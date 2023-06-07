@@ -1,13 +1,13 @@
 ---
-title: 'Como: Localizar o irmão anterior imediato (XPath- LINQ para XML)'
+title: 'Como: localizar o irmão imediatamente anterior (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: ec046283-9fe2-4440-b295-860bf700099d
-ms.openlocfilehash: b2cb9efba0ef65a1b1ab1d7dadd54759f7d2a26b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8b0071b2f39b8debdd52083718fe928c1f9fb6f3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344617"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364520"
 ---
 # <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a>Como localizar o irmão precedentes imediatos (XPath-LINQ to XML) (Visual Basic)
 
@@ -43,13 +43,13 @@ End If
 Console.WriteLine(el1)
 ```
 
-Este exemplo gera a seguinte saída:
+Esse exemplo gera a saída a seguir:
 
 ```console
 Results are identical
 <Child3 />
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [LINQ to XML para usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para usuários do XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

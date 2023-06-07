@@ -2,12 +2,12 @@
 title: O que há de novo no C# 8,0 – Guia C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0.
 ms.date: 04/07/2020
-ms.openlocfilehash: 27c2d7e2d6f0e665e7abe4fdcfb94c140224cc89
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 14df381e17fe89bd862f97522c7efd814857e71e
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895430"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309398"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
@@ -57,14 +57,14 @@ public struct Point
 }
 ```
 
-Como a maioria das structs `ToString()` , o método não modifica o estado. É possível indicar isso adicionando o modificador `readonly` à declaração de `ToString()`:
+Como a maioria das structs, o `ToString()` método não modifica o estado. É possível indicar isso adicionando o modificador `readonly` à declaração de `ToString()`:
 
 ```csharp
 public readonly override string ToString() =>
     $"({X}, {Y}) is {Distance} from the origin";
 ```
 
-A alteração anterior gera um aviso do compilador, `ToString` pois acessa a `Distance` Propriedade, que não está `readonly`marcada:
+A alteração anterior gera um aviso do compilador, pois `ToString` acessa a `Distance` propriedade, que não está marcada `readonly` :
 
 ```console
 warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
@@ -76,9 +76,9 @@ O compilador avisa quando há a necessidade de criar uma cópia de defesa.  A `D
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-Observe que o `readonly` modificador é necessário em uma propriedade somente leitura. O compilador não pressupõe `get` que os acessadores não modifiquem o estado; Você deve declarar `readonly` explicitamente. As propriedades implementadas automaticamente são uma exceção; o compilador tratará todos os getters autoimplementados `readonly`como, portanto, aqui não há necessidade de adicionar `readonly` o modificador `X` às `Y` Propriedades e.
+Observe que o `readonly` modificador é necessário em uma propriedade somente leitura. O compilador não pressupõe `get` que os acessadores não modifiquem o estado; você deve declarar `readonly` explicitamente. As propriedades implementadas automaticamente são uma exceção; o compilador tratará todos os getters autoimplementados como `readonly` , portanto, aqui não há necessidade de adicionar o `readonly` modificador `X` às `Y` Propriedades e.
 
-O compilador impõe a regra que `readonly` os membros não modificam o estado. O método a seguir não será compilado, a `readonly` menos que você remova o modificador:
+O compilador impõe a regra que `readonly` os membros não modificam o estado. O método a seguir não será compilado, a menos que você remova o `readonly` modificador:
 
 ```csharp
 public readonly void Translate(int xOffset, int yOffset)
@@ -90,7 +90,7 @@ public readonly void Translate(int xOffset, int yOffset)
 
 Esse recurso permite que você especifique sua intenção de design para que o compilador possa impô-la e faça otimizações com base nessa intenção.
 
-Para obter mais informações, consulte [ `readonly` ](../language-reference/builtin-types/struct.md#readonly-instance-members) a seção Membros da instância do artigo [tipos de estrutura](../language-reference/builtin-types/struct.md) .
+Para obter mais informações, consulte a seção [ `readonly` membros da instância](../language-reference/builtin-types/struct.md#readonly-instance-members) do artigo [tipos de estrutura](../language-reference/builtin-types/struct.md) .
 
 ## <a name="default-interface-methods"></a>Métodos de interface padrão
 
@@ -100,7 +100,7 @@ Os métodos de interface padrão afetam muitos cenários e elementos de linguage
 
 ## <a name="more-patterns-in-more-places"></a>Mais padrões em mais partes
 
-Com a **correspondência de padrões**, você recebe ferramentas para fornecer funcionalidades dependentes da forma em tipos de dados relacionados, mas diferentes. O C# 7,0 introduziu a sintaxe para padrões de tipo e padrões [`is`](../language-reference/keywords/is.md) constantes usando a [`switch`](../language-reference/keywords/switch.md) expressão e a instrução. Esses recursos representaram os primeiros passos em direção ao suporte a paradigmas de programação, em que os dados e a funcionalidade vivem separados. À medida que o setor se aproxima mais de microsserviços e de outras arquiteturas baseadas em nuvem, outras ferramentas de linguagem de tornam necessárias.
+Com a **correspondência de padrões**, você recebe ferramentas para fornecer funcionalidades dependentes da forma em tipos de dados relacionados, mas diferentes. O C# 7,0 introduziu a sintaxe para padrões de tipo e padrões constantes usando a [`is`](../language-reference/keywords/is.md) expressão e a [`switch`](../language-reference/keywords/switch.md) instrução. Esses recursos representaram os primeiros passos em direção ao suporte a paradigmas de programação, em que os dados e a funcionalidade vivem separados. À medida que o setor se aproxima mais de microsserviços e de outras arquiteturas baseadas em nuvem, outras ferramentas de linguagem de tornam necessárias.
 
 O C# 8.0 expande esse vocabulário, para que você possa usar mais expressões de padrão em mais partes do seu código. Considere esses recursos quando seus dados e funcionalidades estiverem separados. Considere a correspondência de padrões quando seus algoritmos dependerem de um fato diferente do tipo de runtime de um objeto. Essas técnicas fornecem outra maneira de expressar designs.
 
@@ -108,7 +108,7 @@ Além dos novos padrões em novas partes, o C# 8.0 adiciona **padrões recursivo
 
 ### <a name="switch-expressions"></a>Expressões switch
 
-Geralmente, uma [`switch`](../language-reference/keywords/switch.md) instrução produz um valor em cada um de `case` seus blocos. As **expressões switch** permitem que você use a sintaxe de expressão mais concisa. Há menos palavras-chave `case` e `break` repetidas, e menos chaves.  Por exemplo, considere a enumeração a seguir que lista as cores do arco-íris:
+Geralmente, uma [`switch`](../language-reference/keywords/switch.md) instrução produz um valor em cada um de seus `case` blocos. As **expressões switch** permitem que você use a sintaxe de expressão mais concisa. Há menos palavras-chave `case` e `break` repetidas, e menos chaves.  Por exemplo, considere a enumeração a seguir que lista as cores do arco-íris:
 
 ```csharp
 public enum Rainbow
@@ -176,7 +176,7 @@ public static RGBColor FromRainbowClassic(Rainbow colorBand)
 
 ### <a name="property-patterns"></a>Padrões da propriedade
 
-O **padrão da propriedade** permite que você compare as propriedades do objeto examinado. Considere um site de comércio eletrônico que deve calcular o imposto da venda com base no endereço do comprador. Essa computação não é uma responsabilidade principal de `Address` uma classe. Ele mudará ao longo do tempo, provavelmente com mais frequência do que as alterações de formato de endereço. O valor do imposto depende da propriedade `State` do endereço. O método a seguir usa o padrão de propriedade para calcular o imposto da venda de acordo com o endereço e o preço:
+O **padrão da propriedade** permite que você compare as propriedades do objeto examinado. Considere um site de comércio eletrônico que deve calcular o imposto da venda com base no endereço do comprador. Essa computação não é uma responsabilidade principal de uma `Address` classe. Ele mudará ao longo do tempo, provavelmente com mais frequência do que as alterações de formato de endereço. O valor do imposto depende da propriedade `State` do endereço. O método a seguir usa o padrão de propriedade para calcular o imposto da venda de acordo com o endereço e o preço:
 
 ```csharp
 public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
@@ -194,7 +194,7 @@ A correspondência de padrão cria uma sintaxe concisa para expressar esse algor
 
 ### <a name="tuple-patterns"></a>Padrões de tupla
 
-Alguns algoritmos dependem de várias entradas. **Padrões de tupla** permitem que você alterne com base em vários valores, expressadas como uma [tupla](../tuples.md).  O código a seguir mostra uma expressão de comutador para o jogo *pedra, papel, tesoura*:
+Alguns algoritmos dependem de várias entradas. **Padrões de tupla** permitem que você alterne com base em vários valores, expressadas como uma [tupla](../language-reference/builtin-types/value-tuples.md).  O código a seguir mostra uma expressão de comutador para o jogo *pedra, papel, tesoura*:
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -322,7 +322,7 @@ Em ambos os casos, o compilador gera a chamada para `Dispose()`. O compilador ge
 
 ## <a name="static-local-functions"></a>Funções locais estáticas
 
-Agora você pode adicionar o modificador `static` para funções locais a fim de garantir que essa função local não capture (faça referência) às variáveis no escopo delimitador. Essa ação gera `CS8421`, "Uma função local estática não pode conter uma referência à \<variable>".
+Agora você pode adicionar o modificador `static` para funções locais a fim de garantir que essa função local não capture (faça referência) às variáveis no escopo delimitador. Isso gera `CS8421`, "Uma função local estática não pode conter uma referência a \<variable>".
 
 Considere o código a seguir. A função local `LocalFunction` acessa a variável `y`, declarada no escopo delimitador (o método `M`). Portanto, `LocalFunction` não pode ser declarada com o modificador `static`:
 
@@ -352,7 +352,7 @@ int M()
 
 ## <a name="disposable-ref-structs"></a>Estruturas ref descartáveis
 
-Um `struct` declarado com o `ref` modificador não pode implementar nenhuma interface e, portanto <xref:System.IDisposable>, não pode implementar. Portanto, para permitir que uma `ref struct` seja descartada, ela deve ter um método `void Dispose()` acessível. Esse recurso também se aplica `readonly ref struct` a declarações.
+Um `struct` declarado com o `ref` modificador não pode implementar nenhuma interface e, portanto, não pode implementar <xref:System.IDisposable> . Portanto, para permitir que uma `ref struct` seja descartada, ela deve ter um método `void Dispose()` acessível. Esse recurso também se aplica a `readonly ref struct` declarações.
 
 ## <a name="nullable-reference-types"></a>Tipos de referência anuláveis
 
@@ -398,7 +398,7 @@ Experimente você mesmo os fluxos assíncronos em nosso tutorial sobre como [cri
 
 ## <a name="asynchronous-disposable"></a>Descartável assíncrono
 
-A partir do C# 8,0, a linguagem dá suporte a tipos descartáveis <xref:System.IAsyncDisposable?displayProperty=nameWithType> assíncronos que implementam a interface. O operando de uma `using` expressão pode implementar um <xref:System.IDisposable> ou <xref:System.IAsyncDisposable>. No caso `IAsyncDisposable`do, o compilador gera código `await` para o <xref:System.Threading.Tasks.Task> retornado de. <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType> Para obter mais informações, consulte a [ `using` instrução](../language-reference/keywords/using-statement.md).
+A partir do C# 8,0, a linguagem dá suporte a tipos descartáveis assíncronos que implementam a <xref:System.IAsyncDisposable?displayProperty=nameWithType> interface. Você usa a `await using` instrução para trabalhar com um objeto descartável de forma assíncrona. Para obter mais informações, consulte o artigo [implementar um método DisposeAsync](../../standard/garbage-collection/implementing-disposeasync.md) .
 
 ## <a name="indices-and-ranges"></a>Índices e intervalos
 
@@ -407,15 +407,15 @@ A partir do C# 8,0, a linguagem dá suporte a tipos descartáveis <xref:System.I
 Esse suporte a idioma depende de dois novos tipos e de dois novos operadores:
 
 - <xref:System.Index?displayProperty=nameWithType> representa um índice em uma sequência.
-- O índice do operador `^`end, que especifica que um índice é relativo ao final da sequência.
+- O índice do operador end `^` , que especifica que um índice é relativo ao final da sequência.
 - <xref:System.Range?displayProperty=nameWithType> representa um subintervalo de uma sequência.
-- O operador `..`Range, que especifica o início e o término de um intervalo como seus operandos.
+- O operador Range `..` , que especifica o início e o término de um intervalo como seus operandos.
 
 Vamos começar com as regras para índices. Considere uma matriz `sequence`. O índice `0` é o mesmo que `sequence[0]`. O índice `^0` é o mesmo que `sequence[sequence.Length]`. Observe que `sequence[^0]` gera uma exceção, assim como `sequence[sequence.Length]` faz. Para qualquer número `n`, o índice `^n` é o mesmo que `sequence.Length - n`.
 
 Um intervalo especifica o *início* e o *final* de um intervalo. O início do intervalo é inclusivo, mas o final do intervalo é exclusivo, o que significa que o *início* é incluído no intervalo, mas o *final* não é incluído no intervalo. O intervalo `[0..^0]` representa todo o intervalo, assim como `[0..sequence.Length]` representa todo o intervalo.
 
-Vamos analisar alguns exemplos. Considere a matriz a seguir, anotada com seu índice do início e do final:
+Vamos ver alguns exemplos. Considere a matriz a seguir, anotada com seu índice do início e do final:
 
 ```csharp
 var words = new string[]
@@ -446,7 +446,7 @@ O código a seguir cria um subintervalo com as palavras "quick", "brown" e "fox"
 var quickBrownFox = words[1..4];
 ```
 
-O código a seguir cria um subintervalo com "lazy" e "dog". Ele inclui `words[^2]` e `words[^1]`. O índice `words[^0]` final não está incluído:
+O código a seguir cria um subintervalo com "lazy" e "dog". Ele inclui `words[^2]` e `words[^1]`. O índice final `words[^0]` não está incluído:
 
 ```csharp
 var lazyDog = words[^2..^0];
@@ -472,13 +472,13 @@ Em seguida, o intervalo pode ser usado dentro dos caracteres `[` e `]`:
 var text = words[phrase];
 ```
 
-Não apenas as matrizes dão suporte a índices e intervalos. Você também pode usar índices e intervalos com [cadeia](../language-reference/builtin-types/reference-types.md#the-string-type)de <xref:System.Span%601>caracteres, <xref:System.ReadOnlySpan%601>ou. Para obter mais informações, consulte [suporte de tipo para índices e intervalos](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
+Não apenas as matrizes dão suporte a índices e intervalos. Você também pode usar índices e intervalos com [cadeia de caracteres](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> ou <xref:System.ReadOnlySpan%601> . Para obter mais informações, consulte [suporte de tipo para índices e intervalos](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
 
 Você pode explorar mais sobre índices e intervalos do tutorial sobre [índices e intervalos](../tutorials/ranges-indexes.md).
 
 ## <a name="null-coalescing-assignment"></a>Atribuição de União nula
 
-O C# 8,0 apresenta o operador `??=`de atribuição de União nula. Você pode usar o `??=` operador para atribuir o valor do seu operando à direita para seu operando à esquerda somente se o operando esquerdo for avaliado como `null`.
+O C# 8,0 apresenta o operador de atribuição de União nula `??=` . Você pode usar o `??=` operador para atribuir o valor do seu operando à direita para seu operando à esquerda somente se o operando esquerdo for avaliado como `null` .
 
 ```csharp
 List<int> numbers = null;
@@ -523,7 +523,7 @@ Para obter mais informações, consulte [tipos não gerenciados](../language-ref
 
 ## <a name="stackalloc-in-nested-expressions"></a>Stackalloc em expressões aninhadas
 
-A partir do C# 8,0, se o resultado de uma expressão [stackalloc](../language-reference/operators/stackalloc.md) for do <xref:System.Span%601?displayProperty=nameWithType> tipo <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> ou, você poderá usar a `stackalloc` expressão em outras expressões:
+A partir do C# 8,0, se o resultado de uma expressão [stackalloc](../language-reference/operators/stackalloc.md) for do <xref:System.Span%601?displayProperty=nameWithType> <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> tipo ou, você poderá usar a `stackalloc` expressão em outras expressões:
 
 ```csharp
 Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
@@ -533,4 +533,4 @@ Console.WriteLine(ind);  // output: 1
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>Aprimoramento de cadeias de caracteres idênticas interpoladas
 
-`$` A ordem dos tokens `@` e nas cadeias de caracteres idênticas [interpoladas](../language-reference/tokens/interpolated.md) pode ser any: `$@"..."` e `@$"..."` são cadeias de caracteres idênticas interpoladas válidas. Em versões anteriores do C#, `$` o token deve aparecer antes `@` do token.
+A ordem dos `$` `@` tokens e nas cadeias de caracteres idênticas [interpoladas](../language-reference/tokens/interpolated.md) pode ser any: `$@"..."` e `@$"..."` são cadeias de caracteres idênticas interpoladas válidas. Em versões anteriores do C#, o `$` token deve aparecer antes do `@` token.

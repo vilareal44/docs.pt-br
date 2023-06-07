@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 88584574-ade5-45b2-9778-489ed5c4dd7f
 topic_type:
 - apiref
-ms.openlocfilehash: 9e7f682752cfefae63b574655a4fc5e8964146a0
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: db9ce146da1d6fee8db32a0be43903eaa61e52de
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213173"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501749"
 ---
 # <a name="icordebugfunction3getactiverejitrequestilcode-method"></a>ICorDebugFunction3::Método GetActiveReJitRequestILCode
 [Com suporte no .NET Framework 4.5.2 e versões posteriores]  
@@ -39,7 +39,7 @@ HRESULT GetActiveReJitRequestILCode(
 ## <a name="remarks"></a>Comentários  
  Se o método representado por este objeto `ICorDebugFunction3` tiver uma solicitação ReJIT ativa, `ppReJitedILCode` retornará um ponteiro para sua IL. Se não houver nenhuma solicitação ativa, que é um caso comum, `ppReJitedILCode` será **NULL**.  
   
- Uma solicitação ReJIT torna-se ativa logo após a execução retornar da chamada do método [ICorProfilerCallback4:: GetReJITParameters](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md) . Pode ainda não estar compilada em JIT e threads podem ainda estar em execução na versão original do código. Uma solicitação ReJIT se torna inativa durante a chamada do criador de perfil para o método [ICorProfilerInfo4:: RequestRevert](../profiling/icorprofilerinfo4-requestrevert-method.md) . Mesmo depois que a IL é revertida, um thread ainda pode estar em execução no código ReJIT (recompilado por JIT).  
+ Uma solicitação ReJIT torna-se ativa logo após a execução retornar da chamada do método [ICorProfilerCallback4:: GetReJITParameters](../profiling/icorprofilercallback4-getrejitparameters-method.md) . Pode ainda não estar compilada em JIT e threads podem ainda estar em execução na versão original do código. Uma solicitação ReJIT se torna inativa durante a chamada do criador de perfil para o método [ICorProfilerInfo4:: RequestRevert](../profiling/icorprofilerinfo4-requestrevert-method.md) . Mesmo depois que a IL é revertida, um thread ainda pode estar em execução no código ReJIT (recompilado por JIT).  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  

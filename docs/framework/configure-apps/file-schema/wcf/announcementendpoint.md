@@ -3,19 +3,19 @@ title: <announcementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
 ms.openlocfilehash: decaaa1cea5345ff971b16cbb20a85dd803a52d5
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70850289"
 ---
-# <a name="announcementendpoint"></a>\<> announcementEndpoint
-Este elemento de configuração define um ponto de extremidade padrão com um contrato de anúncio fixo. Um serviço pode, opcionalmente, anunciar sua disponibilidade enviando uma mensagem de anúncio online e offline quando ela é aberta ou fechada, respectivamente. Um serviço Windows Communication Foundation (WCF) especifica os pontos de extremidade do comunicado no elemento de [ \<>](servicediscovery.md) de serviço e usa o AnnouncementClient para executar os anúncios. Um cliente que deseja escutar o anúncio de outro serviço está realmente agindo como um serviço WCF; Portanto, você precisa configurar os pontos de extremidade do comunicado para esse cliente na [ \<seção Serviços >](services.md) .  
+# \<announcementEndpoint>
+Este elemento de configuração define um ponto de extremidade padrão com um contrato de anúncio fixo. Um serviço pode, opcionalmente, anunciar sua disponibilidade enviando uma mensagem de anúncio online e offline quando ela é aberta ou fechada, respectivamente. Um serviço Windows Communication Foundation (WCF) especifica os pontos de extremidade do comunicado no [\<serviceDiscovery>](servicediscovery.md) elemento e usa o AnnouncementClient para executar os anúncios. Um cliente que deseja escutar o anúncio de outro serviço está realmente agindo como um serviço WCF; Portanto, você precisa configurar os pontos de extremidade do comunicado para esse cliente na [\<services>](services.md) seção.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> standardEndpoints**](standardendpoints.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> announcementEndpoint**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<standardEndpoints>**](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<announcementEndpoint>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ Este elemento de configuração define um ponto de extremidade padrão com um co
 |name|Uma cadeia de caracteres que especifica o nome da configuração do ponto de extremidade padrão. O nome é usado no `endpointConfiguration` atributo do ponto de extremidade de serviço para vincular um ponto de extremidade padrão à sua configuração.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -80,6 +80,6 @@ Este elemento de configuração define um ponto de extremidade padrão com um co
 </standardEndpoints>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>

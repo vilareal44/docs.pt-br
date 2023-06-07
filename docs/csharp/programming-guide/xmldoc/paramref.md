@@ -1,5 +1,6 @@
 ---
-title: <paramref>- Guia de programação C#
+title: <paramref>-Guia de programação C#
+description: Saiba mais sobre a <paramref> marca XML. Essa marca fornece uma maneira de indicar que uma palavra no código é um parâmetro.
 ms.date: 07/20/2015
 f1_keywords:
 - paramref
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - <paramref> C# XML tag
 - paramref C# XML tag
 ms.assetid: 756c24c1-f591-40e8-a838-559761539b0b
-ms.openlocfilehash: 12df257271369dc7f0a5c066b712a8d8e6c38761
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 133f43abfaf349806404d6d37fb472e3145c51b7
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793396"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381834"
 ---
-# <a name="paramref-c-programming-guide"></a>\<mref> (guia de programação C#)
+# <a name="paramref-c-programming-guide"></a>\<paramref>(Guia de programação C#)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,9 +32,9 @@ ms.locfileid: "76793396"
 
 ## <a name="remarks"></a>Comentários
 
-A marca \<paramref> fornece uma maneira de indicar que uma palavra nos comentários do código, por exemplo, em um blogo \<summary> ou \<remarks> refere-se a um parâmetro. O arquivo XML pode ser processado para formatar essa palavra de alguma forma distinta, como com uma fonte em negrito ou itálico.
+A `<paramref>` marca fornece uma maneira de indicar que uma palavra nos comentários do código, por exemplo, em um `<summary>` `<remarks>` bloco ou se refere a um parâmetro. O arquivo XML pode ser processado para formatar essa palavra de alguma forma distinta, como com uma fonte em negrito ou itálico.
 
-Compilar com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação para um arquivo.
+Compile com [-Doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.
 
 ## <a name="example"></a>Exemplo
 
@@ -41,5 +42,5 @@ Compilar com [-doc](../../language-reference/compiler-options/doc-compiler-optio
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: 3ee94df096b756be544964cfbbd405355e3f728f
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c9bb302e2b34ebe1f51cf39bb3db1094d420d7f4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581265"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408693"
 ---
 # <a name="-delaysign"></a>-delaysign
 
@@ -30,11 +30,11 @@ Opcional. Use `-delaysign-` se você quiser um assembly totalmente assinado. Use
 
 ## <a name="remarks"></a>Comentários
 
-A `-delaysign` opção não tem nenhum efeito, a menos que seja usada com [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) ou [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).
+A `-delaysign` opção não tem nenhum efeito, a menos que seja usada com [-keyfile](keyfile.md) ou [-keycontainer](keycontainer.md).
 
 Quando você solicita um assembly totalmente assinado, o compilador usa o hash no arquivo que contém o manifesto (metadados de assembly) e sinaliza esse hash com a chave particular. A assinatura digital resultante é armazenada no arquivo que contém o manifesto. Quando um assembly é assinado com atraso, o compilador não computa e armazena a assinatura, mas reserva espaço no arquivo para que a assinatura possa ser adicionada posteriormente.
 
-Por exemplo, usando `-delaysign+`o, um desenvolvedor em uma organização pode distribuir versões de teste não assinadas de um assembly que os testadores podem registrar com o cache de assembly global e usar. Quando o trabalho no assembly é concluído, a pessoa responsável pela chave privada da organização pode assinar totalmente o assembly. Essa compartimentalização protege a chave privada da organização contra a divulgação, ao mesmo tempo que permite que todos os desenvolvedores trabalhem nos assemblies.
+Por exemplo, usando `-delaysign+` o, um desenvolvedor em uma organização pode distribuir versões de teste não assinadas de um assembly que os testadores podem registrar com o cache de assembly global e usar. Quando o trabalho no assembly é concluído, a pessoa responsável pela chave privada da organização pode assinar totalmente o assembly. Essa compartimentalização protege a chave privada da organização contra a divulgação, ao mesmo tempo que permite que todos os desenvolvedores trabalhem nos assemblies.
 
 Consulte [criando e usando assemblies de nome forte](../../../standard/assembly/create-use-strong-named.md) para obter mais informações sobre como assinar um assembly.
 
@@ -46,9 +46,9 @@ Consulte [criando e usando assemblies de nome forte](../../../standard/assembly/
 
 3. Defina o valor na caixa **somente assinatura de atraso** .
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)
-- [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)
-- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Compilador de linha de comando do Visual Basic](index.md)
+- [-keyfile](keyfile.md)
+- [-keycontainer](keycontainer.md)
+- [Linhas de Comando de Compilação de Exemplo](sample-compilation-command-lines.md)

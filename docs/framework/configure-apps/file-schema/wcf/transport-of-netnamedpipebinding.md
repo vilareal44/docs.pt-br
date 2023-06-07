@@ -3,22 +3,22 @@ title: <transport> de <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
 ms.openlocfilehash: d40178e59b89c2912123e1927e9e960f6d880871
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73735965"
 ---
-# <a name="transport-of-netnamedpipebinding"></a>> de transporte de \<de \<netNamedPipeBinding >
+# <a name="transport-of-netnamedpipebinding"></a>\<transport> de \<netNamedPipeBinding>
 Define as configurações de segurança de transporte para um pipe nomeado.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netNamedPipeBinding >** ](netnamedpipebinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<security >** ](security-of-netnamedpipebinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**transporte >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<netNamedPipeBinding>**](netnamedpipebinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-netnamedpipebinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ Define as configurações de segurança de transporte para um pipe nomeado.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|protectionLevel|Define o nível de proteção do pipe nomeado. A assinatura de mensagens reduz o risco de violação de terceiros com a mensagem enquanto ela está sendo transferida. A criptografia fornece privacidade no nível de dados durante o transporte. Os valores válidos incluem o seguinte:<br /><br /> -Nenhum: sem proteção.<br />-Sign: as mensagens são assinadas.<br />-EncryptAndSign: as mensagens são criptografadas e assinadas.<br /><br /> O valor padrão é EncryptAndSign.|  
+|protectionLevel|Define o nível de proteção do pipe nomeado. A assinatura de mensagens reduz o risco de violação de terceiros com a mensagem enquanto ela está sendo transferida. A criptografia fornece privacidade no nível de dados durante o transporte. Os valores válidos incluem os seguintes:<br /><br /> -Nenhum: sem proteção.<br />-Sign: as mensagens são assinadas.<br />-EncryptAndSign: as mensagens são criptografadas e assinadas.<br /><br /> O valor padrão é EncryptAndSign.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -48,9 +48,9 @@ Define as configurações de segurança de transporte para um pipe nomeado.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Security >](security-of-netnamedpipebinding.md)|Define as configurações de segurança para uma associação.|  
+|[\<security>](security-of-netnamedpipebinding.md)|Define as configurações de segurança para uma associação.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.NamedPipeTransportSecurity>
 - <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement.Transport%2A>
@@ -60,4 +60,4 @@ Define as configurações de segurança de transporte para um pipe nomeado.
 - [Associações](../../../wcf/bindings.md)
 - [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding >](bindings.md)
+- [\<binding>](bindings.md)

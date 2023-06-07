@@ -1,13 +1,14 @@
 ---
 title: Processar tarefas assíncronas conforme elas são concluídas
+description: Este exemplo mostra como usar Task. WhenAny em C# para iniciar várias tarefas e processar seus resultados à medida que eles são concluídos, em vez de processá-los no pedido iniciado.
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: b618fd6bf80551231d2b285fd0e8aef688d00d93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a7cfa0bdf783fe9bb735241ca398fde7895f1493
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "71736723"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925144"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Iniciar várias tarefas assíncronas e processá-las na conclusão (C#)
 
@@ -23,17 +24,17 @@ O exemplo a seguir usa uma consulta para criar uma coleção de tarefas. Cada ta
 Você pode baixar o projeto completo do WPF (Windows Presentation Foundation) em [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) e, em seguida, seguir estas etapas.
 
 > [!TIP]
-> Se você não quiser baixar o projeto, você pode rever o *arquivo MainWindow.xaml.cs* no final deste tópico.
+> Se você não quiser baixar o projeto, será possível examinar o arquivo *MainWindow.XAML.cs* no final deste tópico em vez disso.
 
-1. Extrair os arquivos que você baixou do arquivo *.zip* e, em seguida, iniciar o Visual Studio.
+1. Extraia os arquivos que você baixou do arquivo *. zip* e inicie o Visual Studio.
 
-2. Na barra de menu, escolha > **Projeto/solução aberta de** > **Project/Solution** **arquivo**.
+2. Na barra de menus, escolha **arquivo**  >  **abrir**  >  **projeto/solução**.
 
-3. Na caixa de diálogo **Projeto Aberto,** abra a pasta que contém o código de amostra que você baixou e, em seguida, abra o arquivo solution *(.sln)* para *AsyncFineTuningCS*/*AsyncFineTuningVB*.
+3. Na caixa de diálogo **Abrir projeto** , abra a pasta que contém o código de exemplo que você baixou e, em seguida, abra o arquivo da solução (*. sln*) para *AsyncFineTuningCS* / *AsyncFineTuningVB*.
 
 4. No **Gerenciador de Soluções**, abra o menu de atalho do projeto **ProcessTasksAsTheyFinish** e escolha **Definir como Projeto de Inicialização**.
 
-5. Escolha a tecla <kbd>F5</kbd> para executar o programa com depuração ou, pressione as teclas <kbd>Ctrl</kbd>+<kbd>F5</kbd> para executar o programa sem depura-lo.
+5. Escolha a tecla <kbd>F5</kbd> para executar o programa com depuração ou pressione <kbd>Ctrl</kbd> + <kbd>F5</kbd> para executar o programa sem depurá-lo.
 
 6. Execute o projeto várias vezes para verificar se os tamanhos baixados não aparecem sempre na mesma ordem.
 
@@ -49,7 +50,7 @@ O projeto **CancelAfterOneTask** já inclui uma consulta que, quando executada, 
 IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessURL(url, client, ct);
 ```
 
-No *arquivo MainWindow.xaml.cs* do projeto, faça as `AccessTheWebAsync` seguintes alterações no método:
+No arquivo *MainWindow.XAML.cs* do projeto, faça as seguintes alterações no `AccessTheWebAsync` método:
 
 - Execute a consulta aplicando <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> em vez de <xref:System.Linq.Enumerable.ToArray%2A>.
 
@@ -71,7 +72,7 @@ No *arquivo MainWindow.xaml.cs* do projeto, faça as `AccessTheWebAsync` seguint
         downloadTasks.Remove(firstFinishedTask);
         ```
 
-    3. Espera `firstFinishedTask`, que é retornado por uma chamada para `ProcessURLAsync`. A variável `firstFinishedTask` é uma <xref:System.Threading.Tasks.Task%601> em que `TReturn` é um inteiro. A tarefa já foi concluída, mas você espera para recuperar o tamanho do site baixado, como mostra o exemplo a seguir. Se a tarefa for `await` falha, jogará a `AggregateException`primeira exceção `Result` de criança `AggregateException`armazenada no , ao contrário da leitura da propriedade que jogaria o .
+    3. Espera `firstFinishedTask`, que é retornado por uma chamada para `ProcessURLAsync`. A variável `firstFinishedTask` é uma <xref:System.Threading.Tasks.Task%601> em que `TReturn` é um inteiro. A tarefa já foi concluída, mas você espera para recuperar o tamanho do site baixado, como mostra o exemplo a seguir. Se a tarefa tiver falhado, `await` o lançará a primeira exceção filha armazenada no `AggregateException` , ao contrário da leitura da `Result` propriedade que geraria o `AggregateException` .
 
         ```csharp
         int length = await firstFinishedTask;
@@ -85,7 +86,7 @@ Execute o programa várias vezes para verificar se os tamanhos baixados não apa
 
 ## <a name="complete-example"></a>Exemplo completo
 
-O código a seguir é o texto completo do *arquivo MainWindow.xaml.cs* para o exemplo. Os asteriscos marcam os elementos que foram adicionados para esse exemplo. Além disso, observe que você deve adicionar uma referência para <xref:System.Net.Http>.
+O código a seguir é o texto completo do arquivo *MainWindow.XAML.cs* para o exemplo. Os asteriscos marcam os elementos que foram adicionados para esse exemplo. Além disso, observe que você deve adicionar uma referência para <xref:System.Net.Http>.
 
 Você pode baixar o projeto de [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
@@ -229,5 +230,5 @@ namespace ProcessTasksAsTheyFinish
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [Ajuste fino de seu aplicativo assíncrono (C#)](fine-tuning-your-async-application.md)
-- [Programação Assíncrona com assincronia e espera (C#)](index.md)
+- [Programação assíncrona com Async e Await (C#)](index.md)
 - [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

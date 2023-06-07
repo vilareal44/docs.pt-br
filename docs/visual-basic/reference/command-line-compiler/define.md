@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: 5035466de4aa17c374824e1b0f02ed594731a9d3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d0d1b03d9ab98f28a0112198f1ecc1e928d6d4a7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716806"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408706"
 ---
 # <a name="-define-visual-basic"></a>-definir (Visual Basic)
 Define as constantes de compilador condicional.  
@@ -25,7 +25,7 @@ Define as constantes de compilador condicional.
 -define:["]symbol[=value][,symbol[=value]]["]  
 ```
 
-ou o
+ou
 
 ```console  
 -d:["]symbol[=value][,symbol[=value]]["]  
@@ -36,10 +36,10 @@ ou o
 |Termo|Definição|  
 |---|---|  
 |`symbol`|Obrigatórios. O símbolo a ser definido.|  
-|`value`|Opcional. O valor para atribuir `symbol`. Se `value` for uma cadeia de caracteres, ela deverá estar entre as sequências de barra invertida\\/aspas (") em vez de aspas. Se nenhum valor for especificado, será considerado como True.|  
+|`value`|Opcional. O valor para atribuir `symbol`. Se `value` for uma cadeia de caracteres, ela deverá estar entre as sequências de barra invertida/aspas ( \\ ") em vez de aspas. Se nenhum valor for especificado, será considerado como True.|  
   
 ## <a name="remarks"></a>Comentários  
- A `-define` opção tem um efeito semelhante ao uso de `#Const` uma diretiva de pré-processador em seu arquivo de origem, exceto que as constantes `-define` definidas com são públicas e se aplicam a todos os arquivos no projeto.  
+ A `-define` opção tem um efeito semelhante ao uso de uma `#Const` diretiva de pré-processador em seu arquivo de origem, exceto que as constantes definidas com `-define` são públicas e se aplicam a todos os arquivos no projeto.  
   
  Você pode usar símbolos criados por essa opção com a diretiva `#If`...`Then`...`#Else` para compilar os arquivos de origem condicionalmente.  
   
@@ -56,9 +56,9 @@ ou o
   
  [!code-vb[VbVbalrCompiler#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#45)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Diretivas #If...Then...#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
-- [Diretiva #Const](../../../visual-basic/language-reference/directives/const-directive.md)
-- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Compilador de linha de comando do Visual Basic](index.md)
+- [#If... Diretivas then... #Else](../../language-reference/directives/if-then-else-directives.md)
+- [#Const diretiva](../../language-reference/directives/const-directive.md)
+- [Linhas de Comando de Compilação de Exemplo](sample-compilation-command-lines.md)

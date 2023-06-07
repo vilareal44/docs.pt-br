@@ -1,19 +1,20 @@
 ---
-title: Como criar Serviços Windows
+title: 'Como: Criar serviços Windows'
+description: Use o modelo de projeto de serviço do Windows para criar um serviço. Defina a propriedade ServiceName, crie instaladores e substitua os métodos OnStart e OnStop.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, creating
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 514675b3c3ce1f6701dff571361df672fb520c6a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6918225e39c15a52710fd0d56342aae869b42325
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053666"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925768"
 ---
-# <a name="how-to-create-windows-services"></a>Como criar Serviços Windows
+# <a name="how-to-create-windows-services"></a>Como: Criar serviços Windows
 Ao criar um serviço, você pode usar um modelo de projeto Visual Studio chamado **Serviço Windows**. Esse modelo realiza automaticamente muito do trabalho para você referenciando as classes e namespaces apropriados, configurando a herança de classe base para serviços, e substituindo muitos dos métodos que você provavelmente desejará substituir.  
   
 > [!WARNING]
@@ -67,13 +68,13 @@ Ao criar um serviço, você pode usar um modelo de projeto Visual Studio chamado
   
 8. Instale o serviço. Para obter mais informações, confira [Como instalar e desinstalar serviços](how-to-install-and-uninstall-services.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Introdução aos aplicativos de serviço do Windows](introduction-to-windows-service-applications.md)
-- [Como escrever serviços de forma programática](how-to-write-services-programmatically.md)
-- [Como adicionar instaladores ao aplicativo de serviço](how-to-add-installers-to-your-service-application.md)
-- [Como registrar informações em log sobre serviços](how-to-log-information-about-services.md)
-- [Como iniciar serviços](how-to-start-services.md)
-- [Como especificar o contexto de segurança para serviços](how-to-specify-the-security-context-for-services.md)
-- [Como instalar e desinstalar serviços](how-to-install-and-uninstall-services.md)
+- [Introdução a aplicativos do Serviço Windows](introduction-to-windows-service-applications.md)
+- [Como: Escrever serviços de forma programática](how-to-write-services-programmatically.md)
+- [Como: Adicionar instaladores ao aplicativo de serviço](how-to-add-installers-to-your-service-application.md)
+- [Como: Registrar em log informações sobre serviços](how-to-log-information-about-services.md)
+- [Como: Iniciar serviços](how-to-start-services.md)
+- [Como: Especificar o contexto de segurança para serviços](how-to-specify-the-security-context-for-services.md)
+- [Como: instalar e desinstalar serviços](how-to-install-and-uninstall-services.md)
 - [Passo a passo: criando um aplicativo de Serviço Windows no Designer de componentes](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

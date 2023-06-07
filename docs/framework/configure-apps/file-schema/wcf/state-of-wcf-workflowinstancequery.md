@@ -3,27 +3,27 @@ title: <state>do WCF,<workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
 ms.openlocfilehash: 80f7532f3c51680a2e34713b526dc43822db61b9
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70854956"
 ---
-# <a name="state-of-wcf-workflowinstancequery"></a>\<Estado > do WCF, \<workflowInstanceQuery >
+# <a name="state-of-wcf-workflowinstancequery"></a>\<state>do WCF,\<workflowInstanceQuery>
 Representa uma coleção de estados inscritos da instância do fluxo de trabalho controladas quando os registros de rastreamento são criados.  
   
  Para obter mais informações sobre consultas de perfil de rastreamento, consulte [perfis de rastreamento](../../../windows-workflow-foundation/tracking-profiles.md)  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<acompanhamento de >** ](tracking-of-wcf.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<perfis >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> trackingProfile**](trackingprofile-of-wcf.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de fluxo de trabalho**](workflow-of-wcf.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> workflowInstanceQueries**](workflowinstancequeries-of-wcf.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> workflowInstanceQuery**](workflowinstancequery-of-wcf.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de Estados**](states-of-wcf-workflowinstancequery.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Estado >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<profiles>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<trackingProfile>**](trackingprofile-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflow>**](workflow-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflowInstanceQueries>**](workflowinstancequeries-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflowInstanceQuery>**](workflowinstancequery-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<states>**](states-of-wcf-workflowinstancequery.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<state>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +57,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
   
 ### <a name="child-elements"></a>Elementos filho
 
-nenhuma.
+Nenhum.
 
 ### <a name="parent-elements"></a>Elementos pai
 
@@ -75,14 +75,14 @@ Os valores de estado possíveis são descritos na tabela a seguir:
 |-----------|-----------------|  
 |Anulado|A instância de fluxo de trabalho será anulada.|  
 |Concluído|A instância de fluxo de trabalho for concluída.|  
-|Deleted|A instância de fluxo de trabalho é excluída.|  
-|Ocioso|A instância de fluxo de trabalho está ociosa.|  
+|Excluído|A instância de fluxo de trabalho é excluída.|  
+|Idle|A instância de fluxo de trabalho está ociosa.|  
 |Persistentes|A instância de fluxo de trabalho é mantida.|  
 |Retomada|A instância de fluxo de trabalho é retomada.|  
-|Introdução|A instância de fluxo de trabalho é iniciada.|  
+|Iniciado|A instância de fluxo de trabalho é iniciada.|  
 |UnhandledException|A instância de fluxo de trabalho encontrou uma exceção sem tratamento.|  
 |Descarregado|A instância de fluxo de trabalho é descarregada.|  
-|Cancelado|A instância de fluxo de trabalho é cancelada.|  
+|Canceled|A instância de fluxo de trabalho é cancelada.|  
 |Suspenso|A instância de fluxo de trabalho é suspensa.|  
 |Encerrada|A instância de fluxo de trabalho é encerrada.|  
 |Não suspenso|A instância de fluxo de trabalho é unsuspended.|  
@@ -101,7 +101,7 @@ A configuração a seguir assina o fluxo de trabalho em nível de instância reg
 </workflowInstanceQueries>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>

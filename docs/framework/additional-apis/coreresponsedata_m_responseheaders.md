@@ -1,5 +1,6 @@
 ---
-title: Campo CoreResponseData.m_ResponseHeaders
+title: Campo CoreResponseData. m_ResponseHeaders
+description: Entenda o campo CoreResponseData. m_ResponseHeaders no .NET. Este campo é um tipo webheadcollection que tem cabeçalhos associados à resposta do servidor.
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,32 +11,32 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 723df6dc2de978695608d106e3a01bde286fc4fe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7c7b896193cb81e9fc9e3ec28110359003a36728
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156097"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989786"
 ---
-# <a name="coreresponsedatam_responseheaders-field"></a>Campo CoreResponseData.m\_ResponseHeaders
+# <a name="coreresponsedatam_responseheaders-field"></a>Campo ResponseHeaders CoreResponseData. m \_
 
-`CoreResponseData.m_ResponseHeaders`é <xref:System.Net.WebHeaderCollection> um dos cabeçalhos associados à resposta do servidor.
+`CoreResponseData.m_ResponseHeaders`é um <xref:System.Net.WebHeaderCollection> dos cabeçalhos associados à resposta do servidor.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
   
 ```csharp
 public WebHeaderCollection m_ResponseHeaders
 ```
 
 > [!WARNING]
-> Esta API não deve ser usada diretamente em seu código. Em vez disso, <xref:System.Diagnostics.DiagnosticSource> você deve usar um código de rede para conectar. Consulte [DiagnosticSource User's Guide](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Essa API não deve ser usada diretamente no seu código. Em vez disso, você deve usar um <xref:System.Diagnostics.DiagnosticSource> para conectar o código de rede. Consulte o [Guia do usuário do diagnosticm](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 >
-> A Microsoft não suporta o uso desta classe em um aplicativo de produção nenhuma circunstância.
+> A Microsoft não oferece suporte ao uso dessa classe em um aplicativo de produção em nenhuma circunstância.
 
 ## <a name="requirements"></a>Requisitos
 
-**Espaço de nome:**<xref:System.Net>
+**Namespace:** <xref:System.Net>
 
-**Montagem:** Sistema (em System.dll)
+**Assembly:** Sistema (em System.dll)
 
-**Versões do Framework .NET:** Disponível desde 2.0.
+**.NET Framework versões:** Disponível desde 2,0.

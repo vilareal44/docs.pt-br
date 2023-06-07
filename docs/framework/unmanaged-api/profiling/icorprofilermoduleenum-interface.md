@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 24d0fcfa-1601-4fba-868f-da8c97303467
 topic_type:
 - apiref
-ms.openlocfilehash: 2713fa90240cb0bf41f455b6ed65d76c568a2cf8
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: fe11c0bbe273ae07cdae43f681a558e07a291ffb
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868259"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494885"
 ---
 # <a name="icorprofilermoduleenum-interface"></a>Interface ICorProfilerModuleEnum
 Fornece métodos para iterar de forma sequencial por meio de uma coleção de módulos carregados pelo aplicativo ou pelo criador de perfis.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
@@ -35,19 +35,19 @@ Fornece métodos para iterar de forma sequencial por meio de uma coleção de m�
 |[Método Skip](icorprofilermoduleenum-skip-method.md)|Avança a posição do cursor do enumerador para que o número especificado de elementos seja ignorado.|  
   
 ## <a name="remarks"></a>Comentários  
- A interface `ICorProfilerModuleEnum` é um enumerador. Ele permite que o destinatário de uma matriz Extraia elementos do remetente a uma taxa apropriada para o destinatário. Em outras palavras, o receptor é capaz de controlar explicitamente o fluxo de elementos de matriz, evitando, assim, os problemas associados à passagem de matrizes grandes como parâmetros de método.  
+ A `ICorProfilerModuleEnum` interface é um enumerador. Ele permite que o destinatário de uma matriz Extraia elementos do remetente a uma taxa apropriada para o destinatário. Em outras palavras, o receptor é capaz de controlar explicitamente o fluxo de elementos de matriz, evitando, assim, os problemas associados à passagem de matrizes grandes como parâmetros de método.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)
-- [Interfaces de criação de perfil](profiling-interfaces.md)
+- [Criação de perfil de interfaces](profiling-interfaces.md)
 - [Método EnumModules](icorprofilerinfo3-enummodules-method.md)

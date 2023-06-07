@@ -1,5 +1,6 @@
 ---
 title: Interoperação com código não gerenciado
+description: Examine a interoperação com código não gerenciado. O CLR oculta de clientes e servidores como os modelos de objeto de componentes .NET e código não gerenciado são diferentes.
 ms.date: 01/17/2018
 helpviewer_keywords:
 - unmanaged code, interoperation
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-ms.openlocfilehash: 12183f390a5178f038c6dd2122a72a33e31ae0ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1cebd75907fd202715cb337593186d248107bdbb
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457960"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621867"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>Interoperação com código não gerenciado
 
@@ -25,7 +26,7 @@ O código que é executado sob o controle de runtime é chamado de código geren
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Expondo componentes do COM ao .NET Framework](exposing-com-components.md)  
+[Expondo componentes do COM para o .NET Framework](exposing-com-components.md)  
 Descreve como usar componentes COM de aplicativos do .NET Framework.
 
 [Expondo componentes do .NET Framework para COM](exposing-dotnet-components-to-com.md)  
@@ -37,22 +38,22 @@ Descreve como chamar funções de DLL não gerenciadas usando a invocação de p
 [Realizando marshaling de interoperabilidade](interop-marshaling.md)  
 Descreve o marshaling para invocação de plataforma e interoperabilidade COM.
 
-[Como mapear HRESULTs e exceções](how-to-map-hresults-and-exceptions.md)  
+[Como: Mapear HRESULTs e exceções](how-to-map-hresults-and-exceptions.md)  
 Descreve o mapeamento entre exceções e HRESULTs.
 
-[Equivalência de tipos e tipos de interoperabilidade inseridos](type-equivalence-and-embedded-interop-types.md)  
+[Equivalência de tipo e tipos de interoperabilidade inseridos](type-equivalence-and-embedded-interop-types.md)  
 Descreve como as informações de tipo para tipos COM são inseridas em assemblies e como o Common Language Runtime determina a equivalência de tipos COM inseridos.
 
-[Como gerar assemblies de interoperabilidade primários usando Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
+[Como: Gerar assemblies de interoperabilidade primários usando Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
 Descreve como gerar assemblies de interoperabilidade primários usando *Tlbimp.exe* (Importador da Biblioteca de Tipos).
 
-[Como registrar assemblies de interoperabilidade primários](how-to-register-primary-interop-assemblies.md)  
+[Como: Registrar assemblies de interoperabilidade primários](how-to-register-primary-interop-assemblies.md)  
 Descreve como registrar os assemblies de interoperabilidade primários antes de referenciá-los em seus projetos.
 
 [Interoperabilidade COM sem registro](registration-free-com-interop.md)  
 Descreve como a interoperabilidade COM pode ativar componentes sem usar o Registro do Windows.
 
-[Como configurar componentes do COM baseados no .NET Framework para ativação sem registro](configure-net-framework-based-com-components-for-reg.md)  
+[Como: Configurar componentes COM baseados no .NET Framework para ativação sem registro](configure-net-framework-based-com-components-for-reg.md)  
 Descreve como criar um manifesto do aplicativo e como criar e inserir um manifesto do componente.
 
 ## <a name="related-sections"></a>Seções relacionadas

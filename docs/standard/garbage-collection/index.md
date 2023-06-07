@@ -1,5 +1,6 @@
 ---
-title: .NET coleta de lixo
+title: Coleta de lixo do .NET
+description: Saiba mais sobre a coleta de lixo no .NET. O coletor de lixo do .NET gerencia a alocação e a liberação de memória para seu aplicativo.
 ms.date: 04/21/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - runtime, garbage collection
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
-ms.openlocfilehash: c087deb033a373dd8b3980feb7ec6901c7909569
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: dde0012ff7233eb7ee13efab1931f129b0eae276
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102236"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662479"
 ---
 # <a name="garbage-collection"></a>Coleta de lixo
 
@@ -33,17 +34,17 @@ O coletor de lixo do .NET gerencia a alocação e a liberação de memória para
   
 |Title|Descrição|  
 |-----------|-----------------|  
-|[Fundamentos da coleta de lixo](../../../docs/standard/garbage-collection/fundamentals.md)|Descreve como funciona a coleta de lixo, como os objetos são alocados no heap gerenciado e outros conceitos principais.|  
-|[Coleta de lixo de estação de trabalho ou de servidor](workstation-server-gc.md)|Descreve as diferenças entre a coleta de lixo da estação de trabalho para aplicativos clientes e a coleta de lixo do servidor para aplicativos de servidor.|
-|[Coleta de lixo de fundo](background-gc.md)|Descreve a coleta de lixo de fundo, que é a coleta de objetos de geração 0 e 1 enquanto a coleta da geração 2 está em andamento.|
-|[O grande monte de objetos](large-object-heap.md)|Descreve o grande monte de objetos (LOH) e como objetos grandes são coletados em lixo.|
-|[Coleta de lixo e desempenho](../../../docs/standard/garbage-collection/performance.md)|Descreve as verificações de desempenho que você pode usar para diagnosticar problemas de desempenho e de coleta de lixo.|  
-|[Coletas induzidas](../../../docs/standard/garbage-collection/induced.md)|Descreve como fazer uma coleta de lixo ocorrer.|  
-|[Modos de latência](../../../docs/standard/garbage-collection/latency.md)|Descreve os modos de determinam o grau de intrusão da coleta de lixo.|  
-|[Otimização da hospedagem Web compartilhada](../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md)|Descreve como otimizar a coleta de lixo em servidores compartilhados por vários sites pequenos.|  
-|[Notificações da coleta de lixo](../../../docs/standard/garbage-collection/notifications.md)|Descreve como determinar quando uma coleta de lixo completa está se aproximando e quando ela é concluída.|  
-|[Monitoramento de recursos do domínio do aplicativo](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)|Descreve como monitorar o uso de CPU e memória por um domínio do aplicativo.|  
-|[Referências fracas](../../../docs/standard/garbage-collection/weak-references.md)|Descreve os recursos que permitem que um objeto seja, simultaneamente, coletado pelo coletor de lixo e acessado pelo aplicativo.|  
+|[Conceitos básicos da coleta de lixo](fundamentals.md)|Descreve como funciona a coleta de lixo, como os objetos são alocados no heap gerenciado e outros conceitos principais.|  
+|[Coleta de lixo de estação de trabalho ou de servidor](workstation-server-gc.md)|Descreve as diferenças entre a coleta de lixo da estação de trabalho para aplicativos cliente e a coleta de lixo do servidor para aplicativos de servidor.|
+|[Coleta de lixo em segundo plano](background-gc.md)|Descreve a coleta de lixo em segundo plano, que é a coleção de objetos de geração 0 e 1 enquanto a coleta de geração 2 está em andamento.|
+|[O heap de objetos grandes](large-object-heap.md)|Descreve o LOH (heap de objeto grande) e como os objetos grandes são coletados por lixo.|
+|[Coleta de lixo e desempenho](performance.md)|Descreve as verificações de desempenho que você pode usar para diagnosticar problemas de desempenho e de coleta de lixo.|  
+|[Coletas induzidas](induced.md)|Descreve como fazer uma coleta de lixo ocorrer.|  
+|[Modos de latência](latency.md)|Descreve os modos de determinam o grau de intrusão da coleta de lixo.|  
+|[Otimização da hospedagem Web compartilhada](optimization-for-shared-web-hosting.md)|Descreve como otimizar a coleta de lixo em servidores compartilhados por vários sites pequenos.|  
+|[Notificações da coleta de lixo](notifications.md)|Descreve como determinar quando uma coleta de lixo completa está se aproximando e quando ela é concluída.|  
+|[Monitoramento de recursos do domínio do aplicativo](app-domain-resource-monitoring.md)|Descreve como monitorar o uso de CPU e memória por um domínio do aplicativo.|  
+|[Referências fracas](weak-references.md)|Descreve os recursos que permitem que um objeto seja, simultaneamente, coletado pelo coletor de lixo e acessado pelo aplicativo.|  
   
 ## <a name="reference"></a>Referência
 
@@ -58,4 +59,4 @@ O coletor de lixo do .NET gerencia a alocação e a liberação de memória para
   
 ## <a name="see-also"></a>Confira também
 
-- [Limpar recursos não gerenciados](../../../docs/standard/garbage-collection/unmanaged.md)
+- [Limpar recursos não gerenciados](unmanaged.md)

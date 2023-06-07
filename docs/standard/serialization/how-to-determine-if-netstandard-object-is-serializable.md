@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
-ms.openlocfilehash: 4037dee36aeb619eb2757016904fd877158e57cf
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: b6791ae0666aeb0ac02d8a38ca419d7de2b263cf
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159891"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289597"
 ---
 # <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>Como determinar se um objeto de .NET Standard é serializável
 
@@ -21,7 +21,7 @@ O .NET Standard é uma especificação que define os tipos e membros que devem e
 
 Se você tiver desenvolvido uma biblioteca que se destina ao .NET Standard, sua biblioteca poderá ser consumida por qualquer implementação do .NET que ofereça suporte ao .NET Standard. Isso significa que você não pode saber com antecedência se um tipo específico é serializável; Você só pode determinar se ele é serializável em tempo de execução.
 
-Você pode determinar se um objeto é serializável em tempo de execução recuperando o valor <xref:System.Type.IsSerializable> da propriedade de <xref:System.Type> um objeto que representa o tipo desse objeto. O exemplo a seguir fornece uma implementação. Ele define um `IsSerializable(Object)` método de extensão que indica se <xref:System.Object> qualquer instância pode ser serializada.
+Você pode determinar se um objeto é serializável em tempo de execução recuperando o valor da <xref:System.Type.IsSerializable> propriedade de um <xref:System.Type> objeto que representa o tipo desse objeto. O exemplo a seguir fornece uma implementação. Ele define um `IsSerializable(Object)` método de extensão que indica se qualquer <xref:System.Object> instância pode ser serializada.
 
 [!code-csharp[is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/csharp/program.cs#2)]
 [!code-vb[is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/vb/library.vb#2)]
@@ -31,7 +31,7 @@ Em seguida, você pode passar qualquer objeto para o método para determinar se 
 [!code-csharp[test-is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/csharp/program.cs#1)]
 [!code-vb[test-is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/vb/program.vb#1)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Serialização binária](binary-serialization.md)
 - <xref:System.SerializableAttribute?displayProperty=nameWithType>

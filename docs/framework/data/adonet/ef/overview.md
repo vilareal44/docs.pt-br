@@ -1,19 +1,20 @@
 ---
 title: Visão geral do Entity Framework
+description: O Entity Framework no ADO.NET dá suporte ao desenvolvimento de aplicativos orientados a dados que funcionam em um nível mais alto de abstração do que os aplicativos tradicionais.
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: ff0c85da89c44834620831c041df3ccdcaf8282f
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 1f1ab5d44c2d6c7e1f54a761dbc706d537664ef6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452520"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286799"
 ---
 # <a name="entity-framework-overview"></a>Visão geral de Entity Framework
 
 O Entity Framework é um conjunto de tecnologias no ADO.NET que dão suporte ao desenvolvimento de aplicativos de software orientado a dados. Os arquitetos e desenvolvedores de aplicativos orientados a dados lutam com a necessidade de realizar dois objetivos muito diferentes. Precisam modelar as entidades, as relações e a lógica dos problemas de negócios que estão solucionando e também precisam trabalhar com os mecanismos de dados usados para armazenar e recuperar os dados. Os dados podem se estender por vários sistemas de armazenamento, cada um com seus próprios protocolos. Mesmo aplicativos que trabalhem com um único sistema de armazenamento devem balancear os requisitos do sistema de armazenamento com os requisitos de gravação eficiente e código de aplicativo que possa ser mantido.
 
-O Entity Framework permite que os desenvolvedores trabalhem com dados na forma de objetos e propriedades específicos de domínio, como clientes e endereços de clientes, sem precisar se preocupar com as tabelas e colunas de banco de dados subjacentes em que esses dados são armazena. Com o Entity Framework, os desenvolvedores podem trabalhar em um nível mais alto de abstração ao lidar com dados e podem criar e manter aplicativos orientados a dados com menos códigos do que em aplicativos tradicionais. Como o Entity Framework é um componente do .NET Framework, os aplicativos Entity Framework podem ser executados em qualquer computador no qual o .NET Framework a partir da versão 3,5 SP1 esteja instalado.
+O Entity Framework permite que os desenvolvedores trabalhem com dados na forma de objetos e propriedades específicos de domínio, como clientes e endereços de clientes, sem ter que se preocupar com as tabelas e colunas de banco de dados subjacentes em que esses data são armazenados. Com o Entity Framework, os desenvolvedores podem trabalhar em um nível mais alto de abstração ao lidar com dados e podem criar e manter aplicativos orientados a dados com menos códigos do que em aplicativos tradicionais. Como o Entity Framework é um componente do .NET Framework, os aplicativos Entity Framework podem ser executados em qualquer computador no qual o .NET Framework a partir da versão 3,5 SP1 esteja instalado.
 
 ## <a name="give-life-to-models"></a>Dê vida aos modelos
  Uma abordagem de design antiga e comum ao criar um aplicativo ou serviço é a divisão do aplicativo ou serviço em três partes: um modelo de domínio, um modelo lógico e um modelo físico. O modelo de domínio define as entidades e as relações no sistema que está sendo modelado. O modelo lógico de um banco de dados relacional normaliza as entidades e relações em tabelas com restrições de chave estrangeira. O modelo físico aborda os recursos de um mecanismo de dados específico definindo detalhes de armazenamento, como o particionamento e a indexação.
@@ -47,19 +48,19 @@ Mais do que apenas outra solução de mapeamento relacional de objeto, o Entity 
 
 - LINQ to Entities. Fornece suporte a LINQ (consulta integrada à linguagem) para consultar tipos de entidade que são definidos em um modelo conceitual. Para obter mais informações, consulte [LINQ to Entities](./language-reference/linq-to-entities.md).
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Um dialeto de SQL independente de armazenamento que funciona diretamente com entidades no modelo conceitual e que dá suporte a conceitos de Modelo de Dados de Entidade. [!INCLUDE[esql](../../../../../includes/esql-md.md)] é usado com consultas de objeto e consultas que são executadas usando o provedor EntityClient. Para obter mais informações, consulte [Entity SQL visão geral](./language-reference/entity-sql-overview.md).
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Um dialeto de SQL independente de armazenamento que funciona diretamente com entidades no modelo conceitual e que dá suporte a conceitos de Modelo de Dados de Entidade. [!INCLUDE[esql](../../../../../includes/esql-md.md)]é usado com consultas de objeto e consultas que são executadas usando o provedor EntityClient. Para obter mais informações, consulte [Entity SQL visão geral](./language-reference/entity-sql-overview.md).
 
-O Entity Framework inclui o provedor de dados EntityClient. Esse provedor gerencia as conexões, traduz as consultas de entidade em consultas específicas à fonte de dados e retorna um leitor de dados que o Entity Framework usa para materializar dados de entidade em objetos. Quando a materialização do objeto não é necessária, o provedor EntityClient também pode ser usado como um provedor de dados ADO.NET padrão, permitindo que os aplicativos executem [!INCLUDE[esql](../../../../../includes/esql-md.md)] consultas e consumam o leitor de dados somente leitura retornado. Para obter mais informações, consulte [EntityClient Provider para o Entity Framework](entityclient-provider-for-the-entity-framework.md).
+O Entity Framework inclui o provedor de dados EntityClient. Esse provedor gerencia as conexões, traduz as consultas de entidade em consultas específicas à fonte de dados e retorna um leitor de dados que o Entity Framework usa para materializar dados de entidade em objetos. Quando a materialização de objeto não é necessária, o provedor EntityClient também pode ser usado como um provedor de dados ADO.NET padrão, permitindo que os aplicativos executem [!INCLUDE[esql](../../../../../includes/esql-md.md)] consultas e consumam o leitor de dados somente leitura retornado. Para obter mais informações, consulte [EntityClient Provider para o Entity Framework](entityclient-provider-for-the-entity-framework.md).
 
 O diagrama a seguir ilustra a arquitetura de Entity Framework para acessar dados:
 
-![Diagrama de arquitetura Entity Framework](./media/wd-efarchdiagram.gif "wd_EFArchDiagram")
+![Diagrama de arquitetura do Entity Framework](./media/wd-efarchdiagram.gif "wd_EFArchDiagram")
 
 As ferramentas de Modelo de Dados de Entidade podem gerar uma classe derivada de `System.Data.Objects.ObjectContext` ou `System.Data.Entity.DbContext` que representa o contêiner de entidade no modelo conceitual. Esse contexto de objeto fornece os recursos para controlar alterações e gerenciar identidades, simultaneidade e relações. Essa classe também expõe um método `SaveChanges` que grava inserções, atualizações e exclusões na fonte de dados. Como consultas, essas alterações são feitas pelos comandos gerados automaticamente pelo sistema ou por procedimentos armazenados especificados pelo desenvolvedor.
 
 ## <a name="data-providers"></a>Provedores de dados
 
-O provedor de `EntityClient` estende o modelo de provedor ADO.NET acessando dados em termos de entidades conceituais e relações. Executa consultas que usam [!INCLUDE[esql](../../../../../includes/esql-md.md)]. O [!INCLUDE[esql](../../../../../includes/esql-md.md)] fornece a linguagem de consulta subjacente que permite que o `EntityClient` se comunique com o banco de dados. Para obter mais informações, consulte [EntityClient Provider para o Entity Framework](entityclient-provider-for-the-entity-framework.md).
+O `EntityClient` provedor estende o modelo de provedor ADO.net acessando dados em termos de entidades conceituais e relações. Executa consultas que usam [!INCLUDE[esql](../../../../../includes/esql-md.md)]. O [!INCLUDE[esql](../../../../../includes/esql-md.md)] fornece a linguagem de consulta subjacente que permite que o `EntityClient` se comunique com o banco de dados. Para obter mais informações, consulte [EntityClient Provider para o Entity Framework](entityclient-provider-for-the-entity-framework.md).
 
 O Entity Framework inclui um Provedor de Dados de SqlClient atualizado que dá suporte a árvores de comando canônicas. Para obter mais informações, consulte [SqlClient para o Entity Framework](sqlclient-for-the-entity-framework.md).
 
@@ -77,6 +78,6 @@ Para saber mais sobre o Entity Framework, consulte:
 
 [Recursos de Entity Framework](resources.md) -fornece links para tópicos conceituais e links para tópicos e recursos externos para a criação de aplicativos Entity Framework.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Entity Framework do ADO.NET](index.md)
+- [ADO.NET Entity Framework](index.md)

@@ -3,21 +3,21 @@ title: <add> de <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
 ms.openlocfilehash: 280c516b17a133930bc4b6621a8c9bc7f4781085
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70850558"
 ---
-# <a name="add-of-filters"></a>\<Adicionar > de \<filtros >
+# <a name="add-of-filters"></a>\<add> de \<filters>
 Um filtro XPath que especifica o tipo de mensagem a ser registrada.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de diagnóstico**](diagnostics.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> messageLogging**](messagelogging.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Filtros >** ](filters.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<diagnostics>**](diagnostics.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<messageLogging>**](messagelogging.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<filters>**](filters.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,10 +34,10 @@ Um filtro XPath que especifica o tipo de mensagem a ser registrada.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|filtrar|Uma cadeia de caracteres que especifica uma consulta em um documento XML definido por uma expressão XPath 1,0. Para obter mais informações, consulte <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.|  
+|filtro|Uma cadeia de caracteres que especifica uma consulta em um documento XML definido por uma expressão XPath 1,0. Para obter mais informações, consulte <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -46,7 +46,7 @@ Um filtro XPath que especifica o tipo de mensagem a ser registrada.
 |[\<filters>](filters.md)|Contém uma coleção de filtros XPath usados para controlar que tipo de mensagem é registrada.|  
   
 ## <a name="remarks"></a>Comentários  
- Os filtros são aplicados somente na camada de transporte, especificada `logMessagesAtTransportLevel` por `true`is. O nível de serviço e o log de mensagens malformados não são afetados por filtros.  
+ Os filtros são aplicados somente na camada de transporte, especificada por `logMessagesAtTransportLevel` is `true` . O nível de serviço e o log de mensagens malformados não são afetados por filtros.  
   
  Para adicionar um filtro à coleção, use a `add` palavra-chave. Quando um ou mais filtros são definidos, somente as mensagens que correspondem a pelo menos um dos filtros são registradas. Se nenhum filtro for definido, todas as mensagens passarão.  
   
@@ -71,7 +71,7 @@ Um filtro XPath que especifica o tipo de mensagem a ser registrada.
 </messageLogging>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Configuration.DiagnosticSection>
 - <xref:System.ServiceModel.Diagnostics>

@@ -9,26 +9,26 @@ helpviewer_keywords:
 - objects [Visual Basic], variables referring to same
 - Visual Basic code, operators
 ms.assetid: f760e828-8704-4256-bc2d-c22a4c93b524
-ms.openlocfilehash: 22e8e1e688d9e3bc3804899103ee78814aac235b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b215225dbc2d8c0d2bdfe2206e5d4a4f1faa6d0c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343625"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403415"
 ---
 # <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>Como testar se dois objetos são iguais (Visual Basic)
-Se você tiver duas variáveis que se referem a objetos, poderá usar o operador `Is` ou `IsNot`, ou ambos, para determinar se eles se referem à mesma instância.  
+Se você tiver duas variáveis que se referem a objetos, poderá usar o `Is` operador OR ou `IsNot` ambos, para determinar se eles se referem à mesma instância.  
   
 ### <a name="to-test-whether-two-objects-are-the-same"></a>Para testar se dois objetos são iguais  
   
-- Use o [operador is](../../../../visual-basic/language-reference/operators/is-operator.md) ou o [operador IsNot](../../../../visual-basic/language-reference/operators/isnot-operator.md) com as duas variáveis como operandos.  
+- Use o [operador is](../../../language-reference/operators/is-operator.md) ou o [operador IsNot](../../../language-reference/operators/isnot-operator.md) com as duas variáveis como operandos.  
   
      [!code-vb[VbVbalrOperators#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#69)]  
   
- Talvez você queira executar uma determinada ação dependendo se dois objetos se referem à mesma instância. O exemplo anterior compara o controle `c` com o controle ativo no `f`de formulário. Se não houver nenhum controle ativo, ou se houver um, mas não for a mesma instância de controle que `c`, a instrução `If` falhará e o procedimento retornará sem processamento adicional.  
+ Talvez você queira executar uma determinada ação dependendo se dois objetos se referem à mesma instância. O exemplo anterior compara `c` o controle com o controle ativo no formulário `f` . Se não houver nenhum controle ativo, ou se houver um, mas não for a mesma instância de controle que `c` o, a `If` instrução falhará e o procedimento retornará sem processamento adicional.  
   
- Se você usa `Is` ou `IsNot` é uma questão de conveniência pessoal. Uma delas pode ser mais fácil de ler do que a outra em uma determinada expressão.  
+ Quer você use `Is` ou `IsNot` seja uma questão de conveniência pessoal para você. Uma delas pode ser mais fácil de ler do que a outra em uma determinada expressão.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Operadores de comparação no Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Operadores de comparação no Visual Basic](comparison-operators.md)

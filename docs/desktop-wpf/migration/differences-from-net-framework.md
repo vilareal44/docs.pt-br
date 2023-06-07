@@ -1,15 +1,15 @@
 ---
 title: Diferenças entre o .NET Framework e o .NET Core
 description: Descreve as diferenças entre a implementação de .NET Framework do Windows Presentation Foundation (WPF) e do WPF do .NET Core. Ao migrar seu aplicativo, você deve considerar essas incompatibilidades.
-author: thraka
+author: adegeo
 ms.date: 09/21/2019
 ms.author: adegeo
-ms.openlocfilehash: 341e576f17c522fbcbb9c417176e9d4a13ab1b18
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 3bedc30046c36d4c5430feedf5854276ebaef8aa
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82072203"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325692"
 ---
 # <a name="differences-in-wpf"></a>Diferenças no WPF
 
@@ -25,16 +25,16 @@ O .NET Core usa arquivos de projeto no estilo SDK. Esses arquivos de projeto sã
 
 ## <a name="nuget-package-references"></a>Referências do pacote NuGet
 
-Se seu aplicativo .NET Framework listar suas dependências do NuGet em um arquivo *Packages. config* , migre para o [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) formato:
+Se seu aplicativo .NET Framework listar suas dependências do NuGet em um arquivo *packages.config* , migre para o [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) formato:
 
 1. No Visual Studio, abra o painel **Gerenciador de soluções** .
-1. Em seu projeto do WPF, clique com o botão direito do mouse em **Packages. config** > **Migrate Packages. config para PackageReference**.
+1. Em seu projeto do WPF, clique com o botão direito do mouse em **packages.config**  >  **migrar packages.config para PackageReference**.
 
 ![Atualizando para o PackageReference](media/differences-from-net-framework/package-reference-migration.png)
 
-Uma caixa de diálogo será exibida mostrando as dependências do NuGet de nível superior calculadas e perguntando quais outros pacotes NuGet devem ser promovidos para o nível superior. Selecione **OK** e o arquivo *Packages. config* será removido do projeto e `<PackageReference>` os elementos serão adicionados ao arquivo de projeto.
+Uma caixa de diálogo será exibida mostrando as dependências do NuGet de nível superior calculadas e perguntando quais outros pacotes NuGet devem ser promovidos para o nível superior. Selecione **OK** e o arquivo de *packages.config* será removido do projeto e os `<PackageReference>` elementos serão adicionados ao arquivo de projeto.
 
-Quando seu projeto usa `<PackageReference>`, os pacotes não são armazenados localmente em uma pasta de *pacotes* , eles são armazenados globalmente. Abra o arquivo de projeto e remova `<Analyzer>` todos os elementos que referenciaram a pasta *pacotes* . Esses analisadores são incluídos automaticamente com as referências do pacote NuGet.
+Quando seu projeto usa `<PackageReference>` , os pacotes não são armazenados localmente em uma pasta de *pacotes* , eles são armazenados globalmente. Abra o arquivo de projeto e remova todos os `<Analyzer>` elementos que referenciaram a pasta *pacotes* . Esses analisadores são incluídos automaticamente com as referências do pacote NuGet.
 
 ## <a name="code-access-security"></a>Segurança de Acesso do Código
 
@@ -42,11 +42,11 @@ A CAS (segurança de acesso ao código) não tem suporte do .NET Core ou do WPF 
 
 Os tipos relacionados ao CAS definidos publicamente foram movidos para fora dos assemblies do WPF e para os assemblies da biblioteca .NET principal. Os assemblies do WPF têm o encaminhamento de tipo definido para o novo local dos tipos movidos.
 
-| Assembly de origem | Assembly de destino | Type                |
+| Assembly de origem | Assembly de destino | Tipo                |
 | --------------- | --------------- | ------------------- |
-| *WindowsBase.dll* | *System. Security. Permissions. dll* | <xref:System.Security.Permissions.MediaPermission> <br /> <xref:System.Security.Permissions.MediaPermissionAttribute> <br /> <xref:System.Security.Permissions.MediaPermissionAudio> <br /> <xref:System.Security.Permissions.MediaPermissionImage> <br /> <xref:System.Security.Permissions.MediaPermissionVideo> <br /> <xref:System.Security.Permissions.WebBrowserPermission> <br /> <xref:System.Security.Permissions.WebBrowserPermissionAttribute> <br /> <xref:System.Security.Permissions.WebBrowserPermissionLevel> |
-| *System.Xaml.dll* | *System. Security. Permissions. dll* | <xref:System.Xaml.Permissions.XamlLoadPermission> |
-| *System.Xaml.dll* | *System. Windows. Extension. dll*    | <xref:System.Xaml.Permissions.XamlAccessLevel><br/> |
+| *WindowsBase.dll* | *System.Security.Permissions.dll* | <xref:System.Security.Permissions.MediaPermission> <br /> <xref:System.Security.Permissions.MediaPermissionAttribute> <br /> <xref:System.Security.Permissions.MediaPermissionAudio> <br /> <xref:System.Security.Permissions.MediaPermissionImage> <br /> <xref:System.Security.Permissions.MediaPermissionVideo> <br /> <xref:System.Security.Permissions.WebBrowserPermission> <br /> <xref:System.Security.Permissions.WebBrowserPermissionAttribute> <br /> <xref:System.Security.Permissions.WebBrowserPermissionLevel> |
+| *System.Xaml.dll* | *System.Security.Permissions.dll* | <xref:System.Xaml.Permissions.XamlLoadPermission> |
+| *System.Xaml.dll* | *System.Windows.Extension.dll*    | <xref:System.Xaml.Permissions.XamlAccessLevel><br/> |
 
 > [!NOTE]
 > Para minimizar o conflito de portamento, a funcionalidade para armazenar e recuperar informações relacionadas às propriedades a seguir foi mantida no `XamlAccessLevel` tipo.

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4664033f-db97-4388-b988-2ec470796e58
 topic_type:
 - apiref
-ms.openlocfilehash: fb2ecc80f272a3fc9b63b20c5956e7a28f117784
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 727cd82226b9a59c4879ffea5e87f93dd5fe38c9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703467"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504102"
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>Método ICLRPolicyManager::SetActionOnFailure
 Especifica a ação de política que o Common Language Runtime (CLR) deve executar quando a falha especificada ocorrer.  
@@ -41,7 +41,7 @@ HRESULT SetActionOnFailure (
  `action`  
  no Um dos valores de [EPolicyAction](epolicyaction-enumeration.md) , indicando a ação a ser executada quando ocorrer uma falha. Para obter uma lista de valores com suporte, consulte a seção comentários.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -54,7 +54,7 @@ HRESULT SetActionOnFailure (
 |E_INVALIDARG|Uma ação de política não pode ser definida para a operação especificada ou uma ação de política inválida foi especificada para a operação.|  
   
 ## <a name="remarks"></a>Comentários  
- Por padrão, o CLR gera uma exceção quando ele falha ao alocar um recurso, como memória. `SetActionOnFailure`permite que o host Substitua esse comportamento especificando a ação da política a ser tomada após a falha. A tabela a seguir mostra as combinações de valores [EClrFailure](eclrfailure-enumeration.md) e [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) com suporte. (O prefixo de FAIL_ é omitido dos valores de [EClrFailure](eclrfailure-enumeration.md) .)  
+ Por padrão, o CLR gera uma exceção quando ele falha ao alocar um recurso, como memória. `SetActionOnFailure`permite que o host Substitua esse comportamento especificando a ação da política a ser tomada após a falha. A tabela a seguir mostra as combinações de valores [EClrFailure](eclrfailure-enumeration.md) e [EPolicyAction](epolicyaction-enumeration.md) com suporte. (O prefixo de FAIL_ é omitido dos valores de [EClrFailure](eclrfailure-enumeration.md) .)  
   
 ||NonCriticalResource|CriticalResource|FatalRuntime|OrphanedLock|StackOverflow|AccessViolation|CodeContract|  
 |-|-------------------------|----------------------|------------------|------------------|-------------------|---------------------|------------------|  

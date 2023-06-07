@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
 ms.openlocfilehash: afee69eb894518b1c88483e34a1d64d452019244
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74802132"
 ---
-# <a name="requestcaching-element-network-settings"></a>\<Elemento requestCaching> (configurações de rede)
+# <a name="requestcaching-element-network-settings"></a>Elemento \<requestCaching> (Configurações de Rede)
 Controla o mecanismo de cache para solicitações de rede.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<requestCaching >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<requestCaching>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,9 +36,9 @@ Controla o mecanismo de cache para solicitações de rede.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
+ As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
-### <a name="attributes"></a>{1&gt;{2&gt;Atributos&lt;2}&lt;1}  
+### <a name="attributes"></a>Atributos  
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
@@ -49,7 +49,7 @@ Controla o mecanismo de cache para solicitações de rede.
   
 ## <a name="policylevel-attribute"></a>Atributo policyLevel  
   
-|Value|Descrição|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |`Default`|Retorna o recurso armazenado em cache se o recurso for atualizado, se o tamanho do conteúdo for preciso e os atributos de expiração, modificação e comprimento do conteúdo estiverem presentes.|  
 |`BypassCache`|Retorna o recurso do servidor.|  
@@ -64,10 +64,10 @@ Controla o mecanismo de cache para solicitações de rede.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[defaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Descreve se o cache HTTP está ativo e descreve a política de cache padrão.|  
-|[\<elemento de > defaultFtpCachePolicy (configurações de rede)](defaultftpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Descreve se o cache FTP está ativo e descreve a política de cache padrão.|  
+|[DefaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Descreve se o cache HTTP está ativo e descreve a política de cache padrão.|  
+|[\<defaultFtpCachePolicy>Elemento (configurações de rede)](defaultftpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Descreve se o cache FTP está ativo e descreve a política de cache padrão.|  
   
-### <a name="parent-elements"></a>Elementos Pai  
+### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
@@ -86,7 +86,7 @@ Controla o mecanismo de cache para solicitações de rede.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Net.Cache?displayProperty=nameWithType>
 - [Esquema de configurações de rede](index.md)

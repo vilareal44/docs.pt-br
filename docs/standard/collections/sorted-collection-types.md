@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SortedList collection type
 - collections [.NET Framework], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
-ms.openlocfilehash: c948c70a06931f5f93a6f4235585cf7ac94e8533
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 2d9d3744859eea1a09923980b3b4c57eca6bba97
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728364"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287933"
 ---
 # <a name="sorted-collection-types"></a>Tipos de coleção Sorted
 
@@ -40,16 +40,16 @@ A tabela a seguir lista algumas das diferenças entre as duas classes de listas 
 | A inserção e a remoção são geralmente O(`n`). No entanto, a inserção é O(log `n`) para dados que já estão em ordem de classificação, de forma que cada elemento seja adicionado ao final da lista. (Isso pressupõe que um redimensionamento não é necessário.) | A inserção e a remoção são O(log `n`). |
 | Usa menos memória do que um <xref:System.Collections.Generic.SortedDictionary%602>. | Usa mais memória do que a classe não genérica <xref:System.Collections.SortedList> e a classe genérica <xref:System.Collections.Generic.SortedList%602>. |
 
-Para listas ou dicionários classificados que precisam estar acessíveis simultaneamente em vários threads, você pode adicionar a lógica de classificação a uma classe derivada de <xref:System.Collections.Concurrent.ConcurrentDictionary%602>. Ao considerar a imutabilidade, os seguintes tipos imutáveis correspondentes seguem semânticas de classificação semelhantes: <xref:System.Collections.Immutable.ImmutableSortedSet%601> e <xref:System.Collections.Immutable.ImmutableSortedDictionary%602>.
+Para listas ou dicionários classificados que precisam estar acessíveis simultaneamente em vários threads, você pode adicionar a lógica de classificação a uma classe derivada de <xref:System.Collections.Concurrent.ConcurrentDictionary%602>. Ao considerar a imutabilidade, os seguintes tipos imutáveis correspondentes seguem semânticas de classificação semelhantes: <xref:System.Collections.Immutable.ImmutableSortedSet%601> e <xref:System.Collections.Immutable.ImmutableSortedDictionary%602> .
 
 > [!NOTE]
 > Para valores que contêm suas próprias chaves (por exemplo, registros de funcionários que contêm um número de ID do funcionário), você pode criar uma coleção com chave que tem algumas características de uma lista e algumas características de um dicionário, derivando da classe genérica <xref:System.Collections.ObjectModel.KeyedCollection%602>.
 
 A partir do .NET Framework 4, a classe <xref:System.Collections.Generic.SortedSet%601> fornece uma árvore de balanceamento automático que mantém os dados na ordem classificada após inserções, exclusões e pesquisas. Essa classe e a classe <xref:System.Collections.Generic.HashSet%601> implementam a interface <xref:System.Collections.Generic.ISet%601>.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Collections.IDictionary?displayProperty=nameWithType>
 - <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>
 - <xref:System.Collections.Concurrent.ConcurrentDictionary%602>
-- [Tipos de coleção comumente usados](../../../docs/standard/collections/commonly-used-collection-types.md)
+- [Tipos de coleção comumente usados](commonly-used-collection-types.md)

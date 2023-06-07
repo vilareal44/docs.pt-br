@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f64c325a-ed3a-4aaf-b847-a88edbc4fefc
 topic_type:
 - apiref
-ms.openlocfilehash: edf5d61baae28a82aff0d0bd32d1d900085ac375
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: a308017dc80dd973cbf108ba9df824193775f5ff
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867315"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501047"
 ---
 # <a name="cor_prf_clause_type-enumeration"></a>Enumeração COR_PRF_CLAUSE_TYPE
 Indica o tipo de cláusula de exceção que o código acabou de inserir ou deixar.  
@@ -37,22 +37,22 @@ typedef enum {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`COR_PRF_CLAUSE_NONE`|A cláusula de exceção não é válida.|  
 |`COR_PRF_CLAUSE_FILTER`|A cláusula de exceção é uma expressão de filtro.|  
-|`COR_PRF_CLAUSE_CATCH`|A cláusula Exception é uma instrução `catch`.|  
-|`COR_PRF_CLAUSE_FINALLY`|A cláusula Exception é uma instrução `finally`.|  
+|`COR_PRF_CLAUSE_CATCH`|A cláusula de exceção é uma `catch` instrução.|  
+|`COR_PRF_CLAUSE_FINALLY`|A cláusula de exceção é uma `finally` instrução.|  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Criando perfil de enumerações](profiling-enumerations.md)

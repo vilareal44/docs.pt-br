@@ -1,25 +1,26 @@
 ---
 title: Conceitos de programação (C#)
+description: Use os recursos desta seção para entender os conceitos de programação na linguagem C#, incluindo a programação orientada a objeto.
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: 5349bfad5ed4601089f449af47cba0e32dc2f908
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 8b0b69abd3c23a968e34905cea93f99e044668ce
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389565"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924910"
 ---
 # <a name="programming-concepts-c"></a>Conceitos de programação (C#)
 Esta seção explica conceitos de programação na linguagem C#.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Title|Descrição|  
+|Título|Descrição|  
 |-----------|-----------------|  
 |[Assemblies no .NET](../../../standard/assembly/index.md)|Descreve como criar e usar um assemblies.|  
-|[Programação Assíncrona com assincronia e espera (C#)](./async/index.md)|Descreve como criar soluções assíncronas usando as palavras-chave [async](../../language-reference/keywords/async.md) e [await](../../language-reference/operators/await.md) no C#. Inclui um passo a passo.|  
+|[Programação assíncrona com Async e Await (C#)](./async/index.md)|Descreve como criar soluções assíncronas usando as palavras-chave [async](../../language-reference/keywords/async.md) e [await](../../language-reference/operators/await.md) no C#. Inclui um passo a passo.|  
 |[Atributos (C#)](./attributes/index.md)|Discute como fornecer informações adicionais sobre como programar elementos como tipos, campos, métodos e propriedades por meio de atributos.|  
-|[Coleções (C#)](./collections.md)|Descreve alguns dos tipos de coleções fornecidos pelo .NET Framework. Demonstra como usar coleções simples e coleções de pares chave/valor.|  
+|[Coleções (C#)](./collections.md)|Descreve alguns dos tipos de coleções fornecidos pelo .NET. Demonstra como usar coleções simples e coleções de pares chave/valor.|  
 |[Covariância e contravariância (C#)](./covariance-contravariance/index.md)|Mostra como habilitar a conversão implícita de parâmetros de tipo genérico em interfaces e delegados.|  
 |[Árvores de expressão (C#)](./expression-trees/index.md)|Explica como você pode usar árvores de expressão para habilitar a modificação dinâmica de código executável.|  
 |[Iteradores (C#)](./iterators.md)|Descreve os iteradores, que são usados para percorrer coleções e retornar elementos um por vez.|  

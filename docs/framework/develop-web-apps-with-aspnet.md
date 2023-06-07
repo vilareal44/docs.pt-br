@@ -1,23 +1,24 @@
 ---
 title: Desenvolvendo aplicativos Web com o ASP.NET
+description: Desenvolva aplicativos Web com ASP.NET Core, que é um novo design de ASP.NET 4. x que é entre plataformas, mais enxutos, mais modulares e unificados para criar uma interface do usuário da Web e APIs da Web.
 ms.date: 09/25/2018
 helpviewer_keywords:
 - ASP.NET
 - .NET Framework, ASP.NET
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
-ms.openlocfilehash: 60d7cf67a21216a8deada2baf0d6a30183c3ee44
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 82f6b9421abbfd9f547cac1c7e08c63de2b2cf48
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607939"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619371"
 ---
 # <a name="developing-web-apps-with-aspnet"></a>Como desenvolver aplicativos Web com o ASP.NET
 
 ASP.NET é uma tecnologia do .NET Framework para a criação de aplicativos Web. Para saber mais sobre o ASP.NET, confira:
 
-- [documentação ASP.NET](/aspnet/overview)
+- [Documentação do ASP.NET](/aspnet/overview)
 - [ASP.NET MVC](https://dotnet.microsoft.com/apps/aspnet/mvc)
 - [Páginas da Web do ASP.NET](https://dotnet.microsoft.com/apps/aspnet/web-apps)
 - [ASP.NET Web API](https://dotnet.microsoft.com/apps/aspnet/apis)  
@@ -36,9 +37,9 @@ Confira [Por que usar o ASP.NET Core?](/aspnet/core/introduction-to-aspnet-core#
 Para saber mais sobre o ASP.NET Core](/aspnet/core), confira:
 
 - [Introdução a Razor Pages](/aspnet/core/tutorials/razor-pages/razor-pages-start)
-- [Crie uma API web](/aspnet/core/tutorials/first-web-api)
+- [Criar uma API Web](/aspnet/core/tutorials/first-web-api)
 - [Criar um aplicativo Web ASP.NET Core no Azure](/azure/app-service/app-service-web-get-started-dotnet)
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Guia de Desenvolvimento](development-guide.md)
+- [Guia de desenvolvimento](development-guide.md)

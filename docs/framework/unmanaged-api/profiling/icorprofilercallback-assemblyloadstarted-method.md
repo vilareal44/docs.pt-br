@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67e8209d-a0ca-4118-a6e6-c1ee0abc2221
 topic_type:
 - apiref
-ms.openlocfilehash: b83be5e79c533e7e5a2468a12a0793d300700428
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: df172edb97a82ae3bf2d46c8be6ea05d5445a09a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866631"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500423"
 ---
 # <a name="icorprofilercallbackassemblyloadstarted-method"></a>Método ICorProfilerCallback::AssemblyLoadStarted
 Notifica o criador de perfil de que um assembly está sendo carregado.  
@@ -36,20 +36,20 @@ HRESULT AssemblyLoadStarted(
 
 - `assemblyId`
 
-  \[em] identifica o assembly que está sendo carregado.
+  \[in] identifica o assembly que está sendo carregado.
 
 ## <a name="remarks"></a>Comentários  
  O valor de `assemblyId` não é válido para uma solicitação de informações até que o método [ICorProfilerCallback:: AssemblyLoadFinished](icorprofilercallback-assemblyloadfinished-method.md) seja chamado.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerCallback](icorprofilercallback-interface.md)

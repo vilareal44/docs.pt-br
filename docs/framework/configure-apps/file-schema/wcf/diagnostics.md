@@ -3,18 +3,18 @@ title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
 ms.openlocfilehash: 2749bc6c66d491a8a160d98b508fb43aa027b806
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70398049"
 ---
-# <a name="diagnostics"></a>\<> de diagnóstico
+# \<diagnostics>
 O `diagnostics` elemento define as configurações que podem ser usadas por um administrador para inspeção e controle de tempo de execução.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> de diagnóstico**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<diagnostics>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +48,7 @@ O `diagnostics` elemento define as configurações que podem ser usadas por um a
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |etwProviderId|Uma cadeia de caracteres que especifica o identificador para o provedor de rastreamento de eventos, que grava eventos em sessões do ETW.|  
-|performanceCounters|Especifica se contadores de desempenho para o assembly estão habilitados. Os valores válidos são<br /><br /> Desconto Os contadores de desempenho estão desabilitados.<br />-Somente: Estão habilitados apenas contadores de desempenho relevantes para esse serviço.<br />Os Contadores de desempenho podem ser exibidos em tempo de execução.<br />Os Uma instância única de contador de desempenho _WCF_Admin é criada. Esta instância é usada para habilitar a coleta de dados SQM usados pela infraestrutura. Nenhum dos valores de contador para esta instância estão atualizados e, portanto, permanecerão em zero. Esse será o valor padrão se nenhuma configuração estiver presente para o WCF.|  
+|performanceCounters|Especifica se contadores de desempenho para o assembly estão habilitados. Os valores válidos são<br /><br /> -Desativado: os contadores de desempenho estão desabilitados.<br />-Service only: somente contadores de desempenho relevantes para esse serviço estão habilitados.<br />-Todos: contadores de desempenho podem ser exibidos em tempo de execução.<br />-Padrão: uma única instância de contador de desempenho _WCF_Admin é criada. Esta instância é usada para habilitar a coleta de dados SQM usados pela infraestrutura. Nenhum dos valores de contador para esta instância estão atualizados e, portanto, permanecerão em zero. Esse será o valor padrão se nenhuma configuração estiver presente para o WCF.|  
 |wmiProviderEnabled|Um valor booliano que especifica se o provedor WMI para o assembly está habilitado. O provedor WMI é necessário para que o usuário tenha acesso em tempo de execução aos recursos de inspeção e controle do Windows Communication Foundation (WCF). O padrão é `false`.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -85,7 +85,7 @@ O `diagnostics` elemento define as configurações que podem ser usadas por um a
 </diagnostics>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Configuration.DiagnosticSection>
 - <xref:System.ServiceModel.Diagnostics>

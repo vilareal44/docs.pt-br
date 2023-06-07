@@ -1,5 +1,6 @@
 ---
 title: Ouvintes de rastreamento
+description: Explore os ouvintes de rastreamento, que são um mecanismo para coletar e registrar mensagens de rastreamento enviadas no .NET. Um ouvinte coleta, armazena e roteia mensagens.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
-ms.openlocfilehash: a51c046a296fbb62d21c7784cf7c1e78b700f3e9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: d08f86c782284a296090cf63e4b03c8d446a95fc
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216117"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803517"
 ---
 # <a name="trace-listeners"></a>Ouvintes de rastreamento
 Ao usar **Trace**, **Debug** e <xref:System.Diagnostics.TraceSource>, você deve ter um mecanismo para coletar e registrar as mensagens que são enviadas. As mensagens de rastreamento são recebidas por *ouvintes*. A finalidade de um ouvinte é coletar, armazenar e rotear mensagens de rastreamento. Os ouvintes direcionam a saída de rastreamento para um destino apropriado, como um log, uma janela ou um arquivo de texto.  
@@ -74,11 +75,11 @@ System.Diagnostics.Trace.Listeners.Add(
 ## <a name="developer-defined-listeners"></a>Ouvintes definidos pelo desenvolvedor  
  Você pode definir seus próprios ouvintes herdando a classe base **TraceListener** e substituindo seus métodos por métodos personalizados. Para obter mais informações sobre como criar ouvintes definidos pelo desenvolvedor, consulte <xref:System.Diagnostics.TraceListener> na referência do .NET Framework.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TraceListener>
-- [Rastreando e instrumentando aplicativos](tracing-and-instrumenting-applications.md)
+- [Rastreamento e instrumentação de aplicativos](tracing-and-instrumenting-applications.md)
 - [Opções de rastreamento](trace-switches.md)

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3bb4b526-0118-42e2-ba59-c95648528ce9
 topic_type:
 - apiref
-ms.openlocfilehash: 048286fb9e1af34cd964fb5b21892778f9575d2c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: bb40ed65a2e34f1bf293e4c4c842d7db63d2eaa5
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938197"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008437"
 ---
 # <a name="metahost_policy_flags-enumeration"></a>Enumeração METAHOST_POLICY_FLAGS
-Fornece políticas de associação que são comuns à maioria dos hosts de tempo de execução. Essa enumeração é usada pelo método [ICLRMetaHostPolicy:: GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) .  
+Fornece políticas de associação que são comuns à maioria dos hosts de tempo de execução. Essa enumeração é usada pelo método [ICLRMetaHostPolicy:: GetRequestedRuntime](iclrmetahostpolicy-getrequestedruntime-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,28 +41,28 @@ typedef enum {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`METAHOST_POLICY_HIGHCOMPAT`|Define a política de alta compatibilidade, que não considera Common Language Runtime (CLR) que é carregado no processo atual. Em vez disso, ele considera apenas o CLRs instalado e as preferências do componente, como derivado do próprio arquivo de assembly, a versão interna declarada ou o arquivo de configuração.|  
-|`METAHOST_POLICY_APPLY_UPGRADE_POLICY`|Aplica a política de atualização ao resultado da Associação de versão quando uma correspondência exata não é encontrada, com base no conteúdo de HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\\. NETFramework\Policy\Upgrades. Isso tem o mesmo efeito que [RUNTIME_INFO_UPGRADE_VERSION](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md).|  
-|`METAHOST_POLICY_EMULATE_EXE_LAUNCH`|Os resultados da associação são retornados como se a imagem fornecida à chamada fosse iniciada em um novo processo. Atualmente, `GetRequestedRuntime` ignora o conjunto de tempos de execução carregável e é associado ao conjunto de tempos de execução instalados. Esse sinalizador permite que um host determine a qual tempo de execução um EXE se associará quando for iniciado.|  
-|`METAHOST_POLICY_SHOW_ERROR_DIALOG`|Uma caixa de diálogo de erro será exibida se `GetRequestedRuntime` não conseguir encontrar um tempo de execução compatível com os parâmetros de entrada. A partir do .NET Framework 4,5, essa caixa de diálogo de erro pode assumir a forma de uma caixa de diálogo de recurso do Windows que pergunta se o usuário deseja habilitar o recurso apropriado.|  
-|`METAHOST_POLICY_USE_PROCESS_IMAGE_PATH`|`GetRequestedRuntime` usa a imagem do processo (e qualquer arquivo de configuração correspondente) como entrada adicional para o processo de associação. Por padrão, o `GetRequestedRuntime` não volta para o caminho da imagem do processo (normalmente, o EXE que foi usado para iniciar o processo) ao determinar o tempo de execução ao qual se associar.|  
-|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` deve verificar se o SKU apropriado está instalado quando não há informações disponíveis no arquivo de configuração. Isso permite que aplicativos que não têm arquivos de configuração falhem normalmente em SKUs menores do que a instalação padrão do .NET Framework. Por padrão, `GetRequestedRuntime` não verifica se o SKU apropriado está instalado, a menos que o atributo SKU seja especificado no elemento de `<supportedRuntime />` do arquivo de configuração.|  
-|`METAHOST_POLICY_IGNORE_ERROR_MODE`|`GetRequestedRuntime` deve ignorar SEM_FAILCRITICALERRORS (que é definida chamando a função [SetError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode) ) e mostrar a caixa de diálogo de erro. Por padrão, SEM_FAILCRITICALERRORS suprime a caixa de diálogo de erro. Ele pode ter sido herdado de outro processo e o erro silencioso pode ser indesejável em seu cenário.|  
+|`METAHOST_POLICY_APPLY_UPGRADE_POLICY`|Aplica a política de atualização ao resultado da Associação de versão quando uma correspondência exata não é encontrada, com base no conteúdo de HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft \\ . NETFramework\Policy\Upgrades. Isso tem o mesmo efeito que [RUNTIME_INFO_UPGRADE_VERSION](runtime-info-flags-enumeration.md).|  
+|`METAHOST_POLICY_EMULATE_EXE_LAUNCH`|Os resultados da associação são retornados como se a imagem fornecida à chamada fosse iniciada em um novo processo. Atualmente, `GetRequestedRuntime` o ignora o conjunto de tempos de execução carregável e é associado ao conjunto de tempos de execução instalados. Esse sinalizador permite que um host determine a qual tempo de execução um EXE se associará quando for iniciado.|  
+|`METAHOST_POLICY_SHOW_ERROR_DIALOG`|Uma caixa de diálogo de erro será exibida se `GetRequestedRuntime` o não conseguir encontrar um tempo de execução compatível com os parâmetros de entrada. A partir do .NET Framework 4,5, essa caixa de diálogo de erro pode assumir a forma de uma caixa de diálogo de recurso do Windows que pergunta se o usuário deseja habilitar o recurso apropriado.|  
+|`METAHOST_POLICY_USE_PROCESS_IMAGE_PATH`|`GetRequestedRuntime`usa a imagem do processo (e qualquer arquivo de configuração correspondente) como entrada adicional para o processo de associação. Por padrão, `GetRequestedRuntime` o não retorna ao caminho da imagem do processo (normalmente, o exe que foi usado para iniciar o processo) ao determinar o tempo de execução ao qual associar.|  
+|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime`deve verificar se o SKU apropriado está instalado quando não há informações disponíveis no arquivo de configuração. Isso permite que aplicativos que não têm arquivos de configuração falhem normalmente em SKUs menores do que a instalação padrão do .NET Framework. Por padrão, `GetRequestedRuntime` o não verifica se o SKU apropriado está instalado, a menos que o atributo SKU seja especificado no elemento arquivo de configuração `<supportedRuntime />` .|  
+|`METAHOST_POLICY_IGNORE_ERROR_MODE`|`GetRequestedRuntime`deve ignorar SEM_FAILCRITICALERRORS (que é definido chamando a função [SetError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode) ) e mostrar a caixa de diálogo de erro. Por padrão, SEM_FAILCRITICALERRORS suprime a caixa de diálogo de erro. Ele pode ter sido herdado de outro processo e o erro silencioso pode ser indesejável em seu cenário.|  
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
-- [Método GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)
+- [Hospedando enumerações](hosting-enumerations.md)
+- [Método GetRequestedRuntime](iclrmetahostpolicy-getrequestedruntime-method.md)

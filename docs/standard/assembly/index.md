@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 87030bf9770c464709559b2fb8f4c0004009e48d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 364a1a8c0fbaae93a02495aaf2e8c519ffb46451
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379906"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290935"
 ---
 # <a name="assemblies-in-net"></a>Assemblies no .NET
 
@@ -86,7 +86,7 @@ Como os assemblies contêm informações sobre conteúdo, controle de versão e 
 Para usar um assembly em um aplicativo, você deve adicionar uma referência a ele. Depois que um assembly é referenciado, todos os tipos, propriedades, métodos e outros membros acessíveis de seus namespaces estão disponíveis para seu aplicativo como se o código fosse parte de seu arquivo de origem.
 
 > [!NOTE]
-> A maioria dos assemblies da Biblioteca de Classes .NET é referenciada automaticamente. Se um assembly do sistema não for referenciado automaticamente, para o .NET Core, você poderá adicionar uma referência ao pacote NuGet que contém o assembly. Use o Gerenciador de pacotes NuGet no Visual Studio ou adicione um elemento [ \< PackageReference>](../../core/tools/dependencies.md#the-packagereference-element) para o assembly para o projeto *. csproj* ou *. vbproj* . No .NET Framework, você pode adicionar uma referência ao assembly usando a caixa de diálogo **Adicionar referência** no Visual Studio ou usando a opção de `-reference` linha de comando para compiladores [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) ou [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) .
+> A maioria dos assemblies da Biblioteca de Classes .NET é referenciada automaticamente. Se um assembly do sistema não for referenciado automaticamente, para o .NET Core, você poderá adicionar uma referência ao pacote NuGet que contém o assembly. Use o Gerenciador de pacotes NuGet no Visual Studio ou adicione um [\<PackageReference>](../../core/tools/dependencies.md#the-packagereference-element) elemento para o assembly ao projeto *. csproj* ou *. vbproj* . No .NET Framework, você pode adicionar uma referência ao assembly usando a caixa de diálogo **Adicionar referência** no Visual Studio ou usando a opção de `-reference` linha de comando para compiladores [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) ou [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) .
 
 No C#, você pode usar duas versões do mesmo assembly em um único aplicativo. Para obter mais informações, consulte [alias externo](../../csharp/language-reference/keywords/extern-alias.md).
 
@@ -102,14 +102,14 @@ No C#, você pode usar duas versões do mesmo assembly em um único aplicativo. 
 |[Controle de versão do assembly](versioning.md)|Visão geral da política de controle de versão do .NET Framework.|
 |[Posicionamento do assembly](../../framework/app-domains/assembly-placement.md)|Onde localizar os assemblies.|
 |[Assemblies e execução lado a lado](side-by-side-execution.md)|Use várias versões do tempo de execução ou um assembly simultaneamente.|
-|[Emissão de métodos e assemblies dinâmicos](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Como criar assemblies dinâmicos.|
-|[Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Como o .NET Framework resolve referências de assembly em tempo de execução.|
+|[Emissão de métodos e assemblies dinâmicos](../../framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Como criar assemblies dinâmicos.|
+|[Como o tempo de execução localiza assemblies](../../framework/deployment/how-the-runtime-locates-assemblies.md)|Como o .NET Framework resolve referências de assembly em tempo de execução.|
 
 ## <a name="reference"></a>Referência
 
 <xref:System.Reflection.Assembly?displayProperty=nameWithType>
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Formato de arquivo do assembly .NET](file-format.md)
 - [Assemblies amigáveis](friend.md)

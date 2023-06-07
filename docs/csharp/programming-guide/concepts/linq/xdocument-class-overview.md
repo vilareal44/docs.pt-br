@@ -1,13 +1,14 @@
 ---
 title: Visão geral da classe XDocument (C#)
+description: A classe XDocument no C# contém as informações necessárias para um documento XML válido, incluindo uma declaração XML, instruções de processamento e comentários.
 ms.date: 07/20/2015
 ms.assetid: 63305603-ab54-49fc-84e4-f76eecc59549
-ms.openlocfilehash: de49dc071d22dd77dddea29ca114663261e3edda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6d522cef25e99e4a5ea54e644855c8dfa7a05f4a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69590849"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302185"
 ---
 # <a name="xdocument-class-overview-c"></a>Visão geral da classe XDocument (C#)
 Este tópico apresenta a classe <xref:System.Xml.Linq.XDocument>.  
@@ -86,6 +87,6 @@ d.Save("test.xml");
 <!--This is another comment.-->  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral da programação LINQ to XML (C#)](./linq-to-xml-overview.md)

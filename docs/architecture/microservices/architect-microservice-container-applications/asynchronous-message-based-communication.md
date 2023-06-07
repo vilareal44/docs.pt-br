@@ -2,12 +2,12 @@
 title: Comunicação assíncrona baseada em mensagens
 description: Arquitetura de Microsserviços do .NET para Aplicativos .NET em Contêineres | A comunicação assíncrona baseada em mensagens é um conceito essencial na arquitetura de microsserviços, porque ela é a melhor maneira de manter microsserviços independentes uns dos outros, estando também simultaneamente sincronizados no fim das contas.
 ms.date: 09/20/2018
-ms.openlocfilehash: 84eaf70178cce91a86dae8a55badb0b4ddd6a7c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a8af94540a7906c474b9b784c28aa60ebae0a6e3
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73454238"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306962"
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicação assíncrona baseada em mensagens
 
@@ -35,7 +35,7 @@ Depois de começar a enviar comunicação baseada em mensagens (seja com comando
 
 **Figura 4-18**. Um único microsserviço recebendo uma mensagem assíncrona
 
-Observe que, quando os comandos provém de aplicativos cliente, eles podem ser implementados como comandos síncronos HTTP. Você deve usar comandos baseados em mensagens quando precisar de maior escalabilidade ou quando já estiver em um processo empresarial baseado em mensagem.
+Quando os comandos são provenientes de aplicativos cliente, eles podem ser implementados como comandos síncronos HTTP. Use comandos baseados em mensagem quando precisar de maior escalabilidade ou quando já estiver em um processo de negócios baseado em mensagem.
 
 ## <a name="multiple-receivers-message-based-communication"></a>Comunicação baseada em mensagens de vários destinatários
 
@@ -53,11 +53,11 @@ Conforme observado anteriormente na seção [Desafios e soluções para o gerenc
 
 Um ponto importante é que você pode querer comunicar-se com vários microsserviços inscritos para o mesmo evento. Para fazer isso, você pode usar mensagens de publicação/assinatura com base em comunicação controlada por evento, conforme mostra a Figura 4-19. Esse mecanismo de publicação/assinatura não é exclusivo da arquitetura de microsserviço. Ele é semelhante à maneira como [Contextos Limitados](https://martinfowler.com/bliki/BoundedContext.html) no DDD devem se comunicar ou à maneira como você propaga atualizações do banco de dados de gravação para o banco de dados de leitura no padrão de arquitetura de [CQRS (Segregação de Responsabilidade de Comando e Consulta)](https://martinfowler.com/bliki/CQRS.html). A meta é ter consistência eventual entre várias fontes de dados em seu sistema distribuído.
 
-![Diagrama mostrando comunicações assíncronas orientadas a eventos.](./media/asynchronous-message-based-communication/asynchronous-event-driven-communication.png)
+![Diagrama mostrando comunicações assíncronas controladas por eventos.](./media/asynchronous-message-based-communication/asynchronous-event-driven-communication.png)
 
 **Figura 4-19**. Comunicação de mensagem controlada por evento assíncrono
 
-Na comunicação controlada por evento assíncrono, um microsserviço publica os eventos para um barramento de evento e muitos microsserviços podem assiná-lo para serem notificados e agirem sobre ele. Sua implementação determinará o protocolo a ser usado para comunicações controladas por eventos e baseadas em mensagem. O [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) pode ajudar a obter uma comunicação confiável na fila.
+Na comunicação assíncrona orientada por evento, um microserviço publica eventos em um barramento de evento e muitos microserviços podem assiná-lo, para ser notificado e agir sobre ele. Sua implementação determinará o protocolo a ser usado para comunicações controladas por eventos e baseadas em mensagem. O [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) pode ajudar a obter uma comunicação confiável na fila.
 
 Ao usar um barramento de evento, talvez você queira usar um nível de abstração (como uma interface de barramento de evento) com base em uma implementação relacionada em classes com o código usando a API de um agente de mensagens como [RabbitMQ](https://www.rabbitmq.com/) ou um barramento de serviço como [Barramento de Serviço do Azure com Tópicos](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Como alternativa, você talvez queira usar um barramento de serviço de nível superior, como NServiceBus, MassTransit ou Brighter para articular seu barramento de evento e sistema de publicação/assinatura.
 
@@ -83,16 +83,16 @@ Tópicos adicionais a serem considerados ao usar comunicação assíncrona são 
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Mensagens orientadas a eventos** \
+- **Mensagens controladas por evento** \
   <https://soapatterns.org/design_patterns/event_driven_messaging>
 
-- **Publicar/inscrever canal** \
+- **Canal de publicação/assinatura** \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
 - **Udi Dahan. CQRS esclarecido** \
-  <http://udidahan.com/2009/12/09/clarified-cqrs/>
+  <https://udidahan.com/2009/12/09/clarified-cqrs/>
 
-- **Segregação de Responsabilidade de Comando e Consulta (CQRS)** \
+- **Separação das Operações de Comando e de Consulta (CQRS)** \
   <https://docs.microsoft.com/azure/architecture/patterns/cqrs>
 
 - **Comunicação entre contextos limitados** \
@@ -101,9 +101,9 @@ Tópicos adicionais a serem considerados ao usar comunicação assíncrona são 
 - **Consistência eventual** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Jimmy Bogard. Refatoração para a resiliência: Avaliando o acoplamento** \
+- **Jimmy Bogard. Refatoração em relação à resiliência: avaliando o acoplamento** \
   <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 > [!div class="step-by-step"]
-> [Próximo](communication-in-microservice-architecture.md)
-> [anterior](maintain-microservice-apis.md)
+> [Anterior](communication-in-microservice-architecture.md) 
+>  [Avançar](maintain-microservice-apis.md)

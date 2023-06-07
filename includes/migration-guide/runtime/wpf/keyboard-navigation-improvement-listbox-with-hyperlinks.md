@@ -1,16 +1,19 @@
 ---
-ms.openlocfilehash: 8797ea76e529d501fb492623cd270e0437c70193
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d19ed4c74b0ca25edb19c05a987ef2e3a6610628
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67802696"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621914"
 ---
 ### <a name="keyboard-navigation-improvement-in-listbox-with-hyperlinks"></a>Melhoria de navegação por teclado no ListBox com hiperlinks
 
-|   |   |
-|---|---|
-|Detalhes|Correção do resultado incorreto de pressionar uma tecla de direção quando o foco está em um hiperlink dentro de um item que não é o item selecionado do <xref:System.Windows.Controls.ItemsControl> pai.|
-|Escopo|Principal|
+#### <a name="details"></a>Detalhes
+
+Correção do resultado incorreto de pressionar uma tecla de direção quando o foco está em um hiperlink dentro de um item que não é o item selecionado do <xref:System.Windows.Controls.ItemsControl> pai.
+
+| Name    | Valor       |
+|:--------|:------------|
+| Escopo   |Principal|
 |Versão|4.8|
 |Type|Runtime|

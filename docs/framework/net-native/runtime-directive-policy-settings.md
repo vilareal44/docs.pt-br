@@ -3,10 +3,10 @@ title: Configurações da política da diretiva de runtime
 ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 ms.openlocfilehash: 7a8933decaec45e8000f3f3d1717847f333deddd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "76738498"
 ---
 # <a name="runtime-directive-policy-settings"></a>Configurações da política da diretiva de runtime
@@ -16,7 +16,7 @@ ms.locfileid: "76738498"
 
 As configurações de política de diretiva de runtime para .NET Nativo determinam a disponibilidade de metadados para tipos e membros de tipo em runtime. Sem os metadados necessários, operações que dependem de reflexão, serialização, desserialização ou marshaling dos tipos de .NET Framework para COM ou o Windows Runtime podem falhar e gerar uma exceção. As exceções mais comuns são [MissingMetadataException](missingmetadataexception-class-net-native.md) e (no caso de interoperabilidade) [MissingInteropDataException](missinginteropdataexception-class-net-native.md).
 
-Configurações de política de runtime são controladas pelo arquivo de diretivas de runtime (.rd.xml). Cada diretiva de runtime define uma política para um elemento específico do programa, tal como um assembly (o elemento [\<Assembly&gt;](assembly-element-net-native.md)), um tipo (o elemento [\<Type&gt;](type-element-net-native.md)) ou um método (o elemento [\<Method&gt;](method-element-net-native.md)). A diretiva inclui um ou mais atributos que definem os tipos de política de reflexão, os tipos de política de serialização e os tipos de política de interoperabilidade discutidos na próxima seção. O valor do atributo define a configuração de política.
+Configurações de política de runtime são controladas pelo arquivo de diretivas de runtime (.rd.xml). Cada diretiva de tempo de execução define a política para um determinado elemento do programa, como um assembly (o [\<Assembly>](assembly-element-net-native.md) elemento), um tipo (o [\<Type>](type-element-net-native.md) elemento) ou um método (o [\<Method>](method-element-net-native.md) elemento). A diretiva inclui um ou mais atributos que definem os tipos de política de reflexão, os tipos de política de serialização e os tipos de política de interoperabilidade discutidos na próxima seção. O valor do atributo define a configuração de política.
 
 ## <a name="policy-types"></a>Tipos de política
 
@@ -32,7 +32,7 @@ Arquivos de diretivas de runtime reconhecem três categorias de tipos de políti
 
   A tabela a seguir lista os tipos de política de reflexão e os elementos do programa com o qual podem ser usados.
 
-  |Elemento|Ativar|Pesquisar|Dynamic|
+  |Elemento|Ativar|Procurar|Dinâmico|
   |-------------|--------------|------------|-------------|
   |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|
   |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|
@@ -128,7 +128,7 @@ Cada tipo de política pode ser definido como um dos valores listados na tabela 
 |`Required PublicAndInternal`|Habilita a política para tipos ou membros públicos e internos e garante que os metadados para tipos e membros públicos e internos estejam sempre disponíveis. Essa configuração é diferente de `PublicAndInternal`, disponibilizando metadados para tipos e membros públicos e internos somente se a cadeia de ferramentas determinar que é necessário.|✔️||
 |`Required All`|Necessita da cadeia de ferramentas para manter todos os tipos e membros, sejam usados ou não, e habilita a política para eles.|✔️||
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Referência do arquivo de configuração das diretivas de runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de runtime](runtime-directive-elements.md)

@@ -1,16 +1,17 @@
 ---
 title: Cadeias de conexão e arquivos de configuração
+description: Saiba como armazenar cadeias de conexão para aplicativos ADO.NET em um arquivo de configuração de aplicativo, como uma prática recomendada de segurança e manutenção.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 8862aa34c2d2677f5bc3e737c01cc61036c243e1
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 572c5be1bd639e8d4b38935f5be49782f0b0316e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345053"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287032"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Cadeias de conexão e arquivos de configuração
 
@@ -65,7 +66,7 @@ Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulner
  O .NET Framework 2.0 introduziu novas classes no namespace <xref:System.Configuration> para simplificar a recuperação de cadeias de conexão de arquivos de configuração em tempo de execução. Você pode programaticamente recuperar uma cadeia de conexão por nome ou nome do provedor.  
   
 > [!NOTE]
-> O arquivo **machine.config** também contém uma seção **connectionStrings**, que contém as cadeias de conexão usadas pelo Visual Studio. Ao recuperar as seqüências de conexão pelo nome do provedor do arquivo **app.config** em um aplicativo do Windows, as strings de conexão em **machine.config** são carregadas primeiro e, em seguida, as entradas do **app.config**. Adicionando **claro** imediatamente após o elemento **connectionStrings** remove todas as referências herdadas da estrutura de dados na memória, de modo que apenas as strings de conexão definidas no arquivo **local app.config** são consideradas.  
+> O arquivo **machine.config** também contém uma seção **connectionStrings**, que contém as cadeias de conexão usadas pelo Visual Studio. Ao recuperar cadeias de conexão pelo nome do provedor do arquivo **app. config** em um aplicativo do Windows, as cadeias de conexão em **Machine. config** são carregadas primeiro e, em seguida, as entradas de **app. config**. Adicionar **Clear** imediatamente após o elemento **connectionStrings** remove todas as referências herdadas da estrutura de dados na memória, para que somente as cadeias de conexão definidas no arquivo **app. config** local sejam consideradas.  
   
 ### <a name="working-with-the-configuration-classes"></a>Trabalhando com as classes de configuração  
  A partir do .NET Framework 2.0, <xref:System.Configuration.ConfigurationManager> é usado ao trabalhar com arquivos de configuração no computador local, substituindo o <xref:System.Configuration.ConfigurationSettings> obsoleto. <xref:System.Web.Configuration.WebConfigurationManager> é usado para trabalhar com arquivos de configuração do ASP.NET. Ele foi criado para trabalhar com arquivos de configuração em um servidor Web e permite o acesso programático a seções do arquivo de configuração como **system.web**.  
@@ -82,7 +83,7 @@ Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulner
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|A cadeia de conexão. Mapeada para o atributo **connectionString**.|  
   
 ### <a name="example-listing-all-connection-strings"></a>Exemplo: listando todas as cadeias de conexão  
- Este exemplo itera <xref:System.Configuration.ConnectionStringSettingsCollection> através do <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType> <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>e <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> exibe as propriedades e propriedades na janela do console.  
+ Este exemplo itera através do <xref:System.Configuration.ConnectionStringSettingsCollection> e exibe as <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType> Propriedades, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType> e <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> na janela do console.  
   
 > [!NOTE]
 > System.Configuration.dll não está incluído em todos os tipos de projeto, e você talvez precise definir uma referência para ele para usar as classes de configuração. O nome e o local de um arquivo de configuração do aplicativo específico variam pelo tipo de aplicativo e o processo de hospedagem.  
@@ -135,7 +136,7 @@ Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulner
   
  Configure outros provedores de configuração protegida adicionando-os ao arquivo **machine.config**. Você também pode criar seu próprio provedor de configuração protegida por herança da classe base abstrata <xref:System.Configuration.ProtectedConfigurationProvider>. A tabela a seguir descreve os dois arquivos de configuração incluídos no .NET Framework.  
   
-|Provedor|Descrição|  
+|Provedor|Description|  
 |--------------|-----------------|  
 |<xref:System.Configuration.RsaProtectedConfigurationProvider>|Usa o algoritmo de criptografia RSA para criptografar e descriptografar dados. O algoritmo RSA pode ser usado para criptografia de chave pública e assinaturas digitais. Também é conhecido como “chave pública” ou criptografia assimétrica porque emprega duas chaves diferentes. Use a [Ferramenta de Registro do IIS do ASP.NET (Aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)) para criptografar as seções em um arquivo Web.config e gerenciar as chaves de criptografia. O ASP.NET descriptografa o arquivo de configuração quando processa o arquivo. A identidade do aplicativo do ASP.NET deve ter acesso de leitura para a chave de criptografia que é usada para criptografar e descriptografar as seções criptografadas.|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Usa a API de Proteção aos Dados do Windows (DPAPI) para criptografar seções de configuração. Usa os serviços de criptografia internos do Windows e pode ser configurado para proteção específica de computador ou da conta do usuário. A proteção específica do computador é útil para vários aplicativos no mesmo servidor que precisam compartilhar informações. A proteção específica da conta do usuário pode ser usada com serviços que são executados com uma identidade de usuário específica, como um ambiente de hospedagem compartilhado. Cada aplicativo é executado em uma identidade separada que restringe o acesso a recursos como arquivos e bancos de dados.|  
@@ -143,7 +144,7 @@ Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulner
  Os dois provedores oferecem criptografia de dados forte. Entretanto, se você estiver planejando usar o mesmo arquivo de configuração criptografado em vários servidores, como uma Web farm, apenas o <xref:System.Configuration.RsaProtectedConfigurationProvider> permite que você exporte as chaves de criptografia usadas para criptografar os dados e importá-los em outro servidor. Para obter mais informações, confira [Importando e exportando contêineres de chave RSA da configuração protegida](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
   
 ### <a name="using-the-configuration-classes"></a>Usando as classes de configuração  
- O namespace <xref:System.Configuration> fornece classes para trabalhar com parâmetros de configuração programaticamente. A classe <xref:System.Configuration.ConfigurationManager> fornece acesso a arquivos de computador, aplicativo e configuração do usuário. Se você estiver criando um aplicativo <xref:System.Web.Configuration.WebConfigurationManager> ASP.NET, você pode usar a classe, que fornece a mesma funcionalidade e, ao mesmo tempo, permite acessar configurações exclusivas de aplicativos ASP.NET, como as encontradas no ** \<system.web>**.  
+ O namespace <xref:System.Configuration> fornece classes para trabalhar com parâmetros de configuração programaticamente. A classe <xref:System.Configuration.ConfigurationManager> fornece acesso a arquivos de computador, aplicativo e configuração do usuário. Se você estiver criando um aplicativo ASP.NET, poderá usar a <xref:System.Web.Configuration.WebConfigurationManager> classe, que fornece a mesma funcionalidade, permitindo também que você acesse as configurações que são exclusivas para aplicativos ASP.net, como as encontradas em **\<system.web>** .  
   
 > [!NOTE]
 > O namespace <xref:System.Security.Cryptography> contém classes que oferecem opções adicionais para criptografar e descriptografar dados. Use essas classes se você precisar de serviços de criptografia que não estão disponíveis usando a configuração protegida. Algumas dessas classes são wrappers da Microsoft CryptoAPI não gerenciada, enquanto outras são implementações puramente gerenciadas. Para obter mais informações, consulte [Serviços Criptográficos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90)).  
@@ -168,9 +169,9 @@ Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulner
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- Para obter mais informações sobre como proteger aplicativos ASP.NET, consulte [Protegendo ASP.NET sites da Web](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100)).  
+ Para obter mais informações sobre como proteger aplicativos ASP.NET, consulte [securing ASP.NET Web sites](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100)).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Construtores de cadeia de conexão](connection-string-builders.md)
 - [Protegendo informações de conexão](protecting-connection-information.md)

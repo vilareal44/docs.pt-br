@@ -1,5 +1,6 @@
 ---
 title: Habilitando o rastreamento de rede
+description: Saiba como habilitar o rastreamento de rede, que fornece informações sobre invocações de método e tráfego de rede para um aplicativo gerenciado no .NET Framework.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - trace destinations
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 61ffd422463ca70cc34c39dd216ce8e660809dcb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4ad0b23fc93ddcdc11cebcc556d12148df5e8ae2
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180875"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502594"
 ---
 # <a name="enabling-network-tracing"></a>Habilitando o rastreamento de rede
 O rastreamento de rede fornece acesso a informações sobre invocações de método e o tráfego de rede gerados por um aplicativo gerenciado. Você deve concluir as seguintes tarefas para habilitar o rastreamento de rede no aplicativo:  

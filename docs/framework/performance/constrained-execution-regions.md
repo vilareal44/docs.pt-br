@@ -1,20 +1,24 @@
 ---
 title: Regiões de execução restrita
+description: Comece a usar as CER (regiões de execução restrita), que fazem parte de um mecanismo de criação de código gerenciado confiável.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-ms.openlocfilehash: fde2bab99f156ddffec678022a58e7b14e0af01e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d928c9357af4a02e389d9ffd5df4ad0195edab06
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716165"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309605"
 ---
 # <a name="constrained-execution-regions"></a>Regiões de execução restrita
 Uma CER (região de execução restrita) faz parte de um mecanismo para a criação de código gerenciado confiável. A CER define uma área na qual o CLR (Common Language Runtime) é restrito de gerar exceções fora de banda que possam impedir que o código na área seja executado em sua totalidade. Nessa região, o código do usuário é restrito de executar um código que poderá resultar na geração de exceções fora de banda. O método <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> deve preceder imediatamente um bloco `try` e marca os blocos `catch`, `finally` e `fault` como regiões de execução restrita. Depois de marcado como uma região restrita, o código deverá chamar apenas outro código com contratos de confiabilidade forte e o código não deverá alocar nem fazer chamadas virtuais a métodos não preparados ou não confiáveis, a menos que o código esteja preparado para manipular falhas. O CLR atrasa as anulações de thread do código que está sendo executado em uma CER.  
-  
+
+> [!IMPORTANT]
+> Só há suporte para CER no .NET Framework. Este artigo não se aplica ao .NET Core ou ao .NET 5 e posterior.
+
  As regiões de execução restrita são usadas de formas diferentes no CLR, além de um bloco `try` anotado, especialmente, finalizadores críticos executados em classes derivadas da classe <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> e um código executado com o método <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A>.  
   
 ## <a name="cer-advance-preparation"></a>Preparação antecipada da CER  
@@ -108,10 +112,10 @@ Uma CER (região de execução restrita) faz parte de um mecanismo para a criaç
   
 - Obtenção ou configuração de campos em um proxy transparente.  
   
-- {1&gt;Serialização.&lt;1}  
+- Serialização.  
   
 - Ponteiros de função e representantes.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Melhores práticas de confiabilidade](reliability-best-practices.md)
+- [Práticas recomendadas de confiabilidade](reliability-best-practices.md)

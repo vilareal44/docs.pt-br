@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: fe70f8fb655579049bb36fc324d04530259d25f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c696d5b8c83ae55caf61e4710630ad1e34c088d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348926"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401765"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Classes usadas em E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)
 
@@ -60,9 +60,9 @@ Para obter uma listagem mais abrangente, consulte [Visão Geral da Biblioteca de
 |<xref:System.IO.StringReader?displayProperty=nameWithType>|Lê caracteres de um `String`. A saída pode ser um fluxo em qualquer codificação ou um `String`.|  
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Grava caracteres em um `String`. A saída pode ser um fluxo em qualquer codificação ou um `String`.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Compor fluxos](../../../../standard/io/composing-streams.md)
 - [Arquivo e e/s de fluxo](../../../../standard/io/index.md)
 - [E/s de arquivo assíncrono](../../../../standard/io/asynchronous-file-i-o.md)
-- [Noções básicas de E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
+- [Noções básicas de E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)](basics-of-net-framework-file-io-and-the-file-system.md)

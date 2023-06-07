@@ -1,5 +1,6 @@
 ---
 title: Práticas recomendadas de threading gerenciado
+description: Conheça as práticas recomendadas de Threading gerenciadas no .NET. Trabalhe com situações difíceis, como a coordenação de vários threads ou a manipulação de threads de bloqueio.
 ms.date: 10/15/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: a76cc40f308ac2f636a650cd4a17da0e94e23a34
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fa0af1461ba568583127316934b9d55577dd4c5a
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160255"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662817"
 ---
 # <a name="managed-threading-best-practices"></a>Práticas recomendadas de threading gerenciado
 O multithreading requer programação cuidadosa. Para a maioria das tarefas, você pode reduzir a complexidade ao enfileirar solicitações para a execução por parte de threads de pool. Este tópico aborda situações mais difíceis, como coordenar o trabalho de vários threads ou manipular threads que bloqueiam.  
   
 > [!NOTE]
-> A partir do .NET Framework 4, a biblioteca de paralelismo de tarefas e o PLINQ fornecem APIs que reduzem parte da complexidade e os riscos da programação de multithreading. Para saber mais, confira [Programação paralela em .NET](../../../docs/standard/parallel-programming/index.md).  
+> A partir do .NET Framework 4, a biblioteca de paralelismo de tarefas e o PLINQ fornecem APIs que reduzem parte da complexidade e os riscos da programação de multithreading. Para saber mais, confira [Programação paralela em .NET](../parallel-programming/index.md).  
   
 ## <a name="deadlocks-and-race-conditions"></a>Deadlocks e condições de corrida  
  O multithreading resolve problemas com taxa de transferência e capacidade de resposta, mas, ao fazer isso, ele introduz novos problemas: deadlocks e condições de corrida.  
@@ -64,7 +65,7 @@ else {
   
  Em um aplicativo com multithreading, um thread que carregou e incrementou o valor pode ser impedido por outro thread que execute todas as três etapas; quando o primeiro thread retomar a execução e armazenar seu valor, ele substituirá `objCt` sem levar em conta o fato de que o valor foi alterado durante o processo.  
   
- Essa condição de corrida específica pode ser evitada facilmente usando métodos da classe <xref:System.Threading.Interlocked>, como <xref:System.Threading.Interlocked.Increment%2A?displayProperty=nameWithType>. Para ler sobre outras técnicas para sincronizar dados entre vários threads, confira [Sincronizando dados para multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md).  
+ Essa condição de corrida específica pode ser evitada facilmente usando métodos da classe <xref:System.Threading.Interlocked>, como <xref:System.Threading.Interlocked.Increment%2A?displayProperty=nameWithType>. Para ler sobre outras técnicas para sincronizar dados entre vários threads, confira [Sincronizando dados para multithreading](synchronizing-data-for-multithreading.md).  
   
  Condições de corrida também podem ocorrer quando você sincroniza as atividades de vários threads. Sempre que você escreve uma linha de código, é preciso considerar o que poderia acontecer se um thread fosse impedido antes de executar a linha (ou antes de qualquer uma das instruções de máquina individuais que compõem a linha) e outro thread o substituísse.  
   
@@ -79,7 +80,7 @@ else {
 
 A existência de apenas um ou de vários processadores disponíveis em um sistema pode influenciar a arquitetura de vários threads. Para obter mais informações, veja [Número de processadores](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/1c9txz50(v%3dvs.71)#number-of-processors).
 
-Use a propriedade <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> para determinar o número de processadores disponíveis no runtime.
+Use a <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> propriedade para determinar o número de processadores disponíveis em tempo de execução.
   
 ## <a name="general-recommendations"></a>Recomendações gerais  
  Ao usar vários threads, considere as seguintes diretrizes:  
@@ -90,7 +91,7 @@ Use a propriedade <xref:System.Environment.ProcessorCount?displayProperty=nameWi
   
 - Não controle a execução de threads de trabalho do seu programa principal (usando eventos, por exemplo). Em vez disso, projete seu programa de forma que os threads de trabalho sejam responsáveis por esperar até que o trabalho esteja disponível, executá-lo e notificar outras partes do seu programa quando terminar. Se seus threads de trabalho não bloquearem, considere o uso de threads de pool. <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> é útil em situações em que os threads de trabalho bloqueiam.  
   
-- Não use tipos como objetos de bloqueio. Isto é, evite códigos como `lock(typeof(X))` em C# ou `SyncLock(GetType(X))` no Visual Basic ou o uso de <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> com objetos <xref:System.Type>. Para um determinado tipo, há apenas uma instância de <xref:System.Type?displayProperty=nameWithType> por domínio de aplicativo. Se o tipo no qual você usar um bloqueio for público, o código que não for o seu próprio poderá assumir bloqueios, levando a deadlocks. Para problemas adicionais, consulte [Práticas recomendadas de confiabilidade](../../../docs/framework/performance/reliability-best-practices.md).  
+- Não use tipos como objetos de bloqueio. Isto é, evite códigos como `lock(typeof(X))` em C# ou `SyncLock(GetType(X))` no Visual Basic ou o uso de <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> com objetos <xref:System.Type>. Para um determinado tipo, há apenas uma instância de <xref:System.Type?displayProperty=nameWithType> por domínio de aplicativo. Se o tipo no qual você usar um bloqueio for público, o código que não for o seu próprio poderá assumir bloqueios, levando a deadlocks. Para problemas adicionais, consulte [Práticas recomendadas de confiabilidade](../../framework/performance/reliability-best-practices.md).  
   
 - Tenha cuidado ao bloquear em instâncias, por exemplo `lock(this)` em C# ou `SyncLock(Me)` no Visual Basic. Se outro código no seu aplicativo, externo ao tipo, assumir um bloqueio no objeto, podem ocorrer deadlocks.  
   
@@ -174,5 +175,5 @@ Use a propriedade <xref:System.Environment.ProcessorCount?displayProperty=nameWi
   
 ## <a name="see-also"></a>Confira também
 
-- [Threading](../../../docs/standard/threading/index.md)
-- [Linhas e Roscas](../../../docs/standard/threading/threads-and-threading.md)
+- [Threading](index.md)
+- [Threads e threading](threads-and-threading.md)

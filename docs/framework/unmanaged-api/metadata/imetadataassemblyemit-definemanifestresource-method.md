@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27f6d295-0fe9-4cda-b77e-6e7d5c53df09
 topic_type:
 - apiref
-ms.openlocfilehash: 5aa5d78faa8ca9261594e2a649b11088e1d78ee7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 026f5efe195cdb34999b65c5f47de6f68d30e11a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177864"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008122"
 ---
 # <a name="imetadataassemblyemitdefinemanifestresource-method"></a>Método IMetaDataAssemblyEmit::DefineManifestResource
-Cria `ManifestResource` uma estrutura contendo metadados para o recurso manifesto especificado e retorna o token de metadados associado.  
+Cria uma `ManifestResource` estrutura que contém metadados para o recurso de manifesto especificado e retorna o token de metadados associado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,34 +37,34 @@ HRESULT DefineManifestResource (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `szName`  
- [em] O nome do recurso.  
+ no O nome do recurso.  
   
  `tkImplementation`  
- [em] Um token de `mdtFile` metadados do tipo ou `mdtAssemblyRef` que mapeia para o provedor de recursos. Um valor NULL indica que o arquivo no qual os metadados estão incorporados é o provedor de recursos.  
+ no Um token de metadados do tipo `mdtFile` ou `mdtAssemblyRef` que é mapeado para o provedor de recursos. Um valor nulo indica que o arquivo no qual os metadados são inseridos é o provedor de recursos.  
   
  `dwOffset`  
- [em] A compensação para o início do recurso dentro do arquivo. Para recursos em arquivos autônomos, isso sempre será zero. Se o recurso estiver incorporado em um arquivo PE (executável portátil), esta será uma compensação do recurso BLOB, que começa no local especificado no arquivo de cabeçalho cor.h.  
+ no O deslocamento para o início do recurso dentro do arquivo. Para recursos em arquivos autônomos, isso sempre será zero. Se o recurso for inserido em um arquivo PE (executável portátil), esse será um deslocamento do BLOB de recursos, que começa no local especificado no arquivo de cabeçalho cor. h.  
   
  `dwResourceFlags`  
- [em] Uma combinação bitwise de valores de bandeira que especificam configurações de propriedade para a definição de recurso.  
+ no Uma combinação de bits de valores de sinalizador que especifica configurações de propriedades para a definição de recurso.  
   
  `pmdmr`  
- [fora] Um ponteiro para o token de metadados retornado.  
+ fora Um ponteiro para o token de metadados retornado.  
   
 ## <a name="remarks"></a>Comentários  
- Uma `ManifestResource` estrutura de metadados deve ser definida para cada recurso que é implementado em cada um dos arquivos da montagem.  
+ Uma `ManifestResource` estrutura de metadados deve ser definida para cada recurso que é implementado em cada um dos arquivos do assembly.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Consulte [os requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [Interface IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md)

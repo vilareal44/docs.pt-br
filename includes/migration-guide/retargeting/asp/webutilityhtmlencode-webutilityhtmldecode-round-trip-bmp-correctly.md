@@ -1,18 +1,28 @@
 ---
-ms.openlocfilehash: ca662b57fae9b1d0d41290f3052f71bca66e9bf3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: acb5b467fc8f0692d8fa1b3b8263fd27308cc124
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774291"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617102"
 ---
 ### <a name="webutilityhtmlencode-and-webutilityhtmldecode-round-trip-bmp-correctly"></a>WebUtility.HtmlEncode e WebUtility.HtmlDecode vão e voltam corretamente ao BMP
 
-|   |   |
-|---|---|
-|Detalhes|Nos aplicativos destinados ao .NET Framework 4.5, os caracteres fora do BMP (Basic Multilingual Plane) vão e voltam corretamente quando são passados para os métodos <xref:System.Net.WebUtility.HtmlDecode(System.String)>.|
-|Sugestão|Essa alteração não deve afetar os aplicativos atuais, mas para restaurar o comportamento original, defina o atributo <code>targetFramework</code> do elemento <code>&lt;httpRuntime&gt;</code> como uma cadeia de caracteres diferente de &quot;4.5&quot;. Você também pode definir os atributos <code>unicodeEncodingConformance</code> e <code>unicodeDecodingConformance</code> do elemento de configuração <code>&lt;webUtility&gt;</code> para controlar esse comportamento independentemente da versão de destino do .NET Framework.|
-|Escopo|Microsoft Edge|
-|Versão|4.5|
-|Tipo|Redirecionando|
-|APIs afetadas|<ul><li><xref:System.Net.WebUtility.HtmlEncode(System.String)?displayProperty=nameWithType></li><li><xref:System.Net.WebUtility.HtmlEncode(System.String,System.IO.TextWriter)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Detalhes
+
+Nos aplicativos destinados ao .NET Framework 4.5, os caracteres fora do BMP (Basic Multilingual Plane) vão e voltam corretamente quando são passados para os métodos <xref:System.Net.WebUtility.HtmlDecode(System.String)>.
+
+#### <a name="suggestion"></a>Sugestão
+
+Essa alteração não deve ter efeito sobre os aplicativos atuais, mas para restaurar o comportamento original, defina o `targetFramework` atributo do `<httpRuntime>` elemento como uma cadeia de caracteres diferente de "4,5". Você também pode definir os atributos `unicodeEncodingConformance` e `unicodeDecodingConformance` do elemento de configuração `<webUtility>` para controlar esse comportamento independentemente da versão de destino do .NET Framework.
+
+| Name    | Valor       |
+|:--------|:------------|
+| Escopo   | Microsoft Edge        |
+| Versão | 4.5         |
+| Type    | Redirecionando |
+
+#### <a name="affected-apis"></a>APIs afetadas
+
+- <xref:System.Net.WebUtility.HtmlEncode(System.String)?displayProperty=nameWithType>
+- <xref:System.Net.WebUtility.HtmlEncode(System.String,System.IO.TextWriter)?displayProperty=nameWithType>

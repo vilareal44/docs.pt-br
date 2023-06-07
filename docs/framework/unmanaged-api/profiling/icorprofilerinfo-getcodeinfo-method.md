@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 90140b0f-a926-4a7e-b6fa-23e05f703cce
 topic_type:
 - apiref
-ms.openlocfilehash: 583189cd667af142ab7d0934be34411644dac936
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: eb6efc738b270f8f76d7130a12af4927fb6220ce
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863914"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498356"
 ---
 # <a name="icorprofilerinfogetcodeinfo-method"></a>Método ICorProfilerInfo::GetCodeInfo
 Obtém a extensão do código nativo associado à ID da função especificada.  
@@ -47,12 +47,12 @@ HRESULT GetCodeInfo(
  fora Um ponteiro para um inteiro que especifica o tamanho, em bytes, do código nativo.  
   
 ## <a name="remarks"></a>Comentários  
- Para otimizar o desempenho, o tempo de execução na versão 2,0 do .NET Framework divide o código pré-compilado precompilado de uma função em várias regiões. Consequentemente, o método `GetCodeInfo` é obsoleto no .NET Framework 2,0 porque não é possível manipular a extensão do código nativo de uma função. Os profileres devem mudar para o uso do método mais geral `ICorProfilerInfo2::GetCodeInfo2` em vez disso.  
+ Para otimizar o desempenho, o tempo de execução na versão 2,0 do .NET Framework divide o código pré-compilado precompilado de uma função em várias regiões. Consequentemente, o `GetCodeInfo` método é obsoleto no .NET Framework 2,0 porque não é possível manipular a extensão do código nativo de uma função. Os profileres devem mudar para o uso do `ICorProfilerInfo2::GetCodeInfo2` método mais geral.  
   
  Essa função usa buffers alocados pelo chamador.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
@@ -60,8 +60,8 @@ HRESULT GetCodeInfo(
   
  **Versões do .NET Framework:** 1,0  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)
-- [Interfaces de criação de perfil](profiling-interfaces.md)
+- [Criação de perfil de interfaces](profiling-interfaces.md)
 - [Criação de perfil](index.md)

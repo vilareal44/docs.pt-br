@@ -1,5 +1,6 @@
 ---
 title: Globalizando e localizando aplicativos do .NET
+description: Saiba como desenvolver um aplicativo preparado para o mundo. Leia sobre globalização, revisão de possibilidade e localização no .NET.
 ms.date: 06/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-ms.openlocfilehash: eae1c38c2383d13bfb4dab83f2fe9551970b39f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3894b7bf9b8aa013b346c169d21c6db270fe987
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120878"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600783"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Globalizando e localizando aplicativos do .NET
 
@@ -50,6 +51,10 @@ Confira mais informações na [Documentação de globalização](/globalization/
 
 Discute o primeiro estágio da criação de um aplicativo pronto para o mundo, o que envolve o projeto e a codificação de um aplicativo independente de cultura e idioma.
 
+[Globalização e ICU do .NET](globalization-icu.md)
+
+Descreve como a globalização [do .NET usa componentes internacionais para Unicode (ICU)](http://site.icu-project.org/home).
+
 [Revisão de localização](localizability-review.md)
 
 Discute o segundo estágio da criação de um aplicativo localizado, o que envolve a identificação de obstáculos potenciais à localização.
@@ -58,7 +63,7 @@ Discute o segundo estágio da criação de um aplicativo localizado, o que envol
 
 Discute o estágio final da criação de um aplicativo localizado, o que envolve a personalização da interface de usuário de um aplicativo para regiões ou culturas específicas.
 
-[Operações de strings insensíveis à cultura](culture-insensitive-string-operations.md)
+[Operações de cadeia de caracteres sem detecção de cultura](culture-insensitive-string-operations.md)
 
 Descreve como usar métodos e classes do .NET sensíveis a culturas por padrão para obter resultados sem diferenciação de cultura.
 
@@ -80,10 +85,10 @@ Descreve as práticas recomendadas a serem seguidas para globalização, localiz
 
    Contém classes que representam ASCII, ANSI, Unicode e outras codificações de caracteres.
 
-- [Resgen.exe (Gerador de Arquivo de Recurso)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
+- [Resgen. exe (gerador de arquivo de recursos)](../../framework/tools/resgen-exe-resource-file-generator.md)
 
    Descreve como usar Resgen.exe para converter arquivos .txt e XML (.resx) para arquivos .resources binários do Common Language Runtime.
 
-- [Winres.exe (Editor de Recursos do Windows Forms)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)
+- [Winres. exe (editor de recursos Windows Forms)](../../framework/tools/winres-exe-windows-forms-resource-editor.md)
 
    Descreve como usar Winres.exe para localizar formulários do Windows Forms.

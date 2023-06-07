@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0667ef7-1d31-4c89-a2d3-d426f023f8d2
 topic_type:
 - apiref
-ms.openlocfilehash: 4a258ce9121a287929ca5bc39c480f1ca2596e78
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3c7c3525f2f8753241c9a206e4cf5e552bf06efe
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437467"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503613"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>Método IMetaDataImport::GetMethodProps
 Obtém os metadados associados ao método referenciado pelo token MethodDef especificado.  
@@ -53,10 +53,10 @@ HRESULT GetMethodProps (
  fora Um ponteiro para um buffer que tem o nome do método.  
   
  `cchMethod`  
- no O tamanho solicitado de `szMethod`.  
+ no O tamanho solicitado de `szMethod` .  
   
  `pchMethod`  
- fora Um ponteiro para o tamanho em caracteres largos de `szMethod`ou, no caso de truncamento, o número real de caracteres largos no nome do método.  
+ fora Um ponteiro para o tamanho em caracteres largos de `szMethod` , ou no caso de truncamento, o número real de caracteres largos no nome do método.  
   
  `pdwAttr`  
  fora Um ponteiro para todos os sinalizadores associados ao método.  
@@ -65,7 +65,7 @@ HRESULT GetMethodProps (
  fora Um ponteiro para a assinatura de metadados binários do método.  
   
  `pcbSigBlob`  
- fora Um ponteiro para o tamanho em bytes de `ppvSigBlob`.  
+ fora Um ponteiro para o tamanho em bytes de `ppvSigBlob` .  
   
  `pulCodeRVA`  
  fora Um ponteiro para o endereço virtual relativo do método.  
@@ -73,16 +73,16 @@ HRESULT GetMethodProps (
  `pdwImplFlags`  
  fora Um ponteiro para qualquer sinalizador de implementação para o método.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

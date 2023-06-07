@@ -3,12 +3,12 @@ title: Cache em um aplicativo nativo de nuvem
 description: Saiba mais sobre estratégias de cache em um aplicativo nativo de nuvem.
 author: robvet
 ms.date: 05/17/2020
-ms.openlocfilehash: a109db59d7b2005ea97922eef07ae4869e4894a7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a33f143499b5f9545493bc4bc757cc3d152f7aa9
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614286"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557510"
 ---
 # <a name="caching-in-a-cloud-native-app"></a>Caching em um aplicativo nativo de nuvem
 
@@ -57,7 +57,7 @@ O cache do Azure para Redis é mais do que um servidor de cache simples. Ele pod
   
 Para cenários avançados, uma cópia dos dados armazenados em cache pode ser [persistida no disco](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-how-to-premium-persistence). Se um evento catastrófico desabilitar os caches primário e de réplica, o cache será reconstruído a partir do instantâneo mais recente.
 
-O cache Redis do Azure está disponível em várias configurações predefinidas e tipos de preço.  A [camada Premium](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-premium-tier-intro) apresenta muitos recursos de nível empresarial, como clustering, persistência de dados, replicação geográfica e isolamento de rede virtual.
+O cache Redis do Azure está disponível em várias configurações predefinidas e tipos de preço. A [camada Premium](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-overview#service-tiers) apresenta muitos recursos de nível empresarial, como clustering, persistência de dados, replicação geográfica e isolamento de rede virtual.
 
 >[!div class="step-by-step"]
 >[Anterior](relational-vs-nosql-data.md) 

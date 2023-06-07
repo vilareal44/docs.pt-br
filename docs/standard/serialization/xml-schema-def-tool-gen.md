@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 21ce4ad846e21a328ba199f6253bd259be9d932b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 0e4e84ea7e11b2e7a00c852d4a2075747c71267e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379532"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84288960"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Como usar a ferramenta de definição de esquema XML para gerar classes e documentos de esquema XML
 A ferramenta de Definição de Esquema XML (Xsd.exe) permite gerar um esquema XML que descreve uma classe ou gerar a classe definida por um esquema XML. Os seguintes procedimentos mostram como executar essas operações.
@@ -38,7 +38,7 @@ _C: \\ arquivos de programas (x86) \\ Microsoft SDKs \\ Windows \\ {version} \\ 
     <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="" xmlns:xs="http://www.w3.org/2001/XMLSchema" />  
     ```  
   
-3. Modifique as classes com métodos, propriedades ou campos, conforme o necessário. Para obter mais informações sobre como modificar uma classe com atributos, consulte [Controlando a serialização XML usando atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md) e [Atributos que controlam a serialização SOAP codificada](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
+3. Modifique as classes com métodos, propriedades ou campos, conforme o necessário. Para obter mais informações sobre como modificar uma classe com atributos, consulte [Controlando a serialização XML usando atributos](controlling-xml-serialization-using-attributes.md) e [Atributos que controlam a serialização SOAP codificada](attributes-that-control-encoded-soap-serialization.md).  
   
  É geralmente útil examinar o esquema do fluxo de XML que é gerado quando instâncias de uma classe (ou classes) são serializadas. Por exemplo, você pode publicar seu esquema para outros usarem ou pode compará-lo com um esquema com o qual está tentando obter conformidade.  
   
@@ -59,9 +59,9 @@ _C: \\ arquivos de programas (x86) \\ Microsoft SDKs \\ Windows \\ {version} \\ 
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Data.DataSet>
-- [A ferramenta de definição de esquema XML e a serialização XML](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)
-- [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Ferramenta de definição de esquema XML (XSD. exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
+- [A ferramenta de definição de esquema XML e a serialização XML](the-xml-schema-definition-tool-and-xml-serialization.md)
+- [Apresentando a serialização XML](introducing-xml-serialization.md)
+- [Ferramenta de definição de esquema XML (XSD. exe)](xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Como desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Como serializar um objeto](how-to-serialize-an-object.md)
+- [Como desserializar um objeto](how-to-deserialize-an-object.md)

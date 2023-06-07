@@ -4,24 +4,24 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4e108e89-1132-46b7-868a-c7f5c69dc89f
 ms.openlocfilehash: a02d71811709b2c285ab7081b89ee3082ec5b43d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152203"
 ---
-# <a name="customtrackingquery"></a>\<> de personalTrackingQuery
+# \<customTrackingQuery>
 Representa uma coleção de consultas que são usados para controlar os eventos que você define em suas atividades de código. A consulta é necessária para um participante de rastreamento assinar registros personalizados de rastreamento.  
   
- Para obter mais informações sobre o rastreamento de consultas de perfil, consulte [Perfis de rastreamento](../../../windows-workflow-foundation/tracking-profiles.md)  
+ Para obter mais informações sobre consultas de perfil de rastreamento, consulte [perfis de rastreamento](../../../windows-workflow-foundation/tracking-profiles.md)  
   
-[**\<>de configuração**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<Sistema.>de modelo de serviço**](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<rastreando>**](tracking.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de rastreamentoPerfil**](trackingprofile.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de fluxo de trabalho**](workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de rastreamento personalizado**](customtrackingqueries.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>de rastreamento personalizado**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<trackingProfile>**](trackingprofile.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflow>**](workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customTrackingQueries>**](customtrackingqueries.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<customTrackingQuery>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,7 +55,7 @@ Representa uma coleção de consultas que são usados para controlar os eventos 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<>de rastreamento personalizado](customtrackingquery.md)|Uma consulta que é usada para controlar os eventos que você define em suas atividades de código.|  
+|[\<customTrackingQuery>](customtrackingquery.md)|Uma consulta que é usada para controlar os eventos que você define em suas atividades de código.|  
   
 ## <a name="see-also"></a>Confira também
 

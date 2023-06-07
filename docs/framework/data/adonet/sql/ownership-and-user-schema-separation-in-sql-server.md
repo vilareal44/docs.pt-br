@@ -1,13 +1,14 @@
 ---
 title: Propriedade e separação do esquema do usuário no SQL Server
+description: Saiba como a separação de esquema de usuário permite flexibilidade no gerenciamento de permissões de objeto de banco de dados SQL Server. Os esquemas agrupam objetos em namespaces separados.
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 5ad3d927bcf3534e134db2c98b79842b0e6148f3
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 97e742979785fedd922dc887295b63e2d93bd147
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894429"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286256"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Propriedade e separação do esquema do usuário no SQL Server
 Um conceito central de segurança do SQL Server é que os proprietários de objetos têm permissões irrevogáveis administrá-los. Você não pode remover os privilégios de um proprietário de objeto e não pode eliminar usuários de um banco de dados se eles possuírem objetos nele.  
@@ -55,13 +56,13 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Separação de esquema de usuário](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Descreve as alterações introduzidas pela separação do esquema do usuário. Inclui o novo comportamento, o seu impacto na propriedade, as exibições do catálogo e as permissões.|  
+|[Separação do Esquema de Usuário](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Descreve as alterações introduzidas pela separação do esquema do usuário. Inclui o novo comportamento, o seu impacto na propriedade, as exibições do catálogo e as permissões.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Securing ADO.NET Applications](../securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
-- [Cenários de segurança do aplicativo no SQL Server](application-security-scenarios-in-sql-server.md)
+- [Protegendo aplicativos ADO.NET](../securing-ado-net-applications.md)
+- [Cenários de Segurança de Aplicativo no SQL Server](application-security-scenarios-in-sql-server.md)
 - [Autenticação no SQL Server](authentication-in-sql-server.md)
 - [Servidor e funções de banco de dados no SQL Server](server-and-database-roles-in-sql-server.md)
 - [Autorização e permissões no SQL Server](authorization-and-permissions-in-sql-server.md)
-- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)
+- [Visão geral do ADO.NET](../ado-net-overview.md)

@@ -11,20 +11,20 @@ helpviewer_keywords:
 - <publisherPolicy> element
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 ms.openlocfilehash: 89fa8a991cc7d0352eb0a13cdfd3a6063ea468e7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73115844"
 ---
-# <a name="publisherpolicy-element"></a>\<elemento de > publisherPolicy Apply
+# <a name="publisherpolicy-element"></a>Elemento \<publisherPolicy>
 Especifica se o runtime aplica a política do editor.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly >** ](dependentassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<publisherpolicy apply >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dependentAssembly>**](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<publisherPolicy>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +50,7 @@ Especifica se o runtime aplica a política do editor.
   
 ### <a name="child-elements"></a>Elementos filho  
 
-nenhuma.  
+Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -58,18 +58,18 @@ nenhuma.
 |-------------|-----------------|  
 |`assemblyBinding`|Contém informações sobre o redirecionamento de versão e os locais dos assemblies.|  
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
-|`dependentAssembly`|Encapsula local do assembly e política de associação para cada assembly. Use um elemento `<dependentAssembly>` para cada assembly.|  
+|`dependentAssembly`|Encapsula local do assembly e política de associação para cada assembly. Use um `<dependentAssembly>` elemento para cada assembly.|  
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- Quando um fornecedor de componentes libera uma nova versão de um assembly, o fornecedor pode incluir uma política de editor para que os aplicativos que usam a versão antiga agora usem a nova versão. Para especificar se a política de editor deve ser aplicada a um determinado assembly, coloque o elemento **\<publisherpolicy apply >** no elemento **\<dependentAssembly >** .  
+ Quando um fornecedor de componentes libera uma nova versão de um assembly, o fornecedor pode incluir uma política de editor para que os aplicativos que usam a versão antiga agora usem a nova versão. Para especificar se a política de editor deve ser aplicada a um determinado assembly, coloque o **\<publisherPolicy>** elemento no **\<dependentAssembly>** elemento.  
   
  A configuração padrão para o atributo **aplicar** é **Sim**. A definição do atributo **aplicar** como **não** substitui as configurações **Sim** anteriores para um assembly.  
   
- A permissão é necessária para que um aplicativo ignore explicitamente a política do Publicador usando o elemento [\<publisherPolicy Apply Apply = "no"/>](publisherpolicy-element.md) no arquivo de configuração do aplicativo. A permissão é concedida pela definição do sinalizador de <xref:System.Security.Permissions.SecurityPermissionFlag> no <xref:System.Security.Permissions.SecurityPermission>. Para obter mais informações, consulte [permissão de segurança de redirecionamento de associação de assembly](../../assembly-binding-redirection-security-permission.md).  
+ A permissão é necessária para que um aplicativo ignore explicitamente a política do editor usando o [\<publisherPolicy apply="no"/>](publisherpolicy-element.md) elemento no arquivo de configuração do aplicativo. A permissão é concedida definindo o <xref:System.Security.Permissions.SecurityPermissionFlag> sinalizador no <xref:System.Security.Permissions.SecurityPermission> . Para obter mais informações, consulte [permissão de segurança de redirecionamento de associação de assembly](../../assembly-binding-redirection-security-permission.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir desativa a política do Publicador para o assembly, `myAssembly`.  
+ O exemplo a seguir desativa a política do Publicador para o assembly, `myAssembly` .  
   
 ```xml  
 <configuration>  
@@ -86,9 +86,9 @@ nenhuma.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de configurações do runtime](index.md)
 - [Esquema de arquivos de configuração](../index.md)
-- [Como o tempo de execução localiza assemblies](../../../deployment/how-the-runtime-locates-assemblies.md)
+- [Como o runtime localiza assemblies](../../../deployment/how-the-runtime-locates-assemblies.md)
 - [Redirecionando versões de assembly](../../redirect-assembly-versions.md)

@@ -40,7 +40,7 @@ Mais informações sobre testes de unidade em projetos do .NET Core:
 Projetos de testes de unidade do .NET Core são compatíveis com:
 
 - [C#](../../csharp/index.yml)
-- [F#](../../fsharp/index.yml)
+- [Fixo #](../../fsharp/index.yml)
 - [Visual Basic](../../visual-basic/index.yml)
 
 Você também pode escolher entre várias estruturas de teste de unidade:

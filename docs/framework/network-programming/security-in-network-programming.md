@@ -1,5 +1,6 @@
 ---
 title: Segurança na programação de rede – .NET Framework
+description: Saiba mais sobre os mecanismos de autenticação de aplicativo populares e permissões de acesso de código que o .NET Framework classes de namespace System.Net dão suporte.
 ms.date: 03/14/2018
 helpviewer_keywords:
 - sending data, Internet security
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
-ms.openlocfilehash: bbe30292e474c9cb5956d96fbbae4d78d464d603
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 546e7223ba4af3029a798fb3edfb503c07e1ab4a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989227"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502165"
 ---
 # <a name="security-in-network-programming"></a>Segurança na programação de rede
 
@@ -39,5 +40,5 @@ Descreve como definir a segurança de acesso de código para aplicativos que usa
   
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Programação de rede no Framework .NET](index.md)  
+[Programação de rede no .NET Framework](index.md)  
 Apresenta as classes nos namespaces <xref:System.Net> e <xref:System.Net.Sockets>.

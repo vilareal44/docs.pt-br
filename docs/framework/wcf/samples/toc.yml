@@ -39,9 +39,9 @@
               href: ajax-service-using-http-post.md
             - name: Serviço AJAX sem configuração
               href: ajax-service-without-configuration.md
-            - name: Serviço de AJAX utilizando tipos complexos
+            - name: Serviço AJAX utilizando tipos complexos
               href: ajax-service-using-complex-types-sample.md
-            - name: Serviço de AJAX com JSON e XML
+            - name: Serviço AJAX com JSON e XML
               href: ajax-service-with-json-and-xml-sample.md
         - name: Associação
           href: binding.md
@@ -215,13 +215,13 @@
         - name: Descoberta
           href: discovery-samples.md
           items:
-            - name: Anúncios
+            - name: Comunicados
               href: announcements-sample.md
             - name: Basic
               href: basic-sample.md
             - name: Configuração
               href: configuration-sample.md
-            - name: Descoberta com escopo
+            - name: Descoberta com escopos
               href: discovery-with-scopes-sample.md
             - name: Critérios de localização personalizados
               href: custom-find-criteria.md
@@ -356,7 +356,7 @@
           items:
             - name: Feed de diagnóstico independente
               href: stand-alone-diagnostics-feed-sample.md
-            - name: Extensões tipadas vagamente
+            - name: Extensões vagamente tipadas
               href: loosely-typed-extensions-sample.md
         - name: Web
           href: web.md
@@ -371,7 +371,7 @@
               href: uritemplate-sample.md
             - name: Tabela de UriTemplate
               href: uritemplate-table-sample.md
-            - name: Distribuidor de tabela de UriTemplate
+            - name: Dispatcher de tabela de UriTemplate
               href: uritemplate-table-dispatcher-sample.md
     - name: Extensibilidade
       href: extensibility.md
@@ -401,7 +401,7 @@
           items:
             - name: Contexto de instância durável
               href: durable-instance-context.md
-            - name: tempo de vida personalizado
+            - name: Tempo de vida personalizado
               href: custom-lifetime.md
             - name: Inicialização de instancialização
               href: instancing-initialization.md
@@ -417,9 +417,9 @@
         - name: Extensibilidade de codificador de mensagem
           href: message-encoder-extensibility.md
           items:
-            - name: 'Codificador personalizado de mensagem: codificador personalizado de texto'
+            - name: 'Codificador de mensagem personalizado: Codificador de texto personalizado'
               href: custom-message-encoder-custom-text-encoder.md
-            - name: 'Codificador de mensagem personalizado: codificador de compactação'
+            - name: 'Codificador de mensagem personalizado: Codificador de compactação'
               href: custom-message-encoder-compression-encoder.md
         - name: Extensibilidade de metadados
           href: metadata-extensibility.md
@@ -458,14 +458,14 @@
               href: strongly-typed-extensions-sample.md
             - name: Formatador do feed (JSON)
               href: feed-formatter-json.md
-            - name: Streaming Feeds
+            - name: Feeds de streaming
               href: streaming-feeds-sample.md
         - name: Extensibilidade de transporte
           href: transport-extensibility.md
           items:
             - name: Ativação de UDP
               href: udp-activation.md
-            - name: 'Transporte: transações personalizadas através de UDP'
+            - name: 'Transporte: transações personalizadas por UDP'
               href: transport-custom-transactions-over-udp-sample.md
             - name: 'Transporte: UDP'
               href: transport-udp.md
@@ -501,7 +501,7 @@
           href: discovery-security-sample.md
         - name: Exemplo de federação
           href: federation-sample.md
-        - name: Weakly-typed JSON Serialization (AJAX)
+        - name: Serialização JSON com tipo fraco (AJAX)
           href: weakly-typed-json-serialization-sample.md
         - name: Serviço de fachada confiável
           href: trusted-facade-service.md

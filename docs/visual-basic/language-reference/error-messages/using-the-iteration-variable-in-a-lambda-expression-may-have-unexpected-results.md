@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
-ms.openlocfilehash: 3335da503b6fb9c33e44266997cc945214a3a365
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: aa3e1d6281af22b301a4697b265ed3fbf23e3de4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913062"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373908"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>O uso de uma variável de iteração em uma expressão lambda pode ter resultados inesperados
-Usar a variável de iteração em uma expressão lambda pode ter resultados inesperados. Em vez disso, crie uma variável local dentro do loop e atribua o valor da variável de iteração.  
+O uso da variável de iteração em uma expressão lambda pode ter resultados inesperados. Em vez disso, crie uma variável local dentro do loop e atribua a ela o valor da variável de iteração.  
   
- Esse aviso aparece quando você usa uma variável de iteração do loop em uma expressão lambda que é declarada dentro do loop. Por exemplo, o exemplo a seguir faz com que o aviso seja exibido.  
+ Esse aviso aparece quando você usa uma variável de iteração de loop em uma expressão lambda que é declarada dentro do loop. Por exemplo, o exemplo a seguir faz com que o aviso apareça.  
   
 ```vb  
 For i As Integer = 1 To 10  
@@ -45,7 +45,7 @@ Module Module1
 End Module  
 ```  
   
- O `For` loop cria uma matriz de expressões lambda, cada um deles retorna o valor da variável de iteração de loop `i`. Quando as expressões lambda são avaliadas na `For Each` loop, você pode esperar ver 0, 1, 2, 3 e 4 exibido, os valores sucessivos `i` no `For` loop. Em vez disso, você pode ver o valor final de `i` exibidos cinco vezes:  
+ O `For` loop cria uma matriz de expressões lambda, cada uma delas retorna o valor da variável de iteração de loop `i` . Quando as expressões lambda são avaliadas no `For Each` loop, você pode esperar ver 0, 1, 2, 3 e 4 exibidos, os valores sucessivos de `i` no `For` loop. Em vez disso, você verá o valor final de `i` exibido cinco vezes:  
   
  `5`  
   
@@ -63,7 +63,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Atribua o valor da variável de iteração para uma variável local e usa a variável local na expressão lambda.  
+- Atribua o valor da variável de iteração a uma variável local e use a variável local na expressão lambda.  
   
 ```vb  
 Module Module1  
@@ -83,6 +83,6 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Expressões Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Expressões lambda](../../programming-guide/language-features/procedures/lambda-expressions.md)

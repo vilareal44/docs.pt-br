@@ -18,19 +18,19 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: 9ac98b5c576c065f8944714c72b492539e0d2f05
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0f15cd870efbdcd00dafa071175be078311a9a37
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "61870234"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289389"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Como usar componentes compatíveis com o padrão assíncrono baseado em evento
 Muitos componentes oferecem a opção de executar seu trabalho de forma assíncrona. Os componentes <xref:System.Media.SoundPlayer> e <xref:System.Windows.Forms.PictureBox>, por exemplo, permite que você carregue sons e imagens "em segundo plano", enquanto o thread principal continua em execução sem interrupções.  
   
- Usar métodos assíncronos em uma classe que dá suporte à [Visão geral do padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) pode ser tão simples quanto anexar um manipulador de eventos ao evento _MethodName_**Completed** do componente, assim como você faria com qualquer outro evento. Quando você chama o método _MethodName_**Async**, seu aplicativo continuará sendo executado sem interrupção até que o evento _MethodName_**Completed** seja gerado. No manipulador de eventos, você pode examinar o parâmetro <xref:System.ComponentModel.AsyncCompletedEventArgs> para determinar se a operação assíncrona foi concluída com êxito ou se foi cancelada.  
+ Usar métodos assíncronos em uma classe que dá suporte à [Visão geral do padrão assíncrono baseado em evento](event-based-asynchronous-pattern-overview.md) pode ser tão simples quanto anexar um manipulador de eventos ao evento _MethodName_**Completed** do componente, assim como você faria com qualquer outro evento. Quando você chama o método _MethodName_**Async**, seu aplicativo continuará sendo executado sem interrupção até que o evento _MethodName_**Completed** seja gerado. No manipulador de eventos, você pode examinar o parâmetro <xref:System.ComponentModel.AsyncCompletedEventArgs> para determinar se a operação assíncrona foi concluída com êxito ou se foi cancelada.  
   
- Para saber mais sobre como usar manipuladores de evento, consulte [Visão geral dos manipuladores de evento](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+ Para saber mais sobre como usar manipuladores de evento, consulte [Visão geral dos manipuladores de evento](../../framework/winforms/event-handlers-overview-windows-forms.md).  
   
  O procedimento a seguir mostra como usar o recurso de carregamento de imagem assíncrono de um controle <xref:System.Windows.Forms.PictureBox>.  
   
@@ -60,7 +60,7 @@ Muitos componentes oferecem a opção de executar seu trabalho de forma assíncr
   
      Conforme o download da imagem prossegue, você pode mover o formulário livremente, minimizá-lo e maximizá-lo.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Como executar uma operação no plano de fundo](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Visão geral do padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Como executar uma operação no plano de fundo](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Visão geral do padrão assíncrono baseado em evento](event-based-asynchronous-pattern-overview.md)

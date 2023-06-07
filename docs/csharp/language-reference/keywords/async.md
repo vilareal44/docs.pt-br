@@ -8,16 +8,16 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 89133339a75c70e3ac86d627065e78d555bff71d
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 279ea2f9875681401c9c7acab922d9e4424e6827
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507198"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062529"
 ---
 # <a name="async-c-reference"></a>async (Referência de C#)
 
-Use o modificador `async` para especificar que um método, uma [expressão lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) ou um [método anônimo](../operators/delegate-operator.md) é assíncrono. Se você usar esse modificador em um método ou expressão, ele será referido como um *método assíncrono*. O exemplo a seguir define um método assíncrono chamado `ExampleMethodAsync`:
+Use o modificador `async` para especificar que um método, uma [expressão lambda](../operators/lambda-expressions.md) ou um [método anônimo](../operators/delegate-operator.md) é assíncrono. Se você usar esse modificador em um método ou expressão, ele será referido como um *método assíncrono*. O exemplo a seguir define um método assíncrono chamado `ExampleMethodAsync`:
   
 ```csharp  
 public async Task<int> ExampleMethodAsync()  
@@ -26,7 +26,7 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
 
-Se você é novo na programação assíncrona ou não entende [ `await` ](../operators/await.md) como um método assíncrono usa o operador para fazer um trabalho potencialmente longo sem bloquear o segmento do chamador, leia a introdução em [Programação Assíncrona com assincronia e aguarde](../../programming-guide/concepts/async/index.md). O código a seguir é encontrado dentro de um método assíncrono e chama o método <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType>:
+Se você for novo na programação assíncrona ou não entender como um método assíncrono usa o [ `await` operador](../operators/await.md) para executar trabalhos potencialmente de longa duração sem bloquear o thread do chamador, leia a introdução em [programação assíncrona com Async e Await](../../programming-guide/concepts/async/index.md). O código a seguir é encontrado dentro de um método assíncrono e chama o método <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType>:
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
@@ -71,7 +71,7 @@ Um método assíncrono pode conter os seguintes tipos de retorno:
 
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
-- [vazio](../builtin-types/void.md). Os métodos `async void` geralmente são desencorajados para código que não são manipuladores de eventos, porque os chamadores não podem `await` esses métodos e devem implementar um mecanismo diferente para relatar a conclusão bem-sucedida ou condições de erro.
+- [void](../builtin-types/void.md). Os métodos `async void` geralmente são desencorajados para código que não são manipuladores de eventos, porque os chamadores não podem `await` esses métodos e devem implementar um mecanismo diferente para relatar a conclusão bem-sucedida ou condições de erro.
 - Começando com o C# 7.0, qualquer tipo que tenha um método acessível `GetAwaiter`. O tipo `System.Threading.Tasks.ValueTask<TResult>` é um exemplo de uma implementação assim. Ele está disponível ao adicionar o pacote NuGet `System.Threading.Tasks.Extensions`.
 
 O método assíncrono não pode declarar os parâmetros [in](./in-parameter-modifier.md), [ref](./ref.md) nem [out](./out-parameter-modifier.md) e também não pode ter um [valor retornado por referência](../../programming-guide/classes-and-structs/ref-returns.md), mas pode chamar métodos que tenham esses parâmetros.  
@@ -84,9 +84,9 @@ A partir do C# 7.0, você retorna outro tipo, geralmente um tipo de valor, que t
 
 Para obter mais informações e exemplos, consulte [Tipos de retorno assíncronos](../../programming-guide/concepts/async/async-return-types.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
-- [Aguardam](../operators/await.md)
-- [Passo a passo: Acessando a Web usando o Async e Aguarde](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Programação assíncrona com async e await](../../programming-guide/concepts/async/index.md)
+- [await](../operators/await.md)
+- [Walkthrough: acessando a Web usando Async e Await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Programação assíncrona com Async e Await](../../programming-guide/concepts/async/index.md)

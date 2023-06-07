@@ -12,32 +12,32 @@ helpviewer_keywords:
 - Seek function
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
-ms.openlocfilehash: 958483be7eb200b5f3d3b46738df0a3c50c4f3c3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3377d3192d14e1737d8a1a83dbff4b9cc26783ec
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347234"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415317"
 ---
 # <a name="mycomputerfilesystem-object"></a>Objeto My.Computer.FileSystem
 Fornece propriedades e métodos para trabalhar com unidades, arquivos e diretórios.  
   
 ## <a name="remarks"></a>Comentários  
- Para obter informações sobre os métodos e as propriedades do objeto `My.Computer.FileSystem`, consulte <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
+ Para obter informações sobre os métodos e as propriedades do `My.Computer.FileSystem` objeto, consulte <xref:Microsoft.VisualBasic.FileIO.FileSystem> .  
   
- Para obter mais informações, consulte [acesso a arquivos com Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
+ Para obter mais informações, consulte [acesso a arquivos com Visual Basic](../../developing-apps/programming/drives-directories-files/file-access.md).  
   
 > [!NOTE]
-> Você também pode usar classes no namespace <xref:System.IO?displayProperty=nameWithType> para trabalhar com unidades, arquivos e diretórios.  
+> Você também pode usar classes no <xref:System.IO?displayProperty=nameWithType> namespace para trabalhar com unidades, arquivos e diretórios.  
   
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Classe:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (fornece acesso ao <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
+ **Classe:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (fornece acesso a <xref:Microsoft.VisualBasic.FileIO.FileSystem> )  
   
  **Assembly:** Visual Basic a biblioteca de tempo de execução (em Microsoft. VisualBasic. dll)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Objeto My.Computer.FileSystem.SpecialDirectories](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)
-- [Objeto My. Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)
+- [Objeto My.Computer.FileSystem.SpecialDirectories](my-computer-filesystem-specialdirectories-object.md)
+- [Objeto My.Computer](my-computer-object.md)

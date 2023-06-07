@@ -1,13 +1,13 @@
 ---
-title: Como escrever uma consulta que encontra elementos com base no contexto
+title: 'Como: escrever uma consulta que localiza elementos com base no contexto'
 ms.date: 07/20/2015
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-ms.openlocfilehash: d25c6d47eee2ae092c84c3db3c08c3e21e7d98d6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 52945cecb1fabe8ebabc836c7e9d61e3570fafb3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346211"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397629"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Como escrever uma consulta que localiza elementos com base no contexto (Visual Basic)
 Muitas vezes você pode ter que escrever uma consulta que seleciona elementos com base no contexto. Você pode querer filtrar com base nos elementos irmãos precedentes ou seguintes. Você pode querer filtrar com base nos elementos filhos ou ancestrais.  
@@ -106,10 +106,10 @@ id = 3
 id = 6  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Linq.XElement.Parse%2A>
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
 - <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>
 - <xref:System.Linq.Enumerable.FirstOrDefault%2A>
-- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Consultas básicas (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)

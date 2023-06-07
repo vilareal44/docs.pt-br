@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 401d1ba9cc2f97e93d7851f96f73b552e6ed6356
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 6fd8113ad39a22c927035fca574151ae8f002685
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378476"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84288323"
 ---
-# <a name="add-element-for-schemaimporterextensions"></a>\<Adicionar> elemento para \< schemaImporterExtensions>
-Adiciona tipos usados pelo <xref:System.Xml.Serialization.XmlSchemaImporter> para mapeamento de tipos XSD para tipos do .NET Framework. Para obter mais informações sobre arquivos de configuração, consulte [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md).  
+# <a name="add-element-for-schemaimporterextensions"></a>Elemento \<add> para \<schemaImporterExtensions>
+Adiciona tipos usados pelo <xref:System.Xml.Serialization.XmlSchemaImporter> para mapeamento de tipos XSD para tipos do .NET Framework. Para obter mais informações sobre arquivos de configuração, consulte [Esquema de arquivos de configuração](../../framework/configure-apps/file-schema/index.md).  
   
  \<configuration>  
 \<system.xml.serialization>  
@@ -64,5 +64,5 @@ Adiciona tipos usados pelo <xref:System.Xml.Serialization.XmlSchemaImporter> par
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
-- [\<Elemento de> System. xml. Serialization](../../../docs/standard/serialization/system-xml-serialization-element.md)
-- [\<Elemento de> schemaImporterExtensions](../../../docs/standard/serialization/schemaimporterextensions-element.md)
+- [\<system.xml.serialization>Elementos](system-xml-serialization-element.md)
+- [\<schemaImporterExtensions>Elementos](schemaimporterextensions-element.md)

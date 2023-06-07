@@ -1,5 +1,6 @@
 ---
 title: Realizando marshaling de um delegado como um método de retorno de chamada
+description: Aprenda a realizar marshaling de um delegado como um método de retorno de chamada. Veja um exemplo de como passar delegados para uma função não gerenciada que é esperada ponteiros de função.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - data marshaling, Callback sample
 - marshaling, Callback sample
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
-ms.openlocfilehash: c71c89e5797745144a2baed2d4846e3d9f9f26be
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bf9ef3b9d48c0869dcc96820c3a2fb6fb608479e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114011"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618942"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Realizando marshaling de um delegado como um método de retorno de chamada
 Este exemplo demonstra como passar delegados para uma função não gerenciada esperando ponteiros de função. Um delegado é uma classe que pode conter uma referência a um método e é equivalente a um ponteiro de função fortemente tipada ou a uma função de retorno de chamada.
@@ -50,7 +51,7 @@ Neste exemplo, a classe `NativeMethods` contém protótipos gerenciados para os 
 [!code-csharp[Conceptual.Interop.Marshaling#38](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/callback.cs#38)]
 [!code-vb[Conceptual.Interop.Marshaling#38](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/callback.vb#38)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Exemplos diversos de marshaling](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))
 - [Tipos de dados de invocação de plataforma](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)

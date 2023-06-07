@@ -6,19 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9f436bca-1b96-494b-a6d2-e102c7551752
-ms.openlocfilehash: 062a98a9cc10e6be00f165cf617de2d92d65acbf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: fa331757fac3f30ee86a24bbd0ee12b5f1031a4b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710356"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288661"
 ---
 # <a name="remove-xml-data-using-xpathnavigator"></a>Remova os dados XML usando XPathNavigator
 A classe de <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métodos usados para remover os nós e valores de um documento XML. Para usar esses métodos, o objeto <xref:System.Xml.XPath.XPathNavigator> deve ser editável, ou seja, sua propriedade <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> deve ser `true`.  
   
  Os objetos <xref:System.Xml.XPath.XPathNavigator> que podem editar um documento XML são criados pelo método <xref:System.Xml.XmlDocument.CreateNavigator%2A> da classe <xref:System.Xml.XmlDocument>. os objetos de<xref:System.Xml.XPath.XPathNavigator> criados pela classe de <xref:System.Xml.XPath.XPathDocument> são somente leitura e qualquer tentativa de usar os métodos de um objeto de <xref:System.Xml.XPath.XPathNavigator> criado por <xref:System.Xml.XPath.XPathDocument> objetos resultados em <xref:System.NotSupportedException>.  
   
- Para saber mais sobre como criar objetos <xref:System.Xml.XPath.XPathNavigator> editáveis, confira [Leitura de dados XML usando XPathDocument e XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md).  
+ Para saber mais sobre como criar objetos <xref:System.Xml.XPath.XPathNavigator> editáveis, confira [Leitura de dados XML usando XPathDocument e XmlDocument](reading-xml-data-using-xpathdocument-and-xmldocument.md).  
   
 ## <a name="removing-nodes"></a>Removendo os nós  
  A classe de <xref:System.Xml.XPath.XPathNavigator> fornece o método de <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> para remover os nós de um documento XML.  
@@ -174,16 +174,16 @@ Console.WriteLine(navigator.OuterXml);
   
  A propriedade <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> altera a marcação XML dos nós filho no qual um objeto <xref:System.Xml.XPath.XPathNavigator> está posicionado no momento com o conteúdo analisado da `string` do XML determinada. Da mesma maneira, a propriedade <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> altera a marcação XML dos nós filho no qual um objeto <xref:System.Xml.XPath.XPathNavigator> está posicionado no momento além do próprio nó atual.  
   
- Além dos métodos descritos neste tópico, <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> e as propriedades de <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> podem ser usados para remover os nós e valores de um documento XML. Para saber mais sobre como usar as propriedades <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> e <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> para modificar nós, confira o tópico [Modificar dados XML usando XPathNavigator](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md).  
+ Além dos métodos descritos neste tópico, <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> e as propriedades de <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> podem ser usados para remover os nós e valores de um documento XML. Para saber mais sobre como usar as propriedades <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> e <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> para modificar nós, confira o tópico [Modificar dados XML usando XPathNavigator](modify-xml-data-using-xpathnavigator.md).  
   
 ## <a name="saving-an-xml-document"></a>Salvando um documento XML  
- Salvando as alterações feitas a um objeto de <xref:System.Xml.XmlDocument> como resultado dos métodos descritos neste tópico é executado usando os métodos da classe <xref:System.Xml.XmlDocument> . Para saber mais sobre como salvar as alterações feitas em um objeto <xref:System.Xml.XmlDocument>, confira [Salvar e gravar um documento](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  
+ Salvando as alterações feitas a um objeto de <xref:System.Xml.XmlDocument> como resultado dos métodos descritos neste tópico é executado usando os métodos da classe <xref:System.Xml.XmlDocument> . Para saber mais sobre como salvar as alterações feitas em um objeto <xref:System.Xml.XmlDocument>, confira [Salvar e gravar um documento](saving-and-writing-a-document.md).  
   
 ## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [Processar dados XML usando o modelo de dados XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Dados XML de inserção usando XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)
-- [Modificar dados XML usando XPathNavigator](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)
+- [Processar dados XML usando o modelo de dados XPath](process-xml-data-using-the-xpath-data-model.md)
+- [Dados XML de inserção usando XPathNavigator](insert-xml-data-using-xpathnavigator.md)
+- [Modificar dados XML usando XPathNavigator](modify-xml-data-using-xpathnavigator.md)

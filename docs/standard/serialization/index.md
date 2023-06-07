@@ -11,10 +11,10 @@ helpviewer_keywords:
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
 ms.openlocfilehash: b3d76c14dc9180a5f19781122d1a42bcae603e76
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "83377241"
 ---
 # <a name="serialization-in-net"></a>Serialização no .NET

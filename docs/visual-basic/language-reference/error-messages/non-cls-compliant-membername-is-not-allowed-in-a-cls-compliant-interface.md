@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
-ms.openlocfilehash: 68e1fb4f55d9f9b140f1b54cfde2bc5f60952dd2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e572189b958612bf9527c82ce702df3ab929a23f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592133"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409394"
 ---
-# <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>Não compatível com CLS \<membername > não é permitido em uma interface compatível com CLS
-Uma propriedade, procedimento ou evento em uma interface é marcado como `<CLSCompliant(True)>` quando a própria interface é marcada como `<CLSCompliant(False)>` ou não está marcado.  
+# <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>\<membername> não compatível com CLS não é permitido em uma interface compatível com CLS
+Uma propriedade, um procedimento ou um evento em uma interface é marcado como `<CLSCompliant(True)>` quando a própria interface está marcada como `<CLSCompliant(False)>` ou não está marcada.  
   
- Para uma interface para estar em conformidade com o [independência de linguagem e componentes independentes de linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS), todos os seus membros devem estar em conformidade.  
+ Para que uma interface seja compatível com a [independência de idioma e com os componentes independentes de linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS), todos os seus membros devem estar em conformidade.  
   
- Quando você aplica a <xref:System.CLSCompliantAttribute> a um elemento de programação, você definir o atributo `isCompliant` parâmetro a `True` ou `False` para indicar a compatibilidade ou incompatibilidade. Não há nenhum padrão para esse parâmetro, e você deve fornecer um valor.  
+ Quando você aplica o a <xref:System.CLSCompliantAttribute> um elemento de programação, você define o parâmetro do atributo `isCompliant` como `True` ou `False` para indicar conformidade ou não conformidade. Não há nenhum padrão para esse parâmetro, e você deve fornecer um valor.  
   
- Se você não se aplicam a <xref:System.CLSCompliantAttribute> a um elemento, ele é considerado incompatível.  
+ Se você não aplicar o <xref:System.CLSCompliantAttribute> a um elemento, será considerado como não compatível.  
   
  Por padrão, esta mensagem é um aviso. Para obter informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
@@ -29,12 +29,12 @@ Uma propriedade, procedimento ou evento em uma interface é marcado como `<CLSCo
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Se você exige conformidade com CLS e tem controle sobre o código-fonte de interface, marque a interface como `<CLSCompliant(True)>` se todos os seus membros estão em conformidade.  
+- Se você precisar de conformidade com CLS e tiver controle sobre o código-fonte da interface, marque a interface como `<CLSCompliant(True)>` se todos os seus membros estiverem em conformidade.  
   
-- Se você exige conformidade com CLS e não tem controle sobre o código de origem da interface, ou se ele não se qualifica para estar em conformidade, defina este membro dentro de uma interface diferente.  
+- Se você precisar de conformidade com CLS e não tiver controle sobre o código-fonte da interface, ou se ele não estiver qualificado para ser compatível, defina esse membro em uma interface diferente.  
   
-- Se você precisar que esse membro permaneça em sua interface atual, remova os <xref:System.CLSCompliantAttribute> de sua definição ou marque-a como `<CLSCompliant(False)>`.  
+- Se você precisar que esse membro permaneça em sua interface atual, remova o <xref:System.CLSCompliantAttribute> de sua definição ou marque-o como `<CLSCompliant(False)>` .  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Instrução Interface](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Instrução Interface](../statements/interface-statement.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1d23247e-c58c-45db-afd8-83aa89cde18e
 topic_type:
 - apiref
-ms.openlocfilehash: be2845d1d660d86447cfbb6f2845a8e68b727e66
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1ff2dd64dc4797bc485550c30f7204644a3adb47
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175506"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492272"
 ---
 # <a name="imetadataimportenumfields-method"></a>Método IMetaDataImport::EnumFields
-Enumera tokens FieldDef para o tipo referenciado pelo token TypeDef especificado.  
+Enumera os tokens FieldDef para o tipo referenciado pelo token de TypeDef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,39 +37,39 @@ HRESULT EnumFields (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [dentro, fora] Um ponteiro para o enumerador.  
+ [entrada, saída] Um ponteiro para o enumerador.  
   
  `cl`  
- [em] O token TypeDef da classe cujos campos devem ser enumerados.  
+ no O token de TypeDef da classe cujos campos devem ser enumerados.  
   
  `rFields`  
- [fora] A lista de tokens FieldDef.  
+ fora A lista de tokens FieldDef.  
   
  `cMax`  
- [em] O tamanho máximo `rFields` da matriz.  
+ no O tamanho máximo da `rFields` matriz.  
   
  `pcTokens`  
- [fora] O número real de tokens FieldDef retornou em `rFields`.  
+ fora O número real de tokens FieldDef retornados em `rFields` .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFields`retornou com sucesso.|  
+|`S_OK`|`EnumFields`retornado com êxito.|  
 |`S_FALSE`|Não há campos para enumerar. Nesse caso, `pcTokens` é zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

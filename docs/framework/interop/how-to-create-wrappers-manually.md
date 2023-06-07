@@ -1,17 +1,18 @@
 ---
-title: Como criar wrappers manualmente
+title: 'Como: Criar wrappers manualmente'
+description: Crie wrappers de tipos COM manualmente. Use um arquivo IDL existente ou biblioteca de tipos, ou crie declarações gerenciadas e exporte o assembly para uma biblioteca de tipos.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-ms.openlocfilehash: a7818a1c08d8538acfacb22dc270d7ef23a7a582
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e562a7e963ff744bf9193821d54dd898db521464
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181423"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619579"
 ---
-# <a name="how-to-create-wrappers-manually"></a>Como criar wrappers manualmente
+# <a name="how-to-create-wrappers-manually"></a>Como: Criar wrappers manualmente
 Se você decidir declarar tipos COM manualmente no código-fonte gerenciado, o melhor lugar para começar é com um arquivo de linguagem IDL ou uma biblioteca de tipos existente. Quando você não tem o arquivo IDL ou não pode gerar um arquivo de biblioteca de tipos, pode simular os tipos COM criando declarações gerenciadas e exportando o assembly resultante para uma biblioteca de tipos.  
   
 ### <a name="to-simulate-com-types-from-managed-source"></a>Para simular tipos COM de uma fonte gerenciada  
@@ -97,11 +98,11 @@ namespace SAServer
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Personalizando RCWs (Runtime Callable Wrappers)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))
 - [Tipos de dados COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))
 - [Como editar assemblies de interoperabilidade](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
 - [Resumo da conversão de bibliotecas de tipos em assemblies](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp. exe (tipo de importador de biblioteca de tipos)](../tools/tlbimp-exe-type-library-importer.md)
-- [TlbExp. exe (tipo de exportador da biblioteca de tipos)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Tlbimp.exe (tipo de importador de biblioteca de tipos)](../tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe (exportador de biblioteca de tipos)](../tools/tlbexp-exe-type-library-exporter.md)

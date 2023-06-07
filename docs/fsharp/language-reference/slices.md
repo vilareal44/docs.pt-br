@@ -1,25 +1,25 @@
 ---
 title: Fatias
-description: Saiba como usar fatias para tipos F# de dados existentes e como definir suas próprias fatias para outros tipos de dados.
+description: 'Saiba como usar fatias para tipos de dados F # existentes e como definir suas próprias fatias para outros tipos de dados.'
 ms.date: 12/23/2019
-ms.openlocfilehash: 928005f2c63ffe099bb64e11ed29bb625e0a54c6
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: d3ddb2c247c36a85842f565f051372c5f2c9a9e9
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980373"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559005"
 ---
 # <a name="slices"></a>Fatias
 
-No F#, uma fatia é um subconjunto de qualquer tipo de dados que tem um método `GetSlice` em sua definição ou em uma [extensão de tipo](type-extensions.md)no escopo. Ele é mais comumente usado com F# matrizes e listas. Este artigo explica como tirar fatias de tipos F# existentes e como definir suas próprias fatias.
+Em F #, uma fatia é um subconjunto de qualquer tipo de dados que tem um `GetSlice` método em sua definição ou em uma [extensão de tipo](type-extensions.md)no escopo. Ele é mais comumente usado com matrizes e listas de F #. Este artigo explica como tirar fatias de tipos existentes de F # e como definir suas próprias fatias.
 
 As fatias são semelhantes aos [indexadores](./members/indexed-properties.md), mas em vez de produzir um único valor da estrutura de dados subjacente, elas produzem várias delas.
 
-F#atualmente tem suporte intrínseco para cadeias de caracteres de divisão, listas, matrizes e matrizes 2D.
+O F # atualmente tem suporte intrínseco para cadeias de caracteres de divisão, listas, matrizes e matrizes 2D.
 
-## <a name="basic-slicing-with-f-lists-and-arrays"></a>Divisão básica com F# listas e matrizes
+## <a name="basic-slicing-with-f-lists-and-arrays"></a>Divisão básica com listas e matrizes F #
 
-Os tipos de dados mais comuns que são segmentados F# são listas e matrizes. O exemplo a seguir demonstra como fazer isso com listas:
+Os tipos de dados mais comuns que são segmentados são listas e matrizes de F #. O exemplo a seguir demonstra como fazer isso com listas:
 
 ```fsharp
 // Generate a list of 100 integers
@@ -59,7 +59,7 @@ printfn "Unbounded end slice: %A" unboundedEnd
 
 ## <a name="slicing-multidimensional-arrays"></a>Fatiando matrizes multidimensionais
 
-F#dá suporte a F# matrizes multidimensionais na biblioteca principal. Assim como acontece com matrizes unidimensionais, as fatias de matrizes multidimensionais também podem ser úteis. No entanto, a introdução de dimensões adicionais exige uma sintaxe ligeiramente diferente para que você possa colocar fatias de linhas e colunas específicas.
+O f # dá suporte a matrizes multidimensionais na biblioteca principal do F #. Assim como acontece com matrizes unidimensionais, as fatias de matrizes multidimensionais também podem ser úteis. No entanto, a introdução de dimensões adicionais exige uma sintaxe ligeiramente diferente para que você possa colocar fatias de linhas e colunas específicas.
 
 Os exemplos a seguir demonstram como dividir uma matriz 2D:
 
@@ -89,13 +89,13 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-Atualmente F# , a biblioteca principal não define `GetSlice` para matrizes 3D. Se você quiser fatiar matrizes 3D ou outras matrizes de mais dimensões, defina o membro `GetSlice` por conta própria.
+A biblioteca de núcleos F # não define atualmente `GetSlice` para matrizes 3D. Se você quiser fatiar matrizes 3D ou outras matrizes de mais dimensões, defina o `GetSlice` membro por conta própria.
 
 ## <a name="defining-slices-for-other-data-structures"></a>Definindo fatias para outras estruturas de dados
 
-A F# biblioteca principal define fatias para um conjunto limitado de tipos. Se você quiser definir fatias para mais tipos de dados, poderá fazer isso na própria definição de tipo ou em uma extensão de tipo.
+A biblioteca de núcleos F # define fatias para um conjunto limitado de tipos. Se você quiser definir fatias para mais tipos de dados, poderá fazer isso na própria definição de tipo ou em uma extensão de tipo.
 
-Por exemplo, veja como você pode definir fatias para a classe <xref:System.ArraySegment%601> para permitir uma manipulação de dados conveniente:
+Por exemplo, veja como você pode definir fatias para a <xref:System.ArraySegment%601> classe para permitir uma manipulação de dados conveniente:
 
 ```fsharp
 open System
@@ -110,23 +110,19 @@ let arr = ArraySegment [| 1 .. 10 |]
 let slice = arr.[2..5] //[ 3; 4; 5]
 ```
 
-### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Use o Outlining para evitar boxing, se necessário
-
-Se você estiver definindo fatias para um tipo que é realmente uma struct, é recomendável `inline` o membro `GetSlice`. O F# compilador otimiza os argumentos opcionais, evitando qualquer alocação de heap como resultado de divisão. Isso é extremamente importante para as construções de fatias, como <xref:System.Span%601> que não podem ser alocadas no heap.
+Outro exemplo que usa <xref:System.Span%601> os <xref:System.ReadOnlySpan%601> tipos e:
 
 ```fsharp
 open System
 
 type ReadOnlySpan<'T> with
-    // Note the 'inline' in the member definition
-    member inline sp.GetSlice(startIdx, endIdx) =
+    member sp.GetSlice(startIdx, endIdx) =
         let s = defaultArg startIdx 0
         let e = defaultArg endIdx sp.Length
         sp.Slice(s, e - s)
 
 type Span<'T> with
-    // Note the 'inline' in the member definition
-    member inline sp.GetSlice(startIdx, endIdx) =
+    member sp.GetSlice(startIdx, endIdx) =
         let s = defaultArg startIdx 0
         let e = defaultArg endIdx sp.Length
         sp.Slice(s, e - s)
@@ -142,9 +138,9 @@ printSpan sp.[0..3] // [|1; 2; 3|]
 printSpan sp.[1..3] // |2; 3|]
 ```
 
-## <a name="built-in-f-slices-are-end-inclusive"></a>As F# fatias internas são inclusivas
+## <a name="built-in-f-slices-are-end-inclusive"></a>As fatias F # internas são inclusivas
 
-Todas as fatias F# intrínsecas no são completas, inclusive ou seja, o limite superior é incluído na fatia. Para uma determinada fatia com `x` de índice inicial e `y`de índice final, a fatia resultante incluirá o valor *YTH* .
+Todas as fatias intrínsecas em F # são inclusivas; ou seja, o limite superior é incluído na fatia. Para uma determinada fatia com índice inicial `x` e índice final `y` , a fatia resultante incluirá o valor *YTH* .
 
 ```fsharp
 // Define a new list
@@ -153,6 +149,6 @@ let xs = [1 .. 10]
 printfn "%A" xs.[2..5] // Includes the 5th index
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Propriedades indexadas](./members/indexed-properties.md)

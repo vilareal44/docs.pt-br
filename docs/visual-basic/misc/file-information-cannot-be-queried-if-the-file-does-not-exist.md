@@ -1,23 +1,23 @@
 ---
-title: Não não possível consultar informações do arquivo se o arquivo não existe
+title: Não será possível consultar as informações do arquivo se ele não existir
 ms.date: 07/20/2015
 ms.assetid: 2bf50d79-2a74-403f-833c-6cabd2c213ce
-ms.openlocfilehash: 3259afc0e371bf00753cef927049ca826ad82848
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 926ac9a2eaf2c8b3daaa8fa3cb01d73b79e2c8b7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624937"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411012"
 ---
-# <a name="file-information-cannot-be-queried-if-the-file-does-not-exist"></a>Não não possível consultar informações do arquivo se o arquivo não existe
-Foi feita uma tentativa para consultar um <xref:System.IO.FileInfo> objeto para obter informações sobre um arquivo que não existe. Normalmente, isso ocorre devido a um erro ao fornecer o nome do arquivo.  
+# <a name="file-information-cannot-be-queried-if-the-file-does-not-exist"></a>Não será possível consultar as informações do arquivo se ele não existir
+Foi feita uma tentativa de consultar um <xref:System.IO.FileInfo> objeto para obter informações sobre um arquivo que não existe. Geralmente isso ocorre devido a um erro ao fornecer o nome do arquivo.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
 - Verifique se você está fornecendo o nome de arquivo correto.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
-- [Como: Obter informações sobre um arquivo no Visual Basic](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/abtzf6f7(v=vs.100))
-- [Como: Analisar caminhos de arquivo](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [My. Computer. FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+- [Como: obter informações sobre um arquivo no Visual Basic](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/abtzf6f7(v=vs.100))
+- [Como: analisar caminhos de arquivo](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

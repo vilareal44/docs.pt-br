@@ -2,22 +2,22 @@
 title: Como modificar árvores de expressão
 ms.date: 07/20/2015
 ms.assetid: d1309fff-28bd-4d8e-a2cf-75725999e8f2
-ms.openlocfilehash: 12ccad6df7d6c7d91ebc290163db362eae173209
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1f052120a2e7e12f5a985adce3ae193afec0e9af
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353753"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410986"
 ---
-# <a name="how-to-modify-expression-trees-visual-basic"></a>Como: modificar árvores de expressão (Visual Basic)
+# <a name="how-to-modify-expression-trees-visual-basic"></a>Como modificar árvores de expressão (Visual Basic)
 
 Este tópico mostra como modificar uma árvore de expressão. As árvores de expressão são imutáveis, o que significa que elas não podem ser diretamente modificadas. Para alterar uma árvore de expressão, você deve criar uma cópia de uma árvore de expressão existente e, ao criar a cópia, faça as alterações necessárias. Você pode usar a classe <xref:System.Linq.Expressions.ExpressionVisitor> para percorrer uma árvore de expressão existente e copiar cada nó que ela visitar.
 
 ## <a name="to-modify-an-expression-tree"></a>Para modificar uma árvore de expressão
 
-1. Crie um novo projeto de **Aplicativo de Console**.
+1. Crie um novo projeto de **aplicativo de console** .
 
-2. Adicione uma instrução `Imports` ao arquivo para o namespace `System.Linq.Expressions`.
+2. Adicione uma `Imports` instrução ao arquivo para o `System.Linq.Expressions` namespace.
 
 3. Adicione a classe `AndAlsoModifier` ao seu projeto.
 
@@ -47,9 +47,9 @@ Este tópico mostra como modificar uma árvore de expressão. As árvores de exp
 
     Essa classe herda a classe <xref:System.Linq.Expressions.ExpressionVisitor> e é especializada para modificar expressões que representam operações `AND` condicionais. Ela muda essas operações de uma `AND` condicional para uma `OR` condicional. Para fazer isso, a classe substitui o método <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> do tipo base, pois as expressões `AND` condicionais são representadas como expressões binárias. No método `VisitBinary`, se a expressão que é passada a ele representa uma operação `AND` condicional, o código cria uma nova expressão que contém o operador `OR` condicional em vez do operador `AND` condicional. Se a expressão que é passada para o `VisitBinary` não representa uma operação `AND` condicional, o método adia para a implementação da classe base. Os métodos da classe base constroem nós que são semelhantes às árvores de expressão que são passadas, mas os nós têm suas subárvores substituídas pelas árvores de expressão que são produzidas recursivamente pelo visitante.
 
-4. Adicione uma instrução `Imports` ao arquivo para o namespace `System.Linq.Expressions`.
+4. Adicione uma `Imports` instrução ao arquivo para o `System.Linq.Expressions` namespace.
 
-5. Adicione código ao método `Main` no arquivo Module1. vb para criar uma árvore de expressão e passá-la para o método que irá modificá-la.
+5. Adicione código ao `Main` método no arquivo Module1. vb para criar uma árvore de expressão e passá-la para o método que irá modificá-la.
 
     ```vb
     Dim expr As Expression(Of Func(Of String, Boolean)) = _
@@ -71,7 +71,7 @@ Este tópico mostra como modificar uma árvore de expressão. As árvores de exp
 
 6. Compile e execute o aplicativo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Como: executar árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [Árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [Como executar árvores de expressão (Visual Basic)](how-to-execute-expression-trees.md)
+- [Árvores de expressão (Visual Basic)](index.md)

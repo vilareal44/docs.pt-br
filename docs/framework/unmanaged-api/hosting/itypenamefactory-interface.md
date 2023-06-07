@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fa4247c4-f4f1-4855-9241-e04d737f5f73
 topic_type:
 - apiref
-ms.openlocfilehash: f224ecc60822862d7c587d7094011d8232fb2b09
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5356ae201dcab423bcb9539031a1a61d23cbb131
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123322"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008606"
 ---
 # <a name="itypenamefactory-interface"></a>Interface ITypeNameFactory
 Fornece métodos para decompor um nome de tipo.  
@@ -27,15 +27,15 @@ Fornece métodos para decompor um nome de tipo.
  Essa interface oferece suporte a infraestrutura do .NET Framework e não se destina a ser usada diretamente do seu código.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Coclass TypeNameFactory](../../../../docs/framework/unmanaged-api/hosting/typenamefactory-coclass.md)
+- [Interfaces de hospedagem](hosting-interfaces.md)
+- [Coclass TypeNameFactory](typenamefactory-coclass.md)

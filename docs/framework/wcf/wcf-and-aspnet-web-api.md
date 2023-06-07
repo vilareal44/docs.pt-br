@@ -1,13 +1,14 @@
 ---
 title: ASP.NET Web API e WCF
+description: Saiba se o WCF ou o ASP.NET Web API é mais adequado para suas necessidades, comparando os principais recursos de cada tecnologia.
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-ms.openlocfilehash: e058b2ea5e9188c365c679ae46c4d7c9de45e4b9
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: de8d1905866c860da96983c2f3d52599e3342403
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452559"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245953"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>ASP.NET Web API e WCF
 WCF é o modelo de programação unificada da Microsoft para a criação de aplicativos orientados a serviços. Ele permite aos desenvolvedores criarem soluções seguras, confiáveis e transacionadas que se integram nas plataformas e interoperam com os investimentos existentes. [ASP.NET Web API](https://www.asp.net/web-api) é uma estrutura que facilita a criação de serviços http que atingem uma ampla variedade de clientes, incluindo navegadores e dispositivos móveis. O ASP.NET Web API é uma plataforma ideal para o desenvolvimento de aplicativos RESTful no .NET Framework. Este tópico apresenta algumas diretrizes para ajudá-lo a decidir qual tecnologia atenderá melhor suas necessidades.  
@@ -26,7 +27,7 @@ WCF é o modelo de programação unificada da Microsoft para a criação de apli
   
  Use o WCF para criar serviços Web confiáveis e seguros que podem ser acessados por uma variedade de transportes. Use ASP.NET Web API para criar serviços baseados em HTTP que estejam acessíveis a partir de uma ampla variedade de clientes. Use o ASP.NET Web API se você estiver criando novos serviços de estilo REST. Embora o WCF forneça algum suporte para escrever serviços de estilo REST, o suporte para REST no ASP.NET Web API é mais completo e todas as melhorias futuras do recurso REST serão feitas no ASP.NET Web API. Se você tiver um serviço WCF existente e quiser expor pontos de extremidade adicionais REST, use WCF e o <xref:System.ServiceModel.WebHttpBinding>.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [O que é o Windows Communication Foundation](whats-wcf.md)
 - [Conceitos fundamentais do Windows Communication Foundation](fundamental-concepts.md)

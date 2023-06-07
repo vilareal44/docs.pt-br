@@ -1,5 +1,6 @@
 ---
 title: MDA dangerousThreadingAPI
+description: Examine o MDA (Assistente de depuração gerenciada) dangerousThreadingAPI, que é ativado quando thread. Suspend é chamado em um thread diferente do thread atual.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - suspending threads
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Suspend method
 - threading [.NET Framework], managed debugging assistants
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
-ms.openlocfilehash: d3fe7d11657c2f9edd1fea7ff639f878f993d6b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9069ccb6f106c83db94f88bc464bc0888d28586c
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174765"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415999"
 ---
 # <a name="dangerousthreadingapi-mda"></a>MDA dangerousThreadingAPI
 O MDA (assistente para depuração gerenciada) `dangerousThreadingAPI` é ativado quando o método <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> é chamado em um thread que não seja o thread atual.  
@@ -65,7 +66,7 @@ Thread t = new Thread(delegate() { Thread.Sleep(1000); });
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Threading.Thread>
 - [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -1,5 +1,5 @@
 ---
-title: Como ler a partir de arquivos binários
+title: 'Como: ler de arquivos binários'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - binary files [Visual Basic], reading from
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ReadAllBytes method [Visual Basic], reading from binary files
 - My.Computer.FileSystem object, reading from binary files
 ms.assetid: d2b1269e-24b6-42e0-9414-ae708db282d8
-ms.openlocfilehash: c33bc72a5c79901e3715ed6a587ffdb8e3565e48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b4108034b86d99143fff6943e68ca0077ebd21b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74335288"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359923"
 ---
 # <a name="how-to-read-from-binary-files-in-visual-basic"></a>Como ler a partir de arquivos binários no Visual Basic
 
@@ -52,10 +52,10 @@ O objeto `My.Computer.FileSystem` fornece o método `ReadAllBytes` para ler arqu
   
  Verifique todas as entradas antes de usar os dados no seu aplicativo. O conteúdo do arquivo pode não ser esperado, e os métodos para ler o arquivo podem falhar.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
-- [Ler arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [Como ler a partir de arquivos de texto com vários formatos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
-- [Armazenar dados e ler da área de transferência](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)
+- [Ler arquivos](reading-from-files.md)
+- [Como: ler de arquivos de texto com vários formatos](how-to-read-from-text-files-with-multiple-formats.md)
+- [Armazenar dados e ler da área de transferência](../computer-resources/storing-data-to-and-reading-from-the-clipboard.md)

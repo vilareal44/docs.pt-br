@@ -1,17 +1,18 @@
 ---
-title: Como criar uma união C/C++ usando atributos (C#)
+title: Como criar uma União C/C++ usando atributos (C#)
+description: Saiba como usar atributos para personalizar como as estruturas são colocadas na memória em C#. Este exemplo implementa o equivalente de uma União de C/C++.
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: ff8ce560444581a28b257820573224f89a274cd9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 766a070105441630dfd8fecf7b9f68fa6818fe50
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141578"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925066"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Como criar uma união C/C++ usando atributos (C#)
+# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Como criar uma União C/C++ usando atributos (C#)
 
-Usando atributos, você pode personalizar como as estruturas são dispostas na memória. Por exemplo, você pode criar o que é conhecido como uma união no C/C++ usando os atributos `StructLayout(LayoutKind.Explicit)` e `FieldOffset`.
+Usando atributos, você pode personalizar a forma como as estruturas são colocadas na memória. Por exemplo, você pode criar o que é conhecido como uma união no C/C++ usando os atributos `StructLayout(LayoutKind.Explicit)` e `FieldOffset`.
 
 ## <a name="example"></a>Exemplo
 
@@ -69,11 +70,11 @@ struct TestExplicit
 
 Os dois campos inteiros, `i1` e `i2`, compartilham os mesmos locais de memória que `lg`. Esse tipo de controle sobre o layout do struct é útil ao usar a invocação de plataforma.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [C# Guia de Programação](../../index.md)
+- [Guia de programação C#](../../index.md)
 - [Atributos](../../../../standard/attributes/index.md)
 - [Reflexão (C#)](../reflection.md)
 - [Atributos (C#)](index.md)

@@ -3,12 +3,12 @@ title: Tipos de nós reconhecidos com consultas XPath
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1d33e22d-18e5-43f8-a466-2e3d0a8dd094
-ms.openlocfilehash: cc1aa668ccf6fc7f210f48a28cf76b364459c784
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b9fc55b11455491406970af2a9232b277160875f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710538"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288726"
 ---
 # <a name="node-types-recognized-with-xpath-queries"></a>Tipos de nós reconhecidos com consultas XPath
 Os tipos de nós reconhecidas em uma consulta XPath não são os mesmos tipos de nós localizados em Document Object Model (DOM).  
@@ -42,16 +42,16 @@ Os tipos de nós reconhecidas em uma consulta XPath não são os mesmos tipos de
   
  O tipo de nó de namespace é uma adição ao modelo de dados XPath e não é um tipo de nó reconhecido DOM.  
   
- Para saber mais sobre o elemento de navegação, o atributo e nós de namespace, confira os tópicos [Navegação do nó usando XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) e [Navegação do nó de atributo e do namespace usando XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md).  
+ Para saber mais sobre o elemento de navegação, o atributo e nós de namespace, confira os tópicos [Navegação do nó usando XPathNavigator](node-set-navigation-using-xpathnavigator.md) e [Navegação do nó de atributo e do namespace usando XPathNavigator](attribute-and-namespace-node-navigation-using-xpathnavigator.md).  
   
 ## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [Processar dados XML usando o modelo de dados XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Selecionar dados XML usando XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)
-- [Avalia as expressões XPath usando XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)
-- [Nós compatíveis usando XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)
-- [Consultas XPath e namespaces](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
-- [Expressões XPath compilados](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
+- [Processar dados XML usando o modelo de dados XPath](process-xml-data-using-the-xpath-data-model.md)
+- [Selecionar dados XML usando XPathNavigator](select-xml-data-using-xpathnavigator.md)
+- [Avalia as expressões XPath usando XPathNavigator](evaluate-xpath-expressions-using-xpathnavigator.md)
+- [Nós compatíveis usando XPathNavigator](matching-nodes-using-xpathnavigator.md)
+- [Consultas XPath e namespaces](xpath-queries-and-namespaces.md)
+- [Expressões XPath compilados](compiled-xpath-expressions.md)

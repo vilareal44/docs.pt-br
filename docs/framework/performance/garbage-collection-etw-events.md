@@ -1,21 +1,22 @@
 ---
 title: Eventos ETW de coleta de lixo
+description: Exiba informações detalhadas sobre eventos ETW de coleta de lixo. Os eventos cobertos incluem GCStart_V1, GCEnd_V1, GCHeapStats_V1, GCCreateSegment_V1 e muito mais.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - GC events
 - garbage collection events [.NET Framework]
 - ETW, garbage collection events (CLR)
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
-ms.openlocfilehash: 5ff214314b92796f4a4a89ddd33a976d8b1f21d1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 58ad874ef6a12c18c404640aa66577c391573534
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716065"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309736"
 ---
 # <a name="garbage-collection-etw-events"></a>Eventos ETW de coleta de lixo
 
-Esses eventos coletam informações relacionadas à coleta de lixo. Eles ajudam no diagnóstico e na depuração, inclusive determinando quantas vezes a coleta de lixo foi executada, a quantidade de memória liberada durante a coleta de lixo e assim por diante.
+ Esses eventos coletam informações referentes à coleta de lixo. Eles ajudam no diagnóstico e na depuração, inclusive determinando quantas vezes a coleta de lixo foi executada, a quantidade de memória liberada durante a coleta de lixo e assim por diante.
 
 Esta categoria consiste nos seguintes eventos:
 
@@ -38,13 +39,13 @@ Esta categoria consiste nos seguintes eventos:
 
 A tabela a seguir mostra a palavra-chave e o nível. Para obter mais informações, consulte [palavras-chave e níveis do ETW do CLR](clr-etw-keywords-and-levels.md).
 
-|Palavra-chave para acionar o evento|Nível|
+|Palavra-chave para acionar o evento|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|Informativo (4)|
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Acionado quando|
+|Evento|ID do evento|Acionado quando|
 |-----------|--------------|-----------------|
 |`GCStart_V1`|1|Uma coleta de lixo foi iniciada.|
 
@@ -52,23 +53,23 @@ A seguinte tabela mostra os dados do evento:
 
 |Nome do campo|Tipo de dados|Descrição|
 |----------------|---------------|-----------------|
-|{1&gt;{2&gt;Contagem&lt;2}&lt;1}|win:UInt32|A *n*° de coleta de lixo.|
+|Contagem|win:UInt32|A *n*° de coleta de lixo.|
 |Profundidade|win:UInt32|A geração que está sendo coletada.|
-|Reason|win:UInt32|Motivo do gatilho da coleta de lixo:<br /><br /> 0x0 – Alocação de heap de objetos pequenos.<br /><br /> 0x1 – Induzido.<br /><br /> 0x2 – Memória insuficiente.<br /><br /> 0x3 – Vazio.<br /><br /> 0x4 – Alocação de heap de objetos grandes.<br /><br /> 0x5 – Espaço insuficiente (para heap de objetos pequenos).<br /><br /> 0x6 – Espaço insuficiente (para heap de objetos grandes).<br /><br /> 0x7 – Induzido, mas não forçado como bloqueio.|
-|{1&gt;Tipo&lt;1}|win:UInt32|0x0 – A coleta de lixo de bloqueio ocorreu fora da coleta de lixo em segundo plano.<br /><br /> 0x1 – Coleta de lixo em segundo plano.<br /><br /> 0x2 – A coleta de lixo de bloqueio ocorreu durante a coleta de lixo em segundo plano.|
+|Motivo|win:UInt32|Motivo do gatilho da coleta de lixo:<br /><br /> 0x0 – Alocação de heap de objetos pequenos.<br /><br /> 0x1 – Induzido.<br /><br /> 0x2 – Memória insuficiente.<br /><br /> 0x3 – Vazio.<br /><br /> 0x4 – Alocação de heap de objetos grandes.<br /><br /> 0x5 – Espaço insuficiente (para heap de objetos pequenos).<br /><br /> 0x6 – Espaço insuficiente (para heap de objetos grandes).<br /><br /> 0x7 – Induzido, mas não forçado como bloqueio.|
+|Tipo|win:UInt32|0x0 – A coleta de lixo de bloqueio ocorreu fora da coleta de lixo em segundo plano.<br /><br /> 0x1 – Coleta de lixo em segundo plano.<br /><br /> 0x2 – A coleta de lixo de bloqueio ocorreu durante a coleta de lixo em segundo plano.|
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|
 
 ## <a name="gcend_v1-event"></a>Evento GCEnd_V1
 
 A seguinte tabela mostra a palavra-chave e o nível:
 
-|Palavra-chave para acionar o evento|Nível|
+|Palavra-chave para acionar o evento|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|Informativo (4)|
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Acionado quando|
+|Evento|ID do evento|Acionado quando|
 |-----------|--------------|-----------------|
 |`GCEnd_V1`|2|A coleta de lixo foi encerrada.|
 
@@ -76,7 +77,7 @@ A seguinte tabela mostra os dados do evento:
 
 |Nome do campo|Tipo de dados|Descrição|
 |----------------|---------------|-----------------|
-|{1&gt;{2&gt;Contagem&lt;2}&lt;1}|win:UInt32|A *n*° de coleta de lixo.|
+|Contagem|win:UInt32|A *n*° de coleta de lixo.|
 |Profundidade|win:UInt32|A geração que foi coletada.|
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|
 
@@ -84,13 +85,13 @@ A seguinte tabela mostra os dados do evento:
 
 A seguinte tabela mostra a palavra-chave e o nível:
 
-|Palavra-chave para acionar o evento|Nível|
+|Palavra-chave para acionar o evento|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|Informativo (4)|
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Descrição|
+|Evento|ID do evento|Descrição|
 |-----------|--------------|-----------------|
 |`GCHeapStats_V1`|4|Mostra as estatísticas de heap no final de cada coleta de lixo.|
 
@@ -117,13 +118,13 @@ A seguinte tabela mostra os dados do evento:
 
 A seguinte tabela mostra a palavra-chave e o nível:
 
-|Palavra-chave para acionar o evento|Nível|
+|Palavra-chave para acionar o evento|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|Informativo (4)|
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Acionado quando|
+|Evento|ID do evento|Acionado quando|
 |-----------|--------------|-----------------|
 |`GCCreateSegment_V1`|5|Um novo segmento de coleta de lixo foi criado. Além disso, quando o rastreamento é habilitado em um processo que já está em execução, esse evento é acionado para cada segmento existente.|
 
@@ -131,9 +132,9 @@ A seguinte tabela mostra os dados do evento:
 
 |Nome do campo|Tipo de dados|Descrição|
 |----------------|---------------|-----------------|
-|Address|win:UInt64|O endereço do segmento.|
+|Endereço|win:UInt64|O endereço do segmento.|
 |Tamanho|win:UInt64|O tamanho do segmento.|
-|{1&gt;Tipo&lt;1}|win:UInt32|0x0 – Heap de objetos pequenos.<br /><br /> 0x1 – Heap de objetos grandes.<br /><br /> 0x2 – Heap somente leitura.|
+|Tipo|win:UInt32|0x0 – Heap de objetos pequenos.<br /><br /> 0x1 – Heap de objetos grandes.<br /><br /> 0x2 – Heap somente leitura.|
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|
 
 Observe que o tamanho de segmentos alocados pelo coletor de lixo é específico à implementação e está sujeito a alterações a qualquer momento, incluindo em atualizações periódicas. Seu aplicativo nunca deve fazer suposições sobre o tamanho de um segmento em particular nem depender dele, tampouco deve tentar configurar a quantidade de memória disponível para alocações de segmento.
@@ -142,13 +143,13 @@ Observe que o tamanho de segmentos alocados pelo coletor de lixo é específico 
 
 A seguinte tabela mostra a palavra-chave e o nível:
 
-|Palavra-chave para acionar o evento|Nível|
+|Palavra-chave para acionar o evento|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|Informativo (4)|
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Acionado quando|
+|Evento|ID do evento|Acionado quando|
 |-----------|--------------|-----------------|
 |`GCFreeSegment_V1`|6|Um segmento de coleta de lixo foi liberado.|
 
@@ -156,20 +157,20 @@ A seguinte tabela mostra os dados do evento:
 
 |Nome do campo|Tipo de dados|Descrição|
 |----------------|---------------|-----------------|
-|Address|win:UInt64|O endereço do segmento.|
+|Endereço|win:UInt64|O endereço do segmento.|
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|
 
 ## <a name="gcrestarteebegin_v1-event"></a>Evento GCRestartEEBegin_V1
 
 A seguinte tabela mostra a palavra-chave e o nível:
 
-|Palavra-chave para acionar o evento|Nível|
+|Palavra-chave para acionar o evento|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|Informativo (4)|
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Acionado quando|
+|Evento|ID do evento|Acionado quando|
 |-----------|--------------|-----------------|
 |`GCRestartEEBegin_V1`|7|A continuidade da suspensão do Common Language Runtime foi iniciada.|
 
@@ -179,13 +180,13 @@ Nenhum dado do evento.
 
 A seguinte tabela mostra a palavra-chave e o nível:
 
-|Palavra-chave para acionar o evento|Nível|
+|Palavra-chave para acionar o evento|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|Informativo (4)|
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Acionado quando|
+|Evento|ID do evento|Acionado quando|
 |-----------|--------------|-----------------|
 |`GCRestartEEEnd_V1`|3|A continuidade da suspensão do Common Language Runtime foi encerrada.|
 
@@ -195,13 +196,13 @@ Nenhum dado do evento.
 
 A seguinte tabela mostra a palavra-chave e o nível:
 
-|Palavra-chave para acionar o evento|Nível|
+|Palavra-chave para acionar o evento|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|Informativo (4)|
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Acionado quando|
+|Evento|ID do evento|Acionado quando|
 |-----------|--------------|-----------------|
 |`GCSuspendEE_V1`|9|Início da suspensão do mecanismo de execução da coleta de lixo.|
 
@@ -209,21 +210,21 @@ A seguinte tabela mostra os dados do evento:
 
 |Nome do campo|Tipo de dados|Descrição|
 |----------------|---------------|-----------------|
-|Reason|win:UInt16|0x0 – Outros.<br /><br /> 0x1 – Coleta de lixo.<br /><br /> 0x2 – Desligamento do domínio do aplicativo.<br /><br /> 0x3 – Densidade do código.<br /><br /> 0x4 – Desligamento.<br /><br /> 0x5 – Depurador.<br /><br /> 0x6 – Preparação para a coleta de lixo.|
-|{1&gt;{2&gt;Contagem&lt;2}&lt;1}|win:UInt32|A contagem de GC no momento. Normalmente, você verá um evento de Início de GC posterior depois disso e sua Contagem será essa Contagem + 1, conforme aumentamos o Índice de GC durante uma coleta de lixo.|
+|Motivo|win:UInt16|0x0 – Outros.<br /><br /> 0x1 – Coleta de lixo.<br /><br /> 0x2 – Desligamento do domínio do aplicativo.<br /><br /> 0x3 – Densidade do código.<br /><br /> 0x4 – Desligamento.<br /><br /> 0x5 – Depurador.<br /><br /> 0x6 – Preparação para a coleta de lixo.|
+|Contagem|win:UInt32|A contagem de GC no momento. Normalmente, você verá um evento de Início de GC posterior depois disso e sua Contagem será essa Contagem + 1, conforme aumentamos o Índice de GC durante uma coleta de lixo.|
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|
 
 ## <a name="gcsuspendeeend_v1-event"></a>Evento GCSuspendEEEnd_V1
 
 A seguinte tabela mostra a palavra-chave e o nível:
 
-|Palavra-chave para acionar o evento|Nível|
+|Palavra-chave para acionar o evento|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|Informativo (4)|
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Acionado quando|
+|Evento|ID do evento|Acionado quando|
 |-----------|--------------|-----------------|
 |`GCSuspendEEEnd_V1`|8|Fim da suspensão do mecanismo de execução da coleta de lixo.|
 
@@ -233,13 +234,13 @@ Nenhum dado do evento.
 
 A seguinte tabela mostra a palavra-chave e o nível:
 
-|Palavra-chave para acionar o evento|Nível|
+|Palavra-chave para acionar o evento|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|Informativo (4)|
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Acionado quando|
+|Evento|ID do evento|Acionado quando|
 |-----------|--------------|-----------------|
 |`GCAllocationTick_V2`|10|A cada vez, aproximadamente 100 KB são alocados.|
 
@@ -251,21 +252,21 @@ A seguinte tabela mostra os dados do evento:
 |AllocationKind|win:UInt32|0x0 – Alocação de objeto pequeno (a alocação está no heap de objetos pequenos).<br /><br /> 0x1 – Alocação de objeto grande (a alocação está no heap de objetos grandes).|
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|
 |AllocationAmount64|win:UInt64|O tamanho de alocação, em bytes. Esse valor é preciso para alocações muito grandes.|
-|Digitar ID|win:Pointer|O endereço da MethodTable. Quando há vários tipos de objetos que foram alocados durante esse evento, esse é o endereço da MethodTable que corresponde ao último objeto alocado (o objeto que fez com que o limite de 100 KB fosse excedido).|
-|NomeDoTipo|win:UnicodeString|O nome do tipo que foi alocado. Quando há vários tipos de objetos que foram alocados durante esse evento, esse é o tipo do último objeto alocado (o objeto que fez com que o limite de 100 KB fosse excedido).|
+|TypeId|win:Pointer|O endereço da MethodTable. Quando há vários tipos de objetos que foram alocados durante esse evento, esse é o endereço da MethodTable que corresponde ao último objeto alocado (o objeto que fez com que o limite de 100 KB fosse excedido).|
+|TypeName|win:UnicodeString|O nome do tipo que foi alocado. Quando há vários tipos de objetos que foram alocados durante esse evento, esse é o tipo do último objeto alocado (o objeto que fez com que o limite de 100 KB fosse excedido).|
 |HeapIndex|win:UInt32|O heap em que o objeto foi alocado. Esse valor é 0 (zero) durante a execução da coleta de lixo da estação de trabalho.|
 
 ## <a name="gcfinalizersbegin_v1-event"></a>Evento GCFinalizersBegin_V1
 
 A seguinte tabela mostra a palavra-chave e o nível:
 
-|Palavra-chave para acionar o evento|Nível|
+|Palavra-chave para acionar o evento|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|Informativo (4)|
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Acionado quando|
+|Evento|ID do evento|Acionado quando|
 |-----------|--------------|-----------------|
 |`GCFinalizersBegin_V1`|14|O início da execução dos finalizadores.|
 
@@ -275,13 +276,13 @@ Nenhum dado do evento.
 
 A seguinte tabela mostra a palavra-chave e o nível:
 
-|Palavra-chave para acionar o evento|Nível|
+|Palavra-chave para acionar o evento|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|Informativo (4)|
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Acionado quando|
+|Evento|ID do evento|Acionado quando|
 |-----------|--------------|-----------------|
 |`GCFinalizersEnd_V1`|13|O fim da execução dos finalizadores.|
 
@@ -289,21 +290,21 @@ A seguinte tabela mostra os dados do evento:
 
 |Nome do campo|Tipo de dados|Descrição|
 |----------------|---------------|-----------------|
-|{1&gt;{2&gt;Contagem&lt;2}&lt;1}|win:UInt32|O número de finalizadores que foram executados.|
+|Contagem|win:UInt32|O número de finalizadores que foram executados.|
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|
 
 ## <a name="gccreateconcurrentthread_v1-event"></a>Evento GCCreateConcurrentThread_V1
 
 A seguinte tabela mostra a palavra-chave e o nível:
 
-|Palavra-chave para acionar o evento|Nível|
+|Palavra-chave para acionar o evento|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|Informativo (4)|
 |`ThreadingKeyword` (0x10000)|Informativo (4)|
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Acionado quando|
+|Evento|ID do evento|Acionado quando|
 |-----------|--------------|-----------------|
 |`GCCreateConcurrentThread_V1`|11|O thread da coleta de lixo simultânea foi criado.|
 
@@ -313,19 +314,19 @@ Nenhum dado do evento.
 
 A seguinte tabela mostra a palavra-chave e o nível:
 
-|Palavra-chave para acionar o evento|Nível|
+|Palavra-chave para acionar o evento|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|Informativo (4)|
 |`ThreadingKeyword` (0x10000)|Informativo (4)|
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Acionado quando|
+|Evento|ID do evento|Acionado quando|
 |-----------|--------------|-----------------|
 |`GCTerminateConcurrentThread_V1`|12|O thread da coleta de lixo simultânea foi terminado.|
 
 Nenhum dado do evento.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Eventos de CLR ETW](clr-etw-events.md)
+- [Eventos ETW no CLR](clr-etw-events.md)

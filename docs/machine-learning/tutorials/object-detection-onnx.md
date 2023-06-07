@@ -3,15 +3,15 @@ title: 'Tutorial: detectar objetos usando um modelo de aprendizado profundo do O
 description: Este tutorial mostra como usar um modelo de aprendizado profundo ONNX pré-treinado no ML.NET para detectar objetos em imagens.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 01/30/2020
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b9fa8ef74dd4f8070884f6cee4eb2af3082af5e5
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 4759a661646b08ea6a93cab030a19af2cfeaca16
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394901"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803398"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: detectar objetos usando ONNX no ML.NET
 
@@ -64,7 +64,7 @@ Há diferentes tipos de redes neurais, as mais comuns são a MLP (Perceptron Mul
 
 ### <a name="understand-the-model"></a>Entender o modelo
 
-A detecção de objetos é uma tarefa de processamento de imagens. Portanto, os modelos de aprendizado profundo mais treinados para resolver esse problema são as CNNs. O modelo usado neste tutorial é o pequeno modelo de YOLOv2, uma versão mais compacta do modelo YOLOv2 descrito no documento: ["YOLO9000: melhor, mais rápido e mais forte" por Redmon e Fadhari](https://arxiv.org/pdf/1612.08242.pdf). O Tiny YOLOv2 é treinado no conjunto de dados do Pascal VOC e é composto por 15 camadas que podem prever 20 classes diferentes de objetos. Como o Tiny YOLOv2 é uma versão condensada do modelo YOLOv2 original, é feita uma compensação entre velocidade e precisão. As diferentes camadas que compõem o modelo podem ser visualizadas usando ferramentas como o Netron. Inspecionar o modelo produziria um mapeamento das conexões entre todas as camadas que compõem a rede neural, em que cada camada conteria o nome da camada junto com as dimensões da respectiva entrada/saída. As estruturas de dados usadas para descrever as entradas e as saídas do modelo são conhecidas como tensores. Os tensores podem ser entendidos como contêineres que armazenam dados em N dimensões. No caso do Tiny YOLOv2, o nome da camada de entrada é `image` e ele espera um tensor de dimensões `3 x 416 x 416`. O nome da camada de saída é `grid` e gera um tensor de saída de dimensões `125 x 13 x 13`.
+A detecção de objetos é uma tarefa de processamento de imagens. Portanto, os modelos de aprendizado profundo mais treinados para resolver esse problema são as CNNs. O modelo usado neste tutorial é o pequeno modelo de YOLOv2, uma versão mais compacta do modelo YOLOv2 descrito no documento: ["YOLO9000: melhor, mais rápido e mais forte" por Redmon e Farhadi](https://arxiv.org/pdf/1612.08242.pdf). O Tiny YOLOv2 é treinado no conjunto de dados do Pascal VOC e é composto por 15 camadas que podem prever 20 classes diferentes de objetos. Como o Tiny YOLOv2 é uma versão condensada do modelo YOLOv2 original, é feita uma compensação entre velocidade e precisão. As diferentes camadas que compõem o modelo podem ser visualizadas usando ferramentas como o Netron. Inspecionar o modelo produziria um mapeamento das conexões entre todas as camadas que compõem a rede neural, em que cada camada conteria o nome da camada junto com as dimensões da respectiva entrada/saída. As estruturas de dados usadas para descrever as entradas e as saídas do modelo são conhecidas como tensores. Os tensores podem ser entendidos como contêineres que armazenam dados em N dimensões. No caso do Tiny YOLOv2, o nome da camada de entrada é `image` e ele espera um tensor de dimensões `3 x 416 x 416`. O nome da camada de saída é `grid` e gera um tensor de saída de dimensões `125 x 13 x 13`.
 
 ![Camada de entrada sendo dividida em camadas ocultas e, em seguida, camada de saída](./media/object-detection-onnx/netron-model-map-layers.png)
 
@@ -90,11 +90,13 @@ Agora que você tem um entendimento geral do que é o ONNX e de como o Tiny YOLO
 
 1. Instalar o **Pacote NuGet Microsoft.ML**:
 
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
     - No Gerenciador de Soluções, clique com o botão direito do mouse no seu projeto e selecione **Gerenciar Pacotes NuGet**.
     - Escolha "nuget.org" como a fonte do pacote, selecione a guia Browse, procure por **Microsoft.ML**.
     - Selecione o botão **Instalar**.
     - Selecione o botão **OK** na caixa de diálogo **Visualizar Alterações** e selecione o botão **Aceito** na caixa de diálogo **Aceitação da Licença**, se concordar com o termos de licença para os pacotes listados.
-    - Repita essas etapas para **Microsoft.ML.ImageAnalytics** e **Microsoft.ML.OnnxTransformer**.
+    - Repita essas etapas para **Microsoft. ml. ImageAnalytics**, **Microsoft. ml. OnnxTransformer** e **Microsoft. ml. OnnxRuntime**.
 
 ### <a name="prepare-your-data-and-pre-trained-model"></a>Prepare seus dados e um modelo pré-treinado
 
@@ -102,7 +104,7 @@ Agora que você tem um entendimento geral do que é o ONNX e de como o Tiny YOLO
 
 1. Copie o diretório `assets` no diretório do projeto *ObjectDetection*. Este diretório e seus subdiretórios contêm os arquivos de imagem (exceto para o modelo Tiny YOLOv2, que você baixará e adicionará na próxima etapa) necessários para este tutorial.
 
-1. Baixe o [modelo Tiny YOLOv2](https://onnxzoo.blob.core.windows.net/models/opset_8/tiny_yolov2/tiny_yolov2.tar.gz) de [ONNX Model Zoo](https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny_yolov2) e descompacte.
+1. Baixe o [modelo Tiny YOLOv2](https://onnxzoo.blob.core.windows.net/models/opset_8/tiny_yolov2/tiny_yolov2.tar.gz) de [ONNX Model Zoo](https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny-yolov2) e descompacte.
 
     Abra o prompt de comando e insira o seguinte comando:
 
@@ -665,7 +667,7 @@ Após a instrução try-catch, adicione a lógica complementar para indicar que 
 
 [!code-csharp [EndProcessLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L62-L63)]
 
-Pronto!
+É isso!
 
 ## <a name="results"></a>Resultados
 

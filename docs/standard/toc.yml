@@ -46,6 +46,8 @@
           href: base-types/type-conversion.md
         - name: Tabelas de conversão de tipos
           href: base-types/conversion-tables.md
+        - name: Escolha entre os tipos anônimo e tupla
+          href: base-types/choosing-between-anonymous-and-tuple.md
         - name: 'Formatar números, datas e outros tipos'
           items:
             - name: Visão geral
@@ -223,6 +225,10 @@
           displayName: 'unmanaged resources, memory management'
         - name: Implementar um método Dispose
           href: garbage-collection/implementing-dispose.md
+          displayName: 'using, Dispose, dispose pattern, IDisposable'
+        - name: Implementar um método DisposeAsync
+          href: garbage-collection/implementing-disposeasync.md
+          displayName: 'await using, DisposeAsync, async dispose pattern, IAsyncDisposable'
         - name: Usar objetos que implementam IDisposable
           href: garbage-collection/using-objects.md
     - name: Coleta de lixo
@@ -738,6 +744,8 @@
         - name: Visão geral
           href: serialization/binary-serialization.md
           displayName: binary serialization
+        - name: Guia de segurança do BinaryFormatter
+          href: serialization/binaryformatter-security-guide.md
         - name: Conceitos de serialização
           href: serialization/serialization-concepts.md
         - name: Serialização básica

@@ -1,5 +1,6 @@
 ---
-title: 'Instruções passo a passo: emitindo código em cenários de confiança parcial'
+title: 'Passo a passo: Emitindo o código em cenários de confiança parcial'
+description: Consulte como emitir código em cenários de confiança parcial. A emissão de reflexão usa as mesmas APIs, mas alguns recursos precisam de permissões especiais em código parcialmente confiável.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
-ms.openlocfilehash: fd420c9754494b95c55df403edec87743572db03
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 70adb3ce67b45459b18741948092a912f6173731
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129986"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865184"
 ---
-# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Instruções passo a passo: emitindo código em cenários de confiança parcial
+# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Passo a passo: Emitindo o código em cenários de confiança parcial
 
 A emissão de reflexão usa a mesma API definida na confiança total ou parcial, porém alguns recursos exigem permissões especiais em código parcialmente confiável. Além disso, a emissão de reflexão tem um recurso, os métodos dinâmicos hospedados anonimamente, que é projetado para ser usado com confiança parcial e por assemblies transparentes de segurança.
 
@@ -221,7 +222,7 @@ Essa comparação mostra como <xref:System.Security.Permissions.ReflectionPermis
 
 - Se você compilar esse exemplo de código no Visual Studio, deverá alterar o nome da classe para incluir o namespace ao passá-lo para o método <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. Por padrão, o namespace é o nome do projeto. Por exemplo, se o projeto for “PartialTrust”, o nome de classe deverá ser “PartialTrust.Worker”.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Problemas de segurança na emissão de reflexão](security-issues-in-reflection-emit.md)
 - [Como executar código parcialmente confiável em uma área restrita](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

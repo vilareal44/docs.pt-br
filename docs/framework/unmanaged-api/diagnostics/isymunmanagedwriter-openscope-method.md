@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbea0644-3873-4329-90b8-624163e87467
 topic_type:
 - apiref
-ms.openlocfilehash: 4008b2a7d785781da5f35b3dc1e564487cb8e760
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 2808606be24399c9a4fe03df4c53202d31cbbe91
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609775"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501710"
 ---
 # <a name="isymunmanagedwriteropenscope-method"></a>Método ISymUnmanagedWriter::OpenScope
 Abre um novo escopo léxico no método atual. O escopo se torna o novo escopo atual e é enviado por push para uma pilha de escopos. Os escopos devem formar uma hierarquia. Irmãos não têm permissão para se sobrepor.  
@@ -40,11 +40,11 @@ HRESULT OpenScope(
  `pRetVal`  
  fora Um ponteiro para um `ULONG32` que recebe o identificador de escopo.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- `ISymUnmanagedWriter::OpenScope`Retorna um identificador de escopo opaco que pode ser usado com [ISymUnmanagedWriter:: SetScopeRange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) para definir o deslocamento de início e de término de um escopo em um momento posterior. Nesse caso, os deslocamentos passados para `ISymUnmanagedWriter::OpenScope` e [ISymUnmanagedWriter:: CloseScope](isymunmanagedwriter-closescope-method.md) são ignorados. Os identificadores de escopo são válidos somente no método atual.  
+ `ISymUnmanagedWriter::OpenScope`Retorna um identificador de escopo opaco que pode ser usado com [ISymUnmanagedWriter:: SetScopeRange](isymunmanagedwriter-setscoperange-method.md) para definir o deslocamento de início e de término de um escopo em um momento posterior. Nesse caso, os deslocamentos passados para `ISymUnmanagedWriter::OpenScope` e [ISymUnmanagedWriter:: CloseScope](isymunmanagedwriter-closescope-method.md) são ignorados. Os identificadores de escopo são válidos somente no método atual.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  

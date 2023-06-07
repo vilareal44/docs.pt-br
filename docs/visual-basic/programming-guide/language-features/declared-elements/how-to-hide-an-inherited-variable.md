@@ -11,18 +11,18 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: c20c36b26c90c82da4e8836799f499498ccc40e4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f49bba0497f9f4f2774b01284c815bba9aaed119
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345348"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357264"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Como ocultar uma variável herdada (Visual Basic)
 
 Uma classe derivada herda todas as definições de sua classe base. Se você quiser definir uma variável usando o mesmo nome de um elemento da classe base, poderá ocultar ou *sombrear*esse elemento da classe base ao definir a variável na classe derivada. Se você fizer isso, o código na classe derivada acessa sua variável, a menos que ela ignore explicitamente o mecanismo de sombreamento.
 
-Outro motivo para você querer ocultar uma variável herdada é proteger-se contra a revisão da classe base. A classe base pode passar por uma alteração que altera o elemento que você está herdando. Se isso acontecer, o modificador `Shadows` forçará as referências da classe derivada a serem resolvidas para a variável, em vez de para o elemento de classe base.
+Outro motivo para você querer ocultar uma variável herdada é proteger-se contra a revisão da classe base. A classe base pode passar por uma alteração que altera o elemento que você está herdando. Se isso acontecer, o `Shadows` modificador força referências da classe derivada a serem resolvidas para a variável, em vez de para o elemento de classe base.
 
 ## <a name="to-hide-an-inherited-variable"></a>Para ocultar uma variável herdada
 
@@ -50,19 +50,19 @@ Outro motivo para você querer ocultar uma variável herdada é proteger-se cont
     End Class  
     ```  
   
-     O exemplo anterior declara a variável `shadowString` na classe base e a sombreia na classe derivada. O procedimento `ShowStrings` na classe derivada exibe a versão de sombreamento da cadeia de caracteres quando o nome `shadowString` não é qualificado. Em seguida, ele exibe a versão sombreada quando `shadowString` é qualificado com a palavra-chave `MyBase`.  
+     O exemplo anterior declara a variável `shadowString` na classe base e a sombreia na classe derivada. O procedimento `ShowStrings` na classe derivada exibe a versão de sombreamento da cadeia de caracteres quando o nome `shadowString` não é qualificado. Em seguida, ele exibe a versão sombreada quando `shadowString` é qualificado com a `MyBase` palavra-chave.  
   
 ## <a name="robust-programming"></a>Programação robusta
 
 O sombreamento apresenta mais de uma versão de uma variável com o mesmo nome. Quando uma instrução de código se refere ao nome da variável, a versão para a qual o compilador resolve a referência depende de fatores como o local da instrução do código e a presença de uma cadeia de caracteres de qualificação. Isso pode aumentar o risco de se referir a uma versão não intencional de uma variável sombreada. Você pode reduzir esse risco Qualificando totalmente todas as referências a uma variável sombreada.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Referências a Elementos Declarados](references-to-declared-elements.md)
-- [Sombreamento em Visual Basic](shadowing.md)
+- [Referências a elementos declarados](references-to-declared-elements.md)
+- [Sombreamento no Visual Basic](shadowing.md)
 - [Diferenças entre sombreamento e sobreposição](differences-between-shadowing-and-overriding.md)
 - [Como ocultar uma variável com o mesmo nome que a variável](how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
 - [Como acessar uma variável oculta por uma classe derivada](how-to-access-a-variable-hidden-by-a-derived-class.md)
-- [Substituições](../../../../visual-basic/language-reference/modifiers/overrides.md)
+- [Substituições](../../../language-reference/modifiers/overrides.md)
 - [Me, My, MyBase e MyClass](../../program-structure/me-my-mybase-and-myclass.md)
-- [Noções Básicas de Herança](../objects-and-classes/inheritance-basics.md)
+- [Noções básicas de herança](../objects-and-classes/inheritance-basics.md)

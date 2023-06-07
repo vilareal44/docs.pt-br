@@ -1,13 +1,13 @@
 ---
 title: Alterações significativas na biblioteca de classes base
 description: Lista as alterações significativas nas principais bibliotecas do .NET.
-ms.date: 09/20/2019
-ms.openlocfilehash: ca50123b842c256607d47010dbef9b216ece4661
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.date: 07/27/2020
+ms.openlocfilehash: 9190fc2fc8dddc4fb4be8409915cf24c92a97daf
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420417"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558162"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Principais alterações significativas nas bibliotecas do .NET
 
@@ -17,7 +17,18 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 | Alteração significativa | Versão introduzida |
 | - | :-: |
+| [Environment. OSVersion retorna a versão correta do sistema operacional](#environmentosversion-returns-the-correct-operating-system-version) | 5.0 |
+| [Complexidade do LINQ OrderBy. primeiro {OrDefault} aumentou](#complexity-of-linq-orderbyfirstordefault-increased) | 5.0 |
+| [IntPtr e UIntPtr implementam IFormattable](#intptr-and-uintptr-implement-iformattable) | 5.0 |
+| [PrincipalPermissionattribute está obsoleto como erro](#principalpermissionattribute-is-obsolete-as-error) | 5.0 |
+| [Os métodos de serialização BinaryFormatter são obsoletos e proibidos em aplicativos ASP.NET](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps) | 5.0 |
+| [Os caminhos de código UTF-7 estão obsoletos](#utf-7-code-paths-are-obsolete) | 5.0 |
+| [Vetor \<T> sempre gera NotSupportedException para tipos sem suporte](#vectort-always-throws-notsupportedexception-for-unsupported-types) | 5.0 |
+| [O ActivityIdFormat padrão é W3C](#default-activityidformat-is-w3c) | 5.0 |
+| [Alteração de comportamento para vector2. Lerp e Vector4. Lerp](#behavior-change-for-vector2lerp-and-vector4lerp) | 5.0 |
 | [Os métodos SSE e SSE2 CompareGreaterThan manipulam corretamente as entradas NaN](#sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs) | 5.0 |
+| [CounterSet. CreateCounterSetInstance agora gera InvalidOperationException se a instância já existir](#countersetcreatecountersetinstance-now-throws-invalidoperationexception-if-instance-already-exists) | 5.0 |
+| [Pacote Microsoft. DotNet. PlatformAbstractions removido](#microsoftdotnetplatformabstractions-package-removed) | 5.0 |
 | [As APIs que relatam versão agora relatam produto e não versão de arquivo](#apis-that-report-version-now-report-product-and-not-file-version) | 3.0 |
 | [Instâncias EncoderFallbackBuffer personalizadas não podem retornar recursivamente](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3.0 |
 | [Alterações de comportamento de análise e formatação de ponto flutuante](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
@@ -26,11 +37,6 @@ As seguintes alterações significativas estão documentadas nesta página:
 | [A substituição de sequências de bytes UTF-8 mal formados segue as diretrizes de Unicode](#replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines) | 3.0 |
 | [TypeDescriptionProviderAttribute movido para outro assembly](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
 | [O ZipArchiveEntry não lida mais com os arquivos mortos com tamanhos de entrada inconsistentes](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
-| [Tipo de exceção de serializador JSON alterado de Jsonexception para NotSupportedException](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception) | 3.0 |
-| [Alteração na semântica de (String) NULL em Utf8JsonWriter](#change-in-semantics-of-stringnull-in-utf8jsonwriter) | 3.0 |
-| [Os métodos JsonEncodedText. Encode têm um argumento JavaScriptEncoder adicional](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument) | 3.0 |
-| [Assinatura de JsonFactoryConverter. Createconverter alterada](#jsonfactoryconvertercreateconverter-signature-changed) | 3.0 |
-| [Alterações da API jsonelement](#jsonelement-api-changes) | 3.0 |
 | [FieldInfo. SetValue gera uma exceção para campos estáticos somente de inicialização](#fieldinfosetvalue-throws-exception-for-static-init-only-fields) | 3.0 |
 | [Campos privados adicionados aos tipos de struct internos](#private-fields-added-to-built-in-struct-types) | 2.1 |
 | [Alteração no valor padrão de UseShellExecute](#change-in-default-value-of-useshellexecute) | 2.1 |
@@ -42,7 +48,51 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 ## <a name="net-50"></a>.NET 5,0
 
+[!INCLUDE [environment-osversion-returns-correct-version](../../../includes/core-changes/corefx/5.0/environment-osversion-returns-correct-version.md)]
+
+***
+
+[!INCLUDE [orderby-firstordefault-complexity-increase](../../../includes/core-changes/corefx/5.0/orderby-firstordefault-complexity-increase.md)]
+
+***
+
+[!INCLUDE [intptr-uintptr-implement-iformattable](../../../includes/core-changes/corefx/5.0/intptr-uintptr-implement-iformattable.md)]
+
+***
+
+[!INCLUDE [principalpermissionattribute-obsolete](../../../includes/core-changes/corefx/5.0/principalpermissionattribute-obsolete.md)]
+
+***
+
+[!INCLUDE [binaryformatter-serialization-obsolete](../../../includes/core-changes/corefx/5.0/binaryformatter-serialization-obsolete.md)]
+
+***
+
+[!INCLUDE [utf-7-code-paths-obsolete](../../../includes/core-changes/corefx/5.0/utf-7-code-paths-obsolete.md)]
+
+***
+
+[!INCLUDE [vectort-throws-notsupportedexception](../../../includes/core-changes/corefx/5.0/vectort-throws-notsupportedexception.md)]
+
+***
+
+[!INCLUDE [default-activityidformat-changed](../../../includes/core-changes/corefx/5.0/default-activityidformat-changed.md)]
+
+***
+
+[!INCLUDE [vector-lerp-behavior-change](../../../includes/core-changes/corefx/5.0/vector-lerp-behavior-change.md)]
+
+***
+
 [!INCLUDE [sse-comparegreaterthan-intrinsics](../../../includes/core-changes/corefx/5.0/sse-comparegreaterthan-intrinsics.md)]
+
+***
+
+[!INCLUDE [createcountersetinstance-throws-invalidoperation](../../../includes/core-changes/corefx/5.0/createcountersetinstance-throws-invalidoperation.md)]
+
+***
+
+[!INCLUDE [platformabstractions-package-removed](../../../includes/core-changes/corefx/5.0/platformabstractions-package-removed.md)]
 
 ***
 
@@ -77,26 +127,6 @@ As seguintes alterações significativas estão documentadas nesta página:
 ***
 
 [!INCLUDE[ZipArchiveEntry no longer handles archives with inconsistent entry sizes](~/includes/core-changes/corefx/3.0/ziparchiveentry-and-inconsistent-entry-sizes.md)]
-
-***
-
-[!INCLUDE[JSON serializer exception type changed from JsonException to NotSupportedException](~/includes/core-changes/corefx/3.0/serializer-throws-notsupportedexception.md)]
-
-***
-
-[!INCLUDE[Change in semantics of (string)null in Utf8JsonWriter](~/includes/core-changes/corefx/3.0/change-in-null-in-utf8jsonwriter.md)]
-
-***
-
-[!INCLUDE[JsonEncodedText.Encode methods have an additional JavaScriptEncoder argument](~/includes/core-changes/corefx/3.0/jsonencodedtext-encode-has-additional-argument.md)]
-
-***
-
-[!INCLUDE[JsonFactoryConverter.CreateConverter signature changed](~/includes/core-changes/corefx/3.0/jsonfactoryconverter-createconverter.md)]
-
-***
-
-[!INCLUDE[JsonElement API changes](~/includes/core-changes/corefx/3.0/jsonelement-api-changes.md)]
 
 ***
 

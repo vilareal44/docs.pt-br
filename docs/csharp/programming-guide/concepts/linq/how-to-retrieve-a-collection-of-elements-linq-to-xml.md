@@ -1,15 +1,16 @@
 ---
-title: Como recuperar uma coleção de elementos (LINQ para XML) (C#)
+title: Como recuperar uma coleção de elementos (LINQ to XML) (C#)
+description: O método Elements em C# recupera uma coleção dos elementos filho de um elemento. Este exemplo de LINQ to XML itera por meio de elementos filho de um elemento.
 ms.date: 07/20/2015
 ms.assetid: b849668c-7976-4974-b8e1-1cd587d34258
-ms.openlocfilehash: 89799b17115fb56a93bda5fbc144b21b334a6974
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f9b6ae4713af9ce1a4eeb5257f57cd9724f68b2
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345014"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103350"
 ---
-# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-c"></a>Como recuperar uma coleção de elementos (LINQ para XML) (C#)
+# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-c"></a>Como recuperar uma coleção de elementos (LINQ to XML) (C#)
 Este tópico demonstra o método de <xref:System.Xml.Linq.XContainer.Elements%2A> . Esse método retorna uma coleção de elementos filho de um elemento.  
   
 ## <a name="example"></a>Exemplo  

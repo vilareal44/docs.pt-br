@@ -1,5 +1,6 @@
 ---
 title: MDA invalidFunctionPointerInDelegate
+description: Examine o MDA (Assistente de depuração gerenciada) invalidFunctionPointerInDelegate, que será invocado se um ponteiro de função inválido for passado para criar um delegado.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - invalidFunctionPointerInDelegate MDA
@@ -11,12 +12,11 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), marshaling
 - invalid function pointers
 ms.assetid: 99ae44f1-783e-49a9-9009-24f54bbd0f09
-ms.openlocfilehash: 723f51e14c314bde40c34d629ba7fc4f6276c633
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: a17427d117c62ba782af3c9549c84623a3013b06
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217375"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051734"
 ---
 # <a name="invalidfunctionpointerindelegate-mda"></a>MDA invalidFunctionPointerInDelegate
 O `invalidFunctionPointerInDelegate` MDA (assistente de depuração gerenciada) é ativado quando é informado um ponteiro de função inválido para construir um representante ao invés de um ponteiro de função nativo.  
@@ -46,8 +46,8 @@ O `invalidFunctionPointerInDelegate` MDA (assistente de depuração gerenciada) 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling de interoperabilidade](../interop/interop-marshaling.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Realizando marshaling de interoperabilidade](../interop/interop-marshaling.md)

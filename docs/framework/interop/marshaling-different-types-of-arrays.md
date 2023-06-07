@@ -1,5 +1,6 @@
 ---
 title: Marshaling de diversos tipos de matrizes
+description: Empacotar tipos de matriz diferentes, como inteiros por valor ou referência, inteiros bidimensionais por valor, cadeias de caracteres por valor e estruturas com números inteiros ou cadeias de caracteres.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - marshaling, Arrays sample
 - data marshaling, Arrays sample
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
-ms.openlocfilehash: 66c7ba5989952edb55f21aab960ad7395a92ae0d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1473c7917189f0b36c96b2adcf20005c5fd6b48
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181359"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621490"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Marshaling de diversos tipos de matrizes
 Uma matriz é um tipo de referência em código gerenciado que contém um ou mais elementos do mesmo tipo. Embora as matrizes sejam tipos de referência, elas são passadas como parâmetros para funções não gerenciadas. Esse comportamento é inconsistente com a maneira que matrizes gerenciadas são passadas para objetos gerenciados, que é na forma de parâmetros de In/Out. Para obter detalhes adicionais, consulte [Copiando e fixando](copying-and-pinning.md).  
@@ -112,7 +113,7 @@ typedef struct _MYPERSON
  [!code-csharp[Conceptual.Interop.Marshaling#32](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#32)]
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Tipos de dados de invocação de plataforma](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [Criando protótipos em código gerenciado](creating-prototypes-in-managed-code.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4400fb8c-0407-4791-8557-f011fd2aee51
 topic_type:
 - apiref
-ms.openlocfilehash: e3d167be9a4091ae57a3283424186142e90ca7a1
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b8e503af11fa1d02aac2ec83edde0ffbd562d8e5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868545"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496393"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>Método ICorProfilerInfo3::GetRuntimeInformation
 Fornece informações de versão sobre o Common Language Runtime (CLR) cujo perfil está sendo criado.  
@@ -61,10 +61,10 @@ HRESULT GetRuntimeInformation(
  fora O número de versão do CLR associado a uma atualização de software.  
   
  `cchVersionString`  
- no O comprimento, em caracteres, do buffer ao qual `szVersionString` aponta.  
+ no O comprimento, em caracteres, do buffer que `szVersionString` aponta para.  
   
  `pcchVersionString`  
- fora O comprimento, em caracteres, de `szVersionString`.  
+ fora O comprimento, em caracteres, de `szVersionString` .  
   
  `szVersionString`  
  fora A cadeia de caracteres da versão do CLR.  
@@ -72,17 +72,17 @@ HRESULT GetRuntimeInformation(
 ## <a name="remarks"></a>Comentários  
  Você pode passar NULL para qualquer parâmetro. No entanto, `pcchVersionString` não pode ser nulo, a menos que `szVersionString` também seja nulo.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerInfo3](icorprofilerinfo3-interface.md)
-- [Interfaces de criação de perfil](profiling-interfaces.md)
+- [Criação de perfil de interfaces](profiling-interfaces.md)
 - [Criação de perfil](index.md)

@@ -2,24 +2,25 @@
 title: Acessando os serviços WCF com um aplicativo cliente da Windows Store
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: b4b91c103aa91e3b2c9e811c642a8347c7db1a88
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed13a88e3a534cd586d9386396802d7457de56e7
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185480"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558966"
 ---
-# <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Acessando os serviços WCF com um aplicativo cliente da Windows Store
+# <a name="access-wcf-services-with-a-windows-store-client-app"></a>Acessar serviços WCF com um aplicativo cliente da Windows Store
+
 O Windows 8 apresenta um novo tipo de aplicativos chamados aplicativos da Windows Store. Esses aplicativos são criados em torno de uma interface de tela sensível ao toque. O .NET Framework 4.5 permite que aplicativos da Windows Store chamem serviços WCF.  
   
 ## <a name="wcf-support-in-windows-store-applications"></a>Suporte do WCF em aplicativos da Windows Store  
  Um subconjunto da funcionalidade do WCF está disponível a partir de um aplicativo da Windows Store. Consulte as seções a seguir para obter mais detalhes.  
   
 > [!IMPORTANT]
-> Use as APIs de agregação de WinRT em vez dessas expostas pelo WCF. Para obter mais informações, consulte [a API do WinRT Syndication](xref:Windows.Web.Syndication)  
+> Use as APIs de agregação de WinRT em vez dessas expostas pelo WCF. Para obter mais informações, consulte [API de distribuição do WinRT](xref:Windows.Web.Syndication)  
   
 > [!WARNING]
-> Não há suporte para usar Adicionar Referência de Serviço para adicionar uma referência ao serviço Web para um componente do Windows Runtime.  
+> Não há suporte para o uso de Adicionar Referência de Serviço para adicionar uma referência de serviço Web a um componente Windows Runtime.  
   
 ### <a name="supported-bindings"></a>Associações com suporte  
  As seguintes associações do WCF têm suporte em aplicativos da Windows Store:  
@@ -52,10 +53,10 @@ O Windows 8 apresenta um novo tipo de aplicativos chamados aplicativos da Window
   
 9. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
- Codificações de texto e binários têm suporte. Todos os modos de transferência de WCF têm suporte. Para obter mais informações, [consulte: Transferência de mensagens de streaming](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md).  
+ Codificações de texto e binários têm suporte. Todos os modos de transferência de WCF têm suporte. Para obter mais informações, consulte [streaming de transferência de mensagens](streaming-message-transfer.md).  
   
 ### <a name="add-service-reference"></a>Adicionar Referência de Serviço  
- Para chamar um serviço WCF de um aplicativo da Windows Store, use o recurso Adicionar Referência de Serviço do Visual Studio 2012. Você observará algumas alterações na funcionalidade de Adicionar Referência de Serviço quando forem feitas dentro de um aplicativo da Windows Store. Nenhum arquivo de configuração é gerado primeiro. Os aplicativos da Windows Store não usam arquivos de configuração. Eles devem ser configurados no código. Este código de configuração pode ser localizado no arquivo References.cs gerado por Adicionar Referência de Serviço. Para ver este arquivo, certifique-se de selecionar "Mostrar todos os arquivos" no explorador de soluções. O arquivo será localizado nos nós de Referências de Serviço e, em seguida, Reference.svcmap dentro do projeto. Todas as operações geradas para os serviços WCF dentro de um aplicativo da Windows Store serão assíncronas usando o padrão assíncrono baseado em tarefas. Para obter mais informações, consulte [Tarefas de Async - Simplificar programação assíncrona com tarefas](https://docs.microsoft.com/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks).  
+ Para chamar um serviço WCF de um aplicativo da Windows Store, use o recurso Adicionar Referência de Serviço do Visual Studio 2012. Você observará algumas alterações na funcionalidade de Adicionar Referência de Serviço quando forem feitas dentro de um aplicativo da Windows Store. Nenhum arquivo de configuração é gerado primeiro. Os aplicativos da Windows Store não usam arquivos de configuração. Eles devem ser configurados no código. Este código de configuração pode ser localizado no arquivo References.cs gerado por Adicionar Referência de Serviço. Para ver esse arquivo, certifique-se de selecionar "Mostrar todos os arquivos" no Gerenciador de soluções. O arquivo será localizado nos nós de Referências de Serviço e, em seguida, Reference.svcmap dentro do projeto. Todas as operações geradas para os serviços WCF dentro de um aplicativo da Windows Store serão assíncronas usando o padrão assíncrono baseado em tarefas. Para obter mais informações, consulte [tarefas assíncronas – simplificar a programação assíncrona com tarefas](https://docs.microsoft.com/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks).  
   
  Como a configuração agora é gerada no código, todas as alterações feitas no arquivo Reference.cs serão substituídas toda vez que a referência do serviço for atualizada. Para solucionar essa situação, o código de configuração é gerado dentro de um método parcial, que você pode implementar em sua classe de proxy cliente. O método parcial é declarado da seguinte maneira:  
   
@@ -108,7 +109,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 ### <a name="security"></a>Segurança  
 
-Os seguintes modos de segurança são suportados em aplicativos do Windows Store:
+Os seguintes modos de segurança têm suporte em aplicativos da Windows Store:
   
 1. <xref:System.ServiceModel.SecurityMode.None>  
   
@@ -118,11 +119,11 @@ Os seguintes modos de segurança são suportados em aplicativos do Windows Store
   
 4. <xref:System.ServiceModel.SecurityMode.Message>
   
-Os seguintes tipos de credenciais do cliente são suportados em aplicativos do Windows Store:
+Os seguintes tipos de credencial de cliente têm suporte em aplicativos da Windows Store:
   
 1. Nenhum  
   
-2. Basic  
+2. Básico  
   
 3. Digest  
   
@@ -136,10 +137,10 @@ Os seguintes tipos de credenciais do cliente são suportados em aplicativos do W
   
 8. Windows (Segurança de Transporte)  
   
- Para que os aplicativos da Windows Store acessem e enviem credenciais padrão do Windows, você deverá habilitar essa funcionalidade dentro do arquivo Package.appmanifest. Abra este arquivo e selecione a guia Recursos e selecione "Credenciais padrão do Windows". Isso permite que o aplicativo se conecte aos recursos de intranet que exigem credenciais de domínio.  
+ Para que os aplicativos da Windows Store acessem e enviem credenciais padrão do Windows, você deverá habilitar essa funcionalidade dentro do arquivo Package.appmanifest. Abra esse arquivo e selecione a guia recursos e selecione "credenciais padrão do Windows". Isso permite que o aplicativo se conecte aos recursos de intranet que exigem credenciais de domínio.  
   
 > [!IMPORTANT]
-> Para que os aplicativos do Windows Store façam chamadas de máquina cruzada, você deve habilitar outro recurso chamado "Home/Work Networking". Esta configuração também está no arquivo Package.appmanifest na guia Recursos.Selecione a caixa de seleção Home/Work Networking. Isso concede o acesso de entrada e saída do aplicativo às redes locais confiáveis do usuário como casa e trabalho. As portas críticas de entrada são sempre bloqueadas. Para acessar serviços na Internet, é necessário habilitar o recurso Internet (Cliente).  
+> Para que os aplicativos da Windows Store façam chamadas entre computadores, você deve habilitar outra funcionalidade chamada "rede doméstica/corporativa". Essa configuração também está no arquivo Package. arquivo AppManifest na guia recursos. Selecione a caixa de seleção rede doméstica/trabalho. Isso dá ao seu aplicativo acesso de entrada e saída às redes dos locais confiáveis do usuário, como Home e Work. As portas críticas de entrada são sempre bloqueadas. Para acessar serviços na Internet, é necessário habilitar o recurso Internet (Cliente).  
   
 ### <a name="misc"></a>Diversos  
  O uso das seguintes classes tem suporte para aplicativos da Windows Store:  
@@ -176,9 +177,5 @@ void async SomeMethod()
   
 ## <a name="see-also"></a>Confira também
 
-- [WCF no Blog de Aplicativos da Loja windows](https://docs.microsoft.com/archive/blogs/piyushjo/wcf-in-windows-8-metro-styled-apps-absolutely-supported)
-- [Clientes e segurança da Windows Store wcf](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-adding-security)
-- [Aplicativos da Windows Store e chamadas de máquinas cruzadas](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
-- [Chamando um serviço WCF implantado no Azure a partir de um aplicativo da Windows Store](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
-- [Programação de segurança do WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
-- [Ligações](../../../../docs/framework/wcf/bindings.md)
+- [Programação de segurança do WCF](programming-wcf-security.md)
+- [Associações](../bindings.md)

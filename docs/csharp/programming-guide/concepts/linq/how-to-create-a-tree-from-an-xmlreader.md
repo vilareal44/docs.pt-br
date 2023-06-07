@@ -1,13 +1,14 @@
 ---
 title: Como criar uma árvore a partir de um XmlReader (C#)
+description: Saiba como criar uma árvore XML diretamente de um XmlReader. Veja um exemplo que mostra como criar um objeto T:System.Xml.XmlReader.
 ms.date: 07/20/2015
 ms.assetid: 60951c9c-7087-406c-b5bb-c60e58609b21
-ms.openlocfilehash: 9ead6352112d9e1b56bd70699c90133e432f96b3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3801177e664d142652d38748d44eaf3f274239dd
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169266"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302653"
 ---
 # <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>Como criar uma árvore a partir de um XmlReader (C#)
 Este tópico mostra como criar uma árvore de XML diretamente de <xref:System.Xml.XmlReader>. Para criar um <xref:System.Xml.Linq.XElement> de um <xref:System.Xml.XmlReader>, você deverá posicionar o <xref:System.Xml.XmlReader> em um nó de elemento. O <xref:System.Xml.XmlReader> ignorará comentários e instruções de processamento, mas se o <xref:System.Xml.XmlReader> estiver posicionado em um nó de texto, um erro será gerado. Para evitar esses erros, sempre posicione o <xref:System.Xml.XmlReader> em um elemento antes de criar uma árvore de XML do <xref:System.Xml.XmlReader>.  
@@ -51,6 +52,6 @@ Console.WriteLine(e);
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Analisando XML (C#)](how-to-parse-a-string.md)

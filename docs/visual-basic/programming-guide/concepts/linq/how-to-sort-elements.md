@@ -1,19 +1,19 @@
 ---
-title: 'Como: Classificar os elementos'
+title: 'Como: classificar elementos'
 ms.date: 07/20/2015
 ms.assetid: c2c09279-6c8a-482e-8e71-b1453a815052
-ms.openlocfilehash: 84d791a73c27b9acf1eaa5a5e4a31d6798a6c76d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1204fb4dc190d68956d01ffce225ce40e11538a4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74341548"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397746"
 ---
 # <a name="how-to-sort-elements-visual-basic"></a>Como classificar elementos (Visual Basic)
 Este exemplo mostra como escrever uma consulta que classifica seus resultados.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos (LINQ to XML)](sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("Data.xml")  
@@ -42,7 +42,7 @@ Next
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra a mesma consulta para XML que está em um namespace. Para obter mais informações, consulte [visão geral de namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos em um namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos em um namespace](sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -74,7 +74,7 @@ End Module
 89.99  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Classificando Dados](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
-- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Classificar dados](sorting-data.md)
+- [Consultas básicas (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)

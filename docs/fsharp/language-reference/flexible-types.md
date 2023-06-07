@@ -1,13 +1,13 @@
 ---
 title: Tipos flexíveis
-description: Saiba como usar F# a anotação de tipo flexível, que indica que um parâmetro, uma variável ou um valor tem um tipo compatível com um tipo especificado.
-ms.date: 05/16/2016
-ms.openlocfilehash: bf05f78f163d1f9c73c667df60925b66a5315627
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+description: 'Saiba como usar a anotação de tipo flexível F #, que indica que um parâmetro, uma variável ou um valor tem um tipo compatível com um tipo especificado.'
+ms.date: 08/15/2020
+ms.openlocfilehash: 44241ad082cd7f3de9e0cc6a48b8a8946e7b33d3
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083071"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557744"
 ---
 # <a name="flexible-types"></a>Tipos flexíveis
 
@@ -37,7 +37,7 @@ Considere as duas funções a seguir, uma das quais retorna uma sequência, a ou
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4101.fs)]
 
-Como outro exemplo, considere a função de biblioteca [Seq. Concat](https://msdn.microsoft.com/library/2eeb69a9-fc2f-4b7d-8dee-101fa2b00712) :
+Como outro exemplo, considere a função de biblioteca [Seq. Concat](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#concat) :
 
 ```fsharp
 val concat: sequences:seq<#seq<'T>> -> seq<'T>
@@ -51,7 +51,7 @@ Você pode passar qualquer uma das sequências enumeráveis a seguir para esta f
 - Uma matriz de sequências
 - Qualquer outra combinação de sequências enumeráveis
 
-O código a seguir `Seq.concat` usa o para demonstrar os cenários para os quais você pode dar suporte usando tipos flexíveis.
+O código a seguir usa `Seq.concat` o para demonstrar os cenários para os quais você pode dar suporte usando tipos flexíveis.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4102.fs)]
 
@@ -65,9 +65,9 @@ seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 ```
 
-No F#, como em outras linguagens orientadas a objeto, há contextos nos quais tipos ou tipos derivados que implementam interfaces são convertidos automaticamente em um tipo base ou tipo de interface. Essas conversões automáticas ocorrem em argumentos diretos, mas não quando o tipo está em uma posição subordinada, como parte de um tipo mais complexo, como um tipo de retorno de um tipo de função, ou como um argumento de tipo. Assim, a notação de tipo flexível é útil principalmente quando o tipo para o qual você está aplicando faz parte de um tipo mais complexo.
+Em F #, como em outras linguagens orientadas a objeto, há contextos nos quais tipos ou tipos derivados que implementam interfaces são automaticamente convertidos em um tipo base ou de interface. Essas conversões automáticas ocorrem em argumentos diretos, mas não quando o tipo está em uma posição subordinada, como parte de um tipo mais complexo, como um tipo de retorno de um tipo de função, ou como um argumento de tipo. Assim, a notação de tipo flexível é útil principalmente quando o tipo para o qual você está aplicando faz parte de um tipo mais complexo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Referência da Linguagem F#](index.md)
+- [Referência de linguagem F #](index.md)
 - [Genéricos](./generics/index.md)

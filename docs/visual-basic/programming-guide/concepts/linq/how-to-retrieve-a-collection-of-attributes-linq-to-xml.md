@@ -1,13 +1,13 @@
 ---
-title: 'Como: Recuperar uma coleção de atributos (LINQ to XML)'
+title: 'Como: recuperar uma coleção de atributos (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: a07e9645-b45b-403b-b698-f652f904c7d2
-ms.openlocfilehash: ff260660057c3b75f4cc92c37c67fca0a0b7f192
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: be7abac736f9a70ae3f0c9efe2074cfe79821ddb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347571"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397876"
 ---
 # <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-visual-basic"></a>Como recuperar uma coleção de atributos (LINQ to XML) (Visual Basic)
 Este tópico apresenta o método de <xref:System.Xml.Linq.XElement.Attributes%2A> . Esse método recupera os atributos de um elemento.  
@@ -34,6 +34,6 @@ Type="int"
 ConvertableTo="double"  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Eixos LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [Eixos LINQ to XML (Visual Basic)](linq-to-xml-axes.md)

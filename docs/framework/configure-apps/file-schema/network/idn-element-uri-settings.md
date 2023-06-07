@@ -3,19 +3,19 @@ title: Elemento <idn> (Configurações de URI)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 ms.openlocfilehash: 533b2562f6e5c8d6c2bf452e56dff9a8bf8ab376
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "71698167"
 ---
-# <a name="idn-element-uri-settings"></a>\<elemento > IDN (configurações de URI)
+# <a name="idn-element-uri-settings"></a>Elemento \<idn> (Configurações de URI)
 
 Especifica se a análise de IDN (nome de domínio internacionalizado) é aplicada a um nome de domínio.
   
-[ **\<configuration>** ](../configuration-element.md)  
-URI de\<de &nbsp;de &nbsp;[ **>** ](uri-element-uri-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<IDN** >  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<uri>**](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<idn>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -26,7 +26,7 @@ URI de\<de &nbsp;de &nbsp;[ **>** ](uri-element-uri-settings.md)
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
+ As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
 
@@ -34,7 +34,7 @@ URI de\<de &nbsp;de &nbsp;[ **>** ](uri-element-uri-settings.md)
 |-----------------|---------------------|  
 |`enabled`|Especifica se a análise de IDN (nome de domínio internacionalizado) é aplicada a um nome de domínio, o valor padrão é nenhum.|  
 
-### <a name="child-elements"></a>Child elements
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum
   
@@ -42,11 +42,11 @@ Nenhum
 
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[uri](uri-element-uri-settings.md)|Contém configurações que especificam como o .NET Framework trata os endereços da Web expressos usando URIs (identificadores de recursos uniformes).|  
+|[URI](uri-element-uri-settings.md)|Contém configurações que especificam como o .NET Framework trata os endereços da Web expressos usando URIs (identificadores de recursos uniformes).|  
 
 ## <a name="remarks"></a>Comentários
 
-A classe de <xref:System.Uri> existente foi estendida em .NET Framework 3,5. 3,0 SP1 e 2,0 SP1 com suporte para IRI (identificadores de recursos internacionais) e IDNs (nomes de domínio internacionalizados). Os usuários atuais não verão nenhuma alteração do comportamento .NET Framework 2,0, a menos que eles especificamente habilitem o suporte a IRI e IDN. Isso garante a compatibilidade do aplicativo com versões anteriores do .NET Framework.
+A <xref:System.Uri> classe existente foi estendida no .NET Framework 3,5. 3,0 SP1 e 2,0 SP1 com suporte para IRI (identificadores de recursos internacionais) e IDNs (nomes de domínio internacionalizados). Os usuários atuais não verão nenhuma alteração do comportamento .NET Framework 2,0, a menos que eles especificamente habilitem o suporte a IRI e IDN. Isso garante a compatibilidade do aplicativo com versões anteriores do .NET Framework.
 
 Para habilitar o suporte para IRI, as duas alterações a seguir são necessárias:
 
@@ -78,9 +78,9 @@ Para habilitar o suporte para IRI, as duas alterações a seguir são necessári
 
 Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra uma configuração usada pela classe <xref:System.Uri> para dar suporte a análise IRI e nomes IDN:
+O exemplo a seguir mostra uma configuração usada pela <xref:System.Uri> classe para dar suporte a análise de IRI e nomes IDN:
 
 ```xml
 <configuration>
@@ -91,7 +91,7 @@ O exemplo a seguir mostra uma configuração usada pela classe <xref:System.Uri>
 </configuration>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

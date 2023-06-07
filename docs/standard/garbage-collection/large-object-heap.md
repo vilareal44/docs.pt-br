@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: dae8a3690d63d77a47a5cd2e76f210ca8210f058
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 87105acbd43eb8eda0daa00c65ca0635f5e1cc74
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420572"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286022"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Heap de objeto grande em sistemas Windows
 
@@ -203,7 +203,7 @@ Como você pode ver, esse é um teste muito simples que aloca apenas objetos gra
 
 ### <a name="a-debugger"></a>Um depurador
 
-Se tudo o que você tem é um despejo de memória e você precisa examinar quais objetos estão realmente no LOH, use a [extensão de depurador SoS](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md) fornecida pelo .NET.
+Se tudo o que você tem é um despejo de memória e você precisa examinar quais objetos estão realmente no LOH, use a [extensão de depurador SoS](../../framework/tools/sos-dll-sos-debugging-extension.md) fornecida pelo .NET.
 
 > [!NOTE]
 > Os comandos de depuração mencionados nesta seção são aplicáveis aos [Depuradores do Windows](https://www.microsoft.com/whdc/devtools/debugging/default.mspx).

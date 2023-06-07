@@ -1,13 +1,14 @@
 ---
 title: Recuperando os parágrafos e seus estilos (C#)
+description: Saiba como escrever uma consulta que recupera parágrafos e, em seguida, identifica o estilo de cada parágrafo.
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: 47127b6f1d6bfaa0d8d93333882a0d0b59f1bae6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 94d01a13485f70bc9d9cef55b5f390c3b30d7f14
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168291"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303394"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>Recuperando os parágrafos e seus estilos (C#)
 Nesse exemplo, nós escrevemos uma consulta que recupera os nós de parágrafo de um documento de WordprocessingML. Também identifica o estilo de cada parágrafo.  

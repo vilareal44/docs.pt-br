@@ -1,5 +1,6 @@
 ---
 title: Programação com domínios do aplicativo e assemblies
+description: Conheça a programação com domínios de aplicativo e assemblies no .NET. Consulte links para tópicos de instruções & exemplos sobre como criar domínios de aplicativo & assemblies.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], programming
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - application domains, programming
 - programming application domains
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
-ms.openlocfilehash: 3f66eacaf30f8001cdbf3a486e5ce1c878712e2f
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 1c28fe0abeb279a1dbbc6dcf043c1780c72d79df
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644281"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903432"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>Programação com domínios do aplicativo e assemblies
 
@@ -25,7 +26,7 @@ No entanto, se estiver criando um aplicativo que hospedará o Common Language Ru
 [Tópicos explicativos sobre domínios do aplicativo e assemblies](application-domains-and-assemblies-how-to-topics.md)  
 Fornece links a todos os Tópicos explicativos encontrados na documentação conceitual para programação com domínios do aplicativo e assemblies.  
   
-[Uso de domínios do aplicativo](use.md)  
+[Usando domínios do aplicativo](use.md)  
 Fornece exemplos de como criar, configurar e usar domínios do aplicativo.  
   
 [Programação com assemblies](../../standard/assembly/index.md)  
@@ -39,7 +40,7 @@ Descreve como criar assemblies dinâmicos.
 [Assemblies no .NET](../../standard/assembly/index.md)  
 Fornece uma visão geral conceitual de assemblies.  
   
-[Domínios de aplicativo](application-domains.md)  
+[Domínios do aplicativo](application-domains.md)  
 Fornece uma visão geral conceitual de domínios de aplicativos.  
   
 [Visão geral da reflexão](../reflection-and-codedom/reflection.md)  

@@ -1,16 +1,17 @@
 ---
-title: Como recuperar o valor de um atributo (LINQ para XML) (C#)
+title: Como recuperar o valor de um atributo (LINQ to XML) (C#)
+description: Saiba como obter o valor de um atributo. Consulte exemplos de código e exiba recursos adicionais disponíveis.
 ms.date: 07/20/2015
 ms.assetid: 817bbe89-5979-4234-bf0c-46f63692ac8c
-ms.openlocfilehash: 212ad3bb3097e7e2c76da8f165011b181f329d4c
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 5ee6995a54829b6d992e2982e6a6effcabf76470
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249188"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301548"
 ---
-# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-c"></a>Como recuperar o valor de um atributo (LINQ para XML) (C#)
-Este tópico mostra como obter o valor de atributos. Existem duas maneiras principais: converter <xref:System.Xml.Linq.XAttribute> no tipo desejado; o operador de conversão explícita converte o conteúdo do elemento ou do atributo no tipo especificado. Outra opção é usar a propriedade <xref:System.Xml.Linq.XAttribute.Value%2A>. No entanto, a conversão geralmente é a abordagem recomendada. Se você lançar o atributo para um tipo de valor anulado, o código é mais simples de escrever ao recuperar o valor de um atributo que pode ou não existir. Para exemplos desta técnica, consulte [Como recuperar o valor de um elemento (LINQ para XML) (C#)](./how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
+# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-c"></a>Como recuperar o valor de um atributo (LINQ to XML) (C#)
+Este tópico mostra como obter o valor de atributos. Existem duas maneiras principais: converter <xref:System.Xml.Linq.XAttribute> no tipo desejado; o operador de conversão explícita converte o conteúdo do elemento ou do atributo no tipo especificado. Outra opção é usar a propriedade <xref:System.Xml.Linq.XAttribute.Value%2A>. No entanto, a conversão geralmente é a abordagem recomendada. Se você converter o atributo para um tipo de valor anulável, o código será mais simples de escrever ao recuperar o valor de um atributo que pode ou não existir. Para obter exemplos dessa técnica, consulte [como recuperar o valor de um elemento (LINQ to XML) (C#)](./how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
   
 ## <a name="example"></a>Exemplo  
  Para recuperar o valor de um atributo, basta converter o objeto <xref:System.Xml.Linq.XAttribute> no tipo desejado.  
@@ -49,6 +50,6 @@ Console.WriteLine(str);
 abcde  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Eixos do LINQ to XML (C#)](./linq-to-xml-axes-overview.md)

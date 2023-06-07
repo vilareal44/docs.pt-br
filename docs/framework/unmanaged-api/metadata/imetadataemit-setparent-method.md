@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02a02ff7-ae0e-4692-a20e-372405f23052
 topic_type:
 - apiref
-ms.openlocfilehash: 7389e9233fd946cdb2c810bec01cfbfffc8b707d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d821413e67b36392d936499cd22f2e065f1556ec
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175597"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503842"
 ---
 # <a name="imetadataemitsetparent-method"></a>Método IMetaDataEmit::SetParent
-Estabelece que o membro especificado, conforme definido por uma chamada anterior ao [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), é um membro do tipo especificado, conforme definido por uma chamada anterior ao [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Estabelece que o membro especificado, conforme definido por uma chamada anterior a [IMetaDataEmit::D efinememberref](imetadataemit-definememberref-method.md), é um membro do tipo especificado, conforme definido por uma chamada anterior para [IMetaDataEmit::D efinetypedef](imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,23 +34,23 @@ HRESULT SetParent (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `mr`  
- [em] O `mdMemberRef` símbolo para receber um novo pai.  
+ no O `mdMemberRef` token para receber um novo pai.  
   
  `tk`  
- [em] O `mdToken` para o novo pai.  
+ no O `mdToken` para o novo pai.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interface IMetaDataEmit](imetadataemit-interface.md)
+- [Interface IMetaDataEmit2](imetadataemit2-interface.md)

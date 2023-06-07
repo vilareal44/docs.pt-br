@@ -1,17 +1,18 @@
 ---
 title: CorFlags.exe (Ferramenta de Conversão de CorFlags)
+description: Entenda CorFlags.exe, a ferramenta de conversão CorFlags. Essa ferramenta permite que você configure a seção CorFlags do cabeçalho de uma imagem executável portátil.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CorFlags conversion tool
 - CorFlags.exe
 - portable executable files, CorFlags section
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
-ms.openlocfilehash: e1251b6660db45f3af4f6e57114b1b10da18bd0a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: da5efadd63cc03f6f6e4eecf3115865ca3643b39
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73129858"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167220"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (Ferramenta de Conversão de CorFlags)
 A ferramenta Conversão CorFlags permite configurar a seção CorFlags do cabeçalho de uma imagem PE (Portable Executable).  
@@ -28,11 +29,11 @@ CorFlags.exe assembly [options]
   
 ## <a name="parameters"></a>parâmetros  
   
-|Parâmetro obrigatório|Descrição|  
+|Parâmetro obrigatório|DESCRIÇÃO|  
 |------------------------|-----------------|  
 |`assembly`|O nome do assembly para o qual configurar o CorFlags.|  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |:------------|-----------------|  
 |`-32BIT[REQ]+`|Define o sinalizador 32BITREQUIRED.|  
 |`-32BIT[REQ]-`|Limpa o sinalizador 32BITREQUIRED.|  
@@ -54,4 +55,4 @@ CorFlags.exe assembly [options]
 
 - [Ferramentas](index.md)
 - [Aplicativos de 64 bits](../64-bit-apps.md)
-- [Prompts de Comando](developer-command-prompt-for-vs.md)
+- [Prompts de comando](developer-command-prompt-for-vs.md)

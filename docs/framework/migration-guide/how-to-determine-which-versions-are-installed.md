@@ -1,21 +1,20 @@
 ---
 title: Determinar quais versões do .NET Framework estão instaladas
-description: Use o código, o regedit. exe ou o PowerShell para detectar quais versões do .NET Framework estão instaladas em um computador consultando o registro do Windows.
+description: Use o código, regedit.exe ou PowerShell para detectar quais versões do .NET Framework estão instaladas em um computador consultando o registro do Windows.
 ms.date: 02/03/2020
 dev_langs:
 - csharp
 - vb
-ms.custom: updateeachrelease
 helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: d25e4ae97877462b2a3b90e51262fb656921e392
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 1591aacf5496852609ae571a52aaea2d5c09a15b
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205494"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558550"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Como determinar quais versões do .NET Framework estão instaladas
 
@@ -61,7 +60,7 @@ O valor da **versão** REG_DWORD no registro representa a versão do .NET Framew
 | .NET Framework 4.7     | No Windows 10 Creators Update: 460798<br />Em todos os outros sistemas operacionais Windows (incluindo outros sistemas operacionais Windows 10): 460805 |
 | .NET Framework 4.7.1   | Na atualização dos criadores de outono do Windows 10 e do Windows Server, versão 1709:461308<br/>Em todos os outros sistemas operacionais Windows (incluindo outros sistemas operacionais Windows 10): 461310 |
 | .NET Framework 4.7.2   | Na atualização do Windows 10 de abril de 2018 e Windows Server, versão 1803:461808<br/>Em todos os sistemas operacionais Windows, exceto Windows 10 de abril de 2018 atualização e Windows Server, versão 1803:461814 |
-| .NET Framework 4.8     | No Windows 10 maio 2019 atualização e Windows 10 de novembro de 2019 atualização: 528040<br/>No Windows 10, pode ser 2020 atualização: 528209<br/>Em todos os outros sistemas operacionais Windows (incluindo outros sistemas operacionais Windows 10): 528049 |
+| .NET Framework 4.8     | No Windows 10 maio 2019 atualização e Windows 10 de novembro de 2019 atualização: 528040<br/>No Windows 10, pode ser 2020 atualização: 528372<br/>Em todos os outros sistemas operacionais Windows (incluindo outros sistemas operacionais Windows 10): 528049 |
 
 ### <a name="minimum-version"></a>Versão mínima
 
@@ -132,13 +131,13 @@ Cada versão do .NET Framework de 1,1 a 4,0 é listada como uma subchave em **HK
 
 | Versão do Framework  | Subchave do registro | Valor |
 | ------------------ | --------------- | ----- |
-| 1.0                | **HKLM \\ software \\ Microsoft \\ . Política de NETFramework \\ \\ v 1.0 \\ 3705**     | **Instalar** o REG_SZ igual a`1` |
-| 1,1                | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 1.1.4322**   | **Instalar** o REG_DWORD igual a`1` |
-| 2,0                | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 2.0.50727**  | **Instalar** o REG_DWORD igual a`1` |
-| 3.0                | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 3.0 \\ instalação** | **InstallSuccess** REG_DWORD igual a`1` |
-| 3,5                | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 3.5**        | **Instalar** o REG_DWORD igual a`1` |
-| 4,0 perfil do cliente | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v4 \\ Client**  | **Instalar** o REG_DWORD igual a`1` |
-| 4,0 perfil completo   | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v4 \\ completo**    | **Instalar** o REG_DWORD igual a`1` |
+| 1.0                | **HKLM \\ software \\ Microsoft \\ . Política de NETFramework \\ \\ v 1.0 \\ 3705**     | **Instalar** o REG_SZ igual a `1` |
+| 1,1                | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 1.1.4322**   | **Instalar** o REG_DWORD igual a `1` |
+| 2.0                | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 2.0.50727**  | **Instalar** o REG_DWORD igual a `1` |
+| 3.0                | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 3.0 \\ instalação** | **InstallSuccess** REG_DWORD igual a `1` |
+| 3,5                | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 3.5**        | **Instalar** o REG_DWORD igual a `1` |
+| 4,0 perfil do cliente | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v4 \\ Client**  | **Instalar** o REG_DWORD igual a `1` |
+| 4,0 perfil completo   | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v4 \\ completo**    | **Instalar** o REG_DWORD igual a `1` |
 
 > [!IMPORTANT]
 > Se o aplicativo que você está executando for de 32 bits e estiver em execução no Windows de 64 bits, os caminhos do registro serão diferentes dos listados anteriormente. O registro de 64 bits está disponível na subchave **HKEY_LOCAL_MACHINE \\ software \\ Wow6432Node \\ ** . Por exemplo, a subchave do registro para .NET Framework 3,5 é **HKEY_LOCAL_MACHINE \\ software \\ Wow6432Node \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 3.5**.
@@ -173,9 +172,9 @@ O exemplo a seguir localiza as .NET Framework de 1 a 4 versões instaladas:
 
 O .NET Framework CLR instalado com .NET Framework tem controle de versão separadamente. Há duas maneiras de detectar a versão do .NET Framework CLR:
 
-- **A ferramenta CLRVer. exe**
+- **A ferramenta de Clrver.exe**
 
-  Use a [ferramenta de versão do CLR (CLRVer. exe)](../tools/clrver-exe-clr-version-tool.md) para determinar quais versões do CLR estão instaladas em um computador. Abra o [prompt de comando do desenvolvedor para o Visual Studio](../tools/developer-command-prompt-for-vs.md) e digite `clrver` .
+  Use a [ferramenta de versão do CLR (Clrver.exe)](../tools/clrver-exe-clr-version-tool.md) para determinar quais versões do CLR estão instaladas em um computador. Abra o [prompt de comando do desenvolvedor para o Visual Studio](../tools/developer-command-prompt-for-vs.md) e digite `clrver` .
 
   Saída de exemplo:
 

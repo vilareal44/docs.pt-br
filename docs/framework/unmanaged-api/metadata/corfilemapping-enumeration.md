@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3ca41592-b8da-475a-8032-a15627730003
 topic_type:
 - apiref
-ms.openlocfilehash: f85a36c810df52f871ecc75b92a3b4440455c66b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0ed1579886f1682348a136be3391f6bdc2543d26
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450301"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007384"
 ---
 # <a name="corfilemapping-enumeration"></a>Enumeração CorFileMapping
-Contém valores que descrevem o tipo de mapeamento de arquivo que é retornado de uma chamada para o método [IMetaDataInfo:: GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) .  
+Contém valores que descrevem o tipo de mapeamento de arquivo que é retornado de uma chamada para o método [IMetaDataInfo:: GetFileMapping](imetadatainfo-getfilemapping-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,19 +37,19 @@ typedef enum CorFileMapping {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
-|`fmFlat`|O arquivo é mapeado como um arquivo de dados. Ou seja, o sinalizador `SEC_IMAGE` não foi passado para a função de `CreateFileMapping` do Microsoft Win32.|  
-|`fmExecutableImage`|O arquivo é mapeado para execução, usando a função `LoadLibrary` ou a função `CreateFileMapping` com o sinalizador `SEC_IMAGE`.|  
+|`fmFlat`|O arquivo é mapeado como um arquivo de dados. Ou seja, o `SEC_IMAGE` sinalizador não foi passado para a função Microsoft Win32 `CreateFileMapping` .|  
+|`fmExecutableImage`|O arquivo é mapeado para execução, usando a `LoadLibrary` função ou a `CreateFileMapping` função com o `SEC_IMAGE` sinalizador.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
-- [Método GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)
+- [Enumerações de metadados](metadata-enumerations.md)
+- [Método GetFileMapping](imetadatainfo-getfilemapping-method.md)

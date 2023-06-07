@@ -1,13 +1,14 @@
 ---
 title: Como agrupar arquivos por extensão (LINQ) (C#)
+description: Saiba como usar o LINQ para realizar operações avançadas de agrupamento e classificação em listas de arquivos ou pastas em C#. O exemplo mostra como paginar a saída no console.
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: 2ee1fa1291f5845c818395dfe038ec5894adc863
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6113392170063cac1fd89017efaf0c7dad3ba34b
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169149"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105037"
 ---
 # <a name="how-to-group-files-by-extension-linq-c"></a>Como agrupar arquivos por extensão (LINQ) (C#)
 Este exemplo mostra como o LINQ pode ser usado para realizar operações avançadas de classificação e agrupamento em listas de arquivos ou pastas. Ele também mostra como paginar a saída na janela do console usando os métodos <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Take%2A>.  

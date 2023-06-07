@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: d7209e431b84e52e487bccbf73bd633a346efde0
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 524660fca7c56fa490cc85169898bf2bf6d1a16e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775616"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400572"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 Permite o uso de inferência de tipo local nas declarações de variáveis.  
@@ -34,7 +34,7 @@ Permite o uso de inferência de tipo local nas declarações de variáveis.
 > Você pode usar a opção `-noconfig` para manter os padrões internos do compilador em vez dos especificados no vbc.rsp. O padrão do compilador para essa opção é `-optioninfer-`.  
   
 ## <a name="remarks"></a>Comentários  
- Se o arquivo de código-fonte contiver uma [instrução Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md), a `-optioninfer` instrução substituirá a configuração do compilador de linha de comando.  
+ Se o arquivo de código-fonte contiver uma [instrução Option Infer](../../language-reference/statements/option-infer-statement.md), a instrução substituirá a `-optioninfer` configuração do compilador de linha de comando.  
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Para Set-optioninfer no IDE do Visual Studio  
   
@@ -49,16 +49,16 @@ Permite o uso de inferência de tipo local nas declarações de variáveis.
 vbc -optioninfer+ test.vb  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Instrução Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [Inferência de Tipo de Variável Local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Compilador de linha de comando do Visual Basic](index.md)
+- [-optioncompare](optioncompare.md)
+- [-optionexplicit](optionexplicit.md)
+- [-optionstrict](optionstrict.md)
+- [Linhas de Comando de Compilação de Exemplo](sample-compilation-command-lines.md)
+- [Instrução Option Infer](../../language-reference/statements/option-infer-statement.md)
+- [Inferência de Tipo de Variável Local](../../programming-guide/language-features/variables/local-type-inference.md)
 - [Caixa de diálogo Padrões do Visual Basic, Projetos, Opções](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [Página de Compilação, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
-- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [Compilando da Linha de Comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)
+- [-noconfig](noconfig.md)
+- [Compilando da Linha de Comando](building-from-the-command-line.md)

@@ -1,17 +1,18 @@
 ---
 title: Host de serviço do WCF (WcfSvcHost.exe)
+description: Use o host de serviço WCF para hospedar e testar um serviço que você implementou. Você pode testar o serviço usando o cliente de teste do WCF ou seu próprio cliente.
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: b8fb32111a80178f5eb92411eb4990decb645bb6
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: efc9512766d2a9cc814083ab632226d98917bf4e
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837734"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245720"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host de serviço do WCF (WcfSvcHost.exe)
 
-O host de serviço do Windows Communication Foundation (WCF) (WcfSvcHost. exe) permite que você inicie o depurador do Visual Studio (F5) para hospedar e testar automaticamente um serviço que você implementou. Em seguida, você pode testar o serviço usando o cliente de teste do WCF (WcfTestClient. exe) ou seu próprio cliente, para localizar e corrigir quaisquer erros potenciais.
+O host de serviço do Windows Communication Foundation (WCF) (WcfSvcHost.exe) permite que você inicie o depurador do Visual Studio (F5) para hospedar e testar automaticamente um serviço que você implementou. Em seguida, você pode testar o serviço usando o cliente de teste do WCF (WcfTestClient.exe) ou seu próprio cliente, para localizar e corrigir possíveis erros.
 
 ## <a name="wcf-service-host"></a>Host de serviço WCF
 
@@ -26,7 +27,7 @@ Usando o host de serviço do WCF, você pode hospedar um serviço WCF (em um pro
 
 O host de serviço WCF pode hospedar os seguintes tipos de projeto de biblioteca de serviço WCF: biblioteca de serviços WCF, biblioteca de serviço de fluxo de trabalho Sequencial, biblioteca de serviço de fluxo de trabalho de máquina de estado e biblioteca O host de serviço WCF também pode hospedar esses serviços que podem ser adicionados a um projeto de biblioteca de serviço usando a funcionalidade **Adicionar item** . Isso inclui serviço WCF, serviço de máquina de estado do WF, serviço sequencial do WF, serviço de máquina de estado XAML do WF e serviço sequencial do WF do XAML.
 
-No entanto, você deve observar que a ferramenta não ajudará a configurar um host. Para essa tarefa, você deve editar manualmente o arquivo app. config. A ferramenta também não valida arquivos de configuração definidos pelo usuário.
+No entanto, você deve observar que a ferramenta não ajudará a configurar um host. Para essa tarefa, você deve editar manualmente o arquivo de App.config. A ferramenta também não valida arquivos de configuração definidos pelo usuário.
 
 > [!CAUTION]
 > Você não deve usar o host de serviço do WCF para hospedar serviços em um ambiente de produção, pois ele não foi projetado para essa finalidade.  O host de serviço WCF não oferece suporte aos requisitos de confiabilidade, segurança e gerenciamento desse ambiente. Em vez disso, use o IIS, pois ele fornece recursos de confiabilidade e monitoramento superiores e é a solução preferida para hospedar serviços. Após a conclusão do desenvolvimento de seus serviços, você deve migrar os serviços do host de serviço do WCF para o IIS.
@@ -51,13 +52,13 @@ Para verificar se o cliente de teste do WCF é usado, clique com o botão direit
 
 #### <a name="using-a-custom-client"></a>Usando um cliente personalizado
 
-Para usar um cliente personalizado, clique com o botão direito do mouse em seu projeto no **Gerenciador de soluções** no Visual Studio, selecione **Propriedades**e, em seguida, selecione a guia **depurar** . clique em **iniciar projeto** e edite o parâmetro `/client` na caixa de diálogo **argumentos de linha de comando** para apontar para o cliente personalizado, conforme indicado no exemplo a seguir.
+Para usar um cliente personalizado, clique com o botão direito do mouse em seu projeto no **Gerenciador de soluções** no Visual Studio, selecione **Propriedades**e, em seguida, selecione a guia **depurar** . clique em **Iniciar projeto** e edite o `/client` parâmetro na caixa de diálogo **argumentos de linha de comando** para apontar para o cliente personalizado, conforme indicado no exemplo a seguir.
 
 `/client:"path/CustomClient.exe"`
 
 Quando você pressiona F5 para iniciar o serviço novamente, o host de serviço do WCF inicia automaticamente o cliente personalizado quando você inicia o depurador.
 
-Você também pode usar o parâmetro `/clientArg:` para especificar uma cadeia de caracteres como um argumento que é passado para o aplicativo cliente personalizado, conforme indicado no exemplo a seguir.
+Você também pode usar o `/clientArg:` parâmetro para especificar uma cadeia de caracteres como um argumento que é passado para o aplicativo cliente personalizado, conforme indicado no exemplo a seguir.
 
 `/client:"path/CustomClient.exe" /clientArg:"arguments that are passed to Client"`
 
@@ -111,16 +112,16 @@ Você pode desligar o host de serviço do WCF das quatro maneiras a seguir:
 
 ## <a name="using-service-host-without-administrator-privilege"></a>Usando o host de serviço sem privilégio de administrador
 
-Para permitir que os usuários sem privilégios de administrador desenvolvam serviços WCF, uma ACL (lista de controle de acesso) é criada para o namespace "http://+:8731/Design_Time_Addresses" durante a instalação do Visual Studio. A ACL é definida como (UI), que inclui todos os usuários interativos conectados à máquina. Os administradores podem adicionar ou remover usuários dessa ACL ou abrir portas adicionais. Essa ACL permite que os usuários usem o host automático do serviço WCF (wcfSvcHost. exe) sem conceder a eles privilégios de administrador.
+Para permitir que os usuários sem privilégios de administrador desenvolvam serviços WCF, uma ACL (lista de controle de acesso) é criada para o namespace " http://+:8731/Design_Time_Addresses " durante a instalação do Visual Studio. A ACL é definida como (UI), que inclui todos os usuários interativos conectados à máquina. Os administradores podem adicionar ou remover usuários dessa ACL ou abrir portas adicionais. Essa ACL permite que os usuários usem o host automático do serviço WCF (wcfSvcHost.exe) sem conceder a eles privilégios de administrador.
 
-Você pode modificar o acesso usando a ferramenta Netsh. exe no Windows Vista na conta de administrador elevado. Veja a seguir um exemplo de como usar o netsh. exe.
+Você pode modificar o acesso usando a ferramenta de netsh.exe no Windows Vista na conta de administrador elevado. Veja a seguir um exemplo de como usar netsh.exe.
 
 ```console
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
 ```
 
-Para obter mais informações sobre o netsh. exe, consulte "[como usar a ferramenta Netsh. exe e as opções de linha de comando](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10))".
+Para obter mais informações sobre netsh.exe, consulte "[como usar a ferramenta de Netsh.exe e as opções de linha de comando](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10))".
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Cliente de teste do WCF (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)
+- [Cliente de Teste do WCF (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

@@ -2,18 +2,18 @@
 title: persistir um objeto no Visual Studio
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: fbd342c929e8519571c0f6bb76d4091efcfe4476
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e4eaf87c99ea1577d7f3ca40e628c00cc2700511
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350391"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413123"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Passo a passo: mantendo um objeto no Visual Studio (Visual Basic)
 Embora você possa definir as propriedades de um objeto para os valores padrão em tempo de design, qualquer valor inserido em tempo de execução será perdido quando o objeto for destruído. Você pode usar a serialização para manter os dados de um objeto entre instâncias, o que permite armazenar valores e recuperá-los na próxima vez que o objeto for instanciado.  
   
 > [!NOTE]
-> No Visual Basic, para armazenar dados simples, como um nome ou número, você pode usar o objeto `My.Settings`. Para obter mais informações, consulte [Objeto My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
+> No Visual Basic, para armazenar dados simples, como um nome ou número, você pode usar o objeto `My.Settings`. Para obter mais informações, consulte [Objeto My.Settings](../../../language-reference/objects/my-settings-object.md).  
   
  Neste passo a passo, você criará um objeto `Loan` simples e manterá seus dados em um arquivo. Em seguida, você recuperará os dados do arquivo quando recriar o objeto.  
   
@@ -24,7 +24,7 @@ Embora você possa definir as propriedades de um objeto para os valores padrão 
 > Este exemplo armazena dados em um arquivo binário. Esses formatos não devem ser usados para dados confidenciais, como senhas ou informações de cartão de crédito.  
   
 > [!NOTE]
-> As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, clique em **Importar e exportar configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
+> As caixas de diálogo e os comandos de menu encontrados podem diferir daqueles descritos na Ajuda, dependendo das configurações ativas ou edição. Para alterar as configurações, clique em **Importar e exportar configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-loan-object"></a>Criando o objeto Loan  
  A primeira etapa é criar uma classe `Loan` e um aplicativo de teste que usa a classe.  
@@ -215,7 +215,7 @@ Embora você possa definir as propriedades de um objeto para os valores padrão 
   
  Neste ponto, você pode compilar e executar o aplicativo novamente. Inicialmente, os valores padrão aparecem nas caixas de texto. Tente alterar os valores e digite um nome na quarta caixa de texto. Feche o aplicativo e execute-o novamente. Observe que agora os novos valores aparecem nas caixas de texto.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Serialização (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
-- [Guia de programação do Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Serialização (Visual Basic)](index.md)
+- [Guia de programação do Visual Basic](../../index.md)

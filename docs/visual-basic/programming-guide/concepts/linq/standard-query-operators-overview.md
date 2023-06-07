@@ -2,20 +2,20 @@
 title: Visão geral de operadores de consulta padrão
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 9660e1d92db87e1ae906b3fd6616a51c8b8715fa
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7c229a576f6695282473352d6253d2c699c76604
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349306"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406775"
 ---
-# <a name="standard-query-operators-overview-visual-basic"></a>Visão geral dos operadores de consulta padrão (Visual Basic)
+# <a name="standard-query-operators-overview-visual-basic"></a>Visão geral de operadores de consulta padrão (Visual Basic)
 
 Os *operadores de consulta padrão* são os métodos que formam o padrão LINQ. A maioria desses métodos opera em sequências; neste contexto, uma sequência é um objeto cujo tipo implementa a interface <xref:System.Collections.Generic.IEnumerable%601> ou a interface <xref:System.Linq.IQueryable%601>. Os operadores de consulta padrão fornecem recursos de consulta incluindo filtragem, projeção, agregação, classificação e muito mais.
 
 Há dois conjuntos de operadores de consulta padrão LINQ, um que opera em objetos do tipo <xref:System.Collections.Generic.IEnumerable%601> e o outro que opera em objetos do tipo <xref:System.Linq.IQueryable%601>. Os métodos que compõem a cada conjunto são os membros estáticos das classes <xref:System.Linq.Enumerable> e <xref:System.Linq.Queryable>, respectivamente. Eles são definidos como *métodos de extensão* do tipo nos quais operam. Isso significa que eles podem ser chamados usando a sintaxe de método estático ou sintaxe de método de instância.
 
-Além disso, vários métodos de operador de consulta padrão operam em tipos diferentes daqueles baseados em <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Linq.IQueryable%601>. O tipo <xref:System.Linq.Enumerable> define dois métodos tais que ambos operam em objetos do tipo <xref:System.Collections.IEnumerable>. Esses métodos, <xref:System.Linq.Enumerable.Cast%60%601%28System.Collections.IEnumerable%29> e <xref:System.Linq.Enumerable.OfType%60%601%28System.Collections.IEnumerable%29>, permitem que você habilite uma coleção sem parâmetros ou não genérica, a ser consultada no padrão LINQ. Eles fazem isso criando uma coleção de objetos fortemente tipada. A classe <xref:System.Linq.Queryable> define dois métodos semelhantes, <xref:System.Linq.Queryable.Cast%60%601%28System.Linq.IQueryable%29> e <xref:System.Linq.Queryable.OfType%60%601%28System.Linq.IQueryable%29>, que operam em objetos do tipo <xref:System.Linq.Queryable>.
+Além disso, vários métodos de operador de consulta padrão operam em tipos diferentes daqueles baseados em <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Linq.IQueryable%601>. O tipo <xref:System.Linq.Enumerable> define dois métodos tais que ambos operam em objetos do tipo <xref:System.Collections.IEnumerable>. Esses métodos, <xref:System.Linq.Enumerable.Cast%60%601%28System.Collections.IEnumerable%29> e <xref:System.Linq.Enumerable.OfType%60%601%28System.Collections.IEnumerable%29>, permitem que você habilite uma coleção sem parâmetros ou não genérica, a ser consultada no padrão LINQ. Eles fazem isso criando uma coleção fortemente tipada de objetos. A classe <xref:System.Linq.Queryable> define dois métodos semelhantes, <xref:System.Linq.Queryable.Cast%60%601%28System.Linq.IQueryable%29> e <xref:System.Linq.Queryable.OfType%60%601%28System.Linq.IQueryable%29>, que operam em objetos do tipo <xref:System.Linq.Queryable>.
 
 Os operadores de consulta padrão são diferentes no momento de sua execução, dependendo de se eles retornam um valor singleton ou uma sequência de valores. Esses métodos que retornam um valor singleton (por exemplo, <xref:System.Linq.Enumerable.Average%2A> e <xref:System.Linq.Enumerable.Sum%2A>) são executados imediatamente. Os métodos que retornam uma sequência adiam a execução da consulta e retornam um objeto enumerável.
 
@@ -66,49 +66,49 @@ MsgBox(output.ToString())
 
 ## <a name="query-expression-syntax"></a>Sintaxe de expressão de consulta
 
-Alguns dos operadores de consulta padrão mais usados têm uma sintaxe de palavra-chave de linguagem C# e Visual Basic dedicada que possibilita que eles sejam chamados como parte de uma *expressão* *de consulta*. Para obter mais informações sobre operadores de consulta padrão que têm palavras-chave dedicadas e suas sintaxes correspondentes, consulte [sintaxe de expressão de consulta para operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).
+Alguns dos operadores de consulta padrão mais usados têm uma sintaxe de palavra-chave de linguagem C# e Visual Basic dedicada que possibilita que eles sejam chamados como parte de uma *expressão* *de consulta*. Para obter mais informações sobre operadores de consulta padrão que têm palavras-chave dedicadas e suas sintaxes correspondentes, consulte [sintaxe de expressão de consulta para operadores de consulta padrão (Visual Basic)](query-expression-syntax-for-standard-query-operators.md).
 
 ## <a name="extending-the-standard-query-operators"></a>Estendendo os operadores de consulta padrão
 
-Você pode aumentar o conjunto de operadores de consulta padrão criando métodos específicos de domínio apropriados para o domínio ou tecnologia de destino. Você também pode substituir os operadores de consulta padrão por suas próprias implementações que fornecem serviços adicionais, como avaliação remota, conversão de consulta e otimização. Consulte <xref:System.Linq.Enumerable.AsEnumerable%2A> para obter um exemplo.
+Você pode aumentar o conjunto de operadores de consulta padrão criando métodos específicos de domínio apropriados para o domínio ou tecnologia de destino. Você também pode substituir os operadores de consulta padrão por suas próprias implementações que fornecem serviços adicionais, como avaliação remota, conversão de consulta e otimização. Para ver um exemplo, consulte <xref:System.Linq.Enumerable.AsEnumerable%2A>.
 
-## <a name="related-sections"></a>Seções Relacionadas
+## <a name="related-sections"></a>Seções relacionadas
 
 Os links a seguir levam você a tópicos que fornecem informações adicionais sobre os vários operadores de consulta padrão com base na funcionalidade.
 
-- [Classificando Dados](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
+- [Classificar dados](sorting-data.md)
 
-- [Operações Set (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)
+- [Operações Set (Visual Basic)](set-operations.md)
 
-- [Filtrando dados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)
+- [Filtrando dados (Visual Basic)](filtering-data.md)
 
-- [Operações do quantificador (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)
+- [Operações do quantificador (Visual Basic)](quantifier-operations.md)
 
-- [Operações de projeção (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Operações de projeção (Visual Basic)](projection-operations.md)
 
-- [Dados de particionamento (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)
+- [Dados de particionamento (Visual Basic)](partitioning-data.md)
 
-- [Operações de junção (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)
+- [Operações de junção (Visual Basic)](join-operations.md)
 
-- [Agrupando dados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)
+- [Agrupando dados (Visual Basic)](grouping-data.md)
 
-- [Operações de geração (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/generation-operations.md)
+- [Operações de geração (Visual Basic)](generation-operations.md)
 
-- [Operações de igualdade (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/equality-operations.md)
+- [Operações de igualdade (Visual Basic)](equality-operations.md)
 
-- [Operações de elemento (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)
+- [Operações de elemento (Visual Basic)](element-operations.md)
 
-- [Convertendo tipos de dados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)
+- [Convertendo tipos de dados (Visual Basic)](converting-data-types.md)
 
-- [Operações de concatenação (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concatenation-operations.md)
+- [Operações de concatenação (Visual Basic)](concatenation-operations.md)
 
-- [Operações de agregação (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)
+- [Operações de agregação (Visual Basic)](aggregation-operations.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
-- [Introdução ao LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
-- [Sintaxe de expressão de consulta para operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [Classificação de operadores de consulta padrão por meio de execução (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
-- [Métodos de Extensão](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [Introdução ao LINQ (Visual Basic)](introduction-to-linq.md)
+- [Sintaxe de expressão de consulta para operadores de consulta padrão (Visual Basic)](query-expression-syntax-for-standard-query-operators.md)
+- [Classificação de operadores de consulta padrão por meio de execução (Visual Basic)](classification-of-standard-query-operators-by-manner-of-execution.md)
+- [Métodos de Extensão](../../language-features/procedures/extension-methods.md)

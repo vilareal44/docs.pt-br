@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9caea662-0167-4267-b14a-2fa42c3be4ea
 topic_type:
 - apiref
-ms.openlocfilehash: b771b368c069a4577d266b47bfb4a5ee1935e48e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7a2a5080872f49a84e36c53ac337d91738c15e45
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436263"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501333"
 ---
 # <a name="imetadataconverter-interface"></a>Interface IMetaDataConverter
 Fornece métodos para mapear bibliotecas de tipos para suas assinaturas de metadados e para converter de uma para a outra.  
@@ -28,20 +28,20 @@ Fornece métodos para mapear bibliotecas de tipos para suas assinaturas de metad
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetMetaDataFromTypeInfo](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-getmetadatafromtypeinfo-method.md)|Obtém um ponteiro para uma instância de [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) que representa a assinatura de metadados para a biblioteca de tipos referenciada pela instância de `ITypeInfo` especificada.|  
-|[Método GetMetaDataFromTypeLib](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-getmetadatafromtypelib-method.md)|Obtém um ponteiro para uma instância de `IMetaDataImport` que representa a assinatura de metadados para a biblioteca de tipos representada pela instância de `ITypeLib` especificada.|  
-|[Método GetTypeLibFromMetaData](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-gettypelibfrommetadata-method.md)|Obtém um ponteiro para uma instância de `ITypeLib` que representa a biblioteca de tipos que tem o módulo e os nomes de biblioteca especificados.|  
+|[Método GetMetaDataFromTypeInfo](imetadataconverter-getmetadatafromtypeinfo-method.md)|Obtém um ponteiro para uma instância de [IMetaDataImport](imetadataimport-interface.md) que representa a assinatura de metadados para a biblioteca de tipos referenciada pela `ITypeInfo` instância especificada.|  
+|[Método GetMetaDataFromTypeLib](imetadataconverter-getmetadatafromtypelib-method.md)|Obtém um ponteiro para uma `IMetaDataImport` instância que representa a assinatura de metadados para a biblioteca de tipos representada pela `ITypeLib` instância especificada.|  
+|[Método GetTypeLibFromMetaData](imetadataconverter-gettypelibfrommetadata-method.md)|Obtém um ponteiro para uma `ITypeLib` instância que representa a biblioteca de tipos que tem o módulo e os nomes de biblioteca especificados.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Consulte [requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaces de metadados](metadata-interfaces.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)

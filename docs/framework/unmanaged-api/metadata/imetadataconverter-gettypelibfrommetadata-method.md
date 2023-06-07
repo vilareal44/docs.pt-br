@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 90eab7b3-1fae-4af4-8bce-f7bc0e188a99
 topic_type:
 - apiref
-ms.openlocfilehash: ef573eb9a572c27e685289b2740a55e898be2093
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 79bd8901641ee587e94861c0aec85b812591ea48
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177626"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008411"
 ---
 # <a name="imetadataconvertergettypelibfrommetadata-method"></a>Método IMetaDataConverter::GetTypeLibFromMetaData
-Obtém um `ITypeLib` ponteiro para uma instância que representa a biblioteca de tipos que tem os nomes de biblioteca e módulo especificados.  
+Obtém um ponteiro para uma `ITypeLib` instância que representa a biblioteca de tipos que tem os nomes de módulo e biblioteca especificados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,25 +35,25 @@ HRESULT GetTypeLibFromMetaData (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `strModule`  
- [em] O nome do módulo da biblioteca do tipo.  
+ no O nome do módulo da biblioteca de tipos.  
   
  `strTlbName`  
- [em] O nome da biblioteca do tipo.  
+ no O nome da biblioteca de tipos.  
   
  `ppITL`  
- [fora] Um ponteiro para um local que `ITypeLib` recebe o endereço da instância que representa a biblioteca do tipo.  
+ fora Um ponteiro para um local que recebe o endereço da `ITypeLib` instância que representa a biblioteca de tipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Consulte [os requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataConverter](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-interface.md)
+- [Interface IMetaDataConverter](imetadataconverter-interface.md)

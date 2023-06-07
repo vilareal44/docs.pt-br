@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8ba42d2-d9fa-43cb-bbc0-f33e1e592cb6
 topic_type:
 - apiref
-ms.openlocfilehash: af1c3d599c5280e584ffb842c96c70a7c3d4ed08
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0916b6382bb9352616d85e21f423301dc6aa9fa9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436882"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490842"
 ---
 # <a name="imetadataimportgetscopeprops-method"></a>Método IMetaDataImport::GetScopeProps
 Obtém o nome e, opcionalmente, o identificador de versão do assembly ou módulo no escopo de metadados atual.  
@@ -41,27 +41,27 @@ HRESULT GetScopeProps (
  fora Um buffer para o assembly ou o nome do módulo.  
   
  `cchName`  
- no O tamanho em caracteres largos de `szName`.  
+ no O tamanho em caracteres largos de `szName` .  
   
  `pchName`  
- fora O número de caracteres largos retornados em `szName`.  
+ fora O número de caracteres largos retornados em `szName` .  
   
  `pmvid`  
  [saída, opcional] Um ponteiro para um GUID que identifica exclusivamente a versão do assembly ou módulo.  
   
 ## <a name="remarks"></a>Comentários  
- O método [IMetaDataEmit:: SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) é usado para definir essas propriedades.  
+ O método [IMetaDataEmit:: SetModuleProps](imetadataemit-setmoduleprops-method.md) é usado para definir essas propriedades.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44bc0f56-32fa-491e-a62d-52fc96d48125
 topic_type:
 - apiref
-ms.openlocfilehash: ed39411fa88c38da58e8a881c47d19b3b8c9ff8d
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f7dee16373fc67580130c57482a130ba02f50204
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76869272"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84497459"
 ---
 # <a name="icorprofilerinfoseteventmask-method"></a>Método ICorProfilerInfo::SetEventMask
 Determina um valor que especifica os tipos de eventos dos quais o perfil deseja receber notificação do CLR (Common Language Runtime).  
@@ -39,18 +39,18 @@ HRESULT SetEventMask(
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
-> Você deve chamar o método [SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) em vez desse método. Embora o método `SetEventMask` continue a ser suportado, o [SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) fornece funcionalidade adicional.  
+> Você deve chamar o método [SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) em vez desse método. Embora o `SetEventMask` método continue a ser suportado, o [SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) fornece funcionalidade adicional.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)
 - [Método SetEventMask2](icorprofilerinfo5-seteventmask2-method.md)

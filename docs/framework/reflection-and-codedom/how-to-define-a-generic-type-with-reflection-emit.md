@@ -1,5 +1,6 @@
 ---
-title: Como definir um tipo genérico com a emissão de reflexão
+title: 'Como: Definir um tipo genérico com a emissão de reflexão'
+description: Consulte como definir um tipo genérico com emissão de reflexo. Crie um tipo genérico com dois parâmetros de tipo, aplique restrições de classe, restrições de interface e muito mais.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - generics [.NET Framework], dynamic types
 - reflection emit, generic types
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
-ms.openlocfilehash: b553fd2235c73cf879474dc4f44f958dddcb649c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fe8fb731fd160ab87e5c65debf367a96bc0dea2a
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130163"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865119"
 ---
-# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Como definir um tipo genérico com a emissão de reflexão
+# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Como: Definir um tipo genérico com a emissão de reflexão
 Este tópico mostra como criar um tipo genérico simples com dois parâmetros de tipo, como aplicar restrições de classe, restrições de interface e restrições especiais aos parâmetros de tipo e como criar membros que usam os parâmetros de tipo da classe como tipos de parâmetro e tipos de retorno.  
   
 > [!IMPORTANT]
@@ -69,7 +70,7 @@ Este tópico mostra como criar um tipo genérico simples com dois parâmetros de
      [!code-csharp[EmitGenericType#21](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#21)]
      [!code-vb[EmitGenericType#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#21)]  
   
-8. Defina um método que usa os parâmetros de tipo do tipo genérico. Observe que esses métodos não são genéricos, a menos que tenham suas próprias listas de parâmetros de tipo. O código a seguir define um método `static` (`Shared` no Visual Basic) que usa uma matriz de `TFirst` e retorna um `List<TFirst>` (`List(Of TFirst)` no Visual Basic) que contém todos os elementos da matriz. Para definir esse método, é necessário criar o tipo `List<TFirst>` chamando <xref:System.Type.MakeGenericType%2A> na definição de tipo genérico, `List<T>`. (O `T` é omitido quando você usa `typeof` o operador`GetType` (em Visual Basic) para obter a definição de tipo genérico.) O tipo de parâmetro é criado usando o <xref:System.Type.MakeArrayType%2A> método.  
+8. Defina um método que usa os parâmetros de tipo do tipo genérico. Observe que esses métodos não são genéricos, a menos que tenham suas próprias listas de parâmetros de tipo. O código a seguir define um método `static` (`Shared` no Visual Basic) que usa uma matriz de `TFirst` e retorna um `List<TFirst>` (`List(Of TFirst)` no Visual Basic) que contém todos os elementos da matriz. Para definir esse método, é necessário criar o tipo `List<TFirst>` chamando <xref:System.Type.MakeGenericType%2A> na definição de tipo genérico, `List<T>`. (O `T` é omitido quando você usa o `typeof` operador ( `GetType` em Visual Basic) para obter a definição de tipo genérico.) O tipo de parâmetro é criado usando o <xref:System.Type.MakeArrayType%2A> método.  
   
      [!code-cpp[EmitGenericType#22](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#22)]
      [!code-csharp[EmitGenericType#22](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#22)]
@@ -79,7 +80,7 @@ Este tópico mostra como criar um tipo genérico simples com dois parâmetros de
   
      O método <xref:System.Type.GetConstructor%2A> não tem suporte em um <xref:System.Reflection.Emit.GenericTypeParameterBuilder>, portanto, não é possível obter o construtor de `List<TFirst>` diretamente. Primeiro, é necessário obter o construtor da definição de tipo genérico `List<T>` e, em seguida, chamar um método que o converte para o construtor correspondente do `List<TFirst>`.  
   
-     O construtor usado para este exemplo de código utiliza um `IEnumerable<T>`. No entanto, observe que essa não é a definição de tipo genérico da interface genérica <xref:System.Collections.Generic.IEnumerable%601>, em vez disso, o parâmetro de tipo `T` de `List<T>` deve ser substituído pelo parâmetro de tipo `T` de `IEnumerable<T>`. (Isso parece confuso apenas porque ambos os tipos têm parâmetros de tipo chamados `T`. É por isso que este exemplo de código usa `TFirst` os `TSecond`nomes e.) Para obter o tipo do argumento do Construtor, comece com a definição `IEnumerable<T>` de tipo genérico e <xref:System.Type.MakeGenericType%2A> chame com o primeiro parâmetro de tipo `List<T>`genérico de. A lista de argumentos do construtor deve ser passada como uma matriz, com apenas um argumento nesse caso.  
+     O construtor usado para este exemplo de código utiliza um `IEnumerable<T>`. No entanto, observe que essa não é a definição de tipo genérico da interface genérica <xref:System.Collections.Generic.IEnumerable%601>, em vez disso, o parâmetro de tipo `T` de `List<T>` deve ser substituído pelo parâmetro de tipo `T` de `IEnumerable<T>`. (Isso parece confuso apenas porque ambos os tipos têm parâmetros de tipo chamados `T`. É por isso que este exemplo de código usa os nomes `TFirst` e `TSecond` .) Para obter o tipo do argumento do Construtor, comece com a definição de tipo genérico `IEnumerable<T>` e chame <xref:System.Type.MakeGenericType%2A> com o primeiro parâmetro de tipo genérico de `List<T>` . A lista de argumentos do construtor deve ser passada como uma matriz, com apenas um argumento nesse caso.  
   
     > [!NOTE]
     > A definição de tipo genérico é expressa como `IEnumerable<>` quando você usa o operador `typeof` em C# ou `IEnumerable(Of )` quando usa o operador `GetType` no Visual Basic.  
@@ -125,7 +126,7 @@ Este tópico mostra como criar um tipo genérico simples com dois parâmetros de
  [!code-csharp[EmitGenericType#1](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#1)]
  [!code-vb[EmitGenericType#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
 - [Usando a emissão de reflexão](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))

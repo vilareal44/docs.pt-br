@@ -1,5 +1,6 @@
 ---
 title: Usando os serviços TCP
+description: A classe TcpClient abstrai os detalhes para criar um soquete para solicitar e receber dados usando TCP. Use .NET Framework tratamento de fluxo para ler e gravar dados.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-ms.openlocfilehash: 3678586647dcf9c47b4494197fbf56cab865b3d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 329701e8f11ca7f87c40ee8b2cc6a337435242b5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73039483"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501957"
 ---
 # <a name="using-tcp-services"></a>Usando os serviços TCP
 
@@ -31,7 +32,7 @@ O protocolo TCP estabelece uma conexão com um ponto de extremidade remoto e, em
 
 Para estabelecer uma conexão TCP, você deve saber o endereço do dispositivo de rede que hospeda o serviço necessário e saber a porta TCP usada pelo serviço para se comunicar. A IANA (Internet Assigned Numbers Authority) define os números da porta de serviços comuns (veja [Registro de número da porta do protocolo de transporte e nome de serviço](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)). Os serviços que não estão na lista da IANA podem ter números de porta no intervalo de 1.024 a 65.535.
 
-O exemplo a seguir demonstra a configuração de um **TcpClient** para se conectar a um servidor de tempo na porta TCP 13:
+O exemplo a seguir demonstra como configurar um **TcpClient** para se conectar a um servidor de horário na porta TCP 13:
 
 ```vb
 Imports System.Net.Sockets
@@ -105,7 +106,7 @@ public class TcpTimeClient
 }
 ```
 
-<xref:System.Net.Sockets.TcpListener>é usado para monitorar uma porta TCP para solicitações recebidas e, em seguida, criar um **Soquete** ou um **TcpClient** que gerencia a conexão com o cliente. O método <xref:System.Net.Sockets.TcpListener.Start%2A> habilita a escuta e o método <xref:System.Net.Sockets.TcpListener.Stop%2A> desabilita a escuta na porta. O método <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> aceita solicitações de conexão de entrada e cria um **TcpClient** para manipular a solicitação e o método <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> aceita solicitações de conexão de entrada e cria um **Socket** para manipular a solicitação.
+<xref:System.Net.Sockets.TcpListener>é usado para monitorar uma porta TCP para solicitações de entrada e, em seguida, criar um **soquete** ou um **TcpClient** que gerencia a conexão com o cliente. O método <xref:System.Net.Sockets.TcpListener.Start%2A> habilita a escuta e o método <xref:System.Net.Sockets.TcpListener.Stop%2A> desabilita a escuta na porta. O método <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> aceita solicitações de conexão de entrada e cria um **TcpClient** para manipular a solicitação e o método <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> aceita solicitações de conexão de entrada e cria um **Socket** para manipular a solicitação.
 
 O exemplo a seguir demonstra como criar um servidor de horário da rede usando um **TcpListener** para monitorar a porta TCP 13. Quando uma solicitação de conexão de entrada é aceita, o servidor de horário responde com a data e hora atuais do servidor host.
 

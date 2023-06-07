@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -vbruntime compiler option [Visual Basic]
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
-ms.openlocfilehash: 8c7789c6af7b82ecb40ecd73d09f64aa1da3fd4b
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 31b719fb7e43cdd6ac44424b359999410dd608a5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005057"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403038"
 ---
 # <a name="-vbruntime"></a>-vbruntime
 Especifica que o compilador deve compilar sem uma referência para a biblioteca de tempo de execução Visual Basic ou com uma referência a uma biblioteca de tempo de execução específica.  
@@ -43,7 +43,7 @@ Especifica que o compilador deve compilar sem uma referência para a biblioteca 
   
  A `-vbruntime+` opção produz o mesmo comportamento que ocorre se nenhuma `-vbruntime` opção for especificada. Você pode usar a `-vbruntime+` opção para substituir as `-vbruntime` opções anteriores.  
   
- A maioria dos objetos `My` do tipo não está disponível quando você usa `-vbruntime-` as `-vbruntime:path` opções ou.  
+ A maioria dos objetos do `My` tipo não está disponível quando você usa `-vbruntime-` as `-vbruntime:path` Opções ou.  
   
 ## <a name="embedding-visual-basic-runtime-core-functionality"></a>Inserindo Visual Basic funcionalidade básica de tempo de execução  
  A `-vbruntime*` opção permite que você compile sem uma referência a uma biblioteca de tempo de execução. Em vez disso, a funcionalidade básica da biblioteca Visual Basic Runtime é inserida no assembly do usuário. Você pode usar essa opção se seu aplicativo for executado em plataformas que não contêm o tempo de execução de Visual Basic.  
@@ -85,7 +85,7 @@ Especifica que o compilador deve compilar sem uma referência para a biblioteca 
 ## <a name="referencing-a-specified-library"></a>Referenciando uma biblioteca especificada  
  Você pode usar o `path` argumento para compilar com uma referência a uma biblioteca de tempo de execução personalizada em vez da biblioteca de tempo de execução padrão Visual Basic.  
   
- Se o valor do `path` argumento for um caminho totalmente qualificado para uma dll, o compilador usará esse arquivo como a biblioteca de tempo de execução. Se o valor do `path` argumento não for um caminho totalmente qualificado para uma dll, o compilador Visual Basic pesquisará a DLL identificada na pasta atual primeiro. Em seguida, ele pesquisará no caminho que você especificou usando a opção de compilador [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) . Se a `-sdkpath` opção do compilador não for usada, o compilador pesquisará a DLL identificada na pasta .NET Framework (`%systemroot%\Microsoft.NET\Framework\versionNumber`).  
+ Se o valor do `path` argumento for um caminho totalmente qualificado para uma dll, o compilador usará esse arquivo como a biblioteca de tempo de execução. Se o valor do `path` argumento não for um caminho totalmente qualificado para uma dll, o compilador Visual Basic pesquisará a DLL identificada na pasta atual primeiro. Em seguida, ele pesquisará no caminho que você especificou usando a opção de compilador [-sdkpath](sdkpath.md) . Se a `-sdkpath` opção do compilador não for usada, o compilador pesquisará a DLL identificada na pasta .NET Framework ( `%systemroot%\Microsoft.NET\Framework\versionNumber` ).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como usar a `-vbruntime` opção para compilar com uma referência a uma biblioteca personalizada.  
@@ -94,9 +94,9 @@ Especifica que o compilador deve compilar sem uma referência para a biblioteca 
 vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Núcleo de Visual Basic – novo modo de compilação no Visual Studio 2010 SP1](https://devblogs.microsoft.com/vbteam/vb-core-new-compilation-mode-in-visual-studio-2010-sp1/)
-- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
+- [Compilador de linha de comando do Visual Basic](index.md)
+- [Linhas de Comando de Compilação de Exemplo](sample-compilation-command-lines.md)
+- [-sdkpath](sdkpath.md)

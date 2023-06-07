@@ -3,14 +3,14 @@ title: APIs que dependem de reflexão
 ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 ms.openlocfilehash: 1d8daceb6b744b984f86b011ad7952d0da583a79
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79181086"
 ---
 # <a name="apis-that-rely-on-reflection"></a>APIs que dependem de reflexão
-Em alguns casos, o uso de reflexão em código não é óbvio e, portanto, a cadeia de ferramentas .NET Native não preserva metadados necessários no tempo de execução. Este tópico abrange algumas APIs ou padrões de programação comuns que não são consideradas como parte da API de reflexão, mas que dependem de reflexão para serem executados com êxito. Se você usá-los no código-fonte, poderá adicionar informações sobre eles no arquivo de diretivas de runtime (.rd.xml), de modo que as chamadas a essas APIs não gerem uma exceção [MissingMetadataException](missingmetadataexception-class-net-native.md) ou outras exceções em runtime.  
+Em alguns casos, o uso de reflexão no código não é óbvio e, portanto, a cadeia de ferramentas de .NET Native não preserva os metadados necessários no tempo de execução. Este tópico abrange algumas APIs ou padrões de programação comuns que não são consideradas como parte da API de reflexão, mas que dependem de reflexão para serem executados com êxito. Se você usá-los no código-fonte, poderá adicionar informações sobre eles no arquivo de diretivas de runtime (.rd.xml), de modo que as chamadas a essas APIs não gerem uma exceção [MissingMetadataException](missingmetadataexception-class-net-native.md) ou outras exceções em runtime.  
   
 ## <a name="typemakegenerictype-method"></a>Método Type.MakeGenericType  
  Você pode instanciar dinamicamente um tipo genérico `AppClass<T>` chamando o método <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> usando um código da seguinte forma:  
@@ -27,9 +27,9 @@ Em alguns casos, o uso de reflexão em código não é óbvio e, portanto, a cad
   
  Mesmo quando você adiciona metadados ao tipo genérico não instanciado, uma chamada ao método <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> gera uma exceção [MissingMetadataException](missingmetadataexception-class-net-native.md):  
   
-Esta operação não pode ser realizada como metadados para o seguinte tipo foi removido por razões de desempenho:  
+Esta operação não pode ser executada porque os metadados para o seguinte tipo foram removidos por motivos de desempenho:  
   
-`App1.AppClass`1<System.Int32>'.  
+`App1.AppClass`1<>System. Int32 '.  
   
  Você pode adicionar a seguinte diretiva de runtime ao arquivo de diretivas de runtime para adicionar metadados `Activate` à instanciação específica sobre `AppClass<T>` de <xref:System.Int32?displayProperty=nameWithType>:  
   
@@ -51,7 +51,7 @@ Esta operação não pode ser realizada como metadados para o seguinte tipo foi 
   
 - Metadados `Browse` para o método que você deseja chamar.  Se for um método público, adicionar metadados `Browse` públicos ao tipo recipiente também inclui o método.  
   
-- Metadados dinâmicos para o método que você deseja chamar, para que o delegado de invocação de reflexão não seja removido pela cadeia de ferramentas .NET Native. Se os metadados dinâmicos não estiverem presentes para o método, a exceção a seguir é acionada quando o método <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> é chamado:  
+- Metadados dinâmicos para o método que você deseja chamar, de modo que o delegado de invocação de reflexão não seja removido pela cadeia de ferramentas de .NET Native. Se os metadados dinâmicos não estiverem presentes para o método, a exceção a seguir é acionada quando o método <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> é chamado:  
   
     ```output
     MakeGenericMethod() cannot create this generic method instantiation because the instantiation was not metadata-enabled: 'App1.Class1.GenMethod<Int32>(Int32)'.  
@@ -91,4 +91,4 @@ Unfortunately, no further information is available.
 ## <a name="see-also"></a>Confira também
 
 - [Introdução](getting-started-with-net-native.md)
-- [Referência do arquivo de configuração das diretivas de runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

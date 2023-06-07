@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-ms.openlocfilehash: ac385880f8c13c23dffff67fc2a1ecc5609fd189
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: ed9adc7cddd9eb204937b9819e4eeff176821e95
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581410"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400547"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 
@@ -28,7 +28,7 @@ Especifica como são feitas comparações de cadeia de caracteres.
 
 ## <a name="remarks"></a>Comentários
 
-Você pode especificar `-optioncompare` em uma das duas formas: `-optioncompare:binary` para usar comparações de cadeia de `-optioncompare:text` caracteres binárias e para usar comparações de cadeia de caracteres de texto. Por padrão, o compilador usa `-optioncompare:binary`o.
+Você pode especificar `-optioncompare` em uma das duas formas: `-optioncompare:binary` para usar comparações de cadeia de caracteres binárias e para usar comparações de `-optioncompare:text` cadeia de caracteres de texto. Por padrão, o compilador usa o `-optioncompare:binary` .
 
 No Microsoft Windows, a página de código atual determina a ordem de classificação binária. Uma ordem de classificação binária típica é a seguinte:
 
@@ -48,7 +48,7 @@ As comparações de cadeia de caracteres baseadas em texto são baseadas em uma 
 
 ### <a name="to-set--optioncompare-programmatically"></a>Para Set-optioncompare programaticamente
 
-Consulte a [instrução de comparação de opção](../../../visual-basic/language-reference/statements/option-compare-statement.md).
+Consulte a [instrução de comparação de opção](../../language-reference/statements/option-compare-statement.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -58,12 +58,12 @@ O código a seguir compila `ProjFile.vb` e usa comparações de cadeia de caract
 vbc -optioncompare:binary projFile.vb
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
-- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Instrução Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [Compilador de linha de comando do Visual Basic](index.md)
+- [-optionexplicit](optionexplicit.md)
+- [-optionstrict](optionstrict.md)
+- [-optioninfer](optioninfer.md)
+- [Linhas de Comando de Compilação de Exemplo](sample-compilation-command-lines.md)
+- [Instrução Option Compare](../../language-reference/statements/option-compare-statement.md)
 - [Caixa de diálogo Padrões do Visual Basic, Projetos, Opções](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 34ffb9923337bbad90b2170a16d610d26c7f6f23
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 1c69a6e78207e146c8dbd6cdc252f27f36ab37a2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160190"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84281694"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList para parâmetros de folha de estilos e objetos de extensão
 A classe de <xref:System.Xml.Xsl.XsltArgumentList> contém o idioma extensível de folha de estilos para objetos de parâmetros de transformações (XSLT) e a extensão XSLT. Quando passados para o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> , esses parâmetros e objetos de extensão podem ser chamados de folhas de estilos.  
   
 > [!NOTE]
-> As classes <xref:System.Xml.Xsl.XslTransform> e <xref:System.Xml.Xsl.XsltArgumentList> estão obsoletas no .NET Framework 2.0. Você pode realizar transformações XSLT usando a classe de <xref:System.Xml.Xsl.XslCompiledTransform> . Confira [Usar a classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [Migrar da classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) para saber mais.  
+> As classes <xref:System.Xml.Xsl.XslTransform> e <xref:System.Xml.Xsl.XsltArgumentList> estão obsoletas no .NET Framework 2.0. Você pode realizar transformações XSLT usando a classe de <xref:System.Xml.Xsl.XslCompiledTransform> . Confira [Usar a classe XslCompiledTransform](using-the-xslcompiledtransform-class.md) e [Migrar da classe XslTransform](migrating-from-the-xsltransform-class.md) para saber mais.  
   
  A classe de <xref:System.Xml.Xsl.XsltArgumentList> contém objetos de parâmetros XSLT e de extensão XSLT. Quando passados para o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> , esses parâmetros e objetos de extensão podem ser chamados de folhas de estilos.  
   
@@ -364,4 +364,4 @@ public class Sample
   
 ## <a name="see-also"></a>Veja também
 
-- [A classe XslTransform implementa do processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [A classe XslTransform implementa do processador XSLT](xsltransform-class-implements-the-xslt-processor.md)

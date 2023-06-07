@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: c9efbefc2bce9e21f328680795e72b62bfcd5cbd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9131c91b34f4c24653dea37ea39af6be6e072287
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "66379601"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619801"
 ---
-### <a name="enumerableemptytresult-always-returns-cached-instance"></a>Enumerable.Empty\<TResult> sempre retorna instância em cache
+### <a name="enumerableemptylttresultgt-always-returns-cached-instance"></a>Enumerable.Empty&lt;TResult&gt; sempre retorna instância em cache
 
-|   |   |
-|---|---|
-|Detalhes|Começando com o .NET Framework 4.5, <xref:System.Linq.Enumerable.Empty%60%601> sempre retorna um <xref:System.Collections.Generic.IEnumerable%601> de instância interna em cache. Anteriormente, o <xref:System.Linq.Enumerable.Empty%60%601> armazenava em cache um <xref:System.Collections.Generic.IEnumerable%601> vazio no momento em que a API era chamada, significando que, em algumas condições nas quais <xref:System.Linq.Enumerable.Empty%60%601> era chamado de forma rápida e simultânea, diferentes instâncias do tipo poderiam ser retornadas para diferentes chamadas à API.|
-|Sugestão|Como o comportamento anterior não era determinístico, é improvável que o código dependesse dele. No entanto, na improbabilidade de que enumeráveis vazios estivessem sendo comparados e, às vezes, esperados que fosse diferentes, matrizes vazias explícitas deviam ser criadas (<code>new T[0]</code>) em vez de usar <xref:System.Linq.Enumerable.Empty%60%601>.|
-|Escopo|Microsoft Edge|
+#### <a name="details"></a>Detalhes
+
+Começando com o .NET Framework 4.5, <xref:System.Linq.Enumerable.Empty%60%601> sempre retorna um <xref:System.Collections.Generic.IEnumerable%601> de instância interna em cache. Anteriormente, o <xref:System.Linq.Enumerable.Empty%60%601> armazenava em cache um <xref:System.Collections.Generic.IEnumerable%601> vazio no momento em que a API era chamada, significando que, em algumas condições nas quais <xref:System.Linq.Enumerable.Empty%60%601> era chamado de forma rápida e simultânea, diferentes instâncias do tipo poderiam ser retornadas para diferentes chamadas à API.
+
+#### <a name="suggestion"></a>Sugestão
+
+Como o comportamento anterior não era determinístico, é improvável que o código dependesse dele. No entanto, na improbabilidade de que enumeráveis vazios estivessem sendo comparados e, às vezes, esperados que fosse diferentes, matrizes vazias explícitas deviam ser criadas (<code>new T[0]</code>) em vez de usar <xref:System.Linq.Enumerable.Empty%60%601>.
+
+| Name    | Valor       |
+|:--------|:------------|
+| Escopo   |Microsoft Edge|
 |Versão|4.5|
-|Tipo|Tempo de execução|
-|APIs afetadas|<ul><li><xref:System.Linq.Enumerable.Empty%60%601?displayProperty=nameWithType></li></ul>|
+|Type|Runtime
+
+#### <a name="affected-apis"></a>APIs afetadas
+
+-<xref:System.Linq.Enumerable.Empty%60%601?displayProperty=nameWithType></li></ul>|

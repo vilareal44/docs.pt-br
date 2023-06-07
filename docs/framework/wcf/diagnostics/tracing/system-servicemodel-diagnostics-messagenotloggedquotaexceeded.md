@@ -2,12 +2,12 @@
 title: System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded
 ms.date: 03/30/2017
 ms.assetid: 8b4fa4c5-83b7-41c3-9d5e-baa1fc2c98ae
-ms.openlocfilehash: f9cf6d286f7951606d1b40cb4fefcc6e40b0fb01
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 13dddbeeded43a85e899dd362f2f7b387e5d3b85
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039821"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601719"
 ---
 # <a name="systemservicemodeldiagnosticsmessagenotloggedquotaexceeded"></a>System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded
 System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded  
@@ -17,6 +17,6 @@ System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded
   
 ## <a name="see-also"></a>Consulte também
 
-- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Rastreamento](index.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](using-tracing-to-troubleshoot-your-application.md)
+- [Administração e diagnóstico](../index.md)

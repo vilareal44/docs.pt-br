@@ -1,23 +1,23 @@
 ---
-title: 'Exemplo de XMLSerializer '
+title: Exemplo de XMLSerializer
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: c6d10a74a00bf534000f79457f2c80b0a9361230
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd787b5caabf698e471a9ebe4604688bc422e99e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143337"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84583941"
 ---
-# <a name="xmlserializer-sample"></a>Exemplo de XMLSerializer 
-Esta amostra demonstra como serializar e desserializar <xref:System.Xml.Serialization.XmlSerializer>tipos compatíveis com o . A matéria padrão da Windows Communication Foundation <xref:System.Runtime.Serialization.DataContractSerializer> (WCF) é a classe. A <xref:System.Xml.Serialization.XmlSerializer> classe pode ser usada para serializar <xref:System.Runtime.Serialization.DataContractSerializer> e desserializar tipos quando a classe não pode ser usada. Este é o caso quando o controle preciso sobre o XML é necessário - por exemplo, se um pedaço de dados deve ser um atributo XML e não um elemento XML. Além disso, muitas <xref:System.Xml.Serialization.XmlSerializer> vezes é selecionado automaticamente ao criar clientes para serviços não-WCF.  
+# <a name="xmlserializer-sample"></a>Exemplo de XMLSerializer
+Este exemplo demonstra como serializar e desserializar os tipos que são compatíveis com o <xref:System.Xml.Serialization.XmlSerializer> . O formatador de Windows Communication Foundation padrão (WCF) é a <xref:System.Runtime.Serialization.DataContractSerializer> classe. A <xref:System.Xml.Serialization.XmlSerializer> classe pode ser usada para serializar e desserializar os tipos quando a <xref:System.Runtime.Serialization.DataContractSerializer> classe não puder ser usada. Geralmente, esse é o caso em que o controle preciso sobre o XML é necessário, por exemplo, se uma parte dos dados deve ser um atributo XML e não um elemento XML. Além disso, a <xref:System.Xml.Serialization.XmlSerializer> frequência é selecionada automaticamente ao criar clientes para serviços não WCF.  
   
- Nesta amostra, o cliente é um aplicativo de console (.exe) e o serviço é hospedado pelo Internet Information Services (IIS).  
+ Neste exemplo, o cliente é um aplicativo de console (. exe) e o serviço é hospedado pelo Serviços de Informações da Internet (IIS).  
   
 > [!NOTE]
-> O procedimento de configuração e as instruções de construção desta amostra estão localizados no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- E <xref:System.ServiceModel.ServiceContractAttribute> <xref:System.ServiceModel.XmlSerializerFormatAttribute> deve ser aplicado à interface conforme mostrado no código de amostra a seguir.  
+ O <xref:System.ServiceModel.ServiceContractAttribute> e o <xref:System.ServiceModel.XmlSerializerFormatAttribute> devem ser aplicados à interface, conforme mostrado no código de exemplo a seguir.  
   
 ```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"), XmlSerializerFormat]  
@@ -34,7 +34,7 @@ public interface IXmlSerializerCalculator
 }  
 ```  
   
- Os membros `ComplexNumber` públicos da classe <xref:System.Xml.Serialization.XmlSerializer> são serializados por atributos XML. O <xref:System.Runtime.Serialization.DataContractSerializer> não pode ser usado para criar esse tipo de instância XML.  
+ Os membros públicos da `ComplexNumber` classe são serializados pelo <xref:System.Xml.Serialization.XmlSerializer> como atributos XML. O <xref:System.Runtime.Serialization.DataContractSerializer> não pode ser usado para criar esse tipo de instância XML.  
   
 ```csharp  
 public class ComplexNumber  
@@ -70,7 +70,7 @@ public class ComplexNumber
 }  
 ```  
   
- A implementação do serviço calcula e retorna o `ComplexNumber` resultado apropriado — aceitando e retornando valores do tipo.  
+ A implementação do serviço calcula e retorna o resultado apropriado — aceitando e retornando valores do `ComplexNumber` tipo.  
   
 ```csharp  
 public class XmlSerializerCalculatorService : IXmlSerializerCalculator  
@@ -84,7 +84,7 @@ public class XmlSerializerCalculatorService : IXmlSerializerCalculator
 }  
 ```  
   
- A implementação do cliente também usa números complexos. Tanto o contrato de serviço quanto os tipos de dados são definidos no arquivo de origem generatedClient.cs, que foi gerado pela [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) a partir de metadados de serviço. Svcutil.exe pode detectar quando um contrato <xref:System.Runtime.Serialization.DataContractSerializer> não é serializável pelo e reverte para tipos emissores `XmlSerializable` neste caso. Se você quiser forçar o <xref:System.Xml.Serialization.XmlSerializer>uso do , você pode passar a opção de comando /serializer:XmlSerializer (use XmlSerializer) para a ferramenta Svcutil.exe.  
+ A implementação do cliente também usa números complexos. O contrato de serviço e os tipos de dados são definidos no arquivo de origem generatedClient.cs, que foi gerado pela [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) de metadados de serviço. Svcutil. exe pode detectar quando um contrato não é serializável pelo <xref:System.Runtime.Serialization.DataContractSerializer> e reverte para emitir `XmlSerializable` tipos nesse caso. Se você quiser forçar o uso do <xref:System.Xml.Serialization.XmlSerializer> , poderá passar a opção de comando/Serializer: XmlSerializer (use XmlSerializer) para a ferramenta svcutil. exe.  
   
 ```csharp  
 // Create a client.  
@@ -106,7 +106,7 @@ Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",
 }  
 ```  
   
- Quando você executa a amostra, as solicitações e respostas da operação são exibidas na janela do console cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
@@ -119,17 +119,17 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Certifique-se de que você tenha realizado o [procedimento de configuração única para as amostras da Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para construir a edição C# ou Visual Basic .NET da solução, siga as instruções em [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para criar a edição C# ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).  
   
-3. Para executar a amostra em uma configuração de máquina única ou cruzada, siga as instruções em [Executar as amostras da Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md).  
   
 > [!IMPORTANT]
 > Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Se esse diretório não existir, vá para [a Windows Communication Foundation (WCF) e para o Windows Workflow Foundation (WF) Amostras para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Amostras e amostras da [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (Windows Communication Foundation). Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\XmlSerializer`  

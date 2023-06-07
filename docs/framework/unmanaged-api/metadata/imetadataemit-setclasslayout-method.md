@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2576c449-388d-4434-a0e1-9f53991e11b6
 topic_type:
 - apiref
-ms.openlocfilehash: e855868d18fc6cffdd5d92cfa401606caf45b76c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a18583ce807ffa672811f3a0cd1e744233f6eb30
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177571"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008816"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>Método IMetaDataEmit::SetClassLayout
-Completa o layout dos campos para uma classe definida por uma chamada anterior ao [Método DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Conclui o layout de campos para uma classe que foi definida por uma chamada anterior ao [método DefineTypeDef](imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,38 +36,38 @@ HRESULT SetClassLayout (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `td`  
- [em] Um `mdTypeDef` token que especifica a classe a ser definida.  
+ no Um `mdTypeDef` token que especifica a classe a ser disposta.  
   
  `dwPackSize`  
- [em] O tamanho da embalagem: 1, 2, 4, 8 ou 16 bytes. O tamanho da embalagem é o número de bytes entre campos adjacentes.  
+ no O tamanho da embalagem: 1, 2, 4, 8 ou 16 bytes. O tamanho da embalagem é o número de bytes entre os campos adjacentes.  
   
  `rFieldOffsets`  
- [em] Uma matriz de [estruturas COR_FIELD_OFFSET,](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) cada uma das quais especifica um campo da classe e o deslocamento do campo dentro da classe. Termine a `mdTokenNil`matriz com .  
+ no Uma matriz de estruturas [COR_FIELD_OFFSET](cor-field-offset-structure.md) , cada uma delas especifica um campo da classe e o deslocamento do campo dentro da classe. Encerre a matriz com `mdTokenNil` .  
   
  `ulClassSize`  
- [em] O tamanho, em bytes, da classe.  
+ no O tamanho, em bytes, da classe.  
   
 ## <a name="remarks"></a>Comentários  
- A classe é definida inicialmente chamando o método [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) e especificando um dos três layouts para os campos da classe: automático, seqüencial ou explícito. Normalmente, você usaria layout automático e deixaria o tempo de execução escolher a melhor maneira de definir os campos.  
+ A classe é definida inicialmente chamando o método [IMetaDataEmit::D efinetypedef](imetadataemit-definetypedef-method.md) e especificando um dos três layouts para os campos da classe: automático, sequencial ou explícito. Normalmente, você usaria o layout automático e permite que o tempo de execução escolha a melhor maneira de modelar os campos.  
   
- No entanto, você pode querer os campos definidos de acordo com o arranjo que o código não gerenciado usa. Neste caso, escolha o layout seqüencial `SetClassLayout` ou explícito e ligue para concluir o layout dos campos:  
+ No entanto, talvez você queira que os campos sejam dispostos de acordo com a organização usada pelo código não gerenciado. Nesse caso, escolha o layout sequencial ou explícito e chame `SetClassLayout` para concluir o layout dos campos:  
   
-- Layout seqüencial: Especifique o tamanho da embalagem. Um campo é alinhado de acordo com seu tamanho natural ou o tamanho da embalagem, o que resultar na menor compensação do campo. Set `rFieldOffsets` `ulClassSize` e para zero.  
+- Layout sequencial: especifique o tamanho da embalagem. Um campo é alinhado de acordo com seu tamanho natural ou o tamanho da embalagem, o que resultar no deslocamento menor do campo. Defina `rFieldOffsets` e `ulClassSize` como zero.  
   
-- Layout explícito: Especifique a compensação de cada campo ou especifique o tamanho da classe e o tamanho da embalagem.  
+- Layout explícito: especifique o deslocamento de cada campo ou especifique o tamanho da classe e o tamanho da embalagem.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interface IMetaDataEmit](imetadataemit-interface.md)
+- [Interface IMetaDataEmit2](imetadataemit2-interface.md)

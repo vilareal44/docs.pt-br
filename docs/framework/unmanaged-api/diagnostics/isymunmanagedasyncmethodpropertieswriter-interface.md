@@ -2,15 +2,15 @@
 title: Interface ISymUnmanagedAsyncMethodPropertiesWriter
 ms.date: 03/30/2017
 ms.assetid: caa71820-8058-4b6a-93a2-25ee757d92d3
-ms.openlocfilehash: 360d1150b0accd6a070fa36531e570d222787cee
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 04876483fd42e3f6e55222416fd0747891734a52
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441754"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501853"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriter-interface"></a>Interface ISymUnmanagedAsyncMethodPropertiesWriter
-Permite que você defina informações de método assíncrono opcional para cada símbolo de método. Sempre usar com um método aberto; ou seja, entre as chamadas para o [método OpenMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md) e o [método CloseMethod](isymunmanagedwriter-closemethod-method.md).  
+Permite que você defina informações de método assíncrono opcional para cada símbolo de método. Sempre usar com um método aberto; ou seja, entre as chamadas para o [método OpenMethod](isymunmanagedwriter-openmethod-method.md) e o [método CloseMethod](isymunmanagedwriter-closemethod-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   

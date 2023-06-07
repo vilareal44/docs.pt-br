@@ -1,13 +1,14 @@
 ---
 title: Exemplo de encadeamento de consultas (C#)
+description: Este exemplo mostra o que acontece quando você encadea duas consultas que usam a execução adiada e a avaliação lenta em C#.
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: 45e3a4f341ca8eb06ff0f553e0f933956e6c6546
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0cfcfe1c8f537778fd1ef909277d95d83991af51
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70205418"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105534"
 ---
 # <a name="chaining-queries-example-c"></a>Exemplo de encadeamento de consultas (C#)
 Este exemplo compila no exemplo anterior e mostra o que acontece quando você encadeia duas consultas que usam execução adiada e avaliação lenta.  

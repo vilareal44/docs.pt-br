@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 46380fcc-0198-43ae-a1f5-2d4939425886
 topic_type:
 - apiref
-ms.openlocfilehash: 0aa43954c3e10d04524bf976d0dd3b29d2bc724c
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f076044b44859cc39d90be528ee6648f5eaa626c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866801"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500579"
 ---
 # <a name="functiontailcall3withinfo-function"></a>Função FunctionTailcall3WithInfo
 Notifica o criador de perfil de que a função atualmente em execução está prestes a executar uma chamada tail para outra função e fornece um identificador que pode ser passado para o [método ICorProfilerInfo3:: GetFunctionTailcall3Info](icorprofilerinfo3-getfunctiontailcall3info-method.md) para recuperar o quadro de pilha.  
@@ -36,16 +36,16 @@ void __stdcall FunctionTailcall3WithInfo(
 
 - `functionIDOrClientID`
 
-  \[em] o identificador da função atualmente em execução que está prestes a fazer uma chamada final.
+  \[in] o identificador da função atualmente em execução que está prestes a fazer uma chamada tail.
 
 - `eltInfo`
 
-  \[em] um identificador opaco que representa informações sobre um determinado registro de ativação. Esse identificador é válido somente durante o retorno de chamada ao qual é passado.
+  \[in] um identificador opaco que representa informações sobre um determinado registro de ativação. Esse identificador é válido somente durante o retorno de chamada ao qual é passado.
 
 ## <a name="remarks"></a>Comentários  
- O método de retorno de chamada `FunctionTailcall3WithInfo` notifica o criador de perfil conforme as funções são chamadas e permite que o criador de perfil Use o [método ICorProfilerInfo3:: GetFunctionTailcall3Info](icorprofilerinfo3-getfunctiontailcall3info-method.md) para inspecionar o quadro de pilha. Para acessar as informações do registro de ativação, o sinalizador `COR_PRF_ENABLE_FRAME_INFO` precisa ser definido. O criador de perfil pode usar o [método ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para definir os sinalizadores de evento e, em seguida, usar o [método ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) para registrar sua implementação dessa função.  
+ O `FunctionTailcall3WithInfo` método de retorno de chamada notifica o criador de perfil conforme as funções são chamadas e permite que o criador de perfil Use o [método ICorProfilerInfo3:: GetFunctionTailcall3Info](icorprofilerinfo3-getfunctiontailcall3info-method.md) para inspecionar o quadro de pilha. Para acessar as informações do registro de ativação, o `COR_PRF_ENABLE_FRAME_INFO` sinalizador precisa ser definido. O criador de perfil pode usar o [método ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para definir os sinalizadores de evento e, em seguida, usar o [método ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) para registrar sua implementação dessa função.  
   
- A função `FunctionTailcall3WithInfo` é um retorno de chamada; Você deve implementá-lo. A implementação deve usar o `__declspec(naked)` atributo de classe de armazenamento.  
+ A `FunctionTailcall3WithInfo` função é um retorno de chamada; você deve implementá-la. A implementação deve usar o `__declspec(naked)` atributo de classe de armazenamento.  
   
  O mecanismo de execução não salva nenhum registro antes de chamar essa função.  
   
@@ -53,20 +53,20 @@ void __stdcall FunctionTailcall3WithInfo(
   
 - Ao sair, você deve restaurar a pilha removendo todos os parâmetros que foram enviados por Push por seu chamador.  
   
- A implementação de `FunctionTailcall3WithInfo` não deve bloquear, pois atrasará a coleta de lixo. A implementação não deve tentar uma coleta de lixo, pois a pilha pode não estar em um estado amigável de coleta de lixo. Se uma coleta de lixo for tentada, o tempo de execução será bloqueado até que `FunctionTailcall3WithInfo` retorne.  
+ A implementação de `FunctionTailcall3WithInfo` não deve bloquear, pois atrasará a coleta de lixo. A implementação não deve tentar uma coleta de lixo, pois a pilha pode não estar em um estado amigável de coleta de lixo. Se for feita uma tentativa de coleta de lixo, o tempo de execução será bloqueado até o `FunctionTailcall3WithInfo` retorno.  
   
  Além disso, a função FunctionTailcall3WithInfo não deve chamar um código gerenciado ou causar uma alocação de memória gerenciada de alguma forma.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [FunctionEnter3](functionenter3-function.md)
 - [FunctionLeave3](functionleave3-function.md)

@@ -1,5 +1,6 @@
 ---
 title: <code> - C# programming guide
+description: Saiba mais sobre o XML <code> tag. This tag is used to indicate multiple lines of code, while <c>marks single-line text in a description as code.
 ms.date: 07/20/2015
 f1_keywords:
 - code
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - code XML tag
 - <code> C# XML tag
 ms.assetid: f235e3bc-a709-43cf-8a9f-bd57cabdf6da
-ms.openlocfilehash: 1b292f0e1f93f815cc31ef3dfb7015b8950bf8a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1f4cd930a876c8eca13de5f015e2b42b928d6f1
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789844"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87382003"
 ---
-# <a name="code-c-programming-guide"></a>\<> de código (guia de programação C#)
+# <a name="code-c-programming-guide"></a>\<code>(Guia de programação C#)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,15 +32,15 @@ ms.locfileid: "76789844"
 
 ## <a name="remarks"></a>Comentários
 
-A marca \<code> oferece uma maneira de indicar várias linhas como código. Use [ \<c>](./code-inline.md) para indicar que o texto dentro de uma descrição deve ser marcado como código.
+A `<code>` marca é usada para indicar várias linhas de código. Use [\<c>](./code-inline.md) para indicar que o texto de linha única dentro de uma descrição deve ser marcado como código.
 
-Compilar com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação para um arquivo.
+Compile com [-Doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.
 
 ## <a name="example"></a>Exemplo
 
-Veja [ \<](./example.md) o exemplo>tópico para um \<exemplo de como usar o código> tag.
+Consulte o [\<example>](./example.md) artigo para obter um exemplo de como usar a `<code>` marca.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Guia de programação em C#](../index.md)
 - [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

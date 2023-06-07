@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c3f1fcda8a8a6abc58d35bf37e51485bb3590fa3
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: efa0925a96fcdd4356109632fa77199edde73c26
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794631"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284280"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Usando o Microsoft XML Serializer Generator no .NET Core
 
@@ -64,7 +64,7 @@ Abra o editor de código e vamos começar! Ainda estamos trabalhando no diretór
 
 Abra o *MyApp.csproj* em seu editor de texto.
 
-Depois de executar [`dotnet add package`](../tools/dotnet-add-package.md) o comando, as seguintes linhas são adicionadas ao seu arquivo de projeto *MyApp. csproj* :
+Depois de executar o [`dotnet add package`](../tools/dotnet-add-package.md) comando, as seguintes linhas são adicionadas ao seu arquivo de projeto *MyApp. csproj* :
 
  ```xml
  <ItemGroup>
@@ -103,7 +103,7 @@ var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 
 ### <a name="build-and-run-the-application"></a>Compile e execute o aplicativo
 
-Ainda dentro da pasta *MyApp*, execute o aplicativo por meio do comando [`dotnet run`](../tools/dotnet-run.md) e ele carregará e usará automaticamente os serializadores pré-gerados em runtime.
+Ainda dentro da pasta *MyApp* , execute o aplicativo via [`dotnet run`](../tools/dotnet-run.md) e ele automaticamente carrega e usa os serializadores gerados previamente em tempo de execução.
 
 Digite o seguinte comando na janela do console:
 
@@ -112,7 +112,7 @@ dotnet run
 ```
 
 > [!NOTE]
-> [`dotnet run`](../tools/dotnet-run.md)chama [`dotnet build`](../tools/dotnet-build.md) para garantir que os destinos de compilação foram criados e, em seguida `dotnet <assembly.dll>` , chama para executar o aplicativo de destino.
+> [`dotnet run`](../tools/dotnet-run.md)chama [`dotnet build`](../tools/dotnet-build.md) para garantir que os destinos de compilação foram criados e, em seguida, chama `dotnet <assembly.dll>` para executar o aplicativo de destino.
 
 > [!IMPORTANT]
 > Os comandos e as etapas mostradas neste tutorial para executar o aplicativo são usadas somente durante o tempo de desenvolvimento. Quando estiver pronto para implantar o aplicativo, dê uma olhada nas diferentes [estratégias de implantação](../deploying/index.md) para aplicativos do .NET Core e no comando [`dotnet publish`](../tools/dotnet-publish.md).

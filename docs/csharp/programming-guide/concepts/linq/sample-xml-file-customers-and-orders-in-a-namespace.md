@@ -1,15 +1,16 @@
 ---
-title: 'Arquivo XML de exemplo: clientes e pedidos em um namespace2'
+title: 'Arquivo XML de exemplo: Clientes e ordens em um namespace'
+description: Esse arquivo XML é usado em vários exemplos na documentação do LINQ to XML. O arquivo contém clientes e pedidos. XML é em um namespace.
 ms.date: 07/20/2015
 ms.assetid: 2da1c474-f658-4dca-a457-c35ef5ba4aff
-ms.openlocfilehash: 80bc052ecc62dfbd78f1dfdffac1925f8a03f31a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 467e00df01d85f1d42b91645cfc6379afac65fc9
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66483800"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302536"
 ---
-# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>Arquivo XML de Exemplo: Clientes e pedidos em um namespace
+# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>Arquivo XML de exemplo: Clientes e ordens em um namespace
 O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo contém clientes e pedidos. XML é em um namespace.  
   
 ## <a name="customersordersinnamespacexml"></a>CustomersOrdersInNamespace.xml  

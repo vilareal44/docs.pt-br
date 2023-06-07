@@ -1,38 +1,39 @@
 ---
 title: Configurando o rastreamento
+description: Saiba como habilitar o rastreamento, configurar origens de rastreamento, definir rastreamento e propagação de atividade e definir ouvintes de rastreamento para acessar rastreamentos no WCF.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: c5079237ff4c97dd9ef164061dc5e7499c1d6e38
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 55d701ee6769099698d2fd869a1502d94237b5a8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635993"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245343"
 ---
 # <a name="configuring-tracing"></a>Configurando o rastreamento
-Este tópico descreve como você pode habilitar o rastreamento, configurar fontes de rastreamento para emitir vestígios e definir níveis de rastreamento, definir rastreamento de atividade e propagação para suportar correlação de rastreamento de ponta a ponta e definir os ouvintes de rastreamento para acessar vestígios.  
+Este tópico descreve como você pode habilitar o rastreamento, configurar fontes de rastreamento para emitir rastreamentos e definir níveis de rastreamento, definir rastreamento de atividade e propagação para dar suporte à correlação de rastreamento de ponta a ponta e definir ouvintes de rastreamento para acessar rastreamentos.  
   
- Para obter recomendações de configurações de rastreamento no ambiente de produção ou depuração, consulte [As configurações recomendadas para rastreamento e registro de mensagens](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
+ Para as recomendações de configurações de rastreamento no ambiente de produção ou de depuração, consulte [as configurações recomendadas para rastreamento e log de mensagens](recommended-settings-for-tracing-and-message-logging.md).  
   
 > [!IMPORTANT]
-> No Windows 8, você deve executar seu aplicativo elevado (Executar como administrador) para que seu aplicativo gere registros de rastreamento.  
+> No Windows 8, você deve executar o aplicativo com privilégios elevados (executar como administrador) para que seu aplicativo gere logs de rastreamento.  
   
 ## <a name="enabling-tracing"></a>Habilitar o rastreamento  
- O Windows Communication Foundation (WCF) produz os seguintes dados para rastreamento de diagnóstico:  
+ Windows Communication Foundation (WCF) gera os seguintes dados para rastreamento de diagnóstico:  
   
-- Rastreamentos para marcos de processo em todos os componentes dos aplicativos, como chamadas de operação, exceções de código, avisos e outros eventos de processamento significativos.  
+- Rastreamentos de etapas de processo em todos os componentes dos aplicativos, como chamadas de operação, exceções de código, avisos e outros eventos de processamento significativos.  
   
-- Eventos de erro do Windows quando o recurso de rastreamento não funciona. Consulte [O Registro de Eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+- Eventos de erro do Windows quando o recurso de rastreamento não funciona. Consulte [log de eventos](../event-logging/index.md).  
   
- O rastreamento wcf é <xref:System.Diagnostics>construído em cima de . Para usar o rastreamento, você deve definir fontes de rastreamento no arquivo de configuração ou em código. O WCF define uma fonte de rastreamento para cada conjunto WCF. A `System.ServiceModel` fonte de rastreamento é a fonte de rastreamento mais geral do WCF e registra os marcos de processamento em toda a pilha de comunicação do WCF, desde a entrada/saída do transporte até a entrada/saída do código do usuário. A `System.ServiceModel.MessageLogging` fonte de rastreamento registra todas as mensagens que fluem pelo sistema.  
+ O rastreamento do WCF é criado sobre o <xref:System.Diagnostics> . Para usar o rastreamento, você deve definir fontes de rastreamento no arquivo de configuração ou no código. O WCF define uma origem de rastreamento para cada assembly do WCF. A `System.ServiceModel` origem do rastreamento é a fonte de rastreamento mais geral do WCF e as etapas de processamento de registros na pilha de comunicação do WCF, da entrada/saída do transporte até a inserção/saída do código do usuário. A `System.ServiceModel.MessageLogging` origem do rastreamento registra todas as mensagens que fluem pelo sistema.  
   
- O rastreamento não é habilitado por padrão. Para ativar o rastreamento, você deve criar um ouvinte de rastreamento e definir um nível de rastreamento diferente de "Off" para a fonte de rastreamento selecionada na configuração; caso contrário, o WCF não gera nenhum traço. Se você não especificar um ouvinte, o rastreamento será desativado automaticamente. Se um ouvinte for definido, mas nenhum nível for especificado, o nível será definido como "Off" por padrão, o que significa que nenhum traço é emitido.  
+ O rastreamento não está habilitado por padrão. Para ativar o rastreamento, você deve criar um ouvinte de rastreamento e definir um nível de rastreamento diferente de "desativado" para a origem de rastreamento selecionada na configuração; caso contrário, o WCF não gerará nenhum rastreamento. Se você não especificar um ouvinte, o rastreamento será desabilitado automaticamente. Se um ouvinte for definido, mas nenhum nível for especificado, o nível será definido como "desativado" por padrão, o que significa que nenhum rastreamento é emitido.  
   
- Se você usar pontos de extensibilidade WCF, como invocadores de operação personalizados, você deve emitir seus próprios traços. Isso porque se você implementar um ponto de extensibilidade, o WCF não poderá mais emitir os traços padrão no caminho padrão. Se você não implementar suporte manual de rastreamento emitindo vestígios, você pode não ver os traços esperados.  
+ Se você usar pontos de extensibilidade do WCF, como chamadores de operação personalizados, deverá emitir seus próprios rastreamentos. Isso ocorre porque, se você implementar um ponto de extensibilidade, o WCF não poderá mais emitir os rastreamentos padrão no caminho padrão. Se você não implementar o suporte de rastreamento manual emitindo rastreamentos, talvez você não veja os rastreamentos esperados.  
   
- Você pode configurar o rastreamento editando o arquivo de configuração do aplicativo — seja o Web.config para aplicativos hospedados na Web ou o Appname.exe.config para aplicativos auto-hospedados. O seguinte é um exemplo de tal edição. Para obter mais informações sobre essas configurações, consulte a seção "Configurando ouvintes de rastreamento para consumir vestígios".  
+ Você pode configurar o rastreamento editando o arquivo de configuração do aplicativo — seja Web.config para aplicativos hospedados na Web ou Appname.exe.config para aplicativos hospedados internamente. Veja a seguir um exemplo de tal edição. Para obter mais informações sobre essas configurações, consulte a seção "Configurando ouvintes de rastreamento para consumir rastreamentos".  
   
 ```xml  
 <configuration>  
@@ -53,26 +54,26 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar fonte
 ```  
   
 > [!NOTE]
-> Para editar o arquivo de configuração de um projeto de serviço WCF no Visual Studio, clique com o botão direito do mouse no arquivo de configuração do aplicativo — seja na Web.config para aplicativos hospedados na Web ou no Appname.exe.config para aplicativo auto-hospedado no **Solution Explorer**. Em seguida, escolha o item Editar o menu de contexto **de configuração do WCF.** Isso lança a [Ferramenta de Editor de Configuração (SvcConfigEditor.exe),](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)que permite modificar as configurações dos serviços WCF usando uma interface gráfica do usuário.  
+> Para editar o arquivo de configuração de um projeto de serviço WCF no Visual Studio, clique com o botão direito do mouse no arquivo de configuração do aplicativo — seja Web.config para aplicativos hospedados na Web ou Appname.exe.config para aplicativo auto-hospedado no **Gerenciador de soluções**. Em seguida, escolha o item de menu de contexto **Editar configuração do WCF** . Isso inicia a [ferramenta do editor de configuração (SvcConfigEditor.exe)](../../configuration-editor-tool-svcconfigeditor-exe.md), que permite que você modifique as definições de configuração dos serviços WCF usando uma interface gráfica do usuário.  
   
-## <a name="configuring-trace-sources-to-emit-traces"></a>Configurando fontes de rastreamento para emitir vestígios  
- O WCF define uma fonte de rastreamento para cada montagem. Os traços gerados dentro de uma montagem são acessados pelos ouvintes definidos para essa fonte. As seguintes fontes de rastreamento são definidas:  
+## <a name="configuring-trace-sources-to-emit-traces"></a>Configurando fontes de rastreamento para emitir rastreamentos  
+ O WCF define uma origem de rastreamento para cada assembly. Os rastreamentos gerados em um assembly são acessados pelos ouvintes definidos para essa fonte. As seguintes origens de rastreamento são definidas:  
   
-- System.ServiceModel: Registra todas as etapas do processamento do WCF, sempre que a configuração é lida, uma mensagem é processada no transporte, processamento de segurança, uma mensagem é enviada no código do usuário, e assim por diante.  
+- System. ServiceModel: registra todos os estágios do processamento do WCF, sempre que a configuração é lida, uma mensagem é processada em transporte, processamento de segurança, uma mensagem é expedida no código do usuário e assim por diante.  
   
-- System.ServiceModel.MessageLogging: Registra todas as mensagens que fluem pelo sistema.  
+- System. ServiceModel. MessageLogging: registra todas as mensagens que fluem pelo sistema.  
   
-- System.IdentityModel.  
+- System. IdentityModel.  
   
-- System.ServiceModel.Activation.  
+- System. ServiceModel. Activation.  
   
-- System.IO.Log: Registro para a interface .NET Framework para o CLFS (Common Log File System).  
+- System. IO. log: registro em log para a interface de .NET Framework para o Sistema de Arquivos de Log Comum (CLFS).  
   
-- System.Runtime.Serialização: Registra quando os objetos são lidos ou gravados.  
+- System. Runtime. Serialization: registra quando objetos são lidos ou gravados.  
   
-- Cardspace.  
+- CardSpace.  
   
- Você pode configurar cada fonte de rastreamento para usar o mesmo ouvinte (compartilhado), conforme indicado no exemplo de configuração a seguir.  
+ Você pode configurar cada origem de rastreamento para usar o mesmo ouvinte (compartilhado), conforme indicado no exemplo de configuração a seguir.  
   
 ```xml  
 <configuration>  
@@ -116,7 +117,7 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar fonte
 </configuration>  
 ```  
   
- Além disso, você pode adicionar fontes de rastreamento definidas pelo usuário, como demonstrado pelo exemplo a seguir, para emitir traços de código do usuário.  
+ Além disso, você pode adicionar fontes de rastreamento definidas pelo usuário, conforme demonstrado pelo exemplo a seguir, para emitir rastreamentos de código de usuário.  
   
 ```xml  
 <system.diagnostics>  
@@ -133,56 +134,56 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar fonte
 </system.diagnostics>  
 ```  
   
- Para obter mais informações sobre a criação de fontes de rastreamento definidas pelo usuário, consulte [Extending Tracing](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
+ Para obter mais informações sobre como criar fontes de rastreamento definidas pelo usuário, consulte [estendendo o rastreamento](../../samples/extending-tracing.md).  
   
-## <a name="configuring-trace-listeners-to-consume-traces"></a>Configurando rastreadores para consumir vestígios  
- Em tempo de execução, o WCF alimenta dados de rastreamento para os ouvintes, que processam os dados. O WCF fornece vários <xref:System.Diagnostics>ouvintes predefinidos para , que diferem no formato que eles usam para a saída. Você também pode adicionar tipos de ouvintes personalizados.  
+## <a name="configuring-trace-listeners-to-consume-traces"></a>Configurando ouvintes de rastreamento para consumir rastreamentos  
+ Em tempo de execução, os feeds do WCF rastreiam dados para os ouvintes, que processam os dados. O WCF fornece vários ouvintes predefinidos para <xref:System.Diagnostics> , que diferem no formato usado para saída. Você também pode adicionar tipos de ouvinte personalizados.  
   
- Você pode usar `add` para especificar o nome e o tipo do ouvinte de rastreamento que deseja usar. Em nossa configuração de exemplo, nomeamos o Ouvinte `traceListener` e`System.Diagnostics.XmlWriterTraceListener`adicionamos o rastreador padrão .NET Framework ( ) como o tipo que queremos usar. Você pode adicionar qualquer número de ouvintes de rastreamento para cada fonte. Se o ouvinte de rastreamento emite o rastreamento para um arquivo, você deve especificar o local e o nome do arquivo de saída no arquivo de configuração. Isso é feito `initializeData` definindo o nome do arquivo para esse ouvinte. Se você não especificar um nome de arquivo, um nome de arquivo aleatório será gerado com base no tipo de ouvinte usado. Se <xref:System.Diagnostics.XmlWriterTraceListener> for usado, um nome de arquivo sem extensão será gerado. Se você implementar um ouvinte personalizado, você também poderá usar esse atributo para receber dados de inicialização que não sejam um nome de arquivo. Por exemplo, você pode especificar um identificador de banco de dados para este atributo.  
+ Você pode usar `add` para especificar o nome e o tipo do ouvinte de rastreamento que deseja usar. Em nossa configuração de exemplo, nomeamos o ouvinte `traceListener` e adicionamos o ouvinte de rastreamento de .NET Framework padrão ( `System.Diagnostics.XmlWriterTraceListener` ) como o tipo que desejamos usar. Você pode adicionar qualquer número de ouvintes de rastreamento para cada fonte. Se o ouvinte de rastreamento emitir o rastreamento para um arquivo, você deverá especificar o local e o nome do arquivo de saída no arquivo de configuração. Isso é feito definindo `initializeData` o nome do arquivo para esse ouvinte. Se você não especificar um nome de arquivo, um nome de arquivo aleatório será gerado com base no tipo de ouvinte usado. Se <xref:System.Diagnostics.XmlWriterTraceListener> for usado, um nome de arquivo sem extensão será gerado. Se você implementar um ouvinte personalizado, também poderá usar esse atributo para receber dados de inicialização diferentes de um nome de arquivo. Por exemplo, você pode especificar um identificador de banco de dados para esse atributo.  
   
- Você pode configurar um ouvinte de rastreamento personalizado para enviar vestígios no fio, por exemplo, para um banco de dados remoto. Como implantador de aplicativos, você deve impor o controle de acesso adequado nos registros de rastreamento na máquina remota.  
+ Você pode configurar um ouvinte de rastreamento personalizado para enviar rastreamentos na conexão, por exemplo, para um banco de dados remoto. Como um implantador de aplicativos, você deve impor o controle de acesso apropriado nos logs de rastreamento no computador remoto.  
   
- Você também pode configurar um ouvinte de rastreamento programáticamente. Para obter mais informações, [consulte Como: Criar e inicializar os rastreadores ouvintes](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) e [criar um TraceListener personalizado](https://docs.microsoft.com/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics).  
+ Você também pode configurar um ouvinte de rastreamento programaticamente. Para obter mais informações, consulte [como: criar e inicializar ouvintes de rastreamento](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) e [criar um TraceListener personalizado](https://docs.microsoft.com/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics).  
   
 > [!CAUTION]
-> Como `System.Diagnostics.XmlWriterTraceListener` não é seguro para rosca, a fonte de rastreamento pode bloquear recursos exclusivamente ao fazer a saída de vestígios. Quando muitos segmentos de saída rastreiam uma fonte de rastreamento configurada para usar este ouvinte, pode ocorrer contenção de recursos, o que resulta em um problema de desempenho significativo. Para resolver esse problema, você deve implementar um ouvinte personalizado que seja seguro para threads.  
+> Como `System.Diagnostics.XmlWriterTraceListener` o não é thread-safe, a origem do rastreamento pode bloquear recursos exclusivamente durante a saída de rastreamentos. Quando muitos threads geram rastreamentos para uma origem de rastreamento configurada para usar esse ouvinte, pode ocorrer contenção de recursos, o que resulta em um problema de desempenho significativo. Para resolver esse problema, você deve implementar um ouvinte personalizado que seja thread-safe.  
   
 ## <a name="trace-level"></a>Nível de rastreamento:  
- O nível de rastreamento `switchValue` é controlado pela configuração da fonte de rastreamento. Os níveis de rastreamento disponíveis são descritos na tabela a seguir.  
+ O nível de rastreamento é controlado pela `switchValue` configuração da origem do rastreamento. Os níveis de rastreamento disponíveis são descritos na tabela a seguir.  
   
-|Nível de rastreamento:|Natureza dos Eventos Rastreados|Conteúdo dos Eventos Rastreados|Eventos rastreados|Alvo do usuário|  
+|Nível de rastreamento:|Natureza dos eventos rastreados|Conteúdo dos eventos rastreados|Eventos rastreados|Destino do usuário|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
-|Desativado|N/D|N/D|Nenhum vestígio é emitido.|N/D|  
-|Crítico|Eventos "negativos": eventos que indicam um processamento inesperado ou uma condição de erro.||Exceções não tratadas, incluindo as seguintes, são registradas:<br /><br /> - OutOfMemoryException<br />- ThreadAbortException (o CLR invoca qualquer ThreadAbortExceptionHandler)<br />- StackOverflowException (não pode ser capturado)<br />- ConfiguraçãoSDeexceto de erros<br />- SEHException<br />- Erros de início de aplicação<br />- Eventos failfast<br />- Sistema trava<br />- Mensagens venenosas: traços de mensagens que causam a falha do aplicativo.|Administradores<br /><br /> Desenvolvedores de aplicativos|  
-|Erro|Eventos "negativos": eventos que indicam um processamento inesperado ou uma condição de erro.|Um processamento inesperado aconteceu. O aplicativo não foi capaz de executar uma tarefa como esperado. No entanto, o aplicativo ainda está em funcionamento.|Todas as exceções estão registradas.|Administradores<br /><br /> Desenvolvedores de aplicativos|  
-|Aviso|Eventos "negativos": eventos que indicam um processamento inesperado ou uma condição de erro.|Um possível problema ocorreu ou pode ocorrer, mas a aplicação ainda funciona corretamente. No entanto, pode não continuar funcionando corretamente.|- O aplicativo está recebendo mais solicitações do que suas configurações de estrangulamento permitem.<br />- A fila de recepção está próxima de sua capacidade máxima configurada.<br />- O tempo está fora.<br />- As credenciais são rejeitadas.|Administradores<br /><br /> Desenvolvedores de aplicativos|  
-|Informações|Eventos "positivos": eventos que marcam marcos de sucesso|Marcos importantes e bem-sucedidos da execução do aplicativo, independentemente de o aplicativo estar funcionando corretamente ou não.|Em geral, são geradas mensagens úteis para monitorar e diagnosticar o estado do sistema, medir o desempenho ou traçar perfis. Você pode usar essas informações para planejamento de capacidade e gerenciamento de desempenho:<br /><br /> - Canais são criados.<br />- Ouvintes de ponto final são criados.<br />- A mensagem entra/sai do transporte.<br />- O token de segurança foi recuperado.<br />- A configuração é lida.|Administradores<br /><br /> Desenvolvedores de aplicativos<br /><br /> Desenvolvedores de produtos.|  
-|Detalhado|Eventos "positivos": eventos que marcam marcos de sucesso.|Eventos de baixo nível para código de usuário e manutenção são emitidos.|Em geral, você pode usar este nível para depuração ou otimização de aplicativos.<br /><br /> - Entendido cabeçalho de mensagem.|Administradores<br /><br /> Desenvolvedores de aplicativos<br /><br /> Desenvolvedores de produtos.|  
-|ActivityTracing||Eventos de fluxo entre atividades de processamento e componentes.|Esse nível permite que administradores e desenvolvedores correlacionam aplicativos no mesmo domínio de aplicativos:<br /><br /> - Traça para limites de atividade, como início/parada.<br />- Rastros para transferências.|Todos|  
-|Todos||A aplicação pode funcionar corretamente. Todos os eventos são emitidos.|Todos os eventos anteriores.|Todos|  
+|Desativado|N/D|N/D|Nenhum rastreamento é emitido.|N/D|  
+|Crítico|Eventos "negativos": eventos que indicam um processamento inesperado ou uma condição de erro.||As exceções sem tratamento, incluindo as seguintes, são registradas em log:<br /><br /> -OutOfMemoryexception<br />-ThreadAbortException (o CLR invoca qualquer ThreadAbortExceptionHandler)<br />-StackOverflowException (não pode ser capturado)<br />- ConfigurationErrorsException<br />-SEHException<br />-Erros de início do aplicativo<br />-Eventos FailFast<br />-Travamentos do sistema<br />-Mensagens suspeitas: rastreamentos de mensagem que causam falha no aplicativo.|Administradores<br /><br /> Desenvolvedores de aplicativos|  
+|Erro|Eventos "negativos": eventos que indicam um processamento inesperado ou uma condição de erro.|Ocorreu um processamento inesperado. O aplicativo não pôde executar uma tarefa conforme o esperado. No entanto, o aplicativo ainda está em execução.|Todas as exceções são registradas.|Administradores<br /><br /> Desenvolvedores de aplicativos|  
+|Aviso|Eventos "negativos": eventos que indicam um processamento inesperado ou uma condição de erro.|Um possível problema ocorreu ou pode ocorrer, mas o aplicativo ainda funciona corretamente. No entanto, ele pode não continuar a funcionar corretamente.|-O aplicativo está recebendo mais solicitações do que as configurações de limitação permitem.<br />-A fila de recebimento está perto da capacidade máxima configurada.<br />-Tempo limite excedido.<br />-As credenciais são rejeitadas.|Administradores<br /><br /> Desenvolvedores de aplicativos|  
+|Informações|Eventos "positivos": eventos que marcam Marcos com êxito|Marcos importantes e bem-sucedidos da execução do aplicativo, independentemente de o aplicativo estar funcionando corretamente ou não.|Em geral, as mensagens úteis para monitorar e diagnosticar o status do sistema, medir o desempenho ou a criação de perfil são geradas. Você pode usar essas informações para o planejamento de capacidade e o gerenciamento de desempenho:<br /><br /> -Os canais são criados.<br />-Os ouvintes de ponto de extremidade são criados.<br />-A mensagem entra/sai do transporte.<br />-O token de segurança é recuperado.<br />-A definição de configuração é leitura.|Administradores<br /><br /> Desenvolvedores de aplicativos<br /><br /> Desenvolvedores de produtos.|  
+|Detalhado|Eventos "positivos": eventos que marcam Marcos bem-sucedidos.|Eventos de nível baixo para código de usuário e serviço são emitidos.|Em geral, você pode usar esse nível para depuração ou otimização de aplicativo.<br /><br /> -Compreendido o cabeçalho da mensagem.|Administradores<br /><br /> Desenvolvedores de aplicativos<br /><br /> Desenvolvedores de produtos.|  
+|ActivityTracing||Eventos de fluxo entre atividades de processamento e componentes.|Esse nível permite que os administradores e desenvolvedores correlacionem aplicativos no mesmo domínio de aplicativo:<br /><br /> -Rastreia os limites de atividade, como iniciar/parar.<br />-Rastreia para transferências.|Todos|  
+|Todos||O aplicativo pode funcionar corretamente. Todos os eventos são emitidos.|Todos os eventos anteriores.|Tudo|  
   
- Os níveis de Verbose a Crítico são empilhados em cima um do outro, ou seja, cada nível de traço inclui todos os níveis acima dele, exceto o nível Off. Por exemplo, um ouvinte que ouve no nível de Aviso recebe traços críticos, de erro e de aviso. O nível All inclui eventos de Verbose a Eventos críticos e de rastreamento de atividades.  
+ Os níveis de detalhado para crítico são empilhados em cima um do outro, ou seja, cada nível de rastreamento inclui todos os níveis acima dele, exceto o nível desativado. Por exemplo, um ouvinte ouvindo no nível de aviso recebe rastreamentos críticos, de erro e de aviso. O nível All inclui eventos de detalhado para eventos de rastreamento de atividade e críticos.  
   
 > [!CAUTION]
-> Os níveis de Informações, Verbose e ActivityTracing geram muitos traços, que podem impactar negativamente o throughput de mensagens se você tiver usado todos os recursos disponíveis na máquina.  
+> Os níveis de informações, detalhados e ActivityTracing geram muitos rastreamentos, o que pode afetar negativamente a taxa de transferência de mensagens se você tiver usado todos os recursos disponíveis no computador.  
   
-## <a name="configuring-activity-tracing-and-propagation-for-correlation"></a>Configurando rastreamento de atividades e propagação para correlação  
- O `activityTracing` valor especificado `switchValue` para o atributo é usado para permitir o rastreamento de atividades, que emite traços para limites de atividade e transferências dentro de endpoints.  
+## <a name="configuring-activity-tracing-and-propagation-for-correlation"></a>Configurando o rastreamento de atividade e a propagação para correlação  
+ O `activityTracing` valor especificado para o `switchValue` atributo é usado para habilitar o rastreamento de atividade, que emite rastreamentos para limites de atividade e transferências em pontos de extremidade.  
   
 > [!NOTE]
-> Quando você usa certos recursos de extensibilidade <xref:System.NullReferenceException> no WCF, você pode obter um rastreamento de atividades ativado. Para corrigir esse problema, verifique o arquivo de `switchValue` configuração do aplicativo e `activityTracing`certifique-se de que o atributo para sua fonte de rastreamento não está definido como .  
+> Ao usar determinados recursos de extensibilidade no WCF, você pode obter um <xref:System.NullReferenceException> quando o rastreamento de atividade está habilitado. Para corrigir esse problema, verifique o arquivo de configuração do aplicativo e verifique se o `switchValue` atributo da origem do rastreamento não está definido como `activityTracing` .  
   
- O `propagateActivity` atributo indica se a atividade deve ser propagada para outros pontos finais que participam da troca de mensagens. Ao definir esse `true`valor para , você pode pegar arquivos de rastreamento gerados por qualquer dois pontos finais e observar como um conjunto de traços em um ponto final fluiu para um conjunto de traços em outro ponto final.  
+ O `propagateActivity` atributo indica se a atividade deve ser propagada para outros pontos de extremidade que participam da troca de mensagens. Ao definir esse valor como `true` , você pode fazer os arquivos de rastreamento gerados por quaisquer dois pontos de extremidade e observar como um conjunto de rastreamentos em um ponto de extremidade fluiu para um conjunto de rastreamentos em outro ponto.  
   
- Para obter mais informações sobre rastreamento e propagação de atividades, consulte [Propagação](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
+ Para obter mais informações sobre rastreamento de atividade e propagação, consulte [propagação](propagation.md).  
   
- Ambos `propagateActivity` `ActivityTracing` e valores booleanos aplicam-se ao System.ServiceModel TraceSource. O `ActivityTracing` valor também se aplica a qualquer fonte de rastreamento, incluindo WCF ou definidos pelo usuário.  
+ Ambos `propagateActivity` os `ActivityTracing` valores Boolianos e booleanos se aplicam ao rastreador System. ServiceModel. O `ActivityTracing` valor também se aplica a qualquer origem de rastreamento, incluindo WCF ou aqueles definidos pelo usuário.  
   
- Não é `propagateActivity` possível usar o atributo com fontes de rastreamento definidas pelo usuário. Para a propagação do ID de atividade de `ActivityTracing`código do usuário, certifique-se de não definir ServiceModel, enquanto ainda tiver o atributo ServiceModel `propagateActivity` definido como `true`.  
+ Você não pode usar o `propagateActivity` atributo com fontes de rastreamento definidas pelo usuário. Para a propagação da ID da atividade de código do usuário, certifique-se de não definir ServiceModel `ActivityTracing` , enquanto ainda tem o `propagateActivity` atributo ServiceModel definido como `true` .  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Administração e Diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Rastreamento](index.md)
+- [Administração e diagnóstico](../index.md)
 - [Como criar e inicializar ouvintes de rastreamento](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)
-- [Criando um tracelistener personalizado](https://docs.microsoft.com/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics)
+- [Criando um TraceListener personalizado](https://docs.microsoft.com/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics)

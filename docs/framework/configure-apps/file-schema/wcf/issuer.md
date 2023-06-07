@@ -3,23 +3,23 @@ title: <issuer>
 ms.date: 03/30/2017
 ms.assetid: 8c49c6ae-fa1a-4179-a84b-613c3216dcde
 ms.openlocfilehash: 74f5f2fc1a0fa1ffbbb510e4e700c33a13d02ab3
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70397910"
 ---
-# <a name="issuer"></a>\<issuer>
+# \<issuer>
 Especifica o serviço de token de segurança (STS) que emite tokens de segurança.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> wsFederationHttpBinding**](wsfederationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de segurança**](security-of-wsfederationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de mensagem**](message-element-of-wsfederationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> do emissor**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<wsFederationHttpBinding>**](wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<message>**](message-element-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<issuer>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ Especifica o serviço de token de segurança (STS) que emite tokens de seguranç
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|endereço|Cadeia de caracteres obrigatória. A URL do STS.|  
+|address|Cadeia de caracteres obrigatória. A URL do STS.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -64,16 +64,16 @@ Especifica o serviço de token de segurança (STS) que emite tokens de seguranç
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<message>](message-element-of-wsfederationhttpbinding.md)|Define as configurações para a segurança em nível de mensagem para [ \<](wsfederationhttpbinding.md) o elemento de > WSFederationHttpBinding.|  
+|[\<message>](message-element-of-wsfederationhttpbinding.md)|Define as configurações para a segurança em nível de mensagem para o [\<wsFederationHttpBinding>](wsfederationhttpbinding.md) elemento.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.Issuer%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>
-- [Autenticação e identidade de serviço](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Identidade e autenticação de serviço](../../../wcf/feature-details/service-identity-and-authentication.md)
 - [Federação e tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)
-- [Autenticação e identidade de serviço](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Identidade e autenticação de serviço](../../../wcf/feature-details/service-identity-and-authentication.md)
 - [Federação e tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)
 - [Recursos de segurança com associações personalizadas](../../../wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [Federação e tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)

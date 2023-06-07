@@ -1,5 +1,6 @@
 ---
-title: Como definir um método genérico com a emissão de reflexão
+title: 'Como: Definir um método genérico com a emissão de reflexão'
+description: Defina um método genérico com emissão de reflexão. Um exemplo cria um método genérico com dois parâmetros de tipo. Um segundo exemplo mostra como emitir o corpo do método.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - reflection emit, generic methods
 - generics [.NET Framework], dynamic types
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
-ms.openlocfilehash: d16f6728b01583fe3ffb8d892522f3892444c537
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3b85fb480e5862daa3b2800f75392adbe92348f2
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130172"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865132"
 ---
-# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Como definir um método genérico com a emissão de reflexão
+# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Como: Definir um método genérico com a emissão de reflexão
 
 O primeiro procedimento mostra como criar um método genérico simples com dois parâmetros de tipo e como aplicar restrições de classe, restrições de interface e restrições especiais aos parâmetros de tipo.
 
@@ -164,7 +165,7 @@ O exemplo de código inclui o código-fonte que é equivalente ao método emitid
 [!code-csharp[GenericMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#1)]
 [!code-vb[GenericMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#1)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Reflection.Emit.MethodBuilder>
-- [Como definir um tipo genérico com a emissão de reflexão](how-to-define-a-generic-type-with-reflection-emit.md)
+- [Como: Definir um tipo genérico com a emissão de reflexão](how-to-define-a-generic-type-with-reflection-emit.md)

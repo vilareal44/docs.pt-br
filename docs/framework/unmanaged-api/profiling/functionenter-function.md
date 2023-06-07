@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-ms.openlocfilehash: caea1d3d526017c0118f95bb138ee4ac45d2c137
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 52870c7446987817ff00b90db26c3265bccdd096
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866990"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500722"
 ---
 # <a name="functionenter-function"></a>Função FunctionEnter
 Notifica o criador de perfil que o controle está sendo passado para uma função.  
   
 > [!NOTE]
-> A função `FunctionEnter` foi preterida no .NET Framework versão 2,0, e seu uso incorrerá em uma penalidade de desempenho. Em vez disso, use a função [FunctionEnter2](functionenter2-function.md) .  
+> A `FunctionEnter` função é preterida no .NET Framework versão 2,0, e seu uso incorrerá em uma penalidade de desempenho. Em vez disso, use a função [FunctionEnter2](functionenter2-function.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,10 +39,10 @@ void __stdcall FunctionEnter (
 
 - `funcID`
 
-  \[em] o identificador da função para o qual o controle é passado.
+  \[in] o identificador da função à qual o controle é passado.
 
 ## <a name="remarks"></a>Comentários  
- A função `FunctionEnter` é um retorno de chamada; Você deve implementá-lo. A implementação deve usar o atributo de classe de armazenamento `__declspec`(`naked`).  
+ A `FunctionEnter` função é um retorno de chamada; você deve implementá-la. A implementação deve usar o `__declspec` `naked` atributo de classe de armazenamento ().  
   
  O mecanismo de execução não salva nenhum registro antes de chamar essa função.  
   
@@ -50,12 +50,12 @@ void __stdcall FunctionEnter (
   
 - Ao sair, você deve restaurar a pilha removendo todos os parâmetros que foram enviados por Push por seu chamador.  
   
- A implementação de `FunctionEnter` não deve bloquear, pois atrasará a coleta de lixo. A implementação não deve tentar uma coleta de lixo porque a pilha pode não estar em um estado amigável de coleta de lixo. Se uma coleta de lixo for tentada, o tempo de execução será bloqueado até que `FunctionEnter` retorne.  
+ A implementação de `FunctionEnter` não deve bloquear, pois atrasará a coleta de lixo. A implementação não deve tentar uma coleta de lixo porque a pilha pode não estar em um estado amigável de coleta de lixo. Se for feita uma tentativa de coleta de lixo, o tempo de execução será bloqueado até o `FunctionEnter` retorno.  
   
- Além disso, a função `FunctionEnter` não deve chamar um código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
+ Além disso, a `FunctionEnter` função não deve chamar um código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl  
   
@@ -63,7 +63,7 @@ void __stdcall FunctionEnter (
   
  **Versões do .NET Framework:** 1,1, 1,0  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Função FunctionEnter2](functionenter2-function.md)
 - [Função FunctionLeave2](functionleave2-function.md)

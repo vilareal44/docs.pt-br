@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3f5c266-3fcc-4ad1-aaf5-4cdbe26304ad
 topic_type:
 - apiref
-ms.openlocfilehash: 61aafb8dc99bb908fc603945ff6ea74054f812c4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d5eb225241f597baf7a0a5584f4aaf8bf8411ea2
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141424"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009464"
 ---
 # <a name="validatorflags-enumeration"></a>Enumeração ValidatorFlags
-Contém valores que indicam o tipo de validação que deve ser executado em uma chamada para o método [ICLRValidator:: Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) .  
+Contém valores que indicam o tipo de validação que deve ser executado em uma chamada para o método [ICLRValidator:: Validate](iclrvalidator-validate-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,15 +47,15 @@ enum ValidatorFlags {
 |`VALIDATOR_SHOW_SOURCE_LINES`|Especifica que as mensagens de erro de validação devem incluir as linhas do código-fonte que geram erros de validação. Esse valor de campo não é válido na versão .NET Framework 2,0.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** IValidator. idl, IValidator. h  
   
  **Biblioteca:** MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ICLRErrorReportingManager](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
-- [Enumerações de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Interface ICLRErrorReportingManager](iclrerrorreportingmanager-interface.md)
+- [Hospedando enumerações](hosting-enumerations.md)

@@ -4,12 +4,12 @@ description: Saiba como usar a ferramenta .NET Portability Analyzer para avaliar
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 94dd6de8839b03bbdc33ae1ed03599853241d40b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d2a9551565e9ef0a2ed76960c869829fc2e86a1f
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209359"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903604"
 ---
 # <a name="the-net-portability-analyzer"></a>O .NET Portability Analyzer
 
@@ -20,7 +20,7 @@ Depois de converter seu projeto para direcionar a nova plataforma, como o .NET C
 ## <a name="common-targets"></a>Destinos comuns
 
 - [.NET Core](../../core/index.yml): tem um design modular, dá suporte à instalação lado a lado e tem como alvo cenários de plataforma cruzada. A instalação lado a lado permite que você adote novas versões do .NET Core sem interromper outros aplicativos. Se seu objetivo é portar seu aplicativo para o .NET Core e oferecer suporte a várias plataformas, esse é o destino recomendado.
-- . [Net Standard](../../standard/net-standard.md): inclui as APIs de .net Standard disponíveis em todas as implementações do .net. Se seu objetivo é fazer com que sua biblioteca seja executada em todas as plataformas com suporte do .NET, esse é o destino recomendado.
+- . [Net Standard](../net-standard.md): inclui as APIs de .net Standard disponíveis em todas as implementações do .net. Se seu objetivo é fazer com que sua biblioteca seja executada em todas as plataformas com suporte do .NET, esse é o destino recomendado.
 - [ASP.NET Core](/aspnet/core): uma estrutura da Web moderna criada no .NET Core. Se sua meta é portar seu aplicativo Web para o .NET Core para dar suporte a várias plataformas, esse é o destino recomendado.
 - [Extensões de plataforma](../../core/porting/windows-compat-pack.md).NET Core +: inclui as APIs do .NET Core, além do pacote de compatibilidade do Windows, que fornece muitas das .NET Framework tecnologias disponíveis. Esse é um destino recomendado para portar seu aplicativo do .NET Framework para o .NET Core no Windows.
 - .NET Standard + [extensões de plataforma](../../core/porting/windows-compat-pack.md): inclui as APIs de .net Standard além do pacote de compatibilidade do Windows, que fornece muitas das .NET Framework tecnologias disponíveis. Esse é um destino recomendado para portar sua biblioteca do .NET Framework para o .NET Core no Windows.
@@ -32,6 +32,20 @@ Para começar a usar o Analisador de Portabilidade do .NET no Visual Studio, pri
 ![Captura de tela do analisador de portabilidade.](./media/portability-analyzer/portability-screenshot.png)
 
 Também é possível usar o aplicativo de console ApiPort, baixando-o do [repositório ApiPort](https://aka.ms/apiportdownload). É possível usar a opção de comando `listTargets` para exibir a lista de destino disponível e escolher as plataformas de destino especificando a opção de comando `-t` ou `--target`.
+
+### <a name="solution-wide-view"></a>Visão ampla da solução
+
+Uma etapa útil na análise de uma solução com muitos projetos seria Visualizar as dependências para entender qual subconjunto de assemblies dependem do que. A recomendação geral é aplicar os resultados da análise em uma abordagem de baixo para cima, começando com os nós folha em um grafo de dependência.
+
+Para recuperar isso, você pode executar o seguinte comando:
+
+```
+ApiPort.exe analyze -r DGML -f [directory or file]
+```
+
+Um resultado disso seria semelhante ao seguinte quando aberto no Visual Studio:
+
+![Captura de tela da análise de DGML.](./media/portability-analyzer/dgml-example.png)
 
 ### <a name="analyze-portability"></a>Analisar portabilidade
 Para analisar todo o projeto no Visual Studio, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções** e selecione **Analisar Portabilidade do Assembly**. Caso contrário, acesse o menu **Analyze** e selecione **Analisar Portabilidade do Assembly**. A partir daí, selecione o executável ou a DLL do seu projeto.

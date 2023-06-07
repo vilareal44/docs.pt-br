@@ -1,13 +1,13 @@
 ---
-title: Classificação de operadores de consulta padrão por meio da execução
+title: Classificação de operadores de consulta padrão por maneira de execução
 ms.date: 07/20/2015
 ms.assetid: 7f55b0be-9f6e-44f8-865c-6afbea50cc54
-ms.openlocfilehash: edace870ea684c70bbf2768c44388f2236622c2c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e1ba5d8bdc2b7a521a11ca5c055323fde4bcb9d9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345709"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410897"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Classificação de operadores de consulta padrão por meio de execução (Visual Basic)
 As implementações de LINQ to Objects dos métodos de operador de consulta padrão em uma das duas maneiras principais: imediata ou adiada. Os operadores de consulta que usam a execução adiada podem ser divididos em mais duas categorias: streaming e não streaming. Se você souber como os operadores de consulta diferentes são executados, isso poderá ajudá-lo a entender os resultados que serão obtidos de uma determinada consulta. Isso é especialmente verdadeiro se a fonte de dados está sendo alterada ou se você estiver criando uma consulta sobre outra consulta. Este tópico classifica os operadores de consulta padrão de acordo com o modo de execução.  
@@ -87,9 +87,9 @@ As implementações de LINQ to Objects dos métodos de operador de consulta padr
 |<xref:System.Linq.Enumerable.Union%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Linq.Enumerable>
-- [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Sintaxe de expressão de consulta para operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [Visão geral de operadores de consulta padrão (Visual Basic)](standard-query-operators-overview.md)
+- [Sintaxe de expressão de consulta para operadores de consulta padrão (Visual Basic)](query-expression-syntax-for-standard-query-operators.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)

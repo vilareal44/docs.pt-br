@@ -1,5 +1,6 @@
 ---
 title: Reflexão no .NET
+description: Examine a reflexão no .NET. Obtenha informações sobre assemblies carregados e os tipos definidos dentro deles, como classes, interfaces, estruturas e enumerações.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET], reflection
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-ms.openlocfilehash: 90d9cf4c473d73d1eeeb5f2a1098f8626c20359f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 46c67595126af2c62b28d29983775943586a0b90
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180482"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865275"
 ---
 # <a name="reflection-in-net"></a>Reflexão no .NET
 
-<xref:System.Reflection> As classes no namespace, junto com <xref:System.Type?displayProperty=nameWithType>o, permitem que você obtenha informações sobre [assemblies](../../standard/assembly/index.md) carregados e os tipos definidos dentro deles, como [classes](../../standard/base-types/common-type-system.md#classes), [interfaces](../../standard/base-types/common-type-system.md#interfaces)e tipos de valor (ou seja, [estruturas](../../standard/base-types/common-type-system.md#structures) e [enumerações](../../standard/base-types/common-type-system.md#enumerations)). Você também pode usar a reflexão para criar instâncias de tipo em tempo de execução e para invocá-los e acessá-los. Para tópicos sobre aspectos específicos da reflexão, consulte [Tópicos relacionados](#related_topics) no final dessa visão geral.
+As classes no <xref:System.Reflection> namespace, junto com o <xref:System.Type?displayProperty=nameWithType> , permitem que você obtenha informações sobre [assemblies](../../standard/assembly/index.md) carregados e os tipos definidos dentro deles, como [classes](../../standard/base-types/common-type-system.md#classes), [interfaces](../../standard/base-types/common-type-system.md#interfaces)e tipos de valor (ou seja, [estruturas](../../standard/base-types/common-type-system.md#structures) e [enumerações](../../standard/base-types/common-type-system.md#enumerations)). Você também pode usar a reflexão para criar instâncias de tipo em tempo de execução e para invocá-los e acessá-los. Para tópicos sobre aspectos específicos da reflexão, consulte [Tópicos relacionados](#related_topics) no final dessa visão geral.
   
 O carregador [Common Language Runtime](../../standard/clr.md) gerencia os [domínios do aplicativo](../app-domains/application-domains.md), que constituem limites definidos em torno de objetos que têm o mesmo escopo de aplicativo. Esse gerenciamento inclui carregar cada assembly no domínio do aplicativo apropriado e controlar o layout da memória da hierarquia de tipo em cada assembly.  
   
@@ -71,16 +72,16 @@ Essas classes de runtime são `internal` (`Friend` no Visual Basic). Elas não s
 
 ## <a name="related-topics"></a>Tópicos Relacionados  
   
-|Title|Descrição|  
+|Título|Descrição|  
 |-----------|-----------------|  
 |[Exibindo informações de tipo](viewing-type-information.md)|Descreve a classe <xref:System.Type> e fornece exemplos de código que ilustram como usar <xref:System.Type> com várias classes de reflexão para obter informações sobre construtores, métodos, campos, propriedades e eventos.|  
 |[Reflexão e tipos genéricos](reflection-and-generic-types.md)|Explica como a reflexão trata os parâmetros de tipo e argumentos de tipo de tipos genéricos e métodos genéricos.|  
 |[Considerações sobre segurança relacionadas à reflexão](security-considerations-for-reflection.md)|Descreve as regras que determinam até que nível a reflexão pode ser usada para descobrir informações de tipo e tipos de acesso.|  
 |[Carregando e usando tipos dinamicamente](dynamically-loading-and-using-types.md)|Descreve a interface de associação personalizada de reflexão que dá suporte à associação tardia.|  
-|[Como carregar assemblies no contexto de somente reflexão](how-to-load-assemblies-into-the-reflection-only-context.md)|Descreve o contexto de carregamento de somente reflexão. Mostra como carregar um assembly, como testar o contexto e como examinar os atributos aplicados a um assembly no contexto de somente reflexão.|  
+|[Como: Carregar assemblies no contexto somente de reflexão](how-to-load-assemblies-into-the-reflection-only-context.md)|Descreve o contexto de carregamento de somente reflexão. Mostra como carregar um assembly, como testar o contexto e como examinar os atributos aplicados a um assembly no contexto de somente reflexão.|  
 |[Acessando atributos personalizados](accessing-custom-attributes.md)|Demonstra o uso de reflexão para consultar a existência do atributo e os valores.|  
 |[Especificando nomes de tipo totalmente qualificados](specifying-fully-qualified-type-names.md)|Descreve o formato dos nomes de tipo totalmente qualificados nos termos da BNF (forma de Backus-Naur) e a sintaxe necessária para especificar os caracteres especiais, os nomes de assembly, os ponteiros, as referências e as matrizes.|  
-|[Como conectar um delegado usando a reflexão](how-to-hook-up-a-delegate-using-reflection.md)|Explica como criar um delegado para um método e conectar o delegado a um evento. Explica como criar um método de manipulação de eventos em tempo de execução usando <xref:System.Reflection.Emit.DynamicMethod>.|  
+|[Como: Conectar um delegado usando a reflexão](how-to-hook-up-a-delegate-using-reflection.md)|Explica como criar um delegado para um método e conectar o delegado a um evento. Explica como criar um método de manipulação de eventos em tempo de execução usando <xref:System.Reflection.Emit.DynamicMethod>.|  
 |[Emissão de métodos e assemblies dinâmicos](emitting-dynamic-methods-and-assemblies.md)|Explica como gerar métodos dinâmicos e assemblies dinâmicos.|  
   
 ## <a name="reference"></a>Referência  

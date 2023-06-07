@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 4e3d3141-4662-4166-8f05-bc857c1b4216
 topic_type:
 - apiref
-ms.openlocfilehash: 1286ce953c96eb3e3164ba5b209031dd1ec5c453
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 177127c8c53e4fee31f7007d04c49cc337cca458
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76864681"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498720"
 ---
 # <a name="icorprofilerfunctioncontrol-interface"></a>Interface ICorProfilerFunctionControl
 Fornece métodos que permitem a um criador de perfis de código se comunicar com o Common Language runtime (CLR) para controlar como o compilador JIT deve gerar código ao recompilar um método específico.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
@@ -35,17 +35,17 @@ Fornece métodos que permitem a um criador de perfis de código se comunicar com
 ## <a name="remarks"></a>Comentários  
  A interface de `ICorProfilerFunctionControl` fornece métodos para controlar a geração de código para uma única função recompilada. O criador de perfil Obtém uma instância dessa interface por meio do retorno de chamada [ICorProfilerCallback4:: GetReJITParameters](icorprofilercallback4-getrejitparameters-method.md) . Cada instância do `ICorProfilerFunctionControl` controla todas as instâncias de uma função.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerInfo4](icorprofilerinfo4-interface.md)
-- [Interfaces de criação de perfil](profiling-interfaces.md)
+- [Criação de perfil de interfaces](profiling-interfaces.md)
 - [Método EnumJITedFunctions2](icorprofilerinfo4-enumjitedfunctions2-method.md)

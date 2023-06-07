@@ -1,13 +1,13 @@
 ---
-title: 'Como: Recuperar o valor raso de um elemento'
+title: 'Como: recuperar o valor superficial de um elemento'
 ms.date: 07/20/2015
 ms.assetid: 730a6670-fb8c-41fc-8a1b-eb97a837e432
-ms.openlocfilehash: 7449d6d1230313aef6005284270370bb9d243a3f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 24e6b128481f56941f0a61da9766f02813a46e97
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346906"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397811"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>Como recuperar o valor superficial de um elemento (Visual Basic)
 
@@ -67,7 +67,7 @@ Module Module1
 End Module
 ```
 
-Este exemplo gera a seguinte saída:
+Esse exemplo gera a saída a seguir:
 
 ```console
 Column  Name="CustomerId"   =Customer.CustomerId.Heading
@@ -76,6 +76,6 @@ Column  Name="CustomerId"   =Customer.CustomerId
 Column  Name="Name"         =Customer.Name
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Eixos LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [Eixos LINQ to XML (Visual Basic)](linq-to-xml-axes.md)

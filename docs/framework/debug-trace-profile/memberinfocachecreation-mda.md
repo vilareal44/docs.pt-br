@@ -1,5 +1,6 @@
 ---
 title: MDA memberInfoCacheCreation
+description: Entenda o MDA (Assistente de depuração gerenciada) do memberInfoCacheCreation no .NET, que é ativado quando um cache MemberInfo é criado.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - member info cache creation
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), cache
 - MemberInfo cache
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
-ms.openlocfilehash: e5dbc769bd634afae06582ee614addafd611fad9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: c48be7ac8632b8072981be01e01997ee8c34b6b3
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217308"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051136"
 ---
 # <a name="memberinfocachecreation-mda"></a>MDA memberInfoCacheCreation
 O MDA (Assistente de Depuração Gerenciado) de `memberInfoCacheCreation` é ativado quando um cache de <xref:System.Reflection.MemberInfo> é criado. Isso é uma indicação forte de um programa que está fazendo uso de recursos de reflexão com consumo elevado de recursos computacionais.  
@@ -62,7 +62,7 @@ public class Exe
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Reflection.MemberInfo>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)

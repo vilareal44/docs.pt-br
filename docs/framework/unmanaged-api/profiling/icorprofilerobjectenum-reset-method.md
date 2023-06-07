@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 973dbcc5-bce8-43a7-9a66-d9a1db7cc5b7
 topic_type:
 - apiref
-ms.openlocfilehash: e4b093765889ef2ba0e5fab5057e2c5278ff9e4b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: a4b530afd615f68c5455d1926bfc616d15a819aa
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868207"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494508"
 ---
 # <a name="icorprofilerobjectenumreset-method"></a>Método ICorProfilerObjectEnum::Reset
 Move o cursor deste enumerador para a posição inicial da sequência.  
@@ -31,15 +31,15 @@ Move o cursor deste enumerador para a posição inicial da sequência.
 HRESULT Reset ();  
 ```  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerObjectEnum](icorprofilerobjectenum-interface.md)

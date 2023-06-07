@@ -1,5 +1,6 @@
 ---
-title: <typeparam> - Guia de programação C#
+title: <typeparam> -Guia de programação C#
+description: Saiba mais sobre o XML <typeparam> Tags. Essa marca é usada no comentário para um tipo genérico ou declaração de método para descrever um parâmetro de tipo.
 ms.date: 07/20/2015
 f1_keywords:
 - typeparam
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: 867ecacf58f95533395ded203a8f17bc92558ccf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e5333e384e8c77b500f74ab7c6038146df6e2c0
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793359"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380781"
 ---
-# <a name="typeparam-c-programming-guide"></a>\<typeparam> (guia de programação C#)
+# <a name="typeparam-c-programming-guide"></a>\<typeparam>(Guia de programação C#)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,7 +41,7 @@ Para obter mais informações, consulte [Genéricos](../generics/index.md).
 
 O texto da marca `<typeparam>` será exibido no IntelliSense, o relatório Web de comentários sobre código da [Janela do Pesquisador de Objetos](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser).
 
-Compilar com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação para um arquivo.
+Compile com [-Doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.
 
 ## <a name="example"></a>Exemplo
 
@@ -48,6 +49,6 @@ Compilar com [-doc](../../language-reference/compiler-options/doc-compiler-optio
 
 ## <a name="see-also"></a>Confira também
 
-- [Referência do C#](../../language-reference/index.md)
+- [Referência de C#](../../language-reference/index.md)
 - [Guia de programação em C#](../index.md)
 - [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

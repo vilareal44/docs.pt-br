@@ -160,7 +160,7 @@ Este tópico é uma continuação do tutorial de Introdução Windows Workflow F
  [!code-csharp[CFX_WF_GettingStarted#12](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#12)]
  [!code-vb[CFX_WF_GettingStarted#12](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#12)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Activities.WorkflowApplication>
 - <xref:System.Activities.Bookmark>

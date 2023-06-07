@@ -1,16 +1,17 @@
 ---
 title: Execução lado a lado em processo
+description: Use a hospedagem no processo lado a lado para executar muitas versões do Common Language Runtime (CLR) em um único processo .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-ms.openlocfilehash: 5ca2f03576946a23b3133bbe7532d46c4ad758ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 078f2eaada8fac57138bef22d46218ef2ccda835
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181657"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622595"
 ---
 # <a name="in-process-side-by-side-execution"></a>Execução lado a lado em processo
 A partir do .NET Framework 4, você pode usar a hospedagem lado a lado em processo para executar várias versões do CLR (Common Language Runtime) em um único processo. Por padrão, os componentes COM gerenciados são executados com a versão do .NET Framework com a qual eles foram criados, independentemente da versão do .NET Framework carregada para o processo.  
@@ -38,9 +39,9 @@ A partir do .NET Framework 4, você pode usar a hospedagem lado a lado em proces
   
     |Versão do .NET Framework|1,1|2.0 – 3.5|4|  
     |----------------------------|---------|----------------|-------|  
-    |1,1|Não aplicável|Não|Sim|  
+    |1,1|Não Aplicável|Não|Sim|  
     |2.0 – 3.5|Não|Não aplicável|Sim|  
-    |4|Sim|Sim|Não aplicável|  
+    |4|Sim|Sim|Não Aplicável|  
   
 > [!NOTE]
 > As versões 3.0 e 3.5 do .NET Framework são criadas de forma incremental na versão 2.0 e não precisam ser executadas lado a lado. Elas são inerentemente a mesma versão.  
@@ -50,15 +51,15 @@ A partir do .NET Framework 4, você pode usar a hospedagem lado a lado em proces
   
 - **Cenário 1:** aplicativo nativo que usa componentes COM criados com versões anteriores do .NET Framework.  
   
-     Versões do Framework .NET instaladas: O .NET Framework 4 e todas as outras versões do .NET Framework usado pelos componentes COM.  
+     .NET Framework versões instaladas: a .NET Framework 4 e todas as outras versões do .NET Framework usadas pelos componentes COM.  
   
      O que fazer: nesse cenário, não faça nada. Os componentes COM serão executados com a versão do .NET Framework com a qual foram registrados.  
   
-- **Cenário 2**: Aplicativo gerenciado construído com o .NET Framework 2.0 SP1 que você prefere executar com o .NET Framework 2.0, mas está disposto a ser executado no .NET Framework 4 se a versão 2.0 não estiver presente.  
+- **Cenário 2**: aplicativo gerenciado criado com o .NET Framework 2,0 SP1 que você prefere executar com o .NET Framework 2,0, mas que está disposto a ser executado no .NET Framework 4 se a versão 2,0 não estiver presente.  
   
-     .NET Framework versões instaladas: Uma versão anterior do .NET Framework e do .NET Framework 4.  
+     .NET Framework versões instaladas: uma versão anterior do .NET Framework e o .NET Framework 4.  
   
-     O que fazer: no [arquivo de configuração de aplicativo](../configure-apps/index.md) no diretório do aplicativo, use o [elemento \<startup](../configure-apps/file-schema/startup/startup-element.md) e o [elemento \<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) definidos da seguinte forma:  
+     O que fazer: no [arquivo de configuração do aplicativo](../configure-apps/index.md) no diretório do aplicativo, use o [ \<startup> elemento](../configure-apps/file-schema/startup/startup-element.md) e o [ \<supportedRuntime> elemento](../configure-apps/file-schema/startup/supportedruntime-element.md) definido da seguinte maneira:  
   
     ```xml  
     <configuration>  
@@ -69,9 +70,9 @@ A partir do .NET Framework 4, você pode usar a hospedagem lado a lado em proces
     </configuration>  
     ```  
   
-- **Cenário 3:** Aplicativo nativo que usa componentes COM construídos com versões anteriores do .NET Framework que você deseja executar com o .NET Framework 4.  
+- **Cenário 3:** Aplicativo nativo que usa componentes COM criados com versões anteriores do .NET Framework que você deseja executar com o .NET Framework 4.  
   
-     .NET Framework versões instaladas: O .NET Framework 4.  
+     .NET Framework versões instaladas: o .NET Framework 4.  
   
      O que fazer: no arquivo de configuração de aplicativo no diretório do aplicativo, use o elemento `<startup>` com o atributo `useLegacyV2RuntimeActivationPolicy` definido como `true` e o elemento `<supportedRuntime>` definido da seguinte forma:  
   
@@ -171,7 +172,7 @@ int _tmain(int argc, _TCHAR* argv[])
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [\<> de startup Element](../configure-apps/file-schema/startup/startup-element.md)
-- [\<suporteElemento de> runtime](../configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<startup>Elementos](../configure-apps/file-schema/startup/startup-element.md)
+- [\<supportedRuntime>Elementos](../configure-apps/file-schema/startup/supportedruntime-element.md)

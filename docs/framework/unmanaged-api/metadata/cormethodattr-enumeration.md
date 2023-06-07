@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e0c3521-e54d-43c1-9857-cc76b49b8ffc
 topic_type:
 - apiref
-ms.openlocfilehash: 74088d1cd018bb07406fc7d00ff83d783a98b663
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 779a8f88b7521aa4b0a75594552981b41714ee3f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450232"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007670"
 ---
 # <a name="cormethodattr-enumeration"></a>Enumeração CorMethodAttr
 Contém valores que descrevem os recursos de um método.  
@@ -64,7 +64,7 @@ typedef enum CorMethodAttr {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`mdMemberAccessMask`|Especifica o acesso de membro.|  
 |`mdPrivateScope`|Especifica que o membro não pode ser referenciado.|  
@@ -79,7 +79,7 @@ typedef enum CorMethodAttr {
 |`mdVirtual`|Especifica que o método pode ser substituído.|  
 |`mdHideBySig`|Especifica que o método oculta por nome e assinatura, em vez de apenas pelo nome.|  
 |`mdVtableLayoutMask`|Especifica o layout da tabela virtual.|  
-|`mdReuseSlot`|Especifica que o slot usado para esse método na tabela virtual seja reutilizado. Esse é o padrão.|  
+|`mdReuseSlot`|Especifica que o slot usado para esse método na tabela virtual seja reutilizado. Este é o padrão.|  
 |`mdNewSlot`|Especifica que o método sempre Obtém um novo slot na tabela virtual.|  
 |`mdCheckAccessOnOverride`|Especifica que o método pode ser substituído pelos mesmos tipos aos quais está visível.|  
 |`mdAbstract`|Especifica que o método não está implementado.|  
@@ -91,13 +91,13 @@ typedef enum CorMethodAttr {
 |`mdHasSecurity`|Especifica que o método tem segurança associada a ele.|  
 |`mdRequireSecObject`|Especifica que o método chama outro método que contém o código de segurança.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerações de metadados](metadata-enumerations.md)

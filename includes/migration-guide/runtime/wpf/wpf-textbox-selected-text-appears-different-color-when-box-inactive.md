@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 74ce1bbc9a887aee3a33eaf05084e8c2000967c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cd59818fe674e10a206725bea8a74c4aceed99b1
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "66379632"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619895"
 ---
 ### <a name="wpf-textbox-selected-text-appears-a-different-color-when-the-text-box-is-inactive"></a>O texto selecionado TextBox do WPF aparece em cor diferente quando a caixa de texto está inativa
 
-|   |   |
-|---|---|
-|Detalhes|No .NET Framework 4.5, quando um controle de caixa de texto do WPF estiver inativo (não tem o foco), o texto selecionado dentro da caixa terá uma cor diferente de quando o controle estiver ativo.|
-|Sugestão|O comportamento anterior (.NET Framework 4.0) poderá ser restaurado definindo a propriedade <xref:System.Windows.FrameworkCompatibilityPreferences.AreInactiveSelectionHighlightBrushKeysSupported> como <code>false</code>.|
-|Escopo|Microsoft Edge|
+#### <a name="details"></a>Detalhes
+
+No .NET Framework 4.5, quando um controle de caixa de texto do WPF estiver inativo (não tem o foco), o texto selecionado dentro da caixa terá uma cor diferente de quando o controle estiver ativo.
+
+#### <a name="suggestion"></a>Sugestão
+
+O comportamento anterior (.NET Framework 4.0) poderá ser restaurado definindo a propriedade <xref:System.Windows.FrameworkCompatibilityPreferences.AreInactiveSelectionHighlightBrushKeysSupported> como <code>false</code>.
+
+| Name    | Valor       |
+|:--------|:------------|
+| Escopo   |Microsoft Edge|
 |Versão|4.5|
-|Tipo|Tempo de execução|
-|APIs afetadas|<ul><li><xref:System.Windows.Controls.TextBox?displayProperty=nameWithType></li></ul>|
+|Type|Runtime
+
+#### <a name="affected-apis"></a>APIs afetadas
+
+-<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType></li></ul>|

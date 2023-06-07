@@ -1,439 +1,489 @@
-- name: Documentação do .NET Core
-  href: index.yml
-- name: Introdução ao .NET Core
-  href: introduction.md
-- name: Visão geral do .NET Core
-  href: about.md
-- name: Instalar o
-  items:
-    - name: Visão geral
-      href: install/index.md
-    - name: Instalar o SDK
-      href: install/sdk.md
-    - name: Instalar o runtime
-      href: install/runtime.md
-    - name: Sistemas operacionais compatíveis e dependências
-      href: install/dependencies.md
-    - name: Remover SDKs e runtimes desatualizados
-      href: install/remove-runtime-sdk-versions.md
-    - name: Gerenciar modelos .NET
-      href: install/templates.md
-    - name: Problemas de notarização do macOS
-      href: install/macos-notarization-issues.md
-    - name: Como verificar as versões do .NET Core
-      href: install/how-to-detect-installed-versions.md
-    - name: Gerenciadores de pacotes do Linux
-      items:
-        - name: Ubuntu 20.04
-          href: install/linux-package-manager-ubuntu-2004.md
-        - name: Ubuntu 19.10
-          href: install/linux-package-manager-ubuntu-1910.md
-        - name: Ubuntu 19.04
-          href: install/linux-package-manager-ubuntu-1904.md
-        - name: Ubuntu 18.04
-          href: install/linux-package-manager-ubuntu-1804.md
-        - name: Ubuntu 16.04
-          href: install/linux-package-manager-ubuntu-1604.md
-        - name: CentOS 8
-          href: install/linux-package-manager-centos8.md
-        - name: CentOS 7
-          href: install/linux-package-manager-centos7.md
-        - name: Debian 10
-          href: install/linux-package-manager-debian10.md
-        - name: Debian 9
-          href: install/linux-package-manager-debian9.md
-        - name: Fedora 32
-          href: install/linux-package-manager-fedora32.md
-        - name: Fedora 31
-          href: install/linux-package-manager-fedora31.md
-        - name: Fedora 30
-          href: install/linux-package-manager-fedora30.md
-        - name: Fedora 29
-          href: install/linux-package-manager-fedora29.md
-        - name: openSUSE 15
-          href: install/linux-package-manager-opensuse15.md
-        - name: RHEL 8
-          href: install/linux-package-manager-rhel8.md
-        - name: RHEL 7
-          href: install/linux-package-manager-rhel7.md
-        - name: SLES 15
-          href: install/linux-package-manager-sles15.md
-        - name: SLES 12
-          href: install/linux-package-manager-sles12.md
-    - name: Instalar IntelliSense localizado
-      href: install/localized-intellisense.md
-- name: Introdução
-  href: get-started.md
-- name: Novidades do .NET Core
-  items:
-    - name: Novidades do .NET Core 3.1
-      href: whats-new/dotnet-core-3-1.md
-    - name: Novidades do .NET Core 3.0
-      href: whats-new/dotnet-core-3-0.md
-    - name: Novidades do .NET Core 2.2
-      href: whats-new/dotnet-core-2-2.md
-    - name: Novidades do .NET Core 2.1
-      href: whats-new/dotnet-core-2-1.md
-    - name: Novidades do .NET Core 2.0
-      href: whats-new/dotnet-core-2-0.md
-- name: Alterações da falha
-  displayName: app compatibility
-  href: compatibility/
-- name: Tutoriais
-  items:
-    - name: Visão geral
-      href: tutorials/index.md
-    - name: Introdução ao .NET Core usando o Visual Studio
-      href: tutorials/with-visual-studio.md
-    - name: Introdução ao .NET Core usando o Visual Studio Code
-      href: tutorials/with-visual-studio-code.md
-    - name: 'Introdução ao .NET Core, usando as ferramentas da CLI'
-      href: tutorials/cli-create-console-app.md
-    - name: Introdução ao .NET Core usando o Visual Studio Code no macOS
-      href: tutorials/using-on-macos.md
-    - name: Introdução ao .NET Core usando o Visual Studio para Mac
-      href: tutorials/using-on-mac-vs.md
-    - name: Depurar um aplicativo usando o Visual Studio
-      href: tutorials/debugging-with-visual-studio.md
-    - name: Publicar um aplicativo no Visual Studio
-      href: tutorials/publishing-with-visual-studio.md
-    - name: Criar uma biblioteca .NET Standard no Visual Studio
-      href: tutorials/library-with-visual-studio.md
-    - name: Testar uma biblioteca .NET Standard no Visual Studio
-      href: tutorials/testing-library-with-visual-studio.md
-    - name: Consumir uma biblioteca .NET Standard no Visual Studio
-      href: tutorials/consuming-library-with-visual-studio.md
-    - name: Compilar uma solução completa do .NET Core no macOS
-      href: tutorials/using-on-mac-vs-full-solution.md
-    - name: Organizar e testar projetos com a CLI do .NET Core
-      href: tutorials/testing-with-cli.md
-    - name: Desenvolver bibliotecas com ferramentas multiplataforma
-      href: tutorials/libraries.md
-    - name: Criar um aplicativo .NET Core com plugins
-      href: tutorials/creating-app-with-plugin-support.md
-    - name: Desenvolver aplicativos ASP.NET Core
-      href: tutorials/aspnet-core.md
-    - name: Como hospedar o .NET Core por meio de código nativo
-      href: tutorials/netcore-hosting.md
-    - name: Criar modelos para a CLI
-      items:
-        - name: 1 – Criar um modelo de item
-          href: tutorials/cli-templates-create-item-template.md
-        - name: 2 – Criar um modelo de projeto
-          href: tutorials/cli-templates-create-project-template.md
-        - name: 3 – Criar um pacote de modelo
-          href: tutorials/cli-templates-create-template-pack.md
-    - name: Criar ferramentas para a CLI
-      items:
-        - name: 1 – Criar uma ferramenta
-          displayName: 'tools, tutorials'
-          href: tools/global-tools-how-to-create.md
-        - name: 2 – Usar uma ferramenta global
-          displayName: 'tools, tutorials'
-          href: tools/global-tools-how-to-use.md
-        - name: 3 – Usar uma ferramenta local
-          href: tools/local-tools-how-to-use.md
-          displayName: 'tools, tutorials'
-- name: SDKs do projeto
-  items:
-    - name: Visão geral
-      href: project-sdk/overview.md
-    - name: Referência
-      items:
-        - name: Microsoft.NET.Sdk
-          href: project-sdk/msbuild-props.md
-        - name: Microsoft.NET.Sdk.Web
-          href: /aspnet/core/razor-pages/web-sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
-        - name: Microsoft.NET.Sdk.Razor
-          href: /aspnet/core/razor-pages/sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
-- name: Visão geral do SDK do .NET Core
-  href: sdk.md
-- name: CLI do .NET Core
-  items:
-    - name: Visão geral
-      href: tools/index.md
-    - name: Referência
-      items:
-        - name: dotnet
-          href: tools/dotnet.md
-        - name: dotnet build
-          href: tools/dotnet-build.md
-        - name: dotnet build-server
-          href: tools/dotnet-build-server.md
-        - name: dotnet clean
-          href: tools/dotnet-clean.md
-        - name: dotnet help
-          href: tools/dotnet-help.md
-        - name: dotnet migrate
-          href: tools/dotnet-migrate.md
-        - name: dotnet msbuild
-          href: tools/dotnet-msbuild.md
-        - name: dotnet new
-          href: tools/dotnet-new.md
-        - name: dotnet nuget
-          items:
-            - name: dotnet nuget delete
-              href: tools/dotnet-nuget-delete.md
-            - name: dotnet nuget locals
-              href: tools/dotnet-nuget-locals.md
-            - name: dotnet nuget push
-              href: tools/dotnet-nuget-push.md
-            - name: dotnet nuget add source
-              href: tools/dotnet-nuget-add-source.md
-            - name: dotnet nuget disable source
-              href: tools/dotnet-nuget-disable-source.md
-            - name: dotnet nuget enable source
-              href: tools/dotnet-nuget-enable-source.md
-            - name: dotnet nuget list source
-              href: tools/dotnet-nuget-list-source.md
-            - name: dotnet nuget remove source
-              href: tools/dotnet-nuget-remove-source.md
-            - name: dotnet nuget update source
-              href: tools/dotnet-nuget-update-source.md
-        - name: dotnet pack
-          href: tools/dotnet-pack.md
-        - name: dotnet publish
-          href: tools/dotnet-publish.md
-        - name: dotnet restore
-          href: tools/dotnet-restore.md
-        - name: dotnet run
-          href: tools/dotnet-run.md
-        - name: dotnet sln
-          href: tools/dotnet-sln.md
-        - name: dotnet store
-          href: tools/dotnet-store.md
-        - name: dotnet test
-          href: tools/dotnet-test.md
-        - name: dotnet tool
-          items:
-            - name: dotnet tool install
-              href: tools/dotnet-tool-install.md
-            - name: dotnet tool list
-              href: tools/dotnet-tool-list.md
-            - name: dotnet tool restore
-              href: tools/dotnet-tool-restore.md
-            - name: dotnet tool run
-              href: tools/dotnet-tool-run.md
-            - name: dotnet tool uninstall
-              href: tools/dotnet-tool-uninstall.md
-            - name: dotnet tool update
-              href: tools/dotnet-tool-update.md
-        - name: dotnet vstest
-          href: tools/dotnet-vstest.md
-        - name: Scripts dotnet-install
-          href: tools/dotnet-install-script.md
-        - name: Comandos de referência do projeto
-          items:
-            - name: dotnet add reference
-              href: tools/dotnet-add-reference.md
-            - name: dotnet list reference
-              href: tools/dotnet-list-reference.md
-            - name: dotnet remove reference
-              href: tools/dotnet-remove-reference.md
-        - name: Comandos de pacote de projeto
-          items:
-            - name: dotnet add package
-              href: tools/dotnet-add-package.md
-            - name: dotnet list package
-              href: tools/dotnet-list-package.md
-            - name: dotnet remove package
-              href: tools/dotnet-remove-package.md
-    - name: Ferramentas globais e locais
-      items:
-        - name: Gerenciar ferramentas
-          href: tools/global-tools.md
-        - name: Solucionar problemas das ferramentas
-          href: tools/troubleshoot-usage-issues.md
-    - name: Visão geral do global.json
-      href: tools/global-json.md
-    - name: Modelos personalizados
-      href: tools/custom-templates.md
-    - name: Telemetria
-      href: tools/telemetry.md
-    - name: Acesso elevado
-      href: tools/elevated-access.md
-    - name: Habilitar o preenchimento com Tab
-      href: tools/enable-tab-autocomplete.md
-- name: Ferramentas de diagnóstico
-  items:
-    - name: Visão geral
-      href: diagnostics/index.md
-    - name: Depuradores gerenciados
-      href: diagnostics/managed-debuggers.md
-    - name: Registro em log e rastreamento
-      href: diagnostics/logging-tracing.md
-    - name: Ferramentas globais da CLI do .NET Core
-      items:
-        - name: dotnet-counters
-          href: diagnostics/dotnet-counters.md
-        - name: dotnet-dump
-          href: diagnostics/dotnet-dump.md
-        - name: dotnet-trace
-          href: diagnostics/dotnet-trace.md
-    - name: Tutoriais de diagnóstico do .NET Core
-      items:
-        - name: Depurar um vazamento de memória
-          href: diagnostics/debug-memory-leak.md
-- name: Ferramentas adicionais do .NET Core
-  items:
-    - name: Visão geral
-      href: additional-tools/index.md
-    - name: Ferramenta de Desinstalação do .NET Core
-      href: additional-tools/uninstall-tool.md
-    - name: Provedor de Referência de Serviço Web do WCF
-      href: additional-tools/wcf-web-service-reference-guide.md
-    - name: dotnet-svcutil
-      href: additional-tools/dotnet-svcutil-guide.md
-    - name: dotnet-svcutil.xmlserializer
-      href: additional-tools/dotnet-svcutil.xmlserializer-guide.md
-    - name: Gerador de serializador de XML
-      href: additional-tools/xml-serializer-generator.md
-- name: Implantação de aplicativo
-  items:
-    - name: Visão geral
-      href: deploying/index.md
-    - name: Publicar aplicativos com a CLI
-      href: deploying/deploy-with-cli.md
-    - name: Implantar aplicativos com o Visual Studio
-      href: deploying/deploy-with-vs.md
-    - name: Criar um pacote NuGet com a CLI
-      href: deploying/creating-nuget-packages.md
-    - name: Roll forward de runtime de implantação autossuficiente
-      href: deploying/runtime-patch-selection.md
-    - name: Cortar implantações e executáveis autossuficientes
-      href: deploying/trim-self-contained.md
-    - name: Repositório de pacotes de runtime
-      href: deploying/runtime-store.md
-- name: Docker
-  items:
-    - name: Introdução ao .NET e ao Docker
-      href: docker/introduction.md
-    - name: Colocar em contêiner um aplicativo .NET Core
-      href: docker/build-container.md
-    - name: Ferramentas de contêiner no Visual Studio
-      href: /visualstudio/containers/overview
-- name: Configuração do runtime
-  items:
-    - name: Configurações
-      href: run-time-config/index.md
-    - name: Configurações de compilação
-      href: run-time-config/compilation.md
-    - name: Configurações de depuração e criação de perfil
-      href: run-time-config/debugging-profiling.md
-    - name: Configurações do coletor de lixo
-      href: run-time-config/garbage-collector.md
-    - name: Configurações de globalização
-      href: run-time-config/globalization.md
-    - name: Configurações de rede
-      href: run-time-config/networking.md
-    - name: Configurações de threading
-      href: run-time-config/threading.md
-- name: Migração
-  items:
-    - name: .NET Core 2.0 para 2.1
-      href: migration/20-21.md
-    - name: Migrar do project.json
-      href: migration/index.md
-    - name: Mapear entre project.json e csproj
-      href: tools/project-json-to-csproj.md
-    - name: Visão geral das alterações na CLI
-      href: tools/cli-msbuild-architecture.md
-    - name: Adições ao formato csproj
-      href: tools/csproj.md
-    - name: Migrar do DNX
-      href: migration/from-dnx.md
-- name: Portar do .NET Framework
-  items:
-    - name: Visão geral
-      href: porting/index.md
-    - name: Analisar as dependências de terceiros
-      href: porting/third-party-deps.md
-    - name: Portar bibliotecas
-      href: porting/libraries.md
-    - name: Organizar projetos para o .NET Core
-      href: porting/project-structure.md
-    - name: Tecnologias indisponíveis
-      href: porting/net-framework-tech-unavailable.md
-    - name: Ferramentas
-      href: porting/tools.md
-    - name: Usar o Pacote de Compatibilidade do Windows
-      href: porting/windows-compat-pack.md
-    - name: Portabilizar projetos do Windows Forms
-      href: porting/winforms.md
-    - name: Portabilizar projetos do WPF
-      href: ../desktop-wpf/migration/convert-project-from-net-framework.md
-    - name: Portabilizar projetos do C++/CLI
-      href: porting/cpp-cli.md
-- name: Teste de unidade
-  href: testing/index.md
-  items:
-    - name: Visão geral
-      href: testing/index.md
-    - name: Melhores práticas de teste de unidade
-      href: testing/unit-testing-best-practices.md
-    - name: 'Testes de unidade do C# com xUnit'
-      href: testing/unit-testing-with-dotnet-test.md
-    - name: 'Testes de unidade do C# com NUnit'
-      href: testing/unit-testing-with-nunit.md
-    - name: 'Testes de unidade do C# com MSTest'
-      href: testing/unit-testing-with-mstest.md
-    - name: 'Testes de unidade do F# com xUnit'
-      href: testing/unit-testing-fsharp-with-dotnet-test.md
-    - name: 'Testes de unidade do F# com NUnit'
-      href: testing/unit-testing-fsharp-with-nunit.md
-    - name: 'Testes de unidade do F# com MSTest'
-      href: testing/unit-testing-fsharp-with-mstest.md
-    - name: Testes de unidade do VB com xUnit
-      href: testing/unit-testing-visual-basic-with-dotnet-test.md
-    - name: Testes de unidade do VB com NUnit
-      href: testing/unit-testing-visual-basic-with-nunit.md
-    - name: Testes de unidade do VB com MSTest
-      href: testing/unit-testing-visual-basic-with-mstest.md
-    - name: Executar testes de unidade seletivos
-      href: testing/selective-unit-tests.md
-    - name: Saída publicada de teste de unidade
-      href: testing/unit-testing-published-output.md
-    - name: Teste de unidade ao vivo de projetos do .NET Core com o Visual Studio
-      href: /visualstudio/test/live-unit-testing-start
-- name: Controle de versão
-  items:
-    - name: Visão geral
-      href: versions/index.md
-    - name: Seleção de versão do .NET Core
-      href: versions/selection.md
-- name: Catálogo de RID (Identificador de Runtime)
-  href: rid-catalog.md
-- name: Nomes de manifesto de recurso
-  href: resources/manifest-file-names.md
-- name: Gerenciamento e carregamento de dependência
-  items:
-    - name: Gerenciamento de dependência
-      href: tools/dependencies.md
-    - name: Carregamento de dependência
-      href: dependency-loading/overview.md
-    - name: Entender o AssemblyLoadContext
-      href: dependency-loading/understanding-assemblyloadcontext.md
-    - name: Detalhes de carregamento de dependência
-      items:
-        - name: Investigação de dependência padrão
-          href: dependency-loading/default-probing.md
-        - name: Carregar assemblies gerenciados
-          href: dependency-loading/loading-managed.md
-        - name: Carregar assemblies satélite
-          href: dependency-loading/loading-resources.md
-        - name: Carregar bibliotecas não gerenciadas
-          href: dependency-loading/loading-unmanaged.md
-    - name: Tutoriais
-      items:
-        - name: Criar um aplicativo do .NET Core com plug-ins
-          href: tutorials/creating-app-with-plugin-support.md
-        - name: Como usar e depurar a capacidade de descarregamento de assembly no .NET Core
-          href: ../standard/assembly/unloadability.md
-- name: Pacote de distribuição do .NET Core
-  href: distribution-packaging.md
-- name: Expor componentes do .NET Core ao COM
-  href: native-interop/expose-components-to-com.md
-- name: 'Pacotes, metapacotes e estruturas'
-  href: packages.md
-- name: Integração contínua
-  href: tools/using-ci-with-cli.md
+items:
+  - name: Documentação do .NET Core
+    href: index.yml
+  - name: Introdução ao .NET Core
+    href: introduction.md
+  - name: Visão geral do .NET Core
+    href: about.md
+  - name: Instalar o
+    items:
+      - name: Visão geral
+        href: install/index.yml
+      - name: Instalar no Windows
+        href: install/windows.md
+      - name: Instalar no macOS
+        href: install/macos.md
+      - name: Instalar no Linux
+        items:
+          - name: Visão geral
+            href: install/linux.md
+          - name: Ubuntu
+            href: install/linux-ubuntu.md
+          - name: Alpine
+            href: install/linux-alpine.md
+          - name: CentOS
+            href: install/linux-centos.md
+          - name: Debian
+            href: install/linux-debian.md
+          - name: Fedora
+            href: install/linux-fedora.md
+          - name: OpenSUSE
+            href: install/linux-opensuse.md
+          - name: Red Hat Enterprise Linux
+            href: install/linux-rhel.md
+          - name: SLES
+            href: install/linux-sles.md
+      - name: Remover SDKs e runtimes desatualizados
+        href: install/remove-runtime-sdk-versions.md
+      - name: Gerenciar modelos .NET
+        href: install/templates.md
+      - name: Problemas de notarização do macOS
+        href: install/macos-notarization-issues.md
+      - name: Como verificar as versões do .NET Core
+        href: install/how-to-detect-installed-versions.md
+      - name: Instalar IntelliSense localizado
+        href: install/localized-intellisense.md
+  - name: Introdução
+    href: get-started.md
+  - name: Novidades do .NET Core
+    items:
+      - name: Novidades do .NET Core 3.1
+        href: whats-new/dotnet-core-3-1.md
+      - name: Novidades do .NET Core 3.0
+        href: whats-new/dotnet-core-3-0.md
+      - name: Novidades do .NET Core 2.2
+        href: whats-new/dotnet-core-2-2.md
+      - name: Novidades do .NET Core 2.1
+        href: whats-new/dotnet-core-2-1.md
+      - name: Novidades do .NET Core 2.0
+        href: whats-new/dotnet-core-2-0.md
+  - name: Alterações da falha
+    displayName: app compatibility
+    href: compatibility/
+  - name: Tutoriais
+    items:
+      - name: Usar o Virtual Studio
+        items:
+          - name: Criar um aplicativo do console
+            href: tutorials/with-visual-studio.md
+            displayName: 'tutorials, visual studio, vs'
+          - name: Depurar um aplicativo
+            href: tutorials/debugging-with-visual-studio.md
+            displayName: 'tutorials, visual studio, vs'
+          - name: Publicar um aplicativo
+            href: tutorials/publishing-with-visual-studio.md
+            displayName: 'tutorials, visual studio, vs'
+          - name: Criar uma biblioteca
+            href: tutorials/library-with-visual-studio.md
+            displayName: 'tutorials, visual studio, vs'
+          - name: Fazer teste de unidade de uma biblioteca
+            href: tutorials/testing-library-with-visual-studio.md
+            displayName: 'tutorials, visual studio, vs'
+          - name: Instalar e usar um pacote
+            href: /nuget/quickstart/install-and-use-a-package-in-visual-studio
+            displayName: 'tutorials, visual studio, vs'
+          - name: Criar e publicar um pacote
+            href: /nuget/quickstart/create-and-publish-a-package-using-visual-studio
+            displayName: 'tutorials, visual studio, vs'
+      - name: Usar o Visual Studio Code
+        items:
+          - name: Criar um aplicativo do console
+            href: tutorials/with-visual-studio-code.md
+            displayName: 'tutorials, visual studio code, vs code, cli'
+          - name: Depurar um aplicativo
+            href: tutorials/debugging-with-visual-studio-code.md
+            displayName: 'tutorials, visual studio code, vs code'
+          - name: Publicar um aplicativo
+            href: tutorials/publishing-with-visual-studio-code.md
+            displayName: 'tutorials, visual studio code, vs code'
+          - name: Criar uma biblioteca
+            href: tutorials/library-with-visual-studio-code.md
+            displayName: 'tutorials, visual studio code, vs code'
+          - name: Fazer teste de unidade de uma biblioteca
+            href: tutorials/testing-library-with-visual-studio-code.md
+            displayName: 'tutorials, visual studio code, vs code'
+          - name: Instalar e usar um pacote
+            href: /nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli
+            displayName: 'tutorials, cli'
+          - name: Criar e publicar um pacote
+            href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
+            displayName: tutorials
+      - name: Usar o Visual Studio para Mac
+        items:
+          - name: Criar um aplicativo do console
+            href: tutorials/with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac, cli'
+          - name: Depurar um aplicativo
+            href: tutorials/debugging-with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: Publicar um aplicativo
+            href: tutorials/publishing-with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: Criar uma biblioteca
+            href: tutorials/library-with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: Fazer teste de unidade de uma biblioteca
+            href: tutorials/testing-library-with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: Instalar e usar um pacote
+            href: /nuget/quickstart/install-and-use-a-package-in-visual-studio-mac
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: Criar e publicar um pacote
+            href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
+            displayName: tutorials
+      - name: Tópicos avançados
+        items:
+          - name: Fazer teste de unidade de um aplicativo com xUnit
+            href: tutorials/testing-with-cli.md
+            displayName: 'tutorials, cli'
+          - name: Como criar bibliotecas
+            href: tutorials/libraries.md
+          - name: Criar modelos para a CLI
+            items:
+              - name: 1 – Criar um modelo de item
+                href: tutorials/cli-templates-create-item-template.md
+                displayName: 'tutorials, cli'
+              - name: 2 – Criar um modelo de projeto
+                href: tutorials/cli-templates-create-project-template.md
+                displayName: 'tutorials, cli'
+              - name: 3 – Criar um pacote de modelo
+                href: tutorials/cli-templates-create-template-pack.md
+                displayName: 'tutorials, cli'
+          - name: Criar ferramentas para a CLI
+            items:
+              - name: 1 – Criar uma ferramenta
+                displayName: 'tools, tutorials, cli'
+                href: tools/global-tools-how-to-create.md
+              - name: 2 – Usar uma ferramenta global
+                displayName: 'tools, tutorials, cli'
+                href: tools/global-tools-how-to-use.md
+              - name: 3 – Usar uma ferramenta local
+                href: tools/local-tools-how-to-use.md
+                displayName: 'tools, tutorials, cli'
+          - name: Criar um aplicativo com plug-ins
+            href: tutorials/creating-app-with-plugin-support.md
+      - name: Mais tutoriais
+        href: tutorials/index.md
+  - name: SDKs do projeto
+    items:
+      - name: Visão geral
+        href: project-sdk/overview.md
+      - name: Referência
+        items:
+          - name: Microsoft.NET.Sdk
+            href: project-sdk/msbuild-props.md
+          - name: Microsoft.NET.Sdk.Web
+            href: /aspnet/core/razor-pages/web-sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
+          - name: Microsoft.NET.Sdk.Razor
+            href: /aspnet/core/razor-pages/sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
+  - name: Visão geral do SDK do .NET Core
+    href: sdk.md
+  - name: CLI do .NET Core
+    items:
+      - name: Visão geral
+        href: tools/index.md
+      - name: Referência
+        items:
+          - name: dotnet
+            href: tools/dotnet.md
+          - name: dotnet build
+            href: tools/dotnet-build.md
+          - name: dotnet build-server
+            href: tools/dotnet-build-server.md
+          - name: dotnet clean
+            href: tools/dotnet-clean.md
+          - name: dotnet help
+            href: tools/dotnet-help.md
+          - name: dotnet migrate
+            href: tools/dotnet-migrate.md
+          - name: dotnet msbuild
+            href: tools/dotnet-msbuild.md
+          - name: dotnet new
+            href: tools/dotnet-new.md
+          - name: dotnet nuget
+            items:
+              - name: dotnet nuget delete
+                href: tools/dotnet-nuget-delete.md
+              - name: dotnet nuget locals
+                href: tools/dotnet-nuget-locals.md
+              - name: dotnet nuget push
+                href: tools/dotnet-nuget-push.md
+              - name: dotnet nuget add source
+                href: tools/dotnet-nuget-add-source.md
+              - name: dotnet nuget disable source
+                href: tools/dotnet-nuget-disable-source.md
+              - name: dotnet nuget enable source
+                href: tools/dotnet-nuget-enable-source.md
+              - name: dotnet nuget list source
+                href: tools/dotnet-nuget-list-source.md
+              - name: dotnet nuget remove source
+                href: tools/dotnet-nuget-remove-source.md
+              - name: dotnet nuget update source
+                href: tools/dotnet-nuget-update-source.md
+          - name: dotnet pack
+            href: tools/dotnet-pack.md
+          - name: dotnet publish
+            href: tools/dotnet-publish.md
+          - name: dotnet restore
+            href: tools/dotnet-restore.md
+          - name: dotnet run
+            href: tools/dotnet-run.md
+          - name: dotnet sln
+            href: tools/dotnet-sln.md
+          - name: dotnet store
+            href: tools/dotnet-store.md
+          - name: dotnet test
+            href: tools/dotnet-test.md
+          - name: dotnet tool
+            items:
+              - name: dotnet tool install
+                href: tools/dotnet-tool-install.md
+              - name: dotnet tool list
+                href: tools/dotnet-tool-list.md
+              - name: dotnet tool restore
+                href: tools/dotnet-tool-restore.md
+              - name: dotnet tool run
+                href: tools/dotnet-tool-run.md
+              - name: dotnet tool uninstall
+                href: tools/dotnet-tool-uninstall.md
+              - name: dotnet tool update
+                href: tools/dotnet-tool-update.md
+          - name: dotnet vstest
+            href: tools/dotnet-vstest.md
+          - name: Scripts dotnet-install
+            href: tools/dotnet-install-script.md
+          - name: Comandos de referência do projeto
+            items:
+              - name: dotnet add reference
+                href: tools/dotnet-add-reference.md
+              - name: dotnet list reference
+                href: tools/dotnet-list-reference.md
+              - name: dotnet remove reference
+                href: tools/dotnet-remove-reference.md
+          - name: Comandos de pacote de projeto
+            items:
+              - name: dotnet add package
+                href: tools/dotnet-add-package.md
+              - name: dotnet list package
+                href: tools/dotnet-list-package.md
+              - name: dotnet remove package
+                href: tools/dotnet-remove-package.md
+      - name: Ferramentas globais e locais
+        items:
+          - name: Gerenciar ferramentas
+            href: tools/global-tools.md
+          - name: Solucionar problemas das ferramentas
+            href: tools/troubleshoot-usage-issues.md
+      - name: Visão geral do global.json
+        href: tools/global-json.md
+      - name: Modelos personalizados
+        href: tools/custom-templates.md
+      - name: Telemetria
+        href: tools/telemetry.md
+      - name: Acesso elevado
+        href: tools/elevated-access.md
+      - name: Habilitar o preenchimento com Tab
+        href: tools/enable-tab-autocomplete.md
+  - name: Ferramentas de diagnóstico
+    items:
+      - name: Visão geral
+        href: diagnostics/index.md
+      - name: Depuradores gerenciados
+        href: diagnostics/managed-debuggers.md
+      - name: EventCounters
+        href: diagnostics/event-counters.md
+      - name: Registro em log e rastreamento
+        href: diagnostics/logging-tracing.md
+      - name: Ferramentas globais da CLI do .NET Core
+        items:
+          - name: dotnet-counters
+            href: diagnostics/dotnet-counters.md
+          - name: dotnet-dump
+            href: diagnostics/dotnet-dump.md
+          - name: dotnet-gcdump
+            href: diagnostics/dotnet-gcdump.md
+          - name: dotnet-trace
+            href: diagnostics/dotnet-trace.md
+      - name: Tutoriais de diagnóstico do .NET Core
+        items:
+          - name: Obter métricas de desempenho com o EventCounters
+            href: diagnostics/event-counter-perf.md
+          - name: Depurar um vazamento de memória
+            href: diagnostics/debug-memory-leak.md
+          - name: Depurar alto uso da CPU
+            href: diagnostics/debug-highcpu.md
+          - name: Depurar deadlock
+            href: diagnostics/debug-deadlock.md
+  - name: Ferramentas adicionais do .NET Core
+    items:
+      - name: Visão geral
+        href: additional-tools/index.md
+      - name: Ferramenta de Desinstalação do .NET Core
+        href: additional-tools/uninstall-tool.md
+      - name: Provedor de Referência de Serviço Web do WCF
+        href: additional-tools/wcf-web-service-reference-guide.md
+      - name: dotnet-svcutil
+        href: additional-tools/dotnet-svcutil-guide.md
+      - name: dotnet-svcutil.xmlserializer
+        href: additional-tools/dotnet-svcutil.xmlserializer-guide.md
+      - name: Gerador de serializador de XML
+        href: additional-tools/xml-serializer-generator.md
+  - name: Implantação de aplicativo
+    items:
+      - name: Visão geral
+        href: deploying/index.md
+      - name: Publicar aplicativos com a CLI
+        href: deploying/deploy-with-cli.md
+      - name: Implantar aplicativos com o Visual Studio
+        href: deploying/deploy-with-vs.md
+      - name: Criar um pacote NuGet com a CLI
+        href: deploying/creating-nuget-packages.md
+      - name: Roll forward de runtime de implantação autossuficiente
+        href: deploying/runtime-patch-selection.md
+      - name: Cortar implantações e executáveis autossuficientes
+        href: deploying/trim-self-contained.md
+      - name: Repositório de pacotes de runtime
+        href: deploying/runtime-store.md
+  - name: Docker
+    items:
+      - name: Introdução ao .NET e ao Docker
+        href: docker/introduction.md
+      - name: Colocar em contêiner um aplicativo .NET Core
+        href: docker/build-container.md
+      - name: Ferramentas de contêiner no Visual Studio
+        href: /visualstudio/containers/overview
+  - name: Configuração do runtime
+    items:
+      - name: Configurações
+        href: run-time-config/index.md
+      - name: Configurações de compilação
+        href: run-time-config/compilation.md
+      - name: Configurações de depuração e criação de perfil
+        href: run-time-config/debugging-profiling.md
+      - name: Configurações do coletor de lixo
+        href: run-time-config/garbage-collector.md
+      - name: Configurações de globalização
+        href: run-time-config/globalization.md
+      - name: Configurações de rede
+        href: run-time-config/networking.md
+      - name: Configurações de threading
+        href: run-time-config/threading.md
+  - name: Migração
+    items:
+      - name: .NET Core 2.0 para 2.1
+        href: migration/20-21.md
+      - name: Migrar do project.json
+        href: migration/index.md
+      - name: Mapear entre project.json e csproj
+        href: tools/project-json-to-csproj.md
+      - name: Visão geral das alterações na CLI
+        href: tools/cli-msbuild-architecture.md
+      - name: Adições ao formato csproj
+        href: tools/csproj.md
+      - name: Migrar do DNX
+        href: migration/from-dnx.md
+  - name: Portar do .NET Framework
+    items:
+      - name: Visão geral
+        href: porting/index.md
+      - name: Analisar as dependências de terceiros
+        href: porting/third-party-deps.md
+      - name: Portar bibliotecas
+        href: porting/libraries.md
+      - name: Organizar projetos para o .NET Core
+        href: porting/project-structure.md
+      - name: Tecnologias indisponíveis
+        href: porting/net-framework-tech-unavailable.md
+      - name: Ferramentas
+        href: porting/tools.md
+      - name: Usar o Pacote de Compatibilidade do Windows
+        href: porting/windows-compat-pack.md
+      - name: Portabilizar projetos do Windows Forms
+        href: porting/winforms.md
+      - name: Portabilizar projetos do WPF
+        href: ../desktop-wpf/migration/convert-project-from-net-framework.md
+      - name: Portabilizar projetos do C++/CLI
+        href: porting/cpp-cli.md
+  - name: Teste de unidade
+    displayName: 'xUnit,NUnit,MSTest,unit testing,testing'
+    items:
+      - name: Visão geral
+        href: testing/index.md
+      - name: Melhores práticas de teste de unidade
+        href: testing/unit-testing-best-practices.md
+      - name: xUnit
+        items:
+          - name: Teste de unidade C#
+            href: testing/unit-testing-with-dotnet-test.md
+          - name: Teste de unidade F#
+            href: testing/unit-testing-fsharp-with-dotnet-test.md
+          - name: Teste de unidade VB
+            href: testing/unit-testing-visual-basic-with-dotnet-test.md
+      - name: NUnit
+        items:
+          - name: Teste de unidade C#
+            href: testing/unit-testing-with-nunit.md
+          - name: Teste de unidade F#
+            href: testing/unit-testing-fsharp-with-nunit.md
+          - name: Teste de unidade VB
+            href: testing/unit-testing-visual-basic-with-nunit.md
+      - name: MSTest
+        items:
+          - name: Teste de unidade C#
+            href: testing/unit-testing-with-mstest.md
+          - name: Teste de unidade F#
+            href: testing/unit-testing-fsharp-with-mstest.md
+          - name: Teste de unidade VB
+            href: testing/unit-testing-visual-basic-with-mstest.md
+      - name: Executar testes de unidade seletivos
+        href: testing/selective-unit-tests.md
+      - name: Solicitar testes de unidade
+        href: testing/order-unit-tests.md
+      - name: Cobertura de código de testes de unidades
+        href: testing/unit-testing-code-coverage.md
+      - name: Saída publicada de teste de unidade
+        href: testing/unit-testing-published-output.md
+      - name: Teste de unidade ao vivo de projetos do .NET Core com o Visual Studio
+        href: /visualstudio/test/live-unit-testing-start
+  - name: Controle de versão
+    items:
+      - name: Visão geral
+        href: versions/index.md
+      - name: Seleção de versão do .NET Core
+        href: versions/selection.md
+  - name: Catálogo de RID (Identificador de Runtime)
+    href: rid-catalog.md
+  - name: Nomes de manifesto de recurso
+    href: resources/manifest-file-names.md
+  - name: Gerenciamento e carregamento de dependência
+    items:
+      - name: Gerenciamento de dependência
+        href: tools/dependencies.md
+      - name: Carregamento de dependência
+        href: dependency-loading/overview.md
+      - name: Entender o AssemblyLoadContext
+        href: dependency-loading/understanding-assemblyloadcontext.md
+      - name: Detalhes de carregamento de dependência
+        items:
+          - name: Investigação de dependência padrão
+            href: dependency-loading/default-probing.md
+          - name: Carregar assemblies gerenciados
+            href: dependency-loading/loading-managed.md
+          - name: Carregar assemblies satélite
+            href: dependency-loading/loading-resources.md
+          - name: Carregar bibliotecas não gerenciadas
+            href: dependency-loading/loading-unmanaged.md
+      - name: Tutoriais
+        items:
+          - name: Criar um aplicativo do .NET Core com plug-ins
+            href: tutorials/creating-app-with-plugin-support.md
+          - name: Como usar e depurar a capacidade de descarregamento de assembly no .NET Core
+            href: ../standard/assembly/unloadability.md
+  - name: Pacote de distribuição do .NET Core
+    href: distribution-packaging.md
+  - name: Expor componentes do .NET Core ao COM
+    href: native-interop/expose-components-to-com.md
+  - name: Como hospedar o .NET Core por meio de código nativo
+    href: tutorials/netcore-hosting.md
+  - name: Integração contínua
+    href: tools/using-ci-with-cli.md

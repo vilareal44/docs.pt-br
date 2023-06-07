@@ -1,5 +1,6 @@
 ---
 title: Relacionamentos de tipo em operações de consulta LINQ (C#)
+description: Saiba como os tipos de variáveis em uma consulta LINQ se relacionam entre si. As operações de consulta LINQ são fortemente tipadas na fonte de dados, na consulta e na execução.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inferring type information [LINQ in C#]
@@ -12,22 +13,22 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 41853e6858fae9e8d449aeed95a6a84f343d5874
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 20f0b37a156e3b3f9c63f14cb83d678d26f685ee
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635607"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302276"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Relacionamentos de tipo em operações de consulta LINQ (C#)
-Para escrever consultas com eficiência, você precisa entender como os tipos de variáveis em uma operação de consulta completa se relacionam entre si. Se você entender esses relacionamentos, você compreenderá mais facilmente as amostras linq e exemplos de código na documentação. Além disso, você compreenderá o que ocorre nos bastidores quando variáveis são tipadas de forma implícita usando `var`.  
+Para escrever consultas com eficiência, você precisa entender como os tipos de variáveis em uma operação de consulta completa se relacionam entre si. Se você entender essas relações, compreenderá mais facilmente os exemplos de código e exemplos de LINQ na documentação. Além disso, você compreenderá o que ocorre nos bastidores quando variáveis são tipadas de forma implícita usando `var`.  
   
- As operações de consulta LINQ são fortemente digitadas na fonte de dados, na própria consulta e na execução da consulta. O tipo das variáveis na consulta deve ser compatível com o tipo dos elementos na fonte de dados e com o tipo da variável de iteração na instrução `foreach`. Essa tipagem forte garante que erros de tipo sejam capturados em tempo de compilação, quando podem ser corrigidos antes que os usuários os encontrem.  
+ As operações de consulta LINQ são fortemente tipadas na fonte de dados, na própria consulta e na execução da consulta. O tipo das variáveis na consulta deve ser compatível com o tipo dos elementos na fonte de dados e com o tipo da variável de iteração na instrução `foreach`. Essa tipagem forte garante que erros de tipo sejam capturados em tempo de compilação, quando podem ser corrigidos antes que os usuários os encontrem.  
   
  Para demonstrar essas relações de tipo, a maioria dos exemplos a seguir usam tipagem explícita para todas as variáveis. O último exemplo mostra como os mesmos princípios se aplicam mesmo quando você usa tipagem implícita usando [var](../../../language-reference/keywords/var.md).  
   
 ## <a name="queries-that-do-not-transform-the-source-data"></a>Consultas que não transformam os dados de origem  
- A ilustração a seguir mostra uma operação de consulta LINQ to Objects que não realiza transformações nos dados. A fonte contém uma sequência de cadeias de caracteres e a saída da consulta também é uma sequência de cadeias de caracteres.  
+ A ilustração a seguir mostra uma operação de consulta LINQ to Objects que não executa transformações nos dados. A fonte contém uma sequência de cadeias de caracteres e a saída da consulta também é uma sequência de cadeias de caracteres.  
   
  ![Diagrama que mostra a relação dos tipos de dados em uma consulta LINQ.](./media/type-relationships-in-linq-query-operations/linq-query-data-type-relation.png)  
   

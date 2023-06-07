@@ -1,25 +1,25 @@
 ---
 title: O que é o Docker?
 description: Obtenha um pouco mais de conhecimento sobre o Docker, uma analogia simples aqui pode ajudá-lo.
-ms.date: 02/15/2019
-ms.openlocfilehash: e3b3685f2fc6d5a9d33bb176d04ca910f0289344
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 73b6032465583861169a8ac2bed81585027f42ec
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76919874"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915060"
 ---
 # <a name="what-is-docker"></a>O que é o Docker?
 
 O [Docker](https://www.docker.com/) é um [projeto de software livre](https://github.com/docker/docker) para automatizar a implantação de aplicativos como contêineres autossuficientes portáteis que podem ser executados na nuvem ou localmente. O Docker é também uma [empresa](https://www.docker.com/) que promove e aprimora essa tecnologia, trabalhando em colaboração com fornecedores de nuvem, do Linux e do Windows, incluindo a Microsoft.
 
-![Diagrama mostrando os lugares que os contêineres Docker podem executar.](./media/what-is-docker/docker-containers-run-anywhere.png)
+![O diagrama que mostra os contêineres do Docker pode ser executado.](./media/what-is-docker/docker-containers-run-anywhere.png)
 
 **Figura 1-2**. O Docker implanta contêineres em todas as camadas da nuvem híbrida
 
-Como mostrado no diagrama acima, os contêineres Docker podem ser executados em qualquer lugar, no local no datacenter do cliente, em um provedor de serviços externo ou na nuvem, no Azure. Os contêineres de imagem Docker também podem ser executados nativamente no Linux e no Windows. No entanto, imagens do Windows podem executar somente em hosts do Windows e imagens do Linux podem executar em hosts do Linux e hosts do Windows (usando uma VM do Linux do Hyper-V, até o momento), em que o host significa um servidor ou uma VM.
+Conforme mostrado no diagrama acima, os contêineres do Docker podem ser executados em qualquer lugar, local no datacenter do cliente, em um provedor de serviços externo ou na nuvem, no Azure. Os contêineres de imagem do Docker também podem ser executados nativamente no Linux e no Windows. No entanto, imagens do Windows podem executar somente em hosts do Windows e imagens do Linux podem executar em hosts do Linux e hosts do Windows (usando uma VM do Linux do Hyper-V, até o momento), em que o host significa um servidor ou uma VM.
 
-Os desenvolvedores podem usar ambientes de desenvolvimento no Windows, Linux ou macOS. No computador de desenvolvimento, o desenvolvedor executa um host Docker em que as imagens do Docker são implantadas, incluindo o aplicativo e suas dependências. Os desenvolvedores que trabalham no Linux ou no Mac usam um host do Docker que é baseado no Linux e eles podem criar imagens apenas para contêineres do Linux. (Os desenvolvedores que trabalham no Mac podem editar código ou executar o Cli Docker a partir do macOS, mas a partir desta escrita, os contêineres não são executados diretamente no macOS.) Desenvolvedores que trabalham no Windows podem criar imagens para O Linux ou Windows Containers.
+Os desenvolvedores podem usar ambientes de desenvolvimento no Windows, Linux ou macOS. No computador de desenvolvimento, o desenvolvedor executa um host Docker em que as imagens do Docker são implantadas, incluindo o aplicativo e suas dependências. Os desenvolvedores que trabalham no Linux ou no Mac usam um host do Docker que é baseado no Linux e eles podem criar imagens apenas para contêineres do Linux. (Os desenvolvedores que trabalham no Mac podem editar código ou executar a interface de linha de comando (CLI) do Docker a partir do macOS, mas no momento da redação deste artigo, os contêineres não são executados diretamente no macOS.) Os desenvolvedores que trabalham no Windows podem criar imagens para contêineres do Linux ou do Windows.
 
 Para hospedar contêineres em ambientes de desenvolvimento e fornecer ferramentas para desenvolvedores adicionais, o Docker envia o [Docker Community Edition (CE)](https://www.docker.com/community-edition) para Windows ou para o macOS. Esses produtos instalam a VM necessária (o host do Docker) para hospedar os contêineres. O Docker também disponibiliza o [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition), que foi projetado para desenvolvimento empresarial e é usado por equipes de TI que criam, enviam e executam aplicativos de grande porte críticos para os negócios em produção.
 
@@ -27,7 +27,7 @@ Para executar [contêineres do Windows](/virtualization/windowscontainers/about/
 
 - Os **contêineres do Windows Server** fornecem isolamento de aplicativos por meio da tecnologia de isolamento de processo e de namespace. Um contêiner do Windows Server compartilha um kernel com o host do contêiner e todos os contêineres em execução no host.
 
-- Os **contêineres do Hyper-V** expandem o isolamento fornecido pelos contêineres do Windows Server, executando cada contêiner em uma máquina virtual altamente otimizada. Nessa configuração, o kernel do host do contêiner não é compartilhado com os contêineres do Hyper-V, fornecendo melhor isolamento.
+- Os **contêineres do Hyper-V** expandem o isolamento fornecido pelos contêineres do Windows Server executando cada contêiner em uma máquina virtual altamente otimizada. Nessa configuração, o kernel do host do contêiner não é compartilhado com os contêineres do Hyper-V, fornecendo melhor isolamento.
 
 As imagens desses contêineres são criadas e funcionam da mesma maneira. A diferença está em como o contêiner é criado da imagem – executar um contêiner do Hyper-V exige um parâmetro extra. Para obter detalhes, consulte [Contêineres do Hyper-V](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/hyperv-container).
 
@@ -35,11 +35,11 @@ As imagens desses contêineres são criadas e funcionam da mesma maneira. A dife
 
 A Figura 1-3 mostra uma comparação entre VMs e contêineres do Docker.
 
-![Diagrama mostrando uma comparação de ambientes de VM e contêiner.](./media/what-is-docker/comparison-vms-docker-conatiners.png)
+![Diagrama mostrando uma comparação de ambientes de VM e de contêiner.](./media/what-is-docker/comparison-vms-docker-conatiners.png)
 
 **Figura 1-3**. Comparação de máquinas virtuais tradicionais com contêineres do Docker
 
-Como mostrado no diagrama acima, para VMs, há três camadas de base no servidor host. De baixo para cima: Infra-estrutura, sistema operacional host e um hipervisor. Além de tudo isso, cada VM tem seu próprio Sistema Operacional e todas as bibliotecas necessárias. Por outro lado, para o Docker, o servidor host só tem a infra-estrutura e o sistema operacional. Além disso, o motor de contêineres mantém os contêineres isolados, mas permite que eles compartilhem os serviços do sistema operacional de base única.
+Conforme mostrado no diagrama acima, para VMs, há três camadas de base no servidor host. De baixo para cima: infraestrutura, sistema operacional do host e um hipervisor. Além de tudo isso, cada VM tem seu próprio sistema operacional e todas as bibliotecas necessárias. Por outro lado, para o Docker, o servidor host tem apenas a infraestrutura e o sistema operacional. Além disso, o mecanismo de contêiner mantém os contêineres isolados, mas permite que eles compartilhem os serviços do so de base único.
 
 Como os contêineres requerem muito menos recursos (por exemplo, eles não precisam de um sistema operacional completo), eles iniciam rapidamente e são fáceis de implantar. Isso permite que você tenha maior densidade, o que significa que permite a você executar mais serviços na mesma unidade de hardware, reduzindo os custos.
 
@@ -80,5 +80,5 @@ Você pode pensar uma imagem como um auxiliar somente leitura disco rígido pron
 Da mesma forma, você pode pensar em um contêiner como o "computador" com o disco rígido de imagem instalado. O contêiner, assim como um computador, pode ser ativado ou desativado.
 
 >[!div class="step-by-step"]
->[Próximo](index.md)
->[anterior](docker-terminology.md)
+>[Anterior](introduction-to-containers-and-docker.md) 
+> [Avançar](docker-terminology.md)

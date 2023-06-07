@@ -1,5 +1,6 @@
 ---
 title: Como criar um soquete
+description: Saiba como inicializar um soquete para se comunicar com dispositivos remotos. Use a classe Socket para especificar a família de endereços, o tipo de soquete e o tipo de protocolo.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: e71e7e235048361580c65bdb551919fe3038130b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1d56ddea721b54192a7dd47d144b6c41bbb9a5d7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180835"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502542"
 ---
 # <a name="how-to-create-a-socket"></a>Como criar um soquete
 Antes de poder usar um soquete para se comunicar com dispositivos remotos, o soquete deve ser inicializado com as informações de protocolo e endereço de rede. O construtor da classe <xref:System.Net.Sockets.Socket> tem parâmetros que especificam a família de endereços, o tipo de soquete e o tipo de protocolo usado pelo soquete para fazer conexões.  

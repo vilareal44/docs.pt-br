@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f0d721e2-b946-426d-8e20-9124bd04e4cb
 topic_type:
 - apiref
-ms.openlocfilehash: 70f76318f51047cb81262f744a6fbed5fe401692
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed8bafd67b5d55a5116111b7721fbdc31c52aca6
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177809"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009087"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>Método IMetaDataAssemblyImport::EnumFiles
-Enumera os arquivos referenciados no manifesto de montagem atual.  
+Enumera os arquivos referenciados no manifesto do assembly atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,35 +36,35 @@ HRESULT EnumFiles (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [dentro, fora] Um ponteiro para o enumerador. Este deve ser um valor nulo para a primeira chamada deste método.  
+ [entrada, saída] Um ponteiro para o enumerador. Deve ser um valor nulo para a primeira chamada deste método.  
   
  `rFiles`  
- [fora] A matriz usada `mdFile` para armazenar os tokens de metadados.  
+ fora A matriz usada para armazenar os `mdFile` tokens de metadados.  
   
  `cMax`  
- [em] O número `mdFile` máximo de tokens `rFiles`que podem ser colocados em .  
+ no O número máximo de `mdFile` tokens que podem ser colocados `rFiles` .  
   
  `pcTokens`  
- [fora] O número `mdFile` de tokens `rFiles`realmente colocados em .  
+ fora O número de `mdFile` tokens realmente colocados no `rFiles` .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFiles`retornou com sucesso.|  
-|`S_FALSE`|Não há tokens para enumerar. Neste caso, `pcTokens` está definido como zero.|  
+|`S_OK`|`EnumFiles`retornado com êxito.|  
+|`S_FALSE`|Não há tokens para enumerar. Nesse caso, `pcTokens` é definido como zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [Interface IMetaDataAssemblyImport](imetadataassemblyimport-interface.md)

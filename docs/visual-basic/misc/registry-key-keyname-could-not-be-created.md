@@ -1,23 +1,23 @@
 ---
-title: Chave do registro '<keyname>' não pôde ser criado
+title: A chave do Registro '<keyname>' não pôde ser criada
 ms.date: 07/20/2015
 f1_keywords:
 - vbrInteraction_ResKeyNotCreated1
 ms.assetid: 465ccd53-dfdc-47ec-8b3f-9a65ba739314
-ms.openlocfilehash: 7d96521f13feda8d1740ee558eca125ee6a715a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a392c5ba1d6fd9ac5fe8e1702d72a37349529339
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592335"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84358109"
 ---
-# <a name="registry-key-keyname-could-not-be-created"></a>Chave do registro '\<keyname >' não pôde ser criado
-Chave do Registro especificada não pôde ser criado, possivelmente devido a permissões de segurança insuficientes.  
+# <a name="registry-key-keyname-could-not-be-created"></a>A chave do Registro '\<keyname>' não pôde ser criada
+A chave do Registro especificada não pôde ser criada, possivelmente devido a permissões de segurança insuficientes.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Certifique-se de que você tenha permissões de segurança suficientes para acessar a chave.  
+- Verifique se você tem permissões de segurança suficientes para acessar a chave.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Resumo do Registro](../../visual-basic/language-reference/keywords/registry-summary.md)
+- [Resumo do Registro](../language-reference/keywords/registry-summary.md)

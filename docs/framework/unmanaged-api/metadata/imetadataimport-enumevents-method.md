@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e1efedcb-3dd7-42ae-a399-21c24728aec5
 topic_type:
 - apiref
-ms.openlocfilehash: bd50d63b1f7080f510c29f90979b7b36242af1c0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 53b1234a176cade5876d70da0cb4eadc18802c69
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177366"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492298"
 ---
 # <a name="imetadataimportenumevents-method"></a>Método IMetaDataImport::EnumEvents
-Enumera tokens de definição de evento para o token TypeDef especificado.  
+Enumera os tokens de definição de evento para o token de TypeDef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,39 +37,39 @@ HRESULT EnumEvents (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [dentro, fora] Um ponteiro para o enumerador.  
+ [entrada, saída] Um ponteiro para o enumerador.  
   
  `td`  
- [em] O token TypeDef cujas definições de evento devem ser enumeradas.  
+ no O token de TypeDef cujas definições de evento devem ser enumeradas.  
   
  `rEvents`  
- [fora] A matriz de eventos retornados.  
+ fora A matriz de eventos retornados.  
   
  `cMax`  
- [em] O tamanho máximo `rEvents` da matriz.  
+ no O tamanho máximo da `rEvents` matriz.  
   
  `pcEvents`  
- [fora] O número real de `rEvents`eventos retornou em .  
+ fora O número real de eventos retornados em `rEvents` .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents`retornou com sucesso.|  
-|`S_FALSE`|Não há eventos para enumerar. Nesse caso, `pcEvents` é zero.|  
+|`S_OK`|`EnumEvents`retornado com êxito.|  
+|`S_FALSE`|Não há eventos a serem enumerados. Nesse caso, `pcEvents` é zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

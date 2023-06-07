@@ -1,20 +1,20 @@
 ---
-title: Introdução ao XML Literals no Visual Basic2
+title: Introdução aos literais XML no Visual Basic2
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: 9f5c54574e51c537d9ea58d307afda10736d0d88
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 8b92d22727c50274d57a5e407a0ca42807de3a94
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266944"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397578"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Introdução a literais XML no Visual Basic
 Esta seção fornece informações sobre a criação de árvores XML no Visual Basic.  
   
- Para obter informações sobre como usar os resultados das consultas LINQ como conteúdo para uma árvore XML, consulte [Construção Funcional (LINQ para XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ Para obter informações sobre como usar os resultados de consultas LINQ como o conteúdo de uma árvore XML, consulte [construção funcional (LINQ to XML) (Visual Basic)](functional-construction-linq-to-xml.md).  
   
- Para obter mais informações sobre literais XML no Visual Basic, consulte [Visão geral de LINQ para XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
+ Para obter mais informações sobre literais XML no Visual Basic, consulte [visão geral de LINQ to XML em Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md).  
   
 ## <a name="creating-xml-trees"></a>Criando árvores XML  
  O exemplo a seguir mostra como criar <xref:System.Xml.Linq.XElement>, nesse caso `contacts`:  
@@ -157,7 +157,7 @@ Console.WriteLine(n)
 </Root>  
 ```  
   
-### <a name="cloning-vs-attaching"></a>Clonagem em anexar  
+### <a name="cloning-vs-attaching"></a>Clonagem contra. anexação  
  Como mencionado anteriormente, se você usar uma expressão inserida para adicionar nós existentes (incluindo elementos) e atributos para uma nova árvore XML, se os nós existentes já parented, os nós é clonados e os nós recentemente clonados são anexados a nova árvore XML. Se os nós existentes não parented, eles estão conectados somente para a nova árvore XML.  
   
 ```vb  
@@ -197,4 +197,4 @@ Child2 was attached
   
 ## <a name="see-also"></a>Confira também
 
-- [Criando árvores XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Criando árvores XML (Visual Basic)](creating-xml-trees.md)

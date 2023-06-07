@@ -2,19 +2,19 @@
 title: Como configurar um comportamento de exceção não tratado de fluxo de trabalho com o WorkflowServiceHost
 ms.date: 03/30/2017
 ms.assetid: 51b25c86-292c-43e4-8d13-273d2badc8ad
-ms.openlocfilehash: 69c6b1ce11d735181390a0c67df2f8dbea4f906c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3881d1af21dcc0c211c6738162360e522648d949
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185320"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593588"
 ---
 # <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>Como configurar um comportamento de exceção não tratado de fluxo de trabalho com o WorkflowServiceHost
-O <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> é um comportamento que permite especificar a ação a ser tomada se <xref:System.ServiceModel.Activities.WorkflowServiceHost>uma exceção não tratada ocorrer dentro de um fluxo de trabalho hospedado em . Este tópico mostra como configurar esse comportamento em um arquivo de configuração.  
+O <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> é um comportamento que permite que você especifique a ação a ser tomada se uma exceção sem tratamento ocorrer em um fluxo de trabalho hospedado no <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Este tópico mostra como configurar esse comportamento em um arquivo de configuração.  
   
-### <a name="to-configure-workflowunhandledexceptionbehavior"></a>Para configurar workflowUnhandledExceptionBehavior  
+### <a name="to-configure-workflowunhandledexceptionbehavior"></a>Para configurar o WorkflowUnhandledExceptionBehavior  
   
-1. Adicione um `workflowUnhandledException` elemento <`behavior`> em um `serviceBehaviors` elemento> `action` <dentro de um elemento> <, usando o atributo para especificar a ação a ser tomada quando uma exceção não manuseada ocorre como mostrado no exemplo a seguir.  
+1. Adicione um `workflowUnhandledException` elemento <> em um `behavior` elemento <> dentro de um elemento <> `serviceBehaviors` , usando o `action` atributo para especificar a ação a ser tomada quando uma exceção sem tratamento ocorrer, conforme mostrado no exemplo a seguir.  
   
     ```xml  
     <behaviors>  
@@ -27,31 +27,31 @@ O <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBeh
     ```  
   
     > [!NOTE]
-    > A amostra de configuração anterior está usando configuração simplificada. Para obter mais informações, consulte [Configuração simplificada](../../../../docs/framework/wcf/simplified-configuration.md).  
+    > O exemplo de configuração anterior está usando uma configuração simplificada. Para obter mais informações, consulte [configuração simplificada](../simplified-configuration.md).  
   
-     Esse comportamento pode ser configurado em código, conforme mostrado no exemplo a seguir.  
+     Esse comportamento pode ser configurado no código, conforme mostrado no exemplo a seguir.  
   
     ```csharp  
     host.Description.Behaviors.Add(new WorkflowUnhandledExceptionBehavior { Action = WorkflowUnhandledExceptionAction.AbandonAndSuspend });  
     ```  
   
-     O `action` atributo `workflowUnhandledException` do elemento> <pode ser definido como um dos seguintes valores:  
+     O `action` atributo do elemento <`workflowUnhandledException`> pode ser definido como um dos seguintes valores:  
   
-     **Abandonar**  
-     Aborta a instância na memória sem tocar no estado de instância persistida (ou seja, reverter para o último ponto de persistência).  
+     **Abandon**  
+     Anula a instância na memória sem tocar no estado de instância persistente (ou seja, reverta para o último ponto de persistência).  
   
-     **abandonaresuspender**  
-     Aborta a instância na memória e atualiza a instância persistida a ser suspensa.  
+     **abandonAndSuspend**  
+     Anula a instância na memória e atualiza a instância persistente a ser suspensa.  
   
-     **Cancelar**  
-     Chama os manipuladores de cancelamento, por exemplo, e depois completa a instância na memória, que também pode removê-la do armazenamento de ocorrências  
+     **cancel**  
+     Chama manipuladores de cancelamento para a instância e, em seguida, conclui a instância na memória, o que também pode removê-la do repositório de instância  
   
-     **Terminar**  
-     Completa a ocorrência na memória e a remove do armazenamento de instâncias.  
+     **encerrar**  
+     Conclui a instância na memória e a remove do repositório de instância.  
   
-     Para obter <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>mais informações sobre, consulte [Extensibility](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)Host de serviço de fluxo de trabalho .  
+     Para obter mais informações sobre o <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> , consulte [extensibilidade do host do serviço de fluxo de trabalho](workflow-service-host-extensibility.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Extensibilidade de host de serviço de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
-- [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Extensibilidade de host de serviço de fluxo de trabalho](workflow-service-host-extensibility.md)
+- [Serviços de fluxo de trabalho](workflow-services.md)

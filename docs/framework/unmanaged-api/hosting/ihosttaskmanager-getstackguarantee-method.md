@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8176d732-c25c-4520-811d-e3310f339947
 topic_type:
 - apiref
-ms.openlocfilehash: 22ec34c82d0f8e550dfc8941f2c048ebed6cf1d7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d76242eb8539f2e8dffbf39b7eaf595664bdce8e
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133030"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842017"
 ---
 # <a name="ihosttaskmanagergetstackguarantee-method"></a>Método IHostTaskManager::GetStackGuarantee
 Obtém a quantidade de espaço de pilha que tem garantia de disponibilidade após a conclusão de uma operação de pilha, mas antes do fechamento de um processo.  
@@ -38,14 +38,14 @@ HRESULT GetStackGuarantee(
  fora Um ponteiro para o número de bytes que estão disponíveis.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [Interface IHostTaskManager](ihosttaskmanager-interface.md)

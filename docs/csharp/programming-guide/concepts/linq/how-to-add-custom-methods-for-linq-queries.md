@@ -1,13 +1,14 @@
 ---
 title: Como adicionar métodos personalizados para consultas LINQ (C#)
+description: Saiba como estender o conjunto de métodos que você pode usar para consultas LINQ adicionando métodos de extensão à <T> interface IEnumerable em C#.
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
-ms.openlocfilehash: e16175d3332b6ce36458eaa78af093e4f8772723
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fac0eb4e14eb3bb36313232a7d7fa3060c0ac171
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141478"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103603"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Como adicionar métodos personalizados para consultas LINQ (C#)
 
@@ -26,26 +27,28 @@ public static class LINQExtension
 {
     public static double Median(this IEnumerable<double> source)
     {
-        if (source.Count() == 0)
+        var countOfElementsInTheSet = source?.Count() ?? 0;
+
+        if (countOfElementsInTheSet == 0)
         {
-            throw new InvalidOperationException("Cannot compute median for an empty set.");
+            throw new InvalidOperationException("Cannot compute median for a null or empty set.");
         }
 
-        var sortedList = from number in source
+        var sortedList = (from number in source
                          orderby number
-                         select number;
+                         select number).ToList();
 
-        int itemIndex = (int)sortedList.Count() / 2;
+        int itemIndex = countOfElementsInTheSet / 2;
 
-        if (sortedList.Count() % 2 == 0)
+        if (countOfElementsInTheSet % 2 == 0)
         {
             // Even number of items.
-            return (sortedList.ElementAt(itemIndex) + sortedList.ElementAt(itemIndex - 1)) / 2;
+            return (sortedList[itemIndex] + sortedList[itemIndex - 1]) / 2;
         }
         else
         {
             // Odd number of items.
-            return sortedList.ElementAt(itemIndex);
+            return sortedList[itemIndex];
         }
     }
 }
@@ -217,4 +220,4 @@ foreach (var element in query)
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [Métodos de extensão](../../classes-and-structs/extension-methods.md)
+- [Métodos de Extensão](../../classes-and-structs/extension-methods.md)

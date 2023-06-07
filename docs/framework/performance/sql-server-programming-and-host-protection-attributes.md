@@ -1,5 +1,6 @@
 ---
 title: Programação em SQL Server e atributos de proteção de host
+description: Introdução aos atributos de proteção de host e programação de SQL Server. Examine SQL Server conjuntos de permissões e restrições de modelo de programação.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SQL Server [.NET Framework]
@@ -12,28 +13,28 @@ helpviewer_keywords:
 - host protection attributes
 - HostProtectionAttribute class, reliability
 ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
-ms.openlocfilehash: 88fa360664627e9f535a6daaaf6f29df01b64a62
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 33db32897d2f49d2c10f94dc73aeae728c17db73
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715923"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474196"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>Programação em SQL Server e atributos de proteção de host
 A capacidade de carregar e executar um código gerenciado em um host do SQL Server exige que os requisitos do host referentes à segurança de acesso do código e à proteção de recursos do host sejam atendidos.  Os requisitos de segurança de acesso do código são especificados por um dos três conjuntos de permissões do SQL Server: SAFE, EXTERNAL-ACCESS ou UNSAFE. O código em execução nos conjuntos de permissões SAFE ou EXTERNAL-ACCESS devem evitar determinados tipos ou membros que têm o atributo <xref:System.Security.Permissions.HostProtectionAttribute> aplicado. O <xref:System.Security.Permissions.HostProtectionAttribute> não é uma permissão de segurança como uma garantia de confiabilidade, pois ele identifica constructos de código específicos, sejam tipos ou métodos, que o host pode não permitir.  O uso do <xref:System.Security.Permissions.HostProtectionAttribute> impõe um modelo de programação que ajuda a proteger a estabilidade do host.  
   
-## <a name="host-protection-attributes"></a>Atributos de proteção do host  
+## <a name="host-protection-attributes"></a>Atributos de proteção de host  
  Os atributos de proteção do host identificam tipos ou membros que não se ajustam ao modelo de programação do host e representam os seguintes níveis cada vez maiores de ameaça à confiabilidade:  
   
-- Caso contrário, eles são benignos.  
+- Do contrário, benignos.  
   
-- Pode levar à desestabilização do código do usuário gerenciado pelo servidor.  
+- Poderia levar à desestabilização do código de usuário gerenciado por servidor.  
   
-- Pode levar à desestabilização do próprio processo do servidor.  
+- Poderia levar à desestabilização do próprio processo do servidor.  
   
  O SQL Server não permite o uso de um tipo ou membro que tem um <xref:System.Security.Permissions.HostProtectionAttribute> que especifica um valor <xref:System.Security.Permissions.HostProtectionResource> igual a <xref:System.Security.Permissions.HostProtectionResource.SharedState>, <xref:System.Security.Permissions.HostProtectionResource.Synchronization>, <xref:System.Security.Permissions.HostProtectionResource.MayLeakOnAbort> ou <xref:System.Security.Permissions.HostProtectionResource.ExternalProcessMgmt>. Isso impede que os assemblies chamem membros que permitem o compartilhamento do estado, executam a sincronização, podem causar uma perda de recursos após o término ou afetam a integridade do processo do SQL Server.  
   
-### <a name="disallowed-types-and-members"></a>Tipos e membros não permitidos  
+### <a name="disallowed-types-and-members"></a>Tipos e membros desaprovados  
  A tabela a seguir identifica os tipos e membros cujos valores <xref:System.Security.Permissions.HostProtectionResource> não são permitidos pelo SQL Server.  
   
 |Namespace|Tipo ou membro|  
@@ -57,23 +58,23 @@ A capacidade de carregar e executar um código gerenciado em um host do SQL Serv
 |--------------------|----------|----------------------|------------|  
 |Segurança de acesso do código|Somente execução|Execução + acesso a recursos externos|Irrestrito|  
 |Restrições do modelo de programação|Sim|Sim|Sem restrições|  
-|Requisito de capacidade de verificação|Sim|Sim|Não|  
-|Capacidade de chamar um código nativo|Não|Não|Sim|  
+|Requisito de verificabilidade|Sim|Sim|Não|  
+|Capacidade de chamar código nativo|Não|Não|Sim|  
   
- SAFE é o modo mais confiável e seguro com restrições associadas no que diz respeito ao modelo de programação permitido. O código SAFE tem recursos de alta confiabilidade e segurança. Os assemblies SAFE recebem permissões suficientes para serem executados, fazer cálculos e ter acesso ao banco de dados local. Os assemblies SAFE precisam ser fortemente tipados verificáveis e não têm permissão para chamar um código não gerenciado.  
+ SAFE é o modo mais confiável e seguro, com restrições associadas ao modelo de programação permitido. O código SAFE tem recursos de alta confiabilidade e segurança. Assemblies SAFE recebem permissão suficiente para executar, realizar cálculos e ter acesso ao banco de dados local. Assemblies SAFE precisam ser seguros do tipo verificável e não têm permissão para chamar código não gerenciado.  
   
  EXTERNAL-ACCESS fornece uma opção de segurança intermediária, permitindo que o código acesse recursos externos ao banco de dados, mas ainda tenha a confiabilidade e a segurança de SAFE.  
   
- UNSAFE é indicado para códigos altamente confiáveis que podem ser criados somente por administradores de banco de dados. Esses códigos confiáveis não têm nenhuma restrição de acesso do código e podem chamar um código não gerenciado (nativo).  
+ UNSAFE é para código altamente confiável que pode ser criado somente por administradores de bancos de dados. Esses códigos confiáveis não têm nenhuma restrição de acesso do código e podem chamar um código não gerenciado (nativo).  
   
- O SQL Server usa a camada da política de segurança de acesso do código em nível de host para configurar uma política de host que concede um dos três conjuntos de permissões, com base no conjunto de permissões armazenado nos catálogos do SQL Server. O código gerenciado executado no banco de dados sempre obtém um desses conjuntos de permissões de acesso do código.  
+ O SQL Server usa a camada da política de segurança de acesso do código em nível de host para configurar uma política de host que concede um dos três conjuntos de permissões, com base no conjunto de permissões armazenado nos catálogos do SQL Server. Código gerenciado em execução dentro do banco de dados sempre obtém um desses conjuntos de permissão de acesso de código.  
   
 ## <a name="programming-model-restrictions"></a>Restrições do Modelo de Programação  
  O modelo de programação de código gerenciado no SQL Server exige funções, procedimentos e tipos que não exigem que o uso do estado seja mantido em várias invocações nem exigem o compartilhamento do estado entre várias sessões do usuário. Além disso, conforme descrito anteriormente, a presença do estado compartilhado pode causar exceções críticas que afetam a escalabilidade e a confiabilidade do aplicativo.  
   
  Com base nessas considerações, o SQL Server não permite o uso de variáveis estáticas e membros de dados estáticos. Para assemblies SAFE e EXTERNAL-ACCESS, o SQL Server examina os metadados do assembly em tempo CREATE ASSEMBLY e falha a criação desses assemblies se encontra o uso de variáveis e membros de dados estáticos.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Security.Permissions.HostProtectionAttribute>
 - <xref:System.Security.Permissions.HostProtectionResource>

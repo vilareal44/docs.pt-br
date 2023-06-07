@@ -1,18 +1,19 @@
 ---
-title: Como implementar eventos de interface - C# Guia de Programação
+title: Como implementar eventos de interface – guia de programação C#
+description: Saiba como implementar eventos de interface em uma classe. Consulte exemplos de código e exiba recursos adicionais disponíveis.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 8c0d221ef1272a43e2682ef2af3fa37d2d12d35e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bd86aed4f8d8ac6e291c11fe441f87ac97593b03
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167473"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302120"
 ---
-# <a name="how-to-implement-interface-events-c-programming-guide"></a>Como implementar eventos de interface (C# Programming Guide)
+# <a name="how-to-implement-interface-events-c-programming-guide"></a>Como implementar eventos de interface (guia de programação C#)
 Um [interface](../../language-reference/keywords/interface.md) pode declarar uma [evento](../../language-reference/keywords/event.md). O exemplo a seguir mostra como implementar eventos de interface em uma classe. Basicamente, as regras são as mesmas aplicadas à implementação de qualquer método ou propriedade de interface.  
   
 ## <a name="to-implement-interface-events-in-a-class"></a>Implementar eventos de interface em uma classe  
@@ -57,10 +58,10 @@ Ao fornecer acessadores próprios, é possível especificar se os dois eventos s
   
  [!code-csharp[csProgGuideEvents#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#10)]
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Eventos](./index.md)
-- [Delega](../delegates/index.md)
-- [Implementação explícita da interface](../interfaces/explicit-interface-implementation.md)
+- [Representantes](../delegates/index.md)
+- [Implementação de interface explícita](../interfaces/explicit-interface-implementation.md)
 - [Como acionar eventos de classe base em classes derivadas](./how-to-raise-base-class-events-in-derived-classes.md)

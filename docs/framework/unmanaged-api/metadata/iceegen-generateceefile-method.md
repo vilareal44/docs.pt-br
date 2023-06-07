@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cca4a9a1-731b-4411-9e04-00cffe7a56d8
 topic_type:
 - apiref
-ms.openlocfilehash: 0dafa741634cc88f8a7d86247e4fa8681d7c4305
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 39d8713b2b78047e615b6c2fdd6e95e9aacbd2ae
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436367"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008840"
 ---
 # <a name="iceegengenerateceefile-method"></a>Método ICeeGen::GenerateCeeFile
-Gera um arquivo de base de código que contém a base de código atualmente carregada nesta interface [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) .  
+Gera um arquivo de base de código que contém a base de código atualmente carregada nesta interface [ICeeGen](iceegen-interface.md) .  
   
  Este método é obsoleto e não deve ser usado.  
   
@@ -34,17 +34,17 @@ HRESULT GenerateCeeFile ();
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
- `GenerateCeeFile` não usa parâmetros.  
+ `GenerateCeeFile`Não usa parâmetros.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [Interface ICeeGen](iceegen-interface.md)

@@ -1,29 +1,29 @@
 ---
-title: Violação
+title: Adulteração
 ms.date: 03/30/2017
 ms.assetid: 3bad93be-60bb-4f89-96ab-a1c3dc7c0fad
-ms.openlocfilehash: 7a4265c30a6713f9557de2b3d1e99c87b7dd3e58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e618ab369a46d403aa8db26c4b472e2be3634785
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703381"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600705"
 ---
-# <a name="tampering"></a>Violação
-*Violação* é o ato de alteração de uma mensagem ou a entrega de uma mensagem e usando a mensagem alterada para uma finalidade que não seja o que ele foi destinado.  
+# <a name="tampering"></a>Adulteração
+A *violação* é o ato de alterar uma mensagem ou a entrega de uma mensagem, e usar a mensagem alterada para uma finalidade diferente da que foi pretendida.  
   
-## <a name="do-not-disable-ws-addressing"></a>Não desabilite o WS-Addressing.  
- A especificação WS-Addressing fornece os cabeçalhos de endereço em cada mensagem, permitindo que um destinatário de mensagem verificar o remetente da mensagem. Você pode desabilitar esse recurso definindo a <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> propriedade para <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>.  
+## <a name="do-not-disable-ws-addressing"></a>Não desabilitar o WS-Addressing  
+ A especificação WS-Addressing fornece cabeçalhos de endereço em cada mensagem, permitindo que um destinatário da mensagem Verifique o remetente da mensagem. Você pode desabilitar esse recurso definindo a <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> propriedade como <xref:System.ServiceModel.Channels.AddressingVersion.None%2A> .  
   
- Quando o modo de segurança é definido como mensagem e WS-Addressing é desabilitada, um invasor pode levar a uma solicitação de um cliente e enviá-lo para outro serviço, e o segundo serviço não tem nenhuma maneira de detectar que a mensagem foi enviada do cliente original. Na verdade, o primeiro serviço poderá fingir que se trata de um cliente ao conversar com o segundo serviço.  
+ Quando o modo de segurança é definido como mensagem e, se o WS-Addressing estiver desabilitado, um invasor poderá fazer uma solicitação de um cliente e enviá-lo para outro serviço, e o segundo serviço não terá como detectar se a mensagem veio do cliente original. Na verdade, o primeiro serviço pode fingir que é um cliente ao conversar com o segundo serviço.  
   
- Para atenuar isso, nunca defina o <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> propriedade para <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>e evite o uso de <xref:System.ServiceModel.Channels.MessageVersion>, como estático <xref:System.ServiceModel.Channels.MessageVersion.Soap12%2A> propriedade, que define o <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> propriedade <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>.  
+ Para atenuar isso, nunca defina a <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> propriedade como <xref:System.ServiceModel.Channels.AddressingVersion.None%2A> e evite o uso de <xref:System.ServiceModel.Channels.MessageVersion> , como a <xref:System.ServiceModel.Channels.MessageVersion.Soap12%2A> propriedade estática, que define a <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> propriedade como <xref:System.ServiceModel.Channels.AddressingVersion.None%2A> .  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Considerações sobre segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Divulgação de informações](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Elevação de privilégio](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Negação de serviço](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Cenários sem suporte](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
-- [Ataques de reprodução](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Considerações sobre segurança](security-considerations-in-wcf.md)
+- [Divulgação de informações](information-disclosure.md)
+- [Elevação de privilégio](elevation-of-privilege.md)
+- [Negação de serviço](denial-of-service.md)
+- [Cenários sem suporte](unsupported-scenarios.md)
+- [Ataques por repetição](replay-attacks.md)

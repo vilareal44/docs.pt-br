@@ -1,5 +1,5 @@
 ---
-title: 'Como: Cancelar um bloco de fluxo de dados'
+title: 'Como: cancelar um bloco de fluxo de dados'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-ms.openlocfilehash: aa175d95f27fcbf28c3f3da3eaa7b8f7988681e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 530c231deeaba007975849ab6dc41f4da6a859ea
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140085"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285541"
 ---
-# <a name="how-to-cancel-a-dataflow-block"></a>Como: Cancelar um bloco de fluxo de dados
+# <a name="how-to-cancel-a-dataflow-block"></a>Como: cancelar um bloco de fluxo de dados
 Este documento mostra como habilitar o cancelamento em seu aplicativo. Este exemplo usa o Windows Forms para mostrar onde os itens de trabalho estão ativos em um pipeline de fluxo de dados, assim como os efeitos de cancelamento.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -63,7 +63,7 @@ Este documento mostra como habilitar o cancelamento em seu aplicativo. Este exem
   
  Como os blocos de fluxo de dados `incrementProgress` e `decrementProgress` atuam na interface do usuário, é importante que essas ações ocorram no thread da interface do usuário. Para isso, durante a construção cada objeto fornece um objeto <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> cuja propriedade <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> está definida como <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>. O método <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> cria um objeto <xref:System.Threading.Tasks.TaskScheduler> que executa o trabalho no contexto de sincronização atual. Como o construtor `Form1` é chamado do thread de interface do usuário, as ações para os blocos de fluxo de dados `incrementProgress` e `decrementProgress` também são executadas no thread da interface do usuário.  
   
- Este exemplo define a propriedade <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> ao construir os membros do pipeline. Como a propriedade <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> cancela permanentemente a execução do bloco de fluxo de dados, o pipeline inteiro deve ser recriado depois que o usuário cancela a operação e, em seguida, deseja adicionar mais itens de trabalho ao pipeline. Veja um exemplo que demonstra uma maneira alternativa de cancelar um bloco de fluxo de dados para que outros trabalhos sejam executados após uma operação ser cancelada no [Passo a passo: usando o fluxo de dados em um aplicativo do Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
+ Este exemplo define a propriedade <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> ao construir os membros do pipeline. Como a propriedade <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> cancela permanentemente a execução do bloco de fluxo de dados, o pipeline inteiro deve ser recriado depois que o usuário cancela a operação e, em seguida, deseja adicionar mais itens de trabalho ao pipeline. Veja um exemplo que demonstra uma maneira alternativa de cancelar um bloco de fluxo de dados para que outros trabalhos sejam executados após uma operação ser cancelada no [Passo a passo: usando o fluxo de dados em um aplicativo do Windows Forms](walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ## <a name="connecting-the-dataflow-pipeline-to-the-user-interface"></a>Conectar o Pipeline de fluxo de dados à interface do usuário  
  Esta seção descreve como conectar o pipeline de fluxo de dados à interface do usuário. O manipulador de eventos controla a criação do pipeline e a adição de itens de trabalho ao pipeline para o botão**Adicionar itens de trabalho**. O cancelamento é iniciado pelo botão **Cancelar**. Quando o usuário clica em um desses botões, a ação apropriada é iniciada de maneira assíncrona.  
@@ -92,8 +92,8 @@ Este documento mostra como habilitar o cancelamento em seu aplicativo. Este exem
   
  A ilustração a seguir mostra o aplicativo em execução.  
   
- ![O aplicativo de formulários do Windows](../../../docs/standard/parallel-programming/media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
+ ![O aplicativo Windows Forms](media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Fluxo de dados](dataflow-task-parallel-library.md)

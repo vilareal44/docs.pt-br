@@ -1,5 +1,6 @@
 ---
 title: Introdução a consultas LINQ (C#)
+description: O LINQ oferece um modelo consistente para consultas em dados em vários tipos de fontes de dados e formatos. Em uma consulta LINQ, você está sempre trabalhando com objetos.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - deferred execution [LINQ]
@@ -7,15 +8,15 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 5a9d97ff14f087ddfc55986bf77f18492cbf8a04
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: ce878dc255d2502f0594626b294393c399c932e5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389585"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165829"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Introdução a consultas LINQ (C#)
-Uma *consulta* é uma expressão que recupera dados de uma fonte de dados. As consultas normalmente são expressas em uma linguagem de consulta especializada. Diferentes linguagens foram desenvolvidas ao longo do tempo para os diversos tipos de fontes de dados, por exemplo, SQL para bancos de dados relacionais e o XQuery para XML. Portanto, os desenvolvedores precisaram aprender uma nova linguagem de consulta para cada tipo de fonte de dados ou formato de dados que eles tinham que oferecer suporte. A LINQ simplifica essa situação oferecendo um modelo consistente para trabalhar com dados em vários tipos de fontes e formatos de dados. Em uma consulta LINQ, você está sempre trabalhando com objetos. Você usa os mesmos padrões básicos de codificação para consultar e transformar dados em documentos XML, bancos de dados SQL, ADO.NET Conjuntos de Dados, coleções .NET e qualquer outro formato para o qual um provedor LINQ esteja disponível.  
+Uma *consulta* é uma expressão que recupera dados de uma fonte de dados. As consultas normalmente são expressas em uma linguagem de consulta especializada. Diferentes linguagens foram desenvolvidas ao longo do tempo para os diversos tipos de fontes de dados, por exemplo, SQL para bancos de dados relacionais e o XQuery para XML. Portanto, os desenvolvedores precisaram aprender uma nova linguagem de consulta para cada tipo de fonte de dados ou formato de dados que eles tinham que oferecer suporte. O LINQ simplifica essa situação oferecendo um modelo consistente para trabalhar com dados em vários tipos de fontes de dados e formatos. Em uma consulta LINQ, você está sempre trabalhando com objetos. Você usa os mesmos padrões básicos de codificação para consultar e transformar dados em documentos XML, bancos de dados SQL, conjuntos de ADO.NET, coleções .NET e qualquer outro formato para o qual um provedor de LINQ esteja disponível.  
   
 ## <a name="three-parts-of-a-query-operation"></a>Três Partes de uma Operação de Consulta  
  Todas as operações de consulta LINQ consistem em três ações distintas:  
@@ -35,13 +36,13 @@ Uma *consulta* é uma expressão que recupera dados de uma fonte de dados. As co
  ![Diagrama da operação completa de consulta LINQ.](./media/introduction-to-linq-queries/linq-query-complete-operation.png)  
   
 ## <a name="the-data-source"></a>A Fonte de Dados  
- No exemplo anterior, como a fonte de dados é uma matriz, ela dá suporte à interface genérica <xref:System.Collections.Generic.IEnumerable%601> de forma implícita. Este fato significa que ele pode ser consultado com LINQ. Uma consulta é executada em uma instrução `foreach`, e `foreach` requer <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>. Tipos que dão suporte a <xref:System.Collections.Generic.IEnumerable%601> ou uma interface derivada, como a genérica <xref:System.Linq.IQueryable%601>, são chamados *tipos passíveis de consulta*.  
+ No exemplo anterior, como a fonte de dados é uma matriz, ela dá suporte à interface genérica <xref:System.Collections.Generic.IEnumerable%601> de forma implícita. Esse fato significa que ele pode ser consultado com LINQ. Uma consulta é executada em uma instrução `foreach`, e `foreach` requer <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>. Tipos que dão suporte a <xref:System.Collections.Generic.IEnumerable%601> ou uma interface derivada, como a genérica <xref:System.Linq.IQueryable%601>, são chamados *tipos passíveis de consulta*.  
   
- Um tipo quepode ser consultado não requer nenhuma modificação ou tratamento especial para servir como fonte de dados LINQ. Se os dados de origem ainda não estão na memória como um tipo querificável, o provedor LINQ deve representá-los como tal. Por exemplo, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] carrega um documento XML em um tipo <xref:System.Xml.Linq.XElement> passível de consulta:  
+ Um tipo passível de consulta não requer nenhuma modificação ou tratamento especial para servir como uma fonte de dados LINQ. Se os dados de origem ainda não estiverem na memória como um tipo passível de consulta, o provedor LINQ deverá representá-lo como tal. Por exemplo, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] carrega um documento XML em um tipo <xref:System.Xml.Linq.XElement> passível de consulta:  
   
  [!code-csharp[CsLINQGettingStarted#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#2)]  
   
- Com [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], você primeiro cria um mapeamento objeto-relacional na hora do design manualmente ou usando o [LINQ para SQL Tools no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2). Você escreve suas consultas aos objetos e o [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] manipula a comunicação com o banco de dados em tempo de execução. No exemplo a seguir, `Customers` representa uma tabela específica no banco de dados, e o tipo do resultado da consulta, <xref:System.Linq.IQueryable%601>, deriva de <xref:System.Collections.Generic.IEnumerable%601>.  
+ Com [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] o, você primeiro cria um mapeamento relacional de objeto no tempo de design manualmente ou usando as [ferramentas de LINQ to SQL no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2). Você escreve suas consultas aos objetos e o [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] manipula a comunicação com o banco de dados em tempo de execução. No exemplo a seguir, `Customers` representa uma tabela específica no banco de dados, e o tipo do resultado da consulta, <xref:System.Linq.IQueryable%601>, deriva de <xref:System.Collections.Generic.IEnumerable%601>.  
   
 ```csharp  
 Northwnd db = new Northwnd(@"c:\northwnd.mdf");  
@@ -53,15 +54,15 @@ IQueryable<Customer> custQuery =
     select cust;  
 ```  
   
- Para obter mais informações sobre como criar tipos específicos de fontes de dados, consulte a documentação dos vários provedores de LINQ. No entanto, a regra básica é muito simples: uma fonte <xref:System.Collections.Generic.IEnumerable%601> de dados LINQ é qualquer objeto que suporte a interface genérica, ou uma interface que herda dela.  
+ Para obter mais informações sobre como criar tipos específicos de fontes de dados, consulte a documentação para os vários provedores de LINQ. No entanto, a regra básica é muito simples: uma fonte de dados LINQ é qualquer objeto que dê suporte à <xref:System.Collections.Generic.IEnumerable%601> interface genérica ou uma interface que herde dela.  
   
 > [!NOTE]
-> Tipos como <xref:System.Collections.ArrayList> esse suportam <xref:System.Collections.IEnumerable> a interface não genérica também podem ser usados como fonte de dados LINQ. Para obter mais informações, consulte [Como consultar uma ArrayList com LINQ (C#)](./how-to-query-an-arraylist-with-linq.md).  
+> Tipos como <xref:System.Collections.ArrayList> o que dão suporte à interface não genérica <xref:System.Collections.IEnumerable> também podem ser usados como uma fonte de dados LINQ. Para obter mais informações, consulte [como consultar uma ArrayList com LINQ (C#)](./how-to-query-an-arraylist-with-linq.md).  
   
-## <a name="the-query"></a><a name="query"></a>A Consulta  
+## <a name="the-query"></a><a name="query"></a>A consulta  
  A consulta especifica quais informações devem ser recuperadas da fonte (ou fontes) de dados. Opcionalmente, uma consulta também especifica como essas informações devem ser classificadas, agrupadas e moldadas antes de serem retornadas. Uma consulta é armazenada em uma variável de consulta e é inicializada com uma expressão de consulta. Para tornar mais fácil escrever consultas, o C# introduziu uma nova sintaxe de consulta.  
   
- A consulta no exemplo anterior retorna todos os números pares da matriz de inteiros. A expressão de consulta contém três cláusulas: `from`, `where` e `select`. (Se você estiver familiarizado com o SQL, você deve ter notado que a ordem das cláusulas é invertida da ordem no SQL.) A `from` cláusula especifica a fonte `where` de dados, a `select` cláusula aplica o filtro e a cláusula especifica o tipo dos elementos retornados. Essas e outras cláusulas de consulta são discutidas detalhadamente na seção [Linguagem Integrada consulta (LINQ).](../../../linq/index.md) Por enquanto, o ponto importante é que no LINQ, a variável consulta em si não toma nenhuma ação e não retorna nenhum dado. Ele apenas armazena as informações necessárias para produzir os resultados quando a consulta for executada em um momento posterior. Para obter mais informações sobre como as consultas são construídas nos bastidores, consulte [Visão geral de operadores de consulta padrão (C#)](./standard-query-operators-overview.md).  
+ A consulta no exemplo anterior retorna todos os números pares da matriz de inteiros. A expressão de consulta contém três cláusulas: `from`, `where` e `select`. (Se você estiver familiarizado com o SQL, perceberá que a ordenação das cláusulas é revertida da ordem em SQL.) A `from` cláusula Especifica a fonte de dados, a `where` cláusula aplica o filtro e a `select` cláusula Especifica o tipo dos elementos retornados. Essas e as outras cláusulas de consulta são discutidas em detalhes na seção [linguagem de consulta integrada (LINQ)](../../../linq/index.md) . Por enquanto, o ponto importante é que, no LINQ, a variável de consulta não executa nenhuma ação e não retorna nenhum dado. Ele apenas armazena as informações necessárias para produzir os resultados quando a consulta for executada em um momento posterior. Para obter mais informações sobre como as consultas são construídas nos bastidores, consulte [Visão geral de operadores de consulta padrão (C#)](./standard-query-operators-overview.md).  
   
 > [!NOTE]
 > As consultas também podem ser expressas usando a sintaxe de método. Para obter mais informações, consulte [Sintaxe de consulta e sintaxe de método em LINQ](./query-syntax-and-method-syntax-in-linq.md).  
@@ -92,6 +93,6 @@ IQueryable<Customer> custQuery =
 
 - [Introdução a LINQ em C#](index.md)
 - [Passo a passo: escrevendo consultas em C#](./walkthrough-writing-queries-linq.md)
-- [Consulta Integrada ao Idioma (LINQ)](../../../linq/index.md)
+- [LINQ (consulta integrada à linguagem)](../../../linq/index.md)
 - [foreach, in](../../../language-reference/keywords/foreach-in.md)
 - [Palavras-chave de consulta (LINQ)](../../../language-reference/keywords/query-keywords.md)

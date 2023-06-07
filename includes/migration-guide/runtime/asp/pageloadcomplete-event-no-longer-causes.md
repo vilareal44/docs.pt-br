@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 02a3c1b5a9693535feeab56d9b0f7c9d360749ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 39d609c955596354d1af28b4ed19d367dab0462b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803104"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619767"
 ---
 ### <a name="pageloadcomplete-event-no-longer-causes-systemwebuiwebcontrolsentitydatasource-control-to-invoke-data-binding"></a>O evento Page.LoadComplete não faz mais com que o controle System.Web.UI.WebControls.EntityDataSource invoque a associação de dados
 
-|   |   |
-|---|---|
-|Detalhes|O evento <xref:System.Web.UI.Page.LoadComplete> não faz mais com que o controle <xref:System.Web.UI.WebControls.EntityDataSource?displayProperty=name> chame a associação de dados para alterações par criar/atualizar/excluir parâmetros. Essa alteração elimina um processamento irrelevante para o banco de dados, impede que os valores dos controles sejam redefinidos e gera um comportamento consistente com outros controles de dados, como <xref:System.Web.UI.WebControls.SqlDataSource?displayProperty=name> e <xref:System.Web.UI.WebControls.ObjectDataSource?displayProperty=name>. Essa alteração gera um comportamento diferente em um evento improvável no qual os aplicativos dependam da associação de dados no evento <xref:System.Web.UI.Page.LoadComplete>.|
-|Sugestão|Se houver necessidade de vinculação de dados, invoque manualmente a associação de dados em um evento que seja anterior no post-back.|
-|Escopo|Microsoft Edge|
+#### <a name="details"></a>Detalhes
+
+O evento <xref:System.Web.UI.Page.LoadComplete> não faz mais com que o controle <xref:System.Web.UI.WebControls.EntityDataSource?displayProperty=fullName> chame a associação de dados para alterações par criar/atualizar/excluir parâmetros. Essa alteração elimina um processamento irrelevante para o banco de dados, impede que os valores dos controles sejam redefinidos e gera um comportamento consistente com outros controles de dados, como <xref:System.Web.UI.WebControls.SqlDataSource?displayProperty=fullName> e <xref:System.Web.UI.WebControls.ObjectDataSource?displayProperty=fullName>. Essa alteração gera um comportamento diferente em um evento improvável no qual os aplicativos dependam da associação de dados no evento <xref:System.Web.UI.Page.LoadComplete>.
+
+#### <a name="suggestion"></a>Sugestão
+
+Se houver necessidade de vinculação de dados, invoque manualmente a associação de dados em um evento que seja anterior no post-back.
+
+| Name    | Valor       |
+|:--------|:------------|
+| Escopo   |Microsoft Edge|
 |Versão|4.5|
-|Tipo|Tempo de execução|
+|Type|Runtime|

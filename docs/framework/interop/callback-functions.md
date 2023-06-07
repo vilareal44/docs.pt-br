@@ -1,16 +1,17 @@
 ---
 title: Funções de retorno de chamada
+description: Leia sobre as funções de retorno de chamada, que são o código com um aplicativo gerenciado que ajuda uma função DLL não gerenciada a concluir uma tarefa.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - callback function
 - platform invoke, calling unmanaged functions
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
-ms.openlocfilehash: 8b8bb4dff4f73247282060c0b4fd778ae0169b1f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e28756b5ed935aff83363b38d6f33982e87718b2
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181514"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621711"
 ---
 # <a name="callback-functions"></a>Funções de retorno de chamada
 Uma função de retorno de chamada é o código em um aplicativo gerenciado que ajuda uma função de DLL não gerenciada a concluir uma tarefa. As chamadas a uma função de retorno de chamada passam indiretamente de um aplicativo gerenciado, por meio de uma função de DLL e novamente para a implementação gerenciada. Algumas das muitas funções de DLL chamadas com a invocação de plataforma exigem que uma função de retorno de chamada no código gerenciado seja executada corretamente.  
@@ -25,7 +26,7 @@ Uma função de retorno de chamada é o código em um aplicativo gerenciado que 
   
  As funções de retorno de chamada são ideais para uso em situações em que uma tarefa é executada repetidamente. Outro uso comum é com funções de enumeração, como **EnumFontFamilies**, **EnumPrinters** e **EnumWindows** na API do Windows. A função **EnumWindows** enumera por meio de todas as janelas existentes no computador, chamando a função de retorno de chamada para executar uma tarefa em cada janela. Para obter instruções e um exemplo, consulte [Como implementar funções de retorno de chamada](how-to-implement-callback-functions.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Como implementar funções de retorno de chamada](how-to-implement-callback-functions.md)
+- [Como: Implementar funções de retorno de chamada](how-to-implement-callback-functions.md)
 - [Chamando uma função de DLL](calling-a-dll-function.md)

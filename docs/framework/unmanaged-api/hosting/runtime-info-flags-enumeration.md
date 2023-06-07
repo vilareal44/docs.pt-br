@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: adba37be-f775-4cdb-8919-5746ce694f33
 topic_type:
 - apiref
-ms.openlocfilehash: 9d505b917c343c40c7fa2a7aecf3466578ae0a8d
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: da830aaaced179fed642340c33e7b7c37b350aa3
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936635"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006552"
 ---
 # <a name="runtime_info_flags-enumeration"></a>Enumeração RUNTIME_INFO_FLAGS
 Contém valores que indicam quais informações sobre o Common Language Runtime (CLR) devem ser retornadas.  
@@ -43,7 +43,7 @@ typedef enum {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Indica que as informações de diretório não devem ser incluídas.|  
 |`RUNTIME_INFO_DONT_RETURN_VERSION`|Indica que as informações de versão não devem ser incluídas.|  
@@ -63,15 +63,15 @@ typedef enum {
   
 - RUNTIME_INFO_REQUEST_X86  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Hospedando enumerações](hosting-enumerations.md)

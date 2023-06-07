@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parsing strings, other strings
 - Boolean data type, parsing strings
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
-ms.openlocfilehash: 08e891501bbefcf8b32eff10dd7294af9d81adac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3503e0e499c6010fcc3d8669fa5c1eaf2dbf570
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127566"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277538"
 ---
 # <a name="parsing-other-strings-in-net"></a>Analisando outras cadeias de caracteres no .NET
 Além das cadeias de caracteres numéricas e <xref:System.DateTime>, também é possível analisar cadeias de caracteres que representam os tipos <xref:System.Char><xref:System.Boolean> e<xref:System.Enum> em tipos de dados.  
@@ -48,8 +48,8 @@ Além das cadeias de caracteres numéricas e <xref:System.DateTime>, também é 
  [!code-csharp[Conceptual.String.Parse#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#4)]
  [!code-vb[Conceptual.String.Parse#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#4)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Análise de cadeias de caracteres](../../../docs/standard/base-types/parsing-strings.md)
-- [Formatar tipos](../../../docs/standard/base-types/formatting-types.md)
-- [Conversão de tipo no .NET](../../../docs/standard/base-types/type-conversion.md)
+- [Analisando cadeias de caracteres](parsing-strings.md)
+- [Formatar tipos](formatting-types.md)
+- [Conversão de tipo no .NET](type-conversion.md)

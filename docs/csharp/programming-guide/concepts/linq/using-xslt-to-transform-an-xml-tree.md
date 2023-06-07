@@ -1,13 +1,14 @@
 ---
 title: Usando XSLT para transformar uma árvore XML (C#)
+description: Saiba como usar o XSLT para transformar uma árvore XML em C# invocando a transformação XSLT em instâncias de XmlReader e XmlWriter.
 ms.date: 07/20/2015
 ms.assetid: 373a2699-d4c5-471b-9bda-c1f0ab73b477
-ms.openlocfilehash: 7ebcfbd6be86fdd5e12bfc48a0fe80a084c6f9b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bce92136850aeef52e5b17cd7bc658b85fe70604
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74140916"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302263"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-c"></a>Usando XSLT para transformar uma árvore XML (C#)
 Você pode criar uma árvore XML, criar um <xref:System.Xml.XmlReader> na árvore XML, criar um novo documento e criar um <xref:System.Xml.XmlWriter> que gravarão no novo documento. Em seguida, você pode chamar a transformação XSLT, passando <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> para a transformação. Depois que a transformação for concluída com êxito, a nova árvore XML será populada com os resultados da transformação.  

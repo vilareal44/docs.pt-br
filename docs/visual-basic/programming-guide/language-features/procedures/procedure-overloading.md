@@ -17,12 +17,12 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 41a971896fe726cbe9849fd46334910e7288afe0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f8accc74fbdd9b1d8cf9bc3d8f6ddd26f73452b8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352593"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363870"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Sobrecarga de procedimento (Visual Basic)
 
@@ -50,13 +50,13 @@ Quando você sobrecarrega um procedimento, as seguintes regras se aplicam:
 
 - **Itens que não fazem parte da assinatura**. Não é possível sobrecarregar um procedimento sem variar a assinatura. Em particular, você não pode sobrecarregar um procedimento, variando apenas um ou mais dos seguintes itens:
 
-  - Palavras-chave do modificador de procedimento, como `Public`, `Shared`e `Static`
+  - Palavras-chave do modificador de procedimento, como `Public` , `Shared` e`Static`
 
   - Nomes de parâmetro de tipo ou parâmetro
 
   - Restrições de parâmetro de tipo (para um procedimento genérico)
 
-  - Palavras-chave do modificador de parâmetro, como `ByRef` e `Optional`
+  - Palavras-chave do modificador de parâmetro, como `ByRef` e`Optional`
 
   - Se ele retorna um valor
 
@@ -64,40 +64,40 @@ Quando você sobrecarrega um procedimento, as seguintes regras se aplicam:
 
   Os itens na lista anterior não fazem parte da assinatura. Embora não seja possível usá-los para diferenciar as versões sobrecarregadas, você pode variar entre as versões sobrecarregadas que são diferenciadas corretamente por suas assinaturas.
 
-- **Argumentos de associação tardia**. Se você pretende passar uma variável de objeto de associação tardia para uma versão sobrecarregada, você deve declarar o parâmetro apropriado como <xref:System.Object>.
+- **Argumentos de associação tardia**. Se você pretende passar uma variável de objeto de associação tardia para uma versão sobrecarregada, você deve declarar o parâmetro apropriado como <xref:System.Object> .
 
 ## <a name="multiple-versions-of-a-procedure"></a>Várias versões de um procedimento
 
-Suponha que você esteja escrevendo um procedimento de `Sub` para postar uma transação em relação ao saldo de um cliente e desejar consultar o cliente por nome ou por número de conta. Para acomodar isso, você pode definir dois procedimentos diferentes de `Sub`, como no exemplo a seguir:
+Suponha que você esteja escrevendo um `Sub` procedimento para lançar uma transação em relação ao saldo de um cliente e desejar consultar o cliente por nome ou por número de conta. Para acomodar isso, você pode definir dois `Sub` procedimentos diferentes, como no exemplo a seguir:
 
 [!code-vb[VbVbcnProcedures#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#73)]
 
 ### <a name="overloaded-versions"></a>Versões sobrecarregadas
 
-Uma alternativa é sobrecarregar um único nome de procedimento. Você pode usar a palavra-chave [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) para definir uma versão do procedimento para cada lista de parâmetros, da seguinte maneira:
+Uma alternativa é sobrecarregar um único nome de procedimento. Você pode usar a palavra-chave [Overloads](../../../language-reference/modifiers/overloads.md) para definir uma versão do procedimento para cada lista de parâmetros, da seguinte maneira:
 
 [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]
 
 #### <a name="additional-overloads"></a>Sobrecargas adicionais
 
-Se você também quisesse aceitar um valor de transação no `Decimal` ou `Single`, poderá sobrecarregar `post` para permitir essa variação. Se você fez isso para cada uma das sobrecargas no exemplo anterior, teria quatro procedimentos `Sub`, todos com o mesmo nome, mas com quatro assinaturas diferentes.
+Se você também quisesse aceitar um valor de transação em `Decimal` ou `Single` , poderá sobrecarregar `post` para permitir essa variação. Se você fez isso para cada uma das sobrecargas no exemplo anterior, teria quatro `Sub` procedimentos, todos com o mesmo nome, mas com quatro assinaturas diferentes.
 
 ## <a name="advantages-of-overloading"></a>Vantagens da sobrecarga
 
-A vantagem de sobrecarregar um procedimento é a flexibilidade da chamada. Para usar o procedimento de `post` declarado no exemplo anterior, o código de chamada pode obter a identificação do cliente como um `String` ou um `Integer`e, em seguida, chamar o mesmo procedimento em ambos os casos. O exemplo a seguir ilustra isto:
+A vantagem de sobrecarregar um procedimento é a flexibilidade da chamada. Para usar o `post` procedimento declarado no exemplo anterior, o código de chamada pode obter a identificação do cliente como um `String` ou um `Integer` e, em seguida, chamar o mesmo procedimento em ambos os casos. O exemplo a seguir ilustra isso:
 
 [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]
 
 [!code-vb[VbVbcnProcedures#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#57)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Procedimentos](./index.md)
 - [Como definir várias versões de um procedimento](./how-to-define-multiple-versions-of-a-procedure.md)
 - [Como chamar um procedimento sobrecarregado](./how-to-call-an-overloaded-procedure.md)
 - [Como sobrecarregar um procedimento que usa parâmetros opcionais](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [Como sobrecarregar um procedimento que usa um número indefinido de parâmetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
-- [Considerações sobre Procedimentos de Sobrecarga](./considerations-in-overloading-procedures.md)
-- [Resolução de Sobrecarga](./overload-resolution.md)
-- [Sobrecargas](../../../../visual-basic/language-reference/modifiers/overloads.md)
-- [Tipos genéricos no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Considerações sobre procedimentos de sobrecarga](./considerations-in-overloading-procedures.md)
+- [Resolução de sobrecarga](./overload-resolution.md)
+- [Sobrecargas](../../../language-reference/modifiers/overloads.md)
+- [Tipos genéricos no Visual Basic](../data-types/generic-types.md)

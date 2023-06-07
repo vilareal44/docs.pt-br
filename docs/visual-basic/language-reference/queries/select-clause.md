@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: 5ebb813229d5d517b369036c69b2d23c8ee1c9f5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a909b1d79b10f82ece03bab788ae889c64b27124
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350402"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359688"
 ---
 # <a name="select-clause-visual-basic"></a>Cláusula Select (Visual Basic)
 Define o resultado de uma consulta.  
@@ -29,33 +29,33 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
  Opcional. Um alias que pode ser usado para referenciar os resultados da expressão de coluna.  
   
  `fieldName1`  
- Necessária. O nome do campo a ser retornado no resultado da consulta.  
+ Obrigatórios. O nome do campo a ser retornado no resultado da consulta.  
   
 ## <a name="remarks"></a>Comentários  
- Você pode usar a cláusula `Select` para definir os resultados a serem retornados de uma consulta. Isso permite que você defina os membros de um novo tipo anônimo que é criado por uma consulta ou para direcionar os membros de um tipo nomeado que é retornado por uma consulta. A cláusula `Select` não é necessária para uma consulta. Se nenhuma cláusula `Select` for especificada, a consulta retornará um tipo com base em todos os membros das variáveis de intervalo identificadas para o escopo atual. Para obter mais informações, consulte [Tipos Anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md). Quando uma consulta cria um tipo nomeado, ela retornará um resultado do tipo <xref:System.Collections.Generic.IEnumerable%601> em que `T` é o tipo criado.  
+ Você pode usar a `Select` cláusula para definir os resultados a serem retornados de uma consulta. Isso permite que você defina os membros de um novo tipo anônimo que é criado por uma consulta ou para direcionar os membros de um tipo nomeado que é retornado por uma consulta. A `Select` cláusula não é necessária para uma consulta. Se nenhuma `Select` cláusula for especificada, a consulta retornará um tipo com base em todos os membros das variáveis de intervalo identificadas para o escopo atual. Para obter mais informações, consulte [Tipos Anônimos](../../programming-guide/language-features/objects-and-classes/anonymous-types.md). Quando uma consulta cria um tipo nomeado, ela retornará um resultado do tipo <xref:System.Collections.Generic.IEnumerable%601> onde `T` é o tipo criado.  
   
- A cláusula `Select` pode fazer referência a qualquer variável no escopo atual. Isso inclui variáveis de intervalo identificadas na cláusula `From` (ou cláusulas `From`). Ele também inclui todas as novas variáveis criadas com um alias pelas cláusulas `Aggregate`, `Let`, `Group By`ou `Group Join` ou variáveis de uma cláusula `Select` anterior na expressão de consulta. A cláusula `Select` também pode incluir valores estáticos. Por exemplo, o exemplo de código a seguir mostra uma expressão de consulta na qual a cláusula `Select` define o resultado da consulta como um novo tipo anônimo com quatro membros: `ProductName`, `Price`, `Discount`e `DiscountedPrice`. Os valores de membro `ProductName` e `Price` são obtidos da variável de intervalo de produtos que é definida na cláusula `From`. O valor do membro `DiscountedPrice` é calculado na cláusula `Let`. O membro `Discount` é um valor estático.  
+ A `Select` cláusula pode fazer referência a qualquer variável no escopo atual. Isso inclui variáveis de intervalo identificadas na `From` cláusula (ou `From` cláusulas). Ele também inclui todas as novas variáveis criadas com um alias pelas `Aggregate` `Let` `Group By` cláusulas,,, ou `Group Join` variáveis de uma `Select` cláusula Previous na expressão de consulta. A `Select` cláusula também pode incluir valores estáticos. Por exemplo, o exemplo de código a seguir mostra uma expressão de consulta na qual a `Select` cláusula define o resultado da consulta como um novo tipo anônimo com quatro membros: `ProductName` ,, `Price` `Discount` e `DiscountedPrice` . Os `ProductName` `Price` valores de membro e são obtidos da variável de intervalo de produtos que é definida na `From` cláusula. O `DiscountedPrice` valor do membro é calculado na `Let` cláusula. O `Discount` membro é um valor estático.  
   
  [!code-vb[VbSimpleQuerySamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#27)]  
   
- A cláusula `Select` introduz um novo conjunto de variáveis de intervalo para cláusulas de consulta subsequentes, e as variáveis de intervalo anteriores não estão mais no escopo. A última cláusula `Select` em uma expressão de consulta determina o valor de retorno da consulta. Por exemplo, a consulta a seguir retorna o nome da empresa e a ID do pedido para cada pedido de cliente para o qual o total excede 500. A primeira cláusula `Select` identifica as variáveis de intervalo para a cláusula `Where` e a segunda cláusula `Select`. A segunda cláusula `Select` identifica os valores retornados pela consulta como um novo tipo anônimo.  
+ A `Select` cláusula apresenta um novo conjunto de variáveis de intervalo para cláusulas de consulta subsequentes, e as variáveis de intervalo anteriores não estão mais no escopo. A última `Select` cláusula em uma expressão de consulta determina o valor de retorno da consulta. Por exemplo, a consulta a seguir retorna o nome da empresa e a ID do pedido para cada pedido de cliente para o qual o total excede 500. A primeira `Select` cláusula identifica as variáveis de intervalo para a `Where` cláusula e a segunda `Select` cláusula. A segunda `Select` cláusula identifica os valores retornados pela consulta como um novo tipo anônimo.  
   
  [!code-vb[VbSimpleQuerySamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#28)]  
   
- Se a cláusula `Select` identifica um único item a ser retornado, a expressão de consulta retorna uma coleção do tipo desse item único. Se a cláusula `Select` identifica vários itens a serem retornados, a expressão de consulta retorna uma coleção de um novo tipo anônimo, com base nos itens selecionados. Por exemplo, as duas consultas a seguir retornam coleções de dois tipos diferentes com base na cláusula `Select`. A primeira consulta retorna uma coleção de nomes de empresa como cadeias de caracteres. A segunda consulta retorna uma coleção de objetos `Customer` populados com os nomes de empresa e informações de endereço.  
+ Se a `Select` cláusula identificar um único item a ser retornado, a expressão de consulta retornará uma coleção do tipo desse item único. Se a `Select` cláusula identificar vários itens a serem retornados, a expressão de consulta retornará uma coleção de um novo tipo anônimo, com base nos itens selecionados. Por exemplo, as duas consultas a seguir retornam coleções de dois tipos diferentes com base na `Select` cláusula. A primeira consulta retorna uma coleção de nomes de empresa como cadeias de caracteres. A segunda consulta retorna uma coleção de `Customer` objetos preenchida com os nomes de empresa e informações de endereço.  
   
  [!code-vb[VbSimpleQuerySamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#29)]  
   
 ## <a name="example"></a>Exemplo  
- A expressão de consulta a seguir usa uma cláusula `From` para declarar uma variável de intervalo `cust` para a coleção de `customers`. A cláusula `Select` seleciona o nome do cliente e o valor da ID e popula as colunas `CompanyName` e `CustomerID` da nova variável de intervalo. A instrução `For Each` faz loop em cada objeto retornado e exibe as colunas `CompanyName` e `CustomerID` para cada registro.  
+ A expressão de consulta a seguir usa uma `From` cláusula para declarar uma variável `cust` de intervalo para a `customers` coleção. A `Select` cláusula seleciona o nome do cliente e o valor da ID e popula as `CompanyName` `CustomerID` colunas e da nova variável de intervalo. A `For Each` instrução faz um loop sobre cada objeto retornado e exibe `CompanyName` as `CustomerID` colunas e para cada registro.  
   
  [!code-vb[VbSimpleQuerySamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#30)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Introdução ao LINQ no Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Consultas](../../../visual-basic/language-reference/queries/index.md)
-- [Cláusula From](../../../visual-basic/language-reference/queries/from-clause.md)
-- [Cláusula Where](../../../visual-basic/language-reference/queries/where-clause.md)
-- [Cláusula Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)
-- [Tipos Anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Introdução a LINQ no Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [Consultas](index.md)
+- [Cláusula from](from-clause.md)
+- [Cláusula WHERE](where-clause.md)
+- [Cláusula Order By](order-by-clause.md)
+- [Tipos anônimos](../../programming-guide/language-features/objects-and-classes/anonymous-types.md)

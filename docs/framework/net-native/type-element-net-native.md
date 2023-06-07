@@ -3,13 +3,13 @@ title: <Type> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 ms.openlocfilehash: 4e88b49b82513079ddcf6f0bafe02d44235a406a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73091848"
 ---
-# <a name="type-element-net-native"></a>Elemento de > de tipo de \<(.NET Native)
+# <a name="type-element-net-native"></a>\<Type> (.NET Nativo)
 
 Aplica a política de runtime a um tipo específico, como uma classe ou estrutura.
 
@@ -53,13 +53,13 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 |Valor|Descrição|
 |-----------|-----------------|
-|*type_name*|O nome do tipo. Se este elemento `<Type>` for o filho de um elemento [\<Namespace>](namespace-element-net-native.md) ou de outro elemento `<Type>`, o *type_name* poderá incluir o nome do tipo sem seu namespace. Caso contrário, o *type_name* deverá incluir o nome do tipo totalmente qualificado.|
+|*type_name*|O nome do tipo. Se esse `<Type>` elemento for o filho de um [\<Namespace>](namespace-element-net-native.md) elemento ou de outro `<Type>` elemento, *type_name* poderá incluir o nome do tipo sem seu namespace. Caso contrário, o *type_name* deverá incluir o nome do tipo totalmente qualificado.|
 
 ## <a name="all-other-attributes"></a>Todos os outros atributos
 
 |Valor|Descrição|
 |-----------|-----------------|
-|*policy_setting*|A configuração a ser aplicada a este tipo de política. Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md).|
+|*policy_setting*|A configuração a ser aplicada a este tipo de política. Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md).|
 
 ### <a name="child-elements"></a>Elementos filho
 
@@ -92,19 +92,19 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 Os atributos de reflexão, serialização e interoperabilidade são todos opcionais. Se nenhum estiver presente, o elemento `<Type>` serve como um contêiner cujos tipos filho definem a política de membros individuais.
 
-Se um elemento `<Type>` for o filho de um elemento [\<Assembly>](assembly-element-net-native.md), [\<Namespace>](namespace-element-net-native.md), `<Type>` ou [\<TypeInstantiation>](typeinstantiation-element-net-native.md), ele substituirá as configurações de política definidas pelo elemento pai.
+Se um `<Type>` elemento for o filho de um [\<Assembly>](assembly-element-net-native.md) elemento,, [\<Namespace>](namespace-element-net-native.md) `<Type>` ou [\<TypeInstantiation>](typeinstantiation-element-net-native.md) , ele substituirá as configurações de política definidas pelo elemento pai.
 
-Um elemento `<Type>` de um tipo genérico aplica sua política a todas as instanciações que não possuem sua própria política. A política dos tipos genéricos construídos é definida pelo elemento [\<TypeInstantiation>](typeinstantiation-element-net-native.md).
+Um elemento `<Type>` de um tipo genérico aplica sua política a todas as instanciações que não possuem sua própria política. A política de tipos genéricos construídos é definida pelo [\<TypeInstantiation>](typeinstantiation-element-net-native.md) elemento.
 
 Se o tipo for um tipo genérico, seu nome é decorado por um símbolo de acento grave (\`) seguido pelo número de parâmetros genéricos. Por exemplo, o atributo `Name` de um elemento `<Type>` da classe <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> aparece como ``Name="System.Collections.Generic.List`1"``.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir usa a reflexão para exibir informações sobre os campos, propriedades e métodos da classe <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. A variável `b` no exemplo é um controle de <xref:Windows.UI.Xaml.Controls.TextBlock>. Como o exemplo simplesmente recupera informações sobre o tipo, a disponibilidade de metadados é controlada pela configuração da política `Browse`.
+O exemplo a seguir usa a reflexão para exibir informações sobre os campos, propriedades e métodos da classe <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. A variável `b` no exemplo é um <xref:Windows.UI.Xaml.Controls.TextBlock> controle. Como o exemplo simplesmente recupera informações sobre o tipo, a disponibilidade de metadados é controlada pela configuração da política `Browse`.
 
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]
 
- Como os metadados para a classe <xref:System.Collections.Generic.List%601> não são incluídos automaticamente pela cadeia de ferramentas de .NET Native, o exemplo não exibe as informações de membro solicitadas em tempo de execução. Para fornecer os metadados necessários, adicione o seguinte elemento `<Type>` ao arquivo de diretivas de tempo de execução. Observe que, como fornecemos um elemento [<Namespace\>](namespace-element-net-native.md) pai, não precisamos fornecer um nome do tipo totalmente qualificado no elemento `<Type>`.
+ Como os metadados da <xref:System.Collections.Generic.List%601> classe não são incluídos automaticamente pela cadeia de ferramentas .net Native, o exemplo não exibe as informações de membro solicitadas em tempo de execução. Para fornecer os metadados necessários, adicione o seguinte elemento `<Type>` ao arquivo de diretivas de runtime. Observe que, como fornecemos um elemento [<Namespace\>](namespace-element-net-native.md) pai, não precisamos fornecer um nome do tipo totalmente qualificado no elemento `<Type>`.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -118,11 +118,11 @@ O exemplo a seguir usa a reflexão para exibir informações sobre os campos, pr
 ```
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir usa reflexão para recuperar um objeto <xref:System.Reflection.PropertyInfo> que representa a propriedade <xref:System.String.Chars%2A?displayProperty=nameWithType>. Ele usa o método <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> para recuperar o valor do sétimo caractere de uma cadeia de caracteres e exibir todos os caracteres na cadeia de caracteres. A variável `b` no exemplo é um controle de <xref:Windows.UI.Xaml.Controls.TextBlock>.
+ O exemplo a seguir usa reflexão para recuperar um objeto <xref:System.Reflection.PropertyInfo> que representa a propriedade <xref:System.String.Chars%2A?displayProperty=nameWithType>. Ele usa o método <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> para recuperar o valor do sétimo caractere de uma cadeia de caracteres e exibir todos os caracteres na cadeia de caracteres. A variável `b` no exemplo é um <xref:Windows.UI.Xaml.Controls.TextBlock> controle.
 
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]
 
- Como os metadados para o objeto <xref:System.String> não estão disponíveis, a chamada para o método <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> gera uma exceção <xref:System.NullReferenceException> em tempo de execução quando compilada com a cadeia de ferramentas .NET Native. Para eliminar a exceção e fornecer os metadados necessários, adicione o seguinte elemento `<Type>` ao arquivo de diretivas de tempo de execução:
+ Como os metadados do <xref:System.String> objeto não estão disponíveis, a chamada para o <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> método gera uma <xref:System.NullReferenceException> exceção em tempo de execução quando compilada com a cadeia de ferramentas de .net Native. Para eliminar a exceção e fornecer os metadados necessários, adicione o seguinte elemento `<Type>` ao arquivo de diretivas de runtime:
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -133,8 +133,8 @@ O exemplo a seguir usa a reflexão para exibir informações sobre os campos, pr
 </Directives>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)
-- [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md)
+- [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementos da diretiva de runtime](runtime-directive-elements.md)
+- [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md)

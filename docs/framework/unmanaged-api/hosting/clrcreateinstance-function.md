@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5de13327-96c6-4697-a89e-b8bf40717855
 topic_type:
 - apiref
-ms.openlocfilehash: c3011149b9b23e776ad3baac9e41f3c42213654d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 4aeacc718632c133550ed8de6649716c5d8b7423
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616821"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504436"
 ---
 # <a name="clrcreateinstance-function"></a>Função CLRCreateInstance
-Fornece uma das três interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)ou [ICLRDebugging](../debugging/iclrdebugging-interface.md).  
+Fornece uma das três interfaces: [ICLRMetaHost](iclrmetahost-interface.md), [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md)ou [ICLRDebugging](../debugging/iclrdebugging-interface.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,9 +43,9 @@ HRESULT CLRCreateInstance(
  no Um dos três identificadores de interface (IIDs): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy ou IID_ICLRDebugging.  
   
  `ppInterface`  
- fora Uma das três interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)ou [ICLRDebugging](../debugging/iclrdebugging-interface.md).  
+ fora Uma das três interfaces: [ICLRMetaHost](iclrmetahost-interface.md), [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md)ou [ICLRDebugging](../debugging/iclrdebugging-interface.md).  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -89,6 +89,6 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
   
  **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Hospedagem](index.md)
+- [Hosting](index.md)

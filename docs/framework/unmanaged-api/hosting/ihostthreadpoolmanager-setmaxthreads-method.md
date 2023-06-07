@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 77cfd347-95c2-4425-b807-4ecc2a8d4578
 topic_type:
 - apiref
-ms.openlocfilehash: 30c4ff93688396dd9a6a8086fbb53ad1c763ead0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 53d42afda6668acc6462c419fcefd6bc1435a34c
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141310"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842446"
 ---
 # <a name="ihostthreadpoolmanagersetmaxthreads-method"></a>Método IHostThreadPoolManager::SetMaxThreads
 Define o número máximo de threads que o host pode manter no pool de threads.  
@@ -37,34 +37,34 @@ HRESULT SetMaxThreads (
  `MaxThreads`  
  O número máximo de threads de trabalho no pool de threads.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`SetMaxThreads` retornado com êxito.|  
+|S_OK|`SetMaxThreads`retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
 |HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
-|E_NOTIMPL|O host não fornece uma implementação de `SetMaxThreads`.|  
+|E_NOTIMPL|O host não fornece uma implementação de `SetMaxThreads` .|  
   
 ## <a name="remarks"></a>Comentários  
  Não é necessário um host para permitir que o CLR configure o tamanho do pool de threads. Alguns hosts podem querer um controle exclusivo sobre o pool de threads, por motivos como implementação, desempenho ou escalabilidade. Nesse caso, um host deve retornar um valor HRESULT de E_NOTIMPL.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Threading.ThreadPool.SetMaxThreads%2A>
 - <xref:System.Threading.ThreadPool>
-- [Método GetMaxThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getmaxthreads-method.md)
-- [Método SetMinThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setminthreads-method.md)
-- [Interface IHostThreadPoolManager](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+- [Método GetMaxThreads](ihostthreadpoolmanager-getmaxthreads-method.md)
+- [Método SetMinThreads](ihostthreadpoolmanager-setminthreads-method.md)
+- [Interface IHostThreadPoolManager](ihostthreadpoolmanager-interface.md)

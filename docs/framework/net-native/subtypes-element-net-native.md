@@ -3,13 +3,13 @@ title: <Subtypes> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 ms.openlocfilehash: bb719449f3769c5dbbde6d05efdb865c18bb4ab2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79180930"
 ---
-# <a name="subtypes-element-net-native"></a>\<Subtipos> Element (.NET nativo)
+# <a name="subtypes-element-net-native"></a>\<Subtypes> (.NET Nativo)
 Aplica a política de runtime a todas as classes herdadas do tipo recipiente.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -58,7 +58,7 @@ Aplica a política de runtime a todas as classes herdadas do tipo recipiente.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Tipo>](type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
+|[\<Type>](type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
   
 ## <a name="remarks"></a>Comentários  
  O elemento `<Subtypes>` aplica a política a todos os subtipos de seu tipo recipiente. Use-o quando desejar aplicar políticas diferentes a tipos derivados e suas classes base.  
@@ -89,7 +89,7 @@ Aplica a política de runtime a todas as classes herdadas do tipo recipiente.
   
 ## <a name="see-also"></a>Confira também
 
-- [\<Tipo elemento>](type-element-net-native.md)
-- [Referência do arquivo de configuração das diretivas de runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [\<Type>Elementos](type-element-net-native.md)
+- [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de runtime](runtime-directive-elements.md)
 - [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md)

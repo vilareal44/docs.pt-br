@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: O comando dotnet test é usado para executar testes de unidade em um determinado projeto.
 ms.date: 04/29/2020
-ms.openlocfilehash: ef71e48daa7c4a6f33961d05a2f3def122087b0e
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: d67521084330b206afca89baf59228b99ca799a1
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975427"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656749"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -21,14 +21,17 @@ ms.locfileid: "82975427"
 
 ```dotnetcli
 dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
-    [-a|--test-adapter-path <PATH_TO_ADAPTER>] [--blame]
+    [-a|--test-adapter-path <ADAPTER_PATH>] [--blame] [--blame-crash]
+    [--blame-crash-dump-type <DUMP_TYPE>] [--blame-crash-collect-always]
+    [--blame-hang] [--blame-hang-dump-type <DUMP_TYPE>]
+    [--blame-hang-timeout <TIMESPAN>]
     [-c|--configuration <CONFIGURATION>]
-    [--collect <DATA_COLLECTOR_FRIENDLY_NAME>]
-    [-d|--diag <PATH_TO_DIAGNOSTICS_FILE>] [-f|--framework <FRAMEWORK>]
+    [--collect <DATA_COLLECTOR_NAME>]
+    [-d|--diag <LOG_FILE>] [-f|--framework <FRAMEWORK>]
     [--filter <EXPRESSION>] [--interactive]
-    [-l|--logger <LOGGER_URI/FRIENDLY_NAME>] [--no-build]
+    [-l|--logger <LOGGER>] [--no-build]
     [--nologo] [--no-restore] [-o|--output <OUTPUT_DIRECTORY>]
-    [-r|--results-directory <PATH>] [--runtime <RUNTIME_IDENTIFIER>]
+    [-r|--results-directory <RESULTS_DIR>] [--runtime <RUNTIME_IDENTIFIER>]
     [-s|--settings <SETTINGS_FILE>] [-t|--list-tests]
     [-v|--verbosity <LEVEL>] [[--] <RunSettings arguments>]
 
@@ -45,13 +48,13 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-Onde `Microsoft.NET.Test.Sdk` é o host de teste `xunit` , é a estrutura de teste. E `xunit.runner.visualstudio` é um adaptador de teste, que permite que a estrutura xUnit funcione com o host de teste.
+Onde `Microsoft.NET.Test.Sdk` é o host de teste, `xunit` é a estrutura de teste. E `xunit.runner.visualstudio` é um adaptador de teste, que permite que a estrutura xUnit funcione com o host de teste.
 
 ### <a name="implicit-restore"></a>Restauração implícita
 
 [!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 - **`PROJECT | SOLUTION | DIRECTORY | DLL`**
 
@@ -64,29 +67,64 @@ Onde `Microsoft.NET.Test.Sdk` é o host de teste `xunit` , é a estrutura de tes
 
 ## <a name="options"></a>Opções
 
-- **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
+- **`-a|--test-adapter-path <ADAPTER_PATH>`**
 
   Caminho para um diretório a ser procurado para os adaptadores de teste adicionais. Somente arquivos *. dll* com sufixo `.TestAdapter.dll` são inspecionados. Se não for especificado, o diretório do test *. dll* será pesquisado.
 
 - **`--blame`**
 
-  Executa os testes no modo blame. Essa opção é útil para isolar testes problemáticos que causam falha no host de teste. Quando uma falha é detectada, ela cria um arquivo de `TestResults/<Guid>/<Guid>_Sequence.xml` sequência no que captura a ordem dos testes que foram executados antes da falha.
+  Executa os testes no modo blame. Essa opção é útil para isolar testes problemáticos que causam falha no host de teste. Quando uma falha é detectada, ela cria um arquivo de sequência no `TestResults/<Guid>/<Guid>_Sequence.xml` que captura a ordem dos testes que foram executados antes da falha.
+
+- **`--blame-crash`** (Disponível desde o SDK da versão prévia do .NET 5,0)
+
+  Executa os testes no modo de culpa e coleta um despejo de memória quando o host de teste sai inesperadamente. Essa opção só tem suporte no Windows. Um diretório que contém *procdump.exe* e *procdump64.exe* deve estar no caminho ou na PROCDUMP_PATH variável de ambiente. [Baixe as ferramentas](https://docs.microsoft.com/sysinternals/downloads/procdump). Implica `--blame` .
+
+- **`--blame-crash-dump-type <DUMP_TYPE>`** (Disponível desde o SDK da versão prévia do .NET 5,0)
+
+  O tipo de despejo de memória a ser coletado. Implica `--blame-crash` .
+
+- **`--blame-crash-collect-always`** (Disponível desde o SDK da versão prévia do .NET 5,0)
+
+  Coleta um despejo de memória em espera e saída de host de teste inesperado.
+
+- **`--blame-hang`** (Disponível desde o SDK da versão prévia do .NET 5,0)
+
+  Execute os testes no modo de culpa e coleta um despejo de travamento quando um teste excede o tempo limite especificado.
+
+- **`--blame-hang-dump-type <DUMP_TYPE>`** (Disponível desde o SDK da versão prévia do .NET 5,0)
+
+  O tipo de despejo de memória a ser coletado. Deve ser `full` , `mini` ou `none` . Quando `none` é especificado, o host de teste é encerrado no tempo limite, mas nenhum despejo é coletado. Implica `--blame-hang` .
+
+- **`--blame-hang-timeout <TIMESPAN>`** (Disponível desde o SDK da versão prévia do .NET 5,0)
+
+  Tempo limite por teste, após o qual um despejo de travamento é disparado e o processo de host de teste é encerrado. O valor de tempo limite é especificado em um dos seguintes formatos:
+  
+  - 1,5 h
+  - próximos
+  - 5400
+  - 5400000ms
+
+  Quando nenhuma unidade é usada (por exemplo, 5,4 milhões), presume-se que o valor esteja em milissegundos. Quando usado junto com testes controlados por dados, o comportamento de tempo limite depende do adaptador de teste usado. Para xUnit e NUnit, o tempo limite é renovado após cada caso de teste. Para MSTest, o tempo limite é usado para todos os casos de teste. Essa opção tem suporte no Windows com o netcoreapp 2.1 e posterior e no Linux com o netcoreapp 3.1 e posterior. Não há suporte para macOS.
 
 - **`-c|--configuration <CONFIGURATION>`**
 
   Define a configuração da compilação. O valor padrão é `Debug`, mas a configuração do seu projeto pode substituir essa configuração padrão do SDK.
 
-- **`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
+- **`--collect <DATA_COLLECTOR_NAME>`**
 
   Habilita o coletor de dados para a execução de teste. Para obter mais informações, consulte [Monitor and analyze test run](https://aka.ms/vstest-collect) (Monitorar e analisar a execução de teste).
+  
+  Para coletar cobertura de código em qualquer plataforma com suporte no .NET Core, instale o [coverlet](https://github.com/coverlet-coverage/coverlet/blob/master/README.md) e use a `--collect:"XPlat Code Coverage"` opção.
 
-- **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
+  No Windows, você pode coletar cobertura de código usando a `--collect "Code Coverage"` opção. Essa opção gera um arquivo *. coverage* , que pode ser aberto no Visual Studio 2019 Enterprise. Para obter mais informações, consulte [usar cobertura de código](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested) e [Personalizar análise de cobertura de código](/visualstudio/test/customizing-code-coverage-analysis).
 
-  Habilita o modo de diagnóstico para a plataforma de teste e grava mensagens de diagnóstico no arquivo especificado e nos arquivos ao lado dele. O processo que está registrando as mensagens determina quais arquivos são criados, como `*.host_<date>.txt` para o log do host de `*.datacollector_<date>.txt` teste e para o log do coletor de dados.
+- **`-d|--diag <LOG_FILE>`**
+
+  Habilita o modo de diagnóstico para a plataforma de teste e grava mensagens de diagnóstico no arquivo especificado e nos arquivos ao lado dele. O processo que está registrando as mensagens determina quais arquivos são criados, como `*.host_<date>.txt` para o log do host de teste e `*.datacollector_<date>.txt` para o log do coletor de dados.
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Força o uso de `dotnet` ou .NET Framework host de teste para os binários de teste. Essa opção determina apenas o tipo de host a ser usado. A versão real do Framework a ser usada é determinada pelo *runtimeconfig. JSON* do projeto de teste. Quando não especificado, o [atributo de assembly TargetFramework](/dotnet/api/system.runtime.versioning.targetframeworkattribute) é usado para determinar o tipo de host. Quando esse atributo é removido do *. dll*, o host de .NET Framework é usado.
+  Força o uso de `dotnet` ou .NET Framework host de teste para os binários de teste. Essa opção determina apenas o tipo de host a ser usado. A versão real do Framework a ser usada é determinada pelo *runtimeconfig.jsno* projeto de teste. Quando não especificado, o [atributo de assembly TargetFramework](/dotnet/api/system.runtime.versioning.targetframeworkattribute) é usado para determinar o tipo de host. Quando esse atributo é removido do *. dll*, o host de .NET Framework é usado.
 
 - **`--filter <EXPRESSION>`**
 
@@ -100,9 +138,9 @@ Onde `Microsoft.NET.Test.Sdk` é o host de teste `xunit` , é a estrutura de tes
 
   Permite que o comando pare e aguarde entrada ou ação do usuário. Por exemplo, para concluir a autenticação. Disponível desde o SDK do .NET Core 3.0.
 
-- **`-l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
+- **`-l|--logger <LOGGER>`**
 
-  Especifica um agente para resultados do teste. Ao contrário do MSBuild, o teste dotnet não aceita abreviações `-l "console;v=d"` : `-l "console;verbosity=detailed"`em vez de usar.
+  Especifica um agente para resultados do teste. Ao contrário do MSBuild, o teste dotnet não aceita abreviações: em vez de `-l "console;v=d"` usar `-l "console;verbosity=detailed"` .
 
 - **`--no-build`**
 
@@ -118,9 +156,9 @@ Onde `Microsoft.NET.Test.Sdk` é o host de teste `xunit` , é a estrutura de tes
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Diretório no qual encontram-se os binários para execução. Se não for especificado, o caminho padrão será `./bin/<configuration>/<framework>/`.  Para projetos com várias estruturas de destino (por meio `TargetFrameworks` da propriedade), também é necessário definir `--framework` quando você especifica essa opção. `dotnet test`sempre execute testes do diretório de saída. Você pode usar <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> para consumir ativos de teste no diretório de saída.
+  Diretório no qual encontram-se os binários para execução. Se não for especificado, o caminho padrão será `./bin/<configuration>/<framework>/`.  Para projetos com várias estruturas de destino (por meio da `TargetFrameworks` Propriedade), também é necessário definir `--framework` quando você especifica essa opção. `dotnet test` sempre executa testes do diretório de saída. Você pode usar <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> para consumir ativos de teste no diretório de saída.
 
-- **`-r|--results-directory <PATH>`**
+- **`-r|--results-directory <RESULTS_DIR>`**
 
   O diretório em que os resultados de teste serão colocados. Se o diretório especificado não existir, ele será criado. O padrão é `TestResults` o diretório que contém o arquivo de projeto.
 
@@ -130,14 +168,14 @@ Onde `Microsoft.NET.Test.Sdk` é o host de teste `xunit` , é a estrutura de tes
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  O arquivo `.runsettings` a ser usado para executar os testes. Observe que o `TargetPlatform` elemento (x86 | x64) não tem nenhum efeito `dotnet test`para. Para executar testes direcionados para x86, instale a versão x86 do .NET Core. O bit de bits do *dotnet. exe* que está no caminho é o que será usado para executar testes. Para saber mais, consulte os recursos a seguir:
+  O arquivo `.runsettings` a ser usado para executar os testes. O `TargetPlatform` elemento (x86 | x64) não tem nenhum efeito para `dotnet test` . Para executar testes direcionados para x86, instale a versão x86 do .NET Core. O bit de bits do *dotnet.exe* que está no caminho é o que será usado para executar testes. Para saber mais, consulte os recursos a seguir:
 
   - [Configurar testes de unidade usando um arquivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
   - [Configurar uma execução de teste](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)
 
 - **`-t|--list-tests`**
 
-  Lista todos os testes descobertos no projeto atual.
+  Liste os testes descobertos em vez de executar os testes.
 
 - **`-v|--verbosity <LEVEL>`**
 
@@ -171,13 +209,25 @@ Onde `Microsoft.NET.Test.Sdk` é o host de teste `xunit` , é a estrutura de tes
   dotnet test --logger trx
   ```
 
+- Execute os testes no projeto no diretório atual e gere um arquivo de cobertura de código (depois de instalar a integração de coletores [coverlet](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/VSTestIntegration.md) ):
+
+  ```dotnetcli
+  dotnet test --collect:"XPlat Code Coverage"
+  ```
+
+- Execute os testes no projeto no diretório atual e gere um arquivo de cobertura de código (somente Windows):
+
+  ```dotnetcli
+  dotnet test --collect "Code Coverage"
+  ```
+
 - Execute os testes no projeto no diretório atual e faça logon com detalhes detalhados no console:
 
   ```dotnetcli
   dotnet test --logger "console;verbosity=detailed"
   ```
-  
-  - Execute os testes no projeto no diretório atual e relate os testes que estavam em andamento quando o host de teste falhou:
+
+- Execute os testes no projeto no diretório atual e relate os testes que estavam em andamento quando o host de teste falhou:
 
   ```dotnetcli
   dotnet test --blame
@@ -195,6 +245,7 @@ Onde `Microsoft.NET.Test.Sdk` é o host de teste `xunit` , é a estrutura de tes
 | -------------- | --------------------------------------------------------------------------------------------------------- |
 | MSTest         | <ul><li>FullyQualifiedName</li><li>Nome</li><li>ClassName</li><li>Prioridade</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Características</li></ul>                                   |
+| NUnit          | <ul><li>FullyQualifiedName</li><li>Nome</li><li>TestCategory</li><li>Prioridade</li></ul>                                   |
 
 O `<operator>` descreve a relação entre a propriedade o valor:
 
@@ -223,5 +274,5 @@ Para obter mais informações e exemplos sobre como usar a filtragem de teste de
 ## <a name="see-also"></a>Consulte também
 
 - [Estruturas e destinos](../../standard/frameworks.md)
-- [Catálogo do Identificador de Runtime do .NET Core](../rid-catalog.md)
+- [Catálogo de RID (identificador de tempo de execução) do .NET Core](../rid-catalog.md)
 - [Passando argumentos RunSettings por meio de linha de comando](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

@@ -1,5 +1,6 @@
 ---
 title: Usando soquetes de cliente
+description: Este exemplo mostra como criar uma conexão TCP/IP com um serviço remoto usando um soquete no .NET Framework.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-ms.openlocfilehash: fe2ad55c3f60347369c0e92bc834d81d98f3870e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1dc02d0b3651d5766d1d30752566217d8417af0c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71046950"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501996"
 ---
 # <a name="using-client-sockets"></a>Usando soquetes de cliente
 Antes de iniciar uma conversa por meio de um <xref:System.Net.Sockets.Socket>, crie um pipe de dados entre o aplicativo e o dispositivo remoto. Embora existam outros protocolos e famílias de endereços de rede, este exemplo mostra como criar uma conexão TCP/IP com um serviço remoto.  

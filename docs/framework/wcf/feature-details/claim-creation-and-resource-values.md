@@ -4,31 +4,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], creation and resource values
 ms.assetid: 30431f76-cbe7-4bad-bad7-8e43e23a82d4
-ms.openlocfilehash: 5c2904f68ba50df99504e2f70c9170490ca54f73
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fabd0a2606560d99174e5ad28940c3b59ee689d9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645569"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587047"
 ---
 # <a name="claim-creation-and-resource-values"></a>Valores de recursos e criação de declarações
-O <xref:System.IdentityModel.Claims.Claim> classe fornece vários métodos para criar instâncias de internos de tipos de declarações. Esses métodos, o seguinte executar semântico não ou formatar a verificação de recurso fornecido:  
+A <xref:System.IdentityModel.Claims.Claim> classe fornece vários métodos para criar instâncias de tipos de declarações internas. Desses métodos, o seguinte não executa nenhuma verificação semântica ou de formato no recurso fornecido:  
   
 - <xref:System.IdentityModel.Claims.Claim.CreateDnsClaim%2A>  
   
-- <xref:System.IdentityModel.Claims.Claim.CreateHashClaim%2A> (não verifica o comprimento ou o conteúdo da matriz de bytes)  
+- <xref:System.IdentityModel.Claims.Claim.CreateHashClaim%2A>(não verifica o comprimento ou o conteúdo da matriz de bytes)  
   
 - <xref:System.IdentityModel.Claims.Claim.CreateNameClaim%2A>  
   
 - <xref:System.IdentityModel.Claims.Claim.CreateSpnClaim%2A>  
   
-- <xref:System.IdentityModel.Claims.Claim.CreateThumbprintClaim%2A> (não verifica o comprimento ou o conteúdo da matriz de bytes)  
+- <xref:System.IdentityModel.Claims.Claim.CreateThumbprintClaim%2A>(não verifica o comprimento ou o conteúdo da matriz de bytes)  
   
 - <xref:System.IdentityModel.Claims.Claim.CreateUpnClaim%2A>  
   
- Tome cuidado ao chamar os métodos acima para garantir que o recurso de valores passados estão no formato correto ou conter o tipo correto de informações (ou ambos).  
+ Deve-se ter cuidado ao chamar os métodos acima para garantir que os valores de recurso passados sejam do formato correto ou contenham o tipo correto de informação (ou ambos).  
   
- Os seguintes métodos recebem tipos específicos:  
+ Os métodos a seguir usam tipos específicos:  
   
 - <xref:System.IdentityModel.Claims.Claim.CreateDenyOnlyWindowsSidClaim%2A>  
   
@@ -46,4 +46,4 @@ O <xref:System.IdentityModel.Claims.Claim> classe fornece vários métodos para 
 
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Claims.ClaimSet>
-- [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Gerenciamento de declarações e autorizações com o modelo de identidade](managing-claims-and-authorization-with-the-identity-model.md)

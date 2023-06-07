@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 ms.openlocfilehash: 5c7de79ec626966e71d461dd3865b294a8979db2
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77214806"
 ---
-# <a name="add-element-for-appsettings"></a>\<Adicionar > elemento para \<appSettings >
+# <a name="add-element-for-appsettings"></a>Elemento \<add> para \<appSettings>
 
 Adiciona uma configuração de aplicativo personalizada.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<adicionar >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,16 +32,16 @@ Adiciona uma configuração de aplicativo personalizada.
 
 ## <a name="attributes"></a>Atributos
 
-|           | DESCRIÇÃO |
+|           | Descrição |
 | --------- | ----------- |
 | **chave**   | Atributo obrigatório.<br><br>Especifica o nome da chave a ser adicionada. |
 | **value** | Atributo obrigatório.<br><br>Especifica o valor da chave a ser adicionada. |
 
 ## <a name="parent-element"></a>Elemento pai
 
-|     | DESCRIÇÃO |
+|     | Descrição |
 | --- | ----------- |
-| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Contém configurações de aplicativo personalizadas, como caminhos de arquivo, URLs de serviço da Web em XML ou qualquer outra informação de configuração personalizada para um aplicativo. |
+| [**\<appSettings>**](appsettings-element-for-configuration.md) | Contém configurações de aplicativo personalizadas, como caminhos de arquivo, URLs de serviço da Web em XML ou qualquer outra informação de configuração personalizada para um aplicativo. |
 
 ## <a name="child-elements"></a>Elementos filho
 
@@ -57,7 +57,7 @@ O exemplo a seguir mostra como adicionar uma definição de configuração perso
 </appSettings>
 ```
 
-O exemplo a seguir usa o elemento `<add>` para definir duas configurações de compatibilidade em um aplicativo ASP.NET:
+O exemplo a seguir usa o `<add>` elemento para definir duas configurações de compatibilidade em um aplicativo ASP.net:
 
 ```xml
 <appSettings>

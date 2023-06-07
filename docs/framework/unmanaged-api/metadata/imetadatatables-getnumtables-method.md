@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8196f2a3-bbf2-45d3-a6cd-74502c356644
 topic_type:
 - apiref
-ms.openlocfilehash: ab864b251a989056bc34b2c7c6658964556f9ac1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: df02def0c14beb4e9ffd1b9260002767586a59b5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449506"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490192"
 ---
 # <a name="imetadatatablesgetnumtables-method"></a>Método IMetaDataTables::GetNumTables
-Obtém o número de tabelas no escopo da instância de `IMetaDataTables` atual.  
+Obtém o número de tabelas no escopo da `IMetaDataTables` instância atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,16 +37,16 @@ HRESULT GetNumTables (
  `pcTables`  
  fora Um ponteiro para o número de tabelas no escopo da instância atual.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [Interface IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [Interface IMetaDataTables](imetadatatables-interface.md)
+- [Interface IMetaDataTables2](imetadatatables2-interface.md)

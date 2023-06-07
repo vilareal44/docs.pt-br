@@ -11,12 +11,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: 3c70d958fdcbb1782af22c3a4715676abbeeac0c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a352df0323cfeca1ea0e206ae45c3f85a2cd7da3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353792"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404363"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Instrução Option Explicit (Visual Basic)
 Força a declaração explícita de todas as variáveis em um arquivo ou permite declarações implícitas de variáveis.  
@@ -29,50 +29,50 @@ Option Explicit { On | Off }
   
 ## <a name="parts"></a>Partes  
  `On`  
- Opcional. Habilita a verificação de `Option Explicit`. Se `On` ou `Off` não for especificado, o padrão será `On`.  
+ Opcional. Habilita a `Option Explicit` verificação. Se `On` ou `Off` não for especificado, o padrão será `On` .  
   
  `Off`  
- Opcional. Desabilita a verificação de `Option Explicit`.  
+ Opcional. Desabilita a `Option Explicit` verificação.  
   
 ## <a name="remarks"></a>Comentários  
- Quando `Option Explicit On` ou `Option Explicit` aparece em um arquivo, você deve declarar explicitamente todas as variáveis usando as instruções `Dim` ou `ReDim`. Se você tentar usar um nome de variável não declarado, ocorrerá um erro no momento da compilação. A instrução `Option Explicit Off` permite a declaração implícita de variáveis.  
+ Quando `Option Explicit On` ou `Option Explicit` aparece em um arquivo, você deve declarar explicitamente todas as variáveis usando as `Dim` `ReDim` instruções ou. Se você tentar usar um nome de variável não declarado, ocorrerá um erro no momento da compilação. A `Option Explicit Off` instrução permite a declaração implícita de variáveis.  
   
  Se usado, a instrução `Option Explicit` deve aparecer em um arquivo antes de quaisquer outras instruções de código-fonte.  
   
 > [!NOTE]
-> A definição de `Option Explicit` para `Off` geralmente não é uma boa prática. Você poderia digitar incorretamente um nome de variável em um ou mais locais, o que levaria a resultados inesperados na execução do programa.  
+> `Option Explicit`A configuração como `Off` geralmente não é uma prática recomendada. Você poderia digitar incorretamente um nome de variável em um ou mais locais, o que levaria a resultados inesperados na execução do programa.  
   
 ## <a name="when-an-option-explicit-statement-is-not-present"></a>Quando uma instrução Option Explicit não está presente  
- Se o código-fonte não contiver uma instrução `Option Explicit`, a opção de configuração **explícita** na [página compilar, designer de projeto (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) será usada. Se o compilador de linha de comando for usado, a opção de compilador [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) será usada.  
+ Se o código-fonte não contiver uma `Option Explicit` instrução, a configuração **Option Explicit** na [página Compile, Designer de projeto (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) será usada. Se o compilador de linha de comando for usado, a opção de compilador [-optionexplicit](../../reference/command-line-compiler/optionexplicit.md) será usada.  
   
 #### <a name="to-set-option-explicit-in-the-ide"></a>Para definir a opção Explicit no IDE  
   
-1. No **Gerenciador de Soluções**, selecione um projeto. No menu **Projeto**, clique em **Propriedades**.  
+1. Em **Gerenciador de soluções**, selecione um projeto. No menu **Projeto** , clique em **Propriedades**.  
   
 2. Clique na guia **Compilar**.  
   
 3. Defina o valor na caixa **Option Explicit** .  
   
- Quando você cria um novo projeto, a **opção configuração explícita** na guia **Compilar** é definida como a **opção configuração explícita** na caixa de diálogo **padrões do VB** . Para acessar a caixa de diálogo **padrões do VB** , no menu **ferramentas** , clique em **Opções**. Na caixa de diálogo **Opções**, expanda **Projetos e Soluções** e, em seguida, clique em **Padrões de VB**. A configuração padrão inicial em **padrões do VB** é `On`.  
+ Quando você cria um novo projeto, a **opção configuração explícita** na guia **Compilar** é definida como a **opção configuração explícita** na caixa de diálogo **padrões do VB** . Para acessar a caixa de diálogo **padrões do VB** , no menu **ferramentas** , clique em **Opções**. Na caixa de diálogo **Opções**, expanda **Projetos e Soluções** e, em seguida, clique em **Padrões de VB**. A configuração padrão inicial em **padrões do VB** é `On` .  
   
 #### <a name="to-set-option-explicit-on-the-command-line"></a>Para definir a opção Explicit na linha de comando  
   
-- Inclua a opção de compilador [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) no comando **Vbc** .  
+- Inclua a opção de compilador [-optionexplicit](../../reference/command-line-compiler/optionexplicit.md) no comando **Vbc** .  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa a instrução `Option Explicit` para forçar a declaração explícita de todas as variáveis. A tentativa de usar uma variável não declarada causa um erro no tempo de compilação.  
+ O exemplo a seguir usa a `Option Explicit` instrução para forçar a declaração explícita de todas as variáveis. A tentativa de usar uma variável não declarada causa um erro no tempo de compilação.  
   
  [!code-vb[VbVbalrStatements#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#47)]  
   
  [!code-vb[VbVbalrStatements#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#48)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
-- [Instrução ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)
-- [Instrução Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)
-- [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [Instrução Dim](dim-statement.md)
+- [Instrução ReDim](redim-statement.md)
+- [Instrução Option Compare](option-compare-statement.md)
+- [Instrução Option Strict](option-strict-statement.md)
+- [-optioncompare](../../reference/command-line-compiler/optioncompare.md)
+- [-optionexplicit](../../reference/command-line-compiler/optionexplicit.md)
+- [-optionstrict](../../reference/command-line-compiler/optionstrict.md)
 - [Caixa de diálogo Padrões do Visual Basic, Projetos, Opções](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

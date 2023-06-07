@@ -1,5 +1,6 @@
 ---
 title: MDA invalidVariant
+description: Examine o assistente de depuração gerenciada do invalidVariant, que será invocado se uma variante inválida for encontrada em uma chamada de código nativo/não gerenciado para gerenciado.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid variant
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - invalid VARIANT types
 - managed debugging assistants (MDAs), invalid variant
 ms.assetid: d273e070-d1b1-4a53-a9c7-7af837b04a3d
-ms.openlocfilehash: 8d686621ae4aa087e1b4f4bea9df7fc3de758d40
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: ab1233d9faa86ef1508fa8fe2b5af46cb37bd523
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216267"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051630"
 ---
 # <a name="invalidvariant-mda"></a>MDA invalidVariant
 O MDA (Assistente de Depuração Gerenciado) de `invalidVariant` é ativado quando uma estrutura `VARIANT` inválida é encontrada durante uma chamada de código não gerenciado ou nativo para código gerenciado.  
@@ -43,8 +43,8 @@ O MDA (Assistente de Depuração Gerenciado) de `invalidVariant` é ativado quan
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling de interoperabilidade](../interop/interop-marshaling.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Realizando marshaling de interoperabilidade](../interop/interop-marshaling.md)

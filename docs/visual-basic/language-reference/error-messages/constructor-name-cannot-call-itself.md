@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-ms.openlocfilehash: 8459ee7fec6d761161a721c88ccdc88e513fc95f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6abb6dde624e129b52fefecf8c51e6cde2567ae1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936689"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409797"
 ---
-# <a name="constructor-name-cannot-call-itself"></a>Construtor '\<nome >' não pode chamar a mesmo
-Um `Sub New` procedimento em uma classe ou estrutura chama a mesmo.  
+# <a name="constructor-name-cannot-call-itself"></a>O construtor '\<name>' não pode se chamar
+Um `Sub New` procedimento em uma classe ou estrutura chama a si mesmo.  
   
- A finalidade de um construtor é inicializar uma instância de uma classe ou estrutura quando ele é o primeiro é criado. Uma classe ou estrutura pode ter vários construtores, desde que todos eles tenham listas de parâmetros diferentes. Um construtor pode chamar outro construtor para executar sua funcionalidade, além de seu próprio. Mas não faz sentido para um construtor chamar a mesmo e, na verdade ele resultaria em recursão infinita se permitido.  
+ A finalidade de um construtor é inicializar uma instância de uma classe ou estrutura quando ela é criada pela primeira vez. Uma classe ou estrutura pode ter vários construtores, desde que todos tenham diferentes listas de parâmetros. Um construtor tem permissão para chamar outro construtor para executar sua funcionalidade, além de seu próprio. Mas não faz sentido para um Construtor chamar a si mesmo e, de fato, resultaria em recursão infinita, se permitido.  
   
  **ID do erro:** BC30298  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1. Verifique a lista de parâmetros do construtor que está sendo chamado. Ele deve ser diferente do construtor fazendo a chamada.  
+1. Verifique a lista de parâmetros do construtor que está sendo chamado. Ele deve ser diferente do construtor que faz a chamada.  
   
-2. Se você não pretende chamar um construtor diferente, remova o `Sub New` chamar inteiramente.  
+2. Se você não pretende chamar um Construtor diferente, remova `Sub New` totalmente a chamada.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Tempo de vida do objeto: Como os objetos são criados e destruídos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Tempo de vida do objeto: como os objetos são criados e destruídos](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

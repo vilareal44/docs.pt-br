@@ -1,14 +1,14 @@
 ---
 title: O que é o Construtor de Modelo e como ele funciona?
 description: Como usar o Construtor de Modelo do ML.NET para treinar automaticamente um modelo de machine learning
-ms.date: 03/25/2020
+ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 4afdbfd1682a30647b09d05d51a5c73c214fe2bd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 2ed4a0c3c94ae9f46bb1cf6ddb1e9774baf82367
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616923"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289493"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>O que é o Construtor de Modelo e como ele funciona?
 
@@ -119,7 +119,7 @@ Se você ainda não tiver seus próprios dados, experimente um desses conjuntos 
 
 ## <a name="train"></a>Treinar
 
-Depois de selecionar seu cenário, dados e rótulo, o Construtor de Modelo treina o modelo.
+Depois de selecionar o cenário, o ambiente, os dados e o rótulo, o construtor de modelos treina o modelo.
 
 ### <a name="what-is-training"></a>O que é o treinamento?
 
@@ -149,6 +149,8 @@ Esses números são apenas um guia. O tamanho exato do treinamento depende de:
 - o tipo de colunas
 - a tarefa ML
 - o desempenho de CPU, disco e memória do computador usado para treinamento
+
+Geralmente, é recomendável que você use mais de 100 linhas como conjuntos de valores com menos de que isso pode não produzir resultados e pode levar um tempo significativamente maior para treinar.
 
 ## <a name="evaluate"></a>Avaliar
 
@@ -193,7 +195,7 @@ Se a sua pontuação de desempenho do modelo não for tão boa quanto deseja, vo
 
 - Treinar por um período maior de tempo. Com mais tempo, o mecanismo de aprendizado de máquina automatizado experimenta mais algoritmos e configurações.
 
-- Adicionar mais dados. Às vezes, a quantidade de dados não é suficiente para treinar um modelo de machine learning de alta qualidade.
+- Adicionar mais dados. Às vezes, a quantidade de dados não é suficiente para treinar um modelo de aprendizado de máquina de alta qualidade. Isso é especialmente verdadeiro com conjuntos de valores que têm um pequeno número de exemplos.
 
 - Balancear seus dados. Para tarefas de classificação, certifique-se de que o conjunto de treinamento esteja equilibrado nas categorias. Por exemplo, se você tiver quatro classes para 100 exemplos de treinamento e as duas primeiras classes (tag1 e tag2) forem usadas para 90 registros, mas as outras duas (tag3 e tag4) forem usadas apenas nos 10 registros restantes, a falta de dados balanceados poderá fazer com que seu modelo tenha dificuldades para prever corretamente o tag3 ou o tag4.
 

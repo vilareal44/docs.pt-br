@@ -2,21 +2,21 @@
 title: System.ServiceModel.Security.SecuritySessionClosedResponseReceived
 ms.date: 03/30/2017
 ms.assetid: aab624cb-30c6-4ac4-9dea-5ea03b5a4917
-ms.openlocfilehash: 226b4212c12fba37218d1b932108429248160aed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9a05f0144f501579608a63972498f7c85dd2daa
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917131"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595746"
 ---
 # <a name="systemservicemodelsecuritysecuritysessionclosedresponsereceived"></a>System.ServiceModel.Security.SecuritySessionClosedResponseReceived
 System.ServiceModel.Security.SecuritySessionClosedResponseReceived  
   
 ## <a name="description"></a>Descrição  
- A sessão de segurança do cliente recebeu uma resposta fechada do servidor.  
+ A sessão do Client Security recebeu uma resposta fechada do servidor.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Rastreamento](index.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](using-tracing-to-troubleshoot-your-application.md)
+- [Administração e diagnóstico](../index.md)

@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-ms.openlocfilehash: 0e9b4510757fc0f98b2edfbe1c656cdb5f6bce72
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 45752f3ffa64079079505934afd76e812daad7bd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588631"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290649"
 ---
 # <a name="order-preservation-in-plinq"></a>Preservação da ordem em PLINQ
 Em PLINQ, o objetivo é maximizar o desempenho mantendo a exatidão. Uma consulta deve ser executada o mais rápido possível, mas ainda produzir os resultados corretos. Em alguns casos, a exatidão requer que a ordem da sequência de origem seja preservada. No entanto, a ordenação pode ser dispendiosa. Portanto, por padrão, o PLINQ não preserva a ordem da sequência de origem. Nesse sentido, o PLINQ assemelha-se a [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], mas é diferente do LINQ to Objects que preserva a ordenação.  
   
- Para substituir o comportamento padrão, ative a preservação da ordem usando o operador <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> na sequência de origem. Posteriormente, você pode desativar a preservação da ordem na consulta usando o método <xref:System.Linq.ParallelEnumerable.AsUnordered%2A>. Nos dois métodos, a consulta é processada com base na heurística que determina se a consulta deverá ser executada como paralela ou sequencial. Para saber mais, veja [Noções básicas sobre agilização em PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+ Para substituir o comportamento padrão, ative a preservação da ordem usando o operador <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> na sequência de origem. Posteriormente, você pode desativar a preservação da ordem na consulta usando o método <xref:System.Linq.ParallelEnumerable.AsUnordered%2A>. Nos dois métodos, a consulta é processada com base na heurística que determina se a consulta deverá ser executada como paralela ou sequencial. Para saber mais, veja [Noções básicas sobre agilização em PLINQ](understanding-speedup-in-plinq.md).  
   
  O exemplo a seguir mostra uma consulta paralela não ordenada que filtra todos os elementos que correspondem a uma condição, sem tentar ordenar os resultados de qualquer forma.  
   
@@ -120,7 +120,7 @@ Em PLINQ, o objetivo é maximizar o desempenho mantendo a exatidão. Uma consult
   
  Os resultados não ordenados não são ativamente embaralhados. Eles simplesmente não têm qualquer lógica de ordenação especial aplicada a eles. Em alguns casos, uma consulta não ordenada pode manter a ordenação da sequência de origem. No caso das consultas que usam o operador Select indexado, o PLINQ garante que os elementos de saída serão apresentados na ordem de índices crescentes, mas não garante quais índices serão atribuídos a quais elementos.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
-- [Programação Paralela](../../../docs/standard/parallel-programming/index.md)
+- [LINQ paralelo (PLINQ)](introduction-to-plinq.md)
+- [Programação paralela](index.md)

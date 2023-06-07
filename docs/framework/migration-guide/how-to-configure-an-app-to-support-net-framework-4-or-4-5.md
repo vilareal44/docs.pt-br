@@ -1,26 +1,27 @@
 ---
-title: 'Como: Configurar um aplicativo para suportar versões .NET Framework 4 ou posteriores'
+title: Como configurar um aplicativo para dar suporte a .NET Framework 4 ou versões posteriores
+description: Use o exemplo incluído para saber como configurar seu aplicativo de área de trabalho para dar suporte ao .NET Framework 4 ou posterior.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring apps to support .NET Framework
 - .NET Framework, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-ms.openlocfilehash: 30fb1da8d758b0e8996b4fcdebbb7fbf545a46c1
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: 58d71cb7fac7a3c2bef975c99cfab1ca730fb6eb
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80228752"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475457"
 ---
-# <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>Como: Configurar um aplicativo para suportar versões .NET Framework 4 ou posteriores
+# <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>Como configurar um aplicativo para dar suporte a .NET Framework 4 ou versões posteriores
 
-Todos os aplicativos que hospedam o CLR (Common Language Runtime) precisam iniciar ou *ativar* o CLR para executar o código gerenciado. Normalmente, um aplicativo .NET Framework é executado na versão do CLR em que foi criado, mas você pode alterar esse comportamento para aplicativos de área de trabalho usando um arquivo de configuração do aplicativo (às vezes chamado arquivo app.config). No entanto, você não pode alterar o comportamento padrão de ativação para aplicativos da Windows Store ou Windows Phone usando um arquivo de configuração de aplicativo. Este artigo explica como habilitar seu aplicativo da área de trabalho para ser executado em outra versão do .NET Framework e fornece um exemplo de como direcionar à versão 4 ou a outras versões.
+Todos os aplicativos que hospedam o CLR (Common Language Runtime) precisam iniciar ou *ativar* o CLR para executar o código gerenciado. Normalmente, um aplicativo .NET Framework é executado na versão do CLR em que ele foi criado, mas você pode alterar esse comportamento para aplicativos de desktop usando um arquivo de configuração de aplicativo (às vezes chamado de arquivo de app.config). No entanto, você não pode alterar o comportamento padrão de ativação para aplicativos da Windows Store ou Windows Phone usando um arquivo de configuração de aplicativo. Este artigo explica como habilitar seu aplicativo da área de trabalho para ser executado em outra versão do .NET Framework e fornece um exemplo de como direcionar à versão 4 ou a outras versões.
 
  A versão do .NET Framework que um aplicativo executa é determinada da seguinte forma:
 
 - Arquivo de configuração.
 
-     Se o arquivo de configuração do aplicativo incluir entradas [ \<de>de execução suportadas](../configure-apps/file-schema/startup/supportedruntime-element.md) que especificam uma ou mais versões do .NET Framework, e uma dessas versões estiver presente no computador do usuário, o aplicativo será executado nessa versão. O arquivo de configuração lê entradas [ \<de>de execução suportadas](../configure-apps/file-schema/startup/supportedruntime-element.md) na ordem em que estão listadas e usa a primeira versão do .NET Framework listada que está presente no computador do usuário. (Use o [ \<elemento> de tempo de execução necessário](../configure-apps/file-schema/startup/requiredruntime-element.md) para a versão 1.0.)
+     Se o arquivo de configuração do aplicativo incluir [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) entradas que especificam uma ou mais versões do .NET Framework, e uma dessas versões estiver presente no computador do usuário, o aplicativo será executado nessa versão. O arquivo de configuração lê [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) as entradas na ordem em que estão listadas e usa a primeira .NET Framework versão listada que está presente no computador do usuário. (Use o [ \<requiredRuntime> elemento](../configure-apps/file-schema/startup/requiredruntime-element.md) para a versão 1,0.)
 
 - Versão compilada.
 
@@ -28,7 +29,7 @@ Todos os aplicativos que hospedam o CLR (Common Language Runtime) precisam inici
 
 - Versão mais recente instalada.
 
-     Se a versão do .NET Framework em que o aplicativo foi construído não estiver presente e um arquivo de configuração não especificar uma versão em um [ \<elemento de> runtime suportado,](../configure-apps/file-schema/startup/supportedruntime-element.md)o aplicativo tentará ser executado na versão mais recente do .NET Framework que está presente no computador do usuário.
+     Se a versão do .NET Framework em que o aplicativo foi criado não estiver presente e um arquivo de configuração não especificar uma versão em um [ \<supportedRuntime> elemento](../configure-apps/file-schema/startup/supportedruntime-element.md), o aplicativo tentará ser executado na versão mais recente do .NET Framework que está presente no computador do usuário.
 
      No entanto, os aplicativos do .NET Framework 1.0, 1.1, 2.0, 3.0, e 3.5 não são executados automaticamente no .NET Framework 4 ou posterior e, em alguns casos, o usuário pode receber um erro e a instalação do .NET Framework 3.5 pode ser solicitada. O comportamento de ativação também pode depender do sistema operacional do usuário, porque as versões diferentes do sistema do Windows incluem diferentes versões do .NET Framework. Se seu aplicativo suportar tanto o .NET Framework 3.5 quanto 4 ou posterior, recomendamos indicar isso com várias entradas no arquivo de configuração do aplicativo para evitar erros de inicialização do .NET Framework. Para saber mais, confira [Versões e dependências](versions-and-dependencies.md).
 
@@ -43,9 +44,9 @@ Todos os aplicativos que hospedam o CLR (Common Language Runtime) precisam inici
 
 1. Adicione ou localize o arquivo de configuração para o projeto do .NET Framework. O arquivo de configuração para um aplicativo está no mesmo diretório e tem o mesmo nome que o aplicativo, mas tem uma extensão .config. Por exemplo, no caso de um aplicativo chamado MyExecutable.exe, o arquivo de configuração do aplicativo chama-se MyExecutable.exe.config.
 
-     Para adicionar um arquivo de configuração, na barra de menus do Visual Studio, escolha **Projeto**, **Adicionar Novo Item**. Escolha **Geral** no painel esquerdo e, em seguida, escolha **Arquivo de Configuração**. Nomeie o aplicativo de arquivo de *configuraçãoName*.exe.config. Essas opções de menu não estão disponíveis para projetos de aplicativos para Windows Store ou windows phone, porque você não pode alterar a política de ativação nessas plataformas.
+     Para adicionar um arquivo de configuração, na barra de menus do Visual Studio, escolha **Projeto**, **Adicionar Novo Item**. Escolha **Geral** no painel esquerdo e, em seguida, escolha **Arquivo de Configuração**. Nomeie o arquivo de configuração *appName*.exe.config. Essas opções de menu não estão disponíveis para projetos de aplicativo da Windows Store ou de aplicativos do Windows Phone, pois você não pode alterar a política de ativação nessas plataformas.
 
-2. Adicione [ \<](../configure-apps/file-schema/startup/supportedruntime-element.md) o elemento de>runtime suportado da seguinte forma ao arquivo de configuração do aplicativo:
+2. Adicione o [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) elemento da seguinte maneira ao arquivo de configuração do aplicativo:
 
     ```xml
     <configuration>
@@ -55,7 +56,7 @@ Todos os aplicativos que hospedam o CLR (Common Language Runtime) precisam inici
     </configuration>
     ```
 
-     onde * \<a versão>* especifica a versão CLR que se alinha com a versão .NET Framework que seu aplicativo suporta. Use as cadeias de caracteres a seguir:
+     em que *\<version>* especifica a versão do CLR que se alinha com a versão .NET Framework à qual seu aplicativo dá suporte. Use as cadeias de caracteres a seguir:
 
     - .NET Framework 1.0: “v1.0.3705”
 
@@ -65,7 +66,7 @@ Todos os aplicativos que hospedam o CLR (Common Language Runtime) precisam inici
 
     - .NET framework 4 e versões posteriores: "v4.0"
 
-     Você pode [ \<](../configure-apps/file-schema/startup/supportedruntime-element.md) adicionar vários elementos de>de runtime suportados, listados por ordem de preferência, para especificar suporte para várias versões do .NET Framework.
+     Você pode adicionar vários [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) elementos, listados em ordem de preferência, para especificar o suporte para várias versões do .NET Framework.
 
  A tabela a seguir demonstra como as configurações do arquivo de configuração do aplicativo e as versões do .NET Framework instaladas em um computador determinam a versão na qual um aplicativo .NET Framework 3.5 é executado. Os exemplos são específicos para um aplicativo .NET Framework 3.5, mas você pode usar uma lógica semelhante para destinar aplicativos criados com versões anteriores do .NET Framework. Observe que o .NET Framework 2.0 (v2.0.50727) é usado para especificar o .NET Framework 3.5 no arquivo de configuração do aplicativo.
 
@@ -79,7 +80,7 @@ Todos os aplicativos que hospedam o CLR (Common Language Runtime) precisam inici
 
  \* Para saber mais sobre essa mensagem de erro e como evitá-la, veja [Erros de inicialização do .NET Framework: Gerenciar a experiência do usuário](../deployment/initialization-errors-managing-the-user-experience.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Migrar do .NET Framework 1.1](migrating-from-the-net-framework-1-1.md)
 - [Guia de Migração](index.md)

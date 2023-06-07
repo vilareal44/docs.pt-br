@@ -1,5 +1,5 @@
 ---
-title: 'Explicação passo a passo: Criando um tipo de bloco de fluxo de dados personalizado'
+title: 'Passo a passo: criando um tipo de bloco de fluxo de dados personalizado'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - TPL dataflow library, creating custom dataflow blocks
 - dataflow blocks, creating custom in TPL
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
-ms.openlocfilehash: cb953952bbed90edd2db799e92d44ec9f062babf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 37857e465bf4089dbeecc4cfd532d0702f795495
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139888"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284696"
 ---
-# <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Explicação passo a passo: Criando um tipo de bloco de fluxo de dados personalizado
+# <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Passo a passo: criando um tipo de bloco de fluxo de dados personalizado
 Embora a biblioteca de fluxo de dados TPL forneça vários tipos de bloco de fluxo de dados que permitem uma gama de funcionalidades, também é possível criar tipos de blocos personalizados. Este documento mostra como criar um tipo de bloco de fluxo de dados que implanta comportamentos personalizados.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Leia primeiro sobre o [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) antes de ler este documento.  
+ Leia primeiro sobre o [Fluxo de dados](dataflow-task-parallel-library.md) antes de ler este documento.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
   
@@ -50,6 +50,6 @@ Embora a biblioteca de fluxo de dados TPL forneça vários tipos de bloco de flu
  [!code-csharp[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_slidingwindowblock/cs/slidingwindowblock.cs#100)]
  [!code-vb[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#100)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Fluxo de dados](dataflow-task-parallel-library.md)

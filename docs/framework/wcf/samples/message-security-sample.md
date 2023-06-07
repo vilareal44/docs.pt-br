@@ -2,20 +2,20 @@
 title: Exemplo de segurança de mensagem
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
-ms.openlocfilehash: 43e1a9104bdd44509d86bd198559c5e7477a9964
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 935695a46e907bf1deeb2e5cb24917ba92b81fe0
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183524"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584840"
 ---
 # <a name="message-security-sample"></a>Exemplo de segurança de mensagem
-Esta amostra demonstra como implementar um `basicHttpBinding` aplicativo que usa a segurança e a mensagem. Esta amostra é baseada no [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora.  
+Este exemplo demonstra como implementar um aplicativo que usa o `basicHttpBinding` e a segurança de mensagem. Este exemplo é baseado no [introdução](getting-started-sample.md) que implementa um serviço de calculadora.  
   
 > [!NOTE]
-> O procedimento de configuração e as instruções de construção desta amostra estão localizados no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- O modo `basicHttpBinding` de segurança pode ser `Message`definido `Transport` `TransportWithMessageCredential`para `TransportCredentialOnly` `None`os seguintes valores: , , e . No seguinte arquivo de serviço de amostra App.config, a definição de ponto final especifica e faz referência a `basicHttpBinding` uma configuração de vinculação nomeada, `Binding1`conforme mostrado na seguinte configuração de amostra:  
+ O modo de segurança de `basicHttpBinding` pode ser definido com os seguintes valores: `Message` ,, `Transport` `TransportWithMessageCredential` `TransportCredentialOnly` e `None` . No arquivo app. config do exemplo a seguir, a definição do ponto de extremidade especifica o `basicHttpBinding` e faz referência a uma configuração de associação denominada `Binding1` , conforme mostrado na seguinte configuração de exemplo:  
   
 ```xml  
 <system.serviceModel>  
@@ -34,7 +34,7 @@ Esta amostra demonstra como implementar um `basicHttpBinding` aplicativo que usa
 </system.serviceModel>  
 ```  
   
- A configuração `mode` de vinculação define `Message` o `clientCredentialType` atributo do [ \<>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) de segurança e define o atributo da [ \<mensagem>](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md) como `Certificate` mostrado na seguinte configuração de amostra:  
+ A configuração de associação define o `mode` atributo de [\<security>](../../configure-apps/file-schema/wcf/security-of-basichttpbinding.md) para `Message` e define o `clientCredentialType` atributo de como [\<message>](../../configure-apps/file-schema/wcf/message-of-basichttpbinding.md) `Certificate` , conforme mostrado na seguinte configuração de exemplo:  
   
 ```xml  
 <bindings>  
@@ -52,7 +52,7 @@ Esta amostra demonstra como implementar um `basicHttpBinding` aplicativo que usa
 </bindings>  
 ```  
   
- O certificado que o serviço usa para autenticar-se ao cliente é definido `serviceCredentials` na seção de comportamentos do arquivo de configuração o elemento. O modo de validação que se aplica ao certificado que o cliente usa para autenticar-se ao serviço também é definido na seção de comportamentos o `clientCertificate` elemento.  
+ O certificado que o serviço usa para se autenticar no cliente é definido na seção comportamentos do arquivo de configuração sob o `serviceCredentials` elemento. O modo de validação que se aplica ao certificado que o cliente usa para se autenticar para o serviço também é definido na seção comportamentos sob o `clientCertificate` elemento.  
   
 ```xml  
 <!--For debugging purposes, set the includeExceptionDetailInFaults attribute to true.-->  
@@ -92,7 +92,7 @@ Esta amostra demonstra como implementar um `basicHttpBinding` aplicativo que usa
 </behaviors>  
 ```  
   
- Os mesmos detalhes de vinculação e segurança são especificados no arquivo de configuração do cliente.  
+ Os mesmos detalhes de ligação e segurança são especificados no arquivo de configuração do cliente.  
   
  A identidade do chamador é exibida na janela do console de serviço usando o seguinte código:  
 
@@ -100,7 +100,7 @@ Esta amostra demonstra como implementar um `basicHttpBinding` aplicativo que usa
 Console.WriteLine("Called by {0}", ServiceSecurityContext.Current.PrimaryIdentity.Name);  
 ```
 
- Quando você executa a amostra, as solicitações e respostas da operação são exibidas na janela do console cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ```console
 Add(100,15.99) = 115.99  
@@ -110,71 +110,71 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-and-build-the-sample"></a>Para configurar e construir a amostra  
+### <a name="to-set-up-and-build-the-sample"></a>Para configurar e compilar o exemplo  
   
-1. Certifique-se de que você tenha realizado o [procedimento de configuração única para as amostras da Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para construir a edição C# ou Visual Basic .NET da solução, siga as instruções em [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para criar a edição C# ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).  
   
-### <a name="to-run-the-sample-on-the-same-machine"></a>Para executar a amostra na mesma máquina  
+### <a name="to-run-the-sample-on-the-same-machine"></a>Para executar o exemplo no mesmo computador  
   
-1. Executar Setup.bat da pasta de instalação de amostra. Isso instala todos os certificados necessários para a execução da amostra.  
-  
-    > [!NOTE]
-    > O arquivo de lote Setup.bat foi projetado para ser executado a partir de um prompt de comando do Windows SDK. Requer que a variável ambiente MSSDK aponte para o diretório onde o SDK está instalado. Essa variável de ambiente é definida automaticamente dentro de um prompt de comando Do Windows SDK.  
-  
-2. Execute o aplicativo de serviço a partir de \service\bin.  
-  
-3. Execute o aplicativo cliente a partir de \client\bin. A atividade do cliente é exibida no aplicativo do console cliente.  
-  
-4. Se o cliente e o serviço não forem capazes de se comunicar, consulte [Dicas de solução de problemas para amostras wcf](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
-  
-5. Remova os certificados executando Cleanup.bat quando terminar com a amostra. Outras amostras de segurança usam os mesmos certificados.  
-  
-### <a name="to-run-the-sample-across-machines"></a>Para executar a amostra através de máquinas  
-  
-1. Crie um diretório na máquina de serviço para os binários de serviço.  
-  
-2. Copie os arquivos do programa de serviço para o diretório de serviço no servidor. Copie também os arquivos Setup.bat, Cleanup.bat e ImportClientCert.bat para o servidor.  
-  
-3. Crie um diretório na máquina cliente para os binários do cliente.  
-  
-4. Copie os arquivos do programa cliente para o diretório do cliente na máquina cliente. Copie também os arquivos Setup.bat, Cleanup.bat e ImportServiceCert.bat para o cliente.  
-  
-5. No servidor, `setup.bat service`execute. A `setup.bat` execução com o `service` argumento cria um certificado de serviço com o nome de domínio totalmente qualificado da máquina e exporta o certificado de serviço para um arquivo chamado Service.cer.  
-  
-6. Editar Service.exe.config para refletir o novo `findValue` nome do certificado (no atributo no [ \<elemento serviceCertificate>)](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) que é o mesmo que o nome de domínio totalmente qualificado da máquina. Também altere o valor do endereço base para especificar um nome de máquina totalmente qualificado em vez de localhost`.`  
-  
-7. Copie o arquivo Service.cer do diretório de serviço para o diretório do cliente na máquina cliente.  
-  
-8. No cliente, `setup.bat client`corra. A `setup.bat` execução com o `client` argumento cria um certificado de cliente chamado client.com e exporta o certificado do cliente para um arquivo chamado Client.cer.  
-  
-9. No arquivo Client.exe.config na máquina cliente, altere o valor do endereço do ponto final para corresponder ao novo endereço do seu serviço. Você faz isso substituindo o localhost pelo nome de domínio totalmente qualificado do servidor. Também altere o atributo `findValue` [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) do>de certificado padrão para o novo nome do certificado de serviço, que é o nome de domínio totalmente qualificado do servidor.  
-  
-10. Copie o arquivo Client.cer do diretório do cliente para o diretório de serviço situado no servidor.  
-  
-11. No cliente, execute ImportServiceCert.bat. Isso importa o certificado de serviço do arquivo Service.cer para a loja CurrentUser - TrustedPeople.  
-  
-12. No servidor, execute ImportClientCert.bat, Isso importa o certificado do cliente do arquivo Client.cer para a loja LocalMachine - TrustedPeople.  
-  
-13. Na máquina de serviço, execute Service.exe a partir de um prompt de comando.  
-  
-14. Na máquina cliente, inicie client.exe a partir de uma janela de solicitação de comando.  
-  
-    1. Se o cliente e o serviço não forem capazes de se comunicar, consulte [Dicas de solução de problemas para amostras wcf](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
-  
-### <a name="to-clean-up-after-the-sample"></a>Para limpar depois da amostra  
-  
-- Executar Cleanup.bat na pasta amostras depois de terminar de executar a amostra.  
+1. Execute setup. bat na pasta de instalação de exemplo. Isso instala todos os certificados necessários para executar o exemplo.  
   
     > [!NOTE]
-    > Este script não remove certificados de serviço em um cliente ao executar esta amostra em máquinas. Se você tiver executado amostras de Windows Communication Foundation (WCF) que usam certificados em máquinas, certifique-se de limpar os certificados de serviço que foram instalados na loja CurrentUser - TrustedPeople. Para fazer isso, use `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` o seguinte comando: Por exemplo:`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`  
+    > O arquivo em lotes setup. bat foi projetado para ser executado em um prompt de comando SDK do Windows. Ele requer que a variável de ambiente MSSDK aponte para o diretório em que o SDK está instalado. Essa variável de ambiente é definida automaticamente em um prompt de comando SDK do Windows.  
+  
+2. Executar o aplicativo de serviço do \service\bin.  
+  
+3. Executar o aplicativo cliente do \client\bin. A atividade do cliente é exibida no aplicativo de console do cliente.  
+  
+4. Se o cliente e o serviço não puderem se comunicar, consulte [dicas de solução de problemas para exemplos do WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+  
+5. Remova os certificados executando Cleanup. bat quando tiver concluído o exemplo. Outros exemplos de segurança usam os mesmos certificados.  
+  
+### <a name="to-run-the-sample-across-machines"></a>Para executar o exemplo entre computadores  
+  
+1. Crie um diretório no computador de serviço para os binários de serviço.  
+  
+2. Copie os arquivos de programa do serviço para o diretório de serviço no servidor. Copie também os arquivos Setup. bat, Cleanup. bat e ImportClientCert. bat para o servidor.  
+  
+3. Crie um diretório no computador cliente para os binários do cliente.  
+  
+4. Copie os arquivos de programa do cliente para o diretório do cliente no computador cliente. Copie também os arquivos Setup. bat, Cleanup. bat e ImportServiceCert. bat para o cliente.  
+  
+5. No servidor, execute `setup.bat service` . `setup.bat`A execução com o `service` argumento cria um certificado de serviço com o nome de domínio totalmente qualificado do computador e exporta o certificado de serviço para um arquivo chamado Service. cer.  
+  
+6. Edite Service. exe. config para refletir o novo nome de certificado (no `findValue` atributo no [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemento) que é o mesmo que o nome de domínio totalmente qualificado do computador. Além disso, altere o valor do endereço base para especificar um nome de computador totalmente qualificado em vez de localhost`.`  
+  
+7. Copie o arquivo Service. cer do diretório de serviço para o diretório do cliente no computador cliente.  
+  
+8. No cliente, execute `setup.bat client` . `setup.bat`A execução com o `client` argumento cria um certificado de cliente chamado Client.com e exporta o certificado do cliente para um arquivo chamado Client. cer.  
+  
+9. No arquivo client. exe. config no computador cliente, altere o valor de endereço do ponto de extremidade para corresponder ao novo endereço do serviço. Você faz isso substituindo localhost pelo nome de domínio totalmente qualificado do servidor. Além disso, altere o `findValue` atributo do [\<defaultCertificate>](../../configure-apps/file-schema/wcf/defaultcertificate-element.md) para o novo nome do certificado de serviço, que é o nome de domínio totalmente qualificado do servidor.  
+  
+10. Copie o arquivo client. cer do diretório cliente para o diretório de serviço no servidor.  
+  
+11. No cliente, execute ImportServiceCert. bat. Isso importa o certificado de serviço do arquivo Service. cer para o repositório CurrentUser-TrustedPeople.  
+  
+12. No servidor, execute ImportClientCert. bat, isso importa o certificado do cliente do arquivo client. cer para o repositório LocalMachine-TrustedPeople.  
+  
+13. Na máquina de serviço, execute Service. exe em um prompt de comando.  
+  
+14. No computador cliente, inicie o Client. exe em uma janela de prompt de comando.  
+  
+    1. Se o cliente e o serviço não puderem se comunicar, consulte [dicas de solução de problemas para exemplos do WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+  
+### <a name="to-clean-up-after-the-sample"></a>Para limpar após o exemplo  
+  
+- Execute o Cleanup. bat na pasta Samples depois de concluir a execução do exemplo.  
+  
+    > [!NOTE]
+    > Esse script não remove certificados de serviço em um cliente ao executar esse exemplo em computadores. Se você tiver executado Windows Communication Foundation (WCF) exemplos que usam certificados entre computadores, certifique-se de limpar os certificados de serviço que foram instalados no repositório CurrentUser-TrustedPeople. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` por exemplo:`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`  
   
 > [!IMPORTANT]
 > Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Se esse diretório não existir, vá para [a Windows Communication Foundation (WCF) e para o Windows Workflow Foundation (WF) Amostras para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Amostras e amostras da [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (Windows Communication Foundation). Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\MessageSecurity`  

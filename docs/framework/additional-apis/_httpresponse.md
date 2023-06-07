@@ -1,5 +1,6 @@
 ---
-title: campo httpWebRequest._HttpResponse
+title: Campo HttpWebRequest. _HttpResponse
+description: Entenda o campo HttpWebRequest. _HttpResponse no .NET. Esse campo é um tipo HttpWebResponse que contém detalhes de resposta HTTP de uma solicitação HTTP.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,32 +11,32 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: eab9b789-beb4-4c28-b2d8-78debc7ba129
-ms.openlocfilehash: 0c5bfc56299aa06dd59c2598588044e81a69933a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 70058e1183abf5b6bfd172497f65a3ceb2344060
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156240"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989961"
 ---
-# <a name="httpwebrequest_httpresponse-field"></a>HttpWebRequest. \_Campo httpresponse
+# <a name="httpwebrequest_httpresponse-field"></a>HttpWebRequest. \_ Campo HttpResponse
 
-`HttpWebRequest._HttpResponse`é <xref:System.Net.HttpWebResponse> uma resposta HTTP contendo detalhes de uma solicitação HTTP. Pode ser `null` até que uma resposta HTTP seja recebida.
+`HttpWebRequest._HttpResponse`é um <xref:System.Net.HttpWebResponse> que contém detalhes de resposta http de uma solicitação HTTP. Pode ser `null` até que uma resposta http seja recebida.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
   
 ```csharp  
 internal HttpWebResponse _HttpResponse
 ```
 
 > [!WARNING]
-> O `HttpWebRequest._HttpResponse` campo é interno e não deve ser usado diretamente em seu código.
+> O `HttpWebRequest._HttpResponse` campo é interno e não deve ser usado diretamente no seu código.
 >
-> A Microsoft não suporta o uso deste campo em um aplicativo de produção nenhuma circunstância.
+> A Microsoft não oferece suporte ao uso deste campo em um aplicativo de produção em qualquer circunstância.
 
 ## <a name="requirements"></a>Requisitos
 
-**Espaço de nome:**<xref:System.Net>
+**Namespace:** <xref:System.Net>
 
-**Montagem:** Sistema (em System.dll)
+**Assembly:** Sistema (em System.dll)
 
-**Versões do Framework .NET:** Disponível desde 2.0.
+**.NET Framework versões:** Disponível desde 2,0.

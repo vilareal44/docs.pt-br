@@ -9,12 +9,12 @@ helpviewer_keywords:
 - My.Application.Log object
 - examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
-ms.openlocfilehash: dace4bac3bf7529b8c50a492a092ad478f4d9e2d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43738b2d654435532a98654cbc40af134d43f02c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74353250"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410017"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>Registrando informações em log a partir do aplicativo (Visual Basic)
 
@@ -28,18 +28,18 @@ Esta seção contém tópicos que abordam como registrar informações em log do
   
 |Para|Consulte|  
 |--------|---------|  
-|Gravar informações de evento em logs do aplicativo.|[Como: gravar mensagens de log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
-|Gravar informações de exceção em logs do aplicativo.|[Como: registrar exceções em log](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  
-|Gravar informações de rastreamento em logs do aplicativo quando o aplicativo for inicializado e desligado.|[Como: registrar mensagens em log quando o aplicativo é iniciado ou encerrado](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-messages-when-the-application-starts-or-shuts-down.md)|  
-|Configure `My.Application.Log` para gravar informações em um arquivo de texto.|[Como: gravar informações de evento em um arquivo de texto](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)|  
-|Configure `My.Application.Log` para gravar informações em um log de eventos.|[Como: gravar em um Log de Eventos do Aplicativo](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)|  
-|Altere o local em que `My.Application.Log` grava as informações.|[Passo a passo: alterar o local no qual My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)|  
-|Determine o local em que `My.Application.Log` grava as informações.|[Passo a passo: determinar o local no qual My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)|  
-|Crie um ouvinte de log personalizado para `My.Application.Log`.|[Passo a passo: criar ouvintes de log personalizados](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)|  
-|Filtre a saída dos logs `My.Application.Log`.|[Passo a passo: filtrar a saída de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)|  
+|Gravar informações de evento em logs do aplicativo.|[Como: gravar mensagens de log](how-to-write-log-messages.md)|  
+|Gravar informações de exceção em logs do aplicativo.|[Como: registrar exceções em log](how-to-log-exceptions.md)|  
+|Gravar informações de rastreamento em logs do aplicativo quando o aplicativo for inicializado e desligado.|[Como: registrar mensagens em log quando o aplicativo é iniciado ou encerrado](how-to-log-messages-when-the-application-starts-or-shuts-down.md)|  
+|Configure `My.Application.Log` para gravar informações em um arquivo de texto.|[Como: gravar informações de evento em um arquivo de texto](how-to-write-event-information-to-a-text-file.md)|  
+|Configure `My.Application.Log` para gravar informações em um log de eventos.|[Como: gravar em um Log de Eventos do Aplicativo](how-to-write-to-an-application-event-log.md)|  
+|Altere o local em que `My.Application.Log` grava as informações.|[Passo a passo: alterar o local no qual My.Application.Log grava informações](walkthrough-changing-where-my-application-log-writes-information.md)|  
+|Determine o local em que `My.Application.Log` grava as informações.|[Passo a passo: determinar o local no qual My.Application.Log grava informações](walkthrough-determining-where-my-application-log-writes-information.md)|  
+|Crie um ouvinte de log personalizado para `My.Application.Log`.|[Passo a passo: criar ouvintes de log personalizados](walkthrough-creating-custom-log-listeners.md)|  
+|Filtre a saída dos logs `My.Application.Log`.|[Passo a passo: filtrar a saída de My.Application.Log](walkthrough-filtering-my-application-log-output.md)|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
-- [Trabalhar com logs do aplicativo](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Solução de problemas: ouvintes de log](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+- [Trabalhar com logs do aplicativo](working-with-application-logs.md)
+- [Solução de problemas: ouvintes de log](troubleshooting-log-listeners.md)

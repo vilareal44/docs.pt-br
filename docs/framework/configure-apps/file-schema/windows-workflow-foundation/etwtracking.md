@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
 ms.openlocfilehash: d562bd4e3d46a1bdf41fc4065fee926850a49aa1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152165"
 ---
-# <a name="etwtracking"></a>\<etwTracking>
+# \<etwTracking>
 Um comportamento de serviço que permite que um serviço que utiliza o acompanhamento ETW use um <xref:System.Activities.Tracking.EtwTrackingParticipant>.  
   
-[**\<>de configuração**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<Sistema.>de modelo de serviço**](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<comportamentos>**](behaviors-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviçocomportamentos>**](servicebehaviors-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<comportamento>**](behavior-of-servicebehaviors-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<etwRastreamento>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<etwTracking>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +48,7 @@ Um comportamento de serviço que permite que um serviço que utiliza o acompanha
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<> de \<comportamento de>de serviços](behavior-of-servicebehaviors-of-workflow.md)|Especifica um elemento de comportamento.|  
+|[\<behavior>desse\<serviceBehaviors>](behavior-of-servicebehaviors-of-workflow.md)|Especifica um elemento de comportamento.|  
   
 ## <a name="remarks"></a>Comentários  
  Quando adicionado à configuração de comportamento do serviço, este elemento de configuração configura um participante de rastreamento em um serviço de fluxo de trabalho.  
@@ -58,7 +58,7 @@ Um comportamento de serviço que permite que um serviço que utiliza o acompanha
 ## <a name="example"></a>Exemplo  
  O exemplo de configuração a seguir mostra o participante de rastreamento ETW padrão que está sendo configurado no arquivo Web. config.  
   
- O ID do Provedor que o Participante de Rastreamento do ETW ** \<** usa para escrever os Registros de Rastreamento para ETW é definido na seção de diagnósticos>. O participante de rastreamento tem um perfil associado a ele para especificar os registros de rastreamento que tiver assinado. Isso é definido pelo atributo **profileName** do ** \<** elemento add>. Uma vez definidos, o Participante de rastreamento é adicionado ao ** \<etwTracking>** comportamento de serviço. Isso adicionará os participantes de rastreamento selecionado para extensões da instância de fluxo de trabalho, para que eles começam a receber os registros de rastreamento.  
+ A ID do provedor que o participante de rastreamento ETW usa para gravar os registros de rastreamento no ETW é definida na **\<diagnostics>** seção. O participante de rastreamento tem um perfil associado a ele para especificar os registros de rastreamento que tiver assinado. Isso é definido pelo atributo **ProfileName** do **\<add>** elemento. Depois que elas são definidas, o participante de rastreamento é adicionado ao **\<etwTracking>** comportamento do serviço. Isso adicionará os participantes de rastreamento selecionado para extensões da instância de fluxo de trabalho, para que eles começam a receber os registros de rastreamento.  
   
 ```xml  
 <configuration>

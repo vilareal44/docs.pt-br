@@ -3,12 +3,12 @@ title: Ferramenta geradora de serializador de XML (Sgen.exe)
 description: O gerador de serializador XML cria um assembly de serialização XML para tipos em um assembly, o que melhora o desempenho de inicialização do XmlSerializer.
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 65e368cfd9294497608b061f15a4fe4755ed745c
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: b6d9406ca6a69f7bdff3129b55c89dd5d1589d3f
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380036"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84288934"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Ferramenta geradora de serializador de XML (Sgen.exe)
 
@@ -23,7 +23,7 @@ sgen [options]
 ```
   
 > [!TIP]
-> Para que as ferramentas de .NET Framework funcionem corretamente, você deve definir as `Path` `Include` variáveis de ambiente, e `Lib` corretamente. Defina essas variáveis de ambiente executando SDKVars.bat, que está localizado no diretório \<SDK>\v2.0\Bin. SDKVars.bat deve ser executado em todo shell de comando.
+> Para que as ferramentas de .NET Framework funcionem corretamente, você deve definir as `Path` `Include` variáveis de ambiente, e `Lib` corretamente. Defina essas variáveis de ambiente executando SDKVars. bat, que está localizado no \<SDK> diretório \v2.0\Bin. SDKVars.bat deve ser executado em todo shell de comando.
   
 ## <a name="parameters"></a>Parâmetros  
   
@@ -33,7 +33,7 @@ sgen [options]
 |**/c \[ Ackers \] :**_Opções_|Especifica as opções para passar para o compilador C#. Todas as opções csc.exe têm suporte quando são passadas para o compilador. Isso pode ser usado para especificar que o assembly deve ser assinado e para especificar o arquivo de chave.|  
 |**/d \[ ebug\]**|Gera uma imagem que pode ser usada com um depurador.|  
 |**/f \[ orçar\]**|Força a substituição de um assembly existente de mesmo nome. O padrão é **false**.|  
-|**/help ou /?**|Exibe sintaxe de comando e opções para a ferramenta.|  
+|**/Help ou/?**|Exibe sintaxe de comando e opções para a ferramenta.|  
 |**/k \[ er\]**|Suprime a exclusão dos arquivos de origem gerados e outros arquivos temporários depois que tiverem sido compilados no assembly de serialização. Isso pode ser usado para determinar se a ferramenta está gerando o código de serialização para um tipo específico.|  
 |**/n \[ ologo\]**|Suprime a exibição do banner de inicialização da Microsoft.|  
 |**/o \[ UT \] :**_caminho_|Especifica o diretório no qual salvar o assembly gerado. **Observação:** o nome do assembly gerado é composto pelo nome do assembly de entrada mais “xmlSerializers.dll”.|  
@@ -64,5 +64,5 @@ sgen Data.dll
   
 ## <a name="see-also"></a>Confira também
 
-- [Ferramentas](../../../docs/framework/tools/index.md)
-- [Prompts de comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Ferramentas](../../framework/tools/index.md)
+- [Prompts de comando](../../framework/tools/developer-command-prompt-for-vs.md)

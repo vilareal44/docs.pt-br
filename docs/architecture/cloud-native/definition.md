@@ -3,12 +3,12 @@ title: Como definir o que é nativo de nuvem
 description: Saiba mais sobre os pilares básicos que fornecem o Fundação para sistemas nativos de nuvem
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: e8b07fe7758d90f6ba97b81d0efa9d2fb5058d49
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f50c144d99fae0c4702965342fd76ec22e8bd8c8
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614156"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87427028"
 ---
 # <a name="defining-cloud-native"></a>Definindo a nuvem nativa
 
@@ -34,7 +34,7 @@ Aqui estão algumas empresas que implementaram essas técnicas. Pense na velocid
 | :-------- | :-------- |
 | [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Tem mais de 600 serviços em produção. Implanta centenas de vezes por dia. |
 | [Uber](https://eng.uber.com/micro-deploy/) | Tem mais de 1.000 serviços em produção. Implanta vários milhares de vezes por semana. |
-| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | Tem mais de 300 serviços em produção. Implanta 1.000 vezes por dia. |
+| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | Tem mais de 3.000 serviços em produção. Implanta 1.000 vezes por dia. |
 
 Como você pode ver, Netflix, Uber e WeChat expõem sistemas que consistem em centenas de microservices independentes. Esse estilo de arquitetura permite que eles respondam rapidamente às condições do mercado. Eles podem atualizar de forma instantânea áreas pequenas de um aplicativo dinâmico e complexo e dimensionar individualmente essas áreas conforme necessário.
 
@@ -86,7 +86,7 @@ A tabela a seguir destaca a metodologia de doze fatores:
 | 8 | Simultaneidade | Os serviços são expandidos em um grande número de pequenos processos idênticos (cópias), em oposição à expansão de uma única instância grande no computador mais potente disponível. |
 | 9 | Disposability | As instâncias de serviço devem ser descartáveis, favorecer as inicializações rápidas para aumentar as oportunidades de escalabilidade e os desligamentos normais para deixar o sistema em um estado correto. Os contêineres do Docker junto com um orquestrador atendem inerentemente a esse requisito. |
 | 10 | Paridade de desenvolvimento/prod | Mantenha os ambientes em todo o ciclo de vida do aplicativo o mais semelhante possível, evitando atalhos dispendiosos. Aqui, a adoção de contêineres pode contribuir muito promovendo o mesmo ambiente de execução. |
-| 11 | Registro em log | Tratar logs gerados por microservices como fluxos de eventos. Processe-os com um agregador de eventos e propague os dados para ferramentas de gerenciamento de log/mineração de dados como Azure Monitor ou Splunk e eventualmente arquivamento de longo prazo. |
+| 11 | Registrando em log | Tratar logs gerados por microservices como fluxos de eventos. Processe-os com um agregador de eventos e propague os dados para ferramentas de gerenciamento de log/mineração de dados como Azure Monitor ou Splunk e eventualmente arquivamento de longo prazo. |
 | 12 | Processos de administração | Execute tarefas administrativas/de gerenciamento como processos únicos. As tarefas podem incluir a limpeza de dados e a obtenção de análises para um relatório. As ferramentas que executam essas tarefas devem ser invocadas no ambiente de produção, mas separadamente do aplicativo. |
 
 No livro, [além do aplicativo de doze fatores](https://content.pivotal.io/blog/beyond-the-twelve-factor-app), o autor Kevin Hoffman detalha cada um dos 12 fatores originais (escritos em 2011). Além disso, ele aborda três fatores adicionais que refletem o design de aplicativos de nuvem moderno de hoje.
@@ -173,7 +173,7 @@ Os microserviços podem ser criados com qualquer plataforma de desenvolvimento m
 
 A plataforma Microsoft .NET Core é uma excelente opção. Gratuito e de código aberto, ele tem muitos recursos internos para simplificar o desenvolvimento de microserviço. O .NET Core é uma plataforma cruzada. Os aplicativos podem ser criados e executados no Windows, no macOS e na maioria dos tipos de Linux.
 
-O .NET Core é altamente funcional e pontuado bem em comparação com o Node. js e outras plataformas concorrentes. Curiosamente, a [TechEmpower](https://www.techempower.com/) realizou um amplo conjunto de [benchmarks de desempenho](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) em várias plataformas e estruturas de aplicativos Web. .NET Core pontuado nos 10 principais-bem acima do node. js e outras plataformas concorrentes.
+O .NET Core é altamente funcional e tem um bom desempenho em comparação com Node.js e outras plataformas concorrentes. Curiosamente, a [TechEmpower](https://www.techempower.com/) realizou um amplo conjunto de [benchmarks de desempenho](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) em várias plataformas e estruturas de aplicativos Web. O .NET Core foi pontuado nos 10 principais, bem acima Node.js e em outras plataformas concorrentes.
 
 O .NET Core é mantido pela Microsoft e pela Comunidade do .NET no GitHub.
 
@@ -209,7 +209,7 @@ Você pode implantar esse mesmo contêiner em qualquer ambiente que tenha o meca
 
 Ao compartilhar o sistema operacional subjacente e os recursos do host, os contêineres têm uma superfície muito menor do que uma máquina virtual completa. O tamanho menor aumenta a *densidade*, ou o número de microserviços, que um determinado host pode executar ao mesmo tempo.
 
-### <a name="container-orchestration"></a>Orquestração de contêineres
+### <a name="container-orchestration"></a>Orquestração de contêiner
 
 Embora ferramentas como o Docker criem imagens e executem contêineres, você também precisará de ferramentas para gerenciá-las. O gerenciamento de contêineres é feito com um programa de software especial chamado orquestrador de contêiner. Ao operar em escala, a orquestração de contêiner é essencial.
 
@@ -225,7 +225,7 @@ A tabela a seguir descreve as tarefas de orquestração comuns.
 | :-------- | :-------- |
 | Agendamento | Provisione automaticamente instâncias de contêiner.|
 | Afinidade/antiafinidade | Provisione contêineres próximos ou distantes uns dos outros, ajudando a disponibilidade e o desempenho. |
-| Monitoramento de integridade | Detectar e corrigir automaticamente as falhas.|
+| Monitoramento da integridade | Detectar e corrigir automaticamente as falhas.|
 | Failover | Reprovisionar automaticamente a instância com falha para computadores íntegros.|
 | Scaling | Adicione ou remova automaticamente a instância de contêiner para atender à demanda.|
 | Rede | Gerenciar uma sobreposição de rede para comunicação de contêiner.|
@@ -331,7 +331,7 @@ Azure Pipelines é um serviço de nuvem que combina CI (integração contínua) 
 Você define seu pipeline no código em um arquivo YAML junto com o restante do código para seu aplicativo.
 
 - O pipeline tem controle de versão com seu código e segue a mesma estrutura de ramificação.
-- Você Obtém a validação de suas alterações por meio de revisões de código em solicitações pull e políticas de compilação de ramificações.
+- Você obtém a validação de suas alterações por meio de revisões de código em solicitações de pull e políticas de build de ramificações.
 - Cada ramificação que você usa pode personalizar a política de compilação modificando o arquivo Azure-pipelines. yml.
 - O arquivo de pipeline é verificado no controle de versão e pode ser investigado se houver um problema.
 

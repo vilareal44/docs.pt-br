@@ -1,15 +1,16 @@
 ---
-title: Como escrever uma consulta que encontra elementos baseados no contexto (C#)
+title: Como escrever uma consulta que localiza elementos com base no contexto (C#)
+description: Saiba como escrever uma consulta que localiza elementos com base no contexto. Consulte exemplos de código e exiba recursos adicionais.
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: 3fc131fdeb8dbf8871bfa455bc54eab0eeca7022
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64f09a41c2c1d01b0be8f776461f9be9df9ecb5f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75348374"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303186"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Como escrever uma consulta que encontra elementos baseados no contexto (C#)
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Como escrever uma consulta que localiza elementos com base no contexto (C#)
 Muitas vezes você pode ter que escrever uma consulta que seleciona elementos com base no contexto. Você pode querer filtrar com base nos elementos irmãos precedentes ou seguintes. Você pode querer filtrar com base nos elementos filhos ou ancestrais.  
   
  Você pode fazer isso escrevendo uma consulta e usando os resultados da consulta na cláusula `where`. Se você primeiro tiver que testar com zero e, em seguida, testar o valor, é mais conveniente fazer a consulta em uma cláusula `let` e usar os resultados na cláusula `where`.  
@@ -47,7 +48,7 @@ foreach (XElement e in items)
     Console.WriteLine("id = {0}", (string)e.Attribute("id"));  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```output  
 id = 1  
@@ -90,7 +91,7 @@ foreach (XElement e in items)
     Console.WriteLine("id = {0}", (string)e.Attribute("id"));  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```output  
 id = 1  

@@ -1,18 +1,19 @@
 ---
-title: Programação Funcional vs. Programação Imperativa (C#)
+title: Programação funcional versus programação imperativa (C#)
+description: Este artigo compara a programação funcional em C# com a abordagem de procedimento. A programação funcional impõe a imutabilidade por meio de funções puras.
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: a163a62912ed2a44d6ea8cad5bc536f03343f15c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bc421d654e532293b522dab9d43920d0fffd7b92
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69594320"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103742"
 ---
-# <a name="functional-programming-vs-imperative-programming-c"></a>Programação Funcional vs. Programação Imperativa (C#)
+# <a name="functional-programming-vs-imperative-programming-c"></a>Programação funcional versus programação imperativa (C#)
 Este tópico compara e contrasta programação funcional com programação (procedural) imperativa mais tradicional.  
   
-## <a name="functional-programming-vs-imperative-programming"></a>Programação funcional contra a programação imperativa  
+## <a name="functional-programming-vs-imperative-programming"></a>Programação com funcional. Programação imperativa  
  O paradigma de *programação funcional* foi criado explicitamente para dar suporte a uma abordagem funcional pura para a solução de problemas. Programação funcional é uma forma de *programação declarativa*. Por outro lado, a maioria das linguagens mais conhecidas, incluindo linguagens OOP (programação orientada a objeto), como C#, Visual Basic, C++ e Java, foram criadas para dar suporte principalmente à programação *imperativa* (de procedimento).  
   
  Com uma abordagem imperativa, um desenvolvedor escreve o código que descreve detalhadamente exigente as etapas que o computador deve executar para fazer o objetivo. Isso é às vezes chamado de programação *algorítmica*. Por outro lado, uma abordagem funcional envolve compõem o problema como um conjunto de funções a ser executadas. Você define cuidadosamente entrada a cada função, e o que cada função retorna. A tabela a seguir descreve algumas das diferenças gerais entre essas duas abordagens.  

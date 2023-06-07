@@ -3,20 +3,20 @@ title: <add> de <transportConfigurationType>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
 ms.openlocfilehash: adf4cd7f02db6535c5950443d09476a9a5ff63fb
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70850312"
 ---
-# <a name="add-of-transportconfigurationtype"></a>\<Adicionar > de \<transportConfigurationType >
+# <a name="add-of-transportconfigurationtype"></a>\<add> de \<transportConfigurationType>
 Esse elemento é um par chave/valor, que identifica o tipo de um transporte específico.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de ServiceHostingEnvironment**](servicehostingenvironment.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> transportConfigurationTypes**](transportconfigurationtypes.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Adicionar >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceHostingEnvironment>**](servicehostingenvironment.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<transportConfigurationTypes>**](transportconfigurationtypes.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +36,7 @@ Esse elemento é um par chave/valor, que identifica o tipo de um transporte espe
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|name|Atributo de cadeia de caracteres necessário.<br /><br /> Contém uma chave definida pelo usuário que identifica exclusivamente o tipo de transporte.|  
+|name|Atributo String obrigatório.<br /><br /> Contém uma chave definida pelo usuário que identifica exclusivamente o tipo de transporte.|  
 |transportConfigurationType|Uma cadeia de caracteres que contém o tipo que implementa o transporte específico.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -59,9 +59,9 @@ Esse elemento é um par chave/valor, que identifica o tipo de um transporte espe
 </serviceHostingEnvironment>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
-- [Hospedagem](../../../wcf/feature-details/hosting.md)
+- [Hosting](../../../wcf/feature-details/hosting.md)

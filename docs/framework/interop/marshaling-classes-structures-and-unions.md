@@ -1,5 +1,6 @@
 ---
 title: Marshaling de classes, estruturas e uniões
+description: Examine como realizar marshaling de classes, estruturas e uniões. Exiba amostras de classes de marshaling, estruturas com estruturas aninhadas, matrizes de estruturas e uniões.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-ms.openlocfilehash: 708ed6a232950cb69796f105f6f198749ed53a24
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 5e616b5bb513939cadd8fe5c72675ba0b6e070a3
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200009"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621516"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshaling de classes, estruturas e uniões
 
@@ -225,7 +226,7 @@ A classe `NativeMethods` contém os protótipos para os métodos `TestUnion` e `
 
 ## <a name="platform-sample"></a>Exemplo de plataforma
 
-Em alguns cenários, `struct` e `union` os layouts podem diferir dependendo da plataforma de destino. Por exemplo, considere o [`STRRET`](/windows/win32/api/shtypes/ns-shtypes-strret) tipo quando definido em um cenário com:
+Em alguns cenários, `struct` e os `union` layouts podem diferir dependendo da plataforma de destino. Por exemplo, considere o [`STRRET`](/windows/win32/api/shtypes/ns-shtypes-strret) tipo quando definido em um cenário com:
 
 ```c++
 #include <pshpack8.h> /* Defines the packing of the struct */
@@ -381,7 +382,7 @@ Como mencionado anteriormente, o C# permite código não gerenciado e o Visual B
 [!code-csharp[Conceptual.Interop.Marshaling#21](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/outarrayofstructs.cs#21)]
 [!code-vb[Conceptual.Interop.Marshaling#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Marshaling de dados com invocação de plataforma](marshaling-data-with-platform-invoke.md)
 - [Realizando marshaling de cadeias de caracteres](marshaling-strings.md)

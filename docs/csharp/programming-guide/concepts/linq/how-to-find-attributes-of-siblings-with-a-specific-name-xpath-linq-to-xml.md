@@ -1,15 +1,16 @@
 ---
-title: Como encontrar atributos de irmãos com um nome específico (XPath-LINQ para XML) (C#)
+title: Como localizar atributos de irmãos com um nome específico (XPath-LINQ to XML) (C#)
+description: Saiba como localizar todos os atributos dos irmãos do nó de contexto. Examine um exemplo de código que usa um arquivo XML de exemplo.
 ms.date: 07/20/2015
 ms.assetid: c3133d64-523f-422d-8838-73d36b945ca0
-ms.openlocfilehash: 331e1a7f432f4d06b697180b1594106ec6842c9a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12bba22c91fef92fc3383d028ff9dfb8bd3cfa3e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169253"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301691"
 ---
-# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>Como encontrar atributos de irmãos com um nome específico (XPath-LINQ para XML) (C#)
+# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>Como localizar atributos de irmãos com um nome específico (XPath-LINQ to XML) (C#)
 Este tópico mostra como localizar todos os atributos de seus irmãos o nó de contexto. Somente os atributos com um nome específico são retornados na coleção.  
   
  A expressão XPath é:  

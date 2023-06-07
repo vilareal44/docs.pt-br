@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef77efd1-849c-4e51-ba92-7ee3d2bf0339
 topic_type:
 - apiref
-ms.openlocfilehash: 9370b27fd385b0223b354365d64aa57048f4ec69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 74111a175b0decbc1beef7c8df5ade59d31d845b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177839"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009139"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>Método IMetaDataAssemblyEmit::SetManifestResourceProps
-Modifica a estrutura `ManifestResource` de metadados especificada.  
+Modifica a estrutura de `ManifestResource` metadados especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,31 +36,31 @@ HRESULT SetManifestResourceProps (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `mr`  
- [em] O token que `ManifestResource` especifica a estrutura de metadados a ser modificada.  
+ no O token que especifica a `ManifestResource` estrutura de metadados a ser modificada.  
   
  `tkImplementation`  
- [em] O token, `File` de `AssemblyRef`tipo ou , que mapeia para o provedor de recursos.  
+ no O token, do tipo `File` ou `AssemblyRef` , que é mapeado para o provedor de recursos.  
   
  `dwOffset`  
- [em] A compensação para o início do recurso dentro do arquivo.  
+ no O deslocamento para o início do recurso dentro do arquivo.  
   
  `dwResourceFlags`  
- [em] Uma combinação bitwise de valores de bandeira que especificam os atributos do recurso.  
+ no Uma combinação de bits de valor de sinalizador que especifica os atributos do recurso.  
   
 ## <a name="remarks"></a>Comentários  
- Para criar `ManifestResource` uma estrutura de metadados, use o método [IMetaDataAssemblyEmit::DefineManifestResource.](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md)  
+ Para criar uma `ManifestResource` estrutura de metadados, use o método [IMetaDataAssemblyEmit::D efinemanifestresource](imetadataassemblyemit-definemanifestresource-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [Interface IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md)

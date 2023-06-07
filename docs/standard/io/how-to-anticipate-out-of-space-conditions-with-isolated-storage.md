@@ -1,5 +1,5 @@
 ---
-title: Como antecipar condições de espaço insuficiente com o armazenamento isolado
+title: 'Como: Prever condições de espaço insuficiente com o armazenamento isolado'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - isolated storage, out of space conditions
 - data storage using isolated storage, out of space conditions
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
-ms.openlocfilehash: 5666019e1a65880221261ef5ad704f82c37263b2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdc2cee343e9d9be44230e84ff45d6fa54901f48
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708109"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288583"
 ---
-# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Como antecipar condições de espaço insuficiente com o armazenamento isolado
+# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Como: Prever condições de espaço insuficiente com o armazenamento isolado
 
-O código que usa armazenamento isolado é restrito por uma [cota](../../../docs/standard/io/isolated-storage.md#quotas) que especifica o tamanho máximo do compartimento de dados no qual arquivos de armazenamento e diretórios isolados existem. A cota é definida pela política de segurança e é configurável por administradores. Se o tamanho máximo permitido for ultrapassado ao tentar gravar dados, uma exceção <xref:System.IO.IsolatedStorage.IsolatedStorageException> será lançada e a operação falhará. Isso ajuda a evitar ataques de negação de serviço que podem fazer com que o aplicativo recuse solicitações porque o armazenamento de dados está cheio.
+O código que usa armazenamento isolado é restrito por uma [cota](isolated-storage.md#quotas) que especifica o tamanho máximo do compartimento de dados no qual arquivos de armazenamento e diretórios isolados existem. A cota é definida pela política de segurança e é configurável por administradores. Se o tamanho máximo permitido for ultrapassado ao tentar gravar dados, uma exceção <xref:System.IO.IsolatedStorage.IsolatedStorageException> será lançada e a operação falhará. Isso ajuda a evitar ataques de negação de serviço que podem fazer com que o aplicativo recuse solicitações porque o armazenamento de dados está cheio.
 
 Para ajudar você a determinar se uma determinada tentativa de gravação provavelmente falhará por esse motivo, a classe <xref:System.IO.IsolatedStorage.IsolatedStorage> fornece três propriedades somente leitura: <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A> e <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>. Você pode usar essas propriedades para determinar se a gravação no armazenamento fará com que o tamanho máximo permitido de armazenamento seja ultrapassado. Lembre-se de que o armazenamento isolado pode ser acessado simultaneamente; portanto, ao calcular a quantidade de armazenamento restante, o espaço de armazenamento poderá ser consumido até você tentar gravar no armazenamento. No entanto, você pode usar o tamanho máximo do armazenamento para ajudar a determinar se o limite superior no armazenamento disponível está prestes a ser alcançado.
 
@@ -45,8 +45,8 @@ O exemplo de código a seguir obtém um armazenamento isolado, cria alguns arqui
 [!code-csharp[Conceptual.IsolatedStorage#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source7.cs#8)]
 [!code-vb[Conceptual.IsolatedStorage#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source7.vb#8)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
-- [Armazenamento isolado](../../../docs/standard/io/isolated-storage.md)
-- [Como obter repositórios para o armazenamento isolado](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)
+- [Armazenamento isolado](isolated-storage.md)
+- [Como: Obter repositórios para o armazenamento isolado](how-to-obtain-stores-for-isolated-storage.md)

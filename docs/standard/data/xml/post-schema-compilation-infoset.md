@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-ms.openlocfilehash: 016032b2b37ced5592edc18934ed183c475f5598
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3bd0c6063fee1fa1a9f046a8be2ebfde07aea9ee
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710473"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291507"
 ---
 # <a name="post-schema-compilation-infoset"></a>Compilação Infoset de pré esquema
 A [Recomendação de esquema XML World Wide Web Consortium (W3C)](https://www.w3.org/XML/Schema) discute as informações definidas (infoset) que devem ser expostas para a validação de pré-esquema e a compilação de pré-esquema. O modelo de objeto (SOM) de esquema XML exibe essa exposição antes e após o método de <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de <xref:System.Xml.Schema.XmlSchemaSet> é chamado.  
@@ -40,4 +40,4 @@ A [Recomendação de esquema XML World Wide Web Consortium (W3C)](https://www.w3
   
 ## <a name="see-also"></a>Veja também
 
-- [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [SOM (Schema Object Model) XML](xml-schema-object-model-som.md)

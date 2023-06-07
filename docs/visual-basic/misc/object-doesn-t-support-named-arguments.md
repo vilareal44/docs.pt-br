@@ -1,23 +1,23 @@
 ---
-title: Objeto não dá suporte a argumentos nomeados
+title: O objeto não dá suporte a argumentos nomeados
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID446
 ms.assetid: f4812db8-e85d-4d5b-b7c9-d54a1f850034
-ms.openlocfilehash: 39940e23f210ecf96f96ae69adea22a57ac11268
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 79ebc638912b218881fd653c5c30b370d3b1b829
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591823"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84376102"
 ---
-# <a name="object-doesnt-support-named-arguments"></a>Objeto não dá suporte a argumentos nomeados
-Você tentou acessar um objeto cujos métodos não dão suporte a argumentos nomeado.  
+# <a name="object-doesnt-support-named-arguments"></a>O objeto não dá suporte a argumentos nomeados
+Você tentou acessar um objeto cujos métodos não dão suporte a argumentos nomeados.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Especifica argumentos por posição ao acessar métodos nesse objeto. Consulte a documentação do objeto para obter mais informações sobre tipos e as posições de argumento.  
+- Especifique os argumentos de posição posicionada ao acessar métodos neste objeto. Consulte a documentação do objeto para obter mais informações sobre os tipos e posições de argumento.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipos de erro](../programming-guide/language-features/error-types.md)

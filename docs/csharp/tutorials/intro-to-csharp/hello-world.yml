@@ -6,17 +6,18 @@ metadata:
   audience: Developer
   level: Beginner
   ms.date: 08/24/2018
+  ms.topic: interactive-tutorial
   nextTutorialHref: numbers-in-csharp.yml
   nextTutorialTitle: Números em C#
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 025b3e0fcaf693be00f1ca396b92617d6faf31aa
-  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+  ms.openlocfilehash: 17d33b25867f75419a0e65ab0d75950bad13af57
+  ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/06/2020
-  ms.locfileid: "82860972"
+  ms.lasthandoff: 08/17/2020
+  ms.locfileid: "88267393"
 items:
 - durationInMinutes: 1
   content: >
@@ -51,7 +52,7 @@ items:
     > Esse exercício ajudará você a conhecer a estrutura do código C#.
 
 
-    Seu primeiro programa está limitado à impressão de uma mensagem. Você pode escrever programas mais úteis usando **variáveis**. Uma **variável** é um símbolo que você pode usar para executar o mesmo código com valores diferentes. Vamos testar isso! Substitua o código que você escreveu na janela interativa pelo código a seguir:
+    Seu primeiro programa está limitado à impressão de uma mensagem. Você pode escrever programas mais úteis usando **variáveis**. Uma **variável** é um símbolo que você pode usar para executar o mesmo código com valores diferentes. Vamos testá-lo! Substitua o código que você escreveu na janela interativa pelo código a seguir:
 
 
     ```csharp
@@ -94,7 +95,7 @@ items:
     Selecione **executar** novamente para ver os resultados.
 
 
-    Você usou `+` para criar cadeias de caracteres com base em cadeias de caracteres de **variáveis** e de **constantes**. Há uma maneira melhor.
+    Você usou `+` para criar cadeias de caracteres com base em cadeias de caracteres de **variáveis** e de **constantes**. Há um modo melhor.
 
     Você pode colocar uma variável entre caracteres `{` e `}` para informar ao C# para substituir esse texto com o valor da variável.
 
@@ -152,7 +153,7 @@ items:
 - title: Faça mais com as cadeias de caractere
   durationInMinutes: 5
   content: >
-    Você está usando um **método**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, para imprimir mensagens. Um **método** é um bloco de código que implementa alguma ação. Ele tem um nome, portanto você pode acessá-lo.
+    Você está usando um **método**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> , para imprimir mensagens. Um **método** é um bloco de código que implementa alguma ação. Ele tem um nome, portanto você pode acessá-lo.
 
 
     Suponha que suas cadeias de caracteres têm espaços à esquerda ou à direita que você não deseja exibir. Você deseja **cortar** os espaços das cadeias de caracteres.
@@ -184,7 +185,7 @@ items:
     ```
 
 
-    Os colchetes `[` e `]` ajudar a visualizar o que `Trim`o `TrimStart` e `TrimEnd` os métodos fazem. Os colchetes mostram onde o espaço em branco começa e termina.
+    Os colchetes `[` e `]` ajudar a visualizar o que o `Trim` e os `TrimStart` `TrimEnd` métodos fazem. Os colchetes mostram onde o espaço em branco começa e termina.
 
 
     Este exemplo reforça alguns conceitos importantes do trabalho com cadeias de caracteres. Os métodos que manipulam cadeias de caracteres retornam novos objetos de cadeia de caracteres, em vez de fazer modificações no local. Veja que cada chamada para qualquer um dos métodos `Trim` retorna uma nova cadeia de caracteres, mas não altera a mensagem original.
@@ -233,7 +234,7 @@ items:
     ```
 
 
-    O método <xref:System.String.Contains%2A> retorna um valor **booliano** que indica se a cadeia de caracteres que você estava procurando foi encontrada. Um **booliano** armazena um valor `true` ou `false`. Quando exibido como saída de texto, eles são capitalizados `True` : `False`e, respectivamente. Você saberá mais sobre valores **boolianos** em uma lição posterior.
+    O método <xref:System.String.Contains%2A> retorna um valor **booliano** que indica se a cadeia de caracteres que você estava procurando foi encontrada. Um **booliano** armazena um valor `true` ou `false`. Quando exibido como saída de texto, eles são capitalizados: `True` e `False` , respectivamente. Você saberá mais sobre valores **boolianos** em uma lição posterior.
 
 
     ***Desafio***

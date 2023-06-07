@@ -9,12 +9,12 @@ helpviewer_keywords:
 - exceptions, COM interop
 - COM interop, exceptions
 ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
-ms.openlocfilehash: 17cd739ac40b43bdd4a93b83a4ab9d0d92400e2d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c8eb374058ddbd2ba3d866079f0f40b292b69ea
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708926"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286100"
 ---
 # <a name="handling-com-interop-exceptions"></a>Manipulando exceções de interoperabilidade COM
 Os códigos gerenciado e não gerenciado podem trabalhar juntos para tratar de exceções. Se um método lança uma exceção no código gerenciado, o common language runtime pode passar um HRESULT para um objeto COM. Se um método falhar no código não gerenciado, retornando um HRESULT de falha, o runtime lançará uma exceção que pode ser detectada pelo código gerenciado.  
@@ -26,8 +26,8 @@ Os códigos gerenciado e não gerenciado podem trabalhar juntos para tratar de e
 ## <a name="working-with-ierrorinfo"></a>Trabalhar com IErrorInfo  
  Quando um erro é passado do COM para o código gerenciado, o runtime preenche o objeto de exceção com informações do erro. Objetos COM que dão suporte a IErrorInfo e retornam HRESULTS fornecem essas informações para exceções de código gerenciado. Por exemplo, o runtime mapeia a Descrição do erro COM para a propriedade <xref:System.Exception.Message%2A> da exceção. Se o HRESULT não fornecer mais informações sobre o erro, o runtime preencherá muitas das propriedades da exceção com valores padrão.  
   
- Se um método falhar no código não gerenciado, uma exceção poderá ser passada para um segmento de código gerenciado. O tópico [HRESULTS e exceções](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md) contém uma tabela que mostra como HRESULTS mapeia para objetos de exceção de runtime.  
+ Se um método falhar no código não gerenciado, uma exceção poderá ser passada para um segmento de código gerenciado. O tópico [HRESULTS e exceções](../../framework/interop/how-to-map-hresults-and-exceptions.md) contém uma tabela que mostra como HRESULTS mapeia para objetos de exceção de runtime.  
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Exceções](index.md)

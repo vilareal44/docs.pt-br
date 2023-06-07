@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6372aca7-869a-4af6-ba2b-0eb1047ef5c0
 topic_type:
 - apiref
-ms.openlocfilehash: 531bd3ffe00c12ef580e8341cd6ad1f7d3924717
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 18355fe9c607977f9da47389216feb2307430e1b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123352"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008593"
 ---
 # <a name="itypenamebuildertostring-method"></a>Método ITypeNameBuilder::ToString
 Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.  
@@ -34,14 +34,14 @@ HRESULT ToString (
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfaces de hospedagem](hosting-interfaces.md)

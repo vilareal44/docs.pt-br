@@ -2,30 +2,30 @@
 title: Como utilizar o provedor de função do ASP.NET com um serviço
 ms.date: 03/30/2017
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-ms.openlocfilehash: ddfedeb2491998f64ab241ceba303d50d0714351
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 45eeda046e877b4379d7d0e5edd90fac305f5e44
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184765"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595291"
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>Como utilizar o provedor de função do ASP.NET com um serviço
 
-O provedor de funções ASP.NET (em conjunto com o provedor de membros ASP.NET) é um recurso que permite que os desenvolvedores ASP.NET criem sites da Web que permitam aos usuários criar uma conta com um site e serem atribuídos funções para fins de autorização. Com esse recurso, qualquer usuário pode estabelecer uma conta no site e fazer login para acesso exclusivo ao site e seus serviços. Isso contrasta com a segurança do Windows, que exige que os usuários tenham contas em um domínio do Windows. Em vez disso, qualquer usuário que forneça suas credenciais (a combinação de nome de usuário/senha) pode usar o site e seus serviços.  
+O provedor de função ASP.NET (em conjunto com o provedor de associação ASP.NET) é um recurso que permite aos desenvolvedores de ASP.NET criar sites da Web que permitem aos usuários criar uma conta com um site e receber funções para fins de autorização. Com esse recurso, qualquer usuário pode estabelecer uma conta com o site e fazer logon para ter acesso exclusivo ao site e aos seus serviços. Isso é diferente da segurança do Windows, o que exige que os usuários tenham contas em um domínio do Windows. Em vez disso, qualquer usuário que forneça suas credenciais (a combinação nome de usuário/senha) pode usar o site e seus serviços.  
   
-Para obter um aplicativo de exemplo, consulte [Adesão e Provedor de Função](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Para obter mais informações sobre o recurso do provedor de membros ASP.NET, consulte [Como: Usar o provedor de adesão ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
+Para um aplicativo de exemplo, consulte [associação e provedor de função](../samples/membership-and-role-provider.md). Para obter mais informações sobre o recurso de provedor de associação do ASP.NET, consulte [como: usar o provedor de associação do ASP.net](how-to-use-the-aspnet-membership-provider.md).  
   
-O recurso provedor de função usa um banco de dados SQL Server para armazenar informações do usuário. Os desenvolvedores da Windows Communication Foundation (WCF) podem tirar proveito desses recursos para fins de segurança. Quando integrado a um aplicativo WCF, os usuários devem fornecer uma combinação de nome de usuário/senha para o aplicativo cliente WCF. Para permitir que o WCF use o banco <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> de dados, você deve criar uma instância da classe, definir sua <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> propriedade para <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>, e adicionar a instância à coleção de comportamentos ao <xref:System.ServiceModel.ServiceHost> que está hospedando o serviço.  
+O recurso de provedor de função usa um banco de dados SQL Server para armazenar informações do usuário. Os desenvolvedores de Windows Communication Foundation (WCF) podem aproveitar esses recursos para fins de segurança. Quando integrado a um aplicativo WCF, os usuários devem fornecer uma combinação de nome de usuário/senha para o aplicativo cliente do WCF. Para habilitar o WCF a usar o banco de dados, você deve criar uma instância da <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> classe, definir sua <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> propriedade como <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles> e adicionar a instância à coleção de comportamentos para o <xref:System.ServiceModel.ServiceHost> que está hospedando o serviço.  
   
-## <a name="configure-the-role-provider"></a>Configure o provedor de função  
+## <a name="configure-the-role-provider"></a>Configurar o provedor de função  
   
-1. No arquivo Web.config, sob `system.web` o elemento <`roleManager`>, adicione `enabled` um `true`elemento> <e defina seu atributo para .  
+1. No arquivo Web. config, no `system.web` elemento < >, adicione um `roleManager` elemento < > e defina seu `enabled` atributo como `true` .  
   
-2. Defina `defaultProvider` o `SqlRoleProvider`atributo para .  
+2. Defina o `defaultProvider` atributo como `SqlRoleProvider` .  
   
-3. Quando criança, ao `roleManager` elemento <>, adicione um elemento> <. `providers`  
+3. Como um filho para o `roleManager` elemento <>, adicione um `providers` elemento <>.  
   
-4. Quando criança, ao `providers` elemento `add` <>, adicione um elemento <> `name`com `type` `connectionStringName`os seguintes atributos definidos aos valores apropriados: , , e `applicationName`, como mostrado no exemplo a seguir.  
+4. Como um filho para o `providers` elemento <>, adicione um `add` elemento <> com os seguintes atributos definidos para os valores apropriados: `name` ,, `type` `connectionStringName` e `applicationName` , conforme mostrado no exemplo a seguir.  
   
     ```xml  
     <!-- Configure the Sql Role Provider. -->  
@@ -40,21 +40,21 @@ O recurso provedor de função usa um banco de dados SQL Server para armazenar i
     </roleManager>  
     ```  
   
-## <a name="configure-the-service-to-use-the-role-provider"></a>Configure o serviço para usar o provedor de função  
+## <a name="configure-the-service-to-use-the-role-provider"></a>Configurar o serviço para usar o provedor de função  
   
-1. No arquivo Web.config, adicione um [ \<elemento system.serviceModel>.](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
+1. No arquivo Web. config, adicione um [\<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md) elemento.  
   
-2. Adicione [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) um elemento de>`system.ServiceModel` de comportamentos ao elemento <>.  
+2. Adicione um [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) elemento ao elemento <`system.ServiceModel`>.  
   
-3. Adicione um [ \<serviçoComportamentos>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) `behaviors` ao elemento <>.  
+3. Adicione um [\<serviceBehaviors>](../../configure-apps/file-schema/wcf/servicebehaviors.md) ao elemento <`behaviors`>.  
   
-4. Adicione [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) um comportamento>`name` elemento e defina o atributo como um valor apropriado.  
+4. Adicione um [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elemento e defina o `name` atributo para um valor apropriado.  
   
-5. Adicione [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) um>de `behavior` autorização de serviço ao elemento <>.  
+5. Adicione um [\<serviceAuthorization>](../../configure-apps/file-schema/wcf/serviceauthorization-element.md) ao elemento <`behavior`>.  
   
-6. Defina `principalPermissionMode` o `UseAspNetRoles`atributo para .  
+6. Defina o `principalPermissionMode` atributo como `UseAspNetRoles` .  
   
-7. Defina `roleProviderName` o `SqlRoleProvider`atributo para . O exemplo a seguir mostra um fragmento da configuração.  
+7. Defina o `roleProviderName` atributo como `SqlRoleProvider` . O exemplo a seguir mostra um fragmento da configuração.  
   
     ```xml  
     <behaviors>  
@@ -67,7 +67,7 @@ O recurso provedor de função usa um banco de dados SQL Server para armazenar i
     </behaviors>  
     ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Provedor de função e associação](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)
-- [Como utilizar o provedor de associação do ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+- [Provedor de função e associação](../samples/membership-and-role-provider.md)
+- [Como utilizar o provedor de associação do ASP.NET](how-to-use-the-aspnet-membership-provider.md)

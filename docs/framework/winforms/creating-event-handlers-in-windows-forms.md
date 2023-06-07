@@ -1,5 +1,6 @@
 ---
 title: Criar manipuladores de eventos
+description: Saiba como os eventos no Windows Forms podem ser atribuídos a vários manipuladores e como os métodos que manipulam eventos específicos podem ser alterados dinamicamente.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - event handling [Windows Forms]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - events [Windows Forms], event handlers
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
-ms.openlocfilehash: 90acb3c7691acbcb528ae66692af67c2fb28eeaf
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 4dca198be69c200ea8dfc741a43801bf8f631b9d
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742340"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326014"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Criando manipuladores de eventos no Windows Forms
 
@@ -24,24 +25,24 @@ Um manipulador de eventos é um procedimento no seu código que determina quais 
  [Visão geral de eventos](events-overview-windows-forms.md)\
  Explica o modelo de evento e a função das classes delegate.
 
- [Visão geral do manipulador de eventos](event-handlers-overview-windows-forms.md)\
+ [Visão geral dos manipuladores de eventos](event-handlers-overview-windows-forms.md)\
  Descreve como manipular eventos.
 
- [Como criar manipuladores de eventos em tempo de execução para Windows Forms](how-to-create-event-handlers-at-run-time-for-windows-forms.md)\
+ [Como: criar manipuladores de eventos em tempo de execução para Windows Forms](how-to-create-event-handlers-at-run-time-for-windows-forms.md)\
  Fornece instruções para responder a eventos de sistema ou de usuário de forma dinâmica.
 
  [Como: conectar vários eventos a um único manipulador de eventos no Windows Forms](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md)\
  Fornece instruções para atribuir a mesma funcionalidade a vários controles por meio de eventos.
 
- [Ordem de eventos em Windows Forms](order-of-events-in-windows-forms.md)\
+ [Ordem de eventos no Windows Forms](order-of-events-in-windows-forms.md)\
  Descreve a ordem em que os eventos são gerados em controles Windows Forms.
 
  [Como criar manipuladores de eventos usando o designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)) Descreve como usar o Designer de Formulários do Windows para criar manipuladores de eventos.
 
-## <a name="related-sections"></a>Seções Relacionadas
+## <a name="related-sections"></a>Seções relacionadas
 
- [Eventos](../../standard/events/index.md)\
+ [LostFocus](../../standard/events/index.md)\
  Fornece links para tópicos sobre como manipular e gerar eventos usando o .NET Framework.
 
- [Solucionando problemas de manipuladores de eventos herdados no Visual Basic](../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)\
+ [Solução de problemas de manipuladores de eventos herdados no Visual Basic](../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)\
  Lista problemas comuns que ocorrem com os manipuladores de eventos em componentes herdados.

@@ -1,5 +1,6 @@
 ---
 title: MDA invalidApartmentStateChange
+description: Saiba mais sobre o MDA (Assistente de depuração gerenciada) do invalidApartmentStateChange no .NET, que é ativado se houver problemas com o estado de apartment COM.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid apartment state
@@ -11,12 +12,11 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-ms.openlocfilehash: 8acafcc2fba9a7d30cc77f25f06adaca7c79db32
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: c6f7b6a5e450d4167946d22b2ada268ea2b0135f
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217410"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051821"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>MDA invalidApartmentStateChange
 O MDS (Assistente de Depuração Gerenciado) de `invalidApartmentStateChange` é ativado por qualquer um de dois problemas:  
@@ -75,8 +75,8 @@ namespace ApartmentStateMDA
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling de interoperabilidade](../interop/interop-marshaling.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Realizando marshaling de interoperabilidade](../interop/interop-marshaling.md)

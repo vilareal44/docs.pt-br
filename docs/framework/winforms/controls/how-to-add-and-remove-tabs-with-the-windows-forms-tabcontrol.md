@@ -1,5 +1,6 @@
 ---
 title: Adicionar e remover guias com TabControl
+description: Saiba como adicionar e remover guias com o Windows Forms controle TabControl, que contém dois controles TabPage. Acesse essas guias por meio da propriedade TabPages.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +13,19 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
-ms.openlocfilehash: 8292d8441f9b47334b98736cf3282c846673dbb4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7e67d0bbc13bd7d9c8835dc6fb9b9c5c9333b8bf
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732711"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618071"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>Como adicionar e remover guias com o controle TabControl dos Windows Forms
-Por padrão, um controle de <xref:System.Windows.Forms.TabControl> contém dois controles de <xref:System.Windows.Forms.TabPage>. Você pode acessar essas guias por meio da propriedade <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
+Por padrão, um <xref:System.Windows.Forms.TabControl> controle contém dois <xref:System.Windows.Forms.TabPage> controles. Você pode acessar essas guias por meio da <xref:System.Windows.Forms.TabControl.TabPages%2A> propriedade.  
   
 ### <a name="to-add-a-tab-programmatically"></a>Para adicionar uma guia programaticamente  
   
-- Use o método <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> da propriedade <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
+- Use o <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> método da <xref:System.Windows.Forms.TabControl.TabPages%2A> propriedade.  
   
     ```vb  
     Dim myTabPage As New TabPage()  
@@ -47,11 +48,11 @@ Por padrão, um controle de <xref:System.Windows.Forms.TabControl> contém dois 
   
 ### <a name="to-remove-a-tab-programmatically"></a>Para remover uma guia programaticamente  
   
-- Para remover as guias selecionadas, use o método <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> da propriedade <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
+- Para remover as guias selecionadas, use o <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> método da <xref:System.Windows.Forms.TabControl.TabPages%2A> propriedade.  
   
      -ou-  
   
-- Para remover todas as guias, use o método <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> da propriedade <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
+- Para remover todas as guias, use o <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> método da <xref:System.Windows.Forms.TabControl.TabPages%2A> propriedade.  
   
     ```vb  
     ' Removes the selected tab:  
@@ -79,4 +80,4 @@ Por padrão, um controle de <xref:System.Windows.Forms.TabControl> contém dois 
 - [Visão geral do controle TabControl](tabcontrol-control-overview-windows-forms.md)
 - [Como adicionar um controle a uma página da guia](how-to-add-a-control-to-a-tab-page.md)
 - [Como desabilitar páginas de guia](how-to-disable-tab-pages.md)
-- [Como alterar a aparência do TabControl do Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Como alterar a aparência do TabControl dos Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

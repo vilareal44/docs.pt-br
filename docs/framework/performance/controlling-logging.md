@@ -1,15 +1,16 @@
 ---
 title: Controlando o registro em log no .NET Framework
+description: Use o ETW (rastreamento de eventos para Windows) para controlar o log do .NET e registrar eventos de Common Language Runtime (CLR). Use ferramentas como logman, Tracerpt e Xperf.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: e7d7d6e60b2f582a579f5811225f4027c37c7876
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 45d9244eb11b914fd203f24057e1b65c6bef18c2
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504103"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309580"
 ---
 # <a name="controlling-net-framework-logging"></a>Controlando o registro em log no .NET Framework
 
@@ -27,7 +28,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-Se o provedor CLR não estiver listado, você poderá instalá-lo no Windows Vista e em sistemas operacionais posteriores usando a ferramenta de linha de comando [Wevtutil](/windows-server/administration/windows-commands/wevtutil) do Windows. Abra uma janela de prompt de comando como administrador. Altere o diretório de prompts para a pasta .NET Framework 4 (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET versão > \). Esta pasta contém o arquivo CLR-ETW.man. No prompt de comando, digite o seguinte comando para instalar o provedor de CLR:
+Se o provedor CLR não estiver listado, você poderá instalá-lo no Windows Vista e em sistemas operacionais posteriores usando a ferramenta de linha de comando [Wevtutil](/windows-server/administration/windows-commands/wevtutil) do Windows. Abra uma janela de prompt de comando como administrador. Altere o diretório de prompts para a pasta .NET Framework 4 (%WINDIR%\Microsoft.NET\Framework [64] \v4. \<.NET version> \ ). Esta pasta contém o arquivo CLR-ETW.man. No prompt de comando, digite o seguinte comando para instalar o provedor de CLR:
 
 `wevtutil im CLR-ETW.man`
 
@@ -111,5 +112,5 @@ Use os comandos listados abaixo para exibir os eventos ETW de CLR. Para obter um
 
 ## <a name="see-also"></a>Confira também
 
-- [Kit de ferramentas de desempenho do Windows](/windows-hardware/test/wpt/)
+- [Windows Performance Toolkit](/windows-hardware/test/wpt/)
 - [Eventos ETW no Common Language Runtime](etw-events-in-the-common-language-runtime.md)

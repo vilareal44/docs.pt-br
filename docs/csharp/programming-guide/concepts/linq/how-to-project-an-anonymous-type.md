@@ -1,13 +1,14 @@
 ---
 title: Como projetar um tipo anônimo (C#)
+description: Saiba como projetar uma consulta para um tipo anônimo em C#. Usar um tipo anônimo pode ser mais fácil do que criar um novo tipo para usar apenas brevemente.
 ms.date: 07/20/2015
 ms.assetid: 5cb9be13-5ac4-4373-a034-b3520a5b2dec
-ms.openlocfilehash: 7797c8bfb12943af1ce7f975b170bf002aa7d6fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6598796a4ba95362340f2551b1da6ac6d857eaae
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345729"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104628"
 ---
 # <a name="how-to-project-an-anonymous-type-c"></a>Como projetar um tipo anônimo (C#)
 Em alguns casos você pode querer projetar uma consulta a um novo tipo, mesmo que você soubesse que você usará apenas este tipo para um curto quando. É muito trabalho adicional para criar apenas um novo tipo para usar na projeção. Uma abordagem mais eficiente nesse caso é projeto para um tipo anônimo. Tipos anônimos permitem que você defina uma classe, então declare e inicialize um objeto de aquela classe, sem dar um nome para a classe.  
@@ -43,7 +44,7 @@ foreach (var cust in custList)
     Console.WriteLine("{0}:{1}:{2}", cust.CustomerID, cust.CompanyName, cust.ContactName);  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```output  
 GREAL:Great Lakes Food Market:Howard Snyder  

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - probing element
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 ms.openlocfilehash: e9e48ea97e1b70fef7fcc78a113e18c5fec23b7c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73115857"
 ---
-# <a name="probing-element"></a>Elemento de > de investigação de \<
+# <a name="probing-element"></a>Elemento \<probing>
 Especifica subdiretórios base do aplicativo para a Common Language Runtime Pesquisar ao carregar assemblies.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**investigação >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<probing>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,7 +41,7 @@ Especifica subdiretórios base do aplicativo para a Common Language Runtime Pesq
   
 ### <a name="child-elements"></a>Elementos filho  
 
-nenhuma.  
+Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -64,9 +64,9 @@ nenhuma.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Esquema de configurações de tempo de execução](index.md)
-- [Esquema de arquivos de configuração](../index.md)
+- [Esquema do arquivo de configuração](../index.md)
 - [Especificar o local de um assembly](../../../../standard/assembly/location.md)
 - [Como o tempo de execução localiza assemblies](../../../deployment/how-the-runtime-locates-assemblies.md)

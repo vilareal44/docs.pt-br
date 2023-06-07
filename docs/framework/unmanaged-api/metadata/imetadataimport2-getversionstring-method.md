@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 308183ee-fd44-4432-9d86-ef00d181b49b
 topic_type:
 - apiref
-ms.openlocfilehash: 0c9f667edf30feb23e1cdaa28950503283fce42e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 84cf5ac9eab5749d3bdc63670fe5c31bfb62abcd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445230"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490395"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>Método IMetaDataImport2::GetVersionString
 Obtém o número de versão do tempo de execução que foi usado para compilar o assembly.  
@@ -40,24 +40,24 @@ HRESULT GetVersionString (
  fora Uma matriz para armazenar a cadeia de caracteres que especifica a versão.  
   
  `ccBufSize`  
- no O tamanho, em caracteres largos, da matriz de `pwzBuf`.  
+ no O tamanho, em caracteres largos, da `pwzBuf` matriz.  
   
  `pccBufSize`  
- fora O número de caracteres largos, incluindo um terminador nulo, retornado na matriz de `pwzBuf`.  
+ fora O número de caracteres largos, incluindo um terminador nulo, retornado na `pwzBuf` matriz.  
   
 ## <a name="remarks"></a>Comentários  
- O método `GetVersionString` Obtém a versão interna do escopo de metadados atual. Se o escopo nunca tiver sido salvo, ele não terá uma versão interna e uma cadeia de caracteres vazia será retornada.  
+ O `GetVersionString` método obtém a versão interna do escopo de metadados atual. Se o escopo nunca tiver sido salvo, ele não terá uma versão interna e uma cadeia de caracteres vazia será retornada.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)

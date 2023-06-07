@@ -1,22 +1,19 @@
 ---
 title: Matrizes
-description: Saiba como criar e usar matrizes na linguagem F# de programação.
-ms.date: 05/16/2016
-ms.openlocfilehash: 8470e01087e417635bcd5c528df9b9e089cbf59f
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+description: 'Saiba como criar e usar matrizes na linguagem de programação F #.'
+ms.date: 08/13/2020
+ms.openlocfilehash: 37f781ccd2c7bc2ca2c7b93bda53bbb3ea93b504
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320498"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608507"
 ---
 # <a name="arrays"></a>Matrizes
 
-> [!NOTE]
-> O link de referência da API levará você até o MSDN.  A referência da API docs.microsoft.com não está completa.
-
 As matrizes são coleções de tamanho fixo, com base em zero e mutáveis de elementos de dados consecutivos que são do mesmo tipo.
 
-## <a name="creating-arrays"></a>Criando matrizes
+## <a name="create-arrays"></a>Criar matrizes
 
 Você pode criar matrizes de várias maneiras. Você pode criar uma pequena matriz listando valores consecutivos entre `[|` e `|]` e separados por ponto e vírgula, conforme mostrado nos exemplos a seguir.
 
@@ -37,13 +34,13 @@ Você também pode usar expressões de sequência para criar matrizes. Veja a se
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet3.fs)]
 
-Para criar uma matriz na qual todos os elementos são inicializados como zero, use `Array.zeroCreate`.
+Para criar uma matriz na qual todos os elementos são inicializados como zero, use `Array.zeroCreate` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet4.fs)]
 
-## <a name="accessing-elements"></a>Acessando elementos
+## <a name="access-elements"></a>Elementos de acesso
 
-Você pode acessar elementos de matriz usando um operador de ponto (`.`) e colchetes (`[` e `]`).
+Você pode acessar elementos de matriz usando um operador de ponto ( `.` ) e colchetes ( `[` e `]` ).
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet5.fs)]
 
@@ -57,13 +54,13 @@ Quando a notação de fatia é usada, uma nova cópia da matriz é criada.
 
 ## <a name="array-types-and-modules"></a>Módulos e tipos de matriz
 
-O tipo de todas F# as matrizes é o tipo de .NET Framework <xref:System.Array?displayProperty=nameWithType>. Portanto, F# as matrizes oferecem suporte a todas as funcionalidades disponíveis no <xref:System.Array?displayProperty=nameWithType>.
+O tipo de todas as matrizes F # é o tipo de .NET Framework <xref:System.Array?displayProperty=nameWithType> . Portanto, as matrizes F # oferecem suporte a todas as funcionalidades disponíveis no <xref:System.Array?displayProperty=nameWithType> .
 
-O módulo de biblioteca [`Microsoft.FSharp.Collections.Array`](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1) dá suporte a operações em matrizes unidimensionais. Os módulos `Array2D`, `Array3D` e `Array4D` contêm funções que dão suporte a operações em matrizes de duas, três e quatro dimensões, respectivamente. Você pode criar matrizes com classificação maior que quatro usando <xref:System.Array?displayProperty=nameWithType>.
+O [ `Array` módulo](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html) dá suporte a operações em matrizes unidimensionais. Os módulos `Array2D` , `Array3D` e `Array4D` contêm funções que dão suporte a operações em matrizes de duas, três e quatro dimensões, respectivamente. Você pode criar matrizes de classificação maior que quatro usando <xref:System.Array?displayProperty=nameWithType> .
 
 ### <a name="simple-functions"></a>Funções simples
 
-[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc) Obtém um elemento. [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f) fornece o comprimento de uma matriz. [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) define um elemento para um valor especificado. O exemplo de código a seguir ilustra o uso dessas funções.
+[`Array.get`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#get) Obtém um elemento. [`Array.length`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#length) fornece o comprimento de uma matriz. [`Array.set`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#set) define um elemento para um valor especificado. O exemplo de código a seguir ilustra o uso dessas funções.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet9.fs)]
 
@@ -75,7 +72,7 @@ A saída é a seguinte.
 
 ### <a name="functions-that-create-arrays"></a>Funções que criam matrizes
 
-Várias funções criam matrizes sem a necessidade de uma matriz existente. [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32) cria uma nova matriz que não contém nenhum elemento. [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be) cria uma matriz de um tamanho especificado e define todos os elementos para os valores fornecidos. [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665) cria uma matriz, dada uma dimensão e uma função para gerar os elementos. [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2) cria uma matriz na qual todos os elementos são inicializados para o valor zero para o tipo da matriz. O código a seguir demonstra essas funções.
+Várias funções criam matrizes sem a necessidade de uma matriz existente. [`Array.empty`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#empty) Cria uma nova matriz que não contém nenhum elemento. [`Array.create`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#create) Cria uma matriz de um tamanho especificado e define todos os elementos para os valores fornecidos. [`Array.init`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#init) Cria uma matriz, dada uma dimensão e uma função para gerar os elementos. [`Array.zeroCreate`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#zeroCreate) Cria uma matriz na qual todos os elementos são inicializados com o valor zero para o tipo da matriz. O código a seguir demonstra essas funções.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet91.fs)]
 
@@ -87,7 +84,7 @@ Area of floats set to 5.0: [|5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0|]
 Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 ```
 
-[`Array.copy`](https://msdn.microsoft.com/library/9d0202f1-1ea0-475e-9d66-4f8ccc3c5b5f) cria uma nova matriz que contém elementos que são copiados de uma matriz existente. Observe que a cópia é uma cópia superficial, o que significa que se o tipo de elemento for um tipo de referência, somente a referência será copiada, não o objeto subjacente. O exemplo de código a seguir ilustra isso.
+[`Array.copy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#copy) Cria uma nova matriz que contém elementos que são copiados de uma matriz existente. Observe que a cópia é uma cópia superficial, o que significa que se o tipo de elemento for um tipo de referência, somente a referência será copiada, não o objeto subjacente. O exemplo de código a seguir ilustra isso.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet11.fs)]
 
@@ -98,9 +95,9 @@ A saída do código anterior é a seguinte:
 [|; Test2; |]
 ```
 
-A cadeia de caracteres `Test1` aparece apenas na primeira matriz porque a operação de criação de um novo elemento substitui a referência em `firstArray`, mas não afeta a referência original a uma cadeia de caracteres vazia que ainda está presente no `secondArray`. A cadeia de caracteres `Test2` aparece em ambas as matrizes porque a operação `Insert` no tipo <xref:System.Text.StringBuilder?displayProperty=nameWithType> afeta o objeto <xref:System.Text.StringBuilder?displayProperty=nameWithType> subjacente, que é referenciado em ambas as matrizes.
+A cadeia de caracteres `Test1` aparece apenas na primeira matriz porque a operação de criação de um novo elemento substitui a referência em `firstArray` , mas não afeta a referência original a uma cadeia de caracteres vazia que ainda está presente no `secondArray` . A cadeia de caracteres `Test2` aparece em ambas as matrizes porque a `Insert` operação no <xref:System.Text.StringBuilder?displayProperty=nameWithType> tipo afeta o <xref:System.Text.StringBuilder?displayProperty=nameWithType> objeto subjacente, que é referenciado em ambas as matrizes.
 
-[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d) gera uma nova matriz de um subintervalo de uma matriz. Você especifica o subintervalo fornecendo o índice inicial e o comprimento. O código a seguir demonstra o uso de `Array.sub`.
+[`Array.sub`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sub) gera uma nova matriz de um subintervalo de uma matriz. Você especifica o subintervalo fornecendo o índice inicial e o comprimento. O código a seguir demonstra o uso de `Array.sub`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet12.fs)]
 
@@ -110,7 +107,7 @@ A saída mostra que a submatriz começa no elemento 5 e contém 10 elementos.
 [|5; 6; 7; 8; 9; 10; 11; 12; 13; 14|]
 ```
 
-[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911) cria uma nova matriz combinando duas matrizes existentes.
+[`Array.append`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#append) Cria uma nova matriz combinando duas matrizes existentes.
 
 O código a seguir demonstra o **array. Append**.
 
@@ -122,7 +119,7 @@ A saída do código anterior é a seguinte.
 [|1; 2; 3; 4; 5; 6|]
 ```
 
-[`Array.choose`](https://msdn.microsoft.com/library/f5c8a5e2-637f-44d4-b35c-be96a6618b09) seleciona os elementos de uma matriz para incluir em uma nova matriz. O código a seguir demonstra `Array.choose`. Observe que o tipo de elemento da matriz não precisa corresponder ao tipo de valor retornado no tipo de opção. Neste exemplo, o tipo de elemento é `int` e a opção é o resultado de uma função polinomial, `elem*elem - 1`, como um número de ponto flutuante.
+[`Array.choose`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#choose) seleciona os elementos de uma matriz para incluir em uma nova matriz. O código a seguir demonstra `Array.choose` . Observe que o tipo de elemento da matriz não precisa corresponder ao tipo de valor retornado no tipo de opção. Neste exemplo, o tipo de elemento é `int` e a opção é o resultado de uma função polinomial, `elem*elem - 1` , como um número de ponto flutuante.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet14.fs)]
 
@@ -132,7 +129,7 @@ A saída do código anterior é a seguinte.
 [|3.0; 15.0; 35.0; 63.0; 99.0|]
 ```
 
-[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a) executa uma função especificada em cada elemento da matriz de uma matriz existente e, em seguida, coleta os elementos gerados pela função e os combina em uma nova matriz. O código a seguir demonstra `Array.collect`.
+[`Array.collect`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#collect) executa uma função especificada em cada elemento da matriz de uma matriz existente e, em seguida, coleta os elementos gerados pela função e os combina em uma nova matriz. O código a seguir demonstra `Array.collect` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet15.fs)]
 
@@ -142,7 +139,7 @@ A saída do código anterior é a seguinte.
 [|0; 1; 0; 1; 2; 3; 4; 5; 0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10|]
 ```
 
-[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302) usa uma sequência de matrizes e as combina em uma única matriz. O código a seguir demonstra `Array.concat`.
+[`Array.concat`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#concat) usa uma sequência de matrizes e as combina em uma única matriz. O código a seguir demonstra `Array.concat` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet16.fs)]
 
@@ -153,7 +150,7 @@ A saída do código anterior é a seguinte.
 (3, 2, 6); (3, 3, 9)|]
 ```
 
-[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede) usa uma função de condição booliana e gera uma nova matriz que contém somente os elementos da matriz de entrada para a qual a condição é verdadeira. O código a seguir demonstra `Array.filter`.
+[`Array.filter`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#filter) usa uma função de condição booliana e gera uma nova matriz que contém somente os elementos da matriz de entrada para a qual a condição é verdadeira. O código a seguir demonstra `Array.filter` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet17.fs)]
 
@@ -163,7 +160,7 @@ A saída do código anterior é a seguinte.
 [|2; 4; 6; 8; 10|]
 ```
 
-[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709) gera uma nova matriz revertendo a ordem de uma matriz existente. O código a seguir demonstra `Array.rev`.
+[`Array.rev`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#rev) gera uma nova matriz revertendo a ordem de uma matriz existente. O código a seguir demonstra `Array.rev` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet18.fs)]
 
@@ -173,7 +170,7 @@ A saída do código anterior é a seguinte.
 "Hello world!"
 ```
 
-Você pode combinar facilmente funções no módulo de matriz que transformam matrizes usando o operador de pipeline (`|>`), conforme mostrado no exemplo a seguir.
+Você pode combinar facilmente funções no módulo de matriz que transformam matrizes usando o operador de pipeline ( `|>` ), conforme mostrado no exemplo a seguir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet19.fs)]
 
@@ -185,11 +182,11 @@ A saída é
 
 ### <a name="multidimensional-arrays"></a>Matrizes multidimensionais
 
-Uma matriz multidimensional pode ser criada, mas não há nenhuma sintaxe para gravar um literal de matriz multidimensional. Use o operador [`array2D`](https://msdn.microsoft.com/library/1d52503d-2990-49fc-8fd3-6b0e508aa236) para criar uma matriz de uma sequência de sequências de elementos de matriz. As sequências podem ser literais de matriz ou lista. Por exemplo, o código a seguir cria uma matriz bidimensional.
+Uma matriz multidimensional pode ser criada, mas não há nenhuma sintaxe para gravar um literal de matriz multidimensional. Use o operador [`array2D`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array2dmodule.html) para criar uma matriz de uma sequência de sequências de elementos de matriz. As sequências podem ser literais de matriz ou lista. Por exemplo, o código a seguir cria uma matriz bidimensional.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet20.fs)]
 
-Você também pode usar a função [`Array2D.init`](https://msdn.microsoft.com/library/9de07e95-bc21-4927-b5b4-08fdec882c7b) para inicializar matrizes de duas dimensões, e funções semelhantes estão disponíveis para matrizes de três e quatro dimensões. Essas funções usam uma função que é usada para criar os elementos. Para criar uma matriz bidimensional que contém elementos definidos como um valor inicial em vez de especificar uma função, use a função [`Array2D.create`](https://msdn.microsoft.com/library/36c9d980-b241-4a20-bc64-bcfa0205d804) , que também está disponível para matrizes de até quatro dimensões. O exemplo de código a seguir mostra primeiro como criar uma matriz de matrizes que contêm os elementos desejados e, em seguida, usa `Array2D.init` para gerar a matriz bidimensional desejada.
+Você também pode usar a função [`Array2D.init`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array2dmodule.html#init) para inicializar matrizes de duas dimensões e funções semelhantes estão disponíveis para matrizes de três e quatro dimensões. Essas funções usam uma função que é usada para criar os elementos. Para criar uma matriz bidimensional que contém elementos definidos como um valor inicial em vez de especificar uma função, use a [`Array2D.create`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array2dmodule.html#create) função, que também está disponível para matrizes de até quatro dimensões. O exemplo de código a seguir mostra primeiro como criar uma matriz de matrizes que contêm os elementos desejados e, em seguida, usa `Array2D.init` para gerar a matriz bidimensional desejada.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet21.fs)]
 
@@ -197,13 +194,13 @@ A indexação de matriz e a sintaxe de divisão têm suporte para matrizes até 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet22.fs)]
 
-O tipo de uma matriz bidimensional é escrito como `<type>[,]` (por exemplo, `int[,]`, `double[,]`) e o tipo de uma matriz tridimensional é escrito como `<type>[,,]` e assim por diante para matrizes de dimensões superiores.
+O tipo de uma matriz bidimensional é escrito como `<type>[,]` (por exemplo, `int[,]` `double[,]` ), e o tipo de uma matriz tridimensional é escrito como `<type>[,,]` e assim por diante para matrizes de dimensões superiores.
 
-Somente um subconjunto das funções disponíveis para matrizes unidimensionais também está disponível para matrizes multidimensionais. Para obter mais informações, consulte [`Collections.Array Module`](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.array-module-%5bfsharp%5d), [`Collections.Array2D Module`](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.array2d-module-%5bfsharp%5d), [`Collections.Array3D Module`](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.array3d-module-%5bfsharp%5d)e [`Collections.Array4D Module`](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.array4d-module-%5bfsharp%5d).
+Somente um subconjunto das funções disponíveis para matrizes unidimensionais também está disponível para matrizes multidimensionais.
 
 ### <a name="array-slicing-and-multidimensional-arrays"></a>Fatias de matrizes e matrizes multidimensionais
 
-Em uma matriz bidimensional (uma matriz), você pode extrair uma submatriz especificando intervalos e usando um caractere curinga (`*`) para especificar linhas ou colunas inteiras.
+Em uma matriz bidimensional (uma matriz), você pode extrair uma submatriz especificando intervalos e usando um caractere curinga ( `*` ) para especificar linhas ou colunas inteiras.
 
 ```fsharp
 // Get rows 1 to N from an NxM matrix (returns a matrix):
@@ -219,7 +216,7 @@ matrix.[*, 1..3]
 matrix.[1..3, 1..3]
 ```
 
-A partir F# de 3,1, você pode decompor uma matriz multidimensional em subconjuntos da mesma dimensão ou menor. Por exemplo, você pode obter um vetor de uma matriz especificando uma única linha ou coluna.
+Você pode decompor uma matriz multidimensional em subconjuntos da mesma dimensão ou menor. Por exemplo, você pode obter um vetor de uma matriz especificando uma única linha ou coluna.
 
 ```fsharp
 // Get row 3 from a matrix as a vector:
@@ -229,7 +226,7 @@ matrix.[3, *]
 matrix.[*, 3]
 ```
 
-Você pode usar essa sintaxe de divisão para tipos que implementam os operadores de acesso de elemento e os métodos `GetSlice` sobrecarregados. Por exemplo, o código a seguir cria um tipo de matriz que encapsula F# a matriz 2D, implementa uma propriedade item para fornecer suporte à indexação de matriz e implementa três versões do `GetSlice`. Se você puder usar esse código como um modelo para os tipos de matriz, poderá usar todas as operações de divisão que esta seção descreve.
+Você pode usar essa sintaxe de divisão para tipos que implementam os operadores de acesso do elemento e os métodos sobrecarregados `GetSlice` . Por exemplo, o código a seguir cria um tipo de matriz que encapsula a matriz 2D F #, implementa uma propriedade item para fornecer suporte para indexação de matriz e implementa três versões do `GetSlice` . Se você puder usar esse código como um modelo para os tipos de matriz, poderá usar todas as operações de divisão que esta seção descreve.
 
 ```fsharp
 type Matrix<'T>(N: int, M: int) =
@@ -300,9 +297,9 @@ module test =
 
 ### <a name="boolean-functions-on-arrays"></a>Funções booleanas em matrizes
 
-O Functions [`Array.exists`](https://msdn.microsoft.com/library/8e47ad6c-c065-4876-8cb4-ec960ec3e5c9) e os elementos de teste [`Array.exists2`](https://msdn.microsoft.com/library/2e384a6a-f99d-4e23-b677-250ffbc1dd8e) em uma ou duas matrizes, respectivamente. Essas funções usam uma função de teste e retornam `true` se houver um elemento (ou par de elementos para `Array.exists2`) que satisfaça a condição.
+As funções [`Array.exists`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#exists) e os [`Array.exists2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#exists2) elementos de teste em uma ou duas matrizes, respectivamente. Essas funções usam uma função de teste e retornam `true` se há um elemento (ou par de elementos para `Array.exists2` ) que satisfaça a condição.
 
-O código a seguir demonstra o uso de `Array.exists` e `Array.exists2`. Nesses exemplos, novas funções são criadas aplicando-se apenas um dos argumentos, nesses casos, o argumento da função.
+O código a seguir demonstra o uso de `Array.exists` e `Array.exists2` . Nesses exemplos, novas funções são criadas aplicando-se apenas um dos argumentos, nesses casos, o argumento da função.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet23.fs)]
 
@@ -315,7 +312,7 @@ false
 true
 ```
 
-Da mesma forma, a função [`Array.forall`](https://msdn.microsoft.com/library/d88f2cd0-fa7f-45cf-ac15-31eae9086cc4) testa uma matriz para determinar se cada elemento atende a uma condição booliana. A variação [`Array.forall2`](https://msdn.microsoft.com/library/c68f61a1-030c-4024-b705-c4768b6c96b9) faz a mesma coisa usando uma função booleana que envolve elementos de duas matrizes de comprimento igual. O código a seguir ilustra o uso dessas funções.
+Da mesma forma, a função [`Array.forall`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#forall) testa uma matriz para determinar se cada elemento atende a uma condição booliana. A variação [`Array.forall2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#forall2) faz a mesma coisa usando uma função booleana que envolve elementos de duas matrizes de comprimento igual. O código a seguir ilustra o uso dessas funções.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet24.fs)]
 
@@ -328,9 +325,9 @@ true
 false
 ```
 
-### <a name="searching-arrays"></a>Pesquisando matrizes
+### <a name="search-arrays"></a>Pesquisar matrizes
 
-[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33) usa uma função booliana e retorna o primeiro elemento para o qual a função retorna `true` ou gera um <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> se nenhum elemento que satisfaça a condição for encontrado. [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) é como `Array.find`, exceto pelo fato de que ele retorna o índice do elemento em vez do próprio elemento.
+[`Array.find`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#find) usa uma função booliana e retorna o primeiro elemento para o qual a função retorna `true` , ou gera um <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> elemento If nenhum que satisfaça a condição é encontrado. [`Array.findIndex`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#findIndex) é como `Array.find` , exceto pelo fato de que ele retorna o índice do elemento em vez do próprio elemento.
 
 O código a seguir usa `Array.find` e `Array.findIndex` para localizar um número que seja um cubo perfeito e um quadrado perfeitos.
 
@@ -342,7 +339,7 @@ A saída é a seguinte.
 The first element that is both a square and a cube is 64 and its index is 62.
 ```
 
-[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9) é como `Array.find`, exceto que seu resultado é um tipo de opção e retorna `None` se nenhum elemento for encontrado. `Array.tryFind` deverá ser usado em vez de `Array.find` quando você não souber se um elemento correspondente está na matriz. Da mesma forma, [`Array.tryFindIndex`](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a) é como [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) , exceto pelo fato de que o tipo de opção é o valor de retorno. Se nenhum elemento for encontrado, a opção será `None`.
+[`Array.tryFind`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#tryFind) é como `Array.find` , exceto que seu resultado é um tipo de opção e retorna `None` se nenhum elemento for encontrado. `Array.tryFind` deve ser usado em vez de `Array.find` quando você não sabe se um elemento correspondente está na matriz. Da mesma forma, [`Array.tryFindIndex`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#tryFindIndex) é como, `Array.findIndex` exceto que o tipo de opção é o valor de retorno. Se nenhum elemento for encontrado, a opção será `None` .
 
 O código a seguir demonstra o uso de `Array.tryFind`. Esse código depende do código anterior.
 
@@ -356,7 +353,7 @@ Found an element: 729
 Failed to find a matching element.
 ```
 
-Use [`Array.tryPick`](https://msdn.microsoft.com/library/72d45f85-037b-43a9-97fd-17239f72713e) quando precisar transformar um elemento, além de localizá-lo. O resultado é o primeiro elemento para o qual a função retorna o elemento transformado como um valor de opção ou `None` se nenhum elemento desse tipo for encontrado.
+Use [`Array.tryPick`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#tryPick) quando precisar transformar um elemento, além de localizá-lo. O resultado é o primeiro elemento para o qual a função retorna o elemento transformado como um valor de opção ou `None` se nenhum elemento desse tipo é encontrado.
 
 O código a seguir demonstra o uso de `Array.tryPick`. Nesse caso, em vez de uma expressão lambda, várias funções auxiliares locais são definidas para simplificar o código.
 
@@ -372,25 +369,25 @@ Found an element 4096 with square root 64 and cube root 16.
 Did not find an element that is both a perfect square and a perfect cube.
 ```
 
-### <a name="performing-computations-on-arrays"></a>Executando cálculos em matrizes
+### <a name="perform-computations-on-arrays"></a>Executar cálculos em matrizes
 
-A função [`Array.average`](https://msdn.microsoft.com/library/7029f2b9-91ea-41cb-be1b-466a5a0db20e) retorna a média de cada elemento em uma matriz. Ele é limitado a tipos de elementos que dão suporte à divisão exata por um inteiro, que inclui tipos de ponto flutuante, mas não tipos integrais. A função [`Array.averageBy`](https://msdn.microsoft.com/library/e9d64609-06a3-48f0-bc07-226ab0f85c54) retorna a média dos resultados da chamada de uma função em cada elemento. Para uma matriz de tipo integral, você pode usar `Array.averageBy` e fazer com que a função Converta cada elemento em um tipo de ponto flutuante para a computação.
+A [`Array.average`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#average) função retorna a média de cada elemento em uma matriz. Ele é limitado a tipos de elementos que dão suporte à divisão exata por um inteiro, que inclui tipos de ponto flutuante, mas não tipos integrais. A [`Array.averageBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#averageBy) função retorna a média dos resultados da chamada de uma função em cada elemento. Para uma matriz de tipo integral, você pode usar `Array.averageBy` e fazer com que a função Converta cada elemento em um tipo de ponto flutuante para a computação.
 
-Use [`Array.max`](https://msdn.microsoft.com/library/f03fbda0-fce6-40e2-a85d-79c9d81f710b) ou [`Array.min`](https://msdn.microsoft.com/library/d6b3da5f-bac0-4355-9846-4b72d95bc3fd) para obter o elemento máximo ou mínimo, se o tipo de elemento oferecer suporte a ele. Da mesma forma, [`Array.maxBy`](https://msdn.microsoft.com/library/18dbe7c5-482e-4766-8e01-12a76f847045) e [`Array.minBy`](https://msdn.microsoft.com/library/24091583-be78-4cc9-9fab-de6d7506af4f) permitem que uma função seja executada primeiro, talvez para transformar em um tipo que dê suporte à comparação.
+Use [`Array.max`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#max) ou [`Array.min`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#min) para obter o elemento máximo ou mínimo, se o tipo de elemento oferecer suporte a ele. Da mesma forma, [`Array.maxBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#maxBy) e [`Array.minBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#minBy) permite que uma função seja executada primeiro, talvez para transformar em um tipo que dê suporte à comparação.
 
-[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2) adiciona os elementos de uma matriz e [`Array.sumBy`](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b) chama uma função em cada elemento e adiciona os resultados juntos.
+[`Array.sum`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sum) Adiciona os elementos de uma matriz e [`Array.sumBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sumBy) chama uma função em cada elemento e adiciona os resultados juntos.
 
-Para executar uma função em cada elemento em uma matriz sem armazenar os valores de retorno, use [`Array.iter`](https://msdn.microsoft.com/library/94eba0f1-ecd7-459f-b89f-ed2a2923e516). Para uma função que envolva duas matrizes de comprimento igual, use [`Array.iter2`](https://msdn.microsoft.com/library/018aa9b9-f186-4142-be8a-a62462794fdc). Se você também precisar manter uma matriz dos resultados da função, use [`Array.map`](https://msdn.microsoft.com/library/38cbe824-0480-47be-85fd-df3afdd97a45) ou [`Array.map2`](https://msdn.microsoft.com/library/bb7aafe8-4a1f-45b9-92fc-1af9eafbea5c), que opera em duas matrizes de cada vez.
+Para executar uma função em cada elemento em uma matriz sem armazenar os valores de retorno, use [`Array.iter`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#iter) . Para uma função que envolva duas matrizes de comprimento igual, use [`Array.iter2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#iter2) . Se você também precisar manter uma matriz dos resultados da função, use [`Array.map`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#map) ou [`Array.map2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#map2) , que opera em duas matrizes por vez.
 
-As variações [`Array.iteri`](https://msdn.microsoft.com/library/8bbe2ed4-ada7-4906-ac3e-cb09f9db6486) e [`Array.iteri2`](https://msdn.microsoft.com/library/c041b91f-6080-45b7-867b-2ed983a90405) permitem que o índice do elemento esteja envolvido na computação; o mesmo é verdadeiro para [`Array.mapi`](https://msdn.microsoft.com/library/f7e45994-b0a1-49e6-8fb5-5641cea8fde4) e [`Array.mapi2`](https://msdn.microsoft.com/library/5edb33d2-47da-44e1-9290-40c00c47d5b0).
+As variações [`Array.iteri`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#iteri) e [`Array.iteri2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#iteri2) permitem que o índice do elemento esteja envolvido na computação; o mesmo é verdadeiro para [`Array.mapi`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#mapi) e [`Array.mapi2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#mapi2) .
 
-As funções [`Array.fold`](https://msdn.microsoft.com/library/5ed9dd3b-3694-4567-94d0-fd9a24474e09), [`Array.foldBack`](https://msdn.microsoft.com/library/1121a453-dead-4711-a0ca-cc147752989c), [`Array.reduce`](https://msdn.microsoft.com/library/fd62a985-89fe-4f49-a9d4-0c808ac6749d), [`Array.reduceBack`](https://msdn.microsoft.com/library/4fdd4cbe-2238-4c5c-b286-597a7e9036f9), [`Array.scan`](https://msdn.microsoft.com/library/f6893608-9146-450d-9ebb-a0016803fbb0)e [1](https://msdn.microsoft.com/library/7610f406-7a5c-41db-a0ca-8e2a2a4826ad) executam os algoritmos que envolvem todos os elementos de uma matriz. Da mesma forma, as variações [`Array.fold2`](https://msdn.microsoft.com/library/5c845087-d041-476e-8cc4-53ae6849ef79) e [`Array.foldBack2`](https://msdn.microsoft.com/library/aa51b405-df20-4c51-9998-a6530f7db862) executam cálculos em duas matrizes.
+As funções [`Array.fold`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#fold) , [`Array.foldBack`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#foldBack) , [`Array.reduce`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#reduce) , [`Array.reduceBack`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#reduceBack) , [`Array.scan`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#scan) e [`Array.scanBack`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#scanBack) executam algoritmos que envolvem todos os elementos de uma matriz. Da mesma forma, as variações [`Array.fold2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#fold2) e [`Array.foldBack2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#foldBack2) executam cálculos em duas matrizes.
 
-Essas funções para executar computações correspondem às funções de mesmo nome no módulo de [lista](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788). Para obter exemplos de uso, consulte [listas](lists.md).
+Essas funções para executar computações correspondem às funções de mesmo nome no módulo de [lista](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html). Para obter exemplos de uso, consulte [listas](lists.md).
 
-### <a name="modifying-arrays"></a>Modificando matrizes
+### <a name="modify-arrays"></a>Modificar matrizes
 
-[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) define um elemento para um valor especificado. [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2) define um intervalo de elementos em uma matriz para um valor especificado. O código a seguir fornece um exemplo de `Array.fill`.
+[`Array.set`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#set) define um elemento para um valor especificado. [`Array.fill`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#fill) define um intervalo de elementos em uma matriz para um valor especificado. O código a seguir fornece um exemplo de `Array.fill` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet28.fs)]
 
@@ -400,25 +397,25 @@ A saída é a seguinte.
 [|1; 2; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 23; 24; 25|]
 ```
 
-Você pode usar [`Array.blit`](https://msdn.microsoft.com/library/675e13e4-7fb9-4e0d-a5be-a112830de667) para copiar uma subseção de uma matriz para outra matriz.
+Você pode usar [`Array.blit`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#blit) para copiar uma subseção de uma matriz para outra matriz.
 
-### <a name="converting-to-and-from-other-types"></a>Convertendo de e para outros tipos
+### <a name="convert-to-and-from-other-types"></a>Converter de e para outros tipos
 
-[`Array.ofList`](https://msdn.microsoft.com/library/e7225239-f561-45a4-b0b5-69a1cdcae78b) cria uma matriz de uma lista. [`Array.ofSeq`](https://msdn.microsoft.com/library/6bedf5e0-4b22-46da-b09c-6aa09eff220c) cria uma matriz de uma sequência. [`Array.toList`](https://msdn.microsoft.com/library/4deff724-0be4-4688-92e7-9d67a1097786) e [`Array.toSeq`](https://msdn.microsoft.com/library/ac28dbab-406c-4fe0-ab08-c1ce5e247af4) convertem esses outros tipos de coleção do tipo de matriz.
+[`Array.ofList`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#ofList) Cria uma matriz de uma lista. [`Array.ofSeq`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#ofSeq) Cria uma matriz de uma sequência. [`Array.toList`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#toList) e [`Array.toSeq`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#toSeq) converter para esses outros tipos de coleção do tipo de matriz.
 
-### <a name="sorting-arrays"></a>Classificando matrizes
+### <a name="sort-arrays"></a>Classificar matrizes
 
-Use [`Array.sort`](https://msdn.microsoft.com/library/c6679075-e7eb-463c-9be5-c89be140c312) para classificar uma matriz usando a função de comparação genérica. Use [`Array.sortBy`](https://msdn.microsoft.com/library/144498dc-091d-4575-a229-c0bcbd61426b) para especificar uma função que gera um valor, chamado de *chave*, para classificar usando a função de comparação genérica na chave. Use [`Array.sortWith`](https://msdn.microsoft.com/library/699d3638-4244-4f42-8496-45f53d43ce95) se desejar fornecer uma função de comparação personalizada. `Array.sort`, `Array.sortBy` e `Array.sortWith` retornam a matriz classificada como uma nova matriz. As variações [`Array.sortInPlace`](https://msdn.microsoft.com/library/36f39947-8a88-4823-9e9b-e9d838d292e0), [`Array.sortInPlaceBy`](https://msdn.microsoft.com/library/7fb9d2dd-d461-4c67-8b43-b5c59fc12c3f)e [`Array.sortInPlaceWith`](https://msdn.microsoft.com/library/454f9e11-972d-47a6-a854-8031cb0c7b0b) modificam a matriz existente em vez de retornar uma nova.
+Use [`Array.sort`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sort) para classificar uma matriz usando a função de comparação genérica. Use [`Array.sortBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortBy) para especificar uma função que gera um valor, chamado de *chave*, para classificar usando a função de comparação genérica na chave. Use [`Array.sortWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortWith) se você quiser fornecer uma função de comparação personalizada. `Array.sort`, `Array.sortBy` e `Array.sortWith` todos retornam a matriz classificada como uma nova matriz. As variações [`Array.sortInPlace`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlace) , [`Array.sortInPlaceBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceBy) e [`Array.sortInPlaceWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceWith) modificam a matriz existente em vez de retornar uma nova.
 
 ### <a name="arrays-and-tuples"></a>Matrizes e tuplas
 
-As funções [`Array.zip`](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187) e [`Array.unzip`](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48) convertem matrizes de pares de tupla em tuplas de matrizes e vice-versa. [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d) e [`Array.unzip3`](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677) são semelhantes, exceto que funcionam com tuplas de três elementos ou tuplas de três matrizes.
+As funções [`Array.zip`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#zip) e [`Array.unzip`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#unzip) convertem matrizes de pares de tupla para tuplas de matrizes e vice-versa. [`Array.zip3`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#zip3) e [`Array.unzip3`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#unzip3) são semelhantes, exceto que funcionam com tuplas de três elementos ou tuplas de três matrizes.
 
 ## <a name="parallel-computations-on-arrays"></a>Cálculos paralelos em matrizes
 
-O módulo [`Array.Parallel`](https://msdn.microsoft.com/library/60f30b77-5af4-4050-9a5c-bcdb3f5cbb09) contém funções para executar cálculos paralelos em matrizes. Este módulo não está disponível em aplicativos que visam versões do .NET Framework antes da versão 4.
+O módulo [`Array.Parallel`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule-parallel.html) contém funções para executar cálculos paralelos em matrizes. Este módulo não está disponível em aplicativos que visam versões do .NET Framework antes da versão 4.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Referência da Linguagem F#](index.md)
+- [Referência de linguagem F #](index.md)
 - [Tipos F#](fsharp-types.md)

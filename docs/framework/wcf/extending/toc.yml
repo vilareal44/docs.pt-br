@@ -7,16 +7,16 @@
         - name: Estendendo clientes
           href: extending-clients.md
           items:
-            - name: Como inspecionar ou modificar mensagens no cliente
+            - name: 'Como: inspecionar ou modificar mensagens no cliente'
               href: how-to-inspect-or-modify-messages-on-the-client.md
-            - name: Como inspecionar ou modificar parâmetros
+            - name: 'Como: inspecionar ou modificar parâmetros'
               href: how-to-inspect-or-modify-parameters.md
         - name: Estendendo distribuidores
           href: extending-dispatchers.md
           items:
-            - name: Como inspecionar e modificar mensagens do serviço
+            - name: 'Como: inspecionar e modificar mensagens do serviço'
               href: how-to-inspect-and-modify-messages-on-the-service.md
-            - name: Como bloquear pontos de extremidade na empresa
+            - name: 'Como: bloquear pontos de extremidade na empresa'
               href: how-to-lock-down-endpoints-in-the-enterprise.md
         - name: Objetos extensíveis
           href: extensible-objects.md
@@ -32,7 +32,7 @@
         - name: Associações personalizadas
           href: custom-bindings.md
           items:
-            - name: Como personalizar uma associação fornecida pelo sistema
+            - name: 'Como: personalizar uma associação fornecida pelo sistema'
               href: how-to-customize-a-system-provided-binding.md
         - name: Criando associações definidas pelo usuário
           href: creating-user-defined-bindings.md
@@ -55,7 +55,7 @@
         - name: Canais de desenvolvimento
           href: developing-channels.md
           items:
-            - name: 'Serviço : ouvintes de canal e canais'
+            - name: 'Serviço: ouvintes de canais e canais'
               href: service-channel-listeners-and-channels.md
             - name: 'Cliente: fábricas de canais e canais'
               href: client-channel-factories-and-channels.md
@@ -75,39 +75,39 @@
         - name: Credencial personalizada e validação de credencial
           href: custom-credential-and-credential-validation.md
           items:
-            - name: Passo a passo de criação de credenciais de serviço e cliente personalizados
+            - name: 'Passo a passo: criar credenciais de serviço e cliente personalizados'
               href: walkthrough-creating-custom-client-and-service-credentials.md
-            - name: Como criar um serviço que utiliza um validador de certificado personalizado
+            - name: 'Como: criar um serviço que utiliza um validador de certificado personalizado'
               href: how-to-create-a-service-that-employs-a-custom-certificate-validator.md
-            - name: Como criar um fornecedor de token de segurança personalizado
+            - name: 'Como: criar um provedor de token de segurança personalizado'
               href: how-to-create-a-custom-security-token-provider.md
-            - name: Como criar um autenticador de token de segurança personalizado
+            - name: 'Como: criar um autenticador de token de segurança personalizado'
               href: how-to-create-a-custom-security-token-authenticator.md
         - name: Tokens personalizados
           href: custom-tokens.md
           items:
-            - name: Como criar um token personalizado
+            - name: 'Como: criar um token personalizado'
               href: how-to-create-a-custom-token.md
         - name: Autorização personalizada
           href: custom-authorization.md
           items:
-            - name: Como criar uma diretiva de autorização personalizada
+            - name: 'Como: criar uma política de autorização personalizada'
               href: how-to-create-a-custom-authorization-policy.md
-            - name: Como criar gerenciador de autorização personalizado para um serviço
+            - name: 'Como: criar gerenciador de autorização personalizado para um serviço'
               href: how-to-create-a-custom-authorization-manager-for-a-service.md
-            - name: Como criar uma afirmação personalizada
+            - name: 'Como: criar uma declaração personalizada'
               href: how-to-create-a-custom-claim.md
-            - name: Como comparar declarações
+            - name: 'Como: comparar declarações'
               href: how-to-compare-claims.md
-            - name: Como criar uma identidade principal personalizada
+            - name: 'Como: criar uma identidade principal personalizada'
               href: how-to-create-a-custom-principal-identity.md
         - name: Substituindo a identidade de um serviço pela autenticação
           href: overriding-the-identity-of-a-service-for-authentication.md
-        - name: Como criar um verificador de identidade de cliente personalizado
+        - name: 'Como: criar um verificador de identidade de cliente personalizado'
           href: how-to-create-a-custom-client-identity-verifier.md
-        - name: Como utilizar certificados X.509 separados para assinatura e criptografia
+        - name: 'Como: usar certificados X.509 separados para assinatura e criptografia'
           href: how-to-use-separate-x-509-certificates-for-signing-and-encryption.md
-        - name: Como alterar o fornecedor de criptografia de uma chave privada de certificado X.509
+        - name: 'Como: alterar o provedor de criptografia de uma chave privada de certificado X.509'
           href: change-cryptographic-provider-x509-certificate-private-key.md
     - name: Estendendo o sistema de metadados
       href: extending-the-metadata-system.md
@@ -115,27 +115,27 @@
         - name: Exportando metadados personalizados para uma extensão do WCF
           href: exporting-custom-metadata-for-a-wcf-extension.md
           items:
-            - name: Como exportar o WSDL personalizado
+            - name: 'Como: exportar o WSDL personalizado'
               href: how-to-export-custom-wsdl.md
-            - name: Como exportar declarações de política personalizadas
+            - name: 'Como: exportar declarações de política personalizadas'
               href: how-to-export-custom-policy-assertions.md
         - name: Importando metadados personalizados para uma extensão do WCF
           href: importing-custom-metadata-for-a-wcf-extension.md
           items:
-            - name: Como importar WSDL personalizado
+            - name: 'Como: importar o WSDL personalizado'
               href: how-to-import-custom-wsdl.md
-            - name: Como importar asserções de políticas personalizadas
+            - name: 'Como: importar declarações de política personalizadas'
               href: how-to-import-custom-policy-assertions.md
-            - name: Como escrever uma extensão para o ServiceContractGenerator
+            - name: 'Como: escrever uma extensão para o ServiceContractGenerator'
               href: how-to-write-an-extension-for-the-servicecontractgenerator.md
         - name: Publicando e recuperando metadados através de uma associação personalizada
           href: publishing-and-retrieving-metadata-over-a-custom-binding.md
           items:
             - name: WS-MetadataExchange Bindings
               href: ws-metadataexchange-bindings.md
-            - name: Como configurar uma associação de intercâmbio de WS-Metadata
+            - name: 'Como: configurar uma associação personalizada do WS-Metadata Exchange'
               href: how-to-configure-a-custom-ws-metadata-exchange-binding.md
-            - name: Como recuperar metadados através de uma associação não MEX
+            - name: 'Como: recuperar metadados através de uma associação não MEX'
               href: how-to-retrieve-metadata-over-a-non-mex-binding.md
     - name: Estendendo codificadores e serializadores
       href: extending-encoders-and-serializers.md

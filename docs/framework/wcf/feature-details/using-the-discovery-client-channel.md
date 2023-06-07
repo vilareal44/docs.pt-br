@@ -2,35 +2,35 @@
 title: Usando o canal cliente Discovery
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
-ms.openlocfilehash: 2d9dd68d233541f4d8cb3185adc1023cd5a19de1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a74d0ba77977e158a6c6e469a9b6a88c8d1aac82
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184258"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575973"
 ---
 # <a name="using-the-discovery-client-channel"></a>Usando o canal cliente Discovery
-Ao escrever um aplicativo cliente WCF, você precisa saber o endereço final do serviço que você está chamando. Em muitas situações, o endereço final de um serviço não é conhecido com antecedência ou o endereço do serviço muda ao longo do tempo. O Discovery Client Channel permite que você escreva um aplicativo cliente WCF, descreva o serviço que deseja ligar e o canal do cliente envie automaticamente uma solicitação de teste. Quando um serviço responde, o canal cliente de descoberta recupera o endereço de ponto final para o serviço a partir da resposta do teste e o usa para chamar o serviço.  
+Ao gravar um aplicativo cliente WCF, você precisa saber o endereço do ponto de extremidade do serviço que está chamando. Em muitas situações, o endereço do ponto de extremidade de um serviço não é conhecido com antecedência ou o endereço do serviço muda ao longo do tempo. O canal cliente de descoberta permite que você grave um aplicativo cliente do WCF, descreva o serviço que você deseja chamar e o canal do cliente envia automaticamente uma solicitação de investigação. Quando um serviço responde, o canal cliente de descoberta recupera o endereço do ponto de extremidade para o serviço da resposta de investigação e o utiliza para chamar o serviço.  
   
 ## <a name="using-the-discovery-client-channel"></a>Usando o canal cliente Discovery  
- Para usar o Discovery Client Channel, <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> adicione uma instância da pilha de canais do cliente. Alternativamente, você <xref:System.ServiceModel.Discovery.DynamicEndpoint> pode <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> usar o e a é automaticamente adicionado à sua vinculação, se ainda não estiver presente.  
+ Para usar o canal cliente de descoberta, adicione uma instância do <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> à pilha de canais do cliente. Como alternativa, você pode usar o <xref:System.ServiceModel.Discovery.DynamicEndpoint> e um <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> é adicionado automaticamente à sua associação, se ainda não estiver presente.  
   
 > [!CAUTION]
-> Recomenda-se que <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> o elemento seja o mais alto na pilha de canais do cliente. Qualquer elemento de vinculação adicionado <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> em cima <xref:System.ServiceModel.ChannelFactory> do deve certificar-se de que `Via` o ou canal `CreateChannel` que ele cria não usa o endereço ou endereço do ponto final (passado para o método) porque eles podem não conter o endereço correto.  
+> É recomendável que o <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> seja o elemento mais alto na pilha de canais do cliente. Qualquer elemento de associação que é adicionado sobre o <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> deve garantir que o <xref:System.ServiceModel.ChannelFactory> canal ou que ele cria não use o endereço do ponto de extremidade ou `Via` Endereço (passado para o `CreateChannel` método) porque eles não podem conter o endereço correto.  
   
  A <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> classe contém duas propriedades públicas:  
   
 1. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>, que é usado para descrever o serviço que você deseja chamar.  
   
-2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A>que especifica o ponto final da descoberta para enviar mensagens de descoberta.  
+2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A>que especifica o ponto de extremidade de descoberta para o qual enviar mensagens de descoberta.  
   
- A <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> propriedade permite que você especifique o contrato de serviço que você está procurando, quaisquer URIs de escopo necessários e o número máximo de tempo para tentar abrir o canal. O tipo de contrato é especificado ligando para o construtor <xref:System.ServiceModel.Discovery.FindCriteria>. URIs de escopo podem <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A> ser adicionados à propriedade. A <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> propriedade permite especificar o número máximo de resultados aos quais o cliente tenta se conectar. Quando uma resposta do teste é recebida, o cliente tenta abrir o canal usando o endereço de ponto final a partir da resposta do teste. Se ocorrer uma exceção, o cliente passa para a próxima resposta do teste, esperando que mais respostas sejam recebidas, se necessário. Ele continua a fazer isso até que o canal seja aberto com sucesso ou o número máximo de resultados seja alcançado. Para obter mais informações sobre essas configurações, consulte <xref:System.ServiceModel.Discovery.FindCriteria>.  
+ A <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> propriedade permite especificar o contrato de serviço que você está procurando, todos os URIs de escopo necessários e o número máximo de tempo para tentar abrir o canal. O tipo de contrato é especificado chamando o construtor <xref:System.ServiceModel.Discovery.FindCriteria> . URIs de escopo podem ser adicionados à <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A> propriedade. A <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> propriedade permite que você especifique o número máximo de resultados aos quais o cliente tenta se conectar. Quando uma resposta de investigação é recebida, o cliente tenta abrir o canal usando o endereço do ponto de extremidade da resposta de investigação. Se ocorrer uma exceção, o cliente passará para a próxima resposta de investigação, aguardando que mais respostas sejam recebidas, se necessário. Ele continua a fazer isso até que o canal seja aberto com êxito ou o número máximo de resultados seja atingido. Para obter mais informações sobre essas configurações, consulte <xref:System.ServiceModel.Discovery.FindCriteria>.  
   
- A <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> propriedade permite que você especifique o ponto final de descoberta a ser usado. Normalmente este <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>é um , mas pode ser qualquer ponto final válido.  
+ A <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> propriedade permite que você especifique o ponto de extremidade de descoberta a ser usado. Normalmente, isso é um <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> , mas pode ser qualquer ponto de extremidade válido.  
   
- Quando você está criando a vinculação para usar para se comunicar com o serviço, você deve ter o cuidado de usar exatamente a mesma vinculação que o serviço. A única diferença é que <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> a vinculação do cliente tem um na parte superior da pilha. Se o serviço estiver usando uma das vinculações <xref:System.ServiceModel.Channels.CustomBinding> fornecidas pelo sistema, crie uma <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> nova e passe na vinculação fornecida pelo sistema ao construtor. Então você pode <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> adicionar `Insert` o <xref:System.ServiceModel.Channels.CustomBinding.Elements%2A> chamando na propriedade.  
+ Ao criar a associação a ser usada para se comunicar com o serviço, você deve ter cuidado para usar exatamente a mesma ligação que o serviço. A única diferença é que a associação de cliente tem um <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> na parte superior da pilha. Se o serviço estiver usando uma das associações fornecidas pelo sistema, crie um novo <xref:System.ServiceModel.Channels.CustomBinding> e passe a associação fornecida pelo sistema para o <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> Construtor. Em seguida, você pode adicionar o <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> chamando `Insert` na <xref:System.ServiceModel.Channels.CustomBinding.Elements%2A> propriedade.  
   
- Depois de adicionar <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> o vinculação e configurá-lo, você pode criar uma instância da classe cliente WCF, abri-la e chamar seus métodos. O exemplo a seguir usa o Discovery Client Channel `ICalculator` para descobrir um serviço WCF que implementa a classe (usada no tutorial Do WCF Getting Started) e chama seu `Add` método.  
+ Depois de adicionar o <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> à sua associação e configurá-lo, você pode criar uma instância da classe de cliente WCF, abri-la e chamar seus métodos. O exemplo a seguir usa o canal do cliente de descoberta para descobrir um serviço WCF que implementa a `ICalculator` classe (usada no tutorial introdução do WCF) e chama seu `Add` método.  
   
 ```csharp
 // Create the DiscoveryClientBindingElement  
@@ -59,5 +59,5 @@ catch (EndpointNotFoundException ex)
 }  
 ```  
   
-## <a name="security-and-the-discovery-client-channel"></a>Segurança e o Discovery Client Channel  
- Ao usar o canal cliente de descoberta, dois pontos finais estão sendo especificados. Um é usado para mensagens de descoberta, geralmente <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, e o outro é o ponto final do aplicativo. Ao implementar um serviço seguro, deve-se tomar cuidado para garantir ambos os pontos finais. Para obter mais informações sobre segurança, consulte [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).
+## <a name="security-and-the-discovery-client-channel"></a>Segurança e o canal do cliente de descoberta  
+ Ao usar o canal do cliente de descoberta, dois pontos de extremidade estão sendo especificados. Uma é usada para mensagens de descoberta, geralmente <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> , e a outra é o ponto de extremidade do aplicativo. Ao implementar um serviço seguro, é necessário tomar cuidado para proteger os dois pontos de extremidade. Para obter mais informações sobre segurança, consulte [protegendo serviços e clientes](securing-services-and-clients.md).

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming, debugging and profiling tools
 ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
-ms.openlocfilehash: 795fb9b37b95a2e7bc1fb8f8f9547522efa46d82
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0765b01e9c07d1250c99cd38aa55ba815511f274
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140053"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291715"
 ---
 # <a name="parallel-diagnostic-tools"></a>Ferramentas de diagnóstico em paralelo
 O Visual Studio fornece amplo suporte para depuração e criação de perfil de aplicativos multi-threaded.  
@@ -22,11 +22,11 @@ O Visual Studio fornece amplo suporte para depuração e criação de perfil de 
   
 - [Usando a janela Tarefas](/visualstudio/debugger/using-the-tasks-window)  
   
-- [Passo a passo: Depurando uma aplicação paralela](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).  
+- [Walkthrough: Depurando um aplicativo paralelo](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).  
   
 ## <a name="profiling"></a>Criação de perfil  
  As visualizações do relatório Visualizador de Simultaneidade permitem que você visualize como os threads em um programa paralelo interagem uns com os outros e com threads de outros processos no sistema. Para saber mais, confira [Visualização Simultânea](/visualstudio/profiling/concurrency-visualizer).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Programação Paralela](../../../docs/standard/parallel-programming/index.md)
+- [Programação paralela](index.md)

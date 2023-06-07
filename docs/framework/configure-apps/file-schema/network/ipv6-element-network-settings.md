@@ -9,19 +9,19 @@ helpviewer_keywords:
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
 ms.openlocfilehash: c16949171d082bd02abb0a02db83c2e71c2f17df
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088130"
 ---
-# <a name="ipv6-element-network-settings"></a>\<Elemento ipv6> (configurações de rede)
-Habilita respostas de IPv6 (protocolo IP versão 6) de membros obsoletos da classe <xref:System.Net.Dns>.  
+# <a name="ipv6-element-network-settings"></a>Elemento \<ipv6> (Configurações de Rede)
+Habilita respostas de IPv6 (protocolo IP versão 6) de membros obsoletos da <xref:System.Net.Dns> classe.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**configurações**](settings-element-network-settings.md) >
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**ipv6 >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<ipv6>**
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,27 +36,27 @@ Habilita respostas de IPv6 (protocolo IP versão 6) de membros obsoletos da clas
   
 ### <a name="attributes"></a>Atributos  
   
-|**Attribute**|**Descrição**|  
+|**Atributo**|**Descrição**|  
 |-------------------|---------------------|  
-|`enabled`|Especifica se os membros da classe de <xref:System.Net.Dns> retornam endereços IPv6 (protocolo IP versão 6). O valor padrão é `false`.|  
+|`enabled`|Especifica se os membros da <xref:System.Net.Dns> classe retornam endereços IPv6 (protocolo IP versão 6). O valor padrão é `false`.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[Configurações](settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
+|[configurações](settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa configuração habilita o suporte a IPv6 para os membros obsoletos da classe <xref:System.Net.Dns>: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>e <xref:System.Net.Dns.Resolve%2A>. Para outros membros do namespace <xref:System.Net?displayProperty=nameWithType>, os endereços IPv6 poderão ser retornados se o IPv6 estiver habilitado no sistema operacional.  
+ Essa configuração habilita o suporte a IPv6 para os membros obsoletos da classe:,,,,, <xref:System.Net.Dns> <xref:System.Net.Dns.BeginGetHostByName%2A> <xref:System.Net.Dns.BeginResolve%2A> <xref:System.Net.Dns.EndGetHostByName%2A> <xref:System.Net.Dns.EndResolve%2A> <xref:System.Net.Dns.GetHostByAddress%2A> <xref:System.Net.Dns.GetHostByName%2A> e <xref:System.Net.Dns.Resolve%2A> . Para outros membros do <xref:System.Net?displayProperty=nameWithType> namespace, os endereços IPv6 podem ser retornados se o IPv6 estiver habilitado no sistema operacional.  
   
-## <a name="configuration-files"></a>Arquivos de Configuração  
+## <a name="configuration-files"></a>Arquivos de configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como habilitar o suporte a IPv6 para a classe <xref:System.Net.Dns>.  
+ O exemplo a seguir mostra como habilitar o suporte a IPv6 para a <xref:System.Net.Dns> classe.  
   
 ```xml  
 <configuration>  
@@ -68,7 +68,7 @@ Habilita respostas de IPv6 (protocolo IP versão 6) de membros obsoletos da clas
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Net?displayProperty=nameWithType>
 - <xref:System.Net.Dns?displayProperty=nameWithType>

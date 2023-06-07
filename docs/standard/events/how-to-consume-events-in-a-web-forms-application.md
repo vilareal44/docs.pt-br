@@ -12,12 +12,12 @@ helpviewer_keywords:
 - events [.NET Framework], consuming
 - Web Forms, event handling
 ms.assetid: 73bf8638-c4ec-4069-b0bb-a1dc79b92e32
-ms.openlocfilehash: 1f95fd0dcc12f2d4e47ee07e1e6bb15d91000f0f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3490b6fb89bfe6d7ac778078f58381bb5172e2fe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73124779"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288479"
 ---
 # <a name="how-to-consume-events-in-a-web-forms-application"></a>Como consumir eventos em um aplicativo Web Forms
 Um cenário comum em aplicativos de Formulários Web do ASP.NET é popular uma página da Web com controles e executar uma ação específica com base no controle em que o usuário clica. Por exemplo, um controle <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> gera um evento quando o usuário clica na página da Web. Ao manipular o evento, o aplicativo pode executar a lógica de aplicativo apropriada para esse clique do botão.  
@@ -49,6 +49,6 @@ Um cenário comum em aplicativos de Formulários Web do ASP.NET é popular uma p
   
 3. No método do manipulador de eventos que você definiu na etapa 2, adicione código para executar as ações que são necessárias quando o evento ocorre.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Eventos](../../../docs/standard/events/index.md)
+- [Eventos](index.md)

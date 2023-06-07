@@ -1,6 +1,7 @@
 ---
-title: Expressões regulares do .NET Framework
-ms.date: 03/30/2017
+title: Expressões regulares do .NET
+description: Use expressões regulares para localizar padrões de caracteres específicos, validar texto, trabalhar com subcadeias de texto, & adicionar cadeias de caracteres extraídas a uma coleção no .NET.
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -20,25 +21,25 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: 819310891192833f0c71d0104fceec11b1b25375
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: f57199c2ddf6569020554e74b6e70801844da641
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635717"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802891"
 ---
 # <a name="net-regular-expressions"></a>Expressões regulares do .NET
 
-Expressões regulares oferecem um método poderoso, flexível e eficiente de processamento de texto. A extensa notação de correspondência de padrões de expressões regulares permite analisar rapidamente grandes quantidades de texto para:
+Expressões regulares oferecem um método poderoso, flexível e eficiente de processamento de texto. A notação extensiva de correspondência de padrões de expressões regulares permite que você analise rapidamente grandes quantidades de texto para:
 
-- Encontre padrões específicos de caracteres.
-- Valide o texto para garantir que ele corresponda a um padrão predefinido (como um endereço de e-mail).
-- Extrair, editar, substituir ou excluir substrings de texto.
-- Adicione as cordas extraídas a uma coleção para gerar um relatório.
+- Localizar padrões de caracteres específicos.
+- Valide o texto para garantir que ele corresponda a um padrão predefinido (como um endereço de email).
+- Extraia, edite, substitua ou exclua subcadeias de texto.
+- Adicione cadeias de caracteres extraídas a uma coleção para gerar um relatório.
 
 Para vários aplicativos que lidam com cadeias de caracteres ou que analisam grandes blocos de texto, as expressões regulares são uma ferramenta indispensável.  
   
-## <a name="how-regular-expressions-work"></a>Como funcionam as expressões regulares
+## <a name="how-regular-expressions-work"></a>Como as expressões regulares funcionam
 
  A parte mais importante do processamento de texto com expressões regulares é o mecanismo de expressão regular, que é representado pelo objeto <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> no .NET. No mínimo, o processamento de texto usando expressões regulares exige que o mecanismo de expressões regulares seja fornecido com os dois itens informativos a seguir:  
   
@@ -67,10 +68,12 @@ Para saber mais sobre a linguagem de expressão regular, confira [Linguagem de e
 
 A classe <xref:System.String> inclui uma série de métodos de pesquisa de cadeia de caracteres e substituição que podem ser usados quando você quer localizar cadeias de caracteres literais em uma cadeia de caracteres maior. Expressões regulares são mais úteis quando você quer localizar uma dentre diversas subcadeias de caracteres em uma cadeia de caracteres maior ou quando quer identificar padrões em uma cadeia de caracteres, como mostrado nos exemplos a seguir.
 
+[!INCLUDE [regex](../../../includes/regex.md)]
+
 > [!TIP]
 > O namespace <xref:System.Web.RegularExpressions> contém vários objetos de expressão regular que implementam padrões predefinidos de expressão regular para analisar cadeias de caracteres de documentos HTML, XML e ASP.NET. Por exemplo, a classe <xref:System.Web.RegularExpressions.TagRegex> identifica marcas de início em uma cadeia de caracteres e a classe <xref:System.Web.RegularExpressions.CommentRegex> identifica comentários ASP.NET em uma cadeia de caracteres.
 
-### <a name="example-1-replace-substrings"></a>Exemplo 1: Substituir substrings  
+### <a name="example-1-replace-substrings"></a>Exemplo 1: substituir subcadeias de caracteres  
 
  Vamos presumir que uma lista de endereçamento contém nomes que, às vezes, incluem um pronome de tratamento (Sr., Srs., Srta. ou Sra.) junto com o nome e o sobrenome. Se não quiser incluir os pronomes de tratamento ao gerar etiquetas para envelopes na lista, é possível usar uma expressão regular para removê-los, como mostrado no exemplo a seguir.  
   
@@ -79,7 +82,7 @@ A classe <xref:System.String> inclui uma série de métodos de pesquisa de cadei
   
  O padrão de expressão regular `(Mr\.? |Mrs\.? |Miss |Ms\.? )` corresponde a qualquer ocorrência de “Sr”, “Sr.”, “Sra”, “Sra.”, “Srta” ou “Srta.”. A chamada para o método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> substitui a cadeia de caracteres correspondida por <xref:System.String.Empty?displayProperty=nameWithType>; em outras palavras, ela a remove da cadeia de caracteres original.  
   
-### <a name="example-2-identify-duplicated-words"></a>Exemplo 2: Identifique palavras duplicadas  
+### <a name="example-2-identify-duplicated-words"></a>Exemplo 2: identificar palavras duplicadas  
 
  Duplicar palavras acidentalmente é um erro comum que escritores cometem. Uma expressão regular pode ser usada para identificar palavras duplicadas, como mostrado no exemplo a seguir.  
   
@@ -99,9 +102,9 @@ A classe <xref:System.String> inclui uma série de métodos de pesquisa de cadei
   
  O método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> é chamado com opções de expressão regular definidas como <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>. Portanto, a operação de correspondência não faz distinção entre maiúsculas e minúsculas e o exemplo identifica a subcadeia de caracteres “This this” como uma duplicação.  
   
- A seqüência de entrada inclui a substring "isso? This”. No entanto, devido à pontuação no meio, ela não é identificada como uma duplicação.  
+ A cadeia de caracteres de entrada inclui a subcadeia de caracteres "esta? This”. No entanto, devido à pontuação no meio, ela não é identificada como uma duplicação.  
   
-### <a name="example-3-dynamically-build-a-culture-sensitive-regular-expression"></a>Exemplo 3: Construa dinamicamente uma expressão regular sensível à cultura  
+### <a name="example-3-dynamically-build-a-culture-sensitive-regular-expression"></a>Exemplo 3: criar dinamicamente uma expressão regular sensível à cultura  
 
  O exemplo a seguir mostra a força das expressões regulares combinada à flexibilidade oferecida pelos recursos de globalização do .NET. Ele utiliza o objeto <xref:System.Globalization.NumberFormatInfo> para determinar o formato de valores de moeda na cultura atual do sistema. Então, essa informação é usada para construir dinamicamente uma expressão regular que extrai valores de moeda do texto. Para cada correspondência, ele extrai o subgrupo que contém somente a subcadeia de caracteres, converte-a para um valor <xref:System.Decimal> e calcula uma soma acumulada.  
   
@@ -113,7 +116,7 @@ A classe <xref:System.String> inclui uma série de métodos de pesquisa de cadei
 > [!div class="mx-tdCol2BreakAll"]
 > |Padrão|Interpretação|  
 > |-|-|  
-> |`\$`|Procure uma única ocorrência do símbolo de cifrão (`$`) na cadeia de caracteres de entrada. A cadeia de caracteres do padrão de expressão regular inclui uma barra invertida para indicar que o símbolo de cifrão deve ser interpretado literalmente ao invés de como uma âncora de expressão regular. (O `$` símbolo por si só indicaria que o mecanismo de expressão regular deve tentar iniciar sua partida no final de uma string.) Para garantir que o símbolo de moeda da cultura atual não seja mal <xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType> interpretado como um símbolo de expressão regular, o exemplo chama o método para escapar do personagem.|  
+> |`\$`|Procure uma única ocorrência do símbolo de cifrão (`$`) na cadeia de caracteres de entrada. A cadeia de caracteres do padrão de expressão regular inclui uma barra invertida para indicar que o símbolo de cifrão deve ser interpretado literalmente ao invés de como uma âncora de expressão regular. (O `$` símbolo sozinho indicaria que o mecanismo de expressões regulares deve tentar iniciar sua correspondência no final de uma cadeia de caracteres.) Para garantir que o símbolo de moeda da cultura atual não seja interpretado erroneamente como um símbolo de expressão regular, o exemplo chama o <xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType> método para escapar o caractere.|  
 > |`\s*`|Procure zero ou mais ocorrências de um caractere de espaço em branco.|  
 > |`[-+]?`|Procure zero ou uma ocorrência de um sinal de positivo ou negativo.|  
 > |`([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`|Os parênteses externos ao redor da expressão a definem como um grupo de captura ou uma subexpressão. Se uma correspondência for localizada, informações sobre essa parte da cadeia de caracteres correspondente podem ser recuperadas do segundo objeto <xref:System.Text.RegularExpressions.Group> no objeto <xref:System.Text.RegularExpressions.GroupCollection> retornado pela propriedade <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. (O primeiro elemento na coleção representa a correspondência inteira.)|  

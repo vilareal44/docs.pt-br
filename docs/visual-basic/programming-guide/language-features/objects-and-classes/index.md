@@ -1,16 +1,16 @@
 ---
 title: Objetos e classes
-ms.date: 07/20/2015
+ms.date: 05/26/2020
 helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 589b0b362cc25fd10e2780fd541cf9f7cfb546a9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9e3cf262ef617a1ae5ee92bcc3d6fd5c691602f9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344633"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600407"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objetos e classes no Visual Basic
 
@@ -26,32 +26,38 @@ Cada objeto no Visual Basic é definido por uma *classe*. Uma classe descreve as
 
 Para entender a relação entre um objeto e sua classe, pense em cookies e cortadores de cookie. O cortador de cookie é a classe. Ele define as características de cada cookie, por exemplo, tamanho e forma. A classe é usada para criar objetos. Os objetos são os cookies.
 
-Você deve criar um objeto antes de poder acessar seus membros.
+Você deve criar um objeto antes de poder acessar seus membros, exceto para [`Shared`](../../../language-reference/modifiers/shared.md) Membros que podem ser acessados sem um objeto da classe.
 
-### <a name="to-create-an-object-from-a-class"></a>Como criar um objeto de uma classe
+### <a name="create-an-object-from-a-class"></a>Criar um objeto a partir de uma classe
 
-1. Determine de qual classe você deseja criar um objeto.
-
-2. Escreva uma [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) para criar uma variável a qual você pode atribuir uma instância da classe. A variável deve ser do tipo da classe desejada.
+1. Determine de qual classe você deseja criar um objeto ou defina sua própria classe. Por exemplo:
 
    ```vb
-   Dim nextCustomer As customer
+   Public Class Customer
+       Public Property AccountNumber As Integer
+   End Class
    ```
 
-3. Adicione a palavra-chave [novo operador](../../../../visual-basic/language-reference/operators/new-operator.md) para inicializar a variável a uma nova instância da classe.
+2. Escreva uma [instrução Dim](../../../language-reference/statements/dim-statement.md) para criar uma variável a qual você pode atribuir uma instância da classe. A variável deve ser do tipo da classe desejada.
 
    ```vb
-   Dim nextCustomer As New customer
+   Dim nextCustomer As Customer
+   ```
+
+3. Adicione a palavra-chave [novo operador](../../../language-reference/operators/new-operator.md) para inicializar a variável a uma nova instância da classe.
+
+   ```vb
+   Dim nextCustomer As New Customer
    ```
 
 4. Agora você pode acessar os membros da classe pela variável de objeto.
 
    ```vb
-   nextCustomer.accountNumber = lastAccountNumber + 1
+   nextCustomer.AccountNumber = lastAccountNumber + 1
    ```
 
 > [!NOTE]
-> Sempre que possível, você deve declarar a variável para ser do tipo de classe que você pretende atribuir a ela. Isso é chamado de *associação inicial*. Se não souber o tipo de classe no tempo de compilação, você poderá invocar a *associação tardia*, declarando a variável como o [Tipo de Dados do Objeto](../../../../visual-basic/language-reference/data-types/object-data-type.md). Entretanto, a associação tardia pode tornar o desempenho mais lento e limitar o acesso a membros do objeto do tempo de execução. Para obter mais informações, consulte [Declaração de variável de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md).
+> Sempre que possível, você deve declarar a variável para ser do tipo de classe que você pretende atribuir a ela. Isso é chamado de *associação inicial*. Se não souber o tipo de classe no tempo de compilação, você poderá invocar a *associação tardia*, declarando a variável como o [Tipo de Dados do Objeto](../../../language-reference/data-types/object-data-type.md). Entretanto, a associação tardia pode tornar o desempenho mais lento e limitar o acesso a membros do objeto do tempo de execução. Para obter mais informações, consulte [Declaração de variável de objeto](../variables/object-variable-declaration.md).
 
 ### <a name="multiple-instances"></a>Várias instâncias
 
@@ -104,9 +110,12 @@ Use os campos quando:
 
 - A propriedade é um tipo de dados `String` e não há restrição sobre o tamanho ou o valor da cadeia de caracteres.
 
-- Para obter mais informações, consulte [Procedimentos de propriedade](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md).
+- Para obter mais informações, consulte [Procedimentos de propriedade](../procedures/property-procedures.md).
 
-### <a name="methods"></a>{1&gt;Métodos&lt;1}
+> [!TIP]
+> Sempre mantenha os campos não constantes particulares. Quando você quiser torná-lo público, use uma propriedade em vez disso.
+
+### <a name="methods"></a>Métodos
 
 Um *método* é uma ação que um objeto pode executar. Por exemplo, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A> é um método do objeto <xref:System.Windows.Forms.ComboBox> que adiciona uma nova entrada para uma caixa de combinação.
 
@@ -119,23 +128,21 @@ safetyTimer.Start()
 
 Observe que um método é simplesmente um *procedimento* que é exposto por um objeto.
 
-Para obter mais informações, consulte [Procedimentos](../../../../visual-basic/programming-guide/language-features/procedures/index.md).
+Para obter mais informações, consulte [Procedimentos](../procedures/index.md).
 
-### <a name="events"></a>Events
+### <a name="events"></a>Eventos
 
 Um evento é uma ação reconhecida por um objeto, como clicar com o mouse ou pressionar uma tecla e para o qual você pode escrever código para responder. Os eventos podem ocorrer como resultado de uma ação do usuário ou código do programa, ou eles podem ser causados pelo sistema. O código que sinaliza um evento *aciona* o evento e o código que responde a ele *lida* com ele.
 
-Você também pode desenvolver seus próprios eventos personalizados para serem acionados por seus objetos e manipulados por outros objetos. Para obter mais informações, consulte [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md).
+Você também pode desenvolver seus próprios eventos personalizados para serem acionados por seus objetos e manipulados por outros objetos. Para obter mais informações, consulte [Eventos](../events/index.md).
 
 ### <a name="instance-members-and-shared-members"></a>Membros de instância e membros compartilhados
 
-Quando você cria um objeto de uma classe, o resultado é uma instância dessa classe. Membros que não são declarados com a palavra-chave [compartilhado](../../../../visual-basic/language-reference/modifiers/shared.md) são *membros de instância*, que pertencem estritamente a essa instância em particular. Um membro de instância em uma instância é independente do mesmo membro em outra instância da mesma classe. Por exemplo, uma variável de membro de instância pode ter valores diferentes em instâncias diferentes.
+Quando você cria um objeto de uma classe, o resultado é uma instância dessa classe. Membros que não são declarados com a palavra-chave [compartilhado](../../../language-reference/modifiers/shared.md) são *membros de instância*, que pertencem estritamente a essa instância em particular. Um membro de instância em uma instância é independente do mesmo membro em outra instância da mesma classe. Por exemplo, uma variável de membro de instância pode ter valores diferentes em instâncias diferentes.
 
 Membros declarados com a palavra-chave `Shared` são *membros compartilhados*, que pertencem à classe como um todo e não a qualquer instância específica. Um membro compartilhado existe somente uma vez, independentemente de quantas instâncias de sua classe você cria ou mesmo se você não criar nenhuma instância. Uma variável de membro compartilhado, por exemplo, tem apenas um valor, que está disponível para todo o código que pode acessar a classe.
 
-#### <a name="accessing-nonshared-members"></a>Acessando membros não compartilhados
-
-##### <a name="to-access-a-nonshared-member-of-an-object"></a>Como acessar um membro não compartilhado de um objeto
+#### <a name="accessing-non-shared-members"></a>Acessando membros não compartilhados
 
 1. Verifique se o objeto foi criado com base na sua classe e atribuído a uma variável de objeto.
 
@@ -143,7 +150,7 @@ Membros declarados com a palavra-chave `Shared` são *membros compartilhados*, q
    Dim secondForm As New System.Windows.Forms.Form
    ```
 
-2. Na instrução que acessa o membro, siga o nome de variável de objeto com o *operador de acesso de membro* (`.`) e, em seguida, o nome do membro.
+2. Na instrução que acessa o membro, siga o nome da variável de objeto com o *operador de acesso para membro* ( `.` ) e, em seguida, o nome do membro.
 
    ```vb
    secondForm.Show()
@@ -151,19 +158,17 @@ Membros declarados com a palavra-chave `Shared` são *membros compartilhados*, q
 
 #### <a name="accessing-shared-members"></a>Acessando membros compartilhados
 
-##### <a name="to-access-a-shared-member-of-an-object"></a>Como acessar um membro compartilhado de um objeto
-
-- Siga o nome da classe com o *operador de acesso de membro* (`.`) e, em seguida, o nome do membro. Você sempre deve acessar um membro do objeto `Shared` diretamente pelo nome da classe.
+- Siga o nome da classe com o *operador de acesso para membro* ( `.` ) e, em seguida, o nome do membro. Você sempre deve acessar um membro do objeto `Shared` diretamente pelo nome da classe.
 
    ```vb
-   MsgBox("This computer is called " & Environment.MachineName)
+   Console.WriteLine("This computer is called " & Environment.MachineName)
    ```
 
 - Se já tiver criado um objeto da classe, você também poderá acessar um membro `Shared` pela variável do objeto.
 
 ### <a name="differences-between-classes-and-modules"></a>Diferenças entre classes e módulos
 
-A principal diferença entre classes e módulos é que as classes podem ser instanciadas como objetos enquanto os módulos padrão não podem. Como há apenas uma cópia dos dados de um módulo padrão, quando uma parte do seu programa altera uma variável pública em um módulo padrão, qualquer outra parte do programa obtém o mesmo valor se ler essa variável. Em contraste, os dados do objeto existem separadamente para cada objeto instanciado. Outra diferença é que, diferentemente dos módulos padrão, as classes podem implementar interfaces.
+A principal diferença entre classes e módulos é que as classes podem ser instanciadas como objetos enquanto os módulos padrão não podem. Como há apenas uma cópia dos dados de um módulo padrão, quando uma parte do seu programa altera uma variável pública em um módulo padrão, qualquer outra parte do programa obtém o mesmo valor se ler essa variável. Em contraste, os dados do objeto existem separadamente para cada objeto instanciado. Outra diferença é que, diferentemente dos módulos padrão, as classes podem implementar interfaces. Se uma classe for marcada com o modificador [MustInherit](../../../language-reference/modifiers/mustinherit.md) , ela não poderá ser instanciada diretamente. No entanto, ele ainda é diferente de um módulo, pois pode ser herdado enquanto os módulos não podem ser herdados.
 
 > [!NOTE]
 > Quando o modificador `Shared` é aplicado a um membro de classe, ele é associado à classe em si em vez de uma determinada instância da classe. O membro é acessado diretamente usando o nome de classe, do mesmo que os membros do módulo são acessados.
@@ -176,10 +181,10 @@ Por outro lado, os membros declarados dentro de um módulo são acessíveis publ
 
 Os objetos permitem que você declare variáveis e procedimentos uma vez e reutilize-os quando necessário. Por exemplo, se desejar adicionar um verificador ortográfico a um aplicativo, defina todas as variáveis e funções de suporte para fornecer a funcionalidade de verificação ortográfica. Se criar o verificador de ortografia como uma classe, você poderá reutilizá-lo em outros aplicativos adicionando uma referência ao assembly compilado. Melhor ainda, você poderá diminuir seu trabalho usando uma classe de verificador ortográfico que alguém já desenvolveu.
 
-O .NET Framework fornece muitos exemplos de componentes que estão disponíveis para uso. O exemplo a seguir usa a classe <xref:System.TimeZone> no namespace <xref:System>. <xref:System.TimeZone> fornece membros que permitem que você recupere informações sobre o fuso horário do sistema atual do computador.
+O .NET fornece muitos exemplos de componentes que estão disponíveis para uso. O exemplo a seguir usa a classe <xref:System.TimeZone> no namespace <xref:System>. <xref:System.TimeZone> fornece membros que permitem que você recupere informações sobre o fuso horário do sistema atual do computador.
 
 ```vb
-Public Sub examineTimeZone()
+Public Sub ExamineTimeZone()
     Dim tz As System.TimeZone = System.TimeZone.CurrentTimeZone
     Dim s As String = "Current time zone is "
     s &= CStr(tz.GetUtcOffset(Now).Hours) & " hours and "
@@ -188,11 +193,11 @@ Public Sub examineTimeZone()
     s &= vbCrLf & "and is currently "
     If tz.IsDaylightSavingTime(Now) = False Then s &= "not "
     s &= "on ""summer time""."
-    MsgBox(s)
+    Console.WriteLine(s)
 End Sub
 ```
 
-No exemplo anterior, o primeiro [Demonstrativo Esmaecido](../../../../visual-basic/language-reference/statements/dim-statement.md) declara uma variável de objeto do tipo <xref:System.TimeZone> e atribui a ele um objeto <xref:System.TimeZone> retornado pela propriedade <xref:System.TimeZone.CurrentTimeZone%2A>.
+No exemplo anterior, o primeiro [Demonstrativo Esmaecido](../../../language-reference/statements/dim-statement.md) declara uma variável de objeto do tipo <xref:System.TimeZone> e atribui a ele um objeto <xref:System.TimeZone> retornado pela propriedade <xref:System.TimeZone.CurrentTimeZone%2A>.
 
 ## <a name="relationships-among-objects"></a>Relacionamentos entre objetos
 
@@ -204,17 +209,17 @@ Quando classes são derivadas de classes mais fundamentais, elas devem ter um *r
 
 No exemplo a seguir, suponha que você deseja definir um tipo especial de <xref:System.Windows.Forms.Button> que atua como um <xref:System.Windows.Forms.Button> normal, mas também expõe um método que reverte as cores de primeiro plano e da tela de fundo.
 
-#### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>Como definir uma classe derivada de uma classe já existente
+#### <a name="define-a-class-that-is-derived-from-an-already-existing-class"></a>Definir uma classe que é derivada de uma classe já existente
 
-1. Use uma [instrução Class](../../../../visual-basic/language-reference/statements/class-statement.md) para definir uma classe da qual criar o objeto que você precisa.
+1. Use uma [instrução Class](../../../language-reference/statements/class-statement.md) para definir uma classe da qual criar o objeto que você precisa.
 
    ```vb
-   Public Class reversibleButton
+   Public Class ReversibleButton
    ```
 
    Certifique-se de que uma instrução `End Class` segue a última linha de código em sua classe. Por padrão, o IDE (ambiente de desenvolvimento integrado) gera automaticamente um `End Class` quando você insere uma instrução `Class`.
 
-2. Siga a instrução `Class` imediatamente com uma [instrução Inherits](../../../../visual-basic/language-reference/statements/inherits-statement.md). Especifique a classe da qual a nova classe deriva.
+2. Siga a instrução `Class` imediatamente com uma [instrução Inherits](../../../language-reference/statements/inherits-statement.md). Especifique a classe da qual a nova classe deriva.
 
    ```vb
    Inherits System.Windows.Forms.Button
@@ -222,12 +227,12 @@ No exemplo a seguir, suponha que você deseja definir um tipo especial de <xref:
 
    A nova classe herda todos os membros definidos pela classe base.
 
-3. Adicione o código para os membros adicionais que sua classe derivada expõe. Por exemplo, você pode adicionar um método `reverseColors` e sua classe derivada será semelhante ao seguinte:
+3. Adicione o código para os membros adicionais que sua classe derivada expõe. Por exemplo, você pode adicionar um método `ReverseColors` e sua classe derivada será semelhante ao seguinte:
 
    ```vb
-   Public Class reversibleButton
+   Public Class ReversibleButton
        Inherits System.Windows.Forms.Button
-           Public Sub reverseColors()
+           Public Sub ReverseColors()
                Dim saveColor As System.Drawing.Color = Me.BackColor
                Me.BackColor = Me.ForeColor
                Me.ForeColor = saveColor
@@ -235,13 +240,13 @@ No exemplo a seguir, suponha que você deseja definir um tipo especial de <xref:
    End Class
    ```
 
-   Se você criar um objeto da classe `reversibleButton`, ele poderá acessar todos os membros da classe <xref:System.Windows.Forms.Button>, bem como o método `reverseColors` e quaisquer outros novos membros que você definir no `reversibleButton`.
+   Se você criar um objeto da `ReversibleButton` classe, ele poderá acessar todos os membros da <xref:System.Windows.Forms.Button> classe, bem como o `ReverseColors` método e quaisquer outros novos membros que você definir no `ReversibleButton` .
 
-As classes derivadas herdam membros da classe que eles se baseiam, permitindo que você adicione complexidade enquanto progride em uma hierarquia de classe. Para obter mais informações, consulte [Noções básicas de herança](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).
+As classes derivadas herdam membros da classe que eles se baseiam, permitindo que você adicione complexidade enquanto progride em uma hierarquia de classe. Para obter mais informações, consulte [Noções básicas de herança](inheritance-basics.md).
 
 ### <a name="compile-the-code"></a>Compilar o código
 
-Certifique-se de que o compilador pode acessar a classe da qual você pretende derivar sua nova classe. Isso pode significar qualificar totalmente seu nome, como no exemplo anterior, ou identificar seu namespace em uma [Instrução Imports (Tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Se a classe estiver em um projeto diferente, você precisará adicionar uma referência ao projeto. Para obter mais informações, consulte [Gerenciando referências em um projeto](/visualstudio/ide/managing-references-in-a-project).
+Certifique-se de que o compilador pode acessar a classe da qual você pretende derivar sua nova classe. Isso pode significar qualificar totalmente seu nome, como no exemplo anterior, ou identificar seu namespace em uma [Instrução Imports (Tipo e Namespace .NET)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md). Se a classe estiver em um projeto diferente, você precisará adicionar uma referência ao projeto. Para obter mais informações, consulte [Gerenciando referências em um projeto](/visualstudio/ide/managing-references-in-a-project).
 
 ### <a name="containment-relationship"></a>Relação de confinamento
 
@@ -249,27 +254,27 @@ Outro modo de relação dos objetos é a *relação de confinamento*. Os objetos
 
 #### <a name="collections"></a>Coleções
 
-Um tipo específico de confinamento de objeto é representado pelas *coleções*. As coleções são grupos de objetos semelhantes que podem ser enumerados. Visual Basic dá suporte a uma sintaxe específica no [para cada... Próxima instrução](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) que permite que você itere pelos itens de uma coleção. Além disso, as coleções permitem, com frequência, que você use um <xref:Microsoft.VisualBasic.Collection.Item%2A> para recuperar elementos pelo índice ou associando-os com uma cadeia de caracteres exclusiva. As coleções podem ser mais fáceis de usar que matrizes porque elas permitem que você adicione ou remova itens sem usar índices. Devido à facilidade de uso, as coleções geralmente são usadas para armazenar formulários e controles.
+Um tipo específico de confinamento de objeto é representado pelas *coleções*. As coleções são grupos de objetos semelhantes que podem ser enumerados. Visual Basic dá suporte a uma sintaxe específica no [para cada... Próxima instrução](../../../language-reference/statements/for-each-next-statement.md) que permite que você itere pelos itens de uma coleção. Além disso, as coleções permitem, com frequência, que você use um <xref:Microsoft.VisualBasic.Collection.Item%2A> para recuperar elementos pelo índice ou associando-os com uma cadeia de caracteres exclusiva. As coleções podem ser mais fáceis de usar que matrizes porque elas permitem que você adicione ou remova itens sem usar índices. Devido à facilidade de uso, as coleções geralmente são usadas para armazenar formulários e controles.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-[Walkthrough: definindo Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)\
+[Walkthrough: definindo classes](walkthrough-defining-classes.md)\
 Fornece uma descrição passo a passo de como criar uma classe.
 
-[Propriedades e métodos sobrecarregados](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)\
+[Propriedades e métodos sobrecarregados](overloaded-properties-and-methods.md)\
 Propriedades e métodos sobrecarregados
 
-[Noções básicas sobre herança](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)\
+[Noções básicas de herança](inheritance-basics.md)\
 Aborda modificadores de herança, substituindo métodos e propriedades, MyClass e MyBase.
 
-[Tempo de vida do objeto: como os objetos são criados e destruídos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)\
+[Tempo de vida do objeto: como os objetos são criados e destruídos](object-lifetime-how-objects-are-created-and-destroyed.md)\
 Aborda a criação e descarte de instâncias de classe.
 
-[Tipos Anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)\
+[Tipos anônimos](anonymous-types.md)\
 Descreve como criar e usar tipos anônimos, que permitem que você crie objetos sem escrever uma definição de classe para o tipo de dados.
 
-[Inicializadores de objeto: tipos nomeados e anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)\
+[Inicializadores de objeto: tipos nomeados e anônimos](object-initializers-named-and-anonymous-types.md)\
 Discute inicializadores de objeto, que são usados para criar instâncias de tipos nomeados e anônimos usando uma única expressão.
 
-[Como: inferir nomes e tipos de propriedade em declarações de tipo anônimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
+[Como: inferir nomes e tipos de propriedade em declarações de tipo anônimo](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
 Explica como inferir nomes e tipos de propriedade em declarações de tipo anônimo. Fornece exemplos de inferência de tipos com e sem êxito.

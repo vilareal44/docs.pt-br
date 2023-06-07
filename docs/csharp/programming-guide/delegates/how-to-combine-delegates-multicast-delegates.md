@@ -1,16 +1,17 @@
 ---
-title: Como combinar delegados (Delegados Multicast) - Guia de Programação C#
+title: Como combinar delegados (delegados multicast) – guia de programação C#
+description: Saiba como combinar delegados para criar delegados multicast. Consulte um exemplo de código e exiba recursos adicionais disponíveis.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], combining
 - multicast delegates [C#]
 ms.assetid: 4e689450-6d0c-46de-acfd-f961018ae5dd
-ms.openlocfilehash: 7b5b9ba5c9bf70983fac9f869836b4c8c5449eca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d23ea758c9da2c3399f5d98e81360cc250b428a1
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705373"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302731"
 ---
 # <a name="how-to-combine-delegates-multicast-delegates-c-programming-guide"></a>Como combinar delegados (delegados multicast) (Guia de Programação em C#)
 Este exemplo demonstra como criar delegados multicast. Uma propriedade útil de objetos [delegados](../../language-reference/builtin-types/reference-types.md) é que vários objetos podem ser atribuídos a uma instância delegada usando o operador `+`. O delegado multicast contém uma lista dos delegados atribuídos. Quando o delegado multicast é chamado, ele invoca os delegados da lista, em ordem. Apenas os delegados do mesmo tipo podem ser combinados.  
@@ -23,5 +24,5 @@ Este exemplo demonstra como criar delegados multicast. Uma propriedade útil de 
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.MulticastDelegate>
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Eventos](../events/index.md)

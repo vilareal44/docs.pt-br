@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6330a9ee-8cd5-4299-86f1-b4de2c701a0d
 topic_type:
 - apiref
-ms.openlocfilehash: c32407c3fc0bc5a045b80ec48937699826d981af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 68e29e932e477f286db00b0c989a3346bd13c9bc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177161"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501216"
 ---
 # <a name="imetadatatablesgetblobheapsize-method"></a>Método IMetaDataTables::GetBlobHeapSize
-Obtém o tamanho, em bytes, do heap binário de objeto grande (BLOB).  
+Obtém o tamanho, em bytes, do heap do objeto binário grande (BLOB).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,20 +33,20 @@ HRESULT GetBlobHeapSize (
 );
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pcbBlobs`  
- [fora] Um ponteiro para o tamanho, em bytes, do monte BLOB.  
+ fora Um ponteiro para o tamanho, em bytes, do heap de BLOB.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [Interface IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [Interface IMetaDataTables](imetadatatables-interface.md)
+- [Interface IMetaDataTables2](imetadatatables2-interface.md)

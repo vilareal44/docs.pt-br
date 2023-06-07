@@ -1,14 +1,13 @@
 ---
 title: Instalar o .NET Framework no Windows 7 SP1
-ms.custom: updateeachrelease
 description: Saiba como instalar o .NET Framework no Windows 7 SP1.
 ms.date: 04/18/2019
-ms.openlocfilehash: 77177b8c4a40f68eb139f5d765bcb421a4d6bb49
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3f94562f2a14c108a021343b89a8279e95215f30
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76965848"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558849"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Instalar o .NET Framework no Windows 7 SP1 e Windows Server 2008 R2
 
@@ -25,7 +24,7 @@ Essas instruções ajudarão você a instalar as versões do .NET Framework nece
 
 O [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) pode ser usado para executar aplicativos criados para o .NET Framework 4.0 ou posterior.
 
-## <a name="net-framework-35"></a>.NET Framework 3,5
+## <a name="net-framework-35"></a>.NET Framework 3.5
 
 O [.NET Framework 3.5](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) está incluído no Windows 7.
 
@@ -37,6 +36,6 @@ Você pode [entrar em contato com a Microsoft para obter ajuda](mailto:dotnet-in
 
 ## <a name="see-also"></a>Confira também
 
-- [Baixe o Quadro .NET](https://dotnet.microsoft.com/download)
+- [Baixar o .NET Framework](https://dotnet.microsoft.com/download)
 - [Solução de problemas de instalações e desinstalações bloqueadas do .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
 - [Instalar o .NET Framework para desenvolvedores](guide-for-developers.md)

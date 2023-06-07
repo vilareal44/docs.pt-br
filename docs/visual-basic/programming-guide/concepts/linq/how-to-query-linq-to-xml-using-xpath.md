@@ -1,13 +1,13 @@
 ---
-title: 'Como: Consulte LINQ to XML usando o XPath'
+title: 'Como: consultar LINQ to XML usando XPath'
 ms.date: 07/20/2015
 ms.assetid: e1f69a20-1efa-452d-9089-c472fa84b3d5
-ms.openlocfilehash: 563756c019ddd458d46f47c843e32ddc7bbaacd1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d95e5a82d146c357f52d03375119474b042d49f6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347651"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397915"
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-visual-basic"></a>Como consultar LINQ to XML usando XPath (Visual Basic)
 Este tópico apresenta os métodos de extensão que permitem ver uma árvore XML usando o XPath. Para obter informações detalhadas sobre como usar esses métodos de extensão, consulte <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
@@ -34,7 +34,7 @@ For Each el As XElement In list
 Next  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <Child2>4</Child2>  
@@ -42,6 +42,6 @@ Next
 <Child2>6</Child2>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Técnicas de consulta avançada (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Técnicas de consulta avançada (LINQ to XML) (Visual Basic)](advanced-query-techniques-linq-to-xml.md)

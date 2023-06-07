@@ -1,13 +1,13 @@
 ---
 title: Expressões lentas
-description: Saiba como F# as expressões lentas podem melhorar o desempenho de seus aplicativos e bibliotecas.
-ms.date: 03/13/2019
-ms.openlocfilehash: 97429e9a4c3838cbaa2ead197db4443e0820e8b3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+description: 'Saiba como as expressões lentas em F # podem melhorar o desempenho de seus aplicativos e bibliotecas.'
+ms.date: 08/15/2020
+ms.openlocfilehash: 71c466ca3b74c9e92b81a3c268e07438ec944905
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630742"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558082"
 ---
 # <a name="lazy-expressions"></a>Expressões lentas
 
@@ -21,19 +21,19 @@ let identifier = lazy ( expression )
 
 ## <a name="remarks"></a>Comentários
 
-Na sintaxe anterior, *expression* é o código que é avaliado somente quando um resultado é necessário e o *identificador* é um valor que armazena o resultado. O valor é do tipo [`Lazy<'T>`](https://msdn.microsoft.com/library/b29d0af5-6efb-4a55-a278-2662a4ecc489), onde o tipo real usado para `'T` é determinado a partir do resultado da expressão.
+Na sintaxe anterior, *expression* é o código que é avaliado somente quando um resultado é necessário e o *identificador* é um valor que armazena o resultado. O valor é do tipo [`Lazy<'T>`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-lazy-1-0.html) , onde o tipo real usado para `'T` é determinado a partir do resultado da expressão.
 
 As expressões lentas permitem melhorar o desempenho restringindo a execução de expressões para apenas as situações em que um resultado é necessário.
 
-Para forçar a execução das expressões, você chama o método `Force`. `Force`faz com que a execução seja executada apenas uma vez. As chamadas subsequentes para `Force` retornar o mesmo resultado, mas não executam nenhum código.
+Para forçar a execução das expressões, você chama o método `Force` . `Force` faz com que a execução seja executada apenas uma vez. As chamadas subsequentes para `Force` retornar o mesmo resultado, mas não executam nenhum código.
 
-O código a seguir ilustra o uso de expressões lentas e o `Force`uso de. Nesse código, o tipo `result` de é `Lazy<int>`e o `Force` método retorna um `int`.
+O código a seguir ilustra o uso de expressões lentas e o uso de `Force` . Nesse código, o tipo de `result` é `Lazy<int>` e o `Force` método retorna um `int` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet73011.fs)]
 
-A avaliação lenta, mas não `Lazy` o tipo, também é usada para sequências. Para obter mais informações, consulte [sequences](sequences.md).
+A avaliação lenta, mas não o `Lazy` tipo, também é usada para sequências. Para obter mais informações, consulte [sequences](sequences.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Referência da Linguagem F#](index.md)
-- [Módulo LazyExtensions](https://msdn.microsoft.com/library/86671f40-84a0-402a-867d-ae596218d948)
+- [Referência de linguagem F #](index.md)
+- [Módulo LazyExtensions](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-lazyextensions.html)

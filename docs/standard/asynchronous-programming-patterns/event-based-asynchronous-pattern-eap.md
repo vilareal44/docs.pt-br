@@ -1,5 +1,6 @@
 ---
 title: Padrão assíncrono baseado em evento (EAP)
+description: Consulte links para artigos sobre o padrão assíncrono baseado em evento (EAP) no .NET, como implementação, práticas recomendadas, implementação de um cliente EAP e muito mais.
 ms.date: 07/23/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - asynchronous programming, design patterns
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-ms.openlocfilehash: ee8c90d63478e444b7d25cb7cbb5c969963d7c63
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 03b4d914d72b96b882c774565654c022b145b5f2
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73130936"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768866"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>Padrão assíncrono baseado em evento (EAP)
 
@@ -60,11 +61,11 @@ Há várias maneiras de expor recursos assíncronos para o código cliente. O Pa
  [Biblioteca de tarefas paralelas (TPL)](../parallel-programming/task-parallel-library-tpl.md)  
  Descreve um modelo de programação para operações paralelas e assíncronas.  
   
- [Threading](../../../docs/standard/threading/index.md)  
+ [Threading](../threading/index.md)  
  Descreve recursos de multithreading no .NET.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Práticas recomendadas de rosca gerenciadas](../threading/managed-threading-best-practices.md)
+- [Práticas recomendadas de Threading gerenciado](../threading/managed-threading-best-practices.md)
 - [Eventos](../events/index.md)
 - [Padrões de design de programação assíncrona](index.md)

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - gcHeapCount element
 - <gcHeapCount> element
 ms.openlocfilehash: 09d6523fb10692dd3617a3827d5bccf112bc632b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73978378"
 ---
-# <a name="gcheapaffinitizemask-element"></a>\<elemento de > GCHeapAffinitizeMask
+# <a name="gcheapaffinitizemask-element"></a>Elemento \<GCHeapAffinitizeMask>
 
 Define a afinidade entre heaps de GC e processadores individuais.
 
-> de configuração do \<\
-> &nbsp;de \<de tempo de execução do &nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapAffinitizeMask >
+\<configuration>\
+&nbsp;&nbsp;\<runtime>\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapAffinitizeMask>
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -44,7 +44,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 ### <a name="child-elements"></a>Elementos filho
 
-nenhuma.
+Nenhum.
 
 ### <a name="parent-elements"></a>Elementos pai
 
@@ -59,7 +59,7 @@ Por padrão, os threads GC do servidor são relacionados com sua respectiva CPU 
 
 **GCHeapAffinitizeMask** normalmente é usado junto com dois outros sinalizadores:
 
-- [GCNoAffinitize](gcnoaffinitize-element.md), que controla se threads GC do servidor/heaps são relacionados com CPUs. O atributo `enabled` do elemento [GCNoAffinitize](gcnoaffinitize-element.md) deve ser `false` (seu valor padrão) para que a configuração **GCHeapAffinitizeMask** seja usada.
+- [GCNoAffinitize](gcnoaffinitize-element.md), que controla se threads GC do servidor/heaps são relacionados com CPUs. O `enabled` atributo do elemento [GCNoAffinitize](gcnoaffinitize-element.md) deve ser `false` (seu valor padrão) para que a configuração **GCHeapAffinitizeMask** seja usada.
 
 - [GCHeapCount](gcheapcount-element.md), que limita o número de heaps usados pelo processo para GC do servidor. Por padrão, há um heap para cada processador.
 
@@ -85,11 +85,11 @@ O exemplo a seguir indica que um aplicativo usa GC de servidor com 10 heaps/thre
 </configuration>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [Elemento GCNoAffinitize](gcnoaffinitize-element.md)
 - [Elemento GCHeapCount](gcheapcount-element.md)
-- [Noções básicas da coleta de lixo](../../../../standard/garbage-collection/fundamentals.md)
+- [Conceitos básicos da coleta de lixo](../../../../standard/garbage-collection/fundamentals.md)
 - [Esquema de configurações do runtime](index.md)
-- [Esquema de arquivos de configuração](../index.md)
+- [Esquema do arquivo de configuração](../index.md)

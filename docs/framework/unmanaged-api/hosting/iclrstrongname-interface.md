@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 04260429dd69f5ba1d6a94b6628979341d12b9e8
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 0b6efcbe4458977e8e938afabd7ae59171bc065a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762065"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501645"
 ---
 # <a name="iclrstrongname-interface"></a>Interface ICLRStrongName
 Fornece funções estáticas globais básicas para assinar assemblies com nomes fortes. Todos os `ICLRStrongName` métodos retornam o padrão com HResults.  
@@ -35,7 +35,7 @@ Fornece funções estáticas globais básicas para assinar assemblies com nomes 
 |[Método GetHashFromFileW](iclrstrongname-gethashfromfilew-method.md)|Gera um hash sobre o conteúdo do arquivo especificado por uma cadeia de caracteres Unicode.|  
 |[Método GetHashFromHandle](iclrstrongname-gethashfromhandle-method.md)|Gera um hash sobre o conteúdo do arquivo com o identificador de arquivo especificado, usando o algoritmo de hash especificado.|  
 |[Método StrongNameCompareAssemblies](iclrstrongname-strongnamecompareassemblies-method.md)|Determina se dois assemblies diferem somente por suas assinaturas de nome forte.|  
-|[Método StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)|Libera a memória que foi alocada com uma chamada anterior para um método de nome forte, como [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)ou [StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md).|  
+|[Método StrongNameFreeBuffer](iclrstrongname-strongnamefreebuffer-method.md)|Libera a memória que foi alocada com uma chamada anterior para um método de nome forte, como [StrongNameGetPublicKey](iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey](iclrstrongname-strongnametokenfrompublickey-method.md)ou [StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md).|  
 |[Método StrongNameGetBlob](iclrstrongname-strongnamegetblob-method.md)|Preenche o buffer especificado com a representação binária do arquivo executável no endereço especificado.|  
 |[Método StrongNameGetBlobFromImage](iclrstrongname-strongnamegetblobfromimage-method.md)|Obtém uma representação binária da imagem do assembly no endereço de memória especificado.|  
 |[Método StrongNameGetPublicKey](iclrstrongname-strongnamegetpublickey-method.md)|Obtém a chave pública de um par de chaves pública/privada.|  
@@ -66,7 +66,7 @@ Fornece funções estáticas globais básicas para assinar assemblies com nomes 
   
  **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interfaces de hospedagem](hosting-interfaces.md)
-- [Hospedagem](index.md)
+- [Hosting](index.md)

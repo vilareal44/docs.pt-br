@@ -1,5 +1,6 @@
 ---
 title: Comparando cadeias de caracteres em .NET
+description: Leia sobre métodos para comparar cadeias de caracteres no .NET. Saiba mais sobre os métodos Compare, CompareOrdinal, CompareTo, StartsWith, EndsWith, Equals, IndexOf, & LastIndexOf.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-ms.openlocfilehash: e63b2a8ac44d6171f9c48990882780ea420f8c76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5ed73d18341c3b9c6e61e12fdf322b9a67affd4a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73101667"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602187"
 ---
 # <a name="comparing-strings-in-net"></a>Comparando cadeias de caracteres em .NET
 O .NET fornece vários métodos para comparar os valores de cadeias de caracteres. A tabela a seguir lista e descreve os métodos de comparação de valores.  
   
-|Nome do método|Use|  
+|Nome do método|Uso|  
 |-----------------|---------|  
 |<xref:System.String.Compare%2A?displayProperty=nameWithType>|Compara os valores das duas cadeias de caracteres. Retorna um valor inteiro.|  
 |<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|Compara duas cadeias de caracteres sem considerar a cultura local. Retorna um valor inteiro.|  
@@ -59,7 +60,7 @@ O .NET fornece vários métodos para comparar os valores de cadeias de caractere
   
  Este exemplo exibe `-1` no console.  
   
- O exemplo anterior diferencia a cultura por padrão. Para realizar uma comparação de cadeia de caracteres que não diferencia a cultura, use uma sobrecarga do método <xref:System.String.Compare%2A?displayProperty=nameWithType> que permite que você especifique a cultura a ser usada, fornecendo um parâmetro *culture*. Confira um exemplo que demonstra como usar o método <xref:System.String.Compare%2A?displayProperty=nameWithType> para realizar uma comparação de cadeia de caracteres que não diferenciam a cultura em [Executando comparações de cadeias de caracteres que não diferenciam a cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ O exemplo anterior diferencia a cultura por padrão. Para realizar uma comparação de cadeia de caracteres que não diferencia a cultura, use uma sobrecarga do método <xref:System.String.Compare%2A?displayProperty=nameWithType> que permite que você especifique a cultura a ser usada, fornecendo um parâmetro *culture*. Confira um exemplo que demonstra como usar o método <xref:System.String.Compare%2A?displayProperty=nameWithType> para realizar uma comparação de cadeia de caracteres que não diferenciam a cultura em [Executando comparações de cadeias de caracteres que não diferenciam a cultura](../globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## <a name="compareordinal"></a>CompareOrdinal  
  O método <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> compara dois objetos de cadeia de caracteres sem considerar a cultura local. Os valores de retorno desse método são idênticos aos valores retornados pelo método **Compare** na tabela anterior.  
@@ -89,7 +90,7 @@ O .NET fornece vários métodos para comparar os valores de cadeias de caractere
   
  Este exemplo exibe `-1` no console.  
   
- Todas as sobrecargas do método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> executam comparações que diferenciam a cultura e com diferenciação de maiúsculas e minúsculas por padrão. Nenhuma sobrecarga desse método é fornecida que permite que você execute uma comparação sem diferenciação de cultura. Para ter maior clareza do código, é recomendável usar o método **String.Compare**, especificando <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> para operações que diferenciam a cultura ou <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> para operações que não diferenciam a cultura. Confira exemplos que demonstram como usar o método **String.Compare** para realizar comparações de cadeia de caracteres que diferenciam a cultura e não em [Executando comparações de cadeias de caracteres que não diferenciam a cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ Todas as sobrecargas do método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> executam comparações que diferenciam a cultura e com diferenciação de maiúsculas e minúsculas por padrão. Nenhuma sobrecarga desse método é fornecida que permite que você execute uma comparação sem diferenciação de cultura. Para ter maior clareza do código, é recomendável usar o método **String.Compare**, especificando <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> para operações que diferenciam a cultura ou <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> para operações que não diferenciam a cultura. Confira exemplos que demonstram como usar o método **String.Compare** para realizar comparações de cadeia de caracteres que diferenciam a cultura e não em [Executando comparações de cadeias de caracteres que não diferenciam a cultura](../globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## <a name="equals"></a>É igual a  
  O método **String.Equals** pode facilmente determinar se duas cadeias de caracteres são as mesmas. Esse método que diferencia maiúsculas de minúsculas retorna um valor Booliano **true** ou **false**. Ele pode ser usado de uma classe existente, conforme ilustrado no exemplo a seguir. O exemplo a seguir usa o método **Equals** para determinar se um objeto de cadeia de caracteres contém a frase "Hello World".  
@@ -148,9 +149,9 @@ O .NET fornece vários métodos para comparar os valores de cadeias de caractere
   
  Os dois métodos são úteis quando usados em conjunto com o método **String.Remove**. Você pode usar tanto o método **IndexOf** quanto o **LastIndexOf** para recuperar a posição de um caractere e, em seguida, fornecer essa posição para o método **Remove** para remover um caractere ou uma palavra que começa com esse caractere.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Operações básicas de string](../../../docs/standard/base-types/basic-string-operations.md)
-- [Executando operações de cadeia de caracteres que não levam em conta a cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+- [Operações básicas de cadeia de caracteres](basic-string-operations.md)
+- [Executando operações de cadeia de caracteres que não levam em conta a cultura](../globalization-localization/performing-culture-insensitive-string-operations.md)
 - [Classificação de tabelas de peso (para .NET em Windows)](https://www.microsoft.com/download/details.aspx?id=10921)
 - [Tabela do elemento de ordenação Unicode padrão (para .NET Core em Linux e macOS)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

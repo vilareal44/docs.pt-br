@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
-ms.openlocfilehash: 2ed3a10cdf941bb8d1d7c00379736e04e8cad4d7
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9b8f49c498699a8f7d1c4b329e82258501aa0c47
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583177"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363092"
 ---
 # <a name="extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a>O atributo 'Extension' pode ser aplicado apenas às declarações 'Module', 'Sub' ou 'Function'
 
-A única maneira de estender um tipo de dados no Visual Basic é definir um método de extensão dentro de um módulo padrão. O método de extensão pode ser um procedimento `Sub` ou um procedimento `Function`. Todos os métodos de extensão devem ser marcados com o atributo de extensão, `<Extension()>`, do namespace <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>. Opcionalmente, um módulo que contém um método de extensão pode ser marcado da mesma maneira. Nenhum outro uso do atributo de extensão é válido.
+A única maneira de estender um tipo de dados no Visual Basic é definir um método de extensão dentro de um módulo padrão. O método de extensão pode ser um `Sub` procedimento ou um `Function` procedimento. Todos os métodos de extensão devem ser marcados com o atributo de extensão, `<Extension()>` , do <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace. Opcionalmente, um módulo que contém um método de extensão pode ser marcado da mesma maneira. Nenhum outro uso do atributo de extensão é válido.
 
 **ID do erro:** BC36550
 
@@ -28,7 +28,7 @@ A única maneira de estender um tipo de dados no Visual Basic é definir um mét
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir define um método `Print` para o tipo de dados `String`.
+O exemplo a seguir define um `Print` método para o `String` tipo de dados.
 
 ```vb
 Imports StringUtility
@@ -44,8 +44,8 @@ Namespace StringUtility
 End Namespace
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Visão geral de atributos](../../../visual-basic/programming-guide/concepts/attributes/index.md)
-- [Métodos de Extensão](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
-- [Instrução Module](../../../visual-basic/language-reference/statements/module-statement.md)
+- [Visão geral de atributos](../../programming-guide/concepts/attributes/index.md)
+- [Métodos de Extensão](../../programming-guide/language-features/procedures/extension-methods.md)
+- [Instrução Module](../statements/module-statement.md)

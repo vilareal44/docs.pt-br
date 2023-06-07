@@ -1,15 +1,16 @@
 ---
 title: Como passar matrizes argumentos – Guia de Programação em C#
+description: As matrizes em C# podem ser passadas como argumentos para parâmetros de método. Como matrizes são tipos de referência, o método pode alterar o valor dos elementos.
 ms.date: 07/05/2018
 helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
-ms.openlocfilehash: 2e53008910a9062ada25680eb4b8e54a225fd226
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 68f174421e56e2cf082fe670f93c4f6627d7c17b
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705685"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474625"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>Passando matrizes como argumentos (Guia de Programação em C#)
 
@@ -55,10 +56,10 @@ No exemplo a seguir, uma matriz bidimensional de inteiros é inicializada e pass
 
 [!code-csharp[csProgGuideArrays#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#31)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [C# Guia de Programação](../index.md)
-- [Matrizes](index.md)
-- [Matrizes Unidimensionais](single-dimensional-arrays.md)
-- [Matrizes Multidimensionais](multidimensional-arrays.md)
-- [Matrizes irregulares](jagged-arrays.md)
+- [Guia de programação C#](../index.md)
+- [matrizes](index.md)
+- [Matrizes unidimensionais](single-dimensional-arrays.md)
+- [Matrizes multidimensionais](multidimensional-arrays.md)
+- [Matrizes denteadas](jagged-arrays.md)

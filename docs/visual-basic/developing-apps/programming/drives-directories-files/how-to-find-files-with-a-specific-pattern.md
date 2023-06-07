@@ -1,17 +1,17 @@
 ---
-title: Como localizar arquivos com um padrão específico
+title: 'Como: localizar arquivos com um padrão específico'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], finding
 - pattern matching
 - patterns, matching
 ms.assetid: 25e3b71d-b844-4293-9e4e-f06c5836b5cc
-ms.openlocfilehash: 5faaa16615f52714db3de6853786990265716501
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 71073672ed14cb2d5df5b5365266b718c59cb18f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348751"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401635"
 ---
 # <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>Como localizar arquivos com um padrão específico no Visual Basic
 
@@ -48,9 +48,9 @@ O método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> re
   
 - O usuário não possui as permissões necessárias (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
-- [Como localizar subdiretórios com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
-- [Solução de problemas: lendo e gravando em arquivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
-- [Como obter a coleção de arquivos em um diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [Como: localizar subdiretórios com um padrão específico](how-to-find-subdirectories-with-a-specific-pattern.md)
+- [Solução de problemas: ler e gravar em arquivos de texto](troubleshooting-reading-from-and-writing-to-text-files.md)
+- [Como: obter a coleção de arquivos em um diretório](how-to-get-the-collection-of-files-in-a-directory.md)

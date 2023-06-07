@@ -1,16 +1,16 @@
 ---
-title: 'Como: Elementos de alterações em um namespace (XPath- LINQ para XML)'
+title: 'Como: localizar elementos em um namespace (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
-ms.openlocfilehash: 822af6367fab707f52e2dcb7a130d899be1fba26
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3663516e6b6289fe3b1d0599ff3ed4b7dad6a80a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344657"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405190"
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Como localizar elementos em um namespace (XPath-LINQ to XML) (Visual Basic)
-As expressões XPath pode localizar nós em um namespace específico. Prefixos de namespace do uso de expressões XPath para especificar namespaces. Para analisar uma expressão XPath que contém prefixos de namespace, você deve passar um objeto para os métodos XPath que implementa <xref:System.Xml.IXmlNamespaceResolver>. Este exemplo usa <xref:System.Xml.XmlNamespaceManager>.  
+As expressões XPath pode localizar nós em um namespace específico. Prefixos de namespace do uso de expressões XPath para especificar namespaces. Para analisar uma expressão XPath que contém prefixos de namespace, você deve passar um objeto para os métodos XPath que implementa <xref:System.Xml.IXmlNamespaceResolver>. Este exemplo usa o <xref:System.Xml.XmlNamespaceManager>.  
   
  A expressão XPath é:  
   
@@ -45,7 +45,7 @@ For Each el As XElement In list2
 Next  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```console
 Results are identical  
@@ -80,6 +80,6 @@ Results are identical
   </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [LINQ to XML para usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para usuários do XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

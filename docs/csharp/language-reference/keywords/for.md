@@ -1,5 +1,5 @@
 ---
-title: para declaração - Referência C#
+title: instrução for-referência C#
 ms.date: 06/13/2018
 f1_keywords:
 - for
@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: cb83fa015eea19b156faebb5bed18cc1f0970cc1
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: db7cecc697a9cc9e5ff6b94b78747b799ed7e505
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738805"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401895"
 ---
 # <a name="for-c-reference"></a>for (referência de C#)
 
 A instrução `for` executa uma instrução ou um bloco de instruções enquanto uma expressão booliana especificada é avaliada como `true`.
 
-Em qualquer ponto dentro do bloco de instrução `for`, você pode sair do loop usando a instrução [break](break.md) ou seguir para a próxima iteração no loop usando a instrução [continue](continue.md). Você também pode `for` sair de um loop pelas declarações [goto](goto.md), [return](return.md)ou [throw.](throw.md)
+Em qualquer ponto dentro do bloco de instrução `for`, você pode sair do loop usando a instrução [break](break.md) ou seguir para a próxima iteração no loop usando a instrução [continue](continue.md). Você também pode sair de um `for` loop pelas instruções [goto](goto.md), [Return](return.md)ou [throw](throw.md) .
 
 ## <a name="structure-of-the-for-statement"></a>Estrutura da instrução `for`
 
@@ -33,7 +33,7 @@ Todas as três seções são opcionais. O corpo do loop é uma instrução ou um
 
 A exemplo a seguir mostra a instrução `for` com todas as seções definidas:
 
-[!code-csharp-interactive[for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#5)]
+[!code-csharp-interactive[for loop example](snippets/IterationKeywordsExamples.cs#5)]
 
 ### <a name="the-initializer-section"></a>A seção *inicializador*
 
@@ -73,7 +73,7 @@ i < 5
 
 ### <a name="the-iterator-section"></a>A seção *iterador*
 
-A seção *iterator* define o que acontece após cada iteração do corpo do loop. A seção *iterator* contém zero ou mais das seguintes expressões de declaração, separadas por commas:
+A seção *iterador* define o que acontece após cada iteração do corpo do loop. A seção *iterador* contém zero ou mais das expressões de instrução a seguir, separadas por vírgulas:
 
 - instrução de [atribuição](../operators/assignment-operator.md)
 
@@ -97,11 +97,11 @@ i++
 
 O exemplo a seguir ilustra vários usos menos comuns das seções de instrução `for`: atribuir um valor a uma variável de loop externa na seção *inicializador*, invocar um método inicializa nas seções de *inicializador* e de *iterador* e alterar os valores de duas variáveis na seção de *iterador*. Selecione **Executar** para executar o código de exemplo. Depois disso, você pode modificar o código e executá-lo novamente.
 
-[!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
+[!code-csharp-interactive[not typical for loop example](snippets/IterationKeywordsExamples.cs#6)]
 
 O exemplo a seguir define o loop `for` infinito:
 
-[!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
+[!code-csharp[infinite for loop example](snippets/IterationKeywordsExamples.cs#7)]
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 
@@ -109,7 +109,7 @@ Para obter mais informações, confira a seção [A instrução for](~/_csharpla
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
-- [C# Palavras-chave](index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
+- [Palavras-chave do C#](index.md)
 - [foreach, in](foreach-in.md)

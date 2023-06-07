@@ -1,13 +1,14 @@
 ---
 title: 'Mitigação: período de bloqueio de pool'
+description: Saiba como atenuar os problemas causados pelo período de bloqueio do pool de conexões que está sendo removido para conexões com bancos de dados SQL do Azure.
 ms.date: 03/30/2017
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
-ms.openlocfilehash: 98396d4254975d1806a8477cbcd2380cb52ceaf3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: be60fe87952697d964571176743a4e6f839c4894
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457851"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475405"
 ---
 # <a name="mitigation-pool-blocking-period"></a>Mitigação: período de bloqueio de pool
 O pool de conexão no período de bloqueio foi removido para conexões com bancos de dados SQL do Azure.  
@@ -31,6 +32,6 @@ O pool de conexão no período de bloqueio foi removido para conexões com banco
   
  É possível restaurar o comportamento anterior definindo a propriedade <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A> como <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Compatibilidade de aplicativos](application-compatibility.md)

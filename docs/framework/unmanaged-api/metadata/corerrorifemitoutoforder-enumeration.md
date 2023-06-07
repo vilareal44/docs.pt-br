@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d758aad-29a7-44fe-9481-bbff5b799a32
 topic_type:
 - apiref
-ms.openlocfilehash: 57460ba30a8ce974b5ca89f76796c4dcf49ffecf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fec049297bfa12d86cb2a7f7950e84ae540832b1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443590"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007423"
 ---
 # <a name="corerrorifemitoutoforder-enumeration"></a>Enumeração CorErrorIfEmitOutOfOrder
 Contém valores de sinalizador que indicam as condições sob as quais uma mensagem de erro deve ser gerada quando os metadados são emitidos fora de ordem.  
@@ -43,7 +43,7 @@ typedef enum CorErrorIfEmitOutOfOrder {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`MDErrorOutOfOrderDefault`|Indica o comportamento padrão, que não gera mensagens de erro.|  
 |`MDErrorOutOfOrderNone`|Indica que o compilador não deve gerar mensagens de erro.|  
@@ -55,12 +55,12 @@ typedef enum CorErrorIfEmitOutOfOrder {
 |`MDEventOutOfOrder`|Indica que o compilador deve gerar uma mensagem de erro quando um evento é emitido fora de ordem.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerações de metadados](metadata-enumerations.md)

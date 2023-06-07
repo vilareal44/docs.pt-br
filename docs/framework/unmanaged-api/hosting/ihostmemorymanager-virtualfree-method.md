@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a436e89-eb28-4d15-bcf1-a072f86dbd99
 topic_type:
 - apiref
-ms.openlocfilehash: b53c0bb38922ae8de048c131807eb32f97423d6c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4d37b7d803509ebfa861b7502d419f868bd12e11
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128584"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804381"
 ---
 # <a name="ihostmemorymanagervirtualfree-method"></a>Método IHostMemoryManager::VirtualFree
 Serve como um wrapper lógico para a função Win32 correspondente. A implementação do Win32 de `VirtualFree` liberações, desconfirma ou libera e desconfirma uma região de páginas dentro do espaço de endereço virtual do processo de chamada.  
@@ -45,11 +45,11 @@ HRESULT VirtualFree (
  `dwFreeType`  
  no O tipo de operação de liberação.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`VirtualFree` retornado com êxito.|  
+|S_OK|`VirtualFree`retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -58,20 +58,20 @@ HRESULT VirtualFree (
 |HOST_E_INVALIDOPERATION|Foi feita uma tentativa de liberar memória que não foi alocada por meio do host.|  
   
 ## <a name="remarks"></a>Comentários  
- `VirtualFree` libera as páginas de memória virtual associadas ao parâmetro `lpAddress` por meio de uma chamada anterior à função [IHostMemoryManager:: VirtualAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualalloc-method.md) . As tentativas de liberar memória que não foi alocada por meio do host devem retornar HOST_E_INVALIDOPERATION.  
+ `VirtualFree`Libera as páginas de memória virtual associadas ao `lpAddress` parâmetro por meio de uma chamada anterior à função [IHostMemoryManager:: VirtualAlloc](ihostmemorymanager-virtualalloc-method.md) . As tentativas de liberar memória que não foi alocada por meio do host devem retornar HOST_E_INVALIDOPERATION.  
   
- A semântica é idêntica àquelas da implementação do Win32 do `VirtualFree`. Para obter mais informações, consulte a documentação da plataforma Windows.  
+ As semânticas são idênticas às da implementação do Win32 do `VirtualFree` . Para obter mais informações, consulte a documentação da plataforma Windows.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
-- [Interface IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
+- [Interface IHostMemoryManager](ihostmemorymanager-interface.md)
+- [Interface IHostMalloc](ihostmalloc-interface.md)

@@ -4,16 +4,16 @@ description: Aprenda os conceitos de teste de unidade no .NET Core por meio de u
 author: billwagner
 ms.author: wiwagn
 ms.date: 05/18/2020
-ms.openlocfilehash: ed1291a980f9a39284525877bab8d0a93389fbd0
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: d384bf08f0b6031a519a8430c876eafc05d03a2e
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702965"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656417"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Bibliotecas do .NET Core no Visual Basic de teste de unidade usando dotnet test e xUnit
 
-Este tutorial mostra como criar uma solução que contém um projeto de teste de unidade e um projeto de biblioteca. Para seguir o tutorial usando uma solução predefinida, [exiba ou baixe o código de exemplo](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/). Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Este tutorial mostra como criar uma solução que contém um projeto de teste de unidade e um projeto de biblioteca. Para seguir o tutorial usando uma solução predefinida, [exiba ou baixe o código de exemplo](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/). Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="create-the-solution"></a>Criar a solução
 
@@ -33,7 +33,7 @@ Nesta seção, é criada uma solução que contém os projetos de origem e de te
 As instruções a seguir fornecem as etapas para criar a solução de teste. Consulte [comandos para criar solução de teste](#create-test-cmd) para obter instruções para criar a solução de teste em uma única etapa.
 
 * Abra uma janela do shell.
-* Execute o comando a seguir:
+* Execute o seguinte comando:
 
   ```dotnetcli
   dotnet new sln -o unit-testing-using-dotnet-test
@@ -41,7 +41,7 @@ As instruções a seguir fornecem as etapas para criar a solução de teste. Con
 
   O [`dotnet new sln`](../tools/dotnet-new.md) comando cria uma nova solução no diretório *Unit-Testing-using-dotnet-Test* .
 * Altere o diretório para a pasta *Unit-Testing-using-dotnet-Test* .
-* Execute o comando a seguir:
+* Execute o seguinte comando:
 
   ```dotnetcli
   dotnet new classlib -o PrimeService --lang VB
@@ -128,7 +128,7 @@ Uma abordagem popular no TDD (desenvolvimento controlado por teste) é escrever 
 Atualize o projeto *PrimeService. Tests* :
 
 * Exclua *PrimeService. Tests/UnitTest1. vb*.
-* Crie um arquivo *PrimeService. Tests/PrimeService_IsPrimeShould. vb* .
+* Crie um arquivo *PrimeService. Tests/PrimeService_IsPrimeShould. vb*  .
 * Substitua o código em *PrimeService_IsPrimeShould. vb* pelo código a seguir:
 
 ```vb
@@ -154,7 +154,7 @@ Namespace PrimeService.Tests
 End Namespace
 ```
 
-O `[Fact]` atributo declara um método de teste que é executado pelo executor de teste. Na pasta *PrimeService. Tests* , execute `dotnet test` . O comando [dotnet Test](../tools/dotnet-test.md) compila ambos os projetos e executa os testes. O executor de teste do xUnit contém o ponto de entrada do programa para executar os testes. `dotnet test`inicia o executor de teste usando o projeto de teste de unidade.
+O `[Fact]` atributo declara um método de teste que é executado pelo executor de teste. Na pasta *PrimeService. Tests* , execute `dotnet test` . O comando [dotnet Test](../tools/dotnet-test.md) compila ambos os projetos e executa os testes. O executor de teste do xUnit contém o ponto de entrada do programa para executar os testes. `dotnet test` inicia o executor de teste usando o projeto de teste de unidade.
 
 O teste falha porque não `IsPrime` foi implementado. Usando a abordagem TDD, escreva apenas código suficiente para que esse teste passe. Atualize `IsPrime` com o seguinte código:
 
@@ -222,7 +222,7 @@ Public Function IsPrime(candidate As Integer) As Boolean
 End Function
 ```
 
-Após a abordagem TDD, adicione mais testes com falha e, em seguida, atualize o código de destino. Consulte a [versão concluída dos testes](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.vb) e a [implementação completa da biblioteca](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.vb).
+Após a abordagem TDD, adicione mais testes com falha e, em seguida, atualize o código de destino. Consulte a [versão concluída dos testes](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.vb) e a [implementação completa da biblioteca](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-dotnet-test/PrimeService/PrimeService.vb).
 
 O `IsPrime` método concluído não é um algoritmo eficiente para testar primality.
 

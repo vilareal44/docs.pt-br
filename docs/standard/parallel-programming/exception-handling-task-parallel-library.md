@@ -1,5 +1,6 @@
 ---
 title: Tratamento de exceções (biblioteca de paralelismo de tarefas)
+description: Explore a manipulação de exceção usando a TPL (biblioteca paralela de tarefas) no .NET. Consulte exceções de agregação aninhadas, exceções internas, exceções de tarefas não observadas, & mais.
 ms.date: 04/20/2020
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-ms.openlocfilehash: aa6d4b706eb11921ffd419402bcf4cf059a29b11
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: f1c1a994f4b3a8df0556a0190bc4eacb63f2921e
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021505"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662531"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Tratamento de exceções (biblioteca de paralelismo de tarefas)
 
@@ -28,7 +29,7 @@ Mesmo que apenas uma exceção seja lançada, ela ainda está envolvida em uma e
 
 Você poderia evitar uma exceção sem tratamento apenas pegando o <xref:System.AggregateException> e não observando nenhuma das exceções internas. No entanto, recomendamos que você não faça isso, pois é análogo o capturar o tipo base <xref:System.Exception> em cenários não paralelos. Capturar uma exceção sem tomar medidas específicas para se recuperar pode deixar seu programa em um estado indeterminado.
 
-Caso não deseje chamar o método <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> para aguardar a conclusão de uma tarefa, você também poderá recuperar a exceção <xref:System.AggregateException> na propriedade <xref:System.Threading.Tasks.Task.Exception%2A> da tarefa, como mostra o exemplo a seguir. Para obter mais informações, consulte as [exceções observando usando a](#observing-exceptions-by-using-the-taskexception-property) seção de propriedade Task.Exception neste tópico.
+Caso não deseje chamar o método <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> para aguardar a conclusão de uma tarefa, você também poderá recuperar a exceção <xref:System.AggregateException> na propriedade <xref:System.Threading.Tasks.Task.Exception%2A> da tarefa, como mostra o exemplo a seguir. Para obter mais informações, consulte a seção [observando exceções usando a Propriedade Task. Exception](#observing-exceptions-by-using-the-taskexception-property) neste tópico.
 
 [!code-csharp[TPL_Exceptions#29](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/handling22.cs#29)]
 [!code-vb[TPL_Exceptions#29](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/handling22.vb#29)]
@@ -63,7 +64,7 @@ Mesmo que você use uma continuação para observar uma exceção em uma tarefa 
 
 ## <a name="exceptions-that-indicate-cooperative-cancellation"></a>Exceções que indicam o cancelamento cooperativo
 
-Quando o código do usuário em uma tarefa responde a uma solicitação de cancelamento, o procedimento correto é lançar um <xref:System.OperationCanceledException> no token de cancelamento no qual a solicitação foi comunicada. Antes de tentar propagar a exceção, a instância da tarefa compara o token na exceção ao que foi passado para ela quando foi criada. Se eles são iguais, a tarefa propaga um <xref:System.Threading.Tasks.TaskCanceledException> encapsulado no <xref:System.AggregateException>, e pode ser visto quando as exceções internas são examinadas. No entanto, se o thread de chamada não estiver aguardando a tarefa, essa exceção específica não será propagada. Para obter mais informações, consulte [Cancelamento de tarefas](../../../docs/standard/parallel-programming/task-cancellation.md).
+Quando o código do usuário em uma tarefa responde a uma solicitação de cancelamento, o procedimento correto é lançar um <xref:System.OperationCanceledException> no token de cancelamento no qual a solicitação foi comunicada. Antes de tentar propagar a exceção, a instância da tarefa compara o token na exceção ao que foi passado para ela quando foi criada. Se eles são iguais, a tarefa propaga um <xref:System.Threading.Tasks.TaskCanceledException> encapsulado no <xref:System.AggregateException>, e pode ser visto quando as exceções internas são examinadas. No entanto, se o thread de chamada não estiver aguardando a tarefa, essa exceção específica não será propagada. Para obter mais informações, consulte [Cancelamento de tarefas](task-cancellation.md).
 
 [!code-csharp[TPL_Exceptions#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptions.cs#4)]
 [!code-vb[TPL_Exceptions#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/tpl_exceptions.vb#4)]
@@ -89,14 +90,14 @@ Se uma tarefa for concluída no estado <xref:System.Threading.Tasks.TaskStatus.F
 [!code-csharp[TPL_Exceptions#27](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptionprop21.cs#27)]
 [!code-vb[TPL_Exceptions#27](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/exceptionprop21.vb#27)]
 
-Em uma aplicação significativa, o delegado de continuação poderia registrar informações detalhadas sobre a exceção e possivelmente gerar novas tarefas para recuperar da exceção. Se uma tarefa falhar, as seguintes expressões jogam a exceção:
+Em um aplicativo significativo, o delegado de continuação poderia registrar informações detalhadas sobre a exceção e possivelmente gerar novas tarefas para se recuperar da exceção. Se houver falhas de tarefa, as expressões a seguir lançarão a exceção:
 
 - `await task`
 - `task.Wait()`
 - `task.Result`
 - `task.GetAwaiter().GetResult()`
 
-Use [`try-catch`](../../csharp/language-reference/keywords/try-catch.md) uma declaração para lidar e observar exceções lançadas. Alternativamente, observe a exceção <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> acessando o imóvel.
+Use uma [`try-catch`](../../csharp/language-reference/keywords/try-catch.md) instrução para manipular e observar exceções geradas. Como alternativa, observe a exceção acessando a <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> propriedade.
 
 ## <a name="unobservedtaskexception-event"></a>Evento UnobservedTaskException
 
@@ -104,4 +105,4 @@ Em alguns cenários, como ao hospedar plug-ins não confiáveis, exceções beni
 
 ## <a name="see-also"></a>Confira também
 
-- [Biblioteca de tarefas paralelas (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Biblioteca de tarefas paralelas (TPL)](task-parallel-library-tpl.md)

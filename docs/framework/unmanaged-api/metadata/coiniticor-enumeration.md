@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 67fefd89-28d6-4588-84ea-dc7a5870e014
 topic_type:
 - apiref
-ms.openlocfilehash: bb9fcc4c6e1fd495e95caa1d2200d9fd516a7748
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ef7851ddb33003b0b4b51065cf1fea3696ca6abd
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444272"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005941"
 ---
 # <a name="coiniticor-enumeration"></a>Enumeração COINITICOR
-Especifica constantes usadas pelo [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) quando inicializa o Common Language Runtime.  
+Especifica constantes usadas pelo [CoInitializeCor](../hosting/coinitializecor-function.md) quando inicializa o Common Language Runtime.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,19 +35,19 @@ typedef enum tagCOINITCOR
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`COINITCOR`|Indica o modo de inicialização padrão.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerações de metadados](metadata-enumerations.md)

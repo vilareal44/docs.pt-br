@@ -5,12 +5,12 @@ helpviewer_keywords:
 - examples [Visual Basic], arrays
 - examples [Visual Basic], Char data type
 ms.assetid: 69f94e85-d57c-4ccc-a62a-426e829f5c5e
-ms.openlocfilehash: bf37ceba901e712df10ad4b39f9ad74194843136
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d9ec897467f0caac0afc089a028516c0316a2bda
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346766"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410587"
 ---
 # <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>Como criar uma cadeia de caracteres a partir de uma matriz de valores de caracteres (Visual Basic)
 Este exemplo cria a cadeia "abcd" de caracteres individuais.  
@@ -21,13 +21,13 @@ Este exemplo cria a cadeia "abcd" de caracteres individuais.
 ## <a name="compile-the-code"></a>Compilar o código  
  Esse método não tem requisitos especiais.  
   
- A sintaxe `"a"c`, em que uma única `c` segue um único caractere entre aspas, é usada para criar um literal de caractere.  
+ A sintaxe `"a"c` , em que um único `c` segue um único caractere entre aspas, é usada para criar um literal de caractere.  
   
-## <a name="robust-programming"></a>Programação Robusta  
- Caracteres nulos (equivalente a `Chr(0)`) na cadeia de caracteres levam a resultados inesperados ao usar a cadeia de caracteres. O caractere nulo será incluído com a cadeia de caracteres, mas os caracteres após o caractere nulo não serão exibidos em algumas situações.  
+## <a name="robust-programming"></a>Programação robusta  
+ Caracteres nulos (equivalente a `Chr(0)` ) na cadeia de caracteres levam a resultados inesperados ao usar a cadeia de caracteres. O caractere nulo será incluído com a cadeia de caracteres, mas os caracteres após o caractere nulo não serão exibidos em algumas situações.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.String>
-- [Tipo de Dados de Caractere](../../../../visual-basic/language-reference/data-types/char-data-type.md)
-- [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Tipo de Dados de Caractere](../../../language-reference/data-types/char-data-type.md)
+- [Tipos de dados](../data-types/index.md)

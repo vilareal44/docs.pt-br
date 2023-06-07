@@ -1,5 +1,6 @@
 ---
 title: Passando estruturas
+description: Entenda como passar estruturas e classes para funções não gerenciadas. Saiba mais sobre o atributo StructLayoutAttribute, que você usa para definir tipos formatados.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - platform invoke, calling unmanaged functions
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
-ms.openlocfilehash: 11e329fa8f0c059b6c2f1c8ccb1d6bd0d0f0030a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eae28d6746cd89d98b659b9eb957f158e1319190
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181334"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620814"
 ---
 # <a name="passing-structures"></a>Passando estruturas
 Muitas funções não gerenciadas esperam que você passe, como um parâmetro para a função, membros de estruturas (tipos definidos pelo usuário no Visual Basic) ou membros de classes que são definidas em código gerenciado. Ao passar estruturas ou classes para código não gerenciado usando invocação de plataforma, você deve fornecer informações adicionais para preservar o layout original e o alinhamento. Este tópico apresenta o atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>, que você usa para definir tipos formatados. Para classes e estruturas gerenciadas, você pode selecionar vários comportamentos de layout previsível fornecidos pela enumeração **LayoutKind**.  
@@ -173,7 +174,7 @@ public class TestPlatformInvoke
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Chamando uma função de DLL](calling-a-dll-function.md)
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>

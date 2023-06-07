@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e2501fc8-b2bc-4dcc-9205-e3acd5a53ffe
 topic_type:
 - apiref
-ms.openlocfilehash: dc6375f3e2cff1a744a8ff2e6a6adab27bbf8af3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5af877c26c20bf64a27618bf24a7bce5b410419
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177474"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007774"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>Método IMetaDataEmit::SetPropertyProps
-Define os recursos armazenados em metadados para uma propriedade definida por uma chamada anterior para [DefinirMétodo de Propriedade](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
+Define os recursos armazenados em metadados para uma propriedade definida por uma chamada anterior para o [método definoproperty](imetadataemit-defineproperty-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,41 +40,41 @@ HRESULT SetPropertyProps (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pr`  
- [em] O símbolo para que a propriedade seja alterada  
+ no O token para a propriedade a ser alterada  
   
  `dwPropFlags`  
- [em] Bandeiras de propriedade.  
+ no Sinalizadores de propriedade.  
   
  `dwCPlusTypeFlag`  
- [em] O tipo de valor padrão da propriedade.  
+ no O tipo do valor padrão da propriedade.  
   
  `pValue`  
- [em] O valor padrão da propriedade.  
+ no O valor padrão para a propriedade.  
   
  `cchValue`  
- [em] A contagem de caracteres `pValue`(Unicode) em .  
+ no A contagem de caracteres (Unicode) no `pValue` .  
   
  `mdSetter`  
- [em] O método que define o valor da propriedade.  
+ no O método que define o valor da propriedade.  
   
  `mdGetter`  
- [em] O método que obtém o valor da propriedade.  
+ no O método que obtém o valor da propriedade.  
   
  `rmdOtherMethods[]`  
- [em] Uma série de outros métodos associados à propriedade. Termine esta matriz `mdTokenNil` com um token.  
+ no Uma matriz de outros métodos associados à propriedade. Terminar esta matriz com um `mdTokenNil` token.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interface IMetaDataEmit](imetadataemit-interface.md)
+- [Interface IMetaDataEmit2](imetadataemit2-interface.md)

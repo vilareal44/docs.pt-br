@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b374116-0972-416a-8cf5-79213129be9a
 topic_type:
 - apiref
-ms.openlocfilehash: d99e5000cdd0d7252764554025815dbace2289f4
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 7550caaa7cb4d7ed77dc36ecf0ce0e0cbc541db7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868675"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84497056"
 ---
 # <a name="icorprofilerinfo2getcontextstaticaddress-method"></a>Método ICorProfilerInfo2::GetContextStaticAddress
 Obtém o endereço do campo estático de contexto especificado que está no escopo do contexto especificado.  
@@ -49,24 +49,24 @@ HRESULT GetContextStaticAddress(
  fora Um ponteiro para o endereço do campo estático que está dentro do contexto especificado.  
   
 ## <a name="remarks"></a>Comentários  
- O método `GetContextStaticAddress` pode retornar um dos seguintes:  
+ O `GetContextStaticAddress` método pode retornar um dos seguintes:  
   
 - Um CORPROF_E_DATAINCOMPLETE HRESULT se o campo estático fornecido não tiver sido atribuído um endereço no contexto especificado.  
   
 - Os endereços de objetos que podem estar no heap de coleta de lixo. Esses endereços podem se tornar inválidos após a coleta de lixo, portanto, após a coleta de lixo, os profileres não devem presumir que eles são válidos.  
   
- Antes de o construtor de classe de uma classe ser concluído, `GetContextStaticAddress` retornará CORPROF_E_DATAINCOMPLETE para todos os seus campos estáticos, embora alguns dos campos estáticos possam já estar inicializados e a raiz dos objetos de coleta de lixo.  
+ Antes que o construtor de classe de uma classe seja concluído, o `GetContextStaticAddress` retornará CORPROF_E_DATAINCOMPLETE para todos os seus campos estáticos, embora alguns dos campos estáticos já possam ser inicializados e a raiz dos objetos de coleta de lixo.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)
 - [Interface ICorProfilerInfo2](icorprofilerinfo2-interface.md)

@@ -1,13 +1,14 @@
 ---
 title: Como consultar o maior arquivo ou arquivos em uma árvore de diretório (LINQ) (C#)
+description: Este exemplo de C# mostra cinco consultas LINQ relacionadas ao tamanho do arquivo em bytes. Você pode modificá-los para consultar uma outra Propriedade do objeto FileInfo.
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: ed7d610bd292be4062db89f3c94af280e851141f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c06c6017d6fd1efd6412729c5df63a2b819908a6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168759"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104381"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Como consultar o maior arquivo ou arquivos em uma árvore de diretório (LINQ) (C#)
 Este exemplo mostra cinco consultas relacionadas ao tamanho do arquivo em bytes:  

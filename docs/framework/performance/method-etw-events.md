@@ -1,20 +1,21 @@
 ---
 title: Eventos ETW de método
+description: Consulte eventos de ETW que coletam informações específicas para métodos, como eventos de método CLR, marcador de método CLR ou eventos detalhados de método CLR e MethodJittingStarted.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-ms.openlocfilehash: 4937afe8bb23be58b72d082cd5ba200b4948ab4d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f48867a0aef417ad0b19a15d78e0c0f01a7c30a1
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715991"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474313"
 ---
 # <a name="method-etw-events"></a>Eventos ETW de método
 
-Esses eventos coletam informações específicas para métodos. A carga desses eventos é necessária para resolução de símbolos. Além disso, esses eventos fornecem informações úteis, como o número de vezes que um método foi chamado.
+ Esses eventos coletam informações que são específicas para métodos. A carga desses eventos é necessária para resolução de símbolos. Além disso, esses eventos fornecem informações úteis, como o número de vezes que um método foi chamado.
 
 Todos os eventos de método têm um nível de "Informativo (4)". Todos os eventos detalhados do método têm um nível de "Detalhado (5)".
 
@@ -33,7 +34,7 @@ A tabela a seguir mostra a palavra-chave e o nível. Para obter mais informaçõ
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Descrição|
+|Evento|ID do evento|Descrição|
 |-----------|--------------|-----------------|
 |`MethodLoad_V1`|136|Gerado quando um método é carregado Just-In-Time (carregado via JIT) ou uma imagem NGEN é carregada. Métodos dinâmicos e genéricos não usam esta versão para carregamentos de método. Os auxiliares JIT nunca usam esta versão.|
 |`MethodUnLoad_V1`|137|Gerado quando um módulo é descarregado ou um domínio do aplicativo é destruído. Métodos dinâmicos nunca usam essa versão para os descarregamentos de método.|
@@ -66,7 +67,7 @@ A seguinte tabela mostra a palavra-chave e o nível:
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Descrição|
+|Evento|ID do evento|Descrição|
 |-----------|--------------|----------------|
 |`DCStartInit_V1`|147|Enviado antes do início da enumeração durante um encerramento inicial.|
 |`DCStartComplete_V1`|145|Enviado antes do término da enumeração durante um encerramento inicial.|
@@ -92,7 +93,7 @@ A seguinte tabela mostra a palavra-chave e o nível:
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Descrição|
+|Evento|ID do evento|Descrição|
 |-----------|--------------|-----------------|
 |`MethodLoadVerbose_V1`|143|Gerado quando um método é carregado via JIT ou uma imagem NGEN é carregada. Métodos dinâmicos e genéricos sempre usam esta versão para carregamentos de método. Os auxiliares JIT sempre usam esta versão.|
 |`MethodUnLoadVerbose_V1`|144|Gerado quando um método dinâmico é destruído, um módulo é descarregado ou um domínio do aplicativo é destruído. Métodos dinâmicos sempre usam essa versão para os descarregamentos de método.|
@@ -127,7 +128,7 @@ A seguinte tabela mostra a palavra-chave e o nível:
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Descrição|
+|Evento|ID do evento|Descrição|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|Gerado quando um método está sendo compilado por JIT.|
 
@@ -140,10 +141,10 @@ A seguinte tabela mostra os dados do evento:
 |MethodToken|win:UInt32|0 para métodos dinâmicos e auxiliares JIT.|
 |MethodILSize|win:UInt32|O tamanho do MSIL (Microsoft Intermediate Language) para o método que está sendo compilado por JIT.|
 |MethodNameSpace|win:UnicodeString|O nome de classe completo associado ao método.|
-|MethodName|win:UnicodeString|Nome do método.|
+|MethodName|win:UnicodeString|O nome do método.|
 |MethodSignature|win:UnicodeString|Assinatura do método (lista separada por vírgulas de nomes de tipo).|
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Eventos de CLR ETW](clr-etw-events.md)
+- [Eventos ETW no CLR](clr-etw-events.md)

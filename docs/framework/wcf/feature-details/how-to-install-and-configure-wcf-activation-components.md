@@ -1,15 +1,16 @@
 ---
 title: Como instalar e configurar componentes de ativação do WCF
+description: Saiba como configurar o WAS (serviço de ativação de processos do Windows) no Windows Vista para hospedar serviços WCF que não se comunicam via HTTP.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: e71664b4361ba28a50b29499585b20a8adbaefd2
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 84a0dcc4fed28ebd7a536bdabfcdc389be6072d8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964461"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246877"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Como instalar e configurar componentes de ativação do WCF
 
@@ -19,11 +20,11 @@ Este tópico descreve as etapas necessárias para configurar o serviço de ativa
 
 - Configurar o WAS para dar suporte a um protocolo não HTTP. O procedimento a seguir configura o Windows Vista para ativação TCP.
 
-Depois de instalar e configurar o WAS, consulte [como hospedar um serviço WCF no was](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) para os procedimentos para criar um serviço WCF que expõe um ponto de extremidade não http que emprega o was.
+Depois de instalar e configurar o WAS, consulte [como hospedar um serviço WCF no was](how-to-host-a-wcf-service-in-was.md) para os procedimentos para criar um serviço WCF que expõe um ponto de extremidade não http que emprega o was.
 
 ## <a name="to-install-the-wcf-non-http-activation-components"></a>Para instalar os componentes de ativação não HTTP do WCF
 
-1. Clique no botão **Iniciar** e em painel de **controle**.
+1. Clique no botão **Iniciar** e clique em **Painel de Controle**.
 
 2. Clique em **Programas** e clique em **Programas e Recursos**.
 
@@ -35,7 +36,7 @@ Depois de instalar e configurar o WAS, consulte [como hospedar um serviço WCF n
 
 ## <a name="to-configure-the-was-to-support-tcp-activation"></a>Para configurar o WAS para dar suporte à ativação de TCP
 
-1. Para dar suporte à ativação net. TCP, o site padrão deve primeiro ser associado a uma porta Net. TCP. Você pode fazer isso usando AppCmd. exe, que é instalado com o conjunto de ferramentas de gerenciamento do IIS 7,0. Em uma janela de prompt de comando de nível de administrador, execute o comando a seguir.
+1. Para dar suporte à ativação net. TCP, o site padrão deve primeiro ser associado a uma porta Net. TCP. Você pode fazer isso usando Appcmd.exe, que é instalado com o conjunto de ferramentas de gerenciamento do IIS 7,0. Em uma janela de prompt de comando de nível de administrador, execute o comando a seguir.
 
     ```console
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']
@@ -52,7 +53,7 @@ Depois de instalar e configurar o WAS, consulte [como hospedar um serviço WCF n
     ```
 
     > [!NOTE]
-    > Esse comando é uma única linha de texto. Esse comando habilita o aplicativo *WCF*de > de\<para ser acessado usando `http://localhost/<WCF Application>` e `net.tcp://localhost/<WCF Application>`.
+    > Esse comando é uma única linha de texto. Esse comando permite que o/ \<*WCF Application*> aplicativo seja acessado usando o `http://localhost/<WCF Application>` e o `net.tcp://localhost/<WCF Application>` .
 
      Remova a associação de site net. TCP que você adicionou para este exemplo.
 
@@ -103,7 +104,7 @@ Depois de instalar e configurar o WAS, consulte [como hospedar um serviço WCF n
 
 ## <a name="see-also"></a>Veja também
 
-- [Ativação TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
-- [Ativação de MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)
-- [NamedPipe Activation](../../../../docs/framework/wcf/samples/namedpipe-activation.md)
-- [Recursos de hospedagem do Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Ativação TCP](../samples/tcp-activation.md)
+- [Ativação de MSMQ](../samples/msmq-activation.md)
+- [NamedPipe Activation](../samples/namedpipe-activation.md)
+- [Recursos de hospedagem do Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

@@ -2,15 +2,15 @@
 title: ASP.NET Core alterações significativas
 titleSuffix: ''
 description: Lista as alterações significativas em ASP.NET Core.
-ms.date: 04/29/2020
+ms.date: 07/17/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 63d39b1aa6e46b6bcbeb5a409efacac01dea4262
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 7a07df5194d5dc220b61d55a4457d90881ac9ddf
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728330"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474820"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core alterações significativas
 
@@ -21,12 +21,15 @@ As seguintes alterações significativas estão documentadas nesta página:
 - [APIs antifalsificação obsoletas, CORS, diagnóstico, MVC e roteamento removidas](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
 - [Autenticação: Google + substituição](#authentication-google-deprecated-and-replaced)
 - [Autenticação: Propriedade HttpContext. Authentication removida](#authentication-httpcontextauthentication-property-removed)
-- [Autenticação: tipos Newtonsoft. JSON substituídos](#authentication-newtonsoftjson-types-replaced)
+- [Autenticação: Newtonsoft.Jsem tipos substituídos](#authentication-newtonsoftjson-types-replaced)
 - [Autenticação: assinatura OAuthHandler ExchangeCodeAsync alterada](#authentication-oauthhandler-exchangecodeasync-signature-changed)
 - [Autorização: sobrecarga de addautoria movida para um assembly diferente](#authorization-addauthorization-overload-moved-to-different-assembly)
 - [Autorização: IAllowAnonymous removido de AuthorizationFilterContext. Filters](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
 - [Autorização: implementações de IAuthorizationPolicyProvider exigem novo método](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [Autorização: o recurso no roteamento de ponto de extremidade é HttpContext](#authorization-resource-in-endpoint-routing-is-httpcontext)
 - [Azure: pacotes de integração do Azure prefixados da Microsoft removidos](#azure-microsoft-prefixed-azure-integration-packages-removed)
+- [Mais grande: espaço em branco insignificado cortado de componentes em tempo de compilação](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
+- [Mais incrivelmente: estrutura de destino de pacotes NuGet alterada](#blazor-target-framework-of-nuget-packages-changed)
 - [Caching: Propriedade CompactOnMemoryPressure removida](#caching-compactonmemorypressure-property-removed)
 - [Caching: o Microsoft. Extensions. Caching. SqlServer usa o novo pacote SqlClient](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [Caching: tipos de ResponseCaching "pubternal" alterados para interno](#caching-responsecaching-pubternal-types-changed-to-internal)
@@ -45,16 +48,24 @@ As seguintes alterações significativas estão documentadas nesta página:
 - [HTTP: alterações de infraestrutura de corpo de resposta](#http-response-body-infrastructure-changes)
 - [HTTP: alguns SameSite de cookie foram alterados valores padrão](#http-some-cookie-samesite-defaults-changed-to-none)
 - [HTTP: e/s síncrona desabilitada por padrão](#http-synchronous-io-disabled-in-all-servers)
+- [HttpS: renegociação de certificado de cliente desabilitada por padrão](#httpsys-client-certificate-renegotiation-disabled-by-default)
 - [Identidade: sobrecarga do método AddDefaultUI removida](#identity-adddefaultui-method-overload-removed)
 - [Identidade: alteração da versão de inicialização da interface do usuário](#identity-default-bootstrap-version-of-ui-changed)
 - [Identidade: o SignInAsync gera uma exceção para a identidade não autenticada](#identity-signinasync-throws-exception-for-unauthenticated-identity)
 - [Identity: o Construtor SignInManager aceita o novo parâmetro](#identity-signinmanager-constructor-accepts-new-parameter)
 - [Identidade: a interface do usuário usa o recurso de ativos da Web estáticos](#identity-ui-uses-static-web-assets-feature)
+- [IIS: cadeias de consulta de middleware UrlRewrite são preservadas](#iis-urlrewrite-middleware-query-strings-are-preserved)
+- [Kestrel: alterações de configuração em tempo de execução detectadas por padrão](#kestrel-configuration-changes-at-run-time-detected-by-default)
 - [Kestrel: adaptadores de conexão removidos](#kestrel-connection-adapters-removed)
+- [Kestrel: versões do protocolo TLS com suporte padrão alteradas](#kestrel-default-supported-tls-protocol-versions-changed)
 - [Kestrel: assembly HTTPS vazio removido](#kestrel-empty-https-assembly-removed)
+- [Kestrel: HTTP/2 desabilitado via TLS em versões incompatíveis do Windows](#kestrel-http2-disabled-over-tls-on-incompatible-windows-versions)
+- [Kestrel: transporte Libuv marcado como obsoleto](#kestrel-libuv-transport-marked-as-obsolete)
 - [Kestrel: Solicitar cabeçalhos de trailer movidos para nova coleção](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel: alterações na camada de abstração de transporte](#kestrel-transport-abstractions-removed-and-made-public)
 - [Localização: APIs marcadas como obsoletas](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
+- [Localização: APIs "Pubternal" removidas](#localization-pubternal-apis-removed)
+- [Localização: Construtor obsoleto removido no middleware de localização de solicitação](#localization-obsolete-constructor-removed-in-request-localization-middleware)
 - [Localização: classe ResourceManagerWithCultureStringLocalizer e membro da interface WithCulture removidos](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [Log: classe DebugLogger criada internamente](#logging-debuglogger-class-made-internal)
 - [MVC: sufixo assíncrono de ação do controlador removido](#mvc-async-suffix-trimmed-from-controller-action-names)
@@ -63,6 +74,8 @@ As seguintes alterações significativas estão documentadas nesta página:
 - [MVC: tipos alterados para interno](#mvc-pubternal-types-changed-to-internal)
 - [MVC: Shim de compatibilidade da API Web removido](#mvc-web-api-compatibility-shim-removed)
 - [Razor: compilação de tempo de execução movida para um pacote](#razor-runtime-compilation-moved-to-a-package)
+- [Segurança: codificação de nome de cookie removida](#security-cookie-name-encoding-removed)
+- [Segurança: versões do pacote NuGet do IdentityModel atualizadas](#security-identitymodel-nuget-package-versions-updated)
 - [Estado da sessão: APIs obsoletas removidas](#session-state-obsolete-apis-removed)
 - [Estrutura compartilhada: remoção de assembly do Microsoft. AspNetCore. app](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)
 - [Estrutura compartilhada: Microsoft. AspNetCore. All removidas](#shared-framework-removed-microsoftaspnetcoreall)
@@ -81,7 +94,19 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 ## <a name="aspnet-core-50"></a>ASP.NET Core 5,0
 
+[!INCLUDE[Authorization: Resource in endpoint routing is HttpContext](~/includes/core-changes/aspnetcore/5.0/authorization-resource-in-endpoint-routing.md)]
+
+***
+
 [!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
+
+***
+
+[!INCLUDE[Blazor: Insignificant whitespace trimmed from components at compile time](~/includes/core-changes/aspnetcore/5.0/blazor-components-trim-insignificant-whitespace.md)]
+
+***
+
+[!INCLUDE[Blazor: Target framework of NuGet packages changed](~/includes/core-changes/aspnetcore/5.0/blazor-packages-target-framework-changed.md)]
 
 ***
 
@@ -97,7 +122,46 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 ***
 
+[!INCLUDE[HttpSys: Client certificate renegotiation disabled by default](~/includes/core-changes/aspnetcore/5.0/httpsys-client-certificate-renegotiation-disabled-by-default.md)]
+
+***
+
+[!INCLUDE[IIS: UrlRewrite middleware query strings are preserved](~/includes/core-changes/aspnetcore/5.0/iis-urlrewrite-middleware-query-strings-are-preserved.md)]
+
+***
+
+[!INCLUDE[Kestrel: Configuration changes at run time detected by default](~/includes/core-changes/aspnetcore/5.0/kestrel-configuration-changes-at-run-time-detected-by-default.md)]
+
+***
+[!INCLUDE[Kestrel: Default supported TLS protocol versions changed](~/includes/core-changes/aspnetcore/5.0/kestrel-default-supported-tls-protocol-versions-changed.md)]
+
+***
+
+[!INCLUDE[Kestrel: HTTP/2 disabled over TLS on incompatible Windows versions](~/includes/core-changes/aspnetcore/5.0/kestrel-disables-http2-over-tls.md)]
+
+***
+
+[!INCLUDE[Kestrel: Libuv transport marked as obsolete](~/includes/core-changes/aspnetcore/5.0/kestrel-libuv-transport-obsolete.md)]
+
+***
+
+[!INCLUDE[Localization: "Pubternal" APIs removed](~/includes/core-changes/aspnetcore/5.0/localization-pubternal-apis-removed.md)]
+
+***
+
+[!INCLUDE[Localization: Obsolete constructor removed in request localization middleware](~/includes/core-changes/aspnetcore/5.0/localization-requestlocalizationmiddleware-constructor-removed.md)]
+
+***
+
 [!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
+
+***
+
+[!INCLUDE[Security: Cookie name encoding removed](~/includes/core-changes/aspnetcore/5.0/security-cookie-name-encoding-removed.md)]
+
+***
+
+[!INCLUDE[Security: IdentityModel NuGet package versions updated](~/includes/core-changes/aspnetcore/5.0/security-identitymodel-nuget-package-versions-updated.md)]
 
 ***
 

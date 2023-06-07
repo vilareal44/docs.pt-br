@@ -2,29 +2,29 @@
 title: Como estender as instruções passo a passo assíncronas usando Task.WhenAll
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
-ms.openlocfilehash: 6df29a90ff0012564c6d966c8156434d25cacdb1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fb323852c83b1edf51396a0b800c2d54a833d0c0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354241"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396617"
 ---
-# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>Como estender as instruções assíncronas usando Task. WhenAll (Visual Basic)
+# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>Como estender as instruções passo a passo assíncronas usando Task.WhenAll (Visual Basic)
 
-Você pode melhorar o desempenho da solução assíncrona em [passo a passos: acessar a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) usando o método <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Esse método aguarda de maneira assíncrona várias operações assíncronas, que são representadas como uma coleção de tarefas.
+Você pode melhorar o desempenho da solução assíncrona em [passo a passo: acessando a Web usando Async e Await (Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md) usando o <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> método. Esse método aguarda de maneira assíncrona várias operações assíncronas, que são representadas como uma coleção de tarefas.
 
 Você deve ter notado no passo a passo que os sites fazem o download em taxas diferentes. Às vezes, um dos sites está muito lento e isso atrasa todos os downloads restantes. Ao executar as soluções assíncronas que você compilou no passo a passo, você poderá finalizar o programa facilmente se não quiser esperar, mas uma opção melhor seria iniciar todos os downloads ao mesmo tempo e permitir que os downloads mais rápidos continuem, sem aguardar o que está atrasado.
 
 Você aplica o método `Task.WhenAll` a uma coleção de tarefas. A aplicação de `WhenAll` retorna uma única tarefa que não será concluída até a conclusão de cada tarefa na coleção. As tarefas parecem ser executadas em paralelo, mas não são criados threads adicionais. As tarefas podem ser concluídas em qualquer ordem.
 
 > [!IMPORTANT]
-> Os procedimentos a seguir descrevem extensões para os aplicativos assíncronos que são desenvolvidos em [passo a passos: acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Você pode desenvolver os aplicativos concluindo o passo a passo ou baixando o código em [Exemplos de código para desenvolvedores](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).
+> Os procedimentos a seguir descrevem extensões para os aplicativos assíncronos que são desenvolvidos em [passo a passos: acessando a Web usando Async e Await (Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md). Você pode desenvolver os aplicativos concluindo o passo a passo ou baixando o código em [Exemplos de código para desenvolvedores](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).
 >
 > Para executar o exemplo, você deve ter o Visual Studio 2012 ou mais recente instalado no seu computador.
 
 ### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>Para adicionar o Task.WhenAll à sua solução GetURLContentsAsync
 
-1. Adicione o método `ProcessURLAsync` ao primeiro aplicativo que é desenvolvido em [passo a passos: acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).
+1. Adicione o `ProcessURLAsync` método ao primeiro aplicativo que é desenvolvido em [passo a passos: acessando a Web usando Async e Await (Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md).
 
     - Se você baixou o código de [exemplos de código do desenvolvedor](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), abra o projeto AsyncWalkthrough e, em seguida, adicione `ProcessURLAsync` ao arquivo MainWindow. XAML. vb.
 
@@ -63,7 +63,7 @@ Você aplica o método `Task.WhenAll` a uma coleção de tarefas. A aplicação 
     'Next
     ```
 
-3. Crie uma coleção de tarefas. O código a seguir define uma [consulta](../../../../visual-basic/programming-guide/concepts/linq/index.md) que, quando executada pelo método <xref:System.Linq.Enumerable.ToArray%2A>, cria uma coleção de tarefas que baixa o conteúdo de cada site. As tarefas são iniciadas quando a consulta é avaliada.
+3. Crie uma coleção de tarefas. O código a seguir define uma [consulta](../linq/index.md) que, quando executada pelo método <xref:System.Linq.Enumerable.ToArray%2A>, cria uma coleção de tarefas que baixa o conteúdo de cada site. As tarefas são iniciadas quando a consulta é avaliada.
 
      Adicione o seguinte código ao método `SumPageSizesAsync` depois da declaração da `urlList`.
 
@@ -97,7 +97,7 @@ Você aplica o método `Task.WhenAll` a uma coleção de tarefas. A aplicação 
 
 ### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>Para adicionar o Task.WhenAll à solução HttpClient.GetByteArrayAsync
 
-1. Adicione a seguinte versão do `ProcessURLAsync` ao segundo aplicativo que é desenvolvido em [passo a passos: acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).
+1. Adicione a seguinte versão do `ProcessURLAsync` ao segundo aplicativo que é desenvolvido em [passo a passos: acessando a Web usando Async e Await (Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md).
 
     - Se você baixou o código de [exemplos de código do desenvolvedor](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), abra o projeto AsyncWalkthrough_HttpClient e, em seguida, adicione `ProcessURLAsync` ao arquivo MainWindow. XAML. vb.
 
@@ -136,7 +136,7 @@ Você aplica o método `Task.WhenAll` a uma coleção de tarefas. A aplicação 
     'Next
     ```
 
-3. Defina uma [consulta](../../../../visual-basic/programming-guide/concepts/linq/index.md) que, quando executada pelo método <xref:System.Linq.Enumerable.ToArray%2A>, cria uma coleção de tarefas que baixa o conteúdo de cada site. As tarefas são iniciadas quando a consulta é avaliada.
+3. Defina uma [consulta](../linq/index.md) que, quando executada pelo método <xref:System.Linq.Enumerable.ToArray%2A>, cria uma coleção de tarefas que baixa o conteúdo de cada site. As tarefas são iniciadas quando a consulta é avaliada.
 
      Adicione o seguinte código ao método `SumPageSizesAsync` depois da declaração de `client` e `urlList`.
 
@@ -170,7 +170,7 @@ Você aplica o método `Task.WhenAll` a uma coleção de tarefas. A aplicação 
 
 ### <a name="to-test-the-taskwhenall-solutions"></a>Para testar as soluções Task.WhenAll
 
-Para qualquer uma das soluções, escolha a tecla F5 para executar o programa e, em seguida, escolha o botão **Iniciar**. A saída deve se parecer com a saída das soluções assíncronas em [passo a passos: acessar a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). No entanto, observe que os sites aparecem em uma ordem diferente a cada vez.
+Para qualquer uma das soluções, escolha a tecla F5 para executar o programa e, em seguida, escolha o botão **Iniciar**. A saída deve se parecer com a saída das soluções assíncronas em [passo a passos: acessar a Web usando Async e Await (Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md). No entanto, observe que os sites aparecem em uma ordem diferente a cada vez.
 
 ## <a name="example"></a>Exemplo
 
@@ -422,7 +422,7 @@ Class MainWindow
 End Class
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>
-- [Instruções passo a passo: acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Instruções passo a passo: acessando a Web usando Async e Await (Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)

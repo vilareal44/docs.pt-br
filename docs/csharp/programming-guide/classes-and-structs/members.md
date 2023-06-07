@@ -1,16 +1,17 @@
 ---
 title: Membros – Guia de Programação em C#
+description: Classes e structs em C# têm Membros que representam dados e comportamento, incluindo membros declarados na classe e declarados em sua hierarquia de herança.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: 09802431d0a5954b67687e9878f572541eeaac79
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa4981ea20d86994bfae92d5db8c9abfa7c8f906
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705503"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864586"
 ---
 # <a name="members-c-programming-guide"></a>Membros (Guia de Programação em C#)
 
@@ -20,7 +21,7 @@ Classes e structs têm membros que representam seus dados e comportamento. Os me
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|[Campos](./fields.md)|Os campos são variáveis declaradas no escopo da classe. Um campo pode ser um tipo numérico interno ou uma instância de outra classe. Por exemplo, uma classe de calendário pode ter um campo que contém a data atual.|  
+|[Fields](./fields.md)|Os campos são variáveis declaradas no escopo da classe. Um campo pode ser um tipo numérico interno ou uma instância de outra classe. Por exemplo, uma classe de calendário pode ter um campo que contém a data atual.|  
 |[Constantes](./constants.md)|Constantes são campos cujo valor é definido em tempo de compilação e não pode ser alterado.|  
 |[Propriedades](./properties.md)|As propriedades são métodos de uma classe acessados como se fossem campos dessa classe. Uma propriedade pode fornecer proteção para um campo de classe para evitar que ele seja alterado sem o conhecimento do objeto.|  
 |[Métodos](./methods.md)|Os métodos definem as ações que uma classe pode executar. Métodos podem usar parâmetros que fornecem dados de entrada e retornar dados de saída por meio de parâmetros. Os métodos também podem retornar um valor diretamente, sem usar um parâmetro.|  
@@ -31,7 +32,7 @@ Classes e structs têm membros que representam seus dados e comportamento. Os me
 |[Finalizadores](./destructors.md)|Os finalizadores raramente são usados no C#. Eles são métodos chamados pelo mecanismo de runtime quando o objeto está prestes a ser removido da memória. Geralmente, eles são usados para garantir que recursos que devem ser liberados sejam manipulados corretamente.|  
 |[Tipos aninhados](./nested-types.md)|Os tipos aninhados são tipos declarados dentro de outro tipo. Geralmente, eles são usados para descrever objetos utilizados somente pelos tipos que os contêm.|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Classes](./classes.md)

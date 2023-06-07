@@ -1,5 +1,6 @@
 ---
-title: <returns> - Guia de programação C#
+title: <returns> -Guia de programação C#
+description: Saiba mais sobre o XML <returns> Tags. Essa marca é usada no comentário para uma declaração de método para descrever o valor de retorno.
 ms.date: 07/20/2015
 f1_keywords:
 - returns
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - <returns> C# XML tag
 - returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
-ms.openlocfilehash: 784d9effa589c962b8a2b982fd199f74309fb4dc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e461d46df619a351048ae7942e59847d39e490f9
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789706"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381392"
 ---
-# <a name="returns-c-programming-guide"></a>\<retorna> (guia de programação C#)
+# <a name="returns-c-programming-guide"></a>\<returns>(Guia de programação C#)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,9 +32,9 @@ ms.locfileid: "76789706"
 
 ## <a name="remarks"></a>Comentários
 
-A marca \<returns> deve ser usada no comentário para uma declaração de método descrever o valor retornado.
+A `<returns>` marca deve ser usada no comentário para uma declaração de método para descrever o valor de retorno.
 
-Compilar com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação para um arquivo.
+Compile com [-Doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.
 
 ## <a name="example"></a>Exemplo
 

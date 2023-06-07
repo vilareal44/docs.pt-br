@@ -1,15 +1,16 @@
 ---
-title: Como encontrar um elemento com um atributo específico (C#)
+title: Como localizar um elemento com um atributo específico (C#)
+description: Saiba como localizar um elemento que tem um atributo com um valor específico. Consulte exemplos de código e recursos adicionais.
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
-ms.openlocfilehash: 106885b8658c493caab3101e6b4ce921589076eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44875ca2104e7a8f83e83da983af49ef85c89f0a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141155"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303277"
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Como encontrar um elemento com um atributo específico (C#)
+# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Como localizar um elemento com um atributo específico (C#)
 Este tópico mostra como localizar um elemento que tem um atributo que tem um valor específico.  
   
 ## <a name="example"></a>Exemplo  
@@ -27,7 +28,7 @@ foreach (XElement el in address)
     Console.WriteLine(el);  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```xml  
 <Address Type="Billing">  
@@ -56,7 +57,7 @@ foreach (XElement el in address)
     Console.WriteLine(el);  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```xml  
 <aw:Address aw:Type="Billing" xmlns:aw="http://www.adventure-works.com">  
@@ -69,7 +70,7 @@ foreach (XElement el in address)
 </aw:Address>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>

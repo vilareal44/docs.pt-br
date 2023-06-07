@@ -9,12 +9,12 @@ helpviewer_keywords:
 - My feature
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-ms.openlocfilehash: 2ee9373098d4355628a43ec46302c97c26de5bf9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3befac591de8fbc7250777a8b87247ee395abf25
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330278"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411701"
 ---
 # <a name="development-with-my-visual-basic"></a>Desenvolvimento com My (Visual Basic)
 
@@ -28,26 +28,26 @@ O Visual Basic apresenta novos recursos para o método RAD que aumentam a produt
   
 ## <a name="in-this-section"></a>Nesta seção  
 
- [Executando tarefas com My.Application, My.Computer e My.User](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
+ [Como executar tarefas com My.Application, My.Computer e My.User](performing-tasks-with-my-application-my-computer-and-my-user.md)  
  Descreve os três objetos `My` centrais `My.Application`, `My.Computer` e `My.User`, que fornecem acesso a informações e funcionalidade  
   
- [Instâncias de objeto padrão fornecidas por My.Forms e My.WebServices](../../../visual-basic/developing-apps/development-with-my/default-object-instances-provided-by-my-forms-and-my-webservices.md)  
+ [Instâncias de objeto padrão fornecidas por My.Forms e My.WebServices](default-object-instances-provided-by-my-forms-and-my-webservices.md)  
  Descreve os objetos `My.Forms` e `My.WebServices`, que fornecem acesso a formulários, fontes de dados e serviços Web XML usados por seu aplicativo.  
   
- [Método RAD com My.Resources e My.Settings](../../../visual-basic/developing-apps/development-with-my/rapid-application-development-with-my-resources-and-my-settings.md)  
+ [Método RAD com My.Resources e My.Settings](rapid-application-development-with-my-resources-and-my-settings.md)  
  Descreve os objetos `My.Resources` e `My.Settings`, que fornecem acesso a recursos e configurações de um aplicativo.  
   
- [Visão geral do modelo de aplicativo do Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
+ [Visão geral do modelo de aplicativo do Visual Basic](overview-of-the-visual-basic-application-model.md)  
  Descreve o modelo de inicialização/desligamento do aplicativo Visual Basic.  
   
- [Como My depende do tipo de projeto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
+ [Como My depende do tipo de projeto](how-my-depends-on-project-type.md)  
  Fornece detalhes sobre quais os recursos `My` que estão disponíveis em diferentes tipos de projeto.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>
-- [Objeto My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)
-- [Objeto My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)
-- [Como My depende do tipo de projeto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
+- [Objeto My.Forms](../../language-reference/objects/my-forms-object.md)
+- [Objeto My.WebServices](../../language-reference/objects/my-webservices-object.md)
+- [Como My depende do tipo de projeto](how-my-depends-on-project-type.md)

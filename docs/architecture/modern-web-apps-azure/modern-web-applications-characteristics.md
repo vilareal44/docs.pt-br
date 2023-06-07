@@ -3,13 +3,16 @@ title: Características de aplicativos Web modernos
 description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | Características de aplicativos Web modernos
 author: ardalis
 ms.author: wiwagn
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 12/04/2019
-ms.openlocfilehash: d70fa54adeb505fd37807399402281dfda67cf52
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd6658a6143e132d488660d1aa4a35e427ba2d84
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77451558"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174790"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Características de aplicativos Web modernos
 
@@ -45,11 +48,11 @@ O ASP.NET Core é multiplataforma e pode ser executado no Windows, no macOS e no
 
 Os pacotes NuGet são cidadãos de primeira classe no .NET Core, e os aplicativos ASP.NET Core são compostos por muitas bibliotecas por meio do NuGet. Essa granularidade da funcionalidade ajuda a garantir que os aplicativos dependam e implantem somente a funcionalidade de que realmente precisam, reduzindo sua área da superfície de vulnerabilidade de segurança.
 
-ASP.NET Core também suporta totalmente [a injeção de dependência,](https://deviq.com/dependency-injection/)tanto internamente quanto no nível de aplicação. As interfaces podem ter várias implementações que podem ser alternadas, conforme necessário. A injeção de dependência permite que os aplicativos sejam acoplados de modo flexível a essas interfaces, em vez de a implementações específicas, facilitando a extensão, a manutenção e o teste.
+O ASP.NET Core também dá suporte total à [injeção de dependência](https://deviq.com/dependency-injection/), tanto internamente quanto no nível do aplicativo. As interfaces podem ter várias implementações que podem ser alternadas, conforme necessário. A injeção de dependência permite que os aplicativos sejam acoplados de modo flexível a essas interfaces, em vez de a implementações específicas, facilitando a extensão, a manutenção e o teste.
 
 ## <a name="easily-tested-with-automated-tests"></a>Testados facilmente com testes automatizados
 
-Os aplicativos ASP.NET Core são compatíveis com teste de unidade, além disso, o acoplamento flexível e o suporte a injeções de dependência facilitam a alternância de interesses da infraestrutura com implementações fictícias para fins de teste. ASP.NET Core também é fornecido com um TestServer que pode ser usado para hospedar aplicativos na memória. Os testes funcionais podem então fazer solicitações para esse servidor em memória, exercitando a pilha completa do aplicativo (incluindo middleware, roteamento, model binding, filtros, etc.) e recebendo uma resposta, tudo isso em uma fração do tempo que levaria para hospedar o aplicativo em um servidor real e fazer solicitações por meio da camada de rede. Esses testes são especialmente fáceis de serem gravados e significativos para APIs, que são cada vez mais importantes em aplicativos Web modernos.
+Os aplicativos ASP.NET Core são compatíveis com teste de unidade, além disso, o acoplamento flexível e o suporte a injeções de dependência facilitam a alternância de interesses da infraestrutura com implementações fictícias para fins de teste. O ASP.NET Core também é fornecido com um TestServer que pode ser usado para hospedar aplicativos na memória. Os testes funcionais podem então fazer solicitações para esse servidor em memória, exercitando a pilha completa do aplicativo (incluindo middleware, roteamento, model binding, filtros, etc.) e recebendo uma resposta, tudo isso em uma fração do tempo que levaria para hospedar o aplicativo em um servidor real e fazer solicitações por meio da camada de rede. Esses testes são especialmente fáceis de serem gravados e significativos para APIs, que são cada vez mais importantes em aplicativos Web modernos.
 
 ## <a name="traditional-and-spa-behaviors-supported"></a>Comportamentos tradicionais e de SPA com suporte
 
@@ -61,19 +64,19 @@ Muitos aplicativos Web envolvem uma combinação do comportamento do aplicativo 
 
 ## <a name="simple-development-and-deployment"></a>Desenvolvimento e implantação simples
 
-ASP.NET aplicativos Core podem ser escritos usando editores de texto simples e interfaces de linha de comando, ou ambientes de desenvolvimento completos, como o Visual Studio. Normalmente, os aplicativos monolíticos são implantados em um único ponto de extremidade. As implantações podem ser automatizadas com facilidade para ocorrerem como parte de um pipeline de CI (integração contínua) e CD (entrega contínua). Além das ferramentas tradicionais de CI/CD, o Microsoft Azure tem suporte integrado para repositórios git e pode implantar automaticamente atualizações à medida que são feitas em uma filial ou tag especificada. O Azure DevOps fornece um pipeline completo de construção e implantação de CI/CD, e o GitHub Actions fornece outra opção para projetos hospedados lá.
+ASP.NET Core aplicativos podem ser escritos usando editores de texto simples e interfaces de linha de comando, ou ambientes de desenvolvimento completos, como o Visual Studio. Normalmente, os aplicativos monolíticos são implantados em um único ponto de extremidade. As implantações podem ser automatizadas com facilidade para ocorrerem como parte de um pipeline de CI (integração contínua) e CD (entrega contínua). Além das ferramentas tradicionais de CI/CD, Microsoft Azure tem suporte integrado para repositórios git e pode implantar atualizações automaticamente conforme elas são feitas em uma ramificação ou marca git especificada. O Azure DevOps fornece uma compilação completa de CI/CD e um pipeline de implantação, e as ações do GitHub fornecem outra opção para projetos hospedados lá.
 
 ## <a name="traditional-aspnet-and-web-forms"></a>ASP.NET tradicional e Web Forms
 
-Além do ASP.NET Core, o ASP.NET 4.x tradicional continua sendo uma plataforma robusta e confiável para a criação de aplicativos Web. ASP.NET suporta modelos de desenvolvimento de MVC e API web, bem como Formulários Web, que é adequado para o rico desenvolvimento de aplicativos baseados em páginas e apresenta um rico ecossistema de componentes de terceiros. O Microsoft Azure tem um ótimo suporte de longa data para ASP.NET aplicativos 4.x, e muitos desenvolvedores estão familiarizados com essa plataforma.
+Além do ASP.NET Core, o ASP.NET 4.x tradicional continua sendo uma plataforma robusta e confiável para a criação de aplicativos Web. O ASP.NET dá suporte a modelos de desenvolvimento de API Web e MVC, bem como Web Forms, que é adequado para o desenvolvimento de aplicativos baseado em página avançado e apresenta um ecossistema avançado de componentes de terceiros. A Microsoft Azure tem um excelente suporte de longa qualidade para aplicativos ASP.NET 4. x e muitos desenvolvedores estão familiarizados com essa plataforma.
 
-## <a name="blazor"></a>Blazor
+## Blazor
 
-Blazor está incluído com ASP.NET Core 3.0 e posterior. Ele fornece um novo mecanismo para criar aplicativos de clientes web interativos ricos usando Razor, C#e ASP.NET Core. Ele oferece outra solução a considerar ao desenvolver aplicações web modernas. Há duas versões do Blazor a considerar: lado do servidor e lado do cliente.
+Blazorestá incluído no ASP.NET Core 3,0 e posterior. Ele fornece um novo mecanismo para a criação de aplicativos avançados de cliente Web interativos usando Razor, C# e ASP.NET Core. Ele oferece outra solução a ser considerada ao desenvolver aplicativos Web modernos. Há duas versões do Blazor a serem consideradas: lado do servidor e do cliente.
 
-O lado do servidor Blazor foi lançado em 2019 com ASP.NET Core 3.0. Como o nome indica, ele é executado no servidor, renderizando alterações no documento do cliente de volta para o navegador pela rede. O Lado do servidor Blazor oferece uma experiência de cliente rica sem exigir JavaScript do lado do cliente e sem exigir cargas de página separadas para cada interação de página do cliente. As alterações na página carregada são solicitadas e processadas pelo servidor e, em seguida, enviadas de volta ao cliente usando signalR.
+O lado do servidor Blazor foi lançado em 2019 com ASP.NET Core 3,0. Como o nome indica, ele é executado no servidor, processando alterações no documento do cliente de volta para o navegador pela rede. O lado do servidor Blazor fornece uma experiência de cliente rica sem a necessidade de JavaScript do lado do cliente e sem a necessidade de carregamentos de página separados para cada interação de página de cliente. As alterações na página carregada são solicitadas e processadas pelo servidor e, em seguida, enviadas de volta para o cliente usando o Signalr.
 
-O Lado cliente Blazor será lançado em 2020 e eliminará a necessidade de renderizar alterações no servidor. Em vez disso, ele aproveitará o WebAssembly para executar o código .NET dentro do cliente. O cliente ainda pode fazer chamadas de API para o servidor se necessário para solicitar dados, mas todo o comportamento do lado do cliente é executado no cliente via WebAssembly, que já é suportado por todos os principais navegadores e é apenas uma biblioteca Javascript.
+O lado do cliente Blazor será lançado em 2020 e eliminará a necessidade de processar alterações no servidor. Em vez disso, ele será aproveitado WebAssembly para executar o código .net dentro do cliente. O cliente ainda pode fazer chamadas à API para o servidor, se necessário, para solicitar dados, mas todo o comportamento do lado do cliente é executado no cliente via WebAssembly , que já tem suporte em todos os principais navegadores e é apenas uma biblioteca JavaScript.
 
 > ### <a name="references--modern-web-applications"></a>Referências – Aplicativos Web modernos
 >
@@ -81,9 +84,9 @@ O Lado cliente Blazor será lançado em 2020 e eliminará a necessidade de rende
 >   <https://docs.microsoft.com/aspnet/core/>
 > - **Teste no ASP.NET Core**  
 >   <https://docs.microsoft.com/aspnet/core/testing/>
-> - **Blazor - Comece**  
+> - **Blazor-Introdução**  
 >   <https://blazor.net/docs/get-started.html>
 
 >[!div class="step-by-step"]
->[Próximo](index.md)
->[anterior](choose-between-traditional-web-and-single-page-apps.md)
+>[Anterior](index.md) 
+> [Avançar](choose-between-traditional-web-and-single-page-apps.md)

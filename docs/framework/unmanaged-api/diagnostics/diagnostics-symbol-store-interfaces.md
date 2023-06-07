@@ -9,12 +9,12 @@ helpviewer_keywords:
 - debugging interfaces [.NET Framework]
 - interfaces [.NET Framework debugging]
 ms.assetid: f96987d5-e6a5-478b-ac5e-302e16545cce
-ms.openlocfilehash: 044ed5e08a85442c5a73c123cf51529d2fd3f1fc
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 34eee8c05e1c356d4c431245c6837bd2b3a89b32
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442170"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504466"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>Interfaces de armazenamento de símbolo de diagnóstico
 Este tópico descreve as interfaces não gerenciadas que permitem que um compilador gere informações de símbolo para uso por um depurador.  
@@ -42,7 +42,7 @@ Este tópico descreve as interfaces não gerenciadas que permitem que um compila
  Essa interface é o complemento de leitura para a [interface ISymUnmanagedAsyncMethodPropertiesWriter](isymunmanagedasyncmethodpropertieswriter-interface.md).  
   
  [Interface ISymUnmanagedAsyncMethodPropertiesWriter](isymunmanagedasyncmethodpropertieswriter-interface.md)  
- Permite a definição de informações opcionais de método Async por símbolo de método. Deve ser usado com um método aberto (ou seja, entre chamadas para o [método OpenMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)e o [método CloseMethod](isymunmanagedwriter-closemethod-method.md)).  
+ Permite a definição de informações opcionais de método Async por símbolo de método. Deve ser usado com um método aberto (ou seja, entre chamadas para o [método OpenMethod](isymunmanagedwriter-openmethod-method.md)e o [método CloseMethod](isymunmanagedwriter-closemethod-method.md)).  
   
  [Interface ISymUnmanagedBinder](isymunmanagedbinder-interface.md)  
  Representa um fichário de símbolo para código não gerenciado.  

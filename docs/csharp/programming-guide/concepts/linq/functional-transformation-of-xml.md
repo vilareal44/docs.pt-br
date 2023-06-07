@@ -1,13 +1,14 @@
 ---
 title: Transformação funcional de XML (C#)
+description: Saiba como modificar documentos XML usando a abordagem de transformação funcional pura em C# e como isso difere de uma abordagem de procedimento.
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: 83ecd97f9319027dc50f346abf7a9888b5c23862
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4ccc6859f3663eb3760c7faeaf115a5e88a2278a
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75336805"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103666"
 ---
 # <a name="functional-transformation-of-xml-c"></a>Transformação funcional de XML (C#)
 Este tópico descreve a abordagem funcional pura de transformação aos documentos XML de alteração, e ele contrastes com uma abordagem procedural.  
@@ -28,9 +29,9 @@ Este tópico descreve a abordagem funcional pura de transformação aos document
   
  LINQ to XML fornece as ferramentas necessárias codificação transformações e puras de uma maneira poderosa completo expressive e, em C# ou de código Visual Basic. Por exemplo, muitos dos exemplos o uso da documentação LINQ to XML uma abordagem funcional pura. Além disso, no [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md), usamos LINQ to XML em uma abordagem funcional para manipular informações em um documento do Microsoft Word.  
   
- Para obter uma comparação mais completa do LINQ com o XML com outras tecnologias Microsoft XML, consulte [LINQ para XML vs. Outras Tecnologias XML](./linq-to-xml-vs-other-xml-technologies.md).  
+ Para obter uma comparação mais completa de LINQ to XML com outras tecnologias XML da Microsoft, consulte [LINQ to XML vs. outras tecnologias XML](./linq-to-xml-vs-other-xml-technologies.md).  
   
-XSLT a ferramenta é recomendada para transformações um documento céntricas quando o documento de origem tem uma estrutura denteada. No entanto, LINQ to XML também pode executar um documento centralizado em transformações. Para obter mais informações, consulte [Como usar anotações para transformar LINQ em árvores XML em um estilo XSLT (C#)](./how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md).
+XSLT a ferramenta é recomendada para transformações um documento céntricas quando o documento de origem tem uma estrutura denteada. No entanto, LINQ to XML também pode executar um documento centralizado em transformações. Para obter mais informações, consulte [como usar anotações para transformar LINQ to XML árvores em um estilo XSLT (C#)](./how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md).
   
 ## <a name="see-also"></a>Confira também
 

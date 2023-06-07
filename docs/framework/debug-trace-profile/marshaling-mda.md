@@ -1,5 +1,6 @@
 ---
 title: MDA marshaling
+description: Examine o assistente de depuração gerenciada de marshaling (MDA), que é invocado se o CLR configurar informações de marshaling para um parâmetro de método ou um campo de estrutura.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marshaling, run-time errors
@@ -7,12 +8,11 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), marshaling
 - MDAs (managed debugging assistants), marshaling
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
-ms.openlocfilehash: f7bb630d3a1e832cf6bf083ce4cf603034248ceb
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 77811c526d1770b91b14aa1199dfc7b3177e6c59
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217330"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051149"
 ---
 # <a name="marshaling-mda"></a>MDA marshaling
 O MDA (Assistente de Depuração Gerenciado) de `marshaling` é ativado quando o CLR define informações de marshaling para um parâmetro de método ou um campo de uma estrutura. Esse MDA não funciona para assemblies compilados por JIT.  
@@ -29,7 +29,7 @@ name="assembly!Namespace.Class::myChar
 ```  
   
 ## <a name="configuration"></a>Configuração  
- A configuração de MDA permite que você filtre as informações de marshaling relatadas com base no campo envolvido ou em nomes de método.  O exemplo a seguir mostra o uso dos elementos `methodFilter`, `fieldFilter` e `match` para especificar filtros.  Definir o atributo `name` como um asterisco (\*) corresponderá a tudo.  
+ A configuração de MDA permite que você filtre as informações de marshaling relatadas com base no campo envolvido ou em nomes de método.  O exemplo a seguir mostra o uso dos elementos `methodFilter`, `fieldFilter` e `match` para especificar filtros.  A definição do `name` atributo como um asterisco ( \* ) corresponderá a tudo.  
   
 ```xml  
 <mdaConfig>  
@@ -48,8 +48,8 @@ name="assembly!Namespace.Class::myChar
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling de interoperabilidade](../interop/interop-marshaling.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Realizando marshaling de interoperabilidade](../interop/interop-marshaling.md)

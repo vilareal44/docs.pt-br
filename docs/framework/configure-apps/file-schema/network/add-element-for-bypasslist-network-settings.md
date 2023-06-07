@@ -11,20 +11,20 @@ helpviewer_keywords:
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
 ms.openlocfilehash: 652b8738a201aaa98fa2c5c435fee1a6da91673b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155071"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>\<adicionar> Elemento para lista de desvios (Configurações de rede)
-Adiciona um endereço IP ou nome DNS à lista de desvio proxy.  
+# <a name="add-element-for-bypasslist-network-settings"></a>Elemento \<add> para bypasslist (Configurações de Rede)
+Adiciona um endereço IP ou nome DNS à lista de bypass de proxy.  
   
-[**\<>de configuração**](../configuration-element.md)  
+[**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de proxy padrão**](defaultproxy-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de bypasslist**](bypasslist-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<adicionar>**  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<bypasslist>**](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,7 +41,7 @@ Adiciona um endereço IP ou nome DNS à lista de desvio proxy.
   
 |**Atributo**|**Descrição**|  
 |-------------------|---------------------|  
-|**Endereço**|Uma expressão regular descrevendo um endereço IP ou nome DNS.|  
+|**address**|Uma expressão regular que descreve um endereço IP ou nome DNS.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum.  
@@ -53,19 +53,19 @@ Adiciona um endereço IP ou nome DNS à lista de desvio proxy.
 |[bypasslist](bypasslist-element-network-settings.md)|Fornece um conjunto de expressões regulares que descrevem endereços que não usam um proxy.|  
   
 ## <a name="remarks"></a>Comentários  
- O `add` elemento insere expressões regulares descrevendo endereços IP ou nomes de servidor DNS na lista de endereços que contornam um servidor proxy.  
+ O `add` elemento insere expressões regulares descrevendo endereços IP ou nomes de servidores DNS na lista de endereços que ignoram um servidor proxy.  
   
- O valor `address` do atributo deve ser uma expressão regular que descreve um conjunto de endereços IP ou nomes de host.  
+ O valor do `address` atributo deve ser uma expressão regular que descreve um conjunto de endereços IP ou nomes de host.  
   
- Você deve ter cuidado ao especificar uma expressão regular para este elemento. A expressão regular\\"[a-z]+\\.contoso .com" corresponde a qualquer host no domínio contoso.com, mas também corresponde a qualquer host no domínio contoso.com.cpandl.com. Para combinar apenas um host no domínio contoso.com, use uma âncora ("$"): "[a-z]+\\.contoso\\.com$".  
+ Tome cuidado ao especificar uma expressão regular para este elemento. A expressão regular "[a-z] + \\ . contoso \\ . com" corresponde a qualquer host no domínio contoso.com, mas também corresponde a qualquer host no domínio contoso.com.cpandl.com. Para corresponder apenas a um host no domínio contoso.com, use uma âncora ("$"): "[a-z] + \\ . contoso \\ . com $".  
   
- Para obter mais informações sobre expressões regulares, consulte . [.NET Framework Expressões Regulares](../../../../standard/base-types/regular-expressions.md).  
+ Para obter mais informações sobre expressões regulares, consulte. [.NET Framework expressões regulares](../../../../standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>Arquivos de configuração  
- Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração da máquina (Machine.config).  
+ Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir adiciona dois endereços à lista de desvios. O primeiro ignora o proxy para todos os servidores do domínio contoso.com; o segundo ignora o proxy para todos os servidores cujo endereço IP começa com 192.168.  
+ O exemplo a seguir adiciona dois endereços à lista de bypass. O primeiro ignora o proxy para todos os servidores no domínio contoso.com; o segundo ignora o proxy para todos os servidores cujo endereço IP começa com 192,168.  
   
 ```xml  
 <configuration>  

@@ -1,18 +1,19 @@
 ---
-title: 'Como: criar uma nova configuração em tempo de design'
+title: Como criar uma nova configuração em tempo de design
+description: Saiba como criar uma nova configuração de Windows Forms em tempo de design usando o Settings designer no Visual Studio.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: 35a7cd8cc1daaf76a25977751ddc9ec0709e5947
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ce37b42191999e29de2f2f7f7e7abfa0ec3f4d47
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037899"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325838"
 ---
-# <a name="how-to-create-a-new-setting-at-design-time"></a>Como: Criar uma nova configuração em tempo de design
+# <a name="how-to-create-a-new-setting-at-design-time"></a>Como: criar uma nova configuração em tempo de design
 
 Você pode criar uma nova configuração no tempo de design usando o Settings designer no Visual Studio. O designer de configurações é uma interface de estilo de grade que permite criar novas configurações e especificar propriedades para essas configurações. Você deve especificar nome, valor, tipo e escopo para as novas configurações. Quando uma configuração é criada, ela é acessível no código.
 
@@ -36,8 +37,8 @@ Você pode criar uma nova configuração no tempo de design usando o Settings de
 
 4. No designer de configurações, defina o **nome**, o **valor**, o **tipo**e o **escopo** da sua configuração. Cada linha representa uma única configuração.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Usando configurações do aplicativo e configurações do usuário](using-application-settings-and-user-settings.md)
-- [Visão Geral das Configurações do Aplicativo](application-settings-overview.md)
-- [Como: Alterar o valor de uma configuração existente no tempo de design](how-to-change-the-value-of-an-existing-setting-at-design-time.md)
+- [Visão geral das configurações do aplicativo](application-settings-overview.md)
+- [Como Alterar o Valor de uma Configuração Existente em Tempo de Design](how-to-change-the-value-of-an-existing-setting-at-design-time.md)

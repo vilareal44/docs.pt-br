@@ -2,30 +2,30 @@
 title: Configurando WorkflowServiceHost
 ms.date: 03/30/2017
 ms.assetid: d8e961cb-0ef5-4f8c-8a25-e76ae6334fed
-ms.openlocfilehash: dcfc22c1c0084761039a876eec7bf00cf78b51a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8364e7e6bed357f65c66f5b6b13bbb19d55237f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857383"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597482"
 ---
 # <a name="configuring-workflowservicehost"></a>Configurando WorkflowServiceHost
-Esta seção contém um conjunto de curto "como" tópicos que descrevem brevemente como configurar diferentes recursos do <xref:System.ServiceModel.Activities.WorkflowServiceHost> classe na configuração. Esses tópicos abordam a configuração específica do serviço de fluxo de trabalho, todas as demais configurações é feita da mesma forma como um serviço WCF normal.  
+Esta seção contém um conjunto de tópicos curtos de "como" que descrevem brevemente como configurar recursos diferentes da <xref:System.ServiceModel.Activities.WorkflowServiceHost> classe na configuração do. Esses tópicos abrangem a configuração específica do serviço de fluxo de trabalho, todas as outras configurações são feitas da mesma maneira que um serviço WCF regular.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como: Configurar a persistência com WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md)  
- Descreve como configurar a persistência para um serviço de fluxo de trabalho usando <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
+ [Como configurar persistência com WorkflowServiceHost](how-to-configure-persistence-with-workflowservicehost.md)  
+ Descreve como configurar a persistência para um serviço de fluxo de trabalho usando o <xref:System.ServiceModel.Activities.WorkflowServiceHost> .  
   
- [Como: Configurar o rastreamento com WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-tracking-with-workflowservicehost.md)  
- Descreve como configurar o fluxo de trabalho de acompanhamento para um serviço de fluxo de trabalho usando <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
+ [Como configurar rastreamento com WorkflowServiceHost](how-to-configure-tracking-with-workflowservicehost.md)  
+ Descreve como configurar o rastreamento de fluxo de trabalho para um serviço de fluxo de trabalho usando o <xref:System.ServiceModel.Activities.WorkflowServiceHost> .  
   
- [Como: Configurar comportamento ocioso com WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md)  
- Descreve como configurar o comportamento ocioso de um serviço de fluxo de trabalho usando <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
+ [Como configurar comportamento ocioso com WorkflowServiceHost](how-to-configure-idle-behavior-with-workflowservicehost.md)  
+ Descreve como configurar o comportamento ocioso de um serviço de fluxo de trabalho usando o <xref:System.ServiceModel.Activities.WorkflowServiceHost> .  
   
- [Como: Configurar fluxo de trabalho sem tratamento do comportamento de exceção com WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
- Descreve como configurar o comportamento de exceção sem tratamento para um serviço de fluxo de trabalho usando <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
+ [Como configurar um comportamento de exceção não tratado de fluxo de trabalho com o WorkflowServiceHost](config-workflow-unhandled-exception-workflowservicehost.md)  
+ Descreve como configurar o comportamento de exceção sem tratamento para um serviço de fluxo de trabalho usando o <xref:System.ServiceModel.Activities.WorkflowServiceHost> .  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Visão geral dos serviços de fluxo de trabalho de hospedagem](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
+- [Serviços de fluxo de trabalho](workflow-services.md)
+- [Visão geral de serviços de fluxo de trabalho de hospedagem](hosting-workflow-services-overview.md)

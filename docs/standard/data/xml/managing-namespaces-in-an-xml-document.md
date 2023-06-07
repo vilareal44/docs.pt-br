@@ -1,14 +1,15 @@
 ---
 title: Gerenciando namespaces em um documento XML
+description: Saiba como gerenciar namespaces em um documento XML. Namespaces XML e nomes de elementos e atributos em um documento XML com o URIs personalizado e predefinido.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: 1b3e57c0a8a37574a92d23cf1d623301cc54b984
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 3a3abd2e932b1afecab85e285b0e2c42eb1eb20f
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796146"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769256"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Gerenciando namespaces em um documento XML
 Namespaces XML e nomes de elementos e atributos em um documento XML com o URIs personalizado e predefinido. Para criar essas associações, você define prefixos para URIs de namespace e usa os prefixos para qualificar nomes de atributo e elemento nos dados XML. Namespaces impedem conflitos de nomes de elementos e atributos e permitem que elementos e atributos de mesmo nome sejam tratados e validados de maneira diferente.  
@@ -68,7 +69,7 @@ Namespaces XML e nomes de elementos e atributos em um documento XML com o URIs p
   
  Aqui estão algumas das tarefas de gerenciamento e de pesquisa podem ser executadas com a classe <xref:System.Xml.XmlNamespaceManager>. Para saber mais e exemplos, siga os links para a página de referência para cada método ou propriedade.  
   
-|Para|Uso|  
+|Para|Use|  
 |--------|---------|  
 |Adicionar um namespace|Método <xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>|  
 |Remover um namespace|Método <xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A>|  
@@ -80,7 +81,7 @@ Namespaces XML e nomes de elementos e atributos em um documento XML com o URIs p
 |Verificar se um prefixo é definido no escopo atual|Método <xref:System.Xml.XmlNamespaceManager.HasNamespace%2A>|  
 |Obter a tabela de nomes usada para pesquisar URIs e prefixos|Propriedade <xref:System.Xml.XmlNamespaceManager.NameTable%2A>|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.XmlNamespaceManager>
-- [Documentos e dados XML](../../../../docs/standard/data/xml/index.md)
+- [Documentos e dados XML](index.md)

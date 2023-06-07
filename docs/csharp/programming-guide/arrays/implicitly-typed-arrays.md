@@ -1,17 +1,18 @@
 ---
 title: Matrizes de tipo implícito – Guia de Programação em C#
+description: O tipo de uma matriz de tipo implícito em C# é inferido a partir dos elementos no inicializador de matriz. Use matrizes de tipo implícito em expressões de consulta.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], implicitly-typed
 - implicitly-typed arrays [C#]
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
-ms.openlocfilehash: 943760af30422cd333fdff65cdf678108c9d9564
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1f14f68207dfb79c92eaa01ac2a8ffaa08facc03
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705711"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474703"
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>Matrizes de tipo implícito (Guia de Programação em C#)
 
@@ -31,12 +32,12 @@ Ao criar um tipo anônimo que contém uma matriz, ela deve ser de tipo implícit
 
 [!code-csharp[csProgGuideLINQ#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#38)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [C# Guia de Programação](../index.md)
-- [Variáveis locais digitadas implicitamente](../classes-and-structs/implicitly-typed-local-variables.md)
-- [Matrizes](./index.md)
-- [Tipos Anônimos](../classes-and-structs/anonymous-types.md)
+- [Guia de programação C#](../index.md)
+- [Variáveis Locais Tipadas Implicitamente](../classes-and-structs/implicitly-typed-local-variables.md)
+- [matrizes](./index.md)
+- [Tipos anônimos](../classes-and-structs/anonymous-types.md)
 - [Inicializadores de objeto e coleção](../classes-and-structs/object-and-collection-initializers.md)
-- [Var](../../language-reference/keywords/var.md)
+- [var](../../language-reference/keywords/var.md)
 - [LINQ em C#](../../linq/index.md)

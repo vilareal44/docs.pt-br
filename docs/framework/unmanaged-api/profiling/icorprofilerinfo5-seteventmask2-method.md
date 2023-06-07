@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 05dbbe2b-049c-4a60-be69-2ad7a949405e
 topic_type:
 - apiref
-ms.openlocfilehash: 10e84b729c8af607165009a8591a69dbc1afcb1e
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 8027cdcde8281c363207e309bf65fcd90c03b626
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868376"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495613"
 ---
 # <a name="icorprofilerinfo5seteventmask2-method"></a>ICorProfilerInfo5::Método SetEventMask2
 [Com suporte no .NET Framework 4.5.2 e versões posteriores]  
@@ -39,20 +39,20 @@ HRESULT SetEventMask2(        [in] DWORD dwEventsLow,        [in] DWORD dwEvents
  [in] Um valor de 4 bytes que especifica as categorias de eventos.  Cada bit controla uma capacidade, um comportamento ou um tipo de evento diferente. Os bits são descritos na enumeração [COR_PRF_HIGH_MONITOR](cor-prf-high-monitor-enumeration.md) .  
   
 ## <a name="remarks"></a>Comentários  
- O método `SetEventMask2` é usado para definir os retornos de chamada para os quais o criador de perfil se inscreve. Normalmente, você chama o método [GetEventMask2](icorprofilerinfo5-geteventmask2-method.md) para determinar quais bits estão definidos, executar uma ou lógica de seus `pdwEventsLow` e `pdwEventsHigh` valores e novos bits que você deseja definir e, em seguida, chamar o método `SetEventMask2`.  
+ O método `SetEventMask2` é usado para definir os retornos de chamada para os quais o criador de perfil se inscreve. Normalmente, você chama o método [GetEventMask2](icorprofilerinfo5-geteventmask2-method.md) para determinar quais bits estão definidos, executar uma lógica ou seus `pdwEventsLow` valores e `pdwEventsHigh` quaisquer novos bits que deseja definir e, em seguida, chamar o `SetEventMask2` método.  
   
  Esse método é a alternativa recomendada para o método [SetEventMask](icorprofilerinfo-seteventmask-method.md) .  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerInfo5](icorprofilerinfo5-interface.md)
 - [Método GetEventMask2](icorprofilerinfo5-geteventmask2-method.md)

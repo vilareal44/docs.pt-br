@@ -5,19 +5,19 @@ helpviewer_keywords:
 - gcHeapCount element
 - <gcHeapCount> element
 ms.openlocfilehash: 3d6cac4185af182758cb82e6bfd9d96ed24869b4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74283079"
 ---
-# <a name="gcheapcount-element"></a>\<elemento de > GCHeapCount
+# <a name="gcheapcount-element"></a>Elemento \<GCHeapCount>
 
 Especifica o número de heaps/threads a serem usados para a coleta de lixo do servidor.
 
-> de configuração do \<\
-> &nbsp;de \<de tempo de execução do &nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapCount >
+\<configuration>\
+&nbsp;&nbsp;\<runtime>\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapCount>
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -42,7 +42,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 |-----------|-----------------|
 |`nn`|O número de heaps a ser usado para o GC do servidor.|
 
-### <a name="child-elements"></a>Child elements
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
@@ -93,11 +93,11 @@ O exemplo a seguir não relacionar threads GC do servidor e limita o número de 
 </configuration>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [Elemento GCNoAffinitize](gcnoaffinitize-element.md)
 - [Elemento GCHeapAffinitizeMask](gcheapaffinitizemask-element.md)
-- [Noções básicas da coleta de lixo](../../../../standard/garbage-collection/fundamentals.md)
+- [Conceitos básicos da coleta de lixo](../../../../standard/garbage-collection/fundamentals.md)
 - [Esquema de configurações do runtime](index.md)
-- [Esquema de arquivos de configuração](../index.md)
+- [Esquema do arquivo de configuração](../index.md)

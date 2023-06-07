@@ -1,13 +1,14 @@
 ---
 title: Classificação de operadores de consulta padrão pelo modo de execução (C#)
+description: 'Saiba mais sobre o modos de execução do operador de consulta padrão em C# para LINQ to Objects: verificação imediata, adiada e não streaming.'
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
-ms.openlocfilehash: ccf8fced5c92ceaaf84f9240e235da0e2b56ac1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd496e232de2c7ed10a8aaa7cec84f8136495cce
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69924288"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105499"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Classificação de operadores de consulta padrão pelo modo de execução (C#)
 As implementações de LINQ to Objects dos métodos de operador de consulta padrão em uma das duas maneiras principais: imediata ou adiada. Os operadores de consulta que usam a execução adiada podem ser divididos em mais duas categorias: streaming e não streaming. Se você souber como os operadores de consulta diferentes são executados, isso poderá ajudá-lo a entender os resultados que serão obtidos de uma determinada consulta. Isso é especialmente verdadeiro se a fonte de dados está sendo alterada ou se você estiver criando uma consulta sobre outra consulta. Este tópico classifica os operadores de consulta padrão de acordo com o modo de execução.  

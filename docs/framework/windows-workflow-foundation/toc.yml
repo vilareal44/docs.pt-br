@@ -23,26 +23,26 @@
     - name: Guia de introdução ao tutorial
       href: getting-started-tutorial.md
       items:
-        - name: Como criar uma atividade
+        - name: 'Como: criar uma atividade'
           href: how-to-create-an-activity.md
-        - name: 'Como: Crie um fluxo de trabalho'
+        - name: 'Como: criar um fluxo de trabalho'
           href: how-to-create-a-workflow.md
           items:
-            - name: Como criar um fluxo de trabalho de fluxograma
+            - name: 'Como: criar um fluxo de trabalho de fluxograma'
               href: how-to-create-a-flowchart-workflow.md
-            - name: Como criar um fluxo de trabalho sequencial
+            - name: 'Como: criar um fluxo de trabalho sequencial'
               href: how-to-create-a-sequential-workflow.md
-            - name: Como criar um fluxo de trabalho de máquina de estado
+            - name: 'Como: criar um fluxo de trabalho da máquina de estado'
               href: how-to-create-a-state-machine-workflow.md
-        - name: Como executar um fluxo de trabalho
+        - name: 'Como: executar um fluxo de trabalho'
           href: how-to-run-a-workflow.md
-        - name: Como criar e executar um fluxo de trabalho de execução longa
+        - name: 'Como: criar e executar um fluxo de trabalho de execução prolongada'
           href: how-to-create-and-run-a-long-running-workflow.md
-        - name: Como criar um participante de rastreamento personalizado
+        - name: 'Como: criar um participante de acompanhamento personalizado'
           href: how-to-create-a-custom-tracking-participant.md
-        - name: Como hospedar várias versões de um fluxo de trabalho lado a lado
+        - name: 'Como: hospedar várias versões de um fluxo de trabalho lado a lado'
           href: how-to-host-multiple-versions-of-a-workflow-side-by-side.md
-        - name: Como atualizar a definição de uma instância de fluxo de trabalho em execução
+        - name: 'Como: atualizar a definição de uma instância de fluxo de trabalho em execução'
           href: how-to-update-the-definition-of-a-running-workflow-instance.md
     - name: Programação do Windows Workflow Foundation
       href: programming.md
@@ -123,7 +123,7 @@
                   href: using-activity-delegates.md
                 - name: Usando extensões de atividade
                   href: using-activity-extensions.md
-                - name: Consumir feeds de OData de um fluxo de trabalho
+                - name: Consumir feeds do OData de um fluxo de trabalho
                   href: consuming-odata-feeds-from-a-workflow.md
                 - name: Escopo e visibilidade de definição de atividades
                   href: activity-definition-scoping-and-visibility.md
@@ -136,9 +136,9 @@
               href: variables-and-arguments.md
             - name: Expressões
               href: expressions.md
-            - name: 'Expressões C#'
+            - name: Expressões C#
               href: csharp-expressions.md
-            - name: Propriedades vs argumentos
+            - name: Propriedades versus Arguments
               href: properties-vs-arguments.md
             - name: Expõem dados com CacheMetadata
               href: exposing-data-with-cachemetadata.md
@@ -177,7 +177,7 @@
           href: dynamic-update.md
         - name: Desenvolvimento de serviço de fluxo de trabalho de primeiro contrato
           href: contract-first-workflow-service-development.md
-        - name: Como criar um serviço de fluxo de trabalho que consome um contrato de serviço existente
+        - name: 'Como: criar um serviço de fluxo de trabalho que consome um contrato de serviço existente'
           href: how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md
         - name: Persistência de fluxo de trabalho
           href: workflow-persistence.md
@@ -200,7 +200,7 @@
                       href: runnable-instances-detection-period.md
                     - name: Cadeia de conexão e nome de cadeia de conexão
                       href: connection-string-and-connection-string-name.md
-                - name: 'Como: Ativar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho'
+                - name: 'Como: habilitar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho'
                   href: how-to-enable-sql-persistence-for-workflows-and-workflow-services.md
                 - name: Ativação de instância
                   href: instance-activation.md
@@ -215,21 +215,21 @@
                   items:
                     - name: Esquema de base de dados de persistência
                       href: persistence-database-schema.md
-                    - name: 'Como: Propriedades de dados de instância de Deserialize'
+                    - name: 'Como: desserializar propriedades de dados de instância'
                       href: how-to-deserialize-instance-data-properties.md
-                    - name: 'Como: Consulta para instâncias são persistentes'
+                    - name: 'Como: consultar para instâncias não persistentes'
                       href: how-to-query-for-non-persisted-instances.md
             - name: Armazenamentos de instância
               href: instance-stores.md
               items:
-                - name: 'Como: Ativar persistência para fluxos de trabalho e serviços de fluxo de trabalho'
+                - name: 'Como: habilitar a persistência para fluxos de trabalho e serviços de fluxo de trabalho'
                   href: how-to-enable-persistence-for-workflows-and-workflow-services.md
-                - name: 'Como: Crie uma instância personalizado Store'
+                - name: 'Como: criar uma instância de repositório personalizado'
                   href: how-to-create-a-custom-instance-store.md
             - name: Participantes de persistência
               href: persistence-participants.md
               items:
-                - name: 'Como: Crie um participante personalizado de persistência'
+                - name: 'Como: criar um participante de persistência personalizado'
                   href: how-to-create-a-custom-persistence-participant.md
             - name: Práticas recomendadas de persistência
               href: persistence-best-practices.md
@@ -523,9 +523,9 @@
             - name: Usando designers personalizados e modelos de atividades
               href: using-custom-activity-designers-and-templates.md
               items:
-                - name: 'Como: Criar um designer personalizado de atividades'
+                - name: 'Como: criar um designer personalizado de atividades'
                   href: how-to-create-a-custom-activity-designer.md
-                - name: 'Como: Crie um modelo personalizado de atividades'
+                - name: 'Como: criar um modelo personalizado de atividades'
                   href: how-to-create-a-custom-activity-template.md
                 - name: Usando o contexto de edição de ModelItem
                   href: using-the-modelitem-editing-context.md
@@ -534,13 +534,13 @@
             - name: Hospedando novamente o designer de fluxo de trabalho
               href: rehosting-the-workflow-designer.md
               items:
-                - name: 'Tarefa 1: Crie um aplicativo do windows presentation foundation do windows'
+                - name: 'Tarefa 1: Criar um aplicativo do Windows Presentation Foundation do Windows'
                   href: task-1-create-a-new-wpf-app.md
-                - name: 'Tarefa 2: Hospedar Designer de Fluxo de Trabalho'
+                - name: 'Tarefa 2: Hospedar o Designer de Fluxo de Trabalho'
                   href: task-2-host-the-workflow-designer.md
-                - name: 'Tarefa 3: Crie a caixa de ferramentas e os painéis de PropertyGrid'
+                - name: 'Tarefa 3: Criar os painéis de Caixa de ferramentas e PropertyGrid'
                   href: task-3-create-the-toolbox-and-propertygrid-panes.md
-                - name: Como Erros de validação de exibição em um designer de Rehosted
+                - name: 'Como: exibir erros de validação em um designer com hospedagem alterada'
                   href: how-to-display-validation-errors-in-a-rehosted-designer.md
                 - name: Suporte para novos recursos do Workflow Foundation 4.5 no Designer de Fluxo de Trabalho hospedado novamente
                   href: wf-features-in-the-rehosted-workflow-designer.md
@@ -548,5 +548,5 @@
               href: using-a-custom-expression-editor.md
     - name: Glossário do Windows Workflow Foundation
       href: glossary.md
-    - name: Fluxo de trabalho Exemplos do Windows
+    - name: Amostras do Windows Workflow
       href: ./samples/

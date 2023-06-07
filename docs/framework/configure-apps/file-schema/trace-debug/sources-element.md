@@ -10,18 +10,18 @@ helpviewer_keywords:
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
 ms.openlocfilehash: 2a76816ee73f516b3c7544877a77531acaa8e09c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153263"
 ---
-# <a name="sources-element"></a>\<fontes> Elemento
-Especifica fontes de rastreamento que iniciam o rastreamento de mensagens.  
+# <a name="sources-element"></a>Elemento \<sources>
+Especifica fontes de rastreamento que iniciam mensagens de rastreamento.  
 
-[**\<>de configuração**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<fontes>**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<sources>**
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,7 +41,7 @@ Especifica fontes de rastreamento que iniciam o rastreamento de mensagens.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<>fonte](source-element.md)|Elemento necessário.<br /><br /> Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.|  
+|[\<source>](source-element.md)|Elemento necessário.<br /><br /> Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -51,10 +51,10 @@ Especifica fontes de rastreamento que iniciam o rastreamento de mensagens.
 |`system.diagnostics`|Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse elemento pode ser usado no arquivo de configuração da máquina (Machine.config) e no arquivo de configuração do aplicativo.  
+ Esse elemento pode ser usado no arquivo de configuração da máquina (Machine. config) e no arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir `<sources>` mostra como usar `mySource` o elemento para adicionar a `sourceSwitch`fonte de rastreamento e definir o nível para o switch de origem chamado . Um ouvinte de rastreamento de console é adicionado que grava informações de rastreamento para o console.  
+ O exemplo a seguir mostra como usar o `<sources>` elemento para adicionar a origem de rastreamento `mySource` e definir o nível para a opção de origem denominada `sourceSwitch` . Um ouvinte de rastreamento de console é adicionado que grava informações de rastreamento no console do.  
   
 ```xml  
 <configuration>  
@@ -88,4 +88,4 @@ Especifica fontes de rastreamento que iniciam o rastreamento de mensagens.
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
 - [Esquema de configurações de rastreamento e depuração](index.md)
-- [\<>fonte](source-element.md)
+- [\<source>](source-element.md)

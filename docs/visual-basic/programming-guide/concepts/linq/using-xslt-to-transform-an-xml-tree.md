@@ -2,12 +2,12 @@
 title: Usando XSLT para transformar uma árvore XML
 ms.date: 07/20/2015
 ms.assetid: 3390ca68-c270-4e1d-b64b-6a063a77017c
-ms.openlocfilehash: f8d7de508fb954148b8b16ddf24966289f191bbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5332eb0a4fa8a2bd855421d674fe9f0de2ccb5f3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350523"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364429"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a>Usando o XSLT para transformar uma árvore XML (Visual Basic)
 
@@ -52,7 +52,7 @@ End Using
 Console.WriteLine(newTree)
 ```
 
-Este exemplo gera a seguinte saída:
+Esse exemplo gera a saída a seguir:
 
 ```xml
 <Root>
@@ -61,8 +61,8 @@ Este exemplo gera a seguinte saída:
 </Root>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>
-- [Programação de LINQ to XML avançada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Programação de LINQ to XML avançada (Visual Basic)](advanced-linq-to-xml-programming.md)

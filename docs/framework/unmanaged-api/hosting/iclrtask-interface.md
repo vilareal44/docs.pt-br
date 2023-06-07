@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3a44df3-578a-4451-b55e-70c8e7695f5e
 topic_type:
 - apiref
-ms.openlocfilehash: 419baaf64397830ef86cfd9e5c3437e3f5b57795
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: b1327e13006ca4b3f9074c1348b1817c9a1b3728
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763001"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503946"
 ---
 # <a name="iclrtask-interface"></a>Interface ICLRTask
 Fornece métodos que permitem ao host fazer solicitações do Common Language Runtime (CLR) ou fornecer notificação ao CLR sobre a tarefa associada.  
@@ -41,7 +41,7 @@ Fornece métodos que permitem ao host fazer solicitações do Common Language Ru
 |[Método YieldTask](iclrtask-yieldtask-method.md)|Solicita que o CLR torne o tempo do processador disponível para outras tarefas. O CLR não garante que a tarefa seja colocada em um estado em que possa gerar o tempo de processamento.|  
   
 ## <a name="remarks"></a>Comentários  
- Um `ICLRTask` é a representação de uma tarefa para o CLR. A qualquer momento durante a execução de código, uma tarefa pode ser descrita como em execução ou aguardando para ser executada. O host chama o `ICLRTask::SwitchIn` método para notificar o CLR que a tarefa que a `ICLRTask` instância atual representa agora está em um estado operável. Após uma chamada para `ICLRTask::SwitchIn` , o host pode agendar a tarefa em qualquer thread do sistema operacional, exceto nos casos em que o tempo de execução requer afinidade de thread, conforme especificado por chamadas para os métodos [IHostTaskManager:: BeginThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md) e [IHostTaskManager:: EndThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md) . Algum tempo depois, o sistema operacional pode decidir remover a tarefa do thread e colocá-la em um estado de não execução. Por exemplo, isso pode ocorrer sempre que a tarefa é bloqueada em primitivos de sincronização ou aguarda a conclusão de operações de e/s. O host chama o [SwitchOut](iclrtask-switchout-method.md) para notificar o CLR que a tarefa representada pela `ICLRTask` instância atual não está mais em um estado operável.  
+ Um `ICLRTask` é a representação de uma tarefa para o CLR. A qualquer momento durante a execução de código, uma tarefa pode ser descrita como em execução ou aguardando para ser executada. O host chama o `ICLRTask::SwitchIn` método para notificar o CLR que a tarefa que a `ICLRTask` instância atual representa agora está em um estado operável. Após uma chamada para `ICLRTask::SwitchIn` , o host pode agendar a tarefa em qualquer thread do sistema operacional, exceto nos casos em que o tempo de execução requer afinidade de thread, conforme especificado por chamadas para os métodos [IHostTaskManager:: BeginThreadAffinity](ihosttaskmanager-beginthreadaffinity-method.md) e [IHostTaskManager:: EndThreadAffinity](ihosttaskmanager-endthreadaffinity-method.md) . Algum tempo depois, o sistema operacional pode decidir remover a tarefa do thread e colocá-la em um estado de não execução. Por exemplo, isso pode ocorrer sempre que a tarefa é bloqueada em primitivos de sincronização ou aguarda a conclusão de operações de e/s. O host chama o [SwitchOut](iclrtask-switchout-method.md) para notificar o CLR que a tarefa representada pela `ICLRTask` instância atual não está mais em um estado operável.  
   
  Normalmente, uma tarefa é encerrada no final da execução do código. Nesse momento, o host chama `ICLRTask::ExitTask` para destruir o associado `ICLRTask` . No entanto, as tarefas também podem ser recicladas usando uma chamada para `ICLRTask::Reset` , o que permite que a `ICLRTask` instância seja usada novamente. Essa abordagem impede a sobrecarga de criar e destruir instâncias repetidamente.  
   
@@ -54,7 +54,7 @@ Fornece métodos que permitem ao host fazer solicitações do Common Language Ru
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICLRTaskManager](iclrtaskmanager-interface.md)
 - [Interface IHostTask](ihosttask-interface.md)

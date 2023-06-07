@@ -1,13 +1,14 @@
 ---
 title: Usando variância para delegados genéricos Func e Action (C#)
+description: Saiba mais sobre como usar Covariance e contravariância nos delegados de Func e Action Generic para proporcionar mais flexibilidade em seu código.
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: 17f55d594ad4364fd29c8f6e41bd6ad2445b0986
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d7174b0f734d10ab69d0936cb5ca4aa2f4fafdf7
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169786"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105707"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Usando variância para delegados genéricos Func e Action (C#)
 Esses exemplos demonstram como usar covariância e contravariância nos delegados genéricos `Func` e `Action` para permitir a reutilização dos métodos e fornecer mais flexibilidade em seu código.  

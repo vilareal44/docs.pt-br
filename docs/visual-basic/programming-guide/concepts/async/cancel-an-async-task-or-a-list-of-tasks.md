@@ -2,23 +2,23 @@
 title: Cancelar uma tarefa assíncrona ou uma lista de tarefas
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 2956582cd0c8e044fcd37ffab13686489a7c854c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 932bf46f1e3aee220d0412f1688e961faaef3459
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347961"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396695"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)
 
 Você pode configurar um botão que pode ser usado para cancelar um aplicativo assíncrono se não desejar aguardar sua conclusão. Seguindo os exemplos neste tópico, você pode adicionar um botão de cancelamento a um aplicativo que baixa o conteúdo de um site ou uma lista de sites.
 
-Os exemplos usam a interface do usuário que descreve o [ajuste do seu aplicativo assíncrono (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) .
+Os exemplos usam a interface do usuário que descreve o [ajuste do seu aplicativo assíncrono (Visual Basic)](fine-tuning-your-async-application.md) .
 
 > [!NOTE]
 > Para executar os exemplos, você precisa ter o Visual Studio 2012 ou uma versão mais recente e o .NET Framework 4.5 ou posterior instalados em seu computador.
 
-## <a name="BKMK_CancelaTask"></a> Cancelar uma tarefa
+## <a name="cancel-a-task"></a><a name="BKMK_CancelaTask"></a>Cancelar uma tarefa
 
 O primeiro exemplo associa o botão **Cancelar** a uma única tarefa de download. Se você escolher o botão enquanto o aplicativo está baixando conteúdo, o download será cancelado.
 
@@ -34,7 +34,7 @@ Você pode baixar o projeto completo do WPF (Windows Presentation Foundation) em
 
 4. No **Gerenciador de Soluções**, abra o menu de atalho do projeto **CancelATask** e, em seguida, escolha **Definir como Projeto de Inicialização**.
 
-5. Pressione a tecla F5 para executar o projeto.
+5. Escolha a tecla F5 para executar o projeto.
 
      Escolha as teclas CTRL+F5 para executar o projeto sem depurá-lo.
 
@@ -138,7 +138,7 @@ Em seguida, adicione as seguintes alterações ao arquivo MainWindow. XAML. vb d
     Download canceled.
     ```
 
-## <a name="BKMK_CancelaListofTasks"></a> Cancelar uma lista de tarefas
+## <a name="cancel-a-list-of-tasks"></a><a name="BKMK_CancelaListofTasks"></a>Cancelar uma lista de tarefas
 
 Você pode estender o exemplo anterior para cancelar muitas tarefas associando a mesma instância `CancellationTokenSource` a cada tarefa. Se você escolher o botão **Cancelar**, cancela todas as tarefas que ainda não estão concluídas.
 
@@ -154,7 +154,7 @@ Você pode baixar o projeto completo do WPF (Windows Presentation Foundation) em
 
 4. No **Gerenciador de Soluções**, abra o menu de atalho do projeto **CancelAListOfTasks** e, em seguida, escolha **Definir como Projeto de Inicialização**.
 
-5. Pressione a tecla F5 para executar o projeto.
+5. Escolha a tecla F5 para executar o projeto.
 
      Escolha as teclas CTRL+F5 para executar o projeto sem depurá-lo.
 
@@ -253,7 +253,7 @@ Para estender o exemplo você mesmo, passo a passo, siga as instruções na seç
     Downloads canceled.
     ```
 
-## <a name="BKMK_CompleteExamples"></a> Exemplos completos
+## <a name="complete-examples"></a><a name="BKMK_CompleteExamples"></a>Exemplos completos
 
 As seções a seguir contêm o código para cada um dos exemplos anteriores. Observe que você deve adicionar uma referência para <xref:System.Net.Http>.
 
@@ -463,10 +463,10 @@ End Class
 ' Downloads canceled.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
-- [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Ajustando seu aplicativo assíncrono (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Programação assíncrona com Async e Await (Visual Basic)](index.md)
+- [Ajustando seu aplicativo assíncrono (Visual Basic)](fine-tuning-your-async-application.md)
 - [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

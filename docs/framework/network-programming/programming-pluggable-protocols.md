@@ -1,5 +1,6 @@
 ---
 title: Programando protocolos conectáveis
+description: Saiba como as classes abstract WebRequest e WebResponse dão suporte a protocolos conectáveis, que permitem que um aplicativo obtenha dados sem especificar um protocolo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - downloading Internet resources, pluggable protocols
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: 94dfedd317782b9e518df02c84d9af55b1ef2b69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 510f616295abc13d93e0e0af5a37aca097d343e3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047397"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502191"
 ---
 # <a name="programming-pluggable-protocols"></a>Programando protocolos conectáveis
 As classes abstratas <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> fornecem a base para protocolos conectáveis. Derivando classes específicas de protocolo de <xref:System.Net.WebRequest> e de <xref:System.Net.WebResponse>, um aplicativo pode solicitar dados de um recurso de Internet e ler a resposta sem especificar o protocolo que está sendo usado.  
@@ -35,5 +36,5 @@ As classes abstratas <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse
 
 - [Derivando de WebRequest](deriving-from-webrequest.md)
 - [Derivando de WebResponse](deriving-from-webresponse.md)
-- [Programação de rede no Framework .NET](index.md)
+- [Programação de rede no .NET Framework](index.md)
 - [Como fazer a conversão de tipo de uma WebRequest para acessar propriedades específicas de protocolo](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

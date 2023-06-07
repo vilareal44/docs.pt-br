@@ -1,15 +1,16 @@
 ---
 title: 'Arquivo XML de exemplo: ordens de compra consolidadasArquivo XML de exemplo: ordens de compra consolidadas2'
+description: Esse arquivo XML é usado em vários exemplos na documentação do LINQ to XML. O arquivo contém pedidos de compra com formas diferentes de várias empresas.
 ms.date: 07/20/2015
 ms.assetid: 9d9698a5-95f2-4564-813b-ba536cdf3bfb
-ms.openlocfilehash: abd9a8f49cbd1308dfb1c043f310601decf64336
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 99cb9e09f9ea14420908aa7cd28f70ff6329baeb
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66483787"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302562"
 ---
-# <a name="sample-xml-file-consolidated-purchase-orders"></a>Arquivo XML de Exemplo: Pedidos de compra consolidados
+# <a name="sample-xml-file-consolidated-purchase-orders"></a>Arquivo XML de exemplo: Ordens de compra consolidadas
 O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo é um conjunto de pedidos de compra com várias formas diferentes de empresas. Os pedidos de compra de cada empresa em namespaces são separadas.  
   
 ## <a name="consolidatedpurchaseordersxml"></a>ConsolidatedPurchaseOrders.xml  

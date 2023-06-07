@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d68666a-fb73-4455-bebd-908d49a16abc
 topic_type:
 - apiref
-ms.openlocfilehash: 8ae47eac713fbee30ea543538957b12460b8e1fc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 688abd210cca193bf03c40f000b74ecb66eb8ede
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123281"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008541"
 ---
 # <a name="ivalidatorvalidate-method"></a>Método IValidator::Validate
 Valida o executável portátil (PE) ou o arquivo. MSIL (Microsoft Intermediate Language) especificado.  
@@ -42,13 +42,13 @@ HRESULT Validate (
   
 ## <a name="parameters"></a>Parâmetros  
  `veh`  
- no Um ponteiro para uma instância de `IVEHandler` que lida com erros de validação.  
+ no Um ponteiro para uma `IVEHandler` instância que manipula erros de validação.  
   
  `pAppDomain`  
  no Um ponteiro para o domínio do aplicativo no qual o arquivo é carregado.  
   
  `ulFlags`  
- no Uma combinação de bits de valor [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) , que indica as validações que devem ser executadas.  
+ no Uma combinação de bits de valor [ValidatorFlags](validatorflags-enumeration.md) , que indica as validações que devem ser executadas.  
   
  `ulMaxError`  
  no O número máximo de erros a serem permitidos antes de sair da validação.  
@@ -66,10 +66,10 @@ HRESULT Validate (
  no O tamanho, em bytes, do arquivo a ser validado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** IValidator. idl, IValidator. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

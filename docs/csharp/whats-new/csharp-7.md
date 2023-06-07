@@ -3,26 +3,26 @@ title: Novidades no C# 7.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos na versão 7.0 da linguagem C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 1291de95b88b3de16fb94fb376fb4153dd4a5862
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 38b1afebf6d4fa69c46424c2d9a3631e8f3a8707
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102662"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174738"
 ---
 # <a name="whats-new-in-c-70"></a>Novidades no C# 7.0
 
 O C# 7.0 adiciona vários recursos novos à linguagem C#:
 
-- [`out`Variáveis](#out-variables)
+- [`out`as](#out-variables)
   - Declare valores `out` embutidos como argumentos para o método em que eles são usados.
 - [Tuplas](#tuples)
   - Você pode criar tipos simples e sem nome que contêm vários campos públicos. Compiladores e ferramentas IDE entendem a semântica desses tipos.
 - [Descartes](#discards)
   - Descartes são variáveis temporárias de somente gravação usadas em atribuições quando o valor atribuído não tem importância. Eles são mais úteis ao desconstruir tuplas e tipos definidos pelo usuário, bem como ao chamar métodos com parâmetros `out`.
-- [Correspondência padrão](#pattern-matching)
+- [Correspondência de padrões](#pattern-matching)
   - Você pode criar a lógica de ramificação com base em tipos e valores arbitrários dos membros desses tipos.
-- [`ref`moradores e retorna](#ref-locals-and-returns)
+- [`ref`locais e retorna](#ref-locals-and-returns)
   - As variáveis locais do método e os valores de retorno podem ser referências a outros armazenamentos.
 - [Funções locais](#local-functions)
   - Você pode aninhar funções dentro de outras funções para limitar seu escopo e visibilidade.
@@ -70,7 +70,7 @@ Você pode criar uma tupla atribuindo um valor a cada membro e, opcionalmente, f
 
 [!code-csharp[NamedTuple](~/samples/snippets/csharp/new-in-7/program.cs#NamedTuple "Named tuple")]
 
-A tupla `namedLetters` contém campos denominados `Alpha` e `Beta`. Esses nomes existem somente em tempo de compilação e não são preservados, por exemplo, ao inspecionar a tupla usando a reflexão em runtime.
+A tupla `namedLetters` contém campos denominados `Alpha` e `Beta`. Esses nomes existem somente no momento da compilação e não são preservados, por exemplo, ao inspecionar a tupla usando reflexão em tempo de execução.
 
 Em uma atribuição de tupla, você também pode especificar os nomes dos campos no lado direito da atribuição:
 
@@ -88,7 +88,7 @@ Extraia os campos individuais atribuindo um `Point` a uma tupla:
 
 [!code-csharp[DeconstructPoint](~/samples/snippets/csharp/new-in-7/program.cs#DeconstructPoint "Deconstruct a point")]
 
-Saiba mais detalhes sobre tuplas no [artigo sobre tuplas](../tuples.md).
+Para obter mais informações, consulte [tipos de tupla](../language-reference/builtin-types/value-tuples.md).
 
 ## <a name="discards"></a>Descartes
 
@@ -114,7 +114,7 @@ As expressões de correspondência de padrões estendem esse conceito, de modo q
 
 A correspondência de padrões tem suporte a expressões `is` e `switch`. Cada uma delas permite inspecionar um objeto e suas propriedades para determinar se esse objeto satisfaz o padrão procurado. Você usa a palavra-chave `when` para especificar regras adicionais para o padrão.
 
-A `is` expressão de padrão estende o [ `is` operador](../language-reference/keywords/is.md#pattern-matching-with-is) familiar a consultar um objeto sobre seu tipo e atribuir o resultado em uma instrução. O seguinte código verifica se uma variável é um `int` e, nesse caso, adiciona-a à soma atual:
+A `is` expressão de padrão estende o [ `is` operador](../language-reference/keywords/is.md#pattern-matching-with-is) familiar para consultar um objeto sobre seu tipo e atribuir o resultado em uma instrução. O seguinte código verifica se uma variável é um `int` e, nesse caso, adiciona-a à soma atual:
 
 ```csharp
 if (input is int count)
@@ -211,7 +211,7 @@ A mesma técnica pode ser empregada com métodos `async` para garantir que as ex
 [!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
-> Alguns dos projetos que são suportados por funções locais também podem ser realizados usando *expressões lambda*. Para obter mais informações, consulte [funções locais vs. expressões lambda](../programming-guide/classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions).
+> Alguns dos designs com suporte das funções locais também podem ser realizados usando *expressões lambda*. Para obter mais informações, consulte [funções locais versus expressões lambda](../programming-guide/classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions).
 
 ## <a name="more-expression-bodied-members"></a>Mais membros aptos para expressão
 
@@ -236,12 +236,12 @@ Essa adição facilita a escrita de um código mais baseado em expressão. Você
 
 Retornar um objeto `Task` de métodos assíncronos pode introduzir gargalos de desempenho em determinados caminhos. `Task` é um tipo de referência, portanto, usá-lo significa alocar um objeto. Em casos em que um método declarado com o modificador `async` retorna um resultado armazenado em cache ou é concluído de forma síncrona, as alocações extras podem se tornar um custo de tempo significativo em seções críticas de desempenho de código. Isso pode se tornar caro se essas alocações ocorrem em loops rígidos.
 
-O novo recurso de linguagem significa que os tipos de retorno do método assíncrono não se limitam a `Task`, `Task<T>` e `void`. O tipo retornado ainda deve satisfazer o padrão assíncrono, o que significa que um método `GetAwaiter` deve ser acessível. Como um exemplo `ValueTask` concreto, o tipo foi adicionado ao .NET para fazer uso deste novo recurso de linguagem:
+O novo recurso de linguagem significa que os tipos de retorno do método assíncrono não se limitam a `Task`, `Task<T>` e `void`. O tipo retornado ainda deve satisfazer o padrão assíncrono, o que significa que um método `GetAwaiter` deve ser acessível. Como um exemplo concreto, o `ValueTask` tipo foi adicionado ao .net para fazer uso desse novo recurso de linguagem:
 
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 
 > [!NOTE]
-> Você precisa adicionar o [`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) pacote NuGet <xref:System.Threading.Tasks.ValueTask%601> para usar o tipo.
+> Você precisa adicionar o pacote NuGet [`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) para usar o <xref:System.Threading.Tasks.ValueTask%601> tipo.
 
 Essa melhoria é mais útil para autores de biblioteca impedirem a alocação de uma `Task` em um código crítico para o desempenho.
 

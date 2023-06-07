@@ -45,7 +45,7 @@ O encaminhamento de tipo permite que você mova um tipo para outro assembly sem 
 
 4. Recompile o assembly onde o tipo estava localizado, com uma referência ao assembly que agora contém o tipo. Por exemplo, se você estiver Compilando um arquivo C# na linha de comando, use a opção [-Reference (opções do compilador C#)](../../csharp/language-reference/compiler-options/reference-compiler-option.md) para especificar o assembly que contém o tipo. Em C++, use a diretiva [#using](/cpp/preprocessor/hash-using-directive-cpp) no arquivo de origem para especificar o assembly que contém o tipo.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>
 - [Encaminhamento de tipo (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)

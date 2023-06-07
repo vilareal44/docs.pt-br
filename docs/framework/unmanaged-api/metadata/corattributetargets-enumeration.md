@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: 51741aa3a6d965c1e9743081628d8ad62e8fb04e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1836f26af99f91ab1765107573f6b067edd5e95
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176195"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007917"
 ---
 # <a name="corattributetargets-enumeration"></a>Enumeração CorAttributeTargets
 Especifica os elementos do aplicativo no qual ele é válido para aplicar um atributo.  
@@ -63,7 +63,7 @@ typedef enum CorAttributeTargets
 |Membro|Descrição|  
 |------------|-----------------|  
 |`catAssembly`|O atributo pode ser aplicado a um assembly.|  
-|`catModule`|O atributo pode ser aplicado a um módulo executável portátil (.dll ou .exe).|  
+|`catModule`|O atributo pode ser aplicado a um módulo executável portátil (. dll ou. exe).|  
 |`catClass`|O atributo pode ser aplicado a uma classe.|  
 |`catStruct`|Atributo pode ser aplicado a uma estrutura; ou seja, um tipo de valor.|  
 |`catEnum`|O atributo pode ser aplicado a uma enumeração.|  
@@ -77,20 +77,20 @@ typedef enum CorAttributeTargets
 |`catDelegate`|O atributo pode ser aplicado a um delegado.|  
 |`catGenericParameter`|O atributo pode ser aplicado a um parâmetro genérico.|  
 |`catAll`|O atributo pode ser aplicado a qualquer elemento de aplicativo.|  
-|`catClassMembers`|Atributo pode ser aplicado a um membro de uma classe.|  
+|`catClassMembers`|O atributo pode ser aplicado a um membro de uma classe.|  
   
 ## <a name="remarks"></a>Comentários  
- Os `CorAttributeTargets` valores de enumeração podem ser combinados com uma operação or pouco sábia para obter a combinação preferida.  
+ Os `CorAttributeTargets` valores de enumeração podem ser combinados com uma operação OR bit a bit para obter a combinação preferida.  
   
- Os `CorAttributeTargets` paralelos da <xref:System.AttributeTargets?displayProperty=nameWithType> enumeração gerenciada.  
+ O `CorAttributeTargets` paraleliza a enumeração gerenciada <xref:System.AttributeTargets?displayProperty=nameWithType> .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** CorHdr.h  
+ **Cabeçalho:** CorHdr. h  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerações de metadados](metadata-enumerations.md)

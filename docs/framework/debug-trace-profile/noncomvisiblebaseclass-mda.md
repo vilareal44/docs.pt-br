@@ -1,5 +1,6 @@
 ---
 title: MDA nonComVisibleBaseClass
+description: Consulte o MDA (Assistente de depuração gerenciada) nonComVisibleBaseClass, que é invocado em chamadas de QueryInterface de código nativo falhando com COR_E_INVALIDOPERATION.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - visible classes
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - QueryInterface call failures
 - MDAs (managed debugging assistants), COM visible classes
 ms.assetid: 9ec1af27-604b-477e-9ee2-e833eb10d3ce
-ms.openlocfilehash: 4c16432df201d19b65c91206ec529d07605e979a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f32b2c57f50fcd900b1fd78f4f8df1ec656a6db
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181796"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803906"
 ---
 # <a name="noncomvisiblebaseclass-mda"></a>MDA nonComVisibleBaseClass
 O MDA (Assistente de Depuração Gerenciado) de `nonComVisibleBaseClass` é ativado quando uma chamada `QueryInterface` é feita por código não gerenciado ou nativo no CCW (COM Callable Wrapper) de uma classe gerenciada visível em COM derivada de uma classe base que não é visível em COM.  A chamada `QueryInterface` faz com que o MDA seja ativado apenas em casos nos quais a chamada solicita a interface de classe ou o `IDispatch` padrão da classe gerenciada visível em COM.  O MDA não é ativado quando o `QueryInterface` é para uma interface explícita que tem o atributo <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> aplicado e é implementado explicitamente pela classe visível em COM.  
@@ -52,7 +53,7 @@ constrained by the COM versioning rules.
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)

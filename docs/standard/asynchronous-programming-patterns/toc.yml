@@ -21,11 +21,11 @@
           href: best-practices-for-implementing-the-event-based-asynchronous-pattern.md
         - name: Decidindo quando implementar o padrão assíncrono baseado em evento
           href: deciding-when-to-implement-the-event-based-asynchronous-pattern.md
-        - name: Como implementar um componente compatível com o padrão assíncrono baseado em evento
+        - name: 'Como: Implementar um componente compatível com o padrão assíncrono baseado em evento'
           href: component-that-supports-the-event-based-asynchronous-pattern.md
-        - name: Como implementar um cliente do padrão assíncrono baseado em evento
+        - name: 'Como: Implementar um cliente do padrão assíncrono baseado em evento'
           href: how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md
-        - name: Como usar componentes compatíveis com o padrão assíncrono baseado em evento
+        - name: 'Como: Usar componentes compatíveis com o padrão assíncrono baseado em evento'
           href: how-to-use-components-that-support-the-event-based-asynchronous-pattern.md
     - name: Modelo de programação assíncrona (APM)
       href: asynchronous-programming-model-apm.md

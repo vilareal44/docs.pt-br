@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 6d50a5d74eccff6fe39aca111f768bac4d8f2e2e
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 6822757608429ca5f4ef9520ab7574d440b67b26
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868324"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495250"
 ---
 # <a name="icorprofilerinfo8getfunctionfromip3-method"></a>Método ICorProfilerInfo8:: GetFunctionFromIP3
 
@@ -48,16 +48,16 @@ HRESULT GetFunctionFromIP3([in] LPCBYTE ip,
 
 Esse método funciona para métodos dinâmicos e não dinâmicos. É um superconjunto de [GetFunctionFromIP2](icorprofilerinfo4-getfunctionfromip2-method.md), que funciona apenas para funções com metadados.
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
-**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
 **Cabeçalho:** CorProf. idl, CorProf. h
 
 **Biblioteca:** CorGuids.lib
 
-**Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework versões:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerInfo8](icorprofilerinfo8-interface.md)

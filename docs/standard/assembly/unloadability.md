@@ -4,33 +4,33 @@ description: Saiba como usar o AssemblyLoadContext de coleção para carregar e 
 author: janvorli
 ms.author: janvorli
 ms.date: 02/05/2019
-ms.openlocfilehash: 267c2209556b66ab3541c9c79c99d7eceb2024da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d1f604816dcbd7a84a3692b3cfd24481532789a
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159735"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865340"
 ---
 # <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>Como usar e depurar a capacidade de descarregamento de assembly no .NET Core
 
 No .NET Core 3.0 em diante, há suporte para a capacidade de carregar e, posteriormente, descarregar um conjunto de assemblies. No .NET Framework, os domínios de aplicativo personalizados foram usados para essa finalidade, mas o .NET Core só dá suporte a um único domínio de aplicativo padrão.
 
-O .NET Core 3.0 e versões posteriores dão suporte à capacidade de descarregamento por meio de <xref:System.Runtime.Loader.AssemblyLoadContext>. Você pode carregar um conjunto de assemblies em um `AssemblyLoadContext` de coleção, executar métodos neles ou apenas inspecioná-los usando a reflexão e, por fim, descarregar o `AssemblyLoadContext`. Isso descarrega os conjuntos `AssemblyLoadContext`carregados no .
+O .NET Core 3.0 e versões posteriores dão suporte à capacidade de descarregamento por meio de <xref:System.Runtime.Loader.AssemblyLoadContext>. Você pode carregar um conjunto de assemblies em um `AssemblyLoadContext` de coleção, executar métodos neles ou apenas inspecioná-los usando a reflexão e, por fim, descarregar o `AssemblyLoadContext`. Que descarrega os assemblies carregados no `AssemblyLoadContext` .
 
-Há uma diferença notável entre o descarregamento com `AssemblyLoadContext` e com o AppDomain. Com o AppDomain, o descarregamento é forçado. No momento de descarregamento, todos os segmentos executados no AppDomain alvo são abortados, objetos COM gerenciados criados no AppDomain alvo são destruídos e assim por diante. Com `AssemblyLoadContext`, o descarregamento é "cooperativo". A chamada do método <xref:System.Runtime.Loader.AssemblyLoadContext.Unload%2A?displayProperty=nameWithType> apenas inicia o descarregamento. O descarregamento é concluído depois que:
+Há uma diferença notável entre o descarregamento com `AssemblyLoadContext` e com o AppDomain. Com o AppDomain, o descarregamento é forçado. No momento do descarregamento, todos os threads em execução no AppDomain de destino são anulados, objetos COM gerenciados criados no AppDomain de destino são destruídos e assim por diante. Com `AssemblyLoadContext`, o descarregamento é "cooperativo". A chamada do método <xref:System.Runtime.Loader.AssemblyLoadContext.Unload%2A?displayProperty=nameWithType> apenas inicia o descarregamento. O descarregamento é concluído depois que:
 
 - Nenhum thread tem métodos dos assemblies carregados em `AssemblyLoadContext` nas pilhas de chamadas.
-- Nenhum dos tipos das assembléias carregadas nas `AssemblyLoadContext`instâncias desses tipos e as próprias assembléias são referenciadas por:
+- Nenhum dos tipos dos assemblies carregados no `AssemblyLoadContext` , nas instâncias desses tipos e nos próprios assemblies são referenciados por:
   - Referências fora do `AssemblyLoadContext`, exceto referências fracas (<xref:System.WeakReference> ou <xref:System.WeakReference%601>).
-  - Alças fortes de coletor de lixo (GC)[(GCHandleType.Normal](xref:System.Runtime.InteropServices.GCHandleType.Normal) ou [GCHandleType.Pinned)](xref:System.Runtime.InteropServices.GCHandleType.Pinned)tanto de dentro como de fora do `AssemblyLoadContext`.
+  - Os identificadores de GC (coletor de lixo forte) ([GCHandleType. normal](xref:System.Runtime.InteropServices.GCHandleType.Normal) ou [GCHandleType. fixado](xref:System.Runtime.InteropServices.GCHandleType.Pinned)) de dentro e fora do `AssemblyLoadContext` .
 
-## <a name="use-collectible-assemblyloadcontext"></a>Use o Conjunto colecionável AssemblyLoadContext
+## <a name="use-collectible-assemblyloadcontext"></a>Usar AssemblyLoadContext de coleção
 
-Esta seção contém um tutorial passo a passo detalhado que mostra uma maneira simples de carregar um aplicativo .NET Core em um `AssemblyLoadContext` de coleção, executar seu ponto de entrada e, em seguida, descarregá-lo. Você pode encontrar uma [https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading](https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading)amostra completa em .
+Esta seção contém um tutorial passo a passo detalhado que mostra uma maneira simples de carregar um aplicativo .NET Core em um `AssemblyLoadContext` de coleção, executar seu ponto de entrada e, em seguida, descarregá-lo. Você pode encontrar um exemplo completo em [https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading](https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading) .
 
 ### <a name="create-a-collectible-assemblyloadcontext"></a>Criar um AssemblyLoadContext de coleção
 
-Você precisa derivar a classe de <xref:System.Runtime.Loader.AssemblyLoadContext> e sobrecarregar o método <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType>. Esse método resolve as referências para todos os assemblies que são dependências de assemblies carregados nesse `AssemblyLoadContext`.
+Você precisa derivar sua classe do <xref:System.Runtime.Loader.AssemblyLoadContext> e substituir seu <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> método. Esse método resolve as referências para todos os assemblies que são dependências de assemblies carregados nesse `AssemblyLoadContext`.
 
 O seguinte código é um exemplo do `AssemblyLoadContext` personalizado mais simples:
 
@@ -38,7 +38,7 @@ O seguinte código é um exemplo do `AssemblyLoadContext` personalizado mais sim
 
 Como você pode ver, o método `Load` retorna `null`. Isso significa que todos os assemblies de dependência são carregados no contexto padrão e o novo contexto contém apenas os assemblies carregados explicitamente nele.
 
-Caso deseje carregar algumas ou todas as dependências no `AssemblyLoadContext` também, use o `AssemblyDependencyResolver` no método `Load`. O `AssemblyDependencyResolver` resolve os nomes de montagem para caminhos de arquivo de montagem absoluta. O resolver usa os arquivos *.deps.json* e arquivos de montagem no diretório da montagem principal carregada no contexto.
+Caso deseje carregar algumas ou todas as dependências no `AssemblyLoadContext` também, use o `AssemblyDependencyResolver` no método `Load`. O `AssemblyDependencyResolver` resolve os nomes de assembly para caminhos de arquivo de assembly absolutos. O resolvedor usa o *.deps.jsem* arquivos de arquivo e assembly no diretório do assembly principal carregado no contexto.
 
 [!code-csharp[Advanced custom AssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/complex_assemblyloadcontext.cs)]
 
@@ -70,35 +70,35 @@ Agora você pode executar essa função para carregar, executar e descarregar o 
 
 [!code-csharp[Part 5](~/samples/snippets/standard/assembly/unloading/simple_example.cs#6)]
 
-No entanto, o descarregamento não é concluído imediatamente. Como mencionado anteriormente, ele conta com o coletor de lixo para coletar todos os objetos da montagem do teste. Em muitos casos, não é necessário aguardar a conclusão do descarregamento. No entanto, há casos em que é útil saber que o descarregamento foi concluído. Por exemplo, talvez você deseje excluir o arquivo do assembly que foi carregado no `AssemblyLoadContext` personalizado do disco. Nesse caso, o snippet de código a seguir pode ser usado. Ele aciona a coleta de lixo e aguarda os finalizadores `AssemblyLoadContext` pendentes `null`em um loop até que a fraca referência ao costume seja definida para, indicando que o objeto-alvo foi coletado. Na maioria dos casos, apenas uma passagem através do loop é necessária. No entanto, para casos mais complexos em que os objetos criados pelo código em execução no `AssemblyLoadContext` têm finalizadores, mais passagens podem ser necessárias.
+No entanto, o descarregamento não é concluído imediatamente. Como mencionado anteriormente, ele depende do coletor de lixo para coletar todos os objetos do assembly de teste. Em muitos casos, não é necessário aguardar a conclusão do descarregamento. No entanto, há casos em que é útil saber que o descarregamento foi concluído. Por exemplo, talvez você deseje excluir o arquivo do assembly que foi carregado no `AssemblyLoadContext` personalizado do disco. Nesse caso, o snippet de código a seguir pode ser usado. Ele dispara a coleta de lixo e aguarda os finalizadores pendentes em um loop até que a referência fraca ao personalizado `AssemblyLoadContext` seja definida como `null` , indicando que o objeto de destino foi coletado. Na maioria dos casos, apenas uma passagem do loop é necessária. No entanto, para casos mais complexos em que os objetos criados pelo código em execução no `AssemblyLoadContext` têm finalizadores, mais passagens podem ser necessárias.
 
 [!code-csharp[Part 6](~/samples/snippets/standard/assembly/unloading/simple_example.cs#7)]
 
 ### <a name="the-unloading-event"></a>O evento de descarregamento
 
-Em alguns casos, poderá ser necessário que o código carregado em um `AssemblyLoadContext` personalizado execute alguma limpeza quando o descarregamento for iniciado. Por exemplo, pode precisar parar os fios ou limpar as alças gc fortes. O evento `Unloading` pode ser usado nesses casos. Um manipulador que executa a limpeza necessária pode ser conectado a esse evento.
+Em alguns casos, poderá ser necessário que o código carregado em um `AssemblyLoadContext` personalizado execute alguma limpeza quando o descarregamento for iniciado. Por exemplo, pode ser necessário interromper threads ou limpar identificadores de GC fortes. O evento `Unloading` pode ser usado nesses casos. Um manipulador que executa a limpeza necessária pode ser conectado a esse evento.
 
 ### <a name="troubleshoot-unloadability-issues"></a>Solução de problemas de capacidade de descarregamento
 
-Devido à natureza cooperativa do descarregamento, é fácil esquecer referências que podem estar `AssemblyLoadContext` mantendo o material em um colecionável vivo e impedindo o descarregamento. Aqui está um resumo de entidades (algumas delas não óbvias) que podem conter as referências:
+Devido à natureza Cooperativa do descarregamento, é fácil esquecer as referências que podem estar mantendo as coisas em uma coleção `AssemblyLoadContext` ativa e impedindo o descarregamento. Aqui está um resumo das entidades (algumas delas não óbvias) que podem conter as referências:
 
-- Referências regulares mantidas fora `AssemblyLoadContext` do colecionável que são armazenadas em um slot de pilha ou um registro de processador (locais do método, explicitamente criados pelo código do usuário ou implicitamente pelo compilador just-in-time (JIT), uma variável estática, ou uma alça GC forte (fixação) e apontando transitivamente para:
+- Referências regulares mantidas de fora da coleção `AssemblyLoadContext` que são armazenadas em um slot de pilha ou um registro de processador (locais de método, explicitamente criados pelo código do usuário ou implicitamente pelo compilador JIT (just-in-time)), uma variável estática ou um identificador GC forte (fixação) e que apontam transitivamente para:
   - Um assembly carregado no `AssemblyLoadContext` de coleção.
   - Um tipo desse assembly.
   - Uma instância de um tipo desse assembly.
 - Threads executando um código de um assembly carregado no `AssemblyLoadContext` de coleção.
-- Exemplos de tipos personalizados `AssemblyLoadContext` e não colecionáveis `AssemblyLoadContext`criados dentro do colecionável .
-- Instâncias pendentes <xref:System.Threading.RegisteredWaitHandle> com retornos de chamada `AssemblyLoadContext`definidos para métodos no costume .
+- Instâncias de tipos personalizados de não coleção `AssemblyLoadContext` criadas dentro da coleção `AssemblyLoadContext` .
+- Instâncias pendentes <xref:System.Threading.RegisteredWaitHandle> com retornos de chamada definidos como métodos no personalizado `AssemblyLoadContext` .
 
 > [!TIP]
-> Referências de objeto armazenadas em slots de pilha ou registros `AssemblyLoadContext` de processadores e que poderiam impedir o descarregamento de um podem ocorrer nas seguintes situações:
+> Referências de objeto que são armazenadas em slots de pilha ou registros de processador e que podem impedir o descarregamento de um `AssemblyLoadContext` podem ocorrer nas seguintes situações:
 >
-> - Quando os resultados da chamada de função são passados diretamente para outra função, mesmo que não haja uma variável local criada pelo usuário.
-> - Quando o compilador JIT mantém uma referência a um objeto que estava disponível em algum momento de um método.
+> - Quando os resultados da chamada de função são passados diretamente para outra função, embora não haja nenhuma variável local criada pelo usuário.
+> - Quando o compilador JIT mantém uma referência a um objeto que estava disponível em algum momento em um método.
 
 ## <a name="debug-unloading-issues"></a>Depurar problemas de descarregamento
 
-Problemas de depuração com o descarregamento podem ser entediantes. Você pode enfrentar situações em que não sabe o que pode estar mantendo `AssemblyLoadContext` um ativo, mas o descarregamento falha. A melhor arma para ajudar com isso é o WinDbg (LLDB no UNIX) com o plug-in do SOS. Você precisa encontrar o que está mantendo um `LoaderAllocator` ativo pertencente ao `AssemblyLoadContext` específico. O plugin SOS permite que você olhe para objetos gc heap, suas hierarquias e raízes.
+Problemas de depuração com o descarregamento podem ser entediantes. Você pode enfrentar situações em que não sabe o que pode estar mantendo `AssemblyLoadContext` um ativo, mas o descarregamento falha. A melhor arma para ajudar com isso é o WinDbg (LLDB no UNIX) com o plug-in do SOS. Você precisa encontrar o que está mantendo um `LoaderAllocator` ativo pertencente ao `AssemblyLoadContext` específico. O plug-in SOS permite que você examine os objetos de heap do GC, suas hierarquias e raízes.
 
 Para carregar o plug-in no depurador, insira o seguinte comando na linha de comando do depurador:
 
@@ -114,10 +114,10 @@ No LLDB:
 plugin load /path/to/libsosplugin.so
 ```
 
-Vamos depurar um programa de exemplo que tem problemas com o descarregamento. O código-fonte está incluído abaixo. Quando você o executa no WinDbg, o programa interrompe o depurador logo após a tentativa de verificar o êxito do descarregamento. Em seguida, você poderá começar a procurar os culpados.
+Vamos depurar um programa de exemplo que tenha problemas com o descarregamento. O código-fonte está incluído abaixo. Quando você o executa no WinDbg, o programa interrompe o depurador logo após a tentativa de verificar o êxito do descarregamento. Em seguida, você poderá começar a procurar os culpados.
 
 > [!TIP]
-> Se você depurar usando LLDB no Unix, os comandos SOS `!` nos exemplos a seguir não terão a frente deles.
+> Se você depurar usando o LLDB no UNIX, os comandos do SOS nos exemplos a seguir não terão o `!` na frente deles.
 
 ```console
 !dumpheap -type LoaderAllocator
@@ -137,15 +137,15 @@ Statistics:
 Total 2 objects
 ```
 
-Na parte "Estatísticas:" abaixo, verifique `MT` (`MethodTable`) pertencente ao `System.Reflection.LoaderAllocator`, que é o objeto sobre o qual nos preocupamos. Em seguida, na lista no início, `MT` encontre a entrada com a correspondência com essa e obtenha o endereço do objeto em si. No nosso caso, é "000002b78000ce40".
+Na parte "Estatísticas:" abaixo, verifique `MT` (`MethodTable`) pertencente ao `System.Reflection.LoaderAllocator`, que é o objeto sobre o qual nos preocupamos. Em seguida, na lista no início, localize a entrada com `MT` correspondente a uma e obtenha o endereço do próprio objeto. Em nosso caso, é "000002b78000ce40".
 
-Agora que sabemos o `LoaderAllocator` endereço do objeto, podemos usar outro comando para encontrar suas raízes GC:
+Agora que sabemos o endereço do `LoaderAllocator` objeto, podemos usar outro comando para encontrar suas raízes de GC:
 
 ```console
 !gcroot -all 0x000002b78000ce40
 ```
 
-Esse comando despeja a cadeia de referências de objeto que leva à instância `LoaderAllocator`. A lista começa com a raiz, que `LoaderAllocator` é a entidade que nos mantém vivos e, portanto, é o cerne do problema. A raiz pode ser um slot de pilha, um registro de processador, um identificador GC ou uma variável estática.
+Esse comando despeja a cadeia de referências de objeto que leva à instância `LoaderAllocator`. A lista começa com a raiz, que é a entidade que mantém o `LoaderAllocator` vivo e, portanto, é o núcleo do problema. A raiz pode ser um slot de pilha, um registro de processador, um identificador GC ou uma variável estática.
 
 Este é um exemplo da saída do comando `gcroot`:
 
@@ -174,13 +174,13 @@ HandleTable:
 Found 3 roots.
 ```
 
-O próximo passo é descobrir onde a raiz está localizada para que você possa corrigi-la. O caso mais fácil é quando a raiz é um slot de pilha ou um registro de processador. Nesse caso, `gcroot` o mostra o nome da função cujo quadro contém a raiz e o segmento executando essa função. O caso difícil é quando a raiz é uma variável estática ou um identificador GC.
+A próxima etapa é descobrir onde a raiz está localizada para que você possa corrigi-la. O caso mais fácil é quando a raiz é um slot de pilha ou um registro de processador. Nesse caso, o `gcroot` mostra o nome da função cujo quadro contém a raiz e o thread que executa essa função. O caso difícil é quando a raiz é uma variável estática ou um identificador GC.
 
 No exemplo anterior, a primeira raiz é um local do tipo `System.Reflection.RuntimeMethodInfo` armazenado no quadro da função `example.Program.Main(System.String[])` no endereço `rbp-20` (`rbp` é o registro de processador `rbp` e -20 é um deslocamento hexadecimal desse registro).
 
 A segunda raiz é um `GCHandle` normal (forte) que contém uma referência a uma instância da classe `test.Test`.
 
-A terceira raiz é um `GCHandle` fixo. Esta é realmente uma variável estática, mas infelizmente, não há como dizer. Os estáticos para tipos de referência são armazenados em uma matriz de objeto gerenciado em estruturas de runtime internas.
+A terceira raiz é um `GCHandle` fixo. Essa é, na verdade, uma variável estática, mas infelizmente não há como dizer. Os estáticos para tipos de referência são armazenados em uma matriz de objeto gerenciado em estruturas de runtime internas.
 
 Outro caso que pode impedir o descarregamento de um `AssemblyLoadContext` é quando um thread tem um quadro de um método de um assembly carregado no `AssemblyLoadContext` em sua pilha. Você pode verificar isso despejando pilhas de chamadas gerenciadas de todos os threads:
 
@@ -188,7 +188,7 @@ Outro caso que pode impedir o descarregamento de um `AssemblyLoadContext` é qua
 ~*e !clrstack
 ```
 
-O comando significa "aplicar a todos os threads o comando `!clrstack`". Veja a seguir a saída desse comando para o exemplo. Infelizmente, o LLDB no Unix não tem nenhuma maneira de aplicar um comando a todos os `clrstack` segmentos, então você deve alternar manualmente os segmentos e repetir o comando. Ignore todos os segmentos onde o depurador diz "Incapaz de andar na pilha gerenciada".
+O comando significa "aplicar a todos os threads o comando `!clrstack`". Veja a seguir a saída desse comando para o exemplo. Infelizmente, o LLDB no Unix não tem nenhuma maneira de aplicar um comando a todos os threads, portanto, você deve alternar manualmente os threads e repetir o `clrstack` comando. Ignorar todos os threads em que o depurador diz "não é possível percorrer a pilha gerenciada".
 
 ```console
 OS Thread Id: 0x6ba8 (0)
@@ -249,6 +249,6 @@ O código a seguir é usado no exemplo de depuração anterior.
 
 ## <a name="program-loaded-into-the-testassemblyloadcontext"></a>Programa carregado no TestAssemblyLoadContext
 
-O código a seguir representa o *test.dll* passado para o `ExecuteAndUnload` método no programa principal de teste.
+O código a seguir representa o *test.dll* passado para o `ExecuteAndUnload` método no programa de teste principal.
 
 [!code-csharp[Program loaded into the TestAssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/unloadability_issues_example_test.cs)]

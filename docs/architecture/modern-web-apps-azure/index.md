@@ -3,13 +3,13 @@ title: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure
 description: Um guia que fornece diretrizes de ponta a ponta para a criação de aplicativos Web monolíticos usando o ASP.NET Core e o Azure.
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/4/2019
-ms.openlocfilehash: 936a068507116033ad178f26e77945f30f70387e
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 5/25/2020
+ms.openlocfilehash: 7be03ea8edb763096b0684a62e71826f1cfcd42f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507187"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284449"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Arquitetar Aplicativos Web Modernos com o ASP.NET Core e o Azure
 
@@ -35,7 +35,7 @@ Este livro é fornecido “no estado em que se encontra” e expressa os pontos 
 
  Alguns exemplos aqui representados são fornecidos somente para fins de ilustração e são fictícios. Nenhuma associação ou conexão real é intencional ou deve ser inferida.
 
-A Microsoft e as marcas listadas em https://www.microsoft.com na página da Web "Marcas" são marcas comerciais do grupo de empresas Microsoft.
+A Microsoft e as marcas listadas em <https://www.microsoft.com> na página da Web "Marcas" são marcas comerciais do grupo de empresas Microsoft.
 
 Mac e macOS são marcas comerciais da Apple Inc.
 
@@ -86,6 +86,10 @@ Cada vez mais empresas estão optando por hospedar seus aplicativos Web na nuvem
 - Capacidade flexível: aumente ou reduza com base em necessidades reais.
 
 A criação de aplicativos Web com o ASP.NET Core, hospedados no Azure, oferece várias vantagens competitivas em relação às alternativas tradicionais. O ASP.NET Core é otimizado para práticas de desenvolvimento de aplicativos Web e cenários de hospedagem em nuvem modernos. Neste guia, você aprenderá como arquitetar seus aplicativos ASP.NET Core para aproveitar melhor essas funcionalidades.
+
+## <a name="version"></a>Versão
+
+Este guia foi revisado para cobrir a versão **3,1 do .NET Core** junto com muitas atualizações adicionais relacionadas à mesma "onda" de tecnologias (isto é, Azure e tecnologias de terceiros adicionais) que coincidem no tempo com a versão 3,1 do .NET Core. É por isso que a versão do livro também foi atualizada para a versão **3,1**.
 
 ## <a name="purpose"></a>Finalidade
 

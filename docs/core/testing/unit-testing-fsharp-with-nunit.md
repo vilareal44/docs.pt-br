@@ -5,16 +5,16 @@ author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.openlocfilehash: 3347e5b90c31589e9a0f99ac0d9298927a717f56
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a1b4bb7e5e705cf1c71cd44827d4a2e0a3f8cf6
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715439"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656469"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Teste de unidade de bibliotecas do F# no .NET Core usando dotnet test e NUnit
 
-Este tutorial apresenta uma experiência interativa de compilação de uma solução de exemplo passo a passo para aprender os conceitos do teste de unidade. Se você preferir acompanhar o tutorial usando uma solução interna, [veja ou baixe o exemplo de código](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/) antes de começar. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Este tutorial apresenta uma experiência interativa de compilação de uma solução de exemplo passo a passo para aprender os conceitos do teste de unidade. Se você preferir acompanhar o tutorial usando uma solução interna, [veja ou baixe o exemplo de código](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/) antes de começar. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
@@ -88,7 +88,7 @@ Isso cria um projeto de teste que usa o NUnit como a estrutura de teste. O model
 </ItemGroup>
 ```
 
-O projeto de teste requer outros pacotes para criar e executar testes de unidade. O `dotnet new` na etapa anterior adicionou o NUnit e o adaptador de teste do NUnit. Agora, adicione a biblioteca de classes `MathService` como outra dependência ao projeto. Use `dotnet add reference` o comando:
+O projeto de teste requer outros pacotes para criar e executar testes de unidade. O `dotnet new` na etapa anterior adicionou o NUnit e o adaptador de teste do NUnit. Agora, adicione a biblioteca de classes `MathService` como outra dependência ao projeto. Use o `dotnet add reference` comando:
 
 ```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
@@ -210,7 +210,7 @@ let squaresOfOdds xs =
 
 Você criou uma pequena biblioteca e um conjunto de testes de unidade para essa biblioteca. Você estruturou a solução para que a adição de novos pacotes e testes fizesse parte do fluxo de trabalho normal. Você concentrou grande parte do seu tempo e esforço em resolver as metas do aplicativo.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [dotnet add reference](../tools/dotnet-add-reference.md)
-- [teste dotnet](../tools/dotnet-test.md)
+- [dotnet test](../tools/dotnet-test.md)

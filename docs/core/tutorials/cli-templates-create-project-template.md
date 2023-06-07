@@ -1,18 +1,18 @@
 ---
 title: Criar um modelo de projetos para o dotnet new
 description: Saiba como criar um modelo de projetos para o comando dotnet new.
-author: thraka
+author: adegeo
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: f53f4037f832265a35f65bf2e5096c7e5a37bcf1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 75fedb2333a4ef9e16a27126055b6cacaf37c1c5
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503526"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324328"
 ---
-# <a name="tutorial-create-a-project-template"></a>Tutorial: Crie um modelo de projeto
+# <a name="tutorial-create-a-project-template"></a>Tutorial: criar um modelo de projeto
 
 Com o .NET Core, você pode criar e implantar modelos que geram projetos, arquivos e até recursos. Este tutorial é a parte dois de uma série que ensina como criar, instalar e desinstalar modelos para usar com o comando `dotnet new`.
 
@@ -87,13 +87,13 @@ Vamos atualizar a versão em linguagem C# que o projeto usa para a versão 8.0. 
 
 Antes de concluir um modelo de projeto, você deve testá-lo para garantir que ele seja compilado e executado corretamente.
 
-Em seu terminal, execute o seguinte comando.
+No seu terminal, execute o comando a seguir.
 
 ```dotnetcli
 dotnet run
 ```
 
-Você tem a seguinte saída.
+Você Obtém a saída a seguir.
 
 ```console
 Hello World with C# 8.0!
@@ -109,7 +109,7 @@ Os modelos são reconhecidos no .NET Core por uma pasta especial e um arquivo de
 
 Quando você cria um modelo, todos os arquivos e pastas na pasta de modelos são incluídos como parte do modelo, exceto a pasta de configuração especial. Esta pasta de configuração chama-se _.template.config_.
 
-Primeiro, crie uma nova subpasta chamada _.template.config_, insira-a. Em seguida, crie um novo arquivo chamado _template.json_. Sua estrutura de pasta deve ser assim.
+Primeiro, crie uma nova subpasta chamada _.template.config_, insira-a. Em seguida, crie um novo arquivo chamado _template.json_. A estrutura de pastas deve ser parecida com esta.
 
 ```console
 working
@@ -119,7 +119,7 @@ working
                 template.json
 ```
 
-Abra o _template.json_ com seu editor de texto favorito e cole no seguinte código json e salve-o.
+Abra o _template.jsem_ com seu editor de texto favorito e cole o código JSON a seguir e salve-o.
 
 ```json
 {
@@ -140,7 +140,7 @@ Esse arquivo de configuração contém todas as configurações do modelo. Você
 
 O item `classifications` representa a coluna **marcações** que você vê quando executa `dotnet new` e obtém uma lista de modelos. Os usuários também podem pesquisar com base nas marcações de classificação. Não confunda a propriedade `tags` no arquivo json com a lista de marcações `classifications`. São duas coisas diferentes, mas, infelizmente, nomeadas da mesma forma. O esquema completo do arquivo *template.json* é encontrado no [Repositório de Esquema JSON](http://json.schemastore.org/template). Para saber mais sobre o arquivo *template.json*, veja o [wiki de modelagem dotnet](https://github.com/dotnet/templating/wiki).
 
-Agora que você já tem um arquivo _.template.config/template.json_ válido, seu modelo está pronto para ser instalado. Antes de instalar o modelo, exclua todas as pastas e arquivos extras que você não deseja incluir no modelo, como as pastas _bin_ ou _obj_. No terminal, navegue até a pasta _consoleasync_ e execute `dotnet new -i .\` para instalar o modelo localizado na pasta atual. Se você estiver usando um sistema operacional Linux ou `dotnet new -i ./`macOS, use uma barra para a frente: .
+Agora que você já tem um arquivo _.template.config/template.json_ válido, seu modelo está pronto para ser instalado. Antes de instalar o modelo, exclua todas as pastas e arquivos extras que você não deseja incluir no modelo, como as pastas _bin_ ou _obj_. No terminal, navegue até a pasta _consoleasync_ e execute `dotnet new -i .\` para instalar o modelo localizado na pasta atual. Se você estiver usando um sistema operacional Linux ou macOS, use uma barra invertida: `dotnet new -i ./` .
 
 Esse comando gera a lista de modelos instalados que deve incluir o seu.
 
@@ -148,7 +148,7 @@ Esse comando gera a lista de modelos instalados que deve incluir o seu.
 dotnet new -i .\
 ```
 
-Você tem saída semelhante à seguinte.
+Você Obtém uma saída semelhante à seguinte.
 
 ```console
 Usage: new [options]
@@ -173,27 +173,27 @@ Worker Service                                    worker                [C#]    
 
 Agora que você tem um modelo de item instalado, teste-o.
 
-1. Navegue até a pasta _de teste_
+1. Navegue até a pasta de _teste_
 
-1. Crie um novo aplicativo de console com o seguinte comando `dotnet run` que gera um projeto de trabalho que você pode testar facilmente com o comando.
+1. Crie um novo aplicativo de console com o comando a seguir, que gera um projeto em funcionamento que você pode testar facilmente com o `dotnet run` comando.
 
     ```dotnetcli
     dotnet new consoleasync
     ```
 
-    Você tem a seguinte saída.
+    Você Obtém a saída a seguir.
 
     ```console
     The template "Example templates: async project" was created successfully.
     ```
 
-1. Execute o projeto usando o seguinte comando.
+1. Execute o projeto usando o comando a seguir.
 
     ```dotnetcli
     dotnet run
     ```
 
-    Você tem a seguinte saída.
+    Você Obtém a saída a seguir.
 
     ```console
     Hello World with C# 8.0!
@@ -209,7 +209,7 @@ Como você instalou o modelo usando um caminho de arquivo, você deve desinstal�
 dotnet new -u
 ```
 
-Você tem saída semelhante à seguinte.
+Você Obtém uma saída semelhante à seguinte.
 
 ```console
 Template Instantiation Commands for .NET Core CLI
@@ -239,7 +239,7 @@ Currently installed items:
       Example templates: async project (consoleasync) C#
 ```
 
-Para desinstalar um modelo, execute o seguinte comando.
+Para desinstalar um modelo, execute o comando a seguir.
 
 ```dotnetcli
 dotnet new -u C:\working\templates\consoleasync

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce259d1d-cd81-4490-a7a1-0d0ea0804872
 topic_type:
 - apiref
-ms.openlocfilehash: 1e881b4a55a99bac3f9ca0e8db1556807b888f13
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8622920a81f4b469361ffa879f7a4eeda697cab9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616953"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504219"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>Método ICLRGCManager::GetStats
 Obtém um conjunto de estatísticas atuais sobre o sistema de coleta de lixo do Common Language Runtime.  
@@ -37,7 +37,7 @@ HRESULT GetStats (
  `pStats`  
  [entrada, saída] Uma instância de [COR_GC_STATS](cor-gc-stats-structure.md) que contém as estatísticas solicitadas.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -51,7 +51,7 @@ HRESULT GetStats (
 ## <a name="remarks"></a>Comentários  
  O CLR calcula e retorna somente as estatísticas que são especificadas pelo `Flags` campo de `pStats` .  
   
- Defina o `Flags` campo como um ou mais valores da enumeração [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) para especificar quais estatísticas na estrutura de [COR_GC_STATS](cor-gc-stats-structure.md) devem ser definidas.  
+ Defina o `Flags` campo como um ou mais valores da enumeração [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) para especificar quais estatísticas na estrutura de [COR_GC_STATS](cor-gc-stats-structure.md) devem ser definidas.  
   
  Um exemplo de uso é o seguinte:  
   
@@ -70,7 +70,7 @@ pCLRGCManager->GetStats(&GCStats);
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Gerenciamento automático de memória](../../../standard/automatic-memory-management.md)
 - [Estrutura COR_GC_STATS](cor-gc-stats-structure.md)
@@ -80,4 +80,4 @@ pCLRGCManager->GetStats(&GCStats);
 - [Interface ICLRGCManager](iclrgcmanager-interface.md)
 - [Interfaces de hospedagem CLR](clr-hosting-interfaces.md)
 - [Interfaces de hospedagem](hosting-interfaces.md)
-- [Hospedagem](index.md)
+- [Hosting](index.md)

@@ -1,5 +1,6 @@
 ---
-title: <remarks> - Guia de programação C#
+title: <remarks> -Guia de programação C#
+description: Saiba mais sobre o XML <remarks> Tags. Essa marca é usada para adicionar informações sobre um tipo, complementando as informações especificadas com <summary>.
 ms.date: 07/20/2015
 f1_keywords:
 - remarks
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - remarks C# XML tag
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
-ms.openlocfilehash: e37dac9cb9fed1df6ca027f09f2c95dbbc8ea66d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d38905d100e24158e7a1412f6be9f01a7ced2382
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793381"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381496"
 ---
-# <a name="remarks-c-programming-guide"></a>\<observações> (guia de programação C#)
+# <a name="remarks-c-programming-guide"></a>\<remarks>(Guia de programação C#)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,9 +32,9 @@ ms.locfileid: "76793381"
 
 ## <a name="remarks"></a>Comentários
 
-As \<observações> tag é usada para adicionar informações sobre [ \< ](./summary.md)um tipo, complementando as informações especificadas com>de resumo . Essas informações são exibidas na janela do Pesquisador de Objetos.
+A `<remarks>` marca é usada para adicionar informações sobre um tipo, complementando as informações especificadas com [\<summary>](./summary.md) . Essas informações são exibidas na janela do Pesquisador de Objetos.
 
-Compilar com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação para um arquivo.
+Compile com [-Doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.
 
 ## <a name="example"></a>Exemplo
 
@@ -41,5 +42,5 @@ Compilar com [-doc](../../language-reference/compiler-options/doc-compiler-optio
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

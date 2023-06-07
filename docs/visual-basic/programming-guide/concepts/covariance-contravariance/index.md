@@ -2,12 +2,12 @@
 title: Covariância e contravariância
 ms.date: 07/20/2015
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
-ms.openlocfilehash: a75970d98890cb1fb363d4672bd90d376bccf89c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 11dd71a8cfde12b7af1de79e3f5a095f79d8aa6e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352154"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400624"
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a>Covariância e contravariância (Visual Basic)
 
@@ -48,7 +48,7 @@ Dim array() As Object = New String(10) {}
 ' array(0) = 10
 ```
 
-O suporte de covariância e contravariância aos grupos de método permite a correspondência de assinaturas de método com tipos de delegados. Isso permite atribuir a delegados não apenas os métodos que têm correspondência de assinaturas, mas também métodos que retornam tipos mais derivados (covariância) ou que aceitam parâmetros que têm tipos menos derivados (contravariância) do que o especificado pelo tipo delegado. Para obter mais informações, consulte [Variação em delegados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) e [Usando variação em delegados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md).
+O suporte de covariância e contravariância aos grupos de método permite a correspondência de assinaturas de método com tipos de delegados. Isso permite atribuir a delegados não apenas os métodos que têm correspondência de assinaturas, mas também métodos que retornam tipos mais derivados (covariância) ou que aceitam parâmetros que têm tipos menos derivados (contravariância) do que o especificado pelo tipo delegado. Para obter mais informações, consulte [Variação em delegados (Visual Basic)](variance-in-delegates.md) e [Usando variação em delegados (Visual Basic)](using-variance-in-delegates.md).
 
 O exemplo de código a seguir mostra o suporte da covariância e da contravariância para grupos de método.
 
@@ -79,7 +79,7 @@ Shared Sub Test()
 End Sub
 ```
 
-No .NET Framework 4 ou posterior, Visual Basic dá suporte a covariância e contravariância em interfaces e delegados genéricos e permite a conversão implícita de parâmetros de tipo genérico. Para obter mais informações, consulte [Variação em interfaces genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) e [Variação em delegados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).
+No .NET Framework 4 ou posterior, Visual Basic dá suporte a covariância e contravariância em interfaces e delegados genéricos e permite a conversão implícita de parâmetros de tipo genérico. Para obter mais informações, consulte [Variação em interfaces genéricas (Visual Basic)](variance-in-generic-interfaces.md) e [Variação em delegados (Visual Basic)](variance-in-delegates.md).
 
 O exemplo de código a seguir mostra a conversão de referência implícita para interfaces genéricas.
 
@@ -88,15 +88,15 @@ Dim strings As IEnumerable(Of String) = New List(Of String)
 Dim objects As IEnumerable(Of Object) = strings
 ```
 
-Uma interface ou delegado genérico será chamado *variante* se seus parâmetros genéricos forem declarados covariantes ou contravariantes. O Visual Basic permite que você crie suas próprias interfaces variantes e delegados. Para obter mais informações, consulte [Criando interfaces genéricas variantes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md) e [Variação em delegados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).
+Uma interface ou delegado genérico será chamado *variante* se seus parâmetros genéricos forem declarados covariantes ou contravariantes. O Visual Basic permite que você crie suas próprias interfaces variantes e delegados. Para obter mais informações, consulte [Criando interfaces genéricas variantes (Visual Basic)](creating-variant-generic-interfaces.md) e [Variação em delegados (Visual Basic)](variance-in-delegates.md).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 |Title|Descrição|
 |-----------|-----------------|
-|[Variação em interfaces genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Discute a covariância e a contravariância em interfaces genéricas e fornece uma lista de interfaces genéricas variáveis no .NET Framework.|
-|[Criando interfaces genéricas variantes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)|Mostra como criar interfaces variantes personalizadas.|
-|[Usando variação em interfaces para coleções genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)|Mostra como o suporte de covariância e contravariância nas interfaces <xref:System.Collections.Generic.IEnumerable%601> e <xref:System.IComparable%601> pode ajudar na reutilização do código.|
-|[Variação em delegados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)|Discute a covariância e a contravariância em interfaces genéricas e não genéricas e fornece uma lista de interfaces genéricas variáveis no .NET Framework.|
-|[Usando variação em delegados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)|Mostra como usar o suporte de covariância e contravariância em delegados não genéricos para corresponder às assinaturas de método com tipos delegados.|
-|[Usando variação para delegados genéricos Func e Action (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)|Mostra como o suporte de covariância e contravariância nos delegados `Func` e `Action` pode ajudar na reutilização do código.|
+|[Variação em interfaces genéricas (Visual Basic)](variance-in-generic-interfaces.md)|Discute a covariância e a contravariância em interfaces genéricas e fornece uma lista de interfaces genéricas variáveis no .NET Framework.|
+|[Criando interfaces genéricas variantes (Visual Basic)](creating-variant-generic-interfaces.md)|Mostra como criar interfaces variantes personalizadas.|
+|[Usando variação em interfaces para coleções genéricas (Visual Basic)](using-variance-in-interfaces-for-generic-collections.md)|Mostra como o suporte de covariância e contravariância nas interfaces <xref:System.Collections.Generic.IEnumerable%601> e <xref:System.IComparable%601> pode ajudar na reutilização do código.|
+|[Variação em delegados (Visual Basic)](variance-in-delegates.md)|Discute a covariância e a contravariância em interfaces genéricas e não genéricas e fornece uma lista de interfaces genéricas variáveis no .NET Framework.|
+|[Usando variação em delegados (Visual Basic)](using-variance-in-delegates.md)|Mostra como usar o suporte de covariância e contravariância em delegados não genéricos para corresponder às assinaturas de método com tipos delegados.|
+|[Usando variação para delegados genéricos Func e Action (Visual Basic)](using-variance-for-func-and-action-generic-delegates.md)|Mostra como o suporte de covariância e contravariância nos delegados `Func` e `Action` pode ajudar na reutilização do código.|

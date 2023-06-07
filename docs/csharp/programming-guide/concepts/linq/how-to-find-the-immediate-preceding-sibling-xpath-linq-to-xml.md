@@ -1,15 +1,16 @@
 ---
-title: Como encontrar o irmão precedente imediato (XPath-LINQ para XML) (C#)
+title: Como encontrar o irmão precedentes imediatos (XPath-LINQ to XML) (C#)
+description: Este exemplo C# compara XPath com LINQ to XML para saber como encontrar o irmão que precede imediatamente um nó.
 ms.date: 07/20/2015
 ms.assetid: 74c06201-0b1b-4b5e-b3ac-0092980614e6
-ms.openlocfilehash: 1e5aece41021642d43b7f6f7b78bb105156ee4ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eaee7f1205ce0d0b2a9c2c41d96ba532573a1384
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141010"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105203"
 ---
-# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>Como encontrar o irmão precedente imediato (XPath-LINQ para XML) (C#)
+# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>Como encontrar o irmão precedentes imediatos (XPath-LINQ to XML) (C#)
 Às vezes você deseja encontrar o irmão anterior imediato a um nó. Devido a diferença na semântica de predicados posicionais para os eixos anterior irmãos no XPath ao contrário de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], essa é uma das comparações mais interessantes.  
   
 ## <a name="example"></a>Exemplo  

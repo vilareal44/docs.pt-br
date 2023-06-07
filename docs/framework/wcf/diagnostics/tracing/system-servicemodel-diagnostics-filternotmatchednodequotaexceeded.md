@@ -2,21 +2,21 @@
 title: System.ServiceModel.Diagnostics.FilterNotMatchedNodeQuotaExceeded
 ms.date: 03/30/2017
 ms.assetid: 067f27ba-4d9e-4efb-8fa7-c23d2654d967
-ms.openlocfilehash: 41cfb5322c42da8210ae8ba6908460959b060997
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa7649335ecf7a635129ed04a404d50bd6dea300
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904690"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601785"
 ---
 # <a name="systemservicemodeldiagnosticsfilternotmatchednodequotaexceeded"></a>System.ServiceModel.Diagnostics.FilterNotMatchedNodeQuotaExceeded
 System.ServiceModel.Diagnostics.FilterNotMatchedNodeQuotaExceeded  
   
 ## <a name="description"></a>Descrição  
- Avaliação de filtro de log em relação a mensagem excedeu a cota de nó que foi definida no filtro de mensagem.  
+ A avaliação do filtro de log de mensagens em relação à mensagem excedeu a cota de nó que foi definida no filtro.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Rastreamento](index.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](using-tracing-to-troubleshoot-your-application.md)
+- [Administração e diagnóstico](../index.md)

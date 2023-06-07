@@ -6,18 +6,18 @@ helpviewer_keywords:
 - <relativeBindForResources> element
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 ms.openlocfilehash: cd49d424019a4e8422fee0ae16217d49cfc456b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153900"
 ---
-# <a name="relativebindforresources-element"></a>\<elemento> relativeBindForResources
+# <a name="relativebindforresources-element"></a>Elemento \<relativeBindForResources>
 Otimiza o teste para assemblies satélites.  
   
-[**\<>de configuração**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<>de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<bindForResources>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<relativeBindForResources>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,14 +33,14 @@ Otimiza o teste para assemblies satélites.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`enabled`|Atributo obrigatório.<br /><br /> Especifica se o tempo de execução do idioma comum otimiza a sonda para conjuntos de satélites.|  
+|`enabled`|Atributo obrigatório.<br /><br /> Especifica se o Common Language Runtime otimiza a investigação para assemblies satélite.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|O tempo de execução não otimiza a sonda para conjuntos de satélites. Esse é o valor padrão.|  
-|`true`|O tempo de execução otimiza a sonda para conjuntos de satélites.|  
+|`false`|O tempo de execução não otimiza a investigação para assemblies satélite. Esse é o valor padrão.|  
+|`true`|O tempo de execução otimiza a investigação para assemblies satélite.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum.  
@@ -53,24 +53,24 @@ Otimiza o teste para assemblies satélites.
 |`runtime`|Contém informações sobre opções de inicialização do runtime.|  
   
 ## <a name="remarks"></a>Comentários  
- Em geral, o Gerenciador de Recursos testa recursos, conforme documentado no tópico [Embalagem e Distribuição de Recursos.](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md) Isso significa que, quando o Resource Manager testa uma versão localizada específica de um recurso, ele pode olhar no cache de montagem global, procurar uma pasta <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> específica de cultura na base de código do aplicativo, consultar o Windows Installer para conjuntos de satélites e aumentar o evento. O `<relativeBindForResources>` elemento otimiza a forma como o Resource Manager sonda para conjuntos de satélites. Pode melhorar o desempenho ao sondar recursos nas seguintes condições:  
+ Em geral, as investigações do Resource Manager para recursos, conforme documentado no tópico [empacotando e implantando recursos](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md) . Isso significa que quando o Gerenciador de recursos investiga uma versão localizada específica de um recurso, ele pode procurar no cache de assembly global, examinar uma pasta específica de cultura na base de código do aplicativo, consultar Windows Installer para assemblies satélites e gerar o <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> evento. O `<relativeBindForResources>` elemento otimiza a maneira como as investigações do Gerenciador de recursos para assemblies satélite. Ele pode melhorar o desempenho ao investigar os recursos sob as seguintes condições:  
   
-- Quando o conjunto de satélites é implantado no mesmo local que o conjunto de códigos. Em outras palavras, se o conjunto de códigos for instalado no cache de montagem global, os conjuntos de satélites também devem ser instalados lá. Se o conjunto de códigos estiver instalado na base de código do aplicativo, os conjuntos de satélites também devem ser instalados em uma pasta específica de cultura na base de código.  
+- Quando o assembly satélite é implantado no mesmo local que o assembly de código. Em outras palavras, se o assembly de código estiver instalado no cache de assembly global, os assemblies satélite também deverão ser instalados lá. Se o assembly de código estiver instalado na base de código do aplicativo, os assemblies satélite também deverão ser instalados em uma pasta específica de cultura na base de código.  
   
-- Quando o Windows Installer não é usado ou é usado apenas raramente para instalação demanda de conjuntos de satélites.  
+- Quando Windows Installer não é usado ou é usado apenas raramente para a instalação sob demanda de assemblies satélite.  
   
-- Quando o código do <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> aplicativo não lida com o evento.  
+- Quando o código do aplicativo não manipula o <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> evento.  
   
- Definir `enabled` o atributo `true` do elemento para otimizar a `<relativeBindForResources>` sonda do Resource Manager para conjuntos de satélites da seguinte forma:  
+ Definir o `enabled` atributo do `<relativeBindForResources>` elemento para `true` otimizar a investigação do Gerenciador de recursos para assemblies satélite da seguinte maneira:  
   
-- Ele usa a localização do conjunto de código sondar para a montagem do satélite.  
+- Ele usa o local do assembly de código pai para investigar o assembly satélite.  
   
-- Ele não consulta o Windows Installer para conjuntos de satélites.  
+- Ele não consulta Windows Installer para assemblies satélite.  
   
-- Isso não levanta <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> o evento.  
+- Ele não gera o <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> evento.  
   
 ## <a name="see-also"></a>Confira também
 
 - [Empacotando e implantando recursos](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)
 - [Esquema de configurações do runtime](index.md)
-- [Esquema de arquivo de configuração](../index.md)
+- [Esquema do arquivo de configuração](../index.md)

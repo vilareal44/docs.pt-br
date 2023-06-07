@@ -2,21 +2,21 @@
 title: Microsoft.Transactions.TransactionBridge.ProtocolInitialized
 ms.date: 03/30/2017
 ms.assetid: 166dfa2d-10de-447a-b76f-3b64752a2967
-ms.openlocfilehash: 98bb4e5910fa31ef4985e708d154380d203cca31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 862ef7debd1e634e2f1a6124df9d56d96ec107d8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997614"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594316"
 ---
 # <a name="microsofttransactionstransactionbridgeprotocolinitialized"></a>Microsoft.Transactions.TransactionBridge.ProtocolInitialized
-O serviço do protocolo WS-AT foi inicializado.  
+O serviço de protocolo de transação WS-Atomic foi inicializado.  
   
 ## <a name="description"></a>Descrição  
  Rastreado durante a inicialização do Gerenciador de transações para indicar qual protocolo foi inicializado com êxito.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Rastreamento](index.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](using-tracing-to-troubleshoot-your-application.md)
+- [Administração e diagnóstico](../index.md)

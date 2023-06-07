@@ -1,17 +1,18 @@
 ---
 title: Quando usar as palavras-chave override e new – Guia de Programação em C#
+description: Use as palavras-chave New e override em C# para especificar como os métodos com o mesmo nome em uma classe base e derivada interagem.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - override keyword [C#]
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: 493c6c5f5bf47c6b2cd140ac0f6922f91ca4252b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 732a37c08b4c7bb998a7cc5dcfbd00d4e706b06c
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170254"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864534"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Quando usar as palavras-chave override e new (Guia de Programação em C#)
 
@@ -542,10 +543,10 @@ namespace OverrideAndNew2
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Classes e structs](./index.md)
 - [Controle de versão com as palavras-chave override e new](./versioning-with-the-override-and-new-keywords.md)
 - [base](../../language-reference/keywords/base.md)
-- [Abstrata](../../language-reference/keywords/abstract.md)
+- [resume](../../language-reference/keywords/abstract.md)

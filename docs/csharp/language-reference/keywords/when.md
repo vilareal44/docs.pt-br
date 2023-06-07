@@ -7,19 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: 6a61c42ba2d01e84ffae376bf95c99877437be85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b041ca3a821f45dd63ce3f6bee7a920eb495651
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712826"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87426989"
 ---
 # <a name="when-c-reference"></a>when (Referência de C#)
 
-Você pode usar a palavra-chave contextual `when` para especificar uma condição de filtro em dois contextos:
+Você pode usar a `when` palavra-chave contextual para especificar uma condição de filtro nos seguintes contextos:
 
 - Na instrução `catch` de um bloco [try/catch](try-catch.md) ou [try/catch/finally](try-catch-finally.md).
 - No rótulo `case` de uma instrução [switch](switch.md).
+- Na [ `switch` expressão](../operators/switch-expression.md).
 
 ## <a name="when-in-a-catch-statement"></a>`when` em uma instrução `catch`
 
@@ -49,8 +50,8 @@ O exemplo a seguir usa a palavra-chave `when` para testar os objetos `Shape` que
 
 [!code-csharp[when-with-case#1](~/samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Instrução switch](switch.md)
+- [instrução switch](switch.md)
 - [instruções try/catch](try-catch.md)
-- [try/catch/finally statement](try-catch-finally.md)
+- [instrução try/catch/finally](try-catch-finally.md)

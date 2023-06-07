@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66eeca30-adb4-45f4-aff5-347564c95724
 topic_type:
 - apiref
-ms.openlocfilehash: 57f771d933e896677dfc0bd5d9dac58da2af22c8
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8b1e918edf641d38dd6b91d790bcaff8020293a0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617250"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493260"
 ---
 # <a name="getclridentitymanager-function"></a>Função GetCLRIdentityManager
 Obtém um ponteiro para uma interface que permite que o Common Language Runtime (CLR) gerencie identidades.  
@@ -40,7 +40,7 @@ STDAPI GetCLRIdentityManager(
  no Um `REFIID` (um identificador de interface) que especifica qual interface deve ser obtida. Esse valor deve ser IID_ICLRAssemblyIdentityManager ou IID_ICLRHostBindingPolicyManager.  
   
  `ppManager`  
- fora Um ponteiro para o endereço de um objeto [ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md) ou [ICLRHostBindingPolicyManager](iclrhostbindingpolicymanager-interface.md) .  
+ fora Um ponteiro para o endereço de um objeto [ICLRAssemblyIdentityManager](iclrassemblyidentitymanager-interface.md) ou [ICLRHostBindingPolicyManager](iclrhostbindingpolicymanager-interface.md) .  
   
 ## <a name="remarks"></a>Comentários  
  Chame a função [GetRealProcAddress](getrealprocaddress-function.md) para obter um ponteiro para a `GetCLRIdentityManager` função.  
@@ -54,6 +54,6 @@ STDAPI GetCLRIdentityManager(
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Funções de hospedagem CLR reprovadas](deprecated-clr-hosting-functions.md)

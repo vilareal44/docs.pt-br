@@ -1,5 +1,6 @@
 ---
 title: Apresentando protocolos conectáveis
+description: Saiba mais sobre protocolos conectáveis, que dão suporte ao desenvolvimento de aplicativos que usam recursos da Internet, independentemente dos detalhes do protocolo que os recursos usam.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data requests, pluggable protocols
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 72b47b8159f9f6f0dc3a19c5cbf94335507d9e7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0bc2d0d005e50b04aff360866a146f6fe6b0ea02
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047867"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502347"
 ---
 # <a name="introducing-pluggable-protocols"></a>Apresentando protocolos conectáveis
 O Microsoft .NET Framework fornece uma implementação dos serviços de Internet em camadas, extensível e gerenciada que pode ser rápida e facilmente integrada aos aplicativos. Classes de acesso à Internet nos namespaces <xref:System.Net> e <xref:System.Net.Sockets> podem ser usadas para implementar tanto aplicativos baseados na Web quanto baseados na Internet.  
@@ -62,12 +63,12 @@ O Microsoft .NET Framework fornece uma implementação dos serviços de Internet
 ## <a name="simple-requests-with-webclient"></a>Solicitações simples com WebClient  
  Para aplicativos que precisam fazer solicitações simples para recursos da Internet, a classe <xref:System.Net.WebClient> fornece métodos comuns para carregar dados para ou baixar dados de um servidor de Internet. O **WebClient** depende da classe **WebRequest** para fornecer acesso aos recursos da Internet; portanto, a classe **WebClient** pode usar qualquer protocolo conectável registrado.  
   
- Para aplicativos que não podem usar o modelo de solicitação/resposta ou para aplicativos que precisam ouvir na rede, bem <xref:System.Net.Sockets.TcpClient> <xref:System.Net.Sockets.TcpListener>como <xref:System.Net.Sockets.UdpClient> enviar solicitações, o **namespace System.Net.Sockets** fornece o , e classes. Essas classes tratam dos detalhes de fazer conexões usando protocolos de transporte diferentes e expõem a conexão de rede para o aplicativo como um fluxo.  
+ Para aplicativos que não podem usar o modelo de solicitação/resposta, ou para aplicativos que precisam escutar na rede, bem como solicitações de envio, o namespace **System .net. Sockets** fornece as <xref:System.Net.Sockets.TcpClient> <xref:System.Net.Sockets.TcpListener> classes, e <xref:System.Net.Sockets.UdpClient> . Essas classes tratam dos detalhes de fazer conexões usando protocolos de transporte diferentes e expõem a conexão de rede para o aplicativo como um fluxo.  
   
  Os desenvolvedores familiarizados com a interface do Windows Sockets ou aqueles que precisam de controle fornecido por programação no nível de soquete descobrirão que as classes **Sockets** satisfazem suas necessidades. As classes **Sockets** são um ponto de transição de código gerenciado para código nativo dentro das classes **System.Net**. Na maioria dos casos, classes **Sockets** realizam marshaling de dados em seus equivalentes do Windows de 32 bits, além de lidarem com quaisquer verificações de segurança necessárias.  
   
 ## <a name="see-also"></a>Confira também
 
 - [Programando protocolos conectáveis](programming-pluggable-protocols.md)
-- [Programação de rede no Framework .NET](index.md)
+- [Programação de rede no .NET Framework](index.md)
 - [Amostras de programação de rede](network-programming-samples.md)

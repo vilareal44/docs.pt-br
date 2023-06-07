@@ -3,18 +3,18 @@ title: Suporte à função msxsl:node-set()
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-ms.openlocfilehash: 5022b298cb20796edbc54e951d8b06043697d832
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 747a0ff8c155f7635d5a6d2ebc76f287cf8646d4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78155588"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291442"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>Suporte à função msxsl:node-set()
 A função `msxsl:node-set` permite que você converta um fragmento da árvore de resultados em um conjunto de nós. O conjunto de nós resultante sempre contém um único nó e é o nó raiz da árvore.  
   
 > [!NOTE]
-> A classe <xref:System.Xml.Xsl.XslTransform> está obsoleta no .NET Framework 2.0. Você pode executar a linguagem XSL Transformations (XSLT) usando a classe <xref:System.Xml.Xsl.XslCompiledTransform>. Confira [Usar a classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [Migrar da classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) para saber mais.  
+> A classe <xref:System.Xml.Xsl.XslTransform> está obsoleta no .NET Framework 2.0. Você pode executar a linguagem XSL Transformations (XSLT) usando a classe <xref:System.Xml.Xsl.XslCompiledTransform>. Confira [Usar a classe XslCompiledTransform](using-the-xslcompiledtransform-class.md) e [Migrar da classe XslTransform](migrating-from-the-xsltransform-class.md) para saber mais.  
   
  A função `msxsl:node-set` permite que você converta um fragmento da árvore de resultados em um conjunto de nós. O conjunto de nós resultante sempre contém um único nó e é o nó raiz da árvore.  
   
@@ -53,4 +53,4 @@ A função `msxsl:node-set` permite que você converta um fragmento da árvore d
   
 ## <a name="see-also"></a>Veja também
 
-- [A classe XslTransform implementa do processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [A classe XslTransform implementa do processador XSLT](xsltransform-class-implements-the-xslt-processor.md)

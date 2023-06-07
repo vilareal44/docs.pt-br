@@ -2,12 +2,12 @@
 title: Manutenção de pares nome-valor
 ms.date: 07/20/2015
 ms.assetid: 57ac2072-d9f5-432b-84f0-a889c62fd813
-ms.openlocfilehash: b8c9487330239e7e6365055d5f08a02f2dbb0e37
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 1e30f010311dda393f65b1424e56f5b5ad014963
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796139"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84389211"
 ---
 # <a name="maintaining-namevalue-pairs-visual-basic"></a>Mantendo pares de nome/valor (Visual Basic)
 Muitos aplicativos devem manter informações que são melhor armazenadas como pares de valor/nome. Essas informações podem ser informações de configuração ou configurações globais. O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] contém alguns métodos que facilitam o trabalho de manter um conjunto de pares de valor/nome. É possível manter informações como atributos ou como um conjunto de elementos filho.  
@@ -118,8 +118,8 @@ Console.WriteLine(root)
 </Root>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>
 - <xref:System.Xml.Linq.XElement.SetElementValue%2A>
-- [Modificando árvores XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [Modificando árvores XML (LINQ to XML) (Visual Basic)](modifying-xml-trees-linq-to-xml.md)

@@ -1,13 +1,14 @@
 ---
 title: Objetos XName e XNamespace atomizados (LINQ to XML) (C#)
+description: Saiba mais sobre os objetos XName e XNamespace Atom e como eles fornecem benefícios de desempenho para consultas.
 ms.date: 07/20/2015
 ms.assetid: a5b21433-b49d-415c-b00e-bcbfb0d267d7
-ms.openlocfilehash: bc5066440d87f5485ae9099d7a7f4f5e9e66b4ec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 305a233adab5c860b5f9509ae25ccc5d633e7957
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70204275"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104273"
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a>Objetos XName e XNamespace atomizados (LINQ to XML) (C#)
 Os objetos <xref:System.Xml.Linq.XName> e <xref:System.Xml.Linq.XNamespace> são *atomizados*, isto é, se eles contêm o mesmo nome qualificado, referem-se ao mesmo objeto. Este benefícios de desempenho das para consultas: Quando você compara dois nomes atomizados para igualdade, o linguagem intermediária subjacente só precisa determinar se o ponto de duas referências para o mesmo objeto. O código subjacente não tem que fazer as comparações de cadeias de caracteres, que poderiam demoradas.  

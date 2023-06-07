@@ -1,13 +1,14 @@
 ---
 title: Exemplo que resulta em partes de documentos do Office Open XML (C#)
+description: Saiba como abrir um documento XML aberto do Office e acessar partes dele com o LINQ em C#. Este exemplo imprime a parte do documento e a parte do estilo de um documento.
 ms.date: 07/20/2015
 ms.assetid: 6cd37055-89b4-42e8-bf27-5a29717e35f3
-ms.openlocfilehash: be4c0ba2ce2a007fa6e19a65d7d86854d85851c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5755ad8e8772195c056b0c1c896c914b1a63a55
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66485997"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103912"
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Exemplo que resulta em partes de documentos do Office Open XML (C#)
 Este tópico mostra como abrir um documento do Office Open XML e acessar partes dentro deles.  

@@ -7,38 +7,38 @@ helpviewer_keywords:
 - = assignment statements [Visual Basic]
 - assignment operators [Visual Basic]
 ms.assetid: 43b7e40c-b7af-45f6-b100-198a90f2561e
-ms.openlocfilehash: 5de4f781d82278fb747b58a41462a470900efde4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 881295f511600cd02e9bf9c9846cf876793a0d8b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336547"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84371837"
 ---
 # <a name="assignment-operators-visual-basic"></a>Operadores de atribuição (Visual Basic)
 A seguir estão os operadores de atribuição definidos em Visual Basic.  
   
- [Operador =](../../../visual-basic/language-reference/operators/assignment-operator.md)  
+ [= Operador](assignment-operator.md)  
   
- [Operador ^=](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  
+ [Operador ^ =](exponentiation-assignment-operator.md)  
   
- [Operador *=](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)  
+ [Operador * =](multiplication-assignment-operator.md)  
   
- [Operador /=](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+ [Operador/=](floating-point-division-assignment-operator.md)  
   
- [Operador \\=](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
+ [\\= Operador](integer-division-assignment-operator.md)  
   
- [Operador +=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
+ [Operador + =](addition-assignment-operator.md)  
   
- [Operador -=](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)  
+ [-= Operador](subtraction-assignment-operator.md)  
   
- [Operador <\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
+ [<\<= Operador](left-shift-assignment-operator.md)  
   
- [Operador >>=](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)  
+ [Operador>>=](right-shift-assignment-operator.md)  
   
- [Operador &=](../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
+ [Operador&=](and-assignment-operator.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Operadores Listados por Funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Instruções](../../../visual-basic/language-reference/statements/index.md)
+- [Precedência do operador no Visual Basic](operator-precedence.md)
+- [Operadores Listados por Funcionalidade](operators-listed-by-functionality.md)
+- [Instruções](../statements/index.md)

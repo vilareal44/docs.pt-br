@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3fc1e6c-bcb6-4915-baf8-7dc0a31b8724
 topic_type:
 - apiref
-ms.openlocfilehash: 2df53ba53c64e042abc54a1d2ac043d301acdde9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f6fbc570e7ea85aca5b365611d58a1700fb27cd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177182"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490712"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>Método IMetaDataImport2::EnumMethodSpecs
-Obtém um enumerador para uma matriz de tokens MethodSpec associados ao token MethodDef ou MemberRef especificado.  
+Obtém um enumerador para uma matriz de tokens de MethodSpec associados ao token MethodDef ou MemberRef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,39 +37,39 @@ HRESULT EnumMethodSpecs (
 );
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [dentro, fora] Um ponteiro para o enumerador para `rMethodSpecs`.  
+ [entrada, saída] Um ponteiro para o enumerador para `rMethodSpecs` .  
   
  `tk`  
- [em] O token MemberRef ou MethodDef que representa o método cujos tokens MethodSpec devem ser enumerados. Se o `tk` valor for 0 (zero), todos os tokens MethodSpec no escopo serão enumerados.  
+ no O token MemberRef ou MethodDef que representa o método cujos tokens de MethodSpec devem ser enumerados. Se o valor de `tk` for 0 (zero), todos os tokens de MethodSpec no escopo serão enumerados.  
   
  `rMethodSpecs`  
- [fora] A matriz de tokens MethodSpec para enumerar.  
+ fora A matriz de tokens de MethodSpec a ser enumerada.  
   
  `cMax`  
- [em] O número máximo solicitado de tokens para colocar em `rMethodSpecs`.  
+ no O número máximo solicitado de tokens a serem colocados `rMethodSpecs` .  
   
  `pcMethodSpecs`  
- [fora] O número retornado de tokens colocados em `rMethodSpecs`.  
+ fora O número retornado de tokens colocados em `rMethodSpecs` .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSpecs`retornou com sucesso.|  
-|`S_FALSE`|`phEnum`não tem elementos membros. Neste caso, `pcMethodSpecs` está definido como 0 (zero).|  
+|`S_OK`|`EnumMethodSpecs`retornado com êxito.|  
+|`S_FALSE`|`phEnum`Não tem elementos de membro. Nesse caso, `pcMethodSpecs` é definido como 0 (zero).|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)

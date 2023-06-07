@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: 64cb561acd72ff5d4a11fcae7ce59eaad750f74e
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 656ef9aa2745c935c37b69ae5a54b8d126700e55
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644366"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608306"
 ---
 # <a name="whats-new-in-net-core-22"></a>Novidades do .NET Core 2.2
 
@@ -18,7 +18,7 @@ O .NET Core 2.2 inclui aprimoramentos na implantação do aplicativo, na manipul
 
 ## <a name="new-deployment-mode"></a>Novo modo de implantação
 
-A partir do .NET Core 2.2, você pode implantar [executáveis dependentes da estrutura](../deploying/index.md#publish-runtime-dependent), que são arquivos **.exe** em vez de arquivos **.dll**. Com uma funcionalidade semelhante às implantações dependentes de estrutura, os FDEs (executáveis dependentes de estrutura) ainda contam com a presença de uma versão compartilhada de todo o sistema do .NET Core para executar. Seu aplicativo contém apenas seu código e quaisquer dependências de terceiros. Ao contrário de implantações dependentes de estrutura, os FDEs são específicos da plataforma.
+A partir do .NET Core 2.2, você pode implantar [executáveis dependentes da estrutura](../deploying/index.md#publish-framework-dependent), que são arquivos **.exe** em vez de arquivos **.dll**. Com uma funcionalidade semelhante às implantações dependentes de estrutura, os FDEs (executáveis dependentes de estrutura) ainda contam com a presença de uma versão compartilhada de todo o sistema do .NET Core para executar. Seu aplicativo contém apenas seu código e quaisquer dependências de terceiros. Ao contrário de implantações dependentes de estrutura, os FDEs são específicos da plataforma.
 
 Esse novo modo de implantação tem a vantagem distinta da criar um executável em vez de uma biblioteca, o que significa que você pode executar seu aplicativo diretamente, sem invocar `dotnet` primeiro.
 

@@ -1,5 +1,6 @@
 ---
 title: Aximp.exe (Importador de Controle ActiveX do Windows Forms)
+description: Entenda Aximp.exe, o Windows Forms o importador do controle ActiveX. Essa ferramenta converte definições de tipo em uma biblioteca de tipos COM do ActiveX em Windows Forms.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ActiveX controls, hosting in Windows Forms
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: 6d58d1df81780c3033eab7c1ac3e860adeb374b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d4fd6762195078963b43392178996a61f90feb94
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180420"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167346"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importador de Controle ActiveX do Windows Forms)
 O Importador de Controle ActiveX converte definições de tipo em uma biblioteca de tipos COM para um controle ActiveX em um controle do Windows Forms.  
@@ -36,18 +37,18 @@ aximp [options]{file.dll | file.ocx}
   
 |Argumento|Descrição|  
 |--------------|-----------------|  
-|*Arquivo*|O nome do arquivo de origem que contém o controle ActiveX a ser convertido. O argumento do arquivo deve ter a extensão .dll ou .ocx.|  
+|*file*|O nome do arquivo de origem que contém o controle ActiveX a ser convertido. O argumento do arquivo deve ter a extensão .dll ou .ocx.|  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |`/delaysign`|Especifica Aximp.exe para assinar o controle resultante usando-se a assinatura com atraso. Você deve especificar essa opção com a opção `/keycontainer:`, `/keyfile:` ou `/publickey:`. Para obter mais informações sobre o processo de assinatura com atraso, consulte [Assinatura com Atraso de um Assembly](../../standard/assembly/delay-sign.md).|  
 |`/help`|Exibe sintaxe de comando e opções para a ferramenta.|  
-|`/keycontainer:`*containerName*|Assina o controle resultante com um nome forte usando o par de chaves pública/privada encontrado no contêiner de chave especificado por *containerName*.|  
-|`/keyfile:`*nome de arquivo*|Assina o controle resultante com um nome forte usando o par de chaves pública/privada oficial do editor encontrado em *filename*.|  
+|`/keycontainer:`*ContainerName*|Assina o controle resultante com um nome forte usando o par de chaves pública/privada encontrado no contêiner de chave especificado por *containerName*.|  
+|`/keyfile:`*nome do arquivo*|Assina o controle resultante com um nome forte usando o par de chaves pública/privada oficial do editor encontrado em *filename*.|  
 |`/nologo`|Suprime a exibição do banner de inicialização da Microsoft.|  
-|`/out:`*nome de arquivo*|Especifica o nome do assembly a ser criado.|  
-|`/publickey:`*nome de arquivo*|Assina o controle resultante com um nome forte usando a chave pública encontrada no arquivo especificado por *filename*.|  
-|`/rcw:`*nome de arquivo*|Usa o runtime callable wrapper especificado, em vez de gerar um novo. Convém especificar várias instâncias. O diretório atual é usado em caminhos relativos. Para obter mais informações, consulte [RCW (Runtime Callable Wrapper)](../../standard/native-interop/runtime-callable-wrapper.md).|  
+|`/out:`*nome do arquivo*|Especifica o nome do assembly a ser criado.|  
+|`/publickey:`*nome do arquivo*|Assina o controle resultante com um nome forte usando a chave pública encontrada no arquivo especificado por *filename*.|  
+|`/rcw:`*nome do arquivo*|Usa o runtime callable wrapper especificado, em vez de gerar um novo. Convém especificar várias instâncias. O diretório atual é usado em caminhos relativos. Para obter mais informações, consulte [RCW (Runtime Callable Wrapper)](../../standard/native-interop/runtime-callable-wrapper.md).|  
 |`/silent`|Suprime a exibição de mensagens de sucesso.|  
 |`/source`|Gera o código-fonte do C# para o wrapper do Windows Forms.|  
 |`/verbose`|Especifica o modo detalhado; exibe informações de andamento adicionais.|  
@@ -80,4 +81,4 @@ aximp c:\systemroot\system32\msdxm.ocx
 ## <a name="see-also"></a>Confira também
 
 - [Ferramentas](index.md)
-- [Ildasm.exe (IL Disassembler)](ildasm-exe-il-disassembler.md)
+- [Ildasm.exe (desmontador de IL)](ildasm-exe-il-disassembler.md)

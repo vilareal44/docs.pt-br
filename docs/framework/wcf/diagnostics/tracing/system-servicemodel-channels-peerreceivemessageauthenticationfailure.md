@@ -2,21 +2,21 @@
 title: System.ServiceModel.Channels.PeerReceiveMessageAuthenticationFailure
 ms.date: 03/30/2017
 ms.assetid: 420e50fd-017c-4e06-bc13-320d4e0dc534
-ms.openlocfilehash: c542cabe49246f8a452f10d95043d363c1c5f3c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4dea5130dc802bb237474043b6647337af2315c0
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766429"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84577013"
 ---
 # <a name="systemservicemodelchannelspeerreceivemessageauthenticationfailure"></a>System.ServiceModel.Channels.PeerReceiveMessageAuthenticationFailure
-A origem da mensagem não pôde ser autenticada  
+Não foi possível autenticar a origem da mensagem  
   
 ## <a name="description"></a>Descrição  
- Este rastreamento ocorre enquanto tentando autenticar mensagens de entrada e autenticação de mensagens está habilitado na ligação.  
+ Esse rastreamento ocorre durante a tentativa de autenticar mensagens de entrada e a autenticação de mensagens está habilitada na associação.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Rastreamento](index.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](using-tracing-to-troubleshoot-your-application.md)
+- [Administração e diagnóstico](../index.md)

@@ -2,12 +2,12 @@
 title: AttributeUsage
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: 7e54e82c1e9edfd0d9d393a014f9d91f82970363
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 677d49aba38801f2adf42cc745983af30b3eddc5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353540"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400726"
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 
@@ -81,7 +81,7 @@ Nesse caso `Attr1` não é aplicado a `DClass` por meio de herança.
 
 O atributo `AttributeUsage` é um atributo de uso único. Ele não pode ser aplicado mais de uma vez para a mesma classe. `AttributeUsage` é um alias para <xref:System.AttributeUsageAttribute>.
 
-Para obter mais informações, consulte [Acessando atributos usando reflexão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).
+Para obter mais informações, consulte [Acessando atributos usando reflexão (Visual Basic)](accessing-attributes-by-using-reflection.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -148,13 +148,13 @@ A3
 A2
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Attribute>
 - <xref:System.Reflection>
-- [Guia de programação do Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Guia de programação do Visual Basic](../../index.md)
 - [Atributos](../../../../standard/attributes/index.md)
-- [Reflexão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [Atributos (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [Criando atributos personalizados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [Acessando atributos usando reflexão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [Reflexão (Visual Basic)](../reflection.md)
+- [Atributos (Visual Basic)](../../../language-reference/attributes.md)
+- [Criando atributos personalizados (Visual Basic)](creating-custom-attributes.md)
+- [Acessando atributos usando reflexão (Visual Basic)](accessing-attributes-by-using-reflection.md)

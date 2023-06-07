@@ -1,13 +1,14 @@
 ---
 title: Como criar hierarquia usando o agrupamento (C#)
+description: Saiba como agrupar dados e, em seguida, gerar um novo arquivo XML em que a hierarquia XML reflete o agrupamento.
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
-ms.openlocfilehash: c5a96b02595446b2efa01868cc88377c3a5151c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d9470ce9b9b7702cf9b835cb2143b6a36f3a254f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141307"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302913"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-c"></a>Como criar hierarquia usando o agrupamento (C#)
 Este exemplo mostra como agrupar dados, e gerencia em XML baseado em agrupamento.  

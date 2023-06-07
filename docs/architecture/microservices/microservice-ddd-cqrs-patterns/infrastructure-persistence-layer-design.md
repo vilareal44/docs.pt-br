@@ -2,16 +2,16 @@
 title: Projetando a camada de persistência da infraestrutura
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Explore o padrão de repositório no design da camada de persistência da infraestrutura.
 ms.date: 10/08/2018
-ms.openlocfilehash: 1b2665e81ade60affa84563121c04bca08537f07
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 3c18582eb5db61a61b366c06f361d297e698b39a
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988473"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100841"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Projetar a camada de persistência da infraestrutura
 
-Os componentes de persistência de dados fornecem acesso aos dados hospedados dentro dos limites de um microserviço (ou seja, o banco de dados de um microserviço). Eles contêm a implementação real dos componentes, como repositórios e classes [Unidade de Trabalho](https://martinfowler.com/eaaCatalog/unitOfWork.html), como objetos <xref:Microsoft.EntityFrameworkCore.DbContext> personalizados do EF (Entity Framework). O DbContext do EF implementa os padrões de Repositório e de Unidade de Trabalho.
+Os componentes de persistência de dados fornecem acesso aos dados hospedados nos limites de um microserviço (ou seja, um banco de dados de microserviço). Eles contêm a implementação real dos componentes, como repositórios e classes [Unidade de Trabalho](https://martinfowler.com/eaaCatalog/unitOfWork.html), como objetos <xref:Microsoft.EntityFrameworkCore.DbContext> personalizados do EF (Entity Framework). O DbContext do EF implementa os padrões de Repositório e de Unidade de Trabalho.
 
 ## <a name="the-repository-pattern"></a>O padrão de repositório
 
@@ -23,7 +23,7 @@ O padrão de repositório é uma maneira bem documentada de trabalhar com uma fo
 
 ### <a name="define-one-repository-per-aggregate"></a>Definir um repositório por agregação
 
-Para cada agregação ou raiz de agregação, você deve criar uma classe de repositório. Em um microsserviço baseado nos padrões de DDD (Design Orientado por Domínio), o único canal que você deve usar para atualizar o banco de dados são os repositórios. Isso porque eles têm uma relação um-para-um com a raiz agregada, que controla as invariantes e a consistência transacional do agregado. É possível consultar o banco de dados por outros canais (como ao seguir uma abordagem de CQRS), porque as consultas não alteram o estado do banco de dados. No entanto, a área transacional (ou seja, as atualizações) sempre precisa ser controlada pelos repositórios e pelas raízes de agregação.
+Para cada agregação ou raiz de agregação, você deve criar uma classe de repositório. Em um microsserviço baseado nos padrões de DDD (Design Orientado por Domínio), o único canal que você deve usar para atualizar o banco de dados são os repositórios. Isso ocorre porque eles têm uma relação um-para-um com a raiz agregada, que controla as invariáveis da agregação e a consistência transacional. É possível consultar o banco de dados por outros canais (como ao seguir uma abordagem de CQRS), porque as consultas não alteram o estado do banco de dados. No entanto, a área transacional (ou seja, as atualizações) sempre precisa ser controlada pelos repositórios e pelas raízes de agregação.
 
 Basicamente, um repositório permite popular na memória dados que são provenientes do banco de dados, em forma de entidades de domínio. Depois que as entidades estão na memória, elas podem ser alteradas e persistidas novamente no banco de dados por meio de transações.
 
@@ -33,11 +33,11 @@ Se o usuário fizer alterações, os dados a serem atualizados virão da camada 
 
 É importante enfatizar novamente que você deve definir apenas um repositório para cada raiz de agregação, conforme mostrado na Figura 7-17. Para atingir a meta da raiz de agregação de manter a consistência transacional entre todos os objetos na agregação, você nunca deve criar um repositório para cada tabela no banco de dados.
 
-![Diagrama mostrando relações de domínio e outras infra-estruturas.](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
+![Diagrama mostrando relações de domínio e outra infraestrutura.](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
 
 **Figura 7-17**. A relação entre repositórios, agregações e tabelas de banco de dados
 
-O diagrama acima mostra as relações entre as camadas de Domínio e Infra-estrutura: O Agregado do Comprador depende do IBuyerRepository e o Order Aggregate depende das interfaces IOrderRepository, essas interfaces são implementadas na camada Infra-estrutura pelos repositórios correspondentes que dependem do UnitOfWork, também implementado lá, que acessa as tabelas no nível Dados.
+O diagrama acima mostra as relações entre as camadas de infraestrutura e de domínio: a agregação de compradores depende do IBuyerRepository e a agregação de ordem depende das interfaces IOrderRepository, essas interfaces são implementadas na camada de infraestrutura pelos repositórios correspondentes que dependem de UnitOfWork, também implementadas ali, que acessam as tabelas na camada de dados.
 
 ### <a name="enforce-one-aggregate-root-per-repository"></a>Impor uma raiz de agregação por repositório
 
@@ -84,7 +84,7 @@ As conexões com bancos de dados podem falhar e, principalmente, executar centen
 
 Em termos de separação de interesses para os testes de unidade, a lógica opera em entidades de domínio na memória. Ela considera que a classe de repositório as entregou. Depois que a lógica modifica as entidades de domínio, ela considera que a classe de repositório as armazenará corretamente. O ponto importante aqui é criar testes de unidade em relação ao seu modelo de domínio e à sua lógica de domínio. As raízes de agregação são os limites de consistência principais em DDD.
 
-Os repositórios implementados no eShopOnContainers dependem da implementação do DbContext da EF Core dos padrões de Repositório e Unidade de Trabalho usando seu rastreador de alterações, para que eles não duplicam essa funcionalidade.
+Os repositórios implementados no eShopOnContainers contam com a implementação DbContext de EF Core do repositório e os padrões de unidade de trabalho usando seu rastreador de alterações, portanto, eles não duplicam essa funcionalidade.
 
 ### <a name="the-difference-between-the-repository-pattern-and-the-legacy-data-access-class-dal-class-pattern"></a>A diferença entre o padrão de repositório e o padrão da classe DAL (classe de acesso a dados) herdada
 
@@ -102,9 +102,9 @@ Os repositórios personalizados são úteis pelos motivos já citados e essa é 
 
 Por exemplo, Jimmy Bogard, ao fornecer comentários diretos para este guia, diz o seguinte:
 
-> Este provavelmente será o meu maior feedback. Eu realmente não sou um fã de repositórios, principalmente porque eles escondem os detalhes importantes do mecanismo de persistência subjacente. É por isso que eu vou para MediatR para comandos, também. Posso usar toda a capacidade da camada de persistência e enviar por push todo esse comportamento de domínio para minhas raízes de agregação. Eu geralmente não quero zombar dos meus repositórios – eu ainda preciso ter esse teste de integração com a coisa real. Ir ao CQRS significava que não tínhamos mais necessidade de repositórios.
+> Isso provavelmente será meu maior comentário. Eu realmente não é fã dos repositórios, principalmente porque eles ocultam os detalhes importantes do mecanismo de persistência subjacente. É por isso que eu também sou usado para obter os comandos do mediador. Posso usar toda a capacidade da camada de persistência e enviar por push todo esse comportamento de domínio para minhas raízes de agregação. Eu geralmente não quero simular meus repositórios – ainda preciso fazer esse teste de integração com o verdadeiro. Usar o CQRS significava que não realmente precisamos de mais repositórios.
 
-Os repositórios podem ser úteis, mas eles não são críticos para o design DDD como são o padrão de Agregação e o modelo de domínio avançado. Portanto, use o padrão de repositório ou não, conforme achar mais adequado. De qualquer forma, você estará usando o padrão de repositório sempre que usar o EF Core, embora, neste caso, o repositório cubra todo o microserviço ou contexto limitado.
+Os repositórios podem ser úteis, mas eles não são críticos para o design DDD como são o padrão de Agregação e o modelo de domínio avançado. Portanto, use o padrão de repositório ou não, conforme achar mais adequado. De qualquer forma, você usará o padrão de repositório sempre que usar EF Core embora, nesse caso, o repositório cubra todo o Microservice ou o contexto limitado.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
@@ -113,20 +113,20 @@ Os repositórios podem ser úteis, mas eles não são críticos para o design DD
 - **Edward Hieatt e Rob me. Padrão de repositório.** \
   <https://martinfowler.com/eaaCatalog/repository.html>
 
-- **O padrão repositório** \
+- **O padrão de repositório** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
-- **Eric Evans. Design orientado por domínio: enfrentando a complexidade no coração do software.** (Livro; inclui uma discussão sobre o padrão de Repositório) \
+- **Eric Evans. Design controlado por domínio: solução de complexidade no coração do software.** (Livro; inclui uma discussão sobre o padrão de Repositório) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="unit-of-work-pattern"></a>Padrão de unidade de trabalho
 
-- **Martin Fowler. Padrão da unidade de trabalho.** \
+- **Martin Fowler. Padrão de unidade de trabalho.** \
   <https://martinfowler.com/eaaCatalog/unitOfWork.html>
 
-- **Implementação do Repositório e da Unidade de Padrões de Trabalho em um aplicativo MVC ASP.NET** \
+- **Implementando o repositório e os padrões de unidade de trabalho em um aplicativo MVC ASP.NET** \
   <https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
 >[!div class="step-by-step"]
->[Próximo](domain-events-design-implementation.md)
->[anterior](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[Anterior](domain-events-design-implementation.md) 
+> [Avançar](infrastructure-persistence-layer-implementation-entity-framework-core.md)

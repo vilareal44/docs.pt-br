@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /removeintchecks compiler option [Visual Basic]
 - -removeintchecks compiler option [Visual Basic]
 ms.assetid: c1835bd5-1e38-4fba-bd2f-6984774765d4
-ms.openlocfilehash: bea6ca24ea6da9000267e754d52fe0ca152f7d7f
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: ec4722cb7088819dae95ca1b7cbc1469d957a7aa
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005234"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400468"
 ---
 # <a name="-removeintchecks"></a>-removeintchecks
 Ativa a verificação de erros de estouro para operações de inteiros.  
@@ -42,7 +42,7 @@ Ativa a verificação de erros de estouro para operações de inteiros.
 vbc -removeintchecks+ test.vb  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Compilador de linha de comando do Visual Basic](index.md)
+- [Linhas de Comando de Compilação de Exemplo](sample-compilation-command-lines.md)

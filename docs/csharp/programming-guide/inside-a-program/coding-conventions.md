@@ -1,17 +1,18 @@
 ---
 title: Convenções de codificação em C# – Guia de Programação em C#
+description: Saiba mais sobre convenções de codificação em C#. As convenções de codificação criam uma aparência consistente para o código e facilitam a cópia, a alteração e a manutenção do código.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - coding conventions, C#
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 77b173a420f26834855e0bdca3c8d04406ac65d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 772aebff0b8c7aebe7c7d5c7634cd2931f4570b1
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399731"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301847"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Convenções de codificação em C# (Guia de Programação em C#)
 
@@ -25,7 +26,7 @@ As convenções de codificação atendem às seguintes finalidades:
   
 - Demonstram as práticas recomendadas do C#.  
 
-As diretrizes deste artigo são usadas pela Microsoft para desenvolver amostras e documentação.  
+As diretrizes neste artigo são usadas pela Microsoft para desenvolver exemplos e documentação.  
   
 ## <a name="naming-conventions"></a>Convenções de nomenclatura  
   
@@ -97,20 +98,20 @@ As seções a seguir descrevem práticas que a equipe de C# segue para preparar 
   
 - Evite o uso de `var` em vez de [dynamic](../../language-reference/builtin-types/reference-types.md).  
   
-- Use digitação implícita para determinar o tipo da variável loop em [loops.](../../language-reference/keywords/for.md)  
+- Use a digitação implícita para determinar o tipo da variável de loop nos loops [for](../../language-reference/keywords/for.md) .  
   
      O exemplo a seguir usa digitação implícita em uma instrução `for`.  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
 
-- Não use digitação implícita para determinar o tipo da variável loop em [loops foreach.](../../language-reference/keywords/foreach-in.md)
+- Não use a digitação implícita para determinar o tipo da variável de loop em loops [foreach](../../language-reference/keywords/foreach-in.md) .
 
-     O exemplo a seguir `foreach` usa digitação explícita em uma instrução.
+     O exemplo a seguir usa a digitação explícita em uma `foreach` instrução.
 
      [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]
 
      > [!NOTE]
-     > Tenha cuidado para não mudar acidentalmente um tipo de elemento da coleção iterável. Por exemplo, é fácil <xref:System.Linq.IQueryable?displayProperty=nameWithType> mudar <xref:System.Collections.IEnumerable?displayProperty=nameWithType> de `foreach` uma declaração para uma declaração, que altera a execução de uma consulta.
+     > Tenha cuidado para não alterar acidentalmente um tipo de elemento da coleção iterável. Por exemplo, é fácil alternar de <xref:System.Linq.IQueryable?displayProperty=nameWithType> para <xref:System.Collections.IEnumerable?displayProperty=nameWithType> em uma `foreach` instrução, que altera a execução de uma consulta.
 
 ### <a name="unsigned-data-type"></a>Tipo de Dados Sem Sinal  
   
@@ -122,7 +123,7 @@ Use a sintaxe concisa ao inicializar matrizes na linha da declaração.
   
 [!code-csharp[csProgGuideCodingConventions#13](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#13)]  
   
-### <a name="delegates"></a>Delega  
+### <a name="delegates"></a>Delegados  
   
 Use a sintaxe concisa ao criar instâncias de um tipo delegado.  
   
@@ -142,11 +143,11 @@ Use a sintaxe concisa ao criar instâncias de um tipo delegado.
   
 ### <a name="-and-124124-operators"></a>Operadores && e &#124;&#124;  
   
-Para evitar exceções e aumentar o desempenho [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) pulando [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) comparações desnecessárias, use em vez de [e&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) em vez de [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) quando você executar comparações, como mostrado no exemplo a seguir.  
+Para evitar exceções e aumentar o desempenho ignorando comparações desnecessárias, use [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) em vez de [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) e [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) em vez de [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) quando você executa comparações, conforme mostrado no exemplo a seguir.  
   
 [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
-### <a name="new-operator"></a>Novo Operador  
+### <a name="new-operator"></a>Operador New  
   
 - Use um formulário conciso de instanciação de objeto com digitação implícita, conforme mostrado na declaração a seguir.  
   
@@ -204,7 +205,7 @@ Chame membros [estáticos](../../language-reference/keywords/static.md) usando o
 
 Siga as diretrizes em [Diretrizes de codificação segura](../../../standard/security/secure-coding-guidelines.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Convenções de codificação do Visual Basic](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
 - [Diretrizes de codificação segura](../../../standard/security/secure-coding-guidelines.md)

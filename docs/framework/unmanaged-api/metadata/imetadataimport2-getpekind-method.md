@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d91c3d89-8022-4a4c-a2a2-a8af2c387507
 topic_type:
 - apiref
-ms.openlocfilehash: 0464c61e4ff01483e10fb5708d5ed4b5f5ed63d0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3626998c456e23fb922ae45a68bedb0e45a7ccba
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445238"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490426"
 ---
 # <a name="imetadataimport2getpekind-method"></a>Método IMetaDataImport2::GetPEKind
 Obtém um valor que identifica a natureza do código no arquivo executável portátil (PE), normalmente um arquivo DLL ou EXE, que é definido no escopo de metadados atual.  
@@ -36,31 +36,31 @@ HRESULT GetPEKind (
   
 ## <a name="parameters"></a>Parâmetros  
  `pdwPEKind`  
- fora Um ponteiro para um valor da enumeração [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) que descreve o arquivo PE.  
+ fora Um ponteiro para um valor da enumeração [CorPEKind](corpekind-enumeration.md) que descreve o arquivo PE.  
   
  `pdwMachine`  
  fora Um ponteiro para um valor que identifica a arquitetura do computador. Consulte a próxima seção para obter os valores possíveis.  
   
 ## <a name="remarks"></a>Comentários  
- O valor referenciado pelo parâmetro `pdwMachine` pode ser um dos seguintes.  
+ O valor referenciado pelo `pdwMachine` parâmetro pode ser um dos seguintes.  
   
 |Valor|Arquitetura do computador|  
 |-----------|--------------------------|  
 |IMAGE_FILE_MACHINE_I386<br /><br /> 0x014C|x86|  
 |IMAGE_FILE_MACHINE_IA64<br /><br /> 0x0200|IPF Intel|  
-|IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|X64|  
+|IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|x64|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Enumeração CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Enumeração CorPEKind](corpekind-enumeration.md)

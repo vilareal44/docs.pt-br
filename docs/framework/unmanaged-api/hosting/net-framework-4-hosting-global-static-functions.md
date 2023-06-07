@@ -6,21 +6,21 @@ helpviewer_keywords:
 - global static functions [.NET Framework hosting], version 4
 - .NET Framework 4, hosting global static functions
 ms.assetid: 07a1a6e1-db73-4555-81df-bc4054c51492
-ms.openlocfilehash: 58b2b6faaf96a8c4f0c0422f2092c3752fbe822f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1a5869e1946e01cbd463bffa2da24b557925488a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133705"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501351"
 ---
 # <a name="net-framework-4-hosting-global-static-functions"></a>.NET Framework 4 hospedando funções estáticas globais
-O .NET Framework 4 introduz um novo método exportado em MSCorEE. dll: [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).  
+O .NET Framework 4 introduz um novo método exportado em MSCorEE. dll: [CLRCreateIntstance](clrcreateinstance-function.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Função CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)  
- Fornece uma das três interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)ou [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
+ [Função CLRCreateInstance](clrcreateinstance-function.md)  
+ Fornece uma das três interfaces: [ICLRMetaHost](iclrmetahost-interface.md), [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md)ou [ICLRDebugging](../debugging/iclrdebugging-interface.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Hospedando funções estáticas globais](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)
-- [Hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [Hospedando funções estáticas globais](hosting-global-static-functions.md)
+- [Hosting](index.md)

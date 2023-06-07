@@ -1,15 +1,15 @@
 ---
-title: Como recuperar o valor de um elemento (LINQ to XML)
+title: 'Como: recuperar o valor de um elemento (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
-ms.openlocfilehash: b1a61091dc59b403c5d967609e8870492c24347f
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: b8ff44416f0fbb590119af7e11714e449185d977
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248928"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397785"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>Como: Recuperar o Valor de um Elemento (LINQ para XML) (Visual Basic)
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>Como recuperar o valor de um elemento (LINQ to XML) (Visual Basic)
 Este tópico mostra como obter o valor de elementos. Há duas maneiras principais de fazer isso. Uma maneira é converter <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XAttribute> para o tipo desejado. O operador de conversão explícita converte o conteúdo do elemento ou do atributo no tipo especificado e o atribui à sua variável. Outra opção é usar a propriedade <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> ou a propriedade <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>.  
   
  Com Visual Basic, a melhor abordagem é usar a propriedade <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>.  
@@ -67,7 +67,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>Exemplo  
- Às vezes, você tenta recuperar o valor de um elemento mesmo quando não tem certeza de que ele existe. Neste caso, quando você atribui o elemento lançado a `string` um tipo anulado (ou um dos tipos de valor anulados no Framework .NET), se o elemento não existir, a variável atribuída será definida apenas para `Nothing`. O código a seguir mostra que quando o elemento pode ou não existir, é mais fácil de usar a conversão do que usar a propriedade <xref:System.Xml.Linq.XElement.Value%2A>.  
+ Às vezes, você tenta recuperar o valor de um elemento mesmo quando não tem certeza de que ele existe. Nesse caso, quando você atribui o elemento convertido a um tipo anulável ( `string` ou um dos tipos de valor anulável no .NET Framework), se o elemento não existir, a variável atribuída será definida apenas como `Nothing` . O código a seguir mostra que quando o elemento pode ou não existir, é mais fácil de usar a conversão do que usar a propriedade <xref:System.Xml.Linq.XElement.Value%2A>.  
   
 ```vb  
 Dim root As XElement = <Root>  
@@ -151,4 +151,4 @@ v4:element does not exist
   
 ## <a name="see-also"></a>Confira também
 
-- [Eixos LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [Eixos LINQ to XML (Visual Basic)](linq-to-xml-axes.md)

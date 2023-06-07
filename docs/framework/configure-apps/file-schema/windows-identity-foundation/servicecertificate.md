@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 42c7f291-2ec3-43c5-8872-35897ff3c660
 author: BrucePerlerMS
 ms.openlocfilehash: 653dd9cfadbfd33f5371b77172199b946321bc8c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70251864"
 ---
-# <a name="servicecertificate"></a>\<serviceCertificate>
+# \<serviceCertificate>
 Configura o certificado X. 509 que é usado para criptografar e descriptografar tokens.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. identityModel. Services >** ](system-identitymodel-services.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> federationConfiguration**](federationconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de certificados**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel.services>**](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<federationConfiguration>**](federationconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceCertificate>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,10 +45,10 @@ Configura o certificado X. 509 que é usado para criptografar e descriptografar 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](federationconfiguration.md)|Contém as configurações que definem <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> o (WSFAM) e <xref:System.IdentityModel.Services.SessionAuthenticationModule> o (Sam).|  
+|[\<federationConfiguration>](federationconfiguration.md)|Contém as configurações que definem o <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) e o <xref:System.IdentityModel.Services.SessionAuthenticationModule> (Sam).|  
   
 ## <a name="example"></a>Exemplo  
- O XML a seguir mostra o uso do \<elemento > do próprio certificado. O XML é extraído do `CustomToken` exemplo.  
+ O XML a seguir mostra o uso do \<serviceCertificate> elemento. O XML é extraído do `CustomToken` exemplo.  
   
 ```xml  
 <serviceCertificate>  

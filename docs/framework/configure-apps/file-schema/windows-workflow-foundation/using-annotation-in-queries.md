@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 50855b30-d5fe-49a9-89d3-3f1bfd670958
 ms.openlocfilehash: 728408e744bc1eca62158fab1a7a17e985fe3b6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69947281"
 ---
 # <a name="using-annotation-in-queries"></a>Usar anotação em consultas
@@ -30,7 +30,7 @@ As anotações permitem que você marca arbitrariamente registros de rastreament
 > [!NOTE]
 > Esses elementos de consulta de controle podem ser usados para criar um perfil de rastreamento. Um perfil de rastreamento pode ser criado na configuração ou usando código.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement>
 - <xref:System.Activities.Tracking.TrackingProfile>

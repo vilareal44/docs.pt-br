@@ -1,13 +1,14 @@
 ---
-title: '{1&gt;Visão Geral&lt;1}'
+title: Visão geral
+description: Leia uma visão geral do ADO.NET em .NET Framework e leia sobre os recursos para obter explicações e exemplos mais detalhados.
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: d5dc9cf7081c6876118914a0b95853a5a7ca5e57
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 2ff3b7ad197bfe1e1c12e382f3a59bd470c57a75
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980334"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287149"
 ---
 # <a name="adonet-overview"></a>Visão geral do ADO.NET
 O ADO.NET fornece acesso consistente a fontes de dados como o SQL Server e o XML, e a fontes de dados expostas através do OLE DB e do ODBC. Os aplicativos do consumidor de compartilhamento de dados podem usar o ADO.NET para se conectar a essas fontes de dados, e para recuperar, manipular e atualizar os dados nelas contidos.  
@@ -29,7 +30,7 @@ O ADO.NET fornece acesso consistente a fontes de dados como o SQL Server e o XML
  [Opções e diretrizes da tecnologia ADO.NET](ado-net-technology-options-and-guidelines.md)  
  Descreve os produtos e as tecnologias incluídos na plataforma de dados de entidade.  
   
- [LINQ e ADO.NET](linq-and-ado-net.md)  
+ [LINQ e o ADO.NET](linq-and-ado-net.md)  
  Descreve como a consulta integrada à linguagem (LINQ) é implementada no ADO.NET e fornece links para tópicos relevantes.  
   
  [Provedores de dados do .NET Framework](data-providers.md)  
@@ -44,11 +45,11 @@ O ADO.NET fornece acesso consistente a fontes de dados como o SQL Server e o XML
  [Exemplos de código do ADO.NET](ado-net-code-examples.md)  
  Fornece exemplos de código que recuperam dados usando os provedores de dados ADO.NET.  
   
-## <a name="related-sections"></a>Seções Relacionadas  
- [What's New in ADO.NET](whats-new.md) (Novidades no ADO.NET)  
+## <a name="related-sections"></a>Seções relacionadas  
+ [Novidades no ADO.NET](whats-new.md)  
  Apresenta recursos que são novos no ADO.NET.  
   
- [Securing ADO.NET Applications](securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  
+ [Protegendo aplicativos ADO.NET](securing-ado-net-applications.md)  
  Descreve práticas seguras de codificação ao usar o ADO.NET.  
   
  [Data Type Mappings in ADO.NET](data-type-mappings-in-ado-net.md) (Mapeamentos de tipo de dados no ADO.NET)  

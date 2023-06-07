@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9bede0ec-5fdf-42a2-b5b7-bee64056acb6
 topic_type:
 - apiref
-ms.openlocfilehash: b1586184c91619994ba0dfc9d5dcc277c10f99cf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b6936081ca3dbadb4f802a6856fafb53f6cef3fa
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436451"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008957"
 ---
 # <a name="cortypeattr-enumeration"></a>Enumeração CorTypeAttr
 Contém valores que indicam metadados de tipo.  
@@ -75,7 +75,7 @@ typedef enum CorTypeAttr {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`tdVisibilityMask`|Usado para informações de visibilidade de tipo.|  
 |`tdNotPublic`|Especifica que o tipo não está no escopo público.|  
@@ -103,7 +103,7 @@ typedef enum CorTypeAttr {
 |`tdAnsiClass`|Especifica que esse tipo interpreta um LPTSTR como ANSI.|  
 |`tdUnicodeClass`|Especifica que esse tipo interpreta um LPTSTR como Unicode.|  
 |`tdAutoClass`|Especifica que esse tipo interpreta automaticamente um LPTSTR.|  
-|`tdCustomFormatClass`|Especifica que o tipo tem uma codificação não padrão, conforme especificado por `CustomFormatMask`.|  
+|`tdCustomFormatClass`|Especifica que o tipo tem uma codificação não padrão, conforme especificado por `CustomFormatMask` .|  
 |`tdCustomFormatMask`|Use essa máscara para obter informações de codificação não padrão para a interoperabilidade nativa. O significado dos valores desses dois bits não é especificado.|  
 |`tdBeforeFieldInit`|Especifica que o tipo deve ser inicializado antes da primeira tentativa de acessar um campo estático.|  
 |`tdForwarder`|Especifica que o tipo é exportado e um encaminhador de tipo.|  
@@ -111,13 +111,13 @@ typedef enum CorTypeAttr {
 |`tdRTSpecialName`|Especifica que a Common Language Runtime deve verificar a codificação do nome.|  
 |`tdHasSecurity`|Especifica que o tipo tem segurança associada a ele.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerações de metadados](metadata-enumerations.md)

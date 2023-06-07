@@ -2,12 +2,12 @@
 title: Eventos LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-ms.openlocfilehash: 06191fb94f808d9a3ece8de000dec1c5de769dde
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d00f6f1b2a14ac73c1bcd4a1f74b9714ca304da3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351932"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84368810"
 ---
 # <a name="linq-to-xml-events-visual-basic"></a>Eventos de LINQ to XML (Visual Basic)
 Eventos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permitem que você seja notificado quando uma árvore XML é modificada.  
@@ -19,7 +19,7 @@ Eventos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permitem que voc�
 ## <a name="types-and-events"></a>Tipos e eventos  
  Você usa os seguintes tipos ao trabalhar com eventos:  
   
-|Tipo|Descrição|  
+|Tipo|Description|  
 |----------|-----------------|  
 |<xref:System.Xml.Linq.XObjectChange>|Especifica o tipo de evento quando um evento é gerado para <xref:System.Xml.Linq.XObject>.|  
 |<xref:System.Xml.Linq.XObjectChangeEventArgs>|Fornece dados para os eventos de <xref:System.Xml.Linq.XObject.Changing> e de <xref:System.Xml.Linq.XObject.Changed> .|  
@@ -92,7 +92,7 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>Comments  
+### <a name="comments"></a>Comentários  
  Esse código gera a seguinte saída:  
   
 ```console  
@@ -114,6 +114,6 @@ Total:308
 </Root>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Programação de LINQ to XML avançada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Programação de LINQ to XML avançada (Visual Basic)](advanced-linq-to-xml-programming.md)

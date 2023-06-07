@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1fec4aef-0a06-4df0-bae7-d31a9ef9603d
 topic_type:
 - apiref
-ms.openlocfilehash: db6a20dee21b6c8bbd55fa9b52a159a00fe310d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ee5dd611888ec52e360ef45fab4c01e9c5b2d6bb
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092031"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009438"
 ---
 # <a name="waitortimercallback-function-pointer"></a>Ponteiro de função WAITORTIMERCALLBACK
-Aponta para uma função que notifica o host que um identificador de espera (<xref:System.Threading.WaitHandle>) foi sinalizado ou esgotou o tempo limite.  
+Aponta para uma função que notifica o host que um identificador de espera ( <xref:System.Threading.WaitHandle> ) foi sinalizado ou esgotou o tempo limite.  
   
  Esse ponteiro de função foi preterido no .NET Framework 4.  
   
@@ -40,20 +40,20 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
  no Um ponteiro para um objeto que contém informações definidas pelo host.  
   
  `TimerOrWaitFired`  
- [in] `true` se o identificador de espera expirou ou `false` se ele foi sinalizado.  
+ [in] `true` Se o identificador de espera expirou ou `false` se foi sinalizado.  
   
 ## <a name="remarks"></a>Comentários  
- A função à qual os pontos de `WAITORTIMERCALLBACK` é uma função de retorno de chamada e deve ser implementada pelo gravador do aplicativo de hospedagem.  
+ A função para a qual os `WAITORTIMERCALLBACK` pontos é uma função de retorno de chamada e deve ser implementada pelo gravador do aplicativo de hospedagem.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** MSCorWks. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funções de hospedagem CLR reprovadas](deprecated-clr-hosting-functions.md)

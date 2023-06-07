@@ -1,22 +1,23 @@
 ---
 title: Código transparente de segurança
+description: Entenda a finalidade do modelo de código Transparent, como especificar o nível de transparência e a imposição de transparência em segurança.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent code
 - security-transparent code
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
-ms.openlocfilehash: ca251ec3084d40269b107e7bd8bef708e8d49622
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: a167efe12b88f796fba4abc6d60ebffe4693709a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215827"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309840"
 ---
 # <a name="security-transparent-code"></a>Código transparente de segurança
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-A segurança envolve três peças de interação: área restrita, permissões e imposição. A área restrita refere-se à prática de criar domínios isolados em que algum código é tratado como totalmente confiável e outro código é restrito às permissões no conjunto de concessão para a área restrita. O código do aplicativo que é executado dentro do conjunto de concessão da área restrita é considerado transparente; ou seja, ele não pode executar nenhuma operação que possa afetar a segurança. A concessão definida para a área restrita é determinada por evidência (<xref:System.Security.Policy.Evidence> classe). A evidência identifica quais permissões específicas são exigidas pelas áreas restritas e quais tipos de áreas restritas podem ser criadas. Imposição refere-se a permitir que o código Transparent seja executado somente dentro de seu conjunto de concessão.
+A segurança envolve três peças de interação: área restrita, permissões e imposição. A área restrita refere-se à prática de criar domínios isolados em que algum código é tratado como totalmente confiável e outro código é restrito às permissões no conjunto de concessão para a área restrita. O código do aplicativo que é executado dentro do conjunto de concessão da área restrita é considerado transparente; ou seja, ele não pode executar nenhuma operação que possa afetar a segurança. A concessão definida para a área restrita é determinada por evidência ( <xref:System.Security.Policy.Evidence> classe). A evidência identifica quais permissões específicas são exigidas pelas áreas restritas e quais tipos de áreas restritas podem ser criadas. Imposição refere-se a permitir que o código Transparent seja executado somente dentro de seu conjunto de concessão.
 
 > [!IMPORTANT]
 > A política de segurança era um elemento fundamental nas versões anteriores do .NET Framework. A partir do .NET Framework 4, a política de segurança é obsoleta. A eliminação da política de segurança é separada da transparência de segurança. Para obter informações sobre os efeitos dessa alteração, consulte [compatibilidade e migração da política de segurança de acesso ao código](code-access-security-policy-compatibility-and-migration.md).
@@ -37,18 +38,18 @@ A transparência foi introduzida na versão 2,0 do .NET Framework para simplific
 
 ## <a name="specifying-the-transparency-level"></a>Especificando o Nível de Transparência
 
-O atributo <xref:System.Security.SecurityRulesAttribute> no nível do assembly seleciona explicitamente as regras de <xref:System.Security.SecurityRuleSet> que o assembly seguirá. As regras são organizadas em um sistema de nível numérico, onde níveis mais altos significam uma imposição mais rígida de regras de segurança.
+O atributo de nível de assembly <xref:System.Security.SecurityRulesAttribute> seleciona explicitamente as <xref:System.Security.SecurityRuleSet> regras que o assembly irá seguir. As regras são organizadas em um sistema de nível numérico, onde níveis mais altos significam uma imposição mais rígida de regras de segurança.
 
 Os níveis são os seguintes:
 
-- Nível 2 (<xref:System.Security.SecurityRuleSet.Level2>) – as regras de transparência .NET Framework 4.
+- Nível 2 ( <xref:System.Security.SecurityRuleSet.Level2> ) – as regras de transparência .NET Framework 4.
 
-- Nível 1 (<xref:System.Security.SecurityRuleSet.Level1>) – as regras de transparência .NET Framework 2,0.
+- Nível 1 ( <xref:System.Security.SecurityRuleSet.Level1> ) – as regras de transparência .NET Framework 2,0.
 
 A principal diferença entre os dois níveis de transparência é que o nível 1 não impõe regras de transparência para chamadas de fora do assembly e destina-se apenas à compatibilidade.
 
 > [!IMPORTANT]
-> Você deve especificar a transparência de nível 1 somente para fins de compatibilidade; ou seja, especifique o nível 1 somente para o código que foi desenvolvido com o .NET Framework 3,5 ou anterior que usa o atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> ou não usa o modelo de transparência. Por exemplo, use a transparência de nível 1 para assemblies .NET Framework 2,0 que permitem chamadas de chamadores parcialmente confiáveis (APTCA). Para o código que é desenvolvido para o .NET Framework 4, sempre use a transparência nível 2.
+> Você deve especificar a transparência de nível 1 somente para fins de compatibilidade; ou seja, especifique o nível 1 somente para o código que foi desenvolvido com o .NET Framework 3,5 ou anterior que usa o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo ou não usa o modelo de transparência. Por exemplo, use a transparência de nível 1 para assemblies .NET Framework 2,0 que permitem chamadas de chamadores parcialmente confiáveis (APTCA). Para o código que é desenvolvido para o .NET Framework 4, sempre use a transparência nível 2.
 
 ### <a name="level-2-transparency"></a>Transparência de nível 2
 
@@ -56,15 +57,15 @@ A transparência de nível 2 foi introduzida no .NET Framework 4. As três filos
 
 - Código Transparent, independentemente das permissões que ele recebe (incluindo confiança total), pode chamar apenas outros códigos transparentes ou código de segurança crítica. Se o código for parcialmente confiável, ele só poderá executar ações permitidas pelo conjunto de permissões do domínio. O código transparent não pode fazer o seguinte:
 
-  - Execute uma operação <xref:System.Security.CodeAccessPermission.Assert%2A> ou elevação de privilégio.
+  - Execute uma <xref:System.Security.CodeAccessPermission.Assert%2A> operação ou elevação de privilégio.
 
   - Conter código não seguro ou não verificável.
 
   - Chame diretamente o código crítico.
 
-  - Chame código nativo ou código que tenha o atributo <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>.
+  - Chame código nativo ou código que tenha o <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> atributo.
 
-  - Chamar um membro que é protegido por um <xref:System.Security.Permissions.SecurityAction.LinkDemand>.
+  - Chamar um membro que é protegido por um <xref:System.Security.Permissions.SecurityAction.LinkDemand> .
 
   - Herdar de tipos críticos.
 
@@ -92,9 +93,9 @@ O modelo transparência nível 1 tem as seguintes limitações:
 
 ## <a name="transparency-enforcement"></a>Imposição de Transparência
 
-As regras de transparência não são impostas até que a transparência seja calculada. Nesse momento, uma <xref:System.InvalidOperationException> será gerada se uma regra de transparência for violada. A hora em que a transparência é calculada depende de vários fatores e não pode ser prevista. Ele é calculado o mais tarde possível. No .NET Framework 4, o cálculo de transparência no nível do assembly ocorre antes do que acontece no .NET Framework 2,0. A única garantia é que o cálculo de transparência ocorrerá no momento em que for necessário. Isso é semelhante a como o compilador JIT (just-in-time) pode alterar o ponto quando um método é compilado e quaisquer erros nesse método são detectados. O cálculo de transparência será invisível se o seu código não tiver erros de transparência.
+As regras de transparência não são impostas até que a transparência seja calculada. Nesse momento, um <xref:System.InvalidOperationException> será gerado se uma regra de transparência for violada. A hora em que a transparência é calculada depende de vários fatores e não pode ser prevista. Ele é calculado o mais tarde possível. No .NET Framework 4, o cálculo de transparência no nível do assembly ocorre antes do que acontece no .NET Framework 2,0. A única garantia é que o cálculo de transparência ocorrerá no momento em que for necessário. Isso é semelhante a como o compilador JIT (just-in-time) pode alterar o ponto quando um método é compilado e quaisquer erros nesse método são detectados. O cálculo de transparência será invisível se o seu código não tiver erros de transparência.
 
 ## <a name="see-also"></a>Confira também
 
 - [Segurança-código Transparent, nível 1](security-transparent-code-level-1.md)
-- [Segurança-código Transparent, nível 2](security-transparent-code-level-2.md)
+- [Código transparente de segurança, nível 2](security-transparent-code-level-2.md)

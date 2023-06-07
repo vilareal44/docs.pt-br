@@ -3,7 +3,7 @@
   items:
     - name: Habilitando a depuração por anexação JIT
       href: enabling-jit-attach-debugging.md
-    - name: Facilitando a depuração de uma imagem
+    - name: Facilitar a depuração de uma imagem
       href: making-an-image-easier-to-debug.md
     - name: Rastreamento e instrumentação de aplicativos
       href: tracing-and-instrumenting-applications.md
@@ -16,15 +16,15 @@
           href: how-to-create-initialize-and-configure-trace-switches.md
         - name: Ouvintes de rastreamento
           href: trace-listeners.md
-        - name: Como usar TraceSource e filtros com ouvintes de rastreamento
+        - name: 'Como: usar TraceSource e filtros com ouvintes de rastreamento'
           href: how-to-use-tracesource-and-filters-with-trace-listeners.md
-        - name: Como criar e inicializar ouvintes de rastreamento
+        - name: 'Como: criar e inicializar ouvintes de rastreamento'
           href: how-to-create-and-initialize-trace-listeners.md
-        - name: Como criar e inicializar fontes de rastreamento
+        - name: 'Como: criar e inicializar fontes de rastreamento'
           href: how-to-create-and-initialize-trace-sources.md
-        - name: Como adicionar instruções de rastreamento ao código de um aplicativo
+        - name: 'Como: adicionar instruções de rastreamento ao código de um aplicativo'
           href: how-to-add-trace-statements-to-application-code.md
-        - name: Como compilar condicionalmente com Trace e Debug
+        - name: 'Como: compilar condicionalmente com Trace e Debug'
           href: how-to-compile-conditionally-with-trace-and-debug.md
     - name: Diagnosticando erros com assistentes de depuração gerenciados
       href: diagnosing-errors-with-managed-debugging-assistants.md

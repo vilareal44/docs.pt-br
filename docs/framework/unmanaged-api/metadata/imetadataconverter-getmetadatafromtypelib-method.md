@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 97dc3a56-adfa-431f-889e-06a35ac84d51
 topic_type:
 - apiref
-ms.openlocfilehash: 09a1605deda5b51be604c3b8f0c69fa5adcf9dc0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f8c0c2cb8dea8ad2b9c0040654122ef5942aca0
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175948"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008385"
 ---
 # <a name="imetadataconvertergetmetadatafromtypelib-method"></a>Método IMetaDataConverter::GetMetaDataFromTypeLib
-Obtém um ponteiro de interface para uma instância [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) que representa a `ITypeLib` assinatura de metadados da biblioteca de tipos representada pela instância especificada.  
+Obtém um ponteiro de interface para uma instância de [IMetaDataImport](imetadataimport-interface.md) que representa a assinatura de metadados da biblioteca de tipos representada pela `ITypeLib` instância especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,23 +34,23 @@ HRESULT GetMetaDataFromTypeLib (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pITL`  
- [em] Ponteiro para `ITypeLib` um objeto que representa a biblioteca do tipo.  
+ no Ponteiro para um `ITypeLib` objeto que representa a biblioteca de tipos.  
   
  `ppMDI`  
- [fora] Pointer para um local que `IMetaDataImport` recebe o endereço da instância que representa a assinatura de metadados.  
+ fora Ponteiro para um local que recebe o endereço da `IMetaDataImport` instância que representa a assinatura de metadados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Consulte [os requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataEmit](imetadataemit-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)

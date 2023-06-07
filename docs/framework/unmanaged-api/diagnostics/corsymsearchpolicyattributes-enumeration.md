@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 03abde84-930a-49d3-bac3-23abb34a0184
 topic_type:
 - apiref
-ms.openlocfilehash: 0cd451854d4dbb3b243339efdc33d7dcd7860eb7
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 8af71314cf8a24c710d3b8980c082daaf9186715
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420598"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501866"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>Enumeração CorSymSearchPolicyAttributes
-Especifica a política a ser usada ao fazer uma pesquisa por um leitor de símbolo. Essas constantes são usadas pelos métodos [ISymUnmanagedBinder2:: GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) e [ISymUnmanagedBinder3:: GetReaderFromCallback](isymunmanagedbinder3-getreaderfromcallback-method.md) .  
+Especifica a política a ser usada ao fazer uma pesquisa por um leitor de símbolo. Essas constantes são usadas pelos métodos [ISymUnmanagedBinder2:: GetReaderForFile2](isymunmanagedbinder2-getreaderforfile2-method.md) e [ISymUnmanagedBinder3:: GetReaderFromCallback](isymunmanagedbinder3-getreaderfromcallback-method.md) .  
   
 > [!IMPORTANT]
 > É um risco de segurança abrir um arquivo de banco de dados do programa (PDB) de uma fonte não confiável.  
@@ -51,6 +51,6 @@ typedef enum CorSymSearchPolicyAttributes
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Enumerações de armazenamento de símbolo de diagnóstico](diagnostics-symbol-store-enumerations.md)

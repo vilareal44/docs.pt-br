@@ -3,17 +3,17 @@ title: <filters>
 ms.date: 03/30/2017
 ms.assetid: 37a87222-ec78-4728-8105-9ca1bd961f0c
 ms.openlocfilehash: e4ce0452cc46a8f29334fa67f51f14b83290b1c8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69918882"
 ---
-# <a name="filters"></a>\<Filtros >
+# \<filters>
 
 O `filters` elemento contém uma coleção de filtros XPath usados para controlar que tipo de mensagem é registrada.
 
-Os filtros são aplicados somente na camada de transporte, especificada `logMessagesAtTransportLevel` por `true`is. O nível de serviço e o log de mensagens malformados não são afetados por filtros.
+Os filtros são aplicados somente na camada de transporte, especificada por `logMessagesAtTransportLevel` is `true` . O nível de serviço e o log de mensagens malformados não são afetados por filtros.
 
 Para adicionar um filtro à coleção, use a `add` palavra-chave. Quando um ou mais filtros são definidos, somente as mensagens que correspondem a pelo menos um dos filtros são registradas. Se nenhum filtro for definido, todas as mensagens passarão.
 
@@ -35,7 +35,7 @@ Veja a seguir um exemplo de como configurar um filtro que registra somente as me
 </messageLogging>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Configuration.DiagnosticSection>
 - <xref:System.ServiceModel.Diagnostics>

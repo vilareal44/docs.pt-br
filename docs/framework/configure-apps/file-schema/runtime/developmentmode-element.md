@@ -10,18 +10,18 @@ helpviewer_keywords:
 - <developmentMode> element
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 ms.openlocfilehash: 4a062da31740edb8f0c7a4f4db8b09800c687587
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73117626"
 ---
-# <a name="developmentmode-element"></a>Elemento de > de desenvolvimento do \<
+# <a name="developmentmode-element"></a>Elemento \<developmentMode>
 Especifica se o runtime pesquisa por assemblies em diretórios especificados pela variável de ambiente DEVPATH.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<developmentmode >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<developmentMode>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,10 +43,10 @@ Especifica se o runtime pesquisa por assemblies em diretórios especificados pel
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**true**|Pesquisa assemblies em diretórios especificados pela variável de ambiente DEVPATH.|  
-|**false**|Não pesquisa assemblies em diretórios especificados pela variável de ambiente DEVPATH. Este é o padrão|  
+|**false**|Não pesquisa assemblies em diretórios especificados pela variável de ambiente DEVPATH. Esse é o padrão.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -69,8 +69,8 @@ Especifica se o runtime pesquisa por assemblies em diretórios especificados pel
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de configurações do runtime](index.md)
 - [Esquema de arquivos de configuração](../index.md)
-- [Como localizar assemblies usando DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)
+- [Como: Localizar assemblies usando DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)

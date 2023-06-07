@@ -3,23 +3,23 @@ title: Elemento <scopedCertificates>
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
 ms.openlocfilehash: 3c06159709df0afe2a475de1e186b0114af32bc2
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70399951"
 ---
-# <a name="scopedcertificates-element"></a>\<Elemento de > scopedCertificates
+# <a name="scopedcertificates-element"></a>Elemento \<scopedCertificates>
 Representa uma coleção de certificados X. 509 fornecidos por serviços específicos (com escopo) para autenticação. Normalmente, essa coleção é usada para especificar os certificados de serviço para serviços de token de segurança em um cenário federado.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamentos >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de comportamento**](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de certificados**](servicecertificate-of-clientcredentials-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> scopedCertificates**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<clientCredentials>**](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceCertificate>**](servicecertificate-of-clientcredentials-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<scopedCertificates>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,7 +37,7 @@ Representa uma coleção de certificados X. 509 fornecidos por serviços especí
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -56,7 +56,7 @@ Representa uma coleção de certificados X. 509 fornecidos por serviços especí
   
  Se uma associação exigir um certificado para o serviço e nenhum certificado específico para a URL do serviço for encontrado no ScopedCertificates, o certificado padrão será usado.  
   
- Para obter mais informações, consulte a seção "certificados com escopo" [de como: Criar um cliente](../../../wcf/feature-details/how-to-create-a-federated-client.md)federado.  
+ Para obter mais informações, consulte a seção "certificados com escopo" de [como: criar um cliente federado](../../../wcf/feature-details/how-to-create-a-federated-client.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir especifica um certificado de serviço para o cliente usar ao se comunicar com pontos de extremidade cujo nome `http://www.contoso.com` de domínio está sobre o protocolo http.  
@@ -73,7 +73,7 @@ Representa uma coleção de certificados X. 509 fornecidos por serviços especí
 </serviceCertificate>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>
@@ -81,7 +81,7 @@ Representa uma coleção de certificados X. 509 fornecidos por serviços especí
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
 - [Trabalhando com certificados](../../../wcf/feature-details/working-with-certificates.md)
-- [Como: Criar um cliente federado](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [Como criar um cliente federado](../../../wcf/feature-details/how-to-create-a-federated-client.md)
 - [\<add>](add-of-scopedcertificates-element.md)
 - [Protegendo clientes](../../../wcf/securing-clients.md)
 - [Protegendo serviços e clientes](../../../wcf/feature-details/securing-services-and-clients.md)

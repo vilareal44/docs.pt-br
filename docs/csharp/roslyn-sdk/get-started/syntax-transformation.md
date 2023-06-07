@@ -3,12 +3,12 @@ title: Introdução à transformação de sintaxe (APIs Roslyn)
 description: Uma introdução pela travessia, consulta e percurso por árvores de sintaxe.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 232fe5fcba35f152dbc3f00b2f2c092b5df0dd35
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 5879dfd6ed0a5f6465829eec496d10cfcfd07362
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794787"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202116"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Introdução à transformação de sintaxe
 
@@ -30,11 +30,11 @@ Você escolhe uma das duas estratégias para transformações de sintaxe. Os **m
 
 A primeira transformação de sintaxe demonstra os métodos de fábrica. Substitua uma instrução `using System.Collections;` por uma instrução `using System.Collections.Generic;`. Este exemplo demonstra como você cria objetos <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> usando os métodos de fábrica <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType>. Para cada tipo de **nó**, **token**ou **trivia**, há um método de fábrica que cria uma instância desse tipo. Você cria árvores de sintaxe compondo os nós hierarquicamente de baixa para cima. Em seguida, você transformará o programa existente substituindo nós existentes pela nova árvore que você criou.
 
-Inicie o Visual Studio e crie um novo projeto de **Ferramenta de Análise de Código Autônoma** do C#. No Visual Studio, escolha **arquivo** > **novo** > **projeto** para exibir a caixa de diálogo novo projeto. Em**extensibilidade** do **Visual C#** > , escolha uma **ferramenta de análise de código**autônoma. Este guia de início rápido tem dois projetos de exemplo, portanto, nomeie a solução **SyntaxTransformationQuickStart** e nomeie o projeto **ConstructionCS**. Clique em **OK**.
+Inicie o Visual Studio e crie um novo projeto de **Ferramenta de Análise de Código Autônoma** do C#. No Visual Studio, escolha **arquivo**  >  **novo**  >  **projeto** para exibir a caixa de diálogo novo projeto. Em extensibilidade do **Visual C#**,  >  **Extensibility** escolha uma ferramenta de **análise de código**autônoma. Este guia de início rápido tem dois projetos de exemplo, portanto, nomeie a solução **SyntaxTransformationQuickStart** e nomeie o projeto **ConstructionCS**. Clique em **OK**.
 
 Este projeto usa os métodos de classe <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> para construir um <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> representando o namespace `System.Collections.Generic`.
 
-Adicione o seguinte usando a diretiva no topo do arquivo `Program.cs` para importar os métodos de fábrica da classe <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory> e os métodos de <xref:System.Console> para que você possa usá-los posteriormente sem qualificá-los:
+Adicione a seguinte diretiva using à parte superior do `Program.cs` .
 
 [!code-csharp[import the SyntaxFactory class](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#StaticUsings "import the Syntax Factory class and the System.Console class")]
 
@@ -94,9 +94,9 @@ Execute o programa novamente. Desta vez, a árvore importa corretamente o namesp
 
 Os métodos `With*` e <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> fornecem meios convenientes para transformar ramos individuais de uma árvore de sintaxe. A classe <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> realiza várias transformações em uma árvore de sintaxe. A classe <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> é uma subclasse de <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor%601?displayProperty=nameWithType>. O <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> aplica uma transformação a um tipo específico de <xref:Microsoft.CodeAnalysis.SyntaxNode>. Você pode aplicar transformações a vários tipos de objetos <xref:Microsoft.CodeAnalysis.SyntaxNode> sempre que eles aparecerem em uma árvore de sintaxe. O segundo projeto neste guia de início rápido cria uma refatoração de linha de comando que remove tipos explícitos em declarações de variáveis ​​locais em qualquer lugar em que a inferência de tipo possa ser usada.
 
-Crie um novo projeto **de ferramenta de análise de código autônomo** em C#. No Visual Studio, clique com o botão direito do mouse no nó da solução `SyntaxTransformationQuickStart`. Escolha **Adicionar** > **novo projeto** para exibir a **caixa de diálogo novo projeto**. Em**extensibilidade**do **Visual C#** > , escolha **ferramenta de análise de código autônoma**. Nomeie seu projeto como `TransformationCS` e clique em OK.
+Crie um novo projeto **de ferramenta de análise de código autônomo** em C#. No Visual Studio, clique com o botão direito do mouse no nó da solução `SyntaxTransformationQuickStart`. Escolha **Adicionar**  >  **novo projeto** para exibir a **caixa de diálogo novo projeto**. Em extensibilidade do **Visual C#**  >  **Extensibility**, escolha **ferramenta de análise de código autônoma**. Nomeie seu projeto como `TransformationCS` e clique em OK.
 
-A primeira etapa é criar uma classe que deriva de <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> para executar as transformações. Adicione um novo arquivo de classe ao projeto. No Visual Studio, escolha **projeto** > **Adicionar classe...**. No tipo `TypeInferenceRewriter.cs` de caixa de diálogo **Adicionar novo item** como o nome do arquivo.
+A primeira etapa é criar uma classe que deriva de <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> para executar as transformações. Adicione um novo arquivo de classe ao projeto. No Visual Studio, escolha **projeto**  >  **Adicionar classe...**. No tipo de caixa de diálogo **Adicionar novo item** `TypeInferenceRewriter.cs` como o nome do arquivo.
 
 Adicione o seguinte usando diretivas ao arquivo `TypeInferenceRewriter.cs`:
 
@@ -174,10 +174,10 @@ Dentro da instrução `foreach` criada, adicione o seguinte código para executa
 
 Você deve ver rabiscos abaixo do código `File.WriteAllText`. Selecione a lâmpada e adicione a instrução `using System.IO;` necessária.
 
-Você está quase lá! Há uma etapa à esquerda: Criando um teste <xref:Microsoft.CodeAnalysis.Compilation>. Como você não usou a inferência de tipos durante este guia de início rápido, este seria um caso de teste perfeito. Infelizmente, criar uma compilação a partir de um arquivo de projeto C# está além do escopo desta explicação passo a passo. Mas, felizmente, se você está seguindo as instruções cuidadosamente, há esperança. Substitua o conteúdo do método de `CreateTestCompilation` com o código a seguir. Ele cria uma compilação de teste que combina coincidentemente com o projeto descrito neste guia de início rápido:
+Você está quase lá! Há uma etapa à esquerda: Criando um teste <xref:Microsoft.CodeAnalysis.Compilation> . Como você não usou a inferência de tipos durante este guia de início rápido, este seria um caso de teste perfeito. Infelizmente, criar uma compilação a partir de um arquivo de projeto C# está além do escopo desta explicação passo a passo. Mas, felizmente, se você está seguindo as instruções cuidadosamente, há esperança. Substitua o conteúdo do método de `CreateTestCompilation` com o código a seguir. Ele cria uma compilação de teste que combina coincidentemente com o projeto descrito neste guia de início rápido:
 
 [!code-csharp[CreateTestCompilation](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#CreateTestCompilation "Create a test compilation using the code written for this quickstart.")]
 
-Cruze os dedos e execute o projeto. No Visual Studio, escolha **depurar** > **Iniciar Depuração**. O Visual Studio exibirá um aviso dizendo que os arquivos em seu projeto foram alterados. Clique em "**Sim para Todos**" para recarregar os arquivos modificados. Examine-os para observar sua grandiosidade. Observe como o código parece mais limpo sem todos os especificadores de tipo explícitos e redundantes.
+Cruze os dedos e execute o projeto. No Visual Studio, escolha **depurar**  >  **Iniciar Depuração**. O Visual Studio exibirá um aviso dizendo que os arquivos em seu projeto foram alterados. Clique em "**Sim para Todos**" para recarregar os arquivos modificados. Examine-os para observar sua grandiosidade. Observe como o código parece mais limpo sem todos os especificadores de tipo explícitos e redundantes.
 
 Parabéns! Você usou as **APIs do compilador** para criar sua própria refatoração que pesquisa todos os arquivos em um projeto C# para determinados padrões sintáticos, analisa a semântica do código-fonte que corresponde a esses padrões e os transforma. Agora você é oficialmente um autor de refatoração!

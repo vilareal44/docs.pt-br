@@ -1,5 +1,6 @@
 ---
 title: Cancelamento em threads gerenciados
+description: Entenda o cancelamento em threads gerenciados. Saiba mais sobre tokens de cancelamento no cancelamento cooperativo de operações síncronas ou de execução longa.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: d4bbf30923d65ad7aeced80efa626136ae27491b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9af4a64e50eff65023d5ed5bda868af2f8323a96
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138136"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662830"
 ---
 # <a name="cancellation-in-managed-threads"></a>Cancelamento em threads gerenciados
 A partir do .NET Framework 4, o .NET Framework usa um modelo unificado para cancelamento cooperativo de operações assíncronas ou síncronas de longa execução. Este modelo é baseado em um objeto leve chamado token de cancelamento. O objeto que invoca uma ou mais operações canceláveis, por exemplo criando novos tópicos ou tarefas, passa o token para cada operação. As operações individuais podem, por sua vez, passar cópias do token para outras operações. Posteriormente, o objeto que criou o token pode usá-lo para solicitar que as operações parem o que estão fazendo. Somente o objeto solicitante pode emitir a solicitação de cancelamento, e cada ouvinte é responsável por perceber a solicitação e respondê-la de forma apropriada e oportuna.  
@@ -33,7 +34,7 @@ A partir do .NET Framework 4, o .NET Framework usa um modelo unificado para canc
   
  A ilustração a seguir mostra o relacionamento entre uma fonte de token e todas as cópias de seu token.  
   
- ![CancelamentoTokenFonte e tokens de cancelamento](../../../docs/standard/threading/media/vs-cancellationtoken.png "VS_CancellationToken")  
+ ![Tokens de CancellationTokenSource e cancelamento](media/vs-cancellationtoken.png "VS_CancellationToken")  
   
  O novo modelo de cancelamento facilita a criação de aplicativos e bibliotecas com reconhecimento de cancelamento, e ele dá suporte aos seguintes recursos:  
   
@@ -64,7 +65,7 @@ A partir do .NET Framework 4, o .NET Framework usa um modelo unificado para canc
  No exemplo a seguir, o objeto solicitante cria um objeto <xref:System.Threading.CancellationTokenSource> e, em seguida, passa sua propriedade <xref:System.Threading.CancellationTokenSource.Token%2A> para a operação cancelável. A operação que recebe a solicitação monitora o valor da propriedade <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> do token por sondagem. Quando o valor se torna `true`, o ouvinte pode concluir de qualquer maneira apropriada. Neste exemplo, o método apenas sai, que é tudo necessário em muitos casos.  
   
 > [!NOTE]
-> O exemplo usa o método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> para demonstrar que a nova estrutura de cancelamento é compatível com as APIs legadas. Para um exemplo que usa o tipo <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> novo e preferido, confira [Como cancelar uma tarefa e seus filhos](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
+> O exemplo usa o método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> para demonstrar que a nova estrutura de cancelamento é compatível com as APIs legadas. Para um exemplo que usa o tipo <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> novo e preferido, confira [Como cancelar uma tarefa e seus filhos](../parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
  [!code-csharp[Cancellation#1](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex1.cs#1)]
  [!code-vb[Cancellation#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex1.vb#1)]  
@@ -84,7 +85,7 @@ A partir do .NET Framework 4, o .NET Framework usa um modelo unificado para canc
   
  No entanto, em casos mais complexos, pode ser necessário que o delegado do usuário notifique ao código da biblioteca que ocorreu o cancelamento. Nesses casos, a maneira correta de concluir a operação é o delegado chamar o método <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>, que fará com que um <xref:System.OperationCanceledException> seja lançado. O código da biblioteca pode capturar essa exceção no thread do delegado de usuário e examinar o token da exceção para determinar se a exceção indica cancelamento cooperativo ou alguma outra situação excepcional.  
   
- A classe <xref:System.Threading.Tasks.Task> lida com o <xref:System.OperationCanceledException> dessa forma. Para obter mais informações, consulte [Cancelamento de tarefas](../../../docs/standard/parallel-programming/task-cancellation.md).  
+ A classe <xref:System.Threading.Tasks.Task> lida com o <xref:System.OperationCanceledException> dessa forma. Para obter mais informações, consulte [Cancelamento de tarefas](../parallel-programming/task-cancellation.md).  
   
 ### <a name="listening-by-polling"></a>Detectar por sondagem  
  Para cálculos de longa execução que fazem loop ou repetição, você pode detectar uma solicitação de cancelamento periodicamente pesquisando o valor da propriedade <xref:System.Threading.CancellationToken.IsCancellationRequested%2A?displayProperty=nameWithType>. Se o valor for `true`, o método deve ser limpo e concluído o mais rápido possível. A frequência de pesquisa ideal depende do tipo de aplicativo. Cabe ao desenvolvedor determinar a melhor frequência de sondagem para qualquer programa. A sondagem em si não afeta o desempenho significativamente. O exemplo a seguir mostra uma abordagem possível para a sondagem.  
@@ -92,7 +93,7 @@ A partir do .NET Framework 4, o .NET Framework usa um modelo unificado para canc
  [!code-csharp[Cancellation#3](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex11.cs#3)]
  [!code-vb[Cancellation#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex11.vb#3)]  
   
- Para um exemplo mais completo, confira [Como detectar solicitações de cancelamento por sondagem](../../../docs/standard/threading/how-to-listen-for-cancellation-requests-by-polling.md).  
+ Para um exemplo mais completo, confira [Como detectar solicitações de cancelamento por sondagem](how-to-listen-for-cancellation-requests-by-polling.md).  
   
 ### <a name="listening-by-registering-a-callback"></a>Ouvir ao registrar um retorno de chamada  
  Algumas operações podem ser bloqueadas de tal forma que não podem verificar o valor do token de cancelamento em tempo hábil. Para esses casos, você pode registrar um método de retorno de chamada que desbloqueia o método quando um pedido de cancelamento é recebido.  
@@ -112,7 +113,7 @@ A partir do .NET Framework 4, o .NET Framework usa um modelo unificado para canc
   
 - Os retornos de chamada não devem executar qualquer thread manual ou uso de <xref:System.Threading.SynchronizationContext> em um retorno de chamada. Se um retorno de chamada deve ser executado em um thread específico, use o construtor <xref:System.Threading.CancellationTokenRegistration?displayProperty=nameWithType> que permite especificar que o destino syncContext é o <xref:System.Threading.SynchronizationContext.Current%2A?displayProperty=nameWithType> ativo. Realizar threading manual em um retorno de chamada pode causar um deadlock.  
   
- Para um exemplo mais completo, confira [Como registrar retornos de chamada para solicitações de cancelamento](../../../docs/standard/threading/how-to-register-callbacks-for-cancellation-requests.md).  
+ Para um exemplo mais completo, confira [Como registrar retornos de chamada para solicitações de cancelamento](how-to-register-callbacks-for-cancellation-requests.md).  
   
 ### <a name="listening-by-using-a-wait-handle"></a>Ouvir usando um identificador de espera  
  Quando uma operação cancelável pode bloquear enquanto aguarda um primitivo de sincronização, como <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> ou <xref:System.Threading.Semaphore?displayProperty=nameWithType>, você pode usar a propriedade <xref:System.Threading.CancellationToken.WaitHandle%2A?displayProperty=nameWithType> para permitir que a operação aguarde o evento e a solicitação de cancelamento. O identificador de espera do token de cancelamento será sinalizado em resposta a um pedido de cancelamento e o método pode usar o valor de retorno do método <xref:System.Threading.WaitHandle.WaitAny%2A> para determinar se foi o token de cancelamento que sinalizou. A operação poderá, em seguida, simplesmente sair ou lançar um <xref:System.OperationCanceledException>, conforme apropriado.  
@@ -125,7 +126,7 @@ A partir do .NET Framework 4, o .NET Framework usa um modelo unificado para canc
  [!code-csharp[Cancellation#6](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#6)]
  [!code-vb[Cancellation#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#6)]  
   
- Para um exemplo mais completo, confira [Como detectar solicitações de cancelamento que possuem identificadores de espera](../../../docs/standard/threading/how-to-listen-for-cancellation-requests-that-have-wait-handles.md).  
+ Para um exemplo mais completo, confira [Como detectar solicitações de cancelamento que possuem identificadores de espera](how-to-listen-for-cancellation-requests-that-have-wait-handles.md).  
   
 ### <a name="listening-to-multiple-tokens-simultaneously"></a>Detectar vários tokens simultaneamente  
  Em alguns casos, um ouvinte pode ter que detectar vários tokens de cancelamento simultaneamente. Por exemplo, uma operação cancelável pode ter que monitorar um token de cancelamento interno, além de um token passado externamente como um argumento para um parâmetro de método. Para fazer isso, crie uma fonte de token vinculada que pode juntar dois ou mais tokens em um token, como mostrado no exemplo a seguir.  
@@ -133,7 +134,7 @@ A partir do .NET Framework 4, o .NET Framework usa um modelo unificado para canc
  [!code-csharp[Cancellation#7](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex13.cs#7)]
  [!code-vb[Cancellation#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex13.vb#7)]  
   
- Observe que você deve chamar `Dispose` na fonte de token vinculada quando concluir. Para um exemplo mais completo, confira [Como detectar múltiplas solicitações de cancelamento](../../../docs/standard/threading/how-to-listen-for-multiple-cancellation-requests.md).  
+ Observe que você deve chamar `Dispose` na fonte de token vinculada quando concluir. Para um exemplo mais completo, confira [Como detectar múltiplas solicitações de cancelamento](how-to-listen-for-multiple-cancellation-requests.md).  
   
 ## <a name="cooperation-between-library-code-and-user-code"></a>Cooperação entre o código de biblioteca e o código do usuário  
  A estrutura de cancelamento unificada permite que o código da biblioteca cancele o código do usuário e que o código do usuário cancele o código da biblioteca de forma cooperativa. A cooperação sem problemas depende da conformidade com as seguintes diretrizes:  
@@ -144,8 +145,8 @@ A partir do .NET Framework 4, o .NET Framework usa um modelo unificado para canc
   
 - Os delegados de usuários devem tentar responder as solicitações de cancelamento do código da biblioteca em tempo hábil.  
   
- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> são exemplos de classes que seguem essas diretrizes. Para obter mais informações, consulte [Cancelamento de Tarefas](../../../docs/standard/parallel-programming/task-cancellation.md) e [Como: Cancelar uma Consulta PLINQ](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
+ <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> são exemplos de classes que seguem essas diretrizes. Para obter mais informações, consulte [cancelamento de tarefas](../parallel-programming/task-cancellation.md) e [como: cancelar uma consulta PLINQ](../parallel-programming/how-to-cancel-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Confira também
 
-- [Noções básicas de rosca gerenciadas](../../../docs/standard/threading/managed-threading-basics.md)
+- [Noções básicas sobre Threading gerenciado](managed-threading-basics.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed5b5b58-7db7-46b5-9e2c-278db7159cee
 topic_type:
 - apiref
-ms.openlocfilehash: e6534c3085b70b590c2dcc3f50cf0253bd5e6682
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b5f6d7d40274972438a01313bc6aaec475b8e0c6
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134749"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805084"
 ---
 # <a name="igcthreadcontrolthreadisblockingforsuspension-method"></a>Método IGCThreadControl::ThreadIsBlockingForSuspension
 Notifica o host que o thread que está fazendo a chamada está prestes a bloquear, talvez para uma coleta de lixo ou outra suspensão.  
@@ -32,17 +32,17 @@ HRESULT ThreadIsBlockingForSuspension ( );
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O host pode escolher dentro do `ThreadIsBlockingForSuspension` retorno de chamada se for reagendado um thread.  
+ O host pode escolher dentro do `ThreadIsBlockingForSuspension` retorno de chamada se você deseja reagendar um thread.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)
+- [Interface IGCThreadControl](igcthreadcontrol-interface.md)

@@ -2,23 +2,23 @@
 title: System.ServiceModel.DroppedAMessage
 ms.date: 03/30/2017
 ms.assetid: a299401f-2983-45ea-b4f3-963bece3602e
-ms.openlocfilehash: 1d91aef87befa7f35615425fe08bc65be0690096
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dfe748f9bc2cfd9e8099181b0596e4a5147da33
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61595719"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596032"
 ---
 # <a name="systemservicemodeldroppedamessage"></a>System.ServiceModel.DroppedAMessage
 System.ServiceModel.DroppedAMessage  
   
 ## <a name="description"></a>Descrição  
- Uma mensagem de resposta foi recebida, mas não há solicitações pendentes aguardando a mensagem. A mensagem está sendo descartada pelo tempo de execução do Windows Communication Foundation (WCF).  
+ Uma mensagem de resposta foi recebida, mas não há solicitações pendentes aguardando esta mensagem. A mensagem está sendo descartada pelo tempo de execução do Windows Communication Foundation (WCF).  
   
- Este rastreamento pode ser usado para depuração de mensagens perdidas.  
+ Esse rastreamento pode ser usado para depurar mensagens perdidas.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Rastreamento](index.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](using-tracing-to-troubleshoot-your-application.md)
+- [Administração e diagnóstico](../index.md)

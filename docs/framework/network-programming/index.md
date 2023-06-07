@@ -1,5 +1,6 @@
 ---
 title: Programação de rede no .NET Framework
+description: Use esses recursos para integrar a implementação em camadas, extensível e gerenciada dos serviços de Internet fornecidos pelo .NET Framework em seus aplicativos.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Networking
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 1e7f0123ab07fd4e83eea957b72bf79eeeecef2b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 117fce887a04def7f9b3f7654a8e9e675ea462d2
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74204688"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502399"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Programação de rede no .NET Framework
 O Microsoft .NET Framework fornece uma implementação dos serviços de Internet em camadas, extensível e gerenciada que pode ser rápida e facilmente integrada aos aplicativos. Os aplicativos de rede podem compilar em protocolos conectáveis para usufruir automaticamente de novos protocolos da Internet ou podem usar uma implementação gerenciada da interface de soquete do Windows para trabalhar com a rede a nível de soquete.  
@@ -31,7 +32,7 @@ O Microsoft .NET Framework fornece uma implementação dos serviços de Internet
  [Usando protocolos de aplicativo](using-application-protocols.md)  
  Descreve aplicativos de programação que se beneficiam de protocolos de rede como o TCP, UDP e HTTP.  
   
- [Protocolo da Internet Versão 6](internet-protocol-version-6.md)  
+ [Protocolo IP versão 6](internet-protocol-version-6.md)  
  Descreve as vantagens do Protocolo de Internet versão 6 (IPv6) sob a versão atual do pacote do Protocolo de Internet (IPv4), descreve o endereçamento do IPv6, o roteamento e a configuração automática e também como habilitar e desabilitar o IPv6.  
   
  [Configuring Internet Applications](configuring-internet-applications.md) (Configurando aplicativos da Internet)  
@@ -49,13 +50,13 @@ O Microsoft .NET Framework fornece uma implementação dos serviços de Internet
  [Melhores práticas para classes System.Net](best-practices-for-system-net-classes.md)  
  Fornece dicas e truques para obter o máximo dos aplicativos da Internet.  
   
- [Acessando a Internet através de um proxy](accessing-the-internet-through-a-proxy.md)  
+ [Acessando a Internet por meio de um proxy](accessing-the-internet-through-a-proxy.md)  
  Descreve como configurar proxies.  
   
  [NetworkInformation](networkinformation.md)  
  Descreve como coletar informações sobre eventos, alterações, estatísticas e propriedades de rede e também explica como determinar se um host remoto é acessível usando a classe <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType>.  
   
- [Alterações no namespace system.uri na versão 2.0](changes-to-the-system-uri-namespace-in-version-2-0.md)  
+ [Alterações no namespace System. URI na versão 2,0](changes-to-the-system-uri-namespace-in-version-2-0.md)  
  Descreve várias alterações feitas na classe <xref:System.Uri?displayProperty=nameWithType> na versão 2.0 para comportamento fixo incorreto; aprimora a usabilidade e a segurança.  
   
  [Suporte ao International Resource Identifier em System.Uri](international-resource-identifier-support-in-system-uri.md)  
@@ -80,7 +81,7 @@ O Microsoft .NET Framework fornece uma implementação dos serviços de Internet
  Descreve os aprimoramentos adicionados ao <xref:System.Net?displayProperty=nameWithType>, <xref:System.Net.NetworkInformation?displayProperty=nameWithType> e namespaces <xref:System.Net.Sockets?displayProperty=nameWithType> para oferecer suporte à NAT transversal usando o IPv6 e o Teredo.  
   
  [Isolamento de rede para Aplicativos da Windows Store](network-isolation-for-windows-store-apps.md)  
- Descreve o impacto do isolamento da <xref:System.Net> <xref:System.Net.Http>rede <xref:System.Net.Http.Headers> quando as classes no , e os namespaces são usados em aplicativos do Windows 8.x Store.  
+ Descreve o impacto do isolamento de rede quando as classes <xref:System.Net> nos <xref:System.Net.Http> <xref:System.Net.Http.Headers> namespaces, e são usadas em aplicativos da loja do Windows 8. x.  
   
  [Amostras de programação de rede](network-programming-samples.md)  
  Vincula-se a amostras para download de programação de rede que usam classes nos namespaces <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets>.  

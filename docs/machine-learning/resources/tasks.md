@@ -2,20 +2,20 @@
 title: Tarefas de aprendizado de máquina
 description: Explore as diferentes tarefas de aprendizado de máquina e as tarefas associadas compatíveis com o ML.NET.
 ms.date: 12/23/2019
-ms.openlocfilehash: 6cd41065e668375537b9816ef7a208a65e0a523b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6e36bd65dbadb8cb7b8edbf9e2e82071c208378
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399199"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144442"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Tarefas de aprendizado de máquina no ML.NET
 
-Uma tarefa de aprendizagem de máquina é o tipo de previsão ou inferência que está sendo feita, com base no problema ou pergunta que está sendo feita, e nos dados disponíveis. Por exemplo, a tarefa de classificação atribui dados a categorias e os grupos de tarefas de agrupamento de acordo com a similaridade.
+Uma tarefa de aprendizado de máquina é o tipo de previsão ou inferência que está sendo feita, com base no problema ou na pergunta que está sendo solicitada e nos dados disponíveis. Por exemplo, a tarefa de classificação atribui dados a categorias e a tarefa de clustering agrupa os dados de acordo com a similaridade.
 
 As tarefas de aprendizado de máquina dependem de padrões nos dados em vez de serem programadas explicitamente.
 
-Este artigo descreve as diferentes tarefas de aprendizado de máquina que você pode escolher em ML.NET e alguns casos de uso comum.
+Este artigo descreve as diferentes tarefas de aprendizado de máquina que você pode escolher em ML.NET e alguns casos de uso comuns.
 
 Depois de decidir a tarefa ideal para seu cenário, será preciso escolher o melhor algoritmo para treinar seu modelo. Os algoritmos disponíveis são listados na seção para cada tarefa.
 
@@ -26,7 +26,7 @@ Uma tarefa de [aprendizado de máquina supervisionado](glossary.md#supervised-ma
 * [Reconhece](../tutorials/sentiment-analysis.md) como "positivo" ou "negativo".
 * Diagnosticar se um paciente tem uma determinada doença ou não.
 * Tomar a decisão de marcar um email como "spam" ou não.
-* Determinar se uma foto contém um item específico ou não, como um cão ou uma fruta.
+* Determinar se uma foto contém um item específico ou não, como um cão ou frutas.
 
 Para obter mais informações, consulte o artigo [Classificação binária](https://en.wikipedia.org/wiki/Binary_classification) na Wikipédia.
 
@@ -54,7 +54,7 @@ Para obter melhores resultados com a classificação binária, os dados de trein
 Os dados da coluna de rótulo de entrada devem ser <xref:System.Boolean>.
 Os dados da coluna de recursos de entrada devem ser um vetor de tamanho fixo de <xref:System.Single>.
 
-Estes treinadores saem das seguintes colunas:
+Esses treinadores geram as seguintes colunas:
 
 | Nome da Coluna de Saída | Tipo de coluna | Descrição|
 | -- | -- | -- |
@@ -72,7 +72,7 @@ Uma tarefa de [aprendizado de máquina supervisionado](glossary.md#supervised-ma
 Para obter mais informações, consulte o artigo [Classificação multiclasse](https://en.wikipedia.org/wiki/Multiclass_classification) na Wikipédia.
 
 >[!NOTE]
->Uma vs todas as atualizações de [aprendizes de classificação binária](#binary-classification) para atuar em conjuntos de dados multiclasse. Mais informações em [Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest).
+>Uma vs todas as atualizações de [aprendizes de classificação binária](#binary-classification) para atuar em conjuntos de dados multiclasse. Mais informações sobre a [Wikipédia](https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest).
 
 ### <a name="multiclass-classification-trainers"></a>Treinadores de classificação multiclasse
 
@@ -94,10 +94,10 @@ A coluna de recursos deve ser um vetor de tamanho fixo de <xref:System.Single>.
 
 Este treinador produz o seguinte:
 
-| Nome de saída | Type | Descrição|
+| Nome de saída | Type | Description|
 | -- | -- | -- |
 | `Score` | Vetor de <xref:System.Single> | As pontuações de todas as classes. Um valor mais alto significa maior probabilidade de se enquadrar na classe associada. Se o elemento iº elemento tiver o maior valor, o índice de rótulo previsto será i. Observe que i é o índice baseado em zero. |
-| `PredictedLabel` | tipo [de chave](xref:Microsoft.ML.Data.KeyDataViewType) | O índice do rótulo previsto. Se seu valor for i, o rótulo real será a iº categoria no tipo de rótulo de entrada com valor de chave. |
+| `PredictedLabel` | tipo de [chave](xref:Microsoft.ML.Data.KeyDataViewType) | O índice do rótulo previsto. Se seu valor for i, o rótulo real será a iº categoria no tipo de rótulo de entrada com valor de chave. |
 
 ## <a name="regression"></a>Regressão
 
@@ -127,7 +127,7 @@ Os dados da coluna de rótulo de entrada devem ser <xref:System.Single>.
 
 Os treinadores para esta tarefa produzem a seguinte saída:
 
-| Nome de saída | Type | Descrição|
+| Nome de saída | Type | Description|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | A pontuação bruta prevista pelo modelo |
 
@@ -154,7 +154,7 @@ Este treinador produz o seguinte:
 | Nome de saída | Type | Descrição|
 | -- | -- | -- |
 | `Score` | vetor de <xref:System.Single> | As distâncias do ponto de dados fornecido para todos os centroides |
-| `PredictedLabel` | tipo [de chave](xref:Microsoft.ML.Data.KeyDataViewType) | O índice do cluster mais próximo previsto pelo modelo. |
+| `PredictedLabel` | tipo de [chave](xref:Microsoft.ML.Data.KeyDataViewType) | O índice do cluster mais próximo previsto pelo modelo. |
 
 ## <a name="anomaly-detection"></a>Detecção de anomalias
 
@@ -186,7 +186,7 @@ Este treinador produz o seguinte:
 | Nome de saída | Type | Descrição|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | A pontuação não negativa não associada calculada pelo modelo de detecção de anomalias |
-| `PredictedLabel` | <xref:System.Boolean> | Um valor verdadeiro/falso representando se a entrada é uma anomalia (PredictedLabel=true) ou não (PredictedLabel=false) |
+| `PredictedLabel` | <xref:System.Boolean> | Um valor true/false que representa se a entrada é uma anomalia (PredictedLabel = true) ou não (PredictedLabel = false) |
 
 ## <a name="ranking"></a>Classificação
 
@@ -223,9 +223,9 @@ Você pode treinar um modelo de recomendação usando os seguintes algoritmos:
 
 ## <a name="forecasting"></a>Previsão
 
-A tarefa de previsão usa dados de séries tempois passadas para fazer previsões sobre o comportamento futuro. Os cenários aplicáveis à previsão incluem previsão do tempo, previsões sazonais de vendas e manutenção preditiva,
+A tarefa de previsão usa dados de série temporal anteriores para fazer previsões sobre o comportamento futuro. Os cenários aplicáveis à previsão incluem previsão do tempo, previsões de vendas sazonais e manutenção preditiva,
 
-### <a name="forecasting-trainers"></a>Treinadores de previsão
+### <a name="forecasting-trainers"></a>Prevendo treinadores
 
 Você pode treinar um modelo de previsão com o seguinte algoritmo:
 

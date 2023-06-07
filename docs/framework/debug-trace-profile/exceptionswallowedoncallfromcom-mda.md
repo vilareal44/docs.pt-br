@@ -1,5 +1,6 @@
 ---
 title: MDA exceptionSwallowedOnCallFromCom
+description: Examine o assistente de depuração gerenciada do exceptionSwallowedOnCallFromCOM no .NET. Esse MDA ocorre se uma exceção foi lançada, mas não há uma boa maneira de relatá-la.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - messages, informational
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), exceptions
 - ExceptionSwallowedOnCallFromCOM MDA
 ms.assetid: 55d6ab12-f251-4aab-aa64-aacbe9d9f974
-ms.openlocfilehash: 4ccb03c9a8a473c10f15b00e64810b04f21504c9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 434f06cf953147d5c245e625db997bed6dbef700
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217518"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415947"
 ---
 # <a name="exceptionswallowedoncallfromcom-mda"></a>MDA exceptionSwallowedOnCallFromCom
 O `exceptionSwallowedOnCallFromCOM` MDA (assistente para depuração gerenciada) é ativado quando uma exceção é lançada do código do CLR (Common Language Runtime) chamado do COM por meio de um método que não tem um tipo de retorno HRESULT não gerenciado.  
@@ -44,8 +45,8 @@ O `exceptionSwallowedOnCallFromCOM` MDA (assistente para depuração gerenciada)
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling de interoperabilidade](../interop/interop-marshaling.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Realizando marshaling de interoperabilidade](../interop/interop-marshaling.md)

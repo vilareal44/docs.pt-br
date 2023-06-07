@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: 481d3f7b87dbe874de010825c3c7f052e4bc33c0
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: af616c2381b993f86296cbfa43a01ba2f9e000c2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738748"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401856"
 ---
 # <a name="while-c-reference"></a>while (Referência de C#)
 
@@ -22,13 +22,13 @@ A qualquer momento dentro do bloco de instruções `while`, interrompa o loop us
 
 Você pode seguir diretamente para a avaliação da expressão `while` usando a instrução [continue](continue.md). Se a expressão for avaliada como `true`, a execução continuará na primeira instrução do loop. Caso contrário, a execução continuará na primeira instrução após o loop.
 
-Você também pode `while` sair de um loop pelas declarações [goto](goto.md), [return](return.md)ou [throw.](throw.md)
+Você também pode sair de um `while` loop pelas instruções [goto](goto.md), [Return](return.md)ou [throw](throw.md) .
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra o uso da instrução `while`. Selecione **Executar** para executar o código de exemplo. Depois disso, você pode modificar o código e executá-lo novamente.
 
-[!code-csharp-interactive[while loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#3)]
+[!code-csharp-interactive[while loop example](snippets/IterationKeywordsExamples.cs#3)]
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 
@@ -36,7 +36,7 @@ Para saber mais, confira a seção [A instrução while](~/_csharplang/spec/stat
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
-- [C# Palavras-chave](index.md)
-- [fazer declaração](do.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
+- [Palavras-chave do C#](index.md)
+- [instrução do](do.md)

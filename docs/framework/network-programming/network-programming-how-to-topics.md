@@ -1,5 +1,6 @@
 ---
 title: Tópicos explicativos de programação de rede
+description: Use esses artigos de instruções para saber mais sobre facetas diferentes da programação de rede no .NET Framework.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - network resources
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: 5f8f1a3ca9aaf4bea56f342857d2df0bb18a9ba8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f091f0f675fcf22cb7c6be83a5766fcc8d279be7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047628"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502269"
 ---
 # <a name="network-programming-how-to-topics"></a>Tópicos explicativos de programação de rede
 A lista a seguir inclui links para os tópicos Como fazer encontrados na documentação conceitual para programação de rede.  
@@ -39,13 +40,13 @@ A lista a seguir inclui links para os tópicos Como fazer encontrados na documen
   
 - [Como criar um soquete](how-to-create-a-socket.md)  
   
-- [Como: Baixar arquivos com FTP](how-to-download-files-with-ftp.md)  
+- [Como: baixar arquivos com FTP](how-to-download-files-with-ftp.md)  
   
-- [Como: Carregar arquivos com FTP](how-to-upload-files-with-ftp.md)  
+- [Como: carregar arquivos com FTP](how-to-upload-files-with-ftp.md)  
   
-- [Como: Listar conteúdo de diretório com FTP](how-to-list-directory-contents-with-ftp.md)  
+- [Como: listar o conteúdo do diretório com FTP](how-to-list-directory-contents-with-ftp.md)  
   
- **Protocolo da Internet Versão 6:**  
+ **Protocolo IP versão 6:**  
   
 - [Como modificar o arquivo de configuração do computador para habilitar o suporte a IPv6](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)  
   
@@ -59,7 +60,7 @@ A lista a seguir inclui links para os tópicos Como fazer encontrados na documen
   
 - [Como definir uma política de cache baseada em tempo padrão para um aplicativo](how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
   
-- [Como: Personalizar uma política de cache baseada no tempo](how-to-customize-a-time-based-cache-policy.md)  
+- [Como personalizar uma política de cache com base no tempo](how-to-customize-a-time-based-cache-policy.md)  
   
 - [Como definir uma política de cache para uma solicitação](how-to-set-cache-policy-for-a-request.md)  
   
@@ -69,7 +70,7 @@ A lista a seguir inclui links para os tópicos Como fazer encontrados na documen
   
 - [Como substituir uma seleção de proxy global](how-to-override-a-global-proxy-selection.md)  
   
- **Informações da rede:**  
+ **Informações de rede:**  
   
 - [Como detectar a disponibilidade de rede e alterações de endereço](how-to-detect-network-availability-and-address-changes.md)  
   
@@ -79,6 +80,6 @@ A lista a seguir inclui links para os tópicos Como fazer encontrados na documen
   
 ## <a name="see-also"></a>Confira também
 
-- [Programação de rede no Framework .NET](index.md)
+- [Programação de rede no .NET Framework](index.md)
 - [Amostras de programação de rede](network-programming-samples.md)
 - [Exemplos de rede do .NET na Galeria de Códigos do MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

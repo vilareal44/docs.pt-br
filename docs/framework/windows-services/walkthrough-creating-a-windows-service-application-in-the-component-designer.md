@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: criar um aplicativo de serviço do Windows'
+description: Neste tutorial, crie um aplicativo de serviço do Windows no Visual Studio que grava mensagens em um log de eventos. Adicionar recursos, definir status, adicionar instaladores e muito mais.
 ms.date: 03/27/2019
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: e5ff40d8413acf64e7a8a129a7b268f58780d591
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 487a974af2280a02b83fe685324c9464df705585
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053478"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925625"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Tutorial: criar um aplicativo de serviço do Windows
 
@@ -51,7 +52,7 @@ Renomeie o serviço de **Service1** para **MyNewService**.
 
 2. Na janela pop-up, selecione **Sim**.
 
-    ![Prompt Renomear](./media/windows-service-rename.png "Prompt Renomear o serviço Windows")
+    ![Renomear prompt](./media/windows-service-rename.png "Prompt de renomeação de serviço do Windows")
 
 3. Na guia **Design**, selecione **Propriedades** no menu de atalho. Na janela **Propriedades**, altere o valor **ServiceName** para *MyNewService*.
 
@@ -340,7 +341,7 @@ Antes de executar um serviço Windows, é necessário instalá-lo, o que o regis
 
      Esse texto é exibido na coluna **Descrição** da janela **Serviços** e descreve o serviço para o usuário.
 
-    ![Descrição do serviço na janela Serviços.](./media/windows-service-description.png "Descrição do serviço")
+    ![Descrição do serviço na janela serviços.](./media/windows-service-description.png "Descrição do serviço")
 
 6. Adicione o texto à propriedade <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A>. Por exemplo, *Nome de Exibição do MyNewService*.
 
@@ -350,7 +351,7 @@ Antes de executar um serviço Windows, é necessário instalá-lo, o que o regis
 
 8. Quando terminar, as janelas **Propriedades** deverão ser semelhantes à seguinte figura:
 
-     ![Propriedades do instalador para um serviço Windows](./media/windows-service-installer-properties.png "Windows service installer properties")
+     ![Propriedades do instalador para um serviço do Windows](./media/windows-service-installer-properties.png "Propriedades do instalador de serviço do Windows")
 
 9. Na exibição **Design** de **ProjectInstaller**, escolha **serviceProcessInstaller1** para um projeto do Visual C# ou **ServiceProcessInstaller1** para um projeto do Visual Basic e, em seguida, escolha **Propriedades** no menu de atalho. Defina a propriedade <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> como <xref:System.ServiceProcess.ServiceAccount.LocalSystem> na lista suspensa.
 
@@ -482,7 +483,7 @@ Agora que você criou o serviço Windows, poderá instalá-lo. Para instalar um 
 
     Se o serviço for instalado com êxito, o comando relatará o êxito.
 
-    Se o sistema não puder localizar *installutil.exe*, verifique se ele existe no computador. Essa ferramenta é instalada com o .NET Framework para a pasta *%windir%\Microsoft.NET\Framework [64]\\&lt;&gt;versão da estrutura*. Por exemplo, o caminho padrão da versão de 64 bits é *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
+    Se o sistema não puder localizar *installutil.exe*, verifique se ele existe no computador. Essa ferramenta é instalada com o .NET Framework para a pasta *%windir%\Microsoft.NET\Framework [64] \\ &lt; versão &gt; da estrutura*. Por exemplo, o caminho padrão da versão de 64 bits é *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
 
     Se o processo **installutil.exe** falhar, verifique o log de instalação para saber o motivo. Por padrão, o log está localizado na mesma pasta do executável do serviço. A instalação poderá falhar se:
     - A classe <xref:System.ComponentModel.RunInstallerAttribute> não estiver presente na classe `ProjectInstaller`.
@@ -493,7 +494,7 @@ Para obter mais informações, consulte [como: instalar e desinstalar serviços]
 
 ## <a name="start-and-run-the-service"></a>Iniciar e executar o serviço
 
-1. No Windows, abra o aplicativo da área de trabalho **Serviços**. Pressione **Windows**+**R** para abrir a caixa **executar** , digite *Services. msc*e pressione **Enter** ou selecione **OK**.
+1. No Windows, abra o aplicativo da área de trabalho **Serviços**. Pressione **Windows** + **R** para abrir a caixa **executar** , digite *Services. msc*e pressione **Enter** ou selecione **OK**.
 
      Você deve ver o serviço listado em **Serviços**, exibido em ordem alfabética pelo nome de exibição definido para ele.
 
@@ -544,9 +545,9 @@ Agora que você criou o serviço, você poderá:
 
 - Em vez de criar o log de eventos quando o aplicativo é executado, use um instalador para criar um log de eventos ao instalar o aplicativo. O log de eventos é excluído pelo instalador quando você desinstala o aplicativo. Para obter mais informações, consulte <xref:System.Diagnostics.EventLogInstaller>.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Aplicativos do serviço Windows](index.md)
-- [Introdução aos aplicativos do serviço Windows](introduction-to-windows-service-applications.md)
-- [Como depurar aplicativos de serviço Windows](how-to-debug-windows-service-applications.md)
+- [Aplicativos de serviço do Windows](index.md)
+- [Introdução aos aplicativos de serviço do Windows](introduction-to-windows-service-applications.md)
+- [Como: depurar aplicativos de serviço do Windows](how-to-debug-windows-service-applications.md)
 - [Serviços (Windows)](/windows/desktop/Services/services)

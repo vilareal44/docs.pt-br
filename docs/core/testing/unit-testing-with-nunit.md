@@ -3,16 +3,16 @@ title: Teste de unidade em C# com NUnit e .NET Core
 description: Aprenda conceitos de teste de unidade no C# e .NET Core por meio de uma experiência interativa, criando passo a passo uma solução de exemplo, usando dotnet test e NUnit.
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: 283aa5a28ed213d4290eb3c73a98af56ec074ad0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 90fd917fd980db6689195026a7524e0cacfc92bc
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240877"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656365"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Teste de unidade em C# com NUnit e .NET Core
 
-Este tutorial apresenta uma experiência interativa de compilação de uma solução de exemplo passo a passo para aprender os conceitos do teste de unidade. Se você preferir acompanhar o tutorial usando uma solução interna, [veja ou baixe o exemplo de código](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/) antes de começar. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Este tutorial apresenta uma experiência interativa de compilação de uma solução de exemplo passo a passo para aprender os conceitos do teste de unidade. Se você preferir acompanhar o tutorial usando uma solução interna, [veja ou baixe o exemplo de código](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/) antes de começar. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
@@ -89,7 +89,7 @@ O comando [dotnet new](../tools/dotnet-new.md) cria um projeto de teste que usa 
 
 [!code-xml[Packages](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
 
-O projeto de teste requer outros pacotes para criar e executar testes de unidade. O `dotnet new`, na etapa anterior, adicionou o SDK de teste da Microsoft, a estrutura de teste do NUnit e o adaptador de teste do NUnit. Agora, adicione a biblioteca de classes `PrimeService` como outra dependência ao projeto. Use [`dotnet add reference`](../tools/dotnet-add-reference.md) o comando:
+O projeto de teste requer outros pacotes para criar e executar testes de unidade. O `dotnet new`, na etapa anterior, adicionou o SDK de teste da Microsoft, a estrutura de teste do NUnit e o adaptador de teste do NUnit. Agora, adicione a biblioteca de classes `PrimeService` como outra dependência ao projeto. Use o [`dotnet add reference`](../tools/dotnet-add-reference.md) comando:
 
 ```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.csproj
@@ -124,7 +124,7 @@ Escreva um teste com falha, faça-o ser aprovado e, em seguida, repita o process
 
 O atributo `[TestFixture]` indica uma classe que contém testes de unidade. O atributo `[Test]` indica um método que é um método de teste.
 
-Salve este arquivo [`dotnet test`](../tools/dotnet-test.md) e execute para construir os testes e a biblioteca de classe e, em seguida, executar os testes. O executor de teste do NUnit contém o ponto de entrada do programa para executar os testes. `dotnet test` inicia o executor de teste usando o projeto de teste de unidade que você criou.
+Salve esse arquivo e execute [`dotnet test`](../tools/dotnet-test.md) para compilar os testes e a biblioteca de classes e, em seguida, execute os testes. O executor de teste do NUnit contém o ponto de entrada do programa para executar os testes. `dotnet test` inicia o executor de teste usando o projeto de teste de unidade que você criou.
 
 O teste falha. Você ainda não criou a implementação. Faça esse teste ser aprovado escrevendo o código mais simples na classe `PrimeService` que funciona:
 

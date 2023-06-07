@@ -1,13 +1,13 @@
 ---
-title: 'Como: Chamadas de método do eixo de cadeia (LINQ to XML)'
+title: 'Como: encadear chamadas de método de eixo (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: e4e22942-39bd-460f-b3c0-9f09e53d3aa9
-ms.openlocfilehash: de6fbec9fa7948c618252415774ff6a2e9289c74
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 51396c9aaffb43badf405600251ed5cb06198dc3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346931"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375129"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a>Como: chamadas de método de eixo de encadeamento (LINQ to XML) (Visual Basic)
 Um padrão comum que você usar em seu código é chamar um método do eixo, então chama um dos eixos do método de extensão.  
@@ -17,7 +17,7 @@ Um padrão comum que você usar em seu código é chamar um método do eixo, ent
 ## <a name="example"></a>Exemplo  
  Este exemplo usa <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> e <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> para localizar todos os elementos de `Name` em todos os elementos de `Address` em todos os elementos de `PurchaseOrder` .  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim purchaseOrders As XElement = XElement.Load("PurchaseOrders.xml")  
@@ -29,7 +29,7 @@ For Each e As XElement In names
 Next  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <Name>Ellen Adams</Name>  
@@ -78,7 +78,7 @@ For Each cp As XElement In configParameters
 Next  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <ConfigParameter>FirstConfigParameter</ConfigParameter>  
@@ -88,7 +88,7 @@ Next
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra a mesma técnica para XML que é em um namespace. Para obter mais informações, consulte [visão geral de namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra em um namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra em um namespace](sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -106,7 +106,7 @@ Module Module1
 End Module  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <aw:Name xmlns:aw="http://www.adventure-works.com">Ellen Adams</aw:Name>  
@@ -117,6 +117,6 @@ End Module
 <aw:Name xmlns:aw="http://www.adventure-works.com">Jessica Arnold</aw:Name>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Eixos LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [Eixos LINQ to XML (Visual Basic)](linq-to-xml-axes.md)

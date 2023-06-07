@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e835062c-c7d6-4945-8a44-2de7ebf3928e
 topic_type:
 - apiref
-ms.openlocfilehash: 717a3d12528a34eafbd918c29d8e13bb87097d82
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 653c8d1d3edd38e646b4e90c0e48dbe15bed102a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615768"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504258"
 ---
 # <a name="iclrdebugmanager-interface"></a>Interface ICLRDebugManager
 Fornece métodos que permitem que um host associe um conjunto de tarefas a um identificador e um nome amigável.  
@@ -32,7 +32,7 @@ Fornece métodos que permitem que um host associe um conjunto de tarefas a um id
 |[Método EndConnection](iclrdebugmanager-endconnection-method.md)|Remove a associação entre uma lista de tarefas e um identificador e um nome amigável.|  
 |[Método GetDacl](iclrdebugmanager-getdacl-method.md)|Este método não está implementado.|  
 |[Método IsDebuggerAttached](iclrdebugmanager-isdebuggerattached-method.md)|Obtém um valor que indica se um depurador está anexado ao processo.|  
-|[Método SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)|Associa uma lista de instâncias [ICLRTask](iclrtask-interface.md) com um identificador e um nome amigável.|  
+|[Método SetConnectionTasks](iclrdebugmanager-setconnectiontasks-method.md)|Associa uma lista de instâncias [ICLRTask](iclrtask-interface.md) com um identificador e um nome amigável.|  
 |[Método SetDacl](iclrdebugmanager-setdacl-method.md)|Este método não está implementado.|  
 |[Método SetSymbolReadingPolicy](iclrdebugmanager-setsymbolreadingpolicy-method.md)|Define a política para ler arquivos de banco de dados do programa (PDB). A política determina se as informações sobre números de linha e arquivos estão incluídas em pilhas de chamadas.|  
   

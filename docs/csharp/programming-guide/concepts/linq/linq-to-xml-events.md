@@ -1,13 +1,14 @@
 ---
 title: Eventos LINQ to XML (C#)
+description: Adicione LINQ to XML eventos em C# a uma instância de qualquer XObject. O manipulador de eventos recebe eventos quando a árvore XML para esse XObject é modificada.
 ms.date: 07/20/2015
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
-ms.openlocfilehash: 8e0cb4519dd0fc2bed443d9a62b9a2545d10e161
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 576b0a5d0472bddd66e01d3bef8f3affa1c9458b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253171"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165417"
 ---
 # <a name="linq-to-xml-events-c"></a>Eventos LINQ to XML (C#)
 Eventos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permitem que você seja notificado quando uma árvore XML é modificada.  
@@ -19,7 +20,7 @@ Eventos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permitem que voc�
 ## <a name="types-and-events"></a>Tipos e eventos  
  Você usa os seguintes tipos ao trabalhar com eventos:  
   
-|Type|Descrição|  
+|Tipo|DESCRIÇÃO|  
 |----------|-----------------|  
 |<xref:System.Xml.Linq.XObjectChange>|Especifica o tipo de evento quando um evento é gerado para <xref:System.Xml.Linq.XObject>.|  
 |<xref:System.Xml.Linq.XObjectChangeEventArgs>|Fornece dados para os eventos de <xref:System.Xml.Linq.XObject.Changing> e de <xref:System.Xml.Linq.XObject.Changed> .|  
@@ -76,7 +77,7 @@ Console.WriteLine(root);
 ```  
   
 ### <a name="comments"></a>Comentários  
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```output  
 Changed System.Xml.Linq.XElement Add  

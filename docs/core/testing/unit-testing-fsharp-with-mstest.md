@@ -4,16 +4,16 @@ description: Aprenda os conceitos de teste de unidade para F# no .NET Core por m
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: a685ed8a56393fb6e1c1b9400f0ed4bcef15f9b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 08aa0b4a36f399d4439a0f3b34e88a1b51e98215
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714272"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656534"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Bibliotecas do F# de teste de unidade no .NET Core usando dotnet test e MSTest
 
-Este tutorial apresenta uma experiência interativa de compilação de uma solução de exemplo passo a passo para aprender os conceitos do teste de unidade. Se você preferir acompanhar o tutorial usando uma solução interna, [veja ou baixe o exemplo de código](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-mstest/) antes de começar. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Este tutorial apresenta uma experiência interativa de compilação de uma solução de exemplo passo a passo para aprender os conceitos do teste de unidade. Se você preferir acompanhar o tutorial usando uma solução interna, [veja ou baixe o exemplo de código](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-mstest/) antes de começar. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
@@ -61,7 +61,7 @@ Torne o diretório *MathService.Tests* o diretório atual e crie um novo projeto
 </ItemGroup>
 ```
 
-O projeto de teste requer outros pacotes para criar e executar testes de unidade. `dotnet new`, na etapa anterior, adicionou MSTest e o executor de MSTest. Agora, adicione a biblioteca de classes `MathService` como outra dependência ao projeto. Use `dotnet add reference` o comando:
+O projeto de teste requer outros pacotes para criar e executar testes de unidade. `dotnet new`, na etapa anterior, adicionou MSTest e o executor de MSTest. Agora, adicione a biblioteca de classes `MathService` como outra dependência ao projeto. Use o `dotnet add reference` comando:
 
 ```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
@@ -180,9 +180,9 @@ let squaresOfOdds xs =
 
 Você criou uma pequena biblioteca e um conjunto de testes de unidade para essa biblioteca. Você estruturou a solução para que a adição de novos pacotes e testes fizesse parte do fluxo de trabalho normal. Você concentrou grande parte do seu tempo e esforço em resolver as metas do aplicativo.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [dotnet new](../tools/dotnet-new.md)
 - [dotnet sln](../tools/dotnet-sln.md)
 - [dotnet add reference](../tools/dotnet-add-reference.md)
-- [teste dotnet](../tools/dotnet-test.md)
+- [dotnet test](../tools/dotnet-test.md)

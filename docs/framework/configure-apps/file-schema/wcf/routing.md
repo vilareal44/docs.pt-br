@@ -3,19 +3,19 @@ title: <routing>
 ms.date: 03/30/2017
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
 ms.openlocfilehash: fcf2d4eec93fd7127c6f800e1c739ad1fac49203
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70399967"
 ---
-# <a name="routing"></a>\<> de roteamento
+# \<routing>
 
-Representa uma seção de configuração para definir um conjunto de filtros de roteamento, que determinam o tipo de Windows Communication Foundation <xref:System.ServiceModel.Dispatcher.MessageFilter> (WCF) a ser usado ao avaliar mensagens de entrada, bem como tabelas de roteamento que definem os pontos de extremidade de destino para enviar mensagens para quando um filtro corresponder.
+Representa uma seção de configuração para definir um conjunto de filtros de roteamento, que determinam o tipo de Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.MessageFilter> a ser usado ao avaliar mensagens de entrada, bem como tabelas de roteamento que definem os pontos de extremidade de destino para envio de mensagens quando um filtro é correspondente.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> de roteamento**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<routing>**
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,8 +53,8 @@ Nenhum
 
 |     | Descrição |
 | --- | ----------- |
-| [ **\<filters>** ](filters-of-routing.md) | Contém um conjunto de filtros de roteamento que determinam o tipo de Windows Communication Foundation (WCF) MessageFilter será usado ao avaliar mensagens de entrada. |
-| [ **\<filterTables>** ](filtertables.md) | Contém mapeamentos entre os filtros de roteamento e os pontos de extremidade de destino para especificar qual ponto de extremidades usar quando o filtro corresponde. |
+| [**\<filters>**](filters-of-routing.md) | Contém um conjunto de filtros de roteamento que determinam o tipo de Windows Communication Foundation (WCF) MessageFilter será usado ao avaliar mensagens de entrada. |
+| [**\<filterTables>**](filtertables.md) | Contém mapeamentos entre os filtros de roteamento e os pontos de extremidade de destino para especificar qual ponto de extremidades usar quando o filtro corresponde. |
 
 ### <a name="parent-elements"></a>Elementos pai
 
@@ -62,6 +62,6 @@ Nenhum
 | --- | ----------- |
 | **\<system.ServiceModel>** | O elemento raiz de todos os elementos de configuração do WCF. |
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>

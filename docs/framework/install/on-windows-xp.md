@@ -1,14 +1,13 @@
 ---
 title: Instalar o .NET Framework no Windows XP
 description: Saiba como instalar o .NET Framework no Windows XP.
-ms.custom: updateeachrelease
 ms.date: 04/18/2019
-ms.openlocfilehash: 8d05c8c9cf961d3902b1d1287be5b1c2c73d349e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b39e47327672031e21cd560cddd65b2544a079fa
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716295"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558511"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Instalar o .NET Framework no Windows XP e Windows Server 2003
 
@@ -29,7 +28,7 @@ O [.NET Framework 4.0.3](https://www.microsoft.com/download/details.aspx?id=2905
 
 Você pode instalar o [.NET Framework 4](https://dotnet.microsoft.com/download/dotnet-framework/net40) no Windows XP. Ele não tem mais suporte da Microsoft.
 
-## <a name="net-framework-35"></a>.NET Framework 3,5
+## <a name="net-framework-35"></a>.NET Framework 3.5
 
 Você pode instalar o [.NET Framework 3.5](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) no Windows XP.
 
@@ -37,6 +36,6 @@ O .NET Framework 3.5 pode ser usado para executar aplicativos compilados para o 
 
 ## <a name="see-also"></a>Confira também
 
-- [Baixe o Quadro .NET](https://dotnet.microsoft.com/download)
+- [Baixar o .NET Framework](https://dotnet.microsoft.com/download)
 - [Solução de problemas de instalações e desinstalações bloqueadas do .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
 - [Instalar o .NET Framework para desenvolvedores](guide-for-developers.md)

@@ -2,21 +2,21 @@
 title: System.ServiceModel.Channels.TcpConnectError
 ms.date: 03/30/2017
 ms.assetid: 22d93797-072e-405d-a3e0-5c519ddf290b
-ms.openlocfilehash: 0bfd35e2b3ca421745701a91f2a5bfc91f3063aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5675547108c5d8c5bc4248a5fa98c76f7e29ce23
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942201"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601849"
 ---
 # <a name="systemservicemodelchannelstcpconnecterror"></a>System.ServiceModel.Channels.TcpConnectError
 Falha na operação de conexão TCP.  
   
 ## <a name="description"></a>Descrição  
- Rastreamento de nível de aviso indica uma falha ao se conectar a um ponto de extremidade TCP. Isso pode acontecer se o ponto de extremidade remoto não está respondendo em um determinado endereço IP e porta. Este rastreamento pode ser ignorado se subsequentes tenta se conectar a outro IP válido endereços (por exemplo, endereços IPv4 ou IPv6, ou outros endereços IP que representa um determinado nome de host) tenha êxito. A exceção dentro desse rastreamento pode revelar informações adicionais sobre o erro.  
+ Esse rastreamento de nível de aviso indica uma falha ao se conectar a um ponto de extremidade TCP. Isso pode acontecer se o ponto de extremidade remoto não estiver respondendo em um determinado endereço IP e porta. Esse rastreamento poderá ser ignorado se as tentativas subsequentes de se conectar a outros endereços IP válidos (como endereços IPv4 ou IPv6 ou outros endereços IP que representem um determinado nome de host) forem bem-sucedidos. A exceção dentro desse rastreamento pode revelar informações adicionais sobre o erro.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Rastreamento](index.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](using-tracing-to-troubleshoot-your-application.md)
+- [Administração e diagnóstico](../index.md)

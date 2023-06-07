@@ -1,5 +1,6 @@
 ---
 title: Escutando com soquetes
+description: Saiba como criar um serviço remoto, em que um soquete de servidor abre uma porta na rede e aguarda que um cliente se conecte a essa porta.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: cf8316ede6888b99a8b0c87cfa3426b33be18b7f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b6de67772bae397373e307ec02ce69a71b0542e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180735"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502308"
 ---
 # <a name="listening-with-sockets"></a>Escutando com soquetes
 Soquetes de ouvinte ou de servidor abrem uma porta na rede e aguardam até que um cliente se conecte a essa porta. Embora existam outros protocolos e famílias de endereços de rede, este exemplo mostra como criar um serviço remoto para uma rede TCP/IP.  
   
- O endereço exclusivo de um serviço de TCP/IP é definido combinando-se o endereço IP do host com o número da porta do serviço para criar um ponto de extremidade para o serviço. A classe <xref:System.Net.Dns> fornece métodos que retornam informações sobre os endereços de rede com suporte pelo dispositivo de rede local. Quando o dispositivo de rede local tem mais de um endereço de rede ou se o sistema local dá suporte a mais de um dispositivo de rede, a classe **Dns** retorna informações sobre todos os endereços de rede e o aplicativo deve escolher o endereço adequado para o serviço. A Autoridade de Números Atribuídos à Internet (Iana) define números de portas para serviços comuns; para obter mais informações, consulte [O Registro do Número da Porta do Protocolo de Transporte e nome do serviço](https://www.iana.org/assignments/port-numbers). Outros serviços podem ter números de porta registrados no intervalo de 1.024 a 65.535.  
+ O endereço exclusivo de um serviço de TCP/IP é definido combinando-se o endereço IP do host com o número da porta do serviço para criar um ponto de extremidade para o serviço. A classe <xref:System.Net.Dns> fornece métodos que retornam informações sobre os endereços de rede com suporte pelo dispositivo de rede local. Quando o dispositivo de rede local tem mais de um endereço de rede ou se o sistema local dá suporte a mais de um dispositivo de rede, a classe **Dns** retorna informações sobre todos os endereços de rede e o aplicativo deve escolher o endereço adequado para o serviço. A IANA (Internet Assigned Numbers Authority) define números de porta para serviços comuns; para obter mais informações, consulte [nome do serviço e registro do número da porta do protocolo de transporte](https://www.iana.org/assignments/port-numbers). Outros serviços podem ter números de porta registrados no intervalo de 1.024 a 65.535.  
   
  O exemplo a seguir cria um <xref:System.Net.IPEndPoint> para um servidor ao combinar o primeiro endereço IP retornado pelo **Dns** para o computador host com um número da porta escolhido dentre o intervalo de números da porta registrados.  
   

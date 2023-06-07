@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea102e62-0454-4477-bcf3-126773acd184
 topic_type:
 - apiref
-ms.openlocfilehash: dbcf9230a953069d311c3908aa3ed21fcfd5075c
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 627df3600b920e2fe2250f2fc3da51c852edc774
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420260"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496200"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>Método ICorProfilerInfo3::RequestProfilerDetach
 Instrui o tempo de execução para desanexar o criador de perfil.  
@@ -36,7 +36,7 @@ HRESULT RequestProfilerDetach(
  `dwExpectedCompletionMilliseconds`  
  no O período de tempo, em milissegundos, que o Common Language Runtime (CLR) deve aguardar antes de verificar se é seguro descarregar o criador de perfil.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -56,7 +56,7 @@ HRESULT RequestProfilerDetach(
  Se o criador de perfil especificar `dwExpectedCompletionMilliseconds` como 0 (zero), o CLR usará um valor padrão de 5000, o que significa que ele executará uma verificação após 5 segundos, novamente após 10 segundos e, em seguida, a cada 10 minutos depois.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
@@ -64,7 +64,7 @@ HRESULT RequestProfilerDetach(
   
  **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerInfo3](icorprofilerinfo3-interface.md)
 - [Criação de perfil de interfaces](profiling-interfaces.md)

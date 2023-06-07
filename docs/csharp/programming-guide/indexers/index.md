@@ -1,5 +1,6 @@
 ---
 title: Indexadores – Guia de Programação em C#
+description: Os indexadores em C# permitem que instâncias de classe ou struct sejam indexadas como matrizes. Você pode definir ou obter o valor indexado sem especificar um tipo ou um membro de instância.
 ms.date: 03/10/2017
 f1_keywords:
 - cs.indexers
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 539b2861e975c0c758c43c8a5d4cca86e3d2bb2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 07e0ae4294373817e10bb79920c73ec1e275d169
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79167521"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303108"
 ---
 # <a name="indexers-c-programming-guide"></a>Indexadores (Guia de Programação em C#)
 
@@ -33,7 +34,7 @@ Os indexadores permitem que instâncias de uma classe ou struct sejam indexados 
 
 Observe que `=>` apresenta o corpo da expressão e que a palavra-chave `get` não é usada.
 
-Começando do C# 7.0, os acessadores get e set podem ser implementados como membros aptos para expressão. Nesse caso, as palavras-chave `get` e `set` devem ser usadas. Por exemplo: 
+Começando do C# 7.0, os acessadores get e set podem ser implementados como membros aptos para expressão. Nesse caso, as palavras-chave `get` e `set` devem ser usadas. Por exemplo:
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   
@@ -53,7 +54,7 @@ Começando do C# 7.0, os acessadores get e set podem ser implementados como memb
   
 - Os indexadores podem ter mais de um parâmetro formal, por exemplo, ao acessar uma matriz bidimensional.  
   
-## <a name="BKMK_RelatedSections"></a>Seções relacionadas  
+## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a>Seções relacionadas  
   
 - [Usando indexadores](./using-indexers.md)  
   
@@ -67,7 +68,7 @@ Começando do C# 7.0, os acessadores get e set podem ser implementados como memb
 
 Para obter mais informações, veja [Indexadores](~/_csharplang/spec/classes.md#indexers) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Propriedades](../classes-and-structs/properties.md)

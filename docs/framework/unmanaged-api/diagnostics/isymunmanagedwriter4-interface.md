@@ -2,12 +2,12 @@
 title: Interface ISymUnmanagedWriter4
 ms.date: 03/30/2017
 ms.assetid: 4af5e8c0-987d-405e-b934-8b9e70fcae6e
-ms.openlocfilehash: eaf2e8e60d9812ab6a31fb3b9050cbaae0f1a9d7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 21d6520aae1367368973da1692f6bca3aeb2c129
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609463"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493650"
 ---
 # <a name="isymunmanagedwriter4-interface"></a>Interface ISymUnmanagedWriter4
 Interface ISymUnmanagedWriter4.  
@@ -23,7 +23,7 @@ Interface ISymUnmanagedWriter4.
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetDebugInfoWithPadding](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-getdebuginfowithpadding-method.md)|O funciona da mesma forma que o [método GetDebugInfo](isymunmanagedwriter-getdebuginfo-method.md) , exceto pelo fato de que a cadeia de caracteres de caminho é preenchida com zeros após o caractere nulo de terminação para tornar os dados da cadeia de caracteres um tamanho fixo `MAX_PATH` . O preenchimento só será fornecido se o comprimento da cadeia de caracteres do caminho for menor que `MAX_PATH` .<br /><br /> Isso facilita a gravação de ferramentas que diferenciam arquivos PE.|  
+|[Método GetDebugInfoWithPadding](isymunmanagedwriter4-getdebuginfowithpadding-method.md)|O funciona da mesma forma que o [método GetDebugInfo](isymunmanagedwriter-getdebuginfo-method.md) , exceto pelo fato de que a cadeia de caracteres de caminho é preenchida com zeros após o caractere nulo de terminação para tornar os dados da cadeia de caracteres um tamanho fixo `MAX_PATH` . O preenchimento só será fornecido se o comprimento da cadeia de caracteres do caminho for menor que `MAX_PATH` .<br /><br /> Isso facilita a gravação de ferramentas que diferenciam arquivos PE.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  

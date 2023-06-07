@@ -1,74 +1,75 @@
 ---
 title: Detalhes de funcionalidades do WCF
+description: Aprenda em detalhes sobre o controle extensivo que o WCF oferece nas funções de mensagens de um aplicativo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - features [WCF]
 - WCF, features
 - Windows Communication Foundation, features
 ms.assetid: 9b4368ca-0bd3-40dc-a539-bcd5779cee5f
-ms.openlocfilehash: c97bd891f0bbb58f8b267296b9b53e00a5486622
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 308a32c73d33a4da2fd841ca7c330a42deb7d324
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047042"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246630"
 ---
 # <a name="wcf-feature-details"></a>Detalhes de funcionalidades do WCF
-Windows Communication Foundation (WCF) permite controle abrangente sobre as funções de sistema de mensagens de um aplicativo. Os tópicos nesta seção fornecem detalhes sobre os recursos disponíveis. Para obter mais informações sobre a programação básica, consulte [programação WCF básica](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+O Windows Communication Foundation (WCF) permite um controle extensivo sobre as funções de mensagens de um aplicativo. Os tópicos nesta seção fornecem detalhes sobre os recursos disponíveis. Para obter mais informações sobre programação básica, consulte [programação básica do WCF](../basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [Serviços de fluxo de trabalho](workflow-services.md)  
  Descreve como criar e configurar serviços de fluxo de trabalho.  
   
- [Pontos de extremidade: Endereços, associações e contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Pontos de extremidade: endereços, associações e contratos](endpoints-addresses-bindings-and-contracts.md)  
  Descreve como controlar vários aspectos do seu serviço.  
   
- [Serialização e transferência de dados](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
+ [Serialização e transferência de dados](data-transfer-and-serialization.md)  
  Descreve como a serialização de dados pode ser adaptada para interoperação ou compatibilidade futura.  
   
- [Sessões, instanciação e simultaneidade](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
- Descreve os modos de instanciação e sessão do WCF e como selecionar o modo certo para seu aplicativo.  
+ [Sessões, instanciação e simultaneidade](sessions-instancing-and-concurrency.md)  
+ Descreve os modos de instanciação e de sessão do WCF e como selecionar o modo certo para seu aplicativo.  
   
- [Transportes](../../../../docs/framework/wcf/feature-details/transports.md)  
+ [Transportes](transports.md)  
  Descreve como configurar a camada de transporte, o nível mais baixo da pilha do canal.  
   
- [Sessões confiáveis e filas](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)  
+ [Sessões confiáveis e filas](queues-and-reliable-sessions.md)  
  Descreve as filas, que armazenam mensagens de um aplicativo emissor em nome de um aplicativo receptor e, posteriormente, encaminham essas mensagens ao aplicativo receptor.  
   
- [Transações](../../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)  
+ [Transações](transactions-in-wcf.md)  
  Explica como criar operações transacionadas que podem ser revertidas, se necessário.  
   
- [Segurança](../../../../docs/framework/wcf/feature-details/security.md)  
- Descreve como a segurança do WCF ajuda você a criar aplicativos que têm confidencialidade e integridade. Autenticação e autorização também estão disponíveis, bem como recursos de auditoria.  
+ [Segurança](security.md)  
+ Descreve como a segurança do WCF ajuda a criar aplicativos que têm confidencialidade e integridade. Autenticação e autorização também estão disponíveis, bem como recursos de auditoria.  
   
- [Rede ponto a ponto](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [Rede ponto a ponto](peer-to-peer-networking.md)  
  Fornece detalhes sobre como criar serviços e clientes pares.  
   
- [Metadados](../../../../docs/framework/wcf/feature-details/metadata.md)  
+ [Metadados](metadata.md)  
  Descreve a arquitetura e formatos de metadados.  
   
- [Clientes](../../../../docs/framework/wcf/feature-details/clients.md)  
+ [Clientes](clients.md)  
  Descreve como criar uma variedade de clientes que acessam serviços.  
   
- [Hospedagem](../../../../docs/framework/wcf/feature-details/hosting.md)  
+ [Hosting](hosting.md)  
  Descreve a hospedagem. Um serviço pode ser hospedado por outro aplicativo, ou pode ser auto-hospedado.  
   
- [Interoperabilidade e integração](../../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)  
- Descreve como usar o WCF para estender sua lógica existente em vez de precisar reescrevê-la se você tiver um investimento substancial em lógica de aplicativo baseado em componente hospedada em COM+.  
+ [Interoperabilidade e integração](interoperability-and-integration.md)  
+ Descreve como usar o WCF para estender sua lógica existente em vez de precisar reescrevê-la se você tiver um investimento substancial em lógica de aplicativo baseada em componente hospedada no COM+.  
   
- [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- Descreve o modelo de programação de Web WCF que permite aos desenvolvedores expor operações de serviço WCF com pontos de extremidade não SOAP.  
+ [Modelo de programação WCF Web HTTP](wcf-web-http-programming-model.md)  
+ Descreve o modelo de programação Web do WCF que permite aos desenvolvedores expor operações de serviço do WCF a pontos de extremidade não SOAP.  
   
- [Sindicalização do WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
- Descreve o suporte para expor facilmente feeds de sindicalização de um serviço WCF.  
+ [Sindicalização do WCF](wcf-syndication.md)  
+ Descreve o suporte para expor facilmente feeds de distribuição de um serviço WCF.  
   
- [Integração AJAX e suporte para JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
- Descreve o suporte para ASP.NET Asynchronous JavaScript e XML (AJAX) e o formato de dados de objeto notação JSON (JavaScript) permitir que os serviços WCF exponham operações a clientes AJAX.  
+ [Integração AJAX e suporte para JSON](ajax-integration-and-json-support.md)  
+ Descreve o suporte para o ASP.NET Asynchronous JavaScript and XML (AJAX) e o formato de dados JavaScript Object Notation (JSON) para permitir que os serviços WCF exponham operações para clientes AJAX.  
   
- [Descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
- Descreve o suporte para permitir que serviços sejam descobertos em tempo de execução de uma maneira interoperável com o protocolo WS-Discovery.  
+ [Descoberta de WCF](wcf-discovery.md)  
+ Descreve o suporte para permitir que serviços sejam descobertos em runtime de uma maneira interoperável com o protocolo WS-Discovery.  
   
- [Roteamento](../../../../docs/framework/wcf/feature-details/routing.md)  
+ [Roteamento](routing.md)  
  Descreve o serviço de roteamento.  
   
 ## <a name="reference"></a>Referência  
@@ -81,4 +82,4 @@ Windows Communication Foundation (WCF) permite controle abrangente sobre as fun�
  <xref:System.ServiceModel.Routing>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Programação básica do WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
+ [Programação básica do WCF](../basic-wcf-programming.md)

@@ -1,17 +1,18 @@
 ---
 title: Usando propriedades – Guia de Programação em C#
+description: Esses exemplos ilustram o uso de propriedades em C#. Veja como os acessadores get e Set implementam acesso de leitura e gravação e encontram-se sobre usos para propriedades.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: d873f626b660bb6bd94710add4543e21e11823d6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 51ca0a37022c99bfbd9d61f2cc47f529d535e72a
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77452013"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864651"
 ---
 # <a name="using-properties-c-programming-guide"></a>Usando propriedades (Guia de Programação em C#)
 
@@ -21,7 +22,7 @@ Diferentemente dos campos, as propriedades não são classificadas como variáve
 
 As propriedades têm muitos usos: elas podem validar os dados antes de permitir uma alteração; elas podem expor, de forma transparente, os dados em uma classe em que esses dados são realmente recuperados de outra origem qualquer, como um banco de dados; elas podem executar uma ação quando os dados são alterados, como acionar um evento ou alterar o valor de outros campos.
 
-As propriedades são declaradas no bloco de classe, especificando o nível de acesso do campo, seguido pelo tipo da propriedade, pelo nome da propriedade e por um bloco de código que declara um acessador `get` e/ou um acessador `set`. Por exemplo: 
+As propriedades são declaradas no bloco de classe, especificando o nível de acesso do campo, seguido pelo tipo da propriedade, pelo nome da propriedade e por um bloco de código que declara um acessador `get` e/ou um acessador `set`. Por exemplo:
 
 [!code-csharp[csProgGuideProperties#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#7)]
 
@@ -35,7 +36,7 @@ O corpo do acessador `get` assemelha-se ao de um método. Ele deve retornar um v
 
 [!code-csharp[csProgGuideProperties#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#8)]
 
-Quando você referencia a propriedade, exceto como o destino de uma atribuição, o acessador `get` é invocado para ler o valor da propriedade. Por exemplo: 
+Quando você referencia a propriedade, exceto como o destino de uma atribuição, o acessador `get` é invocado para ler o valor da propriedade. Por exemplo:
 
 [!code-csharp[csProgGuideProperties#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#9)]
 
@@ -45,11 +46,11 @@ Alterar o estado do objeto usando o acessador `get` é um estilo ruim de program
 
 [!code-csharp[csProgGuideProperties#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#10)]
 
-O acessador `get` pode ser usado para retornar o valor do campo ou para calculá-lo e retorná-lo. Por exemplo: 
+O acessador `get` pode ser usado para retornar o valor do campo ou para calculá-lo e retorná-lo. Por exemplo:
 
 [!code-csharp[csProgGuideProperties#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#11)]
 
-No segmento de código anterior, se você não `Name` atribuir um valor `NA`ao imóvel, ele devolverá o valor .
+No segmento de código anterior, se você não atribuir um valor à `Name` propriedade, ele retornará o valor `NA` .
 
 ## <a name="the-set-accessor"></a>O acessador set
 
@@ -57,7 +58,7 @@ O acessador `set` é semelhante a um método cujo tipo de retorno é [void](../.
 
 [!code-csharp[csProgGuideProperties#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#12)]
 
-Quando você atribui um valor à propriedade, o acessador `set` é invocado por meio do uso de um argumento que fornece o novo valor. Por exemplo: 
+Quando você atribui um valor à propriedade, o acessador `set` é invocado por meio do uso de um argumento que fornece o novo valor. Por exemplo:
 
 [!code-csharp[csProgGuideProperties#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#13)]
 
@@ -67,7 +68,7 @@ Quando você atribui um valor à propriedade, o acessador `set` é invocado por 
 
 As propriedades podem ser marcadas como `public`, `private`, `protected`, `internal`, `protected internal` ou `private protected`. Esses modificadores de acesso definem como os usuários da classe podem acessar a propriedade. Os acessadores `get` e `set` para a mesma propriedade podem ter modificadores de acesso diferentes. Por exemplo, o `get` pode ser `public` para permitir acesso somente leitura de fora do tipo e o `set` pode ser `private` ou `protected`. Para obter mais informações, consulte [Modificadores de Acesso](./access-modifiers.md).
 
-Uma propriedade pode ser declarada como uma propriedade estática, usando a palavra-chave `static`. Isso torna a propriedade disponível para chamadores a qualquer momento, mesmo se não existir nenhuma instância da classe. Para obter mais informações, consulte [Classes Estáticas e Membros de Classe Estática](./static-classes-and-static-class-members.md).
+Uma propriedade pode ser declarada como uma propriedade estática, usando a palavra-chave `static`. Isso torna a propriedade disponível para chamadores a qualquer momento, mesmo se não existir nenhuma instância da classe. Para obter mais informações, consulte [classes estáticas e membros de classe estática](./static-classes-and-static-class-members.md).
 
 Uma propriedade pode ser marcada como uma propriedade virtual, usando a palavra-chave [virtual](../../language-reference/keywords/virtual.md). Isso habilita as classes derivadas a substituírem o comportamento da propriedade, usando a palavra-chave [override](../../language-reference/keywords/override.md). Para obter mais informações sobre essas opções, consulte [Herança](inheritance.md).
 
@@ -84,7 +85,7 @@ Este exemplo demonstra as propriedades instância, estática e somente leitura. 
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo demonstra como acessar uma propriedade em uma classe base que está escondida por outra propriedade que tenha o mesmo nome em uma classe derivada:
+Este exemplo demonstra como acessar uma propriedade em uma classe base que é ocultada por outra propriedade que tem o mesmo nome em uma classe derivada:
 
 [!code-csharp[csProgGuideProperties#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#3)]
 
@@ -106,9 +107,9 @@ Neste exemplo, duas classes, `Cube` e `Square`, implementam uma classe abstrata 
 
 [!code-csharp[csProgGuideProperties#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#6)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Propriedades](properties.md)
 - [Propriedades de interface](interface-properties.md)
-- [Propriedades auto-implementadas](auto-implemented-properties.md)
+- [Propriedades autoimplementadas](auto-implemented-properties.md)

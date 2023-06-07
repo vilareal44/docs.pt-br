@@ -3,13 +3,13 @@ title: <ImpliesType> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 ms.openlocfilehash: 57f4208233cd5e8544b4f1c254e3b0e0eaacd508
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79181009"
 ---
-# <a name="impliestype-element-net-native"></a>\<ImplicaTipo elemento> (nativo.NET)
+# <a name="impliestype-element-net-native"></a>\<ImpliesType> (.NET Nativo)
 Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do método.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -51,7 +51,7 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*Type_name*|O nome do tipo. Se o tipo representado por este elemento `<ImpliesType>` estiver localizado no mesmo namespace contendo seu elemento `<Type>`, o *type_name* poderá incluir o nome do tipo sem o respectivo namespace. Caso contrário, o *type_name* deverá incluir o nome do tipo totalmente qualificado.|  
+|*type_name*|O nome do tipo. Se o tipo representado por este elemento `<ImpliesType>` estiver localizado no mesmo namespace contendo seu elemento `<Type>`, o *type_name* poderá incluir o nome do tipo sem o respectivo namespace. Caso contrário, o *type_name* deverá incluir o nome do tipo totalmente qualificado.|  
   
 ## <a name="all-other-attributes"></a>Todos os outros atributos  
   
@@ -66,9 +66,9 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Tipo>](type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
-|[\<>de Digitação](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
-|[\<método>](method-element-net-native.md)|Aplica a política de reflexão a um método.|  
+|[\<Type>](type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
+|[\<Method>](method-element-net-native.md)|Aplica a política de reflexão a um método.|  
   
 ## <a name="remarks"></a>Comentários  
  O elemento `<ImpliesType>` destina-se principalmente para uso por bibliotecas. Ele aborda o cenário a seguir:  
@@ -89,7 +89,7 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
   
  Essa diretiva não tem efeito, a menos que uma instanciação de `Explicit` tenha uma configuração de política `Dynamic` definida. Por exemplo, se for o caso de `Explicit<Int32>`, `Implicit<Int32>` é instanciado com seu membros públicos enraizados e seus metadados são disponibilizados por programação dinâmica.  
   
- Veja a seguir um exemplo real que se aplica a pelo menos um serializador. As diretivas capturam a exigência de `IList<`que refletir sobre algo digitado como *algo* `>` também envolve refletir sobre o tipo `List<` *de algo* `>` correspondente sem exigir qualquer anotação por aplicativo.  
+ Veja a seguir um exemplo real que se aplica a pelo menos um serializador. As diretivas capturam o requisito que reflete em algo digitado como `IList<` *algo* `>` também envolve refletir o `List<` tipo de *algo* correspondente `>` sem exigir nenhuma anotação por aplicativo.  
   
 ```xml  
 <Type Name="System.Collections.Generic.IList{T}">  
@@ -110,6 +110,6 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
   
 ## <a name="see-also"></a>Confira também
 
-- [Referência do arquivo de configuração das diretivas de runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de runtime](runtime-directive-elements.md)
 - [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md)

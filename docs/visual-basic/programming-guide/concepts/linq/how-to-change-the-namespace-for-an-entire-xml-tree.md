@@ -1,13 +1,13 @@
 ---
-title: 'Como: Alterar o namespace XML para uma árvore inteira'
+title: 'Como: alterar o namespace de uma árvore XML inteira'
 ms.date: 07/20/2015
 ms.assetid: 1837324b-5cb5-4fa8-95b9-3071efa0f913
-ms.openlocfilehash: 37edb426b106d3fbf90ea06118526abab0a78bf8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 11938b575ed5133d930e585dbe4d744e3168cced
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346920"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374973"
 ---
 # <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a>Como: alterar o namespace para uma árvore XML inteira (Visual Basic)
 Às vezes você tem que alterar programaticamente ao namespace para um elemento ou atributo. LINQ to XML faz isso fácil. A propriedade de <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> pode ser definida. A propriedade de <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> não pode ser definida, mas você pode facilmente copiar os atributos em <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, remover os atributos existentes, e então adiciona novos atributos que estão no novo namespace desejada.  
@@ -63,7 +63,7 @@ Dim root As XElement = _
 Console.WriteLine(root)  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <Root>  
@@ -76,6 +76,6 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Modificando árvores XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [Modificando árvores XML (LINQ to XML) (Visual Basic)](modifying-xml-trees-linq-to-xml.md)

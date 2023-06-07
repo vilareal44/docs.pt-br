@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 1db76253-07da-447b-9e7a-3705c7228cf4
 author: BrucePerlerMS
 ms.openlocfilehash: 0fa8c574fd5663606cf081f1000a24884306edfe
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70251989"
 ---
-# <a name="identityconfiguration"></a>\<identityConfiguration>
+# \<identityConfiguration>
 
 Especifica as configurações de identidade de nível de serviço.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> identityConfiguration**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<identityConfiguration>**  
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,9 +38,9 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|name|O nome da seção de configuração de identidade. Você pode usar esse nome para fazer referência a uma seção de configuração específica. Se nenhum `name` atributo for especificado, a seção definirá a configuração padrão. A configuração padrão é sempre usada para cenários de federação passiva. Para obter mais informações, consulte o [ \<elemento federationConfiguration >](federationconfiguration.md) .|
-|saveBootstrapContext|Especifica se os tokens de inicialização devem ser incluídos no token de sessão. O valor também pode ser definido em uma coleção de manipuladores de token `saveBootstrapContext` , definindo o atributo [ \<no elemento securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md) . Um valor definido na coleção de manipuladores de token substitui o valor definido no serviço.|
-|maximumClockSkew|Um <xref:System.TimeSpan> valor que especifica a distorção máxima permitida do relógio. Controla o máximo permitido de distorção de relógio ao executar operações sensíveis ao tempo, como validar o tempo de expiração de uma sessão de entrada. O padrão é 5 minutos, "00:05:00". Para obter mais informações sobre como especificar <xref:System.TimeSpan> valores, consulte [valores de TimeSpan](../windows-workflow-foundation/index.md). A distorção máxima do relógio também pode ser definida em uma coleção de manipuladores `maximumClockSkew` de token, definindo o atributo [ \<no elemento securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md) . Um valor definido na coleção de manipuladores de token substitui o valor definido no serviço.|
+|name|O nome da seção de configuração de identidade. Você pode usar esse nome para fazer referência a uma seção de configuração específica. Se nenhum `name` atributo for especificado, a seção definirá a configuração padrão. A configuração padrão é sempre usada para cenários de federação passiva. Para obter mais informações, consulte o [\<federationConfiguration>](federationconfiguration.md) elemento.|
+|saveBootstrapContext|Especifica se os tokens de inicialização devem ser incluídos no token de sessão. O valor também pode ser definido em uma coleção de manipuladores de token, definindo o `saveBootstrapContext` atributo no [\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md) elemento. Um valor definido na coleção de manipuladores de token substitui o valor definido no serviço.|
+|maximumClockSkew|Um <xref:System.TimeSpan> valor que especifica a distorção máxima permitida do relógio. Controla o máximo permitido de distorção de relógio ao executar operações sensíveis ao tempo, como validar o tempo de expiração de uma sessão de entrada. O padrão é 5 minutos, "00:05:00". Para obter mais informações sobre como especificar <xref:System.TimeSpan> valores, consulte [valores de TimeSpan](../windows-workflow-foundation/index.md). A distorção máxima do relógio também pode ser definida em uma coleção de manipulador de tokens definindo o `maximumClockSkew` atributo no [\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md) elemento. Um valor definido na coleção de manipuladores de token substitui o valor definido no serviço.|
 
 ### <a name="child-elements"></a>Elementos filho
 
@@ -68,7 +68,7 @@ Várias configurações de identidade podem ser definidas, cada uma com um nome 
 
 2. Se um único `<identityConfiguration>` elemento for especificado. É a configuração de identidade padrão. Não importa se ele é nomeado ou não.
 
-3. Se vários `<identityConfiguration>` elementos forem especificados. O elemento sem nome especifica a configuração de identidade padrão. É recomendável que, quando você especificar `<identityConfiguration>` vários elementos, um deles não seja nomeado.
+3. Se vários `<identityConfiguration>` elementos forem especificados. O elemento sem nome especifica a configuração de identidade padrão. É recomendável que, quando você especificar vários `<identityConfiguration>` elementos, um deles não seja nomeado.
 
 > [!WARNING]
 > Se você especificar vários `<identityConfiguration>` elementos, um deles deverá ser sem nome. O elemento sem nome será a configuração de identidade padrão.
@@ -76,12 +76,12 @@ Várias configurações de identidade podem ser definidas, cada uma com um nome 
  Algumas das configurações especificadas no `<identityConfiguration>` elemento podem ser substituídas por configurações em uma coleção de manipulador de token de segurança ou por configurações em manipuladores de token de segurança individuais.
 
 > [!IMPORTANT]
-> Ao usar o <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> ou a <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe para fornecer controle de acesso baseado em declarações em seu código, a configuração de identidade referenciada pelo `<federationConfiguration>` elemento configura o Gerenciador de autorização de declarações e a política que é usada para fazer decisões de autorização. Isso é verdade, mesmo em cenários que não são cenários da Web passivos, por exemplo Windows Communication Foundation (WCF) ou um aplicativo que não é baseado na Web. Se o aplicativo não for um aplicativo Web passivo, o elemento de [ \<> ClaimsAuthorizationManager](claimsauthorizationmanager.md) (e seus elementos de política filho, se presentes) da configuração de identidade referenciada serão as únicas configurações aplicadas. Todas as outras configurações são ignoradas. Para obter mais informações, consulte o [ \<elemento federationConfiguration >](federationconfiguration.md) .
+> Ao usar o <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> ou a <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe para fornecer controle de acesso baseado em declarações em seu código, a configuração de identidade referenciada pelo `<federationConfiguration>` elemento configura o Gerenciador de autorização de declarações e a política que é usada para tomar decisões de autorização. Isso é verdade, mesmo em cenários que não são cenários da Web passivos, por exemplo Windows Communication Foundation (WCF) ou um aplicativo que não é baseado na Web. Se o aplicativo não for um aplicativo Web passivo, o [\<claimsAuthorizationManager>](claimsauthorizationmanager.md) elemento (e seus elementos de política filho, se presentes) da configuração de identidade referenciada serão as únicas configurações aplicadas. Todas as outras configurações são ignoradas. Para obter mais informações, consulte o [\<federationConfiguration>](federationconfiguration.md) elemento.
 
-O `<identityConfiguration>` elemento é representado <xref:System.IdentityModel.Configuration.IdentityConfigurationElement> pela classe. Uma seção de configuração de <xref:System.IdentityModel.Configuration.IdentityConfiguration> identidade é representada pela classe.
+O `<identityConfiguration>` elemento é representado pela <xref:System.IdentityModel.Configuration.IdentityConfigurationElement> classe. Uma seção de configuração de identidade é representada pela <xref:System.IdentityModel.Configuration.IdentityConfiguration> classe.
 
 > [!IMPORTANT]
-> A especificação dos elementos a seguir como elementos filho `<identityConfiguration>` do elemento foi preterida, embora o comportamento ainda tenha suporte para compatibilidade com versões anteriores. Esses elementos devem, em vez disso, ser especificados no [ \<elemento securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md) .
+> A especificação dos elementos a seguir como elementos filho do `<identityConfiguration>` elemento foi preterida, embora o comportamento ainda tenha suporte para compatibilidade com versões anteriores. Em vez disso, esses elementos devem ser especificados no [\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md) elemento.
 >
 > - [\<audienceUris>](audienceuris.md)
 > - [\<issuerNameRegistry>](issuernameregistry.md)
@@ -98,7 +98,7 @@ O exemplo a seguir cria uma configuração de identidade chamada "alternateConfi
 </system.identityModel>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.IdentityModel.Configuration.IdentityConfiguration>
 - <xref:System.IdentityModel.Configuration.IdentityConfigurationElement>

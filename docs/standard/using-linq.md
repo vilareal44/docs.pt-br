@@ -9,12 +9,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 76872f3ba3ed5106a4cb5bfdd918ae607acc092d
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: cd0260de3facdd37c46e9fb2f09ddc4cac08e71b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507514"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291065"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Consulta Integrada à Linguagem)
 
@@ -113,7 +113,7 @@ End Function
 
 Escrever o código para percorrer manualmente o documento XML para realizar essa tarefa seria muito mais desafiador.
 
-Interagir com o XML não é a única coisa que você pode fazer com provedores LINQ. O [LINQ to SQL](../../docs/framework/data/adonet/sql/linq/index.md) é um ORM (Mapeador de Objeto Relacional) de funções bastante básicas para um banco de dados MSSQL. A biblioteca [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) fornece uma passagem do documento JSON eficiente por meio da LINQ. Além disso, se não existir uma biblioteca que faça o que você precisa, também é possível [escrever seu próprio provedor LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110)).
+Interagir com o XML não é a única coisa que você pode fazer com provedores LINQ. O [LINQ to SQL](../framework/data/adonet/sql/linq/index.md) é um ORM (Mapeador de Objeto Relacional) de funções bastante básicas para um banco de dados MSSQL. A biblioteca [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) fornece uma passagem do documento JSON eficiente por meio da LINQ. Além disso, se não existir uma biblioteca que faça o que você precisa, também é possível [escrever seu próprio provedor LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110)).
 
 ## <a name="why-use-the-query-syntax"></a>Por que usar a sintaxe de consulta?
 

@@ -1,13 +1,14 @@
 ---
 title: Controle de versão da linguagem C# – Guia de C#
 description: Saiba mais sobre como a versão da linguagem C# é determinada com base no seu projeto e os motivos por trás dessa escolha. Saiba como substituir o padrão manualmente.
+ms.custom: updateeachrelease
 ms.date: 05/20/2020
-ms.openlocfilehash: bbe5b12e378cf47b7c9b2c8576088e949e526a9a
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: a27f3210f399f1bed190c18d778cf3824772d576
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803001"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656841"
 ---
 # <a name="c-language-versioning"></a>Controle de versão da linguagem C#
 

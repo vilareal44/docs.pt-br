@@ -2,12 +2,12 @@
 title: Dependências e bibliotecas do .NET
 description: Melhores práticas para gerenciar as dependências do NuGet em bibliotecas do .NET.
 ms.date: 10/02/2018
-ms.openlocfilehash: 265e92e86d22c778f65476e7f1383d32e4964655
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 344d5dff564b64b9d70bbd61afb0b7bc057c8f21
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895702"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291364"
 ---
 # <a name="dependencies"></a>Dependências
 
@@ -24,7 +24,7 @@ No momento da compilação, o NuGet analisa todos os pacotes de que um projeto d
 A maioria das dependências de losangos é facilmente resolvida. No entanto, podem criar problemas em determinadas circunstâncias:
 
 1. **Referências de pacote do NuGet conflitantes** impedem que uma versão seja resolvida durante a restauração de pacote.
-2. **Alterações da falha entre as versões** causam erros e exceções em runtime.
+2. **As alterações significativas entre as versões** causam bugs e exceções em tempo de execução.
 3. **O assembly do pacote tem um nome forte**, a versão do assembly é alterada e o aplicativo está em execução no .NET Framework. Redirecionamentos de associação de assembly são necessários.
 
 Não é possível saber quais pacotes serão usados junto com o seu. Uma boa maneira de reduzir a probabilidade de uma dependência de losango provocar falha na sua biblioteca é minimizar o número de pacotes dos quais você depende.
@@ -97,5 +97,5 @@ Pacotes de origem compartilhado têm algumas limitações. Eles só podem ser re
 > Publicar pacotes de origem compartilhados em um [feed local ou no MyGet](./publish-nuget-package.md) para consumi-los internamente dentro de seu projeto.
 
 >[!div class="step-by-step"]
->[Anterior](nuget.md)
->[próximo](sourcelink.md)
+>[Anterior](nuget.md) 
+> [Avançar](sourcelink.md)

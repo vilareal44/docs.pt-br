@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a25a8f8b-5cfa-440d-9376-a1a1c3a9fc11
 topic_type:
 - apiref
-ms.openlocfilehash: ca64d4f5932fb4a0c0486fee5ca1017a6d3adaf2
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 525fa2efa39909390d874fb97d9f11e647340ea9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868623"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496939"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>Método ICorProfilerInfo2::GetRVAStaticAddress
 Obtém o endereço do campo estático de endereço virtual relativo (RVA) especificado.  
@@ -45,24 +45,24 @@ HRESULT GetRVAStaticAddress(
  fora Um ponteiro para o endereço do campo RVA-estático.  
   
 ## <a name="remarks"></a>Comentários  
- O método `GetRVAStaticAddress` pode retornar um dos seguintes:  
+ O `GetRVAStaticAddress` método pode retornar um dos seguintes:  
   
 - Um CORPROF_E_DATAINCOMPLETE HRESULT se o campo estático fornecido não tiver sido atribuído um endereço no contexto especificado.  
   
 - Os endereços de objetos que podem estar no heap de coleta de lixo. Esses endereços podem se tornar inválidos após a coleta de lixo, portanto, após a coleta de lixo, os profileres não devem presumir que eles são válidos.  
   
- Antes de o construtor de classe de uma classe ser concluído, `GetRVAStaticAddress` retornará CORPROF_E_DATAINCOMPLETE para todos os seus campos estáticos, embora alguns dos campos estáticos já possam ser inicializados e possam estar enraizadando objetos de coleta de lixo.  
+ Antes que o construtor de classe de uma classe seja concluído, o `GetRVAStaticAddress` retornará CORPROF_E_DATAINCOMPLETE para todos os seus campos estáticos, embora alguns dos campos estáticos já possam ser inicializados e possam estar enraizadando objetos de coleta de lixo.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)
 - [Interface ICorProfilerInfo2](icorprofilerinfo2-interface.md)

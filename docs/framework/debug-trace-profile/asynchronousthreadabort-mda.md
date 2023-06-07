@@ -1,5 +1,6 @@
 ---
 title: MDA asynchronousThreadAbort
+description: Examine como o MDA (Assistente de depuração gerenciada) asynchronousThreadAbort é ativado quando um thread tenta colocar uma anulação assíncrona em outro thread.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - asynchronous thread aborts
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-ms.openlocfilehash: d0c78e6d52ae4a5b3a24e0bb4278b2e8a1b98751
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 469372d57d9c21198353d171fec16458691eb25d
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217590"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415661"
 ---
 # <a name="asynchronousthreadabort-mda"></a>MDA asynchronousThreadAbort
 O MDA (assistente para depuração gerenciada) `asynchronousThreadAbort` é ativado quando um thread tenta introduzir uma anulação assíncrona em outro thread. Anulações de thread síncronas não ativam o MDA `asynchronousThreadAbort`.
@@ -68,7 +69,7 @@ void FireMda()
 }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Threading.Thread>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)

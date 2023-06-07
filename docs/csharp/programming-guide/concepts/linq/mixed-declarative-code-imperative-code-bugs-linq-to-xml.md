@@ -1,13 +1,14 @@
 ---
 title: Bugs misturados de código declarativo/código obrigatório (LINQ to XML) (C#)
+description: LINQ to XML métodos podem modificar uma árvore XML diretamente. A iteração por meio de um dos eixos ao modificar a árvore XML pode dar ao aumento de bugs estranhos.
 ms.date: 07/20/2015
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
-ms.openlocfilehash: 76a9bb5abf6ce2700a2a0698ebc109f65e2b7eb1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4eaed10f0a2e64abeb7725dcd70816d75d8a0423
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168343"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165290"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>Bugs misturados de código declarativo/código obrigatório (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] contém vários métodos que permitem que você modifique uma árvore XML diretamente. Você pode adicionar elementos, excluir elementos, modifica o conteúdo de um elemento, adiciona atributos, e assim por diante. Essa interface de programação é descrita em [Modificando árvores XML (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md). Se você estiver iterando com um dos eixos, como <xref:System.Xml.Linq.XContainer.Elements%2A>, e você está alterando a árvore XML como você itera através do eixo, você pode acabar com alguns erros estranhas.  
@@ -131,7 +132,7 @@ Console.WriteLine(root);
 ## <a name="why-cant-linq-automatically-handle-this"></a>Por que não pode automaticamente LINQ manipular esse?  
  Uma abordagem seria sempre trazer tudo na memória em vez de fazer a avaliação lazy. No entanto, seria muito cara em termos de uso de desempenho e de memória. De fato, se LINQ e LINQ to (XML) foi tomar essa abordagem, falharia em situações do mundo real.  
   
- Outra abordagem seria possível colocar o meio em alguma sintaxe de transação em LINQ, e tem a tentativa de compilador analisar o código e de determinar se as coleções específicas de precisa ser materializada. No entanto, tentar determinar qualquer código que tiver efeitos colaterais é incredibly complexa. Considere o código a seguir:  
+ Outra abordagem seria possível colocar o meio em alguma sintaxe de transação em LINQ, e tem a tentativa de compilador analisar o código e de determinar se as coleções específicas de precisa ser materializada. No entanto, tentar determinar qualquer código que tiver efeitos colaterais é incredibly complexa. Considere o seguinte código:  
   
 ```csharp  
 var z =  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - throw expression [C#]
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
-ms.openlocfilehash: 04d3138e3390627355b4b2d4e25c6b00248cec1a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7ed84e04dae54283e4b5f03be0600c4dbf95b4b4
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399332"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063114"
 ---
 # <a name="throw-c-reference"></a>throw (Referência de C#)
 
@@ -36,7 +36,7 @@ Os chamadores do método, então, usam um bloco `try-catch` ou `try-catch-finall
 
 [!code-csharp[csrefKeyword#2](~/samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#2)]
 
-## <a name="re-throwing-an-exception"></a>Gerando uma exceção novamente
+## <a name="re-throwing-an-exception"></a>Como gerar novamente uma exceção
 
 `throw` também pode ser usado em um bloco `catch` para gerar novamente uma exceção tratada em um bloco `catch`.  Nesse caso, `throw` não usa um operando de exceção. Ele é mais útil quando um método passa um argumento de um chamador para algum outro método de biblioteca e o método de biblioteca gera uma exceção que deve ser passada para o chamador. O exemplo a seguir gera novamente um <xref:System.NullReferenceException> que é gerado ao tentar recuperar o primeiro caractere de uma cadeia de caracteres não inicializada.
 
@@ -47,7 +47,7 @@ Os chamadores do método, então, usam um bloco `try-catch` ou `try-catch-finall
 
 ## <a name="the-throw-expression"></a>A expressão `throw`
 
-Começando com o C# 7.0, o `throw` pode ser usado como uma expressão, bem como uma instrução. Isso permite que uma exceção seja gerada em contextos que não tinham suporte anteriormente. Eles incluem:
+Começando com o C# 7.0, o `throw` pode ser usado como uma expressão, bem como uma instrução. Isso permite que uma exceção seja gerada em contextos que não tinham suporte anteriormente. Elas incluem:
 
 - [o operador condicional](../operators/conditional-operator.md). O exemplo a seguir usará uma expressão `throw` para gerar um <xref:System.ArgumentException> se uma matriz de cadeia de caracteres vazia for passada para um método. Antes do C# 7.0, essa lógica precisava aparecer em uma instrução `if`/`else`.
 
@@ -57,18 +57,18 @@ Começando com o C# 7.0, o `throw` pode ser usado como uma expressão, bem como 
 
    [!code-csharp[csrefKeyword#5](~/samples/snippets/csharp/language-reference/keywords/throw/coalescing.cs#1)]
 
-- um método ou [lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) com corpo de expressão. O exemplo a seguir ilustra um método com corpo de expressão que gera um <xref:System.InvalidCastException> porque uma conversão para um valor <xref:System.DateTime> não tem suporte.
+- um método ou [lambda](../operators/lambda-expressions.md) com corpo de expressão. O exemplo a seguir ilustra um método com corpo de expressão que gera um <xref:System.InvalidCastException> porque uma conversão para um valor <xref:System.DateTime> não tem suporte.
 
    [!code-csharp[csrefKeyword#6](~/samples/snippets/csharp/language-reference/keywords/throw/exp-bodied.cs#1)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
-- [tentar pegar](try-catch.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
+- [try-catch](try-catch.md)
 - [Palavras-chave do C#](index.md)
 - [Como gerar exceções explicitamente](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

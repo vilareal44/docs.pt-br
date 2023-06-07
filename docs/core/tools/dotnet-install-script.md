@@ -2,12 +2,12 @@
 title: Scripts dotnet-install
 description: Saiba mais sobre os scripts dotnet-install para instalar o SDK do .NET Core e o tempo de execução compartilhado.
 ms.date: 04/30/2020
-ms.openlocfilehash: 9f5cef9cfcca1d8b344021efe803c063a7393f8e
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: c3aa6549a0b521db7fc19c6ff44665e3c4ba0c5f
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83802718"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024648"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referência de scripts dotnet-install
 
@@ -23,12 +23,12 @@ Windows:
 dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
     [-Channel <CHANNEL>] [-DryRun] [-FeedCredential]
     [-InstallDir <DIRECTORY>] [-JSonFile <JSONFILE>]
-    [-NoCdn] [-NoPath] [-ProxyAddress]
+    [-NoCdn] [-NoPath] [-ProxyAddress] [-ProxyBypassList <LIST_OF_URLS>]
     [-ProxyUseDefaultCredentials] [-Runtime <RUNTIME>]
     [-SkipNonVersionedFiles] [-UncachedFeed] [-Verbose]
     [-Version <VERSION>]
 
-dotnet-install.ps1 -Help
+Get-Help ./dotnet-install.ps1
 ```
 
 Linux/macOS:
@@ -44,24 +44,47 @@ dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
 dotnet-install.sh --help
 ```
 
+O script de bash também lê comutadores do PowerShell. Portanto, você pode usar comutadores do PowerShell com o script nos sistemas Linux/macOS.
+
 ## <a name="description"></a>Descrição
 
-Os `dotnet-install` scripts são usados para executar uma instalação não administrativa do SDK do .NET Core, que inclui o CLI do .NET Core e o tempo de execução compartilhado.
+Os `dotnet-install` scripts executam uma instalação não administrativa do SDK do .NET Core, que inclui o CLI do .NET Core e o tempo de execução compartilhado. Há dois scripts:
+
+* Um script do PowerShell que funciona no Windows.
+* Um script bash que funciona no Linux/macOS.
+
+### <a name="purpose"></a>Finalidade
+
+ O uso pretendido dos scripts é para cenários de CI (integração contínua), em que:
+
+* O SDK precisa ser instalado sem interação do usuário e sem direitos de administrador.
+* A instalação do SDK não precisa persistir em várias execuções de CI.
+
+  A sequência típica de eventos:
+  * CI é disparado.
+  * O CI instala o SDK usando um desses scripts.
+  * O CI conclui seu trabalho e limpa os dados temporários, incluindo a instalação do SDK.
+
+Para configurar um ambiente de desenvolvimento ou executar aplicativos, use os instaladores em vez desses scripts.
+
+### <a name="recommended-version"></a>Versão recomendada
 
 Recomendamos que você use a versão estável dos scripts:
 
 - Bash (Linux/macOS):<https://dot.net/v1/dotnet-install.sh>
 - PowerShell (Windows):<https://dot.net/v1/dotnet-install.ps1>
 
-A principal utilidade desses scripts é para cenários de automação e instalações não administrativas. Há dois scripts, um do PowerShell que funciona no Windows e um script bash que funciona no Linux/macOS. Ambos os scripts têm o mesmo comportamento. O script de bash também lê comutadores do PowerShell. Portanto, você pode usar comutadores do PowerShell com o script nos sistemas Linux/macOS.
+### <a name="script-behavior"></a>Comportamento do script
 
-Os scripts de instalação baixam o arquivo ZIP/tarball dos destinos de build da CLI e o instalam no local padrão ou em um local especificado por `-InstallDir|--install-dir`. Por padrão, os scripts de instalação baixam o SDK e o instalam. Se você quiser obter somente o runtime compartilhado, especifique o argumento `-Runtime|--runtime`.
+Ambos os scripts têm o mesmo comportamento. Eles baixam o arquivo ZIP/tarball da CLI Build Descartes e prosseguem para instalá-lo no local padrão ou em um local especificado por `-InstallDir|--install-dir` .
 
-Por padrão, o script adiciona o local de instalação ao $PATH da sessão atual. Substitua esse comportamento padrão especificando o argumento `-NoPath|--no-path`.
+Por padrão, os scripts de instalação baixam o SDK e o instalam. Se você quiser obter somente o runtime compartilhado, especifique o argumento `-Runtime|--runtime`.
 
-Antes de executar o script, instale as [dependências](../install/dependencies.md) necessárias.
+Por padrão, o script adiciona o local de instalação ao $PATH da sessão atual. Substitua esse comportamento padrão especificando o argumento `-NoPath|--no-path`. O script não define a `DOTNET_ROOT` variável de ambiente.
 
-Você pode instalar uma versão específica usando o argumento `-Version|--version`. A versão deve ser especificada como uma versão de três partes (por exemplo, `2.1.0` ). Se não for fornecida, será usada a versão `latest`.
+Antes de executar o script, instale as [dependências](../install/windows.md#dependencies) necessárias.
+
+Você pode instalar uma versão específica usando o argumento `-Version|--version`. A versão deve ser especificada como um número de versão de três partes, como `2.1.0` . Se a versão não for especificada, o script instalará a `latest` versão.
 
 Os scripts de instalação não atualizam o registro no Windows. Eles apenas baixam os binários zipados e os copiam para uma pasta. Se você quiser que os valores de chave do registro sejam atualizados, use os instaladores do .NET Core.
 
@@ -94,9 +117,9 @@ Os scripts de instalação não atualizam o registro no Windows. Eles apenas bai
 
   Usado como uma cadeia de caracteres de consulta para acrescentar ao feed do Azure. Permite alterar a URL para usar contas de armazenamento de blobs não públicos.
 
-- **`-Help|--help`**
+- **`--help`**
 
-  Imprime a ajuda do script.
+  Imprime a ajuda do script. Aplica-se somente ao script bash. Para o PowerShell, use `Get-Help ./dotnet-install.ps1` .
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 
@@ -104,7 +127,7 @@ Os scripts de instalação não atualizam o registro no Windows. Eles apenas bai
 
 - **`-JSonFile|--jsonfile <JSONFILE>`**
 
-  Especifica um caminho para um arquivo [global. JSON](global-json.md) que será usado para determinar a versão do SDK. O arquivo *global. JSON* deve ter um valor para `sdk:version` .
+  Especifica um caminho para um [global.jsno](global-json.md) arquivo que será usado para determinar a versão do SDK. O *global.jsno* arquivo deve ter um valor para `sdk:version` .
 
 - **`-NoCdn|--no-cdn`**
 
@@ -117,6 +140,10 @@ Os scripts de instalação não atualizam o registro no Windows. Eles apenas bai
 - **`-ProxyAddress`**
 
   Se for definido, o instalador usará o proxy ao fazer solicitações da Web. (Válido somente para Windows.)
+
+- **`-ProxyBypassList <LIST_OF_URLS>`**
+
+  Se definido com `ProxyAddress` , fornece uma lista de URLs separadas por vírgula que ignorarão o proxy. (Válido somente para Windows.)
 
 - **`ProxyUseDefaultCredentials`**
 
@@ -229,7 +256,7 @@ Os scripts de instalação não atualizam o registro no Windows. Eles apenas bai
   curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Versões do .NET Core](https://github.com/dotnet/core/releases)
 - [Arquivo de download de runtime e SDK do .NET Core](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

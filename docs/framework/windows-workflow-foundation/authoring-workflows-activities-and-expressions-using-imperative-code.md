@@ -3,12 +3,12 @@ title: Criando fluxos de trabalho, atividades e expressões de design usando o c
 description: Uma definição de fluxo de trabalho do Workflow Foundation é uma árvore de objetos de atividade configurados. Use o código para criar definições, atividades e expressões de fluxo de trabalho.
 ms.date: 03/30/2017
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
-ms.openlocfilehash: d8b4cb8b85d3ea3759d58e15df823a72146772e8
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: d169049c47c154858a2e653b5f286fa6b66ba44d
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421547"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063790"
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>Criando fluxos de trabalho, atividades e expressões de design usando o código obrigatório
 Uma definição de fluxo de trabalho é uma árvore de objetos de atividade configurados. Essa árvore de atividades pode ser definida de muitas maneiras, incluindo pela edição manual do XAML ou usando o Designer de Fluxo de Trabalho para gerar XAML. O uso de XAML, porém, não é um requisito. As definições de fluxo de trabalho também podem ser criadas programaticamente. Este tópico fornece uma visão geral de como criar definições, atividades e expressões de fluxo de trabalho usando código. Para obter exemplos de como trabalhar com fluxos de trabalho XAML usando código, consulte [serializando fluxos de trabalho e atividades de e para XAML](serializing-workflows-and-activities-to-and-from-xaml.md).  
@@ -62,7 +62,7 @@ new Assign<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#52](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#52)]  
   
- Para obter mais informações sobre expressões lambda, consulte [expressões lambda (guia de programação C#)](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) ou [expressões lambda (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Para obter mais informações sobre expressões lambda, consulte [expressões lambda (referência C#)](../../csharp/language-reference/operators/lambda-expressions.md) ou [expressões lambda (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
  As expressões lambda não são serializáveis para o formato XAML. Se uma tentativa para serializar um fluxo de trabalho com expressões lambda for feita, um <xref:System.Activities.Expressions.LambdaSerializationException> será gerado com a seguinte mensagem: “Esse fluxo de trabalho contém as expressões lambda especificadas no código. Essas expressões não são XAML serializável. Para tornar serializável a XAML de seu fluxo de trabalho, use VisualBasicValue/VisualBasicReference ou ExpressionServices.Convert(lambda). Isso fará as expressões lambda serem convertidas em atividades de expressão." Para tornar essa expressão compatível com XAML, use <xref:System.Activities.Expressions.ExpressionServices> e <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>, conforme mostrado no exemplo a seguir.  
   

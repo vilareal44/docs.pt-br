@@ -4,16 +4,16 @@ description: Aprenda os conceitos de teste de unidade no C# e .NET Core por meio
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: d8cf0e29c8a482b39bd7e99bcde1fd60301f046f
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: feff4cabbd10064ef4acca12d4f960f2a40a2b12
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702940"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656378"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>C# de teste de unidade no .NET Core usando dotnet test e xUnit
 
-Este tutorial mostra como criar uma solução que contém um projeto de teste de unidade e um projeto de código-fonte. Para seguir o tutorial usando uma solução predefinida, [exiba ou baixe o código de exemplo](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/). Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Este tutorial mostra como criar uma solução que contém um projeto de teste de unidade e um projeto de código-fonte. Para seguir o tutorial usando uma solução predefinida, [exiba ou baixe o código de exemplo](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/). Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="create-the-solution"></a>Criar a solução
 
@@ -33,7 +33,7 @@ Nesta seção, é criada uma solução que contém os projetos de origem e de te
 As instruções a seguir fornecem as etapas para criar a solução de teste. Consulte [comandos para criar solução de teste](#create-test-cmd) para obter instruções para criar a solução de teste em uma única etapa.
 
 * Abra uma janela do shell.
-* Execute o comando a seguir:
+* Execute o seguinte comando:
 
   ```dotnetcli
   dotnet new sln -o unit-testing-using-dotnet-test
@@ -41,7 +41,7 @@ As instruções a seguir fornecem as etapas para criar a solução de teste. Con
 
   O [`dotnet new sln`](../tools/dotnet-new.md) comando cria uma nova solução no diretório *Unit-Testing-using-dotnet-Test* .
 * Altere o diretório para a pasta *Unit-Testing-using-dotnet-Test* .
-* Execute o comando a seguir:
+* Execute o seguinte comando:
 
   ```dotnetcli
   dotnet new classlib -o PrimeService
@@ -131,7 +131,7 @@ Uma abordagem popular no TDD (desenvolvimento controlado por teste) é escrever 
 Atualize o projeto *PrimeService. Tests* :
 
 * Exclua *PrimeService. Tests/UnitTest1. cs*.
-* Crie um arquivo *PrimeService. Tests/PrimeService_IsPrimeShould. cs* .
+* Crie um arquivo *PrimeService. Tests/PrimeService_IsPrimeShould. cs*  .
 * Substitua o código em *PrimeService_IsPrimeShould. cs* pelo código a seguir:
 
 ```csharp
@@ -160,7 +160,7 @@ namespace Prime.UnitTests.Services
 }
 ```
 
-O `[Fact]` atributo declara um método de teste que é executado pelo executor de teste. Na pasta *PrimeService. Tests* , execute `dotnet test` . O comando [dotnet Test](../tools/dotnet-test.md) compila ambos os projetos e executa os testes. O executor de teste do xUnit contém o ponto de entrada do programa para executar os testes. `dotnet test`inicia o executor de teste usando o projeto de teste de unidade.
+O `[Fact]` atributo declara um método de teste que é executado pelo executor de teste. Na pasta *PrimeService. Tests* , execute `dotnet test` . O comando [dotnet Test](../tools/dotnet-test.md) compila ambos os projetos e executa os testes. O executor de teste do xUnit contém o ponto de entrada do programa para executar os testes. `dotnet test` inicia o executor de teste usando o projeto de teste de unidade.
 
 O teste falha porque não `IsPrime` foi implementado. Usando a abordagem TDD, escreva apenas código suficiente para que esse teste passe. Atualize `IsPrime` com o seguinte código:
 

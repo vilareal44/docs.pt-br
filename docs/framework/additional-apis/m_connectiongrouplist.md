@@ -1,5 +1,6 @@
 ---
-title: Campo ServicePoint.m_ConnectionGroupList
+title: Campo de ponto de extremidade. m_ConnectionGroupList
+description: Entenda o campo do ponto. m_ConnectionGroupList, uma tabela de hash de grupos de conexão que cada um tem uma conexão para o URI do ponto de extremidade no .NET.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,32 +11,32 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
-ms.openlocfilehash: 2b1b46085ed035b67fd01447727b406fe3895980
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ebfeb782147f21abfde536b8053fa15b1e1a602
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155889"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989706"
 ---
-# <a name="servicepointm_connectiongrouplist-field"></a>Campo ServicePoint.m\_ConnectionGroupList
+# <a name="servicepointm_connectiongrouplist-field"></a>Campo ConnectionGroupList do ponto. m \_
 
-`ServicePoint.m_ConnectionGroupList`é <xref:System.Collections.Hashtable> um de grupos de conexão, cada um segurando uma conexão para o <xref:System.Net.ServicePoint>URI 's.
+`ServicePoint.m_ConnectionGroupList`é um <xref:System.Collections.Hashtable> dos grupos de conexão, cada um mantendo uma conexão para o <xref:System.Net.ServicePoint> URI do.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
   
 ```csharp  
 private Hashtable m_ConnectionGroupList
 ```
 
 > [!WARNING]
-> O `ServicePoint.m_ConnectionGroupList` campo é privado e não deve ser usado diretamente em seu código.
+> O `ServicePoint.m_ConnectionGroupList` campo é privado e não deve ser usado diretamente no seu código.
 >
-> A Microsoft não suporta o uso deste campo em um aplicativo de produção nenhuma circunstância.
+> A Microsoft não oferece suporte ao uso deste campo em um aplicativo de produção em qualquer circunstância.
 
 ## <a name="requirements"></a>Requisitos
 
-**Espaço de nome:**<xref:System.Net>
+**Namespace:** <xref:System.Net>
 
-**Montagem:** Sistema (em System.dll)
+**Assembly:** Sistema (em System.dll)
 
-**Versões do Framework .NET:** Disponível desde 2.0.
+**.NET Framework versões:** Disponível desde 2,0.

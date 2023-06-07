@@ -1,5 +1,6 @@
 ---
 title: Especificando um endereço de ponto de extremidade
+description: Saiba mais sobre um endereço de ponto de extremidade, uma parte de um ServiceEndpoint no WCF. Toda a comunicação com um serviço WCF ocorre por meio de seus pontos de extremidade.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 5ec6432d2f9cc7bf8619f59bad470c6b2cb190e0
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: e1bd9e5a27d1bc86d2d3e04ee82221a27a4e1fa8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441013"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245978"
 ---
 # <a name="specifying-an-endpoint-address"></a>Especificando um endereço de ponto de extremidade
 
@@ -42,13 +43,13 @@ Ao hospedar com o IIS, você não gerencia a <xref:System.ServiceModel.ServiceHo
 
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Definindo endereços de ponto de extremidade na configuração
 
-Para definir um ponto de extremidade em um arquivo de configuração, use o elemento [ \< Endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md) .
+Para definir um ponto de extremidade em um arquivo de configuração, use o [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md) elemento.
 
 [!code-xml[S_UEHelloWorld#5](./snippets/specifying-an-endpoint-address/serviceapp2.config#5)]
 
-Quando o <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> método é chamado (ou seja, quando o aplicativo de hospedagem tenta iniciar o serviço), o sistema procura um elemento de [ \<>de serviço](../configure-apps/file-schema/wcf/service.md) com um atributo de nome que especifique "UE. Samples. HelloService ". Se o elemento de [ \<>de serviço](../configure-apps/file-schema/wcf/service.md) for encontrado, o sistema carregará a classe especificada e criará pontos de extremidade usando as definições de ponto de extremidades fornecidas no arquivo de configuração. Esse mecanismo permite que você carregue e inicie um serviço com duas linhas de código enquanto mantém a ligação e o endereçamento de informações do seu código. A vantagem dessa abordagem é que essas alterações podem ser feitas sem a necessidade de recompilar ou reimplantar o aplicativo.
+Quando o <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> método é chamado (ou seja, quando o aplicativo de hospedagem tenta iniciar o serviço), o sistema procura um [\<service>](../configure-apps/file-schema/wcf/service.md) elemento com um atributo de nome que ESPECIFIQUE "UE. Samples. HelloService ". Se o [\<service>](../configure-apps/file-schema/wcf/service.md) elemento for encontrado, o sistema carregará a classe especificada e criará pontos de extremidade usando as definições de ponto de extremidades fornecidas no arquivo de configuração. Esse mecanismo permite que você carregue e inicie um serviço com duas linhas de código enquanto mantém a ligação e o endereçamento de informações do seu código. A vantagem dessa abordagem é que essas alterações podem ser feitas sem a necessidade de recompilar ou reimplantar o aplicativo.
 
-Os cabeçalhos opcionais são declarados em um [ \<>de cabeçalhos ](../configure-apps/file-schema/wcf/headers-element.md). Veja a seguir um exemplo dos elementos usados para especificar pontos de extremidade para um serviço em um arquivo de configuração que distingue entre dois cabeçalhos: clientes "Gold" de `http://tempuri1.org/` e clientes "padrão" do `http://tempuri2.org/` . O cliente que chama esse serviço deve ter os [ \< cabeçalhos apropriados>](../configure-apps/file-schema/wcf/headers-element.md) em seu arquivo de configuração.
+Os cabeçalhos opcionais são declarados em um [\<headers>](../configure-apps/file-schema/wcf/headers-element.md) . Veja a seguir um exemplo dos elementos usados para especificar pontos de extremidade para um serviço em um arquivo de configuração que distingue entre dois cabeçalhos: clientes "Gold" de `http://tempuri1.org/` e clientes "padrão" do `http://tempuri2.org/` . O cliente que chama esse serviço deve ter o apropriado [\<headers>](../configure-apps/file-schema/wcf/headers-element.md) em seu arquivo de configuração.
 
 [!code-xml[S_UEHelloWorld#1](./snippets/specifying-an-endpoint-address/serviceapp.config#1)]
 
@@ -91,4 +92,4 @@ Se os pontos de extremidade forem fornecidos explicitamente, os pontos de extrem
 - <xref:System.ServiceModel.EndpointAddress>
 - [Identidade e autenticação de serviço](./feature-details/service-identity-and-authentication.md)
 - [Visão geral de criação de ponto de extremidade](endpoint-creation-overview.md)
-- [Hospedagem](./feature-details/hosting.md)
+- [Hosting](./feature-details/hosting.md)

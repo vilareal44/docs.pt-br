@@ -1,5 +1,6 @@
 ---
 title: Criação de novas cadeias de caracteres no .NET
+description: Aprenda a criar cadeias de caracteres usando atribuição, construtores de classe ou métodos System. String que combinam várias cadeias de caracteres, matrizes de cadeias de caracteres ou objetos no .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - strings [.NET Framework], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-ms.openlocfilehash: ef65c50111d6ba91ab70d0b9c8cb90c606f9366c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b44d0f8e1717ead72e28f0be644644961d1482b6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73103824"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596442"
 ---
 # <a name="creating-new-strings-in-net"></a>Criação de novas cadeias de caracteres no .NET
 O .NET Framework permite que cadeias de caracteres sejam criadas usando uma atribuição simples e também sobrecarrega um construtor de classe para dar suporte à criação de cadeias de caracteres usando um número de parâmetros diferentes. O .NET Framework também fornece vários métodos na classe <xref:System.String?displayProperty=nameWithType> que criam objetos de cadeia de caracteres combinando várias cadeias de caracteres, matrizes de cadeias de caracteres ou objetos.  
@@ -32,7 +33,7 @@ O .NET Framework permite que cadeias de caracteres sejam criadas usando uma atri
 ## <a name="methods-that-return-strings"></a>Métodos que retornam cadeias de caracteres  
  A tabela a seguir lista vários métodos úteis que retornam novos objetos de cadeia de caracteres.  
   
-|Nome do método|Use|  
+|Nome do método|Uso|  
 |-----------------|---------|  
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|Cria uma cadeia de caracteres formatada de um conjunto de objetos de entrada.|  
 |<xref:System.String.Concat%2A?displayProperty=nameWithType>|Cria cadeias de caracteres de duas ou mais cadeias de caracteres.|  
@@ -41,7 +42,7 @@ O .NET Framework permite que cadeias de caracteres sejam criadas usando uma atri
 |<xref:System.String.CopyTo%2A?displayProperty=nameWithType>|Copia caracteres especificados de uma cadeia de caracteres para uma posição especificada em uma matriz de caracteres.|  
   
 ### <a name="format"></a>Formatar  
- Você pode usar o método **String.Format** para criar cadeias de caracteres formatadas e concatenar cadeias de caracteres que representam vários objetos. Este método converte automaticamente qualquer objeto passado em uma cadeia de caracteres. Por exemplo, se seu aplicativo precisar exibir um valor **Int32** e um valor **DateTime** para o usuário, você pode facilmente criar uma cadeia de caracteres para representar esses valores usando o método **Format**. Para obter informações sobre as convenções de formatação usadas com esse método, consulte a seção sobre [formatação de composição](../../../docs/standard/base-types/composite-formatting.md).  
+ Você pode usar o método **String.Format** para criar cadeias de caracteres formatadas e concatenar cadeias de caracteres que representam vários objetos. Este método converte automaticamente qualquer objeto passado em uma cadeia de caracteres. Por exemplo, se seu aplicativo precisar exibir um valor **Int32** e um valor **DateTime** para o usuário, você pode facilmente criar uma cadeia de caracteres para representar esses valores usando o método **Format**. Para obter informações sobre as convenções de formatação usadas com esse método, consulte a seção sobre [formatação de composição](composite-formatting.md).  
   
  O exemplo a seguir usa o método **Format** para criar uma cadeia de caracteres que usa uma variável de inteiro.  
   
@@ -78,7 +79,7 @@ O .NET Framework permite que cadeias de caracteres sejam criadas usando uma atri
  [!code-csharp[Strings.Creating#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#5)]
  [!code-vb[Strings.Creating#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#5)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Operações básicas de string](../../../docs/standard/base-types/basic-string-operations.md)
-- [Formatação composta](../../../docs/standard/base-types/composite-formatting.md)
+- [Operações básicas de cadeia de caracteres](basic-string-operations.md)
+- [Formatação composta](composite-formatting.md)

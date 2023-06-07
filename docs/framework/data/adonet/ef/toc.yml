@@ -8,15 +8,15 @@
     - name: Gerador de EDM (EdmGen.exe)
       href: edm-generator-edmgen-exe.md
       items:
-        - name: Como usar EdmGen.exe para gerar o modelo e arquivos de mapeamento
+        - name: 'Como: usar EdmGen.exe para gerar o modelo e arquivos de mapeamento'
           href: how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md
-        - name: 'Como: Use EdmGen.exe para gerar código de objetos camada'
+        - name: 'Como: usar EdmGen.exe para gerar código de objetos camada'
           href: how-to-use-edmgen-exe-to-generate-object-layer-code.md
-        - name: 'Como: Use EdmGen.exe para validar o modelo e arquivos de mapeamento'
+        - name: 'Como: usar EdmGen.exe para validar o modelo e arquivos de mapeamento'
           href: how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md
-    - name: Como definir a cadeia de conexão
+    - name: 'Como: definir a cadeia de conexão'
       href: how-to-define-the-connection-string.md
-    - name: Como tornar arquivos de modelo e mapeamento recursos inseridos
+    - name: 'Como: tornar arquivos de modelo e mapeamento recursos inseridos'
       href: how-to-make-model-and-mapping-files-embedded-resources.md
     - name: Trabalhando com a linguagem de definição de dados
       href: working-with-data-definition-language.md
@@ -35,25 +35,25 @@
         - name: Provedor EntityClient para Entity Framework
           href: entityclient-provider-for-the-entity-framework.md
           items:
-            - name: Como compilar uma cadeia de conexão EntityConnection
+            - name: 'Como: criar uma cadeia de conexão EntityConnection'
               href: how-to-build-an-entityconnection-connection-string.md
-            - name: 'Como: Executar uma consulta que retorna resultados de PrimitiveType'
+            - name: 'Como: executar uma consulta que retorna resultados de PrimitiveType'
               href: how-to-execute-a-query-that-returns-primitivetype-results.md
-            - name: 'Como: Executar uma consulta que retorna resultados de StructuralType'
+            - name: 'Como: executar uma consulta que retorna resultados de StructuralType'
               href: how-to-execute-a-query-that-returns-structuraltype-results.md
-            - name: 'Como: Executar uma consulta que retorna resultados de RefType'
+            - name: 'Como: executar uma consulta que retorna resultados de RefType'
               href: how-to-execute-a-query-that-returns-reftype-results.md
-            - name: 'Como: Executar uma consulta que retorna tipos complexos'
+            - name: 'Como: executar uma consulta que retorna tipos complexos'
               href: how-to-execute-a-query-that-returns-complex-types.md
-            - name: 'Como: Executar uma consulta que retorna aninhados coleções'
+            - name: 'Como: executar uma consulta que retorna aninhados coleções'
               href: how-to-execute-a-query-that-returns-nested-collections.md
-            - name: Como executar uma consulta Entity SQL parametrizada usando EntityCommand
+            - name: 'Como: executar uma consulta Entity SQL parametrizada usando EntityCommand'
               href: how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md
-            - name: 'Como: Executar um procedimento armazenado parametrizado usando EntityCommand'
+            - name: 'Como: executar um procedimento armazenado parametrizado usando EntityCommand'
               href: how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md
-            - name: 'Como: Executar uma consulta polimorfo'
+            - name: 'Como: executar uma consulta polimorfo'
               href: how-to-execute-a-polymorphic-query.md
-            - name: 'Como: Navegar em relações com o operador navegar'
+            - name: 'Como: navegar em relações com o operador navegar'
               href: how-to-navigate-relationships-with-the-navigate-operator.md
         - name: SqlClient para Entity Framework
           href: sqlclient-for-the-entity-framework.md

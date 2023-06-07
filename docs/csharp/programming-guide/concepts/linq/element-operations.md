@@ -1,13 +1,14 @@
 ---
 title: Operações de elemento (C#)
+description: Saiba mais sobre os métodos de operador de consulta padrão que fazem operações de elemento, que retornam um único elemento de uma sequência em C#.
 ms.date: 10/03/2018
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-ms.openlocfilehash: e9ec41793afffe60a7184622f91b5fc023e0958f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8cd34146a3b93205ec01ed128aacb79d566a03c6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345155"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105448"
 ---
 # <a name="element-operations-c"></a>Operações de elemento (C#)
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ec90ee83-bd4b-408b-9274-62a923ab86a1
 topic_type:
 - apiref
-ms.openlocfilehash: c674cc43065bf8ea102bec1c5134757380454913
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0e030a33a0a3368f35c82fad33f1ea2ce32446af
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141234"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83841822"
 ---
 # <a name="ihosttaskmanagersetclrtaskmanager-method"></a>Método IHostTaskManager::SetCLRTaskManager
-Fornece ao host um ponteiro de interface para uma instância [ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md) implementada pelo Common Language Runtime (CLR).  
+Fornece ao host um ponteiro de interface para uma instância [ICLRTaskManager](iclrtaskmanager-interface.md) implementada pelo Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,13 +35,13 @@ HRESULT SetCLRTaskManager (
   
 ## <a name="parameters"></a>Parâmetros  
  `pManager`  
- no Um ponteiro para uma instância `ICLRTaskManager` implementada pelo Common Language Runtime.  
+ no Um ponteiro para uma `ICLRTaskManager` instância implementada pelo Common Language Runtime.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`SetCLRTaskManager` retornado com êxito.|  
+|S_OK|`SetCLRTaskManager`retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -49,20 +49,20 @@ HRESULT SetCLRTaskManager (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- O tempo de execução chama `SetCLRTaskManager` para fornecer ao host um ponteiro de interface para uma instância de `ICLRTaskManager`.  
+ O tempo de execução chama `SetCLRTaskManager` para fornecer ao host um ponteiro de interface para uma `ICLRTaskManager` instância.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [Interface ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [Interface IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [Interface IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [Interface ICLRTask](iclrtask-interface.md)
+- [Interface ICLRTaskManager](iclrtaskmanager-interface.md)
+- [Interface IHostTask](ihosttask-interface.md)
+- [Interface IHostTaskManager](ihosttaskmanager-interface.md)

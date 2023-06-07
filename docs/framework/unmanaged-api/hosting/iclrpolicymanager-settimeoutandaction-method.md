@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60454f91-d855-4ddf-bb6d-60a02f5eabab
 topic_type:
 - apiref
-ms.openlocfilehash: efd30ef04c148d5e098110efcb37e50f143884e4
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 02e836601be72d54f561e077cd3c466470bafb25
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703432"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504089"
 ---
 # <a name="iclrpolicymanagersettimeoutandaction-method"></a>Método ICLRPolicyManager::SetTimeoutAndAction
 Define um valor de tempo limite para a operação especificada e especifica a ação de política que o Common Language Runtime (CLR) deve executar quando a operação ocorre.  
@@ -37,7 +37,7 @@ HRESULT SetTimeoutAndAction (
   
 ## <a name="parameters"></a>Parâmetros  
  `operation`  
- no Um dos valores de [EClrOperation](eclroperation-enumeration.md) , que indica a operação para a qual definir o tempo limite e a política `action` . Os valores a seguir têm suporte:  
+ no Um dos valores de [EClrOperation](eclroperation-enumeration.md) , que indica a operação para a qual definir o tempo limite e a política `action` . Os seguintes valores têm suporte:  
   
 - OPR_AppDomainUnload  
   
@@ -53,7 +53,7 @@ HRESULT SetTimeoutAndAction (
  `action`  
  no Um dos valores de [EPolicyAction](epolicyaction-enumeration.md) , indicando a ação de política que o CLR deve executar quando `operation` ocorre.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -66,7 +66,7 @@ HRESULT SetTimeoutAndAction (
 |E_INVALIDARG|Não é possível definir um tempo limite para o especificado `operation` ou um valor inválido foi fornecido para `action` .|  
   
 ## <a name="remarks"></a>Comentários  
- `SetTimeoutAndAction`encapsula os recursos dos métodos [ICLRPolicyManager:: SetTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md) e [ICLRPolicyManager:: SetActionOnTimeout](iclrpolicymanager-setactionontimeout-method.md) e pode ser chamado no lugar de chamadas sequenciais para esses dois métodos.  
+ `SetTimeoutAndAction`encapsula os recursos dos métodos [ICLRPolicyManager:: SetTimeout](iclrpolicymanager-settimeout-method.md) e [ICLRPolicyManager:: SetActionOnTimeout](iclrpolicymanager-setactionontimeout-method.md) e pode ser chamado no lugar de chamadas sequenciais para esses dois métodos.  
   
 > [!IMPORTANT]
 > Nem todos os valores de ação de política podem ser especificados como o comportamento de tempo limite para operações de CLR. Consulte as seções comentários dos tópicos para esses dois métodos para obter os valores válidos.  

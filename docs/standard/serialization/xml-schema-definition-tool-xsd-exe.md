@@ -3,12 +3,12 @@ title: Ferramenta de Definição de Esquema XML (Xsd.exe)
 description: O gerador de serializador XML cria um assembly de serialização XML para tipos em um assembly especificado, o que melhora o desempenho de inicialização do XmlSerializer.
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 9b2be0b0b267973bd25ffd021dec18a7b9bcadec
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 0275ecfebd427feb104013024654d4a0bc98748a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380047"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84288973"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>Ferramenta de Definição de Esquema XML (Xsd.exe)
 
@@ -32,7 +32,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 ```
   
 > [!TIP]
-> Para que as ferramentas de .NET Framework funcionem corretamente, você deve definir as `Path` `Include` variáveis de ambiente, e `Lib` corretamente. Defina essas variáveis de ambiente executando SDKVars.bat, que está localizado no diretório \<SDK>\v2.0\Bin. SDKVars.bat deve ser executado em todo shell de comando.
+> Para que as ferramentas de .NET Framework funcionem corretamente, você deve definir as `Path` `Include` variáveis de ambiente, e `Lib` corretamente. Defina essas variáveis de ambiente executando SDKVars. bat, que está localizado no \<SDK> diretório \v2.0\Bin. SDKVars.bat deve ser executado em todo shell de comando.
 
 ## <a name="argument"></a>Argumento
 
@@ -63,7 +63,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 |------------|-----------------|
 |**/e \[ lementar \] :**_Element_|Especifica o elemento no esquema para o qual gerar código. Por padrão, todos os elementos são tipados. Você pode especificar esse argumento mais de uma vez.|
 |**/enableDataBinding**|Implementa a interface <xref:System.ComponentModel.INotifyPropertyChanged> em todos os tipos gerados para habilitar a associação de dados. A forma curta é `/edb`.|
-|**/enableLinqDataSet**|(Forma abreviada: `/eld` .) Especifica que o DataSet gerado pode ser consultado em relação ao uso de LINQ to DataSet. Essa opção é usada quando a opção /dataset também está especificada. Para obter mais informações, consulte [Visão geral do LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) e [Consultando DataSets tipados](../../../docs/framework/data/adonet/querying-typed-datasets.md). Para obter informações gerais sobre como usar o LINQ, consulte [LINQ (consulta integrada à linguagem)-C#](../../csharp/programming-guide/concepts/linq/index.md) ou [LINQ (consulta integrada à linguagem)-Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).|
+|**/enableLinqDataSet**|(Forma abreviada: `/eld` .) Especifica que o DataSet gerado pode ser consultado em relação ao uso de LINQ to DataSet. Essa opção é usada quando a opção /dataset também está especificada. Para obter mais informações, consulte [Visão geral do LINQ to DataSet](../../framework/data/adonet/linq-to-dataset-overview.md) e [Consultando DataSets tipados](../../framework/data/adonet/querying-typed-datasets.md). Para obter informações gerais sobre como usar o LINQ, consulte [LINQ (consulta integrada à linguagem)-C#](../../csharp/programming-guide/concepts/linq/index.md) ou [LINQ (consulta integrada à linguagem)-Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).|
 |**/f \[ ields\]**|Gera campos em vez de propriedades. Por padrão, as propriedades são geradas.|
 |**/l \[ uagem \] :**_idioma_|Especifica a linguagem de programação a ser usada. Escolha `CS` (C#, que é o padrão), `VB` (Visual Basic), `JS` (JScript), ou `VJS` (Visual J#). Você também pode especificar um nome totalmente qualificado para uma classe implementando <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|
 |**/n \[ amespace \] :**_namespace_|Especifica o namespace de runtime para os tipos gerados. O namespace padrão é `Schemas`.|
@@ -153,7 +153,7 @@ Para gerar um arquivo de código, use o elemento `<generateClasses>`. O exemplo 
 |-------------|-----------------|
 |\<element>|Especifica um elemento no arquivo .xsd para o qual gerar código.|
 |\<schemaImporterExtensions>|Especifica um tipo derivado de uma classe <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>.|
-|\<schema>|Especifica um arquivo de esquema XML para o qual gerar um código. Vários arquivos do Esquema XML podem ser especificados usando vários elementos \<schema>.|
+|\<schema>|Especifica um arquivo de esquema XML para o qual gerar um código. Vários arquivos de esquema XML podem ser especificados usando vários \<schema> elementos.|
 
 A tabela a seguir mostra os atributos que também podem ser usados com o elemento `<generateClasses>`.
 
@@ -176,7 +176,7 @@ As opções que você pode definir para o elemento `<generateDataSet>` incluem o
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|\<schema>|Especifica um arquivo de esquema XML para o qual gerar um código. Vários arquivos do Esquema XML podem ser especificados usando vários elementos \<schema>.|
+|\<schema>|Especifica um arquivo de esquema XML para o qual gerar um código. Vários arquivos de esquema XML podem ser especificados usando vários \<schema> elementos.|
 
  A tabela a seguir mostra os atributos que podem ser usados com o elemento `<generateDataSet>`.
 
@@ -233,9 +233,9 @@ xsd myAssembly.dll
 
 - <xref:System.Data.DataSet>
 - <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>
-- [Ferramentas](../../../docs/framework/tools/index.md)
-- [Prompts de comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-- [LINQ para visão geral do DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
-- [Consultando DataSets tipados](../../../docs/framework/data/adonet/querying-typed-datasets.md)
+- [Ferramentas](../../framework/tools/index.md)
+- [Prompts de comando](../../framework/tools/developer-command-prompt-for-vs.md)
+- [LINQ para visão geral do DataSet](../../framework/data/adonet/linq-to-dataset-overview.md)
+- [Consultando DataSets tipados](../../framework/data/adonet/querying-typed-datasets.md)
 - [LINQ (consulta integrada à linguagem) (C#)](../../csharp/programming-guide/concepts/linq/index.md)
 - [LINQ (consulta integrada à linguagem) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)

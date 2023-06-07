@@ -1,13 +1,14 @@
 ---
 title: DataAdapters e DataReaders
+description: Saiba mais sobre o ADO.NET DataReader, que recupera dados de um banco de dados, e DataAdapter, que recupera dados de uma fonte e popula um DataSet.
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 20c6d514e70d2e4db451e0fff02e72688bf7d0ba
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17463d65266baa53521bed9603c8abd96923277b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786644"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286967"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapters e DataReaders
 Você pode usar o **DataReader** ADO.net para recuperar um fluxo de dados somente leitura e somente encaminhamento de um banco de dado. Os resultados são retornados conforme a consulta é executada e são armazenados no buffer de rede no cliente até que você os solicite usando o método **Read** do **DataReader**. Usar o **DataReader** pode aumentar o desempenho do aplicativo recuperando dados assim que ele estiver disponível e (por padrão) armazenando apenas uma linha de cada vez na memória, reduzindo a sobrecarga do sistema.  
@@ -35,7 +36,7 @@ Você pode usar o **DataReader** ADO.net para recuperar um fluxo de dados soment
  [Paginação por um resultado de consulta](paging-through-a-query-result.md)  
  Fornece um exemplo de como exibir os resultados de uma consulta como páginas de dados.  
   
- [Updating Data Sources with DataAdapters](updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)  
+ [Atualizando fontes de dados com DataAdapters](updating-data-sources-with-dataadapters.md)  
  Descreve como usar um `DataAdapter` para resolver alterações em um `DataSet` de volta para o banco de dados.  
   
  [Manipulação de eventos DataAdapter](handling-dataadapter-events.md)  
@@ -44,10 +45,10 @@ Você pode usar o **DataReader** ADO.net para recuperar um fluxo de dados soment
  [Executando operações em lote usando DataAdapters](performing-batch-operations-using-dataadapters.md)  
  Descreve como melhorar o desempenho do aplicativo reduzindo o número de viagens de ida e volta ao SQL Server para aplicar atualizações do `DataSet`.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Conectando a uma fonte de dados](connecting-to-a-data-source.md)
+- [Conectando a uma Fonte de Dados](connecting-to-a-data-source.md)
 - [Comandos e parâmetros](commands-and-parameters.md)
 - [Transações e simultaneidade](transactions-and-concurrency.md)
-- [DataSets, DataTables, and DataViews](./dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)
-- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)
+- [DataSets, DataTables e DataViews](./dataset-datatable-dataview/index.md)
+- [Visão geral do ADO.NET](ado-net-overview.md)

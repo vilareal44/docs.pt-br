@@ -9,19 +9,19 @@ helpviewer_keywords:
 - namespaces [.NET Framework], names
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
-ms.openlocfilehash: 0ad98af240cf8d1041d6a8b64ab71a56e763f76f
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: e435e0281165b4a9f12bbccbeb10401b57375dcb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419051"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290195"
 ---
 # <a name="names-of-namespaces"></a>Nomes de namespaces
 Assim como acontece com outras diretrizes de nomenclatura, a meta ao nomear namespaces é criar uma clareza suficiente para o programador usando a estrutura para saber imediatamente qual é a probabilidade do conteúdo do namespace. O modelo a seguir especifica a regra geral para nomes de namespaces:
 
  `<Company>.(<Product>|<Technology>)[.<Feature>][.<Subnamespace>]`
 
- Veja estes exemplos:
+ Os exemplos são os seguintes:
 
  `Fabrikam.Math` `Litware.Security`
 
@@ -84,5 +84,5 @@ Assim como acontece com outras diretrizes de nomenclatura, a meta ao nomear name
 
 ## <a name="see-also"></a>Veja também
 
-- [Diretrizes de design de estrutura](../../../docs/standard/design-guidelines/index.md)
-- [Diretrizes de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Diretrizes de design de estrutura](index.md)
+- [Diretrizes de nomenclatura](naming-guidelines.md)

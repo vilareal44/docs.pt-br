@@ -1,17 +1,18 @@
 ---
 title: Como expor componentes .NET ao COM
+description: Expor componentes .NET ao COM. Qualificar tipos .NET para interoperação. Aplicar atributos de interoperabilidade. Empacotar um assembly para COM. Consumir um tipo gerenciado do COM.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
-ms.openlocfilehash: 09045fb455a2163641d6f4af0ba07520ead59f1e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 918c90f6741047f7d3cdf89a9b182700ecb2ed93
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617451"
 ---
 # <a name="exposing-net-components-to-com"></a>Como expor componentes .NET ao COM
 
@@ -49,7 +50,7 @@ A escrita de um tipo .NET e o consumo desse tipo em um código não gerenciado s
 
      Um assembly de nome forte pode ser instalado no cache de assembly global e exige uma assinatura de seu fornecedor. Os assemblies que não têm nome forte devem ser instalados no diretório do aplicativo do cliente.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Interoperação com código não gerenciado](index.md)
-- [Exemplo de interoperabilidade COM: cliente COM e servidor .NET](com-interop-sample-com-client-and-net-server.md)
+- [Amostra de interoperabilidade COM: Cliente COM e servidor .NET](com-interop-sample-com-client-and-net-server.md)

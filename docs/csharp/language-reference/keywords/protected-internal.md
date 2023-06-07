@@ -1,13 +1,15 @@
 ---
 title: protected internal (referência do C#)
 ms.date: 11/15/2017
+f1_keywords:
+- protectedinternal_CSharpKeyword
 author: sputier
-ms.openlocfilehash: 877df74b51fb859043171619f5687ecddb8409d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4067da93bcceba0fa3e4a14aa58b4cde812412f3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713190"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301782"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (referência do C#)
 
@@ -65,15 +67,15 @@ Membros de struct não podem ser `protected internal` porque o struct não pode 
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
 - [Modificadores de acesso](access-modifiers.md)
 - [Níveis de acessibilidade](accessibility-levels.md)
 - [Modificadores](index.md)
 - [público](public.md)
-- [Privada](private.md)
-- [Interno](internal.md)
+- [pessoal](private.md)
+- [internal](internal.md)
 - [Questões de segurança de palavras-chave virtuais internas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

@@ -4,25 +4,25 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-ms.openlocfilehash: 79772d19ddaec041aa1fac936b9951731507b6e6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1d04a7bb756cccb33b436c1f57decc0249764828
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184460"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600329"
 ---
 # <a name="servicemodel-transaction-configuration"></a>Configuração de transação de ServiceModel
-A Windows Communication Foundation (WCF) fornece três atributos `transactionFlow` `transactionProtocol`para `transactionTimeout`configurar transações para um serviço: , e .  
+Windows Communication Foundation (WCF) fornece três atributos para configurar transações para um serviço: `transactionFlow` , `transactionProtocol` e `transactionTimeout` .  
   
-## <a name="configuring-transactionflow"></a>Configurando transactionFlow  
- A maioria das vinculações predefinidas `transactionFlow` `transactionProtocol` que o WCF fornece contém os atributos e os atributos, para que você possa configurar a vinculação para aceitar transações recebidas para um ponto final específico usando um protocolo específico de fluxo de transações. Além disso, você `transactionFlow` pode usar `transactionProtocol` o elemento e seu atributo para construir sua própria vinculação personalizada. Para obter mais informações sobre a configuração dos elementos de [ \<configuração,](../../configure-apps/file-schema/wcf/bindings.md) consulte>de vinculação e [esquema de configuração WCF](../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
+## <a name="configuring-transactionflow"></a>Configurando o transactionFlow  
+ A maioria das associações predefinidas que o WCF fornece contém os `transactionFlow` `transactionProtocol` atributos e, para que você possa configurar a associação para aceitar as transações de entrada de um ponto de extremidade específico usando um protocolo de fluxo de transação específico. Além disso, você pode usar o `transactionFlow` elemento e seu `transactionProtocol` atributo para criar sua própria associação personalizada. Para obter mais informações sobre como definir os elementos de configuração, consulte [\<binding>](../../configure-apps/file-schema/wcf/bindings.md) e [esquema de configuração do WCF](../../configure-apps/file-schema/wcf/index.md).  
   
- O `transactionFlow` atributo especifica se o fluxo de transações está habilitado para pontos finais de serviço que usam a vinculação.  
+ O `transactionFlow` atributo especifica se o fluxo de transações está habilitado para pontos de extremidade de serviço que usam a associação.  
   
-## <a name="configuring-transactionprotocol"></a>Configuração de transactionProtocol  
- O `transactionProtocol` atributo especifica o protocolo de transação a ser usado com pontos finais de serviço que usam a vinculação.  
+## <a name="configuring-transactionprotocol"></a>Configurando o transactionProtocol  
+ O `transactionProtocol` atributo especifica o protocolo de transação a ser usado com pontos de extremidade de serviço que usam a associação.  
   
- A seguir, um exemplo de uma seção de configuração que configura a vinculação especificada para suportar o fluxo de transações, bem como um uso do protocolo WS-AtomicTransaction.  
+ Veja a seguir um exemplo de uma seção de configuração que configura a associação especificada para dar suporte ao fluxo de transações, bem como a usar o protocolo WS-AtomicTransaction.  
   
 ```xml  
 <netNamedPipeBinding>  
@@ -41,8 +41,8 @@ A Windows Communication Foundation (WCF) fornece três atributos `transactionFlo
 </netNamedPipeBinding>  
 ```  
   
-## <a name="configuring-transactiontimeout"></a>Configurando transaçãoTimeout  
- Você pode configurar `transactionTimeout` o atributo para `behavior` o serviço WCF no elemento do arquivo de configuração. O código a seguir demonstra como fazer isso.  
+## <a name="configuring-transactiontimeout"></a>Configurando o transactionTimeout  
+ Você pode configurar o `transactionTimeout` atributo para seu serviço WCF no `behavior` elemento do arquivo de configuração. O código a seguir demonstra como fazer isso.  
   
 ```xml  
 <configuration>  
@@ -54,15 +54,15 @@ A Windows Communication Foundation (WCF) fornece três atributos `transactionFlo
 </configuration>  
 ```  
   
- O `transactionTimeout` atributo especifica o período de tempo no qual uma nova transação criada no serviço deve ser concluída. É usado como <xref:System.Transactions.TransactionScope> o tempo para qualquer operação que estabeleça <xref:System.ServiceModel.OperationBehaviorAttribute> uma nova transação, e se for aplicado, a <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> propriedade é definida como `true`.  
+ O `transactionTimeout` atributo especifica o período de tempo no qual uma nova transação criada no serviço deve ser concluída. Ele é usado como o <xref:System.Transactions.TransactionScope> tempo limite para qualquer operação que estabeleça uma nova transação e, se <xref:System.ServiceModel.OperationBehaviorAttribute> for aplicado, a <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> propriedade será definida como `true` .  
   
- O tempo de intervalo especifica a duração do tempo desde a criação da transação até a conclusão da fase 1 no protocolo de confirmação bifásica.  
+ O tempo limite especifica a duração do tempo desde a criação da transação até a conclusão da fase 1 no protocolo de confirmação de duas fases.  
   
- Se este atributo `service` estiver definido dentro de uma seção de <xref:System.ServiceModel.OperationBehaviorAttribute>configuração, <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> você deve `true`aplicar pelo menos um método do serviço correspondente com , no qual a propriedade está definida para .  
+ Se esse atributo for definido dentro de uma `service` seção de configuração, você deverá aplicar pelo menos um método do serviço correspondente com <xref:System.ServiceModel.OperationBehaviorAttribute> o, no qual a <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> propriedade é definida como `true` .  
   
- Observe que o valor de tempo de saída `transactionTimeout` usado é <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> o valor menor entre essa configuração e qualquer propriedade.  
+ Observe que o valor de tempo limite usado é o valor menor entre esse `transactionTimeout` parâmetro de configuração e qualquer <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> propriedade.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [\<vinculação>](../../configure-apps/file-schema/wcf/bindings.md)
-- [Esquema de configuração wcf](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)
+- [\<binding>](../../configure-apps/file-schema/wcf/bindings.md)
+- [Esquema de configuração do WCF](../../configure-apps/file-schema/wcf/index.md)

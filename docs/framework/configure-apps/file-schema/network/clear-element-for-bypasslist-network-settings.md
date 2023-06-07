@@ -11,20 +11,20 @@ helpviewer_keywords:
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
 ms.openlocfilehash: c25477c2c99be66b34b07e1f7e50115bfa8d14e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154927"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a>\<elemento> claro para lista de desvios (Configurações de rede)
-Limpa a lista de desvios proxy.  
+# <a name="clear-element-for-bypasslist-network-settings"></a>Elemento \<clear> para bypasslist (Configurações de Rede)
+Limpa a lista de bypass de proxy.  
   
-[**\<>de configuração**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de proxy padrão**](defaultproxy-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de bypasslist**](bypasslist-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<claro>**
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<bypasslist>**](bypasslist-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,13 +48,13 @@ Limpa a lista de desvios proxy.
 |[bypasslist](bypasslist-element-network-settings.md)|Fornece um conjunto de expressões regulares que descrevem endereços que não usam um proxy.|  
   
 ## <a name="remarks"></a>Comentários  
- O `clear` elemento limpa todas as entradas da lista de desvios.  
+ O `clear` elemento limpa todas as entradas da lista de bypass.  
   
 ## <a name="configuration-files"></a>Arquivos de configuração  
- Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração da máquina (Machine.config).  
+ Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir limpa a lista de desvios e, em seguida, adiciona dois endereços à lista de desvios. O primeiro ignora o proxy para todos os servidores do domínio contoso.com; o segundo ignora o proxy para todos os servidores cujo endereço IP começa com 192.168.  
+ O exemplo a seguir limpa a lista de bypass e, em seguida, adiciona dois endereços à lista de bypass. O primeiro ignora o proxy para todos os servidores no domínio contoso.com; o segundo ignora o proxy para todos os servidores cujo endereço IP começa com 192,168.  
   
 ```xml  
 <configuration>  

@@ -2,18 +2,18 @@
 title: Como controlar a versão de serviço
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: f1178a0bedfe8665d7b3ec463e99183809538c28
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: beb7de63d300ad7986bfc59093006b074b9456ba
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81464121"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586930"
 ---
 # <a name="how-to-service-versioning"></a>Como controlar a versão de serviço
-Este tópico descreve as etapas básicas necessárias para criar uma configuração de roteamento que encaminha mensagens para diferentes versões do mesmo serviço. Neste exemplo, as mensagens são encaminhadas para duas `roundingCalc` versões diferentes de um serviço de calculadora, (v1) e `regularCalc` (v2). Ambas as implementações suportam as mesmas operações; no entanto, `roundingCalc`o serviço mais antigo, , arredonda todos os cálculos para o valor inteiro mais próximo antes de retornar. Um aplicativo cliente deve ser capaz de `regularCalc` indicar se deve usar o serviço mais novo.  
+Este tópico descreve as etapas básicas necessárias para criar uma configuração de roteamento que roteia mensagens para versões diferentes do mesmo serviço. Neste exemplo, as mensagens são roteadas para duas versões diferentes de um serviço de calculadora, `roundingCalc` (v1) e `regularCalc` (v2). Ambas as implementações dão suporte às mesmas operações; no entanto, o serviço mais antigo, `roundingCalc` , Arredonda todos os cálculos para o valor inteiro mais próximo antes de retornar. Um aplicativo cliente deve ser capaz de indicar se deseja usar o serviço mais recente `regularCalc` .  
   
 > [!WARNING]
-> Para encaminhar uma mensagem para uma versão específica do serviço, o Serviço de Roteamento deve ser capaz de determinar o destino da mensagem com base no conteúdo da mensagem. No método abaixo demonstrado, o cliente especificará a versão inserindo informações em um cabeçalho de mensagem. Existem métodos de versão de serviço que não exigem que os clientes passem dados adicionais. Por exemplo, uma mensagem pode ser encaminhada para a versão mais recente ou mais compatível de um serviço ou o roteador poderia usar uma parte do envelope SOAP padrão.  
+> Para rotear uma mensagem para uma versão de serviço específica, o serviço de roteamento deve ser capaz de determinar o destino da mensagem com base no conteúdo da mensagem. No método demonstrado abaixo, o cliente especificará a versão inserindo informações em um cabeçalho de mensagem. Há métodos de controle de versão de serviço que não exigem que os clientes passem dados adicionais. Por exemplo, uma mensagem pode ser roteada para a versão mais recente ou mais compatível de um serviço ou o roteador pode usar uma parte do envelope SOAP padrão.  
   
  As operações expostas por ambos os serviços são:  
   
@@ -25,19 +25,19 @@ Este tópico descreve as etapas básicas necessárias para criar uma configuraç
   
 - Dividir  
   
- Como ambas as implementações de serviço lidam com as mesmas operações e são essencialmente idênticas aos dados que retornam, os dados base contidos nas mensagens enviadas dos aplicativos do cliente não são únicos o suficiente para permitir que você determine como direcionar a solicitação. Por exemplo, os filtros action não podem ser usados porque as ações padrão para ambos os serviços são as mesmas.  
+ Como ambas as implementações de serviço manipulam as mesmas operações e são, essencialmente, idênticas além dos dados que elas retornam, os dados base contidos nas mensagens enviadas de aplicativos cliente não são exclusivos o suficiente para permitir que você determine como encaminhar a solicitação. Por exemplo, os filtros de ação não podem ser usados porque as ações padrão para ambos os serviços são as mesmas.  
   
- Isso pode ser resolvido de várias maneiras, como expor um ponto final específico no roteador para cada versão do serviço ou adicionar um elemento de cabeçalho personalizado à mensagem para indicar a versão do serviço.  Cada uma dessas abordagens permite que você encaminhe exclusivamente mensagens recebidas para uma versão específica do serviço, mas utilizar conteúdo de mensagem exclusivo é o método preferido de diferenciar entre solicitações de diferentes versões de serviço.  
+ Isso pode ser resolvido de várias maneiras, como expor um ponto de extremidade específico no roteador para cada versão do serviço ou adicionar um elemento de cabeçalho personalizado à mensagem para indicar a versão do serviço.  Cada uma dessas abordagens permite que você roteie exclusivamente as mensagens de entrada para uma versão específica do serviço, mas o uso de conteúdo de mensagem exclusivo é o método preferencial de diferenciação de solicitações para versões de serviço diferentes.  
   
- Neste exemplo, o aplicativo cliente adiciona o cabeçalho personalizado 'CalcVer' à mensagem de solicitação. Este cabeçalho conterá um valor que indica a versão do serviço para a qual a mensagem deve ser roteada. Um valor de '1' indica que a mensagem deve ser processada pelo serviço arredondamentoCalc, enquanto um valor de '2' indica o serviço regularCalc. Isso permite que o aplicativo cliente controle diretamente qual versão do serviço processará a mensagem.  Como o cabeçalho personalizado é um valor contido na mensagem, você pode usar um ponto final para receber mensagens destinadas a ambas as versões do serviço. O código a seguir pode ser usado no aplicativo cliente para adicionar este cabeçalho personalizado à mensagem:  
+ Neste exemplo, o aplicativo cliente adiciona o cabeçalho personalizado ' CalcVer ' à mensagem de solicitação. Esse cabeçalho conterá um valor que indica a versão do serviço para a qual a mensagem deve ser roteada. Um valor de ' 1 ' indica que a mensagem deve ser processada pelo serviço roundingCalc, enquanto um valor de ' 2 ' indica o serviço regularCalc. Isso permite que o aplicativo cliente controle diretamente qual versão do serviço processará a mensagem.  Como o cabeçalho personalizado é um valor contido na mensagem, você pode usar um ponto de extremidade para receber mensagens destinadas a ambas as versões do serviço. O código a seguir pode ser usado no aplicativo cliente para adicionar esse cabeçalho personalizado à mensagem:  
   
 ```csharp  
 messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custom.namespace/", "2"));  
 ```  
   
-### <a name="implement-service-versioning"></a>Implementar versão de serviço  
+### <a name="implement-service-versioning"></a>Implementar o controle de versão de serviço  
   
-1. Crie a configuração básica do Serviço de Roteamento especificando o ponto final do serviço exposto pelo serviço. O exemplo a seguir define um único ponto final de serviço, que será usado para receber mensagens. Ele também define os pontos finais do cliente que `roundingCalc` serão usados para `regularCalc` enviar mensagens para os serviços (v1) e (v2).  
+1. Crie a configuração básica do serviço de roteamento especificando o ponto de extremidade de serviço exposto pelo serviço. O exemplo a seguir define um único ponto de extremidade de serviço, que será usado para receber mensagens. Ele também define os pontos de extremidade do cliente que serão usados para enviar mensagens aos `roundingCalc` Serviços (v1) e `regularCalc` (v2).  
   
     ```xml  
     <services>  
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2. Defina os filtros usados para direcionar mensagens para os pontos finais de destino.  Para este exemplo, o filtro XPath é usado para detectar o valor do cabeçalho personalizado "CalcVer" para determinar para qual versão a mensagem deve ser roteada. Um filtro XPath também é usado para detectar mensagens que não contêm o cabeçalho "CalcVer". O exemplo a seguir define os filtros necessários e a tabela namespace.  
+2. Defina os filtros usados para rotear mensagens para os pontos de extremidade de destino.  Para este exemplo, o filtro XPath é usado para detectar o valor do cabeçalho personalizado "CalcVer" para determinar a qual versão a mensagem deve ser roteada. Um filtro XPath também é usado para detectar mensagens que não contêm o cabeçalho "CalcVer". O exemplo a seguir define os filtros e a tabela de namespace necessários.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -94,11 +94,11 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    > O prefixo s12 namespace é definido por padrão na tabela `http://www.w3.org/2003/05/soap-envelope`namespace e representa o namespace .
+    > O prefixo do namespace S12 é definido por padrão na tabela de namespace e representa o namespace `http://www.w3.org/2003/05/soap-envelope` .
   
-3. Defina a tabela de filtro, que associa cada filtro a um ponto final do cliente. Se a mensagem contiver o cabeçalho "CalcVer" com um valor de 1, ele será enviado para o serviço regularCalc. Se o cabeçalho contiver um valor de 2, ele será enviado para o serviço roundingCalc. Se não houver nenhum cabeçalho, a mensagem será encaminhada para o Calc regular.  
+3. Defina a tabela de filtros, que associa cada filtro a um ponto de extremidade do cliente. Se a mensagem contiver o cabeçalho "CalcVer" com um valor de 1, ele será enviado para o serviço regularCalc. Se o cabeçalho contiver um valor de 2, ele será enviado para o serviço roundingCalc. Se nenhum cabeçalho estiver presente, a mensagem será roteada para o regularCalc.  
   
-     O seguinte define a tabela do filtro e adiciona os filtros definidos anteriormente.  
+     O seguinte define a tabela de filtros e adiciona os filtros definidos anteriormente.  
   
     ```xml  
     <filterTables>  
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4. Para avaliar as mensagens recebidas contra os filtros contidos na tabela de filtros, você deve associar a tabela do filtro com os pontos finais de serviço usando o comportamento de roteamento. O exemplo a `filterTable1` seguir demonstra a associação com os pontos finais do serviço:  
+4. Para avaliar as mensagens de entrada em relação aos filtros contidos na tabela de filtros, você deve associar a tabela de filtros aos pontos de extremidade de serviço usando o comportamento de roteamento. O exemplo a seguir demonstra a associação `filterTable1` com os pontos de extremidade de serviço:  
   
     ```xml  
     <behaviors>  
@@ -131,7 +131,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
 ## <a name="example"></a>Exemplo  
- A seguir está uma listagem completa do arquivo de configuração.  
+ A seguir está uma lista completa do arquivo de configuração.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -214,7 +214,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
 ```  
   
 ## <a name="example"></a>Exemplo  
- A seguir está uma listagem completa do aplicativo do cliente.  
+ A seguir está uma lista completa do aplicativo cliente.  
   
 ```csharp  
 using System;  
@@ -324,6 +324,6 @@ namespace Microsoft.Samples.AdvancedFilters
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Serviços de roteamento](../../../../docs/framework/wcf/samples/routing-services.md)
+- [Serviços de roteamento](../samples/routing-services.md)

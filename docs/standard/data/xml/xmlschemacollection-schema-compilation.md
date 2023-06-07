@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
-ms.openlocfilehash: af6df3729f1bd926e9a47cc5b9d9bf460c8e1225
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 3d517652665d6d0693e141d623483ff8946bbbf4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159280"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290234"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>Compilação do esquema de XmlSchemaCollection
 **XmlSchemaCollection** é um cache ou uma biblioteca em que esquemas XDR (XML-Data Reduced) e XSD (XML Schema definition language) podem ser armazenados e validados. **XmlSchemaCollection** melhora o desempenho armazenando em cache esquemas na memória em vez de acessá-los de um arquivo ou de uma URL.  
@@ -20,7 +20,7 @@ ms.locfileid: "78159280"
 > Embora a classe de **XmlSchemaCollection** armazene esquemas XDR e XML, qualquer método e propriedade que receba ou retorne um objeto **XmlSchema** dá suporte somente a esquemas XML.  
   
 > [!IMPORTANT]
-> A classe <xref:System.Xml.Schema.XmlSchemaCollection> agora está obsoleta e foi substituída pela classe <xref:System.Xml.Schema.XmlSchemaSet>. Para saber mais sobre a classe <xref:System.Xml.Schema.XmlSchemaSet>, veja [XmlSchemaSet para compilação de esquema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+> A classe <xref:System.Xml.Schema.XmlSchemaCollection> agora está obsoleta e foi substituída pela classe <xref:System.Xml.Schema.XmlSchemaSet>. Para saber mais sobre a classe <xref:System.Xml.Schema.XmlSchemaSet>, veja [XmlSchemaSet para compilação de esquema](xmlschemaset-for-schema-compilation.md).  
   
 ## <a name="add-schemas-to-the-collection"></a>Adicionar à coleção esquemas  
  Os esquemas são carregados na coleção usando o método **Add** de **XmlSchemaCollection**, quando o esquema é associado ao URI de um namespace. Para esquemas XML, URI do namespace será normalmente o namespace de destino para o esquema. Para esquemas XDR, o URI de namespace é namespace especificado quando o esquema foi adicionado à coleção.  
@@ -57,5 +57,5 @@ vr.Schemas.Add(xsc);
   
 ## <a name="see-also"></a>Veja também
 
-- [Validação de XDR com XmlSchemaCollection](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)
-- [Validação de XSD (esquema XML) com XmlSchemaCollection](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemacollection.md)
+- [Validação de XDR com XmlSchemaCollection](xdr-validation-with-xmlschemacollection.md)
+- [Validação de XSD (esquema XML) com XmlSchemaCollection](xml-schema-xsd-validation-with-xmlschemacollection.md)

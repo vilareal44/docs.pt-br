@@ -3,22 +3,22 @@ title: <connectionPoolSettings> de <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
 ms.openlocfilehash: f9b0fff741c32c1a3d6f9461f478e89acc18114e
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70398090"
 ---
-# <a name="connectionpoolsettings-of-tcptransport"></a>\<connectionPoolSettings > de \<tcpTransport >
+# <a name="connectionpoolsettings-of-tcptransport"></a>\<connectionPoolSettings> de \<tcpTransport>
 Especifica configurações de pool de conexões adicionais para um transporte TCP.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de CustomBinding**](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> tcpTransport**](tcptransport.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> connectionPoolSettings**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<tcpTransport>**](tcptransport.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<connectionPoolSettings>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ Especifica configurações de pool de conexões adicionais para um transporte TC
 |`maxOutboundConnectionsPerEndpoint`|Um inteiro positivo que especifica o número máximo de conexões com um ponto de extremidade remoto iniciado pelo serviço. As conexões que excedem o limite são enfileiradas até que um espaço abaixo do limite fique disponível. O `idleTimeout` limita a duração em que as conexões permanecem enfileiradas antes que uma exceção seja lançada. O padrão é 10.<br /><br /> Esse atributo limita o número de conexões ativas simultâneas do cliente para um ponto de extremidade de serviço específico. Se esse valor for excedido por ter mais conexões de cliente ativas, o serviço poderá parecer sem resposta ao cliente. Nesse caso, esse valor deve ser ajustado para exceder o número máximo de conexões de cliente simultâneas esperadas para um ponto de extremidade específico.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -50,7 +50,7 @@ Especifica configurações de pool de conexões adicionais para um transporte TC
 |-------------|-----------------|  
 |[\<namedPipeTransport>](namedpipetransport.md)|Define um transporte que faz com que um canal transfira mensagens usando pipes nomeados.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Configuration.TcpConnectionPoolSettingsElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement.ConnectionPoolSettings%2A>
@@ -58,7 +58,7 @@ Especifica configurações de pool de conexões adicionais para um transporte TC
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Transportes](../../../wcf/feature-details/transports.md)
-- [Escolhendo um transporte](../../../wcf/feature-details/choosing-a-transport.md)
+- [Selecionando um transporte](../../../wcf/feature-details/choosing-a-transport.md)
 - [Associações](../../../wcf/bindings.md)
 - [Estendendo associações](../../../wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../wcf/extending/custom-bindings.md)

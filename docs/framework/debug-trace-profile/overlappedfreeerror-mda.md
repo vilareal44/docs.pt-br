@@ -1,5 +1,6 @@
 ---
 title: MDA overlappedFreeError
+description: Examine o MDA (Assistente de depuração gerenciada) do overlappedFreeError no .NET, que pode ser ativado em violações de acesso ou corrupção do heap coletado por lixo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - OverlappedFreeError MDA
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), overlapped structures
 - freeing overlapped structures
 ms.assetid: b6ab2d48-6eee-4bab-97a3-046b3b0a5470
-ms.openlocfilehash: 8a0c72cf26ef8434719ff6661ef15a44f51c8740
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 9be33c59723ecb2743f2bc610d7fb69d24ff388c
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217258"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803905"
 ---
 # <a name="overlappedfreeerror-mda"></a>MDA overlappedFreeError
 O MDA (Assistente de Depuração Gerenciado) de `overlappedFreeError` é ativado quando o método <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> é chamado antes da conclusão da operação sobreposta.  
@@ -48,8 +49,8 @@ O MDA (Assistente de Depuração Gerenciado) de `overlappedFreeError` é ativado
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling de interoperabilidade](../interop/interop-marshaling.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Realizando marshaling de interoperabilidade](../interop/interop-marshaling.md)

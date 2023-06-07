@@ -1,17 +1,18 @@
 ---
-title: Como implementar e chamar um método de extensão personalizado - C# Guia de Programação
+title: Como implementar e chamar um método de extensão personalizado – guia de programação C#
+description: Saiba como implementar métodos de extensão para qualquer tipo .NET. O código do cliente pode usar seus métodos adicionando uma referência a uma DLL e adicionando uma diretiva using.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 7e2092a37c1f042a087e03f4a272139b585156c8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7856e78713648a42d1c961f50f7e83f2f7ef05b7
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705594"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865054"
 ---
-# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Como implementar e chamar um método de extensão personalizado (C# Programming Guide)
+# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Como implementar e chamar um método de extensão personalizado (guia de programação C#)
 Este tópico mostra como implementar seus próprios métodos de extensão para qualquer tipo do .NET. O código de cliente pode usar seus métodos de extensão, adicionando uma referência à DLL que os contém e adicionando uma diretiva [using](../../language-reference/keywords/using-directive.md) que especifica o namespace no qual os métodos de extensão são definidos.  
   
 ## <a name="to-define-and-call-the-extension-method"></a>Para definir e chamar o método de extensão  
@@ -35,17 +36,17 @@ Este tópico mostra como implementar seus próprios métodos de extensão para q
   
  [!code-csharp[csProgGuideExtensionMethods#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#1)]  
   
-## <a name="net-framework-security"></a>Segurança do .NET Framework  
+## <a name="net-security"></a>Segurança do .NET  
  Os métodos de extensão não apresentam nenhuma vulnerabilidade de segurança específica. Eles nunca podem ser usados para representar os métodos existentes em um tipo, porque todos os conflitos de nome são resolvidos em favor da instância ou do método estático, definidos pelo próprio tipo. Os métodos de extensão não podem acessar nenhum dado particular na classe estendida.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
-- [Métodos de extensão](./extension-methods.md)
+- [Guia de programação C#](../index.md)
+- [Métodos de Extensão](./extension-methods.md)
 - [LINQ (Consulta Integrada à Linguagem)](../../linq/linq-in-csharp.md)
 - [Classes static e membros de classes static](./static-classes-and-static-class-members.md)
-- [Protegido](../../language-reference/keywords/protected.md)
-- [Interno](../../language-reference/keywords/internal.md)
+- [protegidos](../../language-reference/keywords/protected.md)
+- [interno](../../language-reference/keywords/internal.md)
 - [público](../../language-reference/keywords/public.md)
-- [Este](../../language-reference/keywords/this.md)
-- [Namespace](../../language-reference/keywords/namespace.md)
+- [Esta](../../language-reference/keywords/this.md)
+- [namespace](../../language-reference/keywords/namespace.md)

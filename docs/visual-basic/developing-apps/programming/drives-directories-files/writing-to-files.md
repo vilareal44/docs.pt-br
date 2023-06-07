@@ -8,12 +8,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
-ms.openlocfilehash: 8511a96c7abcc28997c293a09ef10bad543dc261
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 06809ce8a846ea06ff2decdd87f304d1b26a7750
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74352131"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406606"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>Gravando em arquivos no Visual Basic
 
@@ -21,19 +21,19 @@ Esta seção explica como realizar tarefas que envolvem gravação em arquivos.
   
 ## <a name="in-this-section"></a>Nesta seção  
 
- [Como gravar texto em arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
+ [Como: gravar texto em arquivos](how-to-write-text-to-files.md)  
  Demonstra como gravar em arquivos de texto.  
   
- [Como anexar a arquivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-append-to-text-files.md)  
+ [Como: acrescentar a arquivos de texto](how-to-append-to-text-files.md)  
  Demonstra como adicionar texto a um arquivo de texto.  
   
- [Como gravar em arquivos binários](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-to-binary-files.md)  
+ [Como: gravar em arquivos binários](how-to-write-to-binary-files.md)  
  Demonstra como gravar em um arquivo binário.  
   
- [Como gravar texto em arquivos no diretório Meus Documentos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-in-the-my-documents-directory.md)  
+ [Como: gravar texto em arquivos no diretório Meus Documentos](how-to-write-text-to-files-in-the-my-documents-directory.md)  
  Demonstra como criar e gravar em um novo arquivo de texto no diretório **Meus Documentos**.  
   
- [Como gravar texto em arquivos com um StreamWriter](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
+ [Como: gravar texto em arquivos com um StreamWriter](how-to-write-text-to-files-with-a-streamwriter.md)  
  Demonstra como gravar em um arquivo com um objeto <xref:System.IO.StreamWriter?displayProperty=nameWithType>.  
   
 ## <a name="reference"></a>Referência  
@@ -52,14 +52,14 @@ Esta seção explica como realizar tarefas que envolvem gravação em arquivos.
   
 ## <a name="related-sections"></a>Seções relacionadas  
 
- [Ler arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [Ler arquivos](reading-from-files.md)  
  Explica como realizar tarefas que envolvem a leitura de arquivos.  
   
- [Criar, excluir e mover arquivos e diretórios](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
+ [Criar, excluir e mover arquivos e diretórios](creating-deleting-and-moving-files-and-directories.md)  
  Explica como realizar tarefas que envolvem criar, excluir, mover e renomear arquivos e diretórios.  
   
- [Armazenar dados e ler da área de transferência](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
+ [Armazenar dados e ler da área de transferência](../computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
  Explica como realizar tarefas associadas ao `My.Computer.Clipboard`, como leitura e gravação de dados na área de transferência.  
   
- [Codificações de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
+ [Codificações de arquivo](file-encodings.md)  
  Fornece uma visão geral sobre codificações de arquivo.

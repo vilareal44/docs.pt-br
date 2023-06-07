@@ -1,16 +1,16 @@
 ---
-title: Introdução à interoperabilidade COM
+title: Introdução à Interoperabilidade COM
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: c7909b3b6a2c9f0b397b9621b7e5125c232be313
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6c7caf266514c43e40135b33d848a688546acf1c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353207"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396773"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Introdução à interoperabilidade COM (Visual Basic)
 A Component Object Model (COM) permite que um objeto exponha sua funcionalidade a outros componentes e hospede aplicativos. Embora os objetos COM tenham sido fundamentais para a programação do Windows por muitos anos, os aplicativos projetados para o Common Language Runtime (CLR) oferecem muitas vantagens.  
@@ -51,14 +51,14 @@ A Component Object Model (COM) permite que um objeto exponha sua funcionalidade 
 ## <a name="interoperability-marshaling"></a>Marshaling de interoperabilidade  
  Todos os aplicativos de .NET Framework compartilham um conjunto de tipos comuns que permitem a interoperabilidade de objetos, independentemente da linguagem de programação usada. Os parâmetros e valores de retorno de objetos COM às vezes usam tipos de dados que diferem daqueles usados em código gerenciado. O *marshaling de interoperabilidade* é o processo de empacotamento de parâmetros e valores de retorno em tipos de dados equivalentes à medida que eles se movem para e de objetos com. Para obter mais informações, consulte [Interop Marshaling](../../../framework/interop/interop-marshaling.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Instruções passo a passo: implementando a herança com objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [Interoperabilidade COM](index.md)
+- [Passo a passo: Implementação de herança com objetos COM](walkthrough-implementing-inheritance-with-com-objects.md)
 - [Interoperação com código não gerenciado](../../../framework/interop/index.md)
-- [Solução de problemas de Interoperabilidade](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+- [Solução de problemas de Interoperabilidade](troubleshooting-interoperability.md)
 - [Assemblies no .NET](../../../standard/assembly/index.md)
-- [Tlbimp.exe (Importador de Biblioteca de Tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
-- [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
-- [Marshaling de interoperabilidade](../../../framework/interop/interop-marshaling.md)
+- [Tlbimp. exe (tipo de importador de biblioteca de tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
+- [TlbExp. exe (tipo de exportador da biblioteca de tipos)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
+- [Realizando marshaling de interoperabilidade](../../../framework/interop/interop-marshaling.md)
 - [Interoperabilidade COM sem registro](../../../framework/interop/registration-free-com-interop.md)

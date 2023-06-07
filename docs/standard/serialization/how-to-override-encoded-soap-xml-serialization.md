@@ -6,16 +6,16 @@ helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-ms.openlocfilehash: 76e8009b83182d8517ff403f4f1e67bf0e7846b8
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 50688cb25294f14a9dd4596258eb95adf93cdb41
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83375841"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84277980"
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>Como substituir a serialização XML de SOAP codificada
 
-O processo para substituir a serialização XML de objetos, como mensagens SOAP é semelhante ao processo para substituir a serialização XML padrão. Para obter informações sobre como substituir a serialização de XML padrão, consulte [Como especificar um nome de elemento alternativo para um fluxo XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
+O processo para substituir a serialização XML de objetos, como mensagens SOAP é semelhante ao processo para substituir a serialização XML padrão. Para obter informações sobre como substituir a serialização de XML padrão, consulte [Como especificar um nome de elemento alternativo para um fluxo XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
 ## <a name="to-override-serialization-of-objects-as-soap-messages"></a>Para substituir a serialização XML de objetos como mensagens SOAP
 
@@ -281,9 +281,9 @@ public class Run
 
 ## <a name="see-also"></a>Confira também
 
-- [Serialização de XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [Atributos que controlam a serialização SOAP codificada](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
-- [Serialização XML com serviços Web XML](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
-- [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Como desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-- [Como serializar um objeto como um fluxo XML codificado para SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [Serialização de XML e SOAP](xml-and-soap-serialization.md)
+- [Atributos que controlam a serialização SOAP codificada](attributes-that-control-encoded-soap-serialization.md)
+- [Serialização XML com serviços Web XML](xml-serialization-with-xml-web-services.md)
+- [Como serializar um objeto](how-to-serialize-an-object.md)
+- [Como desserializar um objeto](how-to-deserialize-an-object.md)
+- [Como serializar um objeto como um fluxo XML codificado para SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)

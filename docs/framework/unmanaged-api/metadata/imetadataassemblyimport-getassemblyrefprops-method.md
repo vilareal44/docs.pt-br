@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c6b7fb4-cbca-4479-b650-ab9a99732ea0
 topic_type:
 - apiref
-ms.openlocfilehash: 9aef471c1155070af0e9bcca14975a65bc5dc763
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2858e924ab6effe192955ce53dad9d333d2d244d
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175961"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009059"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>Método IMetaDataAssemblyImport::GetAssemblyRefProps
-Obtém o conjunto de propriedades para a referência de montagem com a assinatura de metadados especificada.  
+Obtém o conjunto de propriedades para a referência de assembly com a assinatura de metadados especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,49 +42,49 @@ HRESULT GetAssemblyRefProps (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `mdar`  
- [em] O `mdAssemblyRef` token de metadados que representa a referência de montagem para obter as propriedades.  
+ no O `mdAssemblyRef` token de metadados que representa a referência de assembly para a qual obter as propriedades.  
   
  `ppbPublicKeyOrToken`  
- [fora] Um ponteiro para a chave pública ou o token de metadados.  
+ fora Um ponteiro para a chave pública ou o token de metadados.  
   
  `pcbPublicKeyOrToken`  
- [fora] O número de bytes na chave pública retornada ou token.  
+ fora O número de bytes na chave pública ou no token retornado.  
   
  `szName`  
- [fora] O nome simples da assembléia.  
+ fora O nome simples do assembly.  
   
  `cchName`  
- [em] O tamanho, em grandes `szName`chars, de .  
+ no O tamanho, em caracteres largos, de `szName` .  
   
  `pchName`  
- [fora] Um ponteiro para o número de chars largos realmente retornou em `szName`.  
+ fora Um ponteiro para o número de caracteres largos realmente retornados em `szName` .  
   
  `pMetaData`  
- [fora] Um ponteiro para uma estrutura ASSEMBLYMETADATA que contém os metadados do conjunto.  
+ fora Um ponteiro para uma estrutura ASSEMBLYMETADATA que contém os metadados do assembly.  
   
  `ppbHashValue`  
- [fora] Um ponteiro para o valor de hash. Este é o hash, usando o algoritmo `PublicKey` SHA-1, da propriedade do conjunto que está sendo referenciada, a menos que a bandeira arfFullOriginator da enumeração [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) seja definida.  
+ fora Um ponteiro para o valor de hash. Esse é o hash, usando o algoritmo SHA-1, da `PublicKey` Propriedade do assembly que está sendo referenciado, a menos que o sinalizador arfFullOriginator da enumeração [AssemblyRefFlags](assemblyrefflags-enumeration.md) seja definido.  
   
  `pcbHashValue`  
- [fora] O número de chars largos no valor de hash devolvido.  
+ fora O número de caracteres largos no valor de hash retornado.  
   
  `pdwAssemblyRefFlags`  
- [fora] Um ponteiro para bandeiras que descrevem os metadados aplicados a uma montagem. O valor das bandeiras é uma combinação de um ou mais valores [corassemblyflags.](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)  
+ fora Um ponteiro para sinalizadores que descrevem os metadados aplicados a um assembly. O valor de flags é uma combinação de um ou mais valores de [CorAssemblyFlags](corassemblyflags-enumeration.md) .  
   
-## <a name="return-value"></a>Valor retornado  
- Este método retorna S_OK se for bem sucedido; caso contrário, ele retorna um dos códigos de erro definidos no arquivo winerror.h header.  
+## <a name="return-value"></a>Valor Retornado  
+ Esse método retornará S_OK se tiver sucesso; caso contrário, ele retorna um dos códigos de erro definidos no arquivo de cabeçalho Winerror. h.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [Interface IMetaDataAssemblyImport](imetadataassemblyimport-interface.md)

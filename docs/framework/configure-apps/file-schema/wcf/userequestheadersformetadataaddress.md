@@ -3,21 +3,21 @@ title: <useRequestHeadersForMetadataAddress>
 ms.date: 03/30/2017
 ms.assetid: 679f0eae-f353-44d1-b42d-a9e247509774
 ms.openlocfilehash: e0b46953924a3825420b719085e1210981da643a
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70399198"
 ---
-# <a name="userequestheadersformetadataaddress"></a>\<useRequestHeadersForMetadataAddress>
+# \<useRequestHeadersForMetadataAddress>
 Habilita a recuperação de informações de endereço de metadados dos cabeçalhos de mensagem de solicitação.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamentos >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de portais**](servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de comportamento**](behavior-of-servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> useRequestHeadersForMetadataAddress**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<useRequestHeadersForMetadataAddress>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,7 +34,7 @@ Habilita a recuperação de informações de endereço de metadados dos cabeçal
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -46,8 +46,8 @@ Habilita a recuperação de informações de endereço de metadados dos cabeçal
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<> de comportamento](behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Configuration.UseRequestHeadersForMetadataAddressElement>

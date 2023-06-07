@@ -1,15 +1,16 @@
 ---
-title: Consultando um XDocument vs. Consultando um XElement (C#)
+title: Consultando um XDocument vs. consultando um XElement (C#)
+description: Saiba mais sobre as diferenças entre consultar um XDocument e consultar um XElement. Examine os exemplos de código que demonstram essas diferenças.
 ms.date: 07/20/2015
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
-ms.openlocfilehash: 475c77934ad535bad9ef79ff58bbddf991dc8f5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c81768f06148308a639f96f4041e464b24edd33
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253136"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300300"
 ---
-# <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>Consultando um XDocument vs. Consultando um XElement (C#)
+# <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>Consultando um XDocument vs. consultando um XElement (C#)
 Ao carregar um documento por meio do <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, você observará que precisa escrever consultas um pouco diferentes do que ao carregar por meio do <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>Comparação de XDocument.Load e de XElement.Load  

@@ -2,12 +2,12 @@
 title: Windows Forms alterações significativas
 description: Lista as alterações significativas no Windows Forms para .NET Core.
 ms.date: 01/08/2020
-ms.openlocfilehash: 75d369c7fb999da81a50fe46716e125c3840eb7a
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: beb9a42e4b5007f03480cd74f57bbfbbfc3f48b1
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158431"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556127"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Alterações recentes no Windows Forms
 
@@ -20,6 +20,7 @@ As seguintes alterações significativas estão documentadas nesta página:
 | [Controles da barra de status removidos](#removed-status-bar-controls) | 5.0 |
 | [Os métodos WinForms agora lançam ArgumentException](#winforms-methods-now-throw-argumentexception) | 5.0 |
 | [Os métodos WinForms agora lançam ArgumentNullException](#winforms-methods-now-throw-argumentnullexception) | 5.0 |
+| [As propriedades do WinForms agora geram ArgumentOutOfRangeException](#winforms-properties-now-throw-argumentoutofrangeexception) | 5.0 |
 | [Controles removidos](#removed-controls) | 3.1 |
 | [Evento CellFormatting não gerado se ToolTip for mostrado](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3.1 |
 | [Control. DefaultFont alterado para Segoe UI 9 pt](#default-control-font-changed-to-segoe-ui-9-pt) | 3.0 |
@@ -33,8 +34,6 @@ As seguintes alterações significativas estão documentadas nesta página:
 | [Não há suporte para a opção de compatibilidade EnableVisualStyleValidation](#enablevisualstylevalidation-compatibility-switch-not-supported) | 3.0 |
 | [Não há suporte para a opção de compatibilidade UseLegacyContextMenuStripSourceControlValue](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported) | 3.0 |
 | [Não há suporte para a opção de compatibilidade UseLegacyImages](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
-| [Alteração de acesso para AccessibleObject. RuntimeIDFirstItem](#change-of-access-for-accessibleobjectruntimeidfirstitem) | 3.0 |
-| [APIs duplicadas removidas do Windows Forms](#duplicated-apis-removed-from-windows-forms) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5,0
 
@@ -50,7 +49,11 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 ***
 
-## <a name="net-core-31"></a>.NET Core 3,1
+[!INCLUDE [invalid-args-cause-argumentoutofrangeexception](../../../includes/core-changes/windowsforms/5.0/invalid-args-cause-argumentoutofrangeexception.md)]
+
+***
+
+## <a name="net-core-31"></a>.NET Core 3.1
 
 [!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/3.1/remove-controls-3.1.md)]
 
@@ -106,14 +109,6 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 ***
 
-[!INCLUDE[Change of access for AccessibleObject.RuntimeIDFirstItem](~/includes/core-changes/windowsforms/3.0/changed-access-for-runtimeidfirstitem.md)]
-
-***
-
-[!INCLUDE[Duplicated APIs removed from Windows Forms](~/includes/core-changes/windowsforms/3.0/remove-duplicated-apis.md)]
-
-***
-
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Porta um aplicativo de Windows Forms para o .NET Core](../porting/winforms.md)

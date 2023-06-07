@@ -4,28 +4,28 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Mouse object
 ms.assetid: da473357-2120-47dd-bd42-c63d695157eb
-ms.openlocfilehash: 98b87777cfc64807b6cf5b7aa6f0fdd5c7d42caa
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f320d095c547ffdb1b28f27f64c180c340dada17
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347188"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415265"
 ---
 # <a name="mycomputermouse-object"></a>Objeto My.Computer.Mouse
 Fornece propriedades para obter informações sobre o formato e a configuração do mouse instalado no computador local.  
   
 ## <a name="remarks"></a>Comentários  
- Para obter informações sobre os métodos e as propriedades do objeto `My.Computer.Mouse`, consulte <xref:Microsoft.VisualBasic.Devices.Mouse>.  
+ Para obter informações sobre os métodos e as propriedades do `My.Computer.Mouse` objeto, consulte <xref:Microsoft.VisualBasic.Devices.Mouse> .  
   
- Para obter mais informações, consulte [acessando o mouse](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md).  
+ Para obter mais informações, consulte [acessando o mouse](../../developing-apps/programming/computer-resources/accessing-the-mouse.md).  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Classe:** <xref:Microsoft.VisualBasic.Devices.Mouse>  
+ **Classe:**<xref:Microsoft.VisualBasic.Devices.Mouse>  
   
  **Assembly:** Visual Basic a biblioteca de tempo de execução (em Microsoft. VisualBasic. dll)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Objeto My. Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)
+- [Objeto My.Computer](my-computer-object.md)

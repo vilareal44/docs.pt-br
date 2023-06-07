@@ -1,6 +1,7 @@
 ---
 title: Implementar um método Dispose
-ms.date: 05/13/2020
+description: Neste artigo, aprenda a implementar o método Dispose, que libera recursos não gerenciados usados pelo seu código no .NET.
+ms.date: 05/27/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: a002e0d27dfe28795b28e6813c4f5d5b3e13cdaf
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 4f0cc9b88947d60638057ca83adb7f2e141c5d14
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396901"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455733"
 ---
 # <a name="implement-a-dispose-method"></a>Implementar um método Dispose
 
-A implementação do <xref:System.IDisposable.Dispose%2A> método destina-se principalmente à liberação de recursos não gerenciados usados pelo seu código. Ao trabalhar com membros de instância que são <xref:System.IDisposable> implementações, é comum fazer chamadas em cascata <xref:System.IDisposable.Dispose%2A> . Há motivos adicionais para a implementação do <xref:System.IDisposable.Dispose%2A> , como desfazer algo que foi feito anteriormente. Por exemplo, liberar memória que foi alocada, removendo um item de uma coleção que foi adicionada, sinalizando o lançamento de um bloqueio que foi adquirido e assim por diante.
+A implementação do <xref:System.IDisposable.Dispose%2A> método destina-se principalmente à liberação de recursos não gerenciados. Ao trabalhar com membros de instância que são <xref:System.IDisposable> implementações, é comum fazer chamadas em cascata <xref:System.IDisposable.Dispose%2A> . Há motivos adicionais para implementar <xref:System.IDisposable.Dispose%2A> , por exemplo, para liberar memória que foi alocada, remover um item que foi adicionado a uma coleção ou sinalizar a liberação de um bloqueio que foi adquirido.
 
 O [coletor de lixo do .net](index.md) não aloca ou libera memória não gerenciada. O padrão para descartar um objeto, chamado de padrão Dispose, impõe a ordem no tempo de vida de um objeto. O padrão Dispose é usado para objetos que implementam a <xref:System.IDisposable> interface e é comum ao interagir com identificadores de arquivo e pipe, identificadores de registro, identificadores de espera ou ponteiros para blocos de memória não gerenciada. Isso ocorre porque o coletor de lixo não pode recuperar objetos não gerenciados.
 
@@ -156,5 +157,4 @@ O exemplo a seguir ilustra o padrão de descarte para uma classe derivada, `Disp
 - <xref:Microsoft.Win32.SafeHandles>
 - <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
-- [Como definir e consumir classes e estruturas (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
-- [Padrão de descarte](implementing-dispose.md)
+- [Definir e consumir classes e estruturas (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)

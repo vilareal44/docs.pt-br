@@ -1,5 +1,6 @@
 ---
 title: Análise de cadeias de caracteres numéricas no .NET
+description: Saiba mais sobre a análise de cadeias de caracteres numéricas no .NET. Saiba como analisar com provedores de formato, valores de enumeração NumberStyles e dígitos Unicode.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,15 +12,15 @@ helpviewer_keywords:
 - enumerations [.NET Framework], parsing strings
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
-ms.openlocfilehash: ac44282a06b2b3710d3a9e5390c7a514c1632c3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b184bad10b816c1eae798302337b5c901732ad7f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127595"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589533"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Análise de cadeias de caracteres numéricas no .NET
-Todos os tipos numéricos têm dois métodos de análise estáticos, `Parse` e `TryParse`, que podem ser usados para converter a representação de cadeia de caracteres de um número em um tipo numérico. Esses métodos permitem analisar cadeias de caracteres que foram produzidas usando as cadeias de caracteres de formato documentadas em [Cadeias de caracteres de formato numérico padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md) e [Cadeias de caracteres de formato numérico personalizadas](../../../docs/standard/base-types/custom-numeric-format-strings.md). Por padrão, os métodos `Parse` e `TryParse` conseguem converter cadeias de caracteres que contêm dígitos decimais integrais somente em valores inteiros. Podem converter cadeias de caracteres que contêm dígitos decimais integrais e dígitos fracionários, separadores de grupo e um separador decimal em valores de ponto flutuante. O método `Parse` lança uma exceção se a operação falhar, enquanto o método `TryParse` retorna `false`.  
+Todos os tipos numéricos têm dois métodos de análise estáticos, `Parse` e `TryParse`, que podem ser usados para converter a representação de cadeia de caracteres de um número em um tipo numérico. Esses métodos permitem analisar cadeias de caracteres que foram produzidas usando as cadeias de caracteres de formato documentadas em [Cadeias de caracteres de formato numérico padrão](standard-numeric-format-strings.md) e [Cadeias de caracteres de formato numérico personalizadas](custom-numeric-format-strings.md). Por padrão, os métodos `Parse` e `TryParse` conseguem converter cadeias de caracteres que contêm dígitos decimais integrais somente em valores inteiros. Podem converter cadeias de caracteres que contêm dígitos decimais integrais e dígitos fracionários, separadores de grupo e um separador decimal em valores de ponto flutuante. O método `Parse` lança uma exceção se a operação falhar, enquanto o método `TryParse` retorna `false`.  
   
 ## <a name="parsing-and-format-providers"></a>Provedores de análise e formato  
  Normalmente, as representações de cadeia de caracteres de valores numéricos diferem por cultura. Elementos de separadores de cadeias de caracteres numéricas, como símbolos de moeda, separadores de grupo (ou milhares) e separadores decimais, variam por cultura. Os métodos de análise usam, implícita ou explicitamente, um provedor de formato que reconhece essas variações específicas da cultura. Se nenhum provedor de formato for especificado em uma chamada ao método `Parse` ou `TryParse`, será usado o provedor de formato associado à cultura do thread atual (o objeto <xref:System.Globalization.NumberFormatInfo> retornado pela propriedade <xref:System.Globalization.NumberFormatInfo.CurrentInfo%2A?displayProperty=nameWithType>).  
@@ -81,8 +82,8 @@ Todos os tipos numéricos têm dois métodos de análise estáticos, `Parse` e `
  [!code-csharp[Parsing.Numbers#3](../../../samples/snippets/csharp/VS_Snippets_CLR/parsing.numbers/cs/unicode1.cs#3)]
  [!code-vb[Parsing.Numbers#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/unicode1.vb#3)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Globalization.NumberStyles>
-- [Análise de cadeias de caracteres](../../../docs/standard/base-types/parsing-strings.md)
-- [Formatar tipos](../../../docs/standard/base-types/formatting-types.md)
+- [Analisando cadeias de caracteres](parsing-strings.md)
+- [Formatar tipos](formatting-types.md)

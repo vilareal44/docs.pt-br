@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: afdb5ac9-5bf5-4b91-b7cb-f81db23d7da3
 topic_type:
 - apiref
-ms.openlocfilehash: 5346792cb2a1309268cb4ba48625aa559777fbaf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e4d0d9ed07c707e51e5833483b71079f2c330505
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176988"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496523"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>Método ICorProfilerInfo3::GetFunctionTailcall3Info
-Fornece o quadro de pilha da função que está sendo relatada ao profiler pela função [FunctionTailcall3WithInfo.](functiontailcall3withinfo-function.md) Este método só pode `FunctionTailcall3WithInfo` ser chamado durante o retorno de chamada.  
+Fornece o quadro de pilha da função que está sendo reportada para o criador de perfil pela função [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) . Esse método pode ser chamado somente durante o `FunctionTailcall3WithInfo` retorno de chamada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,32 +34,32 @@ HRESULT GetFunctionTailcall3Info(
             [out] COR_PRF_FRAME_INFO *pFrameInfo);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `functionId`  
- [em] A `FunctionID` função que está voltando.  
+ no O `FunctionID` da função que está retornando.  
   
  `eltInfo`  
- [em] Uma alça opaca que representa informações sobre um determinado quadro de pilha. O profiler deve `eltInfo` fornecer o mesmo que foi `FunctionTailcall3WithInfo` dado ao profiler pela função.  
+ no Um identificador opaco que representa informações sobre um determinado registro de ativação. O criador de perfil deve fornecer o mesmo `eltInfo` que foi dado ao criador de perfil pela `FunctionTailcall3WithInfo` função.  
   
  `pFrameInfo`  
- [fora] Uma alça opaca que representa informações genéricas sobre um determinado quadro de pilha. Esta alça é válida `FunctionTailcall3WithInfo` somente durante o retorno `GetFunctionTailcall3Info` de chamada no qual o profiler chamou o método.  
+ fora Um identificador opaco que representa informações genéricas sobre um determinado registro de ativação. Esse identificador é válido somente durante o `FunctionTailcall3WithInfo` retorno de chamada no qual o criador de perfil chamou o `GetFunctionTailcall3Info` método.  
   
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Functionenter3withinfo](functionenter3withinfo-function.md)
-- [Functionleave3withinfo](functionleave3withinfo-function.md)
-- [Functiontailcall3withinfo](functiontailcall3withinfo-function.md)
+- [FunctionEnter3WithInfo](functionenter3withinfo-function.md)
+- [FunctionLeave3WithInfo](functionleave3withinfo-function.md)
+- [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)
 - [Interface ICorProfilerInfo3](icorprofilerinfo3-interface.md)
 - [Criação de perfil de interfaces](profiling-interfaces.md)
 - [Criação de perfil](index.md)

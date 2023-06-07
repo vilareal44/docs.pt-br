@@ -1,23 +1,23 @@
 ---
-title: Como localizar uma lista dos elementos filho (XPath-LINQ to XML)
+title: 'Como: localizar uma lista de elementos filho (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2868abfd-9f7b-412a-9cb5-f643f0fed146
-ms.openlocfilehash: 899252e7aacdec00ad75611ee4d149a53e71f95e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d03b89f93fede3abd2d482c01979e93876d60c0b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353005"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410767"
 ---
 # <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a>Como localizar uma lista de elementos filho (XPath-LINQ to XML) (Visual Basic)
-Este tópico compara o eixo de elementos filho XPath com o eixo [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A>.  
+Este tópico compara o eixo dos elementos filho do XPath com o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> eixo.  
   
  A expressão XPath é: `./*`  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo localiza os elementos filho do elemento `Address`.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim cpo As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -40,7 +40,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```console
 Results are identical  
@@ -52,6 +52,6 @@ Results are identical
 <Country>USA</Country>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [LINQ to XML para usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para usuários do XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

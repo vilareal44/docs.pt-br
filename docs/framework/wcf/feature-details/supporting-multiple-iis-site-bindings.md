@@ -1,22 +1,23 @@
 ---
 title: Suporte a ligações de site do IIS
+description: Saiba como fornecer vários endereços base que usam o mesmo protocolo no mesmo site ao hospedar um serviço WCF no IIS.
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-ms.openlocfilehash: e364be55687323d3059c4a7e084818e3f7d54d5f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 290dca03dbed7d0a7442a3903b735eb189929ed1
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743434"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244862"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>Suporte a ligações de site do IIS
-Ao hospedar um serviço de Windows Communication Foundation (WCF) em Serviços de Informações da Internet (IIS) 7,0, talvez você queira fornecer vários endereços base que usam o mesmo protocolo no mesmo site. Isso permite que o mesmo serviço responda a vários URIs diferentes. Isso é útil quando você deseja hospedar um serviço que escuta em `http://www.contoso.com` e `http://contoso.com`. Também é útil criar um serviço que tenha um endereço base para usuários internos e um endereço base separado para usuários externos. Por exemplo: `http://internal.contoso.com` e `http://www.contoso.com`.  
+Ao hospedar um serviço de Windows Communication Foundation (WCF) em Serviços de Informações da Internet (IIS) 7,0, talvez você queira fornecer vários endereços base que usam o mesmo protocolo no mesmo site. Isso permite que o mesmo serviço responda a vários URIs diferentes. Isso é útil quando você deseja hospedar um serviço que escuta em `http://www.contoso.com` e `http://contoso.com` . Também é útil criar um serviço que tenha um endereço base para usuários internos e um endereço base separado para usuários externos. Por exemplo: `http://internal.contoso.com` e `http://www.contoso.com`.  
   
 > [!NOTE]
 > Essa funcionalidade só está disponível usando o protocolo HTTP.  
   
 ## <a name="multiple-base-addresses"></a>Vários endereços base  
- Esse recurso só está disponível para serviços WCF hospedados no IIS. Esse recurso não está habilitado por padrão. Para habilitá-lo, você deve adicionar o atributo `multipleSiteBindingsEnabled` ao elemento <`serviceHostingEnvironment`> no arquivo Web. config e defini-lo como `true`, conforme mostrado no exemplo a seguir.  
+ Esse recurso só está disponível para serviços WCF hospedados no IIS. Esse recurso não está habilitado por padrão. Para habilitá-lo, você deve adicionar o `multipleSiteBindingsEnabled` atributo ao `serviceHostingEnvironment` elemento <> no arquivo de Web.config e defini-lo como `true` , conforme mostrado no exemplo a seguir.  
   
 ```xml  
 <serviceHostingEnvironment multipleSiteBindingsEnabled="true"/>  

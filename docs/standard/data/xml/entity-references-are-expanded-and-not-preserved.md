@@ -3,17 +3,17 @@ title: Referências a entidades são expandidos e não preservadas
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
-ms.openlocfilehash: ae3db77d7659b7e1d36a9bccf7143f52c536dbbf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1d26e9a35497bb0d5293e8a5b630bf4356325401
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710928"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292040"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>Referências a entidades são expandidos e não preservadas
 Quando a referência de entidade é expandida e substituído pelo texto que representa, o nó de **XmlEntityReference** não é criado. Em vez disso, a declaração de entidade é processada e os nós criados na declaração de conteúdo são copiados no lugar de **XmlEntityReference**. Portanto, no exemplo de `&publisher;`, `&publisher;` não é salvo, mas em vez disso, um nó de **XmlText** é criado.  
   
- ![estrutura de árvore expandida](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")  
+ ![estrutura de árvore expandida](media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")  
 Estrutura de árvore para as referências de entidade que são expandidas  
   
  As entidades de caractere como `B` ou `<` não são preservados. Em vez disso, sempre são expandidos e representados como nós de texto.  
@@ -40,4 +40,4 @@ Estrutura de árvore para as referências de entidade que são expandidas
   
 ## <a name="see-also"></a>Veja também
 
-- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

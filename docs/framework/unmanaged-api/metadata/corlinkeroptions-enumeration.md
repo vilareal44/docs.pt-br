@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a656aad6-cc7e-4994-8251-004a6a45e18f
 topic_type:
 - apiref
-ms.openlocfilehash: 086e17185df9caa823b44b51cf027f95d635c48d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fe5ffbab93df7168015e2a31d6e32ec45dce0960
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450263"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007683"
 ---
 # <a name="corlinkeroptions-enumeration"></a>Enumeração CorLinkerOptions
 Especifica sinalizadores para selecionar opções para o vinculador de metadados.  
@@ -35,18 +35,18 @@ typedef enum CorLinkerOptions {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`MDAssembly`|Os tipos privados e as funções globais não são preservadas.|  
 |`MDNetModule`|Os tipos privados e as funções globais são preservados.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerações de metadados](metadata-enumerations.md)

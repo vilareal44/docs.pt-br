@@ -1,5 +1,6 @@
 ---
 title: Uso da classe StringBuilder no .NET
+description: Saiba como usar a classe StringBuilder no .NET. Use essa classe para modificar uma cadeia de caracteres sem criar um novo objeto.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: 19ee90f3300e3b610eeefd4949baa2759b834a60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 83d4b9327b55c511e2a46486e519e3cd0c77b1a3
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121674"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803224"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Uso da classe StringBuilder no .NET
 O objeto <xref:System.String> é imutável. Sempre que usa um dos métodos na classe <xref:System.String?displayProperty=nameWithType>, você cria um novo objeto de cadeia de caracteres na memória, o que requer uma nova alocação de espaço para esse novo objeto. Em situações em que você precisa realizar repetidas modificações em uma cadeia de caracteres, a sobrecarga associada à criação de um novo objeto <xref:System.String> pode ser dispendiosa. A classe <xref:System.Text.StringBuilder?displayProperty=nameWithType> pode ser usada quando você deseja modificar uma cadeia de caracteres sem criar um novo objeto. Por exemplo, o uso da classe <xref:System.Text.StringBuilder> pode melhorar o desempenho ao concatenar várias cadeias de caracteres em um loop.  
@@ -66,7 +67,7 @@ O objeto <xref:System.String> é imutável. Sempre que usa um dos métodos na cl
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|Substitui um especificador de formato transmitido em uma cadeia de caracteres com texto formatado.|  
 |<xref:System.Text.StringBuilder.Insert%2A?displayProperty=nameWithType>|Insere uma cadeia de caracteres ou um objeto no índice especificado do **StringBuilder** atual.|  
 |<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|Remove um número especificado de caracteres do **StringBuilder** atual.|  
-|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Substitui um caractere especificado em um índice especificado.|  
+|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Substitui todas as ocorrências de um caractere ou cadeia de caracteres especificada no **StringBuilder** atual por outro caractere ou cadeia de caracteres especificada.|  
   
 ### <a name="append"></a>Acrescentar  
  O método **Append** pode ser usado para adicionar texto ou uma representação de cadeia de caracteres de um objeto ao final de uma cadeia de caracteres representada pelo **StringBuilder** atual. O exemplo a seguir inicializa um **StringBuilder** para "Hello World" e, em seguida, acrescenta algum texto ao final do objeto. Espaço é alocado automaticamente conforme necessário.  
@@ -76,7 +77,7 @@ O objeto <xref:System.String> é imutável. Sempre que usa um dos métodos na cl
  [!code-vb[Conceptual.StringBuilder#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#4)]  
   
 ### <a name="appendformat"></a>AppendFormat  
- O método <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> adiciona texto ao final do objeto <xref:System.Text.StringBuilder>. Ele dá suporte ao recurso de formatação de composição (para obter mais informações, confira [Formatação de composição](../../../docs/standard/base-types/composite-formatting.md)) chamando a implementação <xref:System.IFormattable> do objeto ou objetos a serem formatados. Portanto, aceita as cadeias de caracteres de formato padrão para valores numéricos, data e hora e enumeração, cadeias de caracteres de formato personalizado para valores numéricos e de data e hora e cadeias de caracteres de formato definidas para tipos personalizados. (Para obter informações sobre formatação, consulte [Tipos de formatação](../../../docs/standard/base-types/formatting-types.md).) Você pode usar este método para personalizar o formato de <xref:System.Text.StringBuilder>variáveis e anexar esses valores a um . O exemplo a seguir usa o método <xref:System.Text.StringBuilder.AppendFormat%2A> para colocar um valor inteiro, formatado como um valor de moeda, no final de um objeto <xref:System.Text.StringBuilder>.  
+ O método <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> adiciona texto ao final do objeto <xref:System.Text.StringBuilder>. Ele dá suporte ao recurso de formatação de composição (para obter mais informações, confira [Formatação de composição](composite-formatting.md)) chamando a implementação <xref:System.IFormattable> do objeto ou objetos a serem formatados. Portanto, aceita as cadeias de caracteres de formato padrão para valores numéricos, data e hora e enumeração, cadeias de caracteres de formato personalizado para valores numéricos e de data e hora e cadeias de caracteres de formato definidas para tipos personalizados. (Para obter informações sobre formatação, consulte [tipos de formatação](formatting-types.md).) Você pode usar esse método para personalizar o formato de variáveis e acrescentar esses valores a um <xref:System.Text.StringBuilder> . O exemplo a seguir usa o método <xref:System.Text.StringBuilder.AppendFormat%2A> para colocar um valor inteiro, formatado como um valor de moeda, no final de um objeto <xref:System.Text.StringBuilder>.  
   
  [!code-cpp[Conceptual.StringBuilder#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#5)]
  [!code-csharp[Conceptual.StringBuilder#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#5)]
@@ -112,5 +113,5 @@ O objeto <xref:System.String> é imutável. Sempre que usa um dos métodos na cl
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Text.StringBuilder?displayProperty=nameWithType>
-- [Operações básicas de string](../../../docs/standard/base-types/basic-string-operations.md)
-- [Formatar tipos](../../../docs/standard/base-types/formatting-types.md)
+- [Operações básicas de cadeia de caracteres](basic-string-operations.md)
+- [Formatar tipos](formatting-types.md)

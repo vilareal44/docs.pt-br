@@ -6,25 +6,25 @@ helpviewer_keywords:
 - unions [.NET Framework metadata]
 - metadata unions [.NET Framework]
 ms.assetid: 2c7534cf-34fa-470a-b29e-6cf5a7bd03d3
-ms.openlocfilehash: 1d872bf352652b6cd3a07dc7796a026c797000ed
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3da69b86504253f68d59eb729668e7467e5795e1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430682"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84489516"
 ---
 # <a name="metadata-unions"></a>Uniões de metadados
 Esta seção descreve as uniões não gerenciadas que a API de metadados usa.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [União CeeSectionRelocExtra](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
- Representa um deslocamento de endereço que é usado pela interface [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) para realocar uma seção  
+ [União CeeSectionRelocExtra](ceesectionrelocextra-union.md)  
+ Representa um deslocamento de endereço que é usado pela interface [ICeeGen](iceegen-interface.md) para realocar uma seção  
   
-## <a name="related-sections"></a>Seções Relacionadas  
- [Interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
+## <a name="related-sections"></a>Seções relacionadas  
+ [Interfaces de metadados](metadata-interfaces.md)  
   
- [Funções estáticas globais de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
+ [Funções estáticas globais de metadados](metadata-global-static-functions.md)  
   
- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
+ [Enumerações de metadados](metadata-enumerations.md)  
   
- [Estruturas de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+ [Estruturas de metadados](metadata-structures.md)

@@ -1,16 +1,16 @@
 ---
-title: Como renomear um arquivo
+title: 'Como: renomear um arquivo'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-ms.openlocfilehash: e69dad9ad7f59002ad62b7a06299ff012488e534
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3de41ee6627315f0e26964b75f564ff98fe472ec
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74334549"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411584"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>Como renomear um arquivo no Visual Basic
 
@@ -48,10 +48,10 @@ Use o método `RenameFile` do objeto `My.Computer.FileSystem` para renomear um a
   
 - O usuário não tem a permissão necessária (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>
-- [Como mover um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)
-- [Criar, excluir e mover arquivos e diretórios](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
-- [Como criar uma cópia de um arquivo no mesmo diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)
-- [Como criar uma cópia de um arquivo em um diretório diferente](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+- [Como: mover um arquivo](how-to-move-a-file.md)
+- [Criar, excluir e mover arquivos e diretórios](creating-deleting-and-moving-files-and-directories.md)
+- [Como: criar uma cópia de um arquivo no mesmo diretório](how-to-create-a-copy-of-a-file-in-the-same-directory.md)
+- [Como: criar uma cópia de um arquivo em outro diretório](how-to-create-a-copy-of-a-file-in-a-different-directory.md)

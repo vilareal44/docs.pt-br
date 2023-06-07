@@ -1,5 +1,6 @@
 ---
 title: MDA virtualCERCall
+description: Examine o MDA (Assistente de depuração gerenciada) virtualCERCall, que é invocado se uma CER contém uma chamada para um método virtual que não pode ser preparado automaticamente.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), CER calls
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
-ms.openlocfilehash: a2112baed863b1035cbee4e956c1b6e271ff6e3c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fab0686b1c7d2fbb1485f6e4b82d008495a553cd
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181716"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803554"
 ---
 # <a name="virtualcercall-mda"></a>MDA virtualCERCall
 O MDA (assistente para depuração gerenciada) `virtualCERCall` é ativado como um aviso, indicando que um site de chamada em um gráfico de chamadas da CER (região de execução restrita) se refere a um destino virtual, ou seja, uma chamada virtual a um método virtual não final ou uma chamada usando uma interface. O CLR (Common Language Runtime) não pode prever o método de destino dessas chamadas pela análise de metadados e de linguagem intermediária apenas. Como resultado, a árvore de chamadas não pode ser preparada como parte do gráfico da CER e as anulações de thread nessa subárvore não podem ser bloqueadas automaticamente. Esse MDA avisa sobre casos em que uma CER talvez precise ser estendida usando chamadas explícitas ao método <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> depois que as informações adicionais necessárias para calcular o destino de chamada são conhecidas em tempo de execução.  

@@ -1,5 +1,6 @@
 ---
 title: MEF (Managed Extensibility Framework)
+description: Explore o Managed Extensibility Framework (MEF), que permite que os desenvolvedores de aplicativos descubram e usem extensões sem configuração no .NET 4 ou superior.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Managed Extensibility Framework, overview
 - MEF, overview
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
-ms.openlocfilehash: 9a601ac860ac3bf81dd01980b020470d3323772f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 00ed48f2202d4c04039ac264b1fe71474a02432e
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181282"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281245"
 ---
 # <a name="managed-extensibility-framework-mef"></a>MEF (Managed Extensibility Framework)
 
@@ -70,7 +71,7 @@ Para baixar o código completo deste exemplo, consulte o [exemplo SimpleCalculat
 
 - Adicione uma referência ao `System.ComponentModel.Composition` assembly, onde o MEF reside.
 
-- Abra *Module1. vb* ou *Program.cs* e adicione `Imports` instruções `using` or para `System.ComponentModel.Composition` e `System.ComponentModel.Composition.Hosting`. Esses dois namespaces contêm tipos MEF que você precisará para desenvolver um aplicativo extensível.
+- Abra *Module1. vb* ou *Program.cs* e adicione `Imports` `using` instruções or para `System.ComponentModel.Composition` e `System.ComponentModel.Composition.Hosting` . Esses dois namespaces contêm tipos MEF que você precisará para desenvolver um aplicativo extensível.
 
 - Se você estiver usando o Visual Basic, adicione a palavra-chave `Public` à linha que declara o módulo `Module1`.
 
@@ -272,7 +273,7 @@ public interface IOperationData
 }
 ```
 
- Nesse caso, os metadados de cada operação são o símbolo que representa essa operação, como +,-, \*e assim por diante. Para disponibilizar a operação de adição, adicione a seguinte classe ao módulo ou ao namespace `SimpleCalculator`:
+ Nesse caso, os metadados de cada operação são o símbolo que representa essa operação, como +,-, \* e assim por diante. Para disponibilizar a operação de adição, adicione a seguinte classe ao módulo ou ao namespace `SimpleCalculator`:
 
 ```vb
 <Export(GetType(IOperation))>
@@ -387,7 +388,7 @@ private int FindFirstNonDigit(string s)
 }
 ```
 
-Agora você poderá compilar e executar o projeto. No Visual Basic, certifique-se de adicionar a palavra-chave `Public` ao `Module1`. Na janela do console, digite uma operação de adição, como "5+3", e a calculadora retorna os resultados. Qualquer outro operador resulta na mensagem "Operação Não Encontrada!" mensagem.
+Agora você poderá compilar e executar o projeto. No Visual Basic, certifique-se de adicionar a palavra-chave `Public` ao `Module1`. Na janela do console, digite uma operação de adição, como "5+3", e a calculadora retorna os resultados. Qualquer outro operador resulta na mensagem "Operação Não Encontrada!" .
 
 ## <a name="extending-simplecalculator-using-a-new-class"></a>Estendendo SimpleCalculator usando uma nova classe
 
@@ -425,7 +426,7 @@ Adicionar classes ao código-fonte é bastante simples, mas o MEF oferece a capa
 
 Adicione um novo diretório chamado `Extensions` ao projeto da SimpleCalculator. Certifique-se de adicioná-lo no nível do projeto e não no nível da solução. Em seguida, adicione um novo projeto de Biblioteca de Classes à solução, chamado `ExtendedOperations`. O novo projeto será compilado em um assembly separado.
 
-Abra o designer de propriedades do projeto para o projeto ExtendedOperations e clique na guia **Compilar** ou **Compilar** . Altere o caminho de **saída da compilação** ou o **caminho de saída** para apontar para o diretório de extensões no diretório do projeto SimpleCalculator (*.. \SimpleCalculator\Extensions\\*).
+Abra o designer de propriedades do projeto para o projeto ExtendedOperations e clique na guia **Compilar** ou **Compilar** . Altere o caminho de **saída da compilação** ou o **caminho de saída** para apontar para o diretório de extensões no diretório do projeto SimpleCalculator (*.. \SimpleCalculator\Extensions \\ *).
 
  No *Module1. vb* ou *Program.cs*, adicione a seguinte linha ao `Program` Construtor:
 
@@ -437,7 +438,7 @@ catalog.Catalogs.Add(New DirectoryCatalog("C:\SimpleCalculator\SimpleCalculator\
 catalog.Catalogs.Add(new DirectoryCatalog("C:\\SimpleCalculator\\SimpleCalculator\\Extensions"));
 ```
 
-Substitua o caminho de exemplo pelo caminho para o diretório de Extensions. (Esse caminho absoluto destina-se apenas a fins de depuração. Em um aplicativo de produção, você usaria um caminho relativo.) Agora <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> , o adicionará todas as partes encontradas em quaisquer assemblies no diretório de extensões ao contêiner de composição.
+Substitua o caminho de exemplo pelo caminho para o diretório de Extensions. (Esse caminho absoluto destina-se apenas a fins de depuração. Em um aplicativo de produção, você usaria um caminho relativo.) <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog>Agora, o adicionará todas as partes encontradas em quaisquer assemblies no diretório de extensões ao contêiner de composição.
 
 No projeto ExtendedOperations, adicione referências à SimpleCalculator e ao System.ComponentModel.Composition. No arquivo de classe ExtendedOperations, adicione um `Imports` ou uma instrução `using` para o System.ComponentModel.Composition. No Visual Basic, adicione também uma instrução `Imports` para a SimpleCalculator. Em seguida, adicione a seguinte classe ao arquivo da classe ExtendedOperations:
 

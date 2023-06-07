@@ -1,5 +1,6 @@
 ---
 title: Installutil.exe (Ferramenta de Instalação)
+description: Use Installutil.exe, o Ferramenta de Instalação. Essa ferramenta permite que você instale ou desinstale recursos do servidor executando os componentes do instalador em assemblies especificados.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - uninstalling server resources
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - progress information for installation
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
-ms.openlocfilehash: caca946617c681ce6516b7184a9ea506cc67158d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 042e5f64a7a863173db9c4e601d3152b0df46d97
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73105070"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164442"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Ferramenta de Instalação)
 
@@ -44,13 +45,13 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 ## <a name="options"></a>Opções
 
-|Opção|Descrição|
+|Opção|DESCRIÇÃO|
 |------------|-----------------|
 |`/h[elp]`<br /><br /> -ou-<br /><br /> `/?`|Exibe sintaxe de comando e opções para a ferramenta.|
-|`/help`*montagem*<br /><br /> -ou-<br /><br /> `/?`*montagem*|Exibe opções adicionais reconhecidas por instaladores individuais dentro do assembly especificado, com a sintaxe do comando e as opções de InstallUtil.exe. Essa opção adiciona o texto retornado pela propriedade <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> de cada componente do instalador para o texto de ajuda de InstallUtil.exe.|
-|`/AssemblyName`"*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|Especifica o nome forte de um assembly, que deve ser registrado no cache de assembly global. O nome do assembly deve ser totalmente qualificado com a versão, a cultura e o token de chave pública do assembly. O nome totalmente qualificado deve estar entre aspas.<br /><br /> Por exemplo, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" é um nome de assembly totalmente qualificado.|
-|`/InstallStateDir=[`*diretórioNome*`]`|Especifica o diretório do arquivo .InstallState que contém os dados usados para desinstalar o assembly. O padrão é o diretório que contém o assembly.|
-|`/LogFile=`[nome*do arquivo]*|Especifica o nome do arquivo de log em que o andamento da instalação é registrado. Por padrão, se a opção `/LogFile` for omitida, um arquivo de log chamado *assemblyname*.InstallLog será criado. Se *filename* for omitido, nenhum arquivo de log será gerado.|
+|`/help`*assembly* do<br /><br /> -ou-<br /><br /> `/?`*assembly* do|Exibe opções adicionais reconhecidas por instaladores individuais dentro do assembly especificado, com a sintaxe do comando e as opções de InstallUtil.exe. Essa opção adiciona o texto retornado pela propriedade <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> de cada componente do instalador para o texto de ajuda de InstallUtil.exe.|
+|`/AssemblyName`"*AssemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|Especifica o nome forte de um assembly, que deve ser registrado no cache de assembly global. O nome do assembly deve ser totalmente qualificado com a versão, a cultura e o token de chave pública do assembly. O nome totalmente qualificado deve estar entre aspas.<br /><br /> Por exemplo, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" é um nome de assembly totalmente qualificado.|
+|`/InstallStateDir=[`*DirectoryName*`]`|Especifica o diretório do arquivo .InstallState que contém os dados usados para desinstalar o assembly. O padrão é o diretório que contém o assembly.|
+|`/LogFile=`[*nome do arquivo*]|Especifica o nome do arquivo de log em que o andamento da instalação é registrado. Por padrão, se a opção `/LogFile` for omitida, um arquivo de log chamado *assemblyname*.InstallLog será criado. Se *filename* for omitido, nenhum arquivo de log será gerado.|
 |`/LogToConsole`={`true`&#124;`false`}|Se `true`, exibirá a saída no console. Se `false` (o padrão), suprimirá a saída no console.|
 |`/ShowCallStack`|A saída da pilha de chamadas será para o arquivo de log se ocorrer uma exceção a qualquer momento durante a instalação.|
 |`/u`[`ninstall`]|Desinstala os assemblies especificados. Diferentemente das outras opções, `/u` se aplica a todos os assemblies, independentemente de onde a opção seja exibida na linha de comando.|
@@ -169,4 +170,4 @@ installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallL
 
 - <xref:System.Configuration.Install>
 - [Ferramentas](index.md)
-- [Prompts de Comando](developer-command-prompt-for-vs.md)
+- [Prompts de comando](developer-command-prompt-for-vs.md)

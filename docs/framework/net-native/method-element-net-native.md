@@ -3,13 +3,13 @@ title: <Method> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
 ms.openlocfilehash: 8db32c660846b4f4071fff2a40c760a3d1ef2489
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79180982"
 ---
-# <a name="method-element-net-native"></a>\<Elemento> método (.NET nativo)
+# <a name="method-element-net-native"></a>\<Method> (.NET Nativo)
 Aplica a política de reflexão de runtime a um construtor ou método.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,7 +37,7 @@ Aplica a política de reflexão de runtime a um construtor ou método.
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*method_name*|O nome do método. O tipo do método é definido pelo elemento [ \<>tipo](type-element-net-native.md) pai ou [ \<Digitação>.](typeinstantiation-element-net-native.md)|  
+|*method_name*|O nome do método. O tipo do método é definido pelo [\<Type>](type-element-net-native.md) elemento pai ou [\<TypeInstantiation>](typeinstantiation-element-net-native.md) .|  
   
 ## <a name="signature-attribute"></a>Atributo de assinatura  
   
@@ -55,24 +55,24 @@ Aplica a política de reflexão de runtime a um construtor ou método.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<>de parâmetros](parameter-element-net-native.md)|Aplica a política ao tipo do argumento passado para um método.|  
-|[\<>de parâmetro genérico](genericparameter-element-net-native.md)|Aplica a política ao tipo de parâmetro de um tipo ou método genérico.|  
-|[\<ImplicaTipo>](impliestype-element-net-native.md)|Aplica a política a um tipo, se esta política tiver sido aplicada ao método representado pelo elemento `<Method>` recipiente.|  
-|[\<>de Parâmetros](typeparameter-element-net-native.md)|Aplica a política ao tipo representado por um argumento <xref:System.Type> passado para um método.|  
+|[\<Parameter>](parameter-element-net-native.md)|Aplica a política ao tipo do argumento passado para um método.|  
+|[\<GenericParameter>](genericparameter-element-net-native.md)|Aplica a política ao tipo de parâmetro de um tipo ou método genérico.|  
+|[\<ImpliesType>](impliestype-element-net-native.md)|Aplica a política a um tipo, se esta política tiver sido aplicada ao método representado pelo elemento `<Method>` recipiente.|  
+|[\<TypeParameter>](typeparameter-element-net-native.md)|Aplica a política ao tipo representado por um argumento <xref:System.Type> passado para um método.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Tipo>](type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
-|[\<>de Digitação](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
+|[\<Type>](type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
   
 ## <a name="remarks"></a>Comentários  
  Um elemento `<Method>` de um método genérico aplica sua política a todas as instanciações que não possuem sua própria política.  
   
  Você pode usar o atributo `Signature` para especificar uma política para uma sobrecarga de método específico. Caso contrário, se o atributo `Signature` estiver ausente, a diretiva de runtime se aplicará a todas as sobrecargas do método.  
   
- Não é possível definir a política de reflexão de runtime de um construtor usando o `<Method>` elemento. Em vez `Activate` disso, use o atributo do [ \<elemento Assembly>](assembly-element-net-native.md), [ \<Namespace>, ](namespace-element-net-native.md) [ \<Type>](type-element-net-native.md)ou [ \<TypeInstantiation>.](typeinstantiation-element-net-native.md)  
+ Não é possível definir a política de reflexão de runtime de um construtor usando o `<Method>` elemento. Em vez disso, use o `Activate` atributo [\<Assembly>](assembly-element-net-native.md) do [\<Namespace>](namespace-element-net-native.md) elemento,, [\<Type>](type-element-net-native.md) ou [\<TypeInstantiation>](typeinstantiation-element-net-native.md) .  
   
 ## <a name="example"></a>Exemplo  
  O método `Stringify` no exemplo a seguir é um método de formatação para fins gerais que usa reflexão para converter um objeto em sua representação de cadeia de caracteres. Além de chamar o método `ToString` padrão do objeto, o método pode produzir uma cadeia de caracteres de resultados formatada passando um método `ToString` do objeto método em uma cadeia de caracteres, uma implementação de <xref:System.IFormatProvider> ou ambos. Ele também pode chamar uma das sobrecargas de <xref:System.Convert.ToString%2A?displayProperty=nameWithType> que converte um número em sua representação octal, hexadecimal ou binária.  
@@ -85,7 +85,7 @@ Aplica a política de reflexão de runtime a um construtor ou método.
   
  No entanto, quando compilado com .NET Native, o exemplo pode acionar diversas exceções no tempo de execução, incluindo as exceções <xref:System.NullReferenceException> e [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md). Isso ocorre porque o método `Stringify` destina-se principalmente a oferecer suporte à formatação dinâmica dos tipos primitivos na Biblioteca de Classes do .NET Framework. No entanto, seus metadados não são disponibilizados pelo arquivo de diretivas padrão. Mesmo quando seus metadados são disponibilizados, o exemplo aciona exceções [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) porque as devidas implementações `ToString` não foram incluídas no código nativo.  
   
- Essas exceções podem ser eliminadas [ \<](type-element-net-native.md) usando o elemento Type>para definir os `<Method>` tipos cujos metadados devem estar presentes, e adicionando elementos para garantir que a implementação de sobrecargas de métodos que podem ser chamadas dinamicamente também esteja presente. Veja a seguir o arquivo default.rd.xml que elimina essas exceções e permite que o exemplo seja executado sem erros.  
+ Essas exceções podem ser eliminadas usando o [\<Type>](type-element-net-native.md) elemento para definir os tipos cujos metadados devem estar presentes e adicionando `<Method>` elementos para garantir que a implementação de sobrecargas de método que pode ser chamada dinamicamente também esteja presente. Veja a seguir o arquivo default.rd.xml que elimina essas exceções e permite que o exemplo seja executado sem erros.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -145,7 +145,7 @@ Aplica a política de reflexão de runtime a um construtor ou método.
   
 ## <a name="see-also"></a>Confira também
 
-- [Referência do arquivo de configuração das diretivas de runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de runtime](runtime-directive-elements.md)
 - [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md)
-- [\<Elemento> de instantito do método](methodinstantiation-element-net-native.md)
+- [\<MethodInstantiation>Elementos](methodinstantiation-element-net-native.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b9b93b0-fe92-42ba-8693-701168a29dde
 topic_type:
 - apiref
-ms.openlocfilehash: c6e0c02af93b9df726202f397bbb2afc306f3b3a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 84cdb42b11ad70f54f21ae36ca2734dc794d06d7
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090874"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008463"
 ---
 # <a name="lpthread_start_routine-function-pointer"></a>Ponteiro de função LPTHREAD_START_ROUTINE
 Aponta para uma função que notifica o host que um thread começou a ser executado.  
@@ -39,17 +39,17 @@ typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (
  no Um ponteiro para o código que iniciou a execução.  
   
 ## <a name="remarks"></a>Comentários  
- A função à qual os pontos de `LPTHREAD_START_ROUTINE` é uma função de retorno de chamada e deve ser implementada pelo gravador do aplicativo de hospedagem.  
+ A função para a qual os `LPTHREAD_START_ROUTINE` pontos é uma função de retorno de chamada e deve ser implementada pelo gravador do aplicativo de hospedagem.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** MSCorWks. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funções de hospedagem CLR reprovadas](deprecated-clr-hosting-functions.md)

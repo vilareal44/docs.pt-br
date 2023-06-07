@@ -4,26 +4,26 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID49
 ms.assetid: 7c7def45-b0ab-450f-ad3f-4383dfd9aed7
-ms.openlocfilehash: f7b0c3a6edbe0b950195306fa66287ff9b209bfe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a60e44ce92b1805b0a5a6f1d4ce397c295eef202
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935272"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409862"
 ---
 # <a name="bad-dll-calling-convention"></a>Convenção de chamada de DLL inválida
-Argumentos passados para uma biblioteca de vínculo dinâmico (DLL) devem corresponder exatamente aos esperados pela rotina. Convenções de chamada lidam com o número, tipo e ordem dos argumentos. Seu programa pode chamar uma rotina em uma DLL que está sendo passada a um tipo incorreto ou o número de argumentos.  
+Os argumentos passados para uma DLL (biblioteca de vínculo dinâmico) devem corresponder exatamente aos esperados pela rotina. As convenções de chamada lidam com número, tipo e ordem de argumentos. Seu programa pode estar chamando uma rotina em uma DLL que está recebendo o tipo errado ou o número de argumentos.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1. Verifique se que todos os tipos de argumento de acordo com aquelas especificadas na declaração da rotina que você está chamando.  
+1. Verifique se todos os tipos de argumento concordam com aqueles especificados na declaração da rotina que você está chamando.  
   
-2. Verifique se que você estiver passando o mesmo número de argumentos indicado na declaração da rotina que você está chamando.  
+2. Certifique-se de que você está passando o mesmo número de argumentos indicado na declaração da rotina que você está chamando.  
   
-3. Se a rotina DLL espera argumentos por valor, certifique-se `ByVal` é especificado para esses argumentos na declaração para a rotina.  
+3. Se a rotina DLL espera argumentos por valor, certifique-se `ByVal` de que é especificado para esses argumentos na declaração para a rotina.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md)
-- [Instrução Call](../../../visual-basic/language-reference/statements/call-statement.md)
-- [Instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Tipos de erro](../../programming-guide/language-features/error-types.md)
+- [Instrução Call](../statements/call-statement.md)
+- [Instrução Declare](../statements/declare-statement.md)

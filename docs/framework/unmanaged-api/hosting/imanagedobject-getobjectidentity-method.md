@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b862ff3e-e480-4cdf-84e2-e1013334a467
 topic_type:
 - apiref
-ms.openlocfilehash: 8c884569a452fb2985713956f942205cda6ea1ff
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1b40ed8e107d30c22b4ade25d29376b1b74583d1
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141250"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842407"
 ---
 # <a name="imanagedobjectgetobjectidentity-method"></a>Método IManagedObject::GetObjectIdentity
 Obtém a identidade deste objeto gerenciado.  
@@ -49,14 +49,14 @@ HRESULT GetObjectIdentity (
  A identidade de um objeto gerenciado inclui GUID do processo, ID de domínio do aplicativo e o índice do objeto na tabela v clássica do COM.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IManagedObject](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)
+- [Interface IManagedObject](imanagedobject-interface.md)

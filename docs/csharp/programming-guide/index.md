@@ -1,5 +1,6 @@
 ---
 title: Guia de Programação em C#
+description: Use estes recursos para obter informações detalhadas sobre os principais recursos da linguagem C# e os recursos acessíveis ao C# por meio do .NET.
 ms.date: 05/02/2017
 f1_keywords:
 - cs.langref
@@ -9,40 +10,40 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: de40369a661c347a2125075e820420af4eb71cac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6db16a86e949fb50254c301f5e5ac0904a6072a4
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75337252"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063593"
 ---
 # <a name="c-programming-guide"></a>Guia de programação em C#
 
-Esta seção fornece informações detalhadas sobre os principais recursos da linguagem C# e os recursos acessíveis para C# por meio do .NET Framework.  
+Esta seção fornece informações detalhadas sobre os principais recursos da linguagem C# e os recursos acessíveis ao C# por meio do .NET.  
   
- Grande parte dessa seção pressupõe que você já sabe algo sobre o C# e conceitos gerais de programação. Se você é um iniciante completo com programação ou com C#, você pode querer visitar o [Introdução aos Tutoriais C#](../tutorials/intro-to-csharp/index.md) ou [o .NET In-Browser Tutorial](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), onde nenhum conhecimento prévio de programação é necessário.  
+ Grande parte dessa seção pressupõe que você já sabe algo sobre o C# e conceitos gerais de programação. Se você for um principiante completo com programação ou com C#, talvez queira visitar o tutorial [introdução aos tutoriais do C#](../tutorials/intro-to-csharp/index.md) ou ao [navegador do .net](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), onde não é necessário nenhum conhecimento prévio de programação.  
   
- Para obter informações sobre palavras-chave específicas, operadores e diretivas de pré-processador, consulte [Referência de C#](../language-reference/index.md). Para obter mais informações sobre as especificações da linguagem C#, consulte [Especificações da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction).  
+ Para obter informações sobre palavras-chave, operadores e diretivas de pré-processador específicas, consulte [referência em C#](../language-reference/index.md). Para obter mais informações sobre as especificações da linguagem C#, consulte [Especificações da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction).  
   
 ## <a name="program-sections"></a>Seções de programa
 
-[Por dentro de um programa em C#](./inside-a-program/index.md)  
+[Dentro de um programa C#](./inside-a-program/index.md)  
   
-[Main() e argumentos de linha de comando](./main-and-command-args/index.md)  
+[Argumentos Main () e de linha de comando](./main-and-command-args/index.md)  
 
 ## <a name="language-sections"></a>Seções da linguagem
 
-[Instruções, Expressões e Operadores](./statements-expressions-operators/index.md)  
+[Instruções, expressões e operadores](./statements-expressions-operators/index.md)  
 
- [Tipos](./types/index.md)  
+ [Types](./types/index.md)  
 
  [Classes e structs](./classes-and-structs/index.md)  
   
  [Interfaces](./interfaces/index.md)  
 
- [Delega](./delegates/index.md)  
+ [Representantes](./delegates/index.md)  
 
- [Matrizes](./arrays/index.md)  
+ [matrizes](./arrays/index.md)  
   
  [Cadeias de caracteres](./strings/index.md)  
   
@@ -58,17 +59,15 @@ Esta seção fornece informações detalhadas sobre os principais recursos da li
   
  [Expressões de Consulta LINQ](../linq/index.md)  
   
- [Expressões Lambda](./statements-expressions-operators/lambda-expressions.md)  
-  
  [Namespaces](./namespaces/index.md)  
   
  [Código não seguro e ponteiros](./unsafe-code-pointers/index.md)  
   
- [Comentários sobre documentação xml](./xmldoc/index.md)  
+ [Comentários de documentação XML](./xmldoc/index.md)  
   
 ## <a name="platform-sections"></a>Seções da plataforma
 
- [Domínios de aplicativo](../../framework/app-domains/application-domains.md)  
+ [Domínios do aplicativo](../../framework/app-domains/application-domains.md)  
   
  [Assemblies no .NET](../../standard/assembly/index.md)  
   
@@ -76,7 +75,7 @@ Esta seção fornece informações detalhadas sobre os principais recursos da li
   
  [Coleções](./concepts/collections.md)  
   
- [Exceções e tratamento de exceções](./exceptions/index.md)  
+ [Exceções e manipulação de exceções](./exceptions/index.md)  
   
  [Sistema de arquivos e o Registro (Guia de Programação em C#)](./file-system/index.md)  
   
@@ -84,6 +83,6 @@ Esta seção fornece informações detalhadas sobre os principais recursos da li
   
  [Reflexão](./concepts/reflection.md)  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [C# Referência](../language-reference/index.md)
+- [Referência do C#](../language-reference/index.md)

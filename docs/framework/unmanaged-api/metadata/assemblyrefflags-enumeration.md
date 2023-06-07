@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: decd4f46-f3b2-466f-9501-e74f2b86b846
 topic_type:
 - apiref
-ms.openlocfilehash: 23d293a87112c62cb2127b435faeca258a7de226
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1307f555c9d8b6d28febcf25db89ae856c143d71
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444230"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009399"
 ---
 # <a name="assemblyrefflags-enumeration"></a>Enumeração AssemblyRefFlags
 Contém valores que descrevem os recursos de uma referência de assembly.  
@@ -34,19 +34,19 @@ typedef enum {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`arfFullOriginator`|Especifica que a referência de assembly contém informações completas e sem hash sobre o Publicador do assembly.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
-- [Interface IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [Método DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)
+- [Enumerações de metadados](metadata-enumerations.md)
+- [Interface IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md)
+- [Método DefineAssemblyRef](imetadataassemblyemit-defineassemblyref-method.md)

@@ -1,5 +1,6 @@
 ---
-title: Como referenciar tipos do .NET com base no COM
+title: 'Como: Referenciar tipos .NET por meio do COM'
+description: Referencie tipos .NET de COM. Os clientes do VB podem exibir um objeto .NET no Pesquisador de objetos, mas os clientes do C++ devem fazer referência a um arquivo TLB com a \# diretiva de importação.
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
-ms.openlocfilehash: 0223cb25b933cc84af49aa86d90259fdf1fd3efc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f8d052c7b9bac9c4bab61ab1950e9e89a7c73912
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124167"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618955"
 ---
-# <a name="how-to-reference-net-types-from-com"></a>Como referenciar tipos do .NET com base no COM
+# <a name="how-to-reference-net-types-from-com"></a>Como: Referenciar tipos .NET por meio do COM
 Do ponto de vista do código de cliente e servidor, as diferenças entre o .NET Framework e o COM são bastante invisíveis. Os clientes do Microsoft Visual Basic podem exibir um objeto .NET no Pesquisador de Objetos, que expõe os métodos de objeto e a sintaxe, propriedades e campos exatamente como se fosse qualquer outro objeto COM.  
   
  O processo de importação de uma biblioteca de tipos é um pouco mais complicado para clientes do C++, embora você use as mesmas ferramentas para exportar metadados para uma biblioteca de tipos COM. Para referenciar membros do objeto .NET de um cliente C++ não gerenciado, referencie o arquivo TLB (produzido com Tlbexp.exe) com a diretiva **#import**. Ao referenciar uma biblioteca de tipos C++, você deve especificar a opção **raw_interfaces_only** ou importar as definições na biblioteca de classes base, Mscorlib.tlb.  

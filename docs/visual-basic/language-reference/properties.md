@@ -1,19 +1,19 @@
 ---
-title: '{1&gt;Propriedades&lt;1}'
+title: Propriedades
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [Visual Basic]
 ms.assetid: c995caf9-8d0e-4fb8-ae02-e9e6087d7651
-ms.openlocfilehash: bd6234c6a784ed0d222a38dfdf91cc0e5b96a173
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 1e56be71c1841c202f08b64716e62b003bda4d97
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838176"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406295"
 ---
 # <a name="properties-visual-basic"></a>Propriedades (Visual Basic)
 
-Esta página lista as propriedades que são membros de Visual Basic módulos. Outras propriedades que são membros de objetos Visual Basic específicos são listadas em [objetos](../../visual-basic/language-reference/objects/index.md).  
+Esta página lista as propriedades que são membros de Visual Basic módulos. Outras propriedades que são membros de objetos Visual Basic específicos são listadas em [objetos](objects/index.md).  
   
 ## <a name="visual-basic-properties"></a>Propriedades de Visual Basic  
   
@@ -30,6 +30,6 @@ Esta página lista as propriedades que são membros de Visual Basic módulos. Ou
 |<xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>|Retorna ou define um valor de `String` que representa a hora atual do dia de acordo com o sistema.|  
 |<xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|Retorna ou define um valor `Date` que contém a data atual de acordo com o sistema.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Referência da linguagem Visual Basic](../../visual-basic/language-reference/index.md)
+- [Referência de linguagem de Visual Basic](index.md)

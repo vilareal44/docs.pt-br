@@ -1,5 +1,6 @@
 ---
 title: MDA invalidOverlappedToPinvoke
+description: Examine o MDA (Assistente de depuração gerenciada) do invalidOverlappedToPinvoke no .NET, que pode ser ativado durante uma falha ou uma corrupção de heap inexplicativa.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overlapped pointers
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), overlapped pointers
 - pointers, overlapped
 ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
-ms.openlocfilehash: 1f557cc370d5c6121b0ad9a4528bd75dcb70a93c
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 162efd55bf636cf2e8698706bd011379f2f6f11f
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216285"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051695"
 ---
 # <a name="invalidoverlappedtopinvoke-mda"></a>MDA invalidOverlappedToPinvoke
 O MDA (Assistente de Depuração Gerenciado) de `invalidOverlappedToPinvoke` é ativado quando um ponteiro sobreposto que não foi criado no heap de coleta de lixo é passado para funções específicas do Win32.  
@@ -70,8 +70,8 @@ O MDA (Assistente de Depuração Gerenciado) de `invalidOverlappedToPinvoke` é 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling de interoperabilidade](../interop/interop-marshaling.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Realizando marshaling de interoperabilidade](../interop/interop-marshaling.md)

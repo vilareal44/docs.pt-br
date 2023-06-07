@@ -1,5 +1,6 @@
 ---
 title: MDA invalidGCHandleCookie
+description: Examine o MDA (Assistente de depuração gerenciada) invalidGCHandleCookie, que é ativado quando uma conversão de um cookie IntPtr inválido para um GCHandle é tentada.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid cookies
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - InvalidGCHandleCookie MDA
 - invalid cookies
 ms.assetid: 613ad742-3c11-401d-a6b3-893ceb8de4f8
-ms.openlocfilehash: c1d8fab863c34313c0cdb778136c6f69a64defeb
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 1063b7be902d3063717b6639564d819ef3292c0e
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216316"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051292"
 ---
 # <a name="invalidgchandlecookie-mda"></a>MDA invalidGCHandleCookie
 O MDA (Assistente de Depuração Gerenciado) de `invalidGCHandleCookie` é ativado quando há uma tentativa de conversão de um cookie <xref:System.IntPtr> inválido em um <xref:System.Runtime.InteropServices.GCHandle>.  
@@ -43,8 +43,8 @@ O MDA (Assistente de Depuração Gerenciado) de `invalidGCHandleCookie` é ativa
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>
 - <xref:System.Runtime.InteropServices.GCHandle>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)

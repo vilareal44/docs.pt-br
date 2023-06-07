@@ -1,0 +1,223 @@
+### YamlMime:Landing
+title: Azure para desenvolvedores .NET
+summary: Comece a desenvolver aplicativos para a nuvem com estes tutoriais e ferramentas para desenvolvedores do .NET. .NET ❤ Azure
+metadata:
+  title: Azure para desenvolvedores .NET
+  description: Documentação, exemplos e links para desenvolvimento com o .NET e o Azure.
+  ms.date: 06/12/2020
+  ms.topic: landing-page
+  ms.collection: collection
+  ms.technology: azure
+  ms.service: multiple
+  ms.prod: azure-dotnet
+  ms.openlocfilehash: a7b9b909e500979750d57cc6047153123cd192e5
+  ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+  ms.translationtype: MT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 07/09/2020
+  ms.locfileid: "86174896"
+landingContent:
+- title: Introdução ao .NET no Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Introdução ao Azure e ao .NET
+      url: intro.md
+  - linkListType: get-started
+    links:
+    - text: Ferramentas de desenvolvedor do .NET
+      url: tools.md
+    - text: Autentique seu aplicativo
+      url: authentication.md
+    - text: Registro em log
+      url: logging.md
+    - text: Exemplo de SDK
+      url: /samples/dotnet/samples/azure-identity-resource-management-storage/
+  - linkListType: learn
+    links:
+    - text: Conceitos básicos do Azure
+      url: /learn/paths/azure-fundamentals/
+  - linkListType: download
+    links:
+    - text: Código de exemplo
+      url: /samples/browse/?products=azure&languages=csharp%2Caspx-csharp%2Cfsharp%2Cvb
+  - linkListType: reference
+    links:
+    - text: Referência de bibliotecas do Azure para API .NET
+      url: /dotnet/api/overview/azure/?view=azure-dotnet
+- title: Criar aplicativos Web
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Serviço de Aplicativo
+      url: /azure/app-service/overview
+    - text: Azure Functions
+      url: /azure/azure-functions/functions-overview
+  - linkListType: quickstart
+    links:
+    - text: Implantar um aplicativo Web ASP.NET
+      url: /azure/app-service/app-service-web-get-started-dotnet
+    - text: Criar uma função sem servidor
+      url: /azure/azure-functions/functions-create-your-first-function-visual-studio
+  - linkListType: learn
+    links:
+    - text: Hospedar um aplicativo Web com o serviço Azure App
+      url: /learn/modules/host-a-web-app-with-azure-app-service/
+    - text: Desenvolver, testar e implantar uma Função do Azure com o Visual Studio
+      url: /learn/modules/develop-test-deploy-azure-functions-with-visual-studio/
+    - text: Publicar e gerenciar suas APIs com o Gerenciamento de API do Azure
+      url: /learn/modules/publish-manage-apis-with-azure-api-management/
+  - linkListType: tutorial
+    links:
+    - text: ASP.NET Core aplicativo Web com o serviço de aplicativo e o banco de dados SQL do Azure
+      url: /azure/app-service/app-service-web-tutorial-dotnet-sqldatabase
+    - text: Identidade gerenciada com o ASP.NET e o Banco de Dados SQL do Azure
+      url: /azure/app-service/app-service-web-tutorial-connect-msi
+    - text: API Web com CORS no Serviço de Aplicativo do Azure
+      url: /azure/app-service/app-service-web-tutorial-rest-api
+- title: Compilar aplicativos nativos de nuvem
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Executar e depurar um microserviço no kubernetes
+      url: /azure/dev-spaces/quickstart-netcore-visualstudio
+  - linkListType: learn
+    links:
+    - text: Criar e implantar um microsserviço ASP.NET Core nativo de nuvem
+      url: /learn/modules/microservices-aspnet-core/
+  - linkListType: how-to-guide
+    links:
+    - text: Implantar um aplicativo .NET Core no registro de contêiner do Azure
+      url: /visualstudio/containers/hosting-web-apps-in-docker
+  - linkListType: tutorial
+    links:
+    - text: ASP.NET Core aplicativo com as ferramentas de contêiner do Visual Studio
+      url: /visualstudio/containers/container-tools
+    - text: Implantar e depurar vários contêineres no AKS
+      url: /azure/dev-spaces/multi-service-netcore-visualstudio
+    - text: Configuração dinâmica e sinalizadores de recurso usando Azure App config
+      url: /azure/azure-app-configuration/use-feature-flags-dotnet-core
+- title: Autenticação e segurança
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Plataforma Microsoft Identity (AD do Azure)
+      url: /azure/active-directory/develop/
+  - linkListType: learn
+    links:
+    - text: Proteja seu aplicativo usando o OpenID Connect e o Azure AD
+      url: /learn/modules/secure-app-with-oidc-and-azure-ad/
+    - text: Proteger APIs personalizadas com o Microsoft Identity
+      url: /learn/modules/identity-secure-custom-api/
+    - text: Proteger um aplicativo Web ASP.NET Core com a estrutura de ASP.NET Identity
+      url: /learn/modules/secure-aspnet-core-identity/
+  - linkListType: tutorial
+    links:
+    - text: Adicionar a entrada com a conta da Microsoft a um aplicativo Web ASP.NET
+      url: /azure/active-directory/develop/tutorial-v2-asp-webapp
+    - text: Usar Azure Key Vault com ASP.NET Core
+      url: /azure/key-vault/tutorial-net-create-vault-azure-web-app
+    - text: Integrar Azure AD B2C com uma API da Web
+      url: /azure/active-directory-b2c/tutorial-single-page-app-webapi
+  - linkListType: reference
+    links:
+    - text: Biblioteca de cliente de identidade do Azure para .NET
+      url: /dotnet/api/overview/azure/identity-readme?view=azure-dotnet
+- title: Trabalhar com dados de & de armazenamento
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Escolha a opção de armazenamento de dados correta
+      url: /azure/architecture/guide/technology-choices/data-store-overview
+  - linkListType: quickstart
+    links:
+    - text: Use o .NET para consultar um banco de dados SQL do Azure ou o Azure SQL Instância Gerenciada
+      url: /azure/azure-sql/database/connect-query-dotnet-core
+    - text: Usar o .NET para consultar o PostgreSQL do Azure
+      url: /azure/postgresql/connect-csharp
+  - linkListType: learn
+    links:
+    - text: Desenvolver e configurar um aplicativo ASP.NET que consulta um banco de dados SQL do Azure
+      url: /learn/modules/develop-app-that-queries-azure-sql/
+    - text: Criar um aplicativo .NET Core para o Azure Cosmos DB no Visual Studio Code
+      url: /learn/modules/build-cosmos-db-app-with-vscode/
+    - text: Armazenar dados do aplicativo com o Armazenamento de Blobs do Azure
+      url: /learn/modules/store-app-data-with-azure-blob-storage/
+    - text: Persistir e recuperar dados relacionais com o Entity Framework Core
+      url: /learn/modules/persist-data-ef-core/
+  - linkListType: tutorial
+    links:
+    - text: Conectar-se a um banco de dados do Azure para PostgreSQL e consultá-lo
+      url: /azure/postgresql/connect-csharp
+- title: Mensagens no Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Armazenamento de mensagens com filas do Azure
+      url: /azure/storage/queues/storage-queues-introduction
+    - text: Mensagens entre aplicativos com o Barramento de Serviço do Azure
+      url: /azure/service-bus-messaging
+    - text: Streaming de Big Data com Hubs de Eventos
+      url: /azure/event-hubs/event-hubs-about
+    - text: Criação de aplicativos baseados em eventos com a Grade de Eventos
+      url: /azure/event-grid/overview
+  - linkListType: quickstart
+    links:
+    - text: Usar o Armazenamento de Filas do Azure
+      url: /azure/storage/queues/storage-dotnet-how-to-use-queues?tabs=dotnet
+    - text: Usar filas do Barramento de Serviço do Azure
+      url: /azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues
+    - text: Ingerir dados em tempo real por meio dos Hubs de Eventos do Azure
+      url: /azure/event-hubs/event-hubs-dotnet-standard-getstarted-send
+    - text: Encaminhar eventos personalizados com a Grade de Eventos
+      url: /azure/event-grid/custom-event-quickstart
+- title: Diagnóstico e monitoramento
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure Monitor
+      url: /azure/azure-monitor/overview
+  - linkListType: learn
+    links:
+    - text: Capturar e exibir tempos de carregamento de página em seu aplicativo Web do Azure
+      url: /learn/modules/capture-page-load-times-application-insights/
+  - linkListType: how-to-guide
+    links:
+    - text: Solucionar problemas ASP.NET Core no serviço Azure App e no IIS
+      url: /aspnet/core/test/troubleshoot-azure-iis
+    - text: Application Insights com o .NET Core ILogger
+      url: /azure/azure-monitor/app/ilogger
+    - text: Application Insights para aplicativos de serviço do Worker
+      url: /azure/azure-monitor/app/worker-service
+    - text: Solucionar problemas de um aplicativo no Serviço de Aplicativo do Azure usando o Visual Studio
+      url: /azure/app-service/troubleshoot-dotnet-visual-studio
+- title: Migração
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Escolher uma opção de hospedagem do Azure
+      url: ./migration/choose.md
+  - linkListType: how-to-guide
+    links:
+    - text: Migrar um aplicativo Web .NET ou serviço para o Serviço de Aplicativo do Azure
+      url: ./migration/app-service.md
+    - text: Migrar um aplicativo ASP.NET para a VM do Azure
+      url: ./migration/vm.md
+    - text: Migrar um banco de dados do SQL Server para o Azure
+      url: ./migration/sql.md
+- title: Guias de arquitetura do .NET
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: Arquitetar aplicativos modernos no Azure
+      url: /learn/paths/architect-modern-apps/
+  - linkListType: architecture
+    links:
+    - text: 'Microsserviços do .NET: Arquitetura para aplicativos .NET em contêineres'
+      url: /dotnet/architecture/microservices/
+    - text: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure
+      url: /dotnet/architecture/modern-web-apps-azure/
+    - text: Ciclo de vida de aplicativo Docker em contêiner com plataforma e ferramentas da Microsoft
+      url: /dotnet/architecture/containerized-lifecycle/
+    - text: Modernize os aplicativos .NET existentes com contêineres do Windows e a nuvem do Azure
+      url: /dotnet/architecture/modernize-with-azure-containers/

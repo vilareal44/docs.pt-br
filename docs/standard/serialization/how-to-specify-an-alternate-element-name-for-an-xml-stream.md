@@ -13,16 +13,16 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: d9851226b602226e00648d8742bf0a49c902c33b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d7e482ee6e1e1a7318ab05766508537d4b87789e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83377402"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289584"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Como especificar um nome de elemento alternativo para um fluxo XML
   
-Usando o <xref:System.Xml.Serialization.XmlSerializer>, você pode gerar mais de um fluxo de XML com o mesmo conjunto de classes. Você deve querer fazer isso porque dois diferentes serviços Web XML exigem as mesmas informações básicas, com apenas poucas diferenças. Por exemplo, imagine dois serviços Web XML que processam pedidos para livros e, portanto, exigem números ISBN. Um serviço usa a marca \<ISBN>, enquanto o segundo usa a marca \<BookID>. Você tem uma classe nomeada `Book` que contém um campo nomeado `ISBN`. Quando uma instância da classe `Book` é serializada, ela, por padrão, usará o nome de membro (ISBN) como o nome de elemento da marca. Para o primeiro serviço Web XML, esse é o esperado. Mas, para enviar o fluxo XML para o segundo serviço Web XML, você deverá sobrescrever a serialização para que o nome do elemento da marca seja `BookID`.  
+Usando o <xref:System.Xml.Serialization.XmlSerializer>, você pode gerar mais de um fluxo de XML com o mesmo conjunto de classes. Você deve querer fazer isso porque dois diferentes serviços Web XML exigem as mesmas informações básicas, com apenas poucas diferenças. Por exemplo, imagine dois serviços Web XML que processam pedidos para livros e, portanto, exigem números ISBN. Um serviço usa a marca \<ISBN> enquanto o segundo usa a marca \<BookID> . Você tem uma classe nomeada `Book` que contém um campo nomeado `ISBN`. Quando uma instância da classe `Book` é serializada, ela, por padrão, usará o nome de membro (ISBN) como o nome de elemento da marca. Para o primeiro serviço Web XML, esse é o esperado. Mas, para enviar o fluxo XML para o segundo serviço Web XML, você deverá sobrescrever a serialização para que o nome do elemento da marca seja `BookID`.  
   
 ## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Para criar um fluxo XML com um nome de elemento alternativo  
   
@@ -97,7 +97,7 @@ public void SerializeOverride()
 - <xref:System.Xml.Serialization.XmlElementAttribute>
 - <xref:System.Xml.Serialization.XmlAttributes>
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
-- [Serialização de XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [Serialização de XML e SOAP](xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Como desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Como serializar um objeto](how-to-serialize-an-object.md)
+- [Como desserializar um objeto](how-to-deserialize-an-object.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: d5aae4d30abbf9ed2af260412352a5e0452e0dcc
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 9e4dbaf2f2800454c673cd58ddec4cf0f6e5c6b9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68513030"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409501"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>Expressão é um valor e, por isso, não pode ser o destino de uma atribuição
 
@@ -29,7 +29,7 @@ maximum = 50
 
 Exemplos semelhantes podem ser aplicados a propriedades e elementos de matriz.
 
-**Acesso indireto.** O acesso indireto por meio de um tipo de valor também pode gerar esse erro. Considere o exemplo de código a seguir, que tenta definir o valor <xref:System.Drawing.Point> de acessando- <xref:System.Windows.Forms.Control.Location%2A>o indiretamente por meio de.
+**Acesso indireto.** O acesso indireto por meio de um tipo de valor também pode gerar esse erro. Considere o exemplo de código a seguir, que tenta definir o valor de <xref:System.Drawing.Point> acessando-o indiretamente por meio de <xref:System.Windows.Forms.Control.Location%2A> .
 
 ```vb
 ' Assume this code runs inside Form1.
@@ -39,7 +39,7 @@ exitButton.Location.X = 140
 ' The preceding line is an ERROR because of no storage for Location.
 ```
 
-A última instrução do exemplo anterior falha porque ela cria apenas uma alocação temporária para a <xref:System.Drawing.Point> estrutura retornada <xref:System.Windows.Forms.Control.Location%2A> pela propriedade. Uma estrutura é um tipo de valor e a estrutura temporária não é mantida após a execução da instrução. O problema é resolvido declarando e usando uma variável <xref:System.Windows.Forms.Control.Location%2A>para, que cria uma alocação mais permanente para <xref:System.Drawing.Point> a estrutura. O exemplo a seguir mostra o código que pode substituir a última instrução do exemplo anterior.
+A última instrução do exemplo anterior falha porque ela cria apenas uma alocação temporária para a <xref:System.Drawing.Point> estrutura retornada pela <xref:System.Windows.Forms.Control.Location%2A> propriedade. Uma estrutura é um tipo de valor e a estrutura temporária não é mantida após a execução da instrução. O problema é resolvido declarando e usando uma variável para <xref:System.Windows.Forms.Control.Location%2A> , que cria uma alocação mais permanente para a <xref:System.Drawing.Point> estrutura. O exemplo a seguir mostra o código que pode substituir a última instrução do exemplo anterior.
 
 ```vb
 Dim exitLocation as New System.Drawing.Point(140, exitButton.Location.Y)
@@ -58,8 +58,8 @@ exitButton.Location = exitLocation
 
 - Use a variável para acessar a propriedade para atribuir um valor a ela.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Operadores e Expressões](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [Instruções](../../../visual-basic/programming-guide/language-features/statements.md)
-- [Solução de problemas de Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+- [Operadores e expressões](../../programming-guide/language-features/operators-and-expressions/index.md)
+- [Instruções](../../programming-guide/language-features/statements.md)
+- [Solucionando problemas de procedimentos](../../programming-guide/language-features/procedures/troubleshooting-procedures.md)

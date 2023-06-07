@@ -4,12 +4,12 @@ description: Saiba como hospedar o runtime do .NET Core a partir do código nati
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 342a0cec78303f70db3a5b31294be1d465459f55
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 3b24ade694e25040d77e411bead3f454e9d5cdef
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394849"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656170"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escreva um host personalizado do .NET Core para controlar o runtime do .NET a partir de seu código nativo
 
@@ -34,7 +34,7 @@ Há três APIs diferentes que podem ser usadas para hospedar o .NET Core. Este a
 
 ## <a name="sample-hosts"></a>Hosts de exemplo
 
-Há [hosts de exemplo](https://github.com/dotnet/samples/tree/master/core/hosting) que demonstram as etapas descritas nos tutoriais abaixo disponíveis no repositório dotnet/samples do GitHub. Os comentários nos exemplos associam claramente as etapas numeradas destes tutoriais aos pontos em que elas são executadas no exemplo. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Há [hosts de exemplo](https://github.com/dotnet/samples/tree/master/core/hosting) que demonstram as etapas descritas nos tutoriais abaixo disponíveis no repositório dotnet/samples do GitHub. Os comentários nos exemplos associam claramente as etapas numeradas destes tutoriais aos pontos em que elas são executadas no exemplo. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 Lembre-se de que os hosts de exemplo devem ser usados para fins de aprendizado e, portanto, não fazem uma verificação de erros rigorosa e são projetados para enfatizar a legibilidade e não a eficiência.
 
@@ -115,10 +115,10 @@ Antes de iniciar o runtime, é necessário preparar algumas propriedades para es
 As propriedades comuns incluem:
 
 * `TRUSTED_PLATFORM_ASSEMBLIES` Essa é uma lista de caminhos de assembly (delimitada por ";" no Windows e por ":" no Linux) que o runtime poderá resolver por padrão. Alguns hosts têm manifestos embutidos em código que listam os assemblies que eles podem carregar. Outros usuários colocarão uma biblioteca em determinados locais (próximos a *coreclr.dll*, por exemplo) nessa lista.
-* `APP_PATHS` Essa é uma lista de caminhos a serem investigados quanto a um assembly se ele não for encontrado na lista de TPA (assemblies de plataforma confiáveis). Como o host tem mais controle sobre quais assemblies são carregados usando a lista de TPA, uma prática recomendada para hosts é determinar quais assemblies eles esperam carregar e listá-los explicitamente. No entanto, se for necessária uma investigação no runtime, essa propriedade poderá permitir esse cenário.
+* `APP_PATHS` Essa é uma lista de caminhos a serem investigados quanto a um assembly se ele não for encontrado na lista de TPA (assemblies de plataforma confiáveis). Como o host tem mais controle sobre quais assemblies são carregados usando a lista de TPA, uma prática recomendada para hosts é determinar quais assemblies eles esperam carregar e listá-los explicitamente. No entanto, se a investigação em tempo de execução for necessária, essa propriedade poderá habilitar esse cenário.
 * `APP_NI_PATHS` Essa lista é semelhante à APP_PATHS, exceto que ela foi projetada para conter os caminhos que serão investigados para imagens nativas.
 * `NATIVE_DLL_SEARCH_DIRECTORIES` Essa propriedade é uma lista de caminhos que o carregador deverá investigar ao procurar bibliotecas nativas chamadas por meio de p/invoke.
-* `PLATFORM_RESOURCE_ROOTS`Essa lista inclui caminhos para investigação para assemblies de satélite de recursos (em subdiretórios específicos de cultura).
+* `PLATFORM_RESOURCE_ROOTS` Essa lista inclui caminhos para investigação para assemblies de satélite de recursos (em subdiretórios específicos de cultura).
 
 Neste host de exemplo, a lista de TPA é construída simplesmente listando todas as bibliotecas no diretório atual:
 
@@ -212,11 +212,11 @@ Depois de decidir quais sinalizadores AppDomain serão usados, as propriedades d
 
 As propriedades comuns de AppDomain incluem:
 
-* `TRUSTED_PLATFORM_ASSEMBLIES`Esta é uma lista de caminhos de assembly (delimitado por `;` no Windows e `:` no linux/MacOS) que o AppDomain deve priorizar o carregamento e fornecer confiança total para (mesmo em domínios parcialmente confiáveis). Essa lista deve conter assemblies “Framework” e outros módulos confiáveis, semelhante ao GAC em cenários do .NET Framework. Alguns hosts colocarão uma biblioteca próxima a *coreclr.dll* nesta lista, enquanto outros têm manifestos embutidos em código que listam os assemblies confiáveis para suas finalidades.
-* `APP_PATHS` Essa é uma lista de caminhos a serem investigados quanto a um assembly se ele não for encontrado na lista de TPA (assemblies de plataforma confiáveis). Como o host tem mais controle sobre quais assemblies são carregados usando a lista de TPA, uma prática recomendada para hosts é determinar quais assemblies eles esperam carregar e listá-los explicitamente. No entanto, se for necessária uma investigação no runtime, essa propriedade poderá permitir esse cenário.
+* `TRUSTED_PLATFORM_ASSEMBLIES` Esta é uma lista de caminhos de assembly (delimitado por `;` no Windows e `:` no linux/MacOS) que o AppDomain deve priorizar o carregamento e fornecer confiança total para (mesmo em domínios parcialmente confiáveis). Essa lista deve conter assemblies “Framework” e outros módulos confiáveis, semelhante ao GAC em cenários do .NET Framework. Alguns hosts colocarão uma biblioteca próxima a *coreclr.dll* nesta lista, enquanto outros têm manifestos embutidos em código que listam os assemblies confiáveis para suas finalidades.
+* `APP_PATHS` Essa é uma lista de caminhos a serem investigados quanto a um assembly se ele não for encontrado na lista de TPA (assemblies de plataforma confiáveis). Como o host tem mais controle sobre quais assemblies são carregados usando a lista de TPA, uma prática recomendada para hosts é determinar quais assemblies eles esperam carregar e listá-los explicitamente. No entanto, se a investigação em tempo de execução for necessária, essa propriedade poderá habilitar esse cenário.
 * `APP_NI_PATHS` Essa lista é muito semelhante a APP_PATHS, com exceção de que foi projetada para serem caminhos que serão investigados quanto a imagens nativas.
 * `NATIVE_DLL_SEARCH_DIRECTORIES` Essa propriedade é uma lista de caminhos que o carregador deverá investigar ao procurar DLLs nativas chamadas por meio de p/invoke.
-* `PLATFORM_RESOURCE_ROOTS`Essa lista inclui caminhos para investigação para assemblies de satélite de recursos (em subdiretórios específicos de cultura).
+* `PLATFORM_RESOURCE_ROOTS` Essa lista inclui caminhos para investigação para assemblies de satélite de recursos (em subdiretórios específicos de cultura).
 
 Em nosso [host de exemplo simples](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithMscoree), essas propriedades são configuradas da seguinte maneira:
 
@@ -256,6 +256,6 @@ O CoreCLR não oferece suporte ao descarregamento. Não descarregue a biblioteca
 ## <a name="conclusion"></a>Conclusão
 Depois que o host for criado, você poderá testá-lo executando-o por meio da linha de comando e passando os argumentos esperados pelo host (como o aplicativo gerenciado a ser executado para o host de exemplo mscoree). Ao especificar o aplicativo .NET Core a ser executado pelo host, lembre-se de usar o arquivo .dll produzido por `dotnet build`. Os executáveis (arquivos .exe) produzidos por `dotnet publish` para aplicativos autossuficientes são, na verdade, o host padrão do .NET Core (para que o aplicativo possa ser iniciado diretamente na linha de comando nos principais cenários). O código de usuário é compilado em uma dll com o mesmo nome.
 
-Se as coisas não funcionarem inicialmente, verifique se o *CoreCLR. dll* está disponível no local esperado pelo host, se todas as bibliotecas de estrutura necessárias estão na lista TPA e se o período de bits do coreclr (32 bits ou 64 bits) corresponde à forma como o host foi criado.
+Se as coisas não funcionarem inicialmente, verifique se *coreclr.dll* está disponível no local esperado pelo host, se todas as bibliotecas de estrutura necessárias estão na lista TPA e se o bit de bits do CoreCLR (32 bits ou 64 bits) corresponde à forma como o host foi criado.
 
 A hospedagem do runtime do .NET Core é um cenário avançado do qual muitos desenvolvedores não precisarão. No entanto, para aqueles que precisam inicializar o código gerenciado de um processo nativo ou que precisam de mais controle sobre o comportamento do runtime do .NET Core, ela pode ser muito útil.

@@ -1,5 +1,6 @@
 ---
 title: Endereçamento IPv6
+description: Saiba mais sobre o IPv6 (Internet Protocol versão 6), endereços, incluindo representação de texto e tipos de endereço.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Internet Protocol version 6, addresses in
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: 1bad43b96fc6f66724e5e40cdf0ae6d76b46d867
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fbf68cb5f40450c2f9ecf4900801ee55e326fcb4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047849"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502334"
 ---
 # <a name="ipv6-addressing"></a>Endereçamento IPv6
 
@@ -77,5 +78,5 @@ Em geral, um nó sempre tem um endereço de link local. Ele pode ter um endereç
 
 ## <a name="see-also"></a>Confira também
 
-- [Protocolo da Internet Versão 6](internet-protocol-version-6.md)
+- [Protocolo IP versão 6](internet-protocol-version-6.md)
 - [Soquetes](sockets.md)

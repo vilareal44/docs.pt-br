@@ -14,34 +14,34 @@ helpviewer_keywords:
 ms.assetid: e79456b1-045b-4a84-9714-2ea560ff75ea
 topic_type:
 - apiref
-ms.openlocfilehash: 90f7899beea204ea53a587200807ccd807cd6c11
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c9cc545f0b3fbe20ef6eb2a72aadf8d6b4374867
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426144"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008229"
 ---
 # <a name="ihostfilter-interface"></a>Interface IHostFilter
 Fornece um método para indicar que um token especificado será processado.  
   
 > [!NOTE]
-> A interface de `IHostFilter` deve ser implementada pelo cliente.  
+> A `IHostFilter` interface deve ser implementada pelo cliente.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método MarkToken](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Indica que o token de metadados especificado será processado.|  
+|[Método MarkToken](ihostfilter-marktoken-method.md)|Indica que o token de metadados especificado será processado.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [Interfaces de metadados](metadata-interfaces.md)

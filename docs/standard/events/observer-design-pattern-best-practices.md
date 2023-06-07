@@ -6,18 +6,18 @@ helpviewer_keywords:
 - observer design pattern [.NET Framework], best practices
 - best practices [.NET Framework], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-ms.openlocfilehash: 2da29e0baf429142707d0ddd39b1a11c13a17a90
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b4f8e568dcb6790dac1dc8fc5c969d6fa1367c4e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141545"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288453"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Práticas recomendadas para o padrão de design do observador
 No .NET Framework, o padrão de design de observador é implementado como um conjunto de interfaces. A interface <xref:System.IObservable%601?displayProperty=nameWithType> representa o provedor de dados, que também é responsável por fornecer uma implementação <xref:System.IDisposable> que permite que os observadores cancelem a assinatura de notificações. A interface <xref:System.IObserver%601?displayProperty=nameWithType> representa o observador. Este tópico descreve as práticas recomendadas que os desenvolvedores devem seguir ao implementar o padrão de design de observador usando essas interfaces.  
   
 ## <a name="threading"></a>Threading  
- Normalmente, um provedor implementa o método <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> adicionando um observador específico a uma lista de assinantes que é representada por algum objeto de coleção e implementa o método <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> removendo um determinado observador da lista de assinantes. Um observador pode chamar esses métodos a qualquer momento. Além disso, como o contrato de provedor/observador não especifica quem é responsável por cancelar a assinatura após o método de retorno de chamada <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, o provedor e o observador podem tentar ambos remover o mesmo membro da lista. Devido a essa possibilidade, tanto o método <xref:System.IObservable%601.Subscribe%2A> quanto o método <xref:System.IDisposable.Dispose%2A> devem ser thread-safe. Normalmente, isso envolve o uso de uma [coleção simultânea](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md) ou um bloqueio. As implementações que não são thread-safe devem documentar explicitamente esse fato.  
+ Normalmente, um provedor implementa o método <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> adicionando um observador específico a uma lista de assinantes que é representada por algum objeto de coleção e implementa o método <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> removendo um determinado observador da lista de assinantes. Um observador pode chamar esses métodos a qualquer momento. Além disso, como o contrato de provedor/observador não especifica quem é responsável por cancelar a assinatura após o método de retorno de chamada <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, o provedor e o observador podem tentar ambos remover o mesmo membro da lista. Devido a essa possibilidade, tanto o método <xref:System.IObservable%601.Subscribe%2A> quanto o método <xref:System.IDisposable.Dispose%2A> devem ser thread-safe. Normalmente, isso envolve o uso de uma [coleção simultânea](../parallel-programming/data-structures-for-parallel-programming.md) ou um bloqueio. As implementações que não são thread-safe devem documentar explicitamente esse fato.  
   
  Quaisquer garantias adicionais devem ser especificadas em uma camada no início do contrato de provedor/observador. Os implementadores devem chamar claramente ao imporem requisitos adicionais para evitar confusão do usuário sobre o contrato do observador.  
   
@@ -51,8 +51,8 @@ No .NET Framework, o padrão de design de observador é implementado como um con
   
  Embora seja possível anexar um observador para vários provedores, o padrão recomendado é anexar uma <xref:System.IObserver%601> instância a uma única instância <xref:System.IObservable%601>.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Padrão de design do observador](../../../docs/standard/events/observer-design-pattern.md)
-- [Como implementar um observador](../../../docs/standard/events/how-to-implement-an-observer.md)
-- [Como implementar um provedor](../../../docs/standard/events/how-to-implement-a-provider.md)
+- [Padrão de design do observador](observer-design-pattern.md)
+- [Como: implementar um observador](how-to-implement-an-observer.md)
+- [Como implementar um provedor](how-to-implement-a-provider.md)

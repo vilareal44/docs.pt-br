@@ -10,19 +10,19 @@ helpviewer_keywords:
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
 ms.openlocfilehash: fe96673b95f48cb75d36662a680bf56a59363f9f
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "71697494"
 ---
-# <a name="requiredruntime-element"></a>\<elemento de > requiredRuntime
+# <a name="requiredruntime-element"></a>Elemento \<requiredRuntime>
 
-Especifica que o aplicativo dá suporte apenas à versão 1.0 do Common Language Runtime. Este elemento foi preterido e não deve mais ser usado. O elemento [`supportedRuntime`](supportedruntime-element.md) deve ser usado em seu lugar.
+Especifica que o aplicativo dá suporte apenas à versão 1.0 do Common Language Runtime. Este elemento foi preterido e não deve mais ser usado. O [`supportedRuntime`](supportedruntime-element.md) elemento deve ser usado em vez disso.
 
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;de inicialização do &nbsp;[ **\<>** ](startup-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<requiredRuntime >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<startup>**](startup-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<requiredRuntime>**  
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,7 +34,7 @@ safemode="true|false"/>
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.
+As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 ### <a name="attributes"></a>Atributos
 
@@ -47,32 +47,32 @@ As seções a seguir descrevem os atributos, bem como os elementos filhos e pais
 
 |Valor|Descrição|
 |-----------|-----------------|
-|`false`|O código de inicialização do tempo de execução procura no registro. Este é o valor padrão.|
+|`false`|O código de inicialização do tempo de execução procura no registro. Esse é o valor padrão.|
 |`true`|O código de inicialização do tempo de execução não procura no registro.|
 
-### <a name="child-elements"></a>Child elements
+### <a name="child-elements"></a>Elementos filho
 
-None.
+Nenhum.
 
 ### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|
-|`startup`|Contém o elemento `<requiredRuntime>`.|
+|`startup`|Contém o `<requiredRuntime>` elemento.|
 
 ## <a name="remarks"></a>Comentários
- Os aplicativos criados para dar suporte apenas à versão 1,0 do tempo de execução devem usar o elemento `<requiredRuntime>`. Os aplicativos criados usando a versão 1,1 ou posterior do tempo de execução devem usar o elemento `<supportedRuntime>`.
+ Os aplicativos criados para dar suporte apenas à versão 1,0 do tempo de execução devem usar o `<requiredRuntime>` elemento. Os aplicativos criados usando a versão 1,1 ou posterior do tempo de execução devem usar o `<supportedRuntime>` elemento.
 
 > [!NOTE]
-> Se você usar a função [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) para especificar o arquivo de configuração, deverá usar o elemento `<requiredRuntime>` para todas as versões do tempo de execução. O elemento `<supportedRuntime>` é ignorado quando você usa [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md).
+> Se você usar a função [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) para especificar o arquivo de configuração, deverá usar o `<requiredRuntime>` elemento para todas as versões do tempo de execução. O `<supportedRuntime>` elemento é ignorado quando você usa [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md).
 
- A cadeia de caracteres do atributo `version` deve corresponder ao nome da pasta de instalação para a versão especificada do .NET Framework. Essa cadeia de caracteres não é interpretada. Se o código de inicialização do tempo de execução não encontrar uma pasta correspondente, o tempo de execução não será carregado; o código de inicialização mostra uma mensagem de erro e é encerrado.
+ A `version` cadeia de caracteres do atributo deve corresponder ao nome da pasta de instalação para a versão especificada do .NET Framework. Essa cadeia de caracteres não é interpretada. Se o código de inicialização do tempo de execução não encontrar uma pasta correspondente, o tempo de execução não será carregado; o código de inicialização mostra uma mensagem de erro e é encerrado.
 
 > [!NOTE]
-> O código de inicialização para um aplicativo hospedado no Microsoft Internet Explorer ignora o elemento `<requiredRuntime>`.
+> O código de inicialização para um aplicativo hospedado no Microsoft Internet Explorer ignora o `<requiredRuntime>` elemento.
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como especificar a versão de tempo de execução em um arquivo de configuração.
 
@@ -84,7 +84,7 @@ O exemplo a seguir mostra como especificar a versão de tempo de execução em u
 </configuration>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Esquema de configurações de inicialização](index.md)
 - [Esquema de arquivos de configuração](../index.md)

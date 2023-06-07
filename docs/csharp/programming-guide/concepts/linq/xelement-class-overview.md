@@ -1,13 +1,14 @@
 ---
 title: Visão geral da classe XElement (C#)
+description: A classe XElement representa um elemento XML em C#. É uma das classes fundamentais em LINQ to XML. Saiba mais sobre a funcionalidade fornecida pelo XElement.
 ms.date: 07/20/2015
 ms.assetid: 2b9f0cd8-a1d1-4037-accf-0f38a410fa11
-ms.openlocfilehash: 6a93dd4bdaf16fddff800b08b0f3146ecb63f9b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f76f51703de054443f47531294777b43a9c0b004
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167888"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302172"
 ---
 # <a name="xelement-class-overview-c"></a>Visão geral da classe XElement (C#)
 A classe <xref:System.Xml.Linq.XElement> é uma das classes fundamentais no [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Representa um elemento XML. Você pode usar essa classe para criar elementos; alterar o conteúdo do elemento; adicionar, alterar ou excluir elementos filho; adicionar atributos a um elemento; ou serializar o conteúdo de um elemento no formulário de texto. Você também pode interoperar com outras classes no <xref:System.Xml?displayProperty=nameWithType>, como <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> e <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -43,7 +44,7 @@ XElement contacts =
     );  
 ```  
   
- Outra técnica muito comum para criar uma árvore XML envolve o uso dos resultados de uma consulta LINQ para preencher uma árvore XML, como mostrado no exemplo a seguir:  
+ Outra técnica muito comum para criar uma árvore XML envolve o uso dos resultados de uma consulta LINQ para popular uma árvore XML, conforme mostrado no exemplo a seguir:  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  
@@ -95,6 +96,6 @@ Console.WriteLine(xmlTree);
   
  Para obter mais informações, consulte [Modificando árvores XML (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral da programação LINQ to XML (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

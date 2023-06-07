@@ -10,12 +10,12 @@ helpviewer_keywords:
 - hash function
 - collections [.NET Framework], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-ms.openlocfilehash: a6f234b6205fd30507b9342d9839db6adcddfc2e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b228f5db16ba01969b77d601becfb94ac0506d1e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711370"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287959"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Tipos de coleção Hashtable e Dictionary
 A classe <xref:System.Collections.Hashtable?displayProperty=nameWithType>, e as classes genéricas <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> e <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>, implementam a interface <xref:System.Collections.IDictionary?displayProperty=nameWithType>. A classe genérica <xref:System.Collections.Generic.Dictionary%602> também implementa a interface genérica <xref:System.Collections.Generic.IDictionary%602>. Portanto, cada elemento nessas coleções é um par chave-valor.  
@@ -34,7 +34,7 @@ A classe <xref:System.Collections.Hashtable?displayProperty=nameWithType>, e as 
   
  As classes <xref:System.Collections.Generic.Dictionary%602> e <xref:System.Collections.Concurrent.ConcurrentDictionary%602> têm a mesma funcionalidade que a classe <xref:System.Collections.Hashtable>. Um <xref:System.Collections.Generic.Dictionary%602> de um tipo específico (diferente de <xref:System.Object>) fornece desempenho melhor do que um <xref:System.Collections.Hashtable> para tipos de valor. Isso ocorre porque os elementos de <xref:System.Collections.Hashtable> são do tipo <xref:System.Object>; portanto, conversões boxing e unboxing normalmente ocorrem quando você armazena ou recupera um tipo de valor. A classe <xref:System.Collections.Concurrent.ConcurrentDictionary%602> deve ser usada quando vários threads podem estar acessando a coleção simultaneamente.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Collections.Hashtable>
 - <xref:System.Collections.IDictionary>
@@ -42,4 +42,4 @@ A classe <xref:System.Collections.Hashtable?displayProperty=nameWithType>, e as 
 - <xref:System.Collections.Generic.Dictionary%602>
 - <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>
 - <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>
-- [Tipos de coleção de uso comum](../../../docs/standard/collections/commonly-used-collection-types.md)
+- [Tipos de coleção comumente usados](commonly-used-collection-types.md)

@@ -4,12 +4,12 @@ titleSuffix: ''
 description: Saiba mais sobre os SDKs do projeto .NET Core.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: 88ec1bf2c4917c69b80b997d090219097694d2bc
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 873c06007307c5892c4828f987486b4dd98dc9ae
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206056"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88187920"
 ---
 # <a name="net-core-project-sdks"></a>SDKs do projeto do .NET Core
 
@@ -21,8 +21,8 @@ Os seguintes SDKs estão disponíveis para o .NET Core:
 
 | ID | Descrição | Repositório|
 | - | - | - |
-| `Microsoft.NET.Sdk` | O SDK do .NET Core | https://github.com/dotnet/sdk |
-| `Microsoft.NET.Sdk.Web` | O [SDK Web](/aspnet/core/razor-pages/web-sdk) do .NET Core | https://github.com/aspnet/websdk |
+| `Microsoft.NET.Sdk` | O SDK do .NET Core | <https://github.com/dotnet/sdk> |
+| `Microsoft.NET.Sdk.Web` | O [SDK Web](/aspnet/core/razor-pages/web-sdk) do .NET Core | <https://github.com/dotnet/sdk> |
 | `Microsoft.NET.Sdk.Razor` | O SDK do .NET Core do [Razor](/aspnet/core/razor-pages/sdk) |
 | `Microsoft.NET.Sdk.Worker` | O SDK do serviço de trabalho do .NET Core |
 | `Microsoft.NET.Sdk.WindowsDesktop` | O SDK do .NET Core WinForms e WPF |
@@ -41,7 +41,7 @@ Os projetos do .NET Core são baseados no formato [MSBuild](/visualstudio/msbuil
 </Project>
 ```
 
-Para especificar um SDK proveniente do NuGet, inclua a versão no final do nome ou especifique o nome e a versão no arquivo *global. JSON* .
+Para especificar um SDK proveniente do NuGet, inclua a versão no final do nome ou especifique o nome e a versão na *global.jsno* arquivo.
 
 ```xml
 <Project Sdk="MSBuild.Sdk.Extras/2.0.54">
@@ -77,7 +77,7 @@ Fazer referência a um SDK de uma dessas maneiras simplifica bastante os arquivo
 
 Você pode ver o projeto totalmente expandido, pois o MSBuild o vê depois que o SDK e seus destinos são incluídos usando o `dotnet msbuild -preprocess` comando. A opção de [pré-processamento](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) do [`dotnet msbuild`](../tools/dotnet-msbuild.md) comando mostra quais arquivos são importados, suas origens e suas contribuições para a compilação sem realmente criar o projeto.
 
-Se o projeto tiver várias estruturas de destino, concentre os resultados do comando em apenas uma estrutura especificando-o como uma propriedade do MSBuild. Por exemplo:
+Se o projeto tiver várias estruturas de destino, concentre os resultados do comando em apenas uma estrutura especificando-o como uma propriedade do MSBuild. Por exemplo: 
 
 `dotnet msbuild -property:TargetFramework=netcoreapp2.0 -preprocess:output.xml`
 
@@ -176,6 +176,6 @@ Você pode configurar como usar o destino personalizado. Como é um destino do M
 
 ## <a name="see-also"></a>Confira também
 
-- [Instalar o .NET Core](../install/index.md)
+- [Instalar o .NET Core](../install/index.yml)
 - [Como usar SDKs de projeto do MSBuild](/visualstudio/msbuild/how-to-use-project-sdk)
 - [Empacotar destinos e props personalizados do MSBuild com o NuGet](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)

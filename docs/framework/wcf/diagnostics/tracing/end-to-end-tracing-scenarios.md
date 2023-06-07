@@ -2,43 +2,43 @@
 title: Cenários de rastreamento ponta a ponta
 ms.date: 03/30/2017
 ms.assetid: f83b7d53-6061-4362-a9a3-ee1daf6542be
-ms.openlocfilehash: 18fbd1e9733d55d60d7aa21f2fe8ac259b3da51b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d881a8396e21d31b2303d1bb270bed52823c8d49
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650370"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589247"
 ---
 # <a name="end-to-end-tracing-scenarios"></a>Cenários de rastreamento ponta a ponta
-Esta seção contém tópicos que descrevem os diferentes cenários de uso de rastreamento.  
+Esta seção contém tópicos que descrevem diferentes cenários para usar o rastreamento.  
   
- Rastreamento de atividade é implementado para a resposta, unidirecional e Duplex cenários usando o seguinte  
+ O rastreamento de atividade é implementado para cenários de resposta/resposta, OneWay e duplex usando o seguinte  
   
 - Síncrono ou assíncrono  
   
-- BasicHttpBinding, netNamedPipeBinding, netTcpBinding, wsHttpBinding ou netMsmqBinding  
+- BasicHttpBinding, netNamedPipeBinding, netTcpbinding, wsHttpBinding ou netMsmqBinding  
   
 - Serviço COM  
   
-- Propagação de id de atividade do usuário  
+- Propagação da ID da atividade do usuário  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-- [Lista de atividades](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)  
+- [Lista de atividades](activity-list.md)  
   
-- [Propagação de ID de atividade](../../../../../docs/framework/wcf/diagnostics/tracing/activity-id-propagation.md)  
+- [Propagação de ID de atividade](activity-id-propagation.md)  
   
-- [Cenários síncronos utilizando HTTP, TCP ou Pipe nomeado](../../../../../docs/framework/wcf/diagnostics/tracing/synchronous-scenarios-using-http-tcp-or-named-pipe.md)  
+- [Cenários síncronos utilizando HTTP, TCP ou pipe nomeado](synchronous-scenarios-using-http-tcp-or-named-pipe.md)  
   
-- [Cenários assíncronos usando HTTP, TCP ou pipe nomeado](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md)  
+- [Cenários assíncronos usando HTTP, TCP ou pipe nomeado](asynchronous-scenarios-using-http-tcp-or-named-pipe.md)  
   
-- [Rastreamento de atividades em segurança de mensagens](../../../../../docs/framework/wcf/diagnostics/tracing/activity-tracing-in-message-security.md)  
+- [Rastreamento de atividades em segurança de mensagens](activity-tracing-in-message-security.md)  
   
-- [MSMQ](../../../../../docs/framework/wcf/diagnostics/tracing/msmq.md)  
+- [MSMQ](msmq.md)  
   
-- [COM+](../../../../../docs/framework/wcf/diagnostics/tracing/com.md)  
+- [COM+](com.md)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Rastreamento ponta a ponta](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](using-tracing-to-troubleshoot-your-application.md)
+- [Rastreamento de ponta a ponta](end-to-end-tracing.md)

@@ -1,16 +1,21 @@
 ---
-title: ''
-ms.date: ''
+title: Como escrever conversores personalizados para serialização JSON-.NET
+ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-helpviewer_keywords: []
-ms.openlocfilehash: 69c11df8217ac6dbdddd98c550f084075b901ea6
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+helpviewer_keywords:
+- JSON serialization
+- serializing objects
+- serialization
+- objects, serializing
+- converters
+ms.openlocfilehash: abda23ea538c2c0da6ada4f359ce745602dca45d
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703614"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84279757"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>Como escrever conversores personalizados para serialização JSON (Marshalling) no .NET
 
@@ -26,7 +31,7 @@ Você também pode escrever conversores personalizados para personalizar ou este
 * [Desserializar tipos inferidos para propriedades de objeto](#deserialize-inferred-types-to-object-properties).
 * [Dicionário de suporte com chave não cadeia de caracteres](#support-dictionary-with-non-string-key).
 * [Suporte à desserialização polimórfico](#support-polymorphic-deserialization).
-* [Dar suporte à viagem de ida e volta para pilha \< T>](#support-round-trip-for-stackt).
+* [Dar suporte à viagem de ida \<T> e volta para pilha](#support-round-trip-for-stackt).
 
 ## <a name="custom-converter-patterns"></a>Padrões de conversor personalizado
 
@@ -44,7 +49,7 @@ Alguns exemplos de tipos que podem ser tratados pelo padrão básico incluem:
 * `DateTime`
 * `Int32`
 
-O padrão básico cria uma classe que pode manipular um tipo. O padrão de fábrica cria uma classe que determina no tempo de execução qual tipo específico é necessário e cria dinamicamente o conversor apropriado.
+O padrão básico cria uma classe que pode manipular um tipo. O padrão de fábrica cria uma classe que determina, em tempo de execução, qual tipo específico é necessário e cria dinamicamente o conversor apropriado.
 
 ## <a name="sample-basic-converter"></a>Conversor básico de exemplo
 
@@ -175,7 +180,7 @@ As seções a seguir fornecem exemplos de conversor que abordam alguns cenários
 * [Desserializar tipos inferidos para propriedades de objeto](#deserialize-inferred-types-to-object-properties)
 * [Dicionário de suporte com chave não cadeia de caracteres](#support-dictionary-with-non-string-key)
 * [Suporte à desserialização polimórfico](#support-polymorphic-deserialization)
-* [Dar suporte à viagem de ida e volta para pilha \< T>](#support-round-trip-for-stackt).
+* [Dar suporte à viagem de ida \<T> e volta para pilha](#support-round-trip-for-stackt).
 
 ### <a name="deserialize-inferred-types-to-object-properties"></a>Desserializar tipos inferidos para propriedades de objeto
 
@@ -252,7 +257,7 @@ A [pasta de testes de unidade](https://github.com/dotnet/runtime/blob/81bf79fd9a
 
 Os recursos internos fornecem um intervalo limitado de [serialização polimórfico](system-text-json-how-to.md#serialize-properties-of-derived-classes) , mas não há suporte para desserialização. A desserialização requer um conversor personalizado.
 
-Suponha, por exemplo, que você tenha uma `Person` classe base abstrata, `Employee` com `Customer` classes derivadas e. A desserialização polimórfica significa que, em tempo de design, você pode especificar `Person` como o destino de desserialização e `Customer` `Employee` os objetos no JSON são desserializados corretamente em tempo de execução. Durante a desserialização, você precisa encontrar pistas que identificam o tipo necessário no JSON. Os tipos de pistas disponíveis variam de acordo com cada cenário. Por exemplo, uma propriedade discriminadora pode estar disponível ou talvez você precise contar com a presença ou a ausência de uma determinada propriedade. A versão atual do `System.Text.Json` não fornece atributos para especificar como lidar com cenários de desserialização polimórfico, para que conversores personalizados sejam necessários.
+Suponha, por exemplo, que você tenha uma `Person` classe base abstrata, `Employee` com `Customer` classes derivadas e. A desserialização polimórfica significa que, em tempo de design, você pode especificar `Person` como o destino de desserialização e `Customer` `Employee` os objetos no JSON são corretamente desserializados em tempo de execução. Durante a desserialização, você precisa encontrar pistas que identificam o tipo necessário no JSON. Os tipos de pistas disponíveis variam de acordo com cada cenário. Por exemplo, uma propriedade discriminadora pode estar disponível ou talvez você precise contar com a presença ou a ausência de uma determinada propriedade. A versão atual do `System.Text.Json` não fornece atributos para especificar como lidar com cenários de desserialização polimórfico, para que conversores personalizados sejam necessários.
 
 O código a seguir mostra uma classe base, duas classes derivadas e um conversor personalizado para elas. O conversor usa uma propriedade discriminadora para fazer desserialização polimórfica. O discriminador de tipo não está nas definições de classe, mas é criado durante a serialização e é lido durante a desserialização.
 
@@ -283,7 +288,7 @@ O conversor pode desserializar o JSON criado usando o mesmo conversor para seria
 
 O código do conversor no exemplo anterior lê e grava cada propriedade manualmente. Uma alternativa é chamar `Deserialize` ou `Serialize` fazer parte do trabalho. Para obter um exemplo, consulte [esta postagem de StackOverflow](https://stackoverflow.com/a/59744873/12509023).
 
-### <a name="support-round-trip-for-stackt"></a>Dar suporte à viagem de ida e volta para a pilha \< T>
+### <a name="support-round-trip-for-stackt"></a>Dar suporte à viagem de ida e volta para pilha\<T>
 
 Se você desserializar uma cadeia de caracteres JSON em um <xref:System.Collections.Generic.Stack%601> objeto e, em seguida, serializar esse objeto, o conteúdo da pilha estará na ordem inversa. Esse comportamento se aplica aos tipos e à interface a seguir e aos tipos definidos pelo usuário que derivam deles:
 
@@ -312,7 +317,7 @@ A [pasta de testes de unidade](https://github.com/dotnet/runtime/blob/81bf79fd9a
 * [Conversor de Int32 que converte NULL para 0 em desserializar](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.NullValueType.cs)
 * [Conversor de Int32 que permite valores de cadeia de caracteres e de número na desserialização](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Int32.cs)
 * [Conversor de enumeração](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Enum.cs)
-* [List \< T> converter que aceita dados externos](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
+* [\<T>Conversor de lista que aceita dados externos](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
 * [Conversor Long [] que funciona com uma lista de números delimitada por vírgulas](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs)
 
 Se você precisar criar um conversor que modifique o comportamento de um conversor interno existente, poderá obter [o código-fonte do conversor existente](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters) para servir como ponto de partida para personalização.

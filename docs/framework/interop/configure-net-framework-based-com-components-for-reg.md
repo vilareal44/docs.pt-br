@@ -1,5 +1,6 @@
 ---
-title: Como configurar componentes do COM baseados no .NET Framework para ativação sem registro
+title: 'Como: Configurar componentes COM baseados no .NET Framework para ativação sem registro'
+description: Configurar. Componentes COM baseados em .net para ativação sem registro. A instalação requer um manifesto de aplicativo em estilo Win32 e um manifesto de componente .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: 9e273bd3e4bf2bb6945fe48c850783a54fa9a869
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 5263e042bafdb886b313f05751c29de0f5715211
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291749"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622192"
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Como configurar componentes do COM baseados no .NET Framework para ativação sem registro
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Como: Configurar componentes COM baseados no .NET Framework para ativação sem registro
 A ativação sem registro de componentes baseados no .NET Framework é apenas um pouco mais complicada do que para componentes COM. A instalação exige dois manifestos:  
   
 - Os aplicativos COM devem ter um manifesto do aplicativo no estilo Win32 para identificar o componente gerenciado.  
@@ -107,7 +108,7 @@ Você pode instalar um manifesto do aplicativo no mesmo diretório do aplicativo
   
 4. Identifique cada classe no assembly. Use o elemento `<clrClass>` para identificar cada classe exclusivamente no assembly gerenciado. O elemento, que é um subelemento do elemento `<assembly>`, tem os atributos descritos na tabela a seguir.  
   
-    |Atributo|Descrição|Obrigatório|  
+    |Atributo|Descrição|Necessária|  
     |---------------|-----------------|--------------|  
     |`clsid`|O identificador que especifica a classe a ser ativada.|Sim|  
     |`description`|Uma cadeia de caracteres que informa o usuário sobre o componente. Uma cadeia de caracteres vazia é o padrão.|Não|  
@@ -172,7 +173,7 @@ Você pode instalar um manifesto do aplicativo no mesmo diretório do aplicativo
   
      Novamente, `myresource.res` é o nome do arquivo de recurso que contém recursos incorporados.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Interoperabilidade COM sem registro](registration-free-com-interop.md)
 - [Requisitos para interoperabilidade COM sem registro](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))

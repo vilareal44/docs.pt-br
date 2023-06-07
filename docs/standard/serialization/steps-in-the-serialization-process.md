@@ -7,10 +7,10 @@ helpviewer_keywords:
 - serialization, steps
 ms.assetid: 4bcbc883-2a91-418f-b968-6c86a25e9737
 ms.openlocfilehash: 1f749b9102182e78bc3fda436cf386a9f5759d5a
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "83379095"
 ---
 # <a name="steps-in-the-serialization-process"></a>Etapas do processo de serialização

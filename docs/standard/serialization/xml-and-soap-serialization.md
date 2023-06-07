@@ -11,10 +11,10 @@ helpviewer_keywords:
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
 ms.openlocfilehash: 6b7d6f59694a28207758fa7772781eed073917e4
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "83379538"
 ---
 # <a name="xml-and-soap-serialization"></a>serialização XML e SOAP

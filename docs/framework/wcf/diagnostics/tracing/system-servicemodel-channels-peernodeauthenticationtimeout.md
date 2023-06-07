@@ -2,24 +2,24 @@
 title: System.ServiceModel.Channels.PeerNodeAuthenticationTimeout
 ms.date: 03/30/2017
 ms.assetid: f294ee94-be83-426c-b40d-6e8a4e5e987c
-ms.openlocfilehash: 7c5f859deb2d9156b819f1fb92164a4c05437192
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: caa98464c76b0f9330419d89407734681c8901bf
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917092"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84577286"
 ---
 # <a name="systemservicemodelchannelspeernodeauthenticationtimeout"></a>System.ServiceModel.Channels.PeerNodeAuthenticationTimeout
-O handshake de segurança não foi bem-sucedida dentro do tempo limite especificado.  
+O handshake de segurança não teve sucesso no limite de tempo especificado.  
   
 ## <a name="description"></a>Descrição  
- Este rastreamento ocorre ao tentar estabelecer uma conexão segura de vizinho.  
+ Esse rastreamento ocorre durante a tentativa de estabelecer uma conexão de vizinho segura.  
   
 ## <a name="troubleshooting"></a>Solução de problemas  
- Certifique-se de que todos os vizinhos tem as credenciais de segurança apropriadas e respondem a todas as mensagens em menos de 1 minuto.  
+ Verifique se todos os vizinhos têm as credenciais de segurança apropriadas e responda a todas as mensagens em menos de 1 minuto.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Rastreamento](index.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](using-tracing-to-troubleshoot-your-application.md)
+- [Administração e diagnóstico](../index.md)

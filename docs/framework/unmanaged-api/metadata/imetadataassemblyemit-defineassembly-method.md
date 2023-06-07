@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0637d66-74bf-4f2d-8137-9ff838bccece
 topic_type:
 - apiref
-ms.openlocfilehash: 14bd352099890e4ca36321d550b8e982d4373231
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17c91200730431c4c6e230b8c1561ce7c4863868
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177895"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008177"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>Método IMetaDataAssemblyEmit::DefineAssembly
-Cria `Assembly` uma estrutura contendo metadados para o conjunto especificado e retorna o token de metadados associado.  
+Cria uma `Assembly` estrutura que contém metadados para o assembly especificado e retorna o token de metadados associado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,40 +39,40 @@ HRESULT DefineAssembly (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pbPublicKey`  
- [em] A chave pública que identifica o editor da montagem, ou NULL se a montagem não for fortemente nomeada.  
+ no A chave pública que identifica o editor do assembly ou NULL se o assembly não tiver um nome forte.  
   
  `cbPublicKey`  
- [em] O tamanho em bytes de `pbPublicKey`.  
+ no O tamanho em bytes de `pbPublicKey` .  
   
  `uHashAlgId`  
- [em] O identificador do algoritmo de hashing para usar para criptografar os arquivos no conjunto, ou NULL para especificar o algoritmo SHA-1.  
+ no O identificador do algoritmo de hash a ser usado para criptografar os arquivos no assembly ou nulo para especificar o algoritmo SHA-1.  
   
  `szName`  
- [em] O nome de texto de leitura humana da assembléia. Este valor não deve exceder 1024 caracteres.  
+ no O nome de texto legível por humanos do assembly. Esse valor não deve exceder 1024 caracteres.  
   
  `pMetaData`  
- [em] Um ponteiro para uma instância ASSEMBLYMETADATA que contém as informações de versão, plataforma e local para o conjunto.  
+ no Um ponteiro para uma instância ASSEMBLYMETADATA que contém a versão, a plataforma e as informações de localidade para o assembly.  
   
  `dwAssemblyFlags`  
- [em] Uma combinação de valores [corassemblyflags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) que descrevem características do conjunto.  
+ no Uma combinação de valores [CorAssemblyFlags](corassemblyflags-enumeration.md) que descrevem os recursos do assembly.  
   
  `pmda`  
- [fora] Um ponteiro para o token de metadados.  
+ fora Um ponteiro para o token de metadados.  
   
 ## <a name="remarks"></a>Comentários  
- Apenas `Assembly` uma estrutura de metadados pode ser definida dentro de um manifesto.  
+ Somente uma `Assembly` estrutura de metadados pode ser definida em um manifesto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [Interface IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md)

@@ -1,5 +1,6 @@
 ---
 title: Exceções em threads gerenciados
+description: Veja como as exceções não tratadas são tratadas no .NET. Com o .NET versão 2,0, a maioria das exceções de thread não tratadas prossegue naturalmente e leva ao encerramento do aplicativo.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: 6c14c60b30f8f70aa5e888ed45d6f867154e18d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2facb68c77815de7a6fb97ab8f2ee683ffbad724
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159644"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767878"
 ---
 # <a name="exceptions-in-managed-threads"></a>Exceções em threads gerenciados
 A partir do .NET Framework versão 2.0, o common language runtime permite que a maioria das exceções sem tratamento em threads prossiga naturalmente. Na maioria dos casos, isso significa que a exceção sem tratamento causa o encerramento do aplicativo.  
@@ -64,7 +65,7 @@ A partir do .NET Framework versão 2.0, o common language runtime permite que a 
   
 - Se um thread precisar ser interrompido para que o encerramento do processo possa continuar, torne o thread um thread em segundo plano para que ela seja encerrado automaticamente no encerramento do processo.  
   
- Em todos os casos, a estratégia deve seguir as diretrizes de design para exceções. Confira [Diretrizes de design para exceções](../../../docs/standard/design-guidelines/exceptions.md).  
+ Em todos os casos, a estratégia deve seguir as diretrizes de design para exceções. Confira [Diretrizes de design para exceções](../design-guidelines/exceptions.md).  
   
 ### <a name="application-compatibility-flag"></a>Sinalizador de compatibilidade de aplicativos  
  Como uma medida temporária de compatibilidade, os administradores podem colocar um sinalizador de compatibilidade na seção `<runtime>` do arquivo de configuração do aplicativo. Isso faz com que o common language runtime reverta para o comportamento das versões 1.0 e 1.1.  
@@ -74,8 +75,8 @@ A partir do .NET Framework versão 2.0, o common language runtime permite que a 
 ```  
   
 ## <a name="host-override"></a>Substituição do host  
- No .NET Framework versão 2.0, um host não gerenciado pode usar a interface [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) na API de hospedagem para substituir a política de exceções sem tratamento padrão do common language runtime. A função [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) é usada para definir a política para exceções sem tratamento.  
+ No .NET Framework versão 2.0, um host não gerenciado pode usar a interface [ICLRPolicyManager](../../framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) na API de hospedagem para substituir a política de exceções sem tratamento padrão do common language runtime. A função [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) é usada para definir a política para exceções sem tratamento.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Noções básicas de rosca gerenciadas](../../../docs/standard/threading/managed-threading-basics.md)
+- [Noções básicas sobre Threading gerenciado](managed-threading-basics.md)

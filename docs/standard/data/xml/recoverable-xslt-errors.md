@@ -3,12 +3,12 @@ title: Erros recuperáveis XSLT
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-ms.openlocfilehash: e3ff86cc80887d14fdffe50f256409cb70ff2d88
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ada0b352cd867417ed3ecf86291df023ca7c579e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710369"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289090"
 ---
 # <a name="recoverable-xslt-errors"></a>Erros recuperáveis XSLT
 A recomendação de versão 1,0 do W3C de transformações XSL (XSLT) inclui as áreas no qual o provedor de implementação pode decidir como manipular uma situação. Essas áreas são consideradas como comportamento arbitrário. Por exemplo, em instruções de processamento criadoras da seção 7,3, XSLT 1,0 estados de recomendação que é um erro se criar uma instância do conteúdo de `xsl:processing-instruction` cria nós diferentes de nós de texto. Para alguns problemas, a recomendação XSLT 1,0 indica o que a decisão deve ser feita se o processador decidir recuperar de erro. Para o problema da seção 7,3, o W3C com a implementação pode recuperar esse erro ignorando os nós e seu conteúdo.  
@@ -50,8 +50,8 @@ A recomendação de versão 1,0 do W3C de transformações XSL (XSLT) inclui as 
 |O atributo de `value` de `xsl:number` é NAN, infinito ou menor que 0,5|errata 24|Recuperar|  
 |O segundo argumento nó- definida como a função do documento está vazia e a referência URI é relativo.|erratas 14|Recuperar|  
   
- <sup>*</sup>Esse comportamento é diferente daquele da <xref:System.Xml.Xsl.XslTransform> classe. Para saber mais, confira [Implementação de comportamentos discricionários na classe XslTransform](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
+ <sup>*</sup>Esse comportamento é diferente daquele da <xref:System.Xml.Xsl.XslTransform> classe. Para saber mais, confira [Implementação de comportamentos discricionários na classe XslTransform](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
   
 ## <a name="see-also"></a>Veja também
 
-- [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [Transformações XSLT](xslt-transformations.md)

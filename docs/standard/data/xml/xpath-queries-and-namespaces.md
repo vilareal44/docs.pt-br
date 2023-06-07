@@ -1,17 +1,18 @@
 ---
 title: Consultas XPath e namespaces
+description: Saiba mais sobre as consultas XPath & namespaces. As consultas XPath conhecem os namespaces em um documento XML & podem usar prefixos de namespace para qualificar nomes de atributos de & de elemento.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
-ms.openlocfilehash: 91503ce0bffa1a9390432a51bff1ef10d80f563a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e8533d372a747432201dfbc4d879ecd3fbceaf8e
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709771"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769243"
 ---
 # <a name="xpath-queries-and-namespaces"></a>Consultas XPath e namespaces
 As consultas XPath reconhecem os namespaces em um documento XML e podem usar prefixos de namespace para qualificar nomes de elementos e atributos. A qualificação de nomes de elemento e atributo com um prefixo de namespace limita os nós retornados por uma consulta XPath somente aos nós que pertencem a um namespace específico.  
@@ -81,9 +82,9 @@ XPathNodeIterator nodes = navigator.Select(query);
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [Processar dados XML usando o modelo de dados XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Selecionar dados XML usando XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)
-- [Avalia as expressões XPath usando XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)
-- [Nós compatíveis usando XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)
-- [Tipos de nós reconhecidos com consultas XPath](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)
-- [Expressões XPath compilados](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
+- [Processar dados XML usando o modelo de dados XPath](process-xml-data-using-the-xpath-data-model.md)
+- [Selecionar dados XML usando XPathNavigator](select-xml-data-using-xpathnavigator.md)
+- [Avalia as expressões XPath usando XPathNavigator](evaluate-xpath-expressions-using-xpathnavigator.md)
+- [Nós compatíveis usando XPathNavigator](matching-nodes-using-xpathnavigator.md)
+- [Tipos de nós reconhecidos com consultas XPath](node-types-recognized-with-xpath-queries.md)
+- [Expressões XPath compilados](compiled-xpath-expressions.md)

@@ -1,20 +1,21 @@
 ---
 title: Como criar certificados temporários para uso durante o desenvolvimento
+description: Saiba como usar um cmdlet do PowerShell para criar dois certificados X. 509 temporários para uso no desenvolvimento de um cliente ou serviço WCF seguro.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 9e01ccb29ad017a2657ab08b54d7f01ef4564481
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 0a21548386639a9f6a8c8572e5d7928ffdb270d6
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964543"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247033"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Como criar certificados temporários para uso durante o desenvolvimento
 
-Ao desenvolver um serviço ou cliente seguro usando Windows Communication Foundation (WCF), geralmente é necessário fornecer um certificado X. 509 para ser usado como uma credencial. O certificado normalmente faz parte de uma cadeia de certificados com uma autoridade raiz encontrada no repositório de autoridades de certificação raiz confiáveis do computador. Ter uma cadeia de certificados permite que você defina o escopo de um conjunto de certificados em que normalmente a autoridade raiz é de sua organização ou unidade de negócios. Para emular isso no momento do desenvolvimento, você pode criar dois certificados para atender aos requisitos de segurança. O primeiro é um certificado autoassinado que é colocado no repositório de autoridades de certificação raiz confiáveis e o segundo certificado é criado a partir do primeiro e é colocado no repositório pessoal do local do computador local ou no repositório pessoal do Local do usuário atual. Este tópico percorre as etapas para criar esses dois certificados usando o cmdlet [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) do PowerShell.
+Ao desenvolver um serviço ou cliente seguro usando Windows Communication Foundation (WCF), geralmente é necessário fornecer um certificado X. 509 para ser usado como uma credencial. O certificado normalmente faz parte de uma cadeia de certificados com uma autoridade raiz encontrada no repositório de autoridades de certificação raiz confiáveis do computador. Ter uma cadeia de certificados permite que você defina o escopo de um conjunto de certificados em que normalmente a autoridade raiz é de sua organização ou unidade de negócios. Para emular isso no momento do desenvolvimento, você pode criar dois certificados para atender aos requisitos de segurança. O primeiro é um certificado autoassinado que é colocado no repositório de autoridades de certificação raiz confiáveis e o segundo certificado é criado a partir do primeiro e é colocado no repositório pessoal do local do computador local ou no repositório pessoal do local do usuário atual. Este tópico percorre as etapas para criar esses dois certificados usando o cmdlet [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) do PowerShell.
 
 > [!IMPORTANT]
 > Os certificados que o cmdlet New-SelfSignedCertificate gera são fornecidos apenas para fins de teste. Ao implantar um serviço ou cliente, certifique-se de usar um certificado apropriado fornecido por uma autoridade de certificação. Isso pode ser de um servidor de certificado do Windows Server em sua organização ou de terceiros.
@@ -42,7 +43,7 @@ Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 
 ## <a name="to-create-a-new-certificate-signed-by-a-root-authority-certificate"></a>Para criar um novo certificado assinado por um certificado de autoridade raiz
 
-O comando a seguir cria um certificado assinado pelo `RootCA` com o nome da entidade "SignedByRootCA" usando a chave privada do emissor.
+O comando a seguir cria um certificado assinado pelo `RootCA` com um nome de assunto de "SignedByRootCA" usando a chave privada do emissor.
 
 ```powershell
 $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert
@@ -62,7 +63,7 @@ Depois que um certificado autoassinado for criado, você poderá instalá-lo no 
 
 ### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>Para instalar um certificado autoassinado nas autoridades de certificação raiz confiáveis
 
-1. Abra o snap-in certificado. Para obter mais informações, confira [Como exibir certificados com o snap-in do MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
+1. Abra o snap-in certificado. Para saber mais, consulte [Como Exibir Certificados com o Snap-in do MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
 
 2. Abra a pasta para armazenar o certificado, o **computador local** ou o **usuário atual**.
 
@@ -115,5 +116,5 @@ Certifique-se de excluir qualquer certificado de autoridade raiz temporário das
 ## <a name="see-also"></a>Veja também
 
 - [Trabalhando com certificados](working-with-certificates.md)
-- [Como exibir certificados com o Snap-in do MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Como exibir certificados com o snap-in do MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Protegendo serviços e clientes](securing-services-and-clients.md)

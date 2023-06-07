@@ -1,5 +1,6 @@
 ---
 title: Interoperabilidade COM sem registro
+description: Use a interoperabilidade COM sem registro para ativar um componente sem usar o registro do Windows para armazenar informações de assembly.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], interop
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - object activation
 - registration-free COM interop, about registration-free COM interop
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
-ms.openlocfilehash: f73bb2ac9e1b942c08f83507589b534d7e67748d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6a4dfc54152ade6136e4292bbd1c4522553d491
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124972"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281596"
 ---
 # <a name="registration-free-com-interop"></a>Interoperabilidade COM sem registro
 A interoperabilidade COM sem registro ativa um componente sem usar o Registro do Windows para armazenar informações de assembly. Em vez de registrar um componente em um computador durante a implantação, você pode criar arquivos de manifesto estilo Win32 em tempo de design que contêm informações sobre associação e a ativação. Esses arquivos de manifesto, em vez de chaves do Registro, direcionam a ativação de um objeto.  
@@ -34,7 +35,7 @@ A interoperabilidade COM sem registro ativa um componente sem usar o Registro do
   
     |Tipo de assembly|Sistema operacional|Versão do .NET Framework|  
     |-------------------|----------------------|----------------------------|  
-    |COM lado a lado|Microsoft Windows XP|Não obrigatório.|  
+    |COM lado a lado|Microsoft Windows XP|Não necessário.|  
     |Com base em .NET|Windows XP com SP2|.NET framework versão 1.1 ou posterior.|  
   
      A família Windows Server 2003 também dá suporte à interoperabilidade COM sem registro para assemblies com base em .NET.  
@@ -54,4 +55,4 @@ A interoperabilidade COM sem registro ativa um componente sem usar o Registro do
   
 ## <a name="see-also"></a>Confira também
 
-- [Como configurar componentes do COM baseados no .NET Framework para ativação sem registro](configure-net-framework-based-com-components-for-reg.md)
+- [Como: Configurar componentes COM baseados no .NET Framework para ativação sem registro](configure-net-framework-based-com-components-for-reg.md)

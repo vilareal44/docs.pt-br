@@ -1,13 +1,13 @@
 ---
 title: Contêineres de base para colaboração de DevOps
 description: Entenda o papel fundamental dos contêineres para simplificar DevOps.
-ms.date: 04/16/2020
-ms.openlocfilehash: 83bebc92a242a5ac2906d9997b7b278f87f0db96
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 08/06/2020
+ms.openlocfilehash: af28c1add8b2e6befbd2f3e6ae9fe707ccc5b106
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507332"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916013"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Contêineres de base para colaboração de DevOps
 
@@ -27,27 +27,27 @@ No pilar à direita, as equipes de operações gerenciam os aplicativos e a infr
 
 Ambas as equipes colaboram por meio de uma plataforma fundamental (os contêineres do Docker) que oferece a separação de preocupações como um contrato, além de melhorar muito a colaboração entre as duas equipes no ciclo de vida do aplicativo. Os desenvolvedores são proprietários do conteúdo do contêiner, do ambiente operacional e das interdependências do contêiner, ao passo que as equipes de operações usam as imagens criadas junto com o manifesto e as executam no sistema de orquestração.
 
-## <a name="challenges-in-application-life-cycle-when-using-docker"></a>Desafios no ciclo de vida do aplicativo ao usar o Docker.
+## <a name="challenges-in-the-application-life-cycle-when-using-docker"></a>Desafios no ciclo de vida do aplicativo ao usar o Docker.
 
 Há muitos motivos que aumentarão o número de aplicativos em contêiner nos próximos anos. Um deles é a criação de aplicativos baseados em microsserviços.
 
-Durante os últimos 15 anos, o uso dos serviços Web foram a base de milhares de aplicativos. Provavelmente, após alguns anos, veremos a mesma situação com os aplicativos baseados em microsserviços em execução nos contêineres do Docker.
+Durante os últimos 15 anos, o uso de Web Services tem sido a base de milhares de aplicativos e, provavelmente, após alguns anos, você encontrará a mesma situação com aplicativos baseados em microserviço em execução em contêineres do Docker.
 
 Também vale a pena mencionar que é possível usar os contêineres do Docker para aplicativos monolíticos e ainda aproveitar todos os benefícios do Docker. Os contêineres não usam só os microsserviços.
 
 O uso dos contêineres do Docker e dos microsserviços gera novos desafios no processo de desenvolvimento das organizações. Portanto, é necessária uma sólida estratégia para manter vários contêineres e microsserviços em execução nos sistemas de produção. Por fim, os aplicativos empresariais terão centenas ou milhares de contêineres/instâncias em execução na produção.
 
-Esses desafios criam demandas ao usar ferramentas de DevOps. Assim, será necessário definir novos processos nas atividades de DevOps e encontrar respostas para estes tipos de perguntas:
+Esses desafios criam novas demandas ao usar ferramentas de DevOps, portanto, você precisará definir novos processos em suas atividades de DevOps e encontrar respostas para o seguinte tipo de perguntas:
 
-- Quais ferramentas podem ser usadas para desenvolvimento, CI/CD, gerenciamento e operações?
+- Quais ferramentas posso usar para o desenvolvimento, CI/CD, gerenciamento e operações??
 
 - Como minha empresa pode gerenciar erros nos contêineres ao executar na produção?
 
 - Como alterar partes do software na produção com um tempo de inatividade mínimo?
 
-- Como dimensionar e monitorar o sistema de produção?
+- Como é possível dimensionar e monitorar nosso sistema de produção?
 
-- Como incluir teste e implantação de contêineres no pipeline de lançamento?
+- Como podemos incluir o teste e a implantação de contêineres em nosso pipeline de lançamento?
 
 - Como usar ferramentas/plataformas open-source para contêineres no Microsoft Azure?
 
@@ -63,9 +63,9 @@ A Figura 2-2 apresenta um fluxo de trabalho mais detalhado do ciclo de vida de u
 
 Tudo começa com o desenvolvedor, que inicia a escrita do código no fluxo de trabalho do loop interno. É no loop interno que os desenvolvedores definem tudo o que acontece antes de efetuar push do código para o repositório (por exemplo, um sistema de controle do código-fonte, como o Git). Após a confirmação, o repositório dispara a CI (integração contínua) e o restante do fluxo de trabalho.
 
-Basicamente, o loop interno consiste em etapas normais, como "código", "execução", "teste" e "depuração", além de outras etapas necessárias imediatamente antes de executar o aplicativo localmente. Esse é o processo do desenvolvedor para executar e testar o aplicativo como um contêiner do Docker. O fluxo de trabalho do loop interno será explicado nas seções a seguir.
+O loop interno consiste em etapas típicas, como "código", "executar", "testar" e "depurar", além das etapas adicionais necessárias imediatamente antes de executar o aplicativo localmente. Esse é o processo do desenvolvedor para executar e testar o aplicativo como um contêiner do Docker. O fluxo de trabalho do loop interno será explicado nas seções a seguir.
 
-Ao dar um passo para trás para analisar o fluxo de trabalho de ponta a ponta, o fluxo de trabalho de DevOps é mais que uma tecnologia ou um conjunto de ferramentas: é uma mentalidade que exige evolução cultural. São as pessoas, os processos e as ferramentas adequadas para acelerar e tornar mais previsível o ciclo de vida do aplicativo. As empresas que adotam um fluxo de trabalho em contêineres normalmente reestruturam suas organizações para representar as pessoas e os processos que combinam com ele.
+Voltando um pouco para examinar o fluxo de trabalho de ponta a ponta, o fluxo de trabalho do DevOps é mais do que uma tecnologia ou um conjunto de ferramentas, é uma mentalidade que exige uma evolução cultural. São as pessoas, os processos e as ferramentas adequadas para acelerar e tornar mais previsível o ciclo de vida do aplicativo. As empresas que adotam um fluxo de trabalho em contêineres normalmente reestruturam suas organizações para representar as pessoas e os processos que combinam com ele.
 
 Praticar DevOps pode ajudar as equipes a responder mais rápido às pressões competitivas ao substituir processos manuais suscetíveis a erro pela automação, o que resulta em rastreabilidade melhor e fluxos de trabalho reproduzíveis. As organizações também podem gerenciar ambientes com mais eficiência e economizar custos com uma combinação de recursos locais e em nuvem, além de ferramentas totalmente integradas.
 
@@ -92,5 +92,5 @@ Confira alguns dos mais importantes benefícios oferecidos por um fluxo de traba
 - Bom plug and play com vários investimentos existentes de DevOps, incluindo os investimentos open-source.
 
 >[!div class="step-by-step"]
->[Anterior](index.md)
->[próximo](../Microsoft-platform-tools-containerized-apps/index.md)
+>[Anterior](index.md) 
+> [Avançar](../Microsoft-platform-tools-containerized-apps/index.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-ms.openlocfilehash: b286bdd2c5d7b03a0a2b5f94478e252da6cd0ae2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ef23cff2416792f13fda04dbe9beb34cbacfd7ea
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120859"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288271"
 ---
 # <a name="localizability-review"></a>Revisão de localização
 
@@ -38,7 +38,7 @@ A revisão de localização é composta pelas três verificações a seguir:
 <a name="global"></a>
 ## <a name="implement-globalization-recommendations"></a>Implementar as recomendações de globalização
 
-Se você tiver projetado e desenvolvido seu aplicativo com a localização em mente, e se tiver seguido as recomendações discutidas no artigo [Globalização](../../../docs/standard/globalization-localization/globalization.md), a revisão de localização será essencialmente uma aprovação da garantia de qualidade. Caso contrário, durante este estágio, examine e implemente as recomendações de [globalização](../../../docs/standard/globalization-localization/globalization.md) e corrija os erros no código-fonte que impedem a localização.
+Se você tiver projetado e desenvolvido seu aplicativo com a localização em mente, e se tiver seguido as recomendações discutidas no artigo [Globalização](globalization.md), a revisão de localização será essencialmente uma aprovação da garantia de qualidade. Caso contrário, durante este estágio, examine e implemente as recomendações de [globalização](globalization.md) e corrija os erros no código-fonte que impedem a localização.
 
 <a name="culture"></a>
 ## <a name="handle-culture-sensitive-features"></a>Lidar com recursos com detecção de cultura
@@ -75,11 +75,11 @@ Antes de localizar seu aplicativo, você deve testá-lo usando dados internacion
 
 - As comparações de cadeia de caracteres ou comparações de igualdade que retornam resultados inesperados.
 
-Se você tiver seguido as recomendações de globalização ao desenvolver seu aplicativo, sendo tratadas corretamente, tratado os recursos sensíveis à cultura e identificado e resolvido os problemas de localização que surgiram durante o teste, você poderá prosseguir para a próxima etapa, [Localização](../../../docs/standard/globalization-localization/localization.md).
+Se você tiver seguido as recomendações de globalização ao desenvolver seu aplicativo, sendo tratadas corretamente, tratado os recursos sensíveis à cultura e identificado e resolvido os problemas de localização que surgiram durante o teste, você poderá prosseguir para a próxima etapa, [Localização](localization.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Globalização e localização](../../../docs/standard/globalization-localization/index.md)
-- [Localização](../../../docs/standard/globalization-localization/localization.md)
-- [Globalização](../../../docs/standard/globalization-localization/globalization.md)
-- [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)
+- [Globalização e localização](index.md)
+- [Localização](localization.md)
+- [Globalização](globalization.md)
+- [Recursos em aplicativos da área de trabalho](../../framework/resources/index.md)

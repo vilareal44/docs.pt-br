@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: aa47304cf2bded93bdb95ffe7dfa35bb37d9a643
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 46177d0af7e5df767eb8421caf424880baac615e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976467"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411721"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visão geral do modelo de aplicativo do Visual Basic
 
@@ -20,7 +20,7 @@ Visual Basic fornece um modelo bem definido para controlar o comportamento de ap
 
  Um aplicativo típico precisa executar tarefas quando ele é iniciado e desligado. Por exemplo, quando ele é iniciado, o aplicativo pode exibir uma tela inicial, fazer conexões de banco de dados, carregar um estado salvo e assim por diante. Quando o aplicativo é desligado, ele pode fechar conexões de banco de dados, salvar o estado atual e assim por diante. Além disso, o aplicativo pode executar um código específico quando o aplicativo é desligado inesperadamente, como durante uma exceção sem tratamento.  
   
- O modelo de aplicativo Visual Basic torna mais fácil criar um aplicativo *de instância única* . Um aplicativo de instância única é diferente de um aplicativo normal, pois apenas uma instância do aplicativo pode ser executada de cada vez. Uma tentativa de iniciar outra instância de um aplicativo de instância única faz com que a instância original seja notificada — por meio `StartupNextInstance` do evento — que outra tentativa de inicialização foi feita. A notificação inclui os argumentos de linha de comando da instância subsequente. A instância subsequente do aplicativo é fechada antes que qualquer inicialização possa ocorrer.  
+ O modelo de aplicativo Visual Basic torna mais fácil criar um aplicativo *de instância única* . Um aplicativo de instância única é diferente de um aplicativo normal, pois apenas uma instância do aplicativo pode ser executada de cada vez. Uma tentativa de iniciar outra instância de um aplicativo de instância única faz com que a instância original seja notificada — por meio do `StartupNextInstance` evento — que outra tentativa de inicialização foi feita. A notificação inclui os argumentos de linha de comando da instância subsequente. A instância subsequente do aplicativo é fechada antes que qualquer inicialização possa ocorrer.  
   
  Um aplicativo de instância única é iniciado e verifica se ele é a primeira instância ou uma instância subsequente do aplicativo:  
   
@@ -40,7 +40,7 @@ Visual Basic fornece um modelo bem definido para controlar o comportamento de ap
   
 - **Inicialização do aplicativo**. O aplicativo gera o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> evento quando ele é iniciado. Ao manipular esse evento, você pode adicionar um código que inicializa o aplicativo antes que o formulário principal seja carregado. O `Startup` evento também fornece o cancelamento da execução do aplicativo durante essa fase do processo de inicialização, se desejado.  
   
-     Você pode configurar o aplicativo para mostrar uma tela inicial enquanto o código de inicialização do aplicativo é executado. Por padrão, o modelo de aplicativo suprime a tela inicial quando o `/nosplash` argumento `-nosplash` de linha de comando ou é usado.  
+     Você pode configurar o aplicativo para mostrar uma tela inicial enquanto o código de inicialização do aplicativo é executado. Por padrão, o modelo de aplicativo suprime a tela inicial quando o `/nosplash` `-nosplash` argumento de linha de comando ou é usado.  
   
 - **Aplicativos de instância única**. O <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> evento é gerado quando uma instância subsequente de um aplicativo de instância única é iniciada. O evento passa os argumentos de linha de comando da instância subsequente.  
   
@@ -48,7 +48,7 @@ Visual Basic fornece um modelo bem definido para controlar o comportamento de ap
   
      O `UnhandledException` evento não é gerado em algumas circunstâncias. Para obter mais informações, consulte <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>.  
   
-- **Alterações de conectividade de rede**. Se a disponibilidade da rede do computador for alterada, o aplicativo <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged> gerará o evento.  
+- **Alterações de conectividade de rede**. Se a disponibilidade da rede do computador for alterada, o aplicativo gerará o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged> evento.  
   
      O `NetworkAvailabilityChanged` evento não é gerado em algumas circunstâncias. Para obter mais informações, consulte <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
   
@@ -56,9 +56,9 @@ Visual Basic fornece um modelo bem definido para controlar o comportamento de ap
   
 ## <a name="availability"></a>Disponibilidade  
 
- Por padrão, o modelo de aplicativo Visual Basic está disponível para projetos Windows Forms. Se você configurar o aplicativo para usar um objeto de inicialização diferente ou iniciar o código do aplicativo com um `Sub Main`personalizado, então esse objeto ou classe pode precisar fornecer uma implementação da <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe para usar o modelo de aplicativo. Para obter informações sobre como alterar o objeto de inicialização, consulte [página do aplicativo, designer de projeto (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Por padrão, o modelo de aplicativo Visual Basic está disponível para projetos Windows Forms. Se você configurar o aplicativo para usar um objeto de inicialização diferente ou iniciar o código do aplicativo com um personalizado `Sub Main` , então esse objeto ou classe pode precisar fornecer uma implementação da <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe para usar o modelo de aplicativo. Para obter informações sobre como alterar o objeto de inicialização, consulte [página do aplicativo, designer de projeto (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>
@@ -67,4 +67,4 @@ Visual Basic fornece um modelo bem definido para controlar o comportamento de ap
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
-- [Estendendo o modelo de aplicativo do Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
+- [Estendendo o modelo de aplicativo do Visual Basic](../customizing-extending-my/extending-the-visual-basic-application-model.md)

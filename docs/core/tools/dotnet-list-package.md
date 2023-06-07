@@ -2,16 +2,16 @@
 title: Comando dotnet list package
 description: O comando 'dotnet list package' fornece uma opção conveniente para listar as referências de pacote de um projeto ou solução.
 ms.date: 02/14/2020
-ms.openlocfilehash: 12d64600d178ea8cf490a0d6917e67bd3d8c6d21
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 7157e56860936d10aa322854a589ae89e2bc0826
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463657"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164759"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
-**Este artigo se aplica a:** ✔️ .NET Core 2.2 SDK e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,2 e versões posteriores
 
 ## <a name="name"></a>Nome
 
@@ -21,6 +21,7 @@ ms.locfileid: "81463657"
 
 ```dotnetcli
 dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
+    [--deprecated]
     [--framework <FRAMEWORK>] [--highest-minor] [--highest-patch]
     [--include-prerelease] [--include-transitive] [--interactive]
     [--outdated] [--source <SOURCE>]
@@ -28,7 +29,7 @@ dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
 dotnet list package -h|--help
 ```
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 O comando `dotnet list package` fornece uma opção conveniente para listar todas as referências de pacotes do NuGet para um projeto específico ou uma solução. Primeiro, você precisa criar o projeto para ter os recursos necessários para que esse comando seja processado. O exemplo a seguir mostra a saída do comando `dotnet list package` para o projeto [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis):
 
@@ -78,6 +79,10 @@ O arquivo de projeto ou solução para operar. Se não for especificado, o coman
 
   A fontes do NuGet a serem usadas ao procurar pacotes mais novos. Requer a opção `--outdated`.
 
+- **`--deprecated`**
+
+  Exibe os pacotes que foram preteridos.
+
 - **`--framework <FRAMEWORK>`**
 
   Exibe apenas os pacotes aplicáveis para a [estrutura de destino](../../standard/frameworks.md) especificada. Para especificar várias estruturas, repita a opção várias vezes. Por exemplo: `--framework netcoreapp2.2 --framework netstandard2.0`.
@@ -88,15 +93,15 @@ O arquivo de projeto ou solução para operar. Se não for especificado, o coman
 
 - **`--highest-minor`**
 
-  Ao procurar pacotes mais novos, considerar apenas os pacotes com um número de versão principal correspondente. Requer a opção `--outdated`.
+  Ao procurar pacotes mais novos, considerar apenas os pacotes com um número de versão principal correspondente. Requer a `--outdated` `--deprecated` opção ou.
 
 - **`--highest-patch`**
 
-  Ao procurar pacotes mais novos, considerar apenas os pacotes com números de versão principais e secundários correspondentes. Requer a opção `--outdated`.
+  Ao procurar pacotes mais novos, considerar apenas os pacotes com números de versão principais e secundários correspondentes. Requer a `--outdated` `--deprecated` opção ou.
 
 - **`--include-prerelease`**
 
-  Ao procurar pacotes mais novos, considere pacotes com versões de pré-lançamento. Requer a opção `--outdated`.
+  Ao procurar pacotes mais novos, considere pacotes com versões de pré-lançamento. Requer a `--outdated` `--deprecated` opção ou.
 
 - **`--include-transitive`**
 
@@ -112,7 +117,7 @@ O arquivo de projeto ou solução para operar. Se não for especificado, o coman
 
 - **`-s|--source <SOURCE>`**
 
-  A fontes do NuGet a serem usadas ao procurar pacotes mais novos. Requer a opção `--outdated`.
+  A fontes do NuGet a serem usadas ao procurar pacotes mais novos. Requer a `--outdated` `--deprecated` opção ou.
 
 ## <a name="examples"></a>Exemplos
 

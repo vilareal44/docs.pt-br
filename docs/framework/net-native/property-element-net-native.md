@@ -3,13 +3,13 @@ title: <Property> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 ms.openlocfilehash: b9bc89804a872dddf1a56c2a3dadc9c3df4f5fd1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128204"
 ---
-# <a name="property-element-net-native"></a>Elemento de > de propriedade \<(.NET Native)
+# <a name="property-element-net-native"></a>\<Property> (.NET Nativo)
 Aplica a política de reflexão de runtime a uma propriedade.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,16 +37,16 @@ Aplica a política de reflexão de runtime a uma propriedade.
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*method_name*|O nome da propriedade. O tipo da propriedade é definido pelo elemento pai [\<Type>](type-element-net-native.md) ou [\<TypeInstantiation>](typeinstantiation-element-net-native.md).|  
+|*method_name*|O nome da propriedade. O tipo da propriedade é definido pelo [\<Type>](type-element-net-native.md) elemento pai ou [\<TypeInstantiation>](typeinstantiation-element-net-native.md) .|  
   
 ## <a name="all-other-attributes"></a>Todos os outros atributos  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*policy_setting*|A configuração a ser aplicada a este tipo de política para a propriedade. Os valores possíveis são `Auto`, `Excluded`, `Included` e `Required`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md).|  
+|*policy_setting*|A configuração a ser aplicada a este tipo de política para a propriedade. Os valores possíveis são `Auto`, `Excluded`, `Included` e `Required`. Para obter mais informações, consulte [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -71,17 +71,17 @@ Aplica a política de reflexão de runtime a uma propriedade.
 </Directives>  
 ```  
   
- O arquivo se aplica ao valor `All` para a política `Activate` da classe `Book`, que permite acesso aos construtores de classe por meio de reflexão. A política `Browse` para a classe `Book` é herdada do seu namespace pai. Isso é definido para `Required Public`, que disponibiliza metadados no tempo de execução.  
+ O arquivo se aplica ao valor `All` para a política `Activate` da classe `Book`, que permite acesso aos construtores de classe por meio de reflexão. A política `Browse` para a classe `Book` é herdada do seu namespace pai. Isso é definido para `Required Public`, que disponibiliza metadados no runtime.  
   
- Este é o código-fonte para o exemplo. A variável `outputBlock` representa um controle de <xref:Windows.UI.Xaml.Controls.TextBlock>.  
+ Este é o código-fonte para o exemplo. A `outputBlock` variável representa um <xref:Windows.UI.Xaml.Controls.TextBlock> controle.  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   
  No entanto, compilar e executar este exemplo gera uma exceção [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md). Embora tenhamos disponibilizados metadados para o tipo `Book` disponível, não realizamos implementações de getters de propriedades disponíveis dinamicamente. Podemos corrigir esse erro de uma das seguintes maneiras:  
   
-- definindo a política `Dynamic` para o tipo `Book` no seu elemento [\<Type>](type-element-net-native.md).  
+- definindo a `Dynamic` política para o `Book` tipo em seu [\<Type>](type-element-net-native.md) elemento.  
   
-- Adicionando um elemento [\<Property>](property-element-net-native.md) aninhado para cada propriedade cujo getter gostaríamos de invocar, como faz o arquivo default.rd.xml a seguir.  
+- Adicionando um elemento aninhado [\<Property>](property-element-net-native.md) para cada propriedade cujo getter gostaríamos de invocar, como faz o seguinte arquivo default. Rd. xml.  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -97,8 +97,8 @@ Aplica a política de reflexão de runtime a uma propriedade.
     </Directives>  
     ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)
-- [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md)
+- [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementos da diretiva de runtime](runtime-directive-elements.md)
+- [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md)

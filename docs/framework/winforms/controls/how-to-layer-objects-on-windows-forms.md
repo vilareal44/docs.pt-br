@@ -1,5 +1,6 @@
 ---
 title: colocar objetos em camadas
+description: Saiba como encamar objetos em Windows Forms controles e formulários filho para criar interfaces de usuário mais complexas.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,16 +16,16 @@ ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1615b9c4df222edd95cda9bceae622ba6f1d8d78
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6269b09c56963fefd500b9e1e6c9d7f51f9619cf
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736346"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174504"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Como: objetos de camada no Windows Forms
 
-Ao criar uma interface do usuário complexa ou trabalhar com um formulário MDI (interface de múltiplos documentos), geralmente se deseja dispor em camadas controles e formulários filho para criar interfaces do usuário (UI) mais complexas. Para mover e acompanhar controles e janelas no contexto de um grupo, você manipula sua *ordem z*. A ordem Z é a camada visual de controles em um formulário ao longo do eixo z do formulário (profundidade). A janela na parte superior da ordem z se sobrepõe a todas as outras janelas. Todas as outras janelas se sobrepõe a janela na parte inferior da ordem z.
+Ao criar uma interface do usuário complexa ou trabalhar com um formulário MDI (interface de múltiplos documentos), geralmente se deseja dispor em camadas controles e formulários filho para criar interfaces do usuário (UI) mais complexas. Para mover e acompanhar controles e janelas no contexto de um grupo, você manipula sua *ordem z*. A ordem z consiste na disposição em camadas visuais de controles em um formulário ao longo do eixo z do formulário (profundidade). A janela na parte superior da ordem z se sobrepõe a todas as outras janelas. Todas as outras janelas se sobrepõe a janela na parte inferior da ordem z.
 
 ## <a name="to-layer-controls-at-design-time"></a>Dispondo controles em camadas no design time
 
@@ -34,9 +35,9 @@ Ao criar uma interface do usuário complexa ou trabalhar com um formulário MDI 
 
 ## <a name="to-layer-controls-programmatically"></a>Dispondo controles em camadas de forma programática
 
-Use os métodos <xref:System.Windows.Forms.Control.BringToFront%2A> e <xref:System.Windows.Forms.Control.SendToBack%2A> para manipular a ordem z dos controles.
+Use os <xref:System.Windows.Forms.Control.BringToFront%2A> <xref:System.Windows.Forms.Control.SendToBack%2A> métodos e para manipular a ordem z dos controles.
 
-Por exemplo, se um controle de <xref:System.Windows.Forms.TextBox>, `txtFirstName`, estiver abaixo de outro controle e você quiser tê-lo na parte superior, use o seguinte código:
+Por exemplo, se um <xref:System.Windows.Forms.TextBox> controle, `txtFirstName` , estiver abaixo de outro controle e você quiser tê-lo na parte superior, use o seguinte código:
 
 ```vb
 txtFirstName.BringToFront()
@@ -51,11 +52,11 @@ txtFirstName->BringToFront();
 ```
 
 > [!NOTE]
-> Windows Forms dá suporte a *Contenção de controle*. A contenção de controle envolve colocar um número de controles dentro de um controle recipiente, como um número de controles de <xref:System.Windows.Forms.RadioButton> dentro de um controle de <xref:System.Windows.Forms.GroupBox>. Em seguida, é possível dispor os controles em camadas no controle de contenção. Mover a caixa de grupo move também os controles, já que estes estão contidos dentro dela.
+> Windows Forms dá suporte a *Contenção de controle*. A contenção de controle envolve colocar um número de controles dentro de um controle recipiente, como um número de <xref:System.Windows.Forms.RadioButton> controles dentro de um <xref:System.Windows.Forms.GroupBox> controle. Em seguida, é possível dispor os controles em camadas no controle de contenção. Mover a caixa de grupo move também os controles, já que estes estão contidos dentro dela.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Controles dos Windows Forms](index.md)
-- [Rotulando controles individuais dos Windows Forms e fornecendo atalhos para eles](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles de Windows Forms](index.md)
+- [Identificando controles dos Windows Forms individuais e fornecendo atalhos para eles](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Controles a serem usados em Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles dos Windows Forms por função](windows-forms-controls-by-function.md)

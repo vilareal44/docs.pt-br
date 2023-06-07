@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2a3637b-d1e9-4d93-9e9b-0555fbff793d
 topic_type:
 - apiref
-ms.openlocfilehash: 66934db3f1507262ffb2e9eec232f21574c29348
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 615dad9000b15ed13783ca41cc3c9fe2b563e15c
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73095750"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842147"
 ---
 # <a name="itypenamegetnames-method"></a>Método ITypeName::GetNames
 Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.  
@@ -36,14 +36,14 @@ HRESULT GetNames (
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfaces de hospedagem](hosting-interfaces.md)

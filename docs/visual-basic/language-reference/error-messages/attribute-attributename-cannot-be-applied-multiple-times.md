@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC30663
 ms.assetid: 3760e7ff-7238-40a1-8676-77d858a64fc0
-ms.openlocfilehash: f2f4dc428a247275f9919c4a8b6e6944a558eef0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 14145f165adf5ccd20298a70ca5596488b488b0c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968235"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409953"
 ---
-# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>O atributo '\<AttributeName > ' não pode ser aplicado várias vezes
+# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>O atributo '\<attributename>' não pode ser aplicado várias vezes
 
-O atributo só pode ser aplicado uma vez. O atributo `AttributeUsage` determina se um atributo pode ser aplicado mais de uma vez.  
+O atributo só pode ser aplicado uma vez. O `AttributeUsage` atributo determina se um atributo pode ser aplicado mais de uma vez.  
   
  **ID do erro:** BC30663  
   
@@ -24,14 +24,14 @@ O atributo só pode ser aplicado uma vez. O atributo `AttributeUsage` determina 
   
 1. Verifique se o atributo é aplicado apenas uma vez.  
   
-2. Se você estiver usando atributos personalizados que desenvolveu, considere alterar o atributo `AttributeUsage` para permitir o uso de vários atributos, como no exemplo a seguir.  
+2. Se você estiver usando atributos personalizados que desenvolveu, considere alterar seu `AttributeUsage` atributo para permitir o uso de vários atributos, como no exemplo a seguir.  
   
 ```vb  
 <AttributeUsage(AllowMultiple := True)>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.AttributeUsageAttribute>
-- [Criando Atributos Personalizados](../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [AttributeUsage](../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+- [Criando atributos personalizados](../../programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [AttributeUsage](../../programming-guide/concepts/attributes/attributeusage.md)

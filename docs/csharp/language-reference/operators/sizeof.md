@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: a9e80ecb3288479a2ca81b43c9d088809ed5f2f0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 327183ccdf79cb8e15cd15aa3cffb044120808f8
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847281"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916697"
 ---
 # <a name="sizeof-operator-c-reference"></a>Operador sizeof (referência em C#)
 
@@ -40,7 +40,7 @@ Você também não precisará usar um contexto não seguro quando o operando do 
 
 O exemplo a seguir demonstra o uso do operador `sizeof`:
 
-[!code-csharp[sizeof examples](snippets/SizeOfOperator.cs)]
+[!code-csharp[sizeof examples](snippets/shared/SizeOfOperator.cs)]
 
 O operador `sizeof` retorna o número de bytes que seriam alocados pelo Common Language Runtime na memória gerenciada. Para tipos [struct](../builtin-types/struct.md), esse valor inclui todo o preenchimento, como demonstra o exemplo anterior. O resultado do operador `sizeof` pode ser diferente do resultado do método <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType>, que retorna o tamanho de um tipo na memória *não gerenciada*.
 
@@ -48,11 +48,11 @@ O operador `sizeof` retorna o número de bytes que seriam alocados pelo Common L
 
 Para obter mais informações, confira a seção [O operador sizeof](~/_csharplang/spec/unsafe-code.md#the-sizeof-operator), nas [especificações da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Referência do C#](../index.md)
-- [Operadores do C#](index.md)
+- [Referência de C#](../index.md)
+- [Operadores e expressões C#](index.md)
 - [Operadores relacionados a ponteiro](pointer-related-operators.md)
-- [Tipos de Ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Tipos de ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Tipos relacionados a memória e extensão](../../../standard/memory-and-spans/index.md)
-- [Genéricos no .NET](../../../standard/generics/index.md)
+- [Generics in .NET (Genéricos no .NET)](../../../standard/generics/index.md)

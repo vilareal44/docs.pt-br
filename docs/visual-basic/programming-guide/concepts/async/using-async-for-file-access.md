@@ -2,14 +2,14 @@
 title: Usando o Async para acessar arquivos
 ms.date: 07/20/2015
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
-ms.openlocfilehash: 803d182f5b0f3071feb7aae4945bc3c0a1fd82c3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2ee1efa69f4b13224be65fe802ebf5f834c941aa
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349104"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400765"
 ---
-# <a name="using-async-for-file-access-visual-basic"></a>Usando Async para acesso a arquivos (Visual Basic)
+# <a name="using-async-for-file-access-visual-basic"></a>Usando o Async para acessar arquivos (Visual Basic)
 Você pode usar o recurso assíncrono para acessar arquivos. Usando o recurso Async, você pode chamar os métodos assíncronos sem usar retornos de chamada ou dividir seu código em vários métodos ou expressões lambda. Para tornar síncrono um código assíncrono, basta chamar um método assíncrono em vez de um método síncrono e adicionar algumas palavras-chave ao código.  
   
  Você pode considerar seguintes motivos para adicionar a assincronia às chamadas de acesso ao arquivo:  
@@ -73,10 +73,10 @@ Dim theTask As Task = sourceStream.WriteAsync(encodedText, 0, encodedText.Length
 Await theTask  
 ```  
   
- A primeira instrução retorna uma tarefa e faz com que o processamento do arquivo seja iniciado. A segunda instrução com o await faz com que o método saia imediatamente e retorne uma tarefa diferente. Quando o processamento do arquivo é concluído posteriormente, a execução retorna para a instrução após a await. Para obter mais informações, consulte [fluxo de controle em programas assíncronos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).  
+ A primeira instrução retorna uma tarefa e faz com que o processamento do arquivo seja iniciado. A segunda instrução com o await faz com que o método saia imediatamente e retorne uma tarefa diferente. Quando o processamento do arquivo é concluído posteriormente, a execução retorna para a instrução após a await. Para obter mais informações, consulte [fluxo de controle em programas assíncronos (Visual Basic)](control-flow-in-async-programs.md).  
   
 ## <a name="reading-text"></a>Lendo texto  
- O exemplo a seguir lê o texto de um arquivo. O texto é armazenado em buffer e, nesse caso, colocado em um <xref:System.Text.StringBuilder>. Diferentemente do exemplo anterior, a avaliação de await produz um valor. O método <xref:System.IO.Stream.ReadAsync%2A> retorna um <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, portanto, a avaliação do await produz um valor `Int32` (`numRead`) após a conclusão da operação. Para obter mais informações, consulte [tipos de retorno assíncronos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
+ O exemplo a seguir lê o texto de um arquivo. O texto é armazenado em buffer e, nesse caso, colocado em um <xref:System.Text.StringBuilder>. Diferentemente do exemplo anterior, a avaliação de await produz um valor. O método <xref:System.IO.Stream.ReadAsync%2A> retorna um <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, portanto, a avaliação do await produz um valor `Int32` (`numRead`) após a conclusão da operação. Para obter mais informações, consulte [tipos de retorno assíncronos (Visual Basic)](async-return-types.md).  
   
 ```vb  
 Public Async Sub ProcessRead()  
@@ -158,10 +158,10 @@ Public Async Sub ProcessWriteMult()
 End Sub  
 ```  
   
- Ao usar os métodos <xref:System.IO.Stream.WriteAsync%2A> e <xref:System.IO.Stream.ReadAsync%2A>, você pode especificar um <xref:System.Threading.CancellationToken>, que pode ser usado para cancelar o fluxo intermediário da operação. Para obter mais informações, consulte ajustar [seu aplicativo assíncrono (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) e o [cancelamento em threads gerenciados](../../../../standard/threading/cancellation-in-managed-threads.md).  
+ Ao usar os métodos <xref:System.IO.Stream.WriteAsync%2A> e <xref:System.IO.Stream.ReadAsync%2A>, você pode especificar um <xref:System.Threading.CancellationToken>, que pode ser usado para cancelar o fluxo intermediário da operação. Para obter mais informações, consulte ajustar [seu aplicativo assíncrono (Visual Basic)](fine-tuning-your-async-application.md) e o [cancelamento em threads gerenciados](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Tipos de retorno assíncronos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [Fluxo de controle em programas assíncronos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
+- [Programação assíncrona com Async e Await (Visual Basic)](index.md)
+- [Tipos de retorno assíncronos (Visual Basic)](async-return-types.md)
+- [Fluxo de controle em programas assíncronos (Visual Basic)](control-flow-in-async-programs.md)

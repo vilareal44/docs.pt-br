@@ -1,5 +1,6 @@
 ---
 title: Práticas recomendadas de confiabilidade
+description: Consulte as práticas recomendadas para confiabilidade em aplicativos de servidor baseados em host .NET, como SQL Server. Impeça-os de vazar recursos ou se tornar desativado.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marking locks
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-ms.openlocfilehash: bd51ea1b79ac1dbd89a862f3961cc8508a87f301
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 134b71153f95dffd4525f307d291ce4389e0ce60
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715978"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474235"
 ---
 # <a name="reliability-best-practices"></a>Práticas recomendadas de confiabilidade
 
@@ -275,7 +276,7 @@ Considere a possibilidade de alterar todos os locais que capturam todas as exce�
 
 #### <a name="code-analysis-rule"></a>Regra de análise de código
 
-Examine todos os blocos catch no código gerenciado que captura todos os objetos ou captura todas as exceções.  No C#, isso significa sinalizar `catch` {} e `catch(Exception)` {}.  Considere tornar o tipo de exceção muito específico ou examine o código para garantir que ele não agirá de forma incorreta se detectar um tipo de exceção inesperado.
+Examine todos os blocos catch no código gerenciado que captura todos os objetos ou captura todas as exceções.  Em C#, isso significa sinalizar `catch` {} e `catch(Exception)` {} .  Considere tornar o tipo de exceção muito específico ou examine o código para garantir que ele não agirá de forma incorreta se detectar um tipo de exceção inesperado.
 
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>Não presuma que um thread gerenciado seja um Thread Win32 – é uma fibra
 
@@ -311,7 +312,7 @@ Uma CER é um bloco `try/finally` específico imediatamente precedido por uma ch
 
 Fazer isso instrui o compilador Just-In-Time para preparar a todo o código no bloco finally antes de executar o bloco `try`. Isso assegura que o código no bloco finally será criado e que será executado em todos os casos. Não é incomum que uma CER tenha um bloco `try` vazio. Usar uma CER protege contra anulações de thread assíncronas e exceções de falta de memória. Consulte <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> para um formulário de uma CER que manipula excedentes de pilha de código excessivamente profundo.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.ConstrainedExecution>
 - [Programação em SQL Server e atributos de proteção de host](sql-server-programming-and-host-protection-attributes.md)

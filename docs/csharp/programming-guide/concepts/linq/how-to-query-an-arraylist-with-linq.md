@@ -1,15 +1,16 @@
 ---
-title: Como consultar uma arraylist com LINQ (C#)
+title: Como consultar uma ArrayList com LINQ (C#)
+description: Este exemplo usa LINQ para consultar em uma ArrayList em C#. Você deve declarar o tipo da variável de intervalo para refletir o tipo dos objetos na coleção.
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: fa185ba3793b628b0d65e1f513a70ec68f6f2425
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c251e17de062a4578f06fc1a40ea3ede9f3ab67
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168928"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104604"
 ---
-# <a name="how-to-query-an-arraylist-with-linq-c"></a>Como consultar uma arraylist com LINQ (C#)
+# <a name="how-to-query-an-arraylist-with-linq-c"></a>Como consultar uma ArrayList com LINQ (C#)
 Ao usar a LINQ para consultar coleções <xref:System.Collections.IEnumerable> não genéricas como <xref:System.Collections.ArrayList>, você deve declarar explicitamente o tipo da variável de intervalo para refletir o tipo específico dos objetos na coleção. Por exemplo, se você tiver um <xref:System.Collections.ArrayList> de objetos `Student`, sua [cláusula from](../../../language-reference/keywords/from-clause.md) deverá ter uma aparência semelhante a esta:  
   
 ```csharp

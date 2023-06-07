@@ -1,13 +1,13 @@
 ---
 title: Funções
-description: Saiba mais sobre o F# Functions F# no e como o dá suporte a construções de programação funcional comuns.
+description: 'Saiba mais sobre o Functions em F # e como o F # dá suporte a construções de programação funcional comuns.'
 ms.date: 05/16/2016
-ms.openlocfilehash: c6b8307f51ffcdc77fe4352b2305fca1f247ccbb
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e49183e0634dee1750757abadbfe9e9c824f51a8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423952"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596468"
 ---
 # <a name="functions"></a>Funções
 
@@ -36,7 +36,7 @@ let f x = x + 1
 
 No exemplo anterior, o nome da função é `f`, o argumento é `x`, que tem o tipo `int`, o corpo da função é `x + 1` e o valor de retorno é do tipo `int`.
 
-As funções podem ser marcadas como `inline`. Para saber mais sobre `inline`, veja [Funções embutidas](../functions/inline-functions.md).
+As funções podem ser marcadas como `inline`. Para saber mais sobre `inline`, veja [Funções embutidas](inline-functions.md).
 
 ## <a name="scope"></a>Escopo
 
@@ -78,7 +78,7 @@ O corpo de uma função pode conter definições de funções e variáveis locai
 
 Para saber mais, veja [Diretrizes de formatação de código](../../style-guide/formatting.md) e [Sintaxe detalhada](../verbose-syntax.md).
 
-## <a name="return-values"></a>Valores de Retorno
+## <a name="return-values"></a>Valores de retorno
 
 O compilador usa a expressão final em um corpo de função para determinar o valor de retorno e o tipo. O compilador pode inferir o tipo da expressão final a partir das expressões anteriores. Na função `cylinderVolume`, mostrada na seção anterior, o tipo de `pi` é determinado pelo tipo do literal `3.14159` como `float`. O compilador usa o tipo de `pi` para determinar o tipo da expressão `h * pi * r * r` como `float`. Portanto, o tipo de retorno geral da função é `float`.
 
@@ -142,7 +142,7 @@ Uma *expressão lambda* é uma função sem nome. Nos exemplos anteriores, em ve
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-Defina expressões lambda usando a palavra-chave `fun`. Uma expressão lambda é semelhante a uma definição de função, com exceção de que em vez do token `=`, o token `->` é usado para separar a lista de argumentos do corpo da função. Assim como em uma definição de função normal, os tipos de argumento podem ser inferidos ou explicitamente especificados, e o tipo de retorno da expressão lambda é inferido do tipo da última expressão no corpo. Para saber mais, veja [Expressões lambda: a palavra-chave `fun`](../functions/lambda-expressions-the-fun-keyword.md).
+Defina expressões lambda usando a palavra-chave `fun`. Uma expressão lambda é semelhante a uma definição de função, com exceção de que em vez do token `=`, o token `->` é usado para separar a lista de argumentos do corpo da função. Assim como em uma definição de função normal, os tipos de argumento podem ser inferidos ou explicitamente especificados, e o tipo de retorno da expressão lambda é inferido do tipo da última expressão no corpo. Para saber mais, veja [Expressões lambda: a palavra-chave `fun`](lambda-expressions-the-fun-keyword.md).
 
 ## <a name="function-composition-and-pipelining"></a>Composição de Função e Pipelining
 
@@ -205,4 +205,4 @@ Você pode sobrecarregar métodos de um tipo, mas não funções. Para saber mai
 ## <a name="see-also"></a>Consulte também
 
 - [Valores](../values/index.md)
-- [Referência da Linguagem F#](../index.md)
+- [Referência de linguagem F #](../index.md)

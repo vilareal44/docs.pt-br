@@ -6,18 +6,18 @@ helpviewer_keywords:
 - <etwEnable> element
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 ms.openlocfilehash: 14cea171a4a25e148ea32f75a8ef09b83a4ec8ad
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73117394"
 ---
-# <a name="etwenable-element"></a>\<elemento de > etwEnable
+# <a name="etwenable-element"></a>Elemento \<etwEnable>
 Especifica se deseja-se habilitar o rastreamento de eventos para Windows (ETW) para eventos de Common Language Runtime.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<etwEnabled >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<etwEnabled>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,7 +32,7 @@ Especifica se deseja-se habilitar o rastreamento de eventos para Windows (ETW) p
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|habilitado|Atributo obrigatório.<br /><br /> Especifica se o ETW deve ser habilitado.|  
+|Habilitado|Atributo obrigatório.<br /><br /> Especifica se o ETW deve ser habilitado.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
@@ -42,7 +42,7 @@ Especifica se deseja-se habilitar o rastreamento de eventos para Windows (ETW) p
 |false|Desabilite o ETW. Esse é o padrão para versões anteriores do Windows.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -68,8 +68,8 @@ Especifica se deseja-se habilitar o rastreamento de eventos para Windows (ETW) p
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de configurações do runtime](index.md)
 - [Esquema de arquivos de configuração](../index.md)
-- [Controlando o log no .NET Framework](../../../performance/controlling-logging.md)
+- [Controlando o registro em log no .NET Framework](../../../performance/controlling-logging.md)

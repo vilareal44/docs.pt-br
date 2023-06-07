@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - AddHandler statement [Visual Basic]
 ms.assetid: cfe69799-2a0f-42c0-a99e-09fed954da01
-ms.openlocfilehash: c110116af75d4fb39c016b8d6afcdb707fa6599b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: de995a13b34678410e2af74b59f2d0c467982b75
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350186"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408478"
 ---
 # <a name="addhandler-statement"></a>Instrução AddHandler
 Associa um evento a um manipulador de eventos em tempo de execução.  
@@ -27,26 +27,26 @@ AddHandler event, AddressOf eventhandler
 ## <a name="parts"></a>Partes  
 |||
 |---|---|
-|evento|O nome do evento a ser manipulado.|  
+|event|O nome do evento a ser manipulado.|  
 |`eventhandler`|O nome de um procedimento que manipula o evento.|
 |||
   
 ## <a name="remarks"></a>Comentários  
- As instruções `AddHandler` e `RemoveHandler` permitem iniciar e parar a manipulação de eventos a qualquer momento durante a execução do programa.  
+ As `AddHandler` `RemoveHandler` instruções e permitem iniciar e parar a manipulação de eventos a qualquer momento durante a execução do programa.  
   
- A assinatura do procedimento de `eventhandler` deve corresponder à assinatura do `event`de evento.  
+ A assinatura do `eventhandler` procedimento deve corresponder à assinatura do evento `event` .  
   
- A palavra-chave `Handles` e a instrução `AddHandler` permitem que você especifique que procedimentos específicos manipulam eventos específicos, mas há diferenças. A instrução `AddHandler` conecta procedimentos a eventos em tempo de execução. Use a palavra-chave `Handles` ao definir um procedimento para especificar que ele trata de um evento específico. Para obter mais informações, consulte [Handles](../../../visual-basic/language-reference/statements/handles-clause.md).  
+ A `Handles` palavra-chave e a `AddHandler` instrução permitem que você especifique que procedimentos específicos manipulam eventos específicos, mas há diferenças. A `AddHandler` instrução conecta procedimentos a eventos em tempo de execução. Use a `Handles` palavra-chave ao definir um procedimento para especificar que ele trata de um evento específico. Para obter mais informações, consulte [Handles](handles-clause.md).  
   
 > [!NOTE]
-> Para eventos personalizados, a instrução `AddHandler` invoca o acessador de `AddHandler` do evento. Para obter mais informações sobre eventos personalizados, consulte [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
+> Para eventos personalizados, a `AddHandler` instrução invoca o `AddHandler` acessador do evento. Para obter mais informações sobre eventos personalizados, consulte [Event Statement](event-statement.md).  
   
 ## <a name="example"></a>Exemplo  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Instrução RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)
-- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
-- [Instrução Event](../../../visual-basic/language-reference/statements/event-statement.md)
-- [Eventos](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Instrução RemoveHandler](removehandler-statement.md)
+- [Alças](handles-clause.md)
+- [Instrução Event](event-statement.md)
+- [Eventos](../../programming-guide/language-features/events/index.md)

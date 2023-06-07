@@ -1,5 +1,6 @@
 ---
 title: Como adicionar uma tela inicial
+description: Descubra como adicionar uma janela de inicialização, ou tela inicial, a um aplicativo Windows Presentation Foundation (WPF).
 ms.date: 08/18/2018
 helpviewer_keywords:
 - WPF [WPF], splash screen
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - SplashScreen class [WPF]
 - splash screen [WPF]
 ms.assetid: d70a25c4-5fb9-4c27-b01d-b1b8ef39b3fd
-ms.openlocfilehash: 39f53e21c40f036c65894b4f275cd5fb414999be
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0d0cf2e2a550320650c3b4a0c257071a0403c32b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740454"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617954"
 ---
 # <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>Como adicionar uma tela inicial a um aplicativo WPF
 
@@ -47,4 +48,4 @@ Em **Gerenciador de soluções**, exclua a imagem da tela inicial.
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.SplashScreen>
-- [Como: adicionar itens existentes a um projeto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))
+- [Como adicionar itens existentes a um projeto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))

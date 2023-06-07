@@ -1,5 +1,6 @@
 ---
 title: Domínios de aplicativo
+description: Leia sobre domínios de aplicativo, que fornecem um limite de isolamento entre aplicativos para segurança, confiabilidade, controle de versão & descarregamento de assemblies no .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - process boundaries for isolation
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - code, verification process
 - verification testing code
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
-ms.openlocfilehash: a5c9f4248e060d231941269f39cadbc7147ce27f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d6accd11e33c0556fdd7596b2790f4787dce7ae1
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399871"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903474"
 ---
 # <a name="application-domains"></a>Domínios de aplicativo
 
@@ -108,7 +109,7 @@ Sistemas operacionais e ambientes em runtime normalmente fornecem alguma forma d
   
  O <xref:System.AppDomain> é a interface programática para domínios de aplicativo. Essa classe inclui métodos para criar e descarregar domínios, para criar instâncias de tipos em domínios e registrar várias notificações como o descarregamento de domínio do aplicativo. A tabela a seguir lista os métodos <xref:System.AppDomain> mais usados.  
   
-|Método AppDomain|Descrição|  
+|Método AppDomain|Description|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|Cria um novo domínio de aplicativo. É recomendável usar uma sobrecarga desse método que especifique um objeto <xref:System.AppDomainSetup>. Essa é a maneira preferencial para definir as propriedades de um novo domínio, como a base do aplicativo ou o diretório raiz do aplicativo; o local do arquivo de configuração do domínio e o caminho de pesquisa que o Common Language Runtime deve usar para carregar assemblies dentro do domínio.|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> e <xref:System.AppDomain.ExecuteAssemblyByName%2A>|Executa um assembly no domínio do aplicativo. Como esse é um método de instância, ele pode ser usado para executar código em outro domínio de aplicativo para o qual você tenha uma referência.|  
@@ -156,9 +157,9 @@ Type = REG_MULTI_SZ
 Value (to append) = COMPLUS_LoaderOptimization=1  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.AppDomain?displayProperty=nameWithType>
 - <xref:System.MarshalByRefObject?displayProperty=nameWithType>
 - [Programação com domínios do aplicativo e assemblies](index.md)
-- [Uso de domínios do aplicativo](use.md)
+- [Usando domínios do aplicativo](use.md)

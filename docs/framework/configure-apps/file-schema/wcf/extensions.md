@@ -3,14 +3,14 @@ title: <extensions>
 ms.date: 03/30/2017
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
 ms.openlocfilehash: bb0df4535560a509d6e3511815196c126a95d0c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "61700768"
 ---
-# <a name="extensions"></a>\<extensions>
-Este elemento de configuração contém uma coleção de elementos XML que contêm metadados personalizados para serem publicados juntamente com os metadados detectáveis padrão (EPR, ContractTypeName, BindingName, escopo e ListenURI). O exemplo a seguir é um exemplo do uso desse elemento de configuração.  
+# \<extensions>
+Este elemento de configuração contém uma coleção de elementos XML que contêm metadados personalizados a serem publicados juntamente com os metadados detectáveis padrão (EPR, ContractTypeName, Bindname, Scope e ListenURI). Veja a seguir um exemplo de como usar esse elemento de configuração.  
   
 ```xml  
 <services>
@@ -45,6 +45,6 @@ Este elemento de configuração contém uma coleção de elementos XML que cont�
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

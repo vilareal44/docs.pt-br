@@ -1,5 +1,6 @@
 ---
 title: Conversões boxing e unboxing – Guia de Programação em C#
+description: Saiba mais sobre boxing e unboxing na programação em C#. Consulte exemplos de código e exiba recursos adicionais disponíveis.
 ms.date: 07/20/2015
 f1_keywords:
 - cs.boxing
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 62df08bf4ae3580e9b8d5b3aab0697d396674ca1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a5bfcc79de8ba3ff66ca8aab9d86d69d89f9221
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76745419"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380690"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Conversões boxing e unboxing (Guia de Programação em C#)
 
-Conversão boxing é o processo de conversão de um [tipo de valor](../../language-reference/builtin-types/value-types.md) para o tipo `object` ou para qualquer tipo de interface implementada por esse tipo de valor. Quando o tempo de execução do idioma comum (CLR) <xref:System.Object?displayProperty=nameWithType> encaixota um tipo de valor, ele envolve o valor dentro de uma instância e armazena-o no heap gerenciado. A conversão unboxing extrai o tipo de valor do objeto. A conversão boxing é implícita, a conversão unboxing é explícita. O conceito de conversões boxing e unboxing serve como base para a exibição unificada de C# do sistema de tipos em que um valor de qualquer tipo pode ser tratado como um objeto.
+Conversão boxing é o processo de conversão de um [tipo de valor](../../language-reference/builtin-types/value-types.md) para o tipo `object` ou para qualquer tipo de interface implementada por esse tipo de valor. Quando as caixas de Common Language Runtime (CLR) um tipo de valor, ele encapsula o valor dentro de uma <xref:System.Object?displayProperty=nameWithType> instância e a armazena no heap gerenciado. A conversão unboxing extrai o tipo de valor do objeto. A conversão boxing é implícita, a conversão unboxing é explícita. O conceito de conversões boxing e unboxing serve como base para a exibição unificada de C# do sistema de tipos em que um valor de qualquer tipo pode ser tratado como um objeto.
 
 No exemplo a seguir, a variável de inteiro `i` é submetida à *conversão boxing* e atribuída ao objeto `o`.
 
@@ -36,7 +37,7 @@ Os exemplos a seguir ilustram como a conversão boxing é usada em C#.
 
 Em relação às atribuições simples, as conversões boxing e unboxing são processos computacionalmente dispendiosos. Quando um tipo de valor é submetido à conversão boxing, um novo objeto deve ser alocado e construído. A um grau menor, a conversão necessária para a conversão unboxing também é computacionalmente dispendiosa. Para obter mais informações, consulte [Desempenho](../../../framework/performance/performance-tips.md).
 
-## <a name="boxing"></a>Boxing
+## <a name="boxing"></a>Conversão boxing
 
 A conversão boxing é usada para armazenar tipos de valor no heap coletado como lixo. A conversão boxing é uma conversão implícita de um [tipo de valor](../../language-reference/builtin-types/value-types.md) para o tipo `object` ou para qualquer tipo de interface implementada por esse tipo de valor. A conversão boxing de um tipo de valor aloca uma instância de objeto no heap e copia o valor no novo objeto.
 
@@ -64,7 +65,7 @@ Este exemplo converte uma variável de inteiro `i` em um objeto `o` usando a con
 
 [!code-csharp[csProgGuideTypes#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#16)]
 
-## <a name="unboxing"></a>Unboxing
+## <a name="unboxing"></a>Conversão unboxing
 
 A conversão unboxing é uma conversão explícita do tipo `object` para um [tipo de valor](../../language-reference/builtin-types/value-types.md) ou de um tipo de interface para um tipo de valor que implementa a interface. Uma operação de conversão unboxing consiste em:
 
@@ -112,7 +113,7 @@ a conversão será executada e você receberá a saída:
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Guia de programação em C#](../index.md)
 - [Tipos de referência](../../language-reference/keywords/reference-types.md)

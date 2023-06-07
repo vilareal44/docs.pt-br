@@ -1,13 +1,13 @@
 ---
-title: Como preencher coleções de objetos a partir de várias fontes (LINQ)
+title: 'Como: popular coleções de objetos de várias fontes (LINQ)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 74a2a0f71e575136f1758f72f9a8db72549a9489
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9c6d8ff5165bf886d8aad87b64305819e65361ab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346973"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396513"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Como: popular coleções de objetos de várias fontes (LINQ) (Visual Basic)
 
@@ -18,7 +18,7 @@ Este exemplo mostra como mesclar dados de diferentes fontes em uma sequência de
 
 ## <a name="to-create-the-data-file"></a>Para criar o arquivo de dados
 
-- Copie os arquivos names. csv e Scores. csv para a pasta do projeto, conforme descrito em [como: unir conteúdo de arquivos não semelhantes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+- Copie os arquivos names. csv e Scores. csv para a pasta do projeto, conforme descrito em [como: unir conteúdo de arquivos não semelhantes (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -100,7 +100,7 @@ End Class
 ' The average score of Michael Tucker is 92
 ```
 
-Na cláusula [Select cláusula](../../../../visual-basic/language-reference/queries/select-clause.md) , um inicializador de objeto é usado para criar uma instância de cada novo `Student` objeto usando os dados das duas fontes.
+Na cláusula [Select cláusula](../../../language-reference/queries/select-clause.md) , um inicializador de objeto é usado para instanciar cada novo `Student` objeto usando os dados das duas fontes.
 
 Se você não tiver que armazenar os resultados de uma consulta, os tipos anônimos poderão ser mais convenientes que os tipos nomeados. Os tipos nomeados são necessários se você passa os resultados da consulta para fora do método em que a consulta é executada. O exemplo a seguir realiza a mesma tarefa do exemplo anterior, mas usa tipos anônimos em vez de tipos nomeados:
 
@@ -128,6 +128,6 @@ For Each s In queryNamesScores2
 Next
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ e cadeias de caracteres (Visual Basic)](linq-and-strings.md)

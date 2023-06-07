@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 7ae70357-b150-4342-8f2a-d5eb6f9c6a0d
 ms.openlocfilehash: 77c55262271843b31330e5e8bf9dbdde5fdd38df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69946293"
 ---
 # <a name="windows-workflow-foundation-configuration-schema"></a>Esquema de configuração do Windows Workflow Foundation

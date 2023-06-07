@@ -1,6 +1,6 @@
 ---
 title: Common Type System
-description: Saiba mais sobre o Type System no .NET.
+description: Explore o sistema de tipos no .NET. Leia sobre os tipos no .NET (tipos de valor ou tipos de referência), definição de tipo, membros de tipo e características de membro de tipo.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: f079613f790121c000a312132e7135121ca721a6
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: db0ecd59f122228d33b74be6dec51371413d68b3
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635905"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767826"
 ---
-# <a name="common-type-system"></a>Sistema de tipo comum
+# <a name="common-type-system"></a>Common Type System
 
 O Common Type System define como os tipos são declarados, usados e gerenciados no Common Language Runtime e também é uma parte importante do suporte do tempo de execução para a integração entre linguagens. O Common Type System executa as seguintes funções:  
   
@@ -78,7 +78,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
 ### <a name="structures"></a>Estruturas
 
- Uma estrutura é um tipo de valor que é derivado implicitamente do <xref:System.ValueType?displayProperty=nameWithType> que, por sua vez, é derivado de <xref:System.Object?displayProperty=nameWithType>. Uma estrutura é útil para representar valores cujos requisitos de memória são pequenos, e para passar valores como parâmetros por valor para métodos que têm parâmetros fortemente digitados. No .NET Framework, todos os tipos de dados primitivos (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32> e <xref:System.UInt64>) são definidos como estruturas.  
+ Uma estrutura é um tipo de valor que é derivado implicitamente do <xref:System.ValueType?displayProperty=nameWithType> que, por sua vez, é derivado de <xref:System.Object?displayProperty=nameWithType>. Uma estrutura é útil para representar valores cujos requisitos de memória são pequenos e para passar valores como parâmetros de valor para métodos que têm parâmetros com rigidez de tipos. No .NET Framework, todos os tipos de dados primitivos (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32> e <xref:System.UInt64>) são definidos como estruturas.  
   
  Assim como as classes, as estruturas definem os dados (os campos da estrutura) e as operações que podem ser executadas nesses dados (os métodos da estrutura). Isso significa que você pode chamar métodos em estruturas, incluindo os métodos virtuais definidos nas classes <xref:System.Object?displayProperty=nameWithType> e <xref:System.ValueType?displayProperty=nameWithType> e todos os métodos definidos no próprio tipo de valor. Em outras palavras, as estruturas podem ter campos, propriedades e eventos, bem como métodos estáticos e não estáticos. É possível criar instâncias de estruturas, passá-las como parâmetros, armazená-las como variáveis locais ou armazená-las em um campo de outro tipo de valor ou tipo de referência. As estruturas também podem implementar interfaces.  
   
@@ -88,7 +88,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
 ### <a name="enumerations"></a>Enumerações
 
- Uma enumeração é um tipo de <xref:System.Enum?displayProperty=nameWithType> valor que herda diretamente e que fornece nomes alternativos para os valores de um tipo primitivo subjacente. Um tipo de enumeração tem um nome, um tipo subjacente que deve ser um dos tipos inteiros com ou sem sinal internos (como <xref:System.Byte>, <xref:System.Int32> ou <xref:System.UInt64>) e um conjunto de campos. Os campos são campos literais estáticos, cada um deles representa uma constante. O mesmo valor pode ser atribuído a vários campos. Quando isso ocorre, você deve marcar um dos valores como o valor de enumeração primário para reflexão e conversão da cadeia de caracteres.  
+ Uma enumeração é um tipo de valor que herda diretamente de <xref:System.Enum?displayProperty=nameWithType> e que fornece nomes alternativos para os valores de um tipo primitivo subjacente. Um tipo de enumeração tem um nome, um tipo subjacente que deve ser um dos tipos inteiros com ou sem sinal internos (como <xref:System.Byte>, <xref:System.Int32> ou <xref:System.UInt64>) e um conjunto de campos. Os campos são campos literais estáticos, cada um deles representa uma constante. O mesmo valor pode ser atribuído a vários campos. Quando isso ocorre, você deve marcar um dos valores como o valor de enumeração primário para reflexão e conversão da cadeia de caracteres.  
   
  Você pode atribuir um valor de tipo subjacente a uma enumeração e vice-versa (nenhuma conversão é exigida pelo runtime). É possível criar uma instância de uma enumeração e chamar os métodos de <xref:System.Enum?displayProperty=nameWithType>, assim como qualquer método definido no tipo subjacente da enumeração. No entanto, algumas linguagens talvez não deixem passar uma enumeração como um parâmetro quando uma instância do tipo subjacente é necessária (ou vice-versa).  
   
@@ -178,7 +178,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 ### <a name="type-accessibility"></a>Acessibilidade de tipo  
  Todos os tipos têm um modificador que rege sua acessibilidade de outros tipos. A tabela a seguir descreve as acessibilidades de tipo que o runtime dá suporte.  
   
-|Acessibilidade|Descrição|  
+|Acessibilidade|Description|  
 |-------------------|-----------------|  
 |públicos|O tipo é acessível por todos os assemblies.|  
 |assembly|O tipo é acessível somente dentro do assembly.|  
@@ -206,7 +206,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
  No entanto, a maioria das linguagens impõe restrições adicionais em nomes de tipo. Todas as comparações são feitas em uma base byte por byte e, assim, diferenciam maiúsculas de minúsculas e são independentes de localidade.  
   
- Embora um tipo possa referenciar tipos de outros módulos e assemblies, um tipo deve ser totalmente definido em um módulo do .NET. (Dependendo do suporte ao compilador, no entanto, ele pode ser dividido em vários arquivos de código-fonte.) Os nomes de digitaprecisam ser únicos apenas dentro de um namespace. Para identificar totalmente um tipo, o nome de tipo deve ser qualificado pelo namespace que contém a implementação do tipo.  
+ Embora um tipo possa referenciar tipos de outros módulos e assemblies, um tipo deve ser totalmente definido em um módulo do .NET. (Dependendo do suporte do compilador, no entanto, ele pode ser dividido em vários arquivos de código-fonte.) Os nomes de tipo precisam ser exclusivos somente dentro de um namespace. Para identificar totalmente um tipo, o nome de tipo deve ser qualificado pelo namespace que contém a implementação do tipo.  
   
 ### <a name="base-types-and-interfaces"></a>Tipos de base e interfaces  
  Um tipo pode herdar valores e comportamentos de outro tipo. O Common Type System não permite que tipos sejam herdados de mais de um tipo de base.  
@@ -249,7 +249,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
  [!code-csharp[Conceptual.Types.Members.Properties#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.properties/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Properties#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.properties/vb/example.vb#1)]  
   
- Além de incluir a propriedade em si, a linguagem intermediária da Microsoft (MSIL) para um tipo que contém uma propriedade legível `get_`inclui um método de nome de *propriedade,* e o MSIL para um tipo que contém uma propriedade gravável inclui um `set_`método de nome de *propriedade.*  
+ Além de incluir a propriedade em si, a MSIL (Microsoft Intermediate Language) para um tipo que contém uma propriedade legível inclui um `get_` método *PropertyName* , e a MSIL para um tipo que contém uma propriedade gravável inclui um `set_` método *PropertyName* .  
 
 ### <a name="methods"></a>Métodos
 
@@ -267,7 +267,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 
 ### <a name="events"></a>Eventos
 
- Um evento define um incidente que pode ser respondido e define métodos para assinar, cancelar a assinatura e acionar o evento. Eventos são frequentemente usados para informar outros tipos de alterações de estado. Para obter mais informações, consulte [Eventos](../../../docs/standard/events/index.md).  
+ Um evento define um incidente que pode ser respondido e define métodos para assinar, cancelar a assinatura e acionar o evento. Eventos são frequentemente usados para informar outros tipos de alterações de estado. Para obter mais informações, consulte [Eventos](../events/index.md).  
 
 ### <a name="nested-types"></a>Tipos aninhados
 
@@ -279,15 +279,15 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 
  O Common Type System permite que os membros de tipo tenham várias características. No entanto, as linguagens não necessariamente dão suporte a todas elas. A tabela a seguir descreve as características de um membro.  
   
-|Característica|Pode ser aplicado a|Descrição|  
+|Característica|Pode ser aplicado a|Description|  
 |--------------------|------------------|-----------------|  
 |abstract|Métodos, propriedades e eventos|O tipo não fornece a implementação do método. Tipos que herdam ou implementam métodos abstratos devem fornecer uma implementação para o método. A única exceção é quando o tipo derivado é um tipo abstrato. Todos os métodos abstratos são virtuais.|  
-|privado, família, assembly, família e assembly, família ou assembly ou público|Todos|Define a acessibilidade de um membro:<br /><br /> particulares<br /> Acessível somente dentro do mesmo tipo que o membro ou de um tipo aninhado.<br /><br /> família<br /> Acessível dentro do mesmo tipo que o membro e de tipos derivados herdados dele.<br /><br /> assembly<br /> Acessível somente no assembly no qual o tipo é definido.<br /><br /> família e assembly<br /> Acessíveis somente em tipos qualificados para acesso de família e assembly.<br /><br /> família ou assembly<br /> Acessíveis somente dentro de tipos qualificados para acesso de família ou assembly.<br /><br /> públicos<br /> Acessíveis dentro de qualquer tipo.|  
+|privado, família, assembly, família e assembly, família ou assembly ou público|Tudo|Define a acessibilidade de um membro:<br /><br /> particulares<br /> Acessível somente dentro do mesmo tipo que o membro ou de um tipo aninhado.<br /><br /> família<br /> Acessível dentro do mesmo tipo que o membro e de tipos derivados herdados dele.<br /><br /> assembly<br /> Acessível somente no assembly no qual o tipo é definido.<br /><br /> família e assembly<br /> Acessíveis somente em tipos qualificados para acesso de família e assembly.<br /><br /> família ou assembly<br /> Acessíveis somente dentro de tipos qualificados para acesso de família ou assembly.<br /><br /> públicos<br /> Acessíveis dentro de qualquer tipo.|  
 |final|Métodos, propriedades e eventos|Um método virtual não pode ser substituído em um tipo derivado.|  
 |initialize-only|Campos|O valor pode apenas ser inicializado e não pode ser gravado após a inicialização.|  
 |instance|Campos, métodos, propriedades e eventos|Se um membro não estiver marcado como `static` (C# e C++), `Shared` (Visual Basic), `virtual` (C# e C++) ou `Overridable` (Visual Basic), ele será um membro de instância (não há palavra-chave de instância). Haverá tantas cópias desses membros na memória quanto objetos que as usam.|  
 |literal|Campos|O valor atribuído ao campo é um valor fixo, conhecido no tempo de compilação, de um tipo de valor interno. Às vezes, campos literais são conhecidos como constantes.|  
-|newslot ou override|Todos|Define como o membro interage com os membros herdados que possuam a mesma assinatura:<br /><br /> newslot<br /> Oculta os membros herdados que possuam a mesma assinatura.<br /><br /> override<br /> Substitui a definição de um método virtual herdado.<br /><br /> O padrão é newslot.|  
+|newslot ou override|Tudo|Define como o membro interage com os membros herdados que possuam a mesma assinatura:<br /><br /> newslot<br /> Oculta os membros herdados que possuam a mesma assinatura.<br /><br /> override<br /> Substitui a definição de um método virtual herdado.<br /><br /> O padrão é newslot.|  
 |static|Campos, métodos, propriedades e eventos|O membro pertence ao tipo no qual está definido e não a uma instância particular do tipo; o membro existirá mesmo se uma instância do tipo não tiver sido criada e será compartilhado entre todas as instâncias do tipo.|  
 |virtual|Métodos, propriedades e eventos|O método pode ser implementado por um tipo derivado e pode ser invocado estática ou dinamicamente. Se a invocação dinâmica for usada, o tipo da instância que faz a chamada no tempo de execução (em vez do tipo conhecido no tempo de compilação) determinará qual implementação do método será chamada. Para invocar um método virtual estaticamente, a variável precisará ser convertida em um tipo que usa a versão desejada do método.|  
   
@@ -297,15 +297,15 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 > [!NOTE]
 > O tipo de retorno não é considerado parte da assinatura do método. Ou seja, os métodos não poderão ser sobrecarregados se diferirem somente pelo tipo de retorno.  
   
-### <a name="inherit-override-and-hide-members"></a>Herdar, substituir e esconder membros  
+### <a name="inherit-override-and-hide-members"></a>Herdar, substituir e ocultar membros  
  Um tipo derivado herda todos os membros de seu tipo de base; ou seja, esses membros são definidos e disponibilizados para o tipo derivado. O comportamento, ou qualidades, de membros herdados pode ser modificado de duas maneiras:  
   
 - Um tipo derivado pode ocultar um membro herdado definindo um novo membro com a mesma assinatura. Isso pode ser feito para fazer um membro privado anteriormente público ou para definir o novo comportamento de um método herdado marcado como `final`.  
   
 - Um tipo derivado pode substituir um método virtual herdado. O método de substituição fornece uma nova definição do método que será invocado com base no tipo do valor no tempo de execução em vez do tipo de variável conhecido no tempo de compilação. Um método poderá substituir um método virtual somente se o método virtual não estiver marcado como `final` e o novo método for tão acessível quanto o método virtual.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [.NET Navegador aPI](/dotnet/api)
-- [Tempo de execução do idioma comum](../../../docs/standard/clr.md)
-- [Conversão de tipo no .NET](../../../docs/standard/base-types/type-conversion.md)
+- [Navegador da API .NET](/dotnet/api)
+- [Common Language Runtime](../clr.md)
+- [Conversão de tipo no .NET](type-conversion.md)

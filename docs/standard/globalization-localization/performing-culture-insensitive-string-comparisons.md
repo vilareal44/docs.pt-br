@@ -13,12 +13,12 @@ helpviewer_keywords:
 - culture-insensitive string operations, comparisons
 - culture parameter
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
-ms.openlocfilehash: 85ba91b63ab0edbccc768e2d1ad4aaef31fd2f21
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 91996bc721db55b24521be97e4d9accd53ef7924
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120828"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288609"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Executando comparações de cadeias de caracteres que não levam em conta a cultura
 Por padrão, o método <xref:System.String.Compare%2A?displayProperty=nameWithType> executa comparações sensíveis à cultura e com diferenciação de maiúsculas e minúsculas. Esse método também inclui várias sobrecargas que fornecem um parâmetro `culture` que permite especificar a cultura a ser usada e um parâmetro `comparisonType` que permite especificar as regras de comparação que serão usadas. Chamar esses métodos em vez da sobrecarga padrão remove qualquer ambiguidade sobre as regras usadas em uma chamada de método específico e a torna claro se uma comparação é sensível à cultura ou não.  
@@ -39,9 +39,9 @@ Por padrão, o método <xref:System.String.Compare%2A?displayProperty=nameWithTy
 
 Você pode baixar as [Tabelas de peso de classificação](https://www.microsoft.com/download/details.aspx?id=10921), um conjunto de arquivos de texto que contêm informações sobre os pesos de caracteres usados em operações de classificação e comparação dos sistemas operacionais Windows, e a [Tabela de elemento de ordenação Unicode padrão](https://www.unicode.org/Public/UCA/latest/allkeys.txt), a tabela de peso de classificação para Linux e macOS.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.String.Compare%2A?displayProperty=nameWithType>
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
-- [Executando operações de cadeia de caracteres que não levam em conta a cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
-- [Melhores práticas para o uso de cadeias de caracteres](../../../docs/standard/base-types/best-practices-strings.md)
+- [Executando operações de cadeia de caracteres que não levam em conta a cultura](performing-culture-insensitive-string-operations.md)
+- [Práticas recomendadas para usar cadeias de caracteres](../base-types/best-practices-strings.md)

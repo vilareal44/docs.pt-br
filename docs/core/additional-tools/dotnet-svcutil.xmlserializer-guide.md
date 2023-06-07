@@ -1,14 +1,14 @@
 ---
-title: Usando dotnet-svcutil.xmlserializer
+title: Usando dotNet-svcutil. XmlSerializer
 description: Saiba como você pode usar o pacote NuGet `dotnet-svcutil.xmlserializer` para pré-gerar um assembly de serialização para projetos .NET Core.
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: 4811647c294118cb160d25805e7d3ada97f071f9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14bb2e8a85ec35f08b0a83b9734a64d751074f1b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75344895"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284319"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>Usar o dotnet-svcutil.xmlserializer no .NET Core
 
@@ -16,7 +16,7 @@ O pacote NuGet `dotnet-svcutil.xmlserializer` pode pré-gerar um assembly de ser
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) ou posterior
+* [SDK do .NET Core 2,1](https://dotnet.microsoft.com/download) ou posterior
 * Seu editor de código favorito
 
 Você pode usar o comando `dotnet --info` para verificar quais versões do SDK do .NET Core e do runtime estão instaladas.
@@ -98,4 +98,4 @@ Para usar `dotnet-svcutil.xmlserializer` em um aplicativo de console do .NET Cor
 
 6. Compile o aplicativo executando `dotnet build`. Se tudo for bem-sucedido, um assembly chamado *MyWCFClient.XmlSerializers.dll* será gerado na pasta de saída. Se a ferramenta não puder gerar o assembly, você verá avisos na saída do build.
 
-7. Inicie o serviço WCF, por exemplo, executando `http://localhost:2561/Service1.svc` no navegador. Depois, inicie o aplicativo cliente, e ele será carregado automaticamente e usará os serializadores pré-gerados no runtime.
+7. Inicie o serviço WCF, por exemplo, executando `http://localhost:2561/Service1.svc` no navegador. Em seguida, inicie o aplicativo cliente e ele automaticamente carregará e usará os serializadores gerados previamente em tempo de execução.

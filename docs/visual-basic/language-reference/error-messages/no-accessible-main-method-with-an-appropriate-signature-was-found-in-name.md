@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30737
 ms.assetid: 3f40bacd-3fac-4741-b204-852f693d4340
-ms.openlocfilehash: 559c905d1e2e2de4500771a93d6116f9630011ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6760b931ceb2ad5c2c04169d664da8629badc487
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591990"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409407"
 ---
-# <a name="no-accessible-main-method-with-an-appropriate-signature-was-found-in-name"></a>Nenhum método 'Main' acessível com uma assinatura apropriada foi encontrado em '\<nome >'
-Aplicativos de linha de comando devem ter um `Sub Main` definido. `Main` deve ser declarado como `Public Shared` se ela é definida em uma classe, ou como `Public` se definida em um módulo.  
+# <a name="no-accessible-main-method-with-an-appropriate-signature-was-found-in-name"></a>Nenhum método 'Main' acessível com uma assinatura apropriada foi encontrado em '\<name>'
+Os aplicativos de linha de comando devem ter um `Sub Main` definido. `Main`deve ser declarado como `Public Shared` se fosse definido em uma classe, ou como `Public` se estiver definido em um módulo.  
   
  **ID do erro:** BC30737  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Definir um `Public Sub Main` procedimento para seu projeto. Declare-o como `Shared` se e somente se você defini-lo dentro de uma classe.  
+- Defina um `Public Sub Main` procedimento para seu projeto. Declare-a como `Shared` If e only se você defini-la dentro de uma classe.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Estrutura de um programa Visual Basic](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
-- [Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Estrutura de um programa Visual Basic](../../programming-guide/program-structure/structure-of-a-visual-basic-program.md)
+- [Procedimentos](../../programming-guide/language-features/procedures/index.md)

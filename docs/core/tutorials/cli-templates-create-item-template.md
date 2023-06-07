@@ -1,18 +1,18 @@
 ---
 title: Criar um modelo de item para o comando dotnet new - CLI do .NET Core
 description: Saiba como criar um modelo de item para o comando dotnet new. Os modelos de item podem conter qualquer quantidade de arquivos.
-author: thraka
+author: adegeo
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 5f4038e863d9bb59df470d3516c08fd2ad29c078
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b804d26b2f33d4d600c17de2f7f71101a0f9c98
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503563"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324373"
 ---
-# <a name="tutorial-create-an-item-template"></a>Tutorial: Crie um modelo de item
+# <a name="tutorial-create-an-item-template"></a>Tutorial: criar um modelo de item
 
 Com o .NET Core, você pode criar e implantar modelos que geram projetos, arquivos e até recursos. Este tutorial é a parte um de uma série que ensina como criar, instalar e desinstalar modelos para usar com o comando `dotnet new`.
 
@@ -41,7 +41,7 @@ Esta série usa uma "pasta de trabalho" na qual sua fonte de modelo está contid
 
 Primeiro, crie a pasta pai. Use o nome que desejar para a pasta. Em seguida, crie uma subpasta chamada _working_. Na pasta _working_, crie uma subpasta chamada _templates_.
 
-Em seguida, crie uma pasta na pasta pai chamada _test_. A estrutura da pasta deve parecer a seguinte.
+Em seguida, crie uma pasta na pasta pai chamada _test_. A estrutura de pastas deve ser parecida com a seguinte.
 
 ```console
 parent_folder
@@ -99,7 +99,7 @@ working
                 template.json
 ```
 
-Abra o _template.json_ com seu editor de texto favorito e cole no seguinte código JSON e salve-o.
+Abra o _template.jsem_ com seu editor de texto favorito e cole o código JSON a seguir e salve-o.
 
 ```json
 {
@@ -122,8 +122,8 @@ O item `classifications` representa a coluna **marcações** que você vê quand
 
 Agora que você já tem um arquivo _.template.config/template.json_ válido, seu modelo está pronto para ser instalado. No terminal, navegue até a pasta _extensions_ e execute o seguinte comando para instalar o modelo localizado na pasta atual:
 
-* **No Windows:**`dotnet new -i .\`
-* **No Linux ou macOS**:`dotnet new -i ./`
+* **No Windows**:`dotnet new -i .\`
+* **No Linux ou MacOS**:`dotnet new -i ./`
 
 Esse comando gera a lista de modelos instalados que deve incluir o seu.
 
@@ -155,7 +155,7 @@ Agora que você tem um modelo de item instalado, teste-o. Navegue até a pasta _
 dotnet new console
 ```
 
-Você tem saída semelhante à seguinte.
+Você Obtém uma saída semelhante à seguinte.
 
 ```console
 The template "Console Application" was created successfully.
@@ -167,13 +167,13 @@ Running 'dotnet restore' on C:\test\test.csproj...
 Restore succeeded.
 ```
 
-Executar o projeto com.
+Execute o projeto com.
 
 ```dotnetcli
 dotnet run
 ```
 
-Você tem a seguinte saída.
+Você Obtém a saída a seguir.
 
 ```console
 Hello World!
@@ -185,7 +185,7 @@ Em seguida, execute `dotnet new stringext` para gerar o _CommonExtensions.cs_ a 
 dotnet new stringext
 ```
 
-Você tem a seguinte saída.
+Você Obtém a saída a seguir.
 
 ```console
 The template "Example templates: string extensions" was created successfully.
@@ -203,7 +203,7 @@ Execute o programa novamente e você verá que o resultado foi invertido.
 dotnet run
 ```
 
-Você tem a seguinte saída.
+Você Obtém a saída a seguir.
 
 ```console
 !dlroW olleH
@@ -219,7 +219,7 @@ Como você instalou o modelo com o caminho de arquivo, você deve desinstalá-lo
 dotnet new -u
 ```
 
-Você tem saída semelhante à seguinte.
+Você Obtém uma saída semelhante à seguinte.
 
 ```console
 Template Instantiation Commands for .NET Core CLI
@@ -249,7 +249,7 @@ Currently installed items:
       Example templates: string extensions (stringext) C#
 ```
 
-Para desinstalar um modelo, execute o seguinte comando.
+Para desinstalar um modelo, execute o comando a seguir.
 
 ```dotnetcli
 dotnet new -u C:\working\templates\extensions

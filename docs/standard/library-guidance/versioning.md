@@ -2,18 +2,18 @@
 title: Bibliotecas de controle de versão e .NET
 description: Recomendações de melhores práticas para controle de versão de bibliotecas do .NET.
 ms.date: 12/10/2018
-ms.openlocfilehash: a274410714791e2790da0e3deb2a595390ee9389
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ab15d56e40abedd842b681496b9e5ee737c8b1cd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400396"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290117"
 ---
 # <a name="versioning"></a>Controle de versão
 
-Uma biblioteca de software raramente está completa na versão 1.0. Boas bibliotecas evoluem com o tempo, adicionando recursos, corrigindo bugs e melhorando o desempenho. É importante que você possa liberar novas versões de uma biblioteca do .NET, fornecendo valor adicional a cada versão, sem interromper os usuários existentes.
+Uma biblioteca de software raramente está completa na versão 1.0. As boas bibliotecas evoluem com o passar do tempo, adicionando recursos, corrigindo bugs e melhorando o desempenho. É importante que você possa liberar novas versões de uma biblioteca do .NET, fornecendo valor adicional a cada versão, sem interromper os usuários existentes.
 
-## <a name="breaking-changes"></a>Alterações de quebra
+## <a name="breaking-changes"></a>Alterações da falha
 
 Para obter informações sobre como lidar com alterações da falha entre as versões, veja [Alterações da falha](./breaking-changes.md).
 
@@ -43,15 +43,15 @@ Como a versão do pacote NuGet é a versão mais visível para os desenvolvedore
 
 ### <a name="assembly-version"></a>Versão do assembly
 
-A versão do assembly é o que o CLR usa no runtime para selecionar qual versão de um assembly carregar. Selecionar um assembly usando o controle de versão só se aplica aos assemblies com um nome forte.
+A versão do assembly é o que o CLR usa em tempo de execução para selecionar qual versão de um assembly carregar. Selecionar um assembly usando o controle de versão só se aplica aos assemblies com um nome forte.
 
 ```xml
 <AssemblyVersion>1.0.0.0</AssemblyVersion>
 ```
 
-O Windows .NET Framework CLR exige uma correspondência exata para carregar um assembly de nome forte. Por exemplo, `Libary1, Version=1.0.0.0` foi compilado com uma referência ao `Newtonsoft.Json, Version=11.0.0.0`. O .NET Framework só carregará a versão exata `11.0.0.0`. Para carregar uma versão diferente no runtime, um redirecionamento de associação deve ser adicionado ao arquivo de configuração do aplicativo .NET.
+O .NET Framework CLR exige uma correspondência exata para carregar um assembly de nome forte. Por exemplo, `Libary1, Version=1.0.0.0` foi compilado com uma referência ao `Newtonsoft.Json, Version=11.0.0.0`. .NET Framework carregará apenas essa versão exata `11.0.0.0` . Para carregar uma versão diferente em tempo de execução, um redirecionamento de associação deve ser adicionado ao arquivo de configuração do aplicativo .NET.
 
-Nomenclatura forte combinada com a versão do assembly habilita [carregamento de versão do assembly estrita](../assembly/versioning.md). Embora nomear uma biblioteca forte tenha uma série de benefícios, muitas vezes resulta em exceções em `app.config` / `web.config` tempo de execução que uma montagem não pode ser encontrada e [requer redirecionamentos vinculativos](../../framework/configure-apps/redirect-assembly-versions.md) para serem corrigidos. O carregamento do assembly do .NET Core foi relaxado e o .NET Core CLR carregará automaticamente os assemblies no runtime com uma versão posterior.
+Nomenclatura forte combinada com a versão do assembly habilita [carregamento de versão do assembly estrita](../assembly/versioning.md). Embora o nome forte de uma biblioteca tenha vários benefícios, ele geralmente resulta em exceções de tempo de execução que um assembly não pode encontrar e [requer redirecionamentos de associação](../../framework/configure-apps/redirect-assembly-versions.md) no `app.config` ou `web.config` para ser corrigido. No .NET Core, o carregamento do assembly é mais relaxado. O tempo de execução do .NET Core carrega automaticamente os assemblies com uma versão superior em tempo de execução.
 
 ✔️ CONSIDERE incluir apenas uma versão principal em AssemblyVersion.
 
@@ -61,13 +61,13 @@ Nomenclatura forte combinada com a versão do assembly habilita [carregamento de
 
 > A versão do AssemblyVersion é incluída em algumas mensagens informativas exibidas ao usuário, por exemplo, o nome do assembly e os nomes de tipo qualificados do assembly em mensagens de exceção. Manter uma relação entre as versões fornece mais informações para desenvolvedores sobre qual versão eles estão usando.
 
-❌NÃO tenha uma versão de montagem fixa.
+❌Não tem um AssemblyVersion fixo.
 
 > Embora um AssemblyVersion inalterável evite a necessidade de redirecionamentos de associação, isso significa que apenas uma única versão do assembly pode ser instalada no GAC (Cache de Assembly Global). Além disso, os aplicativos que fazem referência ao assembly no GAC serão interrompidos se outro aplicativo atualizar o assembly do GAC com alterações significativas.
 
 ### <a name="assembly-file-version"></a>Versão do arquivo do assembly
 
-A versão de arquivo do assembly é usada para exibir uma versão de arquivo no Windows e não tem nenhum efeito sobre o comportamento de runtime. Configurar esta versão é opcional. Ele ficará visível na caixa de diálogo Propriedades do Arquivo no Windows Explorer:
+A versão do arquivo de assembly é usada para exibir uma versão de arquivo no Windows e não tem nenhum efeito sobre o comportamento de tempo de execução. Configurar esta versão é opcional. Ele ficará visível na caixa de diálogo Propriedades do Arquivo no Windows Explorer:
 
 ```xml
 <FileVersion>11.0.2.21924</FileVersion>
@@ -94,10 +94,10 @@ A versão informativa do assembly é usada para registrar informações adiciona
 > [!NOTE]
 > As versões mais antigas do Visual Studio acionam um aviso de build caso essa versão não siga o formato `Major.Minor.Build.Revision`. O aviso pode ser ignorado com segurança.
 
-❌EVITE definir a versão informacional de montagem você mesmo.
+❌Evite definir a versão informativa do assembly por conta própria.
 
 > Permita a SourceLink gerar automaticamente a versão que contém metadados de controle do código-fonte e NuGet.
 
 >[!div class="step-by-step"]
->[Próximo](publish-nuget-package.md)
->[anterior](breaking-changes.md)
+>[Anterior](publish-nuget-package.md) 
+> [Avançar](breaking-changes.md)

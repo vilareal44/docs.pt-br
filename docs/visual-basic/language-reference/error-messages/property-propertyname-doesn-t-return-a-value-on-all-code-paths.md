@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
-ms.openlocfilehash: a5cb28a024274e58da1755b437d6ba4ca6712610
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 21a1c4dbab6e26cd1cb848e270bbda9a544c2a67
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661713"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400416"
 ---
-# <a name="property-propertyname-doesnt-return-a-value-on-all-code-paths"></a>Propriedade '\<propertyname >' não retorna um valor em todos os caminhos de código
-Propriedade '\<propertyname >' não retorna um valor em todos os caminhos de código. Uma exceção de referência nula pode ocorrer em tempo de execução quando o resultado é usado.  
+# <a name="property-propertyname-doesnt-return-a-value-on-all-code-paths"></a>A propriedade '\<propertyname>' não retorna um valor em todos os caminhos de código
+A propriedade ' \<propertyname> ' não retorna um valor em todos os caminhos de código. Uma exceção de referência nula pode ocorrer em tempo de execução quando o resultado é usado.  
   
- Uma propriedade `Get` procedimento tem pelo menos um caminho possível pelo seu código que não retorna um valor.  
+ Um procedimento de propriedade `Get` tem pelo menos um caminho possível por meio de seu código que não retorna um valor.  
   
- Você pode retornar um valor de uma propriedade `Get` procedimento em qualquer uma das seguintes maneiras:  
+ Você pode retornar um valor de um procedimento de propriedade de `Get` qualquer uma das seguintes maneiras:  
   
-- Atribua o valor para o nome da propriedade e, em seguida, executar um `Exit Property` instrução.  
+- Atribua o valor ao nome da propriedade e, em seguida, execute uma `Exit Property` instrução.  
   
-- Atribua o valor para o nome da propriedade e, em seguida, execute o `End Get` instrução.  
+- Atribua o valor ao nome da propriedade e, em seguida, execute a `End Get` instrução.  
   
-- Incluir o valor em uma [instrução Return](../../../visual-basic/language-reference/statements/return-statement.md).  
+- Inclua o valor em uma [instrução return](../statements/return-statement.md).  
   
- Se o controle passa para `Exit Property` ou `End Get` e você não tiver atribuído qualquer valor para o nome da propriedade, o `Get` procedimento retorna o valor padrão da propriedade tipo de dados. Para obter mais informações, consulte "Comportamento" em [instrução Function](../../../visual-basic/language-reference/statements/function-statement.md).  
+ Se o controle passar para `Exit Property` ou `End Get` e você não tiver atribuído nenhum valor ao nome da propriedade, o `Get` procedimento retornará o valor padrão do tipo de dados da propriedade. Para obter mais informações, consulte "Behavior" na [instrução function](../statements/function-statement.md).  
   
  Por padrão, esta mensagem é um aviso. Para obter mais informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
@@ -35,12 +35,12 @@ Propriedade '\<propertyname >' não retorna um valor em todos os caminhos de có
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Verifique sua lógica de fluxo de controle e verifique se que você atribuir um valor antes de cada instrução que faz com que um retorno.  
+- Verifique sua lógica de fluxo de controle e certifique-se de atribuir um valor antes de cada instrução que causa um retorno.  
   
-     É mais fácil garantir que cada retorno do procedimento retorna um valor se você usar sempre o `Return` instrução. Se você fizer isso, a última instrução antes `End Get` deve ser um `Return` instrução.  
+     É mais fácil garantir que cada retorno do procedimento retorne um valor se você sempre usar a `Return` instrução. Se você fizer isso, a última instrução antes `End Get` deve ser uma `Return` instrução.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Procedimentos de Propriedade](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
-- [Instrução Property](../../../visual-basic/language-reference/statements/property-statement.md)
-- [Instrução Get](../../../visual-basic/language-reference/statements/get-statement.md)
+- [Procedimentos de propriedade](../../programming-guide/language-features/procedures/property-procedures.md)
+- [Instrução Property](../statements/property-statement.md)
+- [Instrução Get](../statements/get-statement.md)

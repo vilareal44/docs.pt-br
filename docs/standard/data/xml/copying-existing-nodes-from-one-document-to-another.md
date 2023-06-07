@@ -3,12 +3,12 @@ title: Copiando nós existentes de um documento para outro
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-ms.openlocfilehash: 4ee3f8d280b8bf0f2de067e7529d777e62bff406
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8ae7fd04e5c85e59ca9bd629c6957ad470d36b48
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711019"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289194"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Copiando nós existentes de um documento para outro
 O método **ImportNode** é o mecanismo pelo qual um nó ou uma subárvore inteira do nó são copiados de um **XmlDocument** para outro. O nó retornado de chamada é uma cópia do nó do documento de origem, incluindo valores de atributo, nome de nó, tipo de nó, e todos os atributos URL relacionados como o prefixo, o nome local, e namespace Uniform Resource Identifier (URI). O documento de origem não é alterado. Depois que você importou o nó, você ainda precisará adicioná-lo à árvore usando um dos métodos usados para nós de inserção.  
@@ -36,8 +36,8 @@ O método **ImportNode** é o mecanismo pelo qual um nó ou uma subárvore intei
 |Todos os outros tipos de nó|Esses tipos de nós não podem ser importados.|Esses tipos de nós não podem ser importados.|  
   
 > [!NOTE]
-> Embora os nós de DocumentType possam ser importados, um documento pode ter apenas um DocumentType. Assim, uma vez que você importou o tipo de documento, antes de inseri-lo na árvore você precisará certificar-se que não há documento tipo no documento. Para saber mais sobre como remover nós, confira [Removendo nós, conteúdo e valores de um documento XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md).  
+> Embora os nós de DocumentType possam ser importados, um documento pode ter apenas um DocumentType. Assim, uma vez que você importou o tipo de documento, antes de inseri-lo na árvore você precisará certificar-se que não há documento tipo no documento. Para saber mais sobre como remover nós, confira [Removendo nós, conteúdo e valores de um documento XML](removing-nodes-content-and-values-from-an-xml-document.md).  
   
 ## <a name="see-also"></a>Veja também
 
-- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

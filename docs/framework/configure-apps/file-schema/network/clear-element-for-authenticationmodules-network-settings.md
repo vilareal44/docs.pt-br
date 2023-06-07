@@ -11,19 +11,19 @@ helpviewer_keywords:
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
 ms.openlocfilehash: e3abd1b4c76ebda885703ccf961d58657b582f19
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74087506"
 ---
-# <a name="clear-element-for-authenticationmodules-network-settings"></a>\<limpar > elemento para authenticationModules (configurações de rede)
+# <a name="clear-element-for-authenticationmodules-network-settings"></a>Elemento \<clear> para authenticationModules (Configurações de Rede)
 Limpa todos os módulos de autenticação do aplicativo.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**desmarque >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<authenticationModules>**](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,10 +35,10 @@ Limpa todos os módulos de autenticação do aplicativo.
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -47,9 +47,9 @@ Limpa todos os módulos de autenticação do aplicativo.
 |[authenticationModules](authenticationmodules-element-network-settings.md)|Especifica os módulos usados para autenticar solicitações de rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O elemento `clear` remove todos os módulos de autenticação que foram definidos anteriormente no arquivo de configuração ou em um nível superior na hierarquia de configuração.  
+ O `clear` elemento remove todos os módulos de autenticação que foram definidos anteriormente no arquivo de configuração ou em um nível superior na hierarquia de configuração.  
   
-## <a name="configuration-files"></a>Arquivos de Configuração  
+## <a name="configuration-files"></a>Arquivos de configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
@@ -65,7 +65,7 @@ Limpa todos os módulos de autenticação do aplicativo.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>

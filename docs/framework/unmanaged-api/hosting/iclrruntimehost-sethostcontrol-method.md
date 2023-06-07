@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6136be87-e631-4756-81ed-74b66581bad4
 topic_type:
 - apiref
-ms.openlocfilehash: 8d6a4e1ca934c748352b0c4f5120536a4dd24e0b
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 644b31ae8e8f0c51c08bcad57220a028406cfd3a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703962"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504064"
 ---
 # <a name="iclrruntimehostsethostcontrol-method"></a>Método ICLRRuntimeHost::SetHostControl
 Define o ponteiro de interface que o Common Language Runtime (CLR) pode usar para obter a implementação do host da [interface IHostControl](ihostcontrol-interface.md).  
@@ -37,7 +37,7 @@ HRESULT SetHostControl(
  `pHostControl`  
  no Um ponteiro de interface para a implementação do host da [interface IHostControl](ihostcontrol-interface.md).  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -50,7 +50,7 @@ HRESULT SetHostControl(
 |E_CLR_ALREADY_STARTED|O CLR já foi inicializado.|  
   
 ## <a name="remarks"></a>Comentários  
- Você deve chamar `SetHostControl` antes que o CLR seja inicializado, ou seja, antes de chamar o [método Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) ou usar qualquer uma das [interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md). É recomendável que você chame `SetHostControl` imediatamente depois de chamar a [função CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md) ou a [função CorBindToRuntimeEx](corbindtoruntimeex-function.md).  
+ Você deve chamar `SetHostControl` antes que o CLR seja inicializado, ou seja, antes de chamar o [método Start](iclrruntimehost-start-method.md) ou usar qualquer uma das [interfaces de metadados](../metadata/metadata-interfaces.md). É recomendável que você chame `SetHostControl` imediatamente depois de chamar a [função CorBindToCurrentRuntime](corbindtocurrentruntime-function.md) ou a [função CorBindToRuntimeEx](corbindtoruntimeex-function.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
@@ -61,7 +61,7 @@ HRESULT SetHostControl(
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICLRRuntimeHost](iclrruntimehost-interface.md)
 - [Interface IHostControl](ihostcontrol-interface.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reading text files [Visual Basic], comma-delimited
 - text files [Visual Basic], reading
 ms.assetid: a8413fe4-0dba-49c8-8692-44fb67a9ec4f
-ms.openlocfilehash: 9b93893e2221b156b65ce8e945089269ea28c989
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ba62a0226a1a83326cbc7ab393d135763a7c7cb2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74335069"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411636"
 ---
 # <a name="how-to-read-from-comma-delimited-text-files-in-visual-basic"></a>Como ler em arquivos de texto separados por vírgulas no Visual Basic
 
@@ -56,11 +56,11 @@ O objeto `TextFieldParser` fornece uma maneira fácil e eficiente de analisar ar
   
 - O usuário não tem permissões suficientes para acessar o arquivo (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
-- [Como ler a partir de arquivos de texto de largura fixa](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
-- [Como ler a partir de arquivos de texto com vários formatos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
-- [Analisando arquivos de texto com o objeto TextFieldParser](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
-- [Instruções passo a passo: manipulando arquivos e diretórios no Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)
-- [Solução de problemas: lendo e gravando em arquivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [Como: ler de arquivos de texto de largura fixa](how-to-read-from-fixed-width-text-files.md)
+- [Como: ler de arquivos de texto com vários formatos](how-to-read-from-text-files-with-multiple-formats.md)
+- [Analisando arquivos de texto com o objeto TextFieldParser](parsing-text-files-with-the-textfieldparser-object.md)
+- [Instruções passo a passo: manipulando arquivos e diretórios no Visual Basic](walkthrough-manipulating-files-and-directories.md)
+- [Solução de problemas: ler e gravar em arquivos de texto](troubleshooting-reading-from-and-writing-to-text-files.md)

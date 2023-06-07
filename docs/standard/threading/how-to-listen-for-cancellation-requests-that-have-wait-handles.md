@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, waiting with wait handles
 ms.assetid: 6e2aa49b-fc84-4bcf-962b-17db98b7edcb
-ms.openlocfilehash: 43ca52359a48d3ac5a27933fcc8ce56c07159cac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e44b10b88bef61edcf3f547f56b4020740530e26
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73137984"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279537"
 ---
 # <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a>Como ouvir solicitações de cancelamento que têm identificadores de espera
 Se um método for bloqueado enquanto ele estiver aguardando que um evento seja sinalizado, ele não poderá verificar o valor do token de cancelamento e responder de maneira oportuna. O primeiro exemplo mostra como resolver esse problema quando você estiver trabalhando com eventos, como <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> que não dão suporte nativamente a estrutura de cancelamento unificado. O segundo exemplo mostra uma abordagem mais simples que usa <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>, que dá suporte ao cancelamento unificado.  
@@ -33,6 +33,6 @@ Se um método for bloqueado enquanto ele estiver aguardando que um evento seja s
  [!code-csharp[Cancellation#10](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#10)]
  [!code-vb[Cancellation#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#10)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Cancelamento em threads gerenciados](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+- [Cancelamento em threads gerenciados](cancellation-in-managed-threads.md)

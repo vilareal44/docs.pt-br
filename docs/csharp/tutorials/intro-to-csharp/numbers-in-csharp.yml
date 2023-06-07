@@ -6,17 +6,18 @@ metadata:
   audience: Developer
   ms.custom: mvc
   ms.date: 08/24/2018
+  ms.topic: interactive-tutorial
   level: Beginner
   nextTutorialHref: branches-and-loops.yml
   nextTutorialTitle: Loops e branches em C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: ac4f7318dc25fef9f612649f2c3f57a5142f3ead
-  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+  ms.openlocfilehash: f9cfdf852546c30307f818418d7ff610b210d6f4
+  ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/06/2020
-  ms.locfileid: "82860948"
+  ms.lasthandoff: 08/17/2020
+  ms.locfileid: "88267925"
 items:
 - durationInMinutes: 1
   content: >
@@ -240,11 +241,11 @@ items:
     Há outros tipos numéricos com limites e precisão diferentes que você usaria quando o tipo `int` não atendesse às suas necessidades. Em seguida, vamos explorar esses tipos de números.
 - title: Trabalhar com o tipo Double
   durationInMinutes: 5
-  content: "O tipo numérico `double` representa um número de ponto flutuante de precisão dupla. Esses termos podem ser novidade para você. Um número de **ponto flutuante** é útil para representar números não integrais que podem ser muito grandes ou pequenos em magnitude. A **precisão dupla** é um termo relativo que descreve os números de dígitos binários usados para armazenar o valor. O número de **precisão dupla** tem duas vezes o número de dígitos binários como **uma única precisão**. Em computadores modernos, é mais comum usar precisão dupla que números de precisão única. Números de **precisão única** são declarados usando a `float` palavra-chave.\nVamos explorar. Experimente o seguinte código na janela interativa e veja o resultado:\n\n```csharp\ndouble a = 5;\ndouble b = 4;\ndouble c = 2;\ndouble d = (a + b) / c;\nConsole.WriteLine(d);\n```\n\nObserve que a resposta inclui a parte decimal do quociente. Experimente uma expressão ligeiramente mais complicada com duplos:\n\n```csharp\ndouble a = 19;\ndouble b = 23;\ndouble c = 8;\ndouble d = (a + b) / c;\nConsole.WriteLine(d);\n```\n\nO intervalo de um valor duplo é muito maior do que valores inteiros. Experimente o seguinte código na janela interativa:\n\n```csharp\ndouble max = double.MaxValue;\ndouble min = double.MinValue;\nConsole.WriteLine($\"The range of double is {min} to {max}\");\n```\n\nEsses valores são impressos em notação científica. O número à esquerda do `E` é o significando. O número à direita é o expoente, como uma potência de 10.\n\nAssim como os números decimais em matemática, os duplos em C# podem ter erros de arredondamento. Experimente esse código:\n\n```csharp\ndouble third = 1.0 / 3.0;\nConsole.WriteLine(third);\n```\n\nVocê sabe que `0.3` isso `3/10` é e não exatamente o mesmo `1/3`que. Da mesma `0.33` forma `33/100`, é. Isso está mais próximo `1/3`de, mas ainda não é exato. \n\n***Desafio***\n\nTente outros cálculos com números grandes, números pequenos, multiplicação e divisão usando o `double` tipo.  Experimente cálculos mais complicados.\n"
+  content: "O tipo numérico `double` representa um número de ponto flutuante de precisão dupla. Esses termos podem ser novidade para você. Um número de **ponto flutuante** é útil para representar números não integrais que podem ser muito grandes ou pequenos em magnitude. A **precisão dupla** é um termo relativo que descreve os números de dígitos binários usados para armazenar o valor. O número de **precisão dupla** tem duas vezes o número de dígitos binários como **uma única precisão**. Em computadores modernos, é mais comum usar precisão dupla que números de precisão única. Números de **precisão única** são declarados usando a `float` palavra-chave.\nVamos explorar. Experimente o seguinte código na janela interativa e veja o resultado:\n\n```csharp\ndouble a = 5;\ndouble b = 4;\ndouble c = 2;\ndouble d = (a + b) / c;\nConsole.WriteLine(d);\n```\n\nObserve que a resposta inclui a parte decimal do quociente. Experimente uma expressão ligeiramente mais complicada com duplos:\n\n```csharp\ndouble a = 19;\ndouble b = 23;\ndouble c = 8;\ndouble d = (a + b) / c;\nConsole.WriteLine(d);\n```\n\nO intervalo de um valor duplo é muito maior do que valores inteiros. Experimente o seguinte código na janela interativa:\n\n```csharp\ndouble max = double.MaxValue;\ndouble min = double.MinValue;\nConsole.WriteLine($\"The range of double is {min} to {max}\");\n```\n\nEsses valores são impressos em notação científica. O número à esquerda do `E` é o significando. O número à direita é o expoente, como uma potência de 10.\n\nAssim como os números decimais em matemática, os duplos em C# podem ter erros de arredondamento. Experimente esse código:\n\n```csharp\ndouble third = 1.0 / 3.0;\nConsole.WriteLine(third);\n```\n\nVocê sabe que isso `0.3` é `3/10` e não exatamente o mesmo que `1/3` . Da mesma forma, `0.33` é `33/100` . Isso está mais próximo de `1/3` , mas ainda não é exato. \n\n***Desafio***\n\nTente outros cálculos com números grandes, números pequenos, multiplicação e divisão usando o `double` tipo.  Experimente cálculos mais complicados.\n"
 - title: Trabalhar com tipos decimais
   durationInMinutes: 8
   content: >
-    Você viu os tipos numéricos básicos em C#: inteiros e duplos.  Há um outro tipo para aprender: o `decimal` tipo. O tipo `decimal` tem um intervalo menor, mas precisão maior do que `double`. Vamos analisar:
+    Você viu os tipos numéricos básicos em C#: inteiros e duplos.  Há um outro tipo para aprender: o `decimal` tipo. O tipo `decimal` tem um intervalo menor, mas precisão maior do que `double`. Vamos dar uma olhada:
 
 
     ```csharp
@@ -285,7 +286,7 @@ items:
     Observe que o cálculo usando o tipo decimal tem mais dígitos à direita da vírgula decimal.
 
 
-    O sufixo `M` nos números é o modo como você indica que uma constante deve usar o tipo `decimal`. Caso contrário, o compilador assume `double` o tipo.
+    O sufixo `M` nos números é o modo como você indica que uma constante deve usar o tipo `decimal`. Caso contrário, o compilador assume o `double` tipo.
 
 
     > [!NOTE]
@@ -293,13 +294,10 @@ items:
     > A letra `M` foi escolhida como a letra mais visualmente distinta entre `double` as `decimal` palavras-chave e.
 
 
-    Observe que o cálculo usando o tipo decimal tem mais dígitos à direita da vírgula decimal.
-
-
     ***Desafio***
 
 
-    Agora que você viu os diferentes tipos numéricos, escreva um código que calcula a área de um círculo cujo raio é de 2,50 centímetros. Lembre-se de que a área de um círculo é o quadrado do raio multiplicado por PI. Uma dica: o .NET contém uma constante para PI, <xref:System.Math.PI?displayProperty=nameWithType>, que você pode usar para esse valor. <xref:System.Math.PI?displayProperty=nameWithType>, como todas as constantes declaradas no `System.Math` namespace, `double` é um valor. Por esse motivo, você deve usar `double` valores instead of `decimal` para esse desafio.
+    Agora que você viu os diferentes tipos numéricos, escreva um código que calcula a área de um círculo cujo raio é de 2,50 centímetros. Lembre-se de que a área de um círculo é o quadrado do raio multiplicado por PI. Uma dica: o .NET contém uma constante para PI, <xref:System.Math.PI?displayProperty=nameWithType>, que você pode usar para esse valor. <xref:System.Math.PI?displayProperty=nameWithType>, como todas as constantes declaradas no `System.Math` namespace, é um `double` valor. Por esse motivo, você deve usar `double` valores instead of `decimal` para esse desafio.
 
 
     Você deve obter uma resposta entre 19 e 20.

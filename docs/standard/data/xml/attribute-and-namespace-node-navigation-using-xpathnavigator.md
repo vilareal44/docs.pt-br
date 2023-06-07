@@ -3,15 +3,15 @@ title: Navegação do nó de atributo e do namespace usando XPathNavigator
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-ms.openlocfilehash: 6809a2a47a9ca25a16a9be75a0a8a8b03f98a21d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 90c8fe7450a6ca853aaea452e30a292dbdcd9d98
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711149"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291611"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Navegação do nó de atributo e do namespace usando XPathNavigator
-A classe <xref:System.Xml.XPath.XPathNavigator> fornece dois conjuntos de métodos de navegação. O primeiro conjunto, encontrado no tópico [Navegação do nó usando XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md), é usado para navegar em *conjuntos de nós* em um objeto <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument>. O segundo conjunto, descrito neste tópico, é usado para navegar em *nós de atributo e namespace* em um objeto <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument>.  
+A classe <xref:System.Xml.XPath.XPathNavigator> fornece dois conjuntos de métodos de navegação. O primeiro conjunto, encontrado no tópico [Navegação do nó usando XPathNavigator](node-set-navigation-using-xpathnavigator.md), é usado para navegar em *conjuntos de nós* em um objeto <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument>. O segundo conjunto, descrito neste tópico, é usado para navegar em *nós de atributo e namespace* em um objeto <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument>.  
   
 ## <a name="attribute-node-navigation"></a>Navegação do nó de atributo  
  Os atributos são propriedades de um elemento, não filhos de um elemento. Essa distinção é importante, devido aos métodos da classe <xref:System.Xml.XPath.XPathNavigator> usada para navegar em irmão, o pai, e os nós filho.  
@@ -99,7 +99,7 @@ A classe <xref:System.Xml.XPath.XPathNavigator> fornece dois conjuntos de métod
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [Processar dados XML usando o modelo de dados XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Navegação do nó usando XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)
-- [Extrair dados XML usando XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)
-- [Acessando dados fortemente tipados XML usando XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+- [Processar dados XML usando o modelo de dados XPath](process-xml-data-using-the-xpath-data-model.md)
+- [Navegação do nó usando XPathNavigator](node-set-navigation-using-xpathnavigator.md)
+- [Extrair dados XML usando XPathNavigator](extract-xml-data-using-xpathnavigator.md)
+- [Acessando dados fortemente tipados XML usando XPathNavigator](accessing-strongly-typed-xml-data-using-xpathnavigator.md)

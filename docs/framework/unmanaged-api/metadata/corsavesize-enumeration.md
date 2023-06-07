@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: eb95ce39-5688-43c1-a34d-578794b32faa
 topic_type:
 - apiref
-ms.openlocfilehash: 13a4364244f7d0076d77d14c3e3ef161e3872bcb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 22a7f87a5803dc185052a5ce7ed427eff9f8fb18
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176130"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009178"
 ---
 # <a name="corsavesize-enumeration"></a>Enumeração CorSaveSize
 Contém valores que indicam o nível de precisão necessário ao consultar o tamanho de uma operação de salvamento.  
@@ -40,17 +40,17 @@ typedef enum CorSaveSize {
 |------------|-----------------|  
 |`cssAccurate`|Especifica que o valor de retorno deve ser exato.|  
 |`cssQuick`|Especifica que o valor de retorno deve ser estimado.|  
-|`cssDiscardTransientCAs`|Especifica que os tipos descartáveis devem ser removidos.|  
+|`cssDiscardTransientCAs`|Especifica que os tipos descartados devem ser removidos.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** CorHdr.h  
+ **Cabeçalho:** CorHdr. h  
   
- **Biblioteca:** Usado como recurso em MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerações de metadados](metadata-enumerations.md)

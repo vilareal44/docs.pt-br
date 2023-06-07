@@ -1,24 +1,24 @@
 ---
-ms.openlocfilehash: e1c55eab0b968daab7322350e201b49149e63215
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 3db4b0b42a154c5bc9296889ae9dc4b7ecf1e58e
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721436"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556122"
 ---
 ### <a name="allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported"></a>Não há suporte para a opção de compatibilidade AllowUpdateChildControlIndexForTabControls
 
-A `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` opção de compatibilidade tem suporte no Windows Forms no .NET Framework 4,6 e em versões posteriores, mas não tem suporte no Windows Forms a partir do .NET Core 3,0.
+A `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` opção de compatibilidade tem suporte no Windows Forms no .NET Framework 4,6 e em versões posteriores, mas não tem suporte no .NET Core ou no .net 5,0 e posterior.
 
 #### <a name="change-description"></a>Descrição da alteração
 
 No .NET Framework 4,6 e versões posteriores, a seleção de uma guia reordena sua coleção de controle. A `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` opção de compatibilidade permite que um aplicativo ignore essa reordenação quando esse comportamento é indesejável.
 
-No .NET Core, `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` não há suporte para a opção.
+No .NET Core e no .NET 5,0 e posterior, `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` não há suporte para a opção.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3,0 Preview 9
+3.0
 
 #### <a name="recommended-action"></a>Ação recomendada
 

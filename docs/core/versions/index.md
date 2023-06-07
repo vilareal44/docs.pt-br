@@ -1,13 +1,13 @@
 ---
 title: Como controlar a versão do SDK e do Runtime do .NET Core
 description: Este artigo ensina como controlar a versão do SDK do .NET Core (semelhante ao controle de versão semântico).
-ms.date: 07/26/2018
-ms.openlocfilehash: f166a6dfc1c9127eb629365efd628855489a60cb
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.date: 06/24/2020
+ms.openlocfilehash: 5e315f49227f3c2ea40652a30fabbf566bdfe495
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644389"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619748"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Visão geral de como o .NET Core tem a versão controlada
 
@@ -23,14 +23,14 @@ O SDK do .NET Core não segue o controle de versão semântico. O SDK do .NET Co
 
 A terceira posição do número de versão do SDK comunica o número de patch e da versão secundária. A versão secundária é multiplicada por 100. Versão secundária 1, versão de patch 2 seria representada como 102. Os últimos dois dígitos representam o número de patch. Por exemplo, a versão do .NET Core 2.2 pode criar versões, como a tabela a seguir:
 
-| Alterar                | Runtime do .NET Core | .NET Core SDK ( )\* |
+| Alteração                | Runtime do .NET Core | SDK do .NET Core ( \* ) |
 |-----------------------|-------------------|-------------------|
 | Versão inicial       | 2.2.0             | 2.2.100           |
 | Patch do SDK             | 2.2.0             | 2.2.101           |
 | Runtime e Patch do SDK | 2.2.1             | 2.2.102           |
 | Alteração de Recurso do SDK    | 2.2.1             | 2.2.200           |
 
-(\*) Este gráfico usa o 2.2 .NET Core Runtime como exemplo porque um artefato histórico significava que o primeiro SDK para .NET Core 2.1 é 2.1.300. Para obter mais informações, veja a [seleção de versão do .NET Core](selection.md).
+( \* ) Este gráfico usa o tempo de execução do .net core 2,2 como o exemplo porque um artefato histórico significava que o primeiro SDK para .NET Core 2,1 é 2.1.300. Para obter mais informações, veja a [seleção de versão do .NET Core](selection.md).
 
 OBSERVAÇÕES:
 
@@ -99,14 +99,17 @@ Cada versão do .NET Core implementa uma versão do .NET Standard. Implementar u
 | .NET Core | .NET Standard |
 |-----------|---------------|
 | 1.0       | até 1.6     |
-| 2.0       | até 2.0     |
+| 2,0       | até 2.0     |
 | 2.1       | até 2.0     |
 | 2.2       | até 2.0     |
 | 3.0       | até 2,1     |
+| 3.1       | até 2,1     |
 
-## <a name="see-also"></a>Confira também
+Para uma tabela interativa das versões do .NET Standard e como elas correspondem às implementações do .NET, consulte [.net Standard versões](https://dotnet.microsoft.com/platform/dotnet-standard#versions).
 
-- [Frameworks de destino](../../standard/frameworks.md)
+## <a name="see-also"></a>Consulte também
+
+- [Estruturas de destino](../../standard/frameworks.md)
 - [Pacote de distribuição do .NET Core](../distribution-packaging.md)
 - [Folha informativa sobre o ciclo de vida do suporte ao .NET Core](https://dotnet.microsoft.com/platform/support/policy)
 - [.NET Core 2+ Associação de versão](https://github.com/dotnet/designs/issues/3)

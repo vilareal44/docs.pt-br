@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property grids [Visual Basic], creating for user settings
 - property grids
 ms.assetid: b0bc737e-50d1-43d1-a6df-268db6e6f91c
-ms.openlocfilehash: bed4e8a2b50f0115c3b8d9d6abf427df5f216388
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e93c62ad138be260422319e28a3ed85dd1871a1b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74329606"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410160"
 ---
 # <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>Como criar grades de propriedades para configurações de usuário no Visual Basic
 
@@ -21,7 +21,7 @@ Você pode criar uma grade de propriedades para configurações de usuário, pre
 > [!NOTE]
 > Para que esse exemplo funcione, seu aplicativo deve ter as configurações de usuário definidas. Para obter mais informações, consulte [Gerenciando configurações de aplicativo (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
- O objeto `My.Settings` expõe cada configuração como uma propriedade. O nome da propriedade é o mesmo que o nome da configuração e o tipo de propriedade é o mesmo que o tipo de configuração. O **escopo** da configuração determina se a propriedade é somente leitura; a propriedade para uma configuração de escopo de **aplicativo**é somente leitura, enquanto a propriedade para uma configuração de escopo de **usuário**é de leitura/gravação. Para obter mais informações, consulte [Objeto My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
+ O objeto `My.Settings` expõe cada configuração como uma propriedade. O nome da propriedade é o mesmo que o nome da configuração e o tipo de propriedade é o mesmo que o tipo de configuração. O **escopo** da configuração determina se a propriedade é somente leitura; a propriedade para uma configuração de escopo de **aplicativo**é somente leitura, enquanto a propriedade para uma configuração de escopo de **usuário**é de leitura/gravação. Para obter mais informações, consulte [Objeto My.Settings](../../../language-reference/objects/my-settings-object.md).  
   
 > [!NOTE]
 > Você não pode alterar ou salvar os valores de configurações de escopo do aplicativo em tempo de execução. As configurações de escopo do aplicativo só podem ser alteradas ao criar o aplicativo (por meio do **Designer de Projeto**) ou editando o arquivo de configuração de aplicativo. Para obter mais informações, consulte [Gerenciando configurações de aplicativo (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
@@ -49,12 +49,12 @@ Você pode criar uma grade de propriedades para configurações de usuário, pre
   
 ## <a name="robust-programming"></a>Programação robusta  
 
- O aplicativo salva as configurações do usuário quando o aplicativo é desligado. Para salvar as configurações imediatamente, chame o método `My.Settings.Save`. Para obter mais informações, consulte [Como persistir configurações do usuário no Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md).  
+ O aplicativo salva as configurações do usuário quando o aplicativo é desligado. Para salvar as configurações imediatamente, chame o método `My.Settings.Save`. Para obter mais informações, consulte [Como persistir configurações do usuário no Visual Basic](how-to-persist-user-settings.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Objeto My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md)
-- [Como ler configurações do aplicativo no Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
-- [Como alterar configurações do usuário no Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
-- [Como persistir configurações de usuário no Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
+- [Objeto My.Settings](../../../language-reference/objects/my-settings-object.md)
+- [Como ler configurações do aplicativo no Visual Basic](how-to-read-application-settings.md)
+- [Como alterar configurações do usuário no Visual Basic](how-to-change-user-settings.md)
+- [Como persistir configurações de usuário no Visual Basic](how-to-persist-user-settings.md)
 - [Gerenciando configurações de aplicativo (.NET)](/visualstudio/ide/managing-application-settings-dotnet)

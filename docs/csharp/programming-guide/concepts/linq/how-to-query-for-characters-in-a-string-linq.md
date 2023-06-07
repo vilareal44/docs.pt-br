@@ -1,15 +1,16 @@
 ---
-title: Como consultar caracteres em uma seqüência (LINQ) (C#)
+title: Como consultar caracteres em uma cadeia (LINQ) (C#)
+description: Você pode consultar uma cadeia de caracteres como uma sequência de personagens no LINQ. Este exemplo de C# consulta uma cadeia de caracteres para determinar o número de dígitos numéricos que ele contém.
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: d85e488a38a6167505732103b4c540cade6ea9bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3512be7c30843fcd8e881eab59761706a84a3ac8
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345676"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104557"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Como consultar caracteres em uma seqüência (LINQ) (C#)
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Como consultar caracteres em uma cadeia (LINQ) (C#)
 Já que a classe <xref:System.String> implementa a interface <xref:System.Collections.Generic.IEnumerable%601> genérica, qualquer cadeia de caracteres pode ser consultada como uma sequência de caracteres. No entanto, esse não é um uso comum da LINQ. Para operações de correspondência de padrões complexas, use a classe <xref:System.Text.RegularExpressions.Regex>.  
   
 ## <a name="example"></a>Exemplo  

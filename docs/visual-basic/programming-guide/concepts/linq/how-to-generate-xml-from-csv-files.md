@@ -1,16 +1,16 @@
 ---
-title: Como gerar XML de arquivos CSV
+title: 'Como: gerar um XML com base em arquivos CSV'
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-ms.openlocfilehash: 79b609c3a706db4c8b4c082fbeaf143632a75033
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 647cab02c730f18629c669c3526520b2a98a86d8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636816"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396604"
 ---
 # <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Como gerar XML de arquivos CSV (Visual Basic)
-Este exemplo mostra como usar LINQ (consulta integrada à linguagem) e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para gerar um arquivo XML a partir de um arquivo CSV (valores separados por vírgula).  
+Este exemplo mostra como usar LINQ (consulta integrada à linguagem) e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gerar um arquivo XML a partir de um arquivo CSV (valores separados por vírgula).  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir executa uma consulta LINQ em uma matriz de cadeias de caracteres.  
@@ -107,6 +107,6 @@ Console.WriteLine(cust)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Projeções e transformações (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Projeções e transformações (LINQ to XML) (Visual Basic)](projections-and-transformations-linq-to-xml.md)

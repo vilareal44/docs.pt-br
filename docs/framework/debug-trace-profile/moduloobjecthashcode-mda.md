@@ -1,5 +1,6 @@
 ---
 title: MDA moduloObjectHashcode
+description: Examine o MDA (Assistente de depuração gerenciada) do moduloObjectHashcode, que altera a classe de objeto para obter um valor restante em um resultado de método GetHashCode.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), hashcode modulus
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - GetHashCode method
 - modulus of hashcodes
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
-ms.openlocfilehash: 65bbdfec2d7050d1b474a8186a9ea6e9bb93bd9e
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: a929ec2b9196f1f6cad0528fdf7323839a86fa55
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216179"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052059"
 ---
 # <a name="moduloobjecthashcode-mda"></a>MDA moduloObjectHashcode
 O MDA (Assistente de Depuração Gerenciado) de `moduloObjectHashcode` altera o comportamento da classe <xref:System.Object> para executar uma operação de módulo no código hash retornado pelo método <xref:System.Object.GetHashCode%2A>. O módulo padrão para esse MDA é 1, o que faz com que <xref:System.Object.GetHashCode%2A> retorne 0 para todos os objetos.  
@@ -58,8 +58,8 @@ O MDA (Assistente de Depuração Gerenciado) de `moduloObjectHashcode` altera o 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)

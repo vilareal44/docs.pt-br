@@ -1,5 +1,6 @@
 ---
-title: 'Instruções passo a passo: escrevendo consultas em C# (LINQ)'
+title: 'Passo a passo: Escrevendo consultas em C# (LINQ)'
+description: Este tutorial mostra como os recursos da linguagem C# são usados em expressões de consulta LINQ. Este artigo usa o Visual Studio como um ambiente de desenvolvimento.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], walkthroughs
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: f2135c6c3649ba2fc87e3b49770439688a58269b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d49cb725c9ce9a417f78f638795e98a75a086893
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73418061"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302211"
 ---
-# <a name="walkthrough-writing-queries-in-c-linq"></a>Instruções passo a passo: escrevendo consultas em C# (LINQ)
+# <a name="walkthrough-writing-queries-in-c-linq"></a>Passo a passo: Escrevendo consultas em C# (LINQ)
 Essas instruções passo a passo demonstram os recursos de linguagem C# que são usados para gravar expressões de consulta LINQ.  
   
 ## <a name="create-a-c-project"></a>Criar um Projeto C#  
@@ -63,7 +64,7 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
   
 #### <a name="to-create-a-simple-query"></a>Para criar uma consulta simples  
   
-- No método `Main` do aplicativo, crie uma consulta simples que, quando for executada, produzirá uma lista de todos os alunos cuja pontuação no primeiro teste foi superior a 90. Observe que como o objeto `Student` todo está selecionado, o tipo da consulta é `IEnumerable<Student>`. Embora o código também possa usar a tipagem implícita usando a palavra-chave [var](../../../language-reference/keywords/var.md), a tipagem explícita é usada para ilustrar claramente os resultados. (Para obter `var`mais informações sobre , consulte [Variáveis locais digitadas implicitamente](../../classes-and-structs/implicitly-typed-local-variables.md).)  
+- No método `Main` do aplicativo, crie uma consulta simples que, quando for executada, produzirá uma lista de todos os alunos cuja pontuação no primeiro teste foi superior a 90. Observe que como o objeto `Student` todo está selecionado, o tipo da consulta é `IEnumerable<Student>`. Embora o código também possa usar a tipagem implícita usando a palavra-chave [var](../../../language-reference/keywords/var.md), a tipagem explícita é usada para ilustrar claramente os resultados. (Para obter mais informações sobre `var` , consulte [variáveis de local digitadas implicitamente](../../classes-and-structs/implicitly-typed-local-variables.md).)  
   
      Observe também que a variável de intervalo da consulta, `student`, também funciona como uma referência para cada `Student` na fonte, fornecendo acesso ao membro para cada objeto.  
   
@@ -91,7 +92,7 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
-     Para obter mais informações, consulte [onde a cláusula](../../../language-reference/keywords/where-clause.md).  
+     Para obter mais informações, consulte a [cláusula WHERE](../../../language-reference/keywords/where-clause.md).  
   
 ## <a name="modify-the-query"></a>Modificar a Consulta  
   
@@ -182,7 +183,7 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
   
  [LINQ to Objects (C#)](./linq-to-objects.md)  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [LINQ (Consulta Integrada à Linguagem) (C#)](./index.md)
 - [Expressões de Consulta LINQ](../../../linq/index.md)

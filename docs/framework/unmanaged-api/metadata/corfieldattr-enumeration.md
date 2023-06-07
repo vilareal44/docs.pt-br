@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ae2c4be-212c-4e74-9288-40a11dc26522
 topic_type:
 - apiref
-ms.openlocfilehash: d28a0c8b7ee85f023026dde6f3cc8f3a8406aa64
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dea69e18fc517eddddc5b99950a6f3b16ee3e426
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450308"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007397"
 ---
 # <a name="corfieldattr-enumeration"></a>Enumeração CorFieldAttr
 Contém valores que descrevem metadados sobre um campo.  
@@ -58,7 +58,7 @@ typedef enum CorFieldAttr {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`fdFieldAccessMask`|Especifica informações de acessibilidade.|  
 |`fdPrivateScope`|Especifica que o campo não pode ser referenciado.|  
@@ -81,12 +81,12 @@ typedef enum CorFieldAttr {
 |`fdHasFieldRVA`|Especifica que o campo tem um endereço virtual relativo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerações de metadados](metadata-enumerations.md)

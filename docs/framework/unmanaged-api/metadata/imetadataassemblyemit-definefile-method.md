@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-ms.openlocfilehash: cabd6a47e5d6fc2a4cea87b16d349d9c778b3507
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 61d81c94e3a9c092b5d45791962635c761e8da8a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176052"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008138"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>Método IMetaDataAssemblyEmit::DefineFile
-Cria `File` uma estrutura de metadados contendo metadados para montagem referenciada por este conjunto e retorna o token de metadados associado.  
+Cria uma `File` estrutura de metadados que contém metadados para o assembly referenciado por esse assembly e retorna o token de metadados associado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,34 +37,34 @@ HRESULT DefineFile (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `szName`  
- [em] O nome do arquivo a ser consumido.  
+ no O nome do arquivo a ser consumido.  
   
  `pbHashValue`  
- [em] Um ponteiro para os dados de hash associados à montagem.  
+ no Um ponteiro para os dados de hash associados ao assembly.  
   
  `cbHashValue`  
- [em] O tamanho em bytes de `pbHashValue`.  
+ no O tamanho em bytes de `pbHashValue` .  
   
  `dwFileFlags`  
- [em] Uma combinação bitwise de `FileFlags` valores que especificam configurações de propriedade.  
+ no Uma combinação de bits de `FileFlags` valores que especifica as configurações de propriedade.  
   
  `pmdf`  
- [fora] Um ponteiro para `File` o token devolvido.  
+ fora Um ponteiro para o `File` token retornado.  
   
 ## <a name="remarks"></a>Comentários  
- Uma `File` estrutura de metadados deve ser definida para cada arquivo que fazia parte desta montagem no momento em que este conjunto foi construído, excluindo o arquivo que contém os metadados.  
+ Uma `File` estrutura de metadados deve ser definida para cada arquivo que faz parte desse assembly no momento em que esse assembly foi criado, excluindo o arquivo que contém os metadados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Consulte [os requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [Interface IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md)

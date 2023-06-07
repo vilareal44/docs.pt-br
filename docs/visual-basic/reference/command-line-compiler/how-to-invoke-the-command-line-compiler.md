@@ -1,5 +1,5 @@
 ---
-title: Como invocar o compilador de linha de comando
+title: 'Como: Invocar o compilador de linha de comando'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: 3b34ebba68c9c9b2a8335822d0ffaef2a9b06d7c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6def53d4a2d15dda3e3ac43abe35b3100f456fe9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344253"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408602"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Como invocar o compilador de linha de comando (Visual Basic)
 
@@ -30,7 +30,7 @@ Você pode invocar o compilador de linha de comando digitando o nome do seu arqu
 
 4. Na linha de comando, digite `vbc.exe` *sourceFileName* e pressione Enter.
 
-    Por exemplo, se você armazenou o código-fonte em um `SourceFiles`diretório chamado, abra o prompt de comando e `cd SourceFiles` digite para alterar para esse diretório. Se o diretório contiver um arquivo de `Source.vb`origem chamado, você poderá compilá- `vbc.exe Source.vb`lo digitando.
+    Por exemplo, se você armazenou o código-fonte em um diretório chamado `SourceFiles` , abra o prompt de comando e digite `cd SourceFiles` para alterar para esse diretório. Se o diretório contiver um arquivo de origem chamado `Source.vb` , você poderá compilá-lo digitando `vbc.exe Source.vb` .
 
 ## <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>Para definir a variável de ambiente PATH para o compilador para o prompt de comando do Windows
 
@@ -56,9 +56,9 @@ Você pode invocar o compilador de linha de comando digitando o nome do seu arqu
 
 2. Na linha de comando, digite `vbc.exe` *sourceFileName* e pressione Enter.
 
-     Por exemplo, se você armazenou o código-fonte em um `SourceFiles`diretório chamado, abra o prompt de comando e `cd SourceFiles` digite para alterar para esse diretório. Se o diretório contiver um arquivo de `Source.vb`origem chamado, você poderá compilá- `vbc.exe Source.vb`lo digitando.
+     Por exemplo, se você armazenou o código-fonte em um diretório chamado `SourceFiles` , abra o prompt de comando e digite `cd SourceFiles` para alterar para esse diretório. Se o diretório contiver um arquivo de origem chamado `Source.vb` , você poderá compilá-lo digitando `vbc.exe Source.vb` .
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Compilação condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [Compilador de linha de comando do Visual Basic](index.md)
+- [Compilação condicional](../../programming-guide/program-structure/conditional-compilation.md)

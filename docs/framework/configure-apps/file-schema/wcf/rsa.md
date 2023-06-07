@@ -3,21 +3,21 @@ title: <rsa>
 ms.date: 03/30/2017
 ms.assetid: ae1f2267-e40d-42ff-8abf-06ab7067bdb9
 ms.openlocfilehash: 0e1651f563bdb2b2b24eacacf7bfe387e33a82c7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855050"
 ---
-# <a name="rsa"></a>\<rsa>
+# \<rsa>
 Um cliente WCF seguro que se conecta a um ponto de extremidade com essa identidade verifica se as declarações apresentadas pelo servidor contêm uma declaração que contém a chave pública RSA usada para construir essa identidade.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> do cliente**](client.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> do ponto de extremidade**](endpoint-of-client.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de identidade**](identity.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> RSA**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<client>**](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpoint>**](endpoint-of-client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<identity>**](identity.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<rsa>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,11 +57,11 @@ Um cliente WCF seguro que se conecta a um ponto de extremidade com essa identida
 </identity>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.RsaEndpointIdentity>
-- [Autenticação e identidade de serviço](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Identidade e autenticação de serviço](../../../wcf/feature-details/service-identity-and-authentication.md)
 - [\<identity>](identity.md)

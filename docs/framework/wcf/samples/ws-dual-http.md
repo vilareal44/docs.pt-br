@@ -2,16 +2,16 @@
 title: WS Dual Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: 1f1592598c0ed148f06c0a99ccdb8a8347175d8f
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 4acf2491c242099f6c8b6c9c01dc18e9c99c9934
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716783"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589718"
 ---
 # <a name="ws-dual-http"></a>WS Dual Http
 
-O exemplo http duplo demonstra como configurar a associação de `WSDualHttpBinding`. Este exemplo consiste em um programa de console do cliente (. exe) e uma biblioteca de serviços (. dll) hospedados pelo Serviços de Informações da Internet (IIS). O serviço implementa um contrato duplex. O contrato é definido pela interface `ICalculatorDuplex`, que expõe operações matemáticas (adicionar, subtrair, multiplicar e dividir). Neste exemplo, a interface `ICalculatorDuplex` permite que o cliente execute operações matemáticas, calculando um resultado em execução pela sessão. Independentemente, o serviço retorna resultados na interface `ICalculatorDuplexCallback`. Um contrato duplex requer uma sessão, porque um contexto deve ser estabelecido para correlacionar o conjunto de mensagens que estão sendo enviadas entre o cliente e o serviço. A associação de `WSDualHttpBinding` dá suporte à comunicação duplex.
+O exemplo http duplo demonstra como configurar a `WSDualHttpBinding` associação. Este exemplo consiste em um programa de console do cliente (. exe) e uma biblioteca de serviços (. dll) hospedados pelo Serviços de Informações da Internet (IIS). O serviço implementa um contrato duplex. O contrato é definido pela `ICalculatorDuplex` interface, que expõe operações matemáticas (adicionar, subtrair, multiplicar e dividir). Neste exemplo, a `ICalculatorDuplex` interface permite que o cliente execute operações matemáticas, calculando um resultado em execução pela sessão. Independentemente, o serviço retorna resultados na `ICalculatorDuplexCallback` interface. Um contrato duplex requer uma sessão, porque um contexto deve ser estabelecido para correlacionar o conjunto de mensagens que estão sendo enviadas entre o cliente e o serviço. A `WSDualHttpBinding` Associação dá suporte à comunicação duplex.
 
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.
@@ -21,11 +21,11 @@ O exemplo http duplo demonstra como configurar a associação de `WSDualHttpBind
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\DualHttp`
 
-Para configurar um ponto de extremidade de serviço com o `WSDualHttpBinding`, especifique a associação na configuração do ponto de extremidade, conforme mostrado.
+Para configurar um ponto de extremidade de serviço com o `WSDualHttpBinding` , especifique a associação na configuração do ponto de extremidade, conforme mostrado.
 
 ```xml
 <endpoint address=""
@@ -81,14 +81,14 @@ Ao executar o exemplo, você verá as mensagens retornadas para o cliente na int
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
-2. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+2. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-3. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Para criar a edição C# ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).
 
-4. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md).
 
     > [!IMPORTANT]
-    > Ao executar o cliente em uma configuração entre computadores, substitua localhost no atributo `address` do [> de ponto de extremidade\<do elemento \<cliente >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) e o atributo `clientBaseAddress` do elemento\<de [Associação](../../configure-apps/file-schema/wcf/bindings.md) > do elemento\<[WSDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) pelo nome do computador apropriado, conforme mostrado:
+    > Ao executar o cliente em uma configuração de computador cruzado, substitua localhost no `address` atributo [ \<endpoint> \<client> do](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elemento e o `clientBaseAddress` atributo do elemento [\<binding>](../../configure-apps/file-schema/wcf/bindings.md) do [\<wsDualHttpBinding>](../../configure-apps/file-schema/wcf/wsdualhttpbinding.md) elemento pelo nome do computador apropriado, como mostrado a seguir:.
 
     ```xml
     <client>

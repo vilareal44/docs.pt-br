@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e018eaa-d60e-4a0b-a2c5-8c36bd09d905
 topic_type:
 - apiref
-ms.openlocfilehash: 0542c518b64764ad27aa00b8d595be1191059436
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2cfb66203d8f2d69ea188f6913a5ef34dd74791e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437452"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503595"
 ---
 # <a name="imetadataimportgetmethodsemantics-method"></a>Método IMetaDataImport::GetMethodSemantics
 Obtém sinalizadores que indicam a relação entre o método referenciado pelo token MethodDef especificado e a propriedade emparelhada e o evento referenciado pelo token EventProp especificado.  
@@ -43,21 +43,21 @@ HRESULT GetMethodSemantics (
  no Um token que representa a propriedade emparelhada e o evento para o qual obter a função do método.  
   
  `pdwSemanticsFlags`  
- fora Um ponteiro para os sinalizadores de semântica associados. Esse valor é um bitmask da enumeração [CorMethodSemanticsAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodsemanticsattr-enumeration.md) .  
+ fora Um ponteiro para os sinalizadores de semântica associados. Esse valor é um bitmask da enumeração [CorMethodSemanticsAttr](cormethodsemanticsattr-enumeration.md) .  
   
 ## <a name="remarks"></a>Comentários  
- O método [IMetaDataEmit::D efineproperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md) define os sinalizadores de semântica de um método.  
+ O método [IMetaDataEmit::D efineproperty](imetadataemit-defineproperty-method.md) define os sinalizadores de semântica de um método.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

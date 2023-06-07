@@ -1,15 +1,16 @@
 ---
-title: Como preencher uma árvore XML do sistema de arquivos (C#)
+title: Como popular uma árvore XML do sistema de arquivos (C#)
+description: Saiba como preencher uma árvore XML do sistema de arquivos em C#. Este exemplo popula um XML e, em seguida, consulta a árvore para calcular o tamanho total de todos os arquivos.
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: beb44be1a787fa09b091aa48022dbb5b10c4632b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 676261656be7d306294c9912b75edcb51a31cccc
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345777"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104764"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Como preencher uma árvore XML do sistema de arquivos (C#)
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Como popular uma árvore XML do sistema de arquivos (C#)
 Um aplicativo comum e útil das árvores XML é como um armazenamento de dados hierárquica de nome/valor. Você pode preencher uma árvore XML com dados hierárquicos, e consultar-la em seguida, transformar-la e, se necessário, serializar-la. Neste cenário de uso, muitas de semântica específica XML, como namespaces e comportamento de espaço em branco, não são importantes. Em vez disso, você estiver usando a árvore XML como um pequeno, na memória, base de dados hierárquica de usuário único.  
   
 ## <a name="example"></a>Exemplo  

@@ -1,23 +1,23 @@
 ---
-title: Erro definido pelo aplicativo ou definido pelo objeto
+title: Erro definido por aplicativo ou definido por objeto
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID95
 ms.assetid: 02b8e145-7988-48ad-abad-ed7656b4933c
-ms.openlocfilehash: 68c187c1e35ddbc3f099c22da0109ccd30c3afd7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 60b2f011559aab3a84a4fa66929d4df14ae8855a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609158"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84412904"
 ---
-# <a name="application-defined-or-object-defined-error"></a>Erro definido pelo aplicativo ou definido pelo objeto
+# <a name="application-defined-or-object-defined-error"></a>Erro definido por aplicativo ou definido por objeto
 Ocorreu um erro definido pelo aplicativo ou definido pelo usuário. Verifique o erro.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Consulte o erro para ver onde ele está definido e como resolvê-lo.  
+- Consulte o erro para ver onde ele está definido e como solucioná-lo.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipos de erro](../programming-guide/language-features/error-types.md)

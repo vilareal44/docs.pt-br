@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 603b3881-ea94-4dca-95cd-91eebac873a0
 topic_type:
 - apiref
-ms.openlocfilehash: 56221c6b3ac40595e999f2a2a3739f023441c46d
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 8615deb2e42b039120d97b3eb5af23beb31b0808
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76862398"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502841"
 ---
 # <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a>Método ICorProfilerInfo3::GetAppDomainsContainingModule
 Obtém os identificadores dos domínios de aplicativo nos quais o módulo fornecido foi carregado.  
@@ -41,7 +41,7 @@ HRESULT GetAppDomainsContainingModule(
  no A ID do módulo carregado.  
   
  `cAppDomainIds`  
- no O tamanho da matriz de `appDomainIds`.  
+ no O tamanho da `appDomainIds` matriz.  
   
  `pcAppDomainIds`  
  fora Um ponteiro para o número total de elementos retornados.  
@@ -52,18 +52,18 @@ HRESULT GetAppDomainsContainingModule(
 ## <a name="remarks"></a>Comentários  
  O método usa buffers alocados do chamador.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerFunctionEnum](icorprofilerfunctionenum-interface.md)
 - [Interface ICorProfilerInfo3](icorprofilerinfo3-interface.md)
-- [Interfaces de criação de perfil](profiling-interfaces.md)
+- [Criação de perfil de interfaces](profiling-interfaces.md)
 - [Criação de perfil](index.md)

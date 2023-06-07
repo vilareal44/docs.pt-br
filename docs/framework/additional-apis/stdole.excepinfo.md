@@ -1,5 +1,6 @@
 ---
 title: Estrutura EXCEPINFO (stdole)
+description: Obtenha informações de referência sobre a estrutura EXCEPINFO no .NET. A estrutura está no namespace stdole e no assembly stdole.
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,12 +10,12 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 258ce5e63c9095e5a451d807d588f31512f5e5fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 714ce7e371045dfc6387030d6a7b6b020fa96684
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675280"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989526"
 ---
 # <a name="excepinfo-structure"></a>Estrutura EXCEPINFO
 

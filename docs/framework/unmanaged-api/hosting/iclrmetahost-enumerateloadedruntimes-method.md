@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 22fc0a3f-dce4-4766-9a3c-9fab15f4b4ca
 topic_type:
 - apiref
-ms.openlocfilehash: 2e22b8a2d0213b3bd766d80218d6f396721a90e1
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 7b09bb9c3abcb23997bfd412c3ea939404e583c1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703760"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504167"
 ---
 # <a name="iclrmetahostenumerateloadedruntimes-method"></a>Método ICLRMetaHost::EnumerateLoadedRuntimes
-Retorna uma enumeração que inclui um ponteiro de interface [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) válido para cada versão do Common Language Runtime (CLR) que é carregado em um determinado processo. Esse método substitui a função [GetVersionFromProcess](getversionfromprocess-function.md) .  
+Retorna uma enumeração que inclui um ponteiro de interface [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) válido para cada versão do Common Language Runtime (CLR) que é carregado em um determinado processo. Esse método substitui a função [GetVersionFromProcess](getversionfromprocess-function.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,7 +41,7 @@ HRESULT EnumerateLoadedRuntimes (
  `ppEnumerator`  
  fora Uma <xref:Microsoft.VisualStudio.OLE.Interop.IEnumUnknown> enumeração de interfaces [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) correspondentes a cada CLR que é carregado pelo processo.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -64,4 +64,4 @@ HRESULT EnumerateLoadedRuntimes (
 ## <a name="see-also"></a>Confira também
 
 - [Interface ICLRMetaHost](iclrmetahost-interface.md)
-- [Hospedagem](index.md)
+- [Hosting](index.md)

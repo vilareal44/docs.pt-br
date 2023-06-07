@@ -6,12 +6,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], ambiguous time
 - ambiguous time [.NET Framework]
 ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
-ms.openlocfilehash: f988616a4b2a5d8202c87e3be3cb23c7f9f1f130
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ac723738d80a2f686a5fcaf279cec791b3c58619
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122273"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84281577"
 ---
 # <a name="how-to-let-users-resolve-ambiguous-times"></a>Como: permitir que os usuários resolvam tempos ambíguos
 
@@ -27,15 +27,15 @@ Este tópico mostra como permitir que um usuário resolva um horário ambíguo.
 
 1. Obtenha a entrada de data e hora do usuário.
 
-2. Chame o método <xref:System.TimeZoneInfo.IsAmbiguousTime%2A> para determinar se o tempo é ambíguo.
+2. Chame o <xref:System.TimeZoneInfo.IsAmbiguousTime%2A> método para determinar se o tempo é ambíguo.
 
-3. Se o tempo for ambíguo, chame o método <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A> para recuperar uma matriz de objetos <xref:System.TimeSpan>. Cada elemento na matriz contém um deslocamento UTC para o qual a hora ambígua pode ser mapeada.
+3. Se o tempo for ambíguo, chame o <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A> método para recuperar uma matriz de <xref:System.TimeSpan> objetos. Cada elemento na matriz contém um deslocamento UTC para o qual a hora ambígua pode ser mapeada.
 
 4. Permita que o usuário selecione o deslocamento desejado.
 
 5. Obtenha a data e hora de UTC subtraindo o deslocamento selecionado pelo usuário do horário local.
 
-6. Chame o método `static` (`Shared` no Visual Basic .NET) <xref:System.DateTime.SpecifyKind%2A> para definir a propriedade <xref:System.DateTime.Kind%2A> do valor de data e hora UTC como <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.
+6. Chame o `static` `Shared` método (no Visual Basic .net) <xref:System.DateTime.SpecifyKind%2A> para definir a propriedade de valor de data e hora UTC <xref:System.DateTime.Kind%2A> como <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> .
 
 ## <a name="example"></a>Exemplo
 
@@ -44,17 +44,17 @@ O exemplo a seguir solicita que o usuário insira uma data e hora e, se ela for 
 [!code-csharp[System.TimeZone2.Concepts#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#11)]
 [!code-vb[System.TimeZone2.Concepts#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#11)]
 
-O núcleo do código de exemplo usa uma matriz de <xref:System.TimeSpan> objetos para indicar possíveis deslocamentos do tempo ambíguo do UTC. No entanto, esses deslocamentos provavelmente não serão significativos para o usuário. Para esclarecer o significado dos deslocamentos, o código também observa se um deslocamento representa o horário padrão do fuso horário local ou seu horário de verão. O código determina qual é a hora padrão e em qual horário é o horário de verão comparando o deslocamento com o valor da propriedade <xref:System.TimeZoneInfo.BaseUtcOffset%2A>. Essa propriedade indica a diferença entre o UTC e o horário padrão do fuso horário.
+O núcleo do código de exemplo usa uma matriz de <xref:System.TimeSpan> objetos para indicar possíveis deslocamentos do tempo ambíguo do UTC. No entanto, esses deslocamentos provavelmente não serão significativos para o usuário. Para esclarecer o significado dos deslocamentos, o código também observa se um deslocamento representa o horário padrão do fuso horário local ou seu horário de verão. O código determina qual é a hora padrão e em qual horário é o horário de verão comparando o deslocamento com o valor da <xref:System.TimeZoneInfo.BaseUtcOffset%2A> propriedade. Essa propriedade indica a diferença entre o UTC e o horário padrão do fuso horário.
 
-Neste exemplo, todas as referências ao fuso horário local são feitas por meio da propriedade <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType>; o fuso horário local nunca é atribuído a uma variável de objeto. Essa é uma prática recomendada porque uma chamada para o método <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> invalida todos os objetos aos quais o fuso horário local está atribuído.
+Neste exemplo, todas as referências ao fuso horário local são feitas por meio da <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> Propriedade; o fuso horário local nunca é atribuído a uma variável de objeto. Essa é uma prática recomendada porque uma chamada para o <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> método invalida todos os objetos aos quais o fuso horário local está atribuído.
 
 ## <a name="compiling-the-code"></a>Compilando o código
 
 Este exemplo requer:
 
-- Que o namespace <xref:System> seja importado com a instrução `using` ( C# obrigatória no código).
+- Que o <xref:System> namespace seja importado com a `using` instrução (necessária no código C#).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Datas, horas e fusos horários](../../../docs/standard/datetime/index.md)
-- [Como resolver horários ambíguos](../../../docs/standard/datetime/resolve-ambiguous-times.md)
+- [Datas, horas e fusos horários](index.md)
+- [Como: resolver horários ambíguos](resolve-ambiguous-times.md)

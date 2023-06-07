@@ -1,5 +1,6 @@
 ---
 title: Trabalhando com arquivos .resx de forma programática
+description: Crie ou recupere dados de arquivos de recurso XML (. resx) programaticamente usando tipos e membros no namespace System. Resources da biblioteca de classes .NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-ms.openlocfilehash: 3b84d77e4ac9b9889d1bc2f08e5ead6b81deecb0
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 519ca099b65710b6eb4251e1a9419e965ee69f93
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243031"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166154"
 ---
 # <a name="work-with-resx-files-programmatically"></a>Trabalhar com arquivos .resx de forma programática
 
 Como arquivos de recurso XML (.resx) devem conter XML bem definido, incluindo um cabeçalho que deve seguir um esquema específico seguido por dados em pares nome/valor, você pode concluir que criar esses arquivo manualmente é algo propenso a erros. Como alternativa, você pode criar arquivos .resx com programação usando tipos e membros da biblioteca de classes .NET. Você também pode usar a biblioteca de classes .NET para recuperar os recursos que são armazenados em arquivos .resx. Este artigo explica como você pode usar os tipos e membros no <xref:System.Resources> namespace para trabalhar com arquivos. resx.
 
-Este artigo discute como trabalhar com arquivos XML (. resx) que contêm recursos. Para obter informações sobre como trabalhar com arquivos de recursos binários que foram inseridos <xref:System.Resources.ResourceManager>em assemblies, consulte.
+Este artigo discute como trabalhar com arquivos XML (. resx) que contêm recursos. Para obter informações sobre como trabalhar com arquivos de recursos binários que foram inseridos em assemblies, consulte <xref:System.Resources.ResourceManager> .
 
 > [!WARNING]
 > Também há outras maneiras de trabalhar com arquivos .resx além de programação. Quando você adiciona um arquivo de recurso a um projeto do [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) , o Visual Studio fornece uma interface para criar e manter um arquivo. resx e converte automaticamente o arquivo. resx em um arquivo. Resources no momento da compilação. Você também pode usar um editor de texto para manipular um arquivo .resx diretamente. No entanto, para evitar danificar o arquivo, tenha cuidado para não modificar nenhuma informação binária armazenada nele.
@@ -87,5 +88,5 @@ Não é possível inserir um arquivo .resx em um executável do runtime ou compi
 ## <a name="see-also"></a>Confira também
 
 - [Criação de arquivos de recurso](creating-resource-files-for-desktop-apps.md)
-- [Resgen. exe (gerador de arquivo de recursos)](../tools/resgen-exe-resource-file-generator.md)
-- [Al. exe (vinculador de assembly)](../tools/al-exe-assembly-linker.md)
+- [Resgen.exe (gerador de arquivo de recurso)](../tools/resgen-exe-resource-file-generator.md)
+- [Al.exe (vinculador de assembly)](../tools/al-exe-assembly-linker.md)

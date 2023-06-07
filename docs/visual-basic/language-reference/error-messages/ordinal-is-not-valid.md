@@ -4,30 +4,30 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
-ms.openlocfilehash: 740243c744a7ba5391659894812a00d80555fd80
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7b9bd8435b56dd5e33d14eb35d76aacc7d60c8b5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665660"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413042"
 ---
 # <a name="ordinal-is-not-valid"></a>O ordinal não é válido
-A chamada para uma biblioteca de vínculo dinâmico (DLL) indicado para usar um número em vez de um nome de procedimento, usando o `#num` sintaxe. Esse erro tem as seguintes causas possíveis:  
+Sua chamada para uma DLL (biblioteca de vínculo dinâmico) indicou usar um número em vez de um nome de procedimento, usando a `#num` sintaxe. Esse erro tem as seguintes causas possíveis:  
   
-- Uma tentativa de converter o `#num` expressão a um ordinal falhou.  
+- Falha ao tentar converter a `#num` expressão em um ordinal.  
   
-- O `#num` especificado não especificar qualquer função na DLL.  
+- O `#num` especificado não especifica nenhuma função na dll.  
   
-- Uma biblioteca de tipos tem uma declaração inválida, resultando no uso interno de um número ordinal inválido.  
+- Uma biblioteca de tipos tem uma declaração inválida que resulta em uso interno de um número ordinal inválido.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1. Verifique se que a expressão representa um número válido, ou chame o procedimento por nome.  
+1. Verifique se a expressão representa um número válido ou chame o procedimento por nome.  
   
-2. Certifique-se de `#num` identifica uma função válida na DLL.  
+2. Certifique-se de que `#num` identifica uma função válida na dll.  
   
-3. Isole a causa do problema comentando o código de chamada de procedimento. Gravar um `Declare` instrução para o procedimento e relatar o problema para o fornecedor da biblioteca de tipo.  
+3. Isole a chamada de procedimento que está causando o problema comentando o código. Escreva uma `Declare` instrução para o procedimento e relate o problema ao fornecedor da biblioteca de tipos.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Instrução Declare](../statements/declare-statement.md)

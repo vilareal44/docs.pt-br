@@ -1,5 +1,6 @@
 ---
 title: MDA dirtyCastAndCallOnInterface
+description: Examine o assistente de depuração gerenciada do dirtyCastAndCallOnInterface, que é invocado quando chamadas vtable de ligação antecipada são feitas em interfaces de classe somente de associação tardia.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), early bound calls AutoDispatch
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), early bound calls AutoDispatch
 - EarlyBoundCallOnAutorDispatchClassInteface MDA
 ms.assetid: aa388ed3-7e3d-48ea-a0b5-c47ae19cec38
-ms.openlocfilehash: 6e4f0074958e8a6a8ca322968e9c29e89481c0c8
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2ed5589909915a261a22c48490e469ae52659c8c
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216507"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416064"
 ---
 # <a name="dirtycastandcalloninterface-mda"></a>MDA dirtyCastAndCallOnInterface
 O MDA (assistente para depuração gerenciada) `dirtyCastAndCallOnInterface` é ativado quando há uma tentativa de realizar uma chamada de associação inicial por meio de uma vtable em uma interface de classe que foi marcada como somente associação tardia.  
@@ -47,7 +48,7 @@ O MDA (assistente para depuração gerenciada) `dirtyCastAndCallOnInterface` é 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)

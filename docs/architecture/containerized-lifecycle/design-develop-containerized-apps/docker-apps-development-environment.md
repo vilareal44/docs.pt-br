@@ -1,13 +1,13 @@
 ---
 title: Ambiente de desenvolvimento para aplicativos do Docker
 description: Saiba mais sobre as opções de ferramentas de desenvolvimento mais importantes compatíveis com o ciclo de vida de desenvolvimento do Docker.
-ms.date: 04/16/2020
-ms.openlocfilehash: b1df16db88fa85f794407c989f5428030c4cddf7
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 08/06/2020
+ms.openlocfilehash: 07b42b2bd05ab16ba0fbf61863b050ee2c9e242b
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394895"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916030"
 ---
 # <a name="development-environment-for-docker-apps"></a>Ambiente de desenvolvimento para aplicativos do Docker
 
@@ -26,7 +26,7 @@ Se preferir um editor leve e multiplataforma compatível com qualquer linguagem 
 
 ### <a name="visual-studio-with-docker-tools-windows-development-machine"></a>Visual Studio com ferramentas do Docker (computador de desenvolvimento do Windows)
 
-Recomendamos que você use o Visual Studio 2019 com as ferramentas internas do Docker habilitadas. Com o Visual Studio, é possível desenvolver, executar e validar seus aplicativos diretamente no ambiente do Docker escolhido. Pressione F5 para depurar seu aplicativo (contêiner único ou vários contêineres) diretamente em um host do Docker ou pressione CTRL + F5 para editar e atualizar o aplicativo sem precisar recompilar o contêiner. Essa é a opção mais simples e mais eficiente para desenvolvedores do Windows para criação de contêineres do Docker para Windows ou Linux.
+É recomendável que você use o Visual Studio 2019 com as ferramentas internas do Docker habilitadas. Com o Visual Studio, é possível desenvolver, executar e validar seus aplicativos diretamente no ambiente do Docker escolhido. Pressione F5 para depurar seu aplicativo (contêiner único ou vários contêineres) diretamente em um host do Docker ou pressione CTRL + F5 para editar e atualizar o aplicativo sem precisar recompilar o contêiner. Essa é a opção mais simples e mais eficiente para desenvolvedores do Windows para criação de contêineres do Docker para Windows ou Linux.
 
 ### <a name="visual-studio-for-mac-mac-development-machine"></a>Visual Studio para Mac (computador de desenvolvimento do Mac)
 

@@ -1,21 +1,22 @@
 ---
 title: Contadores de desempenho no .NET Framework
+description: Leia sobre contadores de desempenho no .NET. Há contadores de desempenho para exceções, interoperabilidade, compiladores JIT, carregamento, memória, rede, segurança e muito mais.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - performance, .NET Framework applications
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: 44a5d1cb70d294d720290a4754bb5f5cb47f79a4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3702e9d2e0a369f5391c16088202caf5d7ced7ea
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803697"
 ---
-# <a name="performance-counters-in-the-net-framework"></a>Contadores de desempenho no Framework .NET
+# <a name="performance-counters-in-the-net-framework"></a>Contadores de desempenho no .NET Framework
 
-Este tópico fornece uma lista de contadores de desempenho que você pode encontrar no [Monitor de Desempenho](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)do Windows .  
+Este tópico fornece uma lista de contadores de desempenho que você pode encontrar no [Monitor de desempenho do Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
 
 ## <a name="exception-performance-counters"></a>Contadores de desempenho de exceção  
  A categoria Exceções do .NET CLR do Console de desempenho inclui contadores que fornecem informações sobre as exceções geradas por um aplicativo. A tabela a seguir descreve esses contadores de desempenho.  
@@ -112,7 +113,7 @@ Este tópico fornece uma lista de contadores de desempenho que você pode encont
 |**Tamanho do heap de geração 1**|Exibe o número atual de bytes na geração 1; esse contador não exibe o tamanho máximo da geração 1. Os objetos não são diretamente alocados nessa geração; eles são promovidos de coletas de lixo de geração 0 anteriores. Esse contador é atualizado no final de uma coleta de lixo e não em cada alocação.|  
 |**Bytes promovidos da geração 1/s**|Exibe os bytes por segundo que são promovidos da geração 1 para a geração 2. Objetos que são promovidos apenas porque estão aguardando a finalização não são incluídos nesse contador.<br /><br /> A memória é promovida quando sobrevive a uma coleta de lixo. Nenhum item é promovida da geração 2 porque ela é a geração mais antiga. Esse contador é um indicador dos objetos de vida muito longa criados por segundo.<br /><br /> Esse contador mostra a diferença entre os valores observados nos dois últimos exemplos divididos pela duração do intervalo de amostragem.|  
 |**Tamanho do heap de geração 2**|Exibe o número atual de bytes na geração 2. Os objetos não são diretamente alocados nessa geração; eles são promovidos da geração 1 durante coletas de lixo de geração 1 anteriores. Esse contador é atualizado no final de uma coleta de lixo e não em cada alocação.|  
-|**Tamanho de Heap de objeto grande**|Exibe o tamanho atual, em bytes, do grande monte de objetos. Objetos maiores que aproximadamente 85.000 bytes são tratados como objetos grandes pelo coletor de lixo e são diretamente alocados em um monte especial. Eles não são promovidos através das gerações. Esse contador é atualizado no final de uma coleta de lixo e não em cada alocação.|  
+|**Tamanho de Heap de objeto grande**|Exibe o tamanho atual, em bytes, do heap de objeto grande. Objetos maiores que aproximadamente 85.000 bytes são tratados como objetos grandes pelo coletor de lixo e são diretamente alocados em um heap especial. Eles não são promovidos por meio das gerações. Esse contador é atualizado no final de uma coleta de lixo e não em cada alocação.|  
 |**ID do Processo**|Exibe a ID do processo da instância do processo CLR que está sendo monitorada.|  
 |**Finalização Promovida – Memória da Geração 0**|Exibe os bytes de memória que são promovidos da geração 0 para a geração 1 apenas porque estão aguardando a finalização. Esse contador não é cumulativo. ele exibe o valor observado no fim da última coleta de lixo.|  
 |**Memória Promovida da Geração 0**|Exibe os bytes de memória que sobrevivem à coleta de lixo e são promovidos da geração 0 para a geração 1. Objetos que são promovidos apenas porque estão aguardando a finalização não são incluídos nesse contador. Esse contador não é cumulativo. ele exibe o valor observado no fim da última coleta de lixo.|  
@@ -194,7 +195,7 @@ Os contadores de desempenho de rede para eventos incluem o seguinte:
   
  Contadores de desempenho de rede podem ser acessados e gerenciados usando a <xref:System.Diagnostics.PerformanceCounter> e classes relacionadas no namespace <xref:System.Diagnostics>. Contadores de desempenho de rede também podem ser exibidos com o console do Monitor de Desempenho do Windows.  
   
- Contadores de desempenho de rede precisam ser habilitados no arquivo de configuração a ser usado. Todos os contadores de desempenho de rede são habilitados ou desabilitados com uma única configuração no arquivo de configuração. Contadores de desempenho de rede individuais não podem ser habilitados nem desabilitados. Para obter mais informações, consulte [ \<performanceCounter> Element (Configurações de rede)](../configure-apps/file-schema/network/performancecounter-element-network-settings.md).  
+ Contadores de desempenho de rede precisam ser habilitados no arquivo de configuração a ser usado. Todos os contadores de desempenho de rede são habilitados ou desabilitados com uma única configuração no arquivo de configuração. Contadores de desempenho de rede individuais não podem ser habilitados nem desabilitados. Para obter mais informações, consulte [ \<performanceCounter> elemento (configurações de rede)](../configure-apps/file-schema/network/performancecounter-element-network-settings.md).  
   
  Se os contadores de rede estiverem habilitados, isso criará e atualizará contadores de desempenho globais e por AppDomain. Se desabilitados, o aplicativo não fornecerá nenhum dado de contador de desempenho de rede.  
   
@@ -227,7 +228,7 @@ for (int i = 0; i < Array.Length; i++)
 |**Extensão do exame da pilha**|Exibe a profundidade da pilha durante essa última verificação de segurança de acesso do código de runtime. Verificações de segurança de acesso do código de runtime são realizadas movimentando a pilha. Esse contador não é uma média, ele exibe apenas o último valor observado.|  
 |**Verificações de runtime total**|Exibe o número total de verificações de segurança de acesso do código de runtime realizadas desde que o aplicativo foi iniciado. Verificações de segurança de acesso de código de runtime são realizadas quando um chamador requer uma permissão específica. A verificação de runtime é feita em cada chamada pelo chamador e examina a pilha do thread atual do chamador. Quando usado com o contador **Extensão do exame da pilha**, esse contador indica a penalidade de desempenho que ocorre para verificações de segurança.|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Contadores de desempenho](performance-counters.md)
-- [Perfil de execução](runtime-profiling.md)
+- [Criação de perfil de tempo de execução](runtime-profiling.md)

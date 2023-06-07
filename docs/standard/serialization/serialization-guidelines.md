@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: af0b857e98ffbe0ff9f12108174b79f873c2b38f
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: eb11f0b8ddd34df7c6970c275d4b83cb95f59a53
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378384"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84287487"
 ---
 # <a name="serialization-guidelines"></a>Diretrizes de serialização
 Este documento lista as diretrizes a serem consideradas na criação de uma API a ser serializado.  
@@ -79,7 +79,7 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
      [!code-csharp[SerializationGuidelines#4](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#4)]
      [!code-vb[SerializationGuidelines#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#4)]  
   
-     Nos casos em que a lista de tipos conhecidos não é conhecida estaticamente (quando a classe **Person** é compilada), **KnownTypeAttribute** também pode apontar para um método que retorna uma lista de tipos conhecidos em runtime.  
+     Nos casos em que a lista de tipos conhecidos não é conhecida de forma estática (quando a classe **Person** é compilada), o **KnownTypeAttribute** também pode apontar para um método que retorna uma lista de tipos conhecidos em tempo de execução.  
   
 5. Considere a compatibilidade com versões anteriores e posteriores ao criar ou modificar tipos serializáveis.  
   
@@ -92,7 +92,7 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
      [!code-csharp[SerializationGuidelines#5](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#5)]
      [!code-vb[SerializationGuidelines#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#5)]  
   
-     Para obter mais informações, consulte [Contratos de dados compatíveis por encaminhamento](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+     Para obter mais informações, consulte [Contratos de dados compatíveis por encaminhamento](../../framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 #### <a name="supporting-xml-serialization"></a>Suporte à serialização XML  
  A serialização do contrato de dados é a tecnologia de serialização principal (padrão) do .NET Framework, mas há situações de serialização para as quais a serialização do contrato de dados não oferece suporte. Por exemplo, ela não fornece controle total sobre o formato XML gerado ou consumido pelo serializador. Se esse controle fino for necessário, a *serialização XML* precisará ser usada e você precisará criar seus tipos para oferecer suporte essa tecnologia de serialização.  
@@ -140,10 +140,10 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
   
 ## <a name="see-also"></a>Confira também
 
-- [Usando contratos de dados](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Serializador de contrato de dados](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
-- [Tipos com suporte fornecido pelo serializador de contrato de dados](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Usando contratos de dados](../../framework/wcf/feature-details/using-data-contracts.md)
+- [Serializador de contrato de dados](../../framework/wcf/feature-details/data-contract-serializer.md)
+- [Tipos com suporte fornecido pelo serializador de contrato de dados](../../framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [Serialização binária](binary-serialization.md)
 - [Comunicação remota .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [Serialização de XML e SOAP](xml-and-soap-serialization.md)
-- [Segurança e serialização](../../../docs/framework/misc/security-and-serialization.md)
+- [Segurança e serialização](../../framework/misc/security-and-serialization.md)

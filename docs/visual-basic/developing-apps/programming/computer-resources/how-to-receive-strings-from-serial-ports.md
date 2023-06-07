@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], retrieving from serial ports
 - My.Resources object
 ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
-ms.openlocfilehash: afd19877d053cb414f08761cda4e461d88f9e21c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 93b6b47d89d05331c85a6459bba7d6fd5e2e3377
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345593"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401830"
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Como receber cadeias de caracteres de portas seriais no Visual Basic
 
@@ -63,14 +63,14 @@ Este tópico descreve como usar o `My.Computer.Ports` para receber cadeias de ca
   
 ## <a name="robust-programming"></a>Programação robusta  
 
- Este exemplo pressupõe que o computador esteja usando a `COM1`. Para obter mais flexibilidade, o código deve permitir que o usuário selecione a porta serial desejada na lista de portas disponíveis. Para obter mais informações, consulte [Como mostrar portas seriais disponíveis](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
+ Este exemplo pressupõe que o computador esteja usando a `COM1`. Para obter mais flexibilidade, o código deve permitir que o usuário selecione a porta serial desejada na lista de portas disponíveis. Para obter mais informações, consulte [Como mostrar portas seriais disponíveis](how-to-show-available-serial-ports.md).  
   
- Este exemplo usa um bloco `Try...Catch...Finally` para garantir que o aplicativo feche a porta e capture quaisquer exceções de tempo limite. Para obter mais informações, consulte [Instrução Try...Catch...Finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ Este exemplo usa um bloco `Try...Catch...Finally` para garantir que o aplicativo feche a porta e capture quaisquer exceções de tempo limite. Para obter mais informações, consulte [Instrução Try...Catch...Finally](../../../language-reference/statements/try-catch-finally-statement.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
-- [Como: discar modems anexados a portas seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)
-- [Como: enviar cadeias de caracteres para portas seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
-- [Como: mostrar portas seriais disponíveis](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+- [Como: discar modems anexados a portas seriais](how-to-dial-modems-attached-to-serial-ports.md)
+- [Como: enviar cadeias de caracteres para portas seriais](how-to-send-strings-to-serial-ports.md)
+- [Como: mostrar portas seriais disponíveis](how-to-show-available-serial-ports.md)

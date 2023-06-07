@@ -3,15 +3,15 @@ title: Novidades do .NET Core 3.0
 description: Conheça os novos recursos encontrados no .NET Core 3.0.
 dev_langs:
 - csharp
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 422cb7b20e2644ab44f9573f101fb6b53ab1dd2f
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: bf712e88d96a5c2c80c3ff50283d44e9c7717abb
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378831"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608213"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novidades do .NET Core 3.0
 
@@ -54,7 +54,7 @@ Se você estiver usando o Visual Studio, precisará do [Visual Studio 2019](http
 
 ### <a name="default-executables"></a>Executáveis por padrão
 
-O .NET Core agora cria [executáveis dependentes de tempo de execução](../deploying/index.md#publish-runtime-dependent) por padrão. Esse comportamento é novo para aplicativos que usam uma versão do .NET Core instalada globalmente. Anteriormente, apenas [implantações autocontidas](../deploying/index.md#publish-self-contained) produziam um executável.
+O .NET Core agora compila [executáveis dependentes de estrutura](../deploying/index.md#publish-framework-dependent) por padrão. Esse comportamento é novo para aplicativos que usam uma versão do .NET Core instalada globalmente. Anteriormente, apenas [implantações autocontidas](../deploying/index.md#publish-self-contained) produziam um executável.
 
 Durante `dotnet build` ou `dotnet publish` , um executável (conhecido como **appHost**) é criado que corresponde ao ambiente e à plataforma do SDK que você está usando. Você pode esperar desses executáveis o mesmo que de outros executáveis nativos, como:
 
@@ -69,7 +69,7 @@ A partir do notarized SDK do .NET Core 3,0 para macOS, a configuração para pro
 
 Quando a configuração appHost está habilitada, o .NET Core gera um executável de Mach-O nativo quando você cria ou publica. Seu aplicativo é executado no contexto do appHost quando ele é executado do código-fonte com o `dotnet run` comando ou iniciando o executável de Mach-o diretamente.
 
-Sem o appHost, a única maneira como um usuário pode iniciar um aplicativo [dependente de tempo de execução](../deploying/index.md#publish-runtime-dependent) é com o `dotnet <filename.dll>` comando. Um appHost é sempre criado quando você publica [seu aplicativo independente](../deploying/index.md#publish-self-contained).
+Sem o appHost, a única maneira como um usuário pode iniciar um aplicativo [dependente da estrutura](../deploying/index.md#publish-framework-dependent) é com o `dotnet <filename.dll>` comando. Um appHost é sempre criado quando você publica [seu aplicativo independente](../deploying/index.md#publish-self-contained).
 
 Você pode configurar o appHost no nível do projeto ou alternar o appHost para um `dotnet` comando específico com o `-p:UseAppHost` parâmetro:
 
@@ -213,7 +213,7 @@ Exceções ao direcionamento cruzado:
 O .NET Core 3.0 introduz um recurso opcional que permite que seu aplicativo efetue roll forward para a versão principal mais recente do .NET Core. Adicionalmente, foi adicionada uma nova configuração para controlar como o roll forward é aplicado ao seu aplicativo. Isso pode ser configurado das seguintes maneiras:
 
 - Propriedade do arquivo de projeto: `RollForward`
-- Propriedade do arquivo de configuração de tempo de execução:`rollForward`
+- Propriedade do arquivo de configuração de tempo de execução: `rollForward`
 - Variável de ambiente: `DOTNET_ROLL_FORWARD`
 - Argumento de linha de comando: `--roll-forward`
 
@@ -257,14 +257,14 @@ As ferramentas locais dependem de um nome de arquivo de manifesto `dotnet-tools.
 
 Para ferramentas globais e locais, é necessária uma versão compatível do runtime. Muitas ferramentas que estão atualmente em NuGet.org direcionam para o runtime do .NET Core 2.1. Para instalar essas ferramentas, de forma global ou local, você ainda precisará instalar o [Runtime do NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1).
 
-### <a name="new-globaljson-options"></a>Novas opções global. JSON
+### <a name="new-globaljson-options"></a>Novas global.jsem opções
 
-O arquivo *global. JSON* tem novas opções que fornecem mais flexibilidade quando você está tentando definir qual versão do SDK do .NET Core é usada. As novas opções são:
+O *global.jsno* arquivo tem novas opções que fornecem mais flexibilidade quando você está tentando definir qual versão do SDK do .NET Core é usada. As novas opções são:
 
 - `allowPrerelease`: Indica se o resolvedor do SDK deve considerar versões de pré-lançamento ao selecionar a versão do SDK a ser usada.
 - `rollForward`: Indica a política de roll forward a ser usada ao selecionar uma versão do SDK, seja como um fallback quando uma versão específica do SDK estiver ausente ou como uma diretiva para usar uma versão superior.
 
-Para obter mais informações sobre as alterações, incluindo valores padrão, valores com suporte e novas regras de correspondência, consulte [visão geral global. JSON](../tools/global-json.md).
+Para obter mais informações sobre as alterações, incluindo valores padrão, valores com suporte e novas regras de correspondência, consulte [global.jsem visão geral](../tools/global-json.md).
 
 ### <a name="smaller-garbage-collection-heap-sizes"></a>Tamanhos menores de heap de coleta de lixo
 
@@ -391,7 +391,7 @@ Quando disponíveis, o .NET Core 3.0 usa **OpenSSL 1.1.1**, **1.1.0** ou **1.0.2
 
 O exemplo de C# 8.0 a seguir demonstra o .NET Core 3.0 no Ubuntu 18.10 conectando-se a <https://www.cloudflare.com>:
 
-[!code-csharp[TLSExample](~/samples/snippets/core/whats-new/whats-new-in-30/cs/TLS.cs#TLS)]
+[!code-csharp[TLSExample](./snippets/dotnet-core-3-0/csharp/TLS.cs#TLS)]
 
 ### <a name="cryptography-ciphers"></a>Cifras de criptografia
 
@@ -399,7 +399,7 @@ O .NET 3.0 adiciona o suporte para as criptografias **AES-GCM** e **AES-CCM**, i
 
 O código a seguir demonstra como usar criptografia `AesGcm` para criptografar e descriptografar dados aleatórios.
 
-[!code-csharp[AesGcm](~/samples/snippets/core/whats-new/whats-new-in-30/cs/Cipher.cs#AesGcm)]
+[!code-csharp[AesGcm](./snippets/dotnet-core-3-0/csharp/Cipher.cs#AesGcm)]
 
 ### <a name="cryptographic-key-importexport"></a>Importar/exportar chave de criptografia
 
@@ -424,7 +424,7 @@ Chaves RSA também dão suporte a:
 
 Os métodos de exportação produzem dados binários codificados em DER e os métodos de importação esperam o mesmo. Se uma chave for armazenada no formato PEM compatível com texto, o chamador precisará decodificar o conteúdo em Base64 antes de chamar um método de importação.
 
-[!code-csharp[RSA](~/samples/snippets/core/whats-new/whats-new-in-30/cs/RSA.cs#Rsa)]
+[!code-csharp[RSA](./snippets/dotnet-core-3-0/csharp/RSA.cs#Rsa)]
 
 Arquivos **PKCS nº 8** podem ser inspecionados com <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo?displayProperty=nameWithType> e **arquivos PFX/PKCS nº 12** podem ser inspecionados com <xref:System.Security.Cryptography.Pkcs.Pkcs12Info?displayProperty=nameWithType>. Arquivos **PFX/PKCS nº 12** podem ser manipulados com <xref:System.Security.Cryptography.Pkcs.Pkcs12Builder?displayProperty=nameWithType>.
 
@@ -539,13 +539,13 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ### <a name="fast-built-in-json-support"></a>Suporte interno rápido a JSON
 
-Os usuários do .NET confiam amplamente no [Newtonsoft. JSON](https://www.newtonsoft.com/json) e em outras bibliotecas JSON populares, que continuam a ser boas escolhas. `Newtonsoft.Json`usa cadeias de caracteres .NET como seu tipo de dados base, que é UTF-16 nos bastidores.
+Os usuários do .NET confiam amplamente em [Newtonsoft.Js](https://www.newtonsoft.com/json) e outras bibliotecas JSON populares, que continuam a ser boas escolhas. `Newtonsoft.Json` usa cadeias de caracteres .NET como seu tipo de dados base, que é UTF-16 nos bastidores.
 
 O novo suporte interno a JSON é alto desempenho, baixa alocação e funciona com texto JSON codificado em UTF-8. Para obter mais informações sobre o <xref:System.Text.Json> namespace e os tipos, consulte os seguintes artigos:
 
 * [Serialização JSON no .NET-visão geral](../../standard/serialization/system-text-json-overview.md)
 * [Como serializar e desserializar JSON no .net](../../standard/serialization/system-text-json-how-to.md).
-* [Como migrar de Newtonsoft. JSON para System. Text. JSON](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Como migrar do Newtonsoft.Jspara o System.Text.Jsem](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
 
 ### <a name="http2-support"></a>Suporte do HTTP/2
 
@@ -553,15 +553,15 @@ O tipo <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> dá suport
 
 O protocolo padrão permanece HTTP/1.1, mas o HTTP/2 pode ser ativado de duas maneiras diferentes. Primeiro, você pode definir a mensagem de solicitação HTTP para usar HTTP/2:
 
-[!code-csharp[Http2Request](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Request)]
+[!code-csharp[Http2Request](./snippets/dotnet-core-3-0/csharp/http.cs#Request)]
 
 Segundo, você pode alterar <xref:System.Net.Http.HttpClient> para usar HTTP/2 por padrão:
 
-[!code-csharp[Http2Client](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Client)]
+[!code-csharp[Http2Client](./snippets/dotnet-core-3-0/csharp/http.cs#Client)]
 
 Muitas vezes, quando você está desenvolvendo um aplicativo, quer usar uma conexão não criptografada. Se você souber que o ponto de extremidade estará usando HTTP/2, poderá ativar conexões não criptografadas para HTTP/2. Você pode ativá-lo definindo a variável de ambiente `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT` como `1` ou ativando-a no contexto do aplicativo:
 
-[!code-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
+[!code-csharp[Http2Context](./snippets/dotnet-core-3-0/csharp/http.cs#AppContext)]
 
 ## <a name="next-steps"></a>Próximas etapas
 

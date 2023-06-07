@@ -1,5 +1,6 @@
 ---
 title: adicionar controles
+description: Saiba como desenhar um controle em um formulário do Windows. Um controle é um componente em um formulário que você pode usar para exibir informações ou aceitar a entrada do usuário.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 560089a23fbcccb0f0d5683a95ad06dd9c59556d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d9ab0d78fa0153cce20fb17d22f6e9e781229ece
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743962"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325888"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Como adicionar controles aos Windows Forms
 
@@ -44,7 +45,7 @@ A maioria dos formulários é projetada adicionando controles à superfície do 
     > [!NOTE]
     > Você pode clicar duas vezes em um controle na **Caixa de ferramentas** para adicioná-lo ao canto superior esquerdo do formulário com seu tamanho padrão.
 
-    Você também pode adicionar controles dinamicamente a um formulário no tempo de execução. No exemplo de código a seguir, um controle <xref:System.Windows.Forms.TextBox> será adicionado ao formulário quando um controle de <xref:System.Windows.Forms.Button> for clicado.
+    Você também pode adicionar controles dinamicamente a um formulário no tempo de execução. No exemplo de código a seguir, um <xref:System.Windows.Forms.TextBox> controle será adicionado ao formulário quando um <xref:System.Windows.Forms.Button> controle for clicado.
 
     > [!NOTE]
     > O procedimento a seguir requer a existência de um formulário com um controle **Botão**, `Button1`, já inserido nele.
@@ -87,9 +88,9 @@ A maioria dos formulários é projetada adicionando controles à superfície do 
     > [!IMPORTANT]
     > Você poderia expor seu computador local a um risco de segurança por meio da rede referenciando um `UserControl` mal-intencionado. Isso seria um problemas apenas no caso de uma pessoa mal-intencionada criar um controle personalizado prejudicial e você adicioná-lo por engano ao seu projeto.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Controles dos Windows Forms](index.md)
-- [Como redimensionar controles nos Windows Forms](how-to-resize-controls-on-windows-forms.md)
+- [Controles de Windows Forms](index.md)
+- [Como redimensionar controles no Windows Forms](how-to-resize-controls-on-windows-forms.md)
 - [Como definir o texto exibido por um controle dos Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles a serem usados em Windows Forms](controls-to-use-on-windows-forms.md)

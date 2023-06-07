@@ -1,13 +1,14 @@
 ---
 title: LINQ to Entities
+description: Saiba como criar e executar LINQ to Entities consultas, que permitem escrever consultas no modelo conceitual Entity Framework usando Visual Basic ou Visual C#.
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: bc568cb9dff170062651c908471a36cd17eac980
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 389a81872f4652c69e2b845359cf4e5a275aed5c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854371"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286838"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 O LINQ to Entities fornece suporte a LINQ (Consulta Integrada à Linguagem) que permite aos desenvolvedores escreverem consultas no modelo conceitual do Entity Framework usando Visual Basic ou Visual C#. As consultas no Entity Framework são representadas por consultas de árvore de comando, que são executadas no contexto de objeto. O LINQ to Entities converte consultas do LINQ (Consulta Integrada à Linguagem) para consultas de árvore de comando, executa as consultas no Entity Framework e retorna os objetos que podem ser usados pelo Entity Framework e pelo LINQ. Veja a seguir o processo para criar e executar uma consulta LINQ to Entities:  
@@ -35,7 +36,7 @@ O LINQ to Entities fornece suporte a LINQ (Consulta Integrada à Linguagem) que 
 ## <a name="query-conversion"></a>Conversão de consulta  
  Para executar uma consulta LINQ to Entities no Entity Framework, a consulta LINQ deve ser convertida em uma representação de árvore de comando que pode ser executada no Entity Framework.  
   
- LINQ to Entities consultas são compostas por operadores de consulta padrão LINQ ( <xref:System.Linq.Queryable.Select%2A>como <xref:System.Linq.Queryable.Where%2A>, e <xref:System.Linq.Queryable.GroupBy%2A>) e expressões (x > 10, Contact. LastName e assim por diante). Os operadores LINQ não são definidos por uma classe, mas são métodos em uma classe. No LINQ, as expressões podem conter tudo o que é permitido por tipos dentro do namespace <xref:System.Linq.Expressions> e, por extensão, tudo o que pode ser representado em uma função lambda. Este é um superconjunto de expressões que são permitidas pelo Entity Framework, que são restritas por definição para as operações permitidas no banco de dados, e têm suporte pelo <xref:System.Data.Objects.ObjectQuery%601>.  
+ LINQ to Entities consultas são compostas por operadores de consulta padrão LINQ (como <xref:System.Linq.Queryable.Select%2A> , <xref:System.Linq.Queryable.Where%2A> e <xref:System.Linq.Queryable.GroupBy%2A> ) e expressões (x > 10, Contact. LastName e assim por diante). Os operadores LINQ não são definidos por uma classe, mas são métodos em uma classe. No LINQ, as expressões podem conter tudo o que é permitido por tipos dentro do namespace <xref:System.Linq.Expressions> e, por extensão, tudo o que pode ser representado em uma função lambda. Este é um superconjunto de expressões que são permitidas pelo Entity Framework, que são restritas por definição para as operações permitidas no banco de dados, e têm suporte pelo <xref:System.Data.Objects.ObjectQuery%601>.  
   
  No Entity Framework, os operadores e as expressões são representados por uma única hierarquia de tipo, que são colocadas em uma árvore de comando. A árvore de comando é usada pelo Entity Framework para executar a consulta. Se a consulta LINQ não puder ser expressada como uma árvore de comando, uma exceção será gerada quando a consulta estiver sendo convertida. A conversão de consultas LINQ to Entities envolve duas subconversões: a conversão dos operadores de consulta padrão e a conversão das expressões.  
   
@@ -49,7 +50,7 @@ O LINQ to Entities fornece suporte a LINQ (Consulta Integrada à Linguagem) que 
   
  Para obter informações sobre como chamar funções canônicas, de banco de dados e personalizadas de dentro de LINQ to Entities consultas, consulte [chamando funções em consultas LINQ to Entities](calling-functions-in-linq-to-entities-queries.md).  
   
-## <a name="query-execution"></a>Execução da Consulta  
+## <a name="query-execution"></a>Execução da consulta  
  Depois que a consulta LINQ é criada pelo usuário, ela é convertida para uma representação que está compatível com o Entity Framework (na forma de árvores de comando), que é, em seguida, executado na fonte de dados. No tempo de execução de consulta, todas as expressões de consulta (ou componentes da consulta) são avaliados no cliente ou no servidor. Isso inclui as expressões que são usadas na materialização de resultados ou projeções de entidade. Para obter mais informações, consulte [execução da consulta](query-execution.md). Para obter informações sobre como melhorar o desempenho compilando uma consulta uma vez e, em seguida, executando-a várias vezes com parâmetros diferentes, consulte [consultas compiladas (LINQ to Entities)](compiled-queries-linq-to-entities.md).  
   
 ## <a name="materialization"></a>Materialização  
@@ -72,26 +73,26 @@ O LINQ to Entities fornece suporte a LINQ (Consulta Integrada à Linguagem) que 
   
  [Expressões em consultas LINQ to Entities](expressions-in-linq-to-entities-queries.md)  
   
- [Chamando funções em consultas LINQ to Entities](calling-functions-in-linq-to-entities-queries.md)  
+ [Chamando funções em consultas no LINQ to Entities](calling-functions-in-linq-to-entities-queries.md)  
   
  [Consultas compiladas (LINQ to Entities)](compiled-queries-linq-to-entities.md)  
   
- [Execução de consulta](query-execution.md)  
+ [Execução da consulta](query-execution.md)  
   
- [Resultados da Consulta](query-results.md)  
+ [Resultados da consulta](query-results.md)  
   
  [Operadores de consulta padrão em consultas LINQ to Entities](standard-query-operators-in-linq-to-entities-queries.md)  
   
- [Método CLR para mapeamento de função canônica](clr-method-to-canonical-function-mapping.md)  
+ [Método CLR ao mapeamento canônico de função](clr-method-to-canonical-function-mapping.md)  
   
- [Métodos LINQ com e sem suporte (LINQ to Entities)](supported-and-unsupported-linq-methods-linq-to-entities.md)  
+ [Métodos suportados e sem suporte LINQ (LINQ to Entities)](supported-and-unsupported-linq-methods-linq-to-entities.md)  
   
  [Problemas conhecidos e considerações no LINQ to Entities](known-issues-and-considerations-in-linq-to-entities.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Problemas conhecidos e considerações no LINQ to Entities](known-issues-and-considerations-in-linq-to-entities.md)
 - [LINQ (consulta integrada à linguagem) – C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
 - [LINQ (consulta integrada à linguagem) – Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
-- [LINQ e ADO.NET](../../linq-and-ado-net.md)
-- [Entity Framework do ADO.NET](../index.md)
+- [LINQ e o ADO.NET](../../linq-and-ado-net.md)
+- [ADO.NET Entity Framework](../index.md)

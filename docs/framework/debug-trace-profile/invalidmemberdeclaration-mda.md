@@ -1,5 +1,6 @@
 ---
 title: MDA invalidMemberDeclaration
+description: Examine o assistente de depuração gerenciada do invalidMemberDeclaration, que será invocado se um HRESULT de falha for retornado para COM sem chamar o método gerenciado.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - invalid member declaration
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), marshaling
 - MDAs (managed debugging assistants), marshaling
 ms.assetid: a84dd9a3-d6cf-4824-989a-ecbbf443eeb4
-ms.openlocfilehash: 6033cd4178b2bc493794b5dcc527bc543ba24284
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 5dbfba2baec3263d91746c06379438e97a81f005
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216293"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051708"
 ---
 # <a name="invalidmemberdeclaration-mda"></a>MDA invalidMemberDeclaration
 O MDA (Assistente de Depuração Gerenciado) de `invalidMemberDeclaration` é ativado para relatar um erro que ocorre ao determinar como realizar marshaling dos parâmetros de um membro a ser chamado do COM.  
@@ -43,8 +43,8 @@ O MDA (Assistente de Depuração Gerenciado) de `invalidMemberDeclaration` é at
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling de interoperabilidade](../interop/interop-marshaling.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Realizando marshaling de interoperabilidade](../interop/interop-marshaling.md)

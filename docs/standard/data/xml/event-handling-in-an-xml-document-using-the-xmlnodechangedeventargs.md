@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-ms.openlocfilehash: b27c51572b1ba83480d90eba4add7f930715a4e5
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 7bca8600468d3715b1d1cca46049eb07bb8e3d03
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156524"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287773"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Tratamento de eventos em um documento XML usando o XmlNodeChangedEventArgs
 **XmlNodeChangedEventArgs** encapsula os argumentos passados para manipuladores de eventos registrados no objeto **XmlDocument** para manipular eventos. Os eventos e uma descrição de quando são acionados dados na tabela a seguir.  
@@ -208,4 +208,4 @@ public class Sample
   
 ## <a name="see-also"></a>Veja também
 
-- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

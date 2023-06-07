@@ -1,5 +1,6 @@
 ---
 title: Registrar um Módulo Provedor do Lado do Cliente
+description: Examine um exemplo que mostra como registrar uma DLL que contém provedores de automação da interface do usuário do lado do cliente.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - UI Automation, registering provider assemblies
 - provider assemblies, registering
 ms.assetid: a03af4d9-2771-43cc-b07b-d468dca23190
-ms.openlocfilehash: 72e1349eee90bbe5078fec037b5f29c51c84b8ec
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 034a109bb69c08883c0943b7b6ef69a397a8e7e1
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438453"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168140"
 ---
 # <a name="register-a-client-side-provider-assembly"></a>Registrar um Módulo Provedor do Lado do Cliente
 > [!NOTE]
@@ -29,6 +30,6 @@ ms.locfileid: "74438453"
  [!code-csharp[UIAClientSideProvider_snip#102](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClientSideProvider_snip/CSharp/CSClientProgram.cs#102)]
  [!code-vb[UIAClientSideProvider_snip#102](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClientSideProvider_snip/visualbasic/csclientprogram.vb#102)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Criar um provedor de automação de interface do usuário do lado do cliente](create-a-client-side-ui-automation-provider.md)
+- [Criar um Provedor de Automação de Interface de Usuário do Lado do Cliente](create-a-client-side-ui-automation-provider.md)

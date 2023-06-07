@@ -6,41 +6,41 @@ helpviewer_keywords:
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-ms.openlocfilehash: 1c3589b336ee8982cd6d694112e4c1f784f59ad2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8e3306612e016568ad7cfd5138ab538af771a17
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585791"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585825"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Visão geral de transações do Windows Communication Foundation
 As transações fornecem uma maneira de agrupar um conjunto de ações ou operações em uma única unidade indivisível de execução. Uma transação é uma coleção de operações com as seguintes propriedades:  
   
-- Atomicidade. Isso garante que todas as atualizações concluídas em uma transação específica são confirmadas e tornam-se duráveis ou eles são todos anulados e revertidos ao estado anterior.  
+- Atomicidade. Isso garante que todas as atualizações concluídas em uma transação específica sejam confirmadas e tornadas duráveis ou todas todas sejam anuladas e revertidas para o estado anterior.  
   
-- Consistência. Isso garante que as alterações feitas em uma transação representam uma transformação de um estado consistente para outro. Por exemplo, uma transação que transfere dinheiro de uma conta bancária para uma conta de economias não altera a quantidade de dinheiro na conta bancária geral.  
+- Consistência. Isso garante que as alterações feitas em uma transação representem uma transformação de um estado consistente para outro. Por exemplo, uma transação que transfere dinheiro de uma conta de verificação para uma conta de poupança não altera a quantidade de dinheiro na conta do banco geral.  
   
-- Isolamento. Isso impede que uma transação de observar as alterações não confirmadas que pertencem a outras transações simultâneas. O isolamento fornece uma abstração de simultaneidade, garantindo uma transação não pode ter um impacto inesperado na execução de outra transação.  
+- Isolamento. Isso impede que uma transação Observe alterações não confirmadas que pertencem a outras transações simultâneas. O isolamento fornece uma abstração de simultaneidade, garantindo que uma transação não possa ter um impacto inesperado na execução de outra transação.  
   
-- Durabilidade. Isso significa que, depois de confirmado, atualizações para recursos gerenciados (como um registro de banco de dados) será persistentes no caso de falhas.  
+- Durabilidade. Isso significa que, uma vez confirmadas, as atualizações em recursos gerenciados (como um registro de banco de dados) serão persistentes diante de falhas.  
   
- Windows Communication Foundation (WCF) oferece um conjunto avançado de recursos que permitem a criação de transações distribuídas em seu aplicativo de serviço Web.  
+ O Windows Communication Foundation (WCF) fornece um conjunto avançado de recursos que permitem que você crie transações distribuídas em seu aplicativo de serviço Web.  
   
- O WCF implementa o suporte ao protocolo WS-AtomicTransaction (WS-AT) que permite que os aplicativos do WCF para transações de fluxo para aplicativos interoperáveis, como serviços da Web interoperáveis construídos usando a tecnologia de produtos de terceiros. O WCF também implementa o suporte para o protocolo de transações OLE, que pode ser usado em cenários em que você não precisa interoperabilidade funcionalidade para habilitar o fluxo de transações.  
+ O WCF implementa o suporte para o protocolo WS-AtomicTransaction (WS-AT) que permite que os aplicativos WCF fluam transações para aplicativos interoperáveis, como serviços Web interoperáveis criados com tecnologia de terceiros. O WCF também implementa o suporte para o protocolo transações OLE, que pode ser usado em cenários em que você não precisa da funcionalidade de interoperabilidade para habilitar o fluxo de transações.  
   
- Você pode usar um arquivo de configuração de aplicativo para configurar associações para habilitar ou desabilitar o fluxo de transações, bem como definir o protocolo de transação desejadas em uma associação. Além disso, você pode definir tempos limite de transação no nível de serviço usando o arquivo de configuração. Para obter mais informações, consulte [habilitando o fluxo de transação](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
+ Você pode usar um arquivo de configuração de aplicativo para configurar associações para habilitar ou desabilitar o fluxo de transações, bem como para definir o protocolo de transação desejado em uma associação. Além disso, você pode definir o tempo limite da transação no nível de serviço usando o arquivo de configuração. Para obter mais informações, consulte [habilitando o fluxo de transações](enabling-transaction-flow.md).  
   
- Atributos de transação no <xref:System.ServiceModel> namespace permitem que você faça o seguinte:  
+ Os atributos de transação no <xref:System.ServiceModel> namespace permitem que você faça o seguinte:  
   
-- Configurar tempos limite de transação e a filtragem no nível de isolamento usando o <xref:System.ServiceModel.ServiceBehaviorAttribute> atributo.  
+- Configure tempos limite de transação e filtragem de nível de isolamento usando o <xref:System.ServiceModel.ServiceBehaviorAttribute> atributo.  
   
-- Habilitar a funcionalidade de transações e configurar o comportamento de conclusão de transações usando o <xref:System.ServiceModel.OperationBehaviorAttribute> atributo.  
+- Habilite a funcionalidade de transações e configure o comportamento de conclusão da transação usando o <xref:System.ServiceModel.OperationBehaviorAttribute> atributo.  
   
-- Use o <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> atributos em um método de contrato para exigir, permitir ou negar o fluxo de transações.  
+- Use os <xref:System.ServiceModel.ServiceContractAttribute> <xref:System.ServiceModel.OperationContractAttribute> atributos e em um método de contrato para exigir, permitir ou negar o fluxo de transações.  
   
- Para obter mais informações, consulte [atributos de transação de ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
+ Para obter mais informações, consulte [ServiceModel Transaction Attributes](servicemodel-transaction-attributes.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Atributos de transação de ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)
-- [Habilitando o fluxo de transação](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
+- [Atributos de transação de ServiceModel](servicemodel-transaction-attributes.md)
+- [Ativando o fluxo de transações](enabling-transaction-flow.md)

@@ -2,26 +2,26 @@
 title: Interoperabilidade com Web Services Enhancements 3.0
 ms.date: 03/30/2017
 ms.assetid: e8e589d2-12c6-4794-8a11-1ee90b47dfaa
-ms.openlocfilehash: 19786393a09610b4bd6c593f89beece8b9a0d3f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e16a018a2ffd275344f7e81c087672b61ede4923
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038643"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595252"
 ---
 # <a name="interoperability-with-web-services-enhancements-30"></a>Interoperabilidade com Web Services Enhancements 3.0
-Os clientes do Windows Communication Foundation (WCF) e serviços são compatíveis com o nível de transmissão com Web Services aprimoramentos 3.0 para clientes do Microsoft .NET (WSE) e serviços quando os clientes do WCF e serviços estão configurados para usar a versão de agosto de 2004 das Especificação de WS-Addressing.  
+Os clientes e serviços do Windows Communication Foundation (WCF) são compatíveis de nível de conexão com clientes e serviços do WSE (Web Services Enhancements 3,0 for Microsoft .NET) quando os clientes e serviços WCF são configurados para usar a versão de agosto de 2004 da especificação WS-Addressing.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como: Configurar os serviços WCF para interoperar com o WSE 3.0 clientes](../../../../docs/framework/wcf/feature-details/how-to-configure-wcf-services-to-interoperate-with-wse-3-0-clients.md)  
- Descreve como configurar um serviço WCF, para que uma Web Services aprimoramentos 3.0 para o cliente do Microsoft .NET (WSE) pode se comunicar com ele.  
+ [Como configurar serviços do WCF para interoperar com clientes WSE 3.0](how-to-configure-wcf-services-to-interoperate-with-wse-3-0-clients.md)  
+ Descreve como configurar um serviço WCF, de modo que um cliente de Web Services Enhancements 3,0 para Microsoft .NET (WSE) possa se comunicar com ele.  
   
- [Como: Configurar um cliente WCF para interoperar com serviços WSE3.0](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-client-to-interoperate-with-wse3-0-services.md)  
- Fornece detalhes sobre como configurar um cliente WCF, para que ele se comunica com um aprimoramentos de serviços Web 3.0 para o serviço do Microsoft .NET (WSE).  
+ [Como configurar um cliente WCF para interoperar com serviços WSE3.0](how-to-configure-a-wcf-client-to-interoperate-with-wse3-0-services.md)  
+ Detalhes de como configurar um cliente WCF, para que ele se comunique com um serviço WSE (Web Services Enhancements 3,0 for Microsoft .NET).  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Migração de serviços Web do WSE 3.0 para o WCF](../../../../docs/framework/wcf/feature-details/migrating-wse-3-0-web-services-to-wcf.md)  
+ [Migrando serviços Web de WSE 3.0 para o WCF](migrating-wse-3-0-web-services-to-wcf.md)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interoperabilidade com serviços Web do ASP.NET](../../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)
+- [Interoperabilidade com serviços Web do ASP.NET](interop-with-aspnet-web-services.md)

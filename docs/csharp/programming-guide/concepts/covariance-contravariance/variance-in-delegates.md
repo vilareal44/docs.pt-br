@@ -1,13 +1,14 @@
 ---
 title: Variação em delegados (C#)
+description: Saiba como o suporte à variação no .NET Framework permite que você corresponda a assinaturas de método com tipos delegados em todos os delegados.
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: fd1b4824dc3d8f12347e01b804a6e39fe2e086c8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ef57a7fa7feaef98a47822e3f1c9242d0205932d
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169708"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105659"
 ---
 # <a name="variance-in-delegates-c"></a>Variação em delegados (C#)
 O .NET Framework 3.5 introduziu o suporte a variação para assinaturas de método correspondentes com tipos de delegados em todos os delegados do C#. Isso significa que você pode atribuir a delegados não apenas os métodos que têm assinaturas correspondentes, mas também métodos que retornam tipos mais derivados (covariância) ou que aceitam parâmetros que têm tipos menos derivados (contravariância) do que o especificado pelo tipo de delegado. Isso inclui delegados genéricos e não genéricos.  
@@ -109,8 +110,9 @@ public static void Test()
 }  
 ```  
   
-### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>Delegados genéricos que têm parâmetros de tipo variante no .NET Framework  
- O .NET Framework 4 introduziu o suporte à variação para parâmetros de tipo genérico em diversos delegados genéricos existentes:  
+### <a name="generic-delegates-that-have-variant-type-parameters-in-net"></a>Delegados genéricos que têm parâmetros de tipo Variant no .NET
+
+O .NET Framework 4 introduziu o suporte à variação para parâmetros de tipo genérico em diversos delegados genéricos existentes:  
   
 - `Action` delega do namespace <xref:System>, por exemplo, <xref:System.Action%601> e <xref:System.Action%602>  
   
@@ -157,7 +159,8 @@ dvariant("test");
 ```  
   
 ### <a name="combining-variant-generic-delegates"></a>Combinando delegados genéricos variantes  
- Você não deve combinar delegados variantes. O método <xref:System.Delegate.Combine%2A> não dá suporte à conversão de delegados variantes e espera que os delegados sejam exatamente do mesmo tipo. Isso pode levar a uma exceção de tempo de execução quando você combina delegados usando o método <xref:System.Delegate.Combine%2A> ou o operador `+`, conforme mostrado no exemplo de código a seguir.  
+
+Não combine delegados de variante. O método <xref:System.Delegate.Combine%2A> não dá suporte à conversão de delegados variantes e espera que os delegados sejam exatamente do mesmo tipo. Isso pode levar a uma exceção de tempo de execução quando você combina delegados usando o método <xref:System.Delegate.Combine%2A> ou o operador `+`, conforme mostrado no exemplo de código a seguir.  
   
 ```csharp  
 Action<object> actObj = x => Console.WriteLine("object: {0}", x);  
@@ -200,4 +203,4 @@ public static void Test()
 
 - [Genéricos](../../../../standard/generics/index.md)
 - [Usando variação para delegados genéricos Func e Action (C#)](./using-variance-for-func-and-action-generic-delegates.md)
-- [Como combinar delegados (Delegados Multicast)](../../delegates/how-to-combine-delegates-multicast-delegates.md)
+- [Como combinar delegados (delegados de multicast)](../../delegates/how-to-combine-delegates-multicast-delegates.md)

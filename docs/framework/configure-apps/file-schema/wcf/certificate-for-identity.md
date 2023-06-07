@@ -1,25 +1,25 @@
 ---
-title: <certificate>fins<identity>
+title: <certificate> para <identity>
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
 ms.openlocfilehash: 1cfd207afc72cc71359d9d262e30b0696ba63d2b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70850018"
 ---
-# <a name="certificate-for-identity"></a>\<> de certificado \<para > de identidade
+# <a name="certificate-for-identity"></a>\<certificate> para \<identity>
 Especifica um certificado X. 509 usado para validar um servidor para um cliente.  
   
 Para obter mais informações sobre como definir o valor do elemento, consulte [identidade e autenticação de serviço](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> do cliente**](client.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> do ponto de extremidade**](endpoint-of-client.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de identidade**](identity.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de certificado**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<client>**](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpoint>**](endpoint-of-client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<identity>**](identity.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<certificate>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,10 +34,10 @@ Para obter mais informações sobre como definir o valor do elemento, consulte [
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|encodedValue|Uma codificação base64 do certificado.|  
+|codificado|Uma codificação base64 do certificado.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -54,11 +54,11 @@ Para obter mais informações sobre como definir o valor do elemento, consulte [
 </identity>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.EndpointIdentity>
-- [Autenticação e identidade de serviço](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Identidade e autenticação de serviço](../../../wcf/feature-details/service-identity-and-authentication.md)
 - [\<identity>](identity.md)

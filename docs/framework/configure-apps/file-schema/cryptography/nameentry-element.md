@@ -9,20 +9,20 @@ helpviewer_keywords:
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 ms.openlocfilehash: a339638587f8b544bbc1b0073553f6232ce09694
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "71699773"
 ---
-# <a name="nameentry-element"></a>\<elemento de > nameEntry
+# <a name="nameentry-element"></a>Elemento \<nameEntry>
 Mapeia um nome de classe para um nome de algoritmo amigável, o que permite que uma classe tenha vários nomes amigáveis.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<nameEntry >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptographySettings>**](cryptographysettings-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptoNameMapping>**](cryptonamemapping-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<nameEntry>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,19 +31,19 @@ Mapeia um nome de classe para um nome de algoritmo amigável, o que permite que 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
+ As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |**name**|Atributo obrigatório.<br /><br /> Especifica o nome amigável do algoritmo que a classe de criptografia implementa.|  
-|**class**|Atributo obrigatório.<br /><br /> Especifica o valor do atributo **Name** no elemento [\<cryptoClass >](cryptoclass-element.md) .|  
+|**classes**|Atributo obrigatório.<br /><br /> Especifica o valor do atributo **Name** no [\<cryptoClass>](cryptoclass-element.md) elemento.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- None.  
+ Nenhum.  
   
-### <a name="parent-elements"></a>Elementos Pai  
+### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
@@ -51,10 +51,10 @@ Mapeia um nome de classe para um nome de algoritmo amigável, o que permite que 
 |`system.web`|Especifica o elemento raiz para a seção de configuração ASP.NET.|  
   
 ## <a name="remarks"></a>Comentários  
- O atributo **Name** pode ser o nome de uma das classes abstratas encontradas no namespace <xref:System.Security.Cryptography>. Quando você chama o método **Create** em uma classe de criptografia abstrata, o nome da classe abstrata é passado para o método <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>. **CreateFromName** retorna uma instância do tipo indicado pelo atributo de **classe** . Se o atributo **Name** for um nome curto, como RSA, você poderá usar esse nome ao chamar o método **CreateFromName** .  
+ O atributo **Name** pode ser o nome de uma das classes abstratas encontradas no <xref:System.Security.Cryptography> namespace. Quando você chama o método **Create** em uma classe de criptografia abstrata, o nome da classe abstrata é passado para o <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> método. **CreateFromName** retorna uma instância do tipo indicado pelo atributo de **classe** . Se o atributo **Name** for um nome curto, como RSA, você poderá usar esse nome ao chamar o método **CreateFromName** .  
   
-## <a name="example"></a>{1&gt;Exemplo&lt;1}  
- O exemplo a seguir mostra como usar o elemento **\<nameEntry >** para fazer referência a uma classe de criptografia e configurar o tempo de execução. Em seguida, você pode passar a cadeia de caracteres "RSA" para o método <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> e usar o método <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> para retornar um objeto `MyCryptoRSAClass`.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra como usar o **\<nameEntry>** elemento para fazer referência a uma classe de criptografia e configurar o tempo de execução. Em seguida, você pode passar a cadeia de caracteres "RSA" para o <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> método e usar o <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> método para retornar um `MyCryptoRSAClass` objeto.  
   
 ```xml  
 <configuration>  
@@ -75,9 +75,9 @@ Mapeia um nome de classe para um nome de algoritmo amigável, o que permite que 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Esquema de arquivos de configuração](../index.md)
 - [Esquema de configurações de criptografia](index.md)
-- [Serviços criptográficos](../../../../standard/security/cryptographic-services.md)
+- [Serviços de Criptografia](../../../../standard/security/cryptographic-services.md)
 - [Configurando classes de criptografia](../../configure-cryptography-classes.md)

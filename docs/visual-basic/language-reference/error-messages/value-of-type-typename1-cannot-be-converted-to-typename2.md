@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: 027cccc9ad406d5bc2fd686ddeb4c674dc8f3c90
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f6b35efbc445887c537b94dd299b317a28e5f689
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621194"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406554"
 ---
-# <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>Valor do tipo '\<typename1 >' não pode ser convertido em '\<typename2 >'
-Valor do tipo '\<typename1 >' não pode ser convertido em '\<typename2 >'. Incompatibilidade de tipo pode ser devido a combinação de uma referência de arquivo com uma referência de projeto ao assembly '\<assemblyname >'. Tente substituir a referência de arquivo para '\<filepath >' no projeto '\<projectname1 >' com uma referência de projeto a '\<projectname2 >'.  
+# <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>O valor do tipo '\<typename1>' não pode ser convertido em '\<typename2>'
+O valor do tipo ' \<typename1> ' não pode ser convertido em ' \<typename2> '. A incompatibilidade de tipos pode ser devido à mistura de uma referência de arquivo com uma referência de projeto para o assembly ' \<assemblyname> '. Tente substituir a referência de arquivo para ' \<filepath> ' no projeto ' \<projectname1> ' por uma referência de projeto para ' \<projectname2> '.  
   
- Em uma situação em que um projeto faz uma referência de projeto e uma referência de arquivo, o compilador não pode garantir que um tipo pode ser convertido para outro.  
+ Em uma situação em que um projeto faz uma referência de projeto e uma referência de arquivo, o compilador não pode garantir que um tipo possa ser convertido em outro.  
   
  O pseudocódigo a seguir ilustra uma situação que pode gerar esse erro.  
   
@@ -47,11 +47,11 @@ Valor do tipo '\<typename1 >' não pode ser convertido em '\<typename2 >'. Incom
   
  `End Class`  
   
- Projeto `P1` faz uma referência de projeto indireta por meio do projeto `P2` ao projeto `P3`e também uma referência para `P3`. A declaração de `commonObject` usa a referência de arquivo para `P3`, enquanto a chamada para `P2.getCommonClass` usa a referência de projeto para `P3`.  
+ O projeto `P1` faz uma referência de projeto indireta por meio do projeto `P2` ao projeto `P3` e também uma referência direta de arquivo ao `P3` . A declaração de `commonObject` usa a referência de arquivo para `P3` , enquanto a chamada para `P2.getCommonClass` usa a referência de projeto para `P3` .  
   
- O problema nessa situação é que a referência de arquivo Especifica um caminho de arquivo e um nome para o arquivo de saída de `P3` (geralmente p3. dll), enquanto as referências do projeto identificam o projeto de origem (`P3`) pelo nome do projeto. Por isso, o compilador não pode garantir que o tipo `P3.commonClass` vem do mesmo código-fonte por meio de duas referências diferentes.  
+ O problema nessa situação é que a referência de arquivo especifica um caminho e nome de arquivo para o arquivo de saída de `P3` (normalmente P3. dll), enquanto o projeto faz referência a identificar o projeto de origem ( `P3` ) por nome de projeto. Por isso, o compilador não pode garantir que o tipo `P3.commonClass` venha do mesmo código-fonte por meio de duas referências diferentes.  
   
- Essa situação normalmente ocorre quando as referências de projeto e referências de arquivo são misturadas. Na ilustração anterior, o problema não ocorrerá se `P1` feita uma referência direta ao `P3` em vez de uma referência de arquivo.  
+ Essa situação normalmente ocorre quando referências de projeto e referências de arquivo são misturadas. Na ilustração anterior, o problema não ocorreria se `P1` uma referência de projeto direta fosse feita em `P3` vez de uma referência de arquivo.  
   
  **ID do erro:** BC30955  
   
@@ -59,7 +59,7 @@ Valor do tipo '\<typename1 >' não pode ser convertido em '\<typename2 >'. Incom
   
 - Altere a referência de arquivo para uma referência de projeto.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Conversões de tipo no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Conversões de tipo no Visual Basic](../../programming-guide/language-features/data-types/type-conversions.md)
 - [Gerenciando referências em um projeto](/visualstudio/ide/managing-references-in-a-project)

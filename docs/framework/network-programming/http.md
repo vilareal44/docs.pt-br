@@ -1,5 +1,6 @@
 ---
 title: HTTP
+description: Saiba mais sobre o suporte abrangente para HTTP que o .NET Framework fornece usando as classes HttpWebRequest e HttpWebResponse.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - protocols, HTTP
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-ms.openlocfilehash: c8c799a50e5d63bbf411c338eb9e93f85a942bb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ffb7a5d027ef7691d03caf0ac45d4a3dd9bdb652
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048005"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502412"
 ---
 # <a name="http"></a>HTTP
 O .NET Framework fornece suporte abrangente ao protocolo HTTP, que compõe a maioria de todo o tráfego da Internet, com as classes <xref:System.Net.HttpWebRequest> e <xref:System.Net.HttpWebResponse>. Essas classes, derivadas de <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse>, são retornadas por padrão sempre que o método estático <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> encontra um URI começando com "http" ou "https". Na maioria dos casos, as classes **WebRequest** e **WebResponse** fornecem tudo o que é necessário para fazer a solicitação, mas se você precisar acessar os recursos específicos ao HTTP expostos como propriedades, poderá fazer a conversão de tipo dessas classes em **HttpWebRequest** ou **HttpWebResponse**.  
@@ -33,6 +34,6 @@ O .NET Framework fornece suporte abrangente ao protocolo HTTP, que compõe a mai
   
 ## <a name="see-also"></a>Confira também
 
-- [Acessando a Internet através de um proxy](accessing-the-internet-through-a-proxy.md)
+- [Acessando a Internet por meio de um proxy](accessing-the-internet-through-a-proxy.md)
 - [Usando protocolos de aplicativo](using-application-protocols.md)
 - [Como acessar propriedades específicas de HTTP](how-to-access-http-specific-properties.md)

@@ -1,5 +1,6 @@
 ---
 title: Usando namespaces – Guia de Programação em C#
+description: Saiba como usar namespaces em programação C#, como acessar namespaces, aliases de namespace e usar namespaces para controlar o escopo.
 ms.date: 07/20/2015
 f1_keywords:
 - cs.names
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: b4326be8c9e299a96477096ec21864ec69037abe
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 86892f50e059c16ee9c133d7ba9f2716e11a8e56
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738239"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381691"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Usando namespaces (Guia de Programação em C#)
 
-Os namespaces são usados intensamente em programas em C# de duas maneiras. Em primeiro lugar, as classes do .NET Framework usam namespaces para organizar suas muitas classes. Em segundo lugar, declarar seus próprios namespaces pode ajudar a controlar o escopo dos nomes de classe e de método em projetos de programação maiores.  
+Os namespaces são usados intensamente em programas em C# de duas maneiras. Em primeiro lugar, as classes .NET usam namespaces para organizar suas várias classes. Em segundo lugar, declarar seus próprios namespaces pode ajudar a controlar o escopo dos nomes de classe e de método em projetos de programação maiores.  
   
 ## <a name="accessing-namespaces"></a>Acessar namespaces
 
@@ -36,7 +37,7 @@ Os namespaces são usados intensamente em programas em C# de duas maneiras. Em p
   
 ## <a name="namespace-aliases"></a>aliases de namespace
 
- Você também pode [ `using` ](../../language-reference/keywords/using-directive.md) usar a diretiva para criar um alias para um namespace. Use o [qualificador de alias de namespace `::`](../../language-reference/operators/namespace-alias-qualifier.md) para acessar os membros do namespace com alias. O exemplo a seguir mostra como criar e usar um alias de namespace:
+ Você também pode usar a [ `using` diretiva](../../language-reference/keywords/using-directive.md) para criar um alias para um namespace. Use o [qualificador de alias de namespace `::`](../../language-reference/operators/namespace-alias-qualifier.md) para acessar os membros do namespace com alias. O exemplo a seguir mostra como criar e usar um alias de namespace:
   
 [!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]
   
@@ -90,10 +91,10 @@ Os namespaces são usados intensamente em programas em C# de duas maneiras. Em p
   
  Isso funciona, mas se um tipo nomeado `Alias` fosse subsequentemente introduzido, `Alias.` se associaria a esse tipo. O uso de `Alias::Exception` garante que `Alias` seja tratado como um alias de namespace e não seja confundido com um tipo.  
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Namespaces](./index.md)
-- [Expressão de acesso ao membro](../../language-reference/operators/member-access-operators.md#member-access-expression-)
+- [Expressão de acesso de membro](../../language-reference/operators/member-access-operators.md#member-access-expression-)
 - [Operador ::](../../language-reference/operators/namespace-alias-qualifier.md)
 - [extern alias](../../language-reference/keywords/extern-alias.md)

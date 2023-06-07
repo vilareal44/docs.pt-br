@@ -1,4 +1,4 @@
-- name: Aplicativos orientados a serviço com WCF
+- name: Aplicativos orientados a serviços com WCF
   href: index.md
   items:
     - name: Novidades no Windows Communication Foundation 4.5
@@ -50,7 +50,7 @@
                     - name: Definindo e especificando falhas
                       href: defining-and-specifying-faults.md
                       items:
-                        - name: Como declarar falhas em contratos de serviço
+                        - name: 'Como: declarar falhas em contratos de serviço'
                           href: how-to-declare-faults-in-service-contracts.md
                     - name: Enviando e recebendo falhas
                       href: sending-and-receiving-faults.md
@@ -59,7 +59,7 @@
                 - name: Operações síncronas e assíncronas
                   href: synchronous-and-asynchronous-operations.md
                   items:
-                    - name: Como implementar uma operação de serviço assíncrona
+                    - name: 'Como: implementar uma operação de serviço assíncrona'
                       href: how-to-implement-an-asynchronous-service-operation.md
                 - name: Serviços confiáveis
                   href: reliable-services.md
@@ -89,13 +89,13 @@
                 - name: Usando associações para configurar serviços e clientes
                   href: using-bindings-to-configure-services-and-clients.md
                   items:
-                    - name: Como especificar uma associação de cliente em código
+                    - name: 'Como: especificar uma associação de cliente no código'
                       href: how-to-specify-a-client-binding-in-code.md
-                    - name: Como especificar uma associação de cliente em configuração
+                    - name: 'Como: especificar uma associação de cliente na configuração'
                       href: how-to-specify-a-client-binding-in-configuration.md
-                    - name: Como especificar uma associação de serviço em código
+                    - name: 'Como: especificar uma associação de serviço no código'
                       href: how-to-specify-a-service-binding-in-code.md
-                    - name: Como especificar uma associação de serviço em configuração
+                    - name: 'Como: especificar uma associação de serviço na configuração'
                       href: how-to-specify-a-service-binding-in-configuration.md
                 - name: Configurar associações para serviços
                   href: configuring-bindings-for-wcf-services.md
@@ -111,30 +111,30 @@
             - name: Serviços de segurança
               href: securing-services.md
               items:
-                - name: Como proteger um serviço com credenciais Windows
+                - name: 'Como: proteger um serviço com credenciais do Windows'
                   href: how-to-secure-a-service-with-windows-credentials.md
-                - name: Como definir o modo de segurança
+                - name: 'Como: definir o modo de segurança'
                   href: how-to-set-the-security-mode.md
-                - name: Como especificar o tipo de credencial de cliente
+                - name: 'Como: especificar o tipo de credencial de cliente'
                   href: how-to-specify-the-client-credential-type.md
-                - name: Como restringir acesso com a PrincipalPermissionAttribute class
+                - name: 'Como: restringir o acesso com a classe PrincipalPermissionAttribute'
                   href: how-to-restrict-access-with-the-principalpermissionattribute-class.md
-                - name: Como personificar um cliente em um serviço
+                - name: 'Como: representar um cliente em um serviço'
                   href: how-to-impersonate-a-client-on-a-service.md
-                - name: Como examinar o contexto de segurança
+                - name: 'Como: examinar o contexto de segurança'
                   href: how-to-examine-the-security-context.md
                 - name: Noções básicas de nível de proteção
                   href: understanding-protection-level.md
-                - name: Como definir a propriedade ProtectionLevel
+                - name: 'Como: definir a propriedade ProtectionLevel'
                   href: how-to-set-the-protectionlevel-property.md
             - name: Criando serviços interoperáveis de perfil básico de WS-I 1.1
               href: creating-ws-i-basic-profile-1-1-interoperable-services.md
         - name: Serviços de hospedagem
           href: hosting-services.md
           items:
-            - name: Como hospedar um serviço do WCF em um aplicativo gerenciado
+            - name: 'Como: hospedar um serviço do WCF em um aplicativo gerenciado'
               href: how-to-host-a-wcf-service-in-a-managed-application.md
-            - name: Como hospedar em serviço do WCF escrito com o .NET Framework 3.5 na execução do IIS em .NET Framework 4
+            - name: 'Como: hospedar um serviço do WCF escrito com o .NET Framework 3.5 na execução do IIS no .NET Framework 4'
               href: host-a-wcf-service-net-framework-3-5-iis--net-framework-4.md
         - name: Compilando clientes
           href: building-clients.md
@@ -153,7 +153,7 @@
             - name: Protegendo clientes
               href: securing-clients.md
               items:
-                - name: Como especificar valores de credenciais de cliente
+                - name: 'Como: especificar valores de credenciais de cliente'
                   href: how-to-specify-client-credential-values.md
         - name: Introdução à extensibilidade
           href: introduction-to-extensibility.md
@@ -170,9 +170,9 @@
     - name: Diretrizes e práticas recomendadas
       href: guidelines-and-best-practices.md
       items:
-        - name: 'Práticas recomendadas: controle de versão de contrato de dados'
+        - name: 'Melhores práticas: Controle de versão de contrato de dados'
           href: best-practices-data-contract-versioning.md
-        - name: 'Práticas recomendadas: intermediárias'
+        - name: 'Melhores práticas: intermediários'
           href: best-practices-intermediaries.md
         - name: Controle de versão de serviço
           href: service-versioning.md
@@ -235,9 +235,9 @@
           href: workflow-service-registration-tool-wfservicesreg-exe.md
         - name: Ferramenta Contract-First
           href: contract-first-tool.md
-    - name: Exemplos do Windows Communication Foundation
+    - name: Amostras do Windows Communication Foundation
       href: samples/
-    - name: Glossário Windows Communication Foundation
+    - name: Glossário do Windows Communication Foundation
       href: glossary.md
     - name: Referência geral
       href: general-reference.md

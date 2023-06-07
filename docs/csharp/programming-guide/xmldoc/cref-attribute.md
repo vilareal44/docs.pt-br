@@ -1,23 +1,24 @@
 ---
-title: Cref attribute - C# guia de programação
+title: atributo cref-guia de programação C#
+description: Saiba mais sobre o atributo cref. O atributo cref significa "referência de código" e especifica que o texto interno da marca é um elemento de código.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: b06d0c9d447124dec7d8cf3c0cbbfd0daca78fe3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 31fa1a3f182d7b72a1dfbe1ce47386f87fbbff75
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157007"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381990"
 ---
-# <a name="cref-attribute-c-programming-guide"></a>cref atributo (guia de programação C#)
+# <a name="cref-attribute-c-programming-guide"></a>atributo cref (guia de programação C#)
 
 O atributo `cref` em uma marca de documentação XML significa “referência de código”. Ele especifica que o texto interno da marca é um elemento de código, como um tipo, método ou propriedade. Ferramentas de documentação, como o [DocFX](https://dotnet.github.io/docfx/) e o [Sandcastle](https://github.com/EWSoftware/SHFB), usam os atributos `cref` para gerar automaticamente os hiperlinks para a página em que o tipo ou o membro está documentado.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo `cref` a seguir mostra atributos usados em [ \<ver>](./see.md) tags.
+O exemplo a seguir mostra `cref` atributos usados em [\<see>](./see.md) marcas.
 
 [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]
 
@@ -82,7 +83,7 @@ Quando compilado, o programa produz o seguinte arquivo XML. Observe que o atribu
 </doc>
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Comentários da documentação XML](./index.md)
 - [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

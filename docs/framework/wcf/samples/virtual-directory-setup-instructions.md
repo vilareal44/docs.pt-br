@@ -2,12 +2,12 @@
 title: Instruções de definição de diretório virtual
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 6dccc5174e3fb9ab67023310d8c060d598a707c9
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 2d9443431601ffc712da40bd1c085f595471336b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038641"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602356"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Instruções de definição de diretório virtual
 Os exemplos de Windows Communication Foundation (WCF) destinam-se a compartilhar um diretório virtual comum denominado servicemodelsamples que é mapeado para a pasta%SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
@@ -15,7 +15,7 @@ Os exemplos de Windows Communication Foundation (WCF) destinam-se a compartilhar
 > [!NOTE]
 > % SystemDrive% geralmente é C: ou D:, dependendo do local da unidade em que o Serviços de Informações da Internet (IIS) está instalado.  
   
- Você pode executar os arquivos Setupvroot. bat e Cleanupvroot. bat do [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) para criar o diretório virtual. Se preferir criar o diretório virtual manualmente, use os procedimentos a seguir.  
+ Você pode executar os arquivos Setupvroot. bat e Cleanupvroot. bat do [procedimento de configuração única para os exemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md) para criar o diretório virtual. Se preferir criar o diretório virtual manualmente, use os procedimentos a seguir.  
   
 ## <a name="procedures"></a>Procedimentos  
   
@@ -39,13 +39,13 @@ Os exemplos de Windows Communication Foundation (WCF) destinam-se a compartilhar
     > Essa tarefa deve ser executada apenas uma vez, porque todos os exemplos do WCF usam o mesmo aplicativo Web servicemodelsamples.  
   
     > [!NOTE]
-    > Para a finalidade desta documentação, o termo `virtual directory` é sinônimo `Web application`de.  
+    > Para a finalidade desta documentação, o termo `virtual directory` é sinônimo de `Web application` .  
   
-     Além de criar o diretório virtual, você também deve definir suas propriedades para permitir que os serviços WCF sejam executados. Veja mais detalhes a seguir.  
+     Além de criar o diretório virtual, você também deve definir suas propriedades para permitir que os serviços WCF sejam executados. Veja abaixo para obter mais detalhes.  
   
 #### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>Para criar um diretório virtual no IIS 5,1 ou 6,0  
   
-1. Abra uma janela de prompt de comando `start inetmgr` e digite para abrir o snap-in do MMC serviços de informações da Internet (IIS).  
+1. Abra uma janela de prompt de comando e digite `start inetmgr` para abrir o snap-in do MMC serviços de informações da Internet (IIS).  
   
 2. No painel esquerdo, expanda o nó com o nome do computador e, em seguida, expanda o nó **sites** .  
   
@@ -59,7 +59,7 @@ Os exemplos de Windows Communication Foundation (WCF) destinam-se a compartilhar
   
 7. Por padrão, as seguintes caixas de seleção são selecionadas:  
   
-    - **Ler**  
+    - **Leitura**  
   
     - **Executar scripts (como ASP)**  
   
@@ -76,7 +76,7 @@ Os exemplos de Windows Communication Foundation (WCF) destinam-se a compartilhar
   
 3. No painel Ações, selecione a opção **habilitar** . Isso permite que você acesse o diretório do diretório usando o Internet Explorer, que ajuda a depurar um serviço.  
   
- Por fim, você deve definir as propriedades de segurança da pasta servicemodelsamples para permitir que ela seja acessada por outras pessoas. Veja mais detalhes a seguir.  
+ Por fim, você deve definir as propriedades de segurança da pasta servicemodelsamples para permitir que ela seja acessada por outras pessoas. Veja abaixo para obter mais detalhes.  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-51-or-60"></a>Para definir propriedades de diretório virtual adicionais no IIS 5,1 ou 6,0  
   
@@ -84,7 +84,7 @@ Os exemplos de Windows Communication Foundation (WCF) destinam-se a compartilhar
   
 2. Por padrão, as seguintes caixas de seleção são selecionadas:  
   
-    - **Ler**  
+    - **Leitura**  
   
     - **Registrar visitas**  
   
@@ -102,15 +102,15 @@ Os exemplos de Windows Communication Foundation (WCF) destinam-se a compartilhar
   
 4. Selecione a entrada **Localizar** . A janela **Selecionar usuários ou grupos** é aberta.  
   
-5. Clique em **Avançadas**.  
+5. Clique em **Avançado**.  
   
 6. Clique em **locais**. A janela **locais** agora está aberta.  
   
 7. Selecione a entrada para o computador que está sendo usado. É importante selecionar o computador local e não uma entrada para todos os domínios ou redes listados. Depois de selecionar o computador, clique em **OK**.  
   
-8. Clique em **localizar agora**. Isso popula os resultados da pesquisa com objetos associados ao computador local.  
+8. Clique em **Localizar Agora**. Isso popula os resultados da pesquisa com objetos associados ao computador local.  
   
-9. Localize a entrada **IIS_IUSRS** na coluna **nome (nome distinto relativo)** . Selecione essa entrada e clique em **OK** para fechar a janela resultados da pesquisa.  
+9. Localize a entrada de **IIS_IUSRS** na coluna **nome (nome distinto relativo)** . Selecione essa entrada e clique em **OK** para fechar a janela resultados da pesquisa.  
   
 10. Clique em **OK** para fechar a janela **Selecionar usuários ou grupos** .  
   
@@ -130,7 +130,7 @@ Os exemplos de Windows Communication Foundation (WCF) destinam-se a compartilhar
   
      Se não estiver listado:  
   
-    1. Clique em **Iniciar** e em **Painel de Controle**.  
+    1. Clique em **Iniciar** e em **painel de controle**.  
   
     2. Se você não vir o ícone **contas de usuário** , clique em **alternar para a exibição de categoria**.  
   
@@ -140,7 +140,7 @@ Os exemplos de Windows Communication Foundation (WCF) destinam-se a compartilhar
   
     5. Na caixa de diálogo **contas de usuário** , clique na guia **avançado** .  
   
-    6. Clique em **Avançadas**.  
+    6. Clique em **Avançado**.  
   
     7. Na caixa de diálogo **usuários e grupos locais** , clique para expandir a pasta **usuários** .  
   
@@ -158,7 +158,7 @@ Os exemplos de Windows Communication Foundation (WCF) destinam-se a compartilhar
   
     14. Na caixa de diálogo **Propriedades de servicemodelsamples** , na guia **segurança** , clique em **Adicionar**.  
   
-    15. Digite o nome do computador seguido por uma barra invertida e cole o nome da conta de usuário da Internet, por exemplo, MyMachineName\\% InternetGuestAccountName%  
+    15. Digite o nome do computador seguido por uma barra invertida e cole o nome da conta de usuário da Internet, por exemplo, MyMachineName \\ % InternetGuestAccountName%  
   
     16. Clique em **verificar nomes** para verificar a adição. Se for válido, o nome estará em letras maiúsculas e será sublinhado.  
   
@@ -166,7 +166,7 @@ Os exemplos de Windows Communication Foundation (WCF) destinam-se a compartilhar
   
      Se o serviço de rede não estiver listado:  
   
-    1. Clique em **Adicionar** .  
+    1. Clique em **Adicionar**.  
   
     2. Na caixa de diálogo **Selecionar usuários ou grupos** , digite o nome do computador seguido por uma barra invertida.  
   
@@ -184,7 +184,7 @@ Os exemplos de Windows Communication Foundation (WCF) destinam-se a compartilhar
   
      Para verificar se o ASPNET faz parte do grupo de segurança **usuários** :  
   
-    1. No menu **Iniciar** , clique em **painel de controle**.  
+    1. No menu **Iniciar** , clique em **Painel de Controle**.  
   
     2. Clique no ícone **contas de usuário** .  
   
@@ -192,4 +192,4 @@ Os exemplos de Windows Communication Foundation (WCF) destinam-se a compartilhar
   
 ## <a name="see-also"></a>Consulte também
 
-- [Instruções de hospedagem do Serviços de Informações da Internet](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+- [Instruções de hospedagem de serviço de informação de internet](internet-information-service-hosting-instructions.md)

@@ -3,12 +3,12 @@ title: Suporte do namespace em DOM
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
-ms.openlocfilehash: 7efe03f25fde0681ebd9e3c7c8ea81f6686a8ec1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6fefce961c2ff91530a9110f5563fd921a7838a3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710603"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288791"
 ---
 # <a name="namespace-support-in-the-dom"></a>Suporte do namespace em DOM
 O modelo de objeto (DOM) de documento XML é completamente URL ciente. Somente os documentos XML URL cientes são suportados. World Wide Web Consortium (W3C) especifica que os aplicativos DOM que o nível de implementar 1 pode estar ciente não-namespace-, e os recursos do nível 2 DOM são cientes URL. No entanto, todos os recursos em DOM XML são cientes URL, indiferente se o método é recomendação DOM nível de nível 1 ou 2.  
@@ -25,4 +25,4 @@ O modelo de objeto (DOM) de documento XML é completamente URL ciente. Somente o
   
 ## <a name="see-also"></a>Veja também
 
-- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

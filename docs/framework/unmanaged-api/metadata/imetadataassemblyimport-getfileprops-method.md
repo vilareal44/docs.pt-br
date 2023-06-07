@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5e6216f-ae3d-4697-9688-66b69c1251ec
 topic_type:
 - apiref
-ms.openlocfilehash: dae4a36537eeac58ffb17ebc1b78d935ec807cd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78c192f10f629a0c1316ae7af7fc774819f4de8f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175974"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007475"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>Método IMetaDataAssemblyImport::GetFileProps
 Obtém as propriedades do arquivo com a assinatura de metadados especificada.  
@@ -39,37 +39,37 @@ HRESULT GetFileProps (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `mdf`  
- [em] O `mdFile` token de metadados que representa o arquivo para o qual obter as propriedades.  
+ no O `mdFile` token de metadados que representa o arquivo para o qual obter as propriedades.  
   
  `szName`  
- [fora] O nome simples do arquivo.  
+ fora O nome simples do arquivo.  
   
  `cchName`  
- [em] O tamanho, em grandes `szName`chars, de .  
+ no O tamanho, em caracteres largos, de `szName` .  
   
  `pchName`  
- [fora] O número de chars largos realmente retornou em `szName`.  
+ fora O número de caracteres largos realmente retornados em `szName` .  
   
  `ppbHashValue`  
- [fora] Um ponteiro para o valor de hash. Este é o hash, usando o algoritmo SHA-1, do arquivo.  
+ fora Um ponteiro para o valor de hash. Esse é o hash, usando o algoritmo SHA-1 do arquivo.  
   
  `pcbHashValue`  
- [fora] O número de chars largos no valor de hash devolvido.  
+ fora O número de caracteres largos no valor de hash retornado.  
   
  `pdwFileFlags`  
- [fora] Um ponteiro para as bandeiras que descrevem os metadados aplicados a um arquivo. O valor dos sinalizadores é uma combinação de um ou mais valores [corfileflags.](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)  
+ fora Um ponteiro para os sinalizadores que descrevem os metadados aplicados a um arquivo. O valor de flags é uma combinação de um ou mais valores de [CorFileFlags](corfileflags-enumeration.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Consulte [os requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [Interface IMetaDataAssemblyImport](imetadataassemblyimport-interface.md)

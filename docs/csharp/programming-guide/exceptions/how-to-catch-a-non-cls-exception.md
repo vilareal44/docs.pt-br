@@ -1,15 +1,16 @@
 ---
 title: Como capturar uma exceção não compatível com CLS
+description: Saiba como capturar uma exceção não-CLS. Consulte um exemplo de código e exiba recursos adicionais disponíveis.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
-ms.openlocfilehash: 635cf0a9142f56dea4b2722fbf3f3eda505d85ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 255de4cab9a72491eb3b9624d968539d432e0442
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346271"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302003"
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>Como capturar uma exceção não compatível com CLS
 Algumas linguagens .NET, incluindo o C++/CLI, permite que os objetos lancem exceções que não derivam de <xref:System.Exception>. Essas exceções são chamadas de *exceções não CLS* ou *não exceções*. Em C#, não é possível gerar exceções que não sejam do CLS, mas você pode capturá-las de duas maneiras:  
@@ -49,7 +50,7 @@ catch (RuntimeWrappedException e)
 }
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.CompilerServices.RuntimeWrappedException>
 - [Exceções e tratamento de exceções](./index.md)

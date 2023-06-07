@@ -2,24 +2,24 @@
 title: Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorFailed
 ms.date: 03/30/2017
 ms.assetid: 96474056-0418-41e4-8c75-bbc0a853eaba
-ms.openlocfilehash: 3745c542986d405312a308fcf50ba6d7b6f93a1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: faab1927f75a33b6a6950f8f4baf758e7418547a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997765"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599692"
 ---
 # <a name="microsofttransactionstransactionbridgeregistrationcoordinatorfailed"></a>Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorFailed
-O serviço de protocolo WS-AT não conseguiu enviar uma mensagem de registro ao seu coordenador  
+Falha do serviço de protocolo WS-AT ao enviar uma mensagem de registro para seu coordenador  
   
 ## <a name="description"></a>Descrição  
- Rastreados se o TransactionManager local não é capaz de registrar-se com seu TransactionManager superior devido à incapacidade para enviar uma mensagem.  
+ Rastreado se o TransactionManager local não puder se registrar com seu TransactionManager superior devido à incapacidade de enviar uma mensagem.  
   
 ## <a name="troubleshooting"></a>Solução de problemas  
- Inspecionar a mensagem de rastreamento para a exceção, causando a falha de envio de mensagem  
+ Inspecione a mensagem de rastreamento para a exceção causando a falha de envio da mensagem  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Rastreamento](index.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](using-tracing-to-troubleshoot-your-application.md)
+- [Administração e diagnóstico](../index.md)

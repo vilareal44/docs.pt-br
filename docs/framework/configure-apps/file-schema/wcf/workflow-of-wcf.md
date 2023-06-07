@@ -3,20 +3,20 @@ title: <workflow>do WCF
 ms.date: 03/30/2017
 ms.assetid: c0443eba-d3b4-4fae-886e-9878daf77691
 ms.openlocfilehash: c6c9e14a4ad3d9713ae2d35d6ade20690e0c3575
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69932787"
 ---
-# <a name="workflow-of-wcf"></a>\<> de fluxo de trabalho do WCF
-Configure um participante de rastreamento que escuta para registros de rastreamento emissores de tempo de execução diretamente e processá-los de forma que ele foi configurado. Isso inclui a escrita em uma saída específica (por exemplo, arquivo, Console, ETW), processamento/agregando os registros ou qualquer outra combinação que pode ser necessária.  
+# <a name="workflow-of-wcf"></a>\<workflow>do WCF
+Configure um participante de rastreamento que escuta para registros de rastreamento emissores de runtime diretamente e processá-los de forma que ele foi configurado. Isso inclui a escrita em uma saída específica (por exemplo, arquivo, Console, ETW), processamento/agregando os registros ou qualquer outra combinação que pode ser necessária.  
   
  Para obter mais informações sobre os participantes de rastreamento e rastreamento de fluxo de trabalho, consulte [rastreamento de fluxo de trabalho e rastreamento](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) e [participantes](../../../windows-workflow-foundation/tracking-participants.md)de rastreamento.  
   
  \<system.serviceModel>  
-\<acompanhamento de >  
-\<participantes >  
+\<tracking>  
+\<participants>  
 \<add>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,10 +40,10 @@ Configure um participante de rastreamento que escuta para registros de rastreame
 |-------------|-----------------|  
 |name|Uma cadeia de caracteres que especifica o nome de um participante de rastreamento.|  
 |profileName|Uma cadeia de caracteres que especifica o nome do perfil de rastreamento que define os registros de rastreamento o participante de rastreamento tiver assinado.|  
-|tipo|Uma cadeia de caracteres que especifica o tipo de um participante de rastreamento.|  
+|type|Uma cadeia de caracteres que especifica o tipo de um participante de rastreamento.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -88,7 +88,7 @@ Configure um participante de rastreamento que escuta para registros de rastreame
 </configuration>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>

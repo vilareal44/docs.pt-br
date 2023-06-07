@@ -5,14 +5,14 @@ helpviewer_keywords:
 - <permission> XML tag
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-ms.openlocfilehash: 71b00b669804e644d1171480192b9d55455bdf53
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b3acec04060367a0b9e54b19c0106644d028357b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352272"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400028"
 ---
-# <a name="permission-visual-basic"></a>> de permissão de \<(Visual Basic)
+# <a name="permission-visual-basic"></a>\<permission> (Visual Basic)
 Especifica uma permissão necessária para o membro.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -29,15 +29,15 @@ Especifica uma permissão necessária para o membro.
  Uma descrição do acesso ao membro.  
   
 ## <a name="remarks"></a>Comentários  
- Use a marca `<permission>` para documentar o acesso de um membro. Use a classe <xref:System.Security.PermissionSet> para especificar o acesso a um membro.  
+ Use a `<permission>` marca para documentar o acesso de um membro. Use a <xref:System.Security.PermissionSet> classe para especificar o acesso a um membro.  
   
- Compile com [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
+ Compile com [-Doc](../../reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa a marca `<permission>` para descrever que o <xref:System.Security.Permissions.FileIOPermission> é exigido pelo método `ReadFile`.  
+ Este exemplo usa a `<permission>` marca para descrever que o <xref:System.Security.Permissions.FileIOPermission> é exigido pelo `ReadFile` método.  
   
  [!code-vb[VbVbcnXmlDocComments#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#7)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Marcações de Comentário XML](index.md)

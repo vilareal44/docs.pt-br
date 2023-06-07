@@ -13,12 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: 725884d8ab6d6d9009ad1cdd7bc185889cd5e485
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: aa569c0da5b963243596ef440ef37c08b4fae37f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243057"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288232"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independência da linguagem e componentes independentes da linguagem
 
@@ -33,7 +33,7 @@ Se o componente estiver de acordo com a Common Language Specification, ele será
 
 Neste artigo:
 
-- [Regras de conformidade cls](#Rules)
+- [Regras de conformidade com CLS](#Rules)
 
   - [Tipos e assinaturas de membro de tipo](#Types)
 
@@ -170,7 +170,7 @@ Todos os tipos exibidos em assinaturas de membro, incluindo um tipo de retorno d
 
 - Todos os tipos usados como restrições em parâmetros genéricos devem ser compatíveis com CLS.
 
-O [Common Type System](../../docs/standard/base-types/common-type-system.md) do .NET Framework inclui vários tipos internos que têm suporte direto do Common Language Runtime e são codificados especialmente nos metadados de um assembly. Desses tipos intrínsecos, os tipos listados na tabela a seguir estão em conformidade com CLS.
+O [Common Type System](base-types/common-type-system.md) do .NET Framework inclui vários tipos internos que têm suporte direto do Common Language Runtime e são codificados especialmente nos metadados de um assembly. Desses tipos intrínsecos, os tipos listados na tabela a seguir estão em conformidade com CLS.
 
 |Tipo em conformidade com CLS|Descrição|
 |-------------------------|-----------------|
@@ -205,7 +205,7 @@ A biblioteca de classes .NET Framework ou qualquer outra biblioteca de classes p
 
 - Referências de tipo, que são constructos especiais que contêm referência a um objeto e referência a um tipo. As referências tipadas são representadas no .NET Framework pela classe <xref:System.TypedReference>.
 
-Se um tipo não for compatível com CLS, você deverá aplicar o atributo <xref:System.CLSCompliantAttribute> com um valor `isCompliant` de `false` a ele. Para obter mais informações, consulte a seção [de atributos CLSCompliantAttribute.](#CLSAttribute)
+Se um tipo não for compatível com CLS, você deverá aplicar o atributo <xref:System.CLSCompliantAttribute> com um valor `isCompliant` de `false` a ele. Para obter mais informações, consulte [a seção atributo CLSCompliantAttribute](#CLSAttribute) .
 
 O exemplo a seguir ilustra o problema de conformidade com CLS em uma assinatura do método e em uma instanciação de tipo genérico. Ele define uma classe `InvoiceItem` com uma propriedade do tipo <xref:System.UInt32>, uma propriedade do tipo `Nullable(Of UInt32)` e um construtor com parâmetros de tipo <xref:System.UInt32> e `Nullable(Of UInt32)`. Você recebe quatro avisos do compilador ao tentar de compilar esse exemplo.
 
@@ -271,7 +271,7 @@ A Common Language Specification define dois operadores de conversão:
 
 - `op_Explicit`, que é usado para conversões de redução que possam resultar em perda de magnitude (um valor é convertido em um valor com um intervalo menor) ou precisão. Por exemplo, a estrutura <xref:System.Decimal> inclui um operador `op_Explicit` sobrecarregado para converter <xref:System.Double> e valores <xref:System.Single> em <xref:System.Decimal> e para converter valores <xref:System.Decimal> em valores inteiros, o <xref:System.Double>, <xref:System.Single> e <xref:System.Char>.
 
-No entanto, nem todas as linguagens dão suporte à sobrecarga de operador ou à definição de operadores personalizados. Se optar por implementar esses operadores de conversão, você também deverá fornecer uma maneira alternativa para realizar a conversão. Recomendamos que `From`você `To`forneça os métodos *Xxx* e *Xxx.*
+No entanto, nem todas as linguagens dão suporte à sobrecarga de operador ou à definição de operadores personalizados. Se optar por implementar esses operadores de conversão, você também deverá fornecer uma maneira alternativa para realizar a conversão. Recomendamos que você forneça os `From` métodos *xxx* e `To` *xxx* .
 
 O exemplo a seguir define conversões explícitas e implícitas em conformidade com CLS. Ele cria uma classe `UDouble` que representa um número de ponto flutuante de precisão dupla com sinal. Ele fornece conversões implícitas de `UDouble` em <xref:System.Double> e conversões explícitas de `UDouble` em <xref:System.Single>, de <xref:System.Double> em `UDouble` e de <xref:System.Single> em `UDouble`. Ele também define um método `ToDouble` como uma alternativa ao operador de conversão implícita e os métodos `ToSingle`, `FromDouble` e `FromSingle` como alternativas aos operadores de conversão explícita.
 
@@ -381,7 +381,7 @@ A relação entre os parâmetros de tipo genérico de um tipo de contenção e s
 [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)]
 [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]
 
-Nomes de tipos genéricos são codificados no *nome\`* do \` formulário n , onde o *nome* é o nome do tipo, é um caractere literal, e *n* é o número de parâmetros declarados no tipo, ou, para tipos genéricos aninhados, o número de parâmetros de tipo recém-introduzidos. Essa codificação de nomes de tipo genéricos é principalmente de interesse de desenvolvedores que usam a reflexão para acessar tipos genéricos compatíveis com CLS em uma biblioteca.
+Os nomes de tipo genérico são codificados no formato *nome \` n*, em que *Name* é o nome do tipo, \` é um literal de caractere e *n* é o número de parâmetros declarados no tipo, ou, para tipos genéricos aninhados, o número de parâmetros de tipo introduzidos recentemente. Essa codificação de nomes de tipo genéricos é principalmente de interesse de desenvolvedores que usam a reflexão para acessar tipos genéricos compatíveis com CLS em uma biblioteca.
 
 Se as restrições forem aplicadas a um tipo genérico, qualquer tipo usado como restrição também deverá ser compatível com CLS. O exemplo a seguir define uma classe chamada `BaseClass` que não está em conformidade com CLS e uma classe genérica chamada `BaseCollection` cujo parâmetro de tipo deve derivar de `BaseClass`. Mas como `BaseClass` não é compatível com CLS, o compilador emite um aviso.
 
@@ -400,7 +400,7 @@ O exemplo será compilado com êxito se a restrição for adicionada à classe `
 
 A Common Language Specification impõe um modelo por instanciação conservador para tipos aninhados e membros protegidos. Tipos genéricos abertos não podem expor campos ou membros com assinaturas que contenham uma instanciação específica de um tipo genérico aninhado, protegido. Tipos não genéricos que estendam uma instanciação específica de uma interface ou classe base genérica não podem expor campos ou membros com assinaturas que contenham uma instanciação diferente de um tipo genérico aninhado e protegido.
 
-O exemplo a seguir define um tipo genérico, `C1<T>` (ou `C1(Of T)` no Visual Basic) e uma classe protegida, `C1<T>.N` (ou `C1(Of T).N` no Visual Basic). `C1<T>` possui dois métodos, `M1` e `M2`. No entanto, `M1` é sem conformidade com CLS porque tenta retornar um objeto `C1<int>.N` (ou `C1(Of Integer).N`) de C1\<T> (ou `C1(Of T)`). Uma segunda classe, `C2`, é derivada de `C1<long>` (ou de `C1(Of Long)`). Tem dois métodos, `M3` e `M4`. No entanto, `M3` não é compatível com CLS porque tenta retornar um objeto `C1<int>.N` (ou `C1(Of Integer).N`) de uma subclasse de `C1<long>`. Os compiladores de linguagens podem ser ainda mais restritivos. Neste exemplo, o Visual Basic exibe um erro ao tentar compilar `M4`.
+O exemplo a seguir define um tipo genérico, `C1<T>` (ou `C1(Of T)` no Visual Basic) e uma classe protegida, `C1<T>.N` (ou `C1(Of T).N` no Visual Basic). `C1<T>` possui dois métodos, `M1` e `M2`. No entanto, `M1` o não tem conformidade com CLS porque tenta retornar um `C1<int>.N` (ou `C1(Of Integer).N` ) objeto de C1 \<T> (ou `C1(Of T)` ). Uma segunda classe, `C2`, é derivada de `C1<long>` (ou de `C1(Of Long)`). Tem dois métodos, `M3` e `M4`. No entanto, `M3` não é compatível com CLS porque tenta retornar um objeto `C1<int>.N` (ou `C1(Of Integer).N`) de uma subclasse de `C1<long>`. Os compiladores de linguagens podem ser ainda mais restritivos. Neste exemplo, o Visual Basic exibe um erro ao tentar compilar `M4`.
 
 [!code-csharp[Conceptual.CLSCompliant#32](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics4.cs#32)]
 [!code-vb[Conceptual.CLSCompliant#32](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics4.vb#32)]
@@ -438,11 +438,11 @@ As propriedades em tipos em conformidade com CLS devem seguir estas regras:
 
 Um evento é definido por seu nome e tipo. O tipo de evento é um delegado que é usado para indicar o evento. Por exemplo, o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> é do tipo <xref:System.ResolveEventHandler>. Além do evento em si, três métodos com nomes com base no nome do evento fornecem a implementação do evento e estão marcados como `SpecialName` nos metadados do assembly:
 
-- Um método para adicionar um `add_`manipulador de eventos, chamado *EventName*. Por exemplo, o método de assinatura do evento para o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> é chamado `add_AssemblyResolve`.
+- Um método para adicionar um manipulador de eventos, chamado `add_` *EventName*. Por exemplo, o método de assinatura do evento para o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> é chamado `add_AssemblyResolve`.
 
-- Um método para remover um `remove_`manipulador de eventos, chamado *EventName*. Por exemplo, o método de remoção para o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> é chamado `remove_AssemblyResolve`.
+- Um método para remover um manipulador de eventos chamado `remove_` *EventName*. Por exemplo, o método de remoção para o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> é chamado `remove_AssemblyResolve`.
 
-- Um método para indicar que o evento `raise_`ocorreu, chamado *EventName*.
+- Um método para indicar que o evento ocorreu, chamado `raise_` *EventName*.
 
 > [!NOTE]
 > A maioria das regras da Common Language Specification em relação a eventos é implementada por compiladores de linguagem e é transparente para desenvolvedores de componente.
@@ -571,7 +571,7 @@ Se você estiver desenvolvendo um aplicativo em vez de uma biblioteca (ou seja, 
 
 ## <a name="cross-language-interoperability"></a>Interoperabilidade em qualquer idioma
 
-A independência de linguagem tem vários significados possíveis. Um significado, discutido no artigo [Independência de linguagem e componentes independentes de linguagem](../../docs/standard/language-independence-and-language-independent-components.md), envolve o consumo pleno de tipos escritos em uma linguagem de um aplicativo escrito em outra linguagem. Um segundo significado, que é o enfoque deste artigo, envolve combinar o código gravado em várias linguagens em um único assembly do .NET Framework.
+A independência de linguagem tem vários significados possíveis. Um significado, discutido no artigo [Independência de linguagem e componentes independentes de linguagem](language-independence-and-language-independent-components.md), envolve o consumo pleno de tipos escritos em uma linguagem de um aplicativo escrito em outra linguagem. Um segundo significado, que é o enfoque deste artigo, envolve combinar o código gravado em várias linguagens em um único assembly do .NET Framework.
 
 O exemplo a seguir ilustra a interoperabilidade em qualquer idioma com a criação de uma biblioteca de classes chamada Utilities.dll que inclui duas classes, `NumericLib` e `StringLib`. A classe `NumericLib` é gravada em C#, e a classe `StringLib` é gravada em Visual Basic. Aqui está o código-fonte de StringUtil.vb, que inclui um único membro, `ToTitleCase`, em sua classe `StringLib`.
 
@@ -614,7 +614,7 @@ Para compilar o código do Visual Basic, use este comando:
 vbc example.vb /r:UtilityLib.dll
 ```
 
-Para compilar com C#, altere o nome do compilador de **vbc** para **csc**e altere a extensão do arquivo de .vb para .cs:
+Para compilar com C#, altere o nome do compilador de **Vbc** para **CSC**e altere a extensão de arquivo de. vb para. cs:
 
 ```console
 csc example.cs /r:UtilityLib.dll

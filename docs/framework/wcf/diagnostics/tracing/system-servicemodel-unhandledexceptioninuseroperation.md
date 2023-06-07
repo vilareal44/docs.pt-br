@@ -2,21 +2,21 @@
 title: System.ServiceModel.UnhandledExceptionInUserOperation
 ms.date: 03/30/2017
 ms.assetid: b00612e4-84c7-4a53-849a-e693cdce7fca
-ms.openlocfilehash: 06ad725279ec6810cd6bd8563d4e39eca72f30b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fab4589e64d332255020372034223da21b395adf
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048343"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593640"
 ---
 # <a name="systemservicemodelunhandledexceptioninuseroperation"></a>System.ServiceModel.UnhandledExceptionInUserOperation
 System.ServiceModel.UnhandledExceptionInUserOperation  
   
 ## <a name="description"></a>Descrição  
- Exceção sem tratamento na operação de usuário.  
+ Exceção sem tratamento na operação do usuário.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Rastreamento](index.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](using-tracing-to-troubleshoot-your-application.md)
+- [Administração e diagnóstico](../index.md)

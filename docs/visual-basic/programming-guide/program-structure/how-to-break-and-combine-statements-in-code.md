@@ -1,5 +1,5 @@
 ---
-title: Como quebrar e combinar instruções no código
+title: 'Como: Quebrar e combinar instruções no código'
 ms.date: 07/20/2015
 f1_keywords:
 - vb._
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: f1a24c001cd20acc7663fb4cbe60e7e35a9c8fc3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c78cbeaa5c2df2d4f2e3cce2b5b3fb8048ff3388
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347436"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403246"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Como quebrar e combinar instruções no código (Visual Basic)
 
@@ -34,10 +34,10 @@ Ao escrever seu código, você pode ocasionalmente criar instruções demoradas 
 
 ## <a name="to-break-a-single-statement-into-multiple-lines"></a>Para dividir uma única instrução em várias linhas
 
-Use o caractere de continuação de linha, que é um sublinhado (`_`), no ponto em que você deseja que a linha seja quebrada. O sublinhado deve ser imediatamente precedido por um espaço e imediatamente seguido por um terminador de linha (retorno de carro) ou (começando com a versão 16,0) um comentário seguido por um retorno de carro.
+Use o caractere de continuação de linha, que é um sublinhado ( `_` ), no ponto em que você deseja que a linha seja quebrada. O sublinhado deve ser imediatamente precedido por um espaço e imediatamente seguido por um terminador de linha (retorno de carro) ou (começando com a versão 16,0) um comentário seguido por um retorno de carro.
 
   > [!NOTE]
-  > Em alguns casos, se você omitir o caractere de continuação de linha, o compilador de Visual Basic irá continuar implicitamente a instrução na próxima linha de código. Para obter uma lista de elementos de sintaxe para os quais você pode omitir o caractere de continuação de linha, consulte "continuação de linha implícita" em [instruções](../../../visual-basic/programming-guide/language-features/statements.md).
+  > Em alguns casos, se você omitir o caractere de continuação de linha, o compilador de Visual Basic irá continuar implicitamente a instrução na próxima linha de código. Para obter uma lista de elementos de sintaxe para os quais você pode omitir o caractere de continuação de linha, consulte "continuação de linha implícita" em [instruções](../language-features/statements.md).
 
   No exemplo a seguir, a instrução é dividida em quatro linhas com caracteres de continuação de linha encerrando tudo menos a última linha.
 
@@ -49,17 +49,17 @@ Use o caractere de continuação de linha, que é um sublinhado (`_`), no ponto 
 
   Existem algumas limitações para onde você pode usar o caractere de continuação de linha; por exemplo, você não pode usá-lo no meio de um nome de argumento. Você pode quebrar uma lista de argumentos com o caractere de continuação de linha, mas os nomes individuais dos argumentos devem permanecer intactos.
 
-  Você não pode continuar um comentário usando um caractere de continuação de linha. O compilador não examina os caracteres em um comentário para obter um significado especial. Para um comentário de várias linhas, repita o símbolo de comentário (`'`) em cada linha.
+  Você não pode continuar um comentário usando um caractere de continuação de linha. O compilador não examina os caracteres em um comentário para obter um significado especial. Para um comentário de várias linhas, repita o símbolo de comentário ( `'` ) em cada linha.
 
  Embora colocar cada instrução em uma linha separada seja o método recomendado, Visual Basic também permite colocar várias instruções na mesma linha.
 
 ## <a name="to-place-multiple-statements-on-the-same-line"></a>Para posicionar várias instruções na mesma linha
 
-Separe as instruções com dois-pontos (`:`), como no exemplo a seguir:
+Separe as instruções com dois-pontos ( `:` ), como no exemplo a seguir:
 
   [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Estrutura do Programa e Convenções de Código](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [Instruções](../../../visual-basic/programming-guide/language-features/statements.md)
+- [Estrutura do programa e convenções de código](program-structure-and-code-conventions.md)
+- [Instruções](../language-features/statements.md)

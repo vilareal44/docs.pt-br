@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 2e0fb579897797b732859692092665225a0d6168
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: baf13af39fe575a75f1304b21f3b4ad70dd370ab
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919360"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597313"
 ---
 # <a name="host-in-internet-information-services"></a>Host no Serviços de Informações da Internet
 
@@ -23,7 +23,7 @@ O WCF pode ser hospedado nas seguintes versões do IIS nos seguintes sistemas op
 
 - IIS 6,0 no Windows Server 2003. O IIS 6,0 fornece um modelo de processo avançado que oferece escalabilidade, confiabilidade e isolamento de aplicativos aprimorados. Esse ambiente é adequado para a implantação de produção de serviços WCF que usam a comunicação HTTP exclusivamente.
 
-- IIS 7,0 no Windows Vista e no Windows Server 2008. O IIS 7,0 fornece o mesmo modelo de processo avançado que o IIS 6,0, mas usa o WAS (serviço de ativação de processos do Windows) para permitir a ativação e a comunicação de rede por meio de protocolos diferentes de HTTP. Esse ambiente é adequado para o desenvolvimento de serviços WCF que se comunicam em qualquer protocolo de rede com suporte do WCF (incluindo HTTP, net. TCP, net. pipe e net. MSMQ). Para obter mais informações sobre o WAS, consulte [hospedagem no serviço de ativação de processos do Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).
+- IIS 7,0 no Windows Vista e no Windows Server 2008. O IIS 7,0 fornece o mesmo modelo de processo avançado que o IIS 6,0, mas usa o WAS (serviço de ativação de processos do Windows) para permitir a ativação e a comunicação de rede por meio de protocolos diferentes de HTTP. Esse ambiente é adequado para o desenvolvimento de serviços WCF que se comunicam em qualquer protocolo de rede com suporte do WCF (incluindo HTTP, net. TCP, net. pipe e net. MSMQ). Para obter mais informações sobre o WAS, consulte [hospedagem no serviço de ativação de processos do Windows](hosting-in-windows-process-activation-service.md).
 
 - O [Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)) funciona com o IIS 7,0 e o WAS (serviço de ativação de processos do Windows) para fornecer um ambiente de Hospedagem de aplicativos avançado para serviços WCF e WF do NET4. Esses benefícios incluem gerenciamento do ciclo de vida do processo, reciclagem de processo, hospedagem compartilhada, proteção rápida de falhas, órfão de processo, ativação sob demanda e monitoramento de integridade. Para obter informações detalhadas, consulte [recursos de hospedagem do AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10)) e conceitos de hospedagem do [AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10)).
 
@@ -39,7 +39,7 @@ Hospedar serviços WCF no IIS tem vários benefícios:
 
 - Os serviços WCF hospedados no IIS usam o mesmo modelo de compilação dinâmica que o ASP.NET 2,0, que simplifica o desenvolvimento e a implantação de serviços hospedados.
 
-Ao decidir hospedar serviços WCF no IIS, é importante lembrar que o IIS 5,1 e o IIS 6,0 são limitados apenas à comunicação HTTP. Para obter mais informações sobre como escolher um ambiente de hospedagem, consulte [serviços de hospedagem](../../../../docs/framework/wcf/hosting-services.md).
+Ao decidir hospedar serviços WCF no IIS, é importante lembrar que o IIS 5,1 e o IIS 6,0 são limitados apenas à comunicação HTTP. Para obter mais informações sobre como escolher um ambiente de hospedagem, consulte [serviços de hospedagem](../hosting-services.md).
 
 ## <a name="deploy-an-iis-hosted-wcf-service"></a>Implantar um serviço WCF hospedado pelo IIS
 
@@ -55,17 +55,17 @@ O desenvolvimento e a implantação de um serviço WCF hospedado pelo IIS consis
 
 - Configure o serviço WCF.
 
-Para obter uma discussão sobre cada uma dessas tarefas, consulte [implantando um serviço WCF hospedado por serviços de informações da Internet](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).
+Para obter uma discussão sobre cada uma dessas tarefas, consulte [implantando um serviço WCF hospedado por serviços de informações da Internet](deploying-an-internet-information-services-hosted-wcf-service.md).
 
 ## <a name="wcf-services-and-aspnet"></a>Serviços WCF e ASP.NET
 
-Os serviços WCF podem ser hospedados lado a lado com o ASP.NET ou no modo de compatibilidade ASP.NET, no qual os serviços podem aproveitar ao máximo os recursos fornecidos pela plataforma de aplicativo Web ASP.NET. Para obter uma discussão sobre esses recursos, consulte [Serviços WCF e ASP.net](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).
+Os serviços WCF podem ser hospedados lado a lado com o ASP.NET ou no modo de compatibilidade ASP.NET, no qual os serviços podem aproveitar ao máximo os recursos fornecidos pela plataforma de aplicativo Web ASP.NET. Para obter uma discussão sobre esses recursos, consulte [Serviços WCF e ASP.net](wcf-services-and-aspnet.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Estendendo a hospedagem usando ServiceHostFactory](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)
-- [Implantando um serviço WCF hospedado em Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)
-- [Serviços do WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
-- [Práticas recomendadas de hospedagem de Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
-- [Configurando os Serviços de Informações da Internet 7.0 para Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)
-- [Recursos de hospedagem do Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Estendendo a hospedagem usando ServiceHostFactory](../extending/extending-hosting-using-servicehostfactory.md)
+- [Implantando um serviço WCF hospedado em Serviços de Informações da Internet](deploying-an-internet-information-services-hosted-wcf-service.md)
+- [Serviços WCF e ASP.NET](wcf-services-and-aspnet.md)
+- [Práticas recomendadas de hospedagem de Serviços de Informações da Internet](internet-information-services-hosting-best-practices.md)
+- [Configurando os Serviços de Informações da Internet 7.0 para Windows Communication Foundation](configuring-iis-for-wcf.md)
+- [Recursos de hospedagem do Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

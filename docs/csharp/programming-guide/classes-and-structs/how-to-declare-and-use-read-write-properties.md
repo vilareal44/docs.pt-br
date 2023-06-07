@@ -1,5 +1,6 @@
 ---
-title: Como declarar e usar as propriedades de gravação de leitura - C# Guia de Programação
+title: Como declarar e usar as propriedades de leitura/gravação – guia de programação em C#
+description: Saiba como usar as propriedades de leitura/gravação em C#. Este exemplo inclui duas propriedades, cada uma das quais tem acessadores get e Set, para que as propriedades sejam de leitura/gravação.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - get accessor [C#], declaring properties
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 4b9db5f15746ab9a1f42239150c6783154723371
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 08bdaa9446491d473cfb16e3b82bac41d7af5b79
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170280"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864443"
 ---
-# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Como declarar e usar as propriedades de gravação de leitura (C# Guia de programação)
+# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Como declarar e usar propriedades de leitura/gravação (guia de programação C#)
 As propriedades oferecem a conveniência de membros de dados públicos sem os riscos associados ao acesso sem proteção, sem controle e não verificado aos dados de um objeto. Isso é feito por meio de *acessadores*: métodos especiais que atribuem e recuperam valores do membro de dados subjacente. O acessador [set](../../language-reference/keywords/set.md) habilita a atribuição de membros de dados e o acessador [get](../../language-reference/keywords/get.md) recupera valores do membro de dados.  
   
  Este exemplo mostra uma classe `Person` que tem duas propriedades: `Name` (string) e `Age` (int). Ambas as propriedades fornecem acessadores `get` e `set`, portanto, são consideradas propriedades de leitura/gravação.  
@@ -54,8 +55,8 @@ person.SetAge(person.GetAge() + 1);
   
  Observe que `ToString` não é usado explicitamente no programa. Ele é invocado por padrão pelas chamadas `WriteLine`.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Propriedades](./properties.md)
 - [Classes e structs](./index.md)

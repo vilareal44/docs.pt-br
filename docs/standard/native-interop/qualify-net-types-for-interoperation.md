@@ -10,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-ms.openlocfilehash: 5b122befffbcad39258393462c75ac20431d9136
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5e8d604c8152d37475bf93e3b5687f24cfebfa02
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420494"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285957"
 ---
 # <a name="qualifying-net-types-for-com-interoperation"></a>Tipos .NET qualificados para interoperação COM
 Se você pretende expor os tipos em um assembly para aplicativos COM, considere os requisitos de interoperabilidade COM em tempo de design. Tipos gerenciados (classe, interface, estrutura e enumeração) se integram perfeitamente com tipos COM quando você obedece às seguintes diretrizes:  
@@ -49,7 +49,7 @@ Se você pretende expor os tipos em um assembly para aplicativos COM, considere 
 ## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.InteropServices.ComVisibleAttribute>
-- [Expondo componentes do .NET Framework para COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [Expondo componentes do .NET Framework para COM](../../framework/interop/exposing-dotnet-components-to-com.md)
 - [Introdução à interface de classe](com-callable-wrapper.md#introducing-the-class-interface)
-- [Aplicando atributos de interoperabilidade](../../../docs/standard/native-interop/apply-interop-attributes.md)
-- [Como empacotar um assembly .NET Framework para o COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+- [Aplicando atributos de interoperabilidade](apply-interop-attributes.md)
+- [Como empacotar um assembly .NET Framework para o COM](../../framework/interop/packaging-an-assembly-for-com.md)

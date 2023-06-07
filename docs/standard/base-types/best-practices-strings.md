@@ -18,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: 0fb7ec8d9de8fae7a0443984511e538d38d93c7a
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 28c1397c71debeed181acb2c1acb01b0f8cee7c9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441000"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289359"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Práticas recomendadas para o uso de cadeias de caracteres no .NET
 
@@ -56,7 +56,7 @@ Evite as práticas a seguir ao usar cadeias de caracteres:
 
 A maioria dos métodos de manipulação de cadeia de caracteres no .NET é sobrecarregada. Normalmente, uma ou mais sobrecargas aceitam as configurações padrão, enquanto outras não aceitam nenhum padrão e definem a maneira exata em que as cadeias de caracteres devem ser comparadas ou manipuladas. A maioria dos métodos que não dependem de padrões inclui um parâmetro do tipo <xref:System.StringComparison>, que é uma enumeração que especifica explicitamente as regras de comparação de cadeia de caracteres por cultura e maiúsculas e minúsculas. A tabela a seguir descreve os membros de enumeração <xref:System.StringComparison>.
 
-|Membro de StringComparison|Descrição|
+|Membro de StringComparison|Description|
 |-----------------------------|-----------------|
 |<xref:System.StringComparison.CurrentCulture>|Executa uma comparação que diferencia maiúsculas de minúsculas usando a cultura atual.|
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Executa uma comparação que não diferencia maiúsculas de minúsculas usando a cultura atual.|
@@ -203,8 +203,8 @@ A tabela a seguir descreve o mapeamento do contexto da cadeia de caracteres sem�
 |----------|--------------|-----------------------------------------------------|
 |Identificadores internos que diferenciam maiúsculas de minúsculas.<br /><br /> Identificadores que diferenciam maiúsculas e minúsculas nos padrões como XML e HTTP.<br /><br /> Configurações relacionadas à segurança que diferenciam maiúsculas de minúsculas.|Um identificador não linguístico, em que bytes correspondem exatamente.|<xref:System.StringComparison.Ordinal>|
 |Identificadores internos que não diferenciam maiúsculas de minúsculas.<br /><br /> Identificadores que não diferenciam maiúsculas e minúsculas em padrões como XML e HTTP.<br /><br /> Caminhos de arquivo.<br /><br /> Chaves do Registro e valores.<br /><br /> Variáveis de ambiente.<br /><br /> Identificadores de recurso (por exemplo, nomes de identificador).<br /><br /> Configurações relacionadas à segurança que não diferenciam maiúsculas de minúsculas.|Um identificador não linguístico, em que as maiúsculas e minúsculas são irrelevantes; especialmente, dados armazenados na maioria dos serviços de sistema do Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|
-|Alguns dados persistentes, linguisticamente relevantes.<br /><br /> Exibição de dados linguísticos que requer uma ordem de classificação fixa.|Dados independentes de cultura que ainda são linguisticamente relevantes.|<xref:System.StringComparison.InvariantCulture><br /><br /> – ou –<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
-|Dados exibidos para o usuário.<br /><br /> A maioria das entradas do usuário.|Dados que exigem os costumes linguísticos locais.|<xref:System.StringComparison.CurrentCulture><br /><br /> – ou –<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
+|Alguns dados persistentes, linguisticamente relevantes.<br /><br /> Exibição de dados linguísticos que requer uma ordem de classificação fixa.|Dados independentes de cultura que ainda são linguisticamente relevantes.|<xref:System.StringComparison.InvariantCulture><br /><br /> -ou-<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
+|Dados exibidos para o usuário.<br /><br /> A maioria das entradas do usuário.|Dados que exigem os costumes linguísticos locais.|<xref:System.StringComparison.CurrentCulture><br /><br /> -ou-<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
 
 ## <a name="common-string-comparison-methods-in-net"></a>Métodos comuns de comparação de cadeia de caracteres no .NET
 
@@ -309,7 +309,7 @@ O exemplo a seguir cria um objeto <xref:System.Collections.Hashtable> passando-o
 Quando você exibir dados que não são de cadeias de caracteres como números e datas e horas para os usuários, formate-os usando as configurações culturais do usuário. Por padrão, todos itens a seguir usam a cultura do thread atual em operações de formatação:
 
 - Cadeias de caracteres interpoladas compatíveis com os compiladores [C#](../../csharp/language-reference/tokens/interpolated.md) e [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
-- Operações de concatenação de cadeias de caracteres que usam os operadores de concatenação do [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) ou [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ), ou que chamam o método <xref:System.String.Concat%2A?displayProperty=nameWithType> diretamente.
+- Operações de concatenação de cadeias de caracteres que usam os operadores de concatenação do [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) ou [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md), ou que chamam o método <xref:System.String.Concat%2A?displayProperty=nameWithType> diretamente.
 - O método <xref:System.String.Format%2A?displayProperty=nameWithType>.
 - Os métodos `ToString` dos tipos numéricos e dos tipos de data e hora.
 

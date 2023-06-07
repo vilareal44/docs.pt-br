@@ -3,21 +3,21 @@ title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
 ms.openlocfilehash: fa87a1b0961425d6a9bc84769bef6e87cbc2ce96
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73732558"
 ---
-# <a name="websocketsettings"></a>\<webSocketSettings >
+# \<webSocketSettings>
 Um elemento de configuração usado para especificar as configurações de soquete da Web.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<NetHttpBinding**](nethttpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<webSocketSettings >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<netHttpBinding>**](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<webSocketSettings>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -67,10 +67,10 @@ Um elemento de configuração usado para especificar as configurações de soque
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|> \<NetHttpBinding|Especifica o NetHttpBinding|  
+|\<netHttpBinding>|Especifica o NetHttpBinding|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o elemento \<webSocketSettings >.  
+ O exemplo a seguir mostra como usar o elemento \<webSocketSettings>.  
   
 ```xml  
 <netHttpBinding>
@@ -87,7 +87,7 @@ Um elemento de configuração usado para especificar as configurações de soque
 </netHttpBinding>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
@@ -96,4 +96,4 @@ Um elemento de configuração usado para especificar as configurações de soque
 - [Associações](../../../wcf/bindings.md)
 - [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding >](bindings.md)
+- [\<binding>](bindings.md)

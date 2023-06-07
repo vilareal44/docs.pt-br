@@ -1,18 +1,19 @@
 ---
-title: 'Como: usar funções definidas pelo usuário com valor de tabela'
+title: 'Como: Use funções definidas pelo usuário com avaliadas'
+description: Use estes exemplos para aprender a criar uma função com valor de tabela, que retorna um único conjunto de linhas. Use essa função com valor de tabela, assim como uma tabela.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
-ms.openlocfilehash: c4b5290e4f1aa69c7f55951d526ccb303a5a95ec
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 44866367393e321d7dd2db965e2fad8a2e6b63e9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003178"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286320"
 ---
-# <a name="how-to-use-table-valued-user-defined-functions"></a>Como: usar funções definidas pelo usuário com valor de tabela
+# <a name="how-to-use-table-valued-user-defined-functions"></a>Como: Use funções definidas pelo usuário com avaliadas
 Uma função de tabela valorizada retorna um único rowset (em vez de procedimentos armazenados, que podem retornar várias formas de resultado). Porque o tipo de retorno de uma função de tabela valorizada é `Table`, você pode usar uma função de tabela valorizada em qualquer lugar em SQL que você pode usar uma tabela. Você também pode tratar a função de tabela valorizada assim como você uma tabela.  
   
 ## <a name="example"></a>Exemplo  
@@ -47,6 +48,6 @@ AS p1 INNER JOIN Products AS p2 ON p1.ProductID = p2.ProductID
  [!code-csharp[DLinqUDFS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#2)]
  [!code-vb[DLinqUDFS#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#2)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Funções definidas pelo usuário](user-defined-functions.md)

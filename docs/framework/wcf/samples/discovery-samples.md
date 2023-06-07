@@ -2,34 +2,34 @@
 title: Descoberta (exemplos)
 ms.date: 03/30/2017
 ms.assetid: 522a00b4-a789-4e8c-b8d7-a4c3d863a182
-ms.openlocfilehash: bf01e3fec15ddae0d0901b3c2dc91d3d6109fc97
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb5471db6f4feb61798926ae1466a3bebac7e959
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772912"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600575"
 ---
 # <a name="discovery-samples"></a>Descoberta (exemplos)
 Esta seção contém exemplos relacionados ao recurso de descoberta.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Anúncios](../../../../docs/framework/wcf/samples/announcements-sample.md)  
- Demonstra como usar os anúncios com o recurso de descoberta.  
+ [Avisos](announcements-sample.md)  
+ Demonstra como usar anúncios com o recurso de descoberta.  
   
- [Básico](../../../../docs/framework/wcf/samples/basic-sample.md)  
- Demonstra como fazer um serviço detectável por meio de programação, bem como a pesquisa para esse serviço usando o <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  
+ [Basic](basic-sample.md)  
+ Demonstra como tornar um serviço detectável programaticamente, bem como Pesquisar por esse serviço usando o <xref:System.ServiceModel.Discovery.DynamicEndpoint> .  
   
- [Configuração](../../../../docs/framework/wcf/samples/configuration-sample.md)  
- Demonstra como usar um arquivo de configuração para tornar um serviço detectável, bem como usar um <xref:System.ServiceModel.Discovery.DynamicEndpoint> por meio de configuração para procurar por esse serviço.  
+ [Configuration](configuration-sample.md)  
+ Demonstra como usar um arquivo de configuração para tornar um serviço detectável, bem como usar uma <xref:System.ServiceModel.Discovery.DynamicEndpoint> configuração por meio do para procurar esse serviço.  
   
- [Descoberta com escopos](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
- Demonstra como usar os escopos para categorizar os pontos de extremidade podem ser descobertos como bem como usar <xref:System.ServiceModel.Discovery.DiscoveryClient> para executar uma pesquisa assíncrona para pontos de extremidade.  
+ [Descoberta com escopos](discovery-with-scopes-sample.md)  
+ Demonstra como usar escopos para categorizar pontos de extremidade detectáveis, bem como usar <xref:System.ServiceModel.Discovery.DiscoveryClient> para executar uma pesquisa assíncrona de pontos de extremidade.  
   
- [Critérios de localização personalizados](../../../../docs/framework/wcf/samples/custom-find-criteria.md)  
- Demonstra como criar uma correspondência de escopo personalizado usando a lógica e como implementar um serviço de descoberta personalizada.  
+ [Critérios de localização personalizados](custom-find-criteria.md)  
+ Demonstra como criar uma correspondência de escopo personalizada usando a lógica e como implementar um serviço de descoberta personalizado.  
   
- [Exemplo de descoberta de fluxo de trabalho](../../../../docs/framework/wcf/samples/workflow-discovery-sample.md)  
- Demonstra como tornar um serviço de fluxo de trabalho detectável e como criar uma atividade de código personalizado que procura por um serviço específico.  
+ [Exemplo de descoberta de fluxo de trabalho](workflow-discovery-sample.md)  
+ Demonstra como tornar um serviço de fluxo de trabalho detectável e como criar uma atividade de código personalizada que pesquisa um serviço específico.  
   
- [Serviço de roteador de descoberta](../../../../docs/framework/wcf/samples/discovery-router-service.md)  
+ [Serviço de roteador de descoberta](discovery-router-service.md)  
  Demonstra como encaminhar mensagens de descoberta para outro ponto de extremidade.

@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
-ms.openlocfilehash: d7d3d86f89ef3b76e958707dd0be2dce8a3e9bf2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7914bc859966e17f3da41c9a13a01573b31baf91
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659811"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409667"
 ---
-# <a name="elementname-is-obsolete-visual-basic-warning"></a>'\<elementname >' é obsoleto (aviso do Visual Basic)
+# <a name="elementname-is-obsolete-visual-basic-warning"></a>'\<elementname>' está obsoleto (aviso do Visual Basic)
 Uma instrução tenta acessar um elemento de programação que foi marcado com o <xref:System.ObsoleteAttribute> atributo e a diretiva para tratá-lo como um aviso.  
   
- Você pode marcar qualquer elemento de programação como sendo não mais em uso por meio da aplicação <xref:System.ObsoleteAttribute> a ele. Se você fizer isso, você pode definir o atributo <xref:System.ObsoleteAttribute.IsError%2A> propriedade para um `True` ou `False`. Se você defini-lo como `True`, o compilador trata uma tentativa de usar o elemento como um erro. Se você defini-lo `False`, ou deixá-lo como padrão `False`, o compilador emitirá um aviso se não houver uma tentativa de usar o elemento.  
+ Você pode marcar qualquer elemento de programação como não sendo mais usado aplicando <xref:System.ObsoleteAttribute> -se a ele. Se você fizer isso, poderá definir a propriedade do atributo <xref:System.ObsoleteAttribute.IsError%2A> como `True` ou `False` . Se você defini-lo como `True` , o compilador tratará uma tentativa de usar o elemento como um erro. Se você defini-lo como `False` , ou deixá-lo como padrão `False` , o compilador emitirá um aviso se houver uma tentativa de usar o elemento.  
   
- Por padrão, essa mensagem é um aviso, porque o <xref:System.ObsoleteAttribute.IsError%2A> propriedade de <xref:System.ObsoleteAttribute> é `False`. Para obter mais informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Por padrão, essa mensagem é um aviso, pois a <xref:System.ObsoleteAttribute.IsError%2A> propriedade de <xref:System.ObsoleteAttribute> é `False` . Para obter mais informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **ID do erro:** BC40008  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Certifique-se de que a referência do código-fonte é o nome do elemento digitado corretamente.  
+- Certifique-se de que a referência de código-fonte esteja soletrando o nome do elemento corretamente.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Visão geral de atributos](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Visão geral de atributos](../../programming-guide/concepts/attributes/index.md)

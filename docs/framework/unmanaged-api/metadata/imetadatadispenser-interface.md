@@ -14,34 +14,34 @@ helpviewer_keywords:
 ms.assetid: 989840b3-9822-4ce5-a6c5-b375d3340a7a
 topic_type:
 - apiref
-ms.openlocfilehash: b7ce76c22e7188117bddd9e4f328e323f6742685
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2bdfe65dbf923ec61d91a259b5257d892fef53da
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436231"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007332"
 ---
 # <a name="imetadatadispenser-interface"></a>Interface IMetaDataDispenser
 Fornece métodos para criar um novo escopo de metadados ou abrir um existente.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método DefineScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-definescope-method.md)|Cria uma nova área na memória na qual você pode criar novos metadados.|  
-|[Método OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)|Abre um arquivo existente em disco e mapeia seus metadados na memória.|  
-|[Método OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)|Abre uma área de memória que contém os metadados existentes. Ou seja, esse método abre uma área especificada de memória na qual os dados existentes são tratados como metadados.|  
+|[Método DefineScope](imetadatadispenser-definescope-method.md)|Cria uma nova área na memória na qual você pode criar novos metadados.|  
+|[Método OpenScope](imetadatadispenser-openscope-method.md)|Abre um arquivo existente em disco e mapeia seus metadados na memória.|  
+|[Método OpenScopeOnMemory](imetadatadispenser-openscopeonmemory-method.md)|Abre uma área de memória que contém os metadados existentes. Ou seja, esse método abre uma área especificada de memória na qual os dados existentes são tratados como metadados.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataforma:** Consulte [requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataforma:** Consulte [requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [Interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [Interface IMetaDataDispenserEx](imetadatadispenserex-interface.md)
+- [Interfaces de metadados](metadata-interfaces.md)

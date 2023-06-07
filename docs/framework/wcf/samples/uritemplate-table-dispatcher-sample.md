@@ -2,40 +2,40 @@
 title: Exemplos de distribuidor de tabela de UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 3b32975d-ba90-4c5c-83bc-2fbb48f11c0c
-ms.openlocfilehash: aa4259f8c823bebf38b9689df92c45992cb55723
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 97e916aaf9d137eb7931470f9565797b03620d28
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143675"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84591066"
 ---
 # <a name="uritemplate-table-dispatcher-sample"></a>Exemplos de distribuidor de tabela de UriTemplate
-A <xref:System.UriTemplateTable> classe fornece uma estrutura de tabela associativa <xref:System.UriTemplate> semelhante a um dicionário para trabalhar com um conjunto de instâncias. Esta amostra demonstra um mecanismo `UriTemplateTable`de despacho básico construído `UriTemplateTable` usando , um cenário de uso comum para a classe.  
+A <xref:System.UriTemplateTable> classe fornece uma estrutura de tabela associativa semelhante a um dicionário para trabalhar com um conjunto de <xref:System.UriTemplate> instâncias. Este exemplo demonstra um mecanismo de expedição básico criado usando `UriTemplateTable` o, um cenário de uso comum para a `UriTemplateTable` classe.  
   
- Esta amostra demonstra os seguintes conceitos-chave para a `UriTemplateTable` classe:  
+ Este exemplo demonstra os seguintes conceitos principais para a `UriTemplateTable` classe:  
   
-- Associando delegados `UriTemplates` em `UriTemplateTable`um .  
+- Associando delegados a `UriTemplates` em um `UriTemplateTable` .  
   
-- Usando <xref:System.UriTemplateTable.MatchSingle%2A> para obter o delegado manipulador correto para um URI específico.  
+- Usando <xref:System.UriTemplateTable.MatchSingle%2A> para obter o delegado de manipulador correto para um URI específico.  
   
-- Invocando o delegado manipulador para processar a solicitação.  
+- Invocar o delegado de manipulador para processar a solicitação.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Para construir a edição C# ou Visual Basic .NET da solução, siga as instruções em [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Para criar a edição C# ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).  
   
-2. Para executar a amostra em uma configuração de máquina única ou cruzada, siga as instruções em [Executar as amostras da Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+2. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md).  
   
 > [!IMPORTANT]
 > Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Se esse diretório não existir, vá para [a Windows Communication Foundation (WCF) e para o Windows Workflow Foundation (WF) Amostras para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Amostras e amostras da [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (Windows Communication Foundation). Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\UriTemplateDispatcher`  
   
 ## <a name="see-also"></a>Confira também
 
-- [Tabela de UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
-- [Uritemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
+- [Tabela de UriTemplate](uritemplate-table-sample.md)
+- [UriTemplate](uritemplate-sample.md)

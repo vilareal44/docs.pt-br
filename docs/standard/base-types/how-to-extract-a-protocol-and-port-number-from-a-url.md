@@ -1,6 +1,6 @@
 ---
-title: Como extrair um protocolo e um número de porta de uma URL
-ms.date: 03/30/2017
+title: 'Como: extrair um protocolo e um número da porta de uma URL'
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -13,16 +13,18 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
-ms.openlocfilehash: f2704e3fb5ceb68609a475d52e11030177ad760b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c1d45dbcb2916af86d645d7813594f2b278bb7c2
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138728"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803866"
 ---
-# <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Como extrair um protocolo e um número de porta de uma URL
+# <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Como: extrair um protocolo e um número da porta de uma URL
 O exemplo a seguir extrai um protocolo e um número da porta de uma URL.  
-  
+
+[!INCLUDE [regex](../../../includes/regex.md)]
+
 ## <a name="example"></a>Exemplo  
  O exemplo usa o método <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> para retornar o protocolo seguido por dois-pontos e pelo número da porta.  
   
@@ -47,6 +49,6 @@ O exemplo a seguir extrai um protocolo e um número da porta de uma URL.
  [!code-csharp[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/example2.cs#2)]
  [!code-vb[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/vb/example2.vb#2)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)
+- [Expressões regulares do .NET](regular-expressions.md)

@@ -1,13 +1,14 @@
 ---
 title: Refatoração em funções puras (C#)
+description: Saiba como refatorar o código usando funções puras. Consulte exemplos de código e exiba recursos adicionais disponíveis.
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 4cf91ff078bd1c4582daa05475a91c4a4ecaba3e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cc5dd26923e2edaed34c8f1b742b3dfa1e935e68
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253106"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300222"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refatoração em funções puras (C#)
 
@@ -50,7 +51,7 @@ public class Program
 }  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```output  
 StringOne-StringTwo  
@@ -112,7 +113,7 @@ class Program
   
  Para obter mais informações, consulte [Visão geral de operadores de consulta padrão (C#)](./standard-query-operators-overview.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Introdução às transformações funcionais puras (C#)](./introduction-to-pure-functional-transformations.md)
-- [Programação Funcional vs. Programação Imperativa (C#)](./functional-programming-vs-imperative-programming.md)
+- [Programação funcional versus programação imperativa (C#)](./functional-programming-vs-imperative-programming.md)

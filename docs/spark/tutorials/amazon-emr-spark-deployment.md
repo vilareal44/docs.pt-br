@@ -1,15 +1,15 @@
 ---
 title: Implantar um aplicativo .NET para Apache Spark no Amazon EMR Spark
 description: Descubra como implantar um aplicativo do .NET para Apache Spark no Amazon EMR Spark.
-ms.date: 05/17/2019
+ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a1ff1ba4d5e855e0ac36b99b0c9d63adfaaaac1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c6cf26044693c5d923d11e1bbc72232e7009fe73
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73454939"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618253"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Implantar um aplicativo .NET para Apache Spark no Amazon EMR Spark
 
@@ -23,6 +23,8 @@ Neste tutorial, você aprenderá como:
 > * Publicar seu aplicativo Spark .NET
 > * Implantar seu aplicativo no Amazon EMR Spark
 > * Executar seu aplicativo
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -63,7 +65,7 @@ O **Microsoft.Spark.Worker** é um componente de back-end que reside nos nós de
 
 4. Carregue os seguintes itens para um sistema de arquivos distribuído (por exemplo, S3) ao qual seu cluster tem acesso:
 
-   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Este frasco está incluído como parte do pacote [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet e está localizado no diretório de saída de compilação do seu aplicativo.
+   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Esse jar é incluído como parte do pacote NuGet do [Microsoft. Spark](https://www.nuget.org/packages/Microsoft.Spark/) e é colocado no diretório de saída da compilação do seu aplicativo.
    * `<your app>.zip`
    * Arquivos (como arquivos de dependência ou dados comuns acessíveis a cada trabalho) ou assemblies (como DLLs que contêm suas funções definidas pelo usuário ou bibliotecas das quais seu aplicativo depende) serão colocados no diretório de trabalho de cada executor.
 

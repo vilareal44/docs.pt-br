@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c6c3ace6-e5e7-4450-8cc5-a9a48208c493
 topic_type:
 - apiref
-ms.openlocfilehash: 822b51531b7afc1c824c74b9580d9208e347e13b
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 71afc5e9772f82b922e8f428e6d808e46d092704
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703556"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504206"
 ---
 # <a name="iclriocompletionmanager-interface"></a>Interface ICLRIoCompletionManager
 Implementa um método de retorno de chamada que permite ao host notificar o Common Language Runtime (CLR) do status de solicitações de e/s especificadas.  
@@ -28,7 +28,7 @@ Implementa um método de retorno de chamada que permite ao host notificar o Comm
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método OnComplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md)|Notifica o CLR sobre o status de uma solicitação de e/s que foi feita usando uma chamada para o método [IHostIoCompletionManager:: bind](ihostiocompletionmanager-bind-method.md) .|  
+|[Método OnComplete](iclriocompletionmanager-oncomplete-method.md)|Notifica o CLR sobre o status de uma solicitação de e/s que foi feita usando uma chamada para o método [IHostIoCompletionManager:: bind](ihostiocompletionmanager-bind-method.md) .|  
   
 ## <a name="remarks"></a>Comentários  
  O host implementa a abstração de conclusão de e/s usando a interface [IHostIoCompletionManager](ihostiocompletionmanager-interface.md) . O CLR faz solicitações de e/s por meio dessa interface, e o host notifica o tempo de execução do resultado de tais solicitações usando a `ICLRIoCompletionManager` interface.  
@@ -42,7 +42,7 @@ Implementa um método de retorno de chamada que permite ao host notificar o Comm
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface IHostIoCompletionManager](ihostiocompletionmanager-interface.md)
 - [Interface IHostThreadPoolManager](ihostthreadpoolmanager-interface.md)

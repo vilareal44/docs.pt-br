@@ -1,13 +1,14 @@
 ---
 title: Filtrando dados (C#)
+description: A filtragem, também conhecida como seleção, restringe os resultados com base em uma condição. Saiba mais sobre os métodos do operador de consulta padrão no LINQ em C# que executam a filtragem.
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: 74399244990f8ff2deaa1d10576ea94a57c16bee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f9f6d691da73b566e5135f6692c87ba3a8978005
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346985"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103931"
 ---
 # <a name="filtering-data-c"></a>Filtrando dados (C#)
 A filtragem é a operação de restringir o conjunto de resultados de forma que ele contenha apenas os elementos correspondentes a uma condição especificada. Ela também é conhecida como seleção.  
@@ -49,8 +50,8 @@ foreach (string str in query)
 
 - <xref:System.Linq>
 - [Visão geral de operadores de consulta padrão (C#)](./standard-query-operators-overview.md)
-- [onde cláusula](../../../language-reference/keywords/where-clause.md)
+- [cláusula WHERE](../../../language-reference/keywords/where-clause.md)
 - [Especificar filtros predicados dinamicamente em runtime](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
-- [Como consultar os metadados de um conjunto com reflexão (LINQ) (C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [Como consultar metadados de um assembly com reflexão (LINQ) (C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
 - [Como consultar arquivos com um atributo ou nome especificado (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
 - [Como classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

@@ -4,12 +4,12 @@ description: Saiba mais sobre técnicas de criação de árvores de expressão.
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: c93eb16ebf2ff66dc0162afb6841f2cadfce174e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c153ca2c75738571c81057364390f489d2decb05
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146041"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656144"
 ---
 # <a name="building-expression-trees"></a>Criando árvores de expressão
 
@@ -164,7 +164,7 @@ BlockExpression body = Expression.Block(
 
 O código para criar a árvore de expressão para a função fatorial é bem mais longo, mais complicado e está cheio de rótulos e instruções de interrupção, bem como outros elementos que gostamos de evitar em nossas tarefas de codificação cotidianas.
 
-Para esta seção, também atualizei o código de visitante para visitar cada nó nessa árvore de expressão e gravar informações sobre os nós que são criados neste exemplo. Você pode [exibir ou baixar o código de exemplo](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) no repositório dotnet/docs do GitHub. Experimente por conta própria criando e executando os exemplos. Para obter instruções de download, consulte [Exemplos e tutoriais](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Para esta seção, também atualizei o código de visitante para visitar cada nó nessa árvore de expressão e gravar informações sobre os nós que são criados neste exemplo. Você pode [exibir ou baixar o código de exemplo](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) no repositório dotnet/docs do GitHub. Experimente por conta própria criando e executando os exemplos. Para obter instruções de download, consulte [Exemplos e tutoriais](../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="examining-the-apis"></a>Examinando as APIs
 

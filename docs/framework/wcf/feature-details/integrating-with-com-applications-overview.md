@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: 99e3c2f4445673f3b74048a2b466203af7bc2795
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c283e7cbc4cb4b8bc37dd1313480410df93a93bf
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045891"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596819"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integração com visão geral de aplicativos COM
 
-O Windows Communication Foundation (WCF) fornece ao desenvolvedor de código gerenciado um ambiente avançado para a criação de aplicativos conectados. No entanto, se você tiver um investimento substancial em código não gerenciado com base em COM e não quiser migrar, você ainda poderá integrar os serviços Web WCF diretamente em seu código existente usando o moniker do serviço WCF. O moniker do serviço pode ser usado em uma ampla variedade de ambientes de desenvolvimento baseados em COM, como o Office VBA, Visual Basic 6,0 ou C++ Visual 6,0.
+O Windows Communication Foundation (WCF) fornece ao desenvolvedor de código gerenciado um ambiente avançado para a criação de aplicativos conectados. No entanto, se você tiver um investimento substancial em código não gerenciado com base em COM e não quiser migrar, você ainda poderá integrar os serviços Web WCF diretamente em seu código existente usando o moniker do serviço WCF. O moniker do serviço pode ser usado em uma ampla variedade de ambientes de desenvolvimento baseados em COM, como o Office VBA, Visual Basic 6,0 ou Visual C++ 6,0.
 
 > [!NOTE]
 > O moniker do serviço usa um canal de comunicação do WCF para toda a comunicação. Os mecanismos de segurança e identidade para esse canal diferem daqueles usados em proxies padrão COM e DCOM. Além disso, como o moniker do serviço usa um canal de comunicação do WCF, o período de tempo limite padrão é de um minuto para todas as chamadas.
 
-O moniker do serviço é usado com `GetObject` a função para fornecer ao desenvolvedor não gerenciado uma abordagem com rigidez de tipos e específico para chamar serviços Web WCF. Isso requer uma definição local e visível do contrato do serviço Web WCF e a associação a ser usada. Assim como outros clientes WCF, o moniker do serviço deve construir um canal digitado para o serviço, embora essa construção de canal ocorra de forma transparente para o programador COM na primeira chamada de método.
+O moniker do serviço é usado com a `GetObject` função para fornecer ao desenvolvedor não gerenciado uma abordagem com rigidez de tipos e específico para chamar serviços Web WCF. Isso requer uma definição local e visível do contrato do serviço Web WCF e a associação a ser usada. Assim como outros clientes WCF, o moniker do serviço deve construir um canal digitado para o serviço, embora essa construção de canal ocorra de forma transparente para o programador COM na primeira chamada de método.
 
 Em comum com outros clientes WCF, ao usar o moniker, os aplicativos especificam o endereço, a associação e o contrato para se comunicar com um serviço. O contrato pode ser especificado de uma das seguintes maneiras:
 
@@ -69,4 +69,4 @@ A tabela a seguir mostra os parâmetros que são suportados pelo moniker do serv
 
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Registrar e configurar um moniker de serviço](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+- [Como registrar e configurar um Moniker de serviço](how-to-register-and-configure-a-service-moniker.md)

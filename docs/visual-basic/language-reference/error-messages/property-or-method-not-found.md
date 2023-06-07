@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID423
 ms.assetid: 471d8c1d-9edf-4014-8427-1a01b634a72d
-ms.openlocfilehash: 9dbb1fe51a8f2a0f788e9d19f8f2342162af3f2b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4da49103055bf075f1bdbf2d3b85d9ec68ea6d49
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661725"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400429"
 ---
 # <a name="property-or-method-not-found"></a>Propriedade ou método não localizado
-O método do objeto referenciado ou propriedade de objeto não está definida.  
+O método de objeto ou a propriedade de objeto referenciado não está definida.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Você pode ter digitado incorretamente o nome do objeto. Para ver quais propriedades e métodos são definidos para um objeto, exiba o Pesquisador de objetos. Selecione a biblioteca de objeto apropriado para exibir uma lista de propriedades e métodos disponíveis.  
+- Você pode ter digitado o nome do objeto incorretamente. Para ver quais propriedades e métodos são definidos para um objeto, exiba o pesquisador de objetos. Selecione a biblioteca de objetos apropriada para exibir uma lista de propriedades e métodos disponíveis.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipos de erro](../../programming-guide/language-features/error-types.md)

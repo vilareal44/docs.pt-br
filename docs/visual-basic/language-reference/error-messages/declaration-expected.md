@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: e6f8bf2b4ce9789a1715971b8262bdd162ba8035
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 237622d0dc6c57f66d402f491a6191a5911574e2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619538"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409732"
 ---
 # <a name="declaration-expected"></a>Declaração esperada
-Uma instrução nondeclarative, como uma atribuição ou uma instrução de loop ocorre fora de qualquer procedimento. Apenas declarações são permitidas procedimentos externos.  
+Uma instrução não declarativa, como uma instrução de atribuição ou loop, ocorre fora de qualquer procedimento. Somente declarações são permitidas para procedimentos externos.  
   
- Como alternativa, um elemento de programação é declarado sem uma palavra-chave de declaração, como `Dim` ou `Const`.  
+ Como alternativa, um elemento de programação é declarado sem uma palavra-chave de declaração, como `Dim` ou `Const` .  
   
  **ID do erro:** BC30188  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Mova a instrução nondeclarative para o corpo de um procedimento.  
+- Mova a instrução Declaration para o corpo de um procedimento.  
   
-- Inicie a declaração com uma palavra-chave de declaração adequado.  
+- Inicie a declaração com uma palavra-chave de declaração apropriada.  
   
-- Certifique-se de que não está escrito incorretamente uma palavra-chave de declaração.  
+- Certifique-se de que uma palavra-chave de declaração não tenha sido digitada incorretamente.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [Instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Procedimentos](../../programming-guide/language-features/procedures/index.md)
+- [Instrução Dim](../statements/dim-statement.md)

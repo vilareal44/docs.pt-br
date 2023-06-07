@@ -1,5 +1,6 @@
 ---
 title: Como proteger um serviço com credenciais Windows
+description: Saiba como habilitar a segurança de transporte em um serviço WCF que reside em um domínio do Windows e é chamado por clientes no mesmo domínio.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: d02e697b23b6c745a59f3c9c37dd9c565f2f710e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 8ef164e1475bfd5f047a99426a2bed43a7aa7353
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320929"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244625"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Como proteger um serviço com credenciais Windows
 
@@ -28,17 +29,17 @@ Os três primeiros procedimentos mostram como proteger o serviço usando código
 
 O código completo para o serviço e o cliente está na seção de exemplo no final deste tópico.
 
-O primeiro procedimento percorre a criação e a configuração de uma classe <xref:System.ServiceModel.WSHttpBinding> no código. A associação usa o transporte HTTP. A mesma associação é usada no cliente.
+O primeiro procedimento percorre a criação e a configuração de uma <xref:System.ServiceModel.WSHttpBinding> classe no código. A associação usa o transporte HTTP. A mesma associação é usada no cliente.
 
 #### <a name="to-create-a-wshttpbinding-that-uses-windows-credentials-and-message-security"></a>Para criar uma WSHttpBinding que usa as credenciais do Windows e a segurança da mensagem
 
-1. O código desse procedimento é inserido no início do método `Run` da classe `Test` no código do serviço na seção de exemplo.
+1. O código desse procedimento é inserido no início do `Run` método da `Test` classe no código do serviço na seção de exemplo.
 
-2. Crie uma instância da classe <xref:System.ServiceModel.WSHttpBinding>.
+2. Criar uma instância da classe <xref:System.ServiceModel.WSHttpBinding>.
 
-3. Defina a propriedade <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> da classe <xref:System.ServiceModel.WSHttpSecurity> como <xref:System.ServiceModel.SecurityMode.Message>.
+3. Defina a <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> propriedade da <xref:System.ServiceModel.WSHttpSecurity> classe como <xref:System.ServiceModel.SecurityMode.Message> .
 
-4. Defina a propriedade <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> da classe <xref:System.ServiceModel.MessageSecurityOverHttp> como <xref:System.ServiceModel.MessageCredentialType.Windows>.
+4. Defina a <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> propriedade da <xref:System.ServiceModel.MessageSecurityOverHttp> classe como <xref:System.ServiceModel.MessageCredentialType.Windows> .
 
 5. O código para esse procedimento é o seguinte:
 
@@ -53,15 +54,15 @@ Este é o segundo procedimento, que mostra como usar a associação em um servi�
 
 1. Insira o código deste procedimento após o código do procedimento anterior.
 
-2. Crie uma variável <xref:System.Type> chamada `contractType` e atribua-a ao tipo da interface (`ICalculator`). Ao usar Visual Basic, use o operador `GetType`; ao usar C#, use a palavra-chave `typeof`.
+2. Crie uma <xref:System.Type> variável chamada `contractType` e atribua-a ao tipo da interface ( `ICalculator` ). Ao usar Visual Basic, use o `GetType` operador; ao usar o C#, use a `typeof` palavra-chave.
 
-3. Crie uma segunda variável <xref:System.Type> chamada `serviceType` e atribua a ela o tipo do contrato implementado (`Calculator`).
+3. Crie uma segunda <xref:System.Type> variável chamada `serviceType` e atribua a ela o tipo do contrato implementado ( `Calculator` ).
 
-4. Crie uma instância da classe <xref:System.Uri> denominada `baseAddress` com o endereço base do serviço. O endereço base deve ter um esquema que corresponda ao transporte. Nesse caso, o esquema de transporte é HTTP e o endereço inclui o Uniform Resource Identifier especial (URI) "localhost" e um número de porta (8036), bem como um endereço de ponto de extremidade base ("serviceModelSamples/): `http://localhost:8036/serviceModelSamples/`.
+4. Crie uma instância da <xref:System.Uri> classe chamada `baseAddress` com o endereço base do serviço. O endereço base deve ter um esquema que corresponda ao transporte. Nesse caso, o esquema de transporte é HTTP e o endereço inclui o Uniform Resource Identifier especial (URI) "localhost" e um número de porta (8036), bem como um endereço de ponto de extremidade base ("serviceModelSamples/): `http://localhost:8036/serviceModelSamples/` .
 
-5. Crie uma instância da classe <xref:System.ServiceModel.ServiceHost> com as variáveis `serviceType` e `baseAddress`.
+5. Crie uma instância da <xref:System.ServiceModel.ServiceHost> classe com as `serviceType` variáveis e `baseAddress` .
 
-6. Adicione um ponto de extremidade ao serviço usando o `contractType`, a associação e um nome de ponto de extremidade (secureCalculator). Um cliente deve concatenar o endereço base e o nome do ponto de extremidade ao iniciar uma chamada para o serviço.
+6. Adicione um ponto de extremidade ao serviço usando o `contractType` , a associação e um nome de ponto de extremidade (secureCalculator). Um cliente deve concatenar o endereço base e o nome do ponto de extremidade ao iniciar uma chamada para o serviço.
 
 7. Chame o método <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> para iniciar o serviço. O código para esse procedimento é mostrado aqui:
 
@@ -70,25 +71,25 @@ Este é o segundo procedimento, que mostra como usar a associação em um servi�
 
 ### <a name="using-the-binding-in-a-client"></a>Usando a associação em um cliente
 
-Este procedimento mostra como gerar um proxy que se comunica com o serviço. O proxy é gerado com a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) que usa os metadados de serviço para criar o proxy.
+Este procedimento mostra como gerar um proxy que se comunica com o serviço. O proxy é gerado com a [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) que usa os metadados de serviço para criar o proxy.
 
-Esse procedimento também cria uma instância da classe <xref:System.ServiceModel.WSHttpBinding> para se comunicar com o serviço e, em seguida, chama o serviço.
+Esse procedimento também cria uma instância da <xref:System.ServiceModel.WSHttpBinding> classe para se comunicar com o serviço e, em seguida, chama o serviço.
 
 Este exemplo usa apenas o código para criar o cliente. Como alternativa, você pode usar um arquivo de configuração, que é mostrado na seção após este procedimento.
 
 #### <a name="to-use-a-binding-in-a-client-with-code"></a>Para usar uma associação em um cliente com código
 
-1. Use a ferramenta SvcUtil. exe para gerar o código de proxy a partir dos metadados do serviço. Para obter mais informações, consulte [como: criar um cliente](how-to-create-a-wcf-client.md). O código de proxy gerado herda da classe <xref:System.ServiceModel.ClientBase%601>, que garante que cada cliente tenha os construtores, métodos e propriedades necessários para se comunicar com um serviço WCF. Neste exemplo, o código gerado inclui a classe `CalculatorClient`, que implementa a interface `ICalculator`, permitindo a compatibilidade com o código do serviço.
+1. Use a ferramenta SvcUtil.exe para gerar o código de proxy dos metadados do serviço. Para obter mais informações, consulte [como: criar um cliente](how-to-create-a-wcf-client.md). O código de proxy gerado herda da <xref:System.ServiceModel.ClientBase%601> classe, o que garante que cada cliente tenha os construtores, métodos e propriedades necessários para se comunicar com um serviço WCF. Neste exemplo, o código gerado inclui a `CalculatorClient` classe, que implementa a `ICalculator` interface, permitindo a compatibilidade com o código do serviço.
 
-2. O código deste procedimento é inserido no início do método `Main` do programa cliente.
+2. O código deste procedimento é inserido no início do `Main` método do programa cliente.
 
-3. Crie uma instância da classe <xref:System.ServiceModel.WSHttpBinding> e defina seu modo de segurança como `Message` e seu tipo de credencial de cliente como `Windows`. O exemplo nomeia a variável `clientBinding`.
+3. Crie uma instância da <xref:System.ServiceModel.WSHttpBinding> classe e defina seu modo de segurança como `Message` e seu tipo de credencial de cliente como `Windows` . O exemplo nomeia a variável `clientBinding` .
 
-4. Crie uma instância da classe <xref:System.ServiceModel.EndpointAddress> denominada `serviceAddress`. Inicialize a instância com o endereço base concatenado com o nome do ponto de extremidade.
+4. Crie uma instância da <xref:System.ServiceModel.EndpointAddress> classe denominada `serviceAddress` . Inicialize a instância com o endereço base concatenado com o nome do ponto de extremidade.
 
-5. Crie uma instância da classe de cliente gerada com as variáveis `serviceAddress` e `clientBinding`.
+5. Crie uma instância da classe de cliente gerada com as `serviceAddress` variáveis e `clientBinding` .
 
-6. Chame o método <xref:System.ServiceModel.ClientBase%601.Open%2A>, conforme mostrado no código a seguir.
+6. Chame o <xref:System.ServiceModel.ClientBase%601.Open%2A> método, conforme mostrado no código a seguir.
 
 7. Chame o serviço e exiba os resultados.
 
@@ -106,15 +107,15 @@ Se você ainda não tiver um serviço definido, consulte [projetando e implement
 
 #### <a name="to-enable-transfer-security-on-a-service-in-a-windows-domain-using-configuration"></a>Para habilitar a segurança de transferência em um serviço em um domínio do Windows usando a configuração
 
-1. Adicione um elemento de [> de \<wsHttpBinding](../configure-apps/file-schema/wcf/wshttpbinding.md) à seção de elemento [> do \<bindings](../configure-apps/file-schema/wcf/bindings.md) do arquivo de configuração.
+1. Adicione um [\<wsHttpBinding>](../configure-apps/file-schema/wcf/wshttpbinding.md) elemento à [\<bindings>](../configure-apps/file-schema/wcf/bindings.md) seção element do arquivo de configuração.
 
-2. Adicione um elemento < `binding` > ao elemento < `WSHttpBinding` > e defina o atributo `configurationName` como um valor apropriado para seu aplicativo.
+2. Adicione um `binding` elemento <> ao `WSHttpBinding` elemento> <e defina o `configurationName` atributo como um valor apropriado para seu aplicativo.
 
-3. Adicione um elemento < `security` > e defina o atributo `mode` como mensagem.
+3. Adicione um `security` elemento <> e defina o `mode` atributo como Message.
 
-4. Adicione um elemento < `message` > e defina o atributo `clientCredentialType` para o Windows.
+4. Adicione um `message` elemento <> e defina o `clientCredentialType` atributo como Windows.
 
-5. No arquivo de configuração do serviço, substitua a seção `<bindings>` pelo código a seguir. Se você ainda não tiver um arquivo de configuração de serviço, consulte [usando associações para configurar serviços e clientes](using-bindings-to-configure-services-and-clients.md).
+5. No arquivo de configuração do serviço, substitua a `<bindings>` seção pelo código a seguir. Se você ainda não tiver um arquivo de configuração de serviço, consulte [usando associações para configurar serviços e clientes](using-bindings-to-configure-services-and-clients.md).
 
     ```xml
     <bindings>
@@ -134,15 +135,15 @@ Este procedimento mostra como gerar dois arquivos: um proxy que se comunica com 
 
 #### <a name="to-use-a-binding-in-a-client-with-configuration"></a>Para usar uma associação em um cliente com configuração
 
-1. Use a ferramenta SvcUtil. exe para gerar o código de proxy e o arquivo de configuração dos metadados do serviço. Para obter mais informações, consulte [como: criar um cliente](how-to-create-a-wcf-client.md).
+1. Use a ferramenta SvcUtil.exe para gerar o código de proxy e o arquivo de configuração dos metadados do serviço. Para obter mais informações, consulte [como: criar um cliente](how-to-create-a-wcf-client.md).
 
-2. Substitua a seção [\<bindings >](../configure-apps/file-schema/wcf/bindings.md) do arquivo de configuração gerado pelo código de configuração da seção anterior.
+2. Substitua a [\<bindings>](../configure-apps/file-schema/wcf/bindings.md) seção do arquivo de configuração gerado pelo código de configuração da seção anterior.
 
-3. O código de procedimento é inserido no início do método `Main` do programa cliente.
+3. O código de procedimento é inserido no início do `Main` método do programa cliente.
 
 4. Crie uma instância da classe de cliente gerada passando o nome da associação no arquivo de configuração como um parâmetro de entrada.
 
-5. Chame o método <xref:System.ServiceModel.ClientBase%601.Open%2A>, conforme mostrado no código a seguir.
+5. Chame o <xref:System.ServiceModel.ClientBase%601.Open%2A> método, conforme mostrado no código a seguir.
 
 6. Chame o serviço e exiba os resultados.
 
@@ -155,7 +156,7 @@ Este procedimento mostra como gerar dois arquivos: um proxy que se comunica com 
 [!code-csharp[c_SecureWindowsClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#0)]
 [!code-vb[c_SecureWindowsClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#0)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.WSHttpBinding>
 - [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)

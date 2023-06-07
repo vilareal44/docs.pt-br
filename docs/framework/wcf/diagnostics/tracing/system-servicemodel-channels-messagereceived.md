@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.MessageReceived
 ms.date: 03/30/2017
 ms.assetid: 9e6942a4-051f-416c-9674-7e729b9edd33
-ms.openlocfilehash: fc2de674bf6a112ff6800ea4a1b2d02e7ead2094
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0211244909e6302752985f3958c2d07ac30b34f8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792425"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601992"
 ---
 # <a name="systemservicemodelchannelsmessagereceived"></a>System.ServiceModel.Channels.MessageReceived
 System.ServiceModel.Channels.MessageReceived  
@@ -15,10 +15,10 @@ System.ServiceModel.Channels.MessageReceived
 ## <a name="description"></a>Descrição  
  Mensagem recebida por um canal.  
   
- Esse rastreamento é emitido quando uma mensagem do WCF é recebida se a `System.ServiceModel` origem de rastreamento está habilitada no nível detalhado ou informações. Esse rastreamento é necessário para ver a seta de correlação da mensagem no modo de gráfico de atividade.  
+ Esse rastreamento é emitido quando uma mensagem do WCF é recebida se a `System.ServiceModel` origem do rastreamento está habilitada no nível de informações ou detalhado. Esse rastreamento é necessário para ver a seta de correlação de mensagem na exibição de gráfico de atividade.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Rastreamento](index.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](using-tracing-to-troubleshoot-your-application.md)
+- [Administração e diagnóstico](../index.md)

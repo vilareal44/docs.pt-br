@@ -13,12 +13,12 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-ms.openlocfilehash: c7219c0497bb87f0cc44f27229eaf25f9b3eebce
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ec6ae3328c2042af950d1ee78a33d3de97219f10
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344786"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414292"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Compilando a partir da linha de comando (Visual Basic)
 
@@ -35,18 +35,18 @@ Você pode compilar arquivos de projeto (. vbproj) em um prompt de comando usand
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Como invocar o compilador de linha de comando](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) \
+[Como invocar o compilador de linha de comando](how-to-invoke-the-command-line-compiler.md) \
 Descreve como invocar o compilador de linha de comando no prompt do MS-DOS ou em um subdiretório específico.
 
-[Linhas de comando de compilação de exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) \
+[Linhas de comando de compilação de exemplo](sample-compilation-command-lines.md) \
 Fornece uma lista de linhas de comando de exemplo que você pode modificar para seu próprio uso.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Compilador de linha de comando Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md) \
+[Compilador de linha de comando Visual Basic](index.md) \
 Fornece listas de opções de compilador, organizadas em ordem alfabética ou por finalidade.
 
-[Compilação condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) \
+[Compilação condicional](../../programming-guide/program-structure/conditional-compilation.md) \
 Descreve como compilar seções específicas de código.
 
 [Criando e limpando projetos e soluções no Visual Studio](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) \

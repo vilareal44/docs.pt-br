@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [.NET Framework hosting]
 - hosting enumerations [.NET Framework]
 ms.assetid: e09131eb-1f7d-4f52-ae42-7393e9b62ef6
-ms.openlocfilehash: e6fb22f91d57a356a9a7c3749e44a9fb3c36b699
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8edace3191ee4477b19f199d5db6c891c993dcd5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616106"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504297"
 ---
 # <a name="hosting-enumerations"></a>Hospedando enumerações
 Esta seção descreve as enumerações não gerenciadas que a API de hospedagem usa.  
@@ -72,13 +72,13 @@ Esta seção descreve as enumerações não gerenciadas que a API de hospedagem 
  Contém valores que indicam o impacto de uma falha quando uma alocação de memória específica é solicitada, mas não pode ser satisfeita.  
   
  [Enumeração EPolicyAction](epolicyaction-enumeration.md)  
- Descreve as ações de política que o host pode definir para operações descritas pela [Enumeração EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) e falhas descritas pela [Enumeração EClrFailure](eclrfailure-enumeration.md).  
+ Descreve as ações de política que o host pode definir para operações descritas pela [Enumeração EClrOperation](eclroperation-enumeration.md) e falhas descritas pela [Enumeração EClrFailure](eclrfailure-enumeration.md).  
   
  [Enumeração ESymbolReadingPolicy](esymbolreadingpolicy-enumeration.md)  
  Contém valores que definem a política para ler arquivos de banco de dados do programa (PDB).  
   
  [Enumeração ETaskType](etasktype-enumeration.md)  
- Contém valores que indicam o tipo de tarefa representado por uma [interface ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) ou uma interface de [interface IHostTask](ihosttask-interface.md) .  
+ Contém valores que indicam o tipo de tarefa representado por uma [interface ICLRTask](iclrtask-interface.md) ou uma interface de [interface IHostTask](ihosttask-interface.md) .  
   
  [Enumeração HOST_TYPE](host-type-enumeration.md)  
  Contém valores que especificam o tipo de host que está iniciando um aplicativo.  

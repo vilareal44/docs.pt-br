@@ -3,13 +3,13 @@ title: <MethodInstantiation> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
 ms.openlocfilehash: f19bd3c20088431bcbbafac298398b82a664bee9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128321"
 ---
-# <a name="methodinstantiation-element-net-native"></a>\<elemento de > MethodInstantiation (.NET Native)
+# <a name="methodinstantiation-element-net-native"></a>\<MethodInstantiation> (.NET Nativo)
 Aplica a política de reflexão de runtime a um método genérico construído.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,7 +39,7 @@ Aplica a política de reflexão de runtime a um método genérico construído.
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*method_name*|O nome do método. O tipo do método é definido pelo elemento pai [\<Type>](type-element-net-native.md) ou [\<TypeInstantiation>](typeinstantiation-element-net-native.md).|  
+|*method_name*|O nome do método. O tipo do método é definido pelo [\<Type>](type-element-net-native.md) elemento pai ou [\<TypeInstantiation>](typeinstantiation-element-net-native.md) .|  
   
 ## <a name="signature-attribute"></a>Atributo de assinatura  
   
@@ -57,10 +57,10 @@ Aplica a política de reflexão de runtime a um método genérico construído.
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*policy_setting*|A configuração a ser aplicada a este tipo de política para o método. Os valores possíveis são `Auto`, `Excluded`, `Included` e `Required`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md).|  
+|*policy_setting*|A configuração a ser aplicada a este tipo de política para o método. Os valores possíveis são `Auto`, `Excluded`, `Included` e `Required`. Para obter mais informações, consulte [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -70,11 +70,11 @@ Aplica a política de reflexão de runtime a um método genérico construído.
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
   
 ## <a name="remarks"></a>Comentários  
- O elemento `<MethodInstantiation>` substitui a política de reflexão de tempo de execução do seu método genérico aberto correspondente.  
+ O elemento `<MethodInstantiation>` substitui a política de reflexão de runtime do seu método genérico aberto correspondente.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)
-- [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md)
-- [Elemento \<Method>](method-element-net-native.md)
+- [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementos da diretiva de runtime](runtime-directive-elements.md)
+- [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md)
+- [\<Method>Elementos](method-element-net-native.md)

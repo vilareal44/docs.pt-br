@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: c8c0c084ac3b1cf06fc5f2b3df85fa979744e17b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c99ab5e1e72aefc688df1692091e60caf930d5e4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185412"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597612"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Práticas recomendadas para segurança no WCF
-As seções a seguir listam as melhores práticas a serem consideradas durante a criação de aplicativos seguros usando o WCF (Windows Communication Foundation). Para obter mais informações sobre segurança, confira [Considerações sobre segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [Considerações sobre segurança de dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md) e [Considerações sobre segurança com metadados](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
+As seções a seguir listam as melhores práticas a serem consideradas durante a criação de aplicativos seguros usando o WCF (Windows Communication Foundation). Para obter mais informações sobre segurança, confira [Considerações sobre segurança](security-considerations-in-wcf.md), [Considerações sobre segurança de dados](security-considerations-for-data.md) e [Considerações sobre segurança com metadados](security-considerations-with-metadata.md).  
   
 ## <a name="identify-services-performing-windows-authentication-with-spns"></a>Identificar os serviços que executam a Autenticação do Windows com SPNs  
  Os serviços podem ser identificados com nomes UPN ou SPNs. Os serviços executados em contas de computador como um serviço de rede têm uma identidade do SPN correspondente ao computador que eles estão executando. Os serviços executados em contas de usuário têm uma identidade do UPN correspondente ao usuário como quem eles estão sendo executados, embora a ferramenta `setspn` possa ser usada para atribuir um SPN à conta de usuário. A configuração de um serviço para que ele possa ser identificado por meio do SPN e a configuração dos clientes que se conectam ao serviço para que eles usem esse SPN pode dificultar alguns ataques. Essas diretrizes se aplicam às associações que usam o Kerberos ou a negociação SSPI.  Os clientes ainda devem especificar um SPN quando o SSPI faz fallback para o NTLM.  
@@ -45,19 +45,19 @@ As seções a seguir listam as melhores práticas a serem consideradas durante a
  Garanta que você confie na origem dos metadados e garanta que ninguém tenha adulterado os metadados. Os metadados recuperados usando o protocolo HTTP são enviados em texto não criptografado e podem ser adulterados. Se o serviço usa as propriedades <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> e <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>, use a URL fornecida pelo criador do serviço para baixar os dados usando o protocolo HTTPS.  
   
 ## <a name="publish-metadata-using-security"></a>Publicar metadados usando a segurança  
- Para evitar a adulteração dos metadados publicados de um serviço, proteja o ponto de extremidade de troca de metadados com segurança em nível da mensagem ou do transporte. Para obter mais informações, confira [Publicando pontos de extremidade de metadados](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) e [Como publicar metadados para um serviço usando o código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+ Para evitar a adulteração dos metadados publicados de um serviço, proteja o ponto de extremidade de troca de metadados com segurança em nível da mensagem ou do transporte. Para obter mais informações, confira [Publicando pontos de extremidade de metadados](../publishing-metadata-endpoints.md) e [Como publicar metadados para um serviço usando o código](how-to-publish-metadata-for-a-service-using-code.md).  
   
 ## <a name="ensure-use-of-local-issuer"></a>Garantir o uso do emissor local  
  Se um endereço do emissor e a associação são especificados para uma associação fornecida, o emissor local não é usado para os pontos de extremidade que usam essa associação. Os clientes que pretendem sempre usar o emissor local devem garantir que não usem uma associação como essa ou que modifiquem a associação, de modo que o endereço do emissor seja nulo.  
   
 ## <a name="saml-token-size-quotas"></a>Cotas de tamanho do token SAML  
- Quando os tokens SAML (Security Assertions Markup Language) são serializados em mensagens, quando são emitidos por um STS (Serviço de Token de Segurança) ou quando os clientes apresentam esses tokens para serviços como parte da autenticação, a cota máxima de tamanho da mensagem precisa ser suficientemente grande para acomodar o token SAML e as outras partes da mensagem. Em casos normais, as cotas padrão de tamanho da mensagem são suficientes. No entanto, nos casos em que um token SAML é grande porque contém centenas de declarações, as cotas devem ser aumentadas para acomodar o token serializado. Para obter mais informações sobre cotas, confira [Considerações sobre segurança de dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ Quando os tokens SAML (Security Assertions Markup Language) são serializados em mensagens, quando são emitidos por um STS (Serviço de Token de Segurança) ou quando os clientes apresentam esses tokens para serviços como parte da autenticação, a cota máxima de tamanho da mensagem precisa ser suficientemente grande para acomodar o token SAML e as outras partes da mensagem. Em casos normais, as cotas padrão de tamanho da mensagem são suficientes. No entanto, nos casos em que um token SAML é grande porque contém centenas de declarações, as cotas devem ser aumentadas para acomodar o token serializado. Para obter mais informações sobre cotas, confira [Considerações sobre segurança de dados](security-considerations-for-data.md).  
   
 ## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>Definir SecurityBindingElement.IncludeTimestamp como True em associações personalizadas  
  Ao criar uma associação personalizada, você deverá definir <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> como `true`. Caso contrário, se <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> for definido como `false` e o cliente estiver usando um token baseado em chave assimétrica como um certificado X509, a mensagem não será assinada.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Considerações de segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Considerações de segurança para dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
-- [Considerações de segurança com metadados](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [Considerações sobre segurança](security-considerations-in-wcf.md)
+- [Considerações de segurança para dados](security-considerations-for-data.md)
+- [Considerações de segurança com metadados](security-considerations-with-metadata.md)

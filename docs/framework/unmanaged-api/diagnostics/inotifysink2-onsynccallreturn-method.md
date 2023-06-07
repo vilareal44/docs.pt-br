@@ -46,7 +46,7 @@ HRESULT OnSyncCallReturn
  `in_BufferSize`  
  no Tamanho do buffer de chamada, em bytes.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  S_OK se o método tiver sucesso.  
   
 ## <a name="requirements"></a>Requisitos  

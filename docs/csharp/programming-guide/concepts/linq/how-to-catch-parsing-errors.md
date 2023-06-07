@@ -1,15 +1,16 @@
 ---
-title: Como pegar erros de análise (C#)
+title: Como capturar erros de análise (C#)
+description: Este LINQ to XML exemplo em C# detecta XML incorretamente formado ou inválido. LINQ to XML usa XmlReader, que gera uma exceção para XML mal formado ou inválido.
 ms.date: 07/20/2015
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
-ms.openlocfilehash: 1a05037892061dec85e7837472e8ec13e076724b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a891097322ef6acce062ea927692b01cc425e6c
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141489"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105412"
 ---
-# <a name="how-to-catch-parsing-errors-c"></a>Como pegar erros de análise (C#)
+# <a name="how-to-catch-parsing-errors-c"></a>Como capturar erros de análise (C#)
 Este tópico mostra como detectar XML mal formado ou inválido.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é implementado usando <xref:System.Xml.XmlReader>. Se malformado ou XML válido é passado para [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], a classe subjacente de <xref:System.Xml.XmlReader> irá acionar uma exceção. Os vários métodos que analisam XML, tais como <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, não capturam a exceção; a exceção pode ser capturada por seu aplicativo.  

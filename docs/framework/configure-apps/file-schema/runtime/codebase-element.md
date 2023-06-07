@@ -10,21 +10,21 @@ helpviewer_keywords:
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
 ms.openlocfilehash: 475b7df55ed509157c1da0aeb8f979de238c72b5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70971882"
 ---
-# <a name="codebase-element"></a>\<Elemento de > codeBase
+# <a name="codebase-element"></a>Elemento \<codeBase>
 
 Especifica onde o Common Language Runtime pode encontrar um assembly.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> assemblyBinding**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly >** ](dependentassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<codeBase>**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dependentAssembly>**](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<codeBase>**
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -53,7 +53,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 ### <a name="child-elements"></a>Elementos filho
 
-nenhuma.
+Nenhum.
 
 ### <a name="parent-elements"></a>Elementos pai
 
@@ -66,11 +66,11 @@ nenhuma.
 
 ## <a name="remarks"></a>Comentários
 
-Para que o tempo de execução use a configuração de  **\<> codebase** em um arquivo de configuração de máquina ou arquivo de política do Publicador, o arquivo também deve redirecionar a versão do assembly. Os arquivos de configuração do aplicativo podem ter uma configuração de CodeBase sem redirecionar a versão do assembly. Depois de determinar qual versão do assembly usar, o tempo de execução aplica a configuração de codebase do arquivo que determina a versão. Se nenhuma codebase for indicada, o tempo de execução investigará o assembly da maneira usual.
+Para que o tempo de execução use a **\<codeBase>** configuração em um arquivo de configuração de máquina ou arquivo de política do Publicador, o arquivo também deve redirecionar a versão do assembly. Os arquivos de configuração do aplicativo podem ter uma configuração de CodeBase sem redirecionar a versão do assembly. Depois de determinar qual versão do assembly usar, o tempo de execução aplica a configuração de codebase do arquivo que determina a versão. Se nenhuma codebase for indicada, o tempo de execução investigará o assembly da maneira usual.
 
 Se o assembly tiver um nome forte, a configuração de CodeBase poderá estar em qualquer lugar na intranet local ou na Internet. Se o assembly for um assembly particular, a configuração de CodeBase deverá ser um caminho relativo ao diretório do aplicativo.
 
-Para assemblies sem um nome forte, a versão é ignorada e o carregador usa a primeira \<aparência da base \<de código > dentro do dependentAssembly >. Se houver uma entrada no arquivo de configuração de aplicativo que redireciona a associação a outro assembly, o redirecionamento terá precedência mesmo que a versão do assembly não corresponda à solicitação de associação.
+Para assemblies sem um nome forte, a versão é ignorada e o carregador usa a primeira aparência de \<codebase> dentro \<dependentAssembly> . Se houver uma entrada no arquivo de configuração de aplicativo que redireciona a associação a outro assembly, o redirecionamento terá precedência mesmo que a versão do assembly não corresponda à solicitação de associação.
 
 ## <a name="example"></a>Exemplo
 
@@ -92,9 +92,9 @@ O exemplo a seguir mostra como especificar onde o tempo de execução pode encon
 </configuration>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Esquema de configurações de tempo de execução](index.md)
-- [Esquema de arquivos de configuração](../index.md)
+- [Esquema do arquivo de configuração](../index.md)
 - [Especificar o local de um assembly](../../../../standard/assembly/location.md)
 - [Como o tempo de execução localiza assemblies](../../../deployment/how-the-runtime-locates-assemblies.md)

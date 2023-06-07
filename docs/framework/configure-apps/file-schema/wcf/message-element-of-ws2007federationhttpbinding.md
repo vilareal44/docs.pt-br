@@ -1,24 +1,24 @@
 ---
-title: <message> elemento de <ws2007FederationHttpBinding>
+title: <message>elemento de<ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
 ms.openlocfilehash: dde763687dbc62d6fb342a21a4c614208f28d7e8
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73739002"
 ---
-# <a name="message-element-of-ws2007federationhttpbinding"></a>\<elemento de > de mensagem de \<ws2007FederationHttpBinding >
-Define as configurações para a segurança em nível de mensagem para o elemento [\<ws2007FederationHttpBinding >](ws2007federationhttpbinding.md) .  
+# <a name="message-element-of-ws2007federationhttpbinding"></a>\<message>elemento de\<ws2007FederationHttpBinding>
+Define as configurações para a segurança em nível de mensagem para o [\<ws2007FederationHttpBinding>](ws2007federationhttpbinding.md) elemento.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ws2007FederationHttpBinding >** ](ws2007federationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<security >** ](security-element-of-ws2007federationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**message >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<ws2007FederationHttpBinding>**](ws2007federationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-element-of-ws2007federationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<message>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -87,10 +87,10 @@ Define as configurações para a segurança em nível de mensagem para o element
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`algorithmSuite`|Opcional. Define a criptografia de mensagem, a assinatura e os algoritmos de encapsulamento de chaves. Os algoritmos e os tamanhos de chave são determinados pela classe <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Esses algoritmos são mapeados para aqueles especificados na especificação do WS-SecurityPolicy (Security Policy Language).<br /><br /> Consulte a tabela a seguir para obter os valores possíveis. O valor padrão é Basic256.|  
-|`issuedKeyType`|Especifica o tipo de chave a ser emitida. Os valores válidos incluem o seguinte:<br /><br /> -SymmetricKey<br />-PublicKey<br />- BearerKey<br /><br /> O padrão é SymmetricKey. Este atributo é do tipo <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
+|`algorithmSuite`|Opcional. Define a criptografia de mensagem, a assinatura e os algoritmos de encapsulamento de chaves. Os algoritmos e os tamanhos de chave são determinados pela <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> classe. Esses algoritmos são mapeados para aqueles especificados na especificação do WS-SecurityPolicy (Security Policy Language).<br /><br /> Consulte a tabela a seguir para obter os valores possíveis. O valor padrão é Basic256.|  
+|`issuedKeyType`|Especifica o tipo de chave a ser emitida. Os valores válidos incluem os seguintes:<br /><br /> -SymmetricKey<br />-PublicKey<br />- BearerKey<br /><br /> O padrão é SymmetricKey. Esse atributo é do tipo <xref:System.IdentityModel.Tokens.SecurityKeyType> .|  
 |`issuedTokenType`|Um URI que especifica o tipo de token a ser emitido. O padrão é `null`.|  
-|`negotiateServiceCredential`|Um valor que especifica se a credencial de serviço deve ser trocada como parte da negociação ou está disponível fora da banda. O padrão é `true`, o que significa que a credencial de serviço é negociada.|  
+|`negotiateServiceCredential`|Um valor que especifica se a credencial de serviço deve ser trocada como parte da negociação ou está disponível fora da banda. O padrão é `true` , o que significa que a credencial de serviço é negociada.|  
   
 ## <a name="algorithmsuite-attribute"></a>Atributo algorithmSuite  
   
@@ -117,18 +117,18 @@ Define as configurações para a segurança em nível de mensagem para o element
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements >](claimtyperequirements-element.md)|Especifica uma coleção de tipos de declaração para essa associação. Cada elemento é do tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
-|[> \<emissor](issuer.md)|Especifica um ponto de extremidade que emite um token de segurança. Este elemento é do tipo <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
-|[\<issuerMetadata >](issuermetadata.md)|Especifica o endereço do ponto de extremidade do emissor.|  
-|[\<tokenRequestParameters >](tokenrequestparameters.md)|Uma coleção de parâmetros de solicitação de token. Cada parâmetro é um elemento XML.|  
+|[\<claimTypeRequirements>](claimtyperequirements-element.md)|Especifica uma coleção de tipos de declaração para essa associação. Cada elemento é do tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement> .|  
+|[\<issuer>](issuer.md)|Especifica um ponto de extremidade que emite um token de segurança. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement> .|  
+|[\<issuerMetadata>](issuermetadata.md)|Especifica o endereço do ponto de extremidade do emissor.|  
+|[\<tokenRequestParameters>](tokenrequestparameters.md)|Uma coleção de parâmetros de solicitação de token. Cada parâmetro é um elemento XML.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Security >](security-element-of-ws2007federationhttpbinding.md)|Define as configurações de segurança para uma associação.|  
+|[\<security>](security-element-of-ws2007federationhttpbinding.md)|Define as configurações de segurança para uma associação.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
@@ -138,4 +138,4 @@ Define as configurações para a segurança em nível de mensagem para o element
 - [Associações](../../../wcf/bindings.md)
 - [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding >](bindings.md)
+- [\<binding>](bindings.md)

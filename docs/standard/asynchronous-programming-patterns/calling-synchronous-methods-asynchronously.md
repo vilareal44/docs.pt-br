@@ -1,5 +1,6 @@
 ---
 title: Chamando métodos síncronos de forma assíncrona
+description: Saiba como chamar métodos síncronos de forma assíncrona no .NET, usando os métodos BeginInvoke e EndInvoke.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-ms.openlocfilehash: 06df584f0120fbd4978e18647854a3ee844a2095
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ff2d30c00e7b6becb0c3ff910d825c2e9d6f78e3
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73105126"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662635"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Chamando métodos síncronos de forma assíncrona
 
@@ -36,10 +37,10 @@ O .NET Framework permite que você chame qualquer método de forma assíncrona. 
 
 O método `BeginInvoke` inicia a chamada assíncrona. Ele tem os mesmos parâmetros que o método que você deseja executar de forma assíncrona, além de outros dois parâmetros opcionais. O primeiro parâmetro é um delegado <xref:System.AsyncCallback> que faz referência a um método a ser chamado quando a chamada assíncrona é concluída. O segundo parâmetro é um objeto definido pelo usuário que passa informações para o método de retorno de chamada. `BeginInvoke` retorna imediatamente e não espera a conclusão da chamada assíncrona. `BeginInvoke` retorna um <xref:System.IAsyncResult>, que pode ser usado para monitorar o andamento da chamada assíncrona.
 
-O método `EndInvoke` recupera os resultados da chamada assíncrona. Ele pode ser chamado a qualquer momento após `BeginInvoke`. Se a chamada assíncrona não for concluída, `EndInvoke` bloqueará o thread de chamada até que seja concluída. Os `EndInvoke` parâmetros `out` incluem `ref` os`<Out>` `ByRef` `ByRef` parâmetros (e no Visual Basic) do método que você <xref:System.IAsyncResult> deseja `BeginInvoke`executar de forma assíncrona, mais o devolvido por .
+O método `EndInvoke` recupera os resultados da chamada assíncrona. Ele pode ser chamado a qualquer momento após `BeginInvoke`. Se a chamada assíncrona não for concluída, `EndInvoke` bloqueará o thread de chamada até que seja concluída. Os parâmetros de `EndInvoke` incluem os `out` `ref` parâmetros e ( `<Out>` `ByRef` e `ByRef` em Visual Basic) do método que você deseja executar de forma assíncrona, além do <xref:System.IAsyncResult> retornado por `BeginInvoke` .
 
 > [!NOTE]
-> O recurso IntelliSense no Visual Studio exibe os parâmetros de `BeginInvoke` e `EndInvoke`. Se você não estiver usando o Visual Studio ou uma ferramenta semelhante ou se estiver usando C# com Visual Studio, confira [APM (Modelo de Programação Assíncrona)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) para obter uma descrição dos parâmetros definidos para esses métodos.
+> O recurso IntelliSense no Visual Studio exibe os parâmetros de `BeginInvoke` e `EndInvoke`. Se você não estiver usando o Visual Studio ou uma ferramenta semelhante ou se estiver usando C# com Visual Studio, confira [APM (Modelo de Programação Assíncrona)](asynchronous-programming-model-apm.md) para obter uma descrição dos parâmetros definidos para esses métodos.
 
 Os exemplos de código neste tópico demonstram quatro formas comuns de usar `BeginInvoke` e `EndInvoke` para fazer chamadas assíncronas. Após chamar `BeginInvoke`, você pode fazer o seguinte:
 
@@ -99,7 +100,7 @@ Os exemplos de código neste tópico demonstram quatro formas comuns de usar `Be
 
  Observações sobre o exemplo:
 
-- O `threadId` parâmetro `TestMethod` é `out` um parâmetro`<Out>` `ByRef` ([no Visual Basic), de modo `TestMethod`que seu valor de entrada nunca é usado por . Uma variável fictícia é passada para a chamada `BeginInvoke`. Se o parâmetro `threadId` fosse um parâmetro `ref` (`ByRef` no Visual Basic), a variável precisaria ser um campo de nível de classe para que pudesse ser passada para `BeginInvoke` e `EndInvoke`.
+- O `threadId` parâmetro de `TestMethod` é um `out` parâmetro ([ `<Out>` `ByRef` em Visual Basic), portanto, seu valor de entrada nunca é usado pelo `TestMethod` . Uma variável fictícia é passada para a chamada `BeginInvoke`. Se o parâmetro `threadId` fosse um parâmetro `ref` (`ByRef` no Visual Basic), a variável precisaria ser um campo de nível de classe para que pudesse ser passada para `BeginInvoke` e `EndInvoke`.
 
 - As informações de estado que são passadas para `BeginInvoke` são uma cadeia de caracteres de formato, usada pelo método de retorno de chamada para formatar uma mensagem de saída. Como são passadas como o tipo <xref:System.Object>, as informações de estado devem ser convertidas para o tipo correto antes de poderem ser usadas.
 
@@ -112,4 +113,4 @@ Os exemplos de código neste tópico demonstram quatro formas comuns de usar `Be
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Delegate>
-- [EAP (Padrão Assíncrono baseado em Evento)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+- [EAP (Padrão Assíncrono baseado em Evento)](event-based-asynchronous-pattern-eap.md)

@@ -6,9 +6,9 @@
     - name: Guia de Introdução
       href: getting-started-with-net-native.md
       items:
-        - name: 'Exemplo: solucionando problemas de programação dinâmica'
+        - name: 'Exemplo: solução de problemas de programação dinâmica'
           href: example-troubleshooting-dynamic-programming.md
-        - name: 'Exemplo: lidando com exceções ao associar dados'
+        - name: 'Exemplo: lidar com exceções ao associar dados'
           href: example-handling-exceptions-when-binding-data.md
         - name: Exceções em runtime em aplicativos do .NET Native
           href: runtime-exceptions-in-net-native-apps.md

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e235ea80-b84c-4442-a4c3-fc96c25a8eb9
 topic_type:
 - apiref
-ms.openlocfilehash: 4a91f57126c0cf2074bd086ddb2fb4cd9e0716d4
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 264f16fc9e767584229376e67f5aee6db1069025
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762312"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501606"
 ---
 # <a name="icorruntimehostcreateevidence-method"></a>Método ICorRuntimeHost::CreateEvidence
-Obtém um ponteiro de interface do tipo <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> , que permite que o host crie evidências de segurança para passar para o método [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) ou [CreateDomainEx](icorruntimehost-createdomainex-method.md) .  
+Obtém um ponteiro de interface do tipo <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> , que permite que o host crie evidências de segurança para passar para o método [CreateDomain](icorruntimehost-createdomain-method.md) ou [CreateDomainEx](icorruntimehost-createdomainex-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ HRESULT CreateEvidence (
   
 ## <a name="return-value"></a>Valor Retornado  
   
-|HRESULT|Description|  
+|HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|A operação foi bem-sucedida.|  
 |S_FALSE|Falha ao concluir a operação.|  
@@ -58,7 +58,7 @@ HRESULT CreateEvidence (
   
  **Versão do .NET Framework:** 1,0, 1,1  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>

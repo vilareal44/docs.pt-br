@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44b9fd76-a022-4e9a-aea3-dec5411a9c22
 topic_type:
 - apiref
-ms.openlocfilehash: 2af4260a73b1106aa57f6e1ec184c1170f176fd3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8561ed9cafcd549c5c486edea6881d64acc7531b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428433"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493013"
 ---
 # <a name="imetadataemit2resetenclog-method"></a>Método IMetaDataEmit2::ResetENCLog
 Redefine o log de edição e continuação e inicia uma nova sessão.  
@@ -32,18 +32,18 @@ HRESULT ResetENCLog ();
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
- `ResetENCLog` não usa parâmetros.  
+ `ResetENCLog`Não usa parâmetros.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Interface IMetaDataEmit2](imetadataemit2-interface.md)
+- [Interface IMetaDataEmit](imetadataemit-interface.md)

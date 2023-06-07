@@ -1,5 +1,6 @@
 ---
 title: Definir o texto exibido por um controle
+description: Saiba como definir o texto exibido por um controle de Windows Forms. Defina ou retorne o texto usando a propriedade Text ou altere a fonte usando a propriedade Font.
 ms.date: 08/20/2019
 dev_langs:
 - csharp
@@ -21,26 +22,26 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: eb02cbc3b335b0d5856f786b21d1d202cf444211
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 35bae5830bfee8ab91f7b6c7b9dcc6d6b8db00ca
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738427"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622842"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Como definir o texto exibido por um controle de Windows Forms
 
-Os controles de Windows Forms geralmente exibem algum texto relacionado à função principal do controle. Por exemplo, um controle de <xref:System.Windows.Forms.Button> geralmente exibe uma legenda indicando qual ação será executada se o botão for clicado. Para todos os controles, você pode definir ou retornar o texto usando a propriedade <xref:System.Windows.Forms.Control.Text%2A>. Você pode alterar a fonte usando a propriedade <xref:System.Windows.Forms.Control.Font%2A>.
+Os controles de Windows Forms geralmente exibem algum texto relacionado à função principal do controle. Por exemplo, um <xref:System.Windows.Forms.Button> controle geralmente exibe uma legenda indicando qual ação será executada se o botão for clicado. Para todos os controles, você pode definir ou retornar o texto usando a <xref:System.Windows.Forms.Control.Text%2A> propriedade. Você pode alterar a fonte usando a <xref:System.Windows.Forms.Control.Font%2A> propriedade.
 
 Você também pode definir o texto usando o [Designer](#designer).
 
 ## <a name="programmatic"></a>Programático
 
-1. Defina a propriedade <xref:System.Windows.Forms.Control.Text%2A> como uma cadeia de caracteres.
+1. Defina a <xref:System.Windows.Forms.Control.Text%2A> propriedade como uma cadeia de caracteres.
 
    Para criar uma tecla de acesso sublinhada, inclua um e comercial (&) antes da letra que será a tecla de acesso.
 
-2. Defina a propriedade <xref:System.Windows.Forms.Control.Font%2A> como um objeto do tipo <xref:System.Drawing.Font>.
+2. Defina a <xref:System.Windows.Forms.Control.Font%2A> propriedade como um objeto do tipo <xref:System.Drawing.Font> .
 
     ```vb
     Button1.Text = "Click here to save changes"
@@ -78,7 +79,7 @@ Você também pode definir o texto usando o [Designer](#designer).
 
    Para criar uma tecla de atalho sublinhada, inclua um e comercial (&) antes da letra que será a tecla de atalho.
 
-2. Na janela **Propriedades** , selecione o botão de reticências (![botão de reticências (...) na janela Propriedades do Visual Studio](./media/visual-studio-ellipsis-button.png)) ao lado da propriedade **fonte** .
+2. Na janela **Propriedades** , selecione o botão de reticências ( ![ botão de reticências (...) na janela Propriedades do Visual Studio ](./media/visual-studio-ellipsis-button.png) ) ao lado da propriedade **Font** .
 
    Na caixa de diálogo de fonte padrão, escolha a fonte, o estilo da fonte, o tamanho, efeitos (como riscado ou sublinhado) e o script que você deseja.
 

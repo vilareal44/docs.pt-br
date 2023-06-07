@@ -1,5 +1,6 @@
 ---
 title: Solicitando dados
+description: Saiba como os protocolos conectáveis permitem desenvolver aplicativos que usam uma única interface para recuperar dados de vários protocolos.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-ms.openlocfilehash: 1f367caf7656a83597b6262a5746686df15d33b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 19350d685a81d56657ca0a117d61b50ae24fab6a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047324"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502178"
 ---
 # <a name="requesting-data"></a>Solicitando dados
 Desenvolver aplicativos que são executados no ambiente operacional distribuído da Internet de hoje requer um método eficiente e fácil de usar para recuperar dados de recursos de todos os tipos. Protocolos conectáveis permitem desenvolver aplicativos que usam uma única interface para recuperar dados de vários protocolos de Internet.  
@@ -54,6 +55,6 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
   
 ## <a name="see-also"></a>Confira também
 
-- [Programação de rede no Framework .NET](index.md)
+- [Programação de rede no .NET Framework](index.md)
 - [Como solicitar uma página da Web e recuperar os resultados como um fluxo](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
 - [Como recuperar uma WebResponse específica de protocolo que corresponde a uma WebRequest](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

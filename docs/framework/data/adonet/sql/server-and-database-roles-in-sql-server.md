@@ -1,13 +1,14 @@
 ---
 title: Funções de servidor e banco de dados no SQL Server
+description: Saiba mais sobre o servidor fixo e as funções de banco de dados fixas, que têm um conjunto fixo de permissões atribuídas a eles. SQL Server usa a segurança baseada em função.
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: f3e31aa67bfbaa541d8d1eb5b8b61dfd28182c72
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9c3725b0404a5b3c754a53fa56f4a22497afee70
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791786"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286230"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Funções de servidor e banco de dados no SQL Server
 Todas as versões do SQL Server usam segurança baseada em função, o que permite que você atribua permissões para uma função ou grupo de usuários, em vez de usuários individuais. O servidor fixo e as funções de banco de dados fixas têm um conjunto fixo de permissões atribuídas a eles.  
@@ -58,14 +59,14 @@ Todas as versões do SQL Server usam segurança baseada em função, o que permi
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Introdução com permissões de Mecanismo de Banco de Dados](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Contém links para tópicos que descrevem entidades de segurança, funções, credenciais, protegíveis e permissões.|  
-|[Entidades](/sql/relational-databases/security/authentication-access/principals-database-engine)|Descreve as entidades de segurança e contém links para tópicos que descrevem funções de servidor e banco de dados.|  
+|[Guia de Introdução às permissões do mecanismo de banco de dados](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Contém links para tópicos que descrevem entidades de segurança, funções, credenciais, protegíveis e permissões.|  
+|[Principals](/sql/relational-databases/security/authentication-access/principals-database-engine)|Descreve as entidades de segurança e contém links para tópicos que descrevem funções de servidor e banco de dados.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Securing ADO.NET Applications](../securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
-- [Cenários de segurança do aplicativo no SQL Server](application-security-scenarios-in-sql-server.md)
+- [Protegendo aplicativos ADO.NET](../securing-ado-net-applications.md)
+- [Cenários de Segurança de Aplicativo no SQL Server](application-security-scenarios-in-sql-server.md)
 - [Autenticação no SQL Server](authentication-in-sql-server.md)
-- [Propriedade e separação do esquema de usuário no SQL Server](ownership-and-user-schema-separation-in-sql-server.md)
+- [Propriedade e separação do esquema do usuário no SQL Server](ownership-and-user-schema-separation-in-sql-server.md)
 - [Autorização e permissões no SQL Server](authorization-and-permissions-in-sql-server.md)
-- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)
+- [Visão geral do ADO.NET](../ado-net-overview.md)

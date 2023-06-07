@@ -1,13 +1,13 @@
 ---
-title: Filtrando dados
+title: Filtrar dados
 ms.date: 07/20/2015
 ms.assetid: 7749519a-7edc-49fe-aef9-6a353864af6c
-ms.openlocfilehash: 81e207e451055fb2952e4bf393db067f0851afb4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f7a1aa76dc93cc03952e55f5f8fc3f75176a3f9f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353487"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84383411"
 ---
 # <a name="filtering-data-visual-basic"></a>Filtrando dados (Visual Basic)
 
@@ -19,12 +19,12 @@ A ilustração a seguir mostra os resultados da filtragem de uma sequência de c
 
 Os métodos de operador de consulta padrão que realizam a seleção estão listados na seção a seguir.
 
-## <a name="methods"></a>{1&gt;Métodos&lt;1}
+## <a name="methods"></a>Métodos
 
 |Nome do método|Descrição|Visual Basic sintaxe de expressão de consulta|Mais informações|
 |-----------------|-----------------|------------------------------------------|----------------------|
-|OfType|Seleciona valores, dependendo da capacidade de serem convertidos em um tipo especificado.|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|
-|Onde|Seleciona valores com base em uma função de predicado.|`Where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|
+|OfType|Seleciona valores, dependendo da capacidade de serem convertidos em um tipo especificado.|Não aplicável.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|
+|Where|Seleciona valores com base em uma função de predicado.|`Where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|
 
 ## <a name="query-expression-syntax-example"></a>Exemplo de sintaxe de expressão de consulta
 
@@ -51,12 +51,12 @@ MsgBox(sb.ToString())
 ' fox
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Linq>
-- [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Cláusula Where](../../../../visual-basic/language-reference/queries/where-clause.md)
-- [Como filtrar resultados de consulta](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)
-- [Como consultar metadados de um assembly com reflexão (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
-- [Como consultar arquivos com um atributo ou nome especificado (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)
-- [Como classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Visão geral de operadores de consulta padrão (Visual Basic)](standard-query-operators-overview.md)
+- [Cláusula WHERE](../../../language-reference/queries/where-clause.md)
+- [Como filtrar resultados de consulta](../../language-features/linq/how-to-filter-query-results-by-using-linq.md)
+- [Como consultar metadados de um assembly com reflexão (LINQ) (Visual Basic)](how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [Como consultar arquivos com um atributo ou nome especificado (Visual Basic)](how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [Como classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (Visual Basic)](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

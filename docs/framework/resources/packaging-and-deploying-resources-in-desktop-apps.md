@@ -1,5 +1,6 @@
 ---
 title: Empacotar e implantar recursos em aplicativos .NET
+description: Empacote e implante recursos em aplicativos .NET usando um assembly principal (Hub) e assemblies satélite (spokes). Um spoke contém recursos localizados, mas nenhum código.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-ms.openlocfilehash: d64e3b5201e34541fdafa5724b0c7e8c3f6c0c0d
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 7b06ca4444b75f0a7002323b32732dd4f855f692
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243044"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166185"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Empacotar e implantar recursos em aplicativos .NET
 
@@ -71,7 +72,7 @@ Para melhorar o desempenho da pesquisa, aplique o atributo <xref:System.Resource
 O processo de fallback de recurso do .NET Framework envolve as seguintes etapas:
 
 > [!TIP]
-> Você pode usar o elemento de [ \<configuração relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) para otimizar o processo de fallback de recursos e o processo pelo qual o tempo de execução investiga para assemblies de recursos. Para obter mais informações, consulte a seção [Otimizar o processo de fallback do recurso](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
+> Você pode usar o [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) elemento de configuração para otimizar o processo de fallback de recursos e o processo pelo qual o tempo de execução investiga para assemblies de recursos. Para obter mais informações, consulte a seção [Otimizar o processo de fallback do recurso](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
 
 1. O runtime primeiro verifica o [cache de assembly global](../app-domains/gac.md) para um assembly que coincide com a cultura solicitada para seu aplicativo.
 
@@ -116,7 +117,7 @@ Sob as seguintes condições, você pode otimizar o processo pelo qual o runtime
 
 - O código do aplicativo não processa o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.
 
-Você otimiza a investigação de assemblies satélite, incluindo o [ \<elemento relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) e definindo seu `enabled` atributo como `true` no arquivo de configuração do aplicativo, conforme mostrado no exemplo a seguir.
+Você otimiza a investigação de assemblies satélite, incluindo o [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) elemento e definindo seu `enabled` atributo como `true` no arquivo de configuração do aplicativo, conforme mostrado no exemplo a seguir.
 
 ```xml
 <configuration>
@@ -126,7 +127,7 @@ Você otimiza a investigação de assemblies satélite, incluindo o [ \<elemento
 </configuration>
 ```
 
-A investigação otimizada por assemblies satélite é um recurso opcional. Ou seja, o runtime segue as etapas documentadas em [O Processo de fallback do recurso](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1), a menos que o elemento [\<relativeBindForResources &gt;](../configure-apps/file-schema/runtime/relativebindforresources-element.md) esteja presente no arquivo de configuração do aplicativo e seu atributo `enabled` esteja definido como `true`. Neste caso, o processo de investigação de um assembly satélite é modificado conforme a seguir:
+A investigação otimizada por assemblies satélite é um recurso opcional. Ou seja, o tempo de execução segue as etapas documentadas no [processo de fallback de recurso](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) , a menos que o [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) elemento esteja presente no arquivo de configuração do aplicativo e seu `enabled` atributo seja definido como `true` . Neste caso, o processo de investigação de um assembly satélite é modificado conforme a seguir:
 
 - O runtime usa o local do assembly de código pai para investigar o assembly satélite. Se o assembly pai estiver instalado no cache de assembly global, o runtime investiga o cache, mas não o diretório do aplicativo. Se o assembly pai estiver instalado em um diretório de aplicativo, o runtime investiga o diretório do aplicativo, mas não no cache de assembly global.
 
@@ -232,6 +233,6 @@ Restrições de tempo ou orçamento podem impedir a criação de um conjunto de 
 ## <a name="see-also"></a>Confira também
 
 - [Recursos em aplicativos da área de trabalho](index.md)
-- [Cache de assembly global](../app-domains/gac.md)
+- [Cache de assemblies global](../app-domains/gac.md)
 - [Criação de arquivos de recurso](creating-resource-files-for-desktop-apps.md)
 - [Criação de assemblies satélite](creating-satellite-assemblies-for-desktop-apps.md)

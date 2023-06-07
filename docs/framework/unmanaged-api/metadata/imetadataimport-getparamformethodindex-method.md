@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ec3bfa95-1920-4511-932e-3ff23d76fcb8
 topic_type:
 - apiref
-ms.openlocfilehash: a70691b9c519bc59ae7df7a86d5d6697db565575
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 21a83e404405ca9cfe301b76cb1e1591d69e747c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437170"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491115"
 ---
 # <a name="imetadataimportgetparamformethodindex-method"></a>Método IMetaDataImport::GetParamForMethodIndex
 Obtém o token que representa um parâmetro especificado do método representado pelo token MethodDef especificado.  
@@ -45,16 +45,16 @@ HRESULT GetParamForMethodIndex (
  `ppd`  
  fora Um ponteiro para um token ParamDef que representa o parâmetro solicitado.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

@@ -1,5 +1,6 @@
 ---
-title: Como remover um assembly do cache de assemblies global
+title: 'Como: Remover um assembly do cache de assembly global'
+description: Saiba como remover um assembly do cache de assembly global no .NET, usando a ferramenta global assembly cache (Gacutil.exe) ou Windows Installer.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - GAC (global assembly cache), removing assemblies
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
-ms.openlocfilehash: c7d85222f35a61154e3eec70d8c9dad2ca6a32f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e3a596ea6029ded190c33032e96b601de9d4012d
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119863"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104770"
 ---
-# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Como remover um assembly do cache de assemblies global
+# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Como: Remover um assembly do cache de assembly global
 
 Há duas maneiras de remover um assembly do GAC (cache de assemblies global):
 
@@ -30,14 +31,14 @@ Há duas maneiras de remover um assembly do GAC (cache de assemblies global):
 
 No prompt de comando, digite o comando a seguir:
 
-**gacutil –u** \<*nome do assembly*>
+**Gacutil – u**\<*assembly name*>
 
 Neste comando, *nome do assembly* é o nome do assembly a ser removido do cache de assembly global.
 
 > [!WARNING]
 > Não use Gacutil.exe para remover assemblies em sistemas de produção devido à possibilidade de que o assembly ainda possa ser necessário para algum aplicativo. Em vez disso, use o Windows Installer, que mantém uma contagem de referência para cada assembly que ele instala no GAC.
 
-O exemplo a seguir remove um assembly `hello.dll` chamado do cache de assembly global:
+O exemplo a seguir remove um assembly chamado `hello.dll` do cache de assembly global:
 
 ```console
 gacutil -u hello
@@ -50,8 +51,8 @@ No aplicativo **Programas e Recursos**, em **Painel de Controle**, selecione o a
 > [!NOTE]
 > O Windows Installer mantém uma contagem de referência para os assemblies instalados no GAC. Um assembly será removido do GAC apenas quando sua contagem de referência atingir zero, o que indica que ele não é usado por qualquer aplicativo instalado por um pacote do Windows Installer.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Trabalhando com assemblies e o cache de assembly global](working-with-assemblies-and-the-gac.md)
+- [Trabalhando com assemblies e o cache de assemblies global](working-with-assemblies-and-the-gac.md)
 - [Como instalar um assembly no cache de assembly global](install-assembly-into-gac.md)
-- [Gacutil. exe (Ferramenta de Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md)
+- [Gacutil.exe (Ferramenta de Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md)

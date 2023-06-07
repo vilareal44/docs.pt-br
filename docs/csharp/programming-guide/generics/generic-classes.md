@@ -1,16 +1,17 @@
 ---
 title: Classes genéricas – Guia de Programação em C#
+description: Saiba mais sobre classes genéricas usadas em coleções, como listas vinculadas, tabelas de hash, pilhas, filas e árvores.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 1fdfaa833ad32428d341b6f3a61cc7f638036183
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 308f4328540e1001018942738d931be3d8be53ed
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937514"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301912"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Classes genéricas (Guia de Programação em C#)
 As classes genéricas encapsulam operações que não são específicas de um determinado tipo de dados. O uso mais comum das classes genéricas é com coleções, como listas vinculadas, tabelas de hash, pilhas, filas, árvores e assim por diante. As operações como adicionar e remover itens da coleção são realizadas basicamente da mesma maneira, independentemente do tipo de dados que estão sendo armazenados.  
@@ -65,10 +66,10 @@ As classes genéricas encapsulam operações que não são específicas de um de
   
  As classes genéricas são invariáveis. Em outras palavras, se um parâmetro de entrada especifica um `List<BaseClass>`, você receberá um erro em tempo de compilação se tentar fornecer um `List<DerivedClass>`.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Collections.Generic>
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Genéricos](./index.md)
 - [Salvar o estado de enumeradores](https://docs.microsoft.com/archive/blogs/wesdyer/saving-the-state-of-enumerators)
 - [Um enigma de herança, parte 1](https://docs.microsoft.com/archive/blogs/ericlippert/an-inheritance-puzzle-part-one)

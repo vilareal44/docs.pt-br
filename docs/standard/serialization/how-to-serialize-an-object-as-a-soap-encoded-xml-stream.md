@@ -10,20 +10,20 @@ helpviewer_keywords:
 - XML serialization, SOAP
 - serialization, SOAP
 ms.assetid: af406e0a-fa3a-46dd-a7ba-c80731eba3a0
-ms.openlocfilehash: 09f1431d05248ef3ac3fdcf24bca35ff5cc2e22b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 1d38c4e334439ef41b4d4429e52cff04c6463573
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378392"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84291559"
 ---
 # <a name="how-to-serialize-an-object-as-a-soap-encoded-xml-stream"></a>Como serializar um objeto como um fluxo XML codificado para SOAP
   
- Como a mensagem de SOAP é criada usando XML, a classe <xref:System.Xml.Serialization.XmlSerializer> pode ser usado para serializar classes e gerar mensagens SOAP codificadas. O XML resultante está em conformidade com a [seção 5 do documento "Protocolo SOAP 1.1" do World Wide Web Consortium](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383512). Quando você está criando um serviço Web XML que se comunica por meio de mensagens SOAP, pode personalizar o fluxo XML aplicando um conjunto de atributos SOAP especiais para classes e membros de classes. Para obter mais informações, consulte [Atributos que controlam a serialização SOAP codificada](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
+ Como a mensagem de SOAP é criada usando XML, a classe <xref:System.Xml.Serialization.XmlSerializer> pode ser usado para serializar classes e gerar mensagens SOAP codificadas. O XML resultante está em conformidade com a [seção 5 do documento "Protocolo SOAP 1.1" do World Wide Web Consortium](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383512). Quando você está criando um serviço Web XML que se comunica por meio de mensagens SOAP, pode personalizar o fluxo XML aplicando um conjunto de atributos SOAP especiais para classes e membros de classes. Para obter mais informações, consulte [Atributos que controlam a serialização SOAP codificada](attributes-that-control-encoded-soap-serialization.md).  
   
 ### <a name="to-serialize-an-object-as-a-soap-encoded-xml-stream"></a>Para serializar um objeto como um fluxo XML codificado para SOAP  
   
-1. Criar a classe usando a [Ferramenta de Definição de Esquema XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).  
+1. Criar a classe usando a [Ferramenta de Definição de Esquema XML (Xsd.exe)](xml-schema-definition-tool-xsd-exe.md).  
   
 2. Aplique um ou mais dos atributos especiais localizados em `System.Xml.Serialization`. Consulte a lista em "Atributos que controlam a serialização SOAP codificada".  
   
@@ -73,9 +73,9 @@ XmlSerializer mySerializer = new XmlSerializer(myTypeMapping);
   
 ## <a name="see-also"></a>Confira também
 
-- [Serialização de XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [Atributos que controlam a serialização SOAP codificada](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
-- [Serialização XML com serviços Web XML](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
-- [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Como desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-- [Como substituir a serialização XML de SOAP codificada](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)
+- [Serialização de XML e SOAP](xml-and-soap-serialization.md)
+- [Atributos que controlam a serialização SOAP codificada](attributes-that-control-encoded-soap-serialization.md)
+- [Serialização XML com serviços Web XML](xml-serialization-with-xml-web-services.md)
+- [Como serializar um objeto](how-to-serialize-an-object.md)
+- [Como desserializar um objeto](how-to-deserialize-an-object.md)
+- [Como substituir a serialização XML de SOAP codificada](how-to-override-encoded-soap-xml-serialization.md)

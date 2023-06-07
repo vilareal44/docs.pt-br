@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-ms.openlocfilehash: 7d031bab6ba0a4420062eff107aeb1262d9b3b40
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1f2f44b6b92f66f95816778c6dc8e893f1291abe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421222"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289350"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementando o padrão assíncrono baseado em tarefa
 Você pode implementar o Padrão Assíncrono baseado em Tarefas (TAP) de três formas: usando os compiladores C# e Visual Basic no Visual Studio, manualmente ou por meio de uma combinação dos métodos de compilador e manual. As seções a seguir discutem cada método em detalhes. Você pode usar o padrão TAP para implementar operações assíncronas associadas ao cálculo e associadas à E/S. A seção [Cargas de trabalho](#workloads) descreve cada tipo de operação.
@@ -98,10 +98,10 @@ Os métodos assíncronos não estão limitados apenas a operações associadas a
 [!code-csharp[Conceptual.TAP_Patterns#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#7)]
 [!code-vb[Conceptual.TAP_Patterns#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#7)]
 
-Esse exemplo também demonstra como um token de cancelamento único pode ser encadeado por meio de várias operações assíncronas. Para saber mais, veja a seção de uso de cancelamento em [Consumindo o padrão assíncrono baseado em tarefa](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
+Esse exemplo também demonstra como um token de cancelamento único pode ser encadeado por meio de várias operações assíncronas. Para saber mais, veja a seção de uso de cancelamento em [Consumindo o padrão assíncrono baseado em tarefa](consuming-the-task-based-asynchronous-pattern.md).
 
 ## <a name="see-also"></a>Veja também
 
-- [TAP (Padrão Assíncrono Baseado em Tarefa)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
-- [Consumindo o padrão assíncrono baseado em tarefa](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
-- [Interoperabilidade com outros tipos e padrões assíncronos](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)
+- [TAP (Padrão Assíncrono Baseado em Tarefa)](task-based-asynchronous-pattern-tap.md)
+- [Consumindo o padrão assíncrono baseado em tarefa](consuming-the-task-based-asynchronous-pattern.md)
+- [Interoperabilidade com outros tipos e padrões assíncronos](interop-with-other-asynchronous-patterns-and-types.md)

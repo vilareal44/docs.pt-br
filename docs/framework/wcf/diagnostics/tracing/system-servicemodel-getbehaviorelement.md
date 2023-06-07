@@ -2,21 +2,21 @@
 title: System.ServiceModel.GetBehaviorElement
 ms.date: 03/30/2017
 ms.assetid: c7332d23-e226-470c-b063-0fb9d919437f
-ms.openlocfilehash: 0e818660edf7491e4c96c93673b5fc4a0449747a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 537b30b8f7b26f36a1e8c2a1ff007543a823a03d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997302"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84581003"
 ---
 # <a name="systemservicemodelgetbehaviorelement"></a>System.ServiceModel.GetBehaviorElement
 System.ServiceModel.GetBehaviorElement  
   
 ## <a name="description"></a>Descrição  
- Získat Element BehaviorElement.  
+ Obter Behaviorelement.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Rastreamento](index.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](using-tracing-to-troubleshoot-your-application.md)
+- [Administração e diagnóstico](../index.md)

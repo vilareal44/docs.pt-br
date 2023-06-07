@@ -2,12 +2,12 @@
 title: Novidades do .NET Core para Área de Trabalho
 description: Saiba mais sobre o .NET Core, as diferenças entre o .NET Core e o .NET Framework e os novos recursos que foram adicionados.
 ms.date: 05/12/2020
-ms.openlocfilehash: 9ec4f3002dc9d9ea80fd2b6db8095930867a5c65
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b4fc0cb2841fe13b000223aefc5eaf63bd911994
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83423260"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144259"
 ---
 # <a name="whats-new-with-net-core-for-desktop"></a>Novidades do .NET Core para Área de Trabalho
 
@@ -19,7 +19,7 @@ Desde sua inicialização em 2002, a .NET Framework evoluiu durante os anos para
 
 Se você estiver direcionando apenas uma dessas plataformas, poderá usar esse modelo. No entanto, em muitos casos, talvez seja necessário mais de uma plataforma de destino na mesma solução. Por exemplo, seu aplicativo pode ter uma parte de administrador da área de trabalho, um site voltado para o cliente que compartilha a lógica de back-end em execução em um servidor e até mesmo um cliente móvel. Nesse caso, você precisa de uma experiência de codificação unificada que possa abranger todas essas verticais do .NET.
 
-No momento em que o Windows 8 foi lançado, o conceito de PCLs (bibliotecas de classe portátil) nasceu. Originalmente, a .NET Framework foi projetada em contraposição de que ela sempre seria implantada como uma única unidade, portanto, a [fatoração](http://en.wikipedia.org/wiki/Decomposition_(computer_science)) não era uma preocupação. Para enfrentar o problema do compartilhamento de código entre os verticais, a força de condução estava em como refatorar a estrutura. A ideia dos contratos é fornecer uma área de superfície de API bem fatorada. Os contratos são simplesmente assemblies que você compila em relação ao e são projetados com a fatoração adequada em mente, tomando cuidado com as dependências entre eles.
+No momento em que o Windows 8 foi lançado, o conceito de PCLs (bibliotecas de classe portátil) nasceu. Originalmente, a .NET Framework foi projetada em contraposição de que ela sempre seria implantada como uma única unidade, portanto, a [fatoração](https://wikipedia.org/wiki/Decomposition_(computer_science)) não era uma preocupação. Para enfrentar o problema do compartilhamento de código entre os verticais, a força de condução estava em como refatorar a estrutura. A ideia dos contratos é fornecer uma área de superfície de API bem fatorada. Os contratos são simplesmente assemblies que você compila em relação ao e são projetados com a fatoração adequada em mente, tomando cuidado com as dependências entre eles.
 
 Isso leva a um raciocínio sobre as diferenças de API entre os verticais no nível do assembly, em oposição ao nível de API individual que tínhamos antes. Esse aspecto habilitou uma experiência de biblioteca de classes que pode ser direcionada a várias verticais, também conhecidas como bibliotecas de classes portáteis.
 

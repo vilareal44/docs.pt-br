@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: badddccd-f85c-416e-9f0f-419eab2c9d42
 topic_type:
 - apiref
-ms.openlocfilehash: 0ab383f0968061667b3580a2058687eecda99dde
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 0a4cb365ca8f7d52be505368a3d769a9728983bf
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76869992"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502958"
 ---
 # <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a>Método ICorProfilerInfo::GetInprocInspectionIThisThread
 Obtém um objeto que pode ser consultado para a interface ICorDebugThread. Esse método é obsoleto no .NET Framework versão 2,0.  
@@ -34,13 +34,13 @@ HRESULT GetInprocInspectionIThisThread(
   
 ## <a name="parameters"></a>Parâmetros  
  `ppicd`  
- objeto de [saída](/cpp/atl/iunknown) que pode ser consultado para a interface `ICorDebugThread`.  
+ objeto de [saída](/cpp/atl/iunknown) que pode ser consultado para a `ICorDebugThread` interface.  
   
 ## <a name="remarks"></a>Comentários  
  Os serviços de depuração Common Language Runtime (CLR) com suporte para a depuração em processo limitada na versão .NET Framework 1,0. A depuração em processo habilitou um criador de perfil para usar as partes de inspeção da API de depuração. Como resultado dos comentários dos clientes, a depuração em processo foi removida da .NET Framework na versão 2,0 e substituída por um conjunto de funcionalidades que está mais alinhado com a API de criação de perfil.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
@@ -48,6 +48,6 @@ HRESULT GetInprocInspectionIThisThread(
   
  **Versão do .NET Framework:** 1,0  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)

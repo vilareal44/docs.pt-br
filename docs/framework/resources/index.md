@@ -1,5 +1,6 @@
 ---
 title: Recursos em aplicativos .NET
+description: Entenda os recursos nos aplicativos .NET. Um recurso é qualquer dado não executável que é implantado logicamente com um aplicativo.
 ms.date: 07/25/2018
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-ms.openlocfilehash: 0620cb16c3233f8ba2a665c9c4cb5f44bc5d5e84
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 105325170389917bfb2022314791aa1ed5923db3
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645675"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865158"
 ---
 # <a name="resources-in-net-apps"></a>Recursos em aplicativos .NET
 
@@ -48,11 +49,11 @@ No tempo de execução, um aplicativo carrega os recursos localizados apropriado
 
 - Se não houver uma cultura explicitamente designada, recuperando a cultura padrão da interface do usuário do thread pela propriedade <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>.
 
-- Se uma cultura de interface do usuário do thread padrão não for explicitamente atribuída, recuperando a cultura para o usuário atual no computador local. As implementações do .NET em execução no Windows fazem isso [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) chamando a função do Windows.
+- Se uma cultura de interface do usuário do thread padrão não for explicitamente atribuída, recuperando a cultura para o usuário atual no computador local. As implementações do .NET em execução no Windows fazem isso chamando a função do Windows [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) .
 
 Para saber mais sobre a configuração da cultura da interface do usuário atual, confira as páginas de referência <xref:System.Globalization.CultureInfo> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>.
 
-Você pode recuperar recursos para a cultura da interface do usuário atual ou para uma cultura específica usando a classe <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Embora a classe <xref:System.Resources.ResourceManager> seja mais frequentemente usada para recuperar recursos, o namespace <xref:System.Resources?displayProperty=nameWithType> contém tipos adicionais que podem ser usados para recuperar recursos. Eles incluem:
+Você pode recuperar recursos para a cultura da interface do usuário atual ou para uma cultura específica usando a classe <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Embora a classe <xref:System.Resources.ResourceManager> seja mais frequentemente usada para recuperar recursos, o namespace <xref:System.Resources?displayProperty=nameWithType> contém tipos adicionais que podem ser usados para recuperar recursos. Elas incluem:
 
 - A classe <xref:System.Resources.ResourceReader>, que permite enumerar recursos inseridos em um assembly ou armazenados em um arquivo de recurso binário autônomo. Ela é útil quando você desconhece os nomes exatos dos recursos que estão disponíveis no tempo de execução.
 
@@ -62,7 +63,7 @@ Você pode recuperar recursos para a cultura da interface do usuário atual ou p
 
 - A classe <xref:System.Resources.ResXResourceSet>, que permite recuperar todos os itens em um arquivo de recurso XML na memória.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Globalization.CultureInfo>
 - <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>

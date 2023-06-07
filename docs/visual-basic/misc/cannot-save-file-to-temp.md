@@ -1,25 +1,25 @@
 ---
-title: Não é possível salvar o arquivo para TEMP
+title: Não é possível salvar o arquivo no diretório TEMP
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID735
 ms.assetid: 1055fc15-9641-43b2-a40c-a0a9fbbb34b2
-ms.openlocfilehash: b78c2c23e155317642f3fc0aae95f72fb05bb63f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d643d0a333e60954e3baeceda996138f6870621
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769987"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84365144"
 ---
-# <a name="cannot-save-file-to-temp"></a>Não é possível salvar o arquivo para TEMP
-Um componente não encontrou um diretório chamado TEMP, ou a unidade ou partição que contém o diretório TEMP não tem espaço suficiente para salvar as informações.  
+# <a name="cannot-save-file-to-temp"></a>Não é possível salvar o arquivo no diretório TEMP
+Um componente não pode localizar um diretório chamado TEMP ou a unidade ou partição que contém o diretório TEMP não tem espaço suficiente para salvar as informações.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1. Crie um diretório chamado "TEMP" e defina o TEMP variável de ambiente igual ao seu caminho.  
+1. Crie um diretório chamado "TEMP" e defina a variável de ambiente TEMP igual ao seu caminho.  
   
-2. Libere espaço na unidade, apagando os arquivos desnecessários, ou crie um diretório TEMP em outra partição e defina o TEMP variável de ambiente igual ao seu caminho.  
+2. Libere espaço na unidade apagando arquivos desnecessários ou crie um diretório temporário em outra partição e defina a variável de ambiente TEMP igual ao seu caminho.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipos de erro](../programming-guide/language-features/error-types.md)

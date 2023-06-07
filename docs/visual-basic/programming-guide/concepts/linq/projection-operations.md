@@ -2,12 +2,12 @@
 title: Operações de projeção
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-ms.openlocfilehash: d7efb46ccfe3208ae6c58043a64c236171d0c147
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4795bdaba53949b34fe380ea9c51025ce43c40db
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346626"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396331"
 ---
 # <a name="projection-operations-visual-basic"></a>Operações de projeção (Visual Basic)
 
@@ -15,7 +15,7 @@ Projeção refere-se à operação de transformar um objeto em um novo formulár
 
 Os métodos de operador de consulta padrão que realizam a projeção estão listados na seção a seguir.
 
-## <a name="methods"></a>{1&gt;Métodos&lt;1}
+## <a name="methods"></a>Métodos
 
 |Nome do método|Descrição|Visual Basic sintaxe de expressão de consulta|Mais informações|
 |-----------------|-----------------|------------------------------------------|----------------------|
@@ -52,7 +52,7 @@ MsgBox(sb.ToString())
 
 ### <a name="selectmany"></a>SelectMany
 
-O exemplo a seguir usa várias cláusulas `From` para projetar cada palavra de cada uma das cadeias de caracteres em uma lista de cadeias de caracteres.
+O exemplo a seguir usa várias `From` cláusulas para projetar cada palavra de cada uma delas em uma lista de cadeias de caracteres.
 
 ```vb
 Dim phrases = New List(Of String) From {"an apple a day", "the quick brown fox"}
@@ -175,12 +175,12 @@ Sub SelectVsSelectMany()
 End Sub
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Linq>
-- [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Cláusula Select](../../../../visual-basic/language-reference/queries/select-clause.md)
-- [Como combinar dados com junções](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
-- [Como: popular coleções de objetos de várias fontes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
-- [Como retornar um resultado de consulta LINQ como um tipo específico](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)
-- [Como dividir um arquivo em vários arquivos usando grupos (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Visão geral de operadores de consulta padrão (Visual Basic)](standard-query-operators-overview.md)
+- [Cláusula SELECT](../../../language-reference/queries/select-clause.md)
+- [Como combinar dados com junções](../../language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
+- [Como: popular coleções de objetos de várias fontes (LINQ) (Visual Basic)](how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [Como retornar um resultado de consulta LINQ como um tipo específico](../../language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)
+- [Como dividir um arquivo em vários arquivos usando grupos (LINQ) (Visual Basic)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)

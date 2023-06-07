@@ -1,5 +1,6 @@
 ---
 title: Transformações de dados com LINQ (C#)
+description: Saiba como usar consultas LINQ em C# para transformar dados. Você pode modificar a sequência classificando e agrupando e criando novos tipos usando a cláusula SELECT.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], data transformations
@@ -10,15 +11,15 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 393e3bd24c4bc8b89064e01e1048b24254f5f83b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6844cf2aa589f7516a9e40bc604c5f907ec6d311
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635944"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104016"
 ---
 # <a name="data-transformations-with-linq-c"></a>Transformações de dados com LINQ (C#)
-A Consulta Integrada ao Idioma (LINQ) não se trata apenas de recuperar dados. Também é uma ferramenta poderosa para transformação de dados. Usando uma consulta LINQ, você pode usar uma seqüência de origem como entrada e modificá-la de muitas maneiras para criar uma nova seqüência de saída. Você pode modificar a própria sequência sem modificar os respectivos elementos, classificando-os e agrupando-os. Mas talvez o recurso mais poderoso das consultas LINQ seja a capacidade de criar novos tipos. Isso é feito na cláusula [select](../../../language-reference/keywords/select-clause.md). Por exemplo, é possível executar as seguintes tarefas:  
+A consulta integrada à linguagem (LINQ) não se refere apenas à recuperação de dados. Também é uma ferramenta poderosa para transformação de dados. Usando uma consulta LINQ, você pode usar uma sequência de origem como entrada e modificá-la de várias maneiras para criar uma nova sequência de saída. Você pode modificar a própria sequência sem modificar os respectivos elementos, classificando-os e agrupando-os. Mas talvez o recurso mais poderoso das consultas LINQ seja a capacidade de criar novos tipos. Isso é feito na cláusula [select](../../../language-reference/keywords/select-clause.md). Por exemplo, é possível executar as seguintes tarefas:  
   
 - Mesclar várias sequências de entrada em uma única sequência de saída que tenha um novo tipo.  
   
@@ -31,7 +32,7 @@ A Consulta Integrada ao Idioma (LINQ) não se trata apenas de recuperar dados. T
  Esses são apenas alguns exemplos. É claro que essas transformações podem ser combinadas de diversas maneiras na mesma consulta. Além disso, a sequência de saída de uma consulta pode ser usada como a sequência de entrada de uma nova consulta.  
   
 ## <a name="joining-multiple-inputs-into-one-output-sequence"></a>Ingressando Várias Entradas em uma Única Sequência de Saída  
- Você pode usar uma consulta LINQ para criar uma seqüência de saída que contém elementos de mais de uma seqüência de entrada. O exemplo a seguir mostra como combinar duas estruturas de dados na memória, mas os mesmos princípios podem ser aplicados para combinar dados de origens de XML, SQL ou DataSet. Considere os dois tipos de classe a seguir:  
+ Você pode usar uma consulta LINQ para criar uma sequência de saída que contenha elementos de mais de uma sequência de entrada. O exemplo a seguir mostra como combinar duas estruturas de dados na memória, mas os mesmos princípios podem ser aplicados para combinar dados de origens de XML, SQL ou DataSet. Considere os dois tipos de classe a seguir:  
   
  [!code-csharp[CsLINQGettingStarted#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#7)]  
   
@@ -61,7 +62,7 @@ A Consulta Integrada ao Idioma (LINQ) não se trata apenas de recuperar dados. T
  Para obter mais informações, consulte [Inicializadores de coleção e de objeto](../../classes-and-structs/object-and-collection-initializers.md) e [Tipos anônimos](../../classes-and-structs/anonymous-types.md).  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>Transformando Objetos na Memória em XML  
- As consultas LINQ facilitam a transformação de dados entre estruturas de dados em memória, bancos de dados SQL, ADO.NET Datasets e fluxos ou documentos XML. O exemplo a seguir transforma objetos de uma estrutura de dados na memória em elementos XML.  
+ As consultas do LINQ facilitam a transformação de dados entre estruturas de dados na memória, bancos de dados SQL, ADO.NET e fluxos XML ou documentos. O exemplo a seguir transforma objetos de uma estrutura de dados na memória em elementos XML.  
   
  [!code-csharp[CsLINQGettingStarted#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#9)]  
   
@@ -90,7 +91,11 @@ A Consulta Integrada ao Idioma (LINQ) não se trata apenas de recuperar dados. T
  Para obter mais informações, consulte [Criando árvores XML em C# (LINQ to XML)](./creating-xml-trees-linq-to-xml-2.md).  
   
 ## <a name="performing-operations-on-source-elements"></a>Realizando Operações em Elementos de Origem  
- Uma sequência de saída pode não conter os elementos ou propriedades de elementos da sequência de origem. Em vez disso, a saída pode ser uma sequência de valores que é calculada usando os elementos de origem como argumentos de entrada. Esta simples consulta a seguir, quando executada, produz uma sequência de cadeias de caracteres cujos valores representam um cálculo com base na sequência de origem de elementos do tipo `double`.  
+ Uma sequência de saída pode não conter os elementos ou propriedades de elementos da sequência de origem. Em vez disso, a saída pode ser uma sequência de valores que é calculada usando os elementos de origem como argumentos de entrada.
+
+ A consulta a seguir usará uma sequência de números que representam raios de círculos, calculará a área para cada raio e retornará uma sequência de saída contendo cadeias de caracteres formatadas com a área calculada.
+
+ Cada cadeia de caracteres da sequência de saída será formatada usando [interpolação de cadeia de caracteres](../../../language-reference/tokens/interpolated.md). Uma cadeia de caracteres interpolada terá uma `$` na frente das aspas de abertura da cadeia de caracteres, e as operações poderão ser executadas dentro das chaves colocadas dentro da cadeia de caracteres interpolada. Depois que essas operações forem executadas, os resultados serão concatenados.
   
 > [!NOTE]
 > Não há suporte para chamar métodos em expressões de consulta se a consulta será movida para outro domínio. Por exemplo, você não pode chamar um método comum de C# no [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] porque o SQL Server não tem contexto para ele. No entanto, você pode mapear procedimentos armazenados para os métodos e chamá-los. Para obter mais informações, consulte [Procedimentos armazenados](../../../../framework/data/adonet/sql/linq/stored-procedures.md).  
@@ -104,4 +109,4 @@ A Consulta Integrada ao Idioma (LINQ) não se trata apenas de recuperar dados. T
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 - [LINQ to XML (C#)](./linq-to-xml-overview.md)
 - [Expressões de Consulta LINQ](../../../linq/index.md)
-- [cláusula de seleção](../../../language-reference/keywords/select-clause.md)
+- [cláusula SELECT](../../../language-reference/keywords/select-clause.md)

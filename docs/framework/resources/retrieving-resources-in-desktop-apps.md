@@ -1,5 +1,6 @@
 ---
 title: Recuperando recursos em aplicativos de área de trabalho
+description: Recupere recursos em aplicativos da área de trabalho. Empacotar recursos para a cultura padrão (neutra) com o assembly principal e criar um assembly satélite para cada cultura.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-ms.openlocfilehash: 17795db2cdec419a31fe862793c88506f9535ff9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: db1156106690f8321b7fd5a2890c2aa44cfe17e3
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180456"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166193"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recuperando recursos em aplicativos de área de trabalho
 

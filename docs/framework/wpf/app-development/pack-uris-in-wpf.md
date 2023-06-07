@@ -1,5 +1,6 @@
 ---
 title: URIs de pacote
+description: Saiba mais sobre as várias maneiras de usar URIs (identificadores de recursos uniformes) para identificar e carregar arquivos no Windows Presentation Foundation (WPF).
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pack URI scheme [WPF]
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: a98c97a4aa95fb956a2ca6d417e009a281a938b6
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 1d19dec0d846659f8de6ed518a7f98d224354a82
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124475"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621685"
 ---
 # <a name="pack-uris-in-wpf"></a>URIs "pack://" no WPF
 
 No Windows Presentation Foundation (WPF), os URIs (identificadores de recursos uniformes) são usados para identificar e carregar arquivos de várias maneiras, incluindo o seguinte:
 
-- Especificar o [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] a ser mostrado quando um aplicativo é iniciado pela primeira vez.
+- Especificando o [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] a ser mostrado quando um aplicativo é iniciado pela primeira vez.
 
 - Carregar imagens.
 
@@ -52,7 +53,7 @@ Para identificar partes, a especificação OPC aproveita a extensibilidade do RF
 
 O esquema especificado por um URI é definido por seu prefixo; http, FTP e arquivo são exemplos bem conhecidos. O esquema de URI de pacote usa "Pack" como seu esquema e contém dois componentes: autoridade e caminho. A seguir está o formato de um pacote URI.
 
-*caminho* de/de*autoridade* Pack://
+caminho de*autoridade* / *path* Pack://
 
 A *autoridade* especifica o tipo de pacote no qual uma parte está contida, enquanto o *caminho* especifica o local de uma parte dentro de um pacote.
 
@@ -85,7 +86,7 @@ As seções a seguir explicam como construir URIs de pacote usando essas duas au
 
 ## <a name="resource-file-pack-uris"></a>URIs de pacote de arquivo de recurso
 
-Os arquivos de recurso são configurados como MSBuild `Resource` itens e são compilados em assemblies. O WPF dá suporte à construção de URIs de pacote que podem ser usados para identificar arquivos de recursos que são compilados no assembly local ou compilados em um assembly que é referenciado do assembly local.
+Os arquivos de recurso são configurados como itens do MSBuild `Resource` e são compilados em assemblies. O WPF dá suporte à construção de URIs de pacote que podem ser usados para identificar arquivos de recursos que são compilados no assembly local ou compilados em um assembly que é referenciado do assembly local.
 
 <a name="Local_Assembly_Resource_File"></a>
 
@@ -97,11 +98,11 @@ O pacote URI para um arquivo de recurso que é compilado no assembly local usa a
 
 - **Caminho**: o nome do arquivo de recurso, incluindo seu caminho, em relação à raiz da pasta de projeto do assembly local.
 
-O exemplo a seguir mostra o pacote URI para um arquivo de recurso [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que está localizado na raiz da pasta do projeto do assembly local.
+O exemplo a seguir mostra o pacote URI para um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivo de recurso que está localizado na raiz da pasta do projeto do assembly local.
 
 `pack://application:,,,/ResourceFile.xaml`
 
-O exemplo a seguir mostra o pacote URI para um arquivo de recurso [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que está localizado em uma subpasta da pasta do projeto do assembly local.
+O exemplo a seguir mostra o pacote URI para um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivo de recurso que está localizado em uma subpasta da pasta do projeto do assembly local.
 
 `pack://application:,,,/Subfolder/ResourceFile.xaml`
 
@@ -115,7 +116,7 @@ O pacote URI para um arquivo de recurso que é compilado em um assembly referenc
 
 - **Caminho**: o nome de um arquivo de recurso compilado em um assembly referenciado. O caminho deve estar de acordo com o seguinte formato:
 
-  *AssemblyShortName*{ *; Versão*] { *; PublicKey*]; componente/*caminho*
+  *AssemblyShortName*{*; Versão*] {*; PublicKey*]; componente/*caminho*
 
   - **AssemblyShortName**: o nome curto do assembly referenciado.
 
@@ -127,15 +128,15 @@ O pacote URI para um arquivo de recurso que é compilado em um assembly referenc
 
   - **/Path**: o nome do arquivo de recurso, incluindo o caminho, em relação à raiz da pasta de projeto do assembly referenciado.
 
-O exemplo a seguir mostra o pacote URI para um arquivo de recurso [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que está localizado na raiz da pasta do projeto do assembly referenciado.
+O exemplo a seguir mostra o pacote URI para um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivo de recurso que está localizado na raiz da pasta do projeto do assembly referenciado.
 
 `pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml`
 
-O exemplo a seguir mostra o pacote URI para um arquivo de recurso [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que está localizado em uma subpasta da pasta do projeto do assembly referenciado.
+O exemplo a seguir mostra o pacote URI para um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivo de recurso que está localizado em uma subpasta da pasta do projeto do assembly referenciado.
 
 `pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml`
 
-O exemplo a seguir mostra o pacote URI para um arquivo de recurso [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que está localizado na pasta raiz de uma pasta de projeto de assembly específica de versão referenciada.
+O exemplo a seguir mostra o pacote URI para um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivo de recurso que está localizado na pasta raiz de uma pasta de projeto de assembly específica da versão referenciada.
 
 `pack://application:,,,/ReferencedAssembly;v1.0.0.1;component/ResourceFile.xaml`
 
@@ -153,11 +154,11 @@ O pacote URI para um arquivo de conteúdo usa a seguinte autoridade e caminho:
 
 - **Caminho**: o nome do arquivo de conteúdo, incluindo o caminho em relação ao local do sistema de arquivos do principal assembly executável do aplicativo.
 
-O exemplo a seguir mostra o pacote URI para um arquivo de conteúdo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], localizado na mesma pasta que o assembly executável.
+O exemplo a seguir mostra o pacote URI para um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivo de conteúdo, localizado na mesma pasta que o assembly executável.
 
 `pack://application:,,,/ContentFile.xaml`
 
-O exemplo a seguir mostra o pacote URI para um arquivo de conteúdo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], localizado em uma subpasta que é relativa ao assembly executável do aplicativo.
+O exemplo a seguir mostra o pacote URI para um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivo de conteúdo, localizado em uma subpasta que é relativa ao assembly executável do aplicativo.
 
 `pack://application:,,,/Subfolder/ContentFile.xaml`
 
@@ -174,11 +175,11 @@ O URI do pacote para um arquivo de site de origem usa a seguinte autoridade e ca
 
 - **Caminho**: o nome do arquivo de site de origem, incluindo o caminho em relação ao local a partir do qual o assembly executável foi iniciado.
 
-O exemplo a seguir mostra o pacote URI para um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] site de origem de arquivo, armazenado no local do qual o assembly executável é iniciado.
+O exemplo a seguir mostra o URI do pacote para um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivo de site de origem, armazenado no local do qual o assembly executável é iniciado.
 
 `pack://siteoforigin:,,,/SiteOfOriginFile.xaml`
 
-O exemplo a seguir mostra o pacote URI para um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] site de origem de arquivo, armazenado na subpasta que é relativa ao local do qual o assembly executável do aplicativo é iniciado.
+O exemplo a seguir mostra o URI do pacote para um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivo de site de origem, armazenado na subpasta que é relativa ao local do qual o assembly executável do aplicativo é iniciado.
 
 `pack://siteoforigin:,,,/Subfolder/SiteOfOriginFile.xaml`
 
@@ -186,9 +187,9 @@ O exemplo a seguir mostra o pacote URI para um [!INCLUDE[TLA2#tla_xaml](../../..
 
 ## <a name="page-files"></a>Arquivos de paginação
 
-Os arquivos XAML que são configurados como MSBuild `Page` itens são compilados em assemblies da mesma maneira que os arquivos de recursos. Consequentemente, os itens do MSBuild `Page` podem ser identificados usando URIs de pacote para arquivos de recurso.
+Os arquivos XAML que são configurados como `Page` itens do MSBuild são compilados em assemblies da mesma maneira que os arquivos de recursos. Consequentemente, `Page` os itens do MSBuild podem ser identificados usando URIs de pacote para arquivos de recurso.
 
-Os tipos de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivos que normalmente são configurados como MSBuild`Page` itens têm um dos seguintes como seu elemento raiz:
+Os tipos de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivos que normalmente são configurados como `Page` itens do MSBuild têm um dos seguintes como seu elemento raiz:
 
 - <xref:System.Windows.Window?displayProperty=nameWithType>
 
@@ -206,7 +207,7 @@ Os tipos de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.m
 
 ## <a name="absolute-vs-relative-pack-uris"></a>URIs de pacote absoluto versus relativo
 
-Um URI de pacote totalmente qualificado inclui o esquema, a autoridade e o caminho, e é considerado um URI de pacote absoluto. Como uma simplificação para os desenvolvedores, os elementos de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] geralmente permitem que você defina atributos apropriados com um URI de pacote relativo, que inclui apenas o caminho.
+Um URI de pacote totalmente qualificado inclui o esquema, a autoridade e o caminho, e é considerado um URI de pacote absoluto. Como uma simplificação para os desenvolvedores, os [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] elementos normalmente permitem que você defina atributos apropriados com um URI de pacote relativo, que inclui apenas o caminho.
 
 Por exemplo, considere o seguinte URI de pacote absoluto para um arquivo de recurso no assembly local.
 
@@ -253,21 +254,21 @@ Esse URI de pacote absoluto pode se referir a um arquivo de recurso no assembly 
 
 Para determinar o tipo de arquivo ao qual um URI de pacote se refere, o WPF resolve URIs de arquivos de recursos em assemblies locais e arquivos de conteúdo usando a seguinte heurística:
 
-1. Investigue os metadados do assembly para um atributo <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> que corresponda ao URI do pacote.
+1. Investigue os metadados do assembly para um <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atributo que corresponda ao URI do pacote.
 
-2. Se o atributo <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> for encontrado, o caminho do URI do pacote se referirá a um arquivo de conteúdo.
+2. Se o <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atributo for encontrado, o caminho do URI do pacote se referirá a um arquivo de conteúdo.
 
-3. Se o atributo <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> não for encontrado, investigue os arquivos de recurso definidos que são compilados no assembly local.
+3. Se o <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atributo não for encontrado, investigue os arquivos de recurso definidos que são compilados no assembly local.
 
 4. Se um arquivo de recurso que corresponde ao caminho do URI do pacote for encontrado, o caminho do pacote URI se referirá a um arquivo de recurso.
 
-5. Se o recurso não for encontrado, o <xref:System.Uri> criado internamente será inválido.
+5. Se o recurso não for encontrado, o criado internamente <xref:System.Uri> será inválido.
 
 A resolução de URI não se aplica a URIs que se referem ao seguinte:
 
 - Arquivos de conteúdo em assemblies referenciados: esses tipos de arquivo não são suportados pelo WPF.
 
-- Arquivos inseridos em assemblies referenciados: URIs que os identificam são exclusivos porque incluem o nome do assembly referenciado e o sufixo `;component`.
+- Arquivos inseridos em assemblies referenciados: URIs que os identificam são exclusivos porque incluem o nome do assembly referenciado e o `;component` sufixo.
 
 - Arquivos de site de origem: os URIs que os identificam são exclusivos porque são os únicos arquivos que podem ser identificados por URIs de pacote que contêm a autoridade siteoforigin:///.
 
@@ -334,19 +335,19 @@ Tabela 2: URIs de pacote relativos em marcação
 
 ### <a name="using-pack-uris-in-code"></a>Utilizando URIs de pacote em código
 
-Você especifica um URI de pacote no código instanciando a classe <xref:System.Uri> e passando o URI do pacote como um parâmetro para o construtor. Isso é demonstrado no exemplo a seguir.
+Você especifica um URI de pacote no código instanciando a <xref:System.Uri> classe e passando o URI do pacote como um parâmetro para o construtor. Isso é demonstrado no exemplo a seguir.
 
 ```csharp
 Uri uri = new Uri("pack://application:,,,/File.xaml");
 ```
 
-Por padrão, a classe <xref:System.Uri> considera que os URIs de pacote sejam absolutos. Consequentemente, uma exceção é gerada quando uma instância da classe <xref:System.Uri> é criada com um URI de pacote relativo.
+Por padrão, a <xref:System.Uri> classe considera os URIs do pacote como absoluto. Consequentemente, uma exceção é gerada quando uma instância da <xref:System.Uri> classe é criada com um URI de pacote relativo.
 
 ```csharp
 Uri uri = new Uri("/File.xaml");
 ```
 
-Felizmente, a sobrecarga de <xref:System.Uri.%23ctor%28System.String%2CSystem.UriKind%29> do construtor da classe <xref:System.Uri> aceita um parâmetro do tipo <xref:System.UriKind> para permitir que você especifique se um pacote URI é absoluto ou relativo.
+Felizmente, a <xref:System.Uri.%23ctor%28System.String%2CSystem.UriKind%29> sobrecarga do <xref:System.Uri> Construtor de classe aceita um parâmetro do tipo <xref:System.UriKind> para permitir que você especifique se um pacote URI é absoluto ou relativo.
 
 ```csharp
 // Absolute URI (default)
@@ -364,7 +365,7 @@ TextBox userProvidedUriTextBox = new TextBox();
 Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 ```
 
-A tabela 3 ilustra os vários URIs de pacote relativos que você pode especificar no código usando <xref:System.Uri?displayProperty=nameWithType>.
+A tabela 3 ilustra os vários URIs de pacote relativos que você pode especificar no código usando <xref:System.Uri?displayProperty=nameWithType> .
 
 Tabela 3: URIs de pacote absolutos em código
 
@@ -380,7 +381,7 @@ Tabela 3: URIs de pacote absolutos em código
 |Arquivo de site de origem|`Uri uri = new Uri("pack://siteoforigin:,,,/SOOFile.xaml", UriKind.Absolute);`|
 |Arquivo de site de origem em subpasta|`Uri uri = new Uri("pack://siteoforigin:,,,/Subfolder/SOOFile.xaml", UriKind.Absolute);`|
 
-A tabela 4 ilustra os vários URIs de pacote relativos que você pode especificar no código usando <xref:System.Uri?displayProperty=nameWithType>.
+A tabela 4 ilustra os vários URIs de pacote relativos que você pode especificar no código usando <xref:System.Uri?displayProperty=nameWithType> .
 
 Tabela 4: URIs de pacote relativos em código
 
@@ -403,7 +404,7 @@ As seções anteriores discutiram como construir URIs de pacote para identificar
 
 #### <a name="specifying-the-ui-to-show-when-an-application-starts"></a>Especificando a interface do usuário para mostrar quando um aplicativo foi iniciado
 
-<xref:System.Windows.Application.StartupUri%2A> especifica a primeira [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] a ser mostrada quando um aplicativo WPF é iniciado. Para aplicativos autônomos, o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] pode ser uma janela, conforme mostrado no exemplo a seguir.
+<xref:System.Windows.Application.StartupUri%2A>Especifica o primeiro [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] a ser mostrado quando um aplicativo do WPF é iniciado. Para aplicativos autônomos, o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] pode ser uma janela, conforme mostrado no exemplo a seguir.
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]
 
@@ -411,7 +412,7 @@ Aplicativos autônomos e aplicativos de navegador XAML (XBAPs) também podem esp
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriPage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]
 
-Se o aplicativo for um aplicativo autônomo e uma página for especificada com <xref:System.Windows.Application.StartupUri%2A>, o WPF abrirá um <xref:System.Windows.Navigation.NavigationWindow> para hospedar a página. Para XBAPs, a página é mostrada no navegador de host.
+Se o aplicativo for um aplicativo autônomo e uma página for especificada com <xref:System.Windows.Application.StartupUri%2A> , o WPF abrirá um <xref:System.Windows.Navigation.NavigationWindow> para hospedar a página. Para XBAPs, a página é mostrada no navegador de host.
 
 <a name="Navigating_to_a_Page"></a>
 
@@ -453,7 +454,7 @@ Para obter mais informações sobre como trabalhar com conteúdo de mídia, cons
 
 #### <a name="loading-a-resource-dictionary-from-the-site-of-origin"></a>Carregando um dicionário de recursos a partir do site de origem
 
-Os dicionários de recursos (<xref:System.Windows.ResourceDictionary>) podem ser usados para dar suporte a temas de aplicativo. Uma maneira de criar e gerenciar temas é criando diferentes temas como dicionários de recursos localizados em um site de origem do aplicativo. Isso permite que temas sejam adicionados e atualizados sem recompilar e reimplantar um aplicativo. Esses dicionários de recursos podem ser identificados e carregados usando URIs de pacote, que são mostrados no exemplo a seguir.
+Os dicionários de recursos ( <xref:System.Windows.ResourceDictionary> ) podem ser usados para dar suporte a temas de aplicativo. Uma maneira de criar e gerenciar temas é criando diferentes temas como dicionários de recursos localizados em um site de origem do aplicativo. Isso permite que temas sejam adicionados e atualizados sem recompilar e reimplantar um aplicativo. Esses dicionários de recursos podem ser identificados e carregados usando URIs de pacote, que são mostrados no exemplo a seguir.
 
 [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]
 
@@ -461,4 +462,4 @@ Para obter uma visão geral dos temas no WPF, consulte [estilização e modelage
 
 ## <a name="see-also"></a>Consulte também
 
-- [Arquivos de recursos, de conteúdo e de dados de aplicativos do WPF](wpf-application-resource-content-and-data-files.md)
+- [Arquivos de recurso, conteúdo e dados do aplicativo WPF](wpf-application-resource-content-and-data-files.md)

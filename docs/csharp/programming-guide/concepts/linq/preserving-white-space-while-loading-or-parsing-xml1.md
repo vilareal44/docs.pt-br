@@ -1,13 +1,14 @@
 ---
 title: Preservar espaço em branco para carregar ou ao analisar XML
+description: Saiba como controlar o comportamento de espaço em branco ao carregar ou analisar XML, especificamente o comportamento de métodos que preenchem árvores XML.
 ms.date: 07/20/2015
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
-ms.openlocfilehash: d015c21813df2224356bb49212fe282fa5372d03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3c044937d38f9f89ebc114af3eddbf5116c392ad
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69591548"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302835"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>Preservar espaço em branco para carregar ou ao analisar XML
 Este tópico descreve como controlar o comportamento de espaço em branco de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  

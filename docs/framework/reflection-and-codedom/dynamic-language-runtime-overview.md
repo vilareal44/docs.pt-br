@@ -1,5 +1,6 @@
 ---
 title: Visão geral do Dynamic Language Runtime | Microsoft Docs
+description: Leia uma visão geral do DLR (tempo de execução de linguagem dinâmica) no .NET. O DLR é um ambiente de tempo de execução que adiciona um conjunto de serviços para linguagens dinâmicas para o CLR.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dynamic language runtime
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-ms.openlocfilehash: a38ed15769d1186ef78733d68d9d8b51b3eb262d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2272bc60af35e3cdec3e1a71bbc6516565b4ec6e
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446896"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475145"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Visão geral do Dynamic Language Runtime
 
@@ -89,7 +90,7 @@ O DLR usa associadores em sites de chamada para se comunicar não apenas com o .
 ## <a name="dlr-documentation"></a>Documentação do DLR
  Para obter mais informações sobre como usar a versão de software livre do DLR para adicionar comportamento dinâmico a uma linguagem ou sobre como habilitar o uso de uma linguagem dinâmica com o .NET Framework, consulte a documentação no repositório [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) no GitHub.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>

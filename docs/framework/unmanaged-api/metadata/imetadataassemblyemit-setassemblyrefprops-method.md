@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 70a32bf3-9051-4f96-ae87-11356d06a073
 topic_type:
 - apiref
-ms.openlocfilehash: 6ad6bbb8a4c69f575bbeba3a297c46e049a97325
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb381a872cbeb787da0c6920f2cdeef434fb33ea
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176039"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008086"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>Método IMetaDataAssemblyEmit::SetAssemblyRefProps
-Modifica a estrutura `AssemblyRef` de metadados especificada.  
+Modifica a estrutura de `AssemblyRef` metadados especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,43 +40,43 @@ HRESULT SetAssemblyRefProps (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ar`  
- [em] O token de metadados `AssemblyRef` que especifica a estrutura de metadados a ser modificada.  
+ no O token de metadados que especifica a `AssemblyRef` estrutura de metadados a ser modificada.  
   
  `pbPublicKeyOrToken`  
- [em] A chave pública do editor da montagem referenciada.  
+ no A chave pública do Publicador do assembly referenciado.  
   
  `cbPublicKeyOrToken`  
- [em] O tamanho em bytes de `pbPublicKeyOrToken`.  
+ no O tamanho em bytes de `pbPublicKeyOrToken` .  
   
  `szName`  
- [em] O nome de texto de leitura humana da assembléia.  
+ no O nome de texto legível por humanos do assembly.  
   
  `pMetaData`  
- [em] Um ponteiro para uma instância ASSEMBLYMETADATA que contém as informações de versão, plataforma e local para o conjunto.  
+ no Um ponteiro para uma instância ASSEMBLYMETADATA que contém a versão, a plataforma e as informações de localidade para o assembly.  
   
  `pbHashValue`  
- [em] Um ponteiro para os dados de hash associados à montagem.  
+ no Um ponteiro para os dados de hash associados ao assembly.  
   
  `cbHashValue`  
- [em] O tamanho em bytes de `pbHashValue`.  
+ no O tamanho em bytes de `pbHashValue` .  
   
  `dwAssemblyRefFlags`  
- [em] Uma combinação bitwise dos valores [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) que especificam atributos do conjunto referenciado.  
+ no Uma combinação de bits de valores [AssemblyRefFlags](assemblyrefflags-enumeration.md) que especifica atributos do assembly referenciado.  
   
 ## <a name="remarks"></a>Comentários  
- Para criar `AssemblyRef` uma estrutura de metadados, use o método [IMetaDataAssemblyEmit::DefineAssemblyRef.](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)  
+ Para criar uma `AssemblyRef` estrutura de metadados, use o método [IMetaDataAssemblyEmit::D efineassemblyref](imetadataassemblyemit-defineassemblyref-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [Interface IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md)

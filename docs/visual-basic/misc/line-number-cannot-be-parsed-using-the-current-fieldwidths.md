@@ -1,28 +1,28 @@
 ---
-title: Linha <number> não pode ser analisada usando FieldWidths atual
+title: A linha <number> não pode ser analisada usando FieldWidths atual
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MalFormedFixedWidthLine
 ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
-ms.openlocfilehash: dc6253dc925ed004fbbeb64547054461c39adffc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd6fc431a4a943a3a0022e8e75c834a49b952a66
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64604155"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402129"
 ---
-# <a name="line-number-cannot-be-parsed-using-the-current-fieldwidths"></a>Linha \<número > não pode ser analisada usando FieldWidths atual
-A linha especificada não pode ser analisada porque seus campos têm larguras diferentes daquelas especificadas.  
+# <a name="line-number-cannot-be-parsed-using-the-current-fieldwidths"></a>A linha \<number> não pode ser analisada usando FieldWidths atual
+A linha especificada não pode ser analisada porque seus campos têm larguras diferentes das especificadas.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Ajustar `FieldWidths` para que a linha possa ser processada corretamente, ou insira o código de manipulação de exceção para lidar com a linha.  
+- Ajuste `FieldWidths` para que a linha possa ser analisada corretamente ou insira o código de tratamento de exceções para lidar com a linha.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Como: Ler de arquivos de texto com vários formatos](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
-- [My.Computer.FileSystem.OpenTextFieldParser](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)
-- [Analisando arquivos de texto com o objeto TextFieldParser](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
-- [Objeto TextFieldParser](../../visual-basic/language-reference/objects/textfieldparser-object.md)
-- [Propriedade TextFieldParser.FieldWidths](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths%2A)
-- [Método TextFieldParser.SetFieldWidths](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A)
+- [Como: ler de arquivos de texto com vários formatos](../developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
+- [My. Computer. FileSystem. OpenTextFieldParser](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)
+- [Analisando arquivos de texto com o objeto TextFieldParser](../developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+- [Objeto TextFieldParser](../language-reference/objects/textfieldparser-object.md)
+- [Propriedade TextFieldParser. FieldWidths](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths%2A)
+- [Método TextFieldParser. SetFieldWidths](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A)

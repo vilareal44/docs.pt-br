@@ -1,18 +1,19 @@
 ---
-title: Como implementar explicitamente membros da interface - C# Programming Guide
+title: Como implementar explicitamente membros de interface – guia de programação C#
+description: Saiba como implementar explicitamente membros de interface neste exemplo de C#. Os membros são acessados por meio da instância de interface.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-ms.openlocfilehash: dff094aca237ed6146bd9b52813c40549bc99b9b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 35b512ff6cbee1dd942f5b3476db660481808297
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77627779"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303069"
 ---
-# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Como implementar explicitamente membros de interface (C# Programming Guide)
-Este exemplo declara [interface](../../language-reference/keywords/interface.md)uma `IDimensions`interface , `Box`e uma classe, que `GetLength` implementa explicitamente os membros da interface e `GetWidth`. Os membros são acessados por meio da instância `dimensions` da interface.  
+# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Como implementar explicitamente membros de interface (guia de programação C#)
+Este exemplo declara uma [interface](../../language-reference/keywords/interface.md), `IDimensions` e uma classe, `Box` , que implementa explicitamente os membros da interface `GetLength` e `GetWidth` . Os membros são acessados por meio da instância `dimensions` da interface.  
   
 ## <a name="example"></a>Exemplo  
  [!code-csharp[csProgGuideInheritance#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#8)]  
@@ -27,9 +28,9 @@ Este exemplo declara [interface](../../language-reference/keywords/interface.md)
   
      [!code-csharp[csProgGuideInheritance#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#46)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Classes e structs](../classes-and-structs/index.md)
 - [Interfaces](./index.md)
 - [Como implementar membros de duas interfaces explicitamente](./how-to-explicitly-implement-members-of-two-interfaces.md)

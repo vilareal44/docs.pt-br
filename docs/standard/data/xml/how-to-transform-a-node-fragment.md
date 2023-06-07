@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
-ms.openlocfilehash: 56e9ef6031a5736acfa066ed6c068f954bd5af8d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e44f44db3e12c5e297f137fa247ecfc2d809dd4d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710811"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287708"
 ---
 # <a name="how-to-transform-a-node-fragment"></a>Como: Transformar um fragmento de nó
 Quando você transforma os dados contidos em um objeto de <xref:System.Xml.XmlDocument> ou de <xref:System.Xml.XPath.XPathDocument> as transformações XSLT se aplicam a um documento no dataset. Ou seja se você passar em um nó que não seja o nó de diretório base, isso não impede que o processo de transformação acessar todos os nós do documento carregado. Para transformar um fragmento de nó, você deve criar um objeto separado que contém apenas o fragmento de nó, e passa esse objeto para o método de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> .  
@@ -47,4 +47,4 @@ Quando você transforma os dados contidos em um objeto de <xref:System.Xml.XmlDo
   
 ## <a name="see-also"></a>Veja também
 
-- [Usando a classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+- [Usando a classe XslCompiledTransform](using-the-xslcompiledtransform-class.md)

@@ -1,5 +1,6 @@
 ---
 title: Sn.exe (Ferramenta de Nome Forte)
+description: Introdução ao Sn.exe, a ferramenta de nome forte. Assine assemblies com nomes fortes. Gerenciar chaves e gerar e verificar assinaturas.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - public keys, signing files
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: b5eee15a08dcae42263e06939c197ec0848816a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f10dab9b395640e46cb9bf3ca468b8f6bb2bc1b
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180315"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517185"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Ferramenta de Nome Forte)
 A ferramenta Nome Forte (Sn.exe) ajuda a assinar assemblies com [nomes fortes](../../standard/assembly/strong-named.md). Sn.exe oferece opções para o gerenciamento de chaves, geração de assinaturas e verificação de assinaturas.  
@@ -60,10 +61,10 @@ sn [-quiet][option [parameter(s)]]
 |`-R[a] assembly infile`|Assina novamente um assembly assinado anteriormente ou com atraso usando o par de chaves em *infile*.<br /><br /> Se **-Ra** for usado, os hashes serão recomputados para todos os arquivos no assembly.|  
 |`-Rc[a] assembly container`|Assina novamente um assembly assinado anteriormente ou com atraso usando o par de chaves em *container*.<br /><br /> Se **-Rca** for usado, os hashes serão recomputados para todos os arquivos no assembly.|  
 |`-Rh assembly`|Recomputa hashes para todos os arquivos no assembly.|  
-|`-t[p] infile`|Exibe o token da chave pública armazenada em *infile*. O conteúdo de *infile* deve ser uma chave pública gerada anteriormente com base em um arquivo de par de chaves usando **-p**.  Não use a opção **-t[p]** para extrair o token diretamente de um arquivo de par de chaves.<br /><br /> Sn.exe computa o token usando uma função de hash da chave pública. Para economizar espaço, o Common Language Runtime armazena tokens de chave pública no manifesto como parte de uma referência a outro assembly quando registra uma dependência para um assembly com um nome forte. A opção **-tp** exibe a chave pública além do token. Se o atributo <xref:System.Reflection.AssemblySignatureKeyAttribute> tiver sido aplicado ao assembly, o token será para a chave de identidade, e o nome do algoritmo de hash e a chave de identidade será exibida.<br /><br /> Essa opção não verifica a assinatura do assembly e não deve ser usada para tomar decisões de confiança.  Essa opção exibe apenas os dados brutos do token de chave pública.|  
+|`-t[p] infile`|Exibe o token da chave pública armazenada em *infile*. O conteúdo de *infile* deve ser uma chave pública gerada anteriormente com base em um arquivo de par de chaves usando **-p**.  Não use a opção **-t[p]** para extrair o token diretamente de um arquivo de par de chaves.<br /><br /> Sn.exe computa o token usando uma função de hash da chave pública. Para economizar espaço, o Common Language Runtime armazena tokens de chave pública no manifesto como parte de uma referência a outro assembly quando registra uma dependência para um assembly com um nome forte. A opção **-TP** exibe a chave pública além do token. Se o atributo <xref:System.Reflection.AssemblySignatureKeyAttribute> tiver sido aplicado ao assembly, o token será para a chave de identidade, e o nome do algoritmo de hash e a chave de identidade será exibida.<br /><br /> Essa opção não verifica a assinatura do assembly e não deve ser usada para tomar decisões de confiança.  Essa opção exibe apenas os dados brutos do token de chave pública.|  
 |`-T[p] assembly`|Exibe o token de chave pública do *assembly*. O *assembly* deve ser o nome de um arquivo que contém um manifesto do assembly.<br /><br /> Sn.exe computa o token usando uma função de hash da chave pública. Para economizar espaço, o runtime armazena tokens de chave pública no manifesto como parte de uma referência a outro assembly quando registra uma dependência para um assembly com um nome forte. A opção **-Tp** exibe a chave pública além do token. Se o atributo <xref:System.Reflection.AssemblySignatureKeyAttribute> tiver sido aplicado ao assembly, o token será para a chave de identidade, e o nome do algoritmo de hash e a chave de identidade será exibida.<br /><br /> Essa opção não verifica a assinatura do assembly e não deve ser usada para tomar decisões de confiança.  Essa opção exibe apenas os dados brutos do token de chave pública.|  
-|`-TS assembly infile`|Test-assina a *montagem* assinada ou parcialmente assinada com o par de chaves *no arquivo*.|  
-|`-TSc assembly container`|Os sinais de teste da *montagem* assinada ou parcialmente assinada com o par de chaves no *recipiente*de chave .|
+|`-TS assembly infile`|Teste-assina o *assembly* assinado ou parcialmente assinado com o par de chaves em *INFILE*.|  
+|`-TSc assembly container`|Teste-assina o *assembly* assinado ou parcialmente assinado com o par de chaves no *contêiner*de contêiner de chave.|
 |`-v assembly`|Verifica o nome forte em *assembly*, em que *assembly* é o nome de um arquivo que contém um manifesto do assembly.|  
 |`-vf assembly`|Verifica o nome forte no *assembly*. Diferente da opção **-v**, **-vf** força a verificação, mesmo que seja desabilitada usando a opção **-Vr**.|  
 |`-Vk regfile.reg assembly [userlist] [infile]`|Cria as entradas de um arquivo de registro (.reg) que é possível usar para registrar o assembly especificado ignorar a verificação. As regras de nomenclatura do assembly que se aplicam à opção **-Vr** se aplicam também a **–Vk**. Para obter informações sobre as opções *userlist* e *infile*, consulte a opção **–Vr**.|  
@@ -122,9 +123,9 @@ sn -v MyAsm.dll
 sn -d MyContainer  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Ferramentas](index.md)
-- [Al.exe (Assembly Linker)](al-exe-assembly-linker.md)
-- [Assembly de nome forte](../../standard/assembly/strong-named.md)
-- [Prompts de Comando](developer-command-prompt-for-vs.md)
+- [Al.exe (vinculador de assembly)](al-exe-assembly-linker.md)
+- [Assemblies de nome forte](../../standard/assembly/strong-named.md)
+- [Prompts de comando](developer-command-prompt-for-vs.md)

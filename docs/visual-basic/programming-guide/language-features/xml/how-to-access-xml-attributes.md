@@ -7,22 +7,22 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 66cd704f-990c-4f8d-9b49-2b6aa76ca8fd
-ms.openlocfilehash: 905d6c4bb63323bad790bc833647a5c602d02ada
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2ab6ed27e403273c1b3b2b28593825c0cc6b6db7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332322"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410264"
 ---
 # <a name="how-to-access-xml-attributes-visual-basic"></a>Como acessar atributos XML (Visual Basic)
-Este exemplo mostra como usar uma propriedade de eixo de atributo para acessar atributos XML em um elemento XML por nome. Em particular, ele usa a propriedade de eixo de atributo `type` para acessar o atributo chamado `type` no objeto `phone`.  
+Este exemplo mostra como usar uma propriedade de eixo de atributo para acessar atributos XML em um elemento XML por nome. Em particular, ele usa a `type` Propriedade Axis do atributo para acessar o atributo nomeado `type` no `phone` objeto.  
   
 ## <a name="example"></a>Exemplo  
  [!code-vb[VbXMLSamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#11)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>
-- [Propriedade de Eixo do Atributo XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
-- [Acessando XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
-- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [Propriedade de Eixo do Atributo XML](../../../language-reference/xml-axis/xml-attribute-axis-property.md)
+- [Acessando XML no Visual Basic](accessing-xml.md)
+- [XML](index.md)

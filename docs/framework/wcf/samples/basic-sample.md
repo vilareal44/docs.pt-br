@@ -2,23 +2,23 @@
 title: Exemplo básico
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 2ea5af0a1c05b5632632b2619c0ee4813696d2fc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: db560ec7dea3912ecec8d84943cc9a01512d1f33
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738176"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575765"
 ---
 # <a name="basic-sample"></a>Exemplo básico
 
 Este exemplo mostra como tornar um serviço detectável e como Pesquisar e chamar um serviço que possa ser descoberto. Este exemplo é composto por dois projetos: serviço e cliente.
 
 > [!NOTE]
-> Este exemplo implementa a descoberta no código.  Para obter um exemplo que implementa a descoberta na configuração, consulte [configuração](../../../../docs/framework/wcf/samples/configuration-sample.md).
+> Este exemplo implementa a descoberta no código.  Para obter um exemplo que implementa a descoberta na configuração, consulte [configuração](configuration-sample.md).
 
-## <a name="service"></a>Service
+## <a name="service"></a>Serviço
 
-Esta é uma implementação de serviço de calculadora simples. O código relacionado à descoberta pode ser encontrado em `Main` em que um <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> é adicionado ao host de serviço e um <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> é adicionado, conforme mostrado no código a seguir.
+Esta é uma implementação de serviço de calculadora simples. O código relacionado à descoberta pode ser encontrado em `Main` onde um <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> é adicionado ao host de serviço e um <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> é adicionado, conforme mostrado no código a seguir.
 
 ```csharp
 using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))
@@ -37,7 +37,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 
 ## <a name="client"></a>Cliente
 
-O cliente usa um <xref:System.ServiceModel.Discovery.DynamicEndpoint> para localizar o serviço. O <xref:System.ServiceModel.Discovery.DynamicEndpoint>, um ponto de extremidade padrão, resolve o ponto de extremidade do serviço quando o cliente é aberto. Nesse caso, a <xref:System.ServiceModel.Discovery.DynamicEndpoint> procura o serviço com base no contrato de serviço. O <xref:System.ServiceModel.Discovery.DynamicEndpoint> realiza a pesquisa em um <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> por padrão. Depois de localizar um ponto de extremidade de serviço, o cliente se conecta a esse serviço pela associação especificada.
+O cliente usa um <xref:System.ServiceModel.Discovery.DynamicEndpoint> para localizar o serviço. O <xref:System.ServiceModel.Discovery.DynamicEndpoint> , um ponto de extremidade padrão, resolve o ponto de extremidade do serviço quando o cliente é aberto. Nesse caso, o <xref:System.ServiceModel.Discovery.DynamicEndpoint> procura o serviço com base no contrato de serviço. O <xref:System.ServiceModel.Discovery.DynamicEndpoint> realiza a pesquisa em um <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> por padrão. Depois de localizar um ponto de extremidade de serviço, o cliente se conecta a esse serviço pela associação especificada.
 
 ```csharp
 public static void Main()
@@ -47,7 +47,7 @@ public static void Main()
 }
 ```
 
-O cliente define um método chamado `InvokeCalculatorService` que usa a classe <xref:System.ServiceModel.Discovery.DiscoveryClient> para Pesquisar serviços. O <xref:System.ServiceModel.Discovery.DynamicEndpoint> herda de <xref:System.ServiceModel.Description.ServiceEndpoint>, portanto, ele pode ser passado para o método `InvokeCalculatorService`. Em seguida, o exemplo usa o <xref:System.ServiceModel.Discovery.DynamicEndpoint> para criar uma instância do `CalculatorServiceClient` e chama as várias operações do serviço de calculadora.
+O cliente define um método chamado `InvokeCalculatorService` que usa a <xref:System.ServiceModel.Discovery.DiscoveryClient> classe para Pesquisar serviços. O <xref:System.ServiceModel.Discovery.DynamicEndpoint> herda de <xref:System.ServiceModel.Description.ServiceEndpoint> , portanto, pode ser passado para o `InvokeCalculatorService` método. Em seguida, o exemplo usa o <xref:System.ServiceModel.Discovery.DynamicEndpoint> para criar uma instância do `CalculatorServiceClient` e chama as várias operações do serviço de calculadora.
 
 ```csharp
 static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
@@ -100,6 +100,6 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Basic`

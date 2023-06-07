@@ -1,21 +1,21 @@
 ---
 title: Comando dotnet tool list
-description: O comando dotnet tool list lists the .NET Core ferramentas que estão instaladas na sua máquina.
+description: O comando dotnet da lista de ferramentas lista as ferramentas do .NET Core que estão instaladas em seu computador.
 ms.date: 02/14/2020
-ms.openlocfilehash: 28f9155407d1238f8b0960b69b34ea329ca0e8e6
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 4035c5be233232e53c6d7150485f737108c1e18d
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463356"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925456"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
-**Este artigo se aplica a:** ✔️ .NET Core 2.1 SDK e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
 
 ## <a name="name"></a>Nome
 
-`dotnet tool list`- Lista todas as [ferramentas .NET Core](global-tools.md) do tipo especificado atualmente instalados em sua máquina.
+`dotnet tool list`-Lista todas as [Ferramentas do .NET Core](global-tools.md) do tipo especificado atualmente instalado no seu computador.
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -24,6 +24,8 @@ dotnet tool list -g|--global
 
 dotnet tool list --tool-path <PATH>
 
+dotnet tool list --local
+
 dotnet tool list
 
 dotnet tool list -h|--help
@@ -31,33 +33,37 @@ dotnet tool list -h|--help
 
 ## <a name="description"></a>Descrição
 
-O `dotnet tool list` comando fornece uma maneira de você listar todas as Ferramentas globais, de caminho de ferramentas ou locais do .NET Core instaladas na máquina. O comando lista o nome do pacote, a versão instalada e o comando da ferramenta.  Para usar o comando, você especifica um dos seguintes:
+O `dotnet tool list` comando fornece uma maneira de listar todas as ferramentas globais, de caminho de ferramenta ou locais do .NET Core instaladas em seu computador. O comando lista o nome do pacote, a versão instalada e o comando da ferramenta.  Para usar o comando, especifique um dos seguintes:
 
-* Uma ferramenta global instalada no local padrão. Use `--global` a opção
-* Uma ferramenta global instalada em um local personalizado. Use a opção `--tool-path`.
-* Uma ferramenta local. Omita `--global` `--tool-path` as opções.
+* Para listar as ferramentas globais instaladas no local padrão, use a `--global` opção
+* Para listar as ferramentas globais instaladas em um local personalizado, use a `--tool-path` opção.
+* Para listar as ferramentas locais, use a `--local` opção ou omita as `--global` `--tool-path` Opções, e `--local` .
 
-**As ferramentas locais estão disponíveis a partir do .NET Core SDK 3.0.**
+**As ferramentas locais estão disponíveis a partir do SDK do .NET Core 3,0.**
 
 ## <a name="options"></a>Opções
 
 - **`-g|--global`**
 
-  Lista ferramentas globais de todo o usuário. Não pode ser combinada com a opção `--tool-path`. Omitindo ambos `--global` e `--tool-path` lista ferramentas locais.
+  Lista as ferramentas globais em todo o usuário. Não pode ser combinada com a opção `--tool-path`. Omitir `--global` e `--tool-path` listar as ferramentas locais.
 
 - **`-h|--help`**
 
   Imprime uma ajuda breve para o comando.
 
+- **`--local`**
+
+  Lista as ferramentas locais para o diretório atual. Não pode ser combinado com `--global` as `--tool-path` Opções ou. Omitir `--global` e `--tool-path` listar as ferramentas locais, mesmo se `--local` não for especificado.
+
 - **`--tool-path <PATH>`**
 
-  Especifica um local personalizado onde encontrar ferramentas globais. PATH pode ser absoluto ou relativo. Não pode ser combinada com a opção `--global`. Omitindo ambos `--global` e `--tool-path` lista ferramentas locais.
+  Especifica um local personalizado onde encontrar ferramentas globais. PATH pode ser absoluto ou relativo. Não pode ser combinada com a opção `--global`. Omitir `--global` e `--tool-path` listar as ferramentas locais.
 
 ## <a name="examples"></a>Exemplos
 
 - **`dotnet tool list -g`**
 
-  Lista todas as ferramentas globais instaladas em todo o usuário em sua máquina (perfil de usuário atual).
+  Lista todas as ferramentas globais instaladas por todo o usuário em seu computador (perfil de usuário atual).
 
 - **`dotnet tool list --tool-path c:\global-tools`**
 
@@ -67,12 +73,12 @@ O `dotnet tool list` comando fornece uma maneira de você listar todas as Ferram
 
   Lista as ferramentas globais de um diretório específico do Linux/macOS.
 
-- **`dotnet tool list`**
+- **`dotnet tool list`** or**`dotnet tool list --local`**
 
   Lista todas as ferramentas locais disponíveis no diretório atual.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [.NET Core ferramentas](global-tools.md)
-- [Tutorial: Instale e use uma ferramenta global .NET Core usando o .NET Core CLI](global-tools-how-to-use.md)
-- [Tutorial: Instale e use uma ferramenta local .NET Core usando o .NET Core CLI](local-tools-how-to-use.md)
+- [Ferramentas do .NET Core](global-tools.md)
+- [Tutorial: instalar e usar uma ferramenta global do .NET Core usando o CLI do .NET Core](global-tools-how-to-use.md)
+- [Tutorial: instalar e usar uma ferramenta local do .NET Core usando o CLI do .NET Core](local-tools-how-to-use.md)

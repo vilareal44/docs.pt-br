@@ -1,5 +1,6 @@
 ---
 title: MDA releaseHandleFailed
+description: Examine o MDA (Assistente de depuração gerenciada) releaseHandleFailed, que pode ser ativado devido a vazamentos de recursos ou de memória no .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), handles
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-ms.openlocfilehash: 268acb01a6777315829378e6fd8c06c46d3136d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 167a304b4571aa35f758a2054caf6ae1c60a3c60
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181756"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803632"
 ---
 # <a name="releasehandlefailed-mda"></a>MDA releaseHandleFailed
 O MDA (Assistente de Depuração Gerenciado) de `releaseHandleFailed` é ativado é notificar os desenvolvedores quando o método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> de uma classe derivada de <xref:System.Runtime.InteropServices.SafeHandle> ou <xref:System.Runtime.InteropServices.CriticalHandle> retorna `false`.  
@@ -51,7 +52,7 @@ O MDA (Assistente de Depuração Gerenciado) de `releaseHandleFailed` é ativado
  Esse MDA não tem efeito sobre o CLR.  
   
 ## <a name="output"></a>Saída  
- Uma mensagem indicando que um <xref:System.Runtime.InteropServices.SafeHandle> ou <xref:System.Runtime.InteropServices.CriticalHandle> falhou em liberar o identificador. Por exemplo:   
+ Uma mensagem indicando que um <xref:System.Runtime.InteropServices.SafeHandle> ou <xref:System.Runtime.InteropServices.CriticalHandle> falhou em liberar o identificador. Por exemplo:  
   
 ```output
 "A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'
@@ -88,7 +89,7 @@ bool ReleaseHandle()
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)

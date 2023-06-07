@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbd2f662-208b-4174-b301-5c99af91040f
 topic_type:
 - apiref
-ms.openlocfilehash: e2003ce78f04b101fe093867e0820f9c3840151a
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 5bd985a6870ae6f4cc2302b6a11e8e139180d839
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762702"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503985"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationex-method"></a>Método ICLRStrongName::StrongNameSignatureVerificationEx
 Obtém um valor que indica se o manifesto do assembly no caminho fornecido contém uma assinatura de nome forte.  
@@ -49,7 +49,7 @@ HRESULT StrongNameSignatureVerificationEx (
  `S_OK`se a verificação foi bem-sucedida; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](/windows/win32/seccrypto/common-hresult-values) para uma lista).  
   
 ## <a name="remarks"></a>Comentários  
- O método [ICLRStrongName:: StrongNameSignatureVerificationEx](iclrstrongname-strongnamesignatureverificationex-method.md) fornece um recurso semelhante ao método [ICLRStrongName:: StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) . No entanto, o segundo parâmetro de entrada e o parâmetro de saída para [ICLRStrongName:: StrongNameSignatureVerificationEx](iclrstrongname-strongnamesignatureverificationex-method.md) são do tipo `BOOLEAN` em vez de `DWORD` .  
+ O método [ICLRStrongName:: StrongNameSignatureVerificationEx](iclrstrongname-strongnamesignatureverificationex-method.md) fornece um recurso semelhante ao método [ICLRStrongName:: StrongNameSignatureVerification](iclrstrongname-strongnamesignatureverification-method.md) . No entanto, o segundo parâmetro de entrada e o parâmetro de saída para [ICLRStrongName:: StrongNameSignatureVerificationEx](iclrstrongname-strongnamesignatureverificationex-method.md) são do tipo `BOOLEAN` em vez de `DWORD` .  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
@@ -60,7 +60,7 @@ HRESULT StrongNameSignatureVerificationEx (
   
  **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Método StrongNameSignatureVerification](iclrstrongname-strongnamesignatureverification-method.md)
 - [Interface ICLRStrongName](iclrstrongname-interface.md)

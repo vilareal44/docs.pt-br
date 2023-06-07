@@ -12,18 +12,18 @@ helpviewer_keywords:
 - culture-sensitive string operations
 - culture-insensitive string operations
 ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
-ms.openlocfilehash: 06c46033936e16355b8d2eb6650e8731a04af6e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0db77f3e11542bb920df1e45312a72decc2a34fd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141282"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279783"
 ---
 # <a name="culture-insensitive-string-operations"></a>Operações de cadeia de caracteres sem detecção de cultura
 
 As operações de cadeia de caracteres sensíveis à cultura podem representar uma vantagem se você estiver criando aplicativos projetados para exibir resultados a usuários de acordo com a cultura. Por padrão, os métodos sensíveis à cultura obtêm a cultura a ser usada da propriedade <xref:System.Globalization.CultureInfo.CurrentCulture%2A> para o thread atual.
 
-Observe que as operações de cadeia de caracteres sensíveis à cultura nem sempre apresentam o comportamento desejado. Usar operações sensíveis à cultura quando os resultados devem ser independentes da cultura pode fazer o código falhar em culturas com mapeamentos de casos e regras de classificação personalizados. Por exemplo, consulte a seção ["Comparações de cordas que usam a cultura atual"](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture) no artigo [Práticas recomendadas para usar strings.](../../../docs/standard/base-types/best-practices-strings.md)
+Observe que as operações de cadeia de caracteres sensíveis à cultura nem sempre apresentam o comportamento desejado. Usar operações sensíveis à cultura quando os resultados devem ser independentes da cultura pode fazer o código falhar em culturas com mapeamentos de casos e regras de classificação personalizados. Para obter um exemplo, consulte a seção ["comparações de cadeias de caracteres que usam a cultura atual"](../base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture) no artigo [práticas recomendadas para o uso de Strings](../base-types/best-practices-strings.md) .
 
 A forma como o aplicativo usa os resultados determina se as operações de cadeia de caracteres devem ser sensíveis à cultura ou insensíveis à cultura. Operações de cadeias de caracteres que exibem resultados para o usuário devem normalmente ser sensíveis à cultura. Por exemplo, se um aplicativo exibe uma lista classificada das cadeias de caracteres encontradas em uma caixa de listagem, o aplicativo deve executar uma classificação sensível à cultura.
 
@@ -31,6 +31,6 @@ Os resultados das operações de cadeia de caracteres usados internamente devem,
 
 Independentemente de estar ou não desenvolvendo um aplicativo que inclua código para tratar problemas de localização e globalização, você deve estar ciente dos métodos .NET Framework que, por padrão, recuperam resultados sensíveis à cultura. A finalidade deste tópico é ilustrar a maneira correta para seus aplicativos usarem esses métodos a fim de obter resultados insensíveis à cultura.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Globalização e localização](../../../docs/standard/globalization-localization/index.md)
+- [Globalização e localização](index.md)

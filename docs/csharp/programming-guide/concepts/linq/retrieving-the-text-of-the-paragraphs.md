@@ -1,13 +1,14 @@
 ---
 title: Recuperando o texto dos parágrafos (C#)
+description: Saiba como usar consultas LINQ para obter o texto de cada parágrafo em um documento do WordprocessingML como uma cadeia de caracteres em C#. Este exemplo usa consultas encadeadas.
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: 7c47420045def3fe973169e01143646c0f60a8eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 58a07ab848307c886927815e4e49e90806f61346
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168239"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302588"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>Recuperando o texto dos parágrafos (C#)
 Este exemplo é criado com base no exemplo anterior, [Recuperando os parágrafos e seus estilos (C#)](./retrieving-the-paragraphs-and-their-styles.md). Esse novo exemplo recupera o texto de cada parágrafo como uma cadeia de caracteres.  
@@ -142,7 +143,7 @@ StyleName:Code >Hello World<
   
 - [Refatoração usando um método de extensão (C#)](./refactoring-using-an-extension-method.md)  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](shape-of-wordprocessingml-documents.md)
 - [Execução adiada e avaliação lenta em LINQ to XML (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

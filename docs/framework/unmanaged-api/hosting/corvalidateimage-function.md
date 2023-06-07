@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-ms.openlocfilehash: 8841fab0517353849ef99594bcbd03dda772c766
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 426b39aa3d1ada5ae44565a742b70681a7bcf6d3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616496"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493428"
 ---
 # <a name="_corvalidateimage-function"></a>Função _CorValidateImage
 Valida as imagens de módulo gerenciado e notifica o carregador do sistema operacional depois que elas tiverem sido carregadas.  
@@ -40,7 +40,7 @@ STDAPI _CorValidateImage (
  `FileName`  
  no O nome do arquivo da imagem.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  Essa função retorna os valores padrão `E_INVALIDARG` , `E_OUTOFMEMORY` , `E_UNEXPECTED` e `E_FAIL` , bem como os valores a seguir.  
   
 |Valor retornado|Descrição|  
@@ -59,7 +59,7 @@ STDAPI _CorValidateImage (
   
 - Retorna ao carregador quando as imagens de módulo gerenciado são carregadas.  
   
- Para imagens executáveis, o carregador do sistema operacional chama a função [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) , independentemente do ponto de entrada especificado no executável. Para imagens de assembly de DLL, o carregador chama a função [_CorDllMain](cordllmain-function.md) .  
+ Para imagens executáveis, o carregador do sistema operacional chama a função [_CorExeMain](corexemain-function.md) , independentemente do ponto de entrada especificado no executável. Para imagens de assembly de DLL, o carregador chama a função [_CorDllMain](cordllmain-function.md) .  
   
  `_CorExeMain`ou `_CorDllMain` executa as seguintes ações:  
   
@@ -80,6 +80,6 @@ STDAPI _CorValidateImage (
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Funções estáticas globais de metadados](../metadata/metadata-global-static-functions.md)

@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 9ad70ffd-6963-4ab2-8c84-3d86c3fb8deb
 topic_type:
 - apiref
-ms.openlocfilehash: 91483d5bdf1eb8e6b03d7691e2a95074e3789317
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6b6f2dbaa49c29f6614e9c39a3f408d4d1453983
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134877"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501619"
 ---
 # <a name="igchost-interface"></a>Interface IGCHost
 Fornece métodos para obter informações sobre o sistema de coleta de lixo e para controlar alguns aspectos da coleta de lixo.  
   
 > [!NOTE]
-> A partir do .NET Framework 4,5, você pode usar o método [IGCHost2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) para definir o tamanho de um segmento de coleta de lixo e o tamanho máximo da geração 0 do sistema de coleta de lixo para valores maiores que o limite de `DWORD` Isso é imposto pelo método [SetGCStartupLimits](../../../../docs/framework/unmanaged-api/hosting/igchost-setgcstartuplimits-method.md) .  
+> Começando com o .NET Framework 4,5, você pode usar o método [IGCHost2:: SetGCStartupLimitsEx](igchost2-setgcstartuplimitsex-method.md) para definir o tamanho de um segmento de coleta de lixo e o tamanho máximo da geração 0 do sistema de coleta de lixo para valores maiores que o `DWORD` limite imposto pelo método [SetGCStartupLimits](igchost-setgcstartuplimits-method.md) .  
   
 > [!NOTE]
 > Essa interface é apenas para uso de especialistas. Ele pode afetar o desempenho de um aplicativo se for usado de forma inadequada.  
@@ -34,22 +34,22 @@ Fornece métodos para obter informações sobre o sistema de coleta de lixo e pa
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Collect](../../../../docs/framework/unmanaged-api/hosting/igchost-collect-method.md)|Força a ocorrência de uma coleção para a geração determinada, independentemente do estado da coleta de lixo atual.|  
-|[Método GetStats](../../../../docs/framework/unmanaged-api/hosting/igchost-getstats-method.md)|Obtém as estatísticas do estado atual do sistema de coleta de lixo.|  
-|[Método GetThreadStats](../../../../docs/framework/unmanaged-api/hosting/igchost-getthreadstats-method.md)|Obtém as estatísticas por thread para a coleta de lixo.|  
-|[Método SetGCStartupLimits](../../../../docs/framework/unmanaged-api/hosting/igchost-setgcstartuplimits-method.md)|Define o tamanho do segmento e o tamanho máximo para a geração 0.|  
-|[Método SetVirtualMemLimit](../../../../docs/framework/unmanaged-api/hosting/igchost-setvirtualmemlimit-method.md)|Define o tamanho máximo da memória virtual do tempo de execução.|  
+|[Método Collect](igchost-collect-method.md)|Força a ocorrência de uma coleção para a geração determinada, independentemente do estado da coleta de lixo atual.|  
+|[Método GetStats](igchost-getstats-method.md)|Obtém as estatísticas do estado atual do sistema de coleta de lixo.|  
+|[Método GetThreadStats](igchost-getthreadstats-method.md)|Obtém as estatísticas por thread para a coleta de lixo.|  
+|[Método SetGCStartupLimits](igchost-setgcstartuplimits-method.md)|Define o tamanho do segmento e o tamanho máximo para a geração 0.|  
+|[Método SetVirtualMemLimit](igchost-setvirtualmemlimit-method.md)|Define o tamanho máximo da memória virtual do tempo de execução.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** GCHost. idl, GCHost. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Coclass CorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+- [Interfaces de hospedagem](hosting-interfaces.md)
+- [Coclass CorRuntimeHost](corruntimehost-coclass.md)

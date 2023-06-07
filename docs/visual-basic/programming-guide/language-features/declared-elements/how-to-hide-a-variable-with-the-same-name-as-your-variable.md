@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-ms.openlocfilehash: 0915adbbabb778b1bdd3b6b30e56725a7e74867c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c1f4c2fbf339358be77e76468b1db94616bf04a2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345364"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357226"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Como ocultar uma variável com o mesmo nome que a variável (Visual Basic)
 
@@ -25,7 +25,7 @@ Você pode ocultar uma variável *sombreando* -a, ou seja, redefinindo-a com uma
 
 - **Sombreamento por meio do escopo.** Você pode sombrear a ti por meio do escopo, redeclarando-a dentro de uma sub-região da região que contém a variável que você deseja ocultar.
 
-- **Sombreamento por meio de herança.** Se a variável que você deseja ocultar estiver definida no nível de classe, você poderá sombrear a ti por meio da herança redeclarando-a com a palavra-chave [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) em uma classe derivada.
+- **Sombreamento por meio de herança.** Se a variável que você deseja ocultar estiver definida no nível de classe, você poderá sombrear a ti por meio da herança redeclarando-a com a palavra-chave [Shadows](../../../language-reference/modifiers/shadows.md) em uma classe derivada.
 
 ## <a name="two-ways-to-hide-a-variable"></a>Duas maneiras de ocultar uma variável
 
@@ -35,14 +35,14 @@ Você pode ocultar uma variável *sombreando* -a, ou seja, redefinindo-a com uma
 
     |Região da variável|Subregião permitida para redefini-la|
     |-----------------------|-------------------------------------------|
-    |{1&gt;{2&gt;Módulo&lt;2}&lt;1}|Uma classe dentro do módulo|
+    |Módulo|Uma classe dentro do módulo|
     |Classe|Uma subclasse dentro da classe<br /><br /> Um procedimento dentro da classe|
 
-    Você não pode redefinir uma variável de procedimento em um bloco dentro desse procedimento, por exemplo, em uma construção `If`...`End If` ou um loop `For`.
+    Você não pode redefinir uma variável de procedimento em um bloco dentro desse procedimento, por exemplo, em uma `If` construção... `End If` ou em um `For` loop.
 
 2. Crie a subregião se ela ainda não existir.
 
-3. Dentro da sub-região, escreva uma [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) declarando a variável de sombreamento.
+3. Dentro da sub-região, escreva uma [instrução Dim](../../../language-reference/statements/dim-statement.md) declarando a variável de sombreamento.
 
     Quando o código dentro da sub-região refere-se ao nome da variável, o compilador resolve a referência à variável de sombreamento.
 
@@ -68,9 +68,9 @@ Você pode ocultar uma variável *sombreando* -a, ou seja, redefinindo-a com uma
     End Module
     ```
 
-    O exemplo anterior declara a variável `num` no nível do módulo e no nível do procedimento (no `show`do procedimento). A variável local `num` sombreia a variável em nível de módulo `num` dentro de `show`, portanto, a variável local é definida como 2. No entanto, não há nenhuma variável local para sombra `num` no procedimento `useModuleLevelNum`. Portanto, `useModuleLevelNum` define o valor da variável em nível de módulo como 1.
+    O exemplo anterior declara a variável `num` no nível do módulo e no nível do procedimento (no procedimento `show` ). A variável local `num` sombreia a variável em nível de módulo `num` dentro `show` , portanto, a variável local é definida como 2. No entanto, não há nenhuma variável local para sombrear `num` no `useModuleLevelNum` procedimento. Portanto, `useModuleLevelNum` define o valor da variável em nível de módulo como 1.
 
-    A chamada `MsgBox` dentro de `show` ignora o mecanismo de sombreamento qualificando `num` com o nome do módulo. Portanto, ele exibe a variável em nível de módulo em vez da variável local.
+    A `MsgBox` chamada dentro `show` ignora o mecanismo de sombreamento qualificando `num` com o nome do módulo. Portanto, ele exibe a variável em nível de módulo em vez da variável local.
 
 #### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>Para ocultar uma variável Sombreando-a por meio de herança
 
@@ -78,7 +78,7 @@ Você pode ocultar uma variável *sombreando* -a, ou seja, redefinindo-a com uma
 
 2. Defina uma classe derivada da classe da variável, caso ainda não exista uma.
 
-3. Dentro da classe derivada, escreva uma instrução `Dim` declarando sua variável. Inclua a palavra-chave [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) na declaração.
+3. Dentro da classe derivada, escreva uma `Dim` instrução que declare sua variável. Inclua a palavra-chave [Shadows](../../../language-reference/modifiers/shadows.md) na declaração.
 
     Quando o código na classe derivada se refere ao nome da variável, o compilador resolve a referência à sua variável.
 
@@ -99,19 +99,19 @@ Você pode ocultar uma variável *sombreando* -a, ou seja, redefinindo-a com uma
     End Class
     ```
 
-    O exemplo anterior declara a variável `shadowString` na classe base e a sombreia na classe derivada. O procedimento `showStrings` na classe derivada exibe a versão de sombreamento da cadeia de caracteres quando o nome `shadowString` não é qualificado. Em seguida, ele exibe a versão sombreada quando `shadowString` é qualificado com a palavra-chave `MyBase`.
+    O exemplo anterior declara a variável `shadowString` na classe base e a sombreia na classe derivada. O procedimento `showStrings` na classe derivada exibe a versão de sombreamento da cadeia de caracteres quando o nome `shadowString` não é qualificado. Em seguida, ele exibe a versão sombreada quando `shadowString` é qualificado com a `MyBase` palavra-chave.
 
-## <a name="robust-programming"></a>Programação Robusta
+## <a name="robust-programming"></a>Programação robusta
 
 O sombreamento apresenta mais de uma versão de uma variável com o mesmo nome. Quando uma instrução de código se refere ao nome da variável, a versão para a qual o compilador resolve a referência depende de fatores como o local da instrução do código e a presença de uma cadeia de caracteres de qualificação. Isso pode aumentar o risco de se referir a uma versão não intencional de uma variável sombreada. Você pode reduzir esse risco Qualificando totalmente todas as referências a uma variável sombreada.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Referências a Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Sombreamento em Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [Diferenças entre sombreamento e sobreposição](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
-- [Como ocultar uma variável herdada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
-- [Como acessar uma variável oculta por uma classe derivada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
-- [Substituições](../../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Me, My, MyBase e MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
-- [Noções Básicas de Herança](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [Referências a elementos declarados](references-to-declared-elements.md)
+- [Sombreamento no Visual Basic](shadowing.md)
+- [Diferenças entre sombreamento e sobreposição](differences-between-shadowing-and-overriding.md)
+- [Como ocultar uma variável herdada](how-to-hide-an-inherited-variable.md)
+- [Como acessar uma variável oculta por uma classe derivada](how-to-access-a-variable-hidden-by-a-derived-class.md)
+- [Substituições](../../../language-reference/modifiers/overrides.md)
+- [Me, My, MyBase e MyClass](../../program-structure/me-my-mybase-and-myclass.md)
+- [Noções básicas de herança](../objects-and-classes/inheritance-basics.md)

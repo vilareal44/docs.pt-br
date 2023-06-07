@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97115892-410a-4657-ab47-1e14dfba73f8
-ms.openlocfilehash: c7819c3cb6b1430dcdb8a78c43f7138f64e691a8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e990c8ca3bb2a7145157fcedd06da4ea769c6ad3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709836"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290247"
 ---
 # <a name="xmldocument-input-to-xsltransform"></a>XmlDocument inseriu a XslTransform
 A classe de <xref:System.Xml.XmlDocument> fornece recursos de edição de um documento XML. Se o XML precisa ser editado ou alterado antes de ser enviado para o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> , carregar XML em <xref:System.Xml.XmlDocument>, editá-lo, e enviá-lo na <xref:System.Xml.Xsl.XslTransform>.  
   
 > [!NOTE]
-> A classe <xref:System.Xml.Xsl.XslTransform> está obsoleta no .NET Framework 2.0. Você pode executar a linguagem XSL Transformations (XSLT) usando a classe <xref:System.Xml.Xsl.XslCompiledTransform>. Confira [Usar a classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [Migrar da classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) para saber mais.  
+> A classe <xref:System.Xml.Xsl.XslTransform> está obsoleta no .NET Framework 2.0. Você pode executar a linguagem XSL Transformations (XSLT) usando a classe <xref:System.Xml.Xsl.XslCompiledTransform>. Confira [Usar a classe XslCompiledTransform](using-the-xslcompiledtransform-class.md) e [Migrar da classe XslTransform](migrating-from-the-xsltransform-class.md) para saber mais.  
   
  <xref:System.Xml.XmlDocument> implementa a interface de <xref:System.Xml.XPath.IXPathNavigable> , o documento pode ser passado para o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> após editar.  
   
@@ -48,9 +48,9 @@ while (rdr.Read()) {}
 ## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.XmlDocument>
-- [Transformações XSLT com a classe XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
-- [A classe XslTransform implementa do processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
-- [XPathNavigator nas transformações](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)
-- [XPathNodeIterator nas transformações](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)
-- [XPathDocument inseriu a XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)
-- [XmlDataDocument inseriu a XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)
+- [Transformações XSLT com a classe XslTransform](xslt-transformations-with-the-xsltransform-class.md)
+- [A classe XslTransform implementa do processador XSLT](xsltransform-class-implements-the-xslt-processor.md)
+- [XPathNavigator nas transformações](xpathnavigator-in-transformations.md)
+- [XPathNodeIterator nas transformações](xpathnodeiterator-in-transformations.md)
+- [XPathDocument inseriu a XslTransform](xpathdocument-input-to-xsltransform.md)
+- [XmlDataDocument inseriu a XslTransform](xmldatadocument-input-to-xsltransform.md)

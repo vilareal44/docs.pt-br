@@ -1,15 +1,15 @@
 ---
-title: Como agrupar arquivos por extensão (LINQ)
+title: 'Como: agrupar arquivos por extensão (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: 4d2c51fa62b3ec144bc5ad51b4a9f8305476645e
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 67c48cd735b51009835cbc8df3101ea3cb212a87
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78267022"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396539"
 ---
-# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Como: Arquivos de Grupo por Extensão (LINQ) (Visual Basic)
+# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Como: agrupar arquivos por extensão (LINQ) (Visual Basic)
 Este exemplo mostra como o LINQ pode ser usado para realizar operações avançadas de classificação e agrupamento em listas de arquivos ou pastas. Ele também mostra como paginar a saída na janela do console usando os métodos <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Take%2A>.  
   
 ## <a name="example"></a>Exemplo  
@@ -94,9 +94,9 @@ End Module
  A saída desse programa pode ser longa, dependendo dos detalhes do sistema de arquivos local e o que está definido em `startFolder`. Para habilitar a exibição de todos os resultados, este exemplo mostra como paginá-los. As mesmas técnicas podem ser aplicadas a aplicativos do Windows e aplicativos Web. Observe que, como o código dispõe os itens em um grupo, é necessário um loop `For Each` aninhado. Há também alguma lógica adicional para calcular a posição atual na lista e para permitir que o usuário interrompa a paginação e saia do programa. Nesse caso específico, a consulta de paginação é executada nos resultados da consulta original armazenados em cache. Em outros contextos, como LINQ to SQL, esse cache não é necessário.  
   
 ## <a name="compile-the-code"></a>Compilar o código  
-Crie um projeto de aplicativo `Imports` de console Visual Basic, com uma declaração para o namespace System.Linq.
+Crie um projeto de aplicativo de console Visual Basic, com uma `Imports` instrução para o namespace System. Linq.
   
 ## <a name="see-also"></a>Confira também
 
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)
+- [LINQ e diretórios de arquivos (Visual Basic)](linq-and-file-directories.md)

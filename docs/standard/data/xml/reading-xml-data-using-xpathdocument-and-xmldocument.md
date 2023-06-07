@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5711b225-6aa2-4e4f-9898-19f2d518ad1a
-ms.openlocfilehash: 87ae96944f9a9f2bbcefb54c343f429c75c3022d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: da1cb81c819e55f572e9faaabef4dd49ee7397de
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710382"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288674"
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>Lendo dados XML usando XPathDocument e XmlDocument
 Há duas maneiras para ler um documento XML no namespace <xref:System.Xml.XPath?displayProperty=nameWithType>. Uma é ler um documento XML usando a classe <xref:System.Xml.XPath.XPathDocument> somente leitura e a outra é ler um documento XML usando a classe <xref:System.Xml.XmlDocument> editável no namespace <xref:System.Xml?displayProperty=nameWithType>.  
@@ -75,7 +75,7 @@ document.Load("books.xml");
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [Processar dados XML usando o modelo de dados XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Acessando dados XML usando XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
-- [Editando dados XML usando XPathNavigator](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)
-- [Validação de esquema usando XPathNavigator](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)
+- [Processar dados XML usando o modelo de dados XPath](process-xml-data-using-the-xpath-data-model.md)
+- [Acessando dados XML usando XPathNavigator](accessing-xml-data-using-xpathnavigator.md)
+- [Editando dados XML usando XPathNavigator](editing-xml-data-using-xpathnavigator.md)
+- [Validação de esquema usando XPathNavigator](schema-validation-using-xpathnavigator.md)

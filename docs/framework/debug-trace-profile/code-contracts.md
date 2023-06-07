@@ -1,5 +1,6 @@
 ---
 title: Contratos de código
+description: Explore os contratos de código, que fornecem uma maneira de especificar pré-condições, condições e invariáveis de objeto em seu código .NET.
 ms.date: 09/05/2018
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - Code contracts
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
-ms.openlocfilehash: b60f992cf9d934ed622c89a49c491a80377fb6fe
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 60f794373af75bd3f745c224e0a8c7a84192e4c4
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216711"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904137"
 ---
 # <a name="code-contracts"></a>Contratos de código
 
@@ -67,7 +68,7 @@ if (x == null) throw new ...
 Contract.EndContractBlock(); // All previous "if" checks are preconditions
 ```
 
-Observe que a condição no teste anterior é uma pré-condição negada. (A pré-condição real seria `x != null`.) Uma pré-condição negada é altamente restrita: ela deve ser escrita conforme mostrado no exemplo anterior; ou seja, não deve conter nenhuma cláusula `else` e o corpo da cláusula `then` deve ser uma única instrução `throw`. O teste `if` está sujeito às regras de pureza e visibilidade (consulte [Diretrizes de uso](#usage_guidelines)), mas a expressão `throw` está sujeita apenas às regras de pureza. No entanto, o tipo da exceção gerada deve estar tão visível quanto o método no qual ocorre o contrato.
+Observe que a condição no teste anterior é uma pré-condição negada. (A pré-condição real seria `x != null` .) Uma pré-condição negada é altamente restrita: ela deve ser escrita conforme mostrado no exemplo anterior; ou seja, ele não deve conter `else` cláusulas e o corpo da `then` cláusula deve ser uma única `throw` instrução. O teste `if` está sujeito às regras de pureza e visibilidade (consulte [Diretrizes de uso](#usage_guidelines)), mas a expressão `throw` está sujeita apenas às regras de pureza. No entanto, o tipo da exceção gerada deve estar tão visível quanto o método no qual ocorre o contrato.
 
 ## <a name="postconditions"></a>Pós-condições
 
@@ -101,7 +102,7 @@ Os seguintes métodos podem ser usados apenas em pós-condições:
 
 - É possível se referir aos valores retornados do método nas pós-condições usando a expressão `Contract.Result<T>()`, em que `T` é substituído pelo tipo de retorno do método. Quando o compilador não puder inferir o tipo, você deverá fornecê-lo explicitamente. Por exemplo, o compilador do C# não pode inferir tipos de métodos que não usam nenhum argumento. Portanto, ele exige a seguinte pós-condição: métodos `Contract.Ensures(0 <Contract.Result<int>())` com um tipo de retorno `void` não podem se referir a `Contract.Result<T>()` em suas pós-condições.
 
-- Um valor de pré-estado em uma pós-condição refere-se ao valor de uma expressão no início de um método ou uma propriedade. Ele usa a expressão `Contract.OldValue<T>(e)`, em que `T` é o tipo de `e`. É possível omitir o argumento de tipo genérico sempre que o compilador pode inferir seu tipo. (Por exemplo, o C# compilador sempre infere o tipo porque ele usa um argumento.) Há várias restrições sobre o que pode ocorrer em `e` e os contextos nos quais uma expressão antiga pode aparecer. Uma expressão antiga não pode conter outra expressão antiga. O mais importante é que uma expressão antiga deve se referir a um valor que existia no estado de pré-condição do método. Em outras palavras, ela deve ser uma expressão que possa ser avaliada, desde que a pré-condição do método seja `true`. Veja a seguir várias instâncias dessa regra.
+- Um valor de pré-estado em uma pós-condição refere-se ao valor de uma expressão no início de um método ou uma propriedade. Ele usa a expressão `Contract.OldValue<T>(e)`, em que `T` é o tipo de `e`. É possível omitir o argumento de tipo genérico sempre que o compilador pode inferir seu tipo. (Por exemplo, o compilador C# sempre infere o tipo porque ele usa um argumento). Há várias restrições sobre o que pode ocorrer no `e` e os contextos nos quais uma expressão antiga pode aparecer. Uma expressão antiga não pode conter outra expressão antiga. O mais importante é que uma expressão antiga deve se referir a um valor que existia no estado de pré-condição do método. Em outras palavras, ela deve ser uma expressão que possa ser avaliada, desde que a pré-condição do método seja `true`. Veja a seguir várias instâncias dessa regra.
 
   - O valor deve existir no estado de pré-condição do método. Para fazer referência a um campo em um objeto, as pré-condições devem garantir que o objeto seja sempre não nulo.
 
@@ -163,7 +164,7 @@ protected void ObjectInvariant ()
 }
 ```
 
-As invariáveis são definidas condicionalmente pelo símbolo do pré-processador CONTRACTS_FULL. Durante a verificação em tempo de execução, as invariáveis são verificadas ao final de cada método público. Se uma invariável mencionar um método público na mesma classe, a verificação de invariáveis que normalmente ocorre ao final do método público será desabilitada. Em vez disso, a verificação ocorrerá somente ao final da chamada de método externa para essa classe. Isso também ocorrerá se a classe for inserida novamente devido a uma chamada a um método em outra classe. As invariáveis não são verificadas para um finalizador de objeto e uma implementação de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>.
+As invariáveis são definidas condicionalmente pelo símbolo do pré-processador CONTRACTS_FULL. Durante a verificação em tempo de execução, as invariáveis são verificadas ao final de cada método público. Se uma invariável mencionar um método público na mesma classe, a verificação de invariáveis que normalmente ocorre ao final do método público será desabilitada. Em vez disso, a verificação ocorrerá somente ao final da chamada de método externa para essa classe. Isso também ocorrerá se a classe for inserida novamente devido a uma chamada a um método em outra classe. As invariáveis não são verificadas para um finalizador de objeto e uma <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementação.
 
 <a name="usage_guidelines"></a>
 

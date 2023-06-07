@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: 0460015b44971fa638dba47183690ffcc89ca55f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 28ae7d6fd51170aa822072fc2f5357443f51a353
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351416"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392087"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (modificador genérico) (Visual Basic)
 
-Para parâmetros de tipo genérico, a palavra-chave `Out` especifica que o tipo é covariant.
+Para parâmetros de tipo genérico, a `Out` palavra-chave especifica que o tipo é covariant.
 
 ## <a name="remarks"></a>Comentários
 
@@ -61,7 +61,7 @@ O exemplo a seguir mostra como declarar, instanciar e invocar um delegado genér
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Variação em Interfaces Genéricas](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Variação em interfaces genéricas](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Em](in-generic-modifier.md)

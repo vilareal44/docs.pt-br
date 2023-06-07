@@ -4,16 +4,16 @@ description: Saiba mais sobre árvores de expressão no .NET Core e como usá-la
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: e1026ef70860da519b688a9d67181b88d03f6f0b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 62f5b93097ee8ad2177fc0bb484c656408f91f30
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79145833"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062503"
 ---
 # <a name="expression-trees"></a>Árvores de expressão
 
-Se tiver usado o LINQ, você tem experiência com uma rica biblioteca em que os tipos `Func` fazem parte do conjunto de API. (Se você não está familiarizado com linq, você provavelmente quer ler [o tutorial LINQ](linq/index.md) e o artigo sobre [expressões lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md) antes deste.) *As Árvores de Expressão* proporcionam uma interação mais rica com os argumentos que são funções.
+Se tiver usado o LINQ, você tem experiência com uma rica biblioteca em que os tipos `Func` fazem parte do conjunto de API. (Se você não estiver familiarizado com o LINQ, provavelmente deseja ler [o tutorial do LINQ](linq/index.md) e o artigo sobre [expressões lambda](language-reference/operators/lambda-expressions.md) antes desta.) As *árvores de expressão* fornecem uma interação mais rica com os argumentos que são funções.
 
 Você escreve argumentos de função, normalmente usando expressões lambda, quando cria consultas LINQ. Em uma consulta LINQ típica, esses argumentos de função são transformados em um delegado que o compilador cria.
 

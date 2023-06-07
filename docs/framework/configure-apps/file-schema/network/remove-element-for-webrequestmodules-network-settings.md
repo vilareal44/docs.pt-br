@@ -11,19 +11,19 @@ helpviewer_keywords:
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
 ms.openlocfilehash: afa1aef8ea71f43a136987ec5b6e1925c6d9fb40
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154719"
 ---
-# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<remover> Elemento para webRequestModules (Configurações de rede)
-Remove um módulo de solicitação web personalizado do aplicativo.  
+# <a name="remove-element-for-webrequestmodules-network-settings"></a>Elemento \<remove> para webRequestModules (Configurações de Rede)
+Remove um módulo de solicitação da Web personalizado do aplicativo.  
   
-[**\<>de configuração**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<webRequestModules>**](webrequestmodules-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remover>**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +40,7 @@ Remove um módulo de solicitação web personalizado do aplicativo.
   
 |**Atributo**|**Descrição**|  
 |-------------------|---------------------|  
-|`prefix`|O prefixo URI para solicitações manipuladas por este módulo de solicitação da Web.|  
+|`prefix`|O prefixo de URI para solicitações tratadas por este módulo de solicitação da Web.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum.  
@@ -49,19 +49,19 @@ Remove um módulo de solicitação web personalizado do aplicativo.
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[webRequestModules](webrequestmodules-element-network-settings.md)|Especifica módulos a serem usados para solicitar informações de hosts de rede.|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|Especifica os módulos a serem usados para solicitar informações de hosts de rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O `remove` elemento remove o módulo de solicitação da Web registrado para o prefixo URI especificado.  
+ O `remove` elemento remove o módulo de solicitação da Web registrado para o prefixo de URI especificado.  
   
- O valor `prefix` para o atributo deve ser os caracteres`http`principais`http://www.contoso.com`de um URI válido - por exemplo, " ", ou " "" " "  
+ O valor do `prefix` atributo deve ser os caracteres à esquerda de um URI válido, por exemplo, " `http` " ou " `http://www.contoso.com` ".  
   
 ## <a name="configuration-files"></a>Arquivos de configuração  
- Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração da máquina (Machine.config).  
+ Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
 
-O exemplo a seguir remove o módulo de solicitação da Web existente para HTTP `www.contoso.com`e, em seguida, registra um novo módulo de solicitação web personalizado para solicitações HTTP para .
+O exemplo a seguir remove o módulo de solicitação da Web existente para HTTP e registra um novo módulo de solicitação da Web personalizado para solicitações HTTP para `www.contoso.com` .
   
 ```xml  
 <configuration>  

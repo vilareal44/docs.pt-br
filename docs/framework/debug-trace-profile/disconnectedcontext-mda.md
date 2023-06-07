@@ -1,5 +1,6 @@
 ---
 title: MDA disconnectedContext
+description: Examine o assistente de depuração gerenciada do disconnectedContext no .NET, que é invocado quando o CLR tenta fazer a transição para um apartamento ou contexto desconectado.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DisconnectedContext MDA
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - context disconnections
 - managed debugging assistants (MDAs), disconnected context
 ms.assetid: 1887d31d-7006-4491-93b3-68fd5b05f71d
-ms.openlocfilehash: 3d04e304a6b30fe6fd4deeda5a97007f11ee7b13
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 0b24aadefab7a7cb2a5294f25e674d188beec814
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216544"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416077"
 ---
 # <a name="disconnectedcontext-mda"></a>MDA disconnectedContext
 O MDA (Assistente para depuração gerenciada) `disconnectedContext` é ativado quando o CLR tenta realizar a transição para um apartment ou contexto desconectado durante a manutenção de uma solicitação sobre um objeto COM.  
@@ -44,8 +45,8 @@ O MDA (Assistente para depuração gerenciada) `disconnectedContext` é ativado 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling de interoperabilidade](../interop/interop-marshaling.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Realizando marshaling de interoperabilidade](../interop/interop-marshaling.md)

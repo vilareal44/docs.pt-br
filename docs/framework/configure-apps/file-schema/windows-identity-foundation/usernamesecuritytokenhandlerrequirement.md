@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 6ec3bac1-b014-49ae-843c-c54518cb709a
 author: BrucePerlerMS
 ms.openlocfilehash: 5863c01e97e7f5fb6fe07c43174c0d6cb7a0a25d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70251743"
 ---
-# <a name="usernamesecuritytokenhandlerrequirement"></a>\<userNameSecurityTokenHandlerRequirement>
-Fornece a configuração para <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> a classe ou classes derivadas.  
+# \<userNameSecurityTokenHandlerRequirement>
+Fornece a configuração para a <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> classe ou classes derivadas.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> identityConfiguration**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> securityTokenHandlers**](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Adicionar >** ](add.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> userNameSecurityTokenHandlerRequirement**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<userNameSecurityTokenHandlerRequirement>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ Fornece a configuração para <xref:System.IdentityModel.Services.Tokens.Members
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|membershipProviderName|Especifica o <xref:System.Web.Security.MembershipProvider> que deve ser usado pelo manipulador de token de segurança.|  
+|membershipProvidername|Especifica o <xref:System.Web.Security.MembershipProvider> que deve ser usado pelo manipulador de token de segurança.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -54,7 +54,7 @@ Fornece a configuração para <xref:System.IdentityModel.Services.Tokens.Members
 |[\<add>](add.md)|Adiciona o manipulador de token de segurança especificado à coleção de manipulador de token.|  
   
 ## <a name="remarks"></a>Comentários  
- O `<userNameSecurityTokenHandlerRequirement>` elemento define a <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> Propriedade quando um <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> objeto é inicializado a partir da configuração.  
+ O `<userNameSecurityTokenHandlerRequirement>` elemento define a <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> propriedade quando um <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> objeto é inicializado a partir da configuração.  
   
 ## <a name="example"></a>Exemplo  
   

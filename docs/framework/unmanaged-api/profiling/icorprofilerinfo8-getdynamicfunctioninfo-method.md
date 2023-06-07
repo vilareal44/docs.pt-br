@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 9b5059d9e4bf9b79dc67664c7a7971041d1cf35b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: eaf33f3b0de7a18e400cd16d29c046784e2e190f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861678"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495314"
 ---
 # <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>Método ICorProfilerInfo8:: GetDynamicFunctionInfo
 
@@ -38,11 +38,11 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 
 - `functionId`
 
-  \[em] a ID da função para a qual recuperar informações.
+  \[in] a ID da função para a qual recuperar informações.
 
 - `moduleId`
 
-  \[em] um ponteiro para o módulo no qual a classe pai da função é definida.
+  \[in] um ponteiro para o módulo no qual a classe pai da função é definida.
 
 - `ppvSig`
 
@@ -54,15 +54,15 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 
 - `cchName`
 
-  \[em] o tamanho máximo da matriz de `wszName`.
+  \[in] o tamanho máximo da `wszName` matriz.
 
 - `pcchName`
 
-  \[out] o número de caracteres na matriz `wszName`.
+  \[out] o número de caracteres na `wszName` matriz.
 
 - `wszName`
 
-  \[out] uma matriz de `WCHAR` que é o nome da função, se existir uma.
+  \[out] uma matriz de `WCHAR` que é o nome da função, se houver uma.
 
 ## <a name="remarks"></a>Comentários
 
@@ -70,16 +70,16 @@ Determinados métodos, como stubs IL ou LCG, não têm metadados associados que 
 
 Essa API pode ser usada para recuperar informações sobre métodos dinâmicos, incluindo um nome amigável, se disponível.
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
-**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
 **Cabeçalho:** CorProf. idl, CorProf. h
 
 **Biblioteca:** CorGuids.lib
 
-**Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework versões:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerInfo8](icorprofilerinfo8-interface.md)

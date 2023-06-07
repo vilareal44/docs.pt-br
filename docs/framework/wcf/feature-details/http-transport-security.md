@@ -2,12 +2,12 @@
 title: Segurança de transporte de HTTP
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 4bd3fbfd39538eee4344ef0a8ca4fe61b372ab70
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 28d0ac164022f585f25b44b16c68994b592ef041
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212139"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592717"
 ---
 # <a name="http-transport-security"></a>Segurança de transporte de HTTP
 Ao usar HTTP como transporte, a segurança é fornecida por uma implementação de protocolo SSL (SSL). O SSL é amplamente usado na Internet para autenticar um serviço para um cliente e, em seguida, para fornecer confidencialidade (criptografia) ao canal. Este tópico explica como o SSL funciona e como ele é implementado no Windows Communication Foundation (WCF).  
@@ -51,9 +51,9 @@ Para configurar certificados para uso com o IIS 7,0, consulte [Configurando cert
 
  Se você estiver criando um aplicativo WCF auto-hospedado, use a ferramenta [Httpcfg. exe](/windows/win32/http/httpcfg-exe) .
   
- Para obter mais informações sobre como usar a ferramenta HttpCfg. exe para configurar uma porta com um certificado X. 509, consulte [como: configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Para obter mais informações sobre como usar a ferramenta HttpCfg. exe para configurar uma porta com um certificado X. 509, consulte [como: configurar uma porta com um certificado SSL](how-to-configure-a-port-with-an-ssl-certificate.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [Segurança de mensagem](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+- [Segurança de transporte](transport-security.md)
+- [Segurança de mensagem](message-security-in-wcf.md)

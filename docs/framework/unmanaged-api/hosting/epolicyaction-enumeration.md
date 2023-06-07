@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72dd76ba-239e-45ac-9ded-318fb07d6c6d
 topic_type:
 - apiref
-ms.openlocfilehash: 8788d6e2220778a3f0926d5ed3dd59142487bcca
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 901c62e6f2519fc4f9251f348c77b11bbe0992be
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616184"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504339"
 ---
 # <a name="epolicyaction-enumeration"></a>Enumeração EPolicyAction
-Descreve as ações de política que o host pode definir para operações descritas por [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) e falhas descritas por [EClrFailure](eclrfailure-enumeration.md).  
+Descreve as ações de política que o host pode definir para operações descritas por [EClrOperation](eclroperation-enumeration.md) e falhas descritas por [EClrFailure](eclrfailure-enumeration.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +57,7 @@ typedef enum {
 |`eUnloadAppDomain`|Especifica que o <xref:System.AppDomain> deve ser descarregado. O CLR tenta executar finalizadores.|  
   
 ## <a name="remarks"></a>Comentários  
- O host define as ações de política chamando métodos da interface [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) . Para obter informações sobre anulações rudes e normais, consulte a enumeração [EClrOperation](eclroperation-enumeration.md) .  
+ O host define as ações de política chamando métodos da interface [ICLRPolicyManager](iclrpolicymanager-interface.md) . Para obter informações sobre anulações rudes e normais, consulte a enumeração [EClrOperation](eclroperation-enumeration.md) .  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
@@ -68,7 +68,7 @@ typedef enum {
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Enumeração EClrFailure](eclrfailure-enumeration.md)
 - [Interface ICLRPolicyManager](iclrpolicymanager-interface.md)

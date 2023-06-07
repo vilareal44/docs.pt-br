@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55674b68-678a-4747-ae06-4e91519c7305
 topic_type:
 - apiref
-ms.openlocfilehash: 5d9474f78dd8b999a37f60e0698cfd04240b897a
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 14eb90c707618796d6d62ed2ec5710ceba31ba6c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866566"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500369"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>Método ICorProfilerCallback::ClassUnloadFinished
 Notifica o criador de perfil de que uma classe concluiu o descarregamento.  
@@ -37,25 +37,25 @@ HRESULT ClassUnloadFinished(
 
 - `classId`
 
-  \[em] identifica a classe que foi descarregada.
+  \[in] identifica a classe que foi descarregada.
 
 - `hrStatus`
 
-  \[em] um HRESULT que indica se a classe foi descarregada com êxito.
+  \[in] um HRESULT que indica se a classe foi descarregada com êxito.
   
 ## <a name="remarks"></a>Comentários  
- Algumas partes do descarregamento da classe podem continuar após o retorno de chamada `ClassUnloadFinished`. Uma falha HRESULT no `hrStatus` indica uma falha. No entanto, um HRESULT de êxito em `hrStatus` indica apenas que a primeira parte do descarregamento da classe foi bem-sucedida.  
+ Algumas partes do descarregamento da classe podem continuar após o `ClassUnloadFinished` retorno de chamada. Um HRESULT de falha em `hrStatus` indica uma falha. No entanto, um HRESULT de êxito em `hrStatus` indica apenas que a primeira parte do descarregamento da classe foi bem-sucedida.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
 - [Método ClassUnloadStarted](icorprofilercallback-classunloadstarted-method.md)

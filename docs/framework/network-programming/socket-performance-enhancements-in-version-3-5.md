@@ -1,13 +1,14 @@
 ---
 title: Melhorias do desempenho de soquete na versão 3.5
+description: Saiba mais sobre as melhorias de desempenho na classe System .net. Sockets. Socket na versão 3,5 do .NET Framework.
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 577c033fc5639f9d9f50e413fd2cb55a75d48f2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a640c58e47bf1630a3a551aed72b9bc9d4fd6fe
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047236"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502139"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Melhorias do desempenho de soquete na versão 3.5
 A classe <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> foi aprimorada na Versão 3.5 para uso por aplicativos que usam a E/S de rede assíncrona para obter o melhor desempenho. Uma série de novas classes foi adicionada como parte de um conjunto de melhorias da classe <xref:System.Net.Sockets.Socket>, que fornece um padrão assíncrono alternativo que pode ser usado por aplicativos de soquete especializados de alto desempenho. Essas melhorias foram projetadas especificamente para aplicativos de servidor de rede que exigem alto desempenho. Um aplicativo pode usar o padrão assíncrono aprimorado exclusivamente ou somente nas áreas de acesso direcionadas de seu aplicativo (ao receber grandes quantidades de dados, por exemplo).  

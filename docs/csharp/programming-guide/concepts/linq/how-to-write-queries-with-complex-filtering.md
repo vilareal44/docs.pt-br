@@ -1,13 +1,14 @@
 ---
 title: Como escrever consultas com filtragem complexa (C#)
+description: Saiba como escrever LINQ to XML consultas com filtros complexos. Consulte exemplos de código e exiba recursos adicionais.
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: bc85d7f1e5c5305407ad22f3ada908523313d964
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5d2c1aafc210b35d4d6b1f1b2d74b11966d90c80
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168512"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303420"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-c"></a>Como escrever consultas com filtragem complexa (C#)
 Muitas vezes, você deseja escrever consultas LINQ to XML com filtros complexos. Por exemplo, você pode ter que localizar todos os elementos que têm um elemento filho com um nome e um valor específicos. Este tópico dá um exemplo de como escrever uma consulta com filtragem complexa.  
@@ -35,7 +36,7 @@ foreach (XElement el in purchaseOrders)
     Console.WriteLine((string)el.Attribute("PurchaseOrderNumber"));  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```output  
 99505  
@@ -63,13 +64,13 @@ foreach (XElement el in purchaseOrders)
     Console.WriteLine((string)el.Attribute(aw + "PurchaseOrderNumber"));  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```output  
 99505  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>

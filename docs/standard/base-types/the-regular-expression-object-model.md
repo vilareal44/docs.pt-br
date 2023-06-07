@@ -1,5 +1,6 @@
 ---
 title: O modelo de objeto de expressão regular
+description: Examine o modelo de objeto de expressão regular no .NET. Trabalhe com o mecanismo de expressões regulares, & objetos & coleções relacionadas à correspondência, ao agrupamento & a captura.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -35,27 +36,27 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: 8956be3cf8f96a8dd255f378d4927404c172c908
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43672b85ecb64a15179881ec23c7fadd13d64868
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159995"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768047"
 ---
 # <a name="the-regular-expression-object-model"></a>O modelo de objeto de expressão regular
 <a name="introduction"></a> Este tópico descreve o modelo do objeto usado ao trabalhar com expressões regulares do .NET. Ele contém as seções a seguir:  
   
-- [O Motor de Expressão Regular](#Engine)  
+- [O mecanismo de expressão regular](#Engine)  
   
-- [A MatchCollection e os Objetos de Correspondência](#Match_and_MCollection)  
+- [Os objetos MatchCollection e Match](#Match_and_MCollection)  
   
-- [A Coleção de Grupos](#GroupCollection)  
+- [A coleção de grupos](#GroupCollection)  
   
-- [O Grupo Capturado](#the_captured_group)  
+- [O grupo capturado](#the_captured_group)  
   
-- [A Coleção de Capturas](#CaptureCollection)  
+- [A coleção de captura](#CaptureCollection)  
   
-- [A Captura Individual](#the_individual_capture)  
+- [A captura individual](#the_individual_capture)  
   
 <a name="Engine"></a>
 ## <a name="the-regular-expression-engine"></a>O mecanismo da expressão regular  
@@ -284,7 +285,7 @@ ms.locfileid: "78159995"
   
  As propriedades da classe <xref:System.Text.RegularExpressions.Group> fornecem informações sobre o grupo capturado: a propriedade `Group.Value` contém a subcadeia de caracteres capturada, a propriedade `Group.Index` indica a posição inicial do grupo capturado no texto de entrada, a propriedade `Group.Length` contém o comprimento do texto capturado e a propriedade `Group.Success` indica se uma subcadeia de caracteres corresponde ao padrão definido pelo grupo de captura.  
   
- Aplicar quantificadores a um grupo (para obter mais informações, confira [Quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) modifica a relação de uma captura por grupo de captura de duas formas:  
+ Aplicar quantificadores a um grupo (para obter mais informações, confira [Quantificadores](quantifiers-in-regular-expressions.md)) modifica a relação de uma captura por grupo de captura de duas formas:  
   
 - Se o quantificador `*` ou `*?` (que especifica zero ou mais correspondências) for aplicado a um grupo, um grupo de captura pode não ter uma correspondência na cadeia de caracteres de entrada. Quando não há texto capturado, as propriedades do objeto <xref:System.Text.RegularExpressions.Group> são definidas como mostrado na tabela a seguir.  
   
@@ -349,8 +350,8 @@ ms.locfileid: "78159995"
 |`;`|Corresponder a um ponto e vírgula.|  
 |`((\w+(\s\w+)*),(\d+);)+`|Corresponder ao padrão de uma palavra seguida por qualquer palavra adicional seguida por uma vírgula, um ou mais dígitos e um ponto e vírgula, uma ou mais vezes. Este é o primeiro grupo de captura.|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Text.RegularExpressions>
-- [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)
-- [Linguagem de Expressão Regular - Referência Rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Expressões regulares do .NET](regular-expressions.md)
+- [Linguagem de expressões regulares – referência rápida](regular-expression-language-quick-reference.md)

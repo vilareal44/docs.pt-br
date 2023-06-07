@@ -1,5 +1,5 @@
 ---
-title: Noções básicas de E/S de arquivo do .NET Framework e o sistema de arquivos
+title: Noções Básicas de E/S de Arquivo do .NET Framework e o Sistema de Arquivos
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file access, file I/O in Visual Basic
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 5d60d0089d042c0be343c741c26de0b4b7778d6d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 187a20617ec901e722a30ebfa571e4a55ed0b5c3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348939"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401791"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Noções básicas de E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)
 
 As classes no namespace <xref:System.IO> são usadas para trabalhar com unidades, arquivos e diretórios.
 
-O namespace <xref:System.IO> contém as classes <xref:System.IO.File> e <xref:System.IO.Directory>, que fornecem a funcionalidade do .NET Framework que manipula arquivos e diretórios. Como os métodos desses objetos são estáticos ou membros compartilhados, você pode usá-los diretamente sem antes criar uma instância da classe. Associadas a essas classes estão as classes <xref:System.IO.FileInfo> e <xref:System.IO.DirectoryInfo>, conhecidas pelos usuários do recurso `My`. Para usar essas classes, você deve qualificar totalmente os nomes ou importar os namespaces apropriados, incluindo as declarações `Imports` no início do código afetado. Para obter mais informações, consulte [Instrução Imports (tipo e namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).
+O namespace <xref:System.IO> contém as classes <xref:System.IO.File> e <xref:System.IO.Directory>, que fornecem a funcionalidade do .NET Framework que manipula arquivos e diretórios. Como os métodos desses objetos são estáticos ou membros compartilhados, você pode usá-los diretamente sem antes criar uma instância da classe. Associadas a essas classes estão as classes <xref:System.IO.FileInfo> e <xref:System.IO.DirectoryInfo>, conhecidas pelos usuários do recurso `My`. Para usar essas classes, você deve qualificar totalmente os nomes ou importar os namespaces apropriados, incluindo as declarações `Imports` no início do código afetado. Para obter mais informações, consulte [Instrução Imports (tipo e namespace .NET)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md).
 
 > [!NOTE]
 > Os outros tópicos nesta seção usam o objeto `My.Computer.FileSystem`, em vez das classes `System.IO`, para trabalhar com unidades, arquivos e diretórios. O objeto `My.Computer.FileSystem` destina-se principalmente a ser usado em programas do Visual Basic. As classes `System.IO` destinam-se a serem usadas por qualquer linguagem compatível com o .NET Framework, incluindo o Visual Basic.
@@ -35,9 +35,9 @@ O .NET Framework usa fluxos para dar suporte à leitura e gravação em arquivos
 
 Os dados contidos no fluxo podem vir da memória, de um arquivo ou de um soquete TCP/IP. Os fluxos têm operações fundamentais que podem ser aplicadas a eles:
 
-- **Leitura**. Você pode ler em um fluxo, transferindo dados do fluxo para uma estrutura de dados, como uma cadeia de caracteres ou uma matriz de bytes.
+- **Lendo**. Você pode ler em um fluxo, transferindo dados do fluxo para uma estrutura de dados, como uma cadeia de caracteres ou uma matriz de bytes.
 
-- **Gravação**. Você pode gravar em um fluxo, transferindo dados de uma fonte de dados para o fluxo.
+- **Gravando**. Você pode gravar em um fluxo, transferindo dados de uma fonte de dados para o fluxo.
 
 - **Busca**. Você pode consultar e modificar a sua posição no fluxo.
 
@@ -106,9 +106,9 @@ A tabela a seguir lista as tarefas comumente associadas ao armazenamento isolado
 
 O componente <xref:System.IO.FileSystemWatcher> permite observar alterações em arquivos e diretórios em seu sistema ou em qualquer computador em que você tem acesso à rede. Por exemplo, se um arquivo é modificado, convém enviar a um usuário um alerta sobre a alteração ocorrida. Quando ocorrem alterações, um ou mais eventos são acionados, armazenados em um buffer e enviados ao componente <xref:System.IO.FileSystemWatcher> para processamento.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Compor fluxos](../../../../standard/io/composing-streams.md)
 - [Arquivo e e/s de fluxo](../../../../standard/io/index.md)
 - [E/s de arquivo assíncrono](../../../../standard/io/asynchronous-file-i-o.md)
-- [Classes usadas em E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
+- [Classes usadas em E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)](classes-used-in-net-framework-file-io-and-the-file-system.md)

@@ -1,23 +1,24 @@
 ---
 title: Tipos aninhados – Guia de Programação em C#
+description: Um tipo definido em uma classe, struct ou interface é chamado de tipo aninhado em C#.
 ms.date: 02/08/2020
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: 12e44ccc1254424c152a238c8390f133550fa54c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e1c6c1e8b22b5447d43915ab02984aa13146301
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626484"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864937"
 ---
 # <a name="nested-types-c-programming-guide"></a>Tipos aninhados (Guia de Programação em C#)
 
-Um tipo definido dentro de uma [classe](../../language-reference/keywords/class.md), [struct](../../language-reference/builtin-types/struct.md), ou [interface](../../language-reference/keywords/interface.md) é chamado de um tipo aninhado. Por exemplo
+Um tipo definido em uma [classe](../../language-reference/keywords/class.md), [struct](../../language-reference/builtin-types/struct.md)ou [interface](../../language-reference/keywords/interface.md) é chamado de tipo aninhado. Por exemplo
 
 [!code-csharp[DeclareNestedClass](~/samples/snippets/csharp/objectoriented/nestedtypes.cs#DeclareNestedClass)]
 
-Independentemente de o tipo externo ser uma classe, interface ou struct, tipos aninhados padrão para [privados;](../../language-reference/keywords/private.md) eles são acessíveis apenas a partir de seu tipo contendo. No exemplo anterior, a classe `Nested` é inacessível para tipos externos.
+Independentemente de o tipo externo ser uma classe, interface ou struct, os tipos aninhados são padrão para [privado](../../language-reference/keywords/private.md); Eles são acessíveis somente de seu tipo recipiente. No exemplo anterior, a classe `Nested` é inacessível para tipos externos.
 
 Você também pode especificar um [modificador de acesso](../../language-reference/keywords/access-modifiers.md) para definir a acessibilidade de um tipo aninhado, da seguinte maneira:
 
@@ -31,7 +32,7 @@ O exemplo a seguir torna a classe `Nested` pública:
 
 [!code-csharp[PublicNestedClass](~/samples/snippets/csharp/objectoriented/nestedtypes.cs#PublicNestedClass)]
 
-O tipo aninhado ou interno pode acessar o tipo recipiente ou externo. Para acessar o tipo recipiente, passe-o como um argumento ao construtor do tipo aninhado. Por exemplo: 
+O tipo aninhado ou interno pode acessar o tipo recipiente ou externo. Para acessar o tipo recipiente, passe-o como um argumento ao construtor do tipo aninhado. Por exemplo:
 
 [!code-csharp[DeclareNestedInstance](~/samples/snippets/csharp/objectoriented/nestedtypes.cs#DeclareNestedInstance)]
 
@@ -41,9 +42,9 @@ Na declaração anterior, o nome completo da classe `Nested` é `Container.Neste
 
 [!code-csharp[UseNestedInstance](~/samples/snippets/csharp/objectoriented/nestedtypes.cs#UseNestedInstance)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Classes e structs](./index.md)
 - [Modificadores de acesso](./access-modifiers.md)
 - [Construtores](./constructors.md)

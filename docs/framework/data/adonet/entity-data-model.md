@@ -1,13 +1,14 @@
 ---
 title: Modelo de Dados de Entidade
+description: O Modelo de Dados de Entidade descreve a estrutura de dados, independentemente de sua forma armazenada, que aborda os desafios resultantes do armazenamento de dados em muitas formas.
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: ed834c57104e9f03ac337f6c1d30a0498bd42a06
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: c98b1f4559ef297f8b11051940fd91f5f6fa06fd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738416"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286734"
 ---
 # <a name="entity-data-model"></a>Modelo de Dados de Entidade
 O EDM (Modelo de Dados de Entidade) é um conjunto de conceitos que descrevem a estrutura de dados, independentemente do formato armazenado. O EDM pede emprestado o modelo de relacionamento entre entidades descrito por Peter Chen em 1976, mas também cria a partir desse modelo e estende seus usos tradicionais.  
@@ -19,13 +20,13 @@ O EDM (Modelo de Dados de Entidade) é um conjunto de conceitos que descrevem a 
 ## <a name="in-this-section"></a>Nesta seção  
  Os tópicos nesta seção descrevem os conceitos do Modelo de Dados de Entidade. Qualquer DSL que implemente o EDM deve incluir os conceitos descritos aqui. Observe que o [Entity Framework ADO.net](./ef/index.md) usa CSDL para definir modelos conceituais. Para obter mais informações, consulte [especificação CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).  
   
- [Principais conceitos do Modelo de Dados de Entidade](entity-data-model-key-concepts.md)  
+ [Conceitos chave do Modelo de Dados de Entidade](entity-data-model-key-concepts.md)  
   
  [Modelo de Dados de Entidade: namespaces](entity-data-model-namespaces.md)  
   
- [Modelo de Dados de Entidade: tipos de dados primitivos](entity-data-model-primitive-data-types.md)  
+ [Modelo de Dados de Entidade: Tipos de dados primitivos](entity-data-model-primitive-data-types.md)  
   
- [Modelo de Dados de Entidade: herança](entity-data-model-inheritance.md)  
+ [Modelo de Dados de Entidade: Herança](entity-data-model-inheritance.md)  
   
  [extremidade de associação](association-end.md)  
   
@@ -47,7 +48,7 @@ O EDM (Modelo de Dados de Entidade) é um conjunto de conceitos que descrevem a 
   
  [tipo de entidade](entity-type.md)  
   
- [facet](facet.md)  
+ [particular](facet.md)  
   
  [propriedade de chave estrangeira](foreign-key-property.md)  
   
@@ -57,11 +58,11 @@ O EDM (Modelo de Dados de Entidade) é um conjunto de conceitos que descrevem a 
   
  [propriedade de navegação](navigation-property.md)  
   
- [propriedade](property.md)  
+ [property](property.md)  
   
  [restrição de integridade referencial](referential-integrity-constraint.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Ferramentas de Modelo de Dados de Entidade de ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
 - [Visão geral do arquivo. edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))

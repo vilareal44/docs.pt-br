@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory use, monitoring
 - application domains, resource monitoring
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
-ms.openlocfilehash: 54e300bef1818fd08f27d7920eec68ee1f2c45bb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12dfdd3ac6d75a3e2a33f93d8847c963ded912e8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141385"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286087"
 ---
 # <a name="application-domain-resource-monitoring"></a>Monitoramento de recursos de domínio de aplicativo
 
@@ -29,9 +29,9 @@ O ARM pode ser habilitado de quatro maneiras: fornecendo um arquivo de configura
 
 Após a habilitação do ARM, ele começará coletando dados sobre todos os domínios do aplicativo no processo. Se um domínio do aplicativo tiver sido criado antes de o ARM ser habilitado, os dados cumulativos começarão quando o ARM for habilitado, não quando o domínio do aplicativo foi criado. Após a habilitação, o ARM não poderá ser desabilitado.
 
-- Você pode habilitar o ARM na inicialização CLR adicionando o `enabled` `true` [ \<elemento appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) ao arquivo de configuração e definindo o atributo para . Um valor de `false` (o padrão) significa apenas que o ARM não está habilitado na inicialização; você pode ativá-lo mais tarde usando um dos outros mecanismos de ativação.
+- Você pode habilitar o ARM na inicialização do CLR adicionando o [\<appDomainResourceMonitoring>](../../framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) elemento ao arquivo de configuração e definindo o `enabled` atributo como `true` . Um valor de `false` (o padrão) significa apenas que o ARM não está habilitado na inicialização; você pode ativá-lo mais tarde usando um dos outros mecanismos de ativação.
 
-- O host pode habilitar o ARM solicitando a interface de hospedagem [ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md). Após a obtenção bem-sucedida dessa interface, o ARM será habilitado.
+- O host pode habilitar o ARM solicitando a interface de hospedagem [ICLRAppDomainResourceMonitor](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md). Após a obtenção bem-sucedida dessa interface, o ARM será habilitado.
 
 - O código gerenciado pode habilitar o ARM definindo a propriedade estática (`Shared` no Visual Basic) <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> como `true`. Assim que a propriedade for definida, o ARM estará habilitado.
 
@@ -45,23 +45,23 @@ O ARM fornece o tempo total do processador usado por um domínio do aplicativo e
 
   - API gerenciada: propriedade <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType>.
 
-  - API de hospedagem: método [ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md).
+  - API de hospedagem: método [ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md).
 
-  - Eventos ETW: eventos `ThreadCreated`, `ThreadAppDomainEnter` e `ThreadTerminated`. Para saber mais sobre provedores e palavras-chave, consulte "Eventos de monitoramento de recursos AppDomain" em [Eventos ETW do CLR](../../../docs/framework/performance/clr-etw-events.md).
+  - Eventos ETW: eventos `ThreadCreated`, `ThreadAppDomainEnter` e `ThreadTerminated`. Para saber mais sobre provedores e palavras-chave, consulte "Eventos de monitoramento de recursos AppDomain" em [Eventos ETW do CLR](../../framework/performance/clr-etw-events.md).
 
 - **Total de alocações gerenciadas feitas por um domínio do aplicativo durante seu ciclo de vida, em bytes**: o total de alocações nem sempre reflete o uso da memória por um domínio do aplicativo, pois os objetos alocados podem ser de curta duração. No entanto, se um aplicativo alocar e liberar grandes quantidades de objetos, o custo das alocações poderá ser considerável.
 
   - API gerenciada: propriedade <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType>.
 
-  - API de hospedagem: método [ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md).
+  - API de hospedagem: método [ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md).
 
   - Eventos ETW: evento `AppDomainMemAllocated`, campo `Allocated`.
 
-- **Memória gerenciada, em bytes, referenciada por um domínio do aplicativo e que sobreviveu à coleta de bloqueio completa mais recente**: esse número será preciso somente após uma coleta de bloqueio completa. (Isso contrasta com as coleções simultâneas, que ocorrem em segundo plano e não bloqueiam a aplicação.) Por exemplo, <xref:System.GC.Collect?displayProperty=nameWithType> a sobrecarga do método causa uma coleta completa e bloqueada.
+- **Memória gerenciada, em bytes, referenciada por um domínio do aplicativo e que sobreviveu à coleta de bloqueio completa mais recente**: esse número será preciso somente após uma coleta de bloqueio completa. (Isso é diferente de coleções simultâneas, que ocorrem em segundo plano e não bloqueiam o aplicativo.) Por exemplo, a <xref:System.GC.Collect?displayProperty=nameWithType> sobrecarga do método causa uma coleção de bloqueio completa.
 
   - API gerenciada: propriedade <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>.
 
-  - API de hospedagem: método [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), parâmetro `pAppDomainBytesSurvived`.
+  - API de hospedagem: método [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), parâmetro `pAppDomainBytesSurvived`.
 
   - Eventos ETW: evento `AppDomainMemSurvived`, campo `Survived`.
 
@@ -69,7 +69,7 @@ O ARM fornece o tempo total do processador usado por um domínio do aplicativo e
 
   - API gerenciada: propriedade <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType>.
 
-  - API de hospedagem: método [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), parâmetro `pTotalBytesSurvived`.
+  - API de hospedagem: método [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), parâmetro `pTotalBytesSurvived`.
 
   - Eventos ETW: evento `AppDomainMemSurvived`, campo `ProcessSurvived`.
 
@@ -85,11 +85,11 @@ Como alternativa, você pode chamar o método <xref:System.GC.CollectionCount%2A
 
 #### <a name="hosting-api"></a>API de hospedagem
 
-Se você usar a API de hospedagem não gerenciada, o host deverá passar ao CLR uma implementação da interface [IHostGCManager](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md). O CLR chama o método [Ihostgcmanager](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) quando ele retoma a execução de threads que foram suspensos durante uma coleta. O CLR passa a geração da coleta concluída como um parâmetro do método, para que o host possa determinar se a coleta foi completa ou parcial. Sua implementação do método [Ihostgcmanager](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) pode consultar a existência de memória restante, a fim de certificar-se de que as contagens são recuperadas assim que forem atualizadas.
+Se você usar a API de hospedagem não gerenciada, o host deverá passar ao CLR uma implementação da interface [IHostGCManager](../../framework/unmanaged-api/hosting/ihostgcmanager-interface.md). O CLR chama o método [Ihostgcmanager](../../framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) quando ele retoma a execução de threads que foram suspensos durante uma coleta. O CLR passa a geração da coleta concluída como um parâmetro do método, para que o host possa determinar se a coleta foi completa ou parcial. Sua implementação do método [Ihostgcmanager](../../framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) pode consultar a existência de memória restante, a fim de certificar-se de que as contagens são recuperadas assim que forem atualizadas.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
-- [Interface ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [\<appDomínioDomínioMonitorando>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
-- [Eventos ETW no CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [Interface ICLRAppDomainResourceMonitor](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [\<appDomainResourceMonitoring>](../../framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
+- [Eventos ETW no CLR](../../framework/performance/clr-etw-events.md)

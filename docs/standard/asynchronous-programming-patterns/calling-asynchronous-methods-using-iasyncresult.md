@@ -11,25 +11,25 @@ helpviewer_keywords:
 - IAsyncResult interface, calling asynchronous methods
 - stopping asynchronous operations
 ms.assetid: 07fba116-045b-473c-a0b7-acdbeb49861f
-ms.openlocfilehash: 2a9ce8bc2d2edd09ef79c060b9bb173d4d054d02
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 88ca1b5bfbb8bfbdfef01dea8af07c5d56784c5c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121307"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289909"
 ---
 # <a name="calling-asynchronous-methods-using-iasyncresult"></a>Chamando métodos assíncronos usando IAsyncResult
 Tipos em bibliotecas de classes de terceiros e no .NET Framework podem fornecer métodos que permitem que um aplicativo continue a ser executado durante o desempenho de operações assíncronas em threads diferentes do thread principal do aplicativo. As seções a seguir descrevem e fornecem exemplos de código que demonstram diferentes maneiras de chamar métodos assíncronos que usam o padrão de design <xref:System.IAsyncResult>.  
   
-- [Bloqueando a execução do aplicativo terminando uma operação de sincronização](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
+- [Bloqueio da execução do aplicativo encerrando uma operação assíncrona](blocking-application-execution-by-ending-an-async-operation.md).  
   
-- [Bloqueando a execução do aplicativo usando um AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
+- [Bloqueando a execução do aplicativo usando um AsyncWaitHandle](blocking-application-execution-using-an-asyncwaithandle.md).  
   
-- [Votação para o Status de uma Operação Assíncrona](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md).  
+- [Sondando o status de uma operação assíncrona](polling-for-the-status-of-an-asynchronous-operation.md).  
   
-- [Usando um Delegado AsyncCallback para acabar com uma operação assíncrona](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
+- [Usando um delegado AsyncCallback para finalizar uma operação assíncrona](using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [EAP (Padrão Assíncrono baseado em Evento)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
-- [Visão geral do padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [EAP (Padrão Assíncrono baseado em Evento)](event-based-asynchronous-pattern-eap.md)
+- [Visão geral do padrão assíncrono baseado em evento](event-based-asynchronous-pattern-overview.md)

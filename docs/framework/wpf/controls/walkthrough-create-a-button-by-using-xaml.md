@@ -1,22 +1,23 @@
 ---
 title: 'Instruções passo a passo: criar um botão usando XAML'
+description: Use este passo a passos para aprender a criar um botão animado para uso em um aplicativo Windows Presentation Foundation usando XAML.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: a8cc227703e81e5de9dea7e44e10dfecca2cd05c
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 136d1ad5d6fefd70f0d977e5287ae75f06c52d36
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646477"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164841"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Instruções passo a passo: criar um botão usando XAML
 
-O objetivo deste passo a passo é aprender a criar um botão animado para uso em um aplicativo da Windows Presentation Foundation (WPF). Este passo a passo usa estilos e um modelo para criar um recurso de botão personalizado que permite a reutilização de código e separação da lógica do botão da declaração do botão. Este passo a passo é escrito inteiramente em [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].
+O objetivo deste tutorial é aprender a criar um botão animado para uso em um aplicativo Windows Presentation Foundation (WPF). Este passo a passo usa estilos e um modelo para criar um recurso de botão personalizado que permite a reutilização de código e separação da lógica do botão da declaração do botão. Este passo a passo é escrito inteiramente em [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].
 
 > [!IMPORTANT]
-> Este passo a passo orienta você através das etapas para [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] criar o aplicativo digitando ou copiando e colando no Visual Studio. Se você preferir aprender a usar um designer para criar o mesmo aplicativo, consulte [Criar um botão usando o Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md).
+> Este tutorial explica as etapas para criar o aplicativo digitando ou copiando e colando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] no Visual Studio. Se você preferir saber como usar um designer para criar o mesmo aplicativo, consulte [criar um botão usando o Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md).
 
 A figura a seguir mostra os botões concluídos.
 
@@ -32,7 +33,7 @@ Vamos começar criando um novo projeto e adicionando alguns botões à janela.
 
 2. **Criar um novo projeto WPF:** no menu **Arquivo**, aponte para **Novo** e, em seguida, clique em **Projeto**. Encontre o modelo do **Aplicativo do Windows (WPF)** e nomeie o projeto como "AnimatedButton". Isso criará o esqueleto para o aplicativo.
 
-3. **Adicionar botões padrão básicos:** todos os arquivos necessários para esse passo a passo são fornecidos pelo modelo. Abra o arquivo Window1.xaml, clicando duas vezes nele no Gerenciador de Soluções. Por padrão, há <xref:System.Windows.Controls.Grid> um elemento no Window1.xaml. Remova <xref:System.Windows.Controls.Grid> o elemento e adicione alguns botões à [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] página digitando ou copiando e colando o seguinte código destacado para Window1.xaml:
+3. **Adicionar botões padrão básicos:** todos os arquivos necessários para esse passo a passo são fornecidos pelo modelo. Abra o arquivo Window1.xaml, clicando duas vezes nele no Gerenciador de Soluções. Por padrão, há um <xref:System.Windows.Controls.Grid> elemento em Window1. XAML. Remova o <xref:System.Windows.Controls.Grid> elemento e adicione alguns botões à [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] página digitando ou copiando e colando o seguinte código realçado em Window1. XAML:
 
     ```xaml
     <Window x:Class="AnimatedButton.Window1"
@@ -57,7 +58,7 @@ Vamos começar criando um novo projeto e adicionando alguns botões à janela.
 
 ## <a name="set-basic-properties"></a>Definir propriedades básicas
 
-Em seguida, vamos definir algumas propriedades para controlar a aparência e o layout desses botões. Em vez de definir propriedades em cada botão, você usará recursos para definir propriedades de botão para todo o aplicativo. Os recursos de aplicação são conceitualmente semelhantes às Folhas de Estilo em cascata externas (CSS) para páginas da Web; no entanto, os recursos são muito mais poderosos do que o Cascading Style Sheets (CSS), como você verá no final deste passo a passo. Para saber mais sobre recursos, consulte [Recursos XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).
+Em seguida, vamos definir algumas propriedades para controlar a aparência e o layout desses botões. Em vez de definir propriedades em cada botão, você usará recursos para definir propriedades de botão para todo o aplicativo. Os recursos do aplicativo são conceitualmente semelhantes a folhas de estilos em cascata externos (CSS) para páginas da Web; no entanto, os recursos são muito mais potentes que o folhas de estilos em cascata (CSS), como você verá no final deste guia. Para saber mais sobre recursos, consulte [Recursos XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).
 
 ### <a name="to-use-styles-to-set-basic-properties-on-the-buttons"></a>Usar estilos para definir propriedades básicas nos botões
 
@@ -77,7 +78,7 @@ Em seguida, vamos definir algumas propriedades para controlar a aparência e o l
 
      O escopo do recurso é determinado pelo local em que você define o recurso. A definição de recursos em `Application.Resources` no arquivo app.xaml permite que o recurso seja usado de qualquer local no aplicativo. Para saber mais sobre como definir o escopo de seus recursos, consulte [Recursos XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).
 
-2. **Criar um estilo e definir valores básicos da propriedade com ele:** adicione a seguinte marcação ao bloco `Application.Resources`. Esta marcação <xref:System.Windows.Style> cria um que se aplica a todos <xref:System.Windows.FrameworkElement.Width%2A> os botões do aplicativo, <xref:System.Windows.FrameworkElement.Margin%2A> definindo os botões para 90 e para 10:
+2. **Criar um estilo e definir valores básicos da propriedade com ele:** adicione a seguinte marcação ao bloco `Application.Resources`. Essa marcação cria um <xref:System.Windows.Style> que se aplica a todos os botões no aplicativo, definindo o <xref:System.Windows.FrameworkElement.Width%2A> dos botões como 90 e o <xref:System.Windows.FrameworkElement.Margin%2A> para 10:
 
     ```xaml
     <Application.Resources>
@@ -88,11 +89,11 @@ Em seguida, vamos definir algumas propriedades para controlar a aparência e o l
     </Application.Resources>
     ```
 
-     A <xref:System.Windows.Style.TargetType%2A> propriedade especifica que o estilo se <xref:System.Windows.Controls.Button>aplica a todos os objetos do tipo . Cada <xref:System.Windows.Setter> um define um <xref:System.Windows.Style>valor de propriedade diferente para o . Portanto, neste ponto, cada botão no aplicativo tem uma largura de 90 e uma margem de 10.  Se você pressionar F5 para executar o aplicativo, você verá a seguinte janela.
+     A <xref:System.Windows.Style.TargetType%2A> propriedade especifica que o estilo se aplica a todos os objetos do tipo <xref:System.Windows.Controls.Button> . Cada <xref:System.Windows.Setter> define um valor de propriedade diferente para o <xref:System.Windows.Style> . Portanto, neste ponto, cada botão no aplicativo tem uma largura de 90 e uma margem de 10.  Se você pressionar F5 para executar o aplicativo, você verá a seguinte janela.
 
-     ![Botões com largura de 90 e uma margem de 10](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")
+     ![Botões com uma largura de 90 e uma margem de 10](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")
 
-     Há muito mais que você pode fazer com estilos, incluindo uma variedade de maneiras de ajustar quais objetos são direcionados, especificando valores da propriedade complexos e até mesmo usar estilos como entrada para outros estilos. Para obter mais informações, consulte [Styling e Templating](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
+     Há muito mais que você pode fazer com estilos, incluindo uma variedade de maneiras de ajustar quais objetos são direcionados, especificando valores da propriedade complexos e até mesmo usar estilos como entrada para outros estilos. Para obter mais informações, consulte [estilizando e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 3. **Definir um valor da propriedade de estilo para um recurso:** os recursos proporcionam uma maneira simples de reutilizar objetos e valores comumente definidos. É especialmente útil definir valores complexos usando recursos para tornar seu código mais modular. Adicione a seguinte marcação realçada ao app.xaml.
 
@@ -111,11 +112,11 @@ Em seguida, vamos definir algumas propriedades para controlar a aparência e o l
     </Application.Resources>
     ```
 
-     Logo após o bloco `Application.Resources`, você criou um recurso chamado "GrayBlueGradientBrush". Este recurso define um gradiente horizontal. Esse recurso pode ser usado como um valor de propriedade de qualquer <xref:System.Windows.Controls.Control.Background%2A> lugar do aplicativo, incluindo dentro do setter de estilo de botão para a propriedade. Agora, todos os botões <xref:System.Windows.Controls.Control.Background%2A> têm um valor de propriedade deste gradiente.
+     Logo após o bloco `Application.Resources`, você criou um recurso chamado "GrayBlueGradientBrush". Este recurso define um gradiente horizontal. Esse recurso pode ser usado como um valor de propriedade de qualquer lugar no aplicativo, incluindo dentro do setter de estilo do botão para a <xref:System.Windows.Controls.Control.Background%2A> propriedade. Agora, todos os botões têm um <xref:System.Windows.Controls.Control.Background%2A> valor de propriedade desse gradiente.
 
      Pressione F5 para executar o aplicativo. Ele deverá ter a seguinte aparência.
 
-     ![Botões com fundo gradiente](./media/custom-button-animatedbutton-3.gif "custom_button_AnimatedButton_3")
+     ![Botões com plano de fundo de gradiente](./media/custom-button-animatedbutton-3.gif "custom_button_AnimatedButton_3")
 
 ## <a name="create-a-template-that-defines-the-look-of-the-button"></a>Criar um modelo que define a aparência do botão
 
@@ -125,7 +126,7 @@ Até agora, o controle de como os botões se parecem no aplicativo esteve restri
 
 ### <a name="to-use-the-template-to-define-the-look-of-the-button"></a>Para usar o modelo para definir a aparência do botão
 
-1. **Configure o modelo:** Como os <xref:System.Windows.Controls.Button> controles <xref:System.Windows.Controls.Control.Template%2A> como ter um imóvel, você pode definir o valor da <xref:System.Windows.Style> propriedade <xref:System.Windows.Setter>do modelo, assim como os outros valores de propriedade que definimos em um uso de um . Adicione a seguinte marcação realçada ao seu estilo de botão.
+1. **Configurar o modelo:** Como os controles como <xref:System.Windows.Controls.Button> têm uma <xref:System.Windows.Controls.Control.Template%2A> propriedade, você pode definir o valor da propriedade Template da mesma forma que os outros valores de propriedade que definimos em um <xref:System.Windows.Style> usando um <xref:System.Windows.Setter> . Adicione a seguinte marcação realçada ao seu estilo de botão.
 
     ```xaml
     <Application.Resources>
@@ -148,7 +149,7 @@ Até agora, o controle de como os botões se parecem no aplicativo esteve restri
     </Application.Resources>
     ```
 
-2. **Alterar apresentação do botão:** neste ponto, você precisa definir o modelo. Adicione a seguinte marcação realçada. Esta marcação especifica <xref:System.Windows.Shapes.Rectangle> dois elementos com bordas <xref:System.Windows.Controls.DockPanel>arredondadas, seguido sumido por um . O <xref:System.Windows.Controls.DockPanel> é usado <xref:System.Windows.Controls.ContentPresenter> para hospedar o botão. A <xref:System.Windows.Controls.ContentPresenter> exibe o conteúdo do botão. Neste passo a passo, o conteúdo é texto ("Botão 1", "Botão 2" e "Botão 3"). Todos os componentes do modelo (os <xref:System.Windows.Controls.DockPanel>retângulos e <xref:System.Windows.Controls.Grid>os ) estão dispostos dentro de um .
+2. **Alterar apresentação do botão:** neste ponto, você precisa definir o modelo. Adicione a seguinte marcação realçada. Essa marcação especifica dois <xref:System.Windows.Shapes.Rectangle> elementos com bordas arredondadas, seguidos por um <xref:System.Windows.Controls.DockPanel> . O <xref:System.Windows.Controls.DockPanel> é usado para hospedar o <xref:System.Windows.Controls.ContentPresenter> do botão. Um <xref:System.Windows.Controls.ContentPresenter> exibe o conteúdo do botão. Neste passo a passo, o conteúdo é texto ("Botão 1", "Botão 2" e "Botão 3"). Todos os componentes do modelo (os retângulos e os <xref:System.Windows.Controls.DockPanel> ) são dispostos dentro de um <xref:System.Windows.Controls.Grid> .
 
     ```xaml
     <Setter.Value>
@@ -189,7 +190,7 @@ Até agora, o controle de como os botões se parecem no aplicativo esteve restri
     <!-- Styles and other resources below here. -->
     ```
 
-     Esses recursos são <xref:System.Windows.Shapes.Shape.Fill%2A> usados como para um retângulo que inserimos no <xref:System.Windows.Controls.Grid> modelo do botão. Adicione a seguinte marcação realçada ao modelo.
+     Esses recursos são usados como o <xref:System.Windows.Shapes.Shape.Fill%2A> para um retângulo que inserimos no <xref:System.Windows.Controls.Grid> do modelo de botão. Adicione a seguinte marcação realçada ao modelo.
 
     ```xaml
     <Setter.Value>
@@ -246,7 +247,7 @@ Até agora, o controle de como os botões se parecem no aplicativo esteve restri
     </Setter.Value>
     ```
 
-     Observe que <xref:System.Windows.UIElement.Opacity%2A> o retângulo `x:Name` com a propriedade de "glassCube" é 0, então quando você executa a amostra, você não vê o retângulo de vidro sobreposto por cima. Isso é assim porque depois adicionaremos gatilhos ao modelo para quando o usuário interagir com o botão. No entanto, você pode ver como <xref:System.Windows.UIElement.Opacity%2A> o botão se parece agora, alterando o valor para 1 e executando o aplicativo. Consulte a figura a seguir. Antes de seguir para o <xref:System.Windows.UIElement.Opacity%2A> próximo passo, mude a parte de volta para 0.
+     Observe que o <xref:System.Windows.UIElement.Opacity%2A> do retângulo com a `x:Name` propriedade de "glassCube" é 0, portanto, ao executar o exemplo, você não verá o retângulo de vidro sobreposto na parte superior. Isso é assim porque depois adicionaremos gatilhos ao modelo para quando o usuário interagir com o botão. No entanto, você pode ver a aparência do botão agora alterando o <xref:System.Windows.UIElement.Opacity%2A> valor para 1 e executando o aplicativo. Consulte a figura a seguir. Antes de prosseguir para a próxima etapa, altere de <xref:System.Windows.UIElement.Opacity%2A> volta para 0.
 
      ![Botões personalizados que foram criados usando XAML](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")
 
@@ -254,7 +255,7 @@ Até agora, o controle de como os botões se parecem no aplicativo esteve restri
 
 Nesta seção, você criará gatilhos de propriedade e gatilhos de evento para alterar os valores da propriedade e executar animações em resposta às ações do usuário, como mover o ponteiro do mouse sobre o botão e clicar.
 
-Uma maneira fácil de adicionar interatividade (passar o mouse, soltar o mouse, clicar e assim por diante) é definir gatilhos dentro de seu modelo ou estilo. Para criar <xref:System.Windows.Trigger>um , você define uma "condição" de propriedade, tais como: O valor da propriedade do botão <xref:System.Windows.UIElement.IsMouseOver%2A> é igual a `true`. Em seguida, você define setters (ações) que ocorrem quando a condição do gatilho for verdadeira.
+Uma maneira fácil de adicionar interatividade (passar o mouse, soltar o mouse, clicar e assim por diante) é definir gatilhos dentro de seu modelo ou estilo. Para criar um <xref:System.Windows.Trigger> , você define uma propriedade "Condition", como: o <xref:System.Windows.UIElement.IsMouseOver%2A> valor da Propriedade Button é igual a `true` . Em seguida, você define setters (ações) que ocorrem quando a condição do gatilho for verdadeira.
 
 ### <a name="to-create-button-interactivity"></a>Para criar interatividade de botão
 
@@ -366,7 +367,7 @@ Uma maneira fácil de adicionar interatividade (passar o mouse, soltar o mouse, 
 
      Pressione F5 para executar o aplicativo e clique em um dos botões. Observe que o botão permanece realçado depois que você clica nele, porque ele ainda tem foco. Se você clicar em outro botão, o novo botão obtém o foco e o outro perde o foco.
 
-4. **Adicione animações para** <xref:System.Windows.UIElement.MouseEnter> **e** <xref:System.Windows.UIElement.MouseLeave> **:** Em seguida adicionamos algumas animações aos gatilhos.   Adicione a seguinte marcação em qualquer local dentro do bloco `ControlTemplate.Triggers`.
+4. **Adicionar animações para** <xref:System.Windows.UIElement.MouseEnter> **e** <xref:System.Windows.UIElement.MouseLeave> **:** Em seguida, adicionaremos algumas animações aos gatilhos.   Adicione a seguinte marcação em qualquer local dentro do bloco `ControlTemplate.Triggers`.
 
     ```xaml
     <!-- Animations that start when mouse enters and leaves button. -->
@@ -399,9 +400,9 @@ Uma maneira fácil de adicionar interatividade (passar o mouse, soltar o mouse, 
 
      O retângulo de vidro é reduzido quando o ponteiro do mouse passa sobre o botão e retorna ao tamanho normal quando o ponteiro sai.
 
-     Existem duas animações que são acionadas quando<xref:System.Windows.UIElement.MouseEnter> o ponteiro passa por cima do botão (o evento é levantado). Essas animações reduzem o retângulo de vidro ao longo dos eixos X e Y. Observe as propriedades <xref:System.Windows.Media.Animation.DoubleAnimation> nos <xref:System.Windows.Media.Animation.Timeline.Duration%2A> <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>elementos — e . O <xref:System.Windows.Media.Animation.Timeline.Duration%2A> especifica que a animação ocorre mais <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> de meio segundo, e especifica que o vidro encolhe 10%.
+     Há duas animações disparadas quando o ponteiro passa sobre o botão (o <xref:System.Windows.UIElement.MouseEnter> evento é gerado). Essas animações reduzem o retângulo de vidro ao longo dos eixos X e Y. Observe as propriedades nos <xref:System.Windows.Media.Animation.DoubleAnimation> elementos — <xref:System.Windows.Media.Animation.Timeline.Duration%2A> e <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> . O <xref:System.Windows.Media.Animation.Timeline.Duration%2A> especifica que a animação ocorre em meio segundo e <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> especifica que o vidro é reduzido por 10%.
 
-     O segundo gatilho<xref:System.Windows.UIElement.MouseLeave>de evento ( ) simplesmente pára o primeiro. Quando você <xref:System.Windows.Media.Animation.Storyboard>para um , todas as propriedades animadas retornam aos seus valores padrão. Portanto, quando o usuário move o ponteiro para fora do botão, o botão volta à forma que estava antes de o ponteiro do mouse ser passado sobre o botão. Para obter mais informações sobre animações, consulte [Visão geral de animação](../graphics-multimedia/animation-overview.md).
+     O segundo gatilho de evento ( <xref:System.Windows.UIElement.MouseLeave> ) simplesmente interrompe o primeiro. Quando você interrompe um <xref:System.Windows.Media.Animation.Storyboard> , todas as propriedades animadas retornam aos seus valores padrão. Portanto, quando o usuário move o ponteiro para fora do botão, o botão volta à forma que estava antes de o ponteiro do mouse ser passado sobre o botão. Para obter mais informações sobre animações, consulte [Visão geral de animação](../graphics-multimedia/animation-overview.md).
 
 5. **Adicionar uma animação para quando o botão é clicado:** a etapa final é adicionar um gatilho para quando o usuário clica no botão. Adicione a seguinte marcação em qualquer local dentro do bloco `ControlTemplate.Triggers`:
 
@@ -426,15 +427,15 @@ Uma maneira fácil de adicionar interatividade (passar o mouse, soltar o mouse, 
 ## <a name="summary"></a>Resumo
  Neste passo a passo, você realizou os seguintes exercícios:
 
-- Direcionado a <xref:System.Windows.Style> um tipo<xref:System.Windows.Controls.Button>de objeto ().
+- Direcionado <xref:System.Windows.Style> a para um tipo de objeto ( <xref:System.Windows.Controls.Button> ).
 
-- Propriedades básicas controladas dos botões em <xref:System.Windows.Style>toda a aplicação usando o .
+- Propriedades básicas controladas dos botões em todo o aplicativo usando o <xref:System.Windows.Style> .
 
-- Criou recursos como gradientes para usar para <xref:System.Windows.Style> valores de propriedade dos setters.
+- Recursos criados, como gradientes, a serem usados para valores de propriedade dos <xref:System.Windows.Style> setters.
 
 - Personalizou a aparência dos botões em todo o aplicativo, aplicando um modelo aos botões.
 
-- Comportamento personalizado para os botões em resposta às <xref:System.Windows.UIElement.MouseEnter> <xref:System.Windows.UIElement.MouseLeave>ações <xref:System.Windows.Controls.Primitives.ButtonBase.Click>do usuário (como , e ) que incluíam efeitos de animação.
+- Comportamento personalizado para os botões em resposta a ações do usuário (como <xref:System.Windows.UIElement.MouseEnter> , <xref:System.Windows.UIElement.MouseLeave> e <xref:System.Windows.Controls.Primitives.ButtonBase.Click> ) que incluíam efeitos de animação.
 
 ## <a name="see-also"></a>Confira também
 

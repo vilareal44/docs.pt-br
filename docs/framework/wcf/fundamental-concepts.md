@@ -1,5 +1,6 @@
 ---
 title: Conceitos fundamentais do Windows Communication Foundation
+description: Saiba mais sobre os conceitos básicos da arquitetura do Windows Communication Foundation (WCF) com esta explicação de alto nível.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], concepts
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 360479a2ba17c4542d61a737856d23992296e276
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 93e75942487a1a81a8b0e8ecd8d9d666610152dc
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802306"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244668"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Conceitos fundamentais do Windows Communication Foundation
 
-Este documento fornece uma visão de alto nível da arquitetura do WCF (Windows Communication Foundation) e de sua arquitetura. Ele destina-se a explicar os principais conceitos e como eles se adaptam entre si. Para obter um tutorial sobre como criar a versão mais simples de um serviço e cliente do WCF, consulte [introdução tutorial](getting-started-tutorial.md). Para aprender sobre a programação do WCF, consulte [programação básica do WCF](basic-wcf-programming.md).
+Este documento fornece uma exibição de alto nível da arquitetura do Windows Communication Foundation (WCF). Ele destina-se a explicar os principais conceitos e como eles se adaptam entre si. Para obter um tutorial sobre como criar a versão mais simples de um serviço e cliente do WCF, consulte [introdução tutorial](getting-started-tutorial.md). Para aprender sobre a programação do WCF, consulte [programação básica do WCF](basic-wcf-programming.md).
 
 ## <a name="wcf-fundamentals"></a>Princípios básicos do WCF
 
@@ -80,7 +81,7 @@ O endereço do ponto de extremidade permite que você crie endereços exclusivos
 HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ```
 
-**Associação**  
+**Vinculação**  
  Define como um ponto de extremidade comunica-se com o mundo. Ele é construído de um conjunto de componentes chamados elementos de associação que “empilham” um sobre o outro para criar a infraestrutura de comunicação. No mínimo, uma associação define o transporte (como HTTP ou TCP) e a codificação que está sendo usada (como texto ou binário). Uma associação pode conter elementos de associação que especificam detalhes como mecanismos de segurança usados para proteger mensagens, ou o padrão de mensagem usado por um ponto de extremidade. Para obter mais informações, consulte [Configurando serviços](configuring-services.md).
 
 **Elemento Binding**  
@@ -90,7 +91,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Um componente que controla vários aspectos de tempo de execução de um serviço, um ponto de extremidade, uma operação específico ou um cliente. Os comportamentos são agrupados de acordo com o escopo: os comportamentos comuns afetam todos os pontos de extremidade globalmente, os aspectos de serviço afetam somente aspectos relacionados a serviço, os comportamentos de ponto de extremidade afetam somente as propriedades relacionadas a ponto de extremidade e os comportamentos de nível de operação afetam operações específicas. Por exemplo, um comportamento do serviço é a limitação, que especifica como um serviço reage quando um excesso de mensagens ameaça sobrecarregar seus recursos de manipulação. Um comportamento de ponto de extremidade, por outro lado, controla somente os aspectos que são relevantes para os pontos de extremidade, por exemplo, como e onde localizar uma credencial de segurança.
 
 **Associações fornecidas pelo sistema**  
- WCF inclui um número o sistema forneceu associações. Essas são coleções de elementos de associação que são otimizados para cenários específicos. Por exemplo, a <xref:System.ServiceModel.WSHttpBinding> é projetada para interoperabilidade com serviços que implementam várias especificações de WS-\*. Essas associações predefinidas economizam tempo apresentando somente essas opções que podem ser corretamente aplicadas ao cenário específico. Se uma associação predefinida não atender aos requisitos, você poderá criar sua própria associação personalizada.
+ WCF inclui um número o sistema forneceu associações. Essas são coleções de elementos de associação que são otimizados para cenários específicos. Por exemplo, o <xref:System.ServiceModel.WSHttpBinding> é projetado para interoperabilidade com serviços que implementam várias \* especificações do WS. Essas associações predefinidas economizam tempo apresentando somente essas opções que podem ser corretamente aplicadas ao cenário específico. Se uma associação predefinida não atender aos requisitos, você poderá criar sua própria associação personalizada.
 
 **Configuração versus codificação**  
  O controle de um aplicativo pode ser feito por meio de codificação, configuração ou uma combinação de ambos. A configuração tem a vantagem de permitir que alguém que não seja o desenvolvedor (por exemplo, um administrador de rede) defina o cliente e os parâmetros de serviço após o código ser escrito e sem ter que recompilar. A configuração permite que você não apenas defina os valores como endereços de ponto de extremidade, mas também permite um controle adicional para adicionar pontos de extremidade, associações e comportamentos. A codificação permite que o desenvolvedor mantenha o controle restrito sobre todos os componentes de serviço ou cliente, e as configurações feitas podem ser inspecionadas e, se necessário, substituídas pelo código.
@@ -113,7 +114,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 **Contrato de dados**  
  As descrições nos metadados dos tipos de dados que um serviço usa. Isso permite que outros interoperem com o serviço. Os tipos de dados podem ser usados em qualquer parte de uma mensagem, por exemplo, como parâmetros ou tipos de retorno. Se o serviço estiver usando somente tipos simples, não há necessidade de usar explicitamente contratos de dados.
 
-**Hospedagem**  
+**Hosting**  
  Um serviço deve ser hospedado em algum processo. Um _host_ é um aplicativo que controla o tempo de vida do serviço. Os serviços podem ser auto-hospedados ou gerenciados por um processo de hospedagem existente.
 
 **Serviço auto-hospedado**  
@@ -128,23 +129,23 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 **Aplicativo cliente**  
  Um programa que troca mensagens com um ou mais pontos de extremidade. O aplicativo cliente começa criando uma instância de um cliente de WCF e chamando métodos de cliente do windows. É importante observar que um único aplicativo pode ser um cliente e um serviço.
 
-**Canal**  
+**Channel**  
  Uma implementação concreta de um elemento de associação. A associação representa a configuração e o canal é a implementação associada com essa configuração. Portanto, há um canal associado com cada elemento de associação. O canais empilham-se uns sobre os outros para criar a implementação concreta da associação: a pilha do canal.
 
-**Cliente WCF**  
+**Cliente de WCF**  
  Uma construção de aplicativo cliente que expõe as operações de serviço como métodos (na linguagem de programação .NET Framework de sua escolha, como Visual Basic ou Visual C#). Qualquer aplicativo pode hospedar um cliente de WCF, incluindo um aplicativo que hospeda um serviço. Portanto, é possível criar um serviço que inclui clientes de WCF de outros serviços.
 
-Um cliente WCF pode ser gerado automaticamente usando a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) e apontando-o para um serviço em execução que publica metadados.
+Um cliente WCF pode ser gerado automaticamente usando a [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) e apontando-o para um serviço em execução que publica metadados.
 
 **Metadados**  
- Em um serviço, descreve as características do serviço que uma entidade externa precisa entender para se comunicar com o serviço. Os metadados podem ser consumidos pela [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar um cliente WCF e acompanhar a configuração que um aplicativo cliente pode usar para interagir com o serviço.
+ Em um serviço, descreve as características do serviço que uma entidade externa precisa entender para se comunicar com o serviço. Os metadados podem ser consumidos pela [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar um cliente WCF e acompanhar a configuração que um aplicativo cliente pode usar para interagir com o serviço.
 
 Os metadados expostos pelo serviço incluem os documentos XML do esquema, que definem o contrato de dados do serviço, e os documentos WSDL, que descrevem os métodos do serviço.
 
 Quando ativados, os metadados para o serviço são gerados automaticamente pela inspecionando o serviço e seus pontos de extremidade. Para publicar metadados de um serviço, você deverá explicitamente ativar o comportamento dos metadados.
 
-**Security**  
- No WCF, inclui confidencialidade (criptografia de mensagens para evitar a espionagem), integridade (o meio de detecção de violação com a mensagem), autenticação (o meio de validação de servidores e clientes) e autorização (o controle de acesso a recursos). Essas funções são fornecidas aproveitando os mecanismos de segurança existentes, como o TLS sobre HTTP (também conhecido como HTTPS), ou implementando uma ou mais das várias especificações de segurança do WS-\*.
+**Segurança**  
+ No WCF, inclui confidencialidade (criptografia de mensagens para evitar a espionagem), integridade (o meio de detecção de violação com a mensagem), autenticação (o meio de validação de servidores e clientes) e autorização (o controle de acesso a recursos). Essas funções são fornecidas aproveitando os mecanismos de segurança existentes, como o TLS sobre HTTP (também conhecido como HTTPS) ou implementando uma ou mais das várias especificações do WS- \* Security.
 
 **Modo de segurança de transporte**  
  Especifica que a confidencialidade, a integridade e a autenticação são fornecidas pelos mecanismos da camada de transporte (como HTTPS). Ao usar um transporte como HTTPS, esse modo tem a vantagem de ser eficiente no desempenho, além de bem-compreendido devido à sua predominância na Internet. A desvantagem é que esse tipo de segurança é aplicado separadamente em cada salto no caminho de comunicação, tornando a comunicação suscetível a um ataque de intermediários.
@@ -155,10 +156,10 @@ Quando ativados, os metadados para o serviço são gerados automaticamente pela 
 **Transporte com o modo de segurança de credencial da mensagem**  
  Especifica o uso da camada de transporte para fornecer confidencialidade, autenticação e integridade de mensagens, embora cada uma das mensagens possa conter várias credenciais (reivindicações) exigidas pelos destinatários da mensagem.
 
-**WS-\***  
+**Federation\***  
  Taquigrafia para o conjunto crescente de especificações de (WS) de serviço Web, como WS- segurança, WS - ReliableMessaging, e assim por diante, que são implementadas em windows.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [O que é o Windows Communication Foundation](whats-wcf.md)
 - [Arquitetura do Windows Communication Foundation](architecture.md)

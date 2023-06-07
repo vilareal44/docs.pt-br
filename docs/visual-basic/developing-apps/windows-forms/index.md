@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 1aa1edf0130e388c6cc87662d83591f41a8e2325
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 11216186a28509e1f10bafa1b24a440bcedaeeb6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349158"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398240"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Noções básicas de Aplicativo do Windows Forms (Visual Basic)
 
@@ -38,15 +38,15 @@ Quando um usuário faz algo em seu formulário ou em um de seus controles, ele g
 
 ### <a name="controls"></a>Controles
 
-O Windows Forms contém uma variedade de controles que você pode colocar em formulários: controles que exibem caixas de texto, botões, caixas suspensas, botões de opção e até mesmo páginas da Web. Para obter uma lista de todos os controles que podem ser usados em um formulário, consulte [Controles que podem ser usados nos Windows Forms](../../../framework/winforms/controls/controls-to-use-on-windows-forms.md). Se um controle existente não atender às suas necessidades, Windows Forms também dará suporte à criação de seus próprios controles <xref:System.Windows.Forms.UserControl> personalizados usando a classe.
+O Windows Forms contém uma variedade de controles que você pode colocar em formulários: controles que exibem caixas de texto, botões, caixas suspensas, botões de opção e até mesmo páginas da Web. Para obter uma lista de todos os controles que podem ser usados em um formulário, consulte [Controles que podem ser usados nos Windows Forms](../../../framework/winforms/controls/controls-to-use-on-windows-forms.md). Se um controle existente não atender às suas necessidades, Windows Forms também dará suporte à criação de seus próprios controles personalizados usando a <xref:System.Windows.Forms.UserControl> classe.
 
-O Windows Forms tem controles avançados de interface do usuário que emulam recursos em aplicativos de alta tecnologia, como o Microsoft Office. Usando o <xref:System.Windows.Forms.ToolStrip> controle <xref:System.Windows.Forms.MenuStrip> e, você pode criar barras de ferramentas e menus que contêm texto e imagens, exibir submenus e hospedar outros controles, como caixas de texto e caixas de combinação.
+O Windows Forms tem controles avançados de interface do usuário que emulam recursos em aplicativos de alta tecnologia, como o Microsoft Office. Usando o <xref:System.Windows.Forms.ToolStrip> <xref:System.Windows.Forms.MenuStrip> controle e, você pode criar barras de ferramentas e menus que contêm texto e imagens, exibir submenus e hospedar outros controles, como caixas de texto e caixas de combinação.
 
-Com o designer de formulários do tipo "arrastar e soltar" do Visual Studio, você pode facilmente criar Windows Forms aplicativos: basta selecionar os controles com o cursor e colocá-los onde você deseja no formulário. O designer fornece ferramentas como linhas de grade e "linhas de alinhamento" para tirar as complicações do alinhamento dos controles. E se você usar o Visual Studio ou compilar na linha de comando, poderá usar os <xref:System.Windows.Forms.FlowLayoutPanel>controles <xref:System.Windows.Forms.TableLayoutPanel> e <xref:System.Windows.Forms.SplitContainer> para criar layouts de formulário avançados com tempo mínimo e esforço.
+Com o designer de formulários do tipo "arrastar e soltar" do Visual Studio, você pode facilmente criar Windows Forms aplicativos: basta selecionar os controles com o cursor e colocá-los onde você deseja no formulário. O designer fornece ferramentas como linhas de grade e "linhas de alinhamento" para tirar as complicações do alinhamento dos controles. E se você usar o Visual Studio ou compilar na linha de comando, poderá usar os <xref:System.Windows.Forms.FlowLayoutPanel> <xref:System.Windows.Forms.TableLayoutPanel> controles e <xref:System.Windows.Forms.SplitContainer> para criar layouts de formulário avançados com tempo mínimo e esforço.
 
 ### <a name="custom-ui-elements"></a>Elementos personalizados da interface do usuário
 
-Por fim, se você precisar criar seus próprios elementos personalizados de interface <xref:System.Drawing> do usuário, o namespace conterá todas as classes necessárias para processar linhas, círculos e outras formas diretamente em um formulário.
+Por fim, se você precisar criar seus próprios elementos personalizados de interface do usuário, o <xref:System.Drawing> namespace conterá todas as classes necessárias para processar linhas, círculos e outras formas diretamente em um formulário.
 
 Para obter informações passo a passo sobre como usar esses recursos, consulte os tópicos da ajuda a seguir.
 
@@ -106,8 +106,8 @@ Para obter informações passo a passo sobre como usar esses recursos, consulte 
 |Imprimir o conteúdo de um formulário|[Como imprimir elementos gráficos no Windows Forms](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Como imprimir um arquivo de texto de várias páginas no Windows Forms](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
 |Saiba mais sobre a segurança dos Windows Forms|[Visão geral da Segurança do Windows Forms](../../../framework/winforms/security-in-windows-forms-overview.md)|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
 - [Visão geral dos Windows Forms](../../../framework/winforms/windows-forms-overview.md)
-- [Objeto My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)
+- [Objeto My.Forms](../../language-reference/objects/my-forms-object.md)

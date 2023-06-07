@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e93b99e-5aca-415c-8e37-7f33753b612d
 topic_type:
 - apiref
-ms.openlocfilehash: 4b9c577fab91e9527a1edc6c93e0618c8fe4e662
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 4fbee938ae86b338f2beb0b48feeee46f144a4a0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76864045"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498486"
 ---
 # <a name="icorprofilerinfogetclassidinfo-method"></a>Método ICorProfilerInfo::GetClassIDInfo
 Obtém o módulo pai e o token de metadados para a classe especificada.  
@@ -49,15 +49,15 @@ HRESULT GetClassIDInfo(
   
  Para obter mais informações sobre tipos genéricos, use [ICorProfilerInfo2:: GetClassIDInfo2](icorprofilerinfo2-getclassidinfo2-method.md).  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)

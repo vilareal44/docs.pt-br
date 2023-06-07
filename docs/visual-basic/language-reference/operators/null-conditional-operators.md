@@ -6,16 +6,16 @@ helpviewer_keywords:
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: 003f579a7128bbe2462b7fbe7057de03e61bfbe6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bffbba859968e0a050397cd9e685c142f801798a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348293"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401466"
 ---
 # <a name="-and--null-conditional-operators-visual-basic"></a>?. e? () operadores condicionais nulos (Visual Basic)
 
-Testa o valor do operando esquerdo para NULL (`Nothing`) antes de executar uma operação de acesso de membro (`?.`) ou de índice (`?()`); retornará `Nothing` se o operando esquerdo for avaliado como `Nothing`. Observe que em expressões que normalmente retornam tipos de valor, o operador NULL-Conditional retorna um <xref:System.Nullable%601>.
+Testa o valor do operando esquerdo para NULL ( `Nothing` ) antes de executar uma operação de acesso de membro ( `?.` ) ou de índice ( `?()` ); retorna `Nothing` se o operando à esquerda for avaliado como `Nothing` . Observe que em expressões que normalmente retornam tipos de valor, o operador NULL-Conditional retorna um <xref:System.Nullable%601> .
 
 Esses operadores ajudam a escrever menos código para lidar com verificações nulas, especialmente quando decrescentes em estruturas de dados. Por exemplo:
 
@@ -57,13 +57,13 @@ Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
 If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
 ```
 
-Os operadores condicionais nulos estão entrando em curto-circuito.  Se uma operação em uma cadeia de operações de acesso de membro condicional e de índice retornar `Nothing`, o restante da execução da cadeia será interrompido.  No exemplo a seguir, `C(E)` não será avaliada se `A`, `B`ou `C` for avaliada como `Nothing`.
+Os operadores condicionais nulos estão entrando em curto-circuito.  Se uma operação em uma cadeia de acesso de membro condicional e operações de índice forem retornadas `Nothing` , o restante da execução da cadeia será interrompido.  No exemplo a seguir, `C(E)` não é avaliado se `A` , `B` ou `C` é avaliado como `Nothing` .
 
 ```vb
 A?.B?.C?(E)
 ```
 
-Outro uso para acesso de membro condicional nulo é invocar delegados de forma segura para thread com muito menos código.  O exemplo a seguir define dois tipos, um `NewsBroadcaster` e um `NewsReceiver`. Os itens de notícias são enviados ao destinatário pelo `NewsBroadcaster.SendNews` delegado.
+Outro uso para acesso de membro condicional nulo é invocar delegados de forma segura para thread com muito menos código.  O exemplo a seguir define dois tipos, a `NewsBroadcaster` e a `NewsReceiver` . Os itens de notícias são enviados ao destinatário pelo `NewsBroadcaster.SendNews` delegado.
 
 ```vb
 Public Module NewsBroadcaster
@@ -91,7 +91,7 @@ Public Class NewsReceiver
 End Class
 ```
 
-Se não houver nenhum elemento na lista de invocação `SendNews`, o delegado `SendNews` gerará uma <xref:System.NullReferenceException>. Antes de operadores condicionais NULL, um código semelhante ao seguinte garantiu que a lista de invocação de delegado não foi `Nothing`:
+Se não houver nenhum elemento na `SendNews` lista de invocação, o `SendNews` delegado lançará um <xref:System.NullReferenceException> . Antes de operadores condicionais NULL, o código como o seguinte garantiu que a lista de invocação de delegado não foi `Nothing` :
 
 ```vb
 SendNews = SendNews.Combine({SendNews, client})
@@ -109,8 +109,8 @@ SendNews?.Invoke("Just in...")
 
 A nova forma é thread-safe porque o compilador gera código para avaliar `SendNews` somente uma vez, mantendo o resultado em uma variável temporária. Você precisa chamar explicitamente o método `Invoke` porque não há nenhuma sintaxe de invocação de delegado condicional nulo `SendNews?(String)`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Operadores (Visual Basic)](index.md)
-- [Guia de programação do Visual Basic](../../../visual-basic/programming-guide/index.md)
-- [Referência da linguagem Visual Basic](../../../visual-basic/language-reference/index.md)
+- [Guia de programação do Visual Basic](../../programming-guide/index.md)
+- [Referência de linguagem de Visual Basic](../index.md)

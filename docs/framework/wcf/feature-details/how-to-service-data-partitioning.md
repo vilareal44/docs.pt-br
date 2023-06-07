@@ -1,15 +1,15 @@
 ---
-title: 'Como: fornecer particionamento de dados'
+title: Como particionar dados de serviço
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 49aefd88d73732a139a79f8c53d5beca44d4d4ba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3b2f86ee6a4dea25fb5c972d4cecb1b9ed411b29
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947867"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601186"
 ---
-# <a name="how-to-service-data-partitioning"></a>Como: fornecer particionamento de dados
+# <a name="how-to-service-data-partitioning"></a>Como particionar dados de serviço
 Este tópico descreve as etapas básicas necessárias para particionar mensagens em várias instâncias do mesmo serviço de destino. O particionamento de dados de serviço normalmente é usado quando você precisa dimensionar um serviço para fornecer melhor qualidade de serviço, ou quando você precisa lidar com solicitações de clientes diferentes de uma maneira específica. Por exemplo, as mensagens de clientes de alto valor ou "ouro" talvez precisem ser processadas em uma prioridade mais alta do que as mensagens de um cliente padrão.  
   
  Neste exemplo, as mensagens são roteadas para uma das duas instâncias do serviço regularCalc. Ambas as instâncias do serviço são idênticas; no entanto, o serviço representado pelo ponto de extremidade Calculator1 processa mensagens recebidas de clientes de alto valor, o ponto de extremidade da calculadora 2 processa mensagens de outros clientes  
@@ -175,4 +175,4 @@ Este tópico descreve as etapas básicas necessárias para particionar mensagens
   
 ## <a name="see-also"></a>Consulte também
 
-- [Serviços de roteamento](../../../../docs/framework/wcf/samples/routing-services.md)
+- [Serviços de roteamento](../samples/routing-services.md)

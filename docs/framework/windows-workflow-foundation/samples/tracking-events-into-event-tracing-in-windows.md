@@ -2,12 +2,12 @@
 title: Eventos de rastreamento no rastreamento de evento no Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 2c397bcfa809a1306e9c31bf3f652b055d997f38
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: fa5d86e327bc9c6eca85ed2908775de5f647f410
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094573"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144884"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Eventos de rastreamento no rastreamento de evento no Windows
 
@@ -19,7 +19,7 @@ O fluxo de trabalho no exemplo recebe uma solicitação, atribui o recíproco de
 
 Windows Workflow Foundation fornece uma infraestrutura de controle para acompanhar a execução de uma instância de fluxo de trabalho. O runtime de rastreamento cria uma instância de fluxo de trabalho para emitir os eventos relacionados ao ciclo de vida de fluxo de trabalho, os eventos de atividades de fluxo de trabalho e eventos personalizados. A tabela a seguir detalha os componentes principais de infraestrutura de rastreamento.
 
-|Componente|DESCRIÇÃO|
+|Componente|Descrição|
 |---------------|-----------------|
 |runtime de rastreamento|Fornece a infraestrutura para emitir registros de rastreamento.|
 |Participantes de rastreamento|Acessa os registros de rastreamento. vem de[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] com um participante de rastreamento que grava registros de rastreamento como o rastreamento de evento para eventos do Windows (ETW).|
@@ -27,7 +27,7 @@ Windows Workflow Foundation fornece uma infraestrutura de controle para acompanh
 
 A tabela a seguir detalha os registros de rastreamento que o runtime de fluxo de trabalho se emite.
 
-|Controlando o registro|DESCRIÇÃO|
+|Controlando o registro|Descrição|
 |---------------------|-----------------|
 |Registros de rastreamento de instância de fluxo de trabalho.|Descreve o ciclo de vida de instância de fluxo de trabalho. Por exemplo, um registro de instância é emitida quando o fluxo de trabalho inicia ou termina.|
 |Estado da atividade que acompanha registros.|Detalha a execução da atividade. Esses registros indicam o estado de uma atividade de fluxo de trabalho como quando uma atividade é agendada ou quando a atividade completa ou quando uma falha é lançada.|
@@ -47,11 +47,11 @@ O participante de rastreamento assinatura para um subconjunto de registros emiss
 
 3. Para executar a solução, pressione F5.
 
-    Por padrão, o serviço está escutando na porta 53797 (http://localhost:53797/SampleWorkflowService.xamlx).
+    Por padrão, o serviço está escutando na porta 53797 ( `http://localhost:53797/SampleWorkflowService.xamlx` ).
 
 4. Usando o explorador de arquivos, abra o cliente de teste do WCF.
 
-    O cliente de teste do WCF (WcfTestClient. exe) está localizado na pasta de instalação do \<Visual Studio 2010 > pasta \Common7\IDE\
+    O cliente de teste do WCF (WcfTestClient. exe) está localizado na \<Visual Studio 2010 installation folder> pasta \Common7\IDE\
 
     A pasta de instalação padrão do Visual Studio 2010 é C:\Program Files\Microsoft Visual Studio 10,0.
 
@@ -61,7 +61,7 @@ O participante de rastreamento assinatura para um subconjunto de registros emiss
 
 6. Abra o aplicativo visualizador de eventos.
 
-    Antes de invocar o serviço, inicie Visualizador de Eventos no menu **Iniciar** , selecione **executar** e digite `eventvwr.exe`. Certifique-se de que o log de eventos é escutando eventos de rastreamento emissores de serviço de fluxo de trabalho.
+    Antes de invocar o serviço, inicie Visualizador de Eventos no menu **Iniciar** , selecione **executar** e digite `eventvwr.exe` . Certifique-se de que o log de eventos é escutando eventos de rastreamento emissores de serviço de fluxo de trabalho.
 
 7. No modo de exibição de árvore do Visualizador de Eventos, navegue até **Visualizador de eventos**, **aplicativos e logs de serviços**e **Microsoft**. Clique com o botão direito do mouse em **Microsoft** e selecione **Exibir** e, em seguida, **Mostrar logs analíticos e de depuração** para habilitar logs analíticos e de depuração
 
@@ -125,7 +125,7 @@ O perfil de acompanhamento de monitoramento de integridade emite-se registros de
 
 #### <a name="to-clean-up-optional"></a>Para limpar (opcional)
 
-1. Abra o Visualizador de Eventos.
+1. Visualizador de EventosAberto.
 
 2. Navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows**, **servidor de aplicativos-aplicativos**. Clique com o botão direito do mouse em **analítica** e selecione **desabilitar log**.
 
@@ -138,7 +138,7 @@ O perfil de acompanhamento de monitoramento de integridade emite-se registros de
 > [!NOTE]
 > Há um problema conhecido em Visualizador de Eventos onde pode não decodifica eventos de ETW. Você pode ver a uma mensagem de erro semelhante ao seguinte.
 >
-> A descrição para a ID de evento \<ID > da origem Microsoft-Windows-Application Server – Applications não pode ser encontrada. O componente que gera esse evento não está instalado no computador local ou a instalação está corrompida. Você pode instalar ou reparar o componente no computador local.
+> A descrição para a ID \<id> do evento da origem Microsoft-Windows-Application Server – Applications não pode ser encontrada. O componente que gera esse evento não está instalado no computador local ou a instalação está corrompida. Você pode instalar ou reparar o componente no computador local.
 >
 > Se você encontrar esse erro, atualização de clique no painel ações. O evento agora deve decodificar corretamente.
 
@@ -147,10 +147,10 @@ O perfil de acompanhamento de monitoramento de integridade emite-se registros de
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Exemplos de monitoramento do AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric que monitora Exemplos](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

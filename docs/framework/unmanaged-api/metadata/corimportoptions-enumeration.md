@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e5d03cb-97c9-4ff4-8dbd-17d94ee374d3
 topic_type:
 - apiref
-ms.openlocfilehash: 44d1776e2902988353ef4fd58aca20e56203b9da
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3be8a004be752af8a8675a3499bdb6cbfd785840
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442847"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009191"
 ---
 # <a name="corimportoptions-enumeration"></a>Enumeração CorImportOptions
 Contém valores de sinalizador que controlam o comportamento durante a importação de um assembly fora do escopo atual.  
@@ -44,7 +44,7 @@ typedef enum CorImportOptions {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`MDImportOptionDefault`|Indica o comportamento padrão, que é para ignorar os registros excluídos.|  
 |`MDImportOptionAll`|Indica que todos os metadados devem ser enumerados.|  
@@ -56,13 +56,13 @@ typedef enum CorImportOptions {
 |`MDImportOptionAllCustomAttributes`|Indica que todos os atributos personalizados, incluindo aqueles excluídos, devem ser enumerados.|  
 |`MDImportOptionAllExportedTypes`|Indica que todos os tipos exportados, incluindo aqueles excluídos, devem ser enumerados.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerações de metadados](metadata-enumerations.md)

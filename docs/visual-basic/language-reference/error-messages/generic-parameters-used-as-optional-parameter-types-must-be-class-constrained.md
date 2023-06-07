@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
-ms.openlocfilehash: 11cf4f8d9457ebff385a601786dc97334f274324
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 273ea592e73be5d76a4ffef077e691014a108347
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662070"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402921"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>Parâmetros genéricos usados como tipos de parâmetro opcionais devem ter a classe restrita
-Um procedimento é declarado com um parâmetro opcional que usa um parâmetro de tipo que não é restrito para ser um tipo de referência.  
+Um procedimento é declarado com um parâmetro opcional que usa um parâmetro de tipo que não é restrito a ser um tipo de referência.  
   
- Você sempre deve fornecer um valor padrão para cada parâmetro opcional. Se o parâmetro é de um tipo de referência, o valor opcional deve ser `Nothing`, que é um valor válido para qualquer tipo de referência. No entanto, se o parâmetro é de um tipo de valor, esse tipo deve ser um tipo de dados elementares predefinido pelo Visual Basic. Isso ocorre porque um tipo de valor composto, como uma estrutura definida pelo usuário, tem nenhum valor padrão válido.  
+ Você sempre deve fornecer um valor padrão para cada parâmetro opcional. Se o parâmetro for de um tipo de referência, o valor opcional deverá ser `Nothing` , que é um valor válido para qualquer tipo de referência. No entanto, se o parâmetro for de um tipo de valor, esse tipo deverá ser um tipo de dados elementar predefinido por Visual Basic. Isso ocorre porque um tipo de valor composto, como uma estrutura definida pelo usuário, não tem um valor padrão válido.  
   
- Quando você usa um parâmetro de tipo para um parâmetro opcional, você deve assegurar-se de um tipo de referência para evitar a possibilidade de um tipo de valor com nenhum valor padrão válido. Isso significa que você deve restringir o parâmetro de tipo com o `Class` palavra-chave ou com o nome de uma classe específica.  
+ Quando você usa um parâmetro de tipo para um parâmetro opcional, você deve garantir que ele seja de um tipo de referência para evitar a possibilidade de um tipo de valor sem um valor padrão válido. Isso significa que você deve restringir o parâmetro de tipo com a `Class` palavra-chave ou com o nome de uma classe específica.  
   
  **ID do erro:** BC32124  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Restringir o parâmetro de tipo para aceitar apenas um tipo de referência, ou não usá-lo para o parâmetro opcional.  
+- Restrinja o parâmetro de tipo para aceitar apenas um tipo de referência ou não use-o para o parâmetro opcional.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Lista de Tipos](../../../visual-basic/language-reference/statements/type-list.md)
-- [Instrução Class](../../../visual-basic/language-reference/statements/class-statement.md)
-- [Parâmetros Opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
-- [Estruturas](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Nothing](../../../visual-basic/language-reference/nothing.md)
+- [Tipos genéricos no Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
+- [Lista de Tipos](../statements/type-list.md)
+- [Instrução Class](../statements/class-statement.md)
+- [Parâmetros Opcionais](../../programming-guide/language-features/procedures/optional-parameters.md)
+- [Estruturas](../../programming-guide/language-features/data-types/structures.md)
+- [Nada](../nothing.md)

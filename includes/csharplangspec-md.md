@@ -6,4 +6,4 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "61646170"
 ---
-Para obter mais informações, consulte a [especificação do idioma C#](~/docs/csharp/language-reference/language-specification/index.md). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
+Para obter mais informações, consulte a [especificação da linguagem C#](~/docs/csharp/language-reference/language-specification/index.md). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.

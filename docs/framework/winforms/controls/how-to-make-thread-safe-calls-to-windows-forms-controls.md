@@ -1,6 +1,7 @@
 ---
-title: Faça chamadas seguras para controles
+title: Fazer chamadas thread-safe para controles
 ms.date: 02/19/2019
+description: Saiba como implementar multithreading em seu aplicativo chamando controles de thread cruzado de forma segura para thread.
 dev_langs:
 - csharp
 - vb
@@ -15,22 +16,22 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: 365b1acb693b9ff2be603a3e659ed8d846a7696a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5f4de7bd3d8d89de98dbe27e2dbf360763670d0
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141998"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904176"
 ---
-# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Como: Fazer chamadas seguras para threads para controles do Windows Forms
+# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Como: fazer chamadas de thread-safe para Windows Forms controles
 
-O multithreading pode melhorar o desempenho dos aplicativos do Windows Forms, mas o acesso aos controles do Windows Forms não é inerentemente seguro para threads. Multithreading pode expor seu código a bugs muito sérios e complexos. Dois ou mais fios manipulando um controle podem forçar o controle a um estado inconsistente e levar a condições de raça, impasses e congelamentos ou travamentos. Se você implementar multithreading em seu aplicativo, certifique-se de chamar controles de linha cruzada de forma segura a thread. Para obter mais informações, consulte [As práticas recomendadas de rosca gerenciadas](../../../standard/threading/managed-threading-best-practices.md).
+O multithreading pode melhorar o desempenho de aplicativos Windows Forms, mas o acesso aos controles Windows Forms não é inerentemente seguro ao thread. O multithreading pode expor seu código a bugs muito graves e complexos. Dois ou mais threads manipulando um controle podem forçar o controle em um estado inconsistente e levar a condições de corrida, deadlocks e congelamento ou travamentos. Se você implementar multithreading em seu aplicativo, certifique-se de chamar controles entre threads de forma segura para thread. Para obter mais informações, consulte [práticas recomendadas de Threading gerenciadas](../../../standard/threading/managed-threading-best-practices.md).
 
-Existem duas maneiras de chamar com segurança um controle de Formulários do Windows a partir de um segmento que não criou esse controle. Você pode <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName> usar o método para chamar um delegado criado no segmento principal, que por sua vez chama o controle. Ou, você pode <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>implementar um , que usa um modelo orientado a eventos para separar o trabalho feito no segmento de fundo de reportar sobre os resultados.
+Há duas maneiras de chamar com segurança um controle de Windows Forms de um thread que não criou esse controle. Você pode usar o <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName> método para chamar um delegado criado no thread principal que, por sua vez, chama o controle. Ou, você pode implementar um <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType> , que usa um modelo controlado por eventos para separar o trabalho feito no thread em segundo plano de relatórios sobre os resultados.
 
-## <a name="unsafe-cross-thread-calls"></a>Chamadas transversais inseguras
+## <a name="unsafe-cross-thread-calls"></a>Chamadas de thread cruzado não seguras
 
-Não é seguro chamar um controle diretamente de um segmento que não o criou. O seguinte trecho de código ilustra uma <xref:System.Windows.Forms.TextBox?displayProperty=nameWithType> chamada insegura para o controle. O `Button1_Click` manipulador de `WriteTextUnsafe` eventos cria um novo segmento, que define diretamente a propriedade do <xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType> segmento principal.
+Não é seguro chamar um controle diretamente de um thread que não o criou. O trecho de código a seguir ilustra uma chamada não segura para o <xref:System.Windows.Forms.TextBox?displayProperty=nameWithType> controle. O `Button1_Click` manipulador de eventos cria um novo `WriteTextUnsafe` thread, que define a propriedade do thread principal <xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType> diretamente.
 
 ```csharp
 private void Button1_Click(object sender, EventArgs e)
@@ -55,44 +56,44 @@ Private Sub WriteTextUnsafe()
 End Sub
 ```
 
-O depurador do Visual Studio detecta <xref:System.InvalidOperationException> essas chamadas de thread inseguras levantando uma com a mensagem, **a operação cross-thread não é válida. Controle "" acessado a partir de um segmento diferente do segmento em que foi criado.** O <xref:System.InvalidOperationException> sempre ocorre para chamadas transversais inseguras durante a depuração do Visual Studio, e pode ocorrer em tempo de execução do aplicativo. Você deve corrigir o problema, mas você pode <xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A?displayProperty=nameWithType> desativar `false`a exceção definindo a propriedade para .
+O depurador do Visual Studio detecta essas chamadas de thread não seguras gerando uma <xref:System.InvalidOperationException> com a mensagem, **operação entre threads não válida. Controle "" acessado de um thread que não seja o thread em que foi criado.** O <xref:System.InvalidOperationException> sempre ocorre para chamadas de thread cruzado não seguras durante a depuração do Visual Studio e pode ocorrer no tempo de execução do aplicativo. Você deve corrigir o problema, mas pode desabilitar a exceção definindo a <xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A?displayProperty=nameWithType> propriedade como `false` .
 
-## <a name="safe-cross-thread-calls"></a>Chamadas seguras de linha cruzada
+## <a name="safe-cross-thread-calls"></a>Chamadas de thread cruzado seguras
 
-Os exemplos de código a seguir demonstram duas maneiras de chamar com segurança um controle do Windows Forms a partir de um segmento que não o criou:
+Os exemplos de código a seguir demonstram duas maneiras de chamar com segurança um controle de Windows Forms de um thread que não o criou:
 
-1. O <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName> método, que chama um delegado do segmento principal para chamar o controle.
-2. Um <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType> componente, que oferece um modelo orientado por eventos.
+1. O <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName> método, que chama um delegado do thread principal para chamar o controle.
+2. Um <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType> componente, que oferece um modelo controlado por eventos.
 
-Em ambos os exemplos, o fio de fundo dorme por um segundo para simular o trabalho que está sendo feito nesse segmento.
+Em ambos os exemplos, o thread em segundo plano é suspenso por um segundo para simular o trabalho que está sendo feito nesse thread.
 
-Você pode criar e executar esses exemplos como aplicativos .NET Framework a partir da linha de comando C# ou Visual Basic. Para obter mais informações, consulte [a construção da linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) ou Build a partir da linha de comando [(Visual Basic)](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).
+Você pode criar e executar esses exemplos como .NET Framework aplicativos da linha de comando C# ou Visual Basic. Para obter mais informações, consulte [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) ou [Build na linha de comando (Visual Basic)](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).
 
-Começando com o .NET Core 3.0, você também pode criar e executar os exemplos como aplicativos Windows .NET Core a partir de uma pasta que tem um nome de pasta .NET Core Windows Forms * \<>.csproj* project file.
+A partir do .NET Core 3,0, você também pode criar e executar os exemplos como aplicativos do Windows .NET Core de uma pasta que tem um arquivo de projeto Windows Forms * \<folder name> . csproj* do .NET Core.
 
-## <a name="example-use-the-invoke-method-with-a-delegate"></a>Exemplo: Use o método Invocar com um delegado
+## <a name="example-use-the-invoke-method-with-a-delegate"></a>Exemplo: usar o método Invoke com um delegate
 
-O exemplo a seguir demonstra um padrão para garantir chamadas seguras de rosca para um controle do Windows Forms. Ele consulta <xref:System.Windows.Forms.Control.InvokeRequired%2A?displayProperty=fullName> a propriedade, que compara a criação do ID de thread do controle com o ID de segmento de chamada. Se os IDs de rosca forem os mesmos, ele chamará o controle diretamente. Se os IDs de segmento <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=nameWithType> forem diferentes, ele chama o método com um delegado do segmento principal, o que torna a chamada real para o controle.
+O exemplo a seguir demonstra um padrão para garantir chamadas de thread-safe para um controle Windows Forms. Ele consulta a <xref:System.Windows.Forms.Control.InvokeRequired%2A?displayProperty=fullName> propriedade, que compara a ID de thread de criação do controle com a ID de thread de chamada. Se as IDs de thread forem as mesmas, ele chamará o controle diretamente. Se as IDs de thread forem diferentes, ele chamará o <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=nameWithType> método com um delegado do thread principal, que faz a chamada real para o controle.
 
-O `SafeCallDelegate` habilita <xref:System.Windows.Forms.TextBox> restatando a propriedade do <xref:System.Windows.Forms.TextBox.Text%2A> controle. As `WriteTextSafe` consultas <xref:System.Windows.Forms.Control.InvokeRequired%2A>do método . Se <xref:System.Windows.Forms.Control.InvokeRequired%2A> `true`retornar, `WriteTextSafe` `SafeCallDelegate` passa <xref:System.Windows.Forms.Control.Invoke%2A> o método para fazer a chamada real para o controle. Se <xref:System.Windows.Forms.Control.InvokeRequired%2A> `false`retornar, `WriteTextSafe` <xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType> defina o diretamente. O `Button1_Click` manipulador de eventos cria `WriteTextSafe` o novo segmento e executa o método.
+O `SafeCallDelegate` habilita a definição da <xref:System.Windows.Forms.TextBox> Propriedade do controle <xref:System.Windows.Forms.TextBox.Text%2A> . O `WriteTextSafe` método consulta <xref:System.Windows.Forms.Control.InvokeRequired%2A> . Se <xref:System.Windows.Forms.Control.InvokeRequired%2A> retorna `true` , `WriteTextSafe` passa o `SafeCallDelegate` para o <xref:System.Windows.Forms.Control.Invoke%2A> método para fazer a chamada real para o controle. Se <xref:System.Windows.Forms.Control.InvokeRequired%2A> retorna `false` , `WriteTextSafe` define o <xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType> diretamente. O `Button1_Click` manipulador de eventos cria o novo thread e executa o `WriteTextSafe` método.
 
  [!code-csharp[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
  [!code-vb[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
 
-## <a name="example-use-a-backgroundworker-event-handler"></a>Exemplo: Use um manipulador de eventos BackgroundWorker
+## <a name="example-use-a-backgroundworker-event-handler"></a>Exemplo: usar um manipulador de eventos de BackgroundWorker
 
-Uma maneira fácil de implementar multithreading é com o <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType> componente, que usa um modelo orientado por eventos. O segmento de <xref:System.ComponentModel.BackgroundWorker.DoWork?displayProperty=nameWithType> fundo executa o evento, que não interage com o segmento principal. O segmento principal <xref:System.ComponentModel.BackgroundWorker.ProgressChanged?displayProperty=nameWithType> <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted?displayProperty=nameWithType> executa os manipuladores e os manipuladores de eventos, que podem chamar os controles do segmento principal.
+Uma maneira fácil de implementar multithreading é com o <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType> componente, que usa um modelo controlado por eventos. O thread em segundo plano executa o <xref:System.ComponentModel.BackgroundWorker.DoWork?displayProperty=nameWithType> evento, que não interage com o thread principal. O thread principal executa os <xref:System.ComponentModel.BackgroundWorker.ProgressChanged?displayProperty=nameWithType> <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted?displayProperty=nameWithType> manipuladores de eventos e, que podem chamar os controles do thread principal.
 
-Para fazer uma chamada segura <xref:System.ComponentModel.BackgroundWorker>de rosca usando, crie um método no segmento <xref:System.ComponentModel.BackgroundWorker.DoWork> de fundo para fazer o trabalho e vincule-o ao evento. Crie outro método no segmento principal para relatar os resultados do <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> trabalho de fundo e vinculá-lo ao evento. Para iniciar o segmento <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A?displayProperty=nameWithType>de fundo, ligue .
+Para fazer uma chamada thread-safe usando <xref:System.ComponentModel.BackgroundWorker> , crie um método no thread em segundo plano para fazer o trabalho e associá-lo ao <xref:System.ComponentModel.BackgroundWorker.DoWork> evento. Crie outro método no thread principal para relatar os resultados do trabalho em segundo plano e associá-los ao <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> evento ou <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> . Para iniciar o thread em segundo plano, chame <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A?displayProperty=nameWithType> .
 
-O exemplo <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> usa o manipulador <xref:System.Windows.Forms.TextBox> de <xref:System.Windows.Forms.TextBox.Text%2A> eventos para definir a propriedade do controle. Para um exemplo <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> usando <xref:System.ComponentModel.BackgroundWorker>o evento, consulte .
+O exemplo usa o <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> manipulador de eventos para definir a <xref:System.Windows.Forms.TextBox> Propriedade do controle <xref:System.Windows.Forms.TextBox.Text%2A> . Para obter um exemplo usando o <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> evento, consulte <xref:System.ComponentModel.BackgroundWorker> .
 
  [!code-csharp[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
  [!code-vb[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Como: Executar uma operação em segundo plano](how-to-run-an-operation-in-the-background.md)
-- [Como: Implementar um formulário que usa uma operação de fundo](how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Desenvolva controles personalizados do Windows Forms com o .NET Framework](developing-custom-windows-forms-controls.md)
+- [Como executar uma operação em segundo plano](how-to-run-an-operation-in-the-background.md)
+- [Como: implementar um formulário que usa uma operação em segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Desenvolva controles de Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)

@@ -1,5 +1,6 @@
 ---
 title: Usando objetos que implementam IDisposable
+description: Saiba como usar objetos que implementam a interface IDisposable no .NET. Os tipos que usam recursos não gerenciados implementam IDisposable para permitir a recuperação de recursos.
 ms.date: 05/13/2020
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - try/finally block
 - garbage collection, encapsulating resources
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
-ms.openlocfilehash: d0d55a9253fee1ffcfd5c10714a1118883f6c4ce
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 7d5d4080f22aab6870a230d495b4a4b9ebcb3b96
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396966"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599848"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>Usando objetos que implementam IDisposable
 
@@ -61,8 +62,8 @@ Você poderá seguir esse padrão básico se optar por implementar ou precisar i
 
 Se uma classe mantém uma <xref:System.IDisposable> implementação como um membro de instância, seja um campo ou uma propriedade, a classe também deve implementar <xref:System.IDisposable> . Para obter mais informações, consulte [implementar uma disposição em cascata](implementing-dispose.md#cascade-dispose-calls).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Limpando recursos não gerenciados](../../../docs/standard/garbage-collection/unmanaged.md)
+- [Limpando recursos não gerenciados](unmanaged.md)
 - [Instrução using (referência C#)](../../csharp/language-reference/keywords/using-statement.md)
 - [Instrução Using (Visual Basic)](../../visual-basic/language-reference/statements/using-statement.md)

@@ -1,38 +1,38 @@
 ---
-title: 'Sobre o CustomPeerResolverService: registros de clientes'
+title: 'Sobre o CustomPeerResolverService: Registro de clientes'
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-ms.openlocfilehash: 3d1e1c6493da54bc3ae0e74a33985da59382ea52
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ce694408edbb40309d1750be49b8414ebcbce3f7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619776"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596832"
 ---
-# <a name="inside-the-custompeerresolverservice-client-registrations"></a>Sobre o CustomPeerResolverService: registros de clientes
-Cada nó na malha publica suas informações de ponto de extremidade para o serviço de resolvedor por meio de `Register` função. O serviço de resolvedor armazena essas informações como uma gravação de registro. Esse registro contém um identificador exclusivo (RegistrationID) e informações de ponto de extremidade (PeerNodeAddress) para o nó.  
+# <a name="inside-the-custompeerresolverservice-client-registrations"></a>Sobre o CustomPeerResolverService: Registro de clientes
+Cada nó na malha publica suas informações de ponto de extremidade no serviço de resolvedor por meio da `Register` função. O serviço resolvedor armazena essas informações como um registro de registro. Esse registro contém um identificador exclusivo (RegistrationId) e informações de ponto de extremidade (PeerNodeAddress) para o nó.  
   
-## <a name="stale-records-and-expiration-time"></a>Registros obsoletos e a hora de expiração  
- O ideal é que, quando um nó deixa a malha, ele chamará o `Unregister` função, que faz com que o serviço de resolvedor remover a entrada de registro. Às vezes, nós desligado ou se torne inacessíveis antes de chamar `Unregister`, deixando por trás de um registro obsoleto.  
+## <a name="stale-records-and-expiration-time"></a>Registros obsoletos e tempo de expiração  
+ O ideal é que, quando um nó sair da malha, ele chamará a `Unregister` função, o que faz com que o serviço resolvedor remova a entrada de registro. Às vezes, os nós desligam ou se tornam inacessíveis antes `Unregister` de chamar, deixando por trás de um registro de registro obsoleto.  
   
- Registros obsoletos em seu serviço de resolvedor podem causar falhas de conexão. Se um nó tentando se conectar a uma malha recebe informações de conexão obsoleto do serviço de resolvedor, pode levar mais tempo para associar com êxito a malha. Registros obsoletos também ocupam memória. Sem um eficiente processo de limpeza, o cache usado para armazenar os registros, eventualmente, poderia overflow e o serviço de resolvedor de falhas.  
+ Registros obsoletos no serviço de resolução podem causar conexões com falha. Se um nó tentando se conectar a uma malha receber informações de conexão obsoletas do serviço resolvedor, poderá levar mais tempo para ingressar a malha com êxito. Registros obsoletos também ocupam memória. Sem um processo de limpeza eficiente, o cache usado para armazenar os registros pode, eventualmente, ser estourado e travar o serviço resolvedor.  
   
- O <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> marca cada registro com um tempo de expiração (DateTime) e armazena essas informações como parte do registro. O serviço usa o tempo de expiração para identificar registros obsoletos. As implementações personalizadas devem fazer algo semelhante.  
+ O <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> marca cada registro com um tempo de expiração (DateTime) e armazena essas informações como parte do registro. O serviço usa o tempo de expiração para identificar registros obsoletos. Implementações personalizadas devem fazer algo semelhante.  
   
 ## <a name="refreshinterval-and-cleanupinterval"></a>RefreshInterval e CleanupInterval  
- O `RefreshInterval` propriedade do <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> define quanto tempo os registros de registro permanecerão válidos na tabela de pesquisa de registro do serviço. Quando a quantidade de tempo fornecido para essa propriedade tiver passado para um determinado registro, que o registro se torna obsoleto e será marcado para exclusão.  
+ A `RefreshInterval` propriedade de <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> define por quanto tempo os registros de registro permanecem válidos na tabela de pesquisa de registro do serviço. Quando a quantidade de tempo fornecida para essa propriedade foi passada para um determinado registro, esse registro se torna obsoleto e é marcado para exclusão.  
   
- O `CleanupInterval` propriedade do <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> informa a frequência com que o serviço para procurar e excluir registros obsoletos do registro. O `CleanupInterval` deve ser definido como um tempo maior que ou igual ao `RefreshInterval` definido no serviço.  
+ A `CleanupInterval` propriedade de <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> informa ao serviço com que frequência Pesquisar e excluir registros de registro obsoletos. O `CleanupInterval` deve ser definido para uma hora maior ou igual ao `RefreshInterval` definido no serviço.  
   
- Para implementar seu próprio serviço de resolvedor, você precisa escrever uma função de manutenção para remover registros obsoletos do registro. Há várias maneiras de fazer isso:  
+ Para implementar seu próprio serviço resolvedor, você precisa escrever uma função de manutenção para remover registros de registro obsoletos. Há várias maneiras de fazer isso:  
   
-- **Manutenção periódica**: Defina um timer desativar periodicamente, e percorrer o armazenamento de dados para excluir registros antigos. O <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> usa essa abordagem.  
+- **Manutenção periódica**: defina um temporizador para sair periodicamente e passe pelo armazenamento de dados para excluir registros antigos. O <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> usa essa abordagem.  
   
-- **Exclusão de passivo**: Em vez de pesquisar ativamente registros obsoletos em intervalos regulares, você pode identificar e excluir registros obsoletos, quando o serviço já está executando a outra função. Isso pode potencialmente atrasar tempo de resposta às solicitações dos clientes resolvedor, mas ele elimina a necessidade de um temporizador e pode ser mais eficiente se alguns nós são esperado para sair sem chamar `Unregister`.  
+- **Exclusão passiva**: em vez de procurar ativamente registros obsoletos em intervalos regulares, você pode identificar e excluir registros obsoletos quando o serviço já estiver executando outra função. Isso pode retardar o tempo de resposta para solicitações dos clientes resolvedores, mas elimina a necessidade de um temporizador e pode ser mais eficiente se poucos nós esperarem sair sem chamar `Unregister` .  
   
-## <a name="registrationlifetime-and-refresh"></a>RegistrationLifetime e atualização  
- Quando um nó é registrado com um serviço de resolvedor, ele recebe um <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> objeto do serviço. Esse objeto tem um `RegistrationLifetime` propriedade que indica para o nó de quanto tempo ela tem antes do registro expire e seja removido pelo serviço resolvedor. Se, por exemplo, o `RegistrationLifetime` é 2 minutos, o nó precisa chamar `Refresh` em menos de 2 minutos para garantir o registro permaneça atualizado e não é excluído. Quando o serviço de resolvedor recebe um `Refresh` solicitação, ele procura o registro e redefine a hora de expiração. Atualizar retorna um <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> do objeto com um `RegistrationLifetime` propriedade.  
+## <a name="registrationlifetime-and-refresh"></a>RegistrationLifetime e atualizar  
+ Quando um nó é registrado com um serviço de resolvedor, ele recebe um <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> objeto do serviço. Esse objeto tem uma `RegistrationLifetime` propriedade que indica ao nó quanto tempo ele tem antes de o registro expirar e é removido pelo serviço resolvedor. Se, por exemplo, o `RegistrationLifetime` for de 2 minutos, o nó precisará chamar `Refresh` em menos de 2 minutos para garantir que o registro permaneça atualizado e não seja excluído. Quando o serviço resolvedor recebe uma `Refresh` solicitação, ele pesquisa o registro e redefine o tempo de expiração. Atualizar retorna um <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> objeto com uma `RegistrationLifetime` propriedade.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Resolvedores pares](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+- [Resolvedores pares](peer-resolvers.md)

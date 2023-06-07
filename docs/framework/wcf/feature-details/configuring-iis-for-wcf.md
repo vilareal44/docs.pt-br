@@ -2,12 +2,12 @@
 title: Configurando os Serviços de informação da internet 7.0 para o Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
-ms.openlocfilehash: 41eedcf78d8ca6f10fcd0380e43420dcc1b328f1
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 6343049e2a21b06965a8c7851d891303a49c82b5
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964515"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597560"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Configurando os Serviços de informação da internet 7.0 para o Windows Communication Foundation
 
@@ -18,15 +18,15 @@ O Serviços de Informações da Internet (IIS) 7,0 tem um design modular que per
 
  No painel de controle, clique em **programas** e, em seguida, clique em **Ativar ou desativar recursos do Windows** , que está listado em **programas e recursos**, o componente was é mostrado na lista como na ilustração a seguir.
 
- ![Caixa de diálogo ativar ou desativar recursos](../../../../docs/framework/wcf/feature-details/media/wcfc-turnfeaturesonoroffs.gif "wcfc_TurnFeaturesOnOrOffs")
+ ![Caixa de diálogo de ativar ou desativar recursos](media/wcfc-turnfeaturesonoroffs.gif "wcfc_TurnFeaturesOnOrOffs")
 
  Este recurso tem os seguintes subcomponentes:
 
 - Ambiente .NET
 
-- APIs de Configuração
+- APIs de configuração
 
-- Modelo de Processo
+- Modelo de processo
 
  Se você selecionar o nó raiz do WAS, somente o subnó do **modelo de processo** será verificado por padrão. Observe que, com essa instalação, você está instalando o WAS, porque não há suporte para um servidor Web.
 
@@ -35,26 +35,26 @@ O Serviços de Informações da Internet (IIS) 7,0 tem um design modular que per
 ## <a name="iis-70-default-installation"></a>IIS 7,0: instalação padrão
  Ao verificar o recurso **serviços de informações da Internet** , alguns dos subnós são automaticamente verificados, conforme mostrado na ilustração a seguir.
 
- ![Configurações padrão para recursos do IIS 7,0](../../../../docs/framework/wcf/feature-details/media/wcfc-turningfeaturesonoroff2.gif "wcfc_TurningFeaturesOnOrOff2")
+ ![Configurações padrão para recursos do IIS 7.0](media/wcfc-turningfeaturesonoroff2.gif "wcfc_TurningFeaturesOnOrOff2")
 
  Esta é a instalação padrão do IIS 7,0. Com essa instalação, você pode usar o IIS 7,0 para serviço de conteúdo estático (como páginas HTML e outro conteúdo). No entanto, você não pode executar aplicativos ASP.NET ou CGI nem hospedar serviços WCF.
 
 ## <a name="iis-70-installation-with-aspnet-support"></a>IIS 7,0: instalação com suporte a ASP.NET
  Você deve instalar o ASP.NET para fazer com que o ASP.NET funcione no IIS 7,0. Depois de verificar **ASP.net**, sua tela deve ser parecida com a ilustração a seguir.
 
- ![Asp.NET configurações necessárias](../../../../docs/framework/wcf/feature-details/media/wcfc-trunfeaturesonoroff3s.gif "wcfc_TrunFeaturesOnOrOFf3s")
+ ![Configurações exigidas pelo ASP.NET](media/wcfc-trunfeaturesonoroff3s.gif "wcfc_TrunFeaturesOnOrOFf3s")
 
  Esse é o ambiente mínimo para que os aplicativos WCF e ASP.NET funcionem no IIS 7,0.
 
 ## <a name="iis-70-installation-with-iis-60-compatibility-components"></a>IIS 7,0: instalação com componentes de compatibilidade do IIS 6,0
  Ao instalar o IIS 7,0 em um sistema com o Visual Studio 2005 ou outros scripts ou ferramentas de automação (como Adsutil. vbs) que configuram aplicativos virtuais que usam a API de metabase do IIS 6,0, verifique as **ferramentas de script**do IIS 6,0. Isso verifica automaticamente os outros subnós da **compatibilidade de gerenciamento**do IIS 6,0. A ilustração a seguir mostra a tela depois que isso é feito:
 
- ![Configurações de compatibilidade de gerenciamento do IIS 6,0](../../../../docs/framework/wcf/feature-details/media/scfc-turnfeaturesonoroff5s.gif "scfc_TurnFeaturesOnOrOff5s")
+ ![Configurações de compatibilidade de gerenciamento do IIS 6.0](media/scfc-turnfeaturesonoroff5s.gif "scfc_TurnFeaturesOnOrOff5s")
 
  Com essa instalação, você tem tudo o que é necessário para usar os recursos do IIS 7,0, ASP.NET e WCF e exemplos disponíveis na Web.
 
 ## <a name="request-limits"></a>Limites de solicitações
- No Windows Vista com IIS 7, o valor padrão do `maxUri` e as configurações de `maxQueryStringSize` foram alteradas. Por padrão, a filtragem de solicitações no IIS 7,0 permite um comprimento de URL de 4096 caracteres e um comprimento de cadeia de caracteres de consulta de 2048 caracteres. Para alterar esses padrões, adicione o seguinte XML ao seu arquivo app. config.
+ No Windows Vista com IIS 7, o valor padrão das `maxUri` `maxQueryStringSize` configurações e foi alterado. Por padrão, a filtragem de solicitações no IIS 7,0 permite um comprimento de URL de 4096 caracteres e um comprimento de cadeia de caracteres de consulta de 2048 caracteres. Para alterar esses padrões, adicione o seguinte XML ao seu arquivo app. config.
 
 ```xml
  <system.webServer>
@@ -66,9 +66,9 @@ O Serviços de Informações da Internet (IIS) 7,0 tem um design modular que per
  </system.webServer>
  ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Arquitetura de ativação WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
-- [Configurando o WAS para utilização com o WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [Como instalar e configurar os componentes de ativação do WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
-- [Recursos de hospedagem do Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Arquitetura de ativação do WAS](was-activation-architecture.md)
+- [Configurar o WAS para uso com o WCF](configuring-the-wpa--service-for-use-with-wcf.md)
+- [Como instalar e configurar os componentes de ativação do WCF](how-to-install-and-configure-wcf-activation-components.md)
+- [Recursos de hospedagem do Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

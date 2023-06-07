@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-ms.openlocfilehash: 9aeb7a294beb10f9c2968e6161c72fdc362c4991
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8c88e97f8187ac347f4ff39890c8d87ee80c8f9e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177053"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500709"
 ---
 # <a name="functionenter2-function"></a>Função FunctionEnter2
-Notifica o profiler de que o controle está sendo passado para uma função e fornece informações sobre o quadro de pilha e argumentos de função. Esta função substitui a função [FunctionEnter.](functionenter-function.md)  
+Notifica o criador de perfil que o controle está sendo passado para uma função e fornece informações sobre o quadro de pilha e os argumentos de função. Essa função substitui a função [FunctionEnter](functionenter-function.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,51 +35,51 @@ void __stdcall FunctionEnter2 (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros
+## <a name="parameters"></a>Parâmetros
 
 - `funcId`
 
-  \[em] O identificador da função para a qual o controle é passado.
+  \[in] o identificador da função à qual o controle é passado.
 
 - `clientData`
 
-  \[em] O identificador de função remapped, que o profiler anteriormente especificado usando a função [FunctionIDMapper.](functionidmapper-function.md)
+  \[in] o identificador da função remapeada, que o criador de perfil especificou anteriormente usando a função [FunctionIDMapper](functionidmapper-function.md) .
   
 - `func`
 
-  \[em] `COR_PRF_FRAME_INFO` Um valor que aponta para informações sobre o quadro de pilha.
+  \[in] um `COR_PRF_FRAME_INFO` valor que aponta para informações sobre o registro de ativação.
   
-  O profiler deve tratá-lo como uma alça opaca que pode ser passada de volta para o mecanismo de execução no método [ICorProfilerInfo2::GetFunctionInfo2.](icorprofilerinfo2-getfunctioninfo2-method.md)  
+  O criador de perfil deve tratar isso como um identificador opaco que pode ser passado de volta para o mecanismo de execução no método [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) .  
   
 - `argumentInfo`
 
-  \[em] Um ponteiro para uma estrutura [de COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) que especifica os locais na memória dos argumentos da função.
+  \[in] um ponteiro para uma estrutura de [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) que especifica os locais na memória dos argumentos da função.
 
-  Para acessar as informações `COR_PRF_ENABLE_FUNCTION_ARGS` do argumento, a bandeira deve ser definida. O profiler pode usar o método [ICorProfilerInfo::SetEventMask](icorprofilerinfo-seteventmask-method.md) para definir os sinalizadores de evento.
+  Para acessar informações de argumento, o `COR_PRF_ENABLE_FUNCTION_ARGS` sinalizador deve ser definido. O criador de perfil pode usar o método [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para definir os sinalizadores de evento.
 
 ## <a name="remarks"></a>Comentários  
- Os valores `func` `argumentInfo` dos parâmetros e `FunctionEnter2` dos parâmetros não são válidos após o retorno da função porque os valores podem mudar ou ser destruídos.  
+ Os valores dos `func` parâmetros e `argumentInfo` não são válidos após a `FunctionEnter2` função retornar, pois os valores podem ser alterados ou destruídos.  
   
- A `FunctionEnter2` função é um retorno de chamada; você deve implementá-lo. A implementação `__declspec`deve`naked`usar o atributo () classe de armazenamento.  
+ A `FunctionEnter2` função é um retorno de chamada; você deve implementá-la. A implementação deve usar o `__declspec` `naked` atributo de classe de armazenamento ().  
   
- O motor de execução não salva nenhum registro antes de chamar esta função.  
+ O mecanismo de execução não salva nenhum registro antes de chamar essa função.  
   
-- Na entrada, você deve salvar todos os registros que você usa, incluindo os da unidade de ponto flutuante (FPU).  
+- Na entrada, você deve salvar todos os registros que usar, incluindo aqueles na FPU (unidade de ponto flutuante).  
   
-- Na saída, você deve restaurar a pilha, atirando todos os parâmetros que foram empurrados pelo seu interlocutor.  
+- Ao sair, você deve restaurar a pilha removendo todos os parâmetros que foram enviados por Push por seu chamador.  
   
- A implantação `FunctionEnter2` não deve bloquear porque vai atrasar a coleta de lixo. A implementação não deve tentar uma coleta de lixo porque a pilha pode não estar em um estado favorável à coleta de lixo. Se uma coleta de lixo for tentada, o tempo de execução será bloqueado até `FunctionEnter2` o retorno.  
+ A implementação de `FunctionEnter2` não deve bloquear, pois atrasará a coleta de lixo. A implementação não deve tentar uma coleta de lixo porque a pilha pode não estar em um estado amigável de coleta de lixo. Se for feita uma tentativa de coleta de lixo, o tempo de execução será bloqueado até o `FunctionEnter2` retorno.  
   
- Além disso, a `FunctionEnter2` função não deve chamar para código gerenciado ou de qualquer forma causar uma alocação de memória gerenciada.  
+ Além disso, a `FunctionEnter2` função não deve chamar um código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl  
+ **Cabeçalho:** CorProf. idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 

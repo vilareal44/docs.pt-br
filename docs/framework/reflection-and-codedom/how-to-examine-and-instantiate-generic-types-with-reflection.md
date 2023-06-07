@@ -1,5 +1,6 @@
 ---
-title: Como examinar tipos genéricos e criar instâncias deles com a reflexão
+title: 'Como: Examinar tipos genéricos e criar instâncias deles com a reflexão'
+description: Veja como examinar e instanciar tipos genéricos com reflexão. Use as propriedades isgenéricatype, IsGenericParameter e GenericParameterPosition.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - reflection, generic types
 - generics [.NET Framework], reflection
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
-ms.openlocfilehash: 62e4e066740d0422f8f7045b043a5725278c209c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b57a0ed0c809da442dc9fcf202ad364060971f80
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130133"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865093"
 ---
-# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Como examinar tipos genéricos e criar instâncias deles com a reflexão
+# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Como: Examinar tipos genéricos e criar instâncias deles com a reflexão
 As informações sobre tipos genéricos são obtidas da mesma forma que as informações sobre os outros tipos: examinando um objeto <xref:System.Type> que representa o tipo genérico. A diferença de princípio é que um tipo genérico tem uma lista de objetos <xref:System.Type> que representam seus parâmetros de tipo genérico. O primeiro procedimento nesta seção examina os tipos genéricos.  
   
  Você pode criar um objeto <xref:System.Type> que representa um tipo construído associando argumentos de tipo aos parâmetros de tipo de uma definição de tipo genérico. O segundo procedimento demonstra isso.  
@@ -113,7 +114,7 @@ As informações sobre tipos genéricos são obtidas da mesma forma que as infor
  [!code-csharp[HowToGeneric#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#1)]
  [!code-vb[HowToGeneric#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#1)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Type>
 - <xref:System.Reflection.MethodInfo>

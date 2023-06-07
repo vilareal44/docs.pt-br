@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b60f1f59-9825-4b57-961f-d2979518e6a7
 topic_type:
 - apiref
-ms.openlocfilehash: 8b8b8521a09fa54a105e8263a471ab0467fb6ccc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8cbac3b4ad25ba7dc01413f0c1b44541c43b3999
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176286"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503868"
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>Método IHostTaskManager::CallNeedsHostHook
-Permite que o host especifique se o tempo de execução do idioma comum (CLR) pode inforrar a chamada especificada para uma função não gerenciada.  
+Permite que o host especifique se o Common Language Runtime (CLR) pode embutir a chamada especificada para uma função não gerenciada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,41 +34,41 @@ HRESULT CallNeedsHostHook (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `target`  
- [em] O endereço dentro do arquivo executável portátil mapeado (PE) da função não gerenciada que deve ser chamada.  
+ no O endereço dentro do arquivo PE (executável portátil) mapeado da função não gerenciada que deve ser chamada.  
   
  `pbCallNeedsHostHook`  
- [fora] Um ponteiro para um valor booleano que indica se o host requer que a chamada seja fisgada.  
+ fora Um ponteiro para um valor booliano que indica se o host requer que a chamada seja conectada.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`CallNeedsHostHook`retornou com sucesso.|  
-|Host_e_clrnotavailable|A CLR não foi carregada em um processo, ou a CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com sucesso.|  
-|HOST_E_TIMEOUT|A chamada acabou.|  
-|HOST_E_NOT_OWNER|O interlocutor não é dono da fechadura.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um fio ou fibra bloqueado estava esperando por ele.|  
-|E_FAIL|Uma falha catastrófica desconhecida ocorreu. Quando um método retorna E_FAIL, a CLR não é mais utilizável dentro do processo. Chamadas subseqüentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`CallNeedsHostHook`retornado com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
+|HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- Para ajudar a otimizar a execução do código, o CLR realiza uma análise de cada chamada de invocação da plataforma durante a compilação para determinar se a chamada pode ser inforrada. `CallNeedsHostHook`permite que o host anule essa decisão, exigindo que uma chamada para uma função não gerenciada seja fisgada. Se o host precisar de um gancho, o tempo de execução não inforrar a chamada.  
+ Para ajudar a otimizar a execução de código, o CLR executa uma análise de cada chamada de invocação de plataforma durante a compilação para determinar se a chamada pode ser embutida. `CallNeedsHostHook`permite que o host Substitua essa decisão exigindo que uma chamada para uma função não gerenciada seja conectada. Se o host exigir um gancho, o tempo de execução não embuti a chamada.  
   
- O host normalmente exigiria um gancho onde ele deve ajustar um estado de ponto flutuante ou ao receber a notificação de que uma chamada está entrando em um estado onde o host não pode rastrear as solicitações de memória ou quaisquer bloqueios tomados. Quando o host exige que a chamada seja fisgada, o tempo de execução notifica o host de transições de e para o código gerenciado usando chamadas para [EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime,](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md) [ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)e [ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md).  
+ O host normalmente exigiria um gancho no qual ele deve ajustar um estado de ponto flutuante ou ao receber a notificação de que uma chamada está entrando em um estado em que o host não pode rastrear as solicitações do tempo de execução para a memória ou quaisquer bloqueios tirados. Quando o host exige que a chamada seja conectada, o tempo de execução notifica o host de transições de e para código gerenciado usando chamadas para [EnterRuntime](ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](ihosttaskmanager-leaveruntime-method.md), [ReverseEnterRuntime](ihosttaskmanager-reverseenterruntime-method.md)e [ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [Interface ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [Interface IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [Interface IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [Interface ICLRTask](iclrtask-interface.md)
+- [Interface ICLRTaskManager](iclrtaskmanager-interface.md)
+- [Interface IHostTask](ihosttask-interface.md)
+- [Interface IHostTaskManager](ihosttaskmanager-interface.md)

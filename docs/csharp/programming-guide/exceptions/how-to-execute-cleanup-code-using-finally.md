@@ -1,19 +1,20 @@
 ---
-title: Como executar o código de limpeza usando finalmente - C# Guia de Programação
+title: Como executar o código de limpeza usando o guia de programação finally-C#
+description: Saiba como executar o código de limpeza usando uma instrução ' Finally '. As instruções finally garantem que qualquer limpeza necessária de objetos ocorra imediatamente.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - try/finally blocks [C#]
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: d1ba761e64053d656ad4cd004133fc455a57c6f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 148c1f9fba67659a07c667bb15619d6f3f7c3b2f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705269"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302016"
 ---
-# <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Como executar o código de limpeza usando finalmente (C# Guia de Programação)
+# <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Como executar o código de limpeza usando finally (guia de programação C#)
 O propósito de uma instrução `finally` é garantir que a limpeza necessária de objetos, normalmente objetos que estão mantendo recursos externos, ocorra imediatamente, mesmo que uma exceção seja lançada. Um exemplo dessa limpeza é chamar <xref:System.IO.Stream.Close%2A> em um <xref:System.IO.FileStream> imediatamente após o uso, em vez de esperar que o objeto passe pela coleta de lixo feita pelo Common Language Runtime, da seguinte maneira:  
   
  [!code-csharp[csProgGuideExceptions#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#16)]  
@@ -27,12 +28,12 @@ O propósito de uma instrução `finally` é garantir que a limpeza necessária 
   
  Uma conexão de banco de dados é outra boa candidata a ser fechada em um bloco `finally`. Como o número de conexões permitidas para um servidor de banco de dados é, às vezes, limitado, você deve fechar conexões de banco de dados assim que possível. Se uma exceção for lançada antes de fechar a conexão, este seria outro caso em que o uso do bloco `finally` é melhor que esperar pela coleta de lixo.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Exceções e tratamento de exceções](./index.md)
 - [Tratamento de exceção](./exception-handling.md)
-- [usando a Declaração](../../language-reference/keywords/using-statement.md)
-- [tentar pegar](../../language-reference/keywords/try-catch.md)
+- [Instrução using](../../language-reference/keywords/using-statement.md)
+- [try-catch](../../language-reference/keywords/try-catch.md)
 - [try-finally](../../language-reference/keywords/try-finally.md)
 - [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)

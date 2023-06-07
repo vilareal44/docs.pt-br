@@ -1,17 +1,18 @@
 ---
-title: Como consultar os metadados de um conjunto com reflexão (LINQ) (C#)
+title: Como consultar metadados de um assembly com reflexão (LINQ) (C#)
+description: Saiba como usar o LINQ com APIs de reflexão do .NET em C# para recuperar metadados específicos sobre métodos que correspondem a um critério de pesquisa.
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: 6e68cfea2bf3e03aed9de3e4a18cf9941ece34e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc5352e9cb90e9ad2808fb027823174d07d69da6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168915"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104586"
 ---
-# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>Como consultar os metadados de um conjunto com reflexão (LINQ) (C#)
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>Como consultar metadados de um assembly com reflexão (LINQ) (C#)
 
-As APIs de reflexão da biblioteca de classes .NET Framework podem ser usadas para examinar os metadados no assembly .NET e criar coleções de tipos, membros de tipo, parâmetros e assim por diante que estão nesse assembly. Como essas coleções dão suporte à interface <xref:System.Collections.Generic.IEnumerable%601> genéricas, elas podem ser consultadas usando LINQ.  
+As APIs de reflexão do .NET podem ser usadas para examinar os metadados em um assembly .NET e criar coleções de tipos, membros de tipo, parâmetros e assim por diante que estão nesse assembly. Como essas coleções dão suporte à interface <xref:System.Collections.Generic.IEnumerable%601> genéricas, elas podem ser consultadas usando LINQ.  
   
 O exemplo a seguir mostra como o LINQ pode ser usado com a reflexão para recuperar metadados específicos sobre os métodos que correspondem a um critério de pesquisa especificado. Nesse caso, a consulta localizará os nomes de todos os métodos no assembly que retornam tipos enumeráveis como matrizes.  
   

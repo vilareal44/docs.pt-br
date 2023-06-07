@@ -1,16 +1,17 @@
 ---
 title: Construtores de instâncias – Guia de Programação em C#
+description: Construtores de instância em C# criam e inicializam qualquer variável de membro de instância quando você usa a nova expressão para criar um objeto de uma classe.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: 621b8ca7510b0b9916c9c46f201ff77402c3c655
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d70e786446fb198afb4e0311757cacb65b706f47
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75964720"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864196"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Construtores de instâncias (Guia de Programação em C#)
 
@@ -31,7 +32,7 @@ Os construtores de instância são usados para criar e inicializar quaisquer var
   
  [!code-csharp[csProgGuideObjects#77](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#77)]  
   
- Se uma classe não tiver um construtor, um construtor sem parâmetros será gerado automaticamente e os valores padrão serão usados para inicializar os campos de objeto. Por exemplo, um [int](../../language-reference/builtin-types/integral-numeric-types.md) é inicializada como 0. Para obter informações sobre os valores padrão do tipo, consulte [Valores padrão dos tipos C#](../../language-reference/builtin-types/default-values.md). Portanto, como construtor sem parâmetros da classe `Coords` inicializa todos os membros de dados como zero, ele pode ser totalmente removido sem alterar a maneira como a classe funciona. Um exemplo completo que usa vários construtores é fornecido no Exemplo 1 posteriormente neste tópico e um exemplo de um construtor gerado automaticamente é fornecido no Exemplo 2.  
+ Se uma classe não tiver um construtor, um construtor sem parâmetros será gerado automaticamente e os valores padrão serão usados para inicializar os campos de objeto. Por exemplo, um [int](../../language-reference/builtin-types/integral-numeric-types.md) é inicializada como 0. Para obter informações sobre os valores padrão de tipo, consulte [valores padrão de tipos C#](../../language-reference/builtin-types/default-values.md). Portanto, como construtor sem parâmetros da classe `Coords` inicializa todos os membros de dados como zero, ele pode ser totalmente removido sem alterar a maneira como a classe funciona. Um exemplo completo que usa vários construtores é fornecido no Exemplo 1 posteriormente neste tópico e um exemplo de um construtor gerado automaticamente é fornecido no Exemplo 2.  
   
  Construtores de instância também podem ser usados para chamar os construtores de instância de classes base. O construtor de classe pode invocar o construtor da classe base por meio do inicializador, da seguinte maneira:  
   
@@ -58,10 +59,10 @@ Os construtores de instância são usados para criar e inicializar quaisquer var
   
  Para obter mais exemplos sobre a invocação de construtores de classe base, consulte [virtual](../../language-reference/keywords/virtual.md), [override](../../language-reference/keywords/override.md) e [base](../../language-reference/keywords/base.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Classes e structs](./index.md)
 - [Construtores](./constructors.md)
 - [Finalizadores](./destructors.md)
-- [Estático](../../language-reference/keywords/static.md)
+- [static](../../language-reference/keywords/static.md)

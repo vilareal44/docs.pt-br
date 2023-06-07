@@ -4,12 +4,12 @@ description: Aprenda como escrever código para examinar a estrutura de um árvo
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 5734e1be6b59bfe3eae97f29d1bd91e7e3a3623f
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: ea205d42b02ea7b38c04cb70d322329cf7c1d495
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761857"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004641"
 ---
 # <a name="interpreting-expressions"></a>Interpretando Expressões
 
@@ -22,7 +22,7 @@ Esse design torna visitar todos os nós em uma árvore de expressão uma operaç
 Se o tipo de nó tiver filhos, visite os filhos recursivamente. Em cada nó filho, repita o processo usado no nó raiz: determine o tipo e, se o tipo tiver filhos, visite cada um dos filhos.
 
 ## <a name="examining-an-expression-with-no-children"></a>Examinando uma expressão sem filhos
-Vamos começar visitando cada nó em uma árvore de expressão muito simples.
+Vamos começar visitando cada nó em uma árvore de expressão simples.
 Este é o código que cria uma expressão constante e, em seguida, examina suas propriedades:
 
 ```csharp
@@ -53,7 +53,7 @@ Expression<Func<int>> sum = () => 1 + 2;
 
 > Não estou usando `var` para declarar essa árvore de expressão, pois isso não é possível porque o lado direito da atribuição é de um tipo implícito.
 
-O nó raiz é um `LambdaExpression`. Para obter o código interessante no lado direito do operador `=>`, você precisa encontrar um dos filhos de `LambdaExpression`. Faremos isso com todas as expressões nesta seção. O nó pai nos ajudar a localizar o tipo de retorno do `LambdaExpression`.
+O nó raiz é um `LambdaExpression`. Para obter o código interessante no lado direito do `=>` operador, você precisa encontrar um dos filhos do `LambdaExpression` .... Faremos isso com todas as expressões nesta seção. O nó pai nos ajudar a localizar o tipo de retorno do `LambdaExpression`.
 
 Para examinar cada nó nesta expressão, precisaremos visitar recursivamente alguns nós. Esta é uma primeira implementação simples:
 
@@ -215,7 +215,7 @@ public class ConstantVisitor : Visitor
 }
 ```
 
-Esse algoritmo é a base de um algoritmo que pode visitar qualquer `LambdaExpression` arbitrário. Há várias lacunas, uma delas é que o código que criei pesquisa somente por uma amostra muito pequena dos possíveis conjuntos de nós de árvore de expressão que ele pode encontrar. No entanto, ainda é possível aprender bastante com o que ele produz. (O caso padrão no método `Visitor.CreateFromExpression` imprime uma mensagem no console de erro quando um novo tipo de nó é encontrado. Dessa forma, você sabe que precisa adicionar um novo tipo de expressão.)
+Esse algoritmo é a base de um algoritmo que pode visitar qualquer `LambdaExpression` arbitrário. Há muitos buracos, ou seja, o código que criei apenas procura uma amostra muito pequena dos possíveis conjuntos de nós da árvore de expressão que ele pode encontrar. No entanto, ainda é possível aprender bastante com o que ele produz. (O caso padrão no método `Visitor.CreateFromExpression` imprime uma mensagem no console de erro quando um novo tipo de nó é encontrado. Dessa forma, você sabe que precisa adicionar um novo tipo de expressão.)
 
 Quando executa esse visitante na expressão de adição mostrada acima, você obtém a saída a seguir:
 
@@ -262,7 +262,7 @@ Expression<Func<int>> sum5 = () => (1 + (2 + 3)) + 4;
 Você pode ver a separação em duas possíveis respostas para realçar a mais promissora. A primeira representa expressões *associativas à direita*. A segunda representa expressões *associativas à esquerda*.
 A vantagem desses dois formatos é que o formato pode ser dimensionado para qualquer número arbitrário de expressões de adição.
 
-Se executar essa expressão por meio do visitante, você verá essa saída, verificando se a expressão de adição simples é *associativa à esquerda*.
+Se você executar essa expressão por meio do visitante, verá essa saída, verificando se a expressão de adição simples é a *associação à esquerda*.
 
 Para executar esse exemplo e ver a árvore de expressão completa, eu precise fazer uma alteração na árvore de expressão de origem. Quando a árvore de expressão contém todas as constantes, a árvore resultante contém apenas o valor constante de `10`. O compilador executa toda a adição e reduz a expressão a sua forma mais simples. Simplesmente adicionar uma variável à expressão é suficiente para ver a árvore original:
 
@@ -355,7 +355,7 @@ Expression<Func<int, int>> factorial = (n) =>
 ```
 
 Este código representa uma possível implementação da função *fatorial* matemática. A maneira como escrevi este código destaca duas limitações da criação de árvores de expressão atribuindo expressões lambda a Expressões. Primeiro, lambdas de instrução não são permitidos. Isso significa que eu não posso usar loops, blocos, instruções if/else e outras estruturas de controle comuns em C#. Estou limitado ao uso de expressões. Em segundo lugar, não posso chamar recursivamente a mesma expressão.
-Eu poderia se ela já fosse um delegado, mas não posso chamá-la em sua forma de árvore de expressão. Na seção [criando árvores de expressão](expression-trees-building.md), você aprenderá técnicas para superar essas limitações.
+Eu poderia se ela já fosse um delegado, mas não posso chamá-la em sua forma de árvore de expressão. Na seção sobre a [criação de árvores de expressão](expression-trees-building.md), você aprenderá técnicas para superar essas limitações.
 
 Nesta expressão, você encontrará todos esses tipos de nós:
 
@@ -517,7 +517,7 @@ Até o último exemplo reconhece um subconjunto dos tipos de nó possíveis.
 Você ainda poderá alimentá-lo com muitas expressões que o fariam falhar.
 Uma implementação completa está incluída no .NET Standard com o nome <xref:System.Linq.Expressions.ExpressionVisitor> e pode lidar com todos os tipos de nó possíveis.
 
-Por fim, a biblioteca usada neste artigo foi desenvolvida para demonstração e aprendizado. Ela não está otimizada. Eu a escrevi para deixar as estruturas usadas muito claras e para destacar as técnicas usadas para visitar os nós e analisar o conteúdo. Uma implementação de produção dedicaria mais atenção ao desempenho do que eu dediquei.
+Por fim, a biblioteca usada neste artigo foi desenvolvida para demonstração e aprendizado. Ela não está otimizada. Eu o escrevi para tornar as estruturas usadas claras e destacar as técnicas usadas para visitar os nós e analisar o que está lá. Uma implementação de produção dedicaria mais atenção ao desempenho do que eu dediquei.
 
 Mesmo com essas limitações, você deve estar bem no processo de escrever algoritmos que leem e entendem árvores de expressão.
 

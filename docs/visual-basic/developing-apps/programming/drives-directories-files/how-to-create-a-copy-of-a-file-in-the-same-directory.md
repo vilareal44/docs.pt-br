@@ -1,5 +1,5 @@
 ---
-title: Como criar uma cópia de um arquivo no mesmo diretório
+title: 'Como: criar uma cópia de um arquivo no mesmo diretório'
 ms.date: 07/20/2015
 f1_keywords:
 - File.Copy
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: b2fdda86-e666-42c2-9706-9527e9fa68ff
-ms.openlocfilehash: 33a4f5424ac50de7b5dc988034ca15127dc1ed02
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 741f0c80ba268369ebdd598460e9d5fa13d09571
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348817"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401674"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>Como criar uma cópia de um arquivo no mesmo diretório no Visual Basic
 
@@ -64,12 +64,12 @@ Use o método `My.Computer.FileSystem.CopyFile` para copiar arquivos. Os parâme
   
 - O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
 - <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
-- [Como copiar arquivos com um padrão específico para um diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
-- [Como criar uma cópia de um arquivo em um diretório diferente](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
-- [Como copiar um diretório para outro diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)
-- [Como renomear um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
+- [Como: copiar arquivos com um padrão específico para um diretório](how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
+- [Como: criar uma cópia de um arquivo em outro diretório](how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+- [Como: copiar um diretório para outro diretório](how-to-copy-a-directory-to-another-directory.md)
+- [Como: renomear um arquivo](how-to-rename-a-file.md)

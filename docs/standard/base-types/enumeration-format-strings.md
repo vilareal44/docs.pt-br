@@ -1,5 +1,6 @@
 ---
 title: Cadeias de caracteres de formato de enumeração
+description: Crie cadeias de caracteres de formato de enumeração usando o método enum. ToString no .NET. Formatar valores numéricos, hexadecimais ou de cadeia de caracteres de membros de enumeração.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - enumeration format strings
 - formatting [.NET Framework], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-ms.openlocfilehash: da7634758f5c4319fa18612d216682dc141318fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 825357cf4a56132dae0870972d316eff89b0c94f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78155952"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84583421"
 ---
 # <a name="enumeration-format-strings"></a>Cadeias de caracteres de formato de enumeração
 
@@ -68,6 +69,6 @@ O método `Color.ToString(System.String)` pode, então, ser usado para exibir o 
 [!code-csharp[Formatting.Enum#7](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#7)]
 [!code-vb[Formatting.Enum#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#7)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Formatar tipos](formatting-types.md)

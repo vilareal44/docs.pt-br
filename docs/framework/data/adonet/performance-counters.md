@@ -1,46 +1,47 @@
 ---
 title: Contadores de desempenho
+description: Use contadores de desempenho ADO.NET para monitorar o status do aplicativo e seus recursos de conexão usando o monitor de desempenho do Windows ou programaticamente.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: b68787980a8b64d9ee90ed8d834fab2c5c69006b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9dde2d7305a1176dadba3802fc5335c0c95bfbbb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149330"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286670"
 ---
 # <a name="performance-counters-in-adonet"></a>Contadores de desempenho no ADO.NET
-ADO.NET 2.0 introduziu suporte expandido para contadores de <xref:System.Data.SqlClient> <xref:System.Data.OracleClient>desempenho que inclui suporte para ambos e . Os <xref:System.Data.SqlClient> contadores de desempenho disponíveis em versões anteriores de ADO.NET foram preteridos e substituídos pelos novos contadores de desempenho discutidos neste tópico. Você pode usar contadores de desempenho ADO.NET para monitorar o status do seu aplicativo e os recursos de conexão que ele usa. Os contadores de desempenho podem ser monitorados usando o <xref:System.Diagnostics.PerformanceCounter> <xref:System.Diagnostics> Windows Performance Monitor ou podem ser acessados programáticamente usando a classe no namespace.  
+O ADO.NET 2,0 introduziu suporte expandido para contadores de desempenho que incluem suporte para o <xref:System.Data.SqlClient> e o <xref:System.Data.OracleClient> . Os <xref:System.Data.SqlClient> contadores de desempenho disponíveis nas versões anteriores do ADO.net foram preteridos e substituídos pelos novos contadores de desempenho discutidos neste tópico. Você pode usar contadores de desempenho ADO.NET para monitorar o status do seu aplicativo e os recursos de conexão que ele usa. Os contadores de desempenho podem ser monitorados usando o monitor de desempenho do Windows ou podem ser acessados programaticamente usando a <xref:System.Diagnostics.PerformanceCounter> classe no <xref:System.Diagnostics> namespace.  
   
 ## <a name="available-performance-counters"></a>Contadores de desempenho disponíveis  
- Atualmente existem 14 contadores de <xref:System.Data.SqlClient> <xref:System.Data.OracleClient> desempenho diferentes disponíveis para e conforme descrito na tabela a seguir. Observe que os nomes dos contadores individuais não estão localizados em versões regionais do Microsoft .NET Framework.  
+ Atualmente, há 14 diferentes contadores de desempenho disponíveis <xref:System.Data.SqlClient> para <xref:System.Data.OracleClient> o e conforme descrito na tabela a seguir. Observe que os nomes dos contadores individuais não são localizados em versões regionais do Microsoft .NET Framework.  
   
-|Contador de desempenho|Descrição|  
+|Contador de desempenho|Description|  
 |-------------------------|-----------------|  
-|`HardConnectsPerSecond`|O número de conexões por segundo que estão sendo feitas em um servidor de banco de dados.|  
+|`HardConnectsPerSecond`|O número de conexões por segundo que estão sendo feitas a um servidor de banco de dados.|  
 |`HardDisconnectsPerSecond`|O número de desconexões por segundo que estão sendo feitas em um servidor de banco de dados.|  
-|`NumberOfActiveConnectionPoolGroups`|O número de grupos de pool de conexão exclusivos que estão ativos. Este contador é controlado pelo número de strings de conexão exclusivas encontradas no AppDomain.|  
-|`NumberOfActiveConnectionPools`|O número total de piscinas de conexão.|  
-|`NumberOfActiveConnections`|O número de conexões ativas que estão atualmente em uso. **Nota:**  Este contador de desempenho não está habilitado por padrão. Para habilitar este contador de desempenho, consulte [Ativando contadores fora do padrão](#ActivatingOffByDefault).|  
-|`NumberOfFreeConnections`|O número de conexões disponíveis para uso nos pools de conexão. **Nota:**  Este contador de desempenho não está habilitado por padrão. Para habilitar este contador de desempenho, consulte [Ativando contadores fora do padrão](#ActivatingOffByDefault).|  
-|`NumberOfInactiveConnectionPoolGroups`|O número de grupos de pool de conexão exclusivos que são marcados para poda. Este contador é controlado pelo número de strings de conexão exclusivas encontradas no AppDomain.|  
-|`NumberOfInactiveConnectionPools`|O número de piscinas de conexão inativas que não tiveram nenhuma atividade recente e estão esperando para serem eliminados.|  
-|`NumberOfNonPooledConnections`|O número de conexões ativas que não estão agrupadas.|  
-|`NumberOfPooledConnections`|O número de conexões ativas que estão sendo gerenciadas pela infra-estrutura de pooling de conexões.|  
-|`NumberOfReclaimedConnections`|O número de conexões que foram recuperadas através da coleta de lixo onde `Close` ou `Dispose` não foi chamada pelo aplicativo. Não fechar ou descartar conexões explicitamente prejudica o desempenho.|  
-|`NumberOfStasisConnections`|O número de conexões atualmente aguardando a conclusão de uma ação e que, portanto, não estão disponíveis para uso pelo seu aplicativo.|  
-|`SoftConnectsPerSecond`|O número de conexões ativas sendo retiradas do pool de conexões. **Nota:**  Este contador de desempenho não está habilitado por padrão. Para habilitar este contador de desempenho, consulte [Ativando contadores fora do padrão](#ActivatingOffByDefault).|  
-|`SoftDisconnectsPerSecond`|O número de conexões ativas que estão sendo devolvidas ao pool de conexões. **Nota:**  Este contador de desempenho não está habilitado por padrão. Para habilitar este contador de desempenho, consulte [Ativando contadores fora do padrão](#ActivatingOffByDefault).|  
+|`NumberOfActiveConnectionPoolGroups`|O número de grupos de pools de conexão exclusivos que estão ativos. Esse contador é controlado pelo número de cadeias de conexão exclusivas encontradas no AppDomain.|  
+|`NumberOfActiveConnectionPools`|O número total de pools de conexão.|  
+|`NumberOfActiveConnections`|O número de conexões ativas que estão em uso no momento. **Observação:**  Esse contador de desempenho não está habilitado por padrão. Para habilitar esse contador de desempenho, consulte [ativando contadores desativados por padrão](#ActivatingOffByDefault).|  
+|`NumberOfFreeConnections`|O número de conexões disponíveis para uso nos pools de conexão. **Observação:**  Esse contador de desempenho não está habilitado por padrão. Para habilitar esse contador de desempenho, consulte [ativando contadores desativados por padrão](#ActivatingOffByDefault).|  
+|`NumberOfInactiveConnectionPoolGroups`|O número de grupos de pools de conexão exclusivos que estão marcados para remoção. Esse contador é controlado pelo número de cadeias de conexão exclusivas encontradas no AppDomain.|  
+|`NumberOfInactiveConnectionPools`|O número de pools de conexão inativos que não tiveram nenhuma atividade recente e que estão aguardando para serem descartados.|  
+|`NumberOfNonPooledConnections`|O número de conexões ativas que não estão em pool.|  
+|`NumberOfPooledConnections`|O número de conexões ativas que estão sendo gerenciadas pela infraestrutura de pooling de conexão.|  
+|`NumberOfReclaimedConnections`|O número de conexões que foram recuperadas por meio da coleta de lixo onde `Close` ou `Dispose` não foi chamado pelo aplicativo. Não fechar ou descartar explicitamente as conexões afeta o desempenho.|  
+|`NumberOfStasisConnections`|O número de conexões que estão aguardando a conclusão de uma ação e que, portanto, não estão disponíveis para uso pelo seu aplicativo.|  
+|`SoftConnectsPerSecond`|O número de conexões ativas sendo extraídas do pool de conexões. **Observação:**  Esse contador de desempenho não está habilitado por padrão. Para habilitar esse contador de desempenho, consulte [ativando contadores desativados por padrão](#ActivatingOffByDefault).|  
+|`SoftDisconnectsPerSecond`|O número de conexões ativas que estão sendo retornadas para o pool de conexões. **Observação:**  Esse contador de desempenho não está habilitado por padrão. Para habilitar esse contador de desempenho, consulte [ativando contadores desativados por padrão](#ActivatingOffByDefault).|  
   
-### <a name="connection-pool-groups-and-connection-pools"></a>Grupos de pool de conexão e pools de conexão  
- Ao usar a Autenticação do Windows (segurança integrada), você deve monitorar os `NumberOfActiveConnectionPoolGroups` contadores de desempenho e `NumberOfActiveConnectionPools` os contadores de desempenho. A razão é que os grupos de pool de conexão mapeiam para cadeias de conexão únicas. Quando a segurança integrada é usada, os pools de conexões mapeiam as strings de conexão e, além disso, criam pools separados para identidades individuais do Windows. Por exemplo, se Fred e Julie, cada um dentro `"Data Source=MySqlServer;Integrated Security=true"`do mesmo AppDomain, ambos usarem a seqüência de conexões, um grupo de pool de conexão é criado para a seqüência de conexões, e dois pools adicionais são criados, um para Fred e um para Julie. Se John e Martha usarem uma seqüência `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`de conexão com um login sql server idêntico, então apenas um único pool será criado para a identidade **lowPrivUser.**  
+### <a name="connection-pool-groups-and-connection-pools"></a>Grupos de pools de conexão e pools de conexão  
+ Ao usar a autenticação do Windows (segurança integrada), você deve monitorar `NumberOfActiveConnectionPoolGroups` os `NumberOfActiveConnectionPools` contadores de desempenho e. O motivo é que os grupos do pool de conexões são mapeados para cadeias de conexão exclusivas. Quando a segurança integrada é usada, os pools de conexão são mapeados para cadeias de conexão e também criam pools separados para identidades individuais do Windows. Por exemplo, se Fred e Julie, cada um dentro do mesmo AppDomain, ambos usam a cadeia de conexão `"Data Source=MySqlServer;Integrated Security=true"` , um grupo de pools de conexão é criado para a cadeia de conexão e dois pools adicionais são criados, um para Fred e outro para Julie. Se João e Martha usarem uma cadeia de conexão com um logon de SQL Server idêntico, `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"` apenas um único pool será criado para a identidade **lowPrivUser** .  
   
 <a name="ActivatingOffByDefault"></a>
-### <a name="activating-off-by-default-counters"></a>Ativando contadores off-by-default  
- Os contadores `NumberOfFreeConnections`de `NumberOfActiveConnections` `SoftDisconnectsPerSecond`desempenho `SoftConnectsPerSecond` , , e estão desligados por padrão. Adicione as seguintes informações ao arquivo de configuração do aplicativo para habilitá-las:  
+### <a name="activating-off-by-default-counters"></a>Ativando contadores desativados por padrão  
+ Os contadores de desempenho `NumberOfFreeConnections` , `NumberOfActiveConnections` , `SoftDisconnectsPerSecond` e `SoftConnectsPerSecond` estão desativados por padrão. Adicione as seguintes informações ao arquivo de configuração do aplicativo para habilitá-las:  
   
 ```xml  
 <system.diagnostics>  
@@ -52,10 +53,10 @@ ADO.NET 2.0 introduziu suporte expandido para contadores de <xref:System.Data.Sq
 ```  
   
 ## <a name="retrieving-performance-counter-values"></a>Recuperando valores do contador de desempenho  
- O aplicativo de console a seguir mostra como recuperar valores do contador de desempenho em sua aplicação. As conexões devem estar abertas e ativas para que as informações sejam devolvidas para todos os contadores de desempenho ADO.NET.  
+ O aplicativo de console a seguir mostra como recuperar valores de contador de desempenho em seu aplicativo. As conexões devem estar abertas e ativas para que as informações sejam retornadas para todos os contadores de desempenho ADO.NET.  
   
 > [!NOTE]
-> Este exemplo usa o banco de dados **AdventureWorks** de exemplo incluído no SQL Server. As strings de conexão fornecidas no código de amostra assumem que o banco de dados está instalado e disponível no computador local com um nome de ocorrência do SqlExpress, e que você criou logins do SQL Server que correspondem aos fornecidos nas strings de conexão. Você pode precisar ativar logins do SQL Server se o servidor estiver configurado usando as configurações de segurança padrão que permitem apenas a autenticação do Windows. Modifique as strings de conexão conforme necessário para se adequar ao seu ambiente.  
+> Este exemplo usa o banco de dados **AdventureWorks** de exemplo incluído com SQL Server. As cadeias de conexão fornecidas no código de exemplo pressupõem que o banco de dados está instalado e disponível no computador local com um nome de instância de SQLExpress e que você criou SQL Server logons que correspondem àqueles fornecidos nas cadeias de conexão. Talvez seja necessário habilitar os logons SQL Server se o servidor estiver configurado usando as configurações de segurança padrão que permitem apenas a autenticação do Windows. Modifique as cadeias de conexão conforme necessário para se adequar ao seu ambiente.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -399,6 +400,6 @@ class Program
 - [Conectando a uma Fonte de Dados](connecting-to-a-data-source.md)
 - [Conexão do Oracle, ODBC e OLE DB Pooling](ole-db-odbc-and-oracle-connection-pooling.md)
 - [Contadores de Desempenho do ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
-- [Perfil de execução](../../debug-trace-profile/runtime-profiling.md)
-- [Introdução aos limites de desempenho de monitoramento](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
+- [Criação de perfil de tempo de execução](../../debug-trace-profile/runtime-profiling.md)
+- [Introdução ao monitoramento de limites de desempenho](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
 - [Visão geral do ADO.NET](ado-net-overview.md)

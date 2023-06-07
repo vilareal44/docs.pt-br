@@ -2,18 +2,18 @@
 title: Cancelar tarefas assíncronas após um período
 ms.date: 07/20/2015
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-ms.openlocfilehash: 4b1cfe03e0bbcc0e601a1ec641c95bd68266b7c8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 048d4c19d459905ea579ede96c69230e718d55aa
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347955"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396682"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>Cancelar tarefas assíncronas após um período (Visual Basic)
 
 Você pode cancelar uma operação assíncrona após um período de tempo usando o método <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> se você não deseja aguardar a conclusão da operação. Esse método agenda o cancelamento de quaisquer tarefas associadas que não são concluídas dentro do período designado pela expressão `CancelAfter`.
 
-Este exemplo adiciona o código desenvolvido em [Cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) para baixar uma lista de sites e para exibir o tamanho dos conteúdos de cada um.
+Este exemplo adiciona o código desenvolvido em [Cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)](cancel-an-async-task-or-a-list-of-tasks.md) para baixar uma lista de sites e para exibir o tamanho dos conteúdos de cada um.
 
 > [!NOTE]
 > Para executar os exemplos, você precisa ter o Visual Studio 2012 ou posterior e o .NET Framework 4.5 ou posterior instalados no seu computador.
@@ -30,7 +30,7 @@ Você pode baixar o projeto completo do WPF (Windows Presentation Foundation) em
 
 4. No **Gerenciador de Soluções**, abra o menu de atalho do projeto **CancelAfterTime** e, em seguida, escolha **Definir como Projeto de Inicialização**.
 
-5. Pressione a tecla F5 para executar o projeto.
+5. Escolha a tecla F5 para executar o projeto.
 
      Escolha as teclas CTRL+F5 para executar o projeto sem depurá-lo.
 
@@ -40,7 +40,7 @@ Você pode baixar o projeto completo do WPF (Windows Presentation Foundation) em
 
 ## <a name="building-the-example"></a>Compilando o Exemplo
 
-O exemplo neste tópico é adicionado ao projeto desenvolvido em [Cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) para cancelar uma lista de tarefas. O exemplo usa a mesma interface do usuário, embora o botão **Cancelar** não seja explicitamente usado.
+O exemplo neste tópico é adicionado ao projeto desenvolvido em [Cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)](cancel-an-async-task-or-a-list-of-tasks.md) para cancelar uma lista de tarefas. O exemplo usa a mesma interface do usuário, embora o botão **Cancelar** não seja explicitamente usado.
 
 Para compilar o exemplo você mesmo, passo a passo, siga as instruções na seção "Baixando o exemplo", mas escolha **CancelAListOfTasks** como o **Projeto de Inicialização**. Adicione as alterações deste tópico ao projeto.
 
@@ -193,10 +193,10 @@ End Class
 ' Downloads canceled.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Instruções passo a passo: acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
-- [Ajustando seu aplicativo assíncrono (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Programação assíncrona com Async e Await (Visual Basic)](index.md)
+- [Instruções passo a passo: acessando a Web usando Async e Await (Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)](cancel-an-async-task-or-a-list-of-tasks.md)
+- [Ajustando seu aplicativo assíncrono (Visual Basic)](fine-tuning-your-async-application.md)
 - [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
 ms.openlocfilehash: d96585b397f75dcb9fac7e7fce93799cc95e7c6c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154290"
 ---
-# <a name="bindingredirect-element"></a>\<vinculaçãoRedirecionar> Elemento
+# <a name="bindingredirect-element"></a>Elemento \<bindingRedirect>
 Redireciona uma versão do assembly para outra.  
   
-[**\<>de configuração**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<>de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<montagem>vinculante**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dependente>de montagem**](dependentassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<vinculaçãoRedirecionar>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dependentAssembly>**](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<bindingRedirect>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,8 +40,8 @@ newVersion="new assembly version"/>
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`oldVersion`|Atributo obrigatório.<br /><br /> Especifica a versão do assembly que foi originalmente solicitada. O formato de um número de versão de montagem é *major.minor.build.revision*. Os valores válidos para cada parte desse número de versão estão entre 0 e 65535.<br /><br /> Você também pode especificar um intervalo de versões no seguinte formato:<br /><br /> *n.n.n.n - n.n.n.n*|  
-|`newVersion`|Atributo obrigatório.<br /><br /> Specifies the version of the assembly to use instead of the originally requested version in the format: *n.n.n.n*<br /><br /> Esse valor pode especificar uma versão anterior do `oldVersion`.|  
+|`oldVersion`|Atributo obrigatório.<br /><br /> Especifica a versão do assembly que foi originalmente solicitada. O formato de um número de versão do assembly é *Major. Minor. Build. Revision*. Os valores válidos para cada parte desse número de versão estão entre 0 e 65535.<br /><br /> Você também pode especificar um intervalo de versões no seguinte formato:<br /><br /> *n. n. n-n. n. n. n*|  
+|`newVersion`|Atributo obrigatório.<br /><br /> Especifica a versão do assembly a ser usada em vez da versão solicitada originalmente no formato: *n* . n. n. n<br /><br /> Esse valor pode especificar uma versão anterior do `oldVersion`.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -59,11 +59,11 @@ newVersion="new assembly version"/>
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- Ao criar um aplicativo .NET Framework com base em um assembly com nome forte, o aplicativo usará essa versão do assembly em tempo de execução por padrão, mesmo se uma nova versão estiver disponível. No entanto, você pode configurar o aplicativo para ser executado com base em uma versão mais nova do assembly. Para obter detalhes sobre como o tempo de execução usa esses arquivos para determinar qual versão de montagem usar, consulte [Como o Runtime localiza conjuntos](../../../deployment/how-the-runtime-locates-assemblies.md).  
+ Ao criar um aplicativo .NET Framework com base em um assembly com nome forte, o aplicativo usará essa versão do assembly em tempo de execução por padrão, mesmo se uma nova versão estiver disponível. No entanto, você pode configurar o aplicativo para ser executado com base em uma versão mais nova do assembly. Para obter detalhes sobre como o tempo de execução usa esses arquivos para determinar qual versão do assembly usar, consulte [como o tempo de execução localiza assemblies](../../../deployment/how-the-runtime-locates-assemblies.md).  
   
  Você pode redirecionar mais de uma versão do assembly ao incluir vários elementos `bindingRedirect` em um elemento `dependentAssembly`. Você também pode redirecionar de uma versão mais recente para uma versão anterior do assembly.  
   
- O redirecionamento de associação de assembly explícito em um arquivo de configuração do aplicativo requer uma permissão de segurança. Isso se aplica ao redirecionamento de assemblies do .NET Framework e assemblies de terceiros. A permissão é <xref:System.Security.Permissions.SecurityPermissionFlag> concedida definindo a bandeira no <xref:System.Security.Permissions.SecurityPermission>. Para obter mais informações, consulte [A permissão de segurança de redirecionamento de vinculação do conjunto](../../assembly-binding-redirection-security-permission.md).  
+ O redirecionamento de associação de assembly explícito em um arquivo de configuração do aplicativo requer uma permissão de segurança. Isso se aplica ao redirecionamento de assemblies do .NET Framework e assemblies de terceiros. A permissão é concedida definindo o <xref:System.Security.Permissions.SecurityPermissionFlag> sinalizador no <xref:System.Security.Permissions.SecurityPermission> . Para obter mais informações, consulte [permissão de segurança de redirecionamento de associação de assembly](../../assembly-binding-redirection-security-permission.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como redirecionar uma versão do assembly para outra.  
@@ -87,5 +87,5 @@ newVersion="new assembly version"/>
 ## <a name="see-also"></a>Confira também
 
 - [Esquema de configurações do runtime](index.md)
-- [Esquema de arquivo de configuração](../index.md)
+- [Esquema de arquivos de configuração](../index.md)
 - [Redirecionando versões de assembly](../../redirect-assembly-versions.md)

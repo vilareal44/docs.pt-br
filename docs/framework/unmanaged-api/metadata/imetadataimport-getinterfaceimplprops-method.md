@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: be3f5985-b1e4-4036-8602-c16e8508d4af
 topic_type:
 - apiref
-ms.openlocfilehash: 4b8ddf7fec12d175f030c0ea0ed982c6fb334aee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c9d9647084aa729817eeeb17ee3f5cd320c0d29
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175376"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491206"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>Método IMetaDataImport::GetInterfaceImplProps
 Obtém um ponteiro para os tokens de metadados para o <xref:System.Type> que implementa o método especificado e para a interface que declara esse método.
@@ -35,24 +35,24 @@ HRESULT GetInterfaceImplProps (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `iiImpl`  
- [em] O token de metadados representando o método para retornar os tokens de classe e interface para.  
+ no O token de metadados que representa o método para o qual retornar os tokens de classe e de interface.  
   
  `pClass`  
- [fora] O token de metadados representando a classe que implementa o método.  
+ fora O token de metadados que representa a classe que implementa o método.  
   
  `ptkIface`  
- [fora] O token de metadados representando a interface que define o método implementado.  
+ fora O token de metadados que representa a interface que define o método implementado.  
 
 ## <a name="remarks"></a>Comentários
 
- Você obtém `iImpl` o valor para chamar o método [EnumInterfaceImpls.](imetadataimport-enuminterfaceimpls-method.md)
+ Você Obtém o valor para `iImpl` chamando o método [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) .
 
- Por exemplo, suponha `mdTypeDef` que uma classe tenha um valor de token de 0x02000007 e que implemente três interfaces cujos tipos têm tokens:
+ Por exemplo, suponha que uma classe tenha um `mdTypeDef` valor de token de 0x02000007 e que ele implemente três interfaces cujos tipos têm tokens:
 
 - 0x02000003 (TypeDef)
-- 0x010000A (TypeRef)
+- 0x0100000A (TypeRef)
 - 0x0200001C (TypeDef)
 
 Conceitualmente, essas informações são armazenadas em uma tabela de implementação de interface como:
@@ -61,27 +61,27 @@ Conceitualmente, essas informações são armazenadas em uma tabela de implement
 |------------|-------------|-----------------|
 | 4          |             |                 |
 | 5          | 02000007    | 02000003        |
-| 6          | 02000007    | 010000A        |
+| 6          | 02000007    | 0100000A        |
 | 7          |             |                 |
 | 8          | 02000007    | 0200001C        |
 
-Lembre-se, o token é um valor de 4 bytes:
+Lembre-se de que o token é um valor de 4 bytes:
 
-- Os 3 bytes inferiores mantêm o número da linha, ou RID.
-- O byte superior contém o tipo de `mdtInterfaceImpl`token – 0x09 para .
+- Os 3 bytes inferiores contêm o número da linha, ou RID.
+- O byte superior mantém o tipo de token – 0x09 para `mdtInterfaceImpl` .
 
-`GetInterfaceImplProps`retorna as informações mantidas na linha cujo `iImpl` token você fornece no argumento.
+`GetInterfaceImplProps`Retorna as informações mantidas na linha cujo token você fornece no `iImpl` argumento.
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

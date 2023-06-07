@@ -1,13 +1,14 @@
 ---
 title: Operações de projeção (C#)
+description: Saiba mais sobre as operações de projeção. Essas operações transformam um objeto em um novo formulário que geralmente consiste apenas em propriedades que serão usadas posteriormente.
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: f76eeeb779ab08a575e758a9d974573b700ae652
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 289100ac9afcfc0d5b93b5f963adc0a123e0a5af
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168330"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299156"
 ---
 # <a name="projection-operations-c"></a>Operações de projeção (C#)
 Projeção refere-se à operação de transformar um objeto em um novo formulário que geralmente consiste apenas nas propriedades que serão usadas posteriormente. Usando a projeção, você pode construir um novo tipo que é criado de cada objeto. É possível projetar uma propriedade e executar uma função matemática nela. Também é possível projetar o objeto original sem alterá-lo.  
@@ -159,10 +160,10 @@ static void SelectVsSelectMany()
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Linq>
 - [Visão geral de operadores de consulta padrão (C#)](./standard-query-operators-overview.md)
-- [cláusula de seleção](../../../language-reference/keywords/select-clause.md)
+- [cláusula SELECT](../../../language-reference/keywords/select-clause.md)
 - [Como preencher coleções de objetos de várias fontes (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)
-- [Como dividir um arquivo em muitos arquivos usando grupos (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Como dividir um arquivo em vários arquivos usando grupos (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

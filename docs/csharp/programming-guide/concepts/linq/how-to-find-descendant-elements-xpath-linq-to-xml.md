@@ -1,15 +1,16 @@
 ---
-title: Como encontrar elementos descendentes (XPath-LINQ para XML) (C#)
+title: Como localizar elementos descendentes (XPath-LINQ to XML) (C#)
+description: Saiba como localizar elementos descendentes com um nome específico usando uma expressão XPath. Examine um exemplo de código que usa um arquivo XML de exemplo.
 ms.date: 07/20/2015
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
-ms.openlocfilehash: c90651502629284c67cc16de8a1aa59c392ae178
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5a998a05f866203f3b684b8847a4a5647c12e5b
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141106"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303264"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>Como encontrar elementos descendentes (XPath-LINQ para XML) (C#)
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>Como localizar elementos descendentes (XPath-LINQ to XML) (C#)
 Este tópico mostra como obter os elementos descendentes com um nome específico.  
   
  A expressão XPath é `//Name`.  

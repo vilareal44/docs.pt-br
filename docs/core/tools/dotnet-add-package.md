@@ -2,16 +2,16 @@
 title: Comando dotnet add package
 description: O comando 'dotnet add package' fornece uma opção conveniente para adicionar uma referência de pacote NuGet a um projeto.
 ms.date: 02/14/2020
-ms.openlocfilehash: 1d57aed59ccd45417c88f9b6a2f9dd768fda9b58
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: bc79fe8adf5f775ddce62f3877a8de945c6a18ab
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102847"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840891"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
-**Este artigo se aplica a:** ✔️ .NET Core 2.x SDK e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
 
 ## <a name="name"></a>Nome
 
@@ -91,7 +91,7 @@ O arquivo *ToDo.csproj* agora contém um elemento [`<PackageReference>`](/nuget/
 
 - **`-s|--source <SOURCE>`**
 
-  A origem do pacote NuGet a ser usada durante a operação de restauração.
+  O URI da origem do pacote NuGet a ser usado durante a operação de restauração.
 
 - **`-v|--version <VERSION>`**
 
@@ -117,7 +117,7 @@ O arquivo *ToDo.csproj* agora contém um elemento [`<PackageReference>`](/nuget/
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Como gerenciar as pastas de pacotes globais, de cache e temporárias no NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
 - [Controle de versão do pacote NuGet](https://docs.microsoft.com/nuget/reference/package-versioning)

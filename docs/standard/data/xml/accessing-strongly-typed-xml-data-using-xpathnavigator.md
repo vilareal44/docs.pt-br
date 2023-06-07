@@ -6,24 +6,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: e6ec30e3c7c2318b199122cd63c7f56584707a98
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 61957ff88ef57703aff1861238ee10b23c2f16ff
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78158045"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291598"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Acessando dados fortemente tipados XML usando XPathNavigator
-Como uma instância do modelo de dados XPath 2,0, a classe de <xref:System.Xml.XPath.XPathNavigator> pode conter dados fortemente tipados que mapeiam a Common Language Runtime (CLR) tipos. De acordo com o modelo de dados XPath 2,0, somente os elementos e atributos podem conter dados fortemente tipados. A classe de <xref:System.Xml.XPath.XPathNavigator> fornece mecanismos para acessar dados em um objeto de <xref:System.Xml.XPath.XPathDocument> ou de <xref:System.Xml.XmlDocument> como dados fortemente tipados bem como mecanismos para converter de um tipo de dados para outro.  
+Como uma instância do modelo de dados XPath 2,0, a <xref:System.Xml.XPath.XPathNavigator> classe pode conter dados fortemente tipados que mapeiam para tipos Common Language Runtime (CLR). De acordo com o modelo de dados XPath 2,0, somente elementos e atributos podem conter dados fortemente tipados. A <xref:System.Xml.XPath.XPathNavigator> classe fornece mecanismos para acessar dados dentro de <xref:System.Xml.XPath.XPathDocument> um <xref:System.Xml.XmlDocument> objeto ou como dados fortemente tipados, bem como mecanismos para conversão de um tipo de dados para outro.  
   
 ## <a name="type-information-exposed-by-xpathnavigator"></a>Informações de tipo expostos por XPathNavigator  
  XML 1,0 dados é tecnicamente sem tipo, a menos que processado com um DTD, o esquema de linguagem de definição de esquema XML (XSD), ou outro mecanismo. Há um número de categorias das informações que podem ser associadas com um elemento XML ou um atributo.  
   
-- Tipos simples de CLR: Nenhum de suporte a Common Language Runtime (CLR) linguagens de esquema tipos XML diretamente. Porque é útil poder exibir conteúdo simples de elementos e atributos porque os a maioria exibe o tipo de CLR, todo o conteúdo simples pode ser digitado como <xref:System.String> na ausência de informações de esquema com qualquer adicionadas informações de esquema que limita potencialmente esse conteúdo a um tipo apropriado. Você pode localizar o melhor tipo correspondente de CLR de conteúdo simples de elementos e atributos usando a propriedade de <xref:System.Xml.XPath.XPathNavigator.ValueType%2A> . Para saber mais sobre o mapeamento de tipos internos de esquema para tipos de CLR, confira [Suporte a tipo nas classes System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+- Tipos simples de CLR: Nenhum de suporte a Common Language Runtime (CLR) linguagens de esquema tipos XML diretamente. Porque é útil poder exibir conteúdo simples de elementos e atributos porque os a maioria exibe o tipo de CLR, todo o conteúdo simples pode ser digitado como <xref:System.String> na ausência de informações de esquema com qualquer adicionadas informações de esquema que limita potencialmente esse conteúdo a um tipo apropriado. Você pode localizar o melhor tipo correspondente de CLR de conteúdo simples de elementos e atributos usando a propriedade de <xref:System.Xml.XPath.XPathNavigator.ValueType%2A> . Para saber mais sobre o mapeamento de tipos internos de esquema para tipos de CLR, confira [Suporte a tipo nas classes System.Xml](type-support-in-the-system-xml-classes.md).  
   
-- Listas de tipos simples (de CLR): Um elemento ou atributo com conteúdo simples podem conter uma lista de valores separados por um espaço em branco. Os valores são especificados por um esquema XML para ser de um tipo “lista.” Na ausência de um esquema XML, tal conteúdo simples seria tratado como um único nó de texto. Quando um esquema XML está disponível, esse conteúdo simples pode ser exposta como uma série de valores atômicos cada um que tenha um tipo simples que mapeia a uma coleção de objetos CLR. Para saber mais sobre o mapeamento de tipos internos de esquema para tipos de CLR, confira [Suporte a tipo nas classes System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+- Listas de tipos simples (de CLR): Um elemento ou atributo com conteúdo simples podem conter uma lista de valores separados por um espaço em branco. Os valores são especificados por um esquema XML para ser de um tipo “lista.” Na ausência de um esquema XML, tal conteúdo simples seria tratado como um único nó de texto. Quando um esquema XML está disponível, esse conteúdo simples pode ser exposta como uma série de valores atômicos cada um que tenha um tipo simples que mapeia a uma coleção de objetos CLR. Para saber mais sobre o mapeamento de tipos internos de esquema para tipos de CLR, confira [Suporte a tipo nas classes System.Xml](type-support-in-the-system-xml-classes.md).  
   
-- Valor tipado: Um atributo ou um elemento esquema- validado com um tipo simples têm um valor tipado. Esse valor é um tipo primitivo como um numérico, uma cadeia de caracteres, ou um tipo de dados. Todos os tipos simples internos em XSD podem ser mapeados para os tipos de CLR de que fornece acesso ao valor de um nó como um tipo mais apropriado em vez de apenas como <xref:System.String>. Um elemento com atributos ou filhos do elemento é considerado ser um tipo complexo. O valor tipado de um tipo complexo com conteúdo simples (somente os nós de texto como filhos) é o mesmo que o do tipo simples de seu conteúdo. O valor tipado de um tipo complexo com conteúdo complexo (um ou mais elementos filho) é o valor da cadeia de caracteres de concatenação de todos os nós filhos de texto retornados como <xref:System.String>. Para saber mais sobre o mapeamento de tipos internos de esquema para tipos de CLR, confira [Suporte a tipo nas classes System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+- Valor tipado: Um atributo ou um elemento esquema- validado com um tipo simples têm um valor tipado. Esse valor é um tipo primitivo como um numérico, uma cadeia de caracteres, ou um tipo de dados. Todos os tipos simples internos em XSD podem ser mapeados para os tipos de CLR de que fornece acesso ao valor de um nó como um tipo mais apropriado em vez de apenas como <xref:System.String>. Um elemento com atributos ou filhos do elemento é considerado ser um tipo complexo. O valor tipado de um tipo complexo com conteúdo simples (somente os nós de texto como filhos) é o mesmo que o do tipo simples de seu conteúdo. O valor tipado de um tipo complexo com conteúdo complexo (um ou mais elementos filho) é o valor da cadeia de caracteres de concatenação de todos os nós filhos de texto retornados como <xref:System.String>. Para saber mais sobre o mapeamento de tipos internos de esquema para tipos de CLR, confira [Suporte a tipo nas classes System.Xml](type-support-in-the-system-xml-classes.md).  
   
 - Nome do tipo específico de linguagem Esquema-: Na maioria dos casos, os tipos de CLR, que são definidos como um efeito colateral de aplicar um esquema externo, são usados para fornecer acesso ao valor de um nó. No entanto, pode haver situações onde você pode querer examinar o tipo associado com um esquema específico aplicado a um documento XML. Por exemplo, você pode desejar pesquisar por um documento XML, extraindo todos os elementos que são determinados ter o conteúdo do tipo “PurchaseOrder” de acordo com o esquema anexado. Essas informações de tipo pode ser definida somente como resultado de validação de esquema e essa informação é acessada com <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> e as propriedades de <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> de <xref:System.Xml.XPath.XPathNavigator> classe. Para obter mais informações, consulte a seção de Infoset (PSVI) de validação do esquema de postagem abaixo.  
   
@@ -45,7 +45,7 @@ Como uma instância do modelo de dados XPath 2,0, a classe de <xref:System.Xml.X
 |<xref:System.Xml.XPath.XPathNavigator.ValueAsLong%2A>|O valor de <xref:System.String> de conversão atual do nó com um valor de <xref:System.Int64> , de acordo com o XPath 2,0 regras para converter `xs:integer`.|  
 |<xref:System.Xml.XPath.XPathNavigator.ValueAs%2A>|O conteúdo do nó convertem ao tipo de destino de acordo com o XPath 2,0 regras converter.|  
   
- Para saber mais sobre o mapeamento de tipos internos de esquema para tipos de CLR, confira [Suporte a tipo nas classes System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+ Para saber mais sobre o mapeamento de tipos internos de esquema para tipos de CLR, confira [Suporte a tipo nas classes System.Xml](type-support-in-the-system-xml-classes.md).  
   
 ## <a name="the-post-schema-validation-infoset-psvi"></a>A validação Infoset (PSVI) do esquema de postagem  
  Um processador XML de esquema XML Infoset aceita como entrada e o converte em uma validação Infoset (PSVI) do esquema de postagem. Um PSVI é o infoset original XML de entrada com novos elementos de informações adicionados e as novas propriedades adicionadas a elementos existentes de informações. Há três classes de informações de adicionadas a Infoset XML em PSVI que são expostos por <xref:System.Xml.XPath.XPathNavigator>.  
@@ -181,15 +181,15 @@ Decimal price = (decimal)navigator.ValueAs(typeof(decimal));
 Console.WriteLine("The price of the book has been dropped 20% from {0:C} to {1:C}", navigator.Value, (price - price * (decimal)0.20));  
 ```  
   
- Para saber mais sobre o mapeamento de tipos internos de esquema para tipos de CLR, confira [Suporte a tipo nas classes System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+ Para saber mais sobre o mapeamento de tipos internos de esquema para tipos de CLR, confira [Suporte a tipo nas classes System.Xml](type-support-in-the-system-xml-classes.md).  
   
 ## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [Digite suporte nas classes de System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
-- [Processar dados XML usando o modelo de dados XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Navegação do nó usando XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)
-- [Navegação do nó de atributo e do namespace usando XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)
-- [Extrair dados XML usando XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)
+- [Digite suporte nas classes de System.Xml](type-support-in-the-system-xml-classes.md)
+- [Processar dados XML usando o modelo de dados XPath](process-xml-data-using-the-xpath-data-model.md)
+- [Navegação do nó usando XPathNavigator](node-set-navigation-using-xpathnavigator.md)
+- [Navegação do nó de atributo e do namespace usando XPathNavigator](attribute-and-namespace-node-navigation-using-xpathnavigator.md)
+- [Extrair dados XML usando XPathNavigator](extract-xml-data-using-xpathnavigator.md)

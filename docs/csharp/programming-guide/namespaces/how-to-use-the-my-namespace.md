@@ -1,25 +1,28 @@
 ---
-title: Como usar o Meu namespace - C# Guia de Programação
+title: Como usar o guia de programação meu namespace-C#
+description: Saiba como usar o namespace ' My '. O namespace ' My ' fornece acesso fácil e intuitivo a várias classes .NET.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: 063b46a32ced859c6c86e40c4a6b9870c3decd24
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7abd5049a979d5a15d123052cba0cfdb35bf3fb7
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700413"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381704"
 ---
-# <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Como usar o Meu namespace (Guia de Programação C#)
-O namespace <xref:Microsoft.VisualBasic.MyServices> (`My` no Visual Basic) oferece acesso rápido e intuitivo a inúmeras classes do .NET Framework, permitindo que você grave um código que interaja com o computador, com o aplicativo, com as configurações, com os recursos e assim por diante. Embora tenha sido projetado originalmente para ser usado com o Visual Basic, o namespace `MyServices` pode ser usado em aplicativos C#.  
+# <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Como usar o namespace My (guia de programação C#)
+
+O <xref:Microsoft.VisualBasic.MyServices> namespace ( `My` em Visual Basic) fornece acesso fácil e intuitivo a várias classes .net, permitindo que você escreva código que interaja com o computador, o aplicativo, as configurações, os recursos e assim por diante. Embora tenha sido projetado originalmente para ser usado com o Visual Basic, o namespace `MyServices` pode ser usado em aplicativos C#.  
   
  Para obter mais informações sobre como usar o namespace `MyServices` no Visual Basic, consulte [Desenvolvimento com My](../../../visual-basic/developing-apps/development-with-my/index.md).  
   
-## <a name="adding-a-reference"></a>Adicionando uma referência  
+## <a name="add-a-reference"></a>Adicionar uma referência
+
  Antes de usar as classes `MyServices` em sua solução, é necessário adicionar uma referência à biblioteca do Visual Basic.  
   
-#### <a name="to-add-a-reference-to-the-visual-basic-library"></a>Para adicionar uma referência à biblioteca do Visual Basic  
+### <a name="add-a-reference-to-the-visual-basic-library"></a>Adicionar uma referência à biblioteca de Visual Basic  
   
 1. In **Gerenciador de Soluções**, clique com o botão direito do mouse no nó **Referências** e selecione **Adicionar Referência**.  
   
@@ -38,8 +41,8 @@ O namespace <xref:Microsoft.VisualBasic.MyServices> (`My` no Visual Basic) ofere
   
  [!code-csharp[csProgGuideNamespaces#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces3.cs#20)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Namespaces](./index.md)
 - [Usando namespaces](./using-namespaces.md)

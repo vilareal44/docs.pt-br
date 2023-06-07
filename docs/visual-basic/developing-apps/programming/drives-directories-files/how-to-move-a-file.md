@@ -1,15 +1,15 @@
 ---
-title: Como mover um arquivo
+title: 'Como: mover um arquivo'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
-ms.openlocfilehash: 29c64a7a81028d47bf489212e6d8faec5e8dda75
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2dafeb3b5f8b8c3a8976b25c1a57f405aebb32b9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74335365"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401596"
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>Como mover um arquivo no Visual Basic
 
@@ -51,9 +51,9 @@ O método `My.Computer.FileSystem.MoveFile` pode ser utilizado para mover um arq
   
 - O usuário não tem a permissão necessária (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>
-- [Como renomear um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
-- [Como criar uma cópia de um arquivo em um diretório diferente](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
-- [Como analisar demarcadores de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [Como: renomear um arquivo](how-to-rename-a-file.md)
+- [Como: criar uma cópia de um arquivo em outro diretório](how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+- [Como: analisar caminhos de arquivo](how-to-parse-file-paths.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6c1aaaf-e2cd-407c-b73e-fbe6ffd83bb3
 topic_type:
 - apiref
-ms.openlocfilehash: 375c4b2cece0bdfd763ae383c5412c9e25614baf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4fa227d18b8cb10936d93fda9bcaf413ce63ca3b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177536"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84003926"
 ---
 # <a name="imetadataemitsethandler-method"></a>Método IMetaDataEmit::SetHandler
-Define o método referenciado `IUnknown` pelo ponteiro especificado como um retorno de chamada de notificação para remapeamento de tokens.  
+Define o método referenciado pelo `IUnknown` ponteiro especificado como um retorno de chamada de notificação para remapeamentos de token.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,25 +33,25 @@ HRESULT SetHandler (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pUnk`  
- [em] O manipulador para se registrar.  
+ no O manipulador a ser registrado.  
   
 ## <a name="remarks"></a>Comentários  
- O mecanismo de metadados envia notificação usando `SetHandler`o método fornecido por , para compiladores que não geram registros de forma otimizada e que gostariam de otimizar registros salvos.  
+ O mecanismo de metadados envia a notificação usando o método fornecido pelo `SetHandler` , para compiladores que não geram registros de forma otimizada e que gostaria de otimizar os registros salvos.  
   
- Se o método de retorno `SetHandler`de chamada não for fornecido através, nenhuma otimização será `IMapToken` realizada no save, exceto quando vários escopos de importação foram mesclados usando na mesclagem para cada escopo.  
+ Se o método de retorno de chamada não for fornecido por meio `SetHandler` do, nenhuma otimização será executada no salvamento, exceto onde vários escopos de importação tiverem sido mesclados usando `IMapToken` na mesclagem para cada escopo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interface IMetaDataEmit](imetadataemit-interface.md)
+- [Interface IMetaDataEmit2](imetadataemit2-interface.md)

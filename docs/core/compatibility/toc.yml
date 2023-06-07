@@ -1,6 +1,6 @@
 - name: O que são alterações da falha?
   href: index.md
-- name: Categorias de alterações da falha
+- name: Compatibilidade
   href: categories.md
 - name: Seletores de página
   href: breaking-changes.md
@@ -25,7 +25,7 @@
           href: ../porting/net-framework-tech-unavailable.md?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
         - name: APIs que sempre geram
           href: unsupported-apis.md
-- name: Por área
+- name: Por área de tecnologia
   expanded: true
   items:
     - name: ASP.NET Core
@@ -38,10 +38,14 @@
       href: /ef/core/what-is-new/ef-core-3.0/breaking-changes?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
     - name: Globalização
       href: globalization.md
+    - name: Interoperabilidade
+      href: interop.md
     - name: MSBuild
       href: msbuild.md
     - name: Rede
       href: networking.md
+    - name: Serialização
+      href: serialization.md
     - name: Visual Basic
       href: visualbasic.md
     - name: Windows Forms

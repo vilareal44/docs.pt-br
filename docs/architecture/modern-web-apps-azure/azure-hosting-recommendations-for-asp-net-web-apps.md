@@ -4,17 +4,17 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Re
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: 5587b8b20da8a6801d77b722e9c3326f6e695574
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 547654e77812481daffc9a03ccd28d3d2f6b5f09
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73416721"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164429"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Recomendações de hospedagem do Azure para aplicativos Web ASP.NET Core
 
 > "Líderes de linha de negócios do mundo todo estão passando por cima dos departamentos de TI para obter aplicativos da nuvem (também conhecidos como SaaS) e pagando por eles como se fossem uma assinatura de revista. E quando o serviço não é mais necessário, eles podem cancelar a assinatura sem nenhum equipamento deixado inutilizado no canto."  
-> _\-Daryl Plummer, analista do Gartner_
+> _\-Daryl Plummer, analista da Gartner_
 
 Quaisquer que sejam as necessidades e a arquitetura de seu aplicativo, o Microsoft Azure pode dar suporte a elas. Suas necessidades de hospedagem podem variar de um simples site estático até aplicativos extremamente sofisticados compostos por dezenas de serviços. Para aplicativos Web ASP.NET Core monolíticos e os serviços de suporte, há várias configurações bem conhecidas que são recomendadas. As recomendações neste artigo são agrupadas com base no tipo de recurso a ser hospedado, seja para aplicativos completos, processos individuais ou dados.
 
@@ -26,7 +26,7 @@ Os aplicativos Web podem ser hospedados com:
 
 - Contêineres (várias opções)
 
-- VMs (Máquinas Virtuais)
+- Máquinas Virtuais (VMs)
 
 Entre essas opções, os Aplicativos Web do Serviço de Aplicativo é a abordagem recomendada para a maioria dos cenários, incluindo aplicativos simples baseados em contêiner. Para arquiteturas de microsserviço, considere uma abordagem baseada em contêiner. Caso precise ter mais controle sobre os computadores que executam o aplicativo, considere a possibilidade de usar as Máquinas Virtuais do Azure.
 
@@ -116,21 +116,21 @@ O Azure oferece uma ampla variedade de opções de armazenamento de dados, de mo
 
 Para dados transacionais e relacionais, os Bancos de Dados SQL do Azure são a melhor opção. Para dados de alto desempenho em sua maior parte de leitura, um Cache Redis com o apoio de um Banco de Dados SQL do Azure é uma boa solução.
 
-Os dados JSON não estruturados podem ser armazenados de várias maneiras, desde colunas de banco de dados SQL até Blobs ou Tabelas no Armazenamento Azure, até O Azure Cosmos DB. Destes, o Azure Cosmos DB oferece a melhor funcionalidade de consulta, e é a opção recomendada para um grande número de documentos baseados em JSON que devem suportar consultas.
+Os dados JSON não estruturados podem ser armazenados de várias maneiras, de colunas do banco do dados SQL a BLOBs ou tabelas no armazenamento do Azure, para Azure Cosmos DB. Desses, Azure Cosmos DB oferece a melhor funcionalidade de consulta e é a opção recomendada para grandes números de documentos baseados em JSON que devem dar suporte à consulta.
 
-Dados transitórios baseados em comando ou evento usados para orquestrar o comportamento do aplicativo podem usar o Barramento de Serviço do Azure ou as Filas do Armazenamento do Azure. O Barramento do Armazenamento do Azure oferece mais flexibilidade e é o serviço recomendado para mensagens não triviais enviadas dentro e entre aplicativos.
+Dados transitórios baseados em comando ou evento usados para orquestrar o comportamento do aplicativo podem usar o Barramento de Serviço do Azure ou as Filas do Armazenamento do Azure. O barramento de serviço do Azure oferece mais flexibilidade e é o serviço recomendado para mensagens não triviais dentro e entre aplicativos.
 
 ## <a name="architecture-recommendations"></a>Recomendações de arquitetura
 
 Os requisitos do aplicativo devem determinar sua arquitetura. Há muitos serviços do Azure diferentes disponíveis. Escolher o certo é uma decisão importante. A Microsoft oferece uma galeria de arquiteturas de referência para ajudar a identificar as arquiteturas típicas otimizadas para cenários comuns. Você pode encontrar uma arquitetura de referência que mapeie de perto as necessidades do seu aplicativo ou que, pelo menos, ofereça um ponto de partida.
 
-A Figura 11-1 mostra um exemplo de arquitetura de referência. Esse diagrama descreve uma abordagem de arquitetura recomendada para um site de sistema de gerenciamento de conteúdo do Sitecore otimizado para marketing.
+A Figura 11-1 mostra uma arquitetura de referência de exemplo. Esse diagrama descreve uma abordagem de arquitetura recomendada para um site de sistema de gerenciamento de conteúdo do Sitecore otimizado para marketing.
 
 ![Figura 11-1](./media/image11-2.png)
 
 **Figura 11-1.** Arquitetura de referência do site de marketing do Sitecore.
 
-**Referências – Recomendações de hospedagem do Azure**
+**Referências – recomendações de hospedagem do Azure**
 
 - Arquiteturas de solução do Azure\
   <https://azure.microsoft.com/solutions/architecture/>

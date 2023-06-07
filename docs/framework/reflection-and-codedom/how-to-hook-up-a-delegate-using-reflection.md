@@ -1,5 +1,6 @@
 ---
-title: Como conectar um delegado usando a reflexão
+title: 'Como: Conectar um delegado usando a reflexão'
+description: Veja como conectar um delegado usando reflexão no .NET. Conecte um método existente a um evento obtendo os tipos necessários por meio de reflexão.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - reflection, adding event-handler delegates
 - delegates [.NET Framework], adding event handlers with reflection
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
-ms.openlocfilehash: d748d9f8bdd0b4d831880548d4aceb1c77a0b0c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5d93efd278a53a4e6382f2321918e58ead55899
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180498"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865080"
 ---
-# <a name="how-to-hook-up-a-delegate-using-reflection"></a>Como conectar um delegado usando a reflexão
+# <a name="how-to-hook-up-a-delegate-using-reflection"></a>Como: Conectar um delegado usando a reflexão
 Quando você usa a reflexão para carregar e executar assemblies, não pode usar recursos de linguagem como o operador `+=` do C# ou a [instrução AddHandler](../../visual-basic/language-reference/statements/addhandler-statement.md) do Visual Basic para conectar eventos. Os procedimentos a seguir mostram como conectar um método existente a um evento obtendo todos os tipos necessários por meio de reflexão e como criar um método dinâmico usando a emissão de reflexão e conectá-lo a um evento.  
   
 > [!NOTE]
@@ -103,11 +104,11 @@ Quando você usa a reflexão para carregar e executar assemblies, não pode usar
  [!code-csharp[HookUpDelegate#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#1)]
  [!code-vb[HookUpDelegate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Emit.DynamicMethod>
 - <xref:System.Activator.CreateInstance%2A>
 - <xref:System.Delegate.CreateDelegate%2A>
-- [Como definir e executar métodos dinâmicos](how-to-define-and-execute-dynamic-methods.md)
+- [Como: Definir e executar métodos dinâmicos](how-to-define-and-execute-dynamic-methods.md)
 - [Reflexão](reflection.md)

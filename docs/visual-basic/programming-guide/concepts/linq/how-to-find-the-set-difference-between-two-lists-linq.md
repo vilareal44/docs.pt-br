@@ -1,20 +1,20 @@
 ---
-title: Como localizar a diferença definida entre duas listas (LINQ)
+title: 'Como: localizar a diferença de conjunto entre duas listas (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: 42c5b5ee8a6af1323cb5eee12694fb94063eb877
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f533b63b40325b34c5881c1e2f14aa4e576191c7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347506"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396591"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Como localizar a diferença de conjunto entre duas listas (LINQ) (Visual Basic)
 Este exemplo mostra como usar o LINQ para comparar duas listas de cadeias de caracteres e retornar as linhas que estão no names1.txt, mas não no names2.txt.  
   
 ### <a name="to-create-the-data-files"></a>Para criar os arquivos de dados  
   
-1. Copie names1. txt e names2. txt para a pasta da solução, conforme mostrado em [como: combinar e comparar as coleções de cadeias de caracteres (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
+1. Copie names1. txt e names2. txt para a pasta da solução, conforme mostrado em [como: combinar e comparar as coleções de cadeias de caracteres (LINQ) (Visual Basic)](how-to-combine-and-compare-string-collections-linq.md).  
   
 ## <a name="example"></a>Exemplo  
   
@@ -51,11 +51,11 @@ End Class
 ' Garcia, Debra  
 ```  
   
- Alguns tipos de operações de consulta no Visual Basic, como <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>e <xref:System.Linq.Enumerable.Concat%2A>, só podem ser expressos na sintaxe baseada em método.  
+ Alguns tipos de operações de consulta no Visual Basic, como <xref:System.Linq.Enumerable.Except%2A> , <xref:System.Linq.Enumerable.Distinct%2A> , <xref:System.Linq.Enumerable.Union%2A> e <xref:System.Linq.Enumerable.Concat%2A> , só podem ser expressos na sintaxe baseada em método.  
   
 ## <a name="compile-the-code"></a>Compilar o código  
-Crie um projeto de aplicativo de console Visual Basic, com uma instrução `Imports` para o namespace System. Linq.
+Crie um projeto de aplicativo de console Visual Basic, com uma `Imports` instrução para o namespace System. Linq.
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ e cadeias de caracteres (Visual Basic)](linq-and-strings.md)

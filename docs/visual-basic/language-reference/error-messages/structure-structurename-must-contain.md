@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
-ms.openlocfilehash: 4ce24073896326bb5a68e563e2d34aafa09ef1c1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7b5bda7b1a2ae37eb509c736deae1652dc5e6ab0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593211"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374012"
 ---
-# <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>Estrutura '\<structurename >' deve conter pelo menos uma variável de membro de instância ou declaração de evento de pelo menos uma instância não marcada como 'Personalizada'
-Uma definição de estrutura não inclui quaisquer variáveis não compartilhadas ou eventos não personalizados não compartilhados.  
+# <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>A estrutura '\<structurename>' deve conter pelos menos uma variável membro da instância ou pelo menos uma declaração de evento da instância não marcada como 'Personalizada'
+Uma definição de estrutura não inclui nenhuma variável não compartilhada ou eventos não compartilhados não-personalizados.  
   
- Cada estrutura deve ter uma variável ou um evento que se aplica a cada instância específica (não compartilhada) em vez da todas as instâncias coletivamente ([compartilhado](../../../visual-basic/language-reference/modifiers/shared.md)). Não compartilhado de constantes, propriedades e procedimentos não atendem a esse requisito. Além disso, se não houver nenhuma variáveis não compartilhadas e apenas um evento não compartilhado, esse evento não pode ser um `Custom` eventos.  
+ Cada estrutura deve ter uma variável ou um evento que se aplica a cada instância específica (não compartilhada), em vez de a todas as instâncias coletivamente ([compartilhado](../modifiers/shared.md)). As constantes, as propriedades e os procedimentos não compartilhados não atendem a esse requisito. Além disso, se não houver nenhuma variável não compartilhada e apenas um evento não compartilhado, esse evento não poderá ser um `Custom` evento.  
   
  **ID do erro:** BC30941  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Defina pelo menos uma variável ou evento que não é `Shared`. Se você definir apenas um evento, ele deve ser não personalizados, bem como não compartilhado.  
+- Defina pelo menos uma variável ou evento que não seja `Shared` . Se você definir apenas um evento, ele deverá ser não personalizado, bem como não compartilhado.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Estruturas](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Como: declarar uma estrutura](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [Instrução Structure](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Estruturas](../../programming-guide/language-features/data-types/structures.md)
+- [Como: Declarar uma estrutura](../../programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Instrução Structure](../statements/structure-statement.md)

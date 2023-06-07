@@ -6,15 +6,16 @@ metadata:
   audience: Developer
   ms.custom: mvc
   ms.date: 08/24/2018
+  ms.topic: interactive-tutorial
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 7736a2a26b37d8fbfac98328f94ce3c9a25be181
-  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+  ms.openlocfilehash: 072c232613073c10caf6f8927154ce8f24c19af5
+  ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/06/2020
-  ms.locfileid: "82861002"
+  ms.lasthandoff: 08/17/2020
+  ms.locfileid: "88268004"
 items:
 - durationInMinutes: 2
   content: >
@@ -22,7 +23,7 @@ items:
 - title: Criar uma cadeia de caracteres interpolada
   durationInMinutes: 2
   content: >
-    Execute o seguinte código na janela interativa. Selecione o botão **entrar no modo de foco** . Em seguida, digite o seguinte bloco de código na janela interativa ( `<name>` substitua pelo seu nome) e selecione **executar**:
+    Execute o seguinte código na janela interativa. Selecione o botão **entrar no modo de foco** . Em seguida, digite o seguinte bloco de código na janela interativa (substitua `<name>` pelo seu nome) e selecione **executar**:
 
 
     ```csharp
@@ -53,7 +54,7 @@ items:
     Na etapa anterior, você usou a interpolação de cadeias de caracteres para inserir uma cadeia de caracteres dentro de outra. Cada expressão de interpolação que faz parte de uma expressão de cadeia de caracteres interpolada pode ser de qualquer tipo de dados. Vamos incluir valores de várias expressões de tipo de dados em uma cadeia de caracteres interpolada.
 
 
-    No exemplo a seguir, primeiro definimos uma [tupla](../../tuples.md) que tem `Name`Membros `Price`, e `perPackage` . Execute o seguinte código na janela interativa:
+    No exemplo a seguir, primeiro definimos uma [tupla](../../language-reference/builtin-types/value-tuples.md) que tem `Name` `Price` Membros, e `perPackage` . Execute o seguinte código na janela interativa:
 
 
     ```csharp

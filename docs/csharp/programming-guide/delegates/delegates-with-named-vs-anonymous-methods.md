@@ -1,16 +1,17 @@
 ---
-title: Delegados com Métodos Nomeados vs. Anônimos - C# Guia de Programação
+title: Delegados com métodos nomeados vs. anônimos – guia de programação C#
+description: Saiba mais sobre delegados com métodos nomeados vs. anônimos. Consulte exemplos de código e exiba recursos adicionais disponíveis.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 1ec366999ca6457471b705fa83f06fcde4293f4e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 940363b87e17b34feeffaff38ed498d6fcf6850a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712371"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302744"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Delegados com métodos nomeados versus anônimos (Guia de Programação em C#)
 Um [delegado](../../language-reference/builtin-types/reference-types.md) pode ser associado a um método nomeado. Ao instanciar um delegado usando um método nomeado, o método é passado como um parâmetro, por exemplo:  
@@ -36,9 +37,9 @@ Um [delegado](../../language-reference/builtin-types/reference-types.md) pode se
   
  [!code-csharp[csProgGuideDelegates#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#3)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
-- [Delega](./index.md)
-- [Como combinar delegados (Delegados Multicast)](./how-to-combine-delegates-multicast-delegates.md)
+- [Guia de programação C#](../index.md)
+- [Representantes](./index.md)
+- [Como combinar delegados (delegados de multicast)](./how-to-combine-delegates-multicast-delegates.md)
 - [Eventos](../events/index.md)

@@ -7,33 +7,33 @@ f1_keywords:
 helpviewer_keywords:
 - BC31102
 ms.assetid: 6f7b31b7-3656-4ae1-8851-90f5f4c6950a
-ms.openlocfilehash: cf0158692c1154a8a903c893ba287e51c1e34ac8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 077533a5b1fe241b61ded9516ad8f450d7dbbf5e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593280"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400338"
 ---
-# <a name="set-accessor-of-property-propertyname-is-not-accessible"></a>Acessador ' set' da propriedade '\<propertyname >' não está acessível
-Uma declaração tenta armazenar o valor de uma propriedade quando ela não tem acesso para a propriedade `Set` procedimento.  
+# <a name="set-accessor-of-property-propertyname-is-not-accessible"></a>O acessador 'Set' da propriedade '\<propertyname>' não está acessível
+Uma instrução tenta armazenar o valor de uma propriedade quando não tem acesso ao procedimento da propriedade `Set` .  
   
- Se o [instrução Set](../../../visual-basic/language-reference/statements/set-statement.md) está marcada com um acesso mais restritivo nível que seus [instrução Property](../../../visual-basic/language-reference/statements/property-statement.md), uma tentativa para definir o valor da propriedade pode falhar nos seguintes casos:  
+ Se a [instrução SET](../statements/set-statement.md) for marcada com um nível de acesso mais restritivo do que sua [instrução Property](../statements/property-statement.md), uma tentativa de definir o valor da propriedade poderá falhar nos seguintes casos:  
   
-- O `Set` declaração está marcada [privada](../../../visual-basic/language-reference/modifiers/private.md) e o código de chamada está fora da classe ou estrutura na qual a propriedade é definida.  
+- A `Set` instrução é marcada como [particular](../modifiers/private.md) e o código de chamada está fora da classe ou estrutura na qual a propriedade é definida.  
   
-- O `Set` declaração está marcada [protegido](../../../visual-basic/language-reference/modifiers/protected.md) e o código de chamada é não na classe ou estrutura na qual a propriedade é definida, nem em uma classe derivada.  
+- A `Set` instrução é marcada como [protegida](../modifiers/protected.md) e o código de chamada não está na classe ou estrutura na qual a propriedade é definida, nem em uma classe derivada.  
   
-- O `Set` declaração está marcada [amigo](../../../visual-basic/language-reference/modifiers/friend.md) e o código de chamada não está no mesmo assembly no qual a propriedade é definida.  
+- A `Set` instrução é marcada como [Friend](../modifiers/friend.md) e o código de chamada não está no mesmo assembly no qual a propriedade é definida.  
   
  **ID do erro:** BC31102  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Se você tiver o controle do código-fonte definindo a propriedade, considere a possibilidade de declarar o `Set` procedimento com o mesmo nível de acesso que a própria propriedade.  
+- Se você tiver controle do código-fonte que define a propriedade, considere declarar o `Set` procedimento com o mesmo nível de acesso que a própria propriedade.  
   
-- Se você não tem controle do código-fonte definindo a propriedade, você deve restringir o `Set` procedimento de nível de acesso mais do que a própria propriedade, tente mover a instrução que define o valor da propriedade para uma região de código que tem um melhor acesso para o propriedade.  
+- Se você não tem controle do código-fonte que define a propriedade ou deve restringir o nível de `Set` acesso do procedimento mais do que a propriedade em si, tente mover a instrução que define o valor da propriedade para uma região de código que tenha acesso melhor à propriedade.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Procedimentos de Propriedade](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
-- [Como: Declarar uma propriedade com níveis de acesso mistos](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)
+- [Procedimentos de propriedade](../../programming-guide/language-features/procedures/property-procedures.md)
+- [Como declarar uma propriedade com níveis de acesso mistos](../../programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)

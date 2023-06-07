@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6eefb243-a281-41c1-bcdc-7e17513bc446
 topic_type:
 - apiref
-ms.openlocfilehash: 9a80336db4a5a8d7cfdebb7eb8d25bcb8f96e87c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 320cfae93f8aae94f9315e8e20ed6cf7f9cced7c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437642"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491310"
 ---
 # <a name="imetadataimportgetcustomattributeprops-method"></a>Método IMetaDataImport::GetCustomAttributeProps
 Obtém o valor do atributo personalizado, dado seu token de metadados.  
@@ -42,30 +42,30 @@ HRESULT GetCustomAttributeProps (
  no Um token de metadados que representa o atributo personalizado a ser recuperado.  
   
  `ptkObj`  
- [saída, opcional] Um token de metadados que representa o objeto que o atributo personalizado modifica. Esse valor pode ser qualquer tipo de token de metadados, exceto `mdCustomAttribute`.  
+ [saída, opcional] Um token de metadados que representa o objeto que o atributo personalizado modifica. Esse valor pode ser qualquer tipo de token de metadados, exceto `mdCustomAttribute` .  
   
  `ptkType`  
- [saída, opcional] Um `mdMethodDef` ou `mdMemberRef` token de metadados que representa a <xref:System.Type> do atributo personalizado retornado.  
+ [saída, opcional] Um `mdMethodDef` `mdMemberRef` token de metadados ou que representa o <xref:System.Type> do atributo personalizado retornado.  
   
  `ppBlob`  
  [saída, opcional] Um ponteiro para uma matriz de dados que é o valor do atributo personalizado.  
   
  `pcbSize`  
- [saída, opcional] O tamanho em bytes dos dados retornados em *`ppBlob`.  
+ [saída, opcional] O tamanho em bytes dos dados retornados em * `ppBlob` .  
   
 ## <a name="remarks"></a>Comentários  
  Um atributo personalizado é armazenado como uma matriz de dados, o formato que é compreendido pelo mecanismo de metadados.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

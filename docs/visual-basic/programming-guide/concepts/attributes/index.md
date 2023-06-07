@@ -1,31 +1,31 @@
 ---
-title: Visão geral dos atributos
+title: Visão geral de atributos
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: 97a2a13102718b6ee8829fca678b2b49df21e5d1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a0a080d44796289cc3562803c84ec915dcedd314
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349490"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400701"
 ---
 # <a name="attributes-overview-visual-basic"></a>Visão geral de atributos (Visual Basic)
 
-Os atributos fornecem um método eficiente de associação de metadados, ou informações declarativas, ao código (assemblies, tipos, métodos, propriedades e etc.). Após um atributo ser associado a uma entidade de programa, o atributo poderá ser consultado no tempo de execução usando uma técnica chamada *reflexão*. Para obter mais informações, consulte [Reflexão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).
+Os atributos fornecem um método eficiente de associação de metadados, ou informações declarativas, ao código (assemblies, tipos, métodos, propriedades e etc.). Após um atributo ser associado a uma entidade de programa, o atributo poderá ser consultado no tempo de execução usando uma técnica chamada *reflexão*. Para obter mais informações, consulte [Reflexão (Visual Basic)](../reflection.md).
 
 Os atributos têm as seguintes propriedades:
 
-- Os atributos adicionam metadados ao seu programa. Os *metadados* são informações sobre os tipos definidos em um programa. Todos os assemblies .NET contêm um conjunto de metadados especificado que descreve os tipos e os membros de tipo definidos no assembly. Você pode adicionar atributos personalizados para especificar qualquer informação adicional necessária. Para obter mais informações, consulte [Criando atributos personalizados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md).
+- Os atributos adicionam metadados ao seu programa. Os *metadados* são informações sobre os tipos definidos em um programa. Todos os assemblies .NET contêm um conjunto de metadados especificado que descreve os tipos e os membros de tipo definidos no assembly. Você pode adicionar atributos personalizados para especificar qualquer informação adicional necessária. Para obter mais informações, consulte [Criando atributos personalizados (Visual Basic)](creating-custom-attributes.md).
 
 - Você pode aplicar um ou mais atributos a assemblies completos, módulos ou elementos de programas menores, como classes e propriedades.
 
 - Os atributos podem aceitar argumentos da mesma forma que métodos e propriedades.
 
-- Seu programa pode examinar seus próprios metadados ou os metadados em outros programas usando reflexão. Para obter mais informações, consulte [Acessando atributos usando reflexão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).
+- Seu programa pode examinar seus próprios metadados ou os metadados em outros programas usando reflexão. Para obter mais informações, consulte [Acessando atributos usando reflexão (Visual Basic)](accessing-attributes-by-using-reflection.md).
 
 ## <a name="using-attributes"></a>Usando atributos
 
-Os atributos podem ser colocados em quase qualquer declaração, embora um atributo específico possa restringir os tipos de declarações nas quais ele é válido. No Visual Basic, um atributo fica entre colchetes angulares(\< >). Ele deverá aparecer imediatamente antes do elemento ao qual ele é aplicado, na mesma linha.
+Os atributos podem ser colocados em quase qualquer declaração, embora um atributo específico possa restringir os tipos de declarações nas quais ele é válido. No Visual Basic, um atributo é colocado entre colchetes angulares ( \< > ). Ele deverá aparecer imediatamente antes do elemento ao qual ele é aplicado, na mesma linha.
 
 Neste exemplo, o atributo <xref:System.SerializableAttribute> é usado para aplicar uma característica específica a uma classe:
 
@@ -100,7 +100,7 @@ A lista de possíveis valores `target` é mostrada na tabela a seguir.
 |`assembly`|Assembly inteiro|
 |`module`|Módulo de assembly atual (que é diferente de um módulo do Visual Basic)|
 
- O exemplo a seguir mostra como aplicar atributos a módulos e assemblies. Para obter mais informações, consulte [Atributos comuns (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md).
+ O exemplo a seguir mostra como aplicar atributos a módulos e assemblies. Para obter mais informações, consulte [Atributos comuns (Visual Basic)](common-attributes.md).
 
 ```vb
 Imports System.Reflection
@@ -138,18 +138,18 @@ A lista a seguir inclui alguns dos usos comuns de atributos no código:
 
 Para obter mais informações, consulte:
 
-- [Criando atributos personalizados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [Criando atributos personalizados (Visual Basic)](creating-custom-attributes.md)
 
-- [Acessando atributos usando reflexão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [Acessando atributos usando reflexão (Visual Basic)](accessing-attributes-by-using-reflection.md)
 
-- [Como criar uma união do C/C++ usando atributos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)
+- [Como criar uma união do C/C++ usando atributos (Visual Basic)](how-to-create-a-c-cpp-union-by-using-attributes.md)
 
-- [Atributos comuns (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
+- [Atributos comuns (Visual Basic)](common-attributes.md)
 
-- [Informações do chamador (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)
+- [Informações do chamador (Visual Basic)](../caller-information.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Guia de programação do Visual Basic](../../../../visual-basic/programming-guide/index.md)
-- [Reflexão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [Guia de programação do Visual Basic](../../index.md)
+- [Reflexão (Visual Basic)](../reflection.md)
 - [Atributos](../../../../standard/attributes/index.md)

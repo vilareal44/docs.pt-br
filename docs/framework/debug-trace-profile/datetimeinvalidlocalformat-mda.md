@@ -1,5 +1,6 @@
 ---
 title: MDA dateTimeInvalidLocalFormat
+description: Examine o MDA (Assistente de depuração gerenciada) dateTimeInvalidLocalFormat, que é ativado quando um valor DateTime armazenado em UTC Obtém um formato DateTime somente local.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dates [.NET Framework], formatting
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - time formatting
 - UTC formatting
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
-ms.openlocfilehash: b01f030c474e426cb87fb907f99f241eeb76a7fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d092b93af55d2cdf14e9284d8cffcdc8440cbf81
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174752"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415986"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>MDA dateTimeInvalidLocalFormat
 O MDA `dateTimeInvalidLocalFormat` é ativado quando uma instância <xref:System.DateTime> que é armazenada como um UTC (Horário Coordenado Universal) é formatada com um formato que se destina a ser usado apenas em instâncias <xref:System.DateTime> locais. Esse MDA não é ativado em instâncias <xref:System.DateTime> não especificadas ou padrão.  
@@ -84,7 +85,7 @@ String serialized = XmlConvert.ToString(myDateTime,
     XmlDateTimeSerializationMode.RoundtripKind);  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Globalization.DateTimeFormatInfo>
 - [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)

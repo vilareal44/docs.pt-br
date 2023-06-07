@@ -1,5 +1,6 @@
 ---
 title: Criando protótipos em código gerenciado
+description: Crie protótipos no código gerenciado do .NET, para que você possa acessar funções não gerenciadas e usar campos de atributo que anotam a definição de método no código gerenciado.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-ms.openlocfilehash: 712040c3482b51c4dafe0ee87fdda8cd848fb7fc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 76b1a87c4513fdee21c5c3d5eba533b11e022e3a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123610"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622153"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Criando protótipos em código gerenciado
 Este tópico descreve como acessar funções não gerenciadas e apresenta vários campos de atributo que anotam a definição de método no código gerenciado. Para obter exemplos que demonstram como construir declarações baseadas no .NET a serem usadas com a invocação de plataforma, consulte [Realizando marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md).  
@@ -229,7 +230,7 @@ interface IDemandStubsItf
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Consumindo funções de DLL não gerenciadas](consuming-unmanaged-dll-functions.md)
 - [Especificando um ponto de entrada](specifying-an-entry-point.md)

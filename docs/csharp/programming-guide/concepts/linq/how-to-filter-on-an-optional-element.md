@@ -1,13 +1,14 @@
 ---
 title: Como filtrar em um elemento opcional (C#)
+description: Saiba como filtrar um elemento opcional mesmo se você não tiver certeza de que ele existe no documento XML.
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: c9f844619cbb3d7a66ca66989baa900e0fd7bc2f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a1cd93b70ea2c077437b58bd341f51f15f014871
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141245"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302861"
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>Como filtrar em um elemento opcional (C#)
 Às vezes você deseja filtrar um elemento mesmo que você não tenha certeza ele existe em seu documento XML. A pesquisa deve ser executada de modo que se o elemento específico não tem o elemento filho, você não dispare uma exceção de referência nula filtragem para ele. No exemplo a seguir, o elemento de `Child5` não tiver um elemento filho de `Type` , mas a consulta ainda executa corretamente.  
@@ -45,7 +46,7 @@ foreach(string str in cList)
     Console.WriteLine(str);  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```output  
 Child One Text  
@@ -87,7 +88,7 @@ foreach (string str in cList)
     Console.WriteLine(str);  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```output  
 Child One Text  
@@ -95,7 +96,7 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>

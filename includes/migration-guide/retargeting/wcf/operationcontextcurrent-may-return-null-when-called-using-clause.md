@@ -1,18 +1,69 @@
 ---
-ms.openlocfilehash: e08b78b49cab88d4435d75b04bd446b413a61340
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d25c14f93da5fe8acf06269554fed30ddc6bc95d
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67859354"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614289"
 ---
 ### <a name="operationcontextcurrent-may-return-null-when-called-in-a-using-clause"></a>OperationContext.Current pode retornar nulo quando chamado usando cláusula
 
-|   |   |
-|---|---|
-|Detalhes|<xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> poderá retornar <code>null</code> e um <xref:System.NullReferenceException> poderá ocorrer quando todas as seguintes condições forem verdadeiras:<ul><li>Você recupera o valor da propriedade <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> em um método que retorna um <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601>.</li><li>Você cria uma instância do objeto <xref:System.ServiceModel.OperationContextScope> em uma cláusula <code>using</code>.</li><li>Você recupera o valor da propriedade <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> dentro de <code>using statement</code>. Por exemplo: </li></ul><pre><code class="lang-csharp">using (new OperationContextScope(OperationContext.Current))&#13;&#10;{&#13;&#10;OperationContext context = OperationContext.Current;      // OperationContext.Current is null.&#13;&#10;// ...&#13;&#10;}&#13;&#10;</code></pre>|
-|Sugestão|Para solucionar esse problema, você pode fazer o seguinte:<ul><li>Modifique seu código da seguinte forma<code>null</code> <xref:System.ServiceModel.OperationContext.Current%2A> para instanciar um novo não-objeto:</li></ul><pre><code class="lang-csharp">OperationContext ocx = OperationContext.Current;&#13;&#10;using (new OperationContextScope(OperationContext.Current))&#13;&#10;{&#13;&#10;OperationContext.Current = new OperationContext(ocx.Channel);&#13;&#10;// ...&#13;&#10;}&#13;&#10;</code></pre><ul><li>Instalar a atualização mais recente do .NET Framework 4.6.2 ou atualizar para uma versão posterior do .NET Framework. Isso desabilita o fluxo do <xref:System.Threading.ExecutionContext> em <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> e restaura o comportamento de aplicativos do WCF no .NET Framework 4.6.1 e em versões anteriores. Esse comportamento é configurável; é equivalente a adicionar a seguinte configuração de aplicativo ao arquivo de configuração:</li></ul><pre><code class="lang-xml">&lt;appSettings&gt;&#13;&#10;&lt;add key=&quot;Switch.System.ServiceModel.DisableOperationContextAsyncFlow&quot; value=&quot;true&quot; /&gt;&#13;&#10;&lt;/appSettings&gt;&#13;&#10;</code></pre>Se essa alteração for indesejável e seu aplicativo depender do fluxo do contexto de execução entre contextos de operação, você poderá habilitar o fluxo da seguinte maneira:<pre><code class="lang-xml">&lt;appSettings&gt;&#13;&#10;&lt;add key=&quot;Switch.System.ServiceModel.DisableOperationContextAsyncFlow&quot; value=&quot;false&quot; /&gt;&#13;&#10;&lt;/appSettings&gt;&#13;&#10;</code></pre>|
-|Escopo|Microsoft Edge|
-|Versão|4.6.2|
-|Type|Redirecionando|
-|APIs afetadas|<ul><li><xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Detalhes
+
+<xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> poderá retornar `null` e um <xref:System.NullReferenceException> poderá ocorrer quando todas as seguintes condições forem verdadeiras:
+
+- Você recupera o valor da propriedade <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> em um método que retorna um <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601>.
+- Você cria uma instância do objeto <xref:System.ServiceModel.OperationContextScope> em uma cláusula `using`.
+- Você recupera o valor da propriedade <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> dentro de `using statement`. Por exemplo:
+
+```csharp
+using (new OperationContextScope(OperationContext.Current))
+{
+    // OperationContext.Current is null.
+    OperationContext context = OperationContext.Current;
+
+    // ...
+}
+```
+
+#### <a name="suggestion"></a>Sugestão
+
+Para solucionar esse problema, você pode fazer o seguinte:
+
+- Modifique seu código da seguinte maneira para instanciar um novo não `null` <xref:System.ServiceModel.OperationContext.Current%2A> objeto:
+
+    ```csharp
+    OperationContext ocx = OperationContext.Current;
+    using (new OperationContextScope(OperationContext.Current))
+    {
+        OperationContext.Current = new OperationContext(ocx.Channel);
+
+        // ...
+    }
+    ```
+
+- Instalar a atualização mais recente do .NET Framework 4.6.2 ou atualizar para uma versão posterior do .NET Framework. Isso desabilita o fluxo do <xref:System.Threading.ExecutionContext> em <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> e restaura o comportamento de aplicativos do WCF no .NET Framework 4.6.1 e em versões anteriores. Esse comportamento é configurável; é equivalente a adicionar a seguinte configuração de aplicativo ao arquivo de configuração:
+
+    ```xml
+    <appSettings>
+      <add key="Switch.System.ServiceModel.DisableOperationContextAsyncFlow" value="true" />
+    </appSettings>
+    ```
+
+    Se essa alteração for indesejável e seu aplicativo depender do fluxo do contexto de execução entre contextos de operação, você poderá habilitar o fluxo da seguinte maneira:
+
+    ```xml
+    <appSettings>
+      <add key="Switch.System.ServiceModel.DisableOperationContextAsyncFlow" value="false" />
+    </appSettings>
+    ```
+
+| Name    | Valor       |
+|:--------|:------------|
+| Escopo   | Microsoft Edge        |
+| Versão | 4.6.2       |
+| Type    | Redirecionando |
+
+#### <a name="affected-apis"></a>APIs afetadas
+
+- <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType>

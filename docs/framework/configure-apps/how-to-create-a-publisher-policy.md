@@ -1,5 +1,6 @@
 ---
-title: Como criar uma política de editor
+title: 'Como: Criar uma política de editor'
+description: Saiba como os fornecedores de assembly podem criar um arquivo de política de Publicador com um assembly atualizado no .NET, para estipular que os aplicativos devem usar a versão mais recente.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -7,26 +8,26 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 7c36f6126f0d779a43a22fc11e647ba2d3b03a30
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 23e9d8144ec5742e0371d566b7af59dc9dd30c9b
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646056"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105407"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>Como criar uma política de editor
+# <a name="how-to-create-a-publisher-policy"></a>Como: Criar uma política de editor
 
-Os fornecedores de assembléias podem afirmar que os aplicativos devem usar uma versão mais recente de um conjunto, incluindo um arquivo de diretiva de editor com o conjunto atualizado. O arquivo de diretiva do editor especifica o redirecionamento de montagem e as configurações de base de código e usa o mesmo formato de um arquivo de configuração de aplicativo. O arquivo de diretiva do editor é compilado em uma montagem e colocado no cache de montagem global.
+Os fornecedores de assemblies podem declarar que os aplicativos devem usar uma versão mais recente de um assembly, incluindo um arquivo de política do Publicador com o assembly atualizado. O arquivo de política do Publicador especifica as configurações de redirecionamento de assembly e base de código e usa o mesmo formato que um arquivo de configuração de aplicativo. O arquivo de política do Publicador é compilado em um assembly e colocado no cache de assembly global.
 
-Existem três etapas envolvidas na criação de uma política de editores:
+Há três etapas envolvidas na criação de uma política de editor:
 
-1. Crie um arquivo de política de editor.
+1. Crie um arquivo de política do Publicador.
 
-2. Crie uma montagem de política de editores.
+2. Crie um assembly de política do Publicador.
 
-3. Adicione a montagem da diretiva do editor ao cache de montagem global.
+3. Adicione o assembly de política do Publicador ao cache de assembly global.
 
-O esquema para a política do editor é descrito no [Redirecionamento de Versões de Montagem](redirect-assembly-versions.md). O exemplo a seguir mostra um arquivo de `myAssembly` diretiva de editor que redireciona uma versão para outra.
+O esquema para a política do Publicador é descrito em [redirecionar versões de assembly](redirect-assembly-versions.md). O exemplo a seguir mostra um arquivo de política do Publicador que redireciona uma versão do `myAssembly` para outra.
 
 ```xml
 <configuration>
@@ -45,13 +46,13 @@ O esquema para a política do editor é descrito no [Redirecionamento de Versõe
 </configuration>
 ```
 
-Para saber como especificar uma base de código, consulte [Especificando a localização de um conjunto](specify-assembly-location.md).
+Para saber como especificar uma base de código, consulte [especificando o local de um assembly](specify-assembly-location.md).
 
-## <a name="creating-the-publisher-policy-assembly"></a>Criando a Assembléia de Políticas de Editores
+## <a name="creating-the-publisher-policy-assembly"></a>Criando o assembly de política do Publicador
 
-Use o [Linker de montagem (Al.exe)](../tools/al-exe-assembly-linker.md) para criar a montagem da diretiva do editor.
+Use o [vinculador de assembly (Al.exe)](../tools/al-exe-assembly-linker.md) para criar o assembly de política do Publicador.
 
-#### <a name="to-create-a-publisher-policy-assembly"></a>Para criar uma montagem de política de editores
+#### <a name="to-create-a-publisher-policy-assembly"></a>Para criar um assembly de política do Publicador
 
 Digite o seguinte comando no prompt de comando:
 
@@ -61,36 +62,36 @@ al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFi
 
 Neste comando:
 
-- O `publisherPolicyFile` argumento é o nome do arquivo de política do editor.
+- O `publisherPolicyFile` argumento é o nome do arquivo de política do Publicador.
 
-- O `publisherPolicyAssemblyFile` argumento é o nome da assembléia de política do editor que resulta deste comando. O nome do arquivo de montagem deve seguir o formato:
+- O `publisherPolicyAssemblyFile` argumento é o nome do assembly de política do Publicador que resulta desse comando. O nome do arquivo de assembly deve seguir o formato:
 
-  'policy.majorNumber.minorNumber.mainAssemblyName.dll'
+  'policy.majorNumber.minorNumber.mainAssemblyName.dll '
 
-- O `keyPairFile` argumento é o nome do arquivo que contém o par de chaves. Você deve assinar a montagem e a montagem da política do editor com o mesmo par de chaves.
+- O `keyPairFile` argumento é o nome do arquivo que contém o par de chaves. Você deve assinar o assembly e o assembly da política do Publicador com o mesmo par de chaves.
 
-- O `processorArchitecture` argumento identifica a plataforma direcionada por um conjunto específico do processador.
+- O `processorArchitecture` argumento identifica a plataforma de destino de um assembly específico do processador.
 
   > [!NOTE]
-  > A capacidade de segmentar uma arquitetura específica de processador está disponível a partir do .NET Framework 2.0.
+  > A capacidade de direcionar uma arquitetura de processador específica está disponível a partir do .NET Framework 2,0.
 
-A capacidade de segmentar uma arquitetura específica de processador está disponível a partir do .NET Framework 2.0. O comando a seguir cria `policy.1.0.myAssembly` uma montagem de `pub.config`diretiva de editor chamada a partir de `sgKey.snk` um arquivo de diretiva de editor chamado, atribui um nome forte ao conjunto usando o par de chaves no arquivo e especifica que o conjunto tem como alvo a arquitetura do processador x86.
+A capacidade de direcionar uma arquitetura de processador específica está disponível a partir do .NET Framework 2,0. O comando a seguir cria um assembly de política do publicador chamado `policy.1.0.myAssembly` de um arquivo de política do publicador chamado `pub.config` , atribui um nome forte ao assembly usando o par de chaves no `sgKey.snk` arquivo e especifica que o assembly tem como alvo a arquitetura do processador x86.
 
 ```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
-A montagem da diretiva do editor deve corresponder à arquitetura do processador do conjunto a que se aplica. Assim, se a <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> sua <xref:System.Reflection.ProcessorArchitecture.MSIL>montagem tiver um valor de , a `/platform:anycpu`montagem da política do editor para essa montagem deve ser criada com . Você deve fornecer uma montagem de diretiva de editor separada para cada conjunto específico do processador.
+O assembly de política do Publicador deve corresponder à arquitetura de processador do assembly ao qual ele se aplica. Portanto, se o assembly tiver um <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> valor de <xref:System.Reflection.ProcessorArchitecture.MSIL> , o assembly de política de editor para esse assembly deverá ser criado com `/platform:anycpu` . Você deve fornecer um assembly de política de Publicador separado para cada assembly específico de processador.
 
-Uma conseqüência desta regra é que, para alterar a arquitetura do processador para um conjunto, você deve alterar o componente principal ou menor do número da versão, para que você possa fornecer um novo conjunto de políticas de editor com a arquitetura correta do processador. A antiga montagem de diretiva de editor não pode atender seu conjunto uma vez que seu conjunto tenha uma arquitetura de processador diferente.
+Uma consequência dessa regra é que, para alterar a arquitetura do processador de um assembly, você deve alterar o componente principal ou secundário do número de versão, para que você possa fornecer um novo assembly de política de Publicador com a arquitetura de processador correta. O antigo assembly de política do Publicador não pode atender ao seu assembly depois que o assembly tem uma arquitetura de processador diferente.
 
-Outra conseqüência é que o linker versão 2.0 não pode ser usado para criar um conjunto de políticas de editorpara um conjunto compilado usando versões anteriores do .NET Framework, porque ele sempre especifica a arquitetura do processador.
+Outra consequência é que o vinculador da versão 2,0 não pode ser usado para criar um assembly de política do Publicador para um assembly compilado usando versões anteriores do .NET Framework, porque ele sempre especifica a arquitetura do processador.
 
-## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Adicionando a Assembléia de Políticas de Editores ao Cache de Montagem Global
+## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Adicionando o assembly de política do Publicador ao cache de assembly global
 
-Use a [ferramenta Global Assembly Cache (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) para adicionar a montagem da diretiva do editor ao cache de montagem global.
+Use a [ferramenta global assembly cache (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) para adicionar o assembly de política do Publicador ao cache de assembly global.
 
-### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Para adicionar a montagem da diretiva do editor ao cache de montagem global
+### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Para adicionar o assembly de política do Publicador ao cache de assembly global
 
 Digite o seguinte comando no prompt de comando:
 
@@ -98,20 +99,20 @@ Digite o seguinte comando no prompt de comando:
 gacutil /i publisherPolicyAssemblyFile
 ```
 
-O comando `policy.1.0.myAssembly.dll` a seguir adiciona-se ao cache de montagem global.
+O comando a seguir adiciona `policy.1.0.myAssembly.dll` ao cache de assembly global.
 
 ```console
 gacutil /i policy.1.0.myAssembly.dll
 ```
 
 > [!IMPORTANT]
-> A montagem da diretiva do editor não pode ser adicionada ao `/link` cache de montagem global, a menos que o arquivo de diretiva de editor original especificado no argumento esteja localizado no mesmo diretório da montagem.
+> O assembly de política do Publicador não pode ser adicionado ao cache de assembly global, a menos que o arquivo de política original do Publicador especificado no `/link` argumento esteja localizado no mesmo diretório que o assembly.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Programação com assemblies](../../standard/assembly/index.md)
 - [Como o runtime localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
 - [Configurando aplicativos usando arquivos de configuração ](index.md)
-- [Esquema de configurações em tempo de execução](./file-schema/runtime/index.md)
-- [Esquema de arquivo de configuração](./file-schema/index.md)
+- [Esquema de configurações do runtime](./file-schema/runtime/index.md)
+- [Esquema de arquivos de configuração](./file-schema/index.md)
 - [Redirecionando versões de assembly](redirect-assembly-versions.md)

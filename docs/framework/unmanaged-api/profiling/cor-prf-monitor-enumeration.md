@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9294d702-b4e5-441c-a930-e63d27b86bfd
 topic_type:
 - apiref
-ms.openlocfilehash: b6c3dc78b9c503747c7a2d404706eb797790b931
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1ff167121a5bb752c70edd2c5901133503326bea
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175194"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500800"
 ---
 # <a name="cor_prf_monitor-enumeration"></a>Enumeração COR_PRF_MONITOR
 Contém valores usados para especificar comportamentos, recursos ou eventos que o criador de perfis deseja assinar.  
@@ -98,9 +98,9 @@ typedef enum {
 ```  
   
 ## <a name="members"></a>Membros  
- As seções `COR_PRF_MONITOR` a seguir listam membros de enumeração por categoria. As categorias são:  
+ As seções a seguir listam `COR_PRF_MONITOR` membros de enumeração por categoria. As categorias são:  
   
-- [Sem bandeiras definidas](#None)  
+- [Nenhum sinalizador definido](#None)  
   
 - [Sinalizadores de retorno de chamada](#Callback)  
   
@@ -111,7 +111,7 @@ typedef enum {
 - [Sinalizadores compostos](#Composite)  
   
 <a name="None"></a>
-### <a name="no-flags-set"></a>Sem bandeiras definidas  
+### <a name="no-flags-set"></a>Nenhum sinalizador definido  
   
 |Membro|Descrição|  
 |------------|-----------------|  
@@ -123,39 +123,39 @@ typedef enum {
 |Membro|Descrição|  
 |------------|-----------------|  
 |`COR_PRF_MONITOR_ALL`|Habilita todos os eventos de retorno de chamada.|  
-|`COR_PRF_MONITOR_APPDOMAIN_LOADS`|Controla `AppDomainCreation*` os `AppDomainShutdown*` retornos e retornos na interface [ICorProfilerCallback.](icorprofilercallback-interface.md)|  
-|`COR_PRF_MONITOR_ASSEMBLY_LOADS`|Controla `AssemblyLoad*` os `AssemblyUnload*` retornos e retornos na interface [ICorProfilerCallback.](icorprofilercallback-interface.md)|  
-|`COR_PRF_MONITOR_CACHE_SEARCHES`|Controla `JITCachedFunctionSearch*` os retornos de chamadas na interface [ICorProfilerCallback.](icorprofilercallback-interface.md)<br /><br /> O comportamento deste sinalizador é alterado no .NET Framework versão 2.0.|  
-|`COR_PRF_MONITOR_CCW`|Controla `COMClassicVTable*` os retornos de chamadas na interface [ICorProfilerCallback.](icorprofilercallback-interface.md)|  
-|`COR_PRF_MONITOR_CLASS_LOADS`|Controla `ClassLoad*` os `ClassUnload*` retornos e retornos na interface [ICorProfilerCallback.](icorprofilercallback-interface.md)|  
-|`COR_PRF_MONITOR_CLR_EXCEPTIONS`|Controla `ExceptionCLRCatcher*` os retornos de chamadas na interface [ICorProfilerCallback.](icorprofilercallback-interface.md)|  
-|`COR_PRF_MONITOR_CODE_TRANSITIONS`|Controla os retornos de chamada de transição não [gerenciadosParagerenciara e](icorprofilercallback-unmanagedtomanagedtransition-method.md) [gerenciadaDeTransição](icorprofilercallback-managedtounmanagedtransition-method.md) na interface [ICorProfilerCallback](icorprofilercallback-interface.md)|  
-|`COR_PRF_MONITOR_ENTERLEAVE`|Controla `FunctionEnter*`as `FunctionLeave*` `FunctionTailCall*` [funções estáticas globais e de perfil.](profiling-global-static-functions.md)|  
-|`COR_PRF_MONITOR_EXCEPTIONS`|Controla o retorno de `ExceptionSearch*`chamada `ExceptionOSHandler*` `ExceptionUnwind*`de `ExceptionCatcher*` [exceção](icorprofilercallback-exceptionthrown-method.md) e os retornos de chamada e retornos de chamada na interface [ICorProfilerCallback.](icorprofilercallback-interface.md)|  
-|`COR_PRF_MONITOR_FUNCTION_UNLOADS`|Controla a [chamada FunctionUnloadStarted](icorprofilercallback-functionunloadstarted-method.md) na interface [ICorProfilerCallback.](icorprofilercallback-interface.md)|  
-|`COR_PRF_MONITOR_GC`|Controla `ICorProfilerCallback*` o [GarbageCollectionStarted,](icorprofilercallback2-garbagecollectionstarted-method.md) [GarbageCollectionFinished,](icorprofilercallback2-garbagecollectionfinished-method.md) [MovedReferences](icorprofilercallback-movedreferences-method.md), [MovedReferences2](icorprofilercallback4-movedreferences2-method.md), [SurvivingReferences2](icorprofilercallback2-survivingreferences-method.md), [ObjectReferences](icorprofilercallback-objectreferences-method.md), [ObjectsAllocatedByClass](icorprofilercallback-objectsallocatedbyclass-method.md), [RootReferences,](icorprofilercallback-rootreferences-method.md) [RootReferences2,](icorprofilercallback2-rootreferences2-method.md) [HandleCreated,](icorprofilercallback2-handlecreated-method.md) [SurvivingReferences2](icorprofilercallback4-survivingreferences2-method.md) [HandleDestroyed,](icorprofilercallback2-handledestroyed-method.md)e [FinalizávelObjectQueued](icorprofilercallback2-finalizeableobjectqueued-method.md) callbacks nas interfaces. Quando `COR_PRF_MONITOR_GC` é alocado, a coleta de lixo simultânea é desligada.|  
-|`COR_PRF_MONITOR_JIT_COMPILATION`|Controla `JITCompilation*`os callbacks [, JITFunctionPitched](icorprofilercallback-jitfunctionpitched-method.md)e [JITInlining](icorprofilercallback-jitinlining-method.md) na interface [ICorProfilerCallback.](icorprofilercallback-interface.md)|  
-|`COR_PRF_MONITOR_MODULE_LOADS`|Controla `ModuleLoad*`as `ModuleUnload*`chamadas , e [ModuleAttachedToAssembly](icorprofilercallback-moduleattachedtoassembly-method.md) na interface [ICorProfilerCallback.](icorprofilercallback-interface.md)|  
-|`COR_PRF_MONITOR_OBJECT_ALLOCATED`|Controla a chamada [ObjectAllocated](icorprofilercallback-objectallocated-method.md) callback na interface [ICorProfilerCallback.](icorprofilercallback-interface.md)|  
-|`COR_PRF_MONITOR_REMOTING`|Controla `Remoting*` os retornos de chamadas na interface [ICorProfilerCallback.](icorprofilercallback-interface.md)|  
+|`COR_PRF_MONITOR_APPDOMAIN_LOADS`|Controla os `AppDomainCreation*` `AppDomainShutdown*` retornos de chamada e na interface [ICorProfilerCallback](icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_ASSEMBLY_LOADS`|Controla os `AssemblyLoad*` `AssemblyUnload*` retornos de chamada e na interface [ICorProfilerCallback](icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_CACHE_SEARCHES`|Controla os `JITCachedFunctionSearch*` retornos de chamada na interface [ICorProfilerCallback](icorprofilercallback-interface.md) .<br /><br /> O comportamento deste sinalizador é alterado no .NET Framework versão 2.0.|  
+|`COR_PRF_MONITOR_CCW`|Controla os `COMClassicVTable*` retornos de chamada na interface [ICorProfilerCallback](icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_CLASS_LOADS`|Controla os `ClassLoad*` `ClassUnload*` retornos de chamada e na interface [ICorProfilerCallback](icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_CLR_EXCEPTIONS`|Controla os `ExceptionCLRCatcher*` retornos de chamada na interface [ICorProfilerCallback](icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_CODE_TRANSITIONS`|Controla os retornos de chamada [UnmanagedToManagedTransition](icorprofilercallback-unmanagedtomanagedtransition-method.md) e [ManagedToUnmanagedTransition](icorprofilercallback-managedtounmanagedtransition-method.md) na interface [ICorProfilerCallback](icorprofilercallback-interface.md)|  
+|`COR_PRF_MONITOR_ENTERLEAVE`|Controla as `FunctionEnter*` `FunctionLeave*` `FunctionTailCall*` [funções estáticas globais](profiling-global-static-functions.md), e de criação de perfil.|  
+|`COR_PRF_MONITOR_EXCEPTIONS`|Controla o retorno de chamada [ExceptionThrown](icorprofilercallback-exceptionthrown-method.md) e os `ExceptionSearch*` `ExceptionOSHandler*` retornos de chamada,, `ExceptionUnwind*` e `ExceptionCatcher*` na interface [ICorProfilerCallback](icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_FUNCTION_UNLOADS`|Controla o retorno de chamada [FunctionUnloadStarted](icorprofilercallback-functionunloadstarted-method.md) na interface [ICorProfilerCallback](icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_GC`|Controla os retornos de chamada [GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md), [GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md), [MovedReferences](icorprofilercallback-movedreferences-method.md), [MovedReferences2](icorprofilercallback4-movedreferences2-method.md), [SurvivingReferences](icorprofilercallback2-survivingreferences-method.md), [SurvivingReferences2](icorprofilercallback4-survivingreferences2-method.md), [ObjectReferences](icorprofilercallback-objectreferences-method.md), [ObjectsAllocatedByClass](icorprofilercallback-objectsallocatedbyclass-method.md), [RootReferences](icorprofilercallback-rootreferences-method.md), [RootReferences2](icorprofilercallback2-rootreferences2-method.md), [HandleCreated](icorprofilercallback2-handlecreated-method.md), [HandleDestroyed](icorprofilercallback2-handledestroyed-method.md)e [FinalizeableObjectQueued](icorprofilercallback2-finalizeableobjectqueued-method.md) nas `ICorProfilerCallback*` interfaces. Quando `COR_PRF_MONITOR_GC` é alocado, a coleta de lixo simultânea é desativada.|  
+|`COR_PRF_MONITOR_JIT_COMPILATION`|Controla os `JITCompilation*` retornos de chamada, [JITFunctionPitched](icorprofilercallback-jitfunctionpitched-method.md)e [JITInlining](icorprofilercallback-jitinlining-method.md) na interface [ICorProfilerCallback](icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_MODULE_LOADS`|Controla os `ModuleLoad*` `ModuleUnload*` retornos de chamada, e [ModuleAttachedToAssembly](icorprofilercallback-moduleattachedtoassembly-method.md) na interface [ICorProfilerCallback](icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_OBJECT_ALLOCATED`|Controla o retorno de chamada de [ObjectAllocated](icorprofilercallback-objectallocated-method.md) na interface [ICorProfilerCallback](icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_REMOTING`|Controla os `Remoting*` retornos de chamada na interface [ICorProfilerCallback](icorprofilercallback-interface.md) .|  
 |`COR_PRF_MONITOR_REMOTING_ASYNC`|Controla se os retornos de chamada `Remoting*` vão monitorar ou não os eventos de forma assíncrona.|  
 |`COR_PRF_MONITOR_REMOTING_COOKIE`|Controla se um cookie é passado para os retornos de chamada `Remoting*`.|  
-|`COR_PRF_MONITOR_SUSPENDS`|Controla `RuntimeSuspend*`os `RuntimeResume*`retornos de chamada [, RuntimeThreadSuspended](icorprofilercallback-runtimethreadsuspended-method.md)e [RuntimeThreadResumed](icorprofilercallback-runtimethreadresumed-method.md) na interface [ICorProfilerCallback.](icorprofilercallback-interface.md)|  
-|`COR_PRF_MONITOR_THREADS`|Controla as chamadas [ThreadCreated,](icorprofilercallback-threadcreated-method.md) [ThreadDestroyed,](icorprofilercallback-threaddestroyed-method.md) [ThreadAssignedToOSThread](icorprofilercallback-threadassignedtoosthread-method.md)e [ThreadNameChanged](icorprofilercallback2-threadnamechanged-method.md) nas interfaces [ICorProfilerCallback](icorprofilercallback-interface.md) e [ICorProfilerCallback2.](icorprofilercallback2-interface.md)|  
+|`COR_PRF_MONITOR_SUSPENDS`|Controla os `RuntimeSuspend*` `RuntimeResume*` retornos de chamada,, [RuntimeThreadSuspended](icorprofilercallback-runtimethreadsuspended-method.md)e [RuntimeThreadResumed](icorprofilercallback-runtimethreadresumed-method.md) na interface [ICorProfilerCallback](icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_THREADS`|Controla os retornos de chamada [ThreadCreated](icorprofilercallback-threadcreated-method.md), [ThreadDestroyed](icorprofilercallback-threaddestroyed-method.md), [ThreadAssignedToOSThread](icorprofilercallback-threadassignedtoosthread-method.md)e [ThreadNameChanged](icorprofilercallback2-threadnamechanged-method.md) nas interfaces [ICorProfilerCallback](icorprofilercallback-interface.md) e [ICorProfilerCallback2](icorprofilercallback2-interface.md) .|  
   
 <a name="Feature"></a>
 ### <a name="feature-enabling-flags"></a>Sinalizadores de habilitação de recurso  
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`COR_PRF_ENABLE_FRAME_INFO`|Permite a recuperação de `ClassID` uma função exata para uma função genérica, chamando o método [GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) com um `COR_PRF_FRAME_INFO` valor retornado pelo retorno de chamada [FunctionEnter2.](functionenter2-function.md)|  
-|`COR_PRF_ENABLE_FUNCTION_ARGS`|Habilita o rastreamento de argumentos usando o retorno de chamada [FunctionEnter2](functionenter2-function.md) ou o retorno de chamada [FunctionEnter3WithInfo](functionenter3withinfo-function.md) e o método [GetFunctionEnter3Info.](icorprofilerinfo3-getfunctionenter3info-method.md)|  
-|`COR_PRF_ENABLE_FUNCTION_RETVAL`|Permite o rastreamento dos valores de devolução usando o retorno de chamada [FunctionLeave2](functionleave2-function.md) ou o [método functionLeave3WithInfo](functionleave3withinfo-function.md) callback e [GetFunctionLeave3Info.](icorprofilerinfo3-getfunctionleave3info-method.md)|  
+|`COR_PRF_ENABLE_FRAME_INFO`|Habilita a recuperação de um exato `ClassID` para uma função genérica chamando o método [GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) com um `COR_PRF_FRAME_INFO` valor retornado pelo retorno de chamada [FunctionEnter2](functionenter2-function.md) .|  
+|`COR_PRF_ENABLE_FUNCTION_ARGS`|Habilita o rastreamento de argumentos usando o retorno de chamada [FunctionEnter2](functionenter2-function.md) ou o retorno de chamada [FunctionEnter3WithInfo](functionenter3withinfo-function.md) e o método [GetFunctionEnter3Info](icorprofilerinfo3-getfunctionenter3info-method.md) .|  
+|`COR_PRF_ENABLE_FUNCTION_RETVAL`|Habilita o rastreamento de valores de retorno usando o retorno de chamada [FunctionLeave2](functionleave2-function.md) ou o [FunctionLeave3WithInfo](functionleave3withinfo-function.md) retorno de chamada e o método [GetFunctionLeave3Info](icorprofilerinfo3-getfunctionleave3info-method.md) .|  
 |`COR_PRF_ENABLE_INPROC_DEBUGGING`|Preterido.<br /><br /> Não tem suporte no processo de depuração. Este sinalizador não tem efeito.|  
-|`COR_PRF_ENABLE_JIT_MAPS`|Preterido.<br /><br /> Permite que o profiler obtenha mapas IL-to-native usando [GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md). A partir do .NET Framework 2.0, o runtime sempre acompanha os mapas IL para nativo, portanto, esse sinalizador é sempre considerado como definido.|  
-|`COR_PRF_ENABLE_OBJECT_ALLOCATED`|Informa o runtime que o criador de perfil pode desejar para notificações de alocação do objeto. Este sinalizador deve ser definido durante a inicialização. Ele permite que o profiler `COR_PRF_MONITOR_OBJECT_ALLOCATED` use posteriormente o sinalizador para receber retornos de chamada [ObjectAllocated.](icorprofilercallback-objectallocated-method.md)|  
-|`COR_PRF_ENABLE_REJIT`|Habilita chamadas para os métodos [RequestReJIT](icorprofilerinfo4-requestrejit-method.md) e [RequestRevert.](icorprofilerinfo4-requestrevert-method.md) O criador de perfil deve definir este sinalizador na inicialização.  Se o criador de perfil especificar este sinalizador, também deverá especificar `COR_PRF_DISABLE_ALL_NGEN_IMAGES`.|  
-|`COR_PRF_ENABLE_STACK_SNAPSHOT`|Habilita chamadas para o método [DoStackSnapshot.](icorprofilerinfo2-dostacksnapshot-method.md)|  
+|`COR_PRF_ENABLE_JIT_MAPS`|Preterido.<br /><br /> Permite que o criador de perfil obtenha mapas de IL para nativo usando [GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md). A partir do .NET Framework 2.0, o runtime sempre acompanha os mapas IL para nativo, portanto, esse sinalizador é sempre considerado como definido.|  
+|`COR_PRF_ENABLE_OBJECT_ALLOCATED`|Informa o runtime que o criador de perfil pode desejar para notificações de alocação do objeto. Este sinalizador deve ser definido durante a inicialização. Ele permite que o criador de perfil Use posteriormente o `COR_PRF_MONITOR_OBJECT_ALLOCATED` sinalizador para receber retornos de chamada de [ObjectAllocated](icorprofilercallback-objectallocated-method.md) .|  
+|`COR_PRF_ENABLE_REJIT`|Habilita chamadas para os métodos [RequestReJIT](icorprofilerinfo4-requestrejit-method.md) e [RequestRevert](icorprofilerinfo4-requestrevert-method.md) . O criador de perfil deve definir este sinalizador na inicialização.  Se o criador de perfil especificar este sinalizador, também deverá especificar `COR_PRF_DISABLE_ALL_NGEN_IMAGES`.|  
+|`COR_PRF_ENABLE_STACK_SNAPSHOT`|Habilita chamadas para o método [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) .|  
   
 <a name="Config"></a>
 ### <a name="configuration-flags"></a>Sinalizadores de configuração  
@@ -180,16 +180,16 @@ typedef enum {
 |`COR_PRF_REQUIRE_PROFILE_IMAGE`|Representa todos os sinalizadores `COR_PRF_MONITOR` que necessitam de imagens aprimoradas por perfil.|  
   
 ## <a name="remarks"></a>Comentários  
- Um `COR_PRF_MONITOR` valor é usado com o [ICorProfilerInfo::GetEventMask](icorprofilerinfo-geteventmask-method.md) e [ICorProfilerInfo::SetEventMask](icorprofilerinfo-seteventmask-method.md) métodos para definir as notificações de evento que o tempo de execução do idioma comum faz ao profiler.  
+ Um `COR_PRF_MONITOR` valor é usado com os métodos [ICorProfilerInfo:: GetEventMask](icorprofilerinfo-geteventmask-method.md) e [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para definir as notificações de eventos que o Common Language Runtime faz para o criador de perfil.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 

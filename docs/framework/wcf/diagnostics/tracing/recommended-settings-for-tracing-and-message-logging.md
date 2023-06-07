@@ -1,19 +1,20 @@
 ---
 title: Configurações recomendadas para registro de rastreamento e mensagens
+description: Saiba mais sobre as configurações recomendadas de rastreamento e registro de mensagens para diferentes ambientes operacionais no WCF.
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-ms.openlocfilehash: 604aae2c0a0c5390428e7f1a2c99e17e90ee76a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 71067a4d6f4cec65a148a8162c40e44d82b85784
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185725"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245317"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>Configurações recomendadas para registro de rastreamento e mensagens
-Este tópico descreve as configurações recomendadas de rastreamento e registro de mensagens para diferentes ambientes operacionais.  
+Este tópico descreve o rastreamento recomendado e as configurações de log de mensagens para diferentes ambientes operacionais.  
   
 ## <a name="recommended-settings-for-a-production-environment"></a>Configurações recomendadas para um ambiente de produção  
- Para um ambiente de produção, se você estiver `switchValue` usando fontes de rastreamento WCF, defina o aviso. Se você estiver usando `System.ServiceModel` a fonte `switchValue` de `Warning` rastreamento `propagateActivity` WCF, defina o atributo e o atributo para `true`. Se você estiver usando uma fonte de `switchValue` rastreamento `Warning, ActivityTracing`definida pelo usuário, defina o atributo como . Isso pode ser feito manualmente usando a [Ferramenta do Editor de Configuração (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). Se você não antecipar um hit no `switchValue` desempenho, `Information` você pode definir o atributo em todos os casos mencionados anteriormente, o que gera uma quantidade bastante grande de dados de rastreamento. O exemplo a seguir demonstra essas configurações recomendadas.  
+ Para um ambiente de produção, se você estiver usando fontes de rastreamento do WCF, defina o `switchValue` como aviso. Se você estiver usando a origem de rastreamento do WCF `System.ServiceModel` , defina o `switchValue` atributo como `Warning` e o `propagateActivity` atributo como `true` . Se você estiver usando uma fonte de rastreamento definida pelo usuário, defina o `switchValue` atributo como `Warning, ActivityTracing` . Isso pode ser feito manualmente usando a [ferramenta do editor de configuração (SvcConfigEditor.exe)](../../configuration-editor-tool-svcconfigeditor-exe.md). Se você não antecipar um impacto no desempenho, poderá definir o `switchValue` atributo como `Information` em todos os casos mencionados anteriormente, o que gera uma quantidade muito grande de dados de rastreamento. O exemplo a seguir demonstra essas configurações recomendadas.  
   
 ```xml  
 <configuration>  
@@ -48,9 +49,9 @@ Este tópico descreve as configurações recomendadas de rastreamento e registro
 ```  
   
 ## <a name="recommended-settings-for-deployment-or-debugging"></a>Configurações recomendadas para implantação ou depuração  
- Para implantação ou depuração `Information` `Verbose`do ambiente, escolha ou, juntamente com `ActivityTracing` uma fonte definida pelo usuário ou `System.ServiceModel` trace. Para melhorar a depuração, você também`System.ServiceModel.MessageLogging`deve adicionar uma fonte de rastreamento adicional ( ) à configuração para ativar o registro de mensagens. Observe que `switchValue` o atributo não tem impacto nesta fonte de rastreamento.  
+ Para implantação ou ambiente de depuração, escolha `Information` ou `Verbose` , junto com `ActivityTracing` para uma fonte de rastreamento ou definida pelo usuário `System.ServiceModel` . Para aprimorar a depuração, você também deve adicionar uma fonte de rastreamento adicional ( `System.ServiceModel.MessageLogging` ) à configuração para habilitar o log de mensagens. Observe que o `switchValue` atributo não tem impacto sobre essa origem de rastreamento.  
   
- O exemplo a seguir demonstra as configurações recomendadas, usando `XmlWriterTraceListener`um ouvinte compartilhado que utiliza o .  
+ O exemplo a seguir demonstra as configurações recomendadas, usando um ouvinte compartilhado que utiliza o `XmlWriterTraceListener` .  
   
 ```xml  
 <configuration>  
@@ -96,22 +97,22 @@ Este tópico descreve as configurações recomendadas de rastreamento e registro
 </configuration>  
 ```  
   
-## <a name="using-wmi-to-modify-settings"></a>Usando o WMI para modificar configurações  
- Você pode usar o WMI para alterar as configurações em tempo de execução (ativando o atributo `wmiProviderEnabled` na configuração, como demonstrado no exemplo de configuração anterior). Por exemplo, você pode usar o WMI dentro do CIM Studio para alterar os níveis de origem de rastreamento de Aviso para Informações em tempo de execução. Você deve estar ciente de que o custo de desempenho da depuração ao vivo desta forma pode ser muito alto. Para obter mais informações sobre o uso do WMI, consulte o [tópico Usando a Instrumentação de Gerenciamento do Windows para Diagnósticos.](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)  
+## <a name="using-wmi-to-modify-settings"></a>Usando o WMI para modificar as configurações  
+ Você pode usar o WMI para alterar as definições de configuração em tempo de execução (habilitando o `wmiProviderEnabled` atributo na configuração, conforme demonstrado no exemplo de configuração anterior). Por exemplo, você pode usar o WMI no CIM Studio para alterar os níveis de origem de rastreamento de aviso para informações em tempo de execução. Você deve estar ciente de que o custo de desempenho da depuração dinâmica dessa maneira pode ser muito alto. Para obter mais informações sobre como usar o WMI, consulte o tópico [usando instrumentação de gerenciamento do Windows para diagnóstico](../wmi/index.md) .  
   
-## <a name="enable-correlated-events-in-aspnet-tracing"></a>Habilite eventos correlacionados no rastreamento de ASP.NET  
- ASP.NET eventos não definam o ID de correlação (ActivityID) a menos que ASP.NET rastreamento de eventos esteja ligado. Para ver os eventos correlacionados corretamente, você tem que ativar ASP.NET rastreamento de eventos usando o seguinte comando no console de comando, que pode ser invocado indo para **Iniciar**, **Executar** e digitar **cmd**,  
+## <a name="enable-correlated-events-in-aspnet-tracing"></a>Habilitar eventos correlacionados no rastreamento de ASP.NET  
+ Os eventos ASP.NET não definem a ID de correlação (ActivityId), a menos que o rastreamento de eventos do ASP.NET esteja ativado. Para ver os eventos correlacionados corretamente, você precisa ativar o rastreamento de eventos ASP.NET usando o comando a seguir no console de comando, que pode ser invocado acessando **Iniciar**, **executar** e digitar **cmd**,  
   
 ```console  
 logman start mytrace -pf logman.providers -o test.etl –ets  
 ```  
   
- Para desativar o rastreamento de eventos ASP.NET, use o seguinte comando,  
+ Para desativar o rastreamento de eventos ASP.NET, use o comando a seguir,  
   
 ```console
 logman stop mytrace -ets  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Usando a Instrumentação de Gerenciamento do Windows para diagnóstico](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+- [Usando Instrumentação de Gerenciamento do Windows para diagnóstico](../wmi/index.md)

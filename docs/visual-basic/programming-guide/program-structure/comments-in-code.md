@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 189810393db42c54cb8a0f97b22b3d1514d9a7c4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b50e76b8f832c3a214ca54f97bab8b0b6789ac25
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346170"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403311"
 ---
 # <a name="comments-in-code-visual-basic"></a>Comentários no código (Visual Basic)
 À medida que você lê os exemplos de código, você encontra geralmente o símbolo de comentário (`'`). Esse símbolo informa o compilador de Visual Basic para ignorar o texto que o segue ou o *Comentário*. Os comentários são uma breve explicação e/ou anotações adicionadas ao código para o benefício de quem os lê.  
@@ -44,7 +44,7 @@ ms.locfileid: "74346170"
 |Suposições|Lista cada variável externa, controle, arquivo aberto ou outro elemento acessado pelo procedimento|  
 |Efeitos|Listas cada variável externa, controle ou arquivo afetado, e o efeito que ele tem (somente se não for óbvio)|  
 |Entradas|Especifica a finalidade do argumento|  
-|Retorna|Explica os valores retornados pelo procedimento|  
+|Retornos|Explica os valores retornados pelo procedimento|  
   
  Lembre-se dos seguintes pontos:  
   
@@ -54,15 +54,15 @@ ms.locfileid: "74346170"
   
 - Os comentários não podem seguir uma sequência de continuação de linha na mesma linha.  
   
- Você pode adicionar ou remover símbolos de comentário de um bloco de código selecionando uma ou mais linhas de código e escolhendo o **Comentário** (![botão de comentário de Visual Basic no visual studio.](./media/comments-in-code/visual-basic-comment-button.gif)) e remover marca de **Comentário** (![o botão Visual Basic remover comentários nos botões do Visual Studio.](./media/comments-in-code/visual-basic-uncomment-button.gif)) na barra de ferramentas **Editar** .  
+ Você pode adicionar ou remover símbolos de comentário de um bloco de código selecionando uma ou mais linhas de código e escolhendo o **Comentário** ( ![ o botão de Visual Basic comentário no Visual Studio ](./media/comments-in-code/visual-basic-comment-button.gif) ) e remover os **comentários** ( ![ o botão Visual Basic remover comentários no Visual Studio. ](./media/comments-in-code/visual-basic-uncomment-button.gif) ) na barra de ferramentas **Editar** .  
   
 > [!NOTE]
-> Você também pode adicionar comentários ao código precedendo o texto com a palavra-chave `REM`. No entanto, o símbolo de `'` e o **comentário**/botões para **remover comentários** são mais fáceis de usar e exigem menos espaço e memória.  
+> Você também pode adicionar comentários ao código precedendo o texto com a palavra-chave `REM`. No entanto, o `'` símbolo e os botões de desmarcação de **Comentário** / **Uncomment** são mais fáceis de usar e exigem menos espaço e memória.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Instintos básicos – documentando seu código com comentários XML](https://docs.microsoft.com/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
-- [Como criar documentação XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
-- [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/index.md)
-- [Estrutura do Programa e Convenções de Código](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [Instrução REM](../../../visual-basic/language-reference/statements/rem-statement.md)
+- [Como criar documentação XML](how-to-create-xml-documentation.md)
+- [Marcações de Comentário XML](../../language-reference/xmldoc/index.md)
+- [Estrutura do programa e convenções de código](program-structure-and-code-conventions.md)
+- [Instrução REM](../../language-reference/statements/rem-statement.md)

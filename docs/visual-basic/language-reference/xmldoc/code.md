@@ -5,14 +5,14 @@ helpviewer_keywords:
 - code XML tag
 - <code> XML tag
 ms.assetid: 925e5342-be05-45f2-bf66-7398bbd6710e
-ms.openlocfilehash: 1cbac2162bd39cdc8af9a55dfd6e2f90bc40b08a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: aa65fed863718f1f00b510f82051a13e764e1b23
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354318"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400132"
 ---
-# <a name="code-visual-basic"></a>> de código de \<(Visual Basic)
+# <a name="code-visual-basic"></a>\<code> (Visual Basic)
 Indica que o texto tem várias linhas de código.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -26,15 +26,15 @@ Indica que o texto tem várias linhas de código.
  O texto a ser marcado como código.  
   
 ## <a name="remarks"></a>Comentários  
- Use a marca `<code>` para indicar várias linhas como código. Use [\<c>](../../../visual-basic/language-reference/xmldoc/c.md) para indicar que o texto dentro uma descrição deve ser marcado como código.  
+ Use a `<code>` marca para indicar várias linhas como código. Use [\<c>](c.md) para indicar que o texto dentro de uma descrição deve ser marcado como código.  
   
- Compile com [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
+ Compile com [-Doc](../../reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa a marca de > de código \<para incluir código de exemplo para usar o campo `ID`.  
+ Este exemplo usa a \<code> marca para incluir o código de exemplo para usar o `ID` campo.  
   
  [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Marcações de Comentário XML](index.md)

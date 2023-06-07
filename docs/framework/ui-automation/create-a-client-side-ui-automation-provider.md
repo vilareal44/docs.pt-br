@@ -1,5 +1,6 @@
 ---
 title: Criar um Provedor de Automação de Interface de Usuário do Lado do Cliente
+description: Veja um exemplo de como criar um provedor de automação de interface do usuário do lado do cliente. O exemplo implementa um provedor do lado do cliente simples para uma janela de console.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, creating client-side provider
 - client-side UI Automation provider, creating
 ms.assetid: d91edaf2-be28-41ec-a508-af421cb43c3d
-ms.openlocfilehash: 79accd23392ff9e1e8157348f7a1042ee2b3cc47
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a25966d0f11e409bd4e53f944fc2528360327039
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433658"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168471"
 ---
 # <a name="create-a-client-side-ui-automation-provider"></a>Criar um Provedor de Automação de Interface de Usuário do Lado do Cliente
 > [!NOTE]
@@ -27,7 +28,7 @@ ms.locfileid: "74433658"
  [!code-csharp[UIAClientSideProvider_snip#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClientSideProvider_snip/CSharp/CSProviderProgram.cs#101)]
  [!code-vb[UIAClientSideProvider_snip#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClientSideProvider_snip/visualbasic/csproviderprogram.vb#101)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Visão geral dos provedores de automação de interface do usuário](ui-automation-providers-overview.md)
-- [Registrar um assembly do provedor do lado do cliente](register-a-client-side-provider-assembly.md)
+- [Visão Geral dos Provedores de Automação de Interface do Usuário](ui-automation-providers-overview.md)
+- [Registrar um Módulo Provedor do Lado do Cliente](register-a-client-side-provider-assembly.md)

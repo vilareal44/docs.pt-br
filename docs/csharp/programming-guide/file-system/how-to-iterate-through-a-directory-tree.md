@@ -1,22 +1,23 @@
 ---
-title: Como iterar através de uma árvore de diretório - C# Guia de Programação
+title: Como iterar por meio de uma árvore de diretórios – guia de programação em C#
+description: Saiba como iterar por meio de uma árvore de diretório. Acesse cada arquivo em cada subdiretório aninhado em uma pasta raiz especificada.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: be3931a23e7a88affcf4d0abf617ec00bd35297a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c49a9d1eaea9d4d8967b105d753f2a611d80e795
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712254"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301977"
 ---
-# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Como iterar através de uma árvore de diretório (Guia de Programação C#)
+# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Como iterar por meio de uma árvore de diretório (guia de programação C#)
 A expressão "iterar uma árvore de diretório" significa acessar cada arquivo em cada subdiretório aninhado em uma pasta raiz especificada, em qualquer profundidade. Você não precisa necessariamente abrir cada arquivo. Você pode recuperar apenas o nome do arquivo ou subdiretório como um `string`, ou então você pode recuperar informações adicionais na forma de um objeto <xref:System.IO.FileInfo?displayProperty=nameWithType> ou <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
   
 > [!NOTE]
-> No Windows, os termos "diretório" e "pasta" são usados de forma intercambiável. A maior parte do texto da documentação e da interface do usuário usa o termo "pasta", mas a biblioteca de classes do .NET Framework usa o termo "diretório".  
+> No Windows, os termos "diretório" e "pasta" são usados de forma intercambiável. A maior parte da documentação e do texto da interface do usuário usa o termo "pasta", mas as bibliotecas de classes do .NET usam o termo "diretório".  
   
  No caso mais simples, em que você sabe com certeza que tem permissões de acesso a todos os diretórios em uma raiz especificada, é possível usar o sinalizador `System.IO.SearchOption.AllDirectories`. Esse sinalizador retorna todos os subdiretórios aninhados que correspondem ao padrão especificado. O exemplo a seguir mostra como usar o sinalizador.  
   
@@ -33,7 +34,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  Se precisar executar uma série de operações em arquivos e pastas, você pode modularizar esses exemplos refatorando a operação em funções separadas que podem ser invocadas usando um único delegado.  
   
 > [!NOTE]
-> Sistemas de arquivos NTFS podem conter *pontos de nova análise* na forma de *pontos de junção*, *links simbólicos* e *links físicos*. Os métodos do .NET Framework, tais como <xref:System.IO.DirectoryInfo.GetFiles%2A> e <xref:System.IO.DirectoryInfo.GetDirectories%2A>, não retornarão nenhum subdiretório em um ponto de nova análise. Esse comportamento protege contra o risco de entrar em um loop infinito quando dois pontos de nova análise fazem referência um ao outro. De modo geral, você deve ter muito cuidado ao lidar com pontos de nova análise para garantir que arquivos não sejam modificados ou excluídos inadvertidamente. Se precisar ter um controle preciso sobre pontos de nova análise, use a invocação de plataforma ou código nativo para chamar diretamente os métodos apropriados do sistema de arquivos Win32.  
+> Sistemas de arquivos NTFS podem conter *pontos de nova análise* na forma de *pontos de junção*, *links simbólicos* e *links físicos*. Os métodos do .NET, como <xref:System.IO.DirectoryInfo.GetFiles%2A> e <xref:System.IO.DirectoryInfo.GetDirectories%2A> não retornarão nenhum subdiretório em um ponto de nova análise. Esse comportamento protege contra o risco de entrar em um loop infinito quando dois pontos de nova análise fazem referência um ao outro. De modo geral, você deve ter muito cuidado ao lidar com pontos de nova análise para garantir que arquivos não sejam modificados ou excluídos inadvertidamente. Se precisar ter um controle preciso sobre pontos de nova análise, use a invocação de plataforma ou código nativo para chamar diretamente os métodos apropriados do sistema de arquivos Win32.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como percorrer uma árvore de diretório usando a recursão. A abordagem recursiva é elegante, mas tem o potencial de causar uma exceção de estouro de pilha se a árvore de diretório for grande e profundamente aninhada.  
@@ -56,7 +57,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 ## <a name="robust-programming"></a>Programação robusta  
  O código de iteração de arquivo robusto deve levar em conta muitas complexidades do sistema de arquivos. Para saber mais sobre o sistema de arquivos do Windows, confira [Visão geral do NTFS](/windows-server/storage/file-server/ntfs-overview).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IO>
 - [LINQ e diretórios de arquivos](../concepts/linq/linq-and-file-directories.md)

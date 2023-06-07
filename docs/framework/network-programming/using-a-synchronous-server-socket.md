@@ -1,5 +1,6 @@
 ---
 title: Usando um soquete de servidor síncrono
+description: Este exemplo mostra um soquete de servidor síncrono no .NET Framework, que suspende um aplicativo até que uma solicitação de conexão seja recebida no soquete.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-ms.openlocfilehash: cbc02c755ceefa8f31439f121a98978b82f33fa2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e7d32595f554b32ecc72bbb1f1a469ad5935467
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047030"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502048"
 ---
 # <a name="using-a-synchronous-server-socket"></a>Usando um soquete de servidor síncrono
 Os soquetes de servidor síncrono suspendem a execução do aplicativo até que uma solicitação de conexão seja recebida no soquete. Os soquetes de servidor síncrono não são adequados para aplicativos que fazem uso intenso da rede em sua operação, mas podem ser adequados para aplicativos de rede simples.  
   
  Depois que um <xref:System.Net.Sockets.Socket> for definido para escutar em um ponto de extremidade usando os métodos <xref:System.Net.Sockets.Socket.Bind%2A> e <xref:System.Net.Sockets.Socket.Listen%2A>, ele estará pronto para aceitar solicitações de conexão de entrada usando o método <xref:System.Net.Sockets.Socket.Accept%2A>. O aplicativo é suspenso até que uma solicitação de conexão seja recebida quando o método **Accept** é chamado.  
   
- Quando uma solicitação de conexão é recebida, **Accept** retorna uma nova instância de **Socket** associada ao cliente que se conecta. O exemplo a seguir lê os dados do cliente, exibe-os no console e retorna os dados ao cliente. O **Socket** não especifica nenhum protocolo de mensagens e, portanto, a cadeia de caracteres “\<EOF>” marca o fim dos dados da mensagem. Ele supõe que um **Socket** chamado `listener` foi inicializado e associado a um ponto de extremidade.  
+ Quando uma solicitação de conexão é recebida, **Accept** retorna uma nova instância de **Socket** associada ao cliente que se conecta. O exemplo a seguir lê os dados do cliente, exibe-os no console e retorna os dados ao cliente. O **soquete** não especifica nenhum protocolo de mensagens, portanto, a cadeia de caracteres " \<EOF> " marca o final dos dados da mensagem. Ele supõe que um **Socket** chamado `listener` foi inicializado e associado a um ponto de extremidade.  
   
 ```vb  
 Console.WriteLine("Waiting for a connection...")  

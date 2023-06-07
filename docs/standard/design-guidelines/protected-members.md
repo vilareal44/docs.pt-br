@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unsealed classes
 - customizing class behavior
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
-ms.openlocfilehash: 44d342662e1aaeb51f14470f354f2dadd9a6f18d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: afcb92e48996d594fcedc5b579922b179f754b9d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743649"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286113"
 ---
 # <a name="protected-members"></a>Membros protegidos
 Os membros protegidos por si só não fornecem nenhuma extensibilidade, mas podem tornar a extensibilidade por meio de subclasses mais poderosas. Eles podem ser usados para expor opções de personalização avançadas sem desnecessariamente complicar a interface pública principal.
@@ -32,7 +32,7 @@ Os membros protegidos por si só não fornecem nenhuma extensibilidade, mas pode
 
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
-- [Designer voltado para extensibilidade](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+- [Diretrizes de design de estrutura](index.md)
+- [Designer voltado para extensibilidade](designing-for-extensibility.md)

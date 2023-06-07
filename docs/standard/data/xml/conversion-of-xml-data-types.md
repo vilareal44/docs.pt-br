@@ -6,15 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
-ms.openlocfilehash: b0cdab8861ca50b40ce2b422fcc1acf16e2f2273
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d8b60428bc129958355ce5b285662847e9e712c3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711084"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282409"
 ---
 # <a name="conversion-of-xml-data-types"></a>Conversão de tipos de dados XML
-A maioria dos métodos localizados em uma classe **XmlConvert** é usada para converter dados entre cadeias de caracteres e formatos fortemente tipados. Os métodos são independentes de localidade. Isso significa que não levam em conta as configurações de localidade ao fazer a conversão.  
+A maioria dos métodos encontrados em uma classe **XmlConvert** é usada para converter dados entre cadeias de caracteres e formatos com rigidez de tipos. Os métodos são independentes de localidade. Isso significa que não levam em conta as configurações de localidade ao fazer a conversão.  
   
 ## <a name="reading-string-as-types"></a>Lê a cadeia de caracteres como tipos  
  O exemplo a seguir lê uma cadeia de caracteres e convertê-lo para um tipo de **DateTime**.  
@@ -66,5 +66,5 @@ writer.WriteElementString("TestInt32",XmlConvert.ToString(vInt32));
   
 ## <a name="see-also"></a>Veja também
 
-- [Convertendo cadeias de caracteres em tipos de dados do .NET Framework](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)
-- [Convertendo tipos do .NET Framework para cadeias de caracteres](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+- [Convertendo cadeias de caracteres em tipos de dados do .NET Framework](converting-strings-to-dotnet-data-types.md)
+- [Convertendo tipos do .NET Framework para cadeias de caracteres](converting-dotnet-types-to-strings.md)

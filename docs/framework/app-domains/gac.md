@@ -1,5 +1,6 @@
 ---
 title: Cache de assemblies global
+description: Entenda o cache de assembly global, que é um cache de código de todo o computador em que o Common Language Runtime para .NET está instalado.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - global assembly cache, about
 - access control lists [.NET Framework]
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
-ms.openlocfilehash: 22adf103ce38e189a277405af220880d5ce0b1db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7f08bb4cf279924b12432f259dae8ce5a8474285
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119927"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104910"
 ---
 # <a name="global-assembly-cache"></a>Cache de assemblies global
 Cada computador em que o Common Language Runtime está instalado tem um cache de código em todo o computador chamado Cache de Assembly Global. O Cache de Assembly Global armazena assemblies projetados especificamente para serem compartilhados por vários aplicativos no computador.  
@@ -40,8 +41,8 @@ Cada computador em que o Common Language Runtime está instalado tem um cache de
   
  Assemblies implantados no Cache de Assembly Global devem ter um nome forte. Quando um assembly é adicionado ao Cache de Assembly Global, são executadas verificações de integridade em todos os arquivos que compõem o assembly. O cache executa essas verificações de integridade para garantir que um assembly não tenha sido adulterado, por exemplo, quando um arquivo é alterado, mas o manifesto não reflete a alteração.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Assemblies no .NET](../../standard/assembly/index.md)
-- [Trabalhando com assemblies e o cache de assembly global](working-with-assemblies-and-the-gac.md)
+- [Trabalhando com assemblies e o cache de assemblies global](working-with-assemblies-and-the-gac.md)
 - [Assemblies de nome forte](../../standard/assembly/strong-named.md)

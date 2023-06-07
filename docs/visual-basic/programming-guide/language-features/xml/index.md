@@ -5,16 +5,16 @@ ms.date: 10/20/2017
 helpviewer_keywords:
 - LINQ to XML [Visual Basic]
 ms.assetid: 954b6e40-1246-4185-a018-4061724fcae9
-ms.openlocfilehash: 0bcc6a91c8c20d7e1277000ed76fd59e2e8ba7ee
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bd9a08fca0159a24cb3faba2470dc43ee1178523
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330797"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374779"
 ---
 # <a name="xml-in-visual-basic"></a>XML no Visual Basic
 
-O Visual Basic fornece suporte a idiomas integrados que permite interagir com [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+O Visual Basic fornece suporte de idioma integrado que permite interagir com o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] .  
   
 ## <a name="in-this-section"></a>Nesta seção  
 
@@ -22,14 +22,14 @@ O Visual Basic fornece suporte a idiomas integrados que permite interagir com [!
   
 |Tópico|Descrição|  
 |-----------|-----------------|  
-|[Visão geral do LINQ to XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)|Descreve como Visual Basic dá suporte a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[Criando XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)|Descreve como criar objetos de literal do XML usando o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[Manipulando XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)|Descreve como carregar e analisar XML usando o Visual Basic.|  
-|[Acessando XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)|Descreve as propriedades do eixo XML e os métodos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para acessar atributos e elementos XML.|  
+|[Visão geral de LINQ to XML no Visual Basic](overview-of-linq-to-xml.md)|Descreve como o Visual Basic dá suporte ao [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] .|  
+|[Criando XML no Visual Basic](creating-xml.md)|Descreve como criar objetos de literal do XML usando o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Manipulando XML no Visual Basic](manipulating-xml.md)|Descreve como carregar e analisar XML usando o Visual Basic.|  
+|[Acessando XML no Visual Basic](accessing-xml.md)|Descreve as propriedades do eixo XML e os métodos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para acessar atributos e elementos XML.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Linq>
-- [Literais XML](../../../../visual-basic/language-reference/xml-literals/index.md)
-- [Propriedades do Eixo XML](../../../../visual-basic/language-reference/xml-axis/index.md)
-- [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)
+- [Literais XML](../../../language-reference/xml-literals/index.md)
+- [Propriedades do eixo XML](../../../language-reference/xml-axis/index.md)
+- [LINQ to XML](../../concepts/linq/linq-to-xml.md)

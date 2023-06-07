@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f165200e-3a91-47f7-88fc-13ff10c8babc
 topic_type:
 - apiref
-ms.openlocfilehash: 798815c1122129395e57ff1274c23292696504f0
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 3681106bca94f1fefb2f24a1aa4254eb2b1b0531
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865708"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499734"
 ---
 # <a name="icorprofilercallback2survivingreferences-method"></a>Método ICorProfilerCallback2::SurvivingReferences
 Relata o layout dos objetos no heap como resultado de uma coleta de lixo sem compactação.  
@@ -38,47 +38,47 @@ HRESULT SurvivingReferences(
   
 ## <a name="parameters"></a>Parâmetros  
  `cSurvivingObjectIDRanges`  
- no O número de blocos de objetos contíguos que sobreviveram como resultado da coleta de lixo sem compactação. Ou seja, o valor de `cSurvivingObjectIDRanges` é o tamanho das matrizes `objectIDRangeStart` e `cObjectIDRangeLength`, que armazenam um `ObjectID` e um comprimento, respectivamente, para cada bloco de objetos.  
+ no O número de blocos de objetos contíguos que sobreviveram como resultado da coleta de lixo sem compactação. Ou seja, o valor de `cSurvivingObjectIDRanges` é o tamanho das `objectIDRangeStart` `cObjectIDRangeLength` matrizes e, que armazena um `ObjectID` e um comprimento, respectivamente, para cada bloco de objetos.  
   
- Os dois próximos argumentos de `SurvivingReferences` são matrizes paralelas. Em outras palavras, `objectIDRangeStart` e `cObjectIDRangeLength` se preocupam com o mesmo bloco de objetos contíguos.  
+ Os dois próximos argumentos de `SurvivingReferences` são matrizes paralelas. Em outras palavras, `objectIDRangeStart` e `cObjectIDRangeLength` preocupação com o mesmo bloco de objetos contíguos.  
   
  `objectIDRangeStart`  
- no Uma matriz de valores de `ObjectID`, cada um dos quais é o endereço inicial de um bloco de objetos dinâmicos contíguos na memória.  
+ no Uma matriz de `ObjectID` valores, cada um dos quais é o endereço inicial de um bloco de objetos dinâmicos contíguos na memória.  
   
  `cObjectIDRangeLength`  
  no Uma matriz de inteiros, cada qual é o tamanho de um bloco sobrevivente de objetos contíguos na memória.  
   
- Um tamanho é especificado para cada bloco que é referenciado na matriz de `objectIDRangeStart`.  
+ Um tamanho é especificado para cada bloco que é referenciado na `objectIDRangeStart` matriz.  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]
-> Esse método relata tamanhos como `MAX_ULONG` para objetos maiores que 4 GB em plataformas de 64 bits. Para objetos com mais de 4 GB, use o método [ICorProfilerCallback4:: SurvivingReferences2](icorprofilercallback4-survivingreferences2-method.md) em vez disso.  
+> Esse método relata tamanhos `MAX_ULONG` para objetos que são maiores que 4 GB em plataformas de 64 bits. Para objetos com mais de 4 GB, use o método [ICorProfilerCallback4:: SurvivingReferences2](icorprofilercallback4-survivingreferences2-method.md) em vez disso.  
   
- Os elementos das matrizes `objectIDRangeStart` e `cObjectIDRangeLength` devem ser interpretados da seguinte maneira para determinar se um objeto sobreviveram a coleta de lixo. Suponha que um valor de `ObjectID` (`ObjectID`) está dentro do seguinte intervalo:  
+ Os elementos das `objectIDRangeStart` `cObjectIDRangeLength` matrizes e devem ser interpretados da seguinte maneira para determinar se um objeto sobreviveram a coleta de lixo. Suponha que um `ObjectID` valor ( `ObjectID` ) esteja dentro do seguinte intervalo:  
   
  `ObjectIDRangeStart[i]` <= `ObjectID` < `ObjectIDRangeStart[i]` + `cObjectIDRangeLength[i]`  
   
  Para qualquer valor de `i` que esteja no seguinte intervalo, o objeto tem sobreviveram a coleta de lixo:  
   
- 0 <= `i` < `cSurvivingObjectIDRanges`  
+ 0 <=`i` < `cSurvivingObjectIDRanges`  
   
  Uma coleta de lixo não compactada recupera a memória ocupada por objetos "inativos", mas não compacta esse espaço livre. Como resultado, a memória é retornada para o heap, mas nenhum objeto "ao vivo" é movido.  
   
- O Common Language Runtime (CLR) chama `SurvivingReferences` para coletas de lixo sem compactação. Para compactar as coleções de lixo, [ICorProfilerCallback:: MovedReferences](icorprofilercallback-movedreferences-method.md) é chamado em vez disso. Uma única coleta de lixo pode ser compactada para uma geração e não compactação para outra. Para uma coleta de lixo em qualquer geração específica, o criador de perfil receberá um retorno de chamada `SurvivingReferences` ou um `MovedReferences` retorno de chamada, mas não ambos.  
+ As chamadas de Common Language Runtime (CLR) `SurvivingReferences` para coletas de lixo não compactadas. Para compactar as coleções de lixo, [ICorProfilerCallback:: MovedReferences](icorprofilercallback-movedreferences-method.md) é chamado em vez disso. Uma única coleta de lixo pode ser compactada para uma geração e não compactação para outra. Para uma coleta de lixo em qualquer geração específica, o criador de perfil receberá um retorno de chamada `SurvivingReferences` ou um `MovedReferences` retorno de chamada, mas não ambos.  
   
- Vários retornos de chamada de `SurvivingReferences` podem ser recebidos durante uma coleta de lixo específica, devido a buffers internos limitados, vários threads relatando no caso da coleta de lixo do servidor e por outros motivos. No caso de vários retornos de chamada durante uma coleta de lixo, as informações são cumulativas — todas as referências que são relatadas em qualquer `SurvivingReferences` retorno de chamada sobrevivem à coleta de lixo.  
+ Vários `SurvivingReferences` retornos de chamada podem ser recebidos durante uma determinada coleta de lixo, devido ao buffer interno limitado, a vários threads relatando no caso da coleta de lixo do servidor e por outros motivos. No caso de vários retornos de chamada durante uma coleta de lixo, as informações são cumulativas – todas as referências que são relatadas em qualquer `SurvivingReferences` retorno de chamada sobrevivem à coleta de lixo.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
 - [Interface ICorProfilerCallback2](icorprofilercallback2-interface.md)

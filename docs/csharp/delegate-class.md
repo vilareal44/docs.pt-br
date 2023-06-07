@@ -1,23 +1,23 @@
 ---
 title: System.Delegate e a palavra-chave `delegate`
-description: Saiba mais sobre as classes em .NET que suportam delegados e como esses mapas para a palavra-chave 'delegado'.
+description: Saiba mais sobre as classes no .NET que dão suporte a delegados e como elas são mapeadas para a palavra-chave ' delegate '.
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 87fdf19c4ea810c5ac4409fe16c3cba9d5fc6574
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9df8ad68f6bfa62863ee047875b6419fc81ad779
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146275"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062457"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate e a palavra-chave `delegate`
 
 [Anterior](delegates-overview.md)
 
-Este artigo abrange as classes em .NET que suportam `delegate` delegados, e como esses mapas para a palavra-chave.
+Este artigo aborda as classes no .NET que dão suporte a delegados e como elas são mapeadas para a `delegate` palavra-chave.
 
-## <a name="define-delegate-types"></a>Definir tipos de delegados
+## <a name="define-delegate-types"></a>Definir tipos delegados
 
 Vamos começar com a palavra-chave ‘delegate’, pois ela é basicamente o que você usará ao trabalhar com delegados. O código que o compilador gera quando você usa a palavra-chave `delegate` será mapeado para chamadas de método que invocam membros das classes <xref:System.Delegate> e <xref:System.MulticastDelegate>.
 
@@ -57,7 +57,7 @@ O tipo da variável é `Comparison<T>`, o tipo de delegado definido anteriorment
 
  Esse snippet de código acima declarou uma variável de membro dentro de uma classe. Você também pode declarar variáveis de delegado que são variáveis locais ou argumentos para métodos.
 
-## <a name="invoke-delegates"></a>Invoque delegados
+## <a name="invoke-delegates"></a>Invocar delegados
 
 Você invoca os métodos que estão na lista de invocação de um delegado chamando esse delegado. Dentro do método `Sort()`, o código chamará o método de comparação para determinar em qual ordem posicionar objetos:
 
@@ -70,7 +70,7 @@ Você trata a variável como um nome de método e a invoca usando a sintaxe de c
 
 Essa linha de código faz uma suposição não segura: não há garantia de que um destino foi adicionado ao delegado. Se nenhum destino tiver sido anexado, a linha acima fará com que um `NullReferenceException` seja lançado. As expressões usadas para resolver esse problema são mais complicadas do que uma simples verificação de null e são abordadas posteriormente nesta [série](delegates-patterns.md).
 
-## <a name="assign-add-and-remove-invocation-targets"></a>Atribuir, adicionar e remover alvos de invocação
+## <a name="assign-add-and-remove-invocation-targets"></a>Atribuir, adicionar e remover destinos de invocação
 
 Essa é a forma como o tipo do delegado é definido e como as instâncias de delegado são declaradas e invocadas.
 
@@ -100,7 +100,7 @@ Comparison<string> comparer = CompareLength;
 phrases.Sort(comparer);
 ```
 
-Em utilizações em que o método que está sendo usado como um destinos de delegado é um método pequeno, é comum usar a sintaxe da [expressão lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md) para executar a atribuição:
+Em utilizações em que o método que está sendo usado como um destinos de delegado é um método pequeno, é comum usar a sintaxe da [expressão lambda](language-reference/operators/lambda-expressions.md) para executar a atribuição:
 
 ```csharp
 Comparison<string> comparer = (left, right) => left.Length.CompareTo(right.Length);
@@ -115,7 +115,7 @@ O exemplo de Sort() normalmente anexa um único método de destino ao delegado. 
 
 O suporte de linguagem descrito acima fornece os recursos e o suporte que você normalmente precisará para trabalhar com delegados. Esses recursos são criados com base em duas classes no .NET Core Framework: <xref:System.Delegate> e <xref:System.MulticastDelegate>.
 
-A `System.Delegate` classe e sua subclasse direta única, `System.MulticastDelegate`fornecem o suporte-quadro para a criação de delegados, o registro de métodos como alvos de delegados e invocando todos os métodos que são registrados como alvo de delegado.
+A `System.Delegate` classe e sua única subclasse direta, `System.MulticastDelegate` fornecem o suporte à estrutura para criar delegados, registrar métodos como destinos delegados e invocar todos os métodos que são registrados como um destino delegado.
 
 Curiosamente, as classes `System.Delegate` e `System.MulticastDelegate` não são em si tipos de delegado. Elas fornecem a base para todos os tipos de delegado específicos. Esse mesmo processo de design de linguagem determinou que você não pode declarar uma classe que deriva de `Delegate` ou `MulticastDelegate`. As regras da linguagem C# proíbem isso.
 
@@ -131,6 +131,6 @@ O primeiro e mais importante fato a se lembrar é que todos os delegados com os 
 
 Os métodos que você usará mais com delegados são `Invoke()` e `BeginInvoke()` / `EndInvoke()`. `Invoke()` invocará todos os métodos que foram anexados a uma instância de delegado específica. Como você viu anteriormente, normalmente invoca delegados usando a sintaxe de chamada de método na variável de delegado. Como você verá [posteriormente nesta série](delegates-patterns.md), existem padrões que trabalham diretamente com esses métodos.
 
-Agora que você viu a sintaxe linguística e as classes que apoiam os delegados, vamos examinar o quão fortemente digitados os delegados são usados, criados e invocados.
+Agora que você viu a sintaxe da linguagem e as classes que oferecem suporte a delegados, vamos examinar como os delegados com rigidez de tipos são usados, criados e invocados.
 
-[Avançar](delegates-strongly-typed.md)
+[Próximo](delegates-strongly-typed.md)

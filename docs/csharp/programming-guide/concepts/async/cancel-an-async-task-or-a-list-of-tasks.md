@@ -1,13 +1,14 @@
 ---
 title: Cancelar uma tarefa assíncrona ou uma lista de tarefas (C#)
+description: Use estes exemplos para adicionar um botão que cancela um aplicativo assíncrono antes de ser concluído. Esse aplicativo C# baixa o conteúdo de um ou mais sites.
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 93526f772f79e993767fd8f29087b6caf4e29468
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 21bdbc3bc7c3b752fab160429d71356fb87d9976
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595726"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925340"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Cancelar uma tarefa assíncrona ou uma lista de tarefas (C#)
 
@@ -28,7 +29,7 @@ Você pode baixar o projeto completo do WPF (Windows Presentation Foundation) em
 
 1. Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.
 
-2. Na barra de menu, escolha > **Projeto/solução aberta de** > **Project/Solution** **arquivo**.
+2. Na barra de menus, escolha **arquivo**  >  **abrir**  >  **projeto/solução**.
 
 3. Na caixa de diálogo **Abrir Projeto**, abra a pasta em que está o código de exemplo que você descompactou e, em seguida, abra o arquivo de solução (.sln) de AsyncFineTuningCS.
 
@@ -148,7 +149,7 @@ Você pode baixar o projeto completo do WPF (Windows Presentation Foundation) em
 
 1. Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.
 
-2. Na barra de menu, escolha > **Projeto/solução aberta de** > **Project/Solution** **arquivo**.
+2. Na barra de menus, escolha **arquivo**  >  **abrir**  >  **projeto/solução**.
 
 3. Na caixa de diálogo **Abrir Projeto**, abra a pasta em que está o código de exemplo que você descompactou e, em seguida, abra o arquivo de solução (.sln) de AsyncFineTuningCS.
 
@@ -156,7 +157,7 @@ Você pode baixar o projeto completo do WPF (Windows Presentation Foundation) em
 
 5. Pressione a tecla **F5** para executar o projeto.
 
-     Escolha as teclas **Ctrl**+**F5** para executar o projeto sem depura-lo.
+     Escolha as teclas **Ctrl** + **F5** para executar o projeto sem depurá-lo.
 
 Se você não quiser baixar o projeto, você poderá examinar o arquivo MainWindow.xaml.cs no final deste tópico.
 
@@ -517,10 +518,10 @@ namespace CancelAListOfTasks
 }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
-- [Programação Assíncrona com assincronia e espera (C#)](./index.md)
+- [Programação assíncrona com Async e Await (C#)](./index.md)
 - [Ajuste fino de seu aplicativo assíncrono (C#)](./fine-tuning-your-async-application.md)
 - [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

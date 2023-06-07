@@ -1,101 +1,101 @@
 ---
-title: O que é o Apache Spark?
-description: Conheça o Apache Spark e os cenários de big data.
+title: O que é Apache Spark?
+description: Saiba mais sobre cenários de Apache Spark e Big Data.
 ms.date: 10/15/2019
 ms.topic: conceptual
 ms.custom: mvc
-ms.openlocfilehash: 653f355d09a045feabb3dee0f5737cb691cf2dc4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cde66c4084b7c86e1b78d89c2bad94402dbd7d60
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73458170"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555988"
 ---
-# <a name="what-is-apache-spark"></a>O que é o Apache Spark?
+# <a name="what-is-apache-spark"></a>O que é Apache Spark?
 
-[O Apache Spark](https://spark.apache.org/) é uma estrutura de processamento paralelo de código aberto que suporta processamento na memória para aumentar o desempenho de aplicativos que analisam big data. As soluções de big data são projetadas para lidar com dados muito grandes ou complexos para bancos de dados tradicionais. O Spark processa grandes quantidades de dados na memória, o que é muito mais rápido do que as alternativas baseadas em disco.
+[Apache Spark](https://spark.apache.org/) é uma estrutura de processamento paralelo de software livre que dá suporte ao processamento na memória para melhorar o desempenho de aplicativos que analisam Big Data. As soluções de Big data são projetadas para lidar com os dados muito grandes ou complexos para os bancos tradicionais de dados. O Spark processa grandes quantidades de dados na memória, o que é muito mais rápido do que as alternativas baseadas em disco.
 
-## <a name="common-big-data-scenarios"></a>Cenários comuns de big data
+## <a name="common-big-data-scenarios"></a>Cenários comuns de Big Data
 
-Você pode considerar uma arquitetura de big data se precisar armazenar e processar grandes volumes de dados, transformar dados não estruturados ou processar dados de streaming. Spark é um mecanismo de processamento distribuído de uso geral que pode ser usado para vários cenários de big data.
+Você pode considerar uma arquitetura de Big Data se precisar armazenar e processar grandes volumes de dados, transformar dados não estruturados ou processar dados de streaming. O Spark é um mecanismo de processamento distribuído de finalidade geral que pode ser usado para vários cenários de Big Data.
 
 ### <a name="extract-transform-and-load-etl"></a>ETL (extrair, transformar e carregar)
 
-[Extrair, transformar e carregar (ETL)](/azure/architecture/data-guide/relational-data/etl) é o processo de coleta de dados de uma ou várias fontes, modificando os dados e movendo os dados para um novo armazenamento de dados. Existem várias maneiras de transformar dados, incluindo:
+[Extração, transformação e carregamento (ETL)](/azure/architecture/data-guide/relational-data/etl) é o processo de coleta de dados de uma ou várias fontes, modificação dos dados e movimentação dos dados para um novo armazenamento de dados. Há várias maneiras de transformar dados, incluindo:
 
 * Filtragem
 * Classificação
 * Agregar
 * Adição
-* Limpeza
-* Deduplicação
+* Limpe
+* Eliminação
 * Validando
 
 ### <a name="real-time-data-stream-processing"></a>Processamento de fluxo de dados em tempo real
 
-Streaming, ou em tempo real, dados são dados em movimento. Telemetria de dispositivos IoT, weblogs e clickstreams são todos exemplos de dados de streaming. Os dados em tempo real podem ser processados para fornecer informações úteis, como análise geoespacial, monitoramento remoto e detecção de anomalias. Assim como os dados relacionais, você pode filtrar, agregar e preparar dados de streaming antes de mover os dados para um dissipador de saída. O Apache Spark suporta [o processamento de fluxo de dados em tempo real](/azure/architecture/data-guide/big-data/real-time-processing) através do Spark [Streaming](https://spark.apache.org/streaming/).
+Os dados em tempo real e de streaming são dados em movimento. A telemetria de dispositivos IoT, weblogs e cliques são exemplos de dados de streaming. Os dados em tempo real podem ser processados para fornecer informações úteis, como análise geoespacial, monitoramento remoto e detecção de anomalias. Assim como os dados relacionais, você pode filtrar, agregar e preparar dados de streaming antes de mover os dados para um coletor de saída. O Apache Spark dá suporte ao [processamento de fluxo de dados em tempo real](/azure/architecture/data-guide/big-data/real-time-processing) por meio do [streaming do Spark](https://spark.apache.org/streaming/).
 
 ### <a name="batch-processing"></a>Processamento em lotes
 
-[O processamento em lote](/azure/architecture/data-guide/big-data/batch-processing) é o processamento de big data em repouso. Você pode filtrar, agregar e preparar conjuntos de dados muito grandes usando trabalhos de longa duração em paralelo.
+O [processamento em lotes](/azure/architecture/data-guide/big-data/batch-processing) é o processamento de Big data em repouso. Você pode filtrar, agregar e preparar conjuntos de grandes volumes de trabalho usando trabalhos de longa execução em paralelo.
 
-### <a name="machine-learning-through-mllib"></a>Aprendizado de máquina através do MLlib
+### <a name="machine-learning-through-mllib"></a>Aprendizado de máquina por meio do MLlib
 
-O aprendizado de máquina é usado para problemas analíticos avançados. Seu computador pode usar dados existentes para prever ou prever comportamentos futuros, resultados e tendências. A biblioteca de aprendizado de máquina da Apache Spark, [MLlib,](https://spark.apache.org/mllib/)contém vários algoritmos e utilitários de aprendizagem de máquina.
+O Machine Learning é usado para problemas analíticos avançados. Seu computador pode usar dados existentes para prever ou prever comportamentos, resultados e tendências futuros. A biblioteca de Machine Learning do Apache Spark, [MLlib](https://spark.apache.org/mllib/), contém vários algoritmos e utilitários de aprendizado de máquina.
 
-### <a name="graph-processing-through-graphx"></a>Processamento de gráficos através do GraphX
+### <a name="graph-processing-through-graphx"></a>Processamento de grafo por meio de GraphX
 
-Um gráfico é uma coleção de nódulos conectados por bordas. Você pode usar um banco de dados gráfico se tiver dados hierárquicos ou dados com relacionamentos interconectados. Você pode processar esses dados usando a API [GraphX](https://spark.apache.org/graphx/) do Apache Spark.
+Um grafo é uma coleção de nós conectados por bordas. Você pode usar um banco de dados de grafo se você tiver dado de hierarquia ou dados com relações interconectadas. Você pode processar esses dados usando a API [GraphX](https://spark.apache.org/graphx/) do Apache Spark.
 
-### <a name="sql-and-structured-data-processing-with-spark-sql"></a>SQL e processamento de dados estruturados com Spark SQL
+### <a name="sql-and-structured-data-processing-with-spark-sql"></a>Processamento de dados estruturado e SQL com Spark SQL
 
-Se você estiver trabalhando com dados estruturados (formatados), você pode usar consultas SQL em seu aplicativo Spark usando [Spark SQL](https://spark.apache.org/sql/).
+Se você estiver trabalhando com dados estruturados (formatados), poderá usar consultas SQL em seu aplicativo Spark usando o [Spark SQL](https://spark.apache.org/sql/).
 
-## <a name="apache-spark-architecture"></a>Arquitetura Apache Spark
+## <a name="apache-spark-architecture"></a>Arquitetura de Apache Spark
 
-O Apache Spark, que usa a arquitetura master/worker, tem três componentes principais: o driver, os executores e o gerenciador de cluster.
+Apache Spark, que usa a arquitetura mestre/de trabalho, tem três componentes principais: o driver, executores e Gerenciador de cluster.
 
-![Arquitetura Apache Spark](media/spark-architecture.png)
+![Arquitetura de Apache Spark](media/spark-architecture.png)
 
 ### <a name="driver"></a>Driver
 
-O driver consiste em seu programa, como um aplicativo de console C# e uma sessão Spark. A sessão Spark pega seu programa e o divide em tarefas menores que são tratadas pelos executores.
+O driver consiste em seu programa, como um aplicativo de console em C# e uma sessão do Spark. A sessão do Spark leva seu programa e divide-o em tarefas menores que são manipuladas pelos executores.
 
 ### <a name="executors"></a>Executores
 
-Cada executor, ou nó do trabalhador, recebe uma tarefa do motorista e executa essa tarefa. Os executores residem em uma entidade conhecida como cluster.
+Cada executor, ou nó de trabalho, recebe uma tarefa do driver e executa essa tarefa. Os executores residem em uma entidade conhecida como um cluster.
 
-### <a name="cluster-manager"></a>Gerente de cluster
+### <a name="cluster-manager"></a>Gerenciador de cluster
 
-O gerenciador de cluster comunica-se com o driver e os executores para:
+O Gerenciador de cluster se comunica com o driver e os executores para:
 
-* Gerenciar a alocação de recursos
-* Gerenciar divisão de programas
+* Gerenciar alocação de recursos
+* Gerenciar divisão de programa
 * Gerenciar a execução do programa
 
 ## <a name="language-support"></a>Suporte ao idioma
 
-Apache Spark suporta as seguintes linguagens de programação:
+O Apache Spark dá suporte às seguintes linguagens de programação:
 
 * Scala
 * Python
 * Java
 * SQL
 * R
-* .NET
+* Linguagens .NET (C#/F #)
 
-## <a name="spark-apis"></a>APIs de faísca
+## <a name="spark-apis"></a>APIs do Spark
 
-O Apache Spark suporta as seguintes APIs:
+O Apache Spark dá suporte às seguintes APIs:
 
-* [Spark Scala API](https://spark.apache.org/docs/2.2.0/api/scala/index.html)
-* [Spark Java API](https://spark.apache.org/docs/2.2.0/api/java/index.html)
-* [Spark Python API](https://spark.apache.org/docs/2.2.0/api/python/index.html)
-* [Spark R API](https://spark.apache.org/docs/2.2.0/api/R/index.html)
-* [Spark SQL](https://spark.apache.org/docs/latest/api/sql/index.html), funções incorporadas
+* [API de escala do Spark](https://spark.apache.org/docs/2.2.0/api/scala/index.html)
+* [API do Spark Java](https://spark.apache.org/docs/2.2.0/api/java/index.html)
+* [API do Python do Spark](https://spark.apache.org/docs/2.2.0/api/python/index.html)
+* [API do Spark R](https://spark.apache.org/docs/2.2.0/api/R/index.html)
+* [Spark SQL](https://spark.apache.org/docs/latest/api/sql/index.html), funções internas
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Saiba como usar o Apache Spark no seu aplicativo .NET. Com .NET para Apache Spark, desenvolvedores com experiência .NET e lógica de negócios podem escrever consultas de big data em C# e F#.
+Saiba como você pode usar Apache Spark em seu aplicativo .NET. Com o .NET para Apache Spark, os desenvolvedores com experiência .NET e lógica de negócios podem escrever Big Data consultas em C# e F #.
 > [!div class="nextstepaction"]
-> [O que é .NET para Apache Spark](what-is-apache-spark-dotnet.md)
+> [O que é o .NET para Apache Spark](what-is-apache-spark-dotnet.md)

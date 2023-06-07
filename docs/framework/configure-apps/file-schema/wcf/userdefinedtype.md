@@ -3,21 +3,21 @@ title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
 ms.openlocfilehash: 7a76e5a90fe3218bc0302501b71daa9de0b098bc
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70854839"
 ---
-# <a name="userdefinedtype"></a>\<userDefinedType>
+# \<userDefinedType>
 Representa um tipo definido pelo usuário (UDT) que deve ser incluído no contrato de serviço.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de com-contratos**](comcontracts.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de descontrato**](comcontract.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> userDefinedTypes**](userdefinedtypes.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> userDefinedType**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<comContracts>**](comcontracts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<comContract>**](comcontract.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<userDefinedTypes>**](userdefinedtypes.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<userDefinedType>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +48,7 @@ Representa um tipo definido pelo usuário (UDT) que deve ser incluído no contra
 |`TypeLibVersion`|Uma cadeia de caracteres que identifica a versão da biblioteca de tipos que define o tipo.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -61,7 +61,7 @@ Representa um tipo definido pelo usuário (UDT) que deve ser incluído no contra
   
  Para evitar esse problema, você pode adicionar os UDTs ao arquivo de configuração para que eles possam ser incluídos como tipos conhecidos no contrato de serviço apropriado. Para fazer isso, você precisa identificar exclusivamente o UDT e os contratos, ou seja, as interfaces COM originais que o usam....  
   
- O exemplo a seguir demonstra como adicionar dois UDTs específicos à`userDefinedTypes`seção < > do arquivo de configuração para essa finalidade.  
+ O exemplo a seguir demonstra como adicionar dois UDTs específicos à `userDefinedTypes` seção <> do arquivo de configuração para essa finalidade.  
   
 ```xml  
 <comContracts>
@@ -92,11 +92,11 @@ Representa um tipo definido pelo usuário (UDT) que deve ser incluído no contra
   
  Quando o serviço é inicializado, o Integration Runtime pesquisa os tipos especificados e os adiciona à coleção de tipos conhecidos para os contratos especificados.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>
 - <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
 - [\<comContracts>](comcontracts.md)
-- [Integração de aplicativos COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Como: Definir configurações de serviço COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)
+- [Integração com aplicativos COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Como configurar configurações de serviço de COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

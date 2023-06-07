@@ -1,26 +1,27 @@
 ---
 title: Criando um novo formulário do Windows Forms
+description: Encontre tópicos que apresentem vocabulário, diretrizes e instruções básicas que você deve entender ao começar a criar um aplicativo de Windows Forms.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating a new form
 ms.assetid: c725559c-803e-4725-80fa-96aba93de29a
-ms.openlocfilehash: 409dd945ebd26d212f62745ce6751f7507641bb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9431ebad3fee4eaa1d39f4ac95a57a6d0313fc8
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009052"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281713"
 ---
 # <a name="creating-a-new-windows-form"></a>Criando um novo formulário do Windows Forms
-Este tópico contém links para tópicos que descrevem como criar seu primeiro aplicativo de formulários do Windows. Além disso, os tópicos nesta seção apresentam algumas das vocabulário básico e diretrizes que você deve compreender quando você começa a criar um aplicativo Windows Forms. Para saber mais sobre aplicativos do Windows Forms, os controles que você pode usar neles, eventos e manipulação de eventos e como lidar com a entrada do usuário, consulte a lista de tópicos relacionados.  
+Este tópico contém links para tópicos que descrevem como criar seu primeiro Windows Forms aplicativo. Além disso, os tópicos nesta seção apresentam algumas das diretrizes e do vocabulário básico que você deve entender ao começar a criar um aplicativo Windows Forms. Para saber mais sobre os aplicativos Windows Forms, os controles que você pode usar neles, eventos e manipular eventos e como lidar com a entrada do usuário, consulte a lista de tópicos relacionados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Coordenadas dos formulários do Windows](windows-forms-coordinates.md).  
- Descreve as coordenadas de cliente e da tela.  
+ [Coordenadas do Windows Forms](windows-forms-coordinates.md)  
+ Descreve as coordenadas de cliente e de tela.  
   
- [Como: Criar um aplicativo de formulários do Windows da linha de comando](how-to-create-a-windows-forms-application-from-the-command-line.md)  
- Descreve como criar um formulário básico do Windows e compilá-lo na linha de comando.  
+ [Como: criar um aplicativo do Windows Forms na linha de comando](how-to-create-a-windows-forms-application-from-the-command-line.md)  
+ Descreve como criar um formulário básico do Windows e compilá-lo a partir da linha de comando.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Forms.Form>  
@@ -31,13 +32,13 @@ Este tópico contém links para tópicos que descrevem como criar seu primeiro a
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Manipulando a entrada do usuário](./controls/handling-user-input.md)  
- Contém links para tópicos que discutem a entrada do usuário e como tratá-la em aplicativos de formulários do Windows.  
+ Contém links para tópicos que discutem a entrada do usuário e como tratá-lo em aplicativos Windows Forms.  
   
  [Criando manipuladores de eventos no Windows Forms](creating-event-handlers-in-windows-forms.md)  
- Contém links para tópicos que descrevem como manipular eventos em aplicativos do Windows Forms.  
+ Contém links para tópicos que descrevem como tratar eventos em aplicativos Windows Forms.  
   
- [Alterando a aparência dos Windows Forms](changing-the-appearance-of-windows-forms.md)  
+ [Alterando a aparência do Windows Forms](changing-the-appearance-of-windows-forms.md)  
  Contém links para tópicos que mostram como mudar a aparência dos aplicativos dos Windows Forms.  
   
  [Controles dos Windows Forms por função](./controls/windows-forms-controls-by-function.md)  
- Contém links para tópicos que descrevem os controles que você pode usar em aplicativos do Windows Forms.
+ Contém links para tópicos que descrevem os controles que você pode usar em Windows Forms aplicativos.

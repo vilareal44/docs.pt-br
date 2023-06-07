@@ -8,12 +8,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], reading from
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
-ms.openlocfilehash: 73c32aefe06a68bb42fcb5f4615da0927e57e892
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 74069b111f4316eb81c74f5e62c1fbff6ab8f4b8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345610"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401843"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Como ler um valor a partir de uma chave do Registro no Visual Basic
 
@@ -55,8 +55,8 @@ O método `GetValue` do objeto `My.Computer.Registry` pode ser usado para ler va
 
  Para executar esse processo, seu assembly exige um nível de privilégio concedido pela classe <xref:System.Security.Permissions.RegistryPermission>. Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes. Da mesma forma, o usuário deve ter as ACLs corretas para criar ou gravar nas configurações. Por exemplo, um aplicativo local que tem a permissão de segurança de acesso do código pode não ter permissão do sistema operacional. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../../../framework/misc/code-access-security-basics.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - <xref:Microsoft.Win32.RegistryHive>
-- [Ler e gravar no Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+- [Ler e gravar no Registro](reading-from-and-writing-to-the-registry.md)

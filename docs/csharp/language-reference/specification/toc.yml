@@ -1,4 +1,4 @@
-- name: 'Especificação de rascunho do C# 6.0'
+- name: Especificação de rascunho do C# 6.0
   items:
     - name: Introdução
       href: ../../../../_csharplang/spec/introduction.md

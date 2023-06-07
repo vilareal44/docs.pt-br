@@ -2,30 +2,30 @@
 title: Implementando um modelo de domínio de microsserviço com o .NET Core
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Obtenha os detalhes de implementação de um modelo de domínio orientado a DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: 24f700b371d998cf99cbcf260a5278d797cb39d4
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 0b42ecc2440faf5870b2d99e31d03cda00b21ce0
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988421"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306898"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementar um modelo de domínio de microsserviço com o .NET Core
 
-Na seção anterior, foram explicados os princípios de design fundamentais e os padrões para criar um modelo de domínio. Agora é hora de explorar possíveis maneiras de implementar o modelo de domínio usando o .NET Core (código C\# simples) e EF Core. Observe que seu modelo de domínio será composto apenas pelo seu código. Ele terá apenas os requisitos do modelo EF Core, mas não reais dependências do EF. Você não deve ter dependências rígidas nem referências ao EF Core ou qualquer outro ORM em seu modelo de domínio.
+Na seção anterior, foram explicados os princípios de design fundamentais e os padrões para criar um modelo de domínio. Agora é hora de explorar possíveis maneiras de implementar o modelo de domínio usando o .NET Core (código C\# simples) e EF Core. Seu modelo de domínio será composto simplesmente pelo seu código. Ele terá apenas os requisitos do modelo EF Core, mas não reais dependências do EF. Você não deve ter dependências rígidas nem referências ao EF Core ou qualquer outro ORM em seu modelo de domínio.
 
 ## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Estrutura do modelo de domínio em uma biblioteca .NET Standard personalizada
 
 A organização de pastas usada para o aplicativo de referência eShopOnContainers demonstra o modelo DDD para o aplicativo. Você pode considerar que uma organização de pastas diferente comunica mais claramente as escolhas de design feitas para o seu aplicativo. Como é possível ver na Figura 7-10, no modelo de domínio de ordenação, há duas agregações: a agregação de ordem e a agregação de comprador. Cada agregação é um grupo de entidades de domínio e objetos de valor, embora você possa ter uma agregação composta por uma única entidade de domínio (a raiz de agregação ou entidade raiz) também.
 
-:::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="Captura de tela do projeto Ordering.Domain no Solution Explorer.":::
-A exibição do Gerenciador de Soluções do projeto Ordering.Domain, mostrando a pasta AggregatesModel que contém as pastas BuyerAggregate e OrderAggregate, cada uma contendo suas classes de entidade, arquivos-objeto de valor e assim por diante.
+:::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="Captura de tela do projeto de ordenação. Domain no Gerenciador de Soluções.":::
+O Gerenciador de Soluções exibição para o projeto de ordenação. domínio, mostrando a pasta AggregatesModel que contém as pastas BuyerAggregate e OrderAggregate, cada uma contendo suas classes de entidade, arquivos de objeto de valor e assim por diante.
 :::image-end:::
 
 **Figura 7-10**. Estrutura de modelo de domínio para o microsserviço de ordenação em eShopOnContainers
 
-Além disso, a camada de modelo de domínio inclui os contratos de repositório (interfaces) que são os requisitos de infraestrutura do seu modelo de domínio. Em outras palavras, essas interfaces expressam quais repositórios e os métodos que a camada de infraestrutura deve implementar. É fundamental que a implementação dos repositórios seja colocada fora da camada de modelo de domínio, na biblioteca de camadas de infra-estrutura, para que a camada do modelo de domínio não seja "contaminada" por API ou classes de tecnologias de infra-estrutura, como o Entity Framework.
+Além disso, a camada de modelo de domínio inclui os contratos de repositório (interfaces) que são os requisitos de infraestrutura do seu modelo de domínio. Em outras palavras, essas interfaces expressam quais repositórios e os métodos que a camada de infraestrutura deve implementar. É fundamental que a implementação dos repositórios seja colocada fora da camada de modelo de domínio, na biblioteca de camadas de infraestrutura, de modo que a camada de modelo de domínio não seja "contaminada" por API ou classes de tecnologias de infraestrutura, como Entity Framework.
 
-Você também pode ver uma pasta [SeedWork](https://martinfowler.com/bliki/Seedwork.html) que contém classes base personalizadas que você pode usar como base para suas entidades de domínio e objetos de valor, para que você não tenha código redundante na classe de objetos de cada domínio.
+Você também pode ver uma pasta de tarefa de [propagação](https://martinfowler.com/bliki/Seedwork.html) que contém classes base personalizadas que você pode usar como base para suas entidades de domínio e objetos de valor, para que você não tenha código redundante na classe de objeto de cada domínio.
 
 ## <a name="structure-aggregates-in-a-custom-net-standard-library"></a>Estruturar agregações em uma biblioteca .NET Standard personalizada
 
@@ -95,13 +95,13 @@ public class Order : Entity, IAggregateRoot
 }
 ```
 
-É importante observar que essa é uma entidade de domínio implementada como uma classe POCO. Ela não tem nenhuma dependência direta do Entity Framework Core nem qualquer outra estrutura de infraestrutura. Essa implementação é como deve ser em DDD, apenas código C\# implementando um modelo de domínio.
+É importante observar que essa é uma entidade de domínio implementada como uma classe POCO. Ela não tem nenhuma dependência direta do Entity Framework Core nem qualquer outra estrutura de infraestrutura. Essa implementação é como deve estar no DDD, apenas código C# que implementa um modelo de domínio.
 
 Além disso, a classe é decorada com uma interface denominada IAggregateRoot. Essa interface é uma interface vazia, às vezes chamada de uma *interface de marcador*, que é usada apenas para indicar que essa classe de entidade também é uma raiz de agregação.
 
 Uma interface de marcador às vezes é considerada como um antipadrão; no entanto, também é uma maneira simples de marcar uma classe, especialmente quando essa interface pode estar em evolução. Um atributo pode ser outra escolha para o marcador, mas é mais rápido ver a classe base (Entity) ao lado da interface IAggregate, em vez de colocar um marcador de atributo Aggregate acima da classe. É uma questão de preferências, de qualquer forma.
 
-Ter uma raiz agregada significa que a maior parte do código relacionado à consistência e às regras de negócios das entidades do agregado deve ser implementada como métodos na classe raiz agregada da Ordem (por exemplo, AddOrderItem ao adicionar um objeto OrderItem ao agregado). Você não deve criar nem atualizar objetos OrderItems de modo independente ou direto; a classe AggregateRoot deve manter o controle e a consistência de qualquer operação de atualização com relação às suas entidades filho.
+Ter uma raiz agregada significa que a maior parte do código relacionado às regras de consistência e de negócios das entidades da agregação deve ser implementada como métodos na classe raiz de ordem agregada (por exemplo, AddOrderItem ao adicionar um objeto OrderItem à agregação). Você não deve criar nem atualizar objetos OrderItems de modo independente ou direto; a classe AggregateRoot deve manter o controle e a consistência de qualquer operação de atualização com relação às suas entidades filho.
 
 ## <a name="encapsulate-data-in-the-domain-entities"></a>Encapsular dados nas Entidades de Domínio
 
@@ -132,7 +132,7 @@ Para seguir padrões DDD, as entidades não devem ter setters públicos em nenhu
 
 Além disso, coleções na entidade (como os itens do pedido) devem ser propriedades somente leitura (o método AsReadOnly explicado posteriormente). Você deve ser capaz de atualizá-lo somente de dentro de métodos da classe raiz agregada ou de métodos de entidade filho.
 
-Como você pode ver no código para a raiz agregada da Ordem, todos os setters devem ser privados ou pelo menos lidos apenas externamente, de modo que qualquer operação contra os dados da entidade ou suas entidades infantis deve ser realizada através de métodos na classe da entidade. Isso mantém a consistência de maneira controlada e orientada a objeto, em vez de implementar o código de script transacional.
+Como você pode ver no código da raiz de agregação Order, todos os setters devem ser privados ou, pelo menos, somente leitura externamente, para que qualquer operação em relação aos dados da entidade ou suas entidades filho precise ser executada por meio de métodos na classe de entidade. Isso mantém a consistência de maneira controlada e orientada a objeto, em vez de implementar o código de script transacional.
 
 O snippet de código a seguir mostra a maneira adequada de codificar a tarefa de adicionar um objeto OrderItem para a agregação de ordem de código.
 
@@ -154,7 +154,7 @@ Além disso, a nova operação OrderItem(params) também será controlada e exec
 
 Quando você usar o Entity Framework Core 1.1 ou posterior, uma entidade DDD pode ser melhor expressada porque ela permite [mapear para os campos](https://docs.microsoft.com/ef/core/modeling/backing-field) além das propriedades. Isso é útil ao proteger as coleções de entidades filho ou objetos de valor. Com esse aprimoramento, você pode usar os campos privados, em vez das propriedades, e pode implementar qualquer atualização à coleção de campo nos métodos públicos e fornecer acesso somente leitura por meio do método AsReadOnly.
 
-No DDD, você deseja atualizar a entidade somente por meio de métodos na entidade (ou no construtor) para controlar qualquer invariável e a consistência dos dados, portanto, as propriedades são definidas somente com um acessador get. As propriedades têm o respaldo de campos privados. Membros privados só pode ser acessados de dentro da classe. No entanto, há uma exceção: o EF Core precisa definir esses campos também (para poder retornar o objeto com os valores adequados).
+No DDD, você deseja atualizar a entidade somente por meio de métodos na entidade (ou do Construtor) para controlar qualquer invariável e a consistência dos dados, para que as propriedades sejam definidas somente com um acessador get. As propriedades têm o respaldo de campos privados. Membros privados só pode ser acessados de dentro da classe. No entanto, há uma exceção: o EF Core precisa definir esses campos também (para poder retornar o objeto com os valores adequados).
 
 ### <a name="map-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Mapear propriedades com apenas acessadores get para os campos na tabela de banco de dados
 
@@ -166,19 +166,19 @@ Quando você usa o EF Core 1.0 ou posterior, no DbContext, precisa mapear as pro
 
 Com o recurso no EF Core 1.1 ou posterior para mapear colunas para campos, também é possível não usar propriedades. Em vez disso, você pode apenas mapear as colunas de uma tabela para campos. Um caso de uso comum para isso são campos privados para um estado interno que não precisam ser acessados de fora da entidade.
 
-Por exemplo, no exemplo de código anterior, OrderAggregate, há vários campos privados, como o campo `_paymentMethodId`, que não têm nenhuma propriedade relacionada para um setter ou um getter. Esse campo também poderia ser calculado dentro da lógica de negócios da ordem e usado a partir dos métodos da ordem, mas ele precisa ser persistido no banco de dados também. Assim, no EF Core (desde a v1.1), existe uma maneira de mapear um campo sem uma propriedade relacionada a uma coluna no banco de dados. Isso também é explicado na seção [Camada de infraestrutura](ddd-oriented-microservice.md#the-infrastructure-layer) deste guia.
+Por exemplo, no exemplo de código anterior, OrderAggregate, há vários campos privados, como o campo `_paymentMethodId`, que não têm nenhuma propriedade relacionada para um setter ou um getter. Esse campo também pode ser calculado dentro da lógica de negócios do pedido e usado a partir dos métodos do pedido, mas ele também precisa ser persistido no banco de dados. Assim, no EF Core (desde a v1.1), existe uma maneira de mapear um campo sem uma propriedade relacionada a uma coluna no banco de dados. Isso também é explicado na seção [Camada de infraestrutura](ddd-oriented-microservice.md#the-infrastructure-layer) deste guia.
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-- **Vaughn Vernon. Modelagem agregados com DDD e Framework de entidades.** Observe que este *não* é um Entity Framework Core. \
+- **Vaughn Vernon. A modelagem agrega com DDD e Entity Framework.** Observe que este *não* é um Entity Framework Core. \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman. Pontos de dados - Codificação para design orientado a domínio: dicas para devs focados em dados** \
+- **Julie Lerman. Pontos de dados-codificação para o design controlado por domínio: dicas para desenvolvedores focados em dados** \
   <https://docs.microsoft.com/archive/msdn-magazine/2013/august/data-points-coding-for-domain-driven-design-tips-for-data-focused-devs>
 
 - **Udi Dahan. Como criar modelos de domínio totalmente encapsulados** \
-  <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
+  <https://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 > [!div class="step-by-step"]
-> [Próximo](microservice-domain-model.md)
-> [anterior](seedwork-domain-model-base-classes-interfaces.md)
+> [Anterior](microservice-domain-model.md) 
+>  [Avançar](seedwork-domain-model-base-classes-interfaces.md)

@@ -6,12 +6,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: 53bee82bf24a847b0b21ed2375d09a6303d4fe48
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: d743daca2fa779e300c7e8ab430b1ffff10b434c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507185"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401908"
 ---
 # <a name="fixed-statement-c-reference"></a>Instrução fixed (Referência de C#)
 
@@ -19,15 +19,15 @@ A instrução `fixed` impede que o coletor de lixo faça a realocação de uma v
 
 A instrução `fixed` define um ponteiro para uma variável gerenciada e "fixa" essa variável durante a execução da instrução. Os ponteiros móveis gerenciados são úteis apenas em um contexto `fixed`. Sem um contexto `fixed`, a coleta de lixo poderia realocar as variáveis de forma imprevisível. O compilador do C# só permite que você atribua um ponteiro a uma variável gerenciada em uma instrução `fixed`.
 
-[!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#1)]
+[!code-csharp[Accessing fixed memory](snippets/FixedKeywordExamples.cs#1)]
 
 Você pode inicializar um ponteiro usando uma matriz, uma cadeia de caracteres, um buffer de tamanho fixo ou o endereço de uma variável. O exemplo a seguir ilustra o uso de endereços de variáveis, matrizes e sequências de caracteres:
 
-[!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
+[!code-csharp[Initializing fixed size buffers](snippets/FixedKeywordExamples.cs#2)]
 
 Começando com o C# 7.3, a instrução `fixed` opera em tipos adicionais além de cadeias de caracteres, matrizes, buffers de tamanho fixo ou variáveis não gerenciadas. Qualquer tipo que implementa um método chamado `GetPinnableReference` pode ser anexado. O `GetPinnableReference` deve retornar uma variável `ref` para um [tipo não gerenciado](../builtin-types/unmanaged-types.md). Os tipos .NET <xref:System.Span%601?displayProperty=nameWithType> e <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> introduzidos no .NET Core 2.0 usam esse padrão e podem ser anexados. Isso é mostrado no exemplo a seguir:
 
-[!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#FixedSpan)]
+[!code-csharp[Accessing fixed memory](snippets/FixedKeywordExamples.cs#FixedSpan)]
 
 Se você estiver criando tipos que devem participar desse padrão, consulte <xref:System.Span%601.GetPinnableReference?displayProperty=nameWithType> para obter um exemplo da implementação do padrão.
 
@@ -39,7 +39,7 @@ fixed (byte* ps = srcarray, pd = dstarray) {...}
 
 Para inicializar ponteiros de tipos diferentes, basta aninhar instruções `fixed`, conforme mostrado no exemplo a seguir.
 
-[!code-csharp[Initializing multiple pointers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#3)]
+[!code-csharp[Initializing multiple pointers](snippets/FixedKeywordExamples.cs#3)]
 
 Depois que o código na instrução é executado, todas as variáveis fixadas são desafixadas e ficam sujeiras à coleta de lixo. Portanto, não aponte para essas variáveis fora da instrução `fixed`. As variáveis declaradas na instrução `fixed` estão no escopo dessa instrução, facilitando isto:
 
@@ -62,7 +62,7 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-É possível alocar memória na pilha, local que não está sujeito à coleta de lixo e, portanto, não precisa ser fixado. Para fazer isso, [ `stackalloc` ](../operators/stackalloc.md)use uma expressão .
+É possível alocar memória na pilha, local que não está sujeito à coleta de lixo e, portanto, não precisa ser fixado. Para fazer isso, use uma [ `stackalloc` expressão](../operators/stackalloc.md).
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 
@@ -70,9 +70,9 @@ Para saber mais, confira a seção [A instrução corrigida](~/_csharplang/spec/
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
-- [Inseguro](unsafe.md)
-- [Tipos de Ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [UNSAFE](unsafe.md)
+- [Tipos de ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Buffers de tamanho fixo](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

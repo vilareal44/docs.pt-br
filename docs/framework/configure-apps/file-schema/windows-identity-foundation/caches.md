@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 4651091b-3a20-40d8-b293-4408c0710143
 author: BrucePerlerMS
 ms.openlocfilehash: 80f435b52fd7657c5cd44538028d6080beffe0b5
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70252155"
 ---
-# <a name="caches"></a>\<caches>
+# \<caches>
 Registra os caches usados para tokens de sessão e detecção de reprodução de token.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> identityConfiguration**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<caches >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<caches>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,12 +50,12 @@ Registra os caches usados para tokens de sessão e detecção de reprodução de
 |[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Fornece a configuração para uma coleção de manipuladores de token de segurança.|  
   
 ## <a name="remarks"></a>Comentários  
- Um `<caches>` elemento pode ser especificado no nível de serviço sob o `<identityConfiguration>` elemento ou no nível de coleção do manipulador de token de `<securityTokenHandlerConfiguration>` segurança sob o elemento. As configurações em uma coleção de manipulador de tokens substituem aquelas especificadas no serviço.  
+ Um `<caches>` elemento pode ser especificado no nível de serviço sob o `<identityConfiguration>` elemento ou no nível de coleção do manipulador de token de segurança sob o `<securityTokenHandlerConfiguration>` elemento. As configurações em uma coleção de manipulador de tokens substituem aquelas especificadas no serviço.  
   
- O `<caches>` elemento é representado <xref:System.IdentityModel.Configuration.IdentityModelCachesElement> pela classe. Os caches configurados são representados pela <xref:System.IdentityModel.Configuration.IdentityModelCaches> classe.  
+ O `<caches>` elemento é representado pela <xref:System.IdentityModel.Configuration.IdentityModelCachesElement> classe. Os caches configurados são representados pela <xref:System.IdentityModel.Configuration.IdentityModelCaches> classe.  
   
 ## <a name="example"></a>Exemplo  
- O XML a seguir mostra a configuração de um cache personalizado para manter os tokens<xref:System.IdentityModel.Tokens.SessionSecurityToken>de segurança de sessão (). A configuração é obtida do `ClaimsAwareWebFarm` exemplo.  
+ O XML a seguir mostra a configuração de um cache personalizado para manter os tokens de segurança de sessão ( <xref:System.IdentityModel.Tokens.SessionSecurityToken> ). A configuração é obtida do `ClaimsAwareWebFarm` exemplo.  
   
 ```xml  
 <caches>  

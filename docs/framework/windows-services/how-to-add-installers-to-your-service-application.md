@@ -1,5 +1,6 @@
 ---
-title: Como adicionar instaladores ao aplicativo de serviço
+title: 'Como: Adicionar instaladores ao aplicativo de serviço'
+description: Consulte Como adicionar instaladores ao seu aplicativo de serviço. O Visual Studio envia componentes de instalação que podem instalar recursos associados aos seus aplicativos de serviço.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: 99e2376c50f0b47cc21002b2926818707188805e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f82dd6635555ccb8fcbcdf63cba2495084194731
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053645"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925638"
 ---
-# <a name="how-to-add-installers-to-your-service-application"></a>Como adicionar instaladores ao aplicativo de serviço
+# <a name="how-to-add-installers-to-your-service-application"></a>Como: Adicionar instaladores ao aplicativo de serviço
 O Visual Studio tem componentes de instalação que podem instalar recursos associados com seus aplicativos de serviço. Os componentes de instalação registram um serviço individual no sistema em que ele está sendo instalado e informam o Gerenciador de Controle de Serviços que o serviço existe. Ao trabalhar com um aplicativo de serviço, você pode selecionar um link na janela Propriedades para adicionar automaticamente os instaladores apropriados ao projeto.  
   
 > [!NOTE]
@@ -62,7 +63,7 @@ O Visual Studio tem componentes de instalação que podem instalar recursos asso
   
 ## <a name="see-also"></a>Confira também
 
-- [Introdução aos aplicativos de serviço do Windows](introduction-to-windows-service-applications.md)
-- [Como instalar e desinstalar serviços](how-to-install-and-uninstall-services.md)
-- [Como iniciar serviços](how-to-start-services.md)
-- [Como especificar o contexto de segurança para serviços](how-to-specify-the-security-context-for-services.md)
+- [Introdução a aplicativos do Serviço Windows](introduction-to-windows-service-applications.md)
+- [Como: instalar e desinstalar serviços](how-to-install-and-uninstall-services.md)
+- [Como: Iniciar serviços](how-to-start-services.md)
+- [Como: Especificar o contexto de segurança para serviços](how-to-specify-the-security-context-for-services.md)

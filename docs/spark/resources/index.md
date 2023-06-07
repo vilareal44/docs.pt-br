@@ -1,15 +1,17 @@
 ---
 title: Recursos do .NET para Apache Spark
 description: Explore esses recursos do .NET para Apache Spark para auxiliar na criação e na integração de soluções de ciência de dados personalizadas em seus aplicativos .NET.
-ms.date: 05/06/2019
-ms.openlocfilehash: 96ee1246d5322a1c62b4cbf30392010e6b4d70fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 06/25/2020
+ms.openlocfilehash: 399a90b89fd619bf7faf740b9f61b625a8f28469
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "69620038"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618266"
 ---
 # <a name="net-for-apache-spark-resources"></a>Recursos do .NET para Apache Spark
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 Os recursos a seguir do [.NET para Apache Spark](../index.yml) podem ser úteis para acessar o Apache Spark em seus aplicativos .NET:
 

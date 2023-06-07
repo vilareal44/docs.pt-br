@@ -1,18 +1,19 @@
 ---
-title: Como implementar uma classe leve com propriedades auto-implementadas - C# Programming Guide
+title: Como implementar uma classe leve com propriedades implementadas automaticamente – guia de programação em C#
+description: Saiba como criar uma classe leve imutável em C# que encapsula propriedades implementadas automaticamente. Há duas abordagens de implementação.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 6d121f6be768d41d22ea01d871662913b2daae2b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de9034772bad1f28e27abe01595309dd84ddc3e7
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170267"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864560"
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Como implementar uma classe leve com propriedades auto-implementadas (Guia de Programação C#)
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Como implementar uma classe leve com propriedades autoimplementadas (guia de programação C#)
 
 Este exemplo mostra como criar uma classe leve imutável que serve apenas para encapsular um conjunto de propriedades autoimplementadas. Use esse tipo de constructo em vez de um struct quando for necessário usar a semântica do tipo de referência.
 
@@ -21,9 +22,9 @@ Este exemplo mostra como criar uma classe leve imutável que serve apenas para e
 - É possível declarar o acessador [set](../../language-reference/keywords/set.md) como [privado](../../language-reference/keywords/private.md).  A propriedade será configurável somente dentro do tipo, mas será imutável para os consumidores.
 
   Ao declarar um acessador privado `set`, não é possível usar um inicializador de objeto para inicializar a propriedade. É necessário usar um construtor ou um método de fábrica.
-- Você pode declarar apenas o acessório [get,](../../language-reference/keywords/get.md) o que torna a propriedade imutável em todos os lugares, exceto no construtor do tipo.
+- Você pode declarar somente o acessador [Get](../../language-reference/keywords/get.md) , que torna a propriedade imutável em qualquer lugar, exceto no construtor do tipo.
 
-O exemplo a seguir mostra como uma propriedade com apenas um acessório difere do que um com get e conjunto privado.
+O exemplo a seguir mostra como uma propriedade com somente acessador get difere de uma com Get e Private set.
 
 ```csharp
 class Contact
@@ -145,7 +146,7 @@ public class Program
 
 O compilador cria campos de suporte para cada propriedade autoimplementada. Os campos não são acessíveis diretamente do código-fonte.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Propriedades](./properties.md)
 - [struct](../../language-reference/builtin-types/struct.md)

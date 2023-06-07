@@ -2,22 +2,22 @@
 title: Como implementar um proxy de descoberta
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-ms.openlocfilehash: dafd5e25f998f2dda3f736caeea51cd534ce8e5e
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: ca7ab2ee434aef7649d71cbfc33273f48020788f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351565"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597066"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Como implementar um proxy de descoberta
 
-Este tópico explica como implementar um proxy de descoberta. Para obter mais informações sobre o recurso de descoberta no Windows Communication Foundation (WCF), consulte [visão geral da descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Um proxy de descoberta pode ser implementado criando uma classe que estende a classe abstrata <xref:System.ServiceModel.Discovery.DiscoveryProxy>. Há várias outras classes de suporte definidas e usadas neste exemplo. `OnResolveAsyncResult`, `OnFindAsyncResult`e `AsyncResult`. Essas classes implementam a interface <xref:System.IAsyncResult>. Para obter mais informações sobre <xref:System.IAsyncResult> consulte [interface System. IAsyncResult](xref:System.IAsyncResult).
+Este tópico explica como implementar um proxy de descoberta. Para obter mais informações sobre o recurso de descoberta no Windows Communication Foundation (WCF), consulte [visão geral da descoberta do WCF](wcf-discovery-overview.md). Um proxy de descoberta pode ser implementado criando uma classe que estende a <xref:System.ServiceModel.Discovery.DiscoveryProxy> classe abstrata. Há várias outras classes de suporte definidas e usadas neste exemplo. `OnResolveAsyncResult`, `OnFindAsyncResult`e `AsyncResult`. Essas classes implementam a <xref:System.IAsyncResult> interface. Para obter mais informações sobre como <xref:System.IAsyncResult> ver a [interface System. IAsyncResult](xref:System.IAsyncResult).
 
  A implementação de um proxy de descoberta é dividida em três partes principais neste tópico:
 
-- Defina uma classe que contenha um armazenamento de dados e estenda a classe abstrata <xref:System.ServiceModel.Discovery.DiscoveryProxy>.
+- Defina uma classe que contenha um armazenamento de dados e estenda a <xref:System.ServiceModel.Discovery.DiscoveryProxy> classe abstrata.
 
-- Implemente a classe auxiliar `AsyncResult`.
+- Implemente a `AsyncResult` classe auxiliar.
 
 - Hospede o proxy de descoberta.
 
@@ -25,13 +25,13 @@ Este tópico explica como implementar um proxy de descoberta. Para obter mais in
 
 1. Inicie o Visual Studio 2012.
 
-2. Crie um novo projeto de aplicativo de console. Nomeie o projeto `DiscoveryProxy` e o nome que a solução `DiscoveryProxyExample`.
+2. Crie um novo projeto de aplicativo de console. Nomeie o projeto `DiscoveryProxy` e o nome da solução `DiscoveryProxyExample` .
 
 3. Adicionar as seguintes referências ao projeto
 
     1. System.ServiceModel.dll
 
-    2. System.Servicemodel.Discovery.dll
+    2. System. ServiceModel. Discovery. dll
 
     > [!CAUTION]
     > Certifique-se de que você referencie a versão 4,0 ou superior desses assemblies.
@@ -40,7 +40,7 @@ Este tópico explica como implementar um proxy de descoberta. Para obter mais in
 
 1. Adicione um novo arquivo de código ao seu projeto e nomeie-o DiscoveryProxy.cs.
 
-2. Adicione as instruções `using` a seguir a DiscoveryProxy.cs.
+2. Adicione as instruções a seguir `using` a DiscoveryProxy.cs.
 
     ```csharp
     using System;
@@ -50,7 +50,7 @@ Este tópico explica como implementar um proxy de descoberta. Para obter mais in
     using System.Xml;
     ```
 
-3. Derive a `DiscoveryProxyService` de <xref:System.ServiceModel.Discovery.DiscoveryProxy>. Aplique o atributo `ServiceBehavior` à classe, conforme mostrado no exemplo a seguir.
+3. Derive `DiscoveryProxyService` de <xref:System.ServiceModel.Discovery.DiscoveryProxy> . Aplique o `ServiceBehavior` atributo à classe, conforme mostrado no exemplo a seguir.
 
     ```csharp
     // Implement DiscoveryProxy by extending the DiscoveryProxy class and overriding the abstract methods
@@ -60,7 +60,7 @@ Este tópico explica como implementar um proxy de descoberta. Para obter mais in
     }
     ```
 
-4. Dentro da classe `DiscoveryProxy`, defina um dicionário para manter os serviços registrados.
+4. Dentro da `DiscoveryProxy` classe, defina um dicionário para manter os serviços registrados.
 
     ```csharp
     // Repository to store EndpointDiscoveryMetadata.
@@ -78,7 +78,7 @@ Este tópico explica como implementar um proxy de descoberta. Para obter mais in
 
 ### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a>Para definir os métodos usados para atualizar o cache do proxy de descoberta
 
-1. Implemente o método `AddOnlineservice` para adicionar serviços ao cache. Isso é chamado toda vez que o proxy recebe uma mensagem de anúncio.
+1. Implemente o `AddOnlineservice` método para adicionar serviços ao cache. Isso é chamado toda vez que o proxy recebe uma mensagem de anúncio.
 
     ```csharp
     void AddOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -92,7 +92,7 @@ Este tópico explica como implementar um proxy de descoberta. Para obter mais in
     }
     ```
 
-2. Implemente o método `RemoveOnlineService` usado para remover serviços do cache.
+2. Implemente o `RemoveOnlineService` método usado para remover serviços do cache.
 
     ```csharp
     void RemoveOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -109,7 +109,7 @@ Este tópico explica como implementar um proxy de descoberta. Para obter mais in
     }
     ```
 
-3. Implemente os métodos de `MatchFromOnlineService` que tentam corresponder a um serviço com um serviço no dicionário.
+3. Implemente os `MatchFromOnlineService` métodos que tentam corresponder a um serviço com um serviço no dicionário.
 
     ```csharp
     void MatchFromOnlineService(FindRequestContext findRequestContext)
@@ -145,7 +145,7 @@ Este tópico explica como implementar um proxy de descoberta. Para obter mais in
     }
     ```
 
-4. Implemente o método `PrintDiscoveryMetadata` que fornece ao usuário a saída de texto do console do que o proxy de descoberta está fazendo.
+4. Implemente o `PrintDiscoveryMetadata` método que fornece ao usuário a saída de texto do console do que o proxy de descoberta está fazendo.
 
     ```csharp
     void PrintDiscoveryMetadata(EndpointDiscoveryMetadata endpointDiscoveryMetadata, string verb)
@@ -320,7 +320,7 @@ Este tópico explica como implementar um proxy de descoberta. Para obter mais in
     }
     ```
 
-O OnBegin.. /OnEnd.. os métodos fornecem a lógica para as operações de descoberta subsequentes. Por exemplo, os métodos <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> e <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> implementam a lógica de localização para o proxy de descoberta. Quando o proxy de descoberta recebe uma mensagem de investigação, esses métodos são executados para enviar uma resposta de volta ao cliente. Você pode modificar a lógica de localização como desejar, por exemplo, você pode incorporar a correspondência de escopo personalizado por algoritmos ou análise de metadados XML específica do aplicativo como parte de sua operação de localização.
+O OnBegin.. /OnEnd.. os métodos fornecem a lógica para as operações de descoberta subsequentes. Por exemplo <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> , os <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> métodos e implementam a lógica de localização para o proxy de descoberta. Quando o proxy de descoberta recebe uma mensagem de investigação, esses métodos são executados para enviar uma resposta de volta ao cliente. Você pode modificar a lógica de localização como desejar, por exemplo, você pode incorporar a correspondência de escopo personalizado por algoritmos ou análise de metadados XML específica do aplicativo como parte de sua operação de localização.
 
 ### <a name="to-implement-the-asyncresult-class"></a>Para implementar a classe AsyncResult
 
@@ -328,7 +328,7 @@ O OnBegin.. /OnEnd.. os métodos fornecem a lógica para as operações de desco
 
 2. Crie um novo arquivo de código chamado AsyncResult.cs.
 
-3. Adicione as instruções `using` a seguir a AsyncResult.cs.
+3. Adicione as instruções a seguir `using` a AsyncResult.cs.
 
     ```csharp
     using System;
@@ -487,7 +487,7 @@ O OnBegin.. /OnEnd.. os métodos fornecem a lógica para as operações de desco
 
 1. Abra o arquivo Program.cs no projeto DiscoveryProxyExample.
 
-2. Adicione as instruções de `using` a seguir.
+2. Adicione as seguintes declarações de `using`.
 
     ```csharp
     using System;
@@ -495,7 +495,7 @@ O OnBegin.. /OnEnd.. os métodos fornecem a lógica para as operações de desco
     using System.ServiceModel.Discovery;
     ```
 
-3. No método `Main()`, adicione o código a seguir. Isso cria uma instância da classe `DiscoveryProxy`.
+3. Dentro do `Main()` método, adicione o código a seguir. Isso cria uma instância da `DiscoveryProxy` classe.
 
     ```csharp
     Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");
@@ -546,9 +546,9 @@ O OnBegin.. /OnEnd.. os métodos fornecem a lógica para as operações de desco
     }
     ```
 
-Você concluiu a implementação do proxy de descoberta. Continue em [como implementar um serviço detectável que se registra com o proxy de descoberta](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).
+Você concluiu a implementação do proxy de descoberta. Continue em [como implementar um serviço detectável que se registra com o proxy de descoberta](discoverable-service-that-registers-with-the-discovery-proxy.md).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 Esta é a lista completa do código usado neste tópico.
 
@@ -975,7 +975,7 @@ namespace Microsoft.Samples.Discovery
 
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Como implementar um serviço de descoberta que registra usando o proxy de descoberta](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [Como implementar um aplicativo cliente que usa o proxy de descoberta para localizar um serviço](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
-- [Como testar o proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+- [Visão geral de descoberta do WCF](wcf-discovery-overview.md)
+- [Como implementar um serviço de descoberta que registra usando o proxy de descoberta](discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Como implementar um aplicativo cliente que utiliza o proxy de descoberta para encontrar um serviço](client-app-discovery-proxy-to-find-a-service.md)
+- [Como testar o proxy de descoberta](how-to-test-the-discovery-proxy.md)

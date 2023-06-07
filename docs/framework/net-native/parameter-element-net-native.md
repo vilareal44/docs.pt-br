@@ -3,13 +3,13 @@ title: <Parameter> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 ms.openlocfilehash: c6dfc347d44a794ee8496c45ca879f9daab12b22
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128194"
 ---
-# <a name="parameter-element-net-native"></a>Elemento de > de parâmetro de \<(.NET Native)
+# <a name="parameter-element-net-native"></a>\<Parameter> (.NET Nativo)
 Aplica a política de tempo de reflexão ao tipo do argumento passado para um método.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -57,10 +57,10 @@ Aplica a política de tempo de reflexão ao tipo do argumento passado para um m�
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*policy_setting*|A configuração a ser aplicada a este tipo de política. Os valores possíveis são `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md).|  
+|*policy_setting*|A configuração a ser aplicada a este tipo de política. Os valores possíveis são `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -69,11 +69,11 @@ Aplica a política de tempo de reflexão ao tipo do argumento passado para um m�
 |[\<Method>](method-element-net-native.md)|Aplica a política de reflexão de runtime a um construtor ou método.|  
   
 ## <a name="remarks"></a>Comentários  
- O elemento `<Parameter>` é filho do elemento [\<Method>](method-element-net-native.md) e é usado para aplicar a política a um parâmetro de método específico. O parâmetro de método específico é especificado pelo nome em vez de por tipo. Pelo menos um atributo que representa um tipo de política, como `Activate` ou `Dynamic`, deve estar presente.  
+ O `<Parameter>` elemento é um filho do [\<Method>](method-element-net-native.md) elemento e é usado para aplicar a política a um parâmetro de método específico. O parâmetro de método específico é especificado pelo nome em vez de por tipo. Pelo menos um atributo que representa um tipo de política, como `Activate` ou `Dynamic`, deve estar presente.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Elemento \<Method>](method-element-net-native.md)
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
-- [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md)
-- [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)
+- [\<Method>Elementos](method-element-net-native.md)
+- [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md)
+- [Elementos da diretiva de runtime](runtime-directive-elements.md)

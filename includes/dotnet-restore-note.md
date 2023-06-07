@@ -6,8 +6,8 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/23/2020
 ms.locfileid: "82102730"
 ---
-Você não precisa correr [`dotnet restore`](~/docs/core/tools/dotnet-restore.md) porque é executado implicitamente por todos os comandos `dotnet new`que `dotnet build` `dotnet run`requerem `dotnet test` `dotnet publish`uma `dotnet pack`restauração para ocorrer, tais como, , , , e . Para desativar a restauração `--no-restore` implícita, use a opção.
+Você não precisa executar [`dotnet restore`](~/docs/core/tools/dotnet-restore.md) o porque ele é executado implicitamente por todos os comandos que exigem a ocorrência de uma restauração, como,,,, `dotnet new` `dotnet build` `dotnet run` `dotnet test` `dotnet publish` e `dotnet pack` . Para desabilitar a restauração implícita, use a `--no-restore` opção.
 
-O `dotnet restore` comando ainda é útil em certos cenários onde a restauração explícita faz sentido, como [compilações de integração contínua em Serviços Azure DevOps](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core) ou em sistemas de construção que precisam controlar explicitamente quando a restauração ocorre.
+O `dotnet restore` comando ainda é útil em determinados cenários em que a restauração explícita faz sentido, como [compilações de integração contínua em Azure DevOps Services](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core) ou em sistemas de compilação que precisam controlar explicitamente quando a restauração ocorre.
 
-Para obter informações sobre como gerenciar feeds NuGet, consulte a [ `dotnet restore` documentação](../docs/core/tools/dotnet-restore.md).
+Para obter informações sobre como gerenciar feeds do NuGet, consulte a [ `dotnet restore` documentação](../docs/core/tools/dotnet-restore.md).

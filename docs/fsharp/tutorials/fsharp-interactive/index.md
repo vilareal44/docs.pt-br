@@ -1,37 +1,36 @@
 ---
 title: Referência do F# Interativo (fsi.exe)
-description: Saiba como F# o Interactive (FSI. exe) é usado para F# executar o código interativamente no console do ou F# para executar scripts.
+description: 'Saiba como F# Interativo (fsi.exe) é usado para executar o código F # interativamente no console ou para executar scripts em F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 9f4b5c0e7527d29e375265bb31a5de2df098f8e1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+f1_keywords:
+- VS.ToolsOptionsPages.F#_Tools.F#_Interactive
+ms.openlocfilehash: 8bb1563ad34e65101fb9f09d6e347278e4b0de78
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419902"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87854939"
 ---
 # <a name="interactive-programming-with-f"></a>Programação interativa com F\#
 
 > [!NOTE]
-> Atualmente, este artigo descreve somente a experiência para Windows.  Ele será reescrito.
-
-> [!NOTE]
-> O link de referência da API levará você até o MSDN.  A referência da API docs.microsoft.com não está completa.
+> Atualmente, este artigo descreve somente a experiência para Windows.
 
 O F# interativo (fsi.exe) é usado para executar o código do F# de forma interativa no console ou executar scripts do F#. Em outras palavras, o F# interativo executa um REPL (Ler, Avaliar, Imprimir Loop) para a linguagem F#.
 
-Para executar o F# interativo a partir do console, execute fsi.exe.  Você encontrará o FSI. exe em:
+Para executar o F# interativo a partir do console, execute fsi.exe. Você encontrará fsi.exe em:
 
 ```console
 C:\Program Files (x86)\Microsoft Visual Studio\2019\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
 ```
 
-em que `sku` é `Community`, `Professional`ou `Enterprise`.
+onde `sku` é `Community` , `Professional` ou `Enterprise` .
 
 Para saber mais sobre as opções de linha de comando disponíveis, veja [Opções de F# Interativo](../../language-reference/fsharp-interactive-options.md).
 
-Para executar o F# Interativo por meio do Visual Studio, você pode clicar no botão de barra de ferramentas apropriado rotulado como **F# Interativo** ou usar as teclas **Ctrl+Alt+F**. Isso abrirá a janela interativa, uma janela da ferramenta que executa uma sessão de F# interativo. Você pode também selecionar algum código que deseja executar na janela interativa e pressionar a combinação de teclas **ALT+ENTER**. O F# interativo é iniciado em uma janela da ferramenta rotulada como **F# Interativo**. Quando você usar essa combinação de teclas, certifique-se de que a janela do editor tenha o foco.
+Para executar o F# Interativo por meio do Visual Studio, você pode clicar no botão de barra de ferramentas apropriado rotulado como **F# Interativo** ou usar as teclas **Ctrl+Alt+F**. Isso abrirá a janela interativa, uma janela da ferramenta que executa uma sessão de F# interativo. Você também pode selecionar um código que deseja executar na janela interativa e pressionar a combinação de teclas **ALT + Enter**. O F# interativo é iniciado em uma janela da ferramenta rotulada como **F# Interativo**. Quando você usar essa combinação de teclas, certifique-se de que a janela do editor tenha o foco.
 
-Se você estiver usando o console ou o Visual Studio, será exibido um prompt de comando e o interpretador aguardará a entrada. Você pode inserir o código como faria em um arquivo de código. Para compilar e executar o código, insira dois sinais de ponto e vírgula ( **;;** ) para terminar uma linha ou várias linhas de entrada.
+Se você estiver usando o console ou o Visual Studio, será exibido um prompt de comando e o interpretador aguardará a entrada. Você pode inserir o código como faria em um arquivo de código. Para compilar e executar o código, insira dois sinais de ponto e vírgula (**;;**) para terminar uma linha ou várias linhas de entrada.
 
 O F# interativo tenta compilar o código e, se tiver êxito, executará o código e imprimirá a assinatura dos tipos e valores que ele compilou. Se ocorrerem erros, o interpretador imprime as mensagens de erro.
 
@@ -41,13 +40,13 @@ Quando executado no Visual Studio, o F# interativo é executado independentement
 
 Se você tiver um projeto aberto que faça referência a algumas bibliotecas, poderá fazer referência em F# interativo por meio do **Gerenciador de Soluções**. Para fazer referência a uma biblioteca de F# Interativo, expanda o nó **Referências**, abra o menu de atalho da biblioteca e escolha **Enviar para F# Interativo**.
 
-Você pode controlar os argumentos de linha de comando do F# interativo (opções) ajustando as configurações. No menu **Ferramentas**, selecione **Opções...** e expanda **Ferramentas do F#** . As duas configurações que podem ser alteradas são as opções do F# interativo e a configuração do **F# Interativo de 64 bits**, que é relevante apenas se você estiver executando o F# interativo em uma máquina de 64 bits. Essa configuração determina se você deseja executar a versão de 64 bits dedicada do fsi.exe ou do fsianycpu.exe, que usa a arquitetura de máquina para determinar se deve ser executada como um processo de 32 ou 64 bits.
+Você pode controlar os argumentos de linha de comando do F# interativo (opções) ajustando as configurações. No menu **Ferramentas**, selecione **Opções...** e expanda **Ferramentas do F#**. As duas configurações que podem ser alteradas são as opções do F# interativo e a configuração do **F# Interativo de 64 bits**, que é relevante apenas se você estiver executando o F# interativo em uma máquina de 64 bits. Essa configuração determina se você deseja executar a versão de 64 bits dedicada do fsi.exe ou do fsianycpu.exe, que usa a arquitetura de máquina para determinar se deve ser executada como um processo de 32 ou 64 bits.
 
 ## <a name="scripting-with-f"></a>Criando scripts com o F\#
 
 Os scripts usam a extensão de arquivo **.fsx** ou **.fsscript**. Em vez de compilar o código-fonte e executar o conjunto compilado posteriormente, é possível executar apenas **fsi.exe** e especificar o nome do arquivo do script de código-fonte do F# e o F# interativo lerá o código e o executará em tempo real.
 
-## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>Diferenças entre os ambientes interativo, de script e compilado
+## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>Diferenças entre os ambientes interativo, de script e compilados
 
 Quando você está compilando código em F# interativo, se estiver executando de forma interativa ou executando um script, o símbolo **INTERACTIVE** será definido. Quando você está compilando código no compilador, o símbolo **COMPILED** é definido. Assim, se o código precisar ser diferente nos modos compilados e interativos, você poderá usar diretivas de pré-processador para compilação condicional para determinar qual você deseja usar.
 
@@ -86,7 +85,7 @@ for arg in fsi.CommandLineArgs do
 printfn "%A" (MyAssembly.myFunction 10 40)
 ```
 
-A saída é a seguinte:
+A saída é da seguinte maneira:
 
 ```console
 Command line arguments:
@@ -95,9 +94,9 @@ test
 90
 ```
 
-## <a name="related-topics"></a>Tópicos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 |Título|Descrição|
 |-----|-----------|
-|[Opções do F# Interativo](../../language-reference/fsharp-interactive-options.md)|Descreve a sintaxe de linha de comando e as F# opções para o Interactive, FSI. exe.|
+|[Opções do F# Interativo](../../language-reference/fsharp-interactive-options.md)|Descreve a sintaxe de linha de comando e as opções para o F# Interativo, fsi.exe.|
 |[Referência da biblioteca do F# Interativo](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|Descreve a funcionalidade de biblioteca disponível ao executar o código em F# interativo.|

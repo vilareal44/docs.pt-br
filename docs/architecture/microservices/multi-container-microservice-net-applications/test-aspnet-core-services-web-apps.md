@@ -1,13 +1,13 @@
 ---
 title: Testar serviços e aplicativos Web do ASP.NET Core
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Explorar uma arquitetura para testar serviços e aplicativos Web do ASP.NET Core em contêineres.
-ms.date: 01/30/2020
-ms.openlocfilehash: f66d6184d913405c9372904f8072dda1dbfbe6ac
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 08/07/2020
+ms.openlocfilehash: a27b3b8d392c5e1a7d1961307e6de95659cd823e
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988226"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024596"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testar serviços e aplicativos Web do ASP.NET Core
 
@@ -19,7 +19,7 @@ Os controladores são uma parte central de qualquer serviço de API do ASP.NET C
 
 - Testes de integração. Garantem que as interações do componente funcionam como esperado em artefatos externos, como bancos de dados. Instruções assert podem testar a API do componente, a interface do usuário ou os efeitos colaterais de ações, como E/S de banco de dados, registros em log etc.
 
-- Testes funcionais para cada microsserviço. Isso garante que o aplicativo funcione conforme esperado do ponto de vista do usuário.
+- Testes funcionais para cada microsserviço. Eles garantem que o aplicativo funcione conforme o esperado da perspectiva do usuário.
 
 - Testes de serviço. Garantem que os casos de uso do serviço de ponta a ponta sejam testados, incluindo testes de vários serviços ao mesmo tempo. Para esse tipo de teste, é necessário preparar o ambiente primeiro. Nesse caso, significa iniciar os serviços (por exemplo, usando o docker-compose up).
 
@@ -68,7 +68,7 @@ Ao contrário do teste de unidade, os testes de integração frequentemente envo
 
 Como os testes de integração exercitam segmentos de código maiores que os testes de unidade e contam com elementos de infraestrutura, eles tendem a ter ordens de magnitude mais lentas que os testes de unidade. Portanto, é uma boa ideia limitar a quantidade de testes de integração gravados e executados.
 
-ASP.NET Core inclui um web host de teste incorporado que pode ser usado para lidar com solicitações HTTP sem sobrecarga de rede, o que significa que você pode executar esses testes mais rápido do que ao usar um host web real. O host Web de testes (TestServer) está disponível em um componente NuGet como Microsoft.AspNetCore.TestHost. Ele pode ser adicionado a projetos de teste de integração e usados para hospedar aplicativos do ASP.NET Core.
+O ASP.NET Core inclui um host Web de teste interno que pode ser usado para lidar com solicitações HTTP sem sobrecarga de rede, o que significa que você pode executar esses testes mais rápido do que ao usar um host Web real. O host Web de testes (TestServer) está disponível em um componente NuGet como Microsoft.AspNetCore.TestHost. Ele pode ser adicionado a projetos de teste de integração e usados para hospedar aplicativos do ASP.NET Core.
 
 Conforme mostrado no código a seguir, ao criar testes de integração para controladores do ASP.NET Core, você cria instâncias para os controladores por meio do host de teste. Isso é equivalente a uma solicitação HTTP, mas ele é executado mais rapidamente.
 
@@ -101,19 +101,19 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
-- **O Steve Smith. Controladores de teste** (núcleo ASP.NET) \
+- **Steve Smith. Testando controladores** (ASP.NET Core) \
     [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](/aspnet/core/mvc/controllers/testing)
 
-- **O Steve Smith. Teste de integração** (ASP.NET Core) \
+- **Steve Smith. Testes de integração** (ASP.NET Core) \
     [https://docs.microsoft.com/aspnet/core/test/integration-tests](/aspnet/core/test/integration-tests)
 
-- **Teste unitário em .NET Core usando teste dotnet** \
+- **Teste de unidade no .NET Core usando o teste dotnet** \
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**. Site oficial. \
     <https://xunit.github.io/>
 
-- **Noções básicas de teste da unidade.** \
+- **Noções básicas do teste de unidade.** \
     [https://docs.microsoft.com/visualstudio/test/unit-test-basics](/visualstudio/test/unit-test-basics)
 
 - **Moq**. Repositório do GitHub. \
@@ -138,11 +138,11 @@ Os testes do aplicativo (eShopOnContainers) de referência foram recentemente re
 
 2. **Testes funcionais/integração de microsserviço**, com casos de teste que envolvem a infraestrutura para cada microsserviço, mas isolado dos outros; estão contidos nos projetos **{MicroserviceName}.FunctionalTests**.
 
-3. **Testes funcionais/integração de aplicativos,** que se concentram na integração de microserviços, com casos de teste que exercem diversos microserviços. Esses testes estão localizados no projeto **Application.FunctionalTests**.
+3. **Testes funcionais/de integração do aplicativo**, que se concentram na integração de microserviços, com casos de teste que exercem vários microserviços. Esses testes estão localizados no projeto **Application.FunctionalTests**.
 
 Os testes de unidade e de integração por microsserviço estão contidos em uma pasta de teste em cada microsserviço e o testes de carga e de aplicativo estão contidos na pasta teste da pasta da solução, conforme mostrado na Figura 6-25.
 
-![Captura de tela de VS apontando alguns dos projetos de teste na solução.](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
+![Captura de tela do VS apontando alguns dos projetos de teste na solução.](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
 
 **Figura 6-25**. Estrutura da pastas de teste em eShopOnContainers
 
@@ -198,12 +198,12 @@ Como você pode ver, esses arquivos docker-compose só iniciam os microsserviço
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-- **Arquivo LEIAME dos testes** no repositório eShopOnContainers no GitHub \
-    <https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test>
+- **Teste de integração de & de unidade** no eShopOnContainers \
+    <https://github.com/dotnet-architecture/eShopOnContainers/wiki/Unit-and-integration-testing>
 
-- **Arquivo LEIAME dos testes de carga** no repositório eShopOnContainers no GitHub \
-    <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/>
+- **Teste de carga** no eShopOnContainers
+    <https://github.com/dotnet-architecture/eShopOnContainers/wiki/Load-testing>
 
 > [!div class="step-by-step"]
-> [Próximo](subscribe-events.md)
-> [anterior](background-tasks-with-ihostedservice.md)
+> [Anterior](subscribe-events.md) 
+>  [Avançar](background-tasks-with-ihostedservice.md)

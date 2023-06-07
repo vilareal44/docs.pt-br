@@ -1,13 +1,13 @@
 ---
-title: Como escrever consultas com filtragem complexa
+title: 'Como: escrever consultas com filtragem complexa'
 ms.date: 07/20/2015
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
-ms.openlocfilehash: 28e84b7785948e9d50c08438494b89c906ab8505
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 18ed4379b7ec9c8007cc3c189fc45571b5161911
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344452"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397616"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>Como: escrever consultas com filtragem complexa (Visual Basic)
 Muitas vezes, você deseja escrever consultas LINQ to XML com filtros complexos. Por exemplo, você pode ter que localizar todos os elementos que têm um elemento filho com um nome e um valor específicos. Este tópico dá um exemplo de como escrever uma consulta com filtragem complexa.  
@@ -15,9 +15,9 @@ Muitas vezes, você deseja escrever consultas LINQ to XML com filtros complexos.
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como localizar todos os elementos `PurchaseOrder` que têm um elemento filho `Address` que têm um atributo `Type` igual a “Shipping” e um elemento filho `State` igual a “NY”. Ele usa uma consulta aninhada na cláusula `Where` e o operador `Any` retornará `True` se a coleção tiver elementos nele.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
- Para obter mais informações sobre o operador de `Any`, consulte [operações do quantificador (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).  
+ Para obter mais informações sobre o `Any` operador, consulte [operações do quantificador (Visual Basic)](quantifier-operations.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrders.xml")  
@@ -45,7 +45,7 @@ Next
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra a mesma consulta para XML que está em um namespace. Para obter mais informações, consulte [visão geral de namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra em um namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra em um namespace](sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -76,13 +76,13 @@ End Module
 99505  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [Propriedade do Eixo Filho XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
-- [Propriedade de Eixo do Atributo XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
-- [Propriedade do Valor XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
-- [Operações de projeção (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
-- [Operações do quantificador (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)
+- [Consultas básicas (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)
+- [Propriedade do Eixo Filho XML](../../../language-reference/xml-axis/xml-child-axis-property.md)
+- [Propriedade de Eixo do Atributo XML](../../../language-reference/xml-axis/xml-attribute-axis-property.md)
+- [Propriedade do Valor XML](../../../language-reference/xml-axis/xml-value-property.md)
+- [Operações de projeção (Visual Basic)](projection-operations.md)
+- [Operações do quantificador (Visual Basic)](quantifier-operations.md)

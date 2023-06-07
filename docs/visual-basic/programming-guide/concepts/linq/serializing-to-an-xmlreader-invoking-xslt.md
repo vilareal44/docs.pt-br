@@ -1,13 +1,13 @@
 ---
-title: Serializar a um XmlReader que chama (XSLT)
+title: Serializar para um XmlReader (invocando XSLT)
 ms.date: 07/20/2015
 ms.assetid: 8b64f95a-e8f6-40f7-99f9-a8002c63af96
-ms.openlocfilehash: 39ecbc1851764d221ac99c3e47c26bcbe84c9e46
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e51bfc031ad6d5d0eb98718f5d547fb18eb45295
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349361"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357368"
 ---
 # <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a>Serializando para um XmlReader (invocando XSLT) (Visual Basic)
 Quando você usa os recursos de interoperabilidade de <xref:System.Xml?displayProperty=nameWithType> de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], você pode usar <xref:System.Xml.Linq.XNode.CreateReader%2A> para criar um <xref:System.Xml.XmlReader>. O módulo que lê deste <xref:System.Xml.XmlReader> lê os nós da árvore XML e processa-os de acordo.  
@@ -51,7 +51,7 @@ End Using
 Console.WriteLine(newTree)  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <Root>  
@@ -60,6 +60,6 @@ Console.WriteLine(newTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Serializando árvores XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [Serializando árvores XML (Visual Basic)](serializing-xml-trees.md)

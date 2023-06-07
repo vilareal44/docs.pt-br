@@ -3,21 +3,21 @@ title: <timeOuts>
 ms.date: 03/30/2017
 ms.assetid: 7fccd436-b326-48ec-8de1-c16817a09e0d
 ms.openlocfilehash: b9c67ac03f0eb73a2a4cdd43ab48fe12871a1cc3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70854971"
 ---
-# <a name="timeouts"></a>\<timeOuts>
+# \<timeOuts>
 Representa um elemento de configuração que especifica o intervalo de tempo permitido para o host de serviço abrir ou fechar.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Serviços >** ](services.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de serviço**](service.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> do host**](host.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Tempos limite >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<services>**](services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<service>**](service.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<host>**](host.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<timeOuts>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,7 +37,7 @@ Representa um elemento de configuração que especifica o intervalo de tempo per
 |`openTimeout`|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo permitido para o host de serviço abrir.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -45,8 +45,8 @@ Representa um elemento de configuração que especifica o intervalo de tempo per
 |-------------|-----------------|  
 |[\<host>](host.md)|Um elemento de configuração que especifica as configurações para um host de serviço.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Configuration.HostElement>
 - <xref:System.ServiceModel.ServiceHost>
-- [Hospedagem](../../../wcf/feature-details/hosting.md)
+- [Hosting](../../../wcf/feature-details/hosting.md)

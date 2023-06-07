@@ -1,15 +1,15 @@
 ---
-title: 'Como: Filtro em um elemento opcional'
+title: 'Como: filtrar em um elemento opcional'
 ms.date: 07/20/2015
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
-ms.openlocfilehash: 6db377ae30582ef010d5af467e88c52b008483ed
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 9f03eee479e7c47e528a145d370472de6dfddd39
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78267048"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394357"
 ---
-# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Como: Filtrar em um elemento opcional (visual básico)
+# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Como filtrar em um elemento opcional (Visual Basic)
 Às vezes você deseja filtrar um elemento mesmo que você não tenha certeza ele existe em seu documento XML. A pesquisa deve ser executada de modo que se o elemento específico não tem o elemento filho, você não dispare uma exceção de referência nula filtragem para ele. No exemplo a seguir, o elemento de `Child5` não tiver um elemento filho de `Type` , mas a consulta ainda executa corretamente.  
   
 ## <a name="example"></a>Exemplo  
@@ -57,7 +57,7 @@ Child Four Text
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra a mesma consulta para XML que está em um namespace. Para obter mais informações, consulte [Visão Geral de Namespaces (LINQ para XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ O exemplo a seguir mostra a mesma consulta para XML que está em um namespace. Para obter mais informações, consulte [visão geral de namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -111,9 +111,9 @@ Child Four Text
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
-- [Consultas Básicas (LINQ a XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [Propriedade do Eixo Filho XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
-- [Propriedade de Eixo do Atributo XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
-- [Propriedade do Valor XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
-- [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Operações de Projeção (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Consultas básicas (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)
+- [Propriedade do Eixo Filho XML](../../../language-reference/xml-axis/xml-child-axis-property.md)
+- [Propriedade de Eixo do Atributo XML](../../../language-reference/xml-axis/xml-attribute-axis-property.md)
+- [Propriedade do Valor XML](../../../language-reference/xml-axis/xml-value-property.md)
+- [Visão geral de operadores de consulta padrão (Visual Basic)](standard-query-operators-overview.md)
+- [Operações de projeção (Visual Basic)](projection-operations.md)

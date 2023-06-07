@@ -1,5 +1,6 @@
 ---
-title: Como compilar um assembly de multiarquivos
+title: 'Como: criar um assembly de vários arquivos'
+description: Saiba como compilar (criar) um assembly de multiarquivos no .NET usando o código de exemplo para ilustrar cada etapa no procedimento.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -17,14 +18,14 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-ms.openlocfilehash: 0f8c6d57425657e321d80f9edffa20f27bc28770
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a4c298284950ba2989bb73e6d3383b3c4024e6e7
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429562"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104953"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>Como compilar um assembly de multiarquivos
+# <a name="how-to-build-a-multifile-assembly"></a>Como: criar um assembly de vários arquivos
 
 Este artigo explica como criar um assembly de vários arquivos e fornece código que ilustra cada etapa no procedimento.
 
@@ -99,7 +100,7 @@ Este artigo explica como criar um assembly de vários arquivos e fornece código
 
 3. Compile todos os outros módulos, usando as opções do compilador necessárias para indicar os outros módulos que são referenciados no código. Esta etapa usa a opção do compilador **/addmodule**.
 
-   No exemplo a seguir, um módulo de código chamado *cliente* tem um método `Main` de ponto de entrada que faz referência a um método no módulo *Stringer. dll* criado na etapa 1.
+   No exemplo a seguir, um módulo de código chamado *cliente* tem um método de ponto de entrada `Main` que faz referência a um método no módulo *Stringer.dll* criado na etapa 1.
 
    ```cpp
    #using "Stringer.netmodule"
@@ -209,11 +210,11 @@ Este artigo explica como criar um assembly de vários arquivos e fornece código
 
     No prompt de comando, digite o comando a seguir:
 
-    **Al** \< *module name*> Name nome\<módulo*nome>.* .. **/Main:**\<*nome*> do método **/out:**\<*nome*> do arquivo **/target:**\<*tipo de arquivo do assembly*>
+    **Al** \<*module name*> \<*module name*>... **/Main:** \<*method name*> **/out:** \<*file name*> **/target:**\<*assembly file type*>
 
     Neste comando, os argumentos *nome do módulo* especificam o nome de cada módulo a ser incluído no assembly. A opção **/main:** especifica o nome do método que é o ponto de entrada do assembly. A opção **/out:** especifica o nome do arquivo de saída, que contém metadados do assembly. A opção **/target:** especifica que o assembly é um arquivo executável do aplicativo de console (*. exe*), um arquivo executável do Windows (*. Win*) ou um arquivo de biblioteca (*. lib*).
 
-    No exemplo a seguir, *al. exe* cria um assembly que é um executável de aplicativo de console chamado *myAssembly. exe*. O aplicativo consiste em dois módulos chamados *Client. netmodule* e *Stringer. netmodule*, e o arquivo executável chamado *myAssembly. exe*, que contém apenas metadados do assembly. O ponto de entrada do assembly é o `Main` método na classe `MainClientApp`, que está localizado em *Client. dll*.
+    No exemplo a seguir, *Al.exe* cria um assembly que é um executável de aplicativo de console chamado *myAssembly.exe*. O aplicativo consiste em dois módulos chamados *Client. netmodule* e *Stringer. netmodule*, e o arquivo executável chamado *myAssembly.exe*, que contém somente os metadados do assembly. O ponto de entrada do assembly é o `Main` método na classe `MainClientApp` , que está localizado em *Client.dll*.
 
     ```cmd
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe
@@ -221,7 +222,7 @@ Este artigo explica como criar um assembly de vários arquivos e fornece código
 
     Você pode usar o [MSIL Disassembler (Ildasm.exe)](../tools/ildasm-exe-il-disassembler.md) para examinar o conteúdo de um assembly ou determinar se um arquivo é um assembly ou um módulo.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Criar assemblies](../../standard/assembly/create.md)
 - [Como exibir o conteúdo do assembly](../../standard/assembly/view-contents.md)

@@ -3,12 +3,12 @@ title: Navegação do namespace XPath
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-ms.openlocfilehash: f35318b1439b762bf7c87cff217ed1787e8d007c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: dce7d81d4249cb40c3be6dee4b8bd25951ccb10a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156316"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283202"
 ---
 # <a name="xpath-namespace-navigation"></a>Navegação do namespace XPath
 Para usar consultas XPath com documentos XML, você precisará endereçar corretamente namespaces XML e os elementos contidos por espaços. Namespaces impedem ambiguidades que podem ocorrer quando os nomes são usados em mais de um contexto; por exemplo, o nome `ID` pode referir-se a mais de um identificador associado com os diferentes elementos de um documento XML. A sintaxe do namespace especifica URIs, nomes, e prefixos que distinguiem os elementos de um documento XML.  
@@ -64,5 +64,5 @@ using (XmlReader reader = XmlReader.Create("response.xml"))
   
 ## <a name="see-also"></a>Veja também
 
-- [Acessando dados XML usando XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
-- [Selecionando, avaliando e correspondente de dados XML usando XPathNavigator](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)
+- [Acessando dados XML usando XPathNavigator](accessing-xml-data-using-xpathnavigator.md)
+- [Selecionando, avaliando e correspondente de dados XML usando XPathNavigator](selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 94667c1c-6d58-4aa7-b74e-530b11e2a276
 topic_type:
 - apiref
-ms.openlocfilehash: f5a736d80f36afb8d0a643d4a4e36c9abff01995
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ff97e419c5309fa7cb820cb7e82db96fee34f30c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445433"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501268"
 ---
 # <a name="imetadatatablesgetblob-method"></a>Método IMetaDataTables::GetBlob
 Obtém um ponteiro para o objeto binário grande (BLOB) no índice de coluna especificado.  
@@ -37,24 +37,24 @@ HRESULT GetBlob (
   
 ## <a name="parameters"></a>Parâmetros  
  `ixBlob`  
- no O endereço de memória do qual obter `ppData`.  
+ no O endereço de memória do qual obter `ppData` .  
   
  `pcbData`  
- fora Um ponteiro para o tamanho, em bytes, de `ppData`.  
+ fora Um ponteiro para o tamanho, em bytes, de `ppData` .  
   
  `ppData`  
  fora Um ponteiro para um ponteiro para os dados binários recuperados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [Interface IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [Interface IMetaDataTables](imetadatatables-interface.md)
+- [Interface IMetaDataTables2](imetadatatables2-interface.md)

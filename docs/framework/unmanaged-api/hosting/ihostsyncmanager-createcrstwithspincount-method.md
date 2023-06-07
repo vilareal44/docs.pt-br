@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7280fa8c-3639-4abf-91cb-bc343da742d1
 topic_type:
 - apiref
-ms.openlocfilehash: 632b8d43ed459d489825dc796d39864e2ed15ec3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 86bc320c28a5fbf122d234a4a1f15b674628c0b5
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139416"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83803394"
 ---
 # <a name="ihostsyncmanagercreatecrstwithspincount-method"></a>Método IHostSyncManager::CreateCrstWithSpinCount
 Cria um objeto de seção crítica com contagem de rotação para sincronização.  
@@ -39,13 +39,13 @@ HRESULT CreateCrstWithSpinCount (
  no Especifica a contagem de rotação para o objeto de seção crítica.  
   
  `ppCrst`  
- fora Um ponteiro para o endereço de uma instância de [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) ou NULL se a seção crítica não pôde ser criada.  
+ fora Um ponteiro para o endereço de uma instância de [IHostCrst](ihostcrst-interface.md) ou NULL se a seção crítica não pôde ser criada.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`CreateCrstWithSpinCount` retornado com êxito.|  
+|S_OK|`CreateCrstWithSpinCount`retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -54,19 +54,19 @@ HRESULT CreateCrstWithSpinCount (
 |E_OUTOFMEMORY|Não há memória suficiente disponível para criar a seção crítica solicitada.|  
   
 ## <a name="remarks"></a>Comentários  
- Uma contagem de rotação é usada somente em um sistema com vários processadores. A contagem de rotação especifica o número de vezes que um thread de chamada deve ser girado antes de executar uma operação de espera em um semáforo associado a uma seção crítica indisponível. Se a seção crítica for liberada durante a operação de rotação, o thread de chamada evitará a operação de espera. `CreateCrstWithSpinCount` espelha a função de `InitializeCriticalSectionAndSpinCount` do Win32.  
+ Uma contagem de rotação é usada somente em um sistema com vários processadores. A contagem de rotação especifica o número de vezes que um thread de chamada deve ser girado antes de executar uma operação de espera em um semáforo associado a uma seção crítica indisponível. Se a seção crítica for liberada durante a operação de rotação, o thread de chamada evitará a operação de espera. `CreateCrstWithSpinCount`espelha a função do Win32 `InitializeCriticalSectionAndSpinCount` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [Interface IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
-- [Interface IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [Interface ICLRSyncManager](iclrsyncmanager-interface.md)
+- [Interface IHostSemaphore](ihostsemaphore-interface.md)
+- [Interface IHostSyncManager](ihostsyncmanager-interface.md)

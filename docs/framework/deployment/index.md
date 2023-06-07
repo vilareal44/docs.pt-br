@@ -1,5 +1,6 @@
 ---
 title: Implantando o .NET Framework e aplicativos
+description: Introdução à implantação do .NET com seu aplicativo. O .NET fornece aplicativos sem impacto, componentes privados por padrão, compartilhamento de código controlado e muito mais.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deploying applications [.NET Framework], packaging
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cce888c962c9ab83c13cce4040eb9ba50270972d
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716471"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803489"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Implantando o .NET Framework e aplicativos
 
@@ -162,8 +163,8 @@ As considerações de segurança também podem afetar como você implanta o apli
 |-----------|-----------------|
 |[Como o runtime localiza assemblies](how-the-runtime-locates-assemblies.md)|Descreve como o Common Language Runtime determina qual assembly usar para atender a uma solicitação de associação.|
 |[Práticas recomendadas para carregamento de assemblies](best-practices-for-assembly-loading.md)|Descreve maneiras de evitar problemas de identidade de tipo que podem levar a <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e outros erros.|
-|[Redução das reinicializações do sistema durante as instalações do Framework .NET 4.5](reducing-system-restarts.md)|Descreve o Gerenciador de Reinicialização, que impede reinicializações sempre que possível, além de explicar como os aplicativos que instalam o .NET Framework podem aproveitá-lo.|
-|[Guia de implantação para administradores](guide-for-administrators.md)|Explica como um administrador de sistema pode implantar o .NET Framework e suas dependências de sistema em uma rede usando o Microsoft Endpoint Configuration Manager.|
+|[Reduzindo reinicializações do sistema durante instalações do .NET Framework 4,5](reducing-system-restarts.md)|Descreve o Gerenciador de Reinicialização, que impede reinicializações sempre que possível, além de explicar como os aplicativos que instalam o .NET Framework podem aproveitá-lo.|
+|[Guia de implantação para administradores](guide-for-administrators.md)|Explica como um administrador do sistema pode implantar o .NET Framework e suas dependências do sistema em uma rede usando o Microsoft Endpoint Configuration Manager.|
 |[Guia de implantação para desenvolvedores](deployment-guide-for-developers.md)|Explica como os desenvolvedores podem instalar o .NET Framework nos computadores dos usuários com seus aplicativos.|
 |[Implantando aplicativos, serviços e componentes](/visualstudio/deployment/deploying-applications-services-and-components)|Aborda as opções de implantação no Visual Studio, incluindo instruções para publicar um aplicativo usando as tecnologias ClickOnce e Windows Installer.|
 |[Publicando aplicativos ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Descreve como empacotar um aplicativo do Windows Forms e implantá-lo com o ClickOnce em computadores cliente em uma rede.|
@@ -171,6 +172,6 @@ As considerações de segurança também podem afetar como você implanta o apli
 |[Implantando um aplicativo de interoperabilidade](../interop/deploying-an-interop-application.md)|Explica como enviar e instalar aplicativos de interoperabilidade, que geralmente incluem um assembly de cliente do .NET Framework, um ou mais assemblies de interoperabilidade que representam diferentes bibliotecas de tipo COM e um ou mais componentes COM registrados.|
 |[Como acompanhar o progresso do instalador do .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)|Descreve como inicializar e rastrear silenciosamente o processo de instalação do .NET Framework ao mesmo tempo que mostra sua própria exibição do progresso de instalação.|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Guia de desenvolvimento](../development-guide.md)

@@ -1,5 +1,5 @@
 ---
-title: Literal de documento XML
+title: Literal de Documento XML
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlLiteralDocument
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XML documents [Visual Basic], creating
 - document literal [Visual Basic]
 ms.assetid: f7bbee56-0911-41de-b907-96f20450137b
-ms.openlocfilehash: db77cccd26c87e271d6db45ce514ab6dabbc53e3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3a2182d2937827bc8dc45e22307a3668420261a2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349379"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400196"
 ---
 # <a name="xml-document-literal-visual-basic"></a>Literal de documento XML (Visual Basic)
-Um literal que representa um objeto <xref:System.Xml.Linq.XDocument>.  
+Um literal que representa um <xref:System.Xml.Linq.XDocument> objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,10 +34,10 @@ rootElement
 |---|---|  
 |`encoding`|Opcional. Texto literal que declara a codificação usada pelo documento.|  
 |`standalone`|Opcional. Texto literal. Deve ser "Yes" ou "no".|  
-|`piCommentList`|Opcional. Lista de instruções de processamento XML e comentários XML. Usa o seguinte formato:<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> Cada `piComment` pode ser um dos seguintes:<br /><br /> [literal de instrução de processamento XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)-   .<br />[literal de comentário XML](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)-   .|  
-|`rootElement`|Necessária. Elemento raiz do documento. O formato é um dos seguintes:<br /><br /> <ul><li>[Literal de elemento XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).</li><li>Expressão inserida do formulário `<%=` `elementExp` `%>`. O `elementExp` retorna um dos seguintes:<br /><br /> <ul><li>Um objeto <xref:System.Xml.Linq.XElement>.</li><li>Uma coleção que contém um objeto <xref:System.Xml.Linq.XElement> e qualquer número de objetos <xref:System.Xml.Linq.XProcessingInstruction> e <xref:System.Xml.Linq.XComment>.</li></ul></li></ul><br /> Para obter mais informações, consulte [expressões inseridas em XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
+|`piCommentList`|Opcional. Lista de instruções de processamento XML e comentários XML. Usa o seguinte formato:<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> Cada `piComment` um pode ser um dos seguintes:<br /><br /> -   [Literal de instrução de processamento XML](xml-processing-instruction-literal.md).<br />-   [Literal de comentário XML](xml-comment-literal.md).|  
+|`rootElement`|Obrigatórios. Elemento raiz do documento. O formato é um dos seguintes:<br /><br /> <ul><li>[Literal de elemento XML](xml-element-literal.md).</li><li>Expressão inserida do formulário `<%=` `elementExp` `%>` . O `elementExp` retorna um dos seguintes:<br /><br /> <ul><li>Um objeto <xref:System.Xml.Linq.XElement>.</li><li>Uma coleção que contém um <xref:System.Xml.Linq.XElement> objeto e qualquer número de <xref:System.Xml.Linq.XProcessingInstruction> <xref:System.Xml.Linq.XComment> objetos e.</li></ul></li></ul><br /> Para obter mais informações, consulte [expressões inseridas em XML](../../programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  Um objeto <xref:System.Xml.Linq.XDocument>.  
   
 ## <a name="remarks"></a>Comentários  
@@ -48,22 +48,22 @@ rootElement
 > [!NOTE]
 > Um literal XML pode abranger várias linhas sem usar caracteres de continuação de linha. Isso permite que você copie o conteúdo de um documento XML e cole-o diretamente em um programa Visual Basic.  
   
- O compilador de Visual Basic converte o literal de documento XML em chamadas para os construtores <xref:System.Xml.Linq.XDocument.%23ctor%2A> e <xref:System.Xml.Linq.XDeclaration.%23ctor%2A>.  
+ O compilador de Visual Basic converte o literal de documento XML em chamadas para os <xref:System.Xml.Linq.XDocument.%23ctor%2A> <xref:System.Xml.Linq.XDeclaration.%23ctor%2A> construtores e.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir cria um documento XML que tem uma declaração XML, uma instrução de processamento, um comentário e um elemento que contém outro elemento.  
   
  [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Linq.XElement>
 - <xref:System.Xml.Linq.XProcessingInstruction>
 - <xref:System.Xml.Linq.XComment>
 - <xref:System.Xml.Linq.XDocument>
-- [Literal de Instrução de Processamento XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)
-- [Literal de Comentário XML](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)
-- [Literal do Elemento XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
-- [Literais XML](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Criando XML no Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [Expressões Inseridas no XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [Literal de Instrução de Processamento XML](xml-processing-instruction-literal.md)
+- [Literal de Comentário XML](xml-comment-literal.md)
+- [Literal do Elemento XML](xml-element-literal.md)
+- [Literais XML](index.md)
+- [Criando XML no Visual Basic](../../programming-guide/language-features/xml/creating-xml.md)
+- [Expressões inseridas no XML](../../programming-guide/language-features/xml/embedded-expressions-in-xml.md)

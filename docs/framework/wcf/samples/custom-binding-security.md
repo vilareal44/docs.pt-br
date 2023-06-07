@@ -2,12 +2,12 @@
 title: Segurança de associação personalizada
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: b0b293c58e13f7add6f2cb49ea3c108a86292691
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: eb575594cec9ea714578bc104344acc14b00e9df
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990011"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592457"
 ---
 # <a name="custom-binding-security"></a>Segurança de associação personalizada
 
@@ -24,7 +24,7 @@ A configuração de serviço define uma associação personalizada que dá supor
 
 - Segurança de mensagem do Windows.
 
-A configuração de associação personalizada permite o transporte seguro habilitando simultaneamente a segurança em nível de mensagem. A ordenação de elementos de associação é importante na definição de uma associação personalizada, pois cada uma representa uma camada na pilha de canais (consulte [associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md)). A associação personalizada é definida nos arquivos de configuração do serviço e do cliente, conforme mostrado na seguinte configuração de exemplo.
+A configuração de associação personalizada permite o transporte seguro habilitando simultaneamente a segurança em nível de mensagem. A ordenação de elementos de associação é importante na definição de uma associação personalizada, pois cada uma representa uma camada na pilha de canais (consulte [associações personalizadas](../extending/custom-bindings.md)). A associação personalizada é definida nos arquivos de configuração do serviço e do cliente, conforme mostrado na seguinte configuração de exemplo.
 
 ```xml
 <bindings>
@@ -58,7 +58,7 @@ A associação personalizada usa um certificado de serviço para autenticar o se
 </behaviors>
 ```
 
-Além disso, a associação personalizada usa segurança de mensagem com o tipo de credencial do Windows – esse é o tipo de credencial padrão. Isso é feito pelo `security` elemento Binding. O cliente e o serviço são autenticados usando a segurança no nível da mensagem se o mecanismo de autenticação Kerberos estiver disponível. Isso ocorrerá se o exemplo for executado no ambiente de Active Directory. Se o mecanismo de autenticação Kerberos não estiver disponível, a autenticação NTLM será usada. O NTLM autentica o cliente para o serviço, mas não autentica o serviço para o cliente. O `security` elemento Binding é configurado para usar `SecureConversation` `authenticationType`, o que resulta na criação de uma sessão de segurança no cliente e no serviço. Isso é necessário para permitir que o contrato duplex do serviço funcione.
+Além disso, a associação personalizada usa segurança de mensagem com o tipo de credencial do Windows – esse é o tipo de credencial padrão. Isso é feito pelo `security` elemento Binding. O cliente e o serviço são autenticados usando a segurança no nível da mensagem se o mecanismo de autenticação Kerberos estiver disponível. Isso ocorrerá se o exemplo for executado no ambiente de Active Directory. Se o mecanismo de autenticação Kerberos não estiver disponível, a autenticação NTLM será usada. O NTLM autentica o cliente para o serviço, mas não autentica o serviço para o cliente. O `security` elemento Binding é configurado para usar `SecureConversation` `authenticationType` , o que resulta na criação de uma sessão de segurança no cliente e no serviço. Isso é necessário para permitir que o contrato duplex do serviço funcione.
 
 Quando você executa o exemplo, as solicitações e respostas da operação são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.
 
@@ -106,11 +106,11 @@ Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lot
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo
 
-1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Para criar a edição C# ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).
 
-3. Para executar o exemplo em uma configuração de computador único ou entre computadores, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Para executar o exemplo em uma configuração de computador único ou entre computadores, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md).
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Para executar o exemplo no mesmo computador
 
@@ -121,7 +121,7 @@ Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lot
 
 2. Inicie o Service. exe em \service\bin.
 
-3. Inicie o Client.exe no \client\bin. A atividade do cliente é exibida no aplicativo de console do cliente.
+3. Inicie o Client. exe em \client\bin. A atividade do cliente é exibida no aplicativo de console do cliente.
 
 4. Se o cliente e o serviço não puderem se comunicar, consulte [dicas de solução de problemas para exemplos do WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
@@ -135,12 +135,12 @@ Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lot
 
     3. Copie os arquivos Setup. bat e Cleanup. bat para o computador de serviço.
 
-    4. Execute o seguinte comando em um Prompt de Comando do Desenvolvedor para Visual Studio aberto com privilégios de administrador `Setup.bat service`:. Isso cria o certificado de serviço com o nome da entidade correspondente ao nome do computador em que o arquivo em lotes foi executado.
+    4. Execute o seguinte comando em um Prompt de Comando do Desenvolvedor para Visual Studio aberto com privilégios de administrador: `Setup.bat service` . Isso cria o certificado de serviço com o nome da entidade correspondente ao nome do computador em que o arquivo em lotes foi executado.
 
         > [!NOTE]
         > O arquivo em lotes setup. bat foi projetado para ser executado em um prompt de comando do Visual Studio 2010. Ele requer que a variável de ambiente Path aponte para o diretório em que o SDK está instalado. Essa variável de ambiente é definida automaticamente em um prompt de comando do Visual Studio 2010.
 
-    5. Altere o [ \<>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) de serviço dentro do arquivo Service. exe. config para refletir o nome da entidade do certificado gerado na etapa anterior.
+    5. Altere o [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) dentro do arquivo Service. exe. config para refletir o nome da entidade do certificado gerado na etapa anterior.
 
     6. Execute o Service. exe em um prompt de comando.
 
@@ -150,7 +150,7 @@ Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lot
 
     2. Execute Cleanup. bat para remover quaisquer certificados antigos de exemplos anteriores.
 
-    3. Exporte o certificado do serviço abrindo um prompt de comando do desenvolvedor para o Visual Studio com privilégios administrativos e executando o seguinte comando no computador do serviço (substitua `%SERVER_NAME%` pelo nome totalmente qualificado do computador em que o serviço está em execução):
+    3. Exporte o certificado do serviço abrindo um Prompt de Comando do Desenvolvedor para o Visual Studio com privilégios administrativos e executando o seguinte comando no computador do serviço (substitua `%SERVER_NAME%` pelo nome totalmente qualificado do computador em que o serviço está em execução):
 
         ```console
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
@@ -158,7 +158,7 @@ Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lot
 
     4. Copie% SERVER_NAME%. cer para o computador cliente (substitua% SERVER_NAME% pelo nome totalmente qualificado do computador em que o serviço está em execução).
 
-    5. Importe o certificado do serviço abrindo um Prompt de Comando do Desenvolvedor para o Visual Studio com privilégios administrativos e executando o seguinte comando no computador cliente (substitua% SERVER_NAME% pelo nome totalmente qualificado do computador em que o serviço em execução):
+    5. Importe o certificado do serviço abrindo um Prompt de Comando do Desenvolvedor para o Visual Studio com privilégios administrativos e executando o seguinte comando no computador cliente (substitua% SERVER_NAME% pelo nome totalmente qualificado do computador em que o serviço está em execução):
 
         ```console
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
@@ -179,7 +179,7 @@ Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lot
         </client>
         ```
 
-    7. Se o serviço estiver sendo executado em uma conta diferente da conta NetworkService ou LocalSystem em um ambiente de domínio, talvez seja necessário modificar a identidade do ponto de extremidade para o ponto de extremidade de serviço dentro do arquivo app. config do cliente para definir o UPN ou o SPN apropriado com base na conta que é usada para executar o serviço. Para obter mais informações sobre a identidade do ponto de extremidade, consulte o tópico [identidade e autenticação de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) .
+    7. Se o serviço estiver sendo executado em uma conta diferente da conta NetworkService ou LocalSystem em um ambiente de domínio, talvez seja necessário modificar a identidade do ponto de extremidade para o ponto de extremidade de serviço dentro do arquivo app. config do cliente para definir o UPN ou o SPN apropriado com base na conta usada para executar o serviço. Para obter mais informações sobre a identidade do ponto de extremidade, consulte o tópico [identidade e autenticação de serviço](../feature-details/service-identity-and-authentication.md) .
 
     8. Execute Client. exe em um prompt de comando.
 

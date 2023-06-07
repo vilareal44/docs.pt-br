@@ -1,15 +1,16 @@
 ---
-title: Como serializar usando DataContractSerializer (C#)
+title: Como serializar usando o DataContractSerializer (C#)
+description: Saiba como serializar objetos usando o DataContractSerializer. Veja um exemplo que cria objetos, serializa-os em arquivos de texto e, em seguida, os desserializa.
 ms.date: 07/20/2015
 ms.assetid: 3320ecbf-cdbe-480e-979c-2c14bbef9988
-ms.openlocfilehash: 0b6d35a2f73ac512f05341f5aaffa61484657576
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b713f36cde594f7cd7011073345d33c6f46585e0
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168694"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301522"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-c"></a>Como serializar usando DataContractSerializer (C#)
+# <a name="how-to-serialize-using-datacontractserializer-c"></a>Como serializar usando o DataContractSerializer (C#)
 Este tópico mostra um exemplo que serialize e desserializa usando <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 ## <a name="example"></a>Exemplo  

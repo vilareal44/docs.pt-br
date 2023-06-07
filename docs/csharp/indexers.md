@@ -4,12 +4,12 @@ description: Saiba mais sobre indexadores C# e como implementar propriedades ind
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: e9b1cb18157982f068f1c1e4546e637f2bd707cb
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 1369740404c500d8b44b4706959bf4640c26aa2d
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394693"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656105"
 ---
 # <a name="indexers"></a>Indexadores
 
@@ -46,7 +46,7 @@ A presença dos argumentos para referenciar um item em um conjunto de itens dist
 Você deve definir *indexadores* em seu tipo quando a API do tipo modela alguma coleção na qual você define os argumentos para essa coleção. Seu indexadores podem ou não mapear diretamente para os tipos de coleção que fazem parte da estrutura principal do .NET. O tipo pode ter outras responsabilidades, além da modelagem de uma coleção.
 Os indexadores permitem que você forneça a API que corresponda à abstração do tipo, sem expor os detalhes internos de como os valores dessa abstração são armazenados ou computados.
 
-Vamos examinar alguns dos cenários comuns de uso de *indexadores*. Você pode acessar a [pasta de exemplo para indexadores](https://github.com/dotnet/samples/tree/master/csharp/indexers). Para obter instruções de download, consulte [Exemplos e tutoriais](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Vamos examinar alguns dos cenários comuns de uso de *indexadores*. Você pode acessar a [pasta de exemplo para indexadores](https://github.com/dotnet/samples/tree/master/csharp/indexers). Para obter instruções de download, consulte [Exemplos e tutoriais](../samples-and-tutorials/index.md#view-and-download-samples).
 
 ### <a name="arrays-and-vectors"></a>Matrizes e vetores
 

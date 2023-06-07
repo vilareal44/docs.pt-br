@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30560
 ms.assetid: 7f032293-054b-4eae-8d97-3db8e7ddde3b
-ms.openlocfilehash: 6171572176d53562a1baeb8d8602113f6abf9c43
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0fd07e4b777bdf48fa07eac7ef49dfb92aae522f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665723"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397188"
 ---
-# <a name="name-is-ambiguous-in-the-namespace-namespacename"></a>'\<nome >' é ambíguo no namespace '\<namespacename >'
-Você forneceu um nome que é ambíguo e, portanto, entra em conflito com outro nome. O compilador do Visual Basic não tem nenhuma regra de resolução de conflitos; Você deve resolver a ambiguidade de nomes por conta própria.  
+# <a name="name-is-ambiguous-in-the-namespace-namespacename"></a>'\<name>' é ambíguo no namespace '\<namespacename>'
+Você forneceu um nome ambíguo e, portanto, está em conflito com outro nome. O compilador Visual Basic não tem nenhuma regra de resolução de conflitos; Você mesmo deve eliminar a ambiguidade dos nomes.  
   
  **ID do erro:** BC30560  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Qualifica totalmente o nome.  
+- Qualifique totalmente o nome.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Namespaces no Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [Instrução Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Namespaces no Visual Basic](../../programming-guide/program-structure/namespaces.md)
+- [Instrução Namespace](../statements/namespace-statement.md)

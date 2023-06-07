@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML literals [Visual Basic]
 - XML literals [Visual Basic], modifying
 ms.assetid: 4e864522-a37a-43a2-8236-af80277c5482
-ms.openlocfilehash: 99ec35addcb9fc8d886c9151cde87227b5113eb9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a2ac2e9802d4c8ab522bb430d15cce5616430437
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330852"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374869"
 ---
 # <a name="how-to-modify-xml-literals-visual-basic"></a>Como modificar literais XML (Visual Basic)
 
@@ -19,9 +19,9 @@ Visual Basic fornece maneiras convenientes de modificar literais XML. Você pode
 
 ### <a name="to-modify-the-value-of-an-xml-literal"></a>Para modificar o valor de um literal XML
 
-1. Para modificar o valor de um literal XML, obtenha uma referência para o literal XML e defina a propriedade `Value` como o valor desejado.
+1. Para modificar o valor de um literal XML, obtenha uma referência para o literal XML e defina a `Value` propriedade para o valor desejado.
 
-    O exemplo de código a seguir atualiza o valor de todos os \<os elementos de > de preço em um documento XML.
+    O exemplo de código a seguir atualiza o valor de todos os \<Price> elementos em um documento XML.
 
     [!code-vb[VbXmlSamples2#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#4)]
 
@@ -64,11 +64,11 @@ Visual Basic fornece maneiras convenientes de modificar literais XML. Você pode
     ```
 
     > [!NOTE]
-    > A propriedade `Value` refere-se ao primeiro elemento XML em uma coleção. Se houver mais de um elemento que tenha o mesmo nome em uma coleção, definir a propriedade `Value` afetará apenas o primeiro elemento na coleção.
+    > A `Value` Propriedade refere-se ao primeiro elemento XML em uma coleção. Se houver mais de um elemento que tenha o mesmo nome em uma coleção, a definição da `Value` propriedade afetará apenas o primeiro elemento da coleção.
 
 ### <a name="to-add-an-attribute-to-an-xml-literal"></a>Para adicionar um atributo a um literal XML
 
-1. Para adicionar um atributo a um literal XML, primeiro obtenha uma referência para o literal XML. Em seguida, você pode adicionar um atributo adicionando uma nova propriedade de eixo de atributo XML. Você também pode adicionar um novo objeto <xref:System.Xml.Linq.XAttribute> ao literal XML usando o método <xref:System.Xml.Linq.XContainer.Add%2A>. O exemplo a seguir mostra as duas opções.
+1. Para adicionar um atributo a um literal XML, primeiro obtenha uma referência para o literal XML. Em seguida, você pode adicionar um atributo adicionando uma nova propriedade de eixo de atributo XML. Você também pode adicionar um novo <xref:System.Xml.Linq.XAttribute> objeto ao literal XML usando o <xref:System.Xml.Linq.XContainer.Add%2A> método. O exemplo a seguir mostra as duas opções.
 
     [!code-vb[VbXmlSamples2#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#5)]
 
@@ -110,13 +110,13 @@ Visual Basic fornece maneiras convenientes de modificar literais XML. Você pode
     </Catalog>
     ```
 
-    Para obter mais informações sobre propriedades do eixo de atributo XML, consulte [Propriedade do eixo de atributo XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md).
+    Para obter mais informações sobre propriedades do eixo de atributo XML, consulte [Propriedade do eixo de atributo XML](../../../language-reference/xml-axis/xml-attribute-axis-property.md).
 
 ### <a name="to-add-an-element-to-an-xml-literal"></a>Para adicionar um elemento a um literal XML
 
-1. Para adicionar um elemento a um literal XML, primeiro obtenha uma referência para o literal XML. Em seguida, você pode adicionar um novo objeto <xref:System.Xml.Linq.XElement> como o último subelemento do elemento usando o método <xref:System.Xml.Linq.XContainer.Add%2A>. Você pode adicionar um novo objeto <xref:System.Xml.Linq.XElement> como o primeiro subelemento usando o método <xref:System.Xml.Linq.XContainer.AddFirst%2A>.
+1. Para adicionar um elemento a um literal XML, primeiro obtenha uma referência para o literal XML. Em seguida, você pode adicionar um novo <xref:System.Xml.Linq.XElement> objeto como o último subelemento do elemento usando o <xref:System.Xml.Linq.XContainer.Add%2A> método. Você pode adicionar um novo <xref:System.Xml.Linq.XElement> objeto como o primeiro subelemento usando o <xref:System.Xml.Linq.XContainer.AddFirst%2A> método.
 
-    Para adicionar um novo elemento em um local específico em relação a outros subelementos, primeiro obtenha uma referência a um sub-elemento adjacente. Em seguida, você pode adicionar o novo objeto <xref:System.Xml.Linq.XElement> antes do subelemento adjacente usando o método <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>. Você também pode adicionar o novo objeto <xref:System.Xml.Linq.XElement> após o subelemento adjacente usando o método <xref:System.Xml.Linq.XNode.AddAfterSelf%2A>.
+    Para adicionar um novo elemento em um local específico em relação a outros subelementos, primeiro obtenha uma referência a um sub-elemento adjacente. Em seguida, você pode adicionar o novo <xref:System.Xml.Linq.XElement> objeto antes do subelemento adjacente usando o <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A> método. Você também pode adicionar o novo <xref:System.Xml.Linq.XElement> objeto após o subelemento adjacente usando o <xref:System.Xml.Linq.XNode.AddAfterSelf%2A> método.
 
     O exemplo a seguir mostra exemplos de cada uma dessas técnicas.
 
@@ -166,7 +166,7 @@ Visual Basic fornece maneiras convenientes de modificar literais XML. Você pode
 
 ### <a name="to-remove-an-element-or-attribute-from-an-xml-literal"></a>Para remover um elemento ou atributo de um literal XML
 
-1. Para remover um elemento ou um atributo de um literal XML, obtenha uma referência para o elemento ou atributo e chame o método `Remove`, conforme mostrado no exemplo a seguir.
+1. Para remover um elemento ou um atributo de um literal XML, obtenha uma referência para o elemento ou atributo e chame o `Remove` método, conforme mostrado no exemplo a seguir.
 
     [!code-vb[VbXmlSamples2#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#7)]
 
@@ -210,15 +210,15 @@ Visual Basic fornece maneiras convenientes de modificar literais XML. Você pode
       </Book></Catalog>
     ```
 
-    Para remover todos os elementos ou atributos de um literal XML, obtenha uma referência para o literal XML e chame o método <xref:System.Xml.Linq.XElement.RemoveAll%2A>.
+    Para remover todos os elementos ou atributos de um literal XML, obtenha uma referência para o literal XML e chame o <xref:System.Xml.Linq.XElement.RemoveAll%2A> método.
 
 ### <a name="to-modify-an-xml-literal"></a>Para modificar um literal XML
 
-1. Para alterar o nome de um elemento XML, primeiro obtenha uma referência para o elemento. Em seguida, você pode criar um novo objeto de <xref:System.Xml.Linq.XElement> que tem um novo nome e passar o novo objeto de <xref:System.Xml.Linq.XElement> para o método <xref:System.Xml.Linq.XNode.ReplaceWith%2A> do objeto <xref:System.Xml.Linq.XElement> existente.
+1. Para alterar o nome de um elemento XML, primeiro obtenha uma referência para o elemento. Você pode criar um novo <xref:System.Xml.Linq.XElement> objeto que tem um novo nome e passar o novo <xref:System.Xml.Linq.XElement> objeto para o <xref:System.Xml.Linq.XNode.ReplaceWith%2A> método do objeto existente <xref:System.Xml.Linq.XElement> .
 
-    Se o elemento que você está substituindo tiver subelementos que devam ser preservados, defina o valor do novo objeto <xref:System.Xml.Linq.XElement> como a propriedade <xref:System.Xml.Linq.XContainer.Nodes%2A> do elemento existente. Isso definirá o valor do novo elemento como o XML interno do elemento existente. Caso contrário, você pode definir o valor do novo elemento como a propriedade `Value` do elemento existente.
+    Se o elemento que você está substituindo tiver subelementos que devam ser preservados, defina o valor do novo <xref:System.Xml.Linq.XElement> objeto como a <xref:System.Xml.Linq.XContainer.Nodes%2A> Propriedade do elemento existente. Isso definirá o valor do novo elemento como o XML interno do elemento existente. Caso contrário, você pode definir o valor do novo elemento como a `Value` Propriedade do elemento existente.
 
-    O exemplo de código a seguir substitui todos os elementos de > de descrição de \<por um elemento de > abstrato \<. O conteúdo da descrição de \<> elemento é preservado no novo \<abstrato > elemento usando a propriedade <xref:System.Xml.Linq.XContainer.Nodes%2A> do objeto \<Descrição >.<xref:System.Xml.Linq.XElement>
+    O exemplo de código a seguir substitui todos os \<Description> elementos por um \<Abstract> elemento. O conteúdo do \<Description> elemento é preservado no novo \<Abstract> elemento usando a <xref:System.Xml.Linq.XContainer.Nodes%2A> Propriedade do \<Description> <xref:System.Xml.Linq.XElement> objeto.
 
     [!code-vb[VbXmlSamples2#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#8)]
 
@@ -286,10 +286,10 @@ Visual Basic fornece maneiras convenientes de modificar literais XML. Você pode
     </Catalog>
     ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Manipulando XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
-- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [Como carregar XML de um arquivo, cadeia de caracteres ou fluxo](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Manipulando XML no Visual Basic](manipulating-xml.md)
+- [XML](index.md)
+- [Como carregar XML a partir de um arquivo, cadeia de caracteres ou fluxo](how-to-load-xml-from-a-file-string-or-stream.md)
+- [LINQ](../linq/index.md)
+- [Introdução a LINQ no Visual Basic](../linq/introduction-to-linq.md)

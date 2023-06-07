@@ -1,5 +1,6 @@
 ---
 title: Semaphore e SemaphoreSlim
+description: Saiba mais sobre o Semaphore & SemaphoreSlim. O semáforo de classe é um wrapper fino em volta do objeto de semáforo do Win32. A classe SemaphoreSlim é um semáforo rápido.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-ms.openlocfilehash: b9f7c122ac8acf34f740aca5f0fafc162edcea82
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 21f0d7e3fb446a7b750c45cfe8ef3f087a77888a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127580"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600445"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore e SemaphoreSlim
 A classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> representa um sinal com nome (em todo o sistema) ou local. É um wrapper fino em torno do objeto de sinal Win32. Sinais do Win32 são contagem de sinais que podem ser usadas para controlar o acesso a um pool de recursos.  
@@ -44,8 +45,8 @@ A classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> represen
   
  Use a segurança de controle de acesso para proteger um objeto <xref:System.Threading.Semaphore> que representa um sinal com nome, preferencialmente usando um construtor que especifica um objeto <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType>. Também é possível aplicar a segurança de controle de acesso usando o método <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType>, mas isso deixa uma janela de vulnerabilidade entre o momento em que o sinal é criado e o momento em que ele é protegido. Proteger sinais com a segurança de controle de acesso ajuda a impedir ataques mal-intencionados, mas não resolve o problema de colisão de nome não intencional.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Threading.Semaphore>
 - <xref:System.Threading.SemaphoreSlim>
-- [Objetos e recursos de rosca](../../../docs/standard/threading/threading-objects-and-features.md)
+- [Objetos e recursos de Threading](threading-objects-and-features.md)

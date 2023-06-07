@@ -1,5 +1,6 @@
 ---
 title: Especificando um conjunto de caracteres
+description: Saiba como especificar um conjunto de caracteres que usa codificação estreita (ANSI) ou larga (Unicode). Alternativamente, você pode especificar a seleção automática de tempo de execução.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +11,15 @@ helpviewer_keywords:
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-ms.openlocfilehash: 0db1cd8d75b45f6d718168793c873e5867028269
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 789753742d8714e481f038e323407cbab0499f6c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125172"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309788"
 ---
-# <a name="specifying-a-character-set"></a>Especificando um conjunto de caracteres
+# <a name="specify-a-character-set"></a>Especificar um conjunto de caracteres
+
 O campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> controla o marshaling de cadeia de caracteres e determina como a invocação de plataforma localiza os nomes de função em uma DLL. Este tópico descreve os dois comportamentos.  
   
  Algumas APIs exportam duas versões de funções que usam argumentos de cadeia de caracteres: estreita (ANSI) e larga (Unicode). A API do Windows, por exemplo, inclui os seguintes nomes do ponto de entrada para a função **MessageBox**:  
@@ -61,11 +63,12 @@ O campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayP
   
 - A invocação de plataforma escolhe entre os formatos ANSI e Unicode em tempo de execução, com base na plataforma de destino.  
   
-## <a name="specifying-a-character-set-in-visual-basic"></a>Especificando um conjunto de caracteres no Visual Basic  
- O exemplo a seguir declara a função **MessageBox** três vezes, cada vez com um comportamento diferente do conjunto de caracteres. É possível especificar o comportamento do conjunto de caracteres no Visual Basic adicionando a palavra-chave **Ansi**, **Unicode** ou **Auto** à instrução de declaração.  
-  
- Se você omitir a palavra-chave do conjunto de caracteres, como é feito na primeira instrução de declaração, o campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> usará como padrão o conjunto de caracteres ANSI. A segunda e a terceira instruções no exemplo especificam explicitamente um conjunto de caracteres com uma palavra-chave.  
-  
+## <a name="specify-a-character-set-in-visual-basic"></a>Especifique um conjunto de caracteres em Visual Basic
+
+Você pode especificar o comportamento do conjunto de caracteres no Visual Basic adicionando `Ansi` a `Unicode` `Auto` palavra-chave, ou à instrução de declaração. Se você omitir a palavra-chave de conjunto de caracteres, o <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> campo usa como padrão o conjunto de caracteres ANSI.
+
+O exemplo a seguir declara a função **MessageBox** três vezes, cada vez com um comportamento diferente do conjunto de caracteres. A primeira instrução omite a palavra-chave de conjunto de caracteres, de modo que o conjunto de caracteres usa ANSI como padrão. A segunda e terceira instruções especificam explicitamente um conjunto de caracteres com uma palavra-chave.
+
 ```vb
 Friend Class NativeMethods
     Friend Declare Function MessageBoxA Lib "user32.dll" (
@@ -88,8 +91,9 @@ Friend Class NativeMethods
 End Class
 ```
   
-## <a name="specifying-a-character-set-in-c-and-c"></a>Especificando um conjunto de caracteres no C# e no C++  
- O campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> identifica o conjunto de caracteres subjacente como ANSI ou Unicode. O conjunto de caracteres controla como deve ser realizado o marshaling dos argumentos de cadeia de caracteres para um método. Use um dos seguintes formatos para indicar o conjunto de caracteres:  
+## <a name="specify-a-character-set-in-c-and-c"></a>Especificar um conjunto de caracteres em C# e C++
+
+O campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> identifica o conjunto de caracteres subjacente como ANSI ou Unicode. O conjunto de caracteres controla como deve ser realizado o marshaling dos argumentos de cadeia de caracteres para um método. Use um dos seguintes formatos para indicar o conjunto de caracteres:  
   
 ```csharp
 [DllImport("DllName", CharSet = CharSet.Ansi)]

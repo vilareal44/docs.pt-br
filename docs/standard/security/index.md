@@ -1,38 +1,38 @@
 ---
 title: Segurança no .NET
-ms.date: 06/04/2018
+description: Saiba mais sobre segurança no .NET. Siga os links que descrevem os principais conceitos de segurança, a segurança baseada em função, o modelo de criptografia e as diretrizes de codificação segura.
+ms.date: 07/15/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - .NET, security
 - security [.NET], about security
 - application development [.NET], security
-- security [.NET Framework]
 - security [.NET]
 ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
-ms.openlocfilehash: 2e4c289d7049fb587cdc9a4928f98852483fde5f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 783cb8274d1fafe85d58758a36fae5d671f656f8
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705987"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557106"
 ---
 # <a name="security-in-net"></a>Segurança no .NET
 
-O Common Language Runtime e o .NET fornecem muitas classes e serviços úteis que permitem aos desenvolvedores escrever facilmente código seguro e permitir que os administradores do sistema personalizem as permissões concedidas ao código para que ele possa acessar recursos protegidos. Além disso, o tempo de execução e o .NET fornecem classes e serviços úteis que facilitam o uso da criptografia e da segurança baseada em funções.
+O Common Language Runtime e o .NET fornecem muitas classes e serviços úteis que permitem aos desenvolvedores escrever código seguro, usar criptografia e implementar a segurança baseada em funções.
 
 ## <a name="in-this-section"></a>Nesta seção
 
-- [Principais conceitos de segurança](key-security-concepts.md)  
-Fornece uma visão geral dos recursos de segurança do Common Language Runtime. Esta seção é de interesse dos desenvolvedores e administradores de sistema.
+- [Conceitos principais de segurança](key-security-concepts.md)  
+Fornece uma visão geral dos recursos de segurança do Common Language Runtime.
 
-- [Segurança baseada em Função](role-based-security.md)  
-Descreve como interagir com a segurança baseada em função no seu código. Esta seção é de interesse dos desenvolvedores.
+- [Segurança baseada em função](role-based-security.md)  
+Descreve como interagir com a segurança baseada em função no seu código.
 
 - [Modelo de criptografia](cryptography-model.md)  
-Fornece uma visão geral dos serviços de criptografia fornecidos pelo .NET. Esta seção é de interesse dos desenvolvedores.
+Fornece uma visão geral dos serviços de criptografia fornecidos pelo .NET.
 
 - [Diretrizes de codificação segura](secure-coding-guidelines.md)  
-Descreve algumas das práticas recomendadas para a criação de aplicativos .NET confiáveis. Esta seção é de interesse dos desenvolvedores.
+Descreve algumas das práticas recomendadas para a criação de aplicativos .NET confiáveis.
 
 ## <a name="related-sections"></a>Seções relacionadas
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3546316-e24d-417f-9909-e45d42c9d471
 topic_type:
 - apiref
-ms.openlocfilehash: 57df124f15f78daad053d9634e1baa969a65cc35
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6f273cb03ad00957afb2bd78fe538a940fae236a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175272"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501229"
 ---
 # <a name="imetadatatablesgetguid-method"></a>Método IMetaDataTables::GetGuid
 Obtém um GUID da linha no índice especificado.  
@@ -34,27 +34,27 @@ HRESULT GetGuid (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ixGuid`  
- [em] O índice da linha a partir do qual obter o GUID.  
+ no O índice da linha da qual obter o GUID.  
   
  `ppGuid`  
- [fora] Um ponteiro para um ponteiro para o GUID.  
+ fora Um ponteiro para um ponteiro para o GUID.  
   
 ## <a name="remarks"></a>Comentários  
 
-  Não recomendamos o uso deste método, pois ele não retorna resultados consistentes. Para obter informações sobre a tabela GUID, consulte a documentação da Infra-estrutura de linguagem comum (CLI), especialmente "Partição II: Definição de Metadados e Semântica". A documentação está disponível online; consulte [ECMA C# e Padrões de infra-estrutura de linguagem comum](../../../standard/components.md#applicable-standards) e [Padrão ECMA-335 - Infra-estrutura de linguagem comum (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+  Não recomendamos o uso desse método, pois ele não retorna resultados consistentes. Para obter informações sobre a tabela de GUID, consulte a documentação de Common Language Infrastructure (CLI), especialmente "partição II: definição de metadados e semântica". A documentação está disponível online; consulte [padrões ECMA C# e Common Language Infrastructure](../../../standard/components.md#applicable-standards) e o [padrão ECMA-335-Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [Interface IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [Interface IMetaDataTables](imetadatatables-interface.md)
+- [Interface IMetaDataTables2](imetadatatables2-interface.md)

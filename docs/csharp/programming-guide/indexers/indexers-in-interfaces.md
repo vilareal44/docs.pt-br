@@ -1,25 +1,26 @@
 ---
 title: Indexadores em interfaces – Guia de Programação em C#
+description: Indexadores podem ser declarados em uma interface em C#. Saiba como os acessadores de indexadores de interface diferem dos acessadores de indexadores de classe.
 ms.date: 02/08/2020
 helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: 667a4213626ee37bfc5bf8c4fe78c2cf7186a73e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec77843bdf3181a543bd6c02cfb034b21ded1ae7
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77627832"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303095"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>Indexadores em interfaces (Guia de Programação em C#)
 
 Os indexadores podem ser declarados em uma [interface](../../language-reference/keywords/interface.md). Acessadores de indexadores de interface diferem dos acessadores de indexadores de [classe](../../language-reference/keywords/class.md) das seguintes maneiras:
 
 - Os acessadores de interface não usam modificadores.
-- Um acessório de interface normalmente não tem um corpo.
+- Um acessador de interface normalmente não tem um corpo.
 
-O objetivo do acessório é indicar se o indexador é leitura-gravação, somente leitura ou somente gravação. Você pode fornecer uma implementação para um indexador definido em uma interface, mas isso é raro. Os indexadores normalmente definem uma API para acessar campos de dados, e os campos de dados não podem ser definidos em uma interface.
+A finalidade do acessador é indicar se o indexador é de leitura/gravação, somente leitura ou somente gravação. Você pode fornecer uma implementação para um indexador definido em uma interface, mas isso é raro. Normalmente, os indexadores definem uma API para acessar os campos de dados e os campos de dados não podem ser definidos em uma interface.
 
 Este é um exemplo de um acessador de indexador de interface:
 
@@ -49,9 +50,9 @@ No entanto, o nome totalmente qualificado só será necessário para evitar ambi
 string IEmployee.this[int index]
 {
 }
-``
+```
 
-implements the indexer on the `IEmployee` interface, while the following declaration:
+implementa o indexador na interface `IEmployee`, enquanto a seguinte declaração:
 
 ```csharp
 string ICitizen.this[int index]
@@ -61,9 +62,9 @@ string ICitizen.this[int index]
 
 implementa o indexador na interface `ICitizen`.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Indexadores](./index.md)
 - [Propriedades](../classes-and-structs/properties.md)
 - [Interfaces](../interfaces/index.md)

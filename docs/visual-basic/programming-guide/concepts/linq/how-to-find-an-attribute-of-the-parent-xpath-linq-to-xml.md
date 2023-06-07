@@ -1,13 +1,13 @@
 ---
-title: 'Como: Localizar um atributo do pai (XPath- LINQ para XML)'
+title: 'Como: localizar um atributo do pai (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 9d2572fd-27d4-426c-b079-16854cb9ec7d
-ms.openlocfilehash: c4cb2f2e52aeaa42fd69b83c19c47fd205d48cbc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 98b6e0e55390a2be13968e455321311661d81e84
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352951"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405294"
 ---
 # <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>Como localizar um atributo do pai (XPath-LINQ to XML) (Visual Basic)
 Este tópico mostra como navegar para o elemento pai e localizar um atributo deles.  
@@ -19,7 +19,7 @@ Este tópico mostra como navegar para o elemento pai e localizar um atributo del
 ## <a name="example"></a>Exemplo  
  Este exemplo localiza primeiro um elemento de `Author` . Localiza no atributo de `id` de elemento pai.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: livros (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: livros (LINQ to XML)](sample-xml-file-books-linq-to-xml.md).  
   
 ```vb  
 Dim books As XDocument = XDocument.Load("Books.xml")  
@@ -40,13 +40,13 @@ End If
 Console.WriteLine(att1)  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```console  
 Results are identical  
 id="bk101"  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [LINQ to XML para usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para usuários do XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

@@ -3,13 +3,13 @@ title: <TypeParameter> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
 ms.openlocfilehash: c69b535f3a01c287d30189138130066fc10a77e2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128919"
 ---
-# <a name="typeparameter-element-net-native"></a>\<elemento de > TypeParameter (.NET Native)
+# <a name="typeparameter-element-net-native"></a>\<TypeParameter> (.NET Nativo)
 Aplica a política ao tipo representado por um argumento Type passado para um método.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -57,10 +57,10 @@ Aplica a política ao tipo representado por um argumento Type passado para um m�
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*policy_setting*|A configuração a ser aplicada a este tipo de política. Os valores possíveis são `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md).|  
+|*policy_setting*|A configuração a ser aplicada a este tipo de política. Os valores possíveis são `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -69,7 +69,7 @@ Aplica a política ao tipo representado por um argumento Type passado para um m�
 |[\<Method>](method-element-net-native.md)|Aplica a política de reflexão de runtime a um construtor ou método.|  
   
 ## <a name="remarks"></a>Comentários  
- O elemento `<TypeParameter>` é semelhante ao elemento [\<Parameter>](parameter-element-net-native.md), exceto pelo fato que ele pode ser aplicado somente aos parâmetros do tipo <xref:System.Type>. Ele aplica a política a qualquer tipo que é representado no tempo de execução pelo argumento do tipo especificado pelo atributo `Name`.  
+ O `<TypeParameter>` elemento é semelhante ao [\<Parameter>](parameter-element-net-native.md) elemento, exceto que ele só pode ser aplicado a parâmetros do tipo <xref:System.Type> . Ele aplica a política a qualquer tipo que é representado no tempo de execução pelo argumento do tipo especificado pelo atributo `Name`.  
   
  Por exemplo, o serializador NewtonSoft JSON inclui um método `JsonConvert.DeserializeObject(String value, Type type)` estático. As seguintes diretivas de reflexão:  
   
@@ -83,7 +83,7 @@ Aplica a política ao tipo representado por um argumento Type passado para um m�
 </Directives>  
 ```  
   
- especificam que os metadados para o tipo de tempo de execução representado pelo argumento `type` deve ser disponibilizado para serialização. Se essas diretivas de runtime para um projeto que inclui o seguinte código-fonte:  
+ especificam que os metadados para o tipo de runtime representado pelo argumento `type` deve ser disponibilizado para serialização. Se essas diretivas de runtime para um projeto que inclui o seguinte código-fonte:  
   
 ```csharp  
 Type t = typeof(StockQuote);  
@@ -92,9 +92,9 @@ Object obj = JsonConvert.DeserializeObject(data, t);
   
  as diretivas de reflexão disponibilizam os metadados para o tipo `StockQuote` disponível para o serializador NewtonSoft JSON no tempo de execução.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Elemento \<Method>](method-element-net-native.md)
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
-- [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md)
-- [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)
+- [\<Method>Elementos](method-element-net-native.md)
+- [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md)
+- [Elementos da diretiva de runtime](runtime-directive-elements.md)

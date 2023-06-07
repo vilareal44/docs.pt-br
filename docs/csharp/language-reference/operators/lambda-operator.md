@@ -7,34 +7,34 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 15c02e11610866f359e3e3a7e2751ded918154b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 30e1a3546f83a0a1ba5b1363238878868e94ab93
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846240"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063127"
 ---
 # <a name="-operator-c-reference"></a>Operador => (referência do C#)
 
-O `=>` token é suportado em duas formas: como [operador de lambda](#lambda-operator) e como separador de um nome de membro e a implementação do membro em uma [definição de corpo de expressão](#expression-body-definition).
+O `=>` token tem suporte em duas formas: como o [operador lambda](#lambda-operator) e como um separador de um nome de membro e a implementação de membro em uma [definição de corpo de expressão](#expression-body-definition).
 
 ## <a name="lambda-operator"></a>Operador lambda
 
-Em [expressões lambda,](../../programming-guide/statements-expressions-operators/lambda-expressions.md)o `=>` operador lambda separa os parâmetros de entrada do lado esquerdo do corpo lambda do lado direito.
+Em [expressões lambda](lambda-expressions.md), o operador lambda `=>` separa os parâmetros de entrada no lado esquerdo do corpo lambda no lado direito.
 
 O seguinte exemplo usa o recurso [LINQ](../../programming-guide/concepts/linq/index.md) com a sintaxe de método para demonstrar o uso de expressões lambda:
 
-[!code-csharp-interactive[infer types of input variables](snippets/LambdaOperator.cs#InferredTypes)]
+[!code-csharp-interactive[infer types of input variables](snippets/shared/LambdaOperator.cs#InferredTypes)]
 
-Os parâmetros de entrada de uma expressão lambda são fortemente digitados no momento da compilação. Quando o compilador pode inferir os tipos de parâmetros de entrada, como no exemplo anterior, você pode omiti-lo declarações de tipo. Se você precisar especificar o tipo de parâmetros de entrada, você deve fazer isso para cada parâmetro, como mostra o exemplo a seguir:
+Os parâmetros de entrada de uma expressão lambda são fortemente tipados no momento da compilação. Quando o compilador pode inferir os tipos de parâmetros de entrada, como no exemplo anterior, você pode omitir declarações de tipo. Se você precisar especificar o tipo de parâmetros de entrada, deverá fazer isso para cada parâmetro, como mostra o exemplo a seguir:
 
-[!code-csharp-interactive[specify types of input variables](snippets/LambdaOperator.cs#ExplicitTypes)]
+[!code-csharp-interactive[specify types of input variables](snippets/shared/LambdaOperator.cs#ExplicitTypes)]
 
 O exemplo a seguir mostra como definir uma expressão lambda sem parâmetros de entrada:
 
-[!code-csharp-interactive[without input variables](snippets/LambdaOperator.cs#WithoutInput)]
+[!code-csharp-interactive[without input variables](snippets/shared/LambdaOperator.cs#WithoutInput)]
 
-Para obter mais informações, consulte [expressões Lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md).
+Para obter mais informações, consulte [expressões lambda](lambda-expressions.md).
 
 ## <a name="expression-body-definition"></a>Definição de corpo da expressão
 
@@ -44,7 +44,7 @@ Uma definição de corpo da expressão tem a seguinte sintaxe geral:
 member => expression;
 ```
 
-em que `expression` é uma expressão válida. O tipo de retorno de `expression` deve ser implicitamente conversível para o tipo de retorno do membro. Se o tipo de `void` devolução do membro for ou se o membro `set` for `expression` um construtor, um finalizador ou um acessório de propriedade, deve ser uma expressão de [*declaração*](~/_csharplang/spec/statements.md#expression-statements), que pode ser de qualquer tipo.
+em que `expression` é uma expressão válida. O tipo de retorno de `expression` deve ser implicitamente conversível para o tipo de retorno do membro. Se o tipo de retorno do membro for `void` ou se o membro for um construtor, um finalizador ou um acessador de propriedade ou indexador `set` , `expression` deverá ser uma [*expressão de instrução*](~/_csharplang/spec/statements.md#expression-statements). Como o resultado da expressão é Descartado, o tipo de retorno dessa expressão pode ser qualquer tipo.
 
 O seguinte exemplo mostra uma definição de corpo da expressão para um método `Person.ToString`:
 
@@ -61,7 +61,7 @@ public override string ToString()
 }
 ```
 
-As definições do corpo de expressão para métodos, operadores e propriedades somente leitura são suportadas a partir de C # 6. As definições de corpo de expressão para construtores, finalizadores e acessórios de propriedade e indexadores são suportadas a partir de C# 7.0.
+As definições de corpo de expressão para métodos, operadores e propriedades somente leitura têm suporte a partir do C# 6. As definições de corpo de expressão para construtores, finalizadores e acessadores de propriedade e indexador têm suporte a partir do C# 7,0.
 
 Para obter mais informações, consulte [Membros aptos para expressão](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
 
@@ -69,11 +69,11 @@ Para obter mais informações, consulte [Membros aptos para expressão](../../pr
 
 O operador `=>` não pode ser sobrecarregado.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
-Para obter mais informações sobre o operador lambda, consulte a seção [expressões](~/_csharplang/spec/expressions.md#anonymous-function-expressions) de função Anônima da especificação do [idioma C#.](~/_csharplang/spec/introduction.md)
+Para obter mais informações sobre o operador lambda, consulte a seção [expressões de função anônimas](~/_csharplang/spec/expressions.md#anonymous-function-expressions) da [especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Referência do C#](../index.md)
-- [Operadores do C#](index.md)
+- [Referência de C#](../index.md)
+- [Operadores e expressões C#](index.md)

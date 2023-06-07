@@ -1,13 +1,14 @@
 ---
-title: Documento de WordprocessingML com Styles3
+title: Documento de WordprocessingML com estilos
+description: Este documento WordprocessingML de exemplo tem parágrafos formatados com estilos. Saiba mais sobre as partes do documento que pertencem a estilos.
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-ms.openlocfilehash: 10697744680276a40fb7a175e4c04920c9e3c243
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b799c1bee95d7d638e6a3210b4876ff036e088eb
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167862"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302198"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>Documento de WordprocessingML com estilos
 Um documentos mais complicados de WordprocessingML têm os parágrafos que são formatados com estilos.  

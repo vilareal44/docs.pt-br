@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5eaf3b4a-92b7-4d5b-97e0-1e83721e0052
 topic_type:
 - apiref
-ms.openlocfilehash: 306c1748b4997309ee15fb7751bc818b0287aaf0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b47d1559300a462ccda42bc88da43f66c1043ec
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177264"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491297"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>Método IMetaDataImport::GetEventProps
-Obtém informações de metadados para o evento representado pelo token de evento especificado, incluindo o tipo de declaração, os métodos de adicionar e remover para delegados e quaisquer sinalizadores e outros dados associados.  
+Obtém informações de metadados para o evento representado pelo token de evento especificado, incluindo o tipo declarativo, os métodos Add e remove para delegados e quaisquer sinalizadores e outros dados associados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,53 +45,53 @@ HRESULT GetEventProps (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ev`  
- [em] O token de metadados do evento representando o evento para obter metadados para.  
+ no O token de metadados do evento que representa o evento para o qual obter metadados.  
   
  `pClass`  
- [fora] Um ponteiro para o token TypeDef representando a classe que declara o evento.  
+ fora Um ponteiro para o token de TypeDef que representa a classe que declara o evento.  
   
  `szEvent`  
- [fora] O nome do evento `ev`referenciado por .  
+ fora O nome do evento referenciado por `ev` .  
   
  `pchEvent`  
- [em] O comprimento solicitado em `szEvent`caracteres amplos de .  
+ no O comprimento solicitado em caracteres largos de `szEvent` .  
   
  `pdwEventFlags`  
- [fora] O comprimento retornado em `szEvent`caracteres largos de .  
+ fora O comprimento retornado em caracteres largos de `szEvent` .  
   
  `ptkEventType`  
- [fora] Um ponteiro para um token de metadados TypeRef ou TypeDef representando o <xref:System.Delegate> tipo do evento.  
+ fora Um ponteiro para um token de metadados TypeRef ou TypeDef que representa o <xref:System.Delegate> tipo do evento.  
   
  `pmdAddOn`  
- [fora] Um ponteiro para o token de metadados representando o método que adiciona manipuladores para o evento.  
+ fora Um ponteiro para o token de metadados que representa o método que Adiciona manipuladores para o evento.  
   
  `pmdRemoveOn`  
- [fora] Um ponteiro para o token de metadados representando o método que remove manipuladores para o evento.  
+ fora Um ponteiro para o token de metadados que representa o método que remove manipuladores para o evento.  
   
  `pmdFire`  
- [fora] Um ponteiro para o token de metadados representando o método que levanta o evento.  
+ fora Um ponteiro para o token de metadados que representa o método que gera o evento.  
   
  `rmdOtherMethod`  
- [fora] Uma matriz de ponteiros de token para outros métodos associados ao evento.  
+ fora Uma matriz de ponteiros de token para outros métodos associados ao evento.  
   
  `cMax`  
- [em] O tamanho máximo `rmdOtherMethod` da matriz.  
+ no O tamanho máximo da `rmdOtherMethod` matriz.  
   
  `pcOtherMethod`  
- [fora] O número de tokens `rmdOtherMethod`retornou em .  
+ fora O número de tokens retornados em `rmdOtherMethod` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

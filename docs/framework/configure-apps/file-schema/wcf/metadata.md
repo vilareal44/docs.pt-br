@@ -3,19 +3,19 @@ title: <metadata>
 ms.date: 03/30/2017
 ms.assetid: d09653eb-e355-4c73-b87b-28f93d56480d
 ms.openlocfilehash: 028e4d3fbe7bce06caa7497c8f95f3b293a4b068
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855233"
 ---
-# <a name="metadata"></a>\<> de metadados
+# \<metadata>
 Especifica como os metadados de serviço podem ser processados.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> do cliente**](client.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de metadados**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<client>**](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<metadata>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,7 +38,7 @@ Especifica como os metadados de serviço podem ser processados.
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -53,7 +53,7 @@ Especifica como os metadados de serviço podem ser processados.
 |-------------|-----------------|  
 |[\<client>](client.md)|A seção cliente define uma lista de pontos de extremidade aos quais um cliente pode se conectar.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Configuration.MetadataElement>
 - <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>

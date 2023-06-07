@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30494
 ms.assetid: 27270ec3-82a4-4693-a948-dd4664a5f060
-ms.openlocfilehash: 3baf2ec11db72102439b86e151be80d3031cc5d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 39be6c90479becb32257bad5803ff1e2c5464f9d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661938"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397305"
 ---
 # <a name="line-is-too-long"></a>A linha é muito longa
-Linhas de texto de origem não podem exceder 65.535 caracteres.  
+As linhas de texto de origem não podem exceder 65535 caracteres.  
   
  **ID do erro:** BC30494  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Reduza o comprimento da linha para 65535 caracteres ou menos.  
+- Reduza o comprimento da linha até 65535 caracteres ou menos.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipos de erro](../../programming-guide/language-features/error-types.md)

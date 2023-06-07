@@ -1,24 +1,24 @@
 ---
-title: Interprete ML.NET modelos com importância do recurso de permutação
+title: Interpretar modelos de ML.NET com importância de recurso de permuta
 description: Entender a importância de recursos de modelos com a Importância de recursos de permutação no ML.NET
 ms.date: 01/30/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: c1163a41cd2feb0e8785ae9d4c6a71dfbedf3f12
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed0d6736f1f2e988d96a397cad77a7fc743489da
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77092610"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174225"
 ---
-# <a name="interpret-model-predictions-using-permutation-feature-importance"></a>Interpretar previsões do modelo usando a importância do recurso de permutação
+# <a name="interpret-model-predictions-using-permutation-feature-importance"></a>Interpretar previsões de modelo usando a importância do recurso de permuta
 
-Usando a Importância do Recurso de Permutação (PFI), aprenda a interpretar ML.NET previsões de modelo de aprendizado de máquina. PFI dá a contribuição relativa que cada recurso faz a uma previsão.
+Usando a importância do recurso de permutação (PFI), saiba como interpretar previsões de modelo de aprendizado de máquina ML.NET. PFI fornece a contribuição relativa que cada recurso faz a uma previsão.
 
-Modelos de machine learning geralmente são considerados caixas pretas que pegam entradas e geram uma saída. As etapas intermediárias ou as interações entre os recursos que influenciam a saída raramente são compreendidas. Conforme o aprendizado de máquina é introduzido em mais aspectos da vida diária, como serviços de saúde, é de extrema importância entender por que um modelo de machine learning toma as decisões que ele toma. Por exemplo, se os diagnósticos forem feitos por um modelo de machine learning, os profissionais de saúde precisarão de uma maneira de examinar os fatores que contribuíram para esse diagnóstico. Fornecer o diagnóstico certo pode fazer uma grande diferença em se um paciente tem uma recuperação rápida ou não. Portanto, quanto maior o nível de capacidade de explicação de um modelo, mais confiança os profissionais de saúde terão em aceitar ou rejeitar as decisões tomadas pelo modelo.
+Os modelos de aprendizado de máquina costumam ser considerados como caixas opacas que recebem entradas e geram uma saída. As etapas intermediárias ou as interações entre os recursos que influenciam a saída raramente são compreendidas. Conforme o aprendizado de máquina é introduzido em mais aspectos da vida diária, como serviços de saúde, é de extrema importância entender por que um modelo de machine learning toma as decisões que ele toma. Por exemplo, se os diagnósticos forem feitos por um modelo de machine learning, os profissionais de saúde precisarão de uma maneira de examinar os fatores que contribuíram para esse diagnóstico. Fornecer o diagnóstico certo pode fazer uma grande diferença em se um paciente tem uma recuperação rápida ou não. Portanto, quanto maior o nível de capacidade de explicação de um modelo, mais confiança os profissionais de saúde terão em aceitar ou rejeitar as decisões tomadas pelo modelo.
 
-Várias técnicas são usadas para explicar os modelos, uma delas é a PFI. PFI é uma técnica usada para explicar modelos de classificação e regressão que é inspirada no [artigo *Random Forests* de Breiman](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) (ver seção 10). Em um alto nível, a maneira como eles funcionam é embaralhando aleatoriamente um recurso de dados por vez para todo o conjunto de dados e calculando o quanto a métrica de desempenho de interesse diminui. Quanto maior a alteração, mais importante é esse recurso.
+Várias técnicas são usadas para explicar os modelos, uma delas é a PFI. PFI é uma técnica usada para explicar os modelos de classificação e regressão que são inspirados pelo [documento de *florestas aleatórias* do Breiman](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) (consulte a seção 10). Em um alto nível, a maneira como eles funcionam é embaralhando aleatoriamente um recurso de dados por vez para todo o conjunto de dados e calculando o quanto a métrica de desempenho de interesse diminui. Quanto maior a alteração, mais importante é esse recurso.
 
 Além disso, ao realçar os recursos mais importantes, construtores de modelo podem se concentrar no uso de um subconjunto de recursos mais significativos que pode reduzir o ruído e tempo de treinamento.
 
@@ -40,7 +40,7 @@ Os recursos no conjunto de dados que está sendo usado para este exemplo estão 
 | 10 | TaxRate | Taxa de imposto sobre propriedade
 | 11 | StudentTeacherRatio | Taxa de alunos para professores
 | 12 | PercentPopulationBelowPoverty | Percentual da população vivendo abaixo da linha de pobreza
-| 13 | Price | Preço da casa
+| 13 | Preço | Preço da casa
 
 Um exemplo do conjunto de dados é mostrado abaixo:
 
@@ -50,7 +50,7 @@ Um exemplo do conjunto de dados é mostrado abaixo:
 2,98,16,1,0.25,10,5,1,8,689,13,36,12
 ```
 
-Os dados nesta amostra podem ser modelados por uma classe como `HousingPriceData` e carregados em um [`IDataView`](xref:Microsoft.ML.IDataView).
+Os dados neste exemplo podem ser modelados por uma classe como `HousingPriceData` e carregados em um [`IDataView`](xref:Microsoft.ML.IDataView) .
 
 ```csharp
 class HousingPriceData
@@ -128,7 +128,7 @@ var sdcaModel = sdcaEstimator.Fit(preprocessedTrainData);
 
 ## <a name="explain-the-model-with-permutation-feature-importance-pfi"></a>Explicar o modelo com PFI (Importância de Recurso de Permutação)
 
-Em ML.NET [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) use o método para sua respectiva tarefa.
+No ML.NET, use o [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) método para sua respectiva tarefa.
 
 ```csharp
 ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
@@ -137,9 +137,9 @@ ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
         .PermutationFeatureImportance(sdcaModel, preprocessedTrainData, permutationCount:3);
 ```
 
-O resultado [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) do uso no conjunto [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray) [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) de dados de treinamento é um dos objetos. [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics)fornece estatísticas sumárias como média e [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) desvio padrão para múltiplas observações iguais `permutationCount` ao número de permutações especificadas pelo parâmetro.
+O resultado do uso do no conjunto de resultados de [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) treinamento é um [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray) dos [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) objetos. [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics)fornece estatísticas de resumo como média e desvio padrão para várias observações de [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) igual ao número de permutações especificadas pelo `permutationCount` parâmetro.
 
-A importância, ou neste caso, a diminuição média absoluta [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) na métrica r-quadrada calculada por pode então ser ordenada do mais importante para o menos importante.
+A importância, ou nesse caso, a redução média absoluta na métrica R-quadrado calculada por [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) pode ser ordenada da mais importante para a menos importante.
 
 ```csharp
 // Order features by importance

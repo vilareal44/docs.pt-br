@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30957
 ms.assetid: 561e593a-f50a-4b72-a708-4cab60ec7b28
-ms.openlocfilehash: d004c89b742944622ce45e6a2be8d96116252745
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 7b0113e9c1018772da6dc180f7fc5beb0e922917
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197570"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402947"
 ---
 # <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a>A avaliação de função está desabilitada porque uma avaliação de função anterior atingiu o tempo limite
 A avaliação de função está desabilitada porque uma avaliação de função anterior atingiu o tempo limite. Para reabilitar a avaliação da função, execute novamente ou reinicie a depuração.  
   
  No depurador do Visual Studio, uma expressão especifica uma chamada de procedimento, mas outra avaliação atingiu o tempo limite.  
   
- As possíveis causas de uma chamada de procedimento para o tempo limite incluem um loop infinito ou um *loop infinito*. Para obter mais informações, consulte [para... Próxima instrução](../../../visual-basic/language-reference/statements/for-next-statement.md).  
+ As possíveis causas de uma chamada de procedimento para o tempo limite incluem um loop infinito ou um *loop infinito*. Para obter mais informações, consulte [para... Próxima instrução](../statements/for-next-statement.md).  
   
- Um caso especial de um loop infinito é a *recursão*. Para obter mais informações, consulte [procedimentos recursivos](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md).  
+ Um caso especial de um loop infinito é a *recursão*. Para obter mais informações, consulte [procedimentos recursivos](../../programming-guide/language-features/procedures/recursive-procedures.md).  
   
  **ID do erro:** BC30957  
   
@@ -31,7 +31,7 @@ A avaliação de função está desabilitada porque uma avaliação de função 
   
 2. Siga as etapas do depurador novamente ou encerre e reinicie a depuração.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Depurando no Visual Studio](/visualstudio/debugger/debugger-feature-tour)
 - [Navegar pelo Código com o Depurador](/visualstudio/debugger/navigating-through-code-with-the-debugger)

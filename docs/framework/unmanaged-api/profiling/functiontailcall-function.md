@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 66347e03-9a97-41e8-8f9d-89b80803f7b5
 topic_type:
 - apiref
-ms.openlocfilehash: bd03eccc923049c4a49062d18bd11659f3316e8a
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 42ea497bdcab71518bec08514b827d76f0317d57
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866816"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500592"
 ---
 # <a name="functiontailcall-function"></a>Função FunctionTailcall
 Notifica o criador de perfil de que a função atualmente em execução está prestes a executar uma chamada tail para outra função.  
   
 > [!NOTE]
-> A função `FunctionTailcall` foi preterida no .NET Framework versão 2,0. Ele continuará funcionando, mas incorrerá em uma penalidade de desempenho. Em vez disso, use a função [FunctionTailcall2](functiontailcall2-function.md) .  
+> A `FunctionTailcall` função foi preterida na versão .NET Framework 2,0. Ele continuará funcionando, mas incorrerá em uma penalidade de desempenho. Em vez disso, use a função [FunctionTailcall2](functiontailcall2-function.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,12 +39,12 @@ void __stdcall FunctionTailcall (
 
 - `funcID`
 
-  \[em] o identificador da função atualmente em execução que está prestes a fazer uma chamada final.
+  \[in] o identificador da função atualmente em execução que está prestes a fazer uma chamada tail.
 
 ## <a name="remarks"></a>Comentários  
  A função de destino da chamada tail usará o quadro de pilhas atual e retornará diretamente para o chamador da função que fez a chamada final. Isso significa que um retorno de chamada [FunctionLeave](functionleave-function.md) não será emitido para uma função que seja o destino de uma chamada tail.  
   
- A função `FunctionTailcall` é um retorno de chamada; Você deve implementá-lo. A implementação deve usar o atributo de classe de armazenamento `__declspec`(`naked`).  
+ A `FunctionTailcall` função é um retorno de chamada; você deve implementá-la. A implementação deve usar o `__declspec` `naked` atributo de classe de armazenamento ().  
   
  O mecanismo de execução não salva nenhum registro antes de chamar essa função.  
   
@@ -52,12 +52,12 @@ void __stdcall FunctionTailcall (
   
 - Ao sair, você deve restaurar a pilha removendo todos os parâmetros que foram enviados por Push por seu chamador.  
   
- A implementação de `FunctionTailcall` não deve bloquear, pois atrasará a coleta de lixo. A implementação não deve tentar uma coleta de lixo porque a pilha pode não estar em um estado amigável de coleta de lixo. Se uma coleta de lixo for tentada, o tempo de execução será bloqueado até que `FunctionTailcall` retorne.  
+ A implementação de `FunctionTailcall` não deve bloquear, pois atrasará a coleta de lixo. A implementação não deve tentar uma coleta de lixo porque a pilha pode não estar em um estado amigável de coleta de lixo. Se for feita uma tentativa de coleta de lixo, o tempo de execução será bloqueado até o `FunctionTailcall` retorno.  
   
- Além disso, a função `FunctionTailcall` não deve chamar um código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
+ Além disso, a `FunctionTailcall` função não deve chamar um código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl  
   
@@ -65,7 +65,7 @@ void __stdcall FunctionTailcall (
   
  **Versões do .NET Framework:** 1,1, 1,0  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Função FunctionEnter2](functionenter2-function.md)
 - [Função FunctionLeave2](functionleave2-function.md)

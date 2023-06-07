@@ -12,18 +12,18 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: 5fca32953af91184fe99d8ef6afe5a2374f325d6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c235a838504889a105ef98df47f7373a145503da
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67663723"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289441"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Decidindo quando implementar o padrão assíncrono baseado em evento
 
 O Padrão assíncrono baseado em evento oferece um padrão para expor o comportamento assíncrono de uma classe. Com a introdução deste padrão, o .NET Framework define dois padrões para expor o comportamento assíncrono: o Padrão assíncrono baseado na interface do <xref:System.IAsyncResult?displayProperty=nameWithType> e o padrão baseado no evento. Este tópico descreve quando é apropriado implementar os dois padrões.
 
-Para obter mais informações sobre a programação assíncrona com a interface <xref:System.IAsyncResult>, confira [APM (modelo de programação assíncrona)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).
+Para obter mais informações sobre a programação assíncrona com a interface <xref:System.IAsyncResult>, confira [APM (modelo de programação assíncrona)](asynchronous-programming-model-apm.md).
 
 ## <a name="general-principles"></a>Noções básicas gerais
 
@@ -84,10 +84,10 @@ A lista a seguir mostra algumas recomendações a serem seguidas se você decidi
 
 - Só exponha o padrão <xref:System.IAsyncResult> caso tiver requisitos de alto desempenho que você verificou não poderem ser atendidos pelo padrão baseado em evento, mas que podem ser atendidos pelo padrão <xref:System.IAsyncResult>.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Como implementar um componente compatível com o padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
-- [EAP (Padrão Assíncrono baseado em Evento)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
-- [Implementando o Padrão Assíncrono baseado em Evento](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)
-- [Práticas recomendadas para a implementação do padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
-- [Visão geral do padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Como implementar um componente compatível com o padrão assíncrono baseado em evento](component-that-supports-the-event-based-asynchronous-pattern.md)
+- [EAP (Padrão Assíncrono baseado em Evento)](event-based-asynchronous-pattern-eap.md)
+- [Implementando o Padrão Assíncrono baseado em Evento](implementing-the-event-based-asynchronous-pattern.md)
+- [Práticas recomendadas para a implementação do padrão assíncrono baseado em evento](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+- [Visão geral do padrão assíncrono baseado em evento](event-based-asynchronous-pattern-overview.md)

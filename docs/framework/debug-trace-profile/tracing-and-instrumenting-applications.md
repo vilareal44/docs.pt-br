@@ -1,5 +1,6 @@
 ---
 title: Rastreamento e instrumentação de aplicativos
+description: Rastrear e instrumentar aplicativos no .NET. O rastreamento permite que você monitore a execução do aplicativo enquanto ele está em execução. A instrumentação permite que você meça o nível de desempenho.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-ms.openlocfilehash: 2dcdbaf50ed053d43fc2df2c80fe7688e7b3e51f
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: d5484129ac17ee20aafe305bea5599f85903dfa2
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542605"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803515"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Rastreamento e instrumentação de aplicativos
 O rastreamento é uma maneira de você monitorar a execução de seu aplicativo enquanto ele é executado. É possível adicionar a instrumentação de rastreamento e depuração ao aplicativo do .NET Framework durante seu desenvolvimento e usar essa instrumentação enquanto você estiver desenvolvendo o aplicativo e depois de implantá-lo. É possível usar as classes <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> para registrar informações sobre erros e a execução do aplicativo em logs, arquivos de texto ou outros dispositivos para análise posterior.  
@@ -29,7 +30,7 @@ O rastreamento é uma maneira de você monitorar a execução de seu aplicativo 
   
 - **Depuração** – Rastreamento e correção de erros de programação em um aplicativo em desenvolvimento. Para obter mais informações, consulte [Depurando](/visualstudio/debugger/debugger-feature-tour).  
   
-- **Contadores de desempenho** – Componentes que permitem acompanhar o desempenho do aplicativo. Para obter mais informações, consulte [Performance Counters](performance-counters.md).  
+- **Contadores de desempenho** – Componentes que permitem acompanhar o desempenho do aplicativo. Para obter mais informações, consulte [contadores de desempenho](performance-counters.md).  
   
 - **Logs de eventos** – Componentes que permitem receber e acompanhar os principais eventos na execução do aplicativo. Para obter mais informações, consulte a classe <xref:System.Diagnostics.EventLog>.  
   
@@ -97,7 +98,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 7. Se ocorrer um problema durante o tempo de execução, ative a opção de rastreamento apropriada. Para obter mais informações, consulte [Configurando Opções de Rastreamento](how-to-create-initialize-and-configure-trace-switches.md).  
   
-     O código de rastreamento grava mensagens de rastreamento em um destino especificado, por exemplo, uma tela, um arquivo de texto ou um log de eventos. O tipo de ouvinte que você incluiu na coleção de <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> determina o destino.  
+     O código de rastreamento grava mensagens de rastreamento em um destino especificado, por exemplo, uma tela, um arquivo de texto ou um log de eventos. O tipo de ouvinte que você incluiu na <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> coleção determina o destino.  
   
 8. Analise as mensagens de rastreamento para identificar e entender o problema no aplicativo.  
   
@@ -109,43 +110,43 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Com instruções de rastreamento, você pode evitar a difícil tarefa de examinar o código-fonte original, modificá-lo, recompilá-lo e tentar produzir o erro em tempo de execução no ambiente de depuração. Lembre-se de que é possível instrumentar um aplicativo não apenas para exibir erros, mas também para monitorar o desempenho.  
   
 ## <a name="strategic-placement-of-trace-statements"></a>Posicionamento estratégico de instruções de rastreamento  
- Você deve ter um cuidado especial ao colocar as instruções de rastreamento para uso durante o tempo de execução. Você deve considerar quais informações de rastreamento serão provavelmente necessárias em um aplicativo implantado, de forma que todos os cenários de rastreamento possíveis sejam cobertos adequadamente. Como os aplicativos que usam o rastreamento variam muito, porém, não há nenhuma orientação geral para o posicionamento estratégico de rastreamento. Para obter mais informações sobre como inserir instruções de rastreamento, consulte [Como adicionar instruções de rastreamento ao código do aplicativo](how-to-add-trace-statements-to-application-code.md).  
+ Tenha cuidado especial ao colocar as instruções de rastreamento para uso durante o tempo de execução. Considere quais informações de rastreamento são provavelmente necessárias em um aplicativo implantado, para que todos os prováveis cenários de rastreamento sejam abordados de forma adequada. No entanto, como os aplicativos que usam o rastreamento variam muito, não há diretrizes gerais para o posicionamento estratégico de rastreamento. Para obter mais informações sobre como inserir instruções de rastreamento, consulte [Como adicionar instruções de rastreamento ao código do aplicativo](how-to-add-trace-statements-to-application-code.md).  
   
 ## <a name="output-from-tracing"></a>Saída de rastreamento  
  A saída de rastreamento é coletada por objetos chamados *ouvintes*. Um ouvinte é um objeto que recebe a saída de rastreamento e grava-a em um dispositivo de saída (geralmente, uma janela, um log ou um arquivo de texto). Quando um ouvinte de rastreamento é criado, normalmente, ele é adicionado à coleção <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>, permitindo que o ouvinte receba toda a saída de rastreamento.  
   
- As informações de rastreamento são sempre gravadas, pelo menos, no destino de saída <xref:System.Diagnostics.Trace> padrão, o <xref:System.Diagnostics.DefaultTraceListener>. Se, por algum motivo, você excluiu o <xref:System.Diagnostics.DefaultTraceListener> sem adicionar outros ouvintes à coleção <xref:System.Diagnostics.Trace.Listeners%2A>, não receberá nenhuma mensagem de rastreamento. Para obter mais informações, consulte [Ouvintes de rastreamento](trace-listeners.md).  
+ As informações de rastreamento são sempre gravadas, pelo menos, no destino de saída <xref:System.Diagnostics.Trace> padrão, o <xref:System.Diagnostics.DefaultTraceListener>. Se, por algum motivo, você excluiu o <xref:System.Diagnostics.DefaultTraceListener> sem adicionar outros ouvintes à coleção <xref:System.Diagnostics.Trace.Listeners%2A>, não receberá nenhuma mensagem de rastreamento. Para obter mais informações, consulte [ouvintes de rastreamento](trace-listeners.md).  
   
  Os seis membros <xref:System.Diagnostics.Debug> e métodos <xref:System.Diagnostics.Trace> que gravam informações de rastreamento são listados na tabela a seguir.  
   
 |Método|Saída|  
 |------------|------------|  
-|`Assert`|O texto especificado; ou, se nenhum for especificado, a Pilha de Chamadas. A saída será gravada somente se a condição especificada como um argumento na instrução `Assert` for **false**.|  
+|`Assert`|O texto especificado; ou, se nenhum for especificado, a Pilha de Chamadas. A saída será gravada somente se a condição especificada como um argumento na `Assert` instrução for **false**.|  
 |`Fail`|O texto especificado; ou, se nenhum for especificado, a Pilha de Chamadas.|  
 |`Write`|O texto especificado.|  
-|`WriteIf`|O texto especificado, se a condição especificada como um argumento na instrução `WriteIf` for satisfeita.|  
+|`WriteIf`|O texto especificado, se a condição especificada como um argumento na `WriteIf` instrução for satisfeita.|  
 |`WriteLine`|O texto especificado e um retorno de carro.|  
-|`WriteLineIf`|O texto especificado e um retorno de carro, se a condição especificada como um argumento na instrução `WriteLineIf` for satisfeita.|  
+|`WriteLineIf`|O texto especificado e um retorno de carro, se a condição especificada como um argumento na `WriteLineIf` instrução for satisfeita.|  
   
- Todos os ouvintes na coleção <xref:System.Diagnostics.Trace.Listeners%2A> recebem as mensagens descritas na tabela acima, mas as ações executadas podem variar, dependendo de qual tipo de ouvinte recebe a mensagem. Por exemplo, o <xref:System.Diagnostics.DefaultTraceListener> exibe uma caixa de diálogo de asserção quando recebe uma notificação de `Assert` de `Fail` ou falha, mas uma <xref:System.Diagnostics.TextWriterTraceListener> simplesmente grava a saída em seu fluxo.  
+ Todos os ouvintes na coleção <xref:System.Diagnostics.Trace.Listeners%2A> recebem as mensagens descritas na tabela acima, mas as ações executadas podem variar, dependendo de qual tipo de ouvinte recebe a mensagem. Por exemplo, o <xref:System.Diagnostics.DefaultTraceListener> exibe uma caixa de diálogo de asserção quando recebe uma `Fail` notificação ou com falha `Assert` , mas um <xref:System.Diagnostics.TextWriterTraceListener> simplesmente grava a saída em seu fluxo.  
   
  Produza resultados personalizados implementando seu próprio ouvinte. Um ouvinte de rastreamento personalizado pode, por exemplo, exibir as mensagens em uma caixa de mensagem ou se conectar a um banco de dados para adicionar mensagens a uma tabela. Todos os ouvintes personalizados devem dar suporte aos seis métodos mencionados acima. Para obter mais informações sobre como criar ouvintes definidos pelo desenvolvedor, consulte <xref:System.Diagnostics.TraceListener> na referência do .NET Framework.  
   
- Os métodos `Write` e `WriteLine` sempre gravam o texto que você especificar. `Assert`, `WriteIf`e `WriteLineIf` exigem um argumento booliano que controla se eles gravam ou não o texto especificado; Eles gravarão o texto especificado somente se a expressão for **verdadeira** (para `WriteIf` e `WriteLineIf`) ou **false** (para `Assert`). O método `Fail` sempre grava o texto especificado. Para obter mais informações, consulte [Como adicionar instruções de rastreamento ao código do aplicativo](how-to-add-trace-statements-to-application-code.md) e a referência do .NET Framework.  
+ Os `Write` `WriteLine` métodos e sempre gravam o texto que você especificar. `Assert`, `WriteIf` e `WriteLineIf` exigem um argumento booliano que controla se eles gravam o texto especificado; eles gravam o texto especificado somente se a expressão for **true** (for `WriteIf` e `WriteLineIf` ) ou **false** (for `Assert` ). O `Fail` método sempre grava o texto especificado. Para obter mais informações, consulte [Como adicionar instruções de rastreamento ao código do aplicativo](how-to-add-trace-statements-to-application-code.md) e a referência do .NET Framework.  
   
 ## <a name="security-concerns"></a>Problemas de segurança  
  Se você não desabilitar o rastreamento e a depuração antes de implantar um aplicativo ASP.NET, o aplicativo poderá revelar informações sobre si mesmo que podem ser exploradas por um programa mal-intencionado. Para obter mais informações, consulte [Como compilar condicionalmente com Trace e Debug](how-to-compile-conditionally-with-trace-and-debug.md), [Compilando e criando](/visualstudio/ide/compiling-and-building-in-visual-studio) e [Como criar, inicializar e configurar opções de rastreamento](how-to-create-initialize-and-configure-trace-switches.md). A depuração também é configurável por meio do IIS (Serviços de Informações da Internet).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - [Contratos de código](code-contracts.md)
 - [Tipos de projeto C#, F# e Visual Basic](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
-- [Como adicionar instruções de rastreamento ao código do aplicativo](how-to-add-trace-statements-to-application-code.md)
+- [Como adicionar instruções de rastreamento ao código de um aplicativo](how-to-add-trace-statements-to-application-code.md)
 - [Como compilar condicionalmente com Trace e Debug](how-to-compile-conditionally-with-trace-and-debug.md)
-- [Como criar, inicializar e configurar as opções de rastreamento](how-to-create-initialize-and-configure-trace-switches.md)
+- [Como criar, inicializar e configurar opções de rastreamento](how-to-create-initialize-and-configure-trace-switches.md)
 - [Como criar e inicializar fontes de rastreamento](how-to-create-and-initialize-trace-sources.md)
-- [Como usar o TraceSource e filtros com ouvintes de rastreamento](how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [Como usar TraceSource e filtros com ouvintes de rastreamento](how-to-use-tracesource-and-filters-with-trace-listeners.md)
 - [Ouvintes de rastreamento](trace-listeners.md)
 - [Opções de rastreamento](trace-switches.md)

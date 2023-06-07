@@ -1,19 +1,19 @@
 ---
-title: 'Como: Trabalhar com dicionários usando LINQ to XML'
+title: 'Como: trabalhar com dicionários usando o LINQ to XML'
 ms.date: 07/20/2015
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
-ms.openlocfilehash: 12327be3c9d32d34866691b156f58fd1e8e40240
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 14c9c35693f323292849f01af79ae81f92921611
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332359"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397668"
 ---
 # <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>Como trabalhar com dicionários usando LINQ to XML (Visual Basic)
 É conveniente converter variedades de estruturas de dados para XML, e XML de volta para outras estruturas de dados. Este tópico mostra uma implementação específica dessa abordagem geral convertendo <xref:System.Collections.Generic.Dictionary%602> a XML e verso.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa literais XML e uma consulta em uma expressão inserida. A consulta projeta novos objetos <xref:System.Xml.Linq.XElement>, que, em seguida, se tornam o novo conteúdo para o objeto de <xref:System.Xml.Linq.XElement> de `Root`.  
+ Este exemplo usa literais XML e uma consulta em uma expressão inserida. A consulta projeta novos <xref:System.Xml.Linq.XElement> objetos, que se tornam o novo conteúdo para o `Root` <xref:System.Xml.Linq.XElement> objeto.  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -70,6 +70,6 @@ Child3:Value3
 Child4:Value4  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Projeções e transformações (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Projeções e transformações (LINQ to XML) (Visual Basic)](projections-and-transformations-linq-to-xml.md)

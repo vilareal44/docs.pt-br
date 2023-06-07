@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: f18556bbe1ca2d77925482319246d403892d31ef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa63e7d23641ad71b135f15236e29399a535784f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74353599"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398247"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Instruções passo a passo: filtrando a saída de My.Application.Log (Visual Basic)
 
@@ -43,7 +43,7 @@ Cada mensagem que `My.Application.Log` grava tem um nível de gravidade associad
 
 6. Feche o aplicativo.
 
-     Para obter informações sobre como exibir a janela de saída de depuração do aplicativo, consulte [Janela de Saída](/visualstudio/ide/reference/output-window). Para obter informações sobre o local do arquivo de log do aplicativo, consulte [Instruções passo a passo: determinando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).
+     Para obter informações sobre como exibir a janela de saída de depuração do aplicativo, consulte [Janela de Saída](/visualstudio/ide/reference/output-window). Para obter informações sobre o local do arquivo de log do aplicativo, consulte [Instruções passo a passo: determinando onde My.Application.Log grava informações](walkthrough-determining-where-my-application-log-writes-information.md).
 
     > [!NOTE]
     > Por padrão, o aplicativo libera a saída do arquivo de log quando é fechado.
@@ -249,13 +249,13 @@ Este exemplo demonstra como configurar a filtragem para um novo ouvinte de depur
 
 10. Feche o aplicativo.
 
-Para obter mais informações sobre como alterar as configurações de log após a implantação, consulte [Trabalhando com logs de aplicativo](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).
+Para obter mais informações sobre como alterar as configurações de log após a implantação, consulte [Trabalhando com logs de aplicativo](working-with-application-logs.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Passo a passo: determinar o local no qual My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [Passo a passo: alterar o local no qual My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
-- [Passo a passo: criar ouvintes de log personalizados](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
-- [Como: gravar mensagens de log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [Passo a passo: determinar o local no qual My.Application.Log grava informações](walkthrough-determining-where-my-application-log-writes-information.md)
+- [Passo a passo: alterar o local no qual My.Application.Log grava informações](walkthrough-changing-where-my-application-log-writes-information.md)
+- [Passo a passo: criar ouvintes de log personalizados](walkthrough-creating-custom-log-listeners.md)
+- [Como: gravar mensagens de log](how-to-write-log-messages.md)
 - [Opções de rastreamento](../../../../framework/debug-trace-profile/trace-switches.md)
-- [Registrar informações em log no aplicativo](../../../../visual-basic/developing-apps/programming/log-info/index.md)
+- [Registrando informações em log a partir do aplicativo](index.md)

@@ -2,24 +2,24 @@
 title: System.ServiceModel.Channels.PeerNeighborNotAccepted
 ms.date: 03/30/2017
 ms.assetid: 77309bf5-37ba-4b90-b31f-c00ef044db0d
-ms.openlocfilehash: 4e5700ed65b10b0f83014520961d5ab17fa78190
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac67c273c0e81c1c24cad9d219c82fa7db5dc330
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61950027"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84577533"
 ---
 # <a name="systemservicemodelchannelspeerneighbornotaccepted"></a>System.ServiceModel.Channels.PeerNeighborNotAccepted
-Um vizinho de mesmo nível não foi aceita.  
+Um vizinho de mesmo nível não foi aceito.  
   
 ## <a name="description"></a>Descrição  
- Este rastreamento ocorre durante o processamento de uma conexão para um vizinho. Os possíveis motivos incluem configurações de segurança incompatíveis, tempo limite excedido, um vizinho que não pode aceitar uma conexão ou problemas de rede transitórios.  
+ Esse rastreamento ocorre durante o processamento de uma conexão com um vizinho. Os possíveis motivos incluem configurações de segurança incompatíveis, tempo limite excedido, um vizinho que não pode aceitar uma conexão ou problemas de rede transitórios.  
   
 ## <a name="troubleshooting"></a>Solução de problemas  
- Verifique as configurações de segurança incompatíveis, tempo limite excedido, a incapacidade de um vizinho para aceitar uma conexão ou problemas de rede transitórios.  
+ Verifique se há configurações de segurança incompatíveis, tempo limite excedido, a incapacidade de um vizinho de aceitar uma conexão ou problemas de rede transitórios.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Rastreamento](index.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](using-tracing-to-troubleshoot-your-application.md)
+- [Administração e diagnóstico](../index.md)

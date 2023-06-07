@@ -1,23 +1,23 @@
 ### YamlMime:Landing
 title: Documentação do ML.NET
-summary: Aprenda a usar ML.NET de código aberto para criar modelos personalizados de aprendizado de máquina e integrá-los em aplicativos. Tutoriais, exemplos de código e mais mostram como.
+summary: Saiba como usar o ML.NET de código-fonte aberto para criar modelos de aprendizado de máquina personalizados e integrá-los a aplicativos. TUTORIAIS, exemplos de código e mais mostram como.
 metadata:
   title: Documentação do ML.NET – Tutoriais, referência de API
-  description: Aprenda a usar ML.NET de código aberto para criar modelos personalizados de aprendizado de máquina e integrá-los em aplicativos. Tutoriais, exemplos de código e mais mostram como.
+  description: Saiba como usar o ML.NET de código-fonte aberto para criar modelos de aprendizado de máquina personalizados e integrá-los a aplicativos. TUTORIAIS, exemplos de código e mais mostram como.
   ms.prod: dotnet-ml
   ms.topic: landing-page
   ms.collection: collection
   author: natke
   ms.author: nakersha
   ms.date: 10/30/2019
-  ms.openlocfilehash: 05d357af2088321524841bfc05f94f816f1bc306
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: da93d48dc36123f8821be37c8c0546b84ab29712
+  ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "73423933"
+  ms.lasthandoff: 08/05/2020
+  ms.locfileid: "87795483"
 landingContent:
-- title: ML.NET Noções Básicas
+- title: Noções básicas do ML.NET
   linkLists:
   - linkListType: overview
     links:
@@ -29,7 +29,7 @@ landingContent:
       url: https://channel9.msdn.com/Series/MLNET/MLNET-Machine-Learning-Introduction-1-of-8
   - linkListType: concept
     links:
-    - text: Tarefas de aprendizagem de máquina & algoritmos
+    - text: Algoritmos de & de tarefas de Machine Learning
       url: resources/tasks.md
     - text: Como escolher um algoritmo
       url: how-to-choose-an-ml-net-algorithm.md
@@ -37,35 +37,35 @@ landingContent:
   linkLists:
   - linkListType: quickstart
     links:
-    - text: Configurar model builder no Visual Studio
-      url: how-to-guides/install-model-builder.md
-    - text: Comece com a API ML.NET
+    - text: Introdução à API do ML.NET (primeiro código)
       url: https://dotnet.microsoft.com/learn/ml-dotnet/get-started-tutorial/intro
-    - text: Instale o CLI no Mac OS, Windows ou Linux
+    - text: Configurar o construtor de modelos no Visual Studio (baixo código)
+      url: how-to-guides/install-model-builder.md
+    - text: Instalar a CLI no macOS, Windows ou Linux (baixo código)
       url: how-to-guides/install-ml-net-cli.md
 - title: Tutoriais
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Analisar o sentimento de comentário do site (Model Builder)
+    - text: Analisar sentimentos de comentário do site (Construtor de modelos)
       url: tutorials/sentiment-analysis-model-builder.md
-    - text: Prever preços (Model Builder)
+    - text: Prever preços (Construtor de modelos)
       url: tutorials/predict-prices-with-model-builder.md
-    - text: Categorize violações de saúde (Model Builder & SQL Server)
+    - text: Categorizar violações de integridade (Construtor de modelos & SQL Server)
       url: tutorials/health-violation-classification-model-builder.md
     - text: Categorizar problemas de suporte (API)
       url: tutorials/github-issue-classification.md
-    - text: Classificar imagens com API (Image Classification API)
+    - text: Classificar imagens com API de classificação de imagem (API)
       url: tutorials/image-classification-api-transfer-learning.md
-    - text: Classificar imagens usando a composição do modelo (API)
+    - text: Classificar imagens usando a composição de modelo (API)
       url: tutorials/image-classification.md
     - text: Detectar objetos em imagens (API)
       url: tutorials/object-detection-onnx.md
-    - text: Detectar anomalias nas vendas de produtos (API)
+    - text: Detectar anomalias em vendas de produtos (API)
       url: tutorials/sales-anomaly-detection.md
-    - text: Previsão de demanda de aluguel de bicicletas (API & SQL Server)
+    - text: Previsão da demanda de aluguel de bicicletas (API & SQL Server)
       url: tutorials/time-series-demand-forecasting.md
-    - text: Construa um recomendador de filmes (API)
+    - text: Criar um recomendador de filmes (API)
       url: tutorials/movie-recommendation.md
 - title: Guias de instruções
   linkLists:
@@ -75,11 +75,11 @@ landingContent:
       url: how-to-guides/load-data-ml-net.md
     - text: Preparar dados para criar um modelo
       url: how-to-guides/prepare-data-ml-net.md
-    - text: Trem & avaliar um modelo
+    - text: Treinar & avaliar um modelo
       url: how-to-guides/train-machine-learning-model-ml-net.md
     - text: Fazer previsões com um modelo treinado
       url: how-to-guides/machine-learning-model-predictions-ml-net.md
-    - text: Economize & carregue um modelo treinado
+    - text: Salvar & carregar um modelo treinado
       url: how-to-guides/save-load-machine-learning-models-ml-net.md
     - text: Treinar um modelo novamente
       url: how-to-guides/retrain-model-ml-net.md
@@ -89,5 +89,5 @@ landingContent:
     links:
     - text: Referência de API do ML.NET
       url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
-    - text: ML.NET amostras
+    - text: Exemplos de ML.NET
       url: https://github.com/dotnet/machinelearning-samples

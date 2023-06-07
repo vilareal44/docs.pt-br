@@ -2,15 +2,15 @@
 title: Segurança de transporte WS
 ms.date: 03/30/2017
 ms.assetid: 33a20358-5e1b-458a-a6a9-15753bc7b99b
-ms.openlocfilehash: 221bf2e0d304e93242bb5fea6854c1c9bb72aec2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d0f357ddcfc355bac8eeb86d57641add0013a052
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143454"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596391"
 ---
 # <a name="ws-transport-security"></a>Segurança de transporte WS
-Esta amostra demonstra o uso da segurança <xref:System.ServiceModel.WSHttpBinding> de transporte SSL com a vinculação. Por padrão, `wsHttpBinding` a vinculação fornece comunicação HTTP. Quando configurado para segurança de transporte, a vinculação suporta comunicação HTTPS. Esta amostra é baseada no [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora. O `wsHttpBinding` é especificado e configurado nos arquivos de configuração do aplicativo para o cliente e serviço.  
+Este exemplo demonstra o uso de segurança de transporte SSL com a <xref:System.ServiceModel.WSHttpBinding> associação. Por padrão, a `wsHttpBinding` associação fornece comunicação http. Quando configurado para segurança de transporte, a associação dá suporte à comunicação HTTPS. Este exemplo é baseado no [introdução](getting-started-sample.md) que implementa um serviço de calculadora. O `wsHttpBinding` é especificado e configurado nos arquivos de configuração do aplicativo para o cliente e o serviço.  
   
 > [!NOTE]
 > Os procedimentos de instalação e as instruções de compilação para esse exemplo estão localizadas no final deste tópico.  
@@ -20,11 +20,11 @@ Esta amostra demonstra o uso da segurança <xref:System.ServiceModel.WSHttpBindi
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Se esse diretório não existir, vá para [a Windows Communication Foundation (WCF) e para o Windows Workflow Foundation (WF) Amostras para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Amostras e amostras da [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (Windows Communication Foundation). Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\wsTransportSecurity`  
   
- O código do programa na amostra é idêntico ao do serviço [Getting Started.](../../../../docs/framework/wcf/samples/getting-started-sample.md) Você deve criar um certificado e atribuí-lo usando o Assistente de Certificado do Servidor Web antes de construir e executar a amostra. A definição de ponto final e a `Transport` definição de vinculação nas configurações do arquivo de configuração permitem o modo de segurança, conforme mostrado na configuração de exemplo a seguir para o cliente.  
+ O código do programa no exemplo é idêntico ao do serviço de [introdução](getting-started-sample.md) . Você deve criar um certificado e atribuí-lo usando o assistente de certificado do servidor Web antes de compilar e executar o exemplo. A definição do ponto de extremidade e a definição de associação nas configurações do arquivo de configuração habilitam o `Transport` modo de segurança, conforme mostrado no exemplo de configuração a seguir para o cliente.  
   
 ```xml  
 <system.serviceModel>  
@@ -49,16 +49,16 @@ Esta amostra demonstra o uso da segurança <xref:System.ServiceModel.WSHttpBindi
   </system.serviceModel>  
 ```  
   
- O endereço especificado usa o esquema https://. A configuração de vinculação define o modo de segurança para `Transport`. O mesmo modo de segurança deve ser especificado no arquivo Web.config do serviço.  
+ O endereço especificado usa o `https://` esquema. A configuração de associação define o modo de segurança como `Transport` . O mesmo modo de segurança deve ser especificado no arquivo Web. config do serviço.  
   
- Como o certificado usado nesta amostra é um certificado de teste criado com o Makecert.exe, um https://localhost/servicemodelsamples/service.svcalerta de segurança aparece quando você tenta acessar um endereço https: como , do seu navegador. Para permitir que o cliente da Windows Communication Foundation (WCF) trabalhe com um certificado de teste em vigor, algum código adicional foi adicionado ao cliente para suprimir o alerta de segurança. Este código, e a classe de acompanhamento, não é necessário ao usar certificados de produção.  
+ Como o certificado usado neste exemplo é um certificado de teste criado com MakeCert. exe, um alerta de segurança é exibido quando você tenta acessar um https: address, como `https://localhost/servicemodelsamples/service.svc` , no seu navegador. Para permitir que o cliente do Windows Communication Foundation (WCF) funcione com um certificado de teste em vigor, um código adicional foi adicionado ao cliente para suprimir o alerta de segurança. Esse código e a classe que o acompanham não são necessários ao usar certificados de produção.  
 
 ```csharp
 // This code is required only for test certificates like those created by Makecert.exe.  
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
 ```
 
- Quando você executa a amostra, as solicitações e respostas da operação são exibidas na janela do console cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ```console  
 Add(100,15.99) = 115.99  
@@ -71,16 +71,16 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Instale ASP.NET 4.0 usando o seguinte comando.  
+1. Instale o ASP.NET 4,0 usando o comando a seguir.  
   
     ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Certifique-se de que você tenha realizado o [procedimento de configuração única para as amostras da Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3. Certifique-se de que você tenha realizado as Instruções de Instalação do [Certificado de Servidor do Serviço de Informações da Internet (IIS).](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)  
+3. Verifique se você executou as [instruções de instalação do certificado do servidor serviços de informações da Internet (IIS)](iis-server-certificate-installation-instructions.md).  
   
-4. Para construir a edição C# ou Visual Basic .NET da solução, siga as instruções em [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4. Para criar a edição C# ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).  
   
-5. Para executar a amostra em uma configuração de máquina única ou cruzada, siga as instruções em [Executar as amostras da Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+5. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md).  

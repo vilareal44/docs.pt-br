@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2758f40-e497-4964-8d8d-1bb68af14dcd
-ms.openlocfilehash: b8aa670764deb8e77cfb67fd16dbcf8b1cc9b4c0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e55486feeb427c95a9394ac83758e6052603921e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711123"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291572"
 ---
 # <a name="changing-namespace-declarations-in-an-xml-document"></a>Alterando declarações namespace em um documento XML
 **XmlDocument** expõe declarações de namespace e atributos **xmlns** como parte do modelo de objeto de documento. São armazenados em **XmlDocument**, para que, quando você salvar o documento, ele possa preservar o local desses atributos. Alterar esses atributos não tem efeito nas propriedades **Name**, **NamespaceURI** e **Prefix** de outros nós já na árvore. Por exemplo, se você carregar o documento a seguir, o elemento `test` terá **NamespaceURI** `123.`  
@@ -44,4 +44,4 @@ doc.documentElement.SetAttribute("xmlns","456");
   
 ## <a name="see-also"></a>Veja também
 
-- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

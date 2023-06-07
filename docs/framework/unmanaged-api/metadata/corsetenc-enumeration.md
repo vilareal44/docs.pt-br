@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe4150e8-071d-43fb-8e06-c3c616dbeed2
 topic_type:
 - apiref
-ms.openlocfilehash: 39f72e670ddc700c257f50f6bad6fab702ec21b6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 93a194ea72ab894544927cf96304397b7211b5ac
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432765"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009152"
 ---
 # <a name="corsetenc-enumeration"></a>Enumeração CorSetENC
 Contém valores usados para influenciar o comportamento durante a geração de metadados.  
@@ -44,7 +44,7 @@ typedef enum CorSetENC {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`MDSetENCOn`|Obsoleto.|  
 |`MDSetENCOff`|Obsoleto.|  
@@ -53,15 +53,15 @@ typedef enum CorSetENC {
 |`MDUpdateExtension`|Indica que as atualizações podem consistir apenas em adições. Tokens não podem ser movidos.|  
 |`MDUpdateIncremental`|Indica que a compilação é incremental.|  
 |`MDUpdateDelta`|Indica que somente os metadados alterados devem ser salvos.|  
-|`MDUpdateMask`|Inclui `MDUpdateENC`, `MDUpdateFull` e `MDUpdateIncremental`.|  
+|`MDUpdateMask`|Inclui `MDUpdateENC` o `MDUpdateFull` e o `MDUpdateIncremental` .|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerações de metadados](metadata-enumerations.md)

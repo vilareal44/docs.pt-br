@@ -118,6 +118,6 @@ O exemplo de código a seguir mostra os atributos a serem aplicados ao usar a as
 <Assembly:AssemblyDelaySignAttribute(True)>
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Criar assemblies](create.md)

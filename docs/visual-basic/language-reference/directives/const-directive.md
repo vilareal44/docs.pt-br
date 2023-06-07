@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: 278219edb1bb5d1c0bb015611d69cbe4ae70014b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 91152771a4ef5ec74a7408511ccc2afe28dd442e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343839"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415460"
 ---
 # <a name="const-directive"></a>Diretiva #Const
 
@@ -35,27 +35,27 @@ Define constantes de compilador condicional para Visual Basic.
 ## <a name="parts"></a>Partes  
 
  `constname`  
- Necessário. Nome da constante que está sendo definida.  
+ Obrigatórios. Nome da constante que está sendo definida.  
   
  `expression`  
- Necessário. Literal, outra constante de compilador condicional ou qualquer combinação que inclua qualquer ou todos os operadores aritméticos ou lógicos, exceto `Is`.  
+ Obrigatórios. Literal, outra constante de compilador condicional ou qualquer combinação que inclua qualquer ou todos os operadores aritméticos ou lógicos, exceto `Is` .  
   
 ## <a name="remarks"></a>Comentários  
 
- Constantes de compilador condicional são sempre particulares para o arquivo no qual aparecem. Você não pode criar constantes de compilador público usando a diretiva `#Const`; Você pode criá-los somente na interface do usuário ou com a opção de compilador `/define`.  
+ Constantes de compilador condicional são sempre particulares para o arquivo no qual aparecem. Você não pode criar constantes de compilador público usando a `#Const` diretiva; você pode criá-las somente na interface do usuário ou com a `/define` opção do compilador.  
   
- Você pode usar apenas constantes de compilador condicionais e literais no `expression`. O uso de uma constante padrão definida com `Const` causa um erro. Por outro lado, você pode usar constantes definidas com a palavra-chave `#Const` somente para compilação condicional. As constantes também podem ser indefinidas; nesse caso, elas têm um valor de `Nothing`.  
+ Você pode usar apenas constantes de compilador condicionais e literais no `expression` . Usar uma constante padrão definida com `Const` causa um erro. Por outro lado, você pode usar constantes definidas com a `#Const` palavra-chave somente para compilação condicional. As constantes também podem ser indefinidas; nesse caso, elas têm um valor de `Nothing` .  
   
 ## <a name="example"></a>Exemplo  
 
- Este exemplo usa a diretiva `#Const`.  
+ Este exemplo usa a `#Const` diretiva.  
   
  [!code-vb[VbVbalrConditionalComp#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#3)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [-definir (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
-- [Diretivas #If...Then...#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
-- [Instrução Const](../../../visual-basic/language-reference/statements/const-statement.md)
-- [Compilação Condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
-- [Instrução If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [-definir (Visual Basic)](../../reference/command-line-compiler/define.md)
+- [#If... Diretivas then... #Else](if-then-else-directives.md)
+- [Instrução Const](../statements/const-statement.md)
+- [Compilação condicional](../../programming-guide/program-structure/conditional-compilation.md)
+- [Instrução If...Then...Else](../statements/if-then-else-statement.md)

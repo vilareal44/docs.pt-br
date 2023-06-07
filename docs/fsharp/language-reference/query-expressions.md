@@ -1,18 +1,15 @@
 ---
 title: Expressões de consulta
 description: 'Saiba mais sobre o suporte à expressão de consulta para LINQ na linguagem de programação F #.'
-ms.date: 05/16/2016
-ms.openlocfilehash: bbd15352aa89bd1891b409177921a675784a0227
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.date: 08/15/2020
+ms.openlocfilehash: afcc6e92818b1648a210ad9cfc3f1dcfa46037b5
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419181"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559057"
 ---
 # <a name="query-expressions"></a>Expressões de consulta
-
-> [!NOTE]
-> Os links de referência da API neste artigo levarão você até o MSDN.  A referência da API docs.microsoft.com não está completa.
 
 As expressões de consulta permitem consultar uma fonte de dados e colocar os dados em um formulário desejado. As expressões de consulta fornecem suporte para LINQ em F #.
 
@@ -46,9 +43,9 @@ query1
 |> Seq.iter (fun customer -> printfn "Company: %s Contact: %s" customer.CompanyName customer.ContactName)
 ```
 
-No exemplo de código anterior, a expressão de consulta está entre chaves. O significado do código na expressão é retornar todos os clientes na tabela Customers no banco de dados nos resultados da consulta. As expressões de consulta retornam um tipo que implementa <xref:System.Linq.IQueryable%601> e e <xref:System.Collections.Generic.IEnumerable%601> , portanto, podem ser iteradas usando o [módulo Seq](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) como mostra o exemplo.
+No exemplo de código anterior, a expressão de consulta está entre chaves. O significado do código na expressão é retornar todos os clientes na tabela Customers no banco de dados nos resultados da consulta. As expressões de consulta retornam um tipo que implementa <xref:System.Linq.IQueryable%601> e e <xref:System.Collections.Generic.IEnumerable%601> , portanto, podem ser iteradas usando o [módulo Seq](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html) como mostra o exemplo.
 
-Cada tipo de expressão de computação é criado a partir de uma classe de construtor. A classe do construtor para a expressão de cálculo de consulta é `QueryBuilder` . Para obter mais informações, consulte [expressões de computação](computation-expressions.md) e [classe LINQ. Construtor](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).
+Cada tipo de expressão de computação é criado a partir de uma classe de construtor. A classe do construtor para a expressão de cálculo de consulta é `QueryBuilder` . Para obter mais informações, consulte [expressões de computação](computation-expressions.md) e [classe Construtor](hhttps://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html).
 
 ## <a name="query-operators"></a>Operadores de Consulta
 
@@ -56,7 +53,7 @@ Os operadores de consulta permitem que você especifique os detalhes da consulta
 
 Somente expressões que podem ser convertidas em SQL são permitidas em expressões de consulta. Por exemplo, nenhuma chamada de função é permitida nas expressões quando você usa o `where` operador de consulta.
 
-A tabela 1 mostra os operadores de consulta disponíveis. Além disso, consulte Table2, que compara consultas SQL e as expressões de consulta F # equivalentes posteriormente neste tópico. Alguns operadores de consulta não têm suporte de alguns provedores de tipos. Em particular, o provedor de tipo OData é limitado nos operadores de consulta que ele suporta devido a limitações no OData. Para obter mais informações, consulte [provedor de tipo ODataService (F #)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
+A tabela 1 mostra os operadores de consulta disponíveis. Além disso, consulte Table2, que compara consultas SQL e as expressões de consulta F # equivalentes posteriormente neste tópico. Alguns operadores de consulta não têm suporte de alguns provedores de tipos. Em particular, o provedor de tipo OData é limitado nos operadores de consulta que ele suporta devido a limitações no OData.
 
 Esta tabela pressupõe um banco de dados no seguinte formato:
 
@@ -683,7 +680,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>IN</code>um conjunto de valores especificados<br/>
+<code>IN</code> um conjunto de valores especificados<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -724,7 +721,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>com conjunto de correspondência de padrões.<br/>
+<code>LIKE</code> com conjunto de correspondência de padrões.<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -741,7 +738,7 @@ WHERE Student.Name LIKE '[abc]%'
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>com o padrão de exclusão definida.<br/>
+<code>LIKE</code> com o padrão de exclusão definida.<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -760,7 +757,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>em um campo, mas selecione um campo diferente.<br/>
+<code>LIKE</code> em um campo, mas selecione um campo diferente.<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -810,7 +807,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>LEFT JOIN</code>com duas tabelas.<br/>
+</td></tr><tr><td><code>LEFT JOIN</code> com duas tabelas.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -912,7 +909,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>OR</code>com a ordenação<br/>
+</td></tr><tr><td><code>OR</code> com a ordenação<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -952,7 +949,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>UNION</code>de duas consultas.<br/>
+</td></tr><tr><td><code>UNION</code> de duas consultas.<br/>
 
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable no-space-in-emphasis -->
@@ -1007,7 +1004,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><code>CASE</code>problema.<br/>
+</td></tr><tr><td><code>CASE</code> problema.<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age
@@ -2437,8 +2434,8 @@ module Queries2 = begin
 end
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência de linguagem F #](index.md)
-- [Classe LINQ. Construtor](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
+- [Classe Construtor](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html)
 - [Expressões de computação](Computation-Expressions.md)

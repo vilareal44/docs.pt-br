@@ -1,18 +1,19 @@
 ---
-title: Como criar wrappers COM
+title: 'Como: Criar wrappers COM'
+description: Criar wrappers de Component Object Model (COM) usando as ferramentas do Visual Studio ou do .NET (Tlbimp.exe e Regasm.exe). Ambos os métodos geram dois tipos de Wrappers COM.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
 - COM,wrappers Visual Studio
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
-ms.openlocfilehash: 035d6439ec90426d7b68e05043ea8b6722f81d28
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 286526c710287e6efa3e49a7f7c55e3687076e29
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121597"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617386"
 ---
-# <a name="how-to-create-com-wrappers"></a>Como criar wrappers COM
+# <a name="how-to-create-com-wrappers"></a>Como: Criar wrappers COM
 
 Você pode criar wrappers COM (Component Object Model) usando recursos do Visual Studio 2005 ou as ferramentas Tlbimp.exe e Regasm.exe do .NET Framework. Ambos os métodos geram dois tipos de wrappers COM:
 
@@ -71,7 +72,7 @@ Essa ferramenta lê os metadados do assembly e adiciona as entradas necessárias
   
 Execute o Regasm.exe em um assembly localizado em qualquer diretório e, em seguida, execute o [Gacutil.exe (Ferramenta do Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md) para movê-lo para o cache de assembly global. A movimentação do assembly não invalida as entradas do Registro de local, porque o cache de assembly global sempre será examinado se o assembly não for encontrado em outro lugar.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [RCW (Runtime Callable Wrapper)](../../standard/native-interop/runtime-callable-wrapper.md)
 - [COM Callable Wrapper](../../standard/native-interop/com-callable-wrapper.md)

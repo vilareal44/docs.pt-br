@@ -1,19 +1,19 @@
 ---
 title: Instalar e gerenciar modelos de SDK-.NET Core
 description: Saiba como instalar modelos do .NET Core no Windows, Linux e macOS.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 04/24/2020
 zone_pivot_groups: operating-systems-set-one
 no-loc:
 - dotnet new
 - dotnet nuget add source
-ms.openlocfilehash: 0a3c8655d55bf63de1e91337ce3a2ac399b07d0f
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 09acae1409eb0492be10bd3a61b14da5be57c6c7
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200611"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324492"
 ---
 # <a name="manage-net-project-and-item-templates"></a>Gerenciar modelos de projeto e item do .NET
 
@@ -23,21 +23,21 @@ Para obter mais informações sobre como criar modelos, consulte [tutorial: cria
 
 ## <a name="install-template"></a>Instalar modelo
 
-Os modelos são instalados por meio do [novo comando dotnet](../tools/dotnet-new.md) do `-i` SDK com o parâmetro. Você pode fornecer o identificador de pacote NuGet de um modelo ou uma pasta que contém os arquivos de modelo.
+Os modelos são instalados por meio do [dotnet new](../tools/dotnet-new.md) comando do SDK com o `-i` parâmetro. Você pode fornecer o identificador de pacote NuGet de um modelo ou uma pasta que contém os arquivos de modelo.
 
 ### <a name="nuget-hosted-package"></a>Pacote hospedado do NuGet
 
 Os modelos da CLI do .NET são carregados no [NuGet](https://www.nuget.org/) para ampla distribuição. Os modelos também podem ser instalados de um feed particular. Em vez de carregar um modelo em um feed do NuGet, os arquivos de modelo *nupkg* podem ser distribuídos e instalados manualmente, conforme descrito na seção [pacote do NuGet local](#local-nuget-package) .
 
-Para obter mais informações sobre como configurar feeds do NuGet, consulte [dotnet NuGet Adicionar fonte](../tools/dotnet-nuget-add-source.md).
+Para obter mais informações sobre a configuração de feeds do NuGet, consulte [dotnet nuget add source](../tools/dotnet-nuget-add-source.md) .
 
-Para instalar um pacote de modelos do feed do NuGet padrão, use `dotnet new -i {package-id}` o comando:
+Para instalar um pacote de modelos do feed do NuGet padrão, use o `dotnet new -i {package-id}` comando:
 
 ```dotnetcli
 dotnet new -i Microsoft.DotNet.Web.Spa.ProjectTemplates
 ```
 
-Para instalar um pacote de modelos do feed do NuGet padrão com uma versão específica, use `dotnet new -i {package-id}::{version}` o comando:
+Para instalar um pacote de modelos do feed do NuGet padrão com uma versão específica, use o `dotnet new -i {package-id}::{version}` comando:
 
 ```dotnetcli
 dotnet new -i Microsoft.DotNet.Web.Spa.ProjectTemplates::2.2.6
@@ -65,7 +65,7 @@ dotnet new -i ~/code/nuget-packages/Some.Templates.1.0.0.nupkg
 
 ### <a name="folder"></a>Pasta
 
-Como alternativa à instalação do modelo a partir de um arquivo *nupkg* , você também pode instalar modelos de uma pasta diretamente `dotnet new -i {folder-path}` com o comando. A pasta especificada é tratada como o identificador do pacote de modelos para qualquer modelo encontrado. Qualquer modelo encontrado na hierarquia da pasta especificada é instalado.
+Como alternativa à instalação do modelo a partir de um arquivo *nupkg* , você também pode instalar modelos de uma pasta diretamente com o `dotnet new -i {folder-path}` comando. A pasta especificada é tratada como o identificador do pacote de modelos para qualquer modelo encontrado. Qualquer modelo encontrado na hierarquia da pasta especificada é instalado.
 
 ::: zone pivot="os-windows"
 
@@ -127,13 +127,13 @@ Currently installed items:
 
 ## <a name="uninstall-template"></a>Desinstalar modelo
 
-Os modelos são desinstalados por meio do [novo comando dotnet](../tools/dotnet-new.md) do `-u` SDK com o parâmetro. Você pode fornecer o identificador de pacote NuGet de um modelo ou uma pasta que contém os arquivos de modelo.
+Os modelos são desinstalados por meio do [dotnet new](../tools/dotnet-new.md) comando do SDK com o `-u` parâmetro. Você pode fornecer o identificador de pacote NuGet de um modelo ou uma pasta que contém os arquivos de modelo.
 
 ### <a name="nuget-package"></a>Pacote NuGet
 
 Depois que um pacote de modelos NuGet é instalado, de um feed NuGet ou de um arquivo *nupkg* , você pode desinstalá-lo referenciando o identificador do pacote NuGet.
 
-Para desinstalar um pacote de modelos, use `dotnet new -u {package-id}` o comando:
+Para desinstalar um pacote de modelos, use o `dotnet new -u {package-id}` comando:
 
 ```dotnetcli
 dotnet new -u Microsoft.DotNet.Web.Spa.ProjectTemplates
@@ -143,7 +143,7 @@ dotnet new -u Microsoft.DotNet.Web.Spa.ProjectTemplates
 
 Quando os modelos são instalados por meio de um [caminho de pasta](#folder), o caminho da pasta se torna o identificador do pacote de modelos.
 
-Para desinstalar um pacote de modelos, use `dotnet new -u {package-folder-path}` o comando:
+Para desinstalar um pacote de modelos, use o `dotnet new -u {package-folder-path}` comando:
 
 ::: zone pivot="os-windows"
 
@@ -192,7 +192,7 @@ Os modelos do .NET Core estão disponíveis no NuGet e você pode instalá-los c
 | .NET Core 2.1    | [`Microsoft.DotNet.Common.ProjectTemplates.2.1`](https://www.nuget.org/packages/Microsoft.DotNet.Common.ProjectTemplates.2.1) |
 | .NET Core 2.2    | [`Microsoft.DotNet.Common.ProjectTemplates.2.2`](https://www.nuget.org/packages/Microsoft.DotNet.Common.ProjectTemplates.2.2) |
 | .NET Core 3.0    | [`Microsoft.DotNet.Common.ProjectTemplates.3.0`](https://www.nuget.org/packages/Microsoft.DotNet.Common.ProjectTemplates.3.0) |
-| .NET Core 3,1    | [`Microsoft.DotNet.Common.ProjectTemplates.3.1`](https://www.nuget.org/packages/Microsoft.DotNet.Common.ProjectTemplates.3.1) |
+| .NET Core 3.1    | [`Microsoft.DotNet.Common.ProjectTemplates.3.1`](https://www.nuget.org/packages/Microsoft.DotNet.Common.ProjectTemplates.3.1) |
 | ASP.NET Core 2.1 | [`Microsoft.DotNet.Web.ProjectTemplates.2.1`](https://www.nuget.org/packages/Microsoft.DotNet.Web.ProjectTemplates.2.1)       |
 | ASP.NET Core 2,2 | [`Microsoft.DotNet.Web.ProjectTemplates.2.2`](https://www.nuget.org/packages/Microsoft.DotNet.Web.ProjectTemplates.2.2)       |
 | ASP.NET Core 3,0 | [`Microsoft.DotNet.Web.ProjectTemplates.3.0`](https://www.nuget.org/packages/Microsoft.DotNet.Web.ProjectTemplates.3.0)       |
@@ -230,7 +230,7 @@ Por exemplo, a SDK do .NET Core inclui modelos para um aplicativo de console des
     >
     > Restauração bem-sucedida.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Tutorial: criar um modelo de item](../tutorials/cli-templates-create-item-template.md)
 - [dotnet new](../tools/dotnet-new.md)

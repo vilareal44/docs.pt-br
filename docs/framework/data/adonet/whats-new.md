@@ -1,13 +1,14 @@
 ---
 title: O Que Há de Novo
+description: Saiba mais sobre os novos recursos do ADO.NET no .NET Framework 4,5, incluindo novos recursos para o provedor de dados SqlClient e o ADO.NET Entity Framework.
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 2ac8ebced700dc6c874ac22304773b3b9c19f8b3
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 536b9314dd83366202f7fd9b489759681021fd9e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76979766"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286165"
 ---
 # <a name="whats-new-in-adonet"></a>Novidades no ADO.NET
 
@@ -29,7 +30,7 @@ Os recursos a seguir são novos no .NET Framework Provedor de Dados para SQL Ser
 
 - Uma senha pode ser passada como um <xref:System.Security.SecureString> ao usar a autenticação SQL Server. Consulte <xref:System.Data.SqlClient.SqlCredential> para obter mais informações.
 
-- Quando `TrustServerCertificate` é false e `Encrypt` é true, o nome do servidor (ou endereço IP) em um certificado SQL Server SSL deve corresponder exatamente ao nome do servidor (ou endereço IP) especificado na cadeia de conexão. Caso contrário, a tentativa de conexão falhará. Para obter mais informações, consulte a descrição da opção de conexão de `Encrypt` em <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
+- Quando `TrustServerCertificate` é false e `Encrypt` é true, o nome do servidor (ou endereço IP) em um certificado SSL SQL Server deve corresponder exatamente ao nome do servidor (ou endereço IP) especificado na cadeia de conexão. Caso contrário, a tentativa de conexão falhará. Para obter mais informações, consulte a descrição da opção de conexão de `Encrypt` em <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
   Se esta alteração fizer um aplicativo existente não se conectar mais, você poderá corrigir o aplicativo usando um desses procedimentos:
 
@@ -45,9 +46,9 @@ Os recursos a seguir são novos no .NET Framework Provedor de Dados para SQL Ser
 
 - `Type System Version=SQL Server 2012;` é o novo valor para passar para a propriedade de conexão `Type System Version`. O valor `Type System Version=Latest;` agora é obsoleto e agora é equivalente ao `Type System Version=SQL Server 2008;`. Para obter mais informações, consulte <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
-- O SqlClient fornece suporte adicional a colunas esparsas, um recurso que foi adicionado no SQL Server 2008. Se o seu aplicativo já acessa dados em uma tabela que usa colunas esparsas, você deverá ver uma melhora no desempenho. A coluna IsColumnSet do <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> indica se uma coluna é uma esparsa que é membro de um conjunto de colunas. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> indica se uma coluna é uma coluna esparsa (consulte [SQL Server coleções de esquema](sql-server-schema-collections.md) para obter mais informações). Para obter mais informações sobre colunas esparsas, consulte [usar colunas esparsas](/sql/relational-databases/tables/use-sparse-columns).
+- O SqlClient fornece suporte adicional a colunas esparsas, um recurso que foi adicionado no SQL Server 2008. Se o aplicativo já acessa dados em uma tabela que usa colunas esparsas, você deverá ver um aumento no desempenho. A coluna IsColumnSet do <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> indica se uma coluna é uma esparsa que é membro de um conjunto de colunas. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>indica se uma coluna é uma coluna esparsa (consulte [SQL Server coleções de esquema](sql-server-schema-collections.md) para obter mais informações). Para obter mais informações sobre colunas esparsas, consulte [usar colunas esparsas](/sql/relational-databases/tables/use-sparse-columns).
 
-- O assembly Microsoft.SqlServer.Types.dllque contém os tipos de dados espaciais foi atualizado da versão 10.0 para a versão 11.0. Os aplicativos que fazem referência a esse assembly podem falhar. Para obter mais informações, consulte [alterações recentes em recursos de mecanismo de banco de dados](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms143179(v=sql.110)).
+- O Microsoft.SqlServer.Types.dll do assembly, que contém os tipos de dados espaciais, foi atualizada da versão 10.0 para a 11.0. Os aplicativos que fazem referência a esse assembly podem falhar. Para obter mais informações, consulte [alterações recentes em recursos de mecanismo de banco de dados](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms143179(v=sql.110)).
 
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework
 
@@ -56,6 +57,6 @@ O .NET Framework 4,5 adiciona APIs que habilitam novos cenários ao trabalhar co
 ## <a name="see-also"></a>Veja também
 
 - [ADO.NET](index.md)
-- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)
-- [SQL Server and ADO.NET](./sql/index.md) (SQL Server e ADO.NET)
+- [Visão geral do ADO.NET](ado-net-overview.md)
+- [SQL Server e ADO.NET](./sql/index.md)
 - [O que há de novo no WCF Data Services 5,0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))

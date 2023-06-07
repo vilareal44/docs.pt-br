@@ -1,5 +1,6 @@
 ---
-title: Campo ServicePointManager.s_ServicePointTable
+title: Campo ServicePointManager. s_ServicePointTable
+description: Leia sobre o campo ServicePointManager. s_ServicePointTable no .NET. Este campo de tabela de hash contém conexões HTTP ativas (pontos de bits) no AppDomain.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,32 +11,32 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 24459679-291c-401a-9def-e42b29466fcf
-ms.openlocfilehash: 6a56ecd6fc85005f5987c3c2ad0d1680ca63c398
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9462ae10125dd37706f786a1f2cef78e62fbabcc
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155801"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989541"
 ---
-# <a name="servicepointmanagers_servicepointtable-field"></a>Campo servicepointtable\_servicepointmanager.s
+# <a name="servicepointmanagers_servicepointtable-field"></a>Campo ServicePointManager. s do \_ Objectpointtable
 
-`ServicePointManager.s_ServicePointTable`é <xref:System.Collections.Hashtable> um que contém a lista<xref:System.Net.ServicePoint>de conexões <xref:System.AppDomain>HTTP ativas (s) no .
+`ServicePointManager.s_ServicePointTable`é um <xref:System.Collections.Hashtable> que contém a lista de conexões http ativas <xref:System.Net.ServicePoint> no <xref:System.AppDomain> .
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
   
 ```csharp  
 private static Hashtable s_ServicePointTable
 ```
 
 > [!WARNING]
-> O `ServicePointManager.s_ServicePointTable` campo é privado e não deve ser usado diretamente em seu código.
+> O `ServicePointManager.s_ServicePointTable` campo é privado e não deve ser usado diretamente no seu código.
 >
-> A Microsoft não suporta o uso deste campo em um aplicativo de produção nenhuma circunstância.
+> A Microsoft não oferece suporte ao uso deste campo em um aplicativo de produção em qualquer circunstância.
 
 ## <a name="requirements"></a>Requisitos
 
-**Espaço de nome:**<xref:System.Net>
+**Namespace:** <xref:System.Net>
 
-**Montagem:** Sistema (em System.dll)
+**Assembly:** Sistema (em System.dll)
 
-**Versões do Framework .NET:** Disponível desde 2.0.
+**.NET Framework versões:** Disponível desde 2,0.

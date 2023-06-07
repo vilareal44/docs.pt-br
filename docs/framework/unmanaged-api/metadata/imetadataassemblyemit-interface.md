@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 34fb03cc-2285-4a45-ac48-ad993b7a921a
 topic_type:
 - apiref
-ms.openlocfilehash: 6b36d63101c1e9550a979d858764e9052cf45792
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 807e1ee831a43a4ef1e7b0a269ee38131f24081e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447923"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008112"
 ---
 # <a name="imetadataassemblyemit-interface"></a>Interface IMetaDataAssemblyEmit
 Fornece métodos que dão suporte ao modelo de autodescrição usado pelo Common Language Runtime para resolver e consumir recursos.  
@@ -28,29 +28,29 @@ Fornece métodos que dão suporte ao modelo de autodescrição usado pelo Common
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md)|Cria uma estrutura de dados de assembly contendo metadados para o assembly especificado e retorna o token de metadados associado.|  
-|[Método DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)|Cria uma estrutura de `AssemblyRef` que contém metadados para o assembly ao qual este assembly faz referência e retorna o token de metadados associado.|  
-|[Método DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)|Cria uma estrutura de `ExportedType` que contém metadados para o tipo exportado especificado e retorna o token de metadados associado.|  
-|[Método DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)|Cria uma estrutura de metadados `File` que contém metadados para o assembly referenciado por esse assembly e retorna o token de metadados associado.|  
-|[Método DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md)|Cria uma estrutura de `ManifestResource` que contém metadados para o recurso de manifesto especificado e retorna o token de metadados associado.|  
-|[Método SetAssemblyProps](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-setassemblyprops-method.md)|Modifica a estrutura de metadados de `Assembly` especificada.|  
-|[Método SetAssemblyRefProps](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-setassemblyrefprops-method.md)|Modifica a estrutura de metadados de `AssemblyRef` especificada.|  
-|[Método SetExportedTypeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-setexportedtypeprops-method.md)|Modifica a estrutura de metadados de `ExportedType` especificada.|  
-|[Método SetFileProps](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-setfileprops-method.md)|Modifica a estrutura de metadados de `File` especificada.|  
-|[Método SetManifestResourceProps](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-setmanifestresourceprops-method.md)|Modifica a estrutura de metadados de `ManifestResource` especificada.|  
+|[Método DefineAssembly](imetadataassemblyemit-defineassembly-method.md)|Cria uma estrutura de dados de assembly contendo metadados para o assembly especificado e retorna o token de metadados associado.|  
+|[Método DefineAssemblyRef](imetadataassemblyemit-defineassemblyref-method.md)|Cria uma `AssemblyRef` estrutura que contém metadados para o assembly ao qual este assembly faz referência e retorna o token de metadados associado.|  
+|[Método DefineExportedType](imetadataassemblyemit-defineexportedtype-method.md)|Cria uma `ExportedType` estrutura que contém metadados para o tipo exportado especificado e retorna o token de metadados associado.|  
+|[Método DefineFile](imetadataassemblyemit-definefile-method.md)|Cria uma `File` estrutura de metadados que contém metadados para o assembly referenciado por esse assembly e retorna o token de metadados associado.|  
+|[Método DefineManifestResource](imetadataassemblyemit-definemanifestresource-method.md)|Cria uma `ManifestResource` estrutura que contém metadados para o recurso de manifesto especificado e retorna o token de metadados associado.|  
+|[Método SetAssemblyProps](imetadataassemblyemit-setassemblyprops-method.md)|Modifica a estrutura de `Assembly` metadados especificada.|  
+|[Método SetAssemblyRefProps](imetadataassemblyemit-setassemblyrefprops-method.md)|Modifica a estrutura de `AssemblyRef` metadados especificada.|  
+|[Método SetExportedTypeProps](imetadataassemblyemit-setexportedtypeprops-method.md)|Modifica a estrutura de `ExportedType` metadados especificada.|  
+|[Método SetFileProps](imetadataassemblyemit-setfileprops-method.md)|Modifica a estrutura de `File` metadados especificada.|  
+|[Método SetManifestResourceProps](imetadataassemblyemit-setmanifestresourceprops-method.md)|Modifica a estrutura de `ManifestResource` metadados especificada.|  
   
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
-- [Interface IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [Interfaces de metadados](metadata-interfaces.md)
+- [Interface IMetaDataAssemblyImport](imetadataassemblyimport-interface.md)

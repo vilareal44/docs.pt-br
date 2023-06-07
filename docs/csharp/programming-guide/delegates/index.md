@@ -1,16 +1,17 @@
 ---
 title: Delegados – Guia de Programação em C#
+description: Um delegado em C# é um tipo que se refere a métodos com uma lista de parâmetros e um tipo de retorno. Delegados são usados para passar métodos como argumentos a outros métodos.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: c0f28716926d4c9d74cde58fd00e27d1fdfa7ce1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c1be56b67528c17a6cf1d8d8517817ff93b2aa5
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75705360"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063632"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegados (Guia de Programação em C#)
 Um [delegado](../../language-reference/builtin-types/reference-types.md) é um tipo que representa referências aos métodos com lista de parâmetros e tipo de retorno específicos. Ao instanciar um delegado, você pode associar sua instância a qualquer método com assinatura e tipo de retorno compatíveis. Você pode invocar (ou chamar) o método através da instância de delegado.  
@@ -39,19 +40,19 @@ Um [delegado](../../language-reference/builtin-types/reference-types.md) é um t
   
 - Os métodos não precisam corresponder ao tipo delegado exatamente. Para obter mais informações, confira [Usando a variação delegados](../concepts/covariance-contravariance/using-variance-in-delegates.md).  
   
-- O C# versão 2.0 introduziu o conceito de [métodos anônimos](../../language-reference/operators/delegate-operator.md) que permitem que blocos de código sejam passados como parâmetros em vez de um método definido separadamente. O C# 3.0 introduziu expressões lambda como uma maneira mais concisa de escrever blocos de código embutidos. Os métodos anônimos e as expressões lambda (em determinados contextos) são compilados para tipos delegados. Juntos, esses recursos são agora conhecidos como funções anônimas. Para saber mais sobre expressões lambda, confira o artigo sobre [expressões lambda](../statements-expressions-operators/lambda-expressions.md).
+- O C# versão 2.0 introduziu o conceito de [métodos anônimos](../../language-reference/operators/delegate-operator.md) que permitem que blocos de código sejam passados como parâmetros em vez de um método definido separadamente. O C# 3.0 introduziu expressões lambda como uma maneira mais concisa de escrever blocos de código embutidos. Os métodos anônimos e as expressões lambda (em determinados contextos) são compilados para tipos delegados. Juntos, esses recursos são agora conhecidos como funções anônimas. Para saber mais sobre expressões lambda, confira o artigo sobre [expressões lambda](../../language-reference/operators/lambda-expressions.md).
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-- [Usar delegados](./using-delegates.md)  
+- [Usando delegados](./using-delegates.md)  
   
 - [Quando usar delegados em vez de interfaces (Guia de Programação em C#)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
-- [Delegados com métodos nomeados versus anônimos](./delegates-with-named-vs-anonymous-methods.md)  
+- [Delegados com Métodos Nomeados vs. Métodos anônimos](./delegates-with-named-vs-anonymous-methods.md)  
   
 - [Usando variação em delegados](../concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
-- [Como combinar delegados (Delegados Multicast)](./how-to-combine-delegates-multicast-delegates.md)  
+- [Como combinar delegados (delegados de multicast)](./how-to-combine-delegates-multicast-delegates.md)  
   
 - [Como declarar e usar um delegado e criar uma instância dele](./how-to-declare-instantiate-and-use-a-delegate.md)
 
@@ -64,8 +65,8 @@ Para obter mais informações, veja [Delegados](~/_csharplang/spec/delegates.md)
   
  [Delegados e eventos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652490%28v=orm.10%29) em [Learning C# 3.0: Master the fundamentals of C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v=orm.10%29)  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Delegate>
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Eventos](../events/index.md)

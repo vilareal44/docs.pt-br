@@ -1,5 +1,5 @@
 ---
-title: Como gravar texto em arquivos
+title: 'Como: gravar texto em arquivos'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], writing to
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - examples [Visual Basic], text files
 ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
-ms.openlocfilehash: ce1ee59ba71af6bb13e05a5bce37a2f7eee37712
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f95a0c4df4a2eab0069a6dab0d4c3fa338d1d8ef
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74334469"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411532"
 ---
 # <a name="how-to-write-text-to-files-in-visual-basic"></a>Como gravar texto em arquivos no Visual Basic
 
@@ -56,8 +56,8 @@ O método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> pode se
   
  Se você estiver executando em um contexto de confiança parcial, o código pode gerar uma exceção devido a privilégios insuficientes. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../../../framework/misc/code-access-security-basics.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
-- [Como ler em arquivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
+- [Como: ler de arquivos de texto](how-to-read-from-text-files.md)

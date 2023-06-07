@@ -2,12 +2,12 @@
 title: Modificando elementos, atributos e nós em um Tree1 XML
 ms.date: 07/20/2015
 ms.assetid: 865cf54e-f8ac-4871-863b-a3e6fc61a4b9
-ms.openlocfilehash: d548e6f5912437e5c5df27f55fcdb28990e92c8d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 002e87d58ad1a3730889225bf4b3e50448431f2d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666138"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360924"
 ---
 # <a name="modifying-elements-attributes-and-nodes-in-an-xml-tree"></a>Modificando elementos, atributos e nós em uma árvore XML
 A tabela a seguir resume os métodos e as propriedades que você pode usar para modificar um elemento, seus elementos filho ou seus atributos.  
@@ -45,6 +45,6 @@ A tabela a seguir resume os métodos e as propriedades que você pode usar para 
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A?displayProperty=nameWithType>|Substitui os nós filho pelo novo conteúdo.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Modificando árvores XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [Modificando árvores XML (LINQ to XML) (Visual Basic)](modifying-xml-trees-linq-to-xml.md)

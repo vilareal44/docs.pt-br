@@ -1,16 +1,17 @@
 ---
 title: Diretrizes para criação de componentes para execução lado a lado
+description: Examine as diretrizes para criar componentes para execução lado a lado. Por exemplo, associe o tipo identidade a uma determinada versão de arquivo ou use o armazenamento com reconhecimento de versão.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution, multiple application versions
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
-ms.openlocfilehash: 42d0e2d85517d4a8fb443db9b63e6b893267caca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f0d25984f2444d29d9fc0edb3add23b6adc04c62
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121581"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622634"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Diretrizes para criação de componentes para execução lado a lado
 Siga estas diretrizes gerais para criar aplicativos gerenciados ou componentes projetados para execução lado a lado:  
@@ -60,7 +61,7 @@ Siga estas diretrizes gerais para criar aplicativos gerenciados ou componentes p
   
  A [ferramenta Cache de Assembly Global (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) permite que você substitua um assembly quando apenas o número de versão do arquivo é mais recente. O instalador geralmente não instala em um assembly, a menos que o número de versão do assembly seja maior.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Execução lado a lado](side-by-side-execution.md)
-- [Como habilitar e desabilitar o redirecionamento automático de associações](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Como: Habilitar e desabilitar o redirecionamento automático de associação](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

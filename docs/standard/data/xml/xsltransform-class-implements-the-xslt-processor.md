@@ -6,17 +6,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
-ms.openlocfilehash: 73a432db9a3fcb6587184e27e6dfe9ba49010e92
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: eec5d6588d907e2d12b588ab3bfe743d6d1eaff9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709602"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84281603"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>A classe XslTransform implementa do processador XSLT
 
 > [!NOTE]
-> A classe <xref:System.Xml.Xsl.XslTransform> está obsoleta no .NET Framework 2.0. Você pode executar a linguagem XSL Transformations (XSLT) usando a classe <xref:System.Xml.Xsl.XslCompiledTransform>. Confira [Usar a classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [Migrar da classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) para saber mais.
+> A classe <xref:System.Xml.Xsl.XslTransform> está obsoleta no .NET Framework 2.0. Você pode executar a linguagem XSL Transformations (XSLT) usando a classe <xref:System.Xml.Xsl.XslCompiledTransform>. Confira [Usar a classe XslCompiledTransform](using-the-xslcompiledtransform-class.md) e [Migrar da classe XslTransform](migrating-from-the-xsltransform-class.md) para saber mais.
 
 A classe de <xref:System.Xml.Xsl.XslTransform> é um processador XSLT que implementa a recomendação de versão 1,0 de transformações XSL (XSLT). O método de <xref:System.Xml.Xsl.XslTransform.Load%2A> localiza e ler as folhas de estilos, e o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> torna o documento de origem determinado. Qualquer armazenamento que implemente a interface de <xref:System.Xml.XPath.IXPathNavigable> pode ser usado como o documento de origem para <xref:System.Xml.Xsl.XslTransform>. O .NET Framework atualmente implementa a interface de <xref:System.Xml.XPath.IXPathNavigable> em <xref:System.Xml.XmlDocument>, em <xref:System.Xml.XmlDataDocument> e em <xref:System.Xml.XPath.XPathDocument>, para que todos estes pode ser usado como o documento de fonte de entrada para uma transformação.
 
@@ -76,9 +76,9 @@ Se a folha de estilos é carregada usando um método de <xref:System.Xml.Xsl.Xsl
 
 Se nenhum URI ou evidência é fornecido, então a evidência definida para a folha de estilos é totalmente confiável. Não carregar folhas de estilos de fontes não confiáveis, ou adicionar objetos não confiáveis de extensão em <xref:System.Xml.Xsl.XsltArgumentList>.
 
-Para saber mais sobre níveis e evidência de segurança e como isso afeta o script, confira [Scripts de folha de estilos de XSLT usando \<msxsl:script>](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md). Para saber mais sobre os níveis e evidência de segurança, e como isso afeta os objetos de extensão, confira [XsltArgumentList para parâmetros de folha de estilos e objetos de extensão](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md).
+Para obter mais informações sobre níveis de segurança e evidências e como ele afeta o script, consulte [scripting de \<msxsl:script> folha de estilos XSLT usando ](xslt-stylesheet-scripting-using-msxsl-script.md). Para saber mais sobre os níveis e evidência de segurança, e como isso afeta os objetos de extensão, confira [XsltArgumentList para parâmetros de folha de estilos e objetos de extensão](xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md).
 
-Para saber mais sobre níveis e evidência de segurança, e como isso afeta a função `document()`, confira [Resolvendo folhas de estilos XSLT e documentos externos](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md).
+Para saber mais sobre níveis e evidência de segurança, e como isso afeta a função `document()`, confira [Resolvendo folhas de estilos XSLT e documentos externos](resolving-external-xslt-style-sheets-and-documents.md).
 
 Uma folha de estilos pode ser fornecida com um número de parâmetros. A folha de estilos também pode chamar funções em objetos de extensão. Os parâmetros e objetos de extensão são fornecidos para a folha de estilos usando a classe de <xref:System.Xml.Xsl.XsltArgumentList> . Para obter mais informações sobre <xref:System.Xml.Xsl.XsltArgumentList>, consulte <xref:System.Xml.Xsl.XsltArgumentList>.
 
@@ -238,9 +238,9 @@ A propriedade <xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=n
 ## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.Xsl.XslTransform>
-- [Transformações XSLT com a classe XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
-- [XPathNavigator nas transformações](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)
-- [XPathNodeIterator nas transformações](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)
-- [XPathDocument inseriu a XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)
-- [XmlDataDocument inseriu a XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)
-- [XmlDocument inseriu a XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+- [Transformações XSLT com a classe XslTransform](xslt-transformations-with-the-xsltransform-class.md)
+- [XPathNavigator nas transformações](xpathnavigator-in-transformations.md)
+- [XPathNodeIterator nas transformações](xpathnodeiterator-in-transformations.md)
+- [XPathDocument inseriu a XslTransform](xpathdocument-input-to-xsltransform.md)
+- [XmlDataDocument inseriu a XslTransform](xmldatadocument-input-to-xsltransform.md)
+- [XmlDocument inseriu a XslTransform](xmldocument-input-to-xsltransform.md)

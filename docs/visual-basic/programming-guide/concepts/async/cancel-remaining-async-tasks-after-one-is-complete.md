@@ -1,15 +1,15 @@
 ---
-title: Cancelar as demais tarefas assíncronas depois que uma delas estiver concluída
+title: Cancelar tarefas assíncronas restantes após a conclusão de uma delas
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: e6747f35e665611ac7a48a87f955c8b893ee2b99
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: be716e98263c865adad3c197236467b2f48d7740
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347920"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396669"
 ---
-# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Cancelar as tarefas assíncronas restantes após uma conclusão (Visual Basic)
+# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Cancelar as demais tarefas assíncronas depois que uma delas estiver concluída (Visual Basic)
 
 Usando o método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> juntamente com um <xref:System.Threading.CancellationToken>, você pode cancelar todas as tarefas restantes quando uma tarefa é concluída. O método `WhenAny` leva um argumento que é uma coleção de tarefas. O método inicia todas as tarefas e retorna uma única tarefa. A tarefa única será concluída quando qualquer tarefa na coleção for concluída.
 
@@ -30,7 +30,7 @@ Você pode baixar o projeto completo do WPF (Windows Presentation Foundation) em
 
 4. No **Gerenciador de Soluções**, abra o menu de atalho do projeto **CancelAfterOneTask** e, em seguida, escolha **Definir como Projeto de Inicialização**.
 
-5. Pressione a tecla F5 para executar o projeto.
+5. Escolha a tecla F5 para executar o projeto.
 
     Escolha as teclas CTRL+F5 para executar o projeto sem depurá-lo.
 
@@ -40,11 +40,11 @@ Se não quiser baixar o projeto, você poderá examinar o arquivo MainWindow.xam
 
 ## <a name="building-the-example"></a>Compilando o Exemplo
 
-O exemplo neste tópico adiciona ao projeto que é desenvolvido em [cancelar uma tarefa assíncrona ou uma lista de tarefas](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) para cancelar uma lista de tarefas. O exemplo usa a mesma interface do usuário, embora o botão **Cancelar** não seja explicitamente usado.
+O exemplo neste tópico adiciona ao projeto que é desenvolvido em [cancelar uma tarefa assíncrona ou uma lista de tarefas](cancel-an-async-task-or-a-list-of-tasks.md) para cancelar uma lista de tarefas. O exemplo usa a mesma interface do usuário, embora o botão **Cancelar** não seja explicitamente usado.
 
 Para compilar o exemplo você mesmo, passo a passo, siga as instruções na seção "Baixando o exemplo", mas escolha **CancelAListOfTasks** como o **Projeto de Inicialização**. Adicione as alterações deste tópico ao projeto.
 
-No arquivo MainWindow. XAML. vb do projeto **CancelAListOfTasks** , inicie a transição movendo as etapas de processamento para cada site do loop em `AccessTheWebAsync` para o seguinte método assíncrono.
+No arquivo MainWindow. XAML. vb do projeto **CancelAListOfTasks** , inicie a transição movendo as etapas de processamento para cada site do loop `AccessTheWebAsync` para o seguinte método assíncrono.
 
 ```vb
 ' ***Bundle the processing steps for a website into one async method.
@@ -236,9 +236,9 @@ End Class
 ' Download complete.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Ajustando seu aplicativo assíncrono (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Ajustando seu aplicativo assíncrono (Visual Basic)](fine-tuning-your-async-application.md)
+- [Programação assíncrona com Async e Await (Visual Basic)](index.md)
 - [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

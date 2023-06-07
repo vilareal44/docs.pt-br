@@ -1,13 +1,14 @@
 ---
 title: Rastreamentos de diagnóstico
+description: Saiba mais sobre os rastreamentos de diagnóstico no .NET. Os rastreamentos são a publicação de mensagens específicas que são gerados durante a execução do aplicativo.
 ms.date: 03/30/2017
 ms.assetid: 28e77a63-d20d-4b6a-9caf-ddad86550427
-ms.openlocfilehash: 76712710bf42f498ba859c7b1cd18a261387078c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5de8fdf7b95cf01b119118dac75d373c32949dcd
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174414"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141805"
 ---
 # <a name="diagnostic-traces"></a>Rastreamentos de diagnóstico
 Os rastreamentos são a publicação de mensagens específicas que são gerados durante a execução do aplicativo. Ao usar o rastreamento, você deve ter um mecanismo para coletar e registrar as mensagens são enviadas. Mensagens de rastreamento são recebidas por ouvintes. A finalidade de um ouvinte é coletar, armazenar e rotear mensagens de rastreamento. Os ouvintes direcionam a saída de rastreamento para um destino apropriado, como um log, uma janela ou um arquivo de texto.  
@@ -33,19 +34,19 @@ Os rastreamentos são a publicação de mensagens específicas que são gerados 
 </configuration>  
 ```  
   
- <xref:System.Transactions>os traços são gravados na fonte chamada "System.Transactions". Você pode usar `add` para especificar o nome e o tipo do ouvinte de rastreamento que deseja usar. Em nosso exemplo de configuração, é chamado o ouvinte "tx" e adicionado o ouvinte de rastreamento padrão do .NET Framework (<xref:System.Diagnostics.XmlWriterTraceListener>) como o tipo que deseja usar. Use `initializeData` para definir o nome do arquivo de log para esse ouvinte. Além disso, você pode substituir um caminho totalmente qualificado para um nome de arquivo simples.  
+ <xref:System.Transactions>os rastreamentos são gravados na fonte chamada "System. Transactions". Você pode usar `add` para especificar o nome e o tipo do ouvinte de rastreamento que deseja usar. Em nosso exemplo de configuração, é chamado o ouvinte "tx" e adicionado o ouvinte de rastreamento padrão do .NET Framework (<xref:System.Diagnostics.XmlWriterTraceListener>) como o tipo que deseja usar. Use `initializeData` para definir o nome do arquivo de log para esse ouvinte. Além disso, você pode substituir um caminho totalmente qualificado para um nome de arquivo simples.  
   
  Cada tipo de mensagem de rastreamento é atribuído um nível para indicar o grau de importância. Se o nível de rastreamento do aplicativo-domínio for igual ou menor do que o nível de um tipo de evento, essa mensagem é gerada. O nível de rastreamento é controlado pelo `switchValue` configuração no arquivo de configuração. Os níveis que estão associados com as mensagens de rastreamento de diagnóstico são definidos na tabela a seguir.  
   
-|Nível de rastreamento:|Descrição|  
+|Nível de rastreamento:|Description|  
 |-----------------|-----------------|  
-|Crítico|Ocorreram falhas graves, como o seguinte:<br /><br /> - Um erro que pode causar uma perda imediata na funcionalidade do usuário.<br />- Um evento que exige que um administrador tome medidas para evitar a perda de funcionalidade.<br />- O código está pendurado.<br />- Este nível de rastreamento também pode fornecer contexto suficiente para interpretar outros traços críticos. Isso pode ajudar a identificar a seqüência de operações que leva a uma falha grave.|  
+|Crítico|Ocorreram falhas graves, como o seguinte:<br /><br /> -Um erro que pode causar uma perda imediata na funcionalidade do usuário.<br />-Um evento que exige que um administrador tome medidas para evitar perda de funcionalidade.<br />-O código trava.<br />-Esse nível de rastreamento também pode fornecer contexto suficiente para interpretar outros rastreamentos críticos. Isso pode ajudar a identificar a seqüência de operações que leva a uma falha grave.|  
 |Erro|Ocorreu um erro (por exemplo, inválido configuração ou da rede comportamento) que pode resultar em uma perda de funcionalidade do usuário.|  
 |Aviso|Existe uma condição que pode resultar em um erro ou uma falha crítica (por exemplo, alocação de falha ou alcançando o limite). O processamento normal de erros de código do usuário (por exemplo, transação anulada, tempos limite de falha de autenticação) também pode gerar um aviso.|  
 |Informações|São geradas Mensagens úteis para monitorar e diagnosticar o status do sistema, medir o desempenho ou criar perfis. Eles podem incluir eventos de tempo de vida de transação e a inscrição, como uma transação que está sendo criado ou confirmadas, a interseção de um limite significativa ou a alocação de recursos significativos. Um desenvolvedor pode utilizar essas informações para o gerenciamento de desempenho e planejamento de capacidade.|  
   
 ## <a name="trace-codes"></a>Códigos de rastreamento  
- A tabela a seguir lista os códigos de rastreamento gerados pelo <xref:System.Transactions> infra-estrutura. Incluem-se na tabela o identificador <xref:System.Diagnostics.EventTypeFilter.EventType%2A> de código de rastreamento, o nível de enumeração para o rastreamento e os dados extras contidos no **TraceRecord** para o rastreamento. Além disso, o nível de rastreamento correspondente do traço também é armazenado no **TraceRecord**.  
+ A tabela a seguir lista os códigos de rastreamento gerados pelo <xref:System.Transactions> infra-estrutura. Estão incluídos na tabela o identificador de código de rastreamento, o <xref:System.Diagnostics.EventTypeFilter.EventType%2A> nível de enumeração para o rastreamento e os dados adicionais contidos no **TraceRecord** para o rastreamento. Além disso, o nível de rastreamento correspondente do rastreamento também é armazenado no **TraceRecord**.  
   
 |TraceCode|EventType|Dados extras em TraceRecord|  
 |---------------|---------------|-------------------------------|  
@@ -56,7 +57,7 @@ Os rastreamentos são a publicação de mensagens específicas que são gerados 
 |TransactionRollbackCalled|Aviso|TransactionTraceId|  
 |TransactionAborted|Aviso|TransactionTraceId|  
 |TransactionInDoubt|Aviso|TransactionTraceId|  
-|TransactionScopeCreated|Informações|TransactionScopeResult, que pode ser o seguinte:<br /><br /> - Nova transação.<br />- Transação aprovada.<br />- Transação dependente aprovada.<br />- Usando transação atual.<br />- Sem transação.<br /><br /> novo TransactionTraceId atual|  
+|TransactionScopeCreated|Informações|TransactionScopeResult, que pode ser o seguinte:<br /><br /> -Nova transação.<br />-Transação aprovada.<br />Transação dependente de aprovado.<br />-Usando a transação atual.<br />-Nenhuma transação.<br /><br /> novo TransactionTraceId atual|  
 |TransactionScopeDisposed|Informações|TransactionTraceId da transação atual "esperada" do escopo.|  
 |TransactionScopeIncomplete|Aviso|TransactionTraceId da transação atual "esperada" do escopo.|  
 |TransactionScopeNestedIncorrectly|Aviso|TransactionTraceId da transação atual "esperada" do escopo.|  

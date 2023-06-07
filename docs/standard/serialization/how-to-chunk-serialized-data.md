@@ -15,10 +15,10 @@ helpviewer_keywords:
 - binary serialization, examples
 ms.assetid: 22f1b818-7e0d-428a-8680-f17d6ebdd185
 ms.openlocfilehash: 860fdcae0d1937f53ee964d9d4631ec812b3d379
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "83379136"
 ---
 # <a name="how-to-chunk-serialized-data"></a>Como partir dados serializados

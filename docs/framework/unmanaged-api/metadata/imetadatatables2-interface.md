@@ -14,33 +14,33 @@ helpviewer_keywords:
 ms.assetid: c788bb7c-0212-4b6d-b840-22e8c8829028
 topic_type:
 - apiref
-ms.openlocfilehash: ff79f0268226739ec9cf6abeeda791bf45644a40
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e81055163e5cbd64ecfbb412704e43e7663ccd45
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432350"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501073"
 ---
 # <a name="imetadatatables2-interface"></a>Interface IMetaDataTables2
-Estende [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) para incluir métodos para trabalhar com fluxos de metadados.  
+Estende [IMetaDataTables](imetadatatables-interface.md) para incluir métodos para trabalhar com fluxos de metadados.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetMetaDataStorage](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastorage-method.md)|Obtém o tamanho e o conteúdo dos metadados armazenados na seção especificada.|  
-|[Método GetMetaDataStreamInfo](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|Obtém o nome, o tamanho e o conteúdo do fluxo de metadados no índice especificado.|  
+|[Método GetMetaDataStorage](imetadatatables2-getmetadatastorage-method.md)|Obtém o tamanho e o conteúdo dos metadados armazenados na seção especificada.|  
+|[Método GetMetaDataStreamInfo](imetadatatables2-getmetadatastreaminfo-method.md)|Obtém o nome, o tamanho e o conteúdo do fluxo de metadados no índice especificado.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [Interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [Interface IMetaDataTables](imetadatatables-interface.md)
+- [Interfaces de metadados](metadata-interfaces.md)

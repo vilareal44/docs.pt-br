@@ -1,5 +1,6 @@
 ---
 title: Exemplo de soquete de cliente assíncrono
+description: Este exemplo .NET Framework programa cria um cliente que se conecta a um servidor, usando um soquete assíncrono. Ele envia uma cadeia de caracteres e exibe um resultado.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-ms.openlocfilehash: 9cf8ffff1b219614cd57b56af48d72c03ac63dda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0bcf4becf8193f3bd6bc728dc6d7e96276dddf2
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180921"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502724"
 ---
 # <a name="asynchronous-client-socket-example"></a>Exemplo de soquete de cliente assíncrono
 O programa de exemplo a seguir cria um cliente que se conecta a um servidor. O cliente é criado com um soquete assíncrono e, portanto, a execução do aplicativo cliente não é suspensa enquanto o servidor retorna uma resposta. O aplicativo envia uma cadeia de caracteres ao servidor e, em seguida, exibe a cadeia de caracteres retornada pelo servidor no console.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-ms.openlocfilehash: a43ce44e11a9231dee2961ee02bac745d9ca71cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8ca888074aa757a1bfba786a7bec5928b75b1da2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141605"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290403"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Construtores diversos em expressões regulares
 As expressões regulares em .NET incluem três constructos diversos de linguagem. Um deles permite habilitar ou desabilitar opções específicas de correspondência no meio de um padrão de expressão regular. Os dois restantes permitem incluir comentários em uma expressão regular.  
@@ -25,9 +25,9 @@ As expressões regulares em .NET incluem três constructos diversos de linguagem
   
 `(?imnsx-imnsx)`  
   
- Você lista as opções que deseja habilitar após o ponto de interrogação e as opções que deseja desabilitar após o sinal de subtração. A tabela a seguir descreve cada opção. Para obter mais informações sobre cada opção, consulte [Opções de expressão regulares](../../../docs/standard/base-types/regular-expression-options.md).  
+ Você lista as opções que deseja habilitar após o ponto de interrogação e as opções que deseja desabilitar após o sinal de subtração. A tabela a seguir descreve cada opção. Para obter mais informações sobre cada opção, consulte [Opções de expressão regular](regular-expression-options.md).  
   
-|Opção|Descrição|  
+|Opção|Description|  
 |------------|-----------------|  
 |`i`|Correspondência sem diferenciação entre maiúsculas e minúsculas.|  
 |`m`|Modo multilinha.|  
@@ -38,7 +38,7 @@ As expressões regulares em .NET incluem três constructos diversos de linguagem
  Qualquer alteração nas opções de expressões regulares definida pelo constructo `(?imnsx-imnsx)` permanece em vigor até o fim do grupo delimitador.  
   
 > [!NOTE]
-> O `(?imnsx-imnsx:`conjunto de *subexpressões* `)` fornece funcionalidade idêntica para uma subexpressão. Para saber mais, confira [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+> A `(?imnsx-imnsx:` construção de agrupamento de *subexpressão* `)` fornece uma funcionalidade idêntica para uma subexpressão. Para saber mais, confira [Constructos de agrupamento](grouping-constructs-in-regular-expressions.md).  
   
  O exemplo a seguir usa as opções `i`, `n` e `x` para desabilitar a diferenciação entre maiúsculas e minúsculas e habilitar e capturas explícitas, bem como ignorar o espaço em branco no padrão de expressão regular no meio de uma expressão regular.  
   
@@ -57,7 +57,7 @@ As expressões regulares em .NET incluem três constructos diversos de linguagem
 |`\b`|Corresponder a um limite de palavra.|  
   
 ## <a name="inline-comment"></a>Comentário embutido  
- A `(?#` construção *de comentários* `)` permite incluir um comentário inline em uma expressão regular. O mecanismo de expressões regulares não usa nenhuma parte do comentário na correspondência de padrão, apesar de o comentário estar incluído na cadeia de caracteres que é retornada pelo método <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType>. O comentário é encerrado no primeiro caractere de fechar parênteses.  
+ A `(?#` construção de *Comentário* `)` permite incluir um comentário embutido em uma expressão regular. O mecanismo de expressões regulares não usa nenhuma parte do comentário na correspondência de padrão, apesar de o comentário estar incluído na cadeia de caracteres que é retornada pelo método <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType>. O comentário é encerrado no primeiro caractere de fechar parênteses.  
   
  O exemplo a seguir repete o primeiro padrão de expressão regular do exemplo na seção anterior. Ele adiciona dois comentários embutidos na expressão regular para indicar se a comparação diferencia maiúsculas de minúsculas. O padrão de expressão regular, `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b`, é definido da seguinte forma.  
   
@@ -97,6 +97,6 @@ As expressões regulares em .NET incluem três constructos diversos de linguagem
   
  Observe que, em vez de fornecer o constructo `(?x)` na expressão regular, o comentário pode também poderia ter sido reconhecido chamando o método <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> e passando-o para o valor de enumeração <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Linguagem de Expressão Regular - Referência Rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguagem de expressões regulares – referência rápida](regular-expression-language-quick-reference.md)

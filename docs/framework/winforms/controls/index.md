@@ -1,17 +1,18 @@
 ---
 title: Controles
+description: Saiba como adicionar e posicionar os controles do Windows Form. Você também pode manipular controles no designer e escrever código para adicionar controles dinamicamente em tempo de execução.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls
 - controls [Windows Forms]
 - Windows Forms controls, about Windows Forms controls
 ms.assetid: f050de8f-4ebd-4042-94b8-edf9a1dbd52a
-ms.openlocfilehash: e36efb8b653f528be6f68f77ced26de262cbc6ad
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 9ca4a2a1205663ae0ff4537a58cc1991a15da5d8
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745305"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324035"
 ---
 # <a name="windows-forms-controls"></a>Controles de formulários do Windows
 
@@ -22,22 +23,22 @@ ms.locfileid: "76745305"
 [Colocando controles em Windows Forms](putting-controls-on-windows-forms.md)\
 Fornece links relacionados à colocação de controles em formulários.
 
-[Organizando controles no Windows Forms](how-to-align-multiple-controls-on-windows-forms.md)\
+[Organizando controles em Windows Forms](how-to-align-multiple-controls-on-windows-forms.md)\
 Artigos relacionados à organização de controles em formulários.
 
-[Rotulando controles individuais do Windows Forms e fornecendo atalhos para eles](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)\
+[Rotular controles de Windows Forms individuais e fornecer atalhos para eles](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)\
 Descreve os usos dos atalhos de teclado, rótulos de texto em controles e teclas modificadoras.
 
-[Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)\
+[Controles a serem usados em Windows Forms](controls-to-use-on-windows-forms.md)\
 Lista os controles que funcionam com o Windows Forms e tarefas básicas que você pode realizar com cada controle.
 
-[Desenvolvendo controles do Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)\
+[Desenvolvendo controles de Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)\
 Fornece informações básicas e exemplos para ajudar os usuários a desenvolver controles personalizados dos Windows Forms.
 
-[Desenvolvendo controles dos Windows Forms em tempo de design](developing-windows-forms-controls-at-design-time.md)\
+[Desenvolvendo Windows Forms controles em tempo de design](developing-windows-forms-controls-at-design-time.md)\
 Descreve técnicas para criar controles personalizados por meio de herança e design.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-\ [aplicativos cliente](../../develop-client-apps.md)
+[Aplicativos cliente](../../develop-client-apps.md)\
 Fornece uma visão geral do desenvolvimento de aplicativos baseados no Windows.

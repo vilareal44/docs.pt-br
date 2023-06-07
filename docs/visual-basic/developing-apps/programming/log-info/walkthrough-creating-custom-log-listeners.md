@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 7b611e93119dc66a9404cf271ea201676d7b5318
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a140607a4fe7e1e13de54e8d56cab53e52aaa2a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74353621"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398260"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Instruções passo a passo: criando ouvintes de log personalizados (Visual Basic)
 
@@ -45,7 +45,7 @@ O procedimento seguinte fornece algumas etapas simples para criar um assembly de
 
 3. Marque a caixa **Assinar o assembly**.
 
-4. Selecione ** \<novo>** na lista suspensa **escolher um arquivo de chave de nome forte** .
+4. Selecione **\<New>** na lista suspensa **escolher um arquivo de chave de nome forte** .
 
      A caixa de diálogo **Criar Chave de Nome Forte** é aberta.
 
@@ -63,7 +63,7 @@ Agora que o assembly tem um nome forte, você precisa determinar o nome forte do
 
 O formato de um tipo de nome forte é o seguinte.
 
-\<nome do tipo>, \<nome do assembly>, \<número de versão>, \<cultura>, \<nome forte>
+\<type name>, \<assembly name>, \<version number>, \<culture>, \<strong name>
 
 #### <a name="to-determine-the-strong-name-of-the-listener"></a>Para determinar o nome forte do ouvinte
 
@@ -107,10 +107,10 @@ Com o nome forte, você pode adicionar o ouvinte à coleção de ouvintes de log
 
      Altere o valor de `SimpleLogStrongName` para ser o nome forte do ouvinte.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
-- [Trabalhar com logs do aplicativo](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Como: registrar exceções em log](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [Como: gravar mensagens de log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Passo a passo: alterar o local no qual My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Trabalhar com logs do aplicativo](working-with-application-logs.md)
+- [Como: registrar exceções em log](how-to-log-exceptions.md)
+- [Como: gravar mensagens de log](how-to-write-log-messages.md)
+- [Passo a passo: alterar o local no qual My.Application.Log grava informações](walkthrough-changing-where-my-application-log-writes-information.md)

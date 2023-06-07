@@ -1,13 +1,14 @@
 ---
 title: Materialização intermediária (C#)
+description: Este exemplo de C# mostra a materialização intermediária, em que uma consulta faz com que Appendstring enumere sua origem inteira antes de gerar o primeiro item.
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-ms.openlocfilehash: af1eb7df7da02d8e72fc102cda4ee5f329dc7974
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 30951aaeea261efbd414205bcc54b63106324344
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253158"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165719"
 ---
 # <a name="intermediate-materialization-c"></a>Materialização intermediária (C#)
 Se você não for cauteloso, em algumas situações dràstica você pode alterar a memória e o perfil de desempenho do seu aplicativo causando o materialization prematuro das coleções nas suas consultas. Alguns operadores de consulta padrão faz com que o materialization de sua coleção de origem antes de produzir um único elemento. Por exemplo, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> primeiro itera através da coleção inteira de origem, então classe todos os itens, e então produz basicamente o primeiro item. Isso significa que é grande obter o primeiro item de uma coleção ordenada; cada item não for depois disso caro. Isso faz sentido: Seria impossível para esse operador de consulta de fazer outra maneira.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdd98146-ff4d-4150-a264-a4c1a32d31f3
 topic_type:
 - apiref
-ms.openlocfilehash: fc25e250938d7549c7a9693bee937d4756268b93
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 98e4efe149cab1b822c9993e4df28806f773c61d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615807"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504245"
 ---
 # <a name="iclrdebugmanagerbeginconnection-method"></a>Método ICLRDebugManager::BeginConnection
 Estabelece uma nova conexão entre o host e o depurador para associar uma lista de tarefas com um identificador e um nome amigável.  
@@ -41,7 +41,7 @@ HRESULT BeginConnection (
  `szConnectionName`  
  no Um nome amigável para associar à lista de tarefas do CLR.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -55,7 +55,7 @@ HRESULT BeginConnection (
 |E_OUTOFMEMORY|Não foi possível alocar memória suficiente para manter a lista de tarefas associadas a esta conexão.|  
   
 ## <a name="remarks"></a>Comentários  
- O [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md) fornece três métodos, `BeginConnection` , [SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)e [EndConnect](iclrdebugmanager-endconnection-method.md), para associar listas de tarefas com identificadores e nomes amigáveis.  
+ O [ICLRDebugManager](iclrdebugmanager-interface.md) fornece três métodos, `BeginConnection` , [SetConnectionTasks](iclrdebugmanager-setconnectiontasks-method.md)e [EndConnect](iclrdebugmanager-endconnection-method.md), para associar listas de tarefas com identificadores e nomes amigáveis.  
   
 > [!IMPORTANT]
 > Esses três métodos devem ser chamados em uma ordem específica para cada conjunto de tarefas. `BeginConnection`é chamado primeiro para estabelecer uma nova conexão. `SetConnectionTasks`é chamado ao lado de fornecer o conjunto de tarefas a ser associado a essa conexão. `EndConnection`é chamado por último para remover a associação entre a lista de tarefas e o identificador e o nome amigável. No entanto, as chamadas para diferentes conexões podem ser aninhadas.  

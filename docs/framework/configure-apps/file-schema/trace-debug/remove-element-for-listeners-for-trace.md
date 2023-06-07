@@ -1,5 +1,5 @@
 ---
-title: <remove> elemento para <listeners> para <trace>
+title: <remove>Elemento para <listeners> para<trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
 ms.openlocfilehash: f06973ec30d5061e4a200d6bf7e68adcf6302018
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088842"
 ---
-# <a name="remove-element-for-listeners-for-trace"></a>\<remover > elemento para \<ouvintes > \<rastreamento >
+# <a name="remove-element-for-listeners-for-trace"></a>\<remove>Elemento para \<listeners> para\<trace>
 Remove um ouvinte da coleção **Listeners** .  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Trace**](trace-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**ouvintes >** ](listeners-element-for-trace.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<remover >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<trace>**](trace-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<listeners>**](listeners-element-for-trace.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ Remove um ouvinte da coleção **Listeners** .
 |**name**|Atributo obrigatório.<br /><br /> O nome do ouvinte a ser removido da coleção de **ouvintes** .|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -53,7 +53,7 @@ Remove um ouvinte da coleção **Listeners** .
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
-> Remover o <xref:System.Diagnostics.DefaultTraceListener> da coleção de `Listeners` altera o comportamento dos métodos <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>e <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType>. Chamar um método `Assert` ou `Fail` normalmente resulta na exibição de uma caixa de mensagem, no entanto, a caixa de mensagem não será exibida se a <xref:System.Diagnostics.DefaultTraceListener> não estiver na coleção de `Listeners`.  
+> Remover o <xref:System.Diagnostics.DefaultTraceListener> da `Listeners` coleção altera o comportamento dos <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> métodos,, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> e <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> . Chamar um `Assert` `Fail` método ou normalmente resulta na exibição de uma caixa de mensagem, no entanto, a caixa de mensagem não será exibida se o <xref:System.Diagnostics.DefaultTraceListener> não estiver na `Listeners` coleção.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como remover o ouvinte de rastreamento padrão da coleção de **ouvintes** de rastreamento.  
@@ -70,7 +70,7 @@ Remove um ouvinte da coleção **Listeners** .
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>

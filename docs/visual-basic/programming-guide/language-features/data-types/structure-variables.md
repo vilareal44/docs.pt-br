@@ -7,12 +7,12 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: 16b6cdc5a849b50f6caa8b7963dac5c12d63cf3e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 270e8ca26185e4a68def3b95f4ce6ab4c57a629c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346301"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393579"
 ---
 # <a name="structure-variables-visual-basic"></a>Variáveis de estrutura (Visual Basic)
 
@@ -33,11 +33,11 @@ Dim mySystem, yourSystem As systemInfo
 ```
 
 > [!NOTE]
-> Em classes e módulos, as estruturas declaradas usando a [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) assumem o acesso público como padrão. Se você pretende que uma estrutura seja privada, certifique-se de declará-la usando a palavra-chave [Private](../../../../visual-basic/language-reference/modifiers/private.md) .
+> Em classes e módulos, as estruturas declaradas usando a [instrução Dim](../../../language-reference/statements/dim-statement.md) assumem o acesso público como padrão. Se você pretende que uma estrutura seja privada, certifique-se de declará-la usando a palavra-chave [Private](../../../language-reference/modifiers/private.md) .
 
 ## <a name="access-to-structure-values"></a>Acesso a valores de estrutura
 
-Para atribuir e recuperar valores dos elementos de uma variável de estrutura, use a mesma sintaxe usada para definir e obter propriedades em um objeto. Você coloca o operador de acesso de membro (`.`) entre o nome da variável de estrutura e o nome do elemento. O exemplo a seguir acessa os elementos das variáveis declaradas anteriormente como tipo `systemInfo`.
+Para atribuir e recuperar valores dos elementos de uma variável de estrutura, use a mesma sintaxe usada para definir e obter propriedades em um objeto. Você coloca o operador de acesso de membro ( `.` ) entre o nome da variável de estrutura e o nome do elemento. O exemplo a seguir acessa os elementos das variáveis declaradas anteriormente como tipo `systemInfo` .
 
 ```vb
 mySystem.cPU = "486"
@@ -53,17 +53,17 @@ Você também pode atribuir uma variável a outra se ambas forem do mesmo tipo d
 yourSystem = mySystem
 ```
 
-Se um elemento de estrutura for um tipo de referência, como um `String`, `Object`ou matriz, o ponteiro para os dados será copiado. No exemplo anterior, se `systemInfo` tiver incluído uma variável de objeto, o exemplo anterior teria copiado o ponteiro de `mySystem` para `yourSystem`, e uma alteração nos dados do objeto por meio de uma estrutura estaria em vigor quando acessada por meio da outra estrutura.
+Se um elemento de estrutura for um tipo de referência, como `String` uma `Object` matriz, ou, o ponteiro para os dados será copiado. No exemplo anterior, se `systemInfo` tiver incluído uma variável de objeto, o exemplo anterior teria copiado o ponteiro de `mySystem` para `yourSystem` , e uma alteração nos dados do objeto por meio de uma estrutura estaria em vigor quando acessada por meio da outra estrutura.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Tipos de Dados Elementares](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
-- [Tipos de Dados Compostos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Tipos de Valor e Tipos de Referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Estruturas](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Solução de problemas de Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Como declarar uma estrutura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [Estruturas e Outros Elementos de Programação](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)
-- [Estruturas e Classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
-- [Instrução Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Tipos de dados](index.md)
+- [Tipos de dados elementares](elementary-data-types.md)
+- [Tipos de dados compostos](composite-data-types.md)
+- [Tipos de valor e referência](value-types-and-reference-types.md)
+- [Estruturas](structures.md)
+- [Solução de problemas de tipos de dados](troubleshooting-data-types.md)
+- [Como: Declarar uma estrutura](how-to-declare-a-structure.md)
+- [Estruturas e outros elementos de programação](structures-and-other-programming-elements.md)
+- [Estruturas e classes](structures-and-classes.md)
+- [Instrução Structure](../../../language-reference/statements/structure-statement.md)

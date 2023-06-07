@@ -3,12 +3,12 @@ title: Glossário .NET
 description: Descubra o significado de termos selecionados usados na documentação do .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: e7608ee7e68300d691df51aed923db0e8b518165
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 529b1d9142ddf7982a6712c355c10666f0414d73
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102470"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163112"
 ---
 # <a name="net-glossary"></a>Glossário .NET
 
@@ -18,7 +18,7 @@ A principal meta deste glossário é esclarecer os significados de termos e acr�
 
 Compilador Ahead-of-Time.
 
-Semelhante ao [JIT](#jit), esse compilador também converte [IL](#il) em código de máquina. Diferentemente da compilação JIT, a compilação AOT acontece antes que o aplicativo seja executado e normalmente é executada em um computador diferente. Como as cadeias da ferramenta da AOT não compilam em runtime, elas não têm que minimizar o tempo gasto na compilação. Isso significa que elas podem gastar mais tempo em otimização. Como o contexto da AOT é o aplicativo inteiro, o compilador AOT também executa a vinculação de módulo cruzado e a análise de programa inteiro, o que significa que todas as referências são seguidas e um único executável é produzido.
+Semelhante ao [JIT](#jit), esse compilador também converte [IL](#il) em código de máquina. Diferentemente da compilação JIT, a compilação AOT acontece antes que o aplicativo seja executado e normalmente é executada em um computador diferente. Como as cadeias de ferramentas da AOT não são compiladas em tempo de execução, elas não precisam minimizar o tempo gasto na compilação. Isso significa que elas podem gastar mais tempo em otimização. Como o contexto da AOT é o aplicativo inteiro, o compilador AOT também executa a vinculação de módulo cruzado e a análise de programa inteiro, o que significa que todas as referências são seguidas e um único executável é produzido.
 
 Confira [CoreRT](#corert) e [.NET Native](#net-native).
 
@@ -26,19 +26,19 @@ Confira [CoreRT](#corert) e [.NET Native](#net-native).
 
 A implementação do ASP.NET original que é fornecida com o .NET Framework.
 
-Às vezes, o ASP.NET é um termo abrangente que se refere a ambas as implementações de ASP.NET, incluindo o ASP.NET Core. O significado que o termo carrega em uma determinada instância é determinado pelo contexto. Consulte ASP.NET 4.x quando quiser deixar claro que não está usando ASP.NET para significar ambas as implementações.
+Às vezes, o ASP.NET é um termo abrangente que se refere a ambas as implementações de ASP.NET, incluindo o ASP.NET Core. O significado que o termo carrega em uma determinada instância é determinado pelo contexto. Consulte ASP.NET 4. x quando quiser deixar claro que você não está usando o ASP.NET para significar ambas as implementações.
 
 Confira [Documentação do ASP.NET](/aspnet/#pivot=aspnet).
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
-Uma implementação multiplataforma, de alto desempenho e código aberto de ASP.NET construída no .NET Core.
+Uma implementação de plataforma cruzada, de alto desempenho e de software livre do ASP.NET criada no .NET Core.
 
 Confira [Documentação do ASP.NET Core](/aspnet/#pivot=core).
 
 ## <a name="assembly"></a>assembly
 
-Um arquivo *.dll*/*.exe* que pode conter uma coleção de APIs que podem ser chamadas por aplicativos ou outros conjuntos.
+Um arquivo *. dll* / *. exe* que pode conter uma coleção de APIs que podem ser chamadas por aplicativos ou outros assemblies.
 
 Um assembly pode incluir tipos como interfaces, classes, estruturas, enumerações e delegados. Às vezes, os assemblies em uma pasta *bin* de projeto são chamados de *binários*. Consulte também [biblioteca](#library).
 
@@ -46,7 +46,7 @@ Um assembly pode incluir tipos como interfaces, classes, estruturas, enumeraçõ
 
 Common Language Runtime.
 
-O significado exato depende do contexto, mas o Tempo de Execução da Linguagem Comum geralmente se refere ao tempo de execução do .NET Framework. O CLR manipula a alocação e o gerenciamento de memória. O CLR também é uma máquina virtual que não só executa aplicativos, mas também gera e compila código sem parar usando um compilador [JIT.](#jit) A implementação atual do CLR da Microsoft é somente para Windows.
+O significado exato depende do contexto, mas o tempo de execução de linguagem comum geralmente se refere ao tempo de execução de .NET Framework. O CLR manipula a alocação e o gerenciamento de memória. O CLR também é uma máquina virtual que não só executa aplicativos, mas também gera e compila código imediatamente usando um compilador [JIT](#jit) . A implementação atual do CLR da Microsoft é somente para Windows.
 
 ## <a name="coreclr"></a>CoreCLR
 
@@ -59,21 +59,21 @@ Esse CLR é criado com a mesma base de código que o CLR. Originalmente, o CoreC
 BCL (biblioteca de classes base) do .NET Core
 
 > [!TIP]
-> *Fx* significa *framework*.
+> *FX* significa *estrutura*.
 
-Um conjunto de bibliotecas que compõem o Sistema. \* (e até certo ponto, Microsoft.\*) espaços de nome. A BCL é uma estrutura de nível inferior e de uso geral, base para a criação de estruturas de aplicativo de nível mais alto, como o ASP.NET Core. O código-fonte do .NET Core BCL está contido no [repositório de tempo de execução .NET Core](https://github.com/dotnet/runtime). No entanto, a maioria das APIs do .NET Core também estão disponíveis no .NET Framework, portanto você pode pensar no CoreFX como um fork da BCL do .NET Framework.
+Um conjunto de bibliotecas que compõem o sistema. \* (e com uma extensão limitada da Microsoft. \* ) namespaces. A BCL é uma estrutura de nível inferior e de uso geral, base para a criação de estruturas de aplicativo de nível mais alto, como o ASP.NET Core. O código-fonte da BCL do .NET Core está contido no [repositório do .NET Core Runtime](https://github.com/dotnet/runtime). No entanto, a maioria das APIs do .NET Core também estão disponíveis no .NET Framework, portanto você pode pensar no CoreFX como um fork da BCL do .NET Framework.
 
 ## <a name="corert"></a>CoreRT
 
 runtime do .NET Core.
 
-Ao contrário do CLR/CoreCLR, o CoreRT não é uma máquina virtual, o que significa que ele não inclui os recursos para gerar e executar código dinamicamente, já que não inclui um [JIT](#jit). No entanto, inclui o [GC](#gc) e a capacidade de identificação do tipo de tempo de execução (RTTI) e reflexão. Contudo, seu sistema de tipos é projetado para que os metadados para reflexão não sejam necessários. Não exigir metadados permite ter uma cadeia de ferramentas [AOT](#aot) que pode vincular metadados supérfluos e (mais importante) identificar códigos que o aplicativo não usa. O CoreRT está em desenvolvimento.
+Ao contrário do CLR/CoreCLR, o CoreRT não é uma máquina virtual, o que significa que ele não inclui os recursos para gerar e executar código dinamicamente, já que não inclui um [JIT](#jit). No entanto, ele inclui o [GC](#gc) e a capacidade de RTTI (identificação de tipo de tempo de execução) e reflexão. Contudo, seu sistema de tipos é projetado para que os metadados para reflexão não sejam necessários. Não exigir metadados permite que uma cadeia de ferramentas [AOT](#aot) possa se vincular a metadados supérfluos e (o mais importante) identifique o código que o aplicativo não usa. O CoreRT está em desenvolvimento.
 
-Consulte [Intro para .NET Native e CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md).
+Consulte [introdução a .net Native e CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md).
 
 ## <a name="cross-platform"></a>várias plataformas
 
-A capacidade de desenvolver e executar um aplicativo que pode ser usado em vários sistemas operacionais diferentes, como Linux, Windows e iOS, sem ter que reescrever especificamente para cada um. Isso permite a reutilização de código e consistência entre aplicativos em diferentes plataformas.
+A capacidade de desenvolver e executar um aplicativo que pode ser usado em vários sistemas operacionais diferentes, como Linux, Windows e iOS, sem a necessidade de reescrever especificamente para cada um. Isso permite a reutilização de código e a consistência entre aplicativos em diferentes plataformas.
 
 ## <a name="ecosystem"></a>ecossistema
 
@@ -140,11 +140,9 @@ A biblioteca de palavras e a [estrutura](#framework) geralmente são usadas como
 
 Um pacote NuGet que não tem nenhuma biblioteca própria, mas é apenas uma lista de dependências. Os pacotes incluídos podem, opcionalmente, estabelecer a API para uma estrutura de destino.
 
-Consulte [Pacotes, Metapacotes e Frameworks](../core/packages.md)
-
 ## <a name="mono"></a>Mono
 
-Mono é uma implementação do .NET [multiplataforma](#cross-platform) de software livre usada principalmente quando é necessário um pequeno runtime. É o tempo de execução que alimenta os aplicativos Xamarin no Android, Mac, iOS, tvOS e watchOS e é focado principalmente em aplicativos que requerem uma pequena pegada.
+Mono é uma implementação do .NET [multiplataforma](#cross-platform) de software livre usada principalmente quando é necessário um pequeno runtime. É o tempo de execução que capacita aplicativos Xamarin no Android, Mac, iOS, tvOS e watchOS e concentra-se principalmente em aplicativos que exigem uma pequena superfície.
 
 Ele dá suporte a todas as versões do .NET Standard publicadas atualmente.
 
@@ -156,13 +154,13 @@ Para saber mais sobre o Mono, consulte a [Documentação do Mono](https://www.mo
 
 ## <a name="net"></a>.NET
 
-O termo coletivo para [.NET Standard](#net-standard) e todas as [implementações de .NET](#implementation-of-net), bem como as cargas de trabalho. Sempre totalmente capitalizado, nunca ".Net".
+O termo coletivo para [.NET Standard](#net-standard) e todas as [implementações de .NET](#implementation-of-net), bem como as cargas de trabalho. Sempre totalmente em maiúsculas, nunca ".net".
 
-Consulte o [guia .NET](index.yml)
+Consulte o [guia .net](index.yml)
 
 ## <a name="net-core"></a>.NET Core
 
-Uma implementação multiplataforma, de alto desempenho e código aberto do .NET. Inclui o CoreCLR (Core Common Language Runtime), o CoreRT (tempo de execução Core AOT, em desenvolvimento), a biblioteca de classes base do Core e o SDK do Core.
+Uma implementação de software livre de várias plataformas, de alto desempenho e de software livre do .NET. Inclui o CoreCLR (Core Common Language Runtime), o CoreRT (tempo de execução Core AOT, em desenvolvimento), a biblioteca de classes base do Core e o SDK do Core.
 
 Consulte [.NET Core](../core/index.yml).
 
@@ -170,7 +168,7 @@ Consulte [.NET Core](../core/index.yml).
 
 Uma cadeia de ferramentas multiplataforma para o desenvolvimento de aplicativos .NET Core.
 
-Consulte [.NET Core CLI](../core/tools/index.md).
+Consulte [CLI do .NET Core](../core/tools/index.md).
 
 ## <a name="net-core-sdk"></a>SDK do .Net Core
 
@@ -272,12 +270,12 @@ Consulte [Estruturas de destino](frameworks.md).
 
 Plataforma Universal do Windows.
 
-Uma implementação do .NET que é usada para criar aplicativos do Windows modernos e sensíveis ao toque, bem como software para a IoT (Internet das Coisas). Ele foi projetado para unificar os diferentes tipos de dispositivos que você pode querer segmentar, incluindo PCs, tablets, telefones e até mesmo o Xbox. A UWP fornece muitos serviços, como um repositório centralizado de aplicativos, um ambiente de execução (AppContainer) e um conjunto de APIs do Windows para usar em vez das APIS do Win32 (WinRT). Os aplicativos podem ser escritos em C++, C#, Visual Basic e JavaScript. Ao usar C# e Visual Basic, as APIs .NET são fornecidas pelo .NET Core.
+Uma implementação do .NET que é usada para criar aplicativos do Windows modernos e sensíveis ao toque, bem como software para a IoT (Internet das Coisas). Ele foi projetado para unificar os diferentes tipos de dispositivos que você talvez queira direcionar, incluindo PCs, tablets, telefones e até mesmo o Xbox. A UWP fornece muitos serviços, como um repositório centralizado de aplicativos, um ambiente de execução (AppContainer) e um conjunto de APIs do Windows para usar em vez das APIS do Win32 (WinRT). Os aplicativos podem ser escritos em C++, C#, Visual Basic e JavaScript. Ao usar C# e Visual Basic, as APIs do .NET são fornecidas pelo .NET Core.
 
 ## <a name="see-also"></a>Confira também
 
-- [.NET Guia](index.yml)
-- [.NET Framework Guide](../framework/index.yml)
+- [Guia do .NET](index.yml)
+- [Guia de .NET Framework](../framework/index.yml)
 - [.NET Core](../core/index.yml)
-- [visão geral ASP.NET](/aspnet/index#pivot=aspnet)
-- [visão geral do núcleo ASP.NET](/aspnet/index#pivot=core)
+- [Visão geral do ASP.NET](/aspnet/index#pivot=aspnet)
+- [Visão geral de ASP.NET Core](/aspnet/index#pivot=core)

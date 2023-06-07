@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: add68d3f-45fd-4bef-af94-eb5273f26b11
 topic_type:
 - apiref
-ms.openlocfilehash: 026a952e14cda2ef4ebc32ca91006026e920e3c1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4e2b2501b6b7117cefcfa43511ef20f25106bb42
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437363"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503573"
 ---
 # <a name="imetadataimportgetmodulefromscope-method"></a>Método IMetaDataImport::GetModuleFromScope
 Obtém um token de metadados para o módulo referenciado no escopo de metadados atual.  
@@ -37,16 +37,16 @@ HRESULT GetModuleFromScope (
  `pmd`  
  fora Um ponteiro para o token que representa o módulo referenciado no escopo de metadados atual.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

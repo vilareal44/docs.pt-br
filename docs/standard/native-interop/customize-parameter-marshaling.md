@@ -2,12 +2,12 @@
 title: Como personalizar o marshaling de parâmetro – .NET
 description: Saiba como personalizar a forma como o .NET realiza marshalling em seus parâmetros para uma representação nativa.
 ms.date: 01/18/2019
-ms.openlocfilehash: ff646ad942cf051ce90cd75b24c8562e536182d9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1999cad057875f15b283421f87f485c2e5ca2306
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400361"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374306"
 ---
 # <a name="customizing-parameter-marshaling"></a>Como personalizar o marshaling de parâmetro
 
@@ -40,7 +40,7 @@ Se você estiver interagindo com as APIs do WinRT, poderá usar o formato <xref:
 
 .NET também fornece várias maneiras de realizar marshalling de parâmetros de matriz. Se você estiver chamando uma API que usa uma matriz C-style, use o tipo não gerenciado <xref:System.Runtime.InteropServices.UnmanagedType.LPArray?displayProperty=nameWithType>. Se os valores na matriz precisarem de marshaling personalizado, você poderá usar o campo <xref:System.Runtime.InteropServices.MarshalAsAttribute.ArraySubType> no atributo `[MarshalAs]` para isso.
 
-Se você estiver usando APIs COM, provavelmente terá que organizar seus parâmetros de matriz como `SAFEARRAY*`s. Para fazer isso, você pode usar o tipo não gerenciado <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>. O tipo padrão dos elementos do `SAFEARRAY` pode ser visto na tabela sobre [ como personalizar campos `object`](./customize-struct-marshaling.md#marshaling-systemobjects). Você pode usar os campos <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> e <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> para personalizar o tipo de elemento exato do `SAFEARRAY`.
+Se você estiver usando APIs COM, provavelmente terá que organizar seus parâmetros de matriz como `SAFEARRAY*`s. Para fazer isso, você pode usar o tipo não gerenciado <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>. O tipo padrão dos elementos do `SAFEARRAY` pode ser visto na tabela sobre [ como personalizar campos `object`](./customize-struct-marshaling.md#marshal-systemobject). Você pode usar os campos <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> e <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> para personalizar o tipo de elemento exato do `SAFEARRAY`.
 
 ## <a name="customizing-boolean-or-decimal-parameters"></a>Personalizar parâmetros boolianos ou decimais
 
@@ -62,7 +62,7 @@ Além disso, se o seu tipo estiver marcado com `[ComVisible(true)]` ou se você 
 
 ### <a name="marshaling-to-a-variant"></a>Realizar marshaling para um `VARIANT`
 
-Se sua API nativa tiver uma `VARIANT` Win32, você poderá usar o formato <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> no seu `object` para organizar seus objetos como `VARIANT`s. Consulte a documentação sobre [como personalizar campos `object`](customize-struct-marshaling.md#marshaling-systemobjects) para um mapeamento entre tipos .NET e tipos `VARIANT`.
+Se sua API nativa tiver uma `VARIANT` Win32, você poderá usar o formato <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> no seu `object` para organizar seus objetos como `VARIANT`s. Consulte a documentação sobre [como personalizar campos `object`](customize-struct-marshaling.md#marshal-systemobject) para um mapeamento entre tipos .NET e tipos `VARIANT`.
 
 ### <a name="custom-marshalers"></a>Empacotadores personalizados
 

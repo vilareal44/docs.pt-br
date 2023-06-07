@@ -1,5 +1,6 @@
 ---
-title: <exception>- Guia de programação C#
+title: <exception>-Guia de programação C#
+description: Saiba mais sobre a <exception> marca XML. Essa marca permite que você especifique quais exceções podem ser geradas e pode ser aplicada a métodos, propriedades, eventos e indexadores.
 ms.date: 07/20/2015
 f1_keywords:
 - exception
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: 14318ac0b0cdf781d0488eecaf934879017d91f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 22a28f3fe6de5a0db9aea0f1fd7963d4e6fcee05
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789799"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381730"
 ---
-# <a name="exception-c-programming-guide"></a>\<> exceção (guia de programação C#)
+# <a name="exception-c-programming-guide"></a>\<exception>(Guia de programação C#)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,9 +38,9 @@ ms.locfileid: "76789799"
 
 ## <a name="remarks"></a>Comentários
 
-A marca \<exception> permite que você especifique quais exceções podem ser lançadas. Essa marca pode ser aplicada às definições de métodos, propriedades, eventos e indexadores.
+A `<exception>` marca permite especificar quais exceções podem ser geradas. Essa marca pode ser aplicada às definições de métodos, propriedades, eventos e indexadores.
 
-Compilar com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação para um arquivo.
+Compile com [-Doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.
 
 Para obter mais informações sobre o tratamento de exceção, consulte [Exceções e tratamento de exceção](../exceptions/index.md).
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f469eac-ac66-419b-8668-fe705bc1a51f
 topic_type:
 - apiref
-ms.openlocfilehash: dae5ed7c25f85051d1a28681fb88b056617c4de0
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 8b3785955ec138bbf898e84aa4deb5ed2a6e6b53
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867237"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500943"
 ---
 # <a name="cor_prf_function_argument_range-structure"></a>Estrutura COR_PRF_FUNCTION_ARGUMENT_RANGE
 Representa um bloco de argumentos de função armazenados de forma contígua em ordem da esquerda para a direita na memória.  
@@ -40,15 +40,15 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
 |`startAddress`|O endereço inicial do bloco.|  
 |`length`|O comprimento do bloco contíguo.|  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Estruturas de criação de perfil](profiling-structures.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6f1dbd4-1a9f-44dd-b54b-c530ab44eb48
 topic_type:
 - apiref
-ms.openlocfilehash: a0c639c63356318818e591dfdc3097d94080bbc2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5df472c41fafbf1f6f9e4ac4cb3e72d9f8f581ed
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124853"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008723"
 ---
 # <a name="itypenamebuilderaddpointer-method"></a>Método ITypeNameBuilder::AddPointer
 Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.  
@@ -32,14 +32,14 @@ HRESULT AddPointer ( );
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfaces de hospedagem](hosting-interfaces.md)

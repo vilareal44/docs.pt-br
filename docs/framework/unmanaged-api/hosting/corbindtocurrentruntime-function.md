@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6105c13e-d9cd-44d2-a95a-924e042830c7
 topic_type:
 - apiref
-ms.openlocfilehash: 348ca9d157a668dcd180076475f1fe9861197174
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 4c015d77deb4e6ed3d43074f2903e26b687de84f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616652"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493559"
 ---
 # <a name="corbindtocurrentruntime-function"></a>Função CorBindToCurrentRuntime
 Carrega o Common Language Runtime (CLR) em um processo usando as informações de versão armazenadas em um arquivo XML. O formato do arquivo XML é modelado após o arquivo de configuração de aplicativo padrão. Para obter mais informações sobre arquivos de configuração, consulte [Esquema de arquivos de configuração](../../configure-apps/file-schema/index.md).  
@@ -42,12 +42,12 @@ HRESULT CorBindToCurrentRuntime (
  `pwszFileName`  
  no O nome de um arquivo de configuração de aplicativo que especifica a versão do CLR a ser carregada. Se o nome do arquivo não for totalmente qualificado, supõe-se que esteja no mesmo diretório que o executável que faz a chamada.  
   
- A versão do tempo de execução a ser carregada é descrita pelo atributo Version no elemento [ \< requiredRuntime>](../../configure-apps/file-schema/startup/requiredruntime-element.md) do arquivo de configuração.  
+ A versão do tempo de execução a ser carregada é descrita pelo atributo Version no [\<requiredRuntime>](../../configure-apps/file-schema/startup/requiredruntime-element.md) elemento do arquivo de configuração.  
   
  Se nenhuma versão for especificada ou se o `<requiredRuntime>` elemento não puder ser encontrado, a versão mais recente do CLR instalada no computador será carregada.  
   
  `rclsid`  
- no O `CLSID` da coclass que implementa a interface [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) ou [ICLRRuntimeHost](iclrruntimehost-interface.md) . Os valores com suporte são CLSID_CorRuntimeHost ou CLSID_CLRRuntimeHost.  
+ no O `CLSID` da coclass que implementa a interface [ICorRuntimeHost](icorruntimehost-interface.md) ou [ICLRRuntimeHost](iclrruntimehost-interface.md) . Os valores com suporte são CLSID_CorRuntimeHost ou CLSID_CLRRuntimeHost.  
   
  `riid`  
  no O `IID` da interface que você está solicitando. Os valores com suporte são IID_ICorRuntimeHost ou IID_ICLRRuntimeHost.  
@@ -64,7 +64,7 @@ HRESULT CorBindToCurrentRuntime (
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Função CorBindToRuntime](corbindtoruntime-function.md)
 - [Função CorBindToRuntimeByCfg](corbindtoruntimebycfg-function.md)

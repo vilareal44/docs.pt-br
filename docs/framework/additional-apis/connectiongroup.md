@@ -1,5 +1,6 @@
 ---
 title: Classe ConnectionGroup
+description: Leia sobre a classe do grupo de conexões, que agrupa as conexões dentro do contexto do ponto de acesso e é usado para manter o contexto dos recursos de rede no .NET.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,32 +11,32 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 25c08217-fdeb-44b9-9cd6-1b4955d6e602
-ms.openlocfilehash: 8ebc97112d2044efca85520ee942ed0f587529ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7121713b26880f2490b40d59d92d431a567519b3
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156149"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989819"
 ---
 # <a name="connectiongroup-class"></a>Classe ConnectionGroup
 
-A `ConnectionGroup` classe agrupa uma lista <xref:System.Net.ServicePoint> de conexões dentro do contexto e é usada para manter o contexto para recursos de rede (por exemplo, proxies e clientes separados).
+A `ConnectionGroup` classe agrupa uma lista de conexões no <xref:System.Net.ServicePoint> contexto e é usada para manter o contexto de recursos de rede (por exemplo, proxies e clientes separados).
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
   
 ```csharp  
 internal class ConnectionGroup
 ```
 
 > [!WARNING]
-> A `ConnectionGroup` classe é interna e não deve ser usada diretamente em seu código.
+> A `ConnectionGroup` classe é interna e não deve ser usada diretamente no seu código.
 >
-> A Microsoft não suporta o uso desta classe em um aplicativo de produção sob nenhuma circunstância.
+> A Microsoft não oferece suporte ao uso dessa classe em um aplicativo de produção em nenhuma circunstância.
 
 ## <a name="requirements"></a>Requisitos
 
-**Espaço de nome:**<xref:System.Net>
+**Namespace:** <xref:System.Net>
 
-**Montagem:** Sistema (em System.dll)
+**Assembly:** Sistema (em System.dll)
 
-**Versões do Framework .NET:** Disponível desde 2.0.
+**.NET Framework versões:** Disponível desde 2,0.

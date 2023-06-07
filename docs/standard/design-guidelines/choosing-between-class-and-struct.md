@@ -1,5 +1,6 @@
 ---
 title: Escolher entre Classe e Struct
+description: Saiba como decidir se deseja criar um tipo como uma classe ou criar um tipo como uma estrutura. Entenda como tipos de referência e tipos de valor diferem no .NET.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: 76042bef1475f2fdf14e309390dcba6654ccfaa9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 9d757e77292c1226fbe2328cce082033ae8f7003
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741752"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662596"
 ---
 # <a name="choosing-between-class-and-struct"></a>Escolher entre Classe e Struct
 Uma das decisões básicas de design que cada designer de estrutura enfrenta é se deve criar um tipo como uma classe (um tipo de referência) ou como uma struct (um tipo de valor). Uma boa compreensão das diferenças no comportamento dos tipos de referência e dos tipos de valor é crucial para fazer essa escolha.
 
- A primeira diferença entre os tipos de referência e os tipos de valor que consideraremos é que os tipos de referência são alocados no heap e no lixo coletado, enquanto os tipos de valor são alocados na pilha ou embutidos em tipos contendo e desalocados quando a pilha desenrola ou quando seu tipo recipiente é desalocado. Portanto, alocações e desalocações de tipos de valor são em geral mais baratas do que as alocações e desalocações de tipos de referência.
+ A primeira diferença entre os tipos de referência e os tipos de valor que consideraremos é que os tipos de referência são alocados no heap e no lixo coletado, enquanto os tipos de valor são alocados na pilha ou embutidos em tipos contendo e desalocados quando a pilha se desenrola ou quando seu tipo recipiente é desalocado. Portanto, alocações e desalocações de tipos de valor são em geral mais baratas do que as alocações e desalocações de tipos de referência.
 
  Em seguida, as matrizes dos tipos de referência são alocadas fora de linha, o que significa que os elementos da matriz são apenas referências a instâncias do tipo de referência que residem no heap. Matrizes de tipo de valor são alocadas embutidas, o que significa que os elementos da matriz são as instâncias reais do tipo de valor. Portanto, alocações e desalocações de matrizes de tipo de valor são muito mais baratas do que as alocações e desalocações de matrizes de tipo de referência. Além disso, na maioria das vezes, as matrizes de tipo de valor apresentam uma localidade muito melhor de referência.
 
@@ -36,9 +37,9 @@ Uma das decisões básicas de design que cada designer de estrutura enfrenta é 
 
  ✔️ CONSIDERAR a definição de uma struct em vez de uma classe se as instâncias do tipo forem pequenas e geralmente de curta duração ou se forem normalmente inseridas em outros objetos.
 
- ❌ evitar definir uma struct, a menos que o tipo tenha todas as seguintes características:
+ ❌Evite definir uma struct, a menos que o tipo tenha todas as seguintes características:
 
-- Ele representa logicamente um único valor, semelhante a tipos primitivos (`int`, `double`, etc.).
+- Ele representa logicamente um único valor, semelhante a tipos primitivos ( `int` , `double` , etc.).
 
 - Ele tem um tamanho de instância inferior a 16 bytes.
 
@@ -52,7 +53,7 @@ Uma das decisões básicas de design que cada designer de estrutura enfrenta é 
 
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Diretrizes de Design de tipo](../../../docs/standard/design-guidelines/type.md)
-- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
+- [Diretrizes de design de tipo](type.md)
+- [Diretrizes de design de estrutura](index.md)

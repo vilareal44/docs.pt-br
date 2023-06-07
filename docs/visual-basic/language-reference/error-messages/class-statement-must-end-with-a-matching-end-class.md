@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30481
 ms.assetid: 583f3029-bc3a-4e06-866f-92dbecc46f19
-ms.openlocfilehash: 559595e9902ec2f0a19fd6b13e2c89fa1c2b52d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 01c231f577d21028e9ef92f37c7ac5f7f1fe2aa3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602412"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415382"
 ---
 # <a name="class-statement-must-end-with-a-matching-end-class"></a>Instrução 'Class' deve finalizar com 'End Class' correspondente
-`Class` é usado para iniciar um `Class` block; portanto, ele só pode aparecer no início do bloco, com uma correspondência `End Class` terminando o bloco de instrução. Ou você tem um redundantes `Class` instrução, ou você não ter terminado sua `Class` bloco com `End Class`.  
+`Class`é usado para iniciar um `Class` bloco; portanto, ele só pode aparecer no início do bloco, com uma instrução correspondente que `End Class` termina o bloco. Você tem uma instrução redundante `Class` ou não terminou seu `Class` bloco com `End Class` .  
   
  **ID do erro:** BC30481  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Localize e remova o desnecessárias `Class` instrução.  
+- Localize e remova a instrução desnecessária `Class` .  
   
-- Concluo a `Class` bloco com uma correspondência `End Class`.  
+- Conclua o `Class` bloco com uma correspondência `End Class` .  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [End \<palavra-chave > demonstrativo](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
-- [Instrução Class](../../../visual-basic/language-reference/statements/class-statement.md)
+- [\<keyword>Instrução End](../statements/end-keyword-statement.md)
+- [Instrução Class](../statements/class-statement.md)

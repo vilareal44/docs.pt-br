@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b35e99b1516c3236d07153cf0b69dae55a4bff7d
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 4fb1ffed97a5b7f906bed13a69f1e71563d11dae
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721341"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556118"
 ---
 ### <a name="serializableattribute-removed-from-some-windows-forms-types"></a>SerializableAttribute removido de alguns tipos de Windows Forms
 
@@ -32,7 +32,7 @@ Para obter mais informações, consulte [serialização binária](~/docs/standar
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3,0 Preview 9
+3.0
 
 #### <a name="recommended-action"></a>Ação recomendada
 

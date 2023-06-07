@@ -10,12 +10,12 @@ helpviewer_keywords:
 - BC36644
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-ms.openlocfilehash: 97b03874489473482554078958c7bfd29d87c095
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: b278dcc10a8a4e9e67aacdb16dca2588d2ebd0f1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523999"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409772"
 ---
 # <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>Não é possível inferir o(s) tipo(s) de dados do(s) parâmetro(s) de tipo a partir destes argumentos
 
@@ -58,8 +58,8 @@ End Interface
 
 Você pode especificar um tipo de dados para o parâmetro de tipo ou parâmetros em vez de depender da inferência de tipos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Conversão de Delegado Reduzida](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
-- [Procedimentos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
-- [Conversões de tipo no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Conversão de delegado reduzida](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Procedimentos genéricos no Visual Basic](../../programming-guide/language-features/data-types/generic-procedures.md)
+- [Conversões de tipo no Visual Basic](../../programming-guide/language-features/data-types/type-conversions.md)

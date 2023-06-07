@@ -1,13 +1,14 @@
 ---
 title: Conceitos e terminologia (transformação funcional) (C#)
+description: As funcionalidades de programação funcional facilitam a transformação de XML. Saiba mais sobre os conceitos e a terminologia de transformações funcionais puras em C#.
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: 3e2ecc4c2f70700ae92ee36b6f122059b922332e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ca05a914f6156730e773d1effebfc72626b16507
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70040629"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063270"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Conceitos e terminologia (transformação funcional) (C#)
 
@@ -36,7 +37,7 @@ A *programação funcional* é uma abordagem de programação que dá suporte di
 
 Historicamente, as linguagens de programação funcionais de uso geral, como o ML, Scheme, Haskell e F#, têm sido, principalmente, de interesse da comunidade acadêmica. Embora sempre foi possível escrever transformações funcionais puras no C#, a dificuldade em fazê-lo não tornou essa opção atrativa à maioria dos programadores. Nas versões recentes do C#, no entanto, os novos constructos de linguagem como expressões lambda e inferência de tipos tornaram a programação funcional muito mais fácil e mais produtiva.
 
-Para obter mais informações sobre programação funcional, consulte [Programação Funcional vs. Programação Imperdativa (C#)](./functional-programming-vs-imperative-programming.md).
+Para obter mais informações sobre a programação funcional, consulte programação [funcional vs. programação imperativa (C#)](./functional-programming-vs-imperative-programming.md).
 
 #### <a name="domain-specific-fp-languages"></a>Linguagens específicas do domínio FP
 
@@ -54,7 +55,7 @@ Para obter mais informações, consulte [Visão geral de operadores de consulta 
 expressão lambda \
 Essencialmente, uma função anônimo embutido que pode ser usada em que um tipo delegate é esperada. Esta é uma definição simplificada de expressões lambda, mas é suficiente para fins deste tutorial.
 
-Para obter mais informações, consulte [Expressões lambda](../../statements-expressions-operators/lambda-expressions.md).
+Para obter mais informações, consulte [Expressões lambda](../../../language-reference/operators/lambda-expressions.md).
 
 coleção \
 Um conjunto estruturada de dados, geralmente um tipo de uniforme. Para ser compatível com LINQ, uma coleção deve implementar a interface de <xref:System.Collections.IEnumerable> ou a interface de <xref:System.Linq.IQueryable> (ou uma de suas contrapartes genéricos, de <xref:System.Collections.Generic.IEnumerator%601> ou de <xref:System.Linq.IQueryable%601>).
@@ -76,7 +77,7 @@ Para obter mais informações, consulte [Introdução a consultas LINQ (C#)](./i
 
 Esses recursos de idioma serão usados em exemplos de código em todo esta seção.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Introdução às transformações funcionais puras (C#)](./introduction-to-pure-functional-transformations.md)
-- [Programação Funcional vs. Programação Imperativa (C#)](./functional-programming-vs-imperative-programming.md)
+- [Programação funcional versus programação imperativa (C#)](./functional-programming-vs-imperative-programming.md)

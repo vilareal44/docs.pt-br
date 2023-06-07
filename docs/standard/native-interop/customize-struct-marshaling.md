@@ -1,18 +1,18 @@
 ---
 title: Personalização do marshaling de estrutura – .NET
-description: Saiba como personalizar a forma como o .NET realiza marshal em suas estruturas para uma representação nativa.
+description: Saiba como personalizar como o .NET empacota estruturas para uma representação nativa.
 ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c82e0099c44b8033cad241d69bdd284243711a50
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400368"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374527"
 ---
-# <a name="customizing-structure-marshaling"></a>Personalização do marshaling de estrutura
+# <a name="customize-structure-marshaling"></a>Personalizar marshaling de estruturas
 
 Às vezes, as regras de marshaling padrão para estruturas não são exatamente o que você precisa. Os runtimes do .NET fornecem alguns pontos de extensão para você personalizar o layout de sua estrutura e como os campos têm o marshaling realizado.
 
@@ -22,15 +22,15 @@ O .NET fornece o atributo <xref:System.Runtime.InteropServices.StructLayoutAttri
 
 ✔️ CONSIDERE usar `LayoutKind.Sequential` sempre que possível.
 
-✔️ USE somente `LayoutKind.Explicit` no marshaling quando seu struct nativo também tiver um layout explícito, como uma união.
+✔️ Só usar `LayoutKind.Explicit` no marshaling quando sua estrutura nativa também tiver um layout explícito, como uma Union.
 
-❌Evite usar `LayoutKind.Explicit` ao realizar marshaling de estruturas em plataformas não Windows se você precisar direcionar os tempos de execução antes do .net Core 3,0. O tempo de execução do .NET Core antes de 3,0 não dá suporte à passagem de estruturas explícitas por valor para funções nativas em sistemas Intel ou AMD de 64 bits que não sejam Windows. No entanto, o runtime dá suporte à passagem de estruturas explícitas por referência em todas as plataformas.
+❌Evite usar `LayoutKind.Explicit` ao realizar marshaling de estruturas em plataformas não Windows se você precisar direcionar os tempos de execução antes do .NET Core 3,0. O tempo de execução do .NET Core antes de 3,0 não dá suporte à passagem de estruturas explícitas por valor para funções nativas em sistemas Intel ou AMD de 64 bits que não sejam Windows. No entanto, o runtime dá suporte à passagem de estruturas explícitas por referência em todas as plataformas.
 
 ## <a name="customizing-boolean-field-marshaling"></a>Personalização do marshaling de campo booliano
 
 O código nativo tem muitas representações boolianas diferentes. Somente no Windows, há três formas de representar valores boolianos. O runtime não conhece a definição nativa de sua estrutura, portanto, o melhor que ele pode fazer é estimar como realizar marshal de seus valores boolianos. O runtime do .NET fornece uma maneira de indicar como realizar marshal de seu campo booliano. Os exemplos a seguir mostram como realizar marshal do .NET `bool` para diferentes tipos boolianos nativos.
 
-Os valores Boolianos assumem como padrão o marshaling como um [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) valor nativo de 4 bytes do Win32, conforme mostrado no exemplo a seguir:
+Os valores Boolianos assumem como padrão o marshaling como um valor nativo de 4 bytes [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) do Win32, conforme mostrado no exemplo a seguir:
 
 ```csharp
 public struct WinBool
@@ -264,7 +264,7 @@ struct BString
 };
 ```
 
-Ao usar uma API baseada no WinRT, talvez seja necessário realizar marshal de uma cadeia de caracteres como um `HSTRING`.  Usando o valor <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType>, você pode realizar marshal de uma cadeia de caracteres como um `HSTRING`.
+Ao usar uma API baseada no WinRT, talvez seja necessário realizar marshal de uma cadeia de caracteres como um `HSTRING`. Usando o valor <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType>, você pode realizar marshal de uma cadeia de caracteres como um `HSTRING`.
 
 ```csharp
 public struct HString
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>Personalização do marshaling de campo decimal
 
-Se você estiver trabalhando no Windows, poderá encontrar algumas APIs que usam a estrutura [ `CY` ou `CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy~r1) nativa. Por padrão, o tipo `decimal` .net realiza marshaling na estrutura [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) nativa. No entanto, você pode usar um <xref:System.Runtime.InteropServices.MarshalAsAttribute> com o valor <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> para instruir o marshaler para converter um valor `decimal` para um valor nativo `CY`.
+Se você estiver trabalhando no Windows, poderá encontrar algumas APIs que usam a estrutura [ `CY` ou `CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy-r1) nativa. Por padrão, o `decimal` tipo .net realiza marshaling na [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal-r1) estrutura nativa. No entanto, você pode usar um <xref:System.Runtime.InteropServices.MarshalAsAttribute> com o valor <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> para instruir o marshaler para converter um valor `decimal` para um valor nativo `CY`.
 
 ```csharp
 public struct Currency
@@ -334,7 +334,7 @@ struct Currency
 };
 ```
 
-## <a name="marshaling-systemobjects"></a>`System.Object`s de marshaling
+## <a name="marshal-systemobject"></a>Efetua`System.Object`
 
 No Windows, você pode realizar marshal dos campos tipados de `object` para o código nativo. Você pode realizar marshal desses campos para um dos três tipos:
 

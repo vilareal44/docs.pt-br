@@ -1,15 +1,16 @@
 ---
-title: Como povoar uma árvore XML com um XmlWriter (LINQ para XML) (C#)
+title: Como popular uma árvore XML com um XmlWriter (LINQ to XML) (C#)
+description: Saiba como preencher uma árvore XML usando createwriter para criar um XmlWriter e, em seguida, gravar no XmlWriter em LINQ to XML em C#.
 ms.date: 07/20/2015
 ms.assetid: cd5674d1-5c54-4efc-ba68-e23b2875295f
-ms.openlocfilehash: f48843af403f2ee0e6d2850deab009a143f55dc7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9639c5947583bccf4f8ba427fc8611e181ef1536
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345768"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104799"
 ---
-# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>Como povoar uma árvore XML com um XmlWriter (LINQ para XML) (C#)
+# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>Como popular uma árvore XML com um XmlWriter (LINQ to XML) (C#)
 Uma maneira de preencher uma árvore XML é usar <xref:System.Xml.Linq.XContainer.CreateWriter%2A> para criar um <xref:System.Xml.XmlWriter> e escrever no <xref:System.Xml.XmlWriter>. A árvore XML é preenchida com todos os nós que são escritos no <xref:System.Xml.XmlWriter>.  
   
  Você normalmente usa este método quando usa [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] com outra classe que espera escrever em um <xref:System.Xml.XmlWriter>, por exemplo, <xref:System.Xml.Xsl.XslCompiledTransform>.  

@@ -1,17 +1,18 @@
 ---
 title: Construtores – Guia de Programação em C#
+description: Um construtor em C# é chamado quando uma classe ou struct é criada. Use construtores para definir padrões, limitar a instanciação e escrever código flexível e de fácil leitura.
 ms.date: 05/05/2017
 helpviewer_keywords:
 - constructors [C#]
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 8eedfaed111f01cc2ec55a2f42df66d4588bd42f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4a731e648143f5e0ecf8860625962d8baa29fe26
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399787"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474898"
 ---
 # <a name="constructors-c-programming-guide"></a>Construtores (Guia de Programação em C#)
 
@@ -19,7 +20,7 @@ Sempre que uma [classe](../../language-reference/keywords/class.md) ou [struct](
 
 ## <a name="parameterless-constructors"></a>Construtores sem parâmetros
   
-Se você não fornecer um construtor para sua classe, C# criará um por padrão que instancia o objeto e define as variáveis de membro para os valores padrão listados no artigo [Valores Padrão dos tipos C#.](../../language-reference/builtin-types/default-values.md) Se você não fornecer um construtor para sua estrutura, C# depende de um *construtor implícito sem parâmetros* para inicializar automaticamente cada campo ao seu valor padrão. Para obter mais informações e exemplos, consulte [Construtores de instâncias](instance-constructors.md).  
+Se você não fornecer um construtor para sua classe, o C# criará um por padrão que instancia o objeto e define as variáveis de membro para os valores padrão, conforme listado no artigo [valores padrão de tipos C#](../../language-reference/builtin-types/default-values.md) . Se você não fornecer um construtor para sua estrutura, o C# se baseará em um *Construtor implícito sem parâmetros* para inicializar automaticamente cada campo com seu valor padrão. Para obter mais informações e exemplos, consulte [construtores de instância](instance-constructors.md).  
 
 ## <a name="constructor-syntax"></a>Sintaxe do construtor
 
@@ -33,7 +34,7 @@ Se um construtor puder ser implementado como uma única instrução, você poder
 
 ## <a name="static-constructors"></a>Construtores estáticos
 
-Os exemplos anteriores têm todos os construtores de instância mostrado, que criam um novo objeto. Uma classe ou struct também pode ter um construtor estático, que inicializa membros estáticos do tipo.  Construtores estáticos não têm parâmetros. Se você não fornecer um construtor estático para inicializar campos estáticos, o compilador C# inicializará os campos estáticos para o valor padrão listados no artigo [Valores Padrão dos tipos C#.](../../language-reference/builtin-types/default-values.md)
+Os exemplos anteriores têm todos os construtores de instância mostrado, que criam um novo objeto. Uma classe ou struct também pode ter um construtor estático, que inicializa membros estáticos do tipo.  Construtores estáticos não têm parâmetros. Se você não fornecer um construtor estático para inicializar campos estáticos, o compilador C# Inicializa campos estáticos para seu valor padrão, conforme listado no artigo [valores padrão de tipos C#](../../language-reference/builtin-types/default-values.md) .
 
 O exemplo a seguir usa um construtor estático para inicializar um campo estático.
 
@@ -56,10 +57,10 @@ Para obter mais informações e exemplos, consulte [Construtores Estáticos](./s
   
  [Como escrever um construtor de cópia](./how-to-write-a-copy-constructor.md)  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Classes e structs](./index.md)
 - [Finalizadores](./destructors.md)
-- [Estático](../../language-reference/keywords/static.md)
-- [Por que os iniciadores funcionam na ordem oposta como construtores? Primeira Parte](https://docs.microsoft.com/archive/blogs/ericlippert/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)
+- [static](../../language-reference/keywords/static.md)
+- [Por que inicializadores são executados na ordem oposta como construtores? Parte um](https://docs.microsoft.com/archive/blogs/ericlippert/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)

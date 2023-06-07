@@ -2,27 +2,27 @@
 title: Suporte para JSON e outros formatos de transferência de dados
 ms.date: 03/30/2017
 ms.assetid: a527f1be-4e37-4beb-9a95-291480d19627
-ms.openlocfilehash: 9bf27a853fff42c098446067fa6f0db6bf4dbc4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 168bd9a76b0ff6ff8e6625acc93a5409d43a817c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747596"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594758"
 ---
 # <a name="support-for-json-and-other-data-transfer-formats"></a>Suporte para JSON e outros formatos de transferência de dados
-JSON (JavaScript Object Notation) é um formato de codificação de dados eficiente que permite a troca rápida de pequenas quantidades de dados entre navegadores do cliente e do AJAX (Asynchronous JavaScript and XML)-serviços Web ativada.  
+O JSON (JavaScript Object Notation) é um formato de codificação de dados eficiente que permite trocas rápidas de pequenas quantidades de dados entre navegadores de cliente e serviços Web habilitados para AJAX (Asynchronous JavaScript and XML).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Serialização JSON autônoma](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)  
+ [Serialização JSON autônoma](stand-alone-json-serialization.md)  
  Descreve a serialização JSON autônoma.  
   
- [Como: Serializar e desserializar dados JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)  
- Demonstra como serializar objetos do tipo .NET em dados codificados por JSON e, em seguida, desserializar dados no formato JSON em instâncias de tipos .NET usando o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
+ [Como serializar e desserializar dados JSON](how-to-serialize-and-deserialize-json-data.md)  
+ Demonstra como serializar objetos do tipo .NET em dados codificados em JSON e, em seguida, desserializar os dados no formato JSON de volta em instâncias de tipos .NET usando o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> .  
   
- [Mapeamento entre JSON e XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)  
- Descreve a correspondência entre codificações de notação JSON (JavaScript Object) e o XML infoset, que é usado internamente pelo Windows Communication Foundation (WCF) para representar documentos e dados codificados em JSON.  
+ [Mapeamento entre JSON e XML](mapping-between-json-and-xml.md)  
+ Descreve a correspondência entre codificações JavaScript Object Notation (JSON) e o XML infoset, que é usado internamente pelo Windows Communication Foundation (WCF) para representar dados e documentos codificados em JSON.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
 - <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>

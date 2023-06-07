@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: e56529919945558df178e18a83a895a79bfe4919
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 98aeb5699fdd5e5e538a205acd37436019c3fc03
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512717"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363040"
 ---
-# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>O tipo da variável '\<VariableName > ' não será inferido porque está associado a um campo em um escopo delimitador
+# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>O tipo da variável '\<variablename>' não será inferido porque está associado a um campo em um escopo delimitador
 
-O tipo da variável '\<VariableName > ' não será inferido porque está associado a um campo em um escopo delimitador. Altere o nome de '\<VariableName > ' ou use o nome totalmente qualificado (por exemplo, ' me. VariableName ' ou ' MyBase. VariableName ').
+O tipo da variável ' \<variablename> ' não será inferido porque está associado a um campo em um escopo delimitador. Altere o nome de ' \<variablename> ' ou use o nome totalmente qualificado (por exemplo, ' me. VariableName ' ou ' MyBase. VariableName ').
 
-Uma variável de controle de loop em seu código tem o mesmo nome que um campo da classe ou outro escopo delimitador. Como a variável de controle é usada sem `As` uma cláusula, ela é associada ao campo no escopo delimitador, e o compilador não cria uma nova variável para ela ou infere seu tipo.
+Uma variável de controle de loop em seu código tem o mesmo nome que um campo da classe ou outro escopo delimitador. Como a variável de controle é usada sem uma `As` cláusula, ela é associada ao campo no escopo delimitador, e o compilador não cria uma nova variável para ela ou infere seu tipo.
 
-No exemplo a seguir, `Index`, a variável de controle `For` na instrução é associada `Customer` ao `Index` campo na classe. O compilador não cria uma nova variável para a variável `Index` de controle ou infere seu tipo.
+No exemplo a seguir, `Index` , a variável de controle na `For` instrução é associada ao `Index` campo na `Customer` classe. O compilador não cria uma nova variável para a variável de controle `Index` ou infere seu tipo.
 
 ```vb
 Class Customer
@@ -39,7 +39,7 @@ Class Customer
 End Class
 ```
 
-Por padrão, esta mensagem é um aviso. Para obter informações sobre como ocultar avisos ou como tratar avisos como erros, consulte Configurando [avisos no Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).
+Por padrão, esta mensagem é um aviso. Para obter informações sobre como ocultar avisos ou como tratar avisos como erros, consulte [Configurando avisos no Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).
 
 **ID do erro:** BC42110
 
@@ -51,13 +51,13 @@ Por padrão, esta mensagem é um aviso. Para obter informações sobre como ocul
   For I = 1 To 10
   ```
 
-- Esclareça que a variável de controle de loop é vinculada ao campo de classe `Me.` prefixando para o nome da variável.
+- Esclareça que a variável de controle de loop é vinculada ao campo de classe prefixando `Me.` para o nome da variável.
 
   ```vb
   For Me.Index = 1 To 10
   ```
 
-- Em vez de depender da inferência de tipo local, `As` use uma cláusula para especificar um tipo para a variável de controle de loop.
+- Em vez de depender da inferência de tipo local, use uma `As` cláusula para especificar um tipo para a variável de controle de loop.
 
   ```vb
   For Index As Integer = 1 To 10
@@ -82,11 +82,11 @@ Class Customer
 End Class
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Instrução Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [Instrução For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [Instrução For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [Como: Consulte a instância atual de um objeto](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
-- [Inferência de Tipo de Variável Local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Me, My, MyBase e MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [Instrução Option Infer](../statements/option-infer-statement.md)
+- [Instrução For Each...Next](../statements/for-each-next-statement.md)
+- [Instrução For...Next](../statements/for-next-statement.md)
+- [Como fazer referência à instância atual de um objeto](../../programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
+- [Inferência de Tipo de Variável Local](../../programming-guide/language-features/variables/local-type-inference.md)
+- [Me, My, MyBase e MyClass](../../programming-guide/program-structure/me-my-mybase-and-myclass.md)

@@ -2,12 +2,12 @@
 title: Programação connosco
 ms.date: 07/20/2015
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
-ms.openlocfilehash: 9c64c348f5d26172f26593b927e6bc24baf365bf
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 4cae85d99e7e28506faad8ca39347cf8f271718e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794397"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396370"
 ---
 # <a name="programming-with-nodes-visual-basic"></a>Programando com nós (Visual Basic)
 desenvolvedores de[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] que precisam geralmente escrever programas como um editor XML, um sistema uma transformação, ou uma necessidade o gravador de relatório escrever programas que funcionam no nível mais fino de granularidade dos elementos e atributos. Freqüentemente necessitam de trabalhar no nível de nó, em nós de manipulação de texto, as instruções de processamento, e os comentários. Este tópico fornece alguns detalhes sobre programação no nível do nó.  
@@ -171,6 +171,6 @@ Console.WriteLine(doc.Nodes().Count())
 1
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Programação de LINQ to XML avançada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Programação de LINQ to XML avançada (Visual Basic)](advanced-linq-to-xml-programming.md)

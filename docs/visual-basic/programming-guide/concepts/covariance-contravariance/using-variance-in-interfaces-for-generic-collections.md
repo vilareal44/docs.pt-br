@@ -2,20 +2,20 @@
 title: Usar variação em interfaces para coleções genéricas
 ms.date: 07/20/2015
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
-ms.openlocfilehash: 6ee133dfd61d7d7a88243ca592642ff21e0c2223
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b762ce42215f9b24371313446637e95962677bfb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349018"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375635"
 ---
-# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>Usando a variação em interfaces para coleções genéricas (Visual Basic)
+# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>Usando variação em interfaces para coleções genéricas (Visual Basic)
 
 Uma interface de covariante permite que seus métodos retornem mais tipos derivados daquelas especificadas na interface. Uma interface de contravariante permite que seus métodos aceitem parâmetros de tipos menos derivados do que os especificados na interface.
 
 No .NET Framework 4, várias interfaces existentes se tornaram covariantes e contravariantes. Eles incluem <xref:System.Collections.Generic.IEnumerable%601> e <xref:System.IComparable%601>. Isso permite que você reutilize métodos que operam com coleções genéricas de tipos base para coleções de tipos derivados.
 
-Para obter uma lista de interfaces variantes na .NET Framework, consulte [variação em interfaces genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
+Para obter uma lista de interfaces variantes na .NET Framework, consulte [variação em interfaces genéricas (Visual Basic)](variance-in-generic-interfaces.md).
 
 ## <a name="converting-generic-collections"></a>Convertendo coleções genéricas
 
@@ -112,6 +112,6 @@ Sub Main()
 End Sub
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Variação em interfaces genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Variação em interfaces genéricas (Visual Basic)](variance-in-generic-interfaces.md)

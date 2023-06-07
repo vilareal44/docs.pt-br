@@ -1,13 +1,14 @@
 ---
 title: Introdução à Integração do SQL Server CLR
+description: A integração CLR com o SQL Server dá suporte a procedimentos armazenados, gatilhos, funções definidas pelo usuário, tipos definidos pelo usuário e agregações definidas pelo usuário em código gerenciado.
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: 41dd89af4f45c673cf6b7283fc39aaf91fd9963c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: fa2ef68792d09cf94b3e0680a14bd79f9b593999
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452403"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286424"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>Introdução à Integração do SQL Server CLR
 O CLR (Common Language Runtime) é o centro do Microsoft .NET Framework; ele fornece o ambiente de execução para todo o código do .NET Framework. O código executado no CLR é chamado de código gerenciado. O CLR fornece diversas funções e serviços necessários para a execução de programas, incluindo a compilação JIT (Just-In-Time), alocação e gerenciamento de memória, imposição de segurança de tipos, tratamento de exceções, gerenciamento de threads e segurança.  
@@ -38,7 +39,7 @@ GO
   
  **Documentação do SQL Server**  
   
-- [Habilitando a integração CLR](/sql/relational-databases/clr-integration/clr-integration-enabling)  
+- [Habilitando integração CLR](/sql/relational-databases/clr-integration/clr-integration-enabling)  
   
 ## <a name="deploying-a-clr-assembly"></a>Implantando um assembly de CLR  
  Quando testados e verificados no servidor de teste, os métodos do CLR podem ser distribuídos para servidores de produção usando um script de implantação. O script de implantação pode ser gerado manualmente ou usando o SQL Server Management Studio. Para obter informações mais detalhadas, consulte a versão da documentação do SQL Server para a versão do SQL Server que você está usando.  
@@ -65,7 +66,7 @@ GO
   
 - [Depurando objetos de banco de dados CLR](/sql/relational-databases/clr-integration/debugging-clr-database-objects)  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Segurança de acesso do código e o ADO.NET](../code-access-security.md)
-- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)
+- [Visão geral do ADO.NET](../ado-net-overview.md)

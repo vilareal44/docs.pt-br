@@ -4,16 +4,16 @@ description: Aprenda os conceitos de teste de unidade para F# no .NET Core por m
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 5fe4a8faddd87334439513368f24d808abc58e65
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e0f2b6f88a650f412148f51cc0236fa46ed8c618
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157304"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656547"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>Bibliotecas do F# de teste de unidade no .NET Core usando dotnet test e xUnit
 
-Este tutorial apresenta uma experiência interativa de compilação de uma solução de exemplo passo a passo para aprender os conceitos do teste de unidade. Se você preferir acompanhar o tutorial usando uma solução interna, [veja ou baixe o exemplo de código](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp/) antes de começar. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Este tutorial apresenta uma experiência interativa de compilação de uma solução de exemplo passo a passo para aprender os conceitos do teste de unidade. Se você preferir acompanhar o tutorial usando uma solução interna, [veja ou baixe o exemplo de código](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp/) antes de começar. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
@@ -29,7 +29,7 @@ No diretório da solução, crie um diretório *MathService*. A estrutura de arq
     /MathService
 ```
 
-Faça *do MathService* o diretório `dotnet new classlib -lang "F#"` atual e execute para criar o projeto de origem. Você criará uma implementação com falha do serviço de matemática:
+Torne o *MathService* o diretório atual e execute `dotnet new classlib -lang "F#"` para criar o projeto de origem. Você criará uma implementação com falha do serviço de matemática:
 
 ```fsharp
 module MyMath =
@@ -61,7 +61,7 @@ Torne o diretório *MathService.Tests* o diretório atual e crie um novo projeto
 </ItemGroup>
 ```
 
-O projeto de teste requer outros pacotes para criar e executar testes de unidade. `dotnet new` na etapa anterior adicionou xUnit e o executor de xUnit. Agora, adicione a biblioteca de classes `MathService` como outra dependência ao projeto. Use `dotnet add reference` o comando:
+O projeto de teste requer outros pacotes para criar e executar testes de unidade. `dotnet new` na etapa anterior adicionou xUnit e o executor de xUnit. Agora, adicione a biblioteca de classes `MathService` como outra dependência ao projeto. Use o `dotnet add reference` comando:
 
 ```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
@@ -166,9 +166,9 @@ let squaresOfOdds xs =
 
 Você criou uma pequena biblioteca e um conjunto de testes de unidade para essa biblioteca. Você estruturou a solução para que a adição de novos pacotes e testes fizesse parte do fluxo de trabalho normal. Você concentrou grande parte do seu tempo e esforço em resolver as metas do aplicativo.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [dotnet new](../tools/dotnet-new.md)
 - [dotnet sln](../tools/dotnet-new.md)
 - [dotnet add reference](../tools/dotnet-add-reference.md)
-- [teste dotnet](../tools/dotnet-test.md)
+- [dotnet test](../tools/dotnet-test.md)

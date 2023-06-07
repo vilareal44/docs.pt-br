@@ -5,10 +5,10 @@ helpviewer_keywords:
 - GCLOHThreshold element
 - <GCLOHThreshold> element
 ms.openlocfilehash: d72dc9d27984f60dfb6296217263ce8b176093c6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74451216"
 ---
 # <a name="gclohthreshold-element"></a>Elemento GCLOHThreshold
@@ -16,8 +16,8 @@ ms.locfileid: "74451216"
 Especifica o tamanho do limite, em bytes, que faz com que o coletor de lixo coloque objetos na LOH (Large Object heap).
 
 [\<configuration>](../configuration-element.md)\
-> &nbsp;de [\<de tempo de execução](runtime-element.md) do &nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold >
+&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold>
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,7 +38,7 @@ Especifica o tamanho do limite, em bytes, que faz com que o coletor de lixo colo
 |-----------|-----------------|
 |`nnnn`|O tamanho do limite, em bytes, que faz com que os objetos vá para a heap de objeto grande.|
 
-## <a name="child-elements"></a>Child elements
+## <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
@@ -53,9 +53,9 @@ Nenhum.
 
 Essa configuração foi introduzida no .NET Framework 4,8.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Esquema de configurações de tempo de execução](index.md)
-- [Esquema de arquivos de configuração](../index.md)
-- [Noções básicas da coleta de lixo](../../../../standard/garbage-collection/fundamentals.md)
+- [Esquema do arquivo de configuração](../index.md)
+- [Conceitos básicos da coleta de lixo](../../../../standard/garbage-collection/fundamentals.md)
 - [Opções de configuração de tempo de execução do NET Core para GC](../../../../core/run-time-config/garbage-collector.md)

@@ -3,13 +3,13 @@ title: <Field> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
 ms.openlocfilehash: 2a63b88c399a999cd00750dee1614352cea10e80
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128416"
 ---
-# <a name="field-element-net-native"></a>Elemento de > de campo de \<(.NET Native)
+# <a name="field-element-net-native"></a>\<Field> (.NET Nativo)
 Aplica a política de reflexão do runtime a um campo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,16 +37,16 @@ Aplica a política de reflexão do runtime a um campo.
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*method_name*|O nome do campo. O tipo do campo é definido pelo elemento pai [\<Type>](type-element-net-native.md) ou [\<TypeInstantiation>](typeinstantiation-element-net-native.md).|  
+|*method_name*|O nome do campo. O tipo do campo é definido pelo [\<Type>](type-element-net-native.md) elemento pai ou [\<TypeInstantiation>](typeinstantiation-element-net-native.md) .|  
   
 ## <a name="all-other-attributes"></a>Todos os outros atributos  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*policy_setting*|A configuração a ser aplicada a este tipo de política para o campo. Os valores possíveis são `Auto`, `Excluded`, `Included` e `Required`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md).|  
+|*policy_setting*|A configuração a ser aplicada a este tipo de política para o campo. Os valores possíveis são `Auto`, `Excluded`, `Included` e `Required`. Para obter mais informações, consulte [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -58,8 +58,8 @@ Aplica a política de reflexão do runtime a um campo.
 ## <a name="remarks"></a>Comentários  
  Se a política do campo não for definida explicitamente, ele herdará a política de runtime do seu elemento pai.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
-- [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md)
+- [Elementos da diretiva de runtime](runtime-directive-elements.md)
+- [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md)

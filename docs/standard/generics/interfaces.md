@@ -8,12 +8,12 @@ helpviewer_keywords:
 - generics [.NET Framework], interfaces
 - ordering comparisons [.NET Framework]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
-ms.openlocfilehash: 704ada32d428c468d5b71a3f1390568ca586079e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 21a244a5d44b036a987d8eb8a79aef2c4b8e9a76
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708318"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287513"
 ---
 # <a name="generic-interfaces"></a>Interfaces genéricas
 Este tópico fornece uma visão geral de interfaces genéricas que fornecem funcionalidade comum entre famílias de tipos genéricos.  
@@ -22,7 +22,7 @@ Este tópico fornece uma visão geral de interfaces genéricas que fornecem func
  As interfaces genéricas fornecem contrapartes fortemente tipadas para interfaces não genéricas para fins de comparações de ordenação e de igualdade, e para a funcionalidade que é compartilhada por tipos de coleção genérica.  
   
 > [!NOTE]
-> A partir do .NET Framework 4, os parâmetros de tipo de várias interfaces genéricas são marcados como covariantes ou contravariantes, fornecendo mais flexibilidade na atribuição e usando tipos que implementam essas interfaces. Consulte [Covariância e contravariância](../../../docs/standard/generics/covariance-and-contravariance.md).  
+> A partir do .NET Framework 4, os parâmetros de tipo de várias interfaces genéricas são marcados como covariantes ou contravariantes, fornecendo mais flexibilidade na atribuição e usando tipos que implementam essas interfaces. Consulte [Covariância e contravariância](covariance-and-contravariance.md).  
   
 ### <a name="equality-and-ordering-comparisons"></a>Comparações de ordem e igualdade  
  No namespace <xref:System>, as interfaces genéricas <xref:System.IComparable%601?displayProperty=nameWithType> e <xref:System.IEquatable%601?displayProperty=nameWithType>, assim como suas contrapartes não genéricas, definem métodos para comparações de classificação e de igualdade, respectivamente. Os tipos implementam essas interfaces para permitir a execução dessas comparações.  
@@ -40,11 +40,11 @@ Este tópico fornece uma visão geral de interfaces genéricas que fornecem func
   
  A interface genérica <xref:System.Collections.Generic.IEnumerable%601> fornece uma estrutura de enumerador genérico. A interface genérica <xref:System.Collections.Generic.IEnumerator%601> implementada pelos enumeradores genéricos herda a interface não genérica <xref:System.Collections.IEnumerator>; os membros <xref:System.Collections.IEnumerator.MoveNext%2A> e <xref:System.Collections.IEnumerator.Reset%2A>, que não dependem do parâmetro de tipo `T`, só aparecem na interface não genérica. Isso significa que qualquer consumidor da interface não genérica também poderá consumir a interface genérica.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
-- [Genéricos](../../../docs/standard/generics/index.md)
-- [Coleções genéricas no .NET Framework](../../../docs/standard/generics/collections.md)
-- [Delegados genéricos para manipulação de matrizes e listas](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)
-- [Covariância e contravariância](../../../docs/standard/generics/covariance-and-contravariance.md)
+- [Genéricos](index.md)
+- [Coleções genéricas no .NET Framework](collections.md)
+- [Delegados genéricos para manipular matrizes e listas](delegates-for-manipulating-arrays-and-lists.md)
+- [Covariância e contravariância](covariance-and-contravariance.md)

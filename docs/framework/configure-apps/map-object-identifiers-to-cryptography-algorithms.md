@@ -1,5 +1,6 @@
 ---
 title: Mapeando identificadores de objeto para algoritmos de criptografia
+description: Consulte como mapear um OID (identificador de objeto) para um algoritmo de criptografia no .NET usando os elementos oidEntry e nameEntry em um arquivo de configuração XML.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - digital signatures
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - mapping object identifiers
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
-ms.openlocfilehash: a5aebac2d392d4540581dfe7c7afff0819968ac0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e22510014071455b83ba28cd82690b5ecdce9bc9
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912536"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141998"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Mapeando identificadores de objeto para algoritmos de criptografia
 As assinaturas digitais garantem que os dados não sejam adulterados quando enviados de um programa para outro. Normalmente, a assinatura digital é computada aplicando uma função matemática ao hash dos dados a serem assinados. Ao Formatar um valor de hash a ser assinado, alguns algoritmos de assinatura digital acrescentam um OID (identificador de objeto) de ASN. 1 como parte da operação de formatação. O OID identifica o algoritmo que foi usado para calcular o hash. Você pode mapear algoritmos para identificadores de objeto para estender o mecanismo de criptografia para usar algoritmos personalizados. O exemplo a seguir mostra como mapear um identificador de objeto para um novo algoritmo de hash.  
@@ -38,9 +39,9 @@ As assinaturas digitais garantem que os dados não sejam adulterados quando envi
 </configuration>  
 ```  
   
- [ O\<elemento > oidEntry](./file-schema/cryptography/oidentry-element.md) contém dois atributos. O atributo **OID** é o número do identificador de objeto. O atributo **Name** é o valor do [ \<atributo Name do elemento > nameEntry](./file-schema/cryptography/nameentry-element.md). Deve haver um mapeamento de um nome de algoritmo para uma classe antes que um identificador de objeto possa ser mapeado para um nome simples.  
+ O [ \<oidEntry> elemento](./file-schema/cryptography/oidentry-element.md) contém dois atributos. O atributo **OID** é o número do identificador de objeto. O atributo **Name** é o valor do atributo **Name** do [ \<nameEntry> elemento](./file-schema/cryptography/nameentry-element.md). Deve haver um mapeamento de um nome de algoritmo para uma classe antes que um identificador de objeto possa ser mapeado para um nome simples.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Configurando classes de criptografia](configure-cryptography-classes.md)
-- [Serviços criptográficos](../../standard/security/cryptographic-services.md)
+- [Serviços de Criptografia](../../standard/security/cryptographic-services.md)

@@ -3,12 +3,12 @@ title: Digite suporte nas classes de System.Xml
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 63570538-06e3-4401-ad4d-ac50be90c7bf
-ms.openlocfilehash: cec47d40a0353639bc17b880265f7c15f2f53ac4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8ceda15cb8463db3e81260529ebb1e3a67a0c1af
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710096"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283293"
 ---
 # <a name="type-support-in-the-systemxml-classes"></a>Digite suporte nas classes de System.Xml
 No .NET Framework versão 2,0, as classes XML principais foram aprimoradas para incluir recursos de suporte de tipo. <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, e as classes de <xref:System.Xml.XPath.XPathNavigator> incluem recursos de suporte do tipo que incluem a capacidade de conversão entre tipos esquema XML e Common Language Runtime (CLR) tipos.  
@@ -27,14 +27,14 @@ No .NET Framework versão 2,0, as classes XML principais foram aprimoradas para 
 > Na versão 1,0 do.NET Framework a classe de <xref:System.Xml.XmlConvert> foi necessária para converter entre o esquema XML e os tipos de CLR.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Tipos de dados XML de mapeamento para tipos de CLR](../../../../docs/standard/data/xml/mapping-xml-data-types-to-clr-types.md)  
+ [Tipos de dados XML de mapeamento para tipos de CLR](mapping-xml-data-types-to-clr-types.md)  
  Descreve os mapeamentos padrão de tipos de dados XML para tipos de CLR.  
   
- [Notas de implementação de suporte do tipo XML](../../../../docs/standard/data/xml/xml-type-support-implementation-notes.md)  
+ [Notas de implementação de suporte do tipo XML](xml-type-support-implementation-notes.md)  
  Descreve alguns dos detalhes de implementação de suporte de tipo.  
   
- [Conversão de tipos de dados XML](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
+ [Conversão de tipos de dados XML](conversion-of-xml-data-types.md)  
  Descreve como usar a classe de <xref:System.Xml.XmlConvert> para converter entre o esquema XML e os tipos de CLR.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Acessando dados fortemente tipados XML usando XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+ [Acessando dados fortemente tipados XML usando XPathNavigator](accessing-strongly-typed-xml-data-using-xpathnavigator.md)

@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: d2221d1c-c9cb-48d1-b044-a3b4445c7f05
-ms.openlocfilehash: 8706eee341dd1a5852efae0aad5195e09f62fec4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b5b9ba0cc9a6d867b0478720b6151c7a561da16
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183489"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584708"
 ---
 # <a name="message-security-windows"></a>Segurança de mensagens do Windows
-Esta amostra demonstra como <xref:System.ServiceModel.WSHttpBinding> configurar uma vinculação para usar a segurança em nível de mensagem com a autenticação do Windows. Esta amostra é baseada no [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md). Nesta amostra, o serviço está hospedado no Internet Information Services (IIS) e o cliente é um aplicativo de console (.exe).  
+Este exemplo demonstra como configurar uma <xref:System.ServiceModel.WSHttpBinding> Associação para usar a segurança em nível de mensagem com a autenticação do Windows. Este exemplo é baseado na [introdução](getting-started-sample.md). Neste exemplo, o serviço é hospedado no Serviços de Informações da Internet (IIS) e o cliente é um aplicativo de console (. exe).  
   
 > [!NOTE]
-> O procedimento de configuração e as instruções de construção desta amostra estão localizados no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- A segurança padrão do [ \<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) é a segurança de mensagens usando a autenticação do Windows. Os arquivos de configuração nesta `mode` amostra definem explicitamente `clientCredentialType` o `Windows`atributo [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) do>de segurança `Message` e o atributo a . Esses valores são os valores padrão para essa vinculação, mas foram explicitamente configurados, como mostrado na configuração de amostra a seguir para demonstrar seu uso.  
+ A segurança padrão para o [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) é a segurança de mensagem usando a autenticação do Windows. Os arquivos de configuração neste exemplo definem explicitamente o `mode` atributo de [\<security>](../../configure-apps/file-schema/wcf/security-of-wshttpbinding.md) para `Message` e o `clientCredentialType` atributo como `Windows` . Esses valores são os valores padrão para essa associação, mas foram explicitamente configurados, conforme mostrado na configuração de exemplo a seguir para demonstrar seu uso.  
   
 ```xml  
 <bindings>  
@@ -31,7 +31,7 @@ Esta amostra demonstra como <xref:System.ServiceModel.WSHttpBinding> configurar 
 </bindings>  
 ```  
   
- A configuração de ponto final do cliente consiste em um endereço absoluto para o ponto final do serviço, a vinculação e o contrato. A vinculação do cliente `securityMode` é `authenticationMode`configurada com o apropriado e .  
+ A configuração de ponto de extremidade do cliente consiste em um endereço absoluto para o ponto de extremidade de serviço, a associação e o contrato. A associação de cliente é configurada com o `securityMode` e o `authenticationMode` .  
   
 ```xml  
 <system.serviceModel>  
@@ -60,7 +60,7 @@ Esta amostra demonstra como <xref:System.ServiceModel.WSHttpBinding> configurar 
 </system.serviceModel>  
 ```  
   
- O código-fonte do serviço foi <xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A> modificado para demonstrar como o pode ser usado para acessar a identidade do chamador.  
+ O código-fonte do serviço foi modificado para demonstrar como o <xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A> pode ser usado para acessar a identidade do chamador.  
 
 ```csharp
 public string GetCallerIdentity()  
@@ -70,12 +70,12 @@ public string GetCallerIdentity()
 }  
 ```
 
- Quando você executa a amostra, as solicitações e respostas da operação são exibidas na janela do console cliente. O primeiro método `GetCallerIdentity` chamado - retorna o nome da identidade do chamador de volta para o cliente. Pressione ENTER na janela do console para desligar o cliente.  
+ Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. O primeiro método chamado- `GetCallerIdentity` -retorna o nome da identidade do chamador de volta para o cliente. Pressione ENTER na janela do console para desligar o cliente.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Certifique-se de que você tenha realizado o [procedimento de configuração única para as amostras da Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para construir a edição C# ou Visual Basic .NET da solução, siga as instruções em [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para criar a edição C# ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).  
   
-3. Para executar a amostra em uma configuração de computador único ou cruzado, siga as instruções em [Executar as amostras da Fundação](../../../../docs/framework/wcf/samples/running-the-samples.md)de Comunicação do Windows .  
+3. Para executar o exemplo em uma configuração de computador único ou entre computadores, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md).  

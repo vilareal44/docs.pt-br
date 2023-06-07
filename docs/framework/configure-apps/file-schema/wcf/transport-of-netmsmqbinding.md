@@ -3,22 +3,22 @@ title: <transport> de <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 72e1b338-39f0-4af1-a5d9-7a2fb79f6a0b
 ms.openlocfilehash: cc47c01cccc931e81ba57ab37ad9e3accfaa693b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152925"
 ---
-# <a name="transport-of-netmsmqbinding"></a>\<> de \<transporte de> netMsmqBinding
+# <a name="transport-of-netmsmqbinding"></a>\<transport> de \<netMsmqBinding>
 Define as configurações de segurança de transporte.  
   
-[**\<>de configuração**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<system.serviceModelo>**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<vinculações>**](bindings.md)\
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<netMsmqBinding>**](netmsmqbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<vinculação>**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de segurança**](security-of-netmsmqbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>de transporte**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-netmsmqbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,10 +42,10 @@ Define as configurações de segurança de transporte.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|Msmqauthenticationmode|Especifica como a mensagem deve ser autenticada pelo transporte MSMQ. Os valores válidos incluem os seguintes:<br /><br /> - Nenhuma: nenhuma autenticação.<br />- WindowsDomain: O mecanismo de autenticação usa o Active Directory para recuperar o certificado X.509 para o identificador de segurança associado à mensagem. Isso é então usado para verificar a ACL da fila para garantir que o usuário tenha permissão de gravação para a fila.<br />- Certificado: O canal recupera o certificado da loja de certificados.<br /><br /> O padrão é `WindowsDomain`.<br /><br /> Se este atributo `None`estiver `msmqProtectionLevel` definido como , `None`o atributo também deve ser definido como . Esse atributo é do tipo<xref:System.ServiceModel.MsmqAuthenticationMode>|  
-|msmqEncryptionAlgorithm|Especifica o algoritmo a ser usado para criptografia de mensagens no fio ao transferir mensagens entre gerentes de fila de mensagens. Os valores válidos incluem os seguintes:<br /><br /> - RC4Stream<br />- AES<br />- O valor `RC4Stream`padrão é . Este atributo <xref:System.ServiceModel.MsmqEncryptionAlgorithm>é do tipo .|  
-|Msmqprotectionlevel|Especifica a forma como as mensagens são protegidas no nível do transporte MSMQ. A criptografia garante a integridade da mensagem, enquanto assinar e criptografar garante a integridade da mensagem e o não-repúdio. Ou seja, a mensagem realmente veio do remetente e o remetente é quem eles dizem que são. Os valores válidos incluem os seguintes:<br /><br /> - Nenhuma: sem proteção.<br />- Sinal: As mensagens são assinadas.<br />- EncryptAndSign: As mensagens são criptografadas e assinadas.<br />- O `Sign`padrão é.|  
-|msmqSecureHashAlgorithm|Especifica o algoritmo hash a ser usado para calcular o digerir a mensagem. Os valores válidos incluem os seguintes:<br /><br /> - MD5<br />- SHA1<br />- SHA256<br />- SHA512<br /><br /> O padrão é `SHA1`. Este atributo <xref:System.ServiceModel.MsmqSecureHashAlgorithm>é do tipo .<br>Devido a problemas de colisão com MD5 e SHA1, a Microsoft recomenda SHA256 ou melhor.|  
+|msmqAuthenticationMode|Especifica como a mensagem deve ser autenticada pelo transporte MSMQ. Os valores válidos incluem os seguintes:<br /><br /> -Nenhum: nenhuma autenticação.<br />-WindowsDomain: o mecanismo de autenticação usa Active Directory para recuperar o certificado X. 509 para o identificador de segurança associado à mensagem. Isso é usado para verificar a ACL da fila para garantir que o usuário tenha permissão de gravação para a fila.<br />-Certificate: o canal recupera o certificado do repositório de certificados.<br /><br /> O padrão é `WindowsDomain`.<br /><br /> Se esse atributo for definido como `None` , o `msmqProtectionLevel` atributo também deverá ser definido como `None` . Esse atributo é do tipo<xref:System.ServiceModel.MsmqAuthenticationMode>|  
+|msmqEncryptionAlgorithm|Especifica o algoritmo a ser usado para criptografia de mensagem na conexão ao transferir mensagens entre gerenciadores de filas de mensagens. Os valores válidos incluem os seguintes:<br /><br /> - RC4Stream<br />-AES<br />-O valor padrão é `RC4Stream` . Esse atributo é do tipo <xref:System.ServiceModel.MsmqEncryptionAlgorithm> .|  
+|msmqProtectionLevel|Especifica a maneira como as mensagens são protegidas no nível do transporte MSMQ. A criptografia garante a integridade da mensagem, enquanto a assinatura e a criptografia garantem a integridade da mensagem e o não-repúdio. Ou seja, a mensagem realmente veio do remetente e o remetente é quem eles dizem. Os valores válidos incluem os seguintes:<br /><br /> -Nenhum: sem proteção.<br />-Sign: as mensagens são assinadas.<br />-EncryptAndSign: as mensagens são criptografadas e assinadas.<br />-O padrão é `Sign` .|  
+|msmqSecureHashAlgorithm|Especifica o algoritmo de hash a ser usado para computar o resumo da mensagem. Os valores válidos incluem os seguintes:<br /><br /> -MD5<br />-SHA1<br />-SHA256<br />-SHA512<br /><br /> O padrão é `SHA1`. Esse atributo é do tipo <xref:System.ServiceModel.MsmqSecureHashAlgorithm> .<br>Devido a problemas de colisão com MD5 e SHA1, a Microsoft recomenda SHA256 ou melhor.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -54,7 +54,7 @@ Define as configurações de segurança de transporte.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<>de segurança](security-of-netmsmqbinding.md)|Define as configurações de segurança de transporte para transportes enfileirados.|  
+|[\<security>](security-of-netmsmqbinding.md)|Define as configurações de segurança de transporte para transportes em fila.|  
   
 ## <a name="see-also"></a>Confira também
 
@@ -64,7 +64,7 @@ Define as configurações de segurança de transporte.
 - <xref:System.ServiceModel.MsmqTransportSecurity>
 - [Filas no WCF](../../../wcf/feature-details/queues-in-wcf.md)
 - [Protegendo serviços e clientes](../../../wcf/feature-details/securing-services-and-clients.md)
-- [Ligações](../../../wcf/bindings.md)
+- [Associações](../../../wcf/bindings.md)
 - [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<vinculação>](bindings.md)
+- [\<binding>](bindings.md)

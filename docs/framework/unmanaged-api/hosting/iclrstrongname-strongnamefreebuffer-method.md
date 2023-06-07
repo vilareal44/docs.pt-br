@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6148c508-bd1d-4a37-85c3-06ecb09cc857
 topic_type:
 - apiref
-ms.openlocfilehash: bd5275f4ef8bfecdcfcfa48afe59f3bea579bd30
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 7aed3e6877bfcd83754d462cdba81ccc229d002f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762030"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503998"
 ---
 # <a name="iclrstrongnamestrongnamefreebuffer-method"></a>Método ICLRStrongName::StrongNameFreeBuffer
-Libera a memória que foi alocada com uma chamada anterior para um método de nome forte, como [ICLRStrongName:: StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [ICLRStrongName:: StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)ou [ICLRStrongName:: StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md).  
+Libera a memória que foi alocada com uma chamada anterior para um método de nome forte, como [ICLRStrongName:: StrongNameGetPublicKey](iclrstrongname-strongnamegetpublickey-method.md), [ICLRStrongName:: StrongNameTokenFromPublicKey](iclrstrongname-strongnametokenfrompublickey-method.md)ou [ICLRStrongName:: StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,6 +49,6 @@ HRESULT StrongNameFreeBuffer (
   
  **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICLRStrongName](iclrstrongname-interface.md)

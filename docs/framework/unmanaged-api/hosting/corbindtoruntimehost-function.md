@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c826ba3-8258-49bc-a417-78807915fcaf
 topic_type:
 - apiref
-ms.openlocfilehash: afb25ad9e1760f390aa8dfb3e1de39ea60f185c2
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9d1c7f4f5b881f7f55539602c152b557a7950472
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616613"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504401"
 ---
 # <a name="corbindtoruntimehost-function"></a>Função CorBindToRuntimeHost
 Permite que os hosts carreguem uma versão especificada do Common Language Runtime (CLR) em um processo.  
@@ -69,7 +69,7 @@ HRESULT CorBindToRuntimeHost (
  no Um conjunto de sinalizadores que controla a coleta de lixo simultânea, o código neutro de domínio e o comportamento do `pwszVersion` parâmetro. O padrão é domínio único se nenhum sinalizador for definido. Para obter uma lista de valores com suporte, consulte a [enumeração STARTUP_FLAGS](startup-flags-enumeration.md).  
   
  `rclsid`  
- no O `CLSID` da coclass que implementa a interface [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) ou [ICLRRuntimeHost](iclrruntimehost-interface.md) . Os valores com suporte são CLSID_CorRuntimeHost ou CLSID_CLRRuntimeHost.  
+ no O `CLSID` da coclass que implementa a interface [ICorRuntimeHost](icorruntimehost-interface.md) ou [ICLRRuntimeHost](iclrruntimehost-interface.md) . Os valores com suporte são CLSID_CorRuntimeHost ou CLSID_CLRRuntimeHost.  
   
  `riid`  
  no O `IID` da interface que você está solicitando. Os valores com suporte são IID_ICorRuntimeHost ou IID_ICLRRuntimeHost.  
@@ -86,7 +86,7 @@ HRESULT CorBindToRuntimeHost (
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Função CorBindToCurrentRuntime](corbindtocurrentruntime-function.md)
 - [Função CorBindToRuntime](corbindtoruntime-function.md)

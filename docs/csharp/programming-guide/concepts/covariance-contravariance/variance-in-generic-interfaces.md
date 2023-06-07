@@ -1,19 +1,20 @@
 ---
 title: Variância em interfaces genéricas (C#)
+description: Exiba informações de suporte de variação para interfaces genéricas, incluindo informações atualizadas para interfaces existentes no .NET Framework 4 e 4,5.
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 2020ea54734724de775192a1a438413a73003d17
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 91218742c01eeb6e65ea26d9dc41ed7c98827377
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169656"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105628"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Variância em interfaces genéricas (C#)
 
 O .NET Framework 4 introduziu o suporte à variação para diversas interfaces genéricas existentes. O suporte à variação possibilita a conversão implícita de classes que implementam essas interfaces.
 
-Começando com .NET Framework 4, as seguintes interfaces são variantes:
+A partir do .NET Framework 4, as seguintes interfaces são variantes:
 
 - <xref:System.Collections.Generic.IEnumerable%601> (T é covariante)
 
@@ -42,7 +43,7 @@ IEnumerable<String> strings = new List<String>();
 IEnumerable<Object> objects = strings;
 ```
 
-Em versões anteriores do .NET Framework, esse código causa um erro de compilação em C# e, se `Option Strict` estiver ativado, no Visual Basic. Mas agora você pode usar `strings` em vez de `objects`, conforme mostrado no exemplo anterior, porque a interface <xref:System.Collections.Generic.IEnumerable%601> é covariante.
+Em versões anteriores do .NET Framework, esse código causa um erro de compilação em C# e, se `Option Strict` estiver ativado, em Visual Basic. Mas agora você pode usar `strings` em vez de `objects`, conforme mostrado no exemplo anterior, porque a interface <xref:System.Collections.Generic.IEnumerable%601> é covariante.
 
 A contravariância permite que um método tenha tipos de argumentos menos derivados que aquele especificado pelo parâmetro genérico da interface. Para ilustrar a contravariância, suponha que você tenha criado uma classe `BaseComparer` para comparar instâncias da classe `BaseClass`. A classe `BaseComparer` implementa a interface `IEqualityComparer<BaseClass>`. Como a interface <xref:System.Collections.Generic.IEqualityComparer%601> agora é contravariante, você pode usar `BaseComparer` para comparar instâncias de classes que herdam a classe `BaseClass`. Isso é mostrado no exemplo de código a seguir.
 

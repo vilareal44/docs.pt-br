@@ -1,22 +1,23 @@
 ---
 title: WCF Data Services 4.5
+description: Saiba mais sobre WCF Data Services, um componente .NET Framework que dá suporte a serviços para expor e consumir dados usando a semântica REST.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: aace683b1a105445b5a3ba3de0a6a671859588b5
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: ca6b196e8c910f97ead6d1df5b6c0dd6c49c68a4
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937438"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247747"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 
-WCF Data Services (anteriormente conhecido como "ADO.NET Data Services") é um componente da .NET Framework que permite criar serviços que usam o Protocolo Open Data (OData) para expor e consumir dados pela Web ou intranet usando a semântica da [REST (transferência de estado de reapresentação)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm). OData expõe dados como recursos endereçáveis por URIs. Os dados são acessados e modificados usando verbos HTTP padrão, que são GET, PUT, POST e DELETE. O OData usa as convenções de relacionamento de entidade do [modelo de dados de entidade](../adonet/entity-data-model.md) para expor recursos como conjuntos de entidades relacionadas por associações.
+WCF Data Services (anteriormente conhecido como "ADO.NET Data Services") é um componente da .NET Framework que permite criar serviços que usam o Protocolo Open Data (OData) para expor e consumir dados pela Web ou intranet usando a semântica da [REST (transferência de estado de reapresentação)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm). OData expõem dados como recursos que são endereçáveis por URIs. Os dados são acessados e alterados usando os verbos HTTP padrão GET, PUT, POST e DELETE. O OData usa as convenções de relacionamento de entidade do [modelo de dados de entidade](../adonet/entity-data-model.md) para expor recursos como conjuntos de entidades relacionadas por associações.
 
-WCF Data Services usa o protocolo OData para endereçar e atualizar recursos. Dessa forma, você pode acessar esses serviços de qualquer cliente que ofereça suporte a OData. O OData permite que você solicite e grave dados em recursos usando formatos de transferência conhecidos: Atom, um conjunto de padrões para a troca e atualização de dados como XML e JavaScript Object Notation (JSON), um formato de troca de dados baseado em texto usado extensivamente no AJAX aplicativos.
+WCF Data Services usa o protocolo OData para endereçar e atualizar recursos. Dessa forma, você pode acessar esses serviços de qualquer cliente que ofereça suporte a OData. O OData permite que você solicite e grave dados em recursos usando formatos de transferência conhecidos: Atom, um conjunto de padrões para trocar e atualizar dados como XML e JavaScript Object Notation (JSON), um formato de troca de dados baseado em texto usado extensivamente em aplicativos AJAX.
 
 WCF Data Services pode expor dados originados de várias fontes como feeds OData. As ferramentas do Visual Studio facilitam a criação de um serviço baseado em OData usando um modelo de dados do ADO.NET Entity Framework. Você também pode criar feeds OData com base em classes Common Language Runtime (CLR) e até mesmo dados de associação tardia ou não tipada.
 
@@ -28,17 +29,17 @@ Dependendo de seus interesses, considere a introdução ao WCF Data Services em 
 
 Desejo ir diretamente para...
 
-- [Quickstart](quickstart-wcf-data-services.md) (Início rápido)
+- [Início rápido](quickstart-wcf-data-services.md)
 
 - [Introdução](getting-started-with-wcf-data-services.md)
 
 Mostrar apenas alguns códigos...
 
-- [Quickstart](quickstart-wcf-data-services.md) (Início rápido)
+- [Início rápido](quickstart-wcf-data-services.md)
 
-- [How to: Execute Data Service Queries](how-to-execute-data-service-queries-wcf-data-services.md) (Como executar consultas de serviço de dados)
+- [Como executar consultas de serviço de dados](how-to-execute-data-service-queries-wcf-data-services.md)
 
-- [How to: Bind Data to Windows Presentation Foundation Elements](bind-data-to-wpf-elements-wcf-data-services.md) (Como associar dados aos elementos do Windows Presentation Foundation)
+- [Como associar dados aos elementos do Windows Presentation Foundation](bind-data-to-wpf-elements-wcf-data-services.md)
 
 Quero saber mais sobre o OData...
 
@@ -53,25 +54,25 @@ Quero ver exemplos de ponta a ponta...
 
 Como ele se integra ao Visual Studio?
 
-- [Generating the Data Service Client Library](generating-the-data-service-client-library-wcf-data-services.md) (Gerando a biblioteca de clientes do serviço de dados)
+- [Gerando a biblioteca do cliente de serviço de dados](generating-the-data-service-client-library-wcf-data-services.md)
 
-- [Creating the Data Service](creating-the-data-service.md) (Criando o serviço de dados)
+- [Criar o serviço de dados](creating-the-data-service.md)
 
-- [Entity Framework Provider](entity-framework-provider-wcf-data-services.md) (Provedor de Entity Framework)
+- [Provedor de Entity Framework](entity-framework-provider-wcf-data-services.md)
 
 O que posso fazer com ele?
 
-- [Visão Geral](wcf-data-services-overview.md)
+- [Visão geral](wcf-data-services-overview.md)
 
-- [Application Scenarios](application-scenarios-wcf-data-services.md) (Cenários de aplicativo)
+- [Cenários de aplicativos](application-scenarios-wcf-data-services.md)
 
 Quero usar LINQ...
 
-- [Querying the Data Service](querying-the-data-service-wcf-data-services.md) (Consultando o serviço de dados)
+- [Consultar o serviço de dados](querying-the-data-service-wcf-data-services.md)
 
-- [LINQ Considerations](linq-considerations-wcf-data-services.md) (Considerações sobre LINQ)
+- [Considerações sobre o LINQ](linq-considerations-wcf-data-services.md)
 
-- [How to: Execute Data Service Queries](how-to-execute-data-service-queries-wcf-data-services.md) (Como executar consultas de serviço de dados)
+- [Como executar consultas de serviço de dados](how-to-execute-data-service-queries-wcf-data-services.md)
 
 Ainda preciso de mais algumas informações...
 
@@ -81,7 +82,7 @@ Ainda preciso de mais algumas informações...
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Visão Geral](wcf-data-services-overview.md)
+[Visão geral](wcf-data-services-overview.md)
 
 Fornece uma visão geral dos recursos e funcionalidades disponíveis no WCF Data Services.
 
@@ -93,11 +94,11 @@ Descreve a nova funcionalidade no WCF Data Services e suporte para novos recurso
 
 Descreve como expor e consumir feeds OData usando WCF Data Services.
 
-[Defining WCF Data Services](defining-wcf-data-services.md) (Definindo o WCF Data Services)
+[Configurando WCF Data Services](defining-wcf-data-services.md)
 
 Descreve como criar e configurar um serviço de dados que expõe feeds OData.
 
-[WCF Data Services Client Library](wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
+[Biblioteca de cliente do WCF Data Services](wcf-data-services-client-library.md)
 
 Descreve como usar bibliotecas de cliente para consumir feeds OData de um aplicativo cliente .NET Framework.
 

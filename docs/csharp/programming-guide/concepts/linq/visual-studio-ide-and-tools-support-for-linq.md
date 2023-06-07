@@ -1,13 +1,14 @@
 ---
 title: Suporte de ferramentas e do IDE do Visual Studio para LINQ (C#)
+description: Saiba mais sobre os recursos do Visual Studio que dão suporte ao desenvolvimento do LINQ, como Object Relational Designer, ferramenta SqlMetal, editor de código com reconhecimento de LINQ e depurador.
 ms.date: 07/20/2015
 ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
-ms.openlocfilehash: a42d6711e34564f03aaf07c295bc682965513619
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd0c936624b4d5329cb2eb0f1cdd5215bbc96f23
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69590910"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302237"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>Suporte de ferramentas e do IDE do Visual Studio para LINQ (C#)
 O IDE (ambiente de desenvolvimento integrado) do Visual Studio fornece os seguintes recursos que dão suporte ao desenvolvimento de aplicativos LINQ:  

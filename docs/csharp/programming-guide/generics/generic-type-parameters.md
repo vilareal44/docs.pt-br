@@ -1,16 +1,17 @@
 ---
 title: Parâmetros de tipo genérico – Guia de Programação em C#
+description: Saiba mais sobre a definição de tipo genérico em C#, em que um parâmetro de tipo é um espaço reservado para um tipo que um cliente especifica para uma instância do tipo genérico.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], type parameters
 - type parameters [C#]
 ms.assetid: a03b0ab2-0606-4b41-b7bf-e64d5bb4d18f
-ms.openlocfilehash: 8412980d35989c445d2e0a44c0b9f35e6087bb8d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc37029378ac1e9ec194d95b561787761d69a9fd
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712176"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299247"
 ---
 # <a name="generic-type-parameters-c-programming-guide"></a>Parâmetros de tipo genérico (Guia de Programação em C#)
 
@@ -38,9 +39,9 @@ Em cada uma dessas instâncias de `GenericList<T>`, todas as ocorrências de `T`
 
 A regra de análise de código [CA1715](/visualstudio/code-quality/ca1715) pode ser usada para garantir que os parâmetros de tipo sejam nomeados adequadamente.
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Collections.Generic>
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Genéricos](./index.md)
 - [Diferenças entre modelos C++ e genéricos C#](./differences-between-cpp-templates-and-csharp-generics.md)

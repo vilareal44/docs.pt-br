@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aae9fb17-5d01-41da-9773-1b5b5b642d81
 topic_type:
 - apiref
-ms.openlocfilehash: dcf2ce8bdb7cec1f567e548ff3314e160fffe9fd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e66b63ffa4ed25e861cff6bd9eb6065f57ff807f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616626"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493494"
 ---
 # <a name="corbindtoruntimeex-function"></a>Função CorBindToRuntimeEx
 Permite que hosts não gerenciados carreguem o Common Language Runtime (CLR) em um processo. O [CorBindToRuntime](corbindtoruntime-function.md) e as `CorBindToRuntimeEx` funções executam a mesma operação, mas a `CorBindToRuntimeEx` função permite que você defina sinalizadores para especificar o comportamento do CLR.  
@@ -102,7 +102,7 @@ HRESULT CorBindToRuntimeEx (
  Para obter descrições desses sinalizadores, consulte a enumeração [STARTUP_FLAGS](startup-flags-enumeration.md) .  
   
  `rclsid`  
- no O `CLSID` da coclass que implementa a interface [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) ou [ICLRRuntimeHost](iclrruntimehost-interface.md) . Os valores com suporte são CLSID_CorRuntimeHost ou CLSID_CLRRuntimeHost.  
+ no O `CLSID` da coclass que implementa a interface [ICorRuntimeHost](icorruntimehost-interface.md) ou [ICLRRuntimeHost](iclrruntimehost-interface.md) . Os valores com suporte são CLSID_CorRuntimeHost ou CLSID_CLRRuntimeHost.  
   
  `riid`  
  no O `IID` da interface solicitada de `rclsid` . Os valores com suporte são IID_ICorRuntimeHost ou IID_ICLRRuntimeHost.  
@@ -122,7 +122,7 @@ HRESULT CorBindToRuntimeEx (
   
 2. Alterando o modo padrão do processo para o modo de compatibilidade da versão 1, em que o <xref:System.Security.Principal.WindowsIdentity> objeto não flui em nenhum ponto assíncrono, independentemente das <xref:System.Threading.ExecutionContext> configurações no thread atual. A maneira como você altera o modo padrão depende se você usa um executável gerenciado ou uma interface de hospedagem não gerenciada para carregar o CLR:  
   
-    1. Para executáveis gerenciados, você deve definir o `enabled` atributo do elemento de [ \<>legacyImpersonationPolicy](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) como `true` .  
+    1. Para executáveis gerenciados, você deve definir o `enabled` atributo do [\<legacyImpersonationPolicy>](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) elemento como `true` .  
   
     2. Para interfaces de hospedagem não gerenciadas, defina o `STARTUP_LEGACY_IMPERSONATION` sinalizador no `startupFlags` parâmetro ao chamar a `CorBindToRuntimeEx` função.  
   
@@ -137,7 +137,7 @@ HRESULT CorBindToRuntimeEx (
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Função CorBindToCurrentRuntime](corbindtocurrentruntime-function.md)
 - [Função CorBindToRuntime](corbindtoruntime-function.md)

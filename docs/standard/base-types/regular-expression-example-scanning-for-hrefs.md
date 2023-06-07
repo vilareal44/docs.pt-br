@@ -1,6 +1,7 @@
 ---
 title: 'Exemplo de expressão regular: Verificação de HREFs'
-ms.date: 03/30/2017
+description: Veja um exemplo de expressões regulares no .NET. O exemplo pesquisa uma cadeia de caracteres de entrada e exibe todos os valores de atributo href e suas localizações.
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -13,17 +14,19 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: d8546980dd0cf58ca7c095750f2749d5a6bc7723
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7bcc2a4242bfaed3e3340347a30e97e7e4060794
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73084221"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802840"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Exemplo de expressão regular: Verificação de HREFs
 O exemplo a seguir procura uma cadeia de caracteres de entrada e exibe todos os valores href="…" e suas localizações na cadeia de caracteres.  
-  
-## <a name="the-regex-object"></a>O objeto Regex  
+
+[!INCLUDE [regex](../../../includes/regex.md)]
+
+## <a name="the-regex-object"></a>O objeto Regex
  Como o método `DumpHRefs` pode ser chamado várias vezes do código do usuário, ele usa o método `static` (`Shared` no Visual Basic) <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>. Isso permite que o mecanismo de expressões regulares armazene em cache a expressão regular e evite a sobrecarga de instanciar um novo objeto <xref:System.Text.RegularExpressions.Regex> sempre que o método é chamado. Um objeto <xref:System.Text.RegularExpressions.Match> é usado para iterar por todas as correspondências na cadeia de caracteres.  
   
  [!code-csharp[RegularExpressions.Examples.HREF#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.HREF/cs/example.cs#1)]
@@ -54,6 +57,6 @@ O exemplo a seguir procura uma cadeia de caracteres de entrada e exibe todos os 
   
  Para resolver esses problemas, a classe <xref:System.Text.RegularExpressions.Regex> dá suporte à sintaxe `(?<name>…)` para capturar uma correspondência em um slot especificado (o slot pode ser nomeado usando uma cadeia de caracteres ou um inteiro; inteiros podem ser recuperados mais rapidamente). Assim, todas as correspondências alternativas para a mesma cadeia de caracteres podem ser direcionadas para o mesmo local. Em caso de conflito, a última correspondência solta em um slot é a correspondência com êxito. (No entanto, está disponível uma lista completa de diversas correspondências para um único slot. Confira a coleção <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> para obter detalhes).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)
+- [Expressões regulares do .NET](regular-expressions.md)

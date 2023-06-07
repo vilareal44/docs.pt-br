@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-ms.openlocfilehash: e71c609b500bc6771c405cfb6f4ac14923cc3939
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 7db031c655980dd800de77cbbd6a07a0ba94b33b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507540"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284878"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL e programação assíncrona do .NET Framework
 O .NET Framework fornece os dois padrões a seguir para executar operações assíncronas vinculadas a E/S e a computação:  
@@ -102,7 +102,7 @@ O .NET Framework fornece os dois padrões a seguir para executar operações ass
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- Para um exemplo mais completo, que inclui a manipulação de exceções adicionais e mostra como chamar o método do código do cliente, confira [Como encapsular padrões de EAP em uma tarefa](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
+ Para um exemplo mais completo, que inclui a manipulação de exceções adicionais e mostra como chamar o método do código do cliente, confira [Como encapsular padrões de EAP em uma tarefa](how-to-wrap-eap-patterns-in-a-task.md).  
   
  Lembre-se de que qualquer tarefa criada por um <xref:System.Threading.Tasks.TaskCompletionSource%601> será iniciada por TaskCompletionSource e, portanto, o código do usuário não deve chamar o método Start nessa tarefa.  
   
@@ -115,8 +115,8 @@ O .NET Framework fornece os dois padrões a seguir para executar operações ass
  [!code-vb[FromAsync#09](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#09)]  
   
 ## <a name="using-the-streamextensions-sample-code"></a>Usando o Código de Exemplo StreamExtensions  
- O arquivo *StreamExtensions.cs* , no repositório de [extras .net Standard extensões paralelas](/samples/dotnet/samples/parallel-programming-extensions-extras-cs/) , contém várias implementações de referência `Task` que usam objetos para e/s de rede e de arquivo assíncrono.
+ O arquivo *StreamExtensions.cs* , no repositório de [extras .net Standard extensões paralelas](/samples/dotnet/samples/parallel-programming-extensions-extras-cs/) , contém várias implementações de referência que usam `Task` objetos para e/s de rede e de arquivo assíncrono.
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Biblioteca de tarefas paralelas (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Biblioteca de tarefas paralelas (TPL)](task-parallel-library-tpl.md)

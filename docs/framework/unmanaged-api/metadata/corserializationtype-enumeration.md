@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b1fcd11-c7fb-4be2-8910-abc862d4caf4
 topic_type:
 - apiref
-ms.openlocfilehash: 064374285216e9fb054b299937087f1ca7c351a4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 649a9159f99afa64615c40c23a98a80318ae0d7f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432876"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009165"
 ---
 # <a name="corserializationtype-enumeration"></a>Enumeração CorSerializationType
 Especifica como um objeto é serializado pelo Common Language Runtime.  
@@ -55,7 +55,7 @@ typedef enum CorSerializationType {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`SERIALIZATION_TYPE_UNDEFINED`|A serialização do objeto está indefinida.|  
 |`SERIALIZATION_TYPE_BOOLEAN`|O objeto é serializado como um tipo booliano|  
@@ -78,13 +78,13 @@ typedef enum CorSerializationType {
 |`SERIALIZATION_TYPE_PROPERTY`|O objeto é serializado como uma propriedade.|  
 |`SERIALIZATION_TYPE_ENUM`|O objeto é serializado como uma enumeração.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerações de metadados](metadata-enumerations.md)

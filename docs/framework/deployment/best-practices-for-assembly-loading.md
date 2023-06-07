@@ -1,5 +1,6 @@
 ---
 title: Práticas recomendadas para carregamento de assemblies
+description: Explore as práticas recomendadas para o carregamento de assembly no .NET. Evite problemas de identidade de tipo que podem levar a conversões inválidas, métodos ausentes e outras exceções.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies,binding
@@ -12,23 +13,23 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: 7575c40edf47e977335bcc34fcd9e49debab0980
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8ee5243258ea1b853b4690b79ec032c46d1b3777
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181698"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803488"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Práticas recomendadas para carregamento de assemblies
 Este artigo descreve maneiras de evitar problemas de identidade de tipo que podem levar a <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e outros erros. O artigo aborda as seguintes recomendações:  
   
-- [Entenda as vantagens e desvantagens dos contextos de carga](#load_contexts)  
+- [Entender as vantagens e desvantagens dos contextos de carga](#load_contexts)  
   
 - [Evite associações em nomes de assembly parciais](#avoid_partial_names)  
   
 - [Evite o carregamento de um assembly em vários contextos](#avoid_loading_into_multiple_contexts)  
   
-- [Evite carregar várias versões de um conjunto no mesmo contexto](#avoid_loading_multiple_versions)  
+- [Evite carregar várias versões de um assembly no mesmo contexto](#avoid_loading_multiple_versions)  
   
 - [Considere a possibilidade de alternar para o contexto de carregamento padrão](#switch_to_default)  
   

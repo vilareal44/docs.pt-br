@@ -2,20 +2,20 @@
 title: Refatoração usando uma função pura
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: 3a0365c79b8283fef242ecf8f2b68ea4de780049
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 675baa4eb07db7a798b9bd47877c8f019a7021e3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266931"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413430"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>Refatoração usando uma função pura (Visual Basic)
-O exemplo a seguir refatora o exemplo anterior, [Refatoração Usando um Método de Extensão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), para usar `ParagraphText`uma função pura Neste exemplo, o código para encontrar o texto de um parágrafo é movido para o método estático puro .  
+O exemplo a seguir refatora o exemplo anterior, [refactorando usando um método de extensão (Visual Basic)](refactoring-using-an-extension-method.md), para usar uma função pura neste exemplo, o código para localizar o texto de um parágrafo é movido para o método estático puro `ParagraphText` .  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo processa um documento de WordprocessingML, recuperando os nós de parágrafo de um documento de WordprocessingML. Também identifica o estilo de cada parágrafo. Este exemplo cria nos exemplos anteriores neste tutorial. O código refactored é chamado nos comentários no código a seguir.  
   
- Para obter instruções para criar o documento de origem para este exemplo, consulte [Criando o Documento XML Aberto do Escritório de Origem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Para obter instruções sobre como criar o documento de origem para este exemplo, consulte [criando o documento Office Open XML de origem (Visual Basic)](creating-the-source-office-open-xml-document.md).  
   
  Este exemplo usa classes do assembly WindowsBase. Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -170,10 +170,10 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>Próximas etapas  
  O exemplo a seguir mostra como projetar XML em uma forma diferente:  
   
-- [Projetando XML em uma forma diferente (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [Projetando XML em uma forma diferente (Visual Basic)](projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>Confira também
 
-- [Tutorial: Manipulação de conteúdo em um documento ML de processamento de texto (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [Refatoração usando um método de extensão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
-- [Refatoração em funções puras (visual básico)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Tutorial: manipulando conteúdo em um documento do WordprocessingML (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Refatoração usando um método de extensão (Visual Basic)](refactoring-using-an-extension-method.md)
+- [Refatoração em funções puras (Visual Basic)](refactoring-into-pure-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: Como escrever uma função agregada PLINQ personalizada
+title: 'Como: Escrever uma função de agregação PLINQ personalizada'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to create aggregate function
 ms.assetid: 5a70dd49-ab2a-4798-b551-196ee7042b1a
-ms.openlocfilehash: 8168c89a6edecd5f7e33a710c9a89c92a6f82005
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 644d6b6f929e040a0fe688c18c774de6f434c4b3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588236"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290766"
 ---
-# <a name="how-to-write-a-custom-plinq-aggregate-function"></a>Como escrever uma função agregada PLINQ personalizada
+# <a name="how-to-write-a-custom-plinq-aggregate-function"></a>Como: Escrever uma função de agregação PLINQ personalizada
 Este exemplo mostra como usar o método <xref:System.Linq.ParallelEnumerable.Aggregate%2A> para aplicar uma função de agregação personalizada a uma sequência de origem.  
   
 > [!WARNING]
-> Este exemplo tem como objetivo demonstrar o uso e pode não executar tão rápido quanto a consulta LINQ to Objects sequencial equivalente. Para saber mais sobre agilização, confira [Noções básicas sobre agilização no PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+> Este exemplo tem como objetivo demonstrar o uso e pode não executar tão rápido quanto a consulta LINQ to Objects sequencial equivalente. Para saber mais sobre agilização, confira [Noções básicas sobre agilização no PLINQ](understanding-speedup-in-plinq.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir calcula o desvio padrão de uma sequência de números inteiros.  
@@ -31,7 +31,7 @@ Este exemplo mostra como usar o método <xref:System.Linq.ParallelEnumerable.Agg
   
  Observe que quando um corpo da expressão lambda é composto por uma única expressão, o valor de retorno do delegado <xref:System.Func%602?displayProperty=nameWithType> é o valor da expressão.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Linq.ParallelEnumerable>
-- [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [LINQ paralelo (PLINQ)](introduction-to-plinq.md)

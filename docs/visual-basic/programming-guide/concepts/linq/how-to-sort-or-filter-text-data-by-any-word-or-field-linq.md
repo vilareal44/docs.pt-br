@@ -1,13 +1,13 @@
 ---
-title: Como classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ)
+title: 'Como: classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: f0eeda77a721d482ec7a2b8562c0a71f34c5a3ae
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 798f30d39b4f805001c8c28b9ad6212061550775
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348039"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397720"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>Como classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (Visual Basic)
 
@@ -15,7 +15,7 @@ O exemplo a seguir mostra como classificar linhas de texto estruturado, como val
 
 ### <a name="to-create-a-file-that-contains-data"></a>Para criar um arquivo que contém dados
 
-Copie os dados Scores. csv do tópico [como: adicionar conteúdo de arquivos diferentes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) e salvá-lo em sua pasta de solução.
+Copie os dados Scores. csv do tópico [como: adicionar conteúdo de arquivos diferentes (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md) e salvá-lo em sua pasta de solução.
 
 ## <a name="example"></a>Exemplo
 
@@ -74,8 +74,8 @@ Este exemplo também demonstra como retornar uma variável de consulta de uma fu
 
 ## <a name="compile-the-code"></a>Compilar o código
 
-Crie um projeto de aplicativo de console Visual Basic, com uma instrução `Imports` para o namespace System. Linq.
+Crie um projeto de aplicativo de console Visual Basic, com uma `Imports` instrução para o namespace System. Linq.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ e cadeias de caracteres (Visual Basic)](linq-and-strings.md)

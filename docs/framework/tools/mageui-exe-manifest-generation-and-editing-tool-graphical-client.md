@@ -1,20 +1,21 @@
 ---
 title: MageUI.exe (Ferramenta de Geração e Edição de Manifesto, cliente gráfico)
+description: Explore MageUI.exe, o Manifest Generation and Editing Tool, o cliente gráfico. Crie, edite e assine manifestos de aplicativo e implantação com esta ferramenta de GUI.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 7d09e1283be8ec75df89957e91f0d8411c125b3b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1ff7c10a478f0f0f53d7b00f34b228b9070f798d
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74714456"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87516717"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Ferramenta de Geração e Edição de Manifesto, cliente gráfico)
 
-MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de comando Mage.exe, mas com uma interface do usuário (UI) com base no Windows. Com essa ferramenta é possível criar, editar e assinar manifestos de implantação e aplicativo. Novos manifestos criados com o MageUI.exe têm como alvo o Perfil do Cliente .NET Framework 4. As versões anteriores de MageUI.exe devem ser usadas para segmentar versões do .NET Framework anteriores. Ao adicionar ou remover assembléias de um manifesto ou reassinar manifestos existentes, o MageUI.exe não atualiza o manifesto para direcionar o Perfil do Cliente .NET Framework 4. Para obter mais informações, consulte [Mage.exe (Manifest Generation and Editing Tool)](mage-exe-manifest-generation-and-editing-tool.md).
+MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de comando Mage.exe, mas com uma interface do usuário (UI) com base no Windows. Com essa ferramenta é possível criar, editar e assinar manifestos de implantação e aplicativo. Novos manifestos criados com MageUI.exe direcionam o perfil de cliente do .NET Framework 4. As versões anteriores de MageUI.exe devem ser usadas para segmentar versões do .NET Framework anteriores. Ao adicionar ou remover assemblies de um manifesto ou assinar novamente manifestos existentes, MageUI.exe não atualiza o manifesto para o perfil de cliente do .NET Framework 4. Para obter mais informações, consulte [Mage.exe (manifest Generation and Editing Tool)](mage-exe-manifest-generation-and-editing-tool.md).
 
  Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](developer-command-prompt-for-vs.md).
 
@@ -28,8 +29,8 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
   
 |Comando|Menu|Atalho|Descrição|  
 |-------------|----------|--------------|-----------------|  
-|**Manifesto de aplicação**|**Arquivo, Novo**||Cria um novo manifesto de aplicativo.|  
-|**Manifesto de implantação**|**Arquivo, Novo**||Cria um novo manifesto de implantação.|  
+|**Manifesto do aplicativo**|**Arquivo, novo**||Cria um novo manifesto de aplicativo.|  
+|**Manifesto de implantação**|**Arquivo, novo**||Cria um novo manifesto de implantação.|  
 |**Abrir**|**Arquivo**|Ctrl+O|Abre um manifesto de implantação existente, o manifesto do aplicativo ou a licença de confiança para edição.|  
 |**Fechar**|**Arquivo**|CTRL+F4|Fecha um arquivo aberto.<br /><br /> Se você modificar um arquivo antes de fechá-lo, MageUI.exe solicitará uma nova assinatura do arquivo com uma chave pública, um par de chaves ou um certificado armazenado.|  
 |**Salvar**|**Arquivo**|Ctrl+S|Salva em disco o documento que tem o foco de entrada do usuário no momento.|  
@@ -39,9 +40,9 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 |**Sair**|**Arquivo**|ALT+F4|Fecha MageUI.exe.|  
 |**Recortar**|**Editar**|CTRL+X|Remove o texto selecionado no momento do aplicativo e o move para a Área de Transferência do sistema.|  
 |**Cópia**|**Editar**|CTRL+C|Copia o texto selecionado no momento para a Área de Transferência do sistema.|  
-|**Colar**|**Editar**|Ctrl+V|Cola o texto da Área de Transferência do sistema para o elemento de texto ativo no momento.|  
+|**Colar**|**Editar**|CTRL+V|Cola o texto da Área de Transferência do sistema para o elemento de texto ativo no momento.|  
 |**Excluir**|**Editar**||Exclui um elemento selecionado no momento em uma lista, como uma licença de confiança na guia **Manifesto de Implantação**.|  
-|**Fechar tudo**|**Janela**||Fecha todos os arquivos abertos no momento em MageUI.exe. Se um ou mais arquivos precisar de gravação, MageUI.exe solicitará que você os salve. MageUI.exe também solicita a seleção de uma chave de assinatura para cada arquivo não assinado ou alterado.|  
+|**Fechar tudo**|**Window**||Fecha todos os arquivos abertos no momento em MageUI.exe. Se um ou mais arquivos precisar de gravação, MageUI.exe solicitará que você os salve. MageUI.exe também solicita a seleção de uma chave de assinatura para cada arquivo não assinado ou alterado.|  
 |**Sobre**|**Ajuda**||Exibe informações de versão e direitos autorais sobre MageUI.exe.|  
   
 ## <a name="preferences-dialog-box"></a>Caixa de Diálogo Preferências  
@@ -101,7 +102,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
   
 |Elemento da interface do usuário|Descrição|  
 |----------------|-----------------|  
-|**Editor**|O nome da pessoa ou organização responsável pelo aplicativo. Esse valor é usado como o nome da pasta do menu Iniciar.|  
+|**Publicador**|O nome da pessoa ou organização responsável pelo aplicativo. Esse valor é usado como o nome da pasta do menu Iniciar.|  
 |**Product**|O nome completo do produto. Se você selecionou **Instalar Localmente** para o elemento **Tipo de Aplicativo** na guia **Opções de Implantação** do manifesto de implementação, esse nome será o que aparece no link do menu **Iniciar** e em **Adicionar ou Remover Programas** para esse aplicativo.|  
 |**Local de Suporte**|A URL na qual os clientes podem obter ajuda e suporte para o aplicativo.|  
   
@@ -118,7 +119,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 |----------------|-----------------|  
 |**Diretório de aplicativo**|O diretório no qual residem os arquivos do aplicativo. Use o botão de reticências (**...**) para selecionar o diretório.|  
 |**Popular**|Adiciona todos os arquivos no diretório e subdiretórios do aplicativo ao manifesto do aplicativo. Se MageUI.exe localizar um único arquivo executável no diretório, ele o marcará automaticamente como o Ponto de Entrada, que é o arquivo executado primeiro quando o aplicativo ClickOnce é inicializado no cliente.|  
-|**Arquivos de aplicativos**|Lista todos os arquivos no aplicativo. Cada arquivo tem três atributos editáveis, discutidos abaixo.|  
+|**Arquivos de aplicativo**|Lista todos os arquivos no aplicativo. Cada arquivo tem três atributos editáveis, discutidos abaixo.|  
 |**Tipo de arquivo**|O Tipo de Arquivo pode ser um dos quatro valores:<br /><br /> – Nenhum.<br />– Ponto de Entrada. O executável principal do aplicativo. Apenas um arquivo executável pode ser marcado como o ponto de entrada.<br />– Arquivo de Dados. Um arquivo, como um arquivo XML, que fornece dados para o aplicativo.<br />– Arquivo de Ícone. Um ícone do aplicativo, como aparece na área de trabalho ou no canto da janela do aplicativo.|  
 |**Opcional**|Arquivos marcados como opcionais não são baixados na instalação inicial ou na atualização, mas podem ser baixados em tempo de execução usando a API sob demanda System.Deployment. Para obter mais informações, consulte [Walkthrough: Downloading Assemblies on Demand with the ClickOnce Deployment API Using the Designer](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer) (Instruções passo a passo: baixando assemblies sob demanda com a API de implantação do ClickOnce usando o designer).|  
 |**Grupo**|Um rótulo para um conjunto de arquivos opcionais. Você pode aplicar um rótulo Grupo a um conjunto de arquivos e usar a API sob demanda para baixar um lote de arquivos com uma única chamada à API.|  
@@ -129,7 +130,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 |Elemento da interface do usuário|Descrição|  
 |----------------|-----------------|  
 |**Tipo do conjunto de permissões**|O conjunto de permissões mínimas exigido por esse aplicativo para ser executado no cliente. Para obter uma descrição desses conjuntos de permissões e quais permissões eles exigem ou não, confira [Conjuntos de permissões nomeadas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).|  
-|**Detalhes**|O XML criado para o manifesto do aplicativo para representar o conjunto de permissões. A menos que tenha um bom entendimento do formato XML do manifesto do aplicativo, você não deve editar esse XML manualmente. Para obter mais informações, consulte [ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest).|  
+|**Detalhes**|O XML criado para o manifesto do aplicativo para representar o conjunto de permissões. A menos que tenha um bom entendimento do formato XML do manifesto do aplicativo, você não deve editar esse XML manualmente. Para obter mais informações, consulte [manifesto do aplicativo ClickOnce](/visualstudio/deployment/clickonce-application-manifest).|  
   
 ### <a name="deployment-manifest-tab"></a>Guia Manifesto de Implantação  
  A guia **Manifesto de Implantação** contém as seguintes guias.  
@@ -157,7 +158,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
   
 |Elemento da interface do usuário|Descrição|  
 |----------------|-----------------|  
-|**Editor**|Obrigatórios. O nome da pessoa ou organização responsável pelo aplicativo. Esse valor é usado como o nome da pasta do menu Iniciar.|  
+|**Publicador**|Obrigatórios. O nome da pessoa ou organização responsável pelo aplicativo. Esse valor é usado como o nome da pasta do menu Iniciar.|  
 |**Product**|Obrigatórios. O nome completo do produto. Se você selecionou **Instalar Localmente** para o elemento **Tipo de Aplicativo** na guia **Opções de Implantação**, esse nome será o que aparece no link do menu **Iniciar** e em **Adicionar ou Remover Programas** para esse aplicativo.|  
 |**Local de Suporte**|Opcional. A URL na qual os clientes podem obter ajuda e suporte para o aplicativo.|  
   
@@ -190,8 +191,8 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 |----------------|-----------------|  
 |**Selecionar Manifesto**|Permite que você escolha o manifesto do aplicativo. Todos os outros campos nesta página serão populados quando você escolher um manifesto do aplicativo.|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Cliqueemememem em Segurança e Implantação](/visualstudio/deployment/clickonce-security-and-deployment)
-- [Passo a passo: Implantando manualmente um aplicativo ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
+- [Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
+- [Walkthrough: Implantando manualmente um aplicativo ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
 - [Mage.exe (Manifest Generation and Editing Tool)](mage-exe-manifest-generation-and-editing-tool.md)

@@ -2,19 +2,19 @@
 title: Hospedando na Web um aplicativo em fila
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: 36c35fe0590ad9fc728641313d4175a432d7ccaa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 17c3d2167d3f98017c5f366ab0d700d9fb889f82
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951571"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600134"
 ---
 # <a name="web-hosting-a-queued-application"></a>Hospedando na Web um aplicativo em fila
-O WAS (serviço de ativação de processos do Windows) gerencia a ativação e o tempo de vida dos processos de trabalho que contêm aplicativos que hospedam serviços do Windows Communication Foundation (WCF). O modelo de processo WAS generaliza o modelo de processo do IIS 6,0 para o servidor HTTP removendo a dependência em HTTP. Isso permite que os serviços WCF usem protocolos HTTP e não HTTP, como net. MSMQ e MSMQ. FormatName, em um ambiente de hospedagem que ofereça suporte à ativação baseada em mensagem e ofereça a capacidade de hospedar um grande número de aplicativos em um determinado computador.  
+O Serviço de Ativação de Processos do Windows (WAS) gerencia a ativação e a vida útil dos processos de trabalho que contêm aplicativos que hospedam os serviços do Windows Communication Foundation (WCF). O modelo de processo WAS generaliza o modelo de processo IIS 6.0 para o servidor HTTP ao remover a dependência do HTTP. Isso permite que os serviços WCF usem protocolos HTTP e não HTTP, como net. MSMQ e MSMQ. FormatName, em um ambiente de hospedagem que ofereça suporte à ativação baseada em mensagem e ofereça a capacidade de hospedar um grande número de aplicativos em um determinado computador.  
   
  O WAS inclui um serviço de ativação de enfileiramento de mensagens (MSMQ) que ativa um aplicativo na fila quando uma ou mais mensagens são colocadas em uma das filas usadas pelo aplicativo. O serviço de ativação MSMQ é um serviço NT que é iniciado automaticamente por padrão.  
   
- Para obter mais informações sobre o WAS e seus benefícios, consulte [hospedagem no serviço de ativação de processos do Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). Para obter mais informações sobre o MSMQ, consulte [visão geral de filas](../../../../docs/framework/wcf/feature-details/queues-overview.md).
+ Para obter mais informações sobre o WAS e seus benefícios, consulte [hospedagem no serviço de ativação de processos do Windows](hosting-in-windows-process-activation-service.md). Para obter mais informações sobre o MSMQ, consulte [visão geral de filas](queues-overview.md).
   
 ## <a name="queue-addressing-in-was"></a>O endereçamento de fila no foi  
  Os aplicativos WAS têm endereços Uniform Resource Identifier (URI). Os endereços de aplicativo têm duas partes: um prefixo de URI de base e um endereço relativo de aplicativo específico (caminho). Essas duas partes fornecem o endereço externo para um aplicativo quando Unidos. O prefixo URI de base é construído a partir da associação do site e é usado para todos os aplicativos no site, por exemplo, "net. MSMQ://localhost", "MSMQ. FormatName://localhost" ou "net. TCP://localhost". Os endereços de aplicativo são então construídos por meio de fragmentos de caminho específicos do aplicativo (como "/applicationOne") e os acrescentamos ao prefixo de URI de base para chegar ao URI completo do aplicativo, por exemplo, "net. MSMQ://localhost/applicationOne".  
@@ -43,5 +43,5 @@ O WAS (serviço de ativação de processos do Windows) gerencia a ativação e o
   
 ## <a name="see-also"></a>Consulte também
 
-- [Manipulação de mensagens suspeitas](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
-- [Pontos de extremidade de serviço e endereçamento de fila](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+- [Manipulação de mensagens suspeitas](poison-message-handling.md)
+- [Pontos de extremidade de serviço e endereçamento de fila](service-endpoints-and-queue-addressing.md)

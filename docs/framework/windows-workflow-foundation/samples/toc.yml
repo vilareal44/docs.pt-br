@@ -48,7 +48,7 @@
         - name: Designer
           href: designer.md
           items:
-            - name: Removendo o estado de exibição o designer adiciona a um Arquivo XAML
+            - name: Remover o estado de exibição que o Designer adiciona a um arquivo XAML
               href: removing-the-view-state-the-designer-adds-to-an-xaml-file.md
             - name: Árvore modelo de programação de item
               href: programming-model-item-tree.md
@@ -90,7 +90,7 @@
               href: externalized-policy-activity-in-net-framework-4-5.md
             - name: ForEach não genéricos
               href: non-generic-foreach.md
-            - name: ParallelForEach não genéricos
+            - name: ParallelForEach não genérico
               href: non-generic-parallelforeach.md
             - name: Obter WorkflowInstanceId
               href: get-workflowinstanceid.md

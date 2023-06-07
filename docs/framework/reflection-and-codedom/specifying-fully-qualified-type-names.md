@@ -1,5 +1,6 @@
 ---
 title: Especificando nomes de tipo totalmente qualificados
+description: Para obter uma entrada válida para operações de reflexão, use nomes de tipo totalmente qualificado, que têm especificações de nome de assembly, especificações de namespace e nomes de tipo.
 ms.date: 02/21/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-ms.openlocfilehash: 707c71482196d789ed9a88db34af048ec57734fb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ff33b6abd31a82c6b80aa794564c5c48648cde63
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130025"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865223"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Especificar nomes de tipo totalmente qualificado
 
@@ -187,7 +188,7 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
 
 ## <a name="specifying-generic-types"></a>Especificar tipos genéricos
 
-SimpleTypeSpec\`NÚMERO representa um tipo genérico aberto com 1 a *n* parâmetros de tipo genérico. Por exemplo, para obter a referência para a Lista de tipo genérico aberto\<T>, ou para a lista de tipo genérico fechado\<Cadeia de caracteres>, use ``Type.GetType("System.Collections.Generic.List`1")`` para obter uma referência para o Dicionário de tipo genérico\<TKey, TValue>, use ``Type.GetType("System.Collections.Generic.Dictionary`2")``.
+SimpleTypeSpec\`NÚMERO representa um tipo genérico aberto com 1 a *n* parâmetros de tipo genérico. Por exemplo, para obter referência à lista de tipos genéricos abertos \<T> ou à lista de tipos genéricos fechados \<String> , use ``Type.GetType("System.Collections.Generic.List`1")`` para obter uma referência ao dicionário de tipo genérico \<TKey,TValue> , use ``Type.GetType("System.Collections.Generic.Dictionary`2")`` .
 
 ## <a name="specifying-pointers"></a>Especificar ponteiros
 
@@ -214,7 +215,7 @@ Observe que, do ponto de vista do runtime, `MyArray[] != MyArray[*]`, mas para m
 
 Para o o **. GetType**, `MyArray[0..5]` indica uma matriz de dimensão única com tamanho 6, menor limite 0. `MyArray[4…]` indica uma matriz de dimensão única de tamanho desconhecido e limite inferior 4.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Reflection.AssemblyName>
 - <xref:System.Reflection.Emit.ModuleBuilder>

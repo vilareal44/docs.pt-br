@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Shutdown event [Visual Basic]
 - My.Log object, logging
 ms.assetid: 67624d05-cddf-48b7-8c36-5c99baa4c621
-ms.openlocfilehash: 5a4ef3888ba8371d26204c3569b5fb9bae1f15f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac5fb17e527bcbcb55f98ec0ced06c152555ce6c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74352095"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410069"
 ---
 # <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>Como registrar mensagens em log quando o aplicativo é iniciado ou encerrado (Visual Basic)
 
@@ -60,10 +60,10 @@ ms.locfileid: "74352095"
   
  [!code-vb[VbVbalrMyApplicationLog#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#3)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [Página de Aplicativo, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
-- [Trabalhar com logs do aplicativo](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [Trabalhar com logs do aplicativo](working-with-application-logs.md)

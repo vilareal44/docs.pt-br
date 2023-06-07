@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8027df7c-cfad-4724-bda0-7538d9519070
 topic_type:
 - apiref
-ms.openlocfilehash: 1362efbf518310240ce665badc93810d1c0b9b89
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9211af4726617598f3dd8772383cade6368e6c08
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450193"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007618"
 ---
 # <a name="cornativelinkflags-enumeration"></a>Enumeração CorNativeLinkFlags
 Fornece valores de sinalizador usados pelo vinculador ao vincular código nativo.  
@@ -38,22 +38,22 @@ typedef enum
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`nlfNone`|Indica que não há sinalizadores.|  
-|`nlfLastError`|Indica uma palavra-chave `setLastError`.|  
-|`nlfNoMangle`|Indica uma palavra-chave `nomangle`.|  
+|`nlfLastError`|Indica uma `setLastError` palavra-chave.|  
+|`nlfNoMangle`|Indica uma `nomangle` palavra-chave.|  
 |`nlfMaxValue`|Não usado.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerações de metadados](metadata-enumerations.md)

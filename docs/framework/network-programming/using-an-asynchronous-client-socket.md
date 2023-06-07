@@ -1,5 +1,6 @@
 ---
 title: Usando um soquete de cliente assíncrono
+description: Este exemplo mostra um soquete de cliente assíncrono. .NET Framework programação assíncrona permite que um aplicativo continue a ser executado durante o processamento de uma conexão.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 748745ca6799005dccdbfcbcc37a8c2a38f2a88e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9cf46e9519bcecf4d7a20ff99b86fa5f66af2087
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180647"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502035"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Usando um soquete de cliente assíncrono
 Um soquete de cliente assíncrono não suspende o aplicativo enquanto aguarda a conclusão das operações de rede. Em vez disso, ele usa o modelo padrão de programação assíncrona do .NET Framework para processar a conexão de rede em um thread, enquanto o aplicativo continua em execução no thread original. Soquetes assíncronos são apropriados para aplicativos que fazem uso intenso da rede ou que não podem aguardar a conclusão das operações de rede antes de continuar.  

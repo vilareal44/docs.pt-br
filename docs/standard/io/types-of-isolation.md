@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: 0e8be9b1d12d40f8135d21abe9dd6cb0b63bb2d8
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 7802e4bc27195d1c8ecaccbd64121fb24328a4d8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646389"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288531"
 ---
 # <a name="types-of-isolation"></a>Tipos de isolamento
 O acesso ao armazenamento isolado é sempre restrito ao usuário que o criou. Para implementar esse tipo de isolamento, o common language runtime usa a mesma noção de identidade de usuário que o sistema operacional reconhece, que é a identidade associada ao processo no qual o código está em execução quando o armazenamento é aberto. Essa é uma identidade de usuário autenticado, mas a representação pode fazer com que a identidade do usuário atual seja alterada dinamicamente.  
@@ -38,9 +38,9 @@ O acesso ao armazenamento isolado é sempre restrito ao usuário que o criou. Pa
   
  Combinando os conceitos de usuário, domínio e identidade de assembly, o armazenamento isolado pode isolar dados das seguintes maneiras, cada uma das quais tem seus próprios cenários de uso:  
   
-- [Isolamento por usuário e montagem](#UserAssembly)  
+- [Isolamento por usuário e assembly](#UserAssembly)  
   
-- [Isolamento por usuário, domínio e montagem](#UserDomainAssembly)  
+- [Isolamento por usuário, domínio e assembly](#UserDomainAssembly)  
   
  Um desses isolamentos pode ser combinado a um perfil de usuário móvel. Para saber mais, confira a seção [Armazenamento isolado e roaming](#Roaming).  
   
@@ -48,10 +48,10 @@ O acesso ao armazenamento isolado é sempre restrito ao usuário que o criou. Pa
   
  ![Diagrama que mostra o isolamento por usuário e assembly.](./media/types-of-isolation/isolated-storage-types.gif)  
   
- Com exceção das lojas de roaming, o armazenamento isolado é sempre implicitamente isolado pelo computador porque usa as instalações de armazenamento que são locais para um determinado computador.  
+ Exceto para armazenamentos de roaming, o armazenamento isolado é sempre isolado implicitamente pelo computador porque ele usa os recursos de armazenamento que são locais para um determinado computador.  
   
 > [!IMPORTANT]
-> O armazenamento isolado não está disponível para aplicativos do Windows 8.x Store. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API do Windows Runtime para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.  
+> O armazenamento isolado não está disponível para aplicativos da loja do Windows 8. x. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API do Windows Runtime para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.  
   
 <a name="UserAssembly"></a>
 ## <a name="isolation-by-user-and-assembly"></a>Isolamento por usuário e assembly  
@@ -103,7 +103,7 @@ O acesso ao armazenamento isolado é sempre restrito ao usuário que o criou. Pa
  [!code-csharp[Conceptual.IsolatedStorage#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#12)]
  [!code-vb[Conceptual.IsolatedStorage#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source9.vb#12)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
-- [Armazenamento isolado](../../../docs/standard/io/isolated-storage.md)
+- [Armazenamento isolado](isolated-storage.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar tarefas pré-computadas'
+title: 'Como: criar tarefas pré-computadas'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - tasks, creating pre-computed
 ms.assetid: a73eafa2-1f49-4106-a19e-997186029b58
-ms.openlocfilehash: f5d2a70685fe0401d0219b99ada6936ac04691f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 88f0782380d21858bc5dd0fc0fbf63bbf85403b8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73123132"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289987"
 ---
-# <a name="how-to-create-pre-computed-tasks"></a>Como: Criar tarefas pré-computadas
+# <a name="how-to-create-pre-computed-tasks"></a>Como: criar tarefas pré-computadas
 Esse documento descreve como usar o método <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> para recuperar os resultados das operações de download assíncronas armazenados em um cache. O método <xref:System.Threading.Tasks.Task.FromResult%2A> retorna um objeto <xref:System.Threading.Tasks.Task%601> que contém o valor fornecido como sua propriedade <xref:System.Threading.Tasks.Task%601.Result%2A>. Este método é útil quando você executa uma operação assíncrona que retorna um objeto <xref:System.Threading.Tasks.Task%601> e o resultado do objeto <xref:System.Threading.Tasks.Task%601> já está calculado.  
   
 ## <a name="example"></a>Exemplo  
@@ -26,6 +26,6 @@ Esse documento descreve como usar o método <xref:System.Threading.Tasks.Task.Fr
   
  Esse exemplo calcula o tempo necessário para baixar várias cadeias de caracteres duas vezes. O segundo conjunto de operações de download deve levar menos tempo do que o primeiro conjunto porque os resultados são mantidos no cache. O método <xref:System.Threading.Tasks.Task.FromResult%2A> permite que o método `DownloadStringAsync` crie objetos <xref:System.Threading.Tasks.Task%601> que contêm esses resultados pré-computados.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Programação Assíncrona baseada em tarefas](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+- [Programação assíncrona baseada em tarefas](task-based-asynchronous-programming.md)

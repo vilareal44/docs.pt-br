@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bed097b3-6d52-46c9-bee7-ac7910b6fc3f
 topic_type:
 - apiref
-ms.openlocfilehash: d0219751987b1f2d78ee37a1553b323014c1ccfe
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 9bff594d0307153fb468b28c1535977f06997748
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865682"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499708"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>Método ICorProfilerCallback3::InitializeForAttach
 Chamado pelo Common Language Runtime (CLR) para dar ao criador de perfil uma oportunidade de inicializar seu estado após uma operação de anexação.  
@@ -36,29 +36,29 @@ HRESULT InitializeForAttach(
   
 ## <a name="parameters"></a>Parâmetros  
  `pCorProfilerInfoUnk`  
- no Um ponteiro de interface para a interface `ICorProfilerInfo*`.  
+ no Um ponteiro de interface para a `ICorProfilerInfo*` interface.  
   
  `pvClientData`  
- no Um ponteiro para os dados passados para o método [ICLRProfiling:: AttachProfiler](iclrprofiling-attachprofiler-method.md) em seu parâmetro `pvClientData`. Se esse parâmetro for nulo, `cbClientData` será 0 (zero). O CLR libera essa memória quando ela retorna da `InitializeForAttach`.  
+ no Um ponteiro para os dados passados para o método [ICLRProfiling:: AttachProfiler](iclrprofiling-attachprofiler-method.md) em seu `pvClientData` parâmetro. Se esse parâmetro for NULL, `cbClientData` será 0 (zero). O CLR libera essa memória quando ela retorna do `InitializeForAttach` .  
   
  `cbClientData`  
- no O tamanho, em bytes, dos dados aos quais `pvClientData` aponta.  
+ no O tamanho, em bytes, dos dados que `pvClientData` aponta para.  
   
 ## <a name="remarks"></a>Comentários  
  O CLR chama `InitializeForAttach` para dar ao criador de perfil uma oportunidade de solicitar retornos de chamada.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
 - [Interface ICorProfilerInfo3](icorprofilerinfo3-interface.md)
-- [Interfaces de criação de perfil](profiling-interfaces.md)
+- [Criação de perfil de interfaces](profiling-interfaces.md)
 - [Criação de perfil](index.md)

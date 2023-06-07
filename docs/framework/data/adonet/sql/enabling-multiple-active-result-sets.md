@@ -1,16 +1,17 @@
 ---
 title: Habilitando conjuntos de resultados ativos múltiplos
+description: Saiba como habilitar/desabilitar MARS em uma cadeia de conexão, que funciona com SQL Server para que você possa executar vários lotes em uma única conexão no ADO.NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 72125be835298218e5445fe1915d6a17f5008bb2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43bdfebce291c3c1d6c90104c5fef440b295934b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148719"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286475"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Habilitando conjuntos de resultados ativos múltiplos
 MARS (Conjuntos de resultados ativos múltiplos) é um recurso que funciona com o SQL Server para permitir a execução de vários lotes em uma única conexão. Quando o MARS está habilitado para uso com o SQL Server, cada objeto de comando usado adiciona uma sessão à conexão.  
@@ -64,7 +65,7 @@ string connectionString = "Data Source=MSSQL1;" +
 ### <a name="mars-session-cache"></a>Cache de sessão de MARS  
  Quando uma conexão é aberta com o MARS habilitado, uma sessão lógica é criada, o que adiciona sobrecarga extra. Para reduzir a sobrecarga e melhorar o desempenho, o **SqlClient** armazena em cache a sessão de MARS dentro de uma conexão. O cache contém no máximo 10 sessões de MARS. Esse valor não é especificado pelo usuário. Se o limite de sessão for atingido, uma nova sessão será criada – um erro não será gerado. O cache e as sessões que ele contém são por conexão e não são compartilhados entre conexões. Quando uma sessão é liberada, ela retorna ao pool, a menos que o limite superior do pool tenha sido atingido. Se o pool de cache estiver cheio, a sessão será fechada. As sessões de MARS não expiram. Somente são limpas quando o objeto de conexão é descartado. O cache de sessão de MARS não fica pré-carregado. Ele é carregado quando o aplicativo requer mais sessões.  
   
-### <a name="thread-safety"></a>Segurança de thread  
+### <a name="thread-safety"></a>Acesso thread-safe  
  As operações de MARS não são thread-safe.  
   
 ### <a name="connection-pooling"></a>Pool de conexões  
@@ -94,7 +95,7 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Mensagem: o contexto da transação está sendo usado por outra sessão.  
   
- Fonte: .NET SqlClient Data Provider  
+ Fonte: .NET SqlClient Provedor de Dados  
   
  Esperado: (nulo)  
   
@@ -111,7 +112,7 @@ string connectionString = "Data Source=MSSQL1;" +
 ### <a name="detecting-mars-support"></a>Detectando o suporte de MARS  
  Um aplicativo pode verificar o suporte a MARS lendo o valor `SqlConnection.ServerVersion`. O número principal deve ser 9 para o SQL Server 2005 e 10 para o SQL Server 2008.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Múltiplos conjuntos de resultados ativos (MARS)](multiple-active-result-sets-mars.md)
+- [MARS (Vários Conjuntos de Resultados Ativos)](multiple-active-result-sets-mars.md)
 - [Visão geral do ADO.NET](../ado-net-overview.md)

@@ -4,12 +4,12 @@ description: Saiba mais sobre os tipos principais (numéricos, cadeias de caract
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 89b5cebdc887db808db8abb1fa9eda34e2bec9e5
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 93a0023969bb8bb089922a9e30fbf599eddc7203
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205805"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174173"
 ---
 # <a name="types-variables-and-values"></a>Tipos, variáveis e valores
 
@@ -66,7 +66,7 @@ Um tipo pode ser declarado com um ou mais *parâmetros de tipo* que servem como 
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)]
   
-O uso do parâmetro de tipo possibilita a reutilização da mesma classe para conter qualquer tipo de elemento sem precisar converter cada elemento em [objeto](language-reference/builtin-types/reference-types.md#the-object-type). As classes de coleção genéricas são chamadas de *coleções fortemente tipadas* porque o compilador sabe o tipo específico dos elementos da coleção e pode gerar um erro em tempo de compilação se, por exemplo, você tentar adicionar um inteiro ao objeto `strings` no exemplo anterior. Para obter mais informações, consulte [Genéricos](programming-guide/generics/index.md).
+O uso do parâmetro de tipo possibilita a reutilização da mesma classe para conter qualquer tipo de elemento sem precisar converter cada elemento em [objeto](language-reference/builtin-types/reference-types.md#the-object-type). As classes de coleção genéricas são chamadas de coleções com rigidez de *tipos* porque o compilador sabe o tipo específico dos elementos da coleção e pode gerar um erro no tempo de compilação se, por exemplo, você tentar adicionar um inteiro ao `strings` objeto no exemplo anterior. Para obter mais informações, consulte [Genéricos](programming-guide/generics/index.md).
 
 ## <a name="implicit-types-anonymous-types-and-tuple-types"></a>Tipos implícitos, tipos anônimos e tipos de tupla
 
@@ -74,7 +74,7 @@ Conforme mencionado anteriormente, você pode digitar implicitamente uma variáv
   
 Em alguns casos, é inconveniente criar um tipo nomeado para conjuntos simples de valores relacionados que você não pretende armazenar ou transmitir para fora dos limites do método. Você pode criar *tipos anônimos* para essa finalidade. Para obter mais informações, consulte [tipos anônimos](programming-guide/classes-and-structs/anonymous-types.md).
 
-É comum querer retornar mais de um valor de um método. Você pode criar *tipos de tupla* que retornam vários valores em uma única chamada de método. Para obter mais informações, consulte [tuplas](tuples.md).
+É comum querer retornar mais de um valor de um método. Você pode criar *tipos de tupla* que retornam vários valores em uma única chamada de método. Para obter mais informações, consulte [tipos de tupla](language-reference/builtin-types/value-tuples.md).
 
 ## <a name="the-common-type-system"></a>O Common Type System
 
@@ -84,7 +84,7 @@ Em alguns casos, é inconveniente criar um tipo nomeado para conjuntos simples d
   
 - Cada tipo no CTS é definido como um *tipo de valor* ou um *tipo de referência*. Isso inclui todos os tipos personalizados na biblioteca de classes do .NET, além de tipos personalizados definidos pelo usuário. Os tipos que você define usando a `struct` `enum` palavra-chave ou são tipos de valor. Para obter mais informações sobre tipos de valor, consulte [tipos de valor](language-reference/builtin-types/value-types.md). Os tipos que você define usando a palavra-chave [class](language-reference/keywords/class.md) são tipos de referência. Para obter mais informações sobre tipos de referência, consulte [Classes](programming-guide/classes-and-structs/classes.md). Os tipos de referência e os tipos de valor têm diferentes regras de tempo de compilação e comportamento de tempo de execução diferente.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Tipos de estrutura](language-reference/builtin-types/struct.md)
 - [Tipos de enumeração](language-reference/builtin-types/enum.md)

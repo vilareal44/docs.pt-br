@@ -1,16 +1,17 @@
 ---
 title: Passando parâmetros de tipo de referência – Guia de Programação em C#
+description: Quando você passa um parâmetro de tipo de referência por valor em C#, os dados no objeto referenciado podem ser alterados, mas não o valor da referência em si.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: 6fa0e60fafabaa9fb04cdc5d5bf3f9e29490e84f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64a4735eded7a468549862b3221b4fbd0966e64d
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714716"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864703"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Passando parâmetros de tipo de referência (Guia de Programação em C#)
 Uma variável de um [tipo de referência](../../language-reference/keywords/reference-types.md) não contém seus dados diretamente; ela contém uma referência a seus dados. Quando você passa um parâmetro de tipo de referência por valor, é possível alterar os dados que pertencem ao objeto referenciado, como o valor de um membro de classe. No entanto, não é possível alterar o valor da referência em si. Por exemplo, não é possível usar a mesma referência para alocar memória para um novo objeto e fazer com que ele persista fora do bloco. Para fazer isso, passe o parâmetro usando a palavra-chave [ref](../../language-reference/keywords/ref.md) ou [out](../../language-reference/keywords/out-parameter-modifier.md). Para simplificar, os exemplos a seguir usam `ref`.  
@@ -38,11 +39,11 @@ Uma variável de um [tipo de referência](../../language-reference/keywords/refe
   
  Para obter mais informações sobre cadeias de caracteres, consulte [cadeia de caracteres](../../language-reference/builtin-types/reference-types.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Passando parâmetros](./passing-parameters.md)
 - [ref](../../language-reference/keywords/ref.md)
-- [Em](../../language-reference/keywords/in-parameter-modifier.md)
+- [no](../../language-reference/keywords/in-parameter-modifier.md)
 - [fora](../../language-reference/keywords/out.md)
 - [Tipos de referência](../../language-reference/keywords/reference-types.md)

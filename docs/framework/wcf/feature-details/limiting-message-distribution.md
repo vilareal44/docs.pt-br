@@ -2,12 +2,12 @@
 title: Limitando a distribuição de mensagens
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 36d9d43760e68f6bcf0099ac17dec5a8278d0e49
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 188d7bd365caad7d4cd438744c78ae8e7cd95e7e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211902"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586306"
 ---
 # <a name="limiting-message-distribution"></a>Limitando a distribuição de mensagens
 
@@ -15,17 +15,17 @@ O canal par é por meio do design de uma malha de difusão. Seu modelo de inunda
 
 ## <a name="hop-counts"></a>Contagens de saltos
 
-O conceito de `PeerHopCount` é semelhante ao TTL (vida útil) usado no protocolo IP. O valor de `PeerHopCount` está vinculado a uma instância de mensagem e especifica quantas vezes uma mensagem deve ser encaminhada antes de ser descartada. Cada vez que uma mensagem é recebida por um cliente de canal par, o cliente examina a mensagem para ver se `PeerHopCount` está especificado. Se for especificado, o cliente decrementará o valor da contagem de saltos em um antes de encaminhar a mensagem para os nós vizinhos. Quando um cliente recebe uma mensagem com um valor de contagem de salto igual a zero, o cliente processa a mensagem, mas não encaminha a mensagem aos vizinhos.
+O conceito de `PeerHopCount` é semelhante ao TTL (vida útil) usado no protocolo IP. O valor de `PeerHopCount` é vinculado a uma instância de mensagem e especifica quantas vezes uma mensagem deve ser encaminhada antes de ser descartada. Cada vez que uma mensagem é recebida por um cliente de canal par, o cliente examina a mensagem para ver se `PeerHopCount` é especificado. Se for especificado, o cliente decrementará o valor da contagem de saltos em um antes de encaminhar a mensagem para os nós vizinhos. Quando um cliente recebe uma mensagem com um valor de contagem de salto igual a zero, o cliente processa a mensagem, mas não encaminha a mensagem aos vizinhos.
 
-A contagem de saltos pode ser adicionada a uma mensagem adicionando `PeerHopCount` como um atributo à propriedade ou campo aplicável na implementação da classe de mensagem. Você pode definir isso com um valor específico antes de enviar a mensagem para a malha. Dessa maneira, você pode usar a contagem de saltos para limitar a distribuição de mensagens em toda a malha quando necessário, evitando potencialmente a duplicação de mensagens desnecessárias. Isso é útil em casos em que a malha contém uma grande quantidade de dados redundantes, ou para enviar uma mensagem para vizinhos imediatos ou vizinhos dentro de alguns saltos.
+A contagem de saltos pode ser adicionada a uma mensagem adicionando-se `PeerHopCount` como um atributo à propriedade ou ao campo aplicável na implementação da classe de mensagem. Você pode definir isso com um valor específico antes de enviar a mensagem para a malha. Dessa maneira, você pode usar a contagem de saltos para limitar a distribuição de mensagens em toda a malha quando necessário, evitando potencialmente a duplicação de mensagens desnecessárias. Isso é útil em casos em que a malha contém uma grande quantidade de dados redundantes, ou para enviar uma mensagem para vizinhos imediatos ou vizinhos dentro de alguns saltos.
 
 - Para obter trechos de código e informações relacionadas, consulte o [atributo PeerHopCount: controle](https://docs.microsoft.com/archive/blogs/peerchan/the-peerhopcount-attribute-controlling-message-distribution) post de distribuição de mensagens no blog do canal par.
 
 ## <a name="message-propagation-filter"></a>Filtro de propagação de mensagem
 
-`MessagePropagationFilter` pode ser usado para o controle personalizado de inundação de mensagem, especialmente quando o conteúdo da mensagem ou outros cenários específicos determinam a propagação. O filtro toma decisões de propagação para cada mensagem que passa pelo nó. Isso é verdadeiro para mensagens originadas em outro lugar na malha que seu nó recebeu, bem como mensagens criadas pelo seu aplicativo. O filtro tem acesso à mensagem e à sua origem, portanto, as decisões sobre o encaminhamento ou descarte da mensagem podem se basear nas informações completas disponíveis.
+`MessagePropagationFilter`pode ser usado para o controle personalizado de inundação de mensagem, especialmente quando o conteúdo da mensagem ou outros cenários específicos determinam a propagação. O filtro toma decisões de propagação para cada mensagem que passa pelo nó. Isso é verdadeiro para mensagens originadas em outro lugar na malha que seu nó recebeu, bem como mensagens criadas pelo seu aplicativo. O filtro tem acesso à mensagem e à sua origem, portanto, as decisões sobre o encaminhamento ou descarte da mensagem podem se basear nas informações completas disponíveis.
 
-<xref:System.ServiceModel.PeerMessagePropagationFilter> é uma classe abstrata de base com uma única função, <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. O primeiro argumento da chamada do método passa em uma cópia completa da mensagem. As alterações feitas na mensagem não afetam a mensagem real. O último argumento da chamada de método identifica a origem da mensagem (`PeerMessageOrigination.Local` ou `PeerMessageOrigination.Remote`). Implementações concretas desse método devem retornar uma constante da enumeração <xref:System.ServiceModel.PeerMessagePropagation> indicando que a mensagem deve ser encaminhada ao aplicativo local (`Local`), encaminhado para clientes remotos (`Remote`), ambos (`LocalAndRemote`) ou nenhum (`None`). Esse filtro pode ser aplicado acessando o objeto `PeerNode` correspondente e especificando uma instância da classe de filtro de propagação derivada na propriedade `PeerNode.MessagePropagationFilter`. Verifique se o filtro de propagação está anexado antes de abrir o canal par.
+<xref:System.ServiceModel.PeerMessagePropagationFilter>é uma classe abstrata de base com uma única função, <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A> . O primeiro argumento da chamada do método passa em uma cópia completa da mensagem. As alterações feitas na mensagem não afetam a mensagem real. O último argumento da chamada de método identifica a origem da mensagem ( `PeerMessageOrigination.Local` ou `PeerMessageOrigination.Remote` ). Implementações concretas desse método devem retornar uma constante da <xref:System.ServiceModel.PeerMessagePropagation> enumeração que indica que a mensagem deve ser encaminhada para o aplicativo local ( `Local` ), encaminhada para clientes remotos ( `Remote` ), ambos ( `LocalAndRemote` ) ou nenhum () `None` . Esse filtro pode ser aplicado acessando o `PeerNode` objeto correspondente e especificando uma instância da classe de filtro de propagação derivada na `PeerNode.MessagePropagationFilter` propriedade. Verifique se o filtro de propagação está anexado antes de abrir o canal par.
 
 - Para obter trechos de código e informações relacionadas, consulte o [canal par e o MessagePropagationFilter](https://docs.microsoft.com/archive/blogs/peerchan/peer-channel-and-messagepropagationfilter) post no blog do canal par.
 
@@ -69,6 +69,6 @@ As respostas para essas perguntas podem ajudá-lo a determinar se deve usar a co
 
   - *Baixa*: any, a conexão direta provavelmente não é necessária.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Compilando um aplicativo de canal par](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+- [Compilando um aplicativo de canal par](building-a-peer-channel-application.md)

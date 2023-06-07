@@ -1,5 +1,6 @@
 ---
-title: Como carregar assemblies em um domínio de aplicativo
+title: 'Como: Carregar assemblies em um domínio do aplicativo'
+description: Saiba como carregar assemblies em um domínio de aplicativo no .NET. A maneira recomendada é usar o método de carga estático (ou compartilhado) no System. Reflection. assembly.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - application domains, loading assemblies
 - loading assemblies
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
-ms.openlocfilehash: c560e2c5858de67442ccbcd18c8f92b142cc178d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c91c70625b79002e9297755dfdfac8aa6e283208
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119901"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104749"
 ---
-# <a name="how-to-load-assemblies-into-an-application-domain"></a>Como carregar assemblies em um domínio de aplicativo
+# <a name="how-to-load-assemblies-into-an-application-domain"></a>Como: Carregar assemblies em um domínio do aplicativo
 Há várias maneiras de carregar um assembly em um domínio de aplicativo. A maneira recomendada é usar o método <xref:System.Reflection.Assembly.Load%2A>`static` (`Shared` no Visual Basic) da classe <xref:System.Reflection.Assembly?displayProperty=nameWithType>. Outras maneiras que os assemblies podem ser carregados incluem:  
   
 - O método <xref:System.Reflection.Assembly.LoadFrom%2A> da classe <xref:System.Reflection.Assembly> carrega um assembly dado seu local do arquivo. O carregamento de assemblies com esse método usa um contexto de carga diferente.  
@@ -44,11 +45,11 @@ Há várias maneiras de carregar um assembly em um domínio de aplicativo. A man
  [!code-csharp[System.AppDomain.Load#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.load/cs/source2.cs#2)]
  [!code-vb[System.AppDomain.Load#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source2.vb#2)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
 - [Programação com domínios do aplicativo](application-domains.md#programming-with-application-domains)
 - [Reflexão](../reflection-and-codedom/reflection.md)
-- [Uso de domínios do aplicativo](use.md)
-- [Como carregar assemblies no contexto de somente reflexão](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
+- [Usando domínios do aplicativo](use.md)
+- [Como: Carregar assemblies no contexto somente de reflexão](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [Domínios de aplicativo e assemblies](application-domains.md#application-domains-and-assemblies)

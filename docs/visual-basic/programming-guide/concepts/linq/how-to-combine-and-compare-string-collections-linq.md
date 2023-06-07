@@ -1,13 +1,13 @@
 ---
-title: Como combinar e comparar coleções de cadeias de caracteres (LINQ)
+title: 'Como: combinar e comparar coleções de cadeias de caracteres (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 2df5db16e51e8f9de8a8e3506eb1f7b737065a14
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 271ef7805cd2285fa2d8796a31257c0f31bb9a76
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337565"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374856"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Como: combinar e comparar coleções de cadeias de caracteres (LINQ) (Visual Basic)
 
@@ -165,9 +165,9 @@ End Class
 
 ## <a name="compile-the-code"></a>Compilar o código
 
-Crie um projeto de aplicativo de console Visual Basic. Adicione uma instrução `Imports` para o namespace System. Linq.
+Crie um projeto de aplicativo de console Visual Basic. Adicione uma `Imports` instrução para o namespace System. Linq.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ e cadeias de caracteres (Visual Basic)](linq-and-strings.md)
+- [LINQ e diretórios de arquivos (Visual Basic)](linq-and-file-directories.md)

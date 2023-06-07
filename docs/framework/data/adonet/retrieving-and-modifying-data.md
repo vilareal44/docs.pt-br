@@ -1,25 +1,26 @@
 ---
 title: Recuperando e modificando dados
+description: No .NET Framework, os provedores de dados no ADO.NET servem como uma ponte entre um aplicativo e uma fonte de dados para ler e atualizar dados.
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: 65c373ecff004e219527754bf2e9cc56837dc305
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: f916324dc829526a5e6b0078021b09786755f666
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980048"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286605"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Recuperando e modificando dados no ADO.NET
-A função principal de qualquer aplicativo de banco de dados é conectar-se a uma fonte de dados e recuperar os dados que ele contém. Os .NET Framework provedores de dados do ADO.NET servem como uma ponte entre um aplicativo e uma fonte de dados, permitindo que você execute comandos, bem como recuperar dados usando um **DataReader** ou um **DataAdapter**. A função principal de qualquer aplicativo de banco de dados é a capacidade de atualizar os dados que estão armazenados no banco de dados. No ADO.NET, a atualização de dados envolve o uso de **DataAdapter** e <xref:System.Data.DataSet>e de objetos de **comando** ; e também pode envolver o uso de transações.  
+A função principal de qualquer aplicativo de banco de dados é conectar-se a uma fonte de dados e recuperar os dados que ele contém. Os .NET Framework provedores de dados do ADO.NET servem como uma ponte entre um aplicativo e uma fonte de dados, permitindo que você execute comandos, bem como recuperar dados usando um **DataReader** ou um **DataAdapter**. A função principal de qualquer aplicativo de banco de dados é a capacidade de atualizar os dados que estão armazenados no banco de dados. No ADO.NET, a atualização de dados envolve o uso de **DataAdapter** e e de <xref:System.Data.DataSet> objetos **Command** ; e também pode envolver o uso de transações.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Conectando a uma fonte de dados](connecting-to-a-data-source.md)  
+ [Conectando a uma Fonte de Dados](connecting-to-a-data-source.md)  
  Descreve como estabelecer uma conexão com uma fonte de dados e como trabalhar com eventos de conexão.  
   
- [Cadeia de Conexão](connection-strings.md)  
+ [Cadeias de conexão](connection-strings.md)  
  Contém os tópicos que descrevem os vários aspectos do uso de cadeias de conexão, incluindo palavras-chave de cadeias de conexão, informações de segurança e seu respectivo armazenamento e recuperação.  
   
- [Pooling de Conexão](connection-pooling.md)  
+ [Pool de conexões](connection-pooling.md)  
  Descreve o pool de conexões para provedores de dados .NET Framework.  
   
  [Comandos e parâmetros](commands-and-parameters.md)  
@@ -35,7 +36,7 @@ A função principal de qualquer aplicativo de banco de dados é conectar-se a u
  Fornece um exemplo de mapeamento dos valores gerados para uma coluna de **identidade** em uma tabela SQL Server ou para um campo **AutoNumeração** em uma tabela do Microsoft Access, para uma coluna de uma linha inserida em uma tabela. Discute como mesclar valores de identidade em `DataTable`.  
   
  [Recuperando dados binários](retrieving-binary-data.md)  
- Descreve como recuperar dados binários ou estruturas de dados grandes usando `CommandBehavior`.`SequentialAccess` para modificar o comportamento padrão de um `DataReader`.  
+ Descreve como recuperar dados binários ou estruturas de dados grandes usando o `CommandBehavior` .`SequentialAccess` para modificar o comportamento padrão de um `DataReader` .  
   
  [Modificando dados com procedimentos armazenados](modifying-data-with-stored-procedures.md)  
  Descreve como usar parâmetros de entrada e de saída de procedimentos armazenados para inserir uma linha em um banco de dados, retornando um novo valor de identidade.  
@@ -52,16 +53,16 @@ A função principal de qualquer aplicativo de banco de dados é conectar-se a u
  [Contadores de desempenho](performance-counters.md)  
  Descreve os contadores de desempenho disponíveis para `SqlClient` e `OracleClient`.  
   
- [Programação Assíncrona](asynchronous-programming.md)  
+ [Programação assíncrona](asynchronous-programming.md)  
  Descreve o suporte do ADO.NET para programação assíncrona.  
   
- [Suporte de Streaming do SqlClient](sqlclient-streaming-support.md)  
+ [Suporte de streaming do SqlClient](sqlclient-streaming-support.md)  
  Discute como escrever aplicativos que transmitem dados de SQL Server sem tê-los totalmente carregados na memória.  
   
 ## <a name="see-also"></a>Veja também
 
 - [Data Type Mappings in ADO.NET](data-type-mappings-in-ado-net.md) (Mapeamentos de tipo de dados no ADO.NET)
-- [DataSets, DataTables, and DataViews](./dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)
-- [Securing ADO.NET Applications](securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
-- [SQL Server and ADO.NET](./sql/index.md) (SQL Server e ADO.NET)
-- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)
+- [DataSets, DataTables e DataViews](./dataset-datatable-dataview/index.md)
+- [Protegendo aplicativos ADO.NET](securing-ado-net-applications.md)
+- [SQL Server e ADO.NET](./sql/index.md)
+- [Visão geral do ADO.NET](ado-net-overview.md)

@@ -5,16 +5,17 @@ metadata:
   description: Neste tutorial, você usará seu navegador para aprender C# interativamente. Escreva o código em C# e veja os resultados da compilação e execução de seu código diretamente no navegador.
   audience: Developer
   ms.custom: mvc
+  ms.topic: interactive-tutorial
   ms.date: 10/23/2018
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: ed4c30146f07c5f2ec17f13ff852d83d6469a9b0
-  ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+  ms.openlocfilehash: 9618b3f931b8290d7ce696007c3c9603cc30ef6e
+  ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/14/2020
-  ms.locfileid: "83396846"
+  ms.lasthandoff: 08/17/2020
+  ms.locfileid: "88268108"
 items:
 - durationInMinutes: 1
   content: >

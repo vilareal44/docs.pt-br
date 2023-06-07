@@ -1,20 +1,21 @@
 ---
 title: Criando interfaces genéricas variantes (C#)
+description: Saiba como criar interfaces genéricas variantes com parâmetros de tipo genérico covariant ou contravariant.
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-ms.openlocfilehash: 4ba72f28cd2ddd800f169387cc2c742159d4cb1b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 38b32784b681e748cd508c3d431fd4b18ec2c81a
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595313"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105725"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>Criando interfaces genéricas variantes (C#)
 
 Você pode declarar parâmetros de tipo genérico em interfaces como covariantes ou contravariantes. A *Covariância* permite que os métodos de interface tenham tipos de retorno mais derivados que aqueles definidos pelos parâmetros de tipo genérico. A *Contravariância* permite que os métodos de interface tenham tipos de argumentos que são menos derivados que aqueles especificados pelos parâmetros genéricos. Uma interface genérica que tenha parâmetros de tipo genérico covariantes ou contravariantes é chamada de *variante*.
 
 > [!NOTE]
-> O .NET Framework 4 introduziu o suporte à variação para diversas interfaces genéricas existentes. Para obter a lista das interfaces de variantes no .NET Framework, consulte [Variância em interfaces genéricas (C#)](./variance-in-generic-interfaces.md).
+> O .NET Framework 4 introduziu o suporte à variação para diversas interfaces genéricas existentes. Para obter a lista das interfaces variantes no .NET, consulte [variação em interfaces genéricas (C#)](./variance-in-generic-interfaces.md).
 
 ## <a name="declaring-variant-generic-interfaces"></a>Declarando interfaces genéricas variantes
 
@@ -144,9 +145,9 @@ interface ICovariant<out T> { }
 
 ### <a name="avoiding-ambiguity"></a>Evitando ambiguidade
 
-Ao implementar interfaces genéricas variantes, a variância, às vezes, pode levar à ambiguidade. Isso deve ser evitado.
+Ao implementar interfaces genéricas variantes, a variância, às vezes, pode levar à ambiguidade. Essa ambiguidade deve ser evitada.
 
-Por exemplo, se você implementar explicitamente a mesma interface genérica variante com parâmetros de tipo genérico diferentes em uma classe, isso poderá criar ambiguidade. O compilador não produzirá um erro nesse caso, mas não está especificado qual implementação de interface será escolhida em runtime. Isso poderá causar bugs sutis no seu código. Considere o exemplo de código a seguir.
+Por exemplo, se você implementar explicitamente a mesma interface genérica variante com parâmetros de tipo genérico diferentes em uma classe, isso poderá criar ambiguidade. O compilador não produz um erro nesse caso, mas não é especificado qual implementação de interface será escolhida em tempo de execução. Essa ambiguidade pode levar a bugs sutis em seu código. Considere o exemplo de código a seguir.
 
 ```csharp
 // Simple class hierarchy.

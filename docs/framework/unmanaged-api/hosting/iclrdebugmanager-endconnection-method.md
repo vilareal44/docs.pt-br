@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 89dc7363-2f29-4eb2-8f23-fccdda6a76a6
 topic_type:
 - apiref
-ms.openlocfilehash: f524cadf77caec0823411784c68f339207433601
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d3d081e389e29833f24063ba75289f3db8c5504a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615773"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504271"
 ---
 # <a name="iclrdebugmanagerendconnection-method"></a>Método ICLRDebugManager::EndConnection
 Remove a associação entre uma lista de tarefas e um identificador e um nome amigável.  
@@ -37,7 +37,7 @@ HRESULT EndConnection (
  `dwConnectionId`  
  no O identificador específico do host para a conexão e a lista associada de tarefas de Common Language Runtime (CLR).  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -50,7 +50,7 @@ HRESULT EndConnection (
 |E_INVALIDARG|A [beginconnectização](iclrdebugmanager-beginconnection-method.md) nunca foi chamada `dwConnectionId` de using `dwConnectionId` ou era zero.|  
   
 ## <a name="remarks"></a>Comentários  
- O [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md) fornece três métodos, `BeginConnection` , [SetConnectionTasks](iclrdebugmanager-setconnectiontasks-method.md), e `EndConnection` , para associar listas de tarefas com identificadores e nomes amigáveis.  
+ O [ICLRDebugManager](iclrdebugmanager-interface.md) fornece três métodos, `BeginConnection` , [SetConnectionTasks](iclrdebugmanager-setconnectiontasks-method.md), e `EndConnection` , para associar listas de tarefas com identificadores e nomes amigáveis.  
   
 > [!IMPORTANT]
 > Esses três métodos devem ser chamados em uma ordem específica para cada conjunto de tarefas. `BeginConnection`é chamado primeiro para estabelecer uma nova conexão. `SetConnectionTasks`é chamado ao lado de fornecer o conjunto de tarefas a ser associado a essa conexão. `EndConnection`é chamado por último para remover a associação entre a lista de tarefas e o identificador e o nome amigável. No entanto, as chamadas para diferentes conexões podem ser aninhadas.  
@@ -64,7 +64,7 @@ HRESULT EndConnection (
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICLRControl](iclrcontrol-interface.md)
 - [Interface ICLRDebugManager](iclrdebugmanager-interface.md)

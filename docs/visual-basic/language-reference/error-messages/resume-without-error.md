@@ -4,23 +4,23 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID20
 ms.assetid: f9631804-fd36-4443-b36c-30db827e6176
-ms.openlocfilehash: 61332486b20af66af24eac06b222a38353578c16
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b6b565c88acadca048ade22ab00ac68539725f78
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055154"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400364"
 ---
 # <a name="resume-without-error"></a>Retomar sem erro
-Um `Resume` instrução apareceu fora do código de tratamento de erro ou o código entrou em um manipulador de erro, mesmo que não houve erro.  
+Uma `Resume` instrução apareceu fora do código de tratamento de erros ou o código entrou em um manipulador de erros, embora não haja erro.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1. Mover o `Resume` instrução em um manipulador de erro, ou excluí-lo.  
+1. Mova a `Resume` instrução para um manipulador de erro ou exclua-a.  
   
-2. Portanto, salta para rótulos não pode ocorrer em vários procedimentos, pesquise o procedimento para o rótulo que identifica o manipulador de erro. Se você encontrar um rótulo duplicado especificado como o destino de uma `GoTo` instrução que não seja um `On Error GoTo` instrução, altere o rótulo de linha de acordo com seu destino pretendido.  
+2. Saltos para rótulos não podem ocorrer entre procedimentos. portanto, pesquise o procedimento para o rótulo que identifica o manipulador de erros. Se você encontrar um rótulo duplicado especificado como o destino de uma `GoTo` instrução que não é uma `On Error GoTo` instrução, altere o rótulo da linha para concordar com o destino pretendido.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Instrução Resume](../../../visual-basic/language-reference/statements/resume-statement.md)
-- [Instrução On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)
+- [Instrução Resume](../statements/resume-statement.md)
+- [Instrução On Error](../statements/on-error-statement.md)

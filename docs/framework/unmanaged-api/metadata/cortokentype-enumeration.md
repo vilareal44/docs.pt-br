@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 93c9a369-225f-4eff-9b78-3fbee4902cf1
 topic_type:
 - apiref
-ms.openlocfilehash: 74807a678b5c0c2738f33fe552f6462af93ca1f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 629e18b6cd2fd7910804ecc608a45d2406dddea1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436457"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007488"
 ---
 # <a name="cortokentype-enumeration"></a>Enumeração CorTokenType
 Indica o tipo de um token de metadados.  
@@ -61,45 +61,45 @@ typedef enum CorTokenType {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
-|`mdtModule`|Um token `mdModule`.|  
-|`mdtTypeRef`|Um token `mdTypeRef`.|  
-|`mdtTypeDef`|Um token `mdTypeDef`.|  
-|`mdtFieldDef`|Um token `mdFieldDef`.|  
-|`mdtMethodDef`|Um token `mdMethodDef`.|  
-|`mdtParamDef`|Um token `mdParamDef`.|  
-|`mdtInterfaceImpl`|Um token `mdInterfaceImpl`.|  
-|`mdtMemberRef`|Um token `mdMemberRef`.|  
-|`mdtCustomAttribute`|Um token `mdCustomAttribute`.|  
-|`mdtPermission`|Um token `mdPermission`.|  
-|`mdtSignature`|Um token `mdSignature`.|  
-|`mdtEvent`|Um token `mdEvent`.|  
-|`mdtProperty`|Um token `mdProperty`.|  
-|`mdtModuleRef`|Um token `mdModuleRef`.|  
-|`mdtTypeSpec`|Um token `mdTypeSpec`.|  
-|`mdtAssembly`|Um token `mdAssembly`.|  
-|`mdtAssemblyRef`|Um token `mdAssemblyRef`.|  
-|`mdtFile`|Um token `mdFile`.|  
-|`mdtExportedType`|Um token `mdExportedType`.|  
-|`mdtManifestResource`|Um token `mdManifestResource`.|  
-|`mdtGenericParam`|Um token `mdGenericParam`.|  
-|`mdtMethodSpec`|Um token `mdMethodSpec`.|  
-|`mdtGenericParamConstraint`|Um token `mdGenericParamConstraint`.|  
-|`mdtString`|Um token `mdString`.|  
-|`mdtName`|Um token `mdName`.|  
+|`mdtModule`|Um `mdModule` token.|  
+|`mdtTypeRef`|Um `mdTypeRef` token.|  
+|`mdtTypeDef`|Um `mdTypeDef` token.|  
+|`mdtFieldDef`|Um `mdFieldDef` token.|  
+|`mdtMethodDef`|Um `mdMethodDef` token.|  
+|`mdtParamDef`|Um `mdParamDef` token.|  
+|`mdtInterfaceImpl`|Um `mdInterfaceImpl` token.|  
+|`mdtMemberRef`|Um `mdMemberRef` token.|  
+|`mdtCustomAttribute`|Um `mdCustomAttribute` token.|  
+|`mdtPermission`|Um `mdPermission` token.|  
+|`mdtSignature`|Um `mdSignature` token.|  
+|`mdtEvent`|Um `mdEvent` token.|  
+|`mdtProperty`|Um `mdProperty` token.|  
+|`mdtModuleRef`|Um `mdModuleRef` token.|  
+|`mdtTypeSpec`|Um `mdTypeSpec` token.|  
+|`mdtAssembly`|Um `mdAssembly` token.|  
+|`mdtAssemblyRef`|Um `mdAssemblyRef` token.|  
+|`mdtFile`|Um `mdFile` token.|  
+|`mdtExportedType`|Um `mdExportedType` token.|  
+|`mdtManifestResource`|Um `mdManifestResource` token.|  
+|`mdtGenericParam`|Um `mdGenericParam` token.|  
+|`mdtMethodSpec`|Um `mdMethodSpec` token.|  
+|`mdtGenericParamConstraint`|Um `mdGenericParamConstraint` token.|  
+|`mdtString`|Um `mdString` token.|  
+|`mdtName`|Um `mdName` token.|  
 |`mdtBaseType`|Não usado.|  
   
 ## <a name="remarks"></a>Comentários  
  Cada valor é igual ao valor do byte superior no token de metadados correspondente.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerações de metadados](metadata-enumerations.md)

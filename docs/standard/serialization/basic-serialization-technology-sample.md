@@ -3,12 +3,12 @@ title: Exemplo de tecnologia de serialização básica
 description: Este exemplo demonstra a capacidade do CLR de serializar um gráfico de objeto na memória para um fluxo. Este exemplo pode usar o SoapFormatter ou o BinaryFormatter.
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: fcbf790c3b3d48a0aeb27fd1ef6f75dcd7609ae0
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 3f2273e6afb3a72f9734444ffe92d30871fb762b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378436"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84276563"
 ---
 # <a name="basic-serialization-technology-sample"></a>Exemplo de tecnologia de serialização básica
 
@@ -100,9 +100,9 @@ Os seguintes marcadores descrevem brevemente as classes e as tecnologias usadas 
 - <xref:System.Runtime.Serialization.IFormatter>
 - <xref:System.SerializableAttribute>
 - <xref:System.Xml.Serialization>
-- [Serialização básica](../../../docs/standard/serialization/basic-serialization.md)
-- [Serialização binária](../../../docs/standard/serialization/binary-serialization.md)
-- [Controlando a serialização XML usando atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Serialização](../../../docs/standard/serialization/index.md)
-- [Serialização de XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [Serialização básica](basic-serialization.md)
+- [Serialização binária](binary-serialization.md)
+- [Controlando a serialização XML usando atributos](controlling-xml-serialization-using-attributes.md)
+- [Apresentando a serialização XML](introducing-xml-serialization.md)
+- [Serialização](index.md)
+- [Serialização de XML e SOAP](xml-and-soap-serialization.md)

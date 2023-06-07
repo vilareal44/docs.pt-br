@@ -8,12 +8,12 @@ helpviewer_keywords:
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-ms.openlocfilehash: b5a7c4b78f8599f64aa11f1c98c033866e582933
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: adeeb6c95769d8e1ac120d4fb26d8aaedf7a1d4d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127516"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291078"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Armazenamento local de thread: campos estáticos relativos a thread e slots de dados
 Você pode usar o armazenamento local de thread (TLS) gerenciado para armazenar dados que são exclusivos de um domínio de aplicativo e thread. O .NET Framework oferece duas maneiras de usar o TLS gerenciado: campos estáticos relativos a thread e slots de dados.  
@@ -24,7 +24,7 @@ Você pode usar o armazenamento local de thread (TLS) gerenciado para armazenar 
   
  No C ++ não gerenciado, você usa `TlsAlloc` para alocar slots dinamicamente e `__declspec(thread)` para declarar que uma variável deve ser alocada no armazenamento relativo ao thread. Os campos estáticos relativos a thread e os slots de dados fornecem a versão gerenciada desse comportamento.  
   
- No .NET Framework 4, você pode usar a classe <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> para criar objetos locais de thread que são inicializados lentamente quando o objeto é consumido pela primeira vez. Para obter mais informações, veja [Inicialização lenta](../../../docs/framework/performance/lazy-initialization.md).  
+ No .NET Framework 4, você pode usar a classe <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> para criar objetos locais de thread que são inicializados lentamente quando o objeto é consumido pela primeira vez. Para obter mais informações, veja [Inicialização lenta](../../framework/performance/lazy-initialization.md).  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>Exclusividade de dados em TLS gerenciado  
  Não importa se você usa campos estáticos relativos a thread ou slots de dados, os dados em TLS gerenciado são exclusivos da combinação de thread e domínio de aplicativos.  
@@ -55,10 +55,10 @@ Você pode usar o armazenamento local de thread (TLS) gerenciado para armazenar 
   
  Os slots nomeados podem ser convenientes, pois você pode recuperar o slot quando necessário, passando seu nome para o método <xref:System.Threading.Thread.GetNamedDataSlot%2A>, em vez de manter uma referência a um slot sem nome. No entanto, se outro componente usa o mesmo nome para seu armazenamento relativo ao thread e um thread executa o código do seu componente e do outro componente, os dois componentes podem corromper os dados uns dos outros. (Este cenário pressupõe que ambos os componentes estão sendo executados no mesmo domínio de aplicativo e que eles não foram projetados para compartilhar os mesmos dados).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ContextStaticAttribute>
 - <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>
 - <xref:System.ThreadStaticAttribute>
 - <xref:System.Runtime.Remoting.Messaging.CallContext>
-- [Threading](../../../docs/standard/threading/index.md)
+- [Threading](index.md)

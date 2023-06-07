@@ -1,5 +1,6 @@
 ---
 title: Como empacotar um assembly .NET Framework para o COM
+description: Empacotar um assembly .NET para COM. Reúna a lista de tipos que os aplicativos COM podem consumir, as instruções de controle de versão e implantação e a biblioteca de tipos.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - Reqasm.exe
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
-ms.openlocfilehash: 6866da283cc7cdd180aada252007d67bd72cd862
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4963892419fd1caec4483123f820d62967a87dd6
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124089"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620827"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>Como empacotar um assembly .NET Framework para o COM
 
@@ -87,7 +88,7 @@ A [Ferramenta de Registro de Assembly (Regasm.exe)](../tools/regasm-exe-assembly
 
 A [ferramenta de instalação de serviços .NET (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) adiciona classes gerenciadas para Serviços do Componente do Windows 2000 e combina várias tarefas em uma única ferramenta. Além de carregar e registrar um assembly, Regsvcs.exe pode gerar, registrar e instalar a biblioteca de tipos em um aplicativo COM+ 1.0 existente.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
@@ -95,6 +96,6 @@ A [ferramenta de instalação de serviços .NET (Regsvcs.exe)](../tools/regsvcs-
 - [Qualificando tipos do .NET para interoperação](../../standard/native-interop/qualify-net-types-for-interoperation.md)
 - [Introdução à interface de classe](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
 - [Considerações de segurança do assembly](../../standard/assembly/security-considerations.md)
-- [TlbExp. exe (tipo de exportador da biblioteca de tipos)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Tlbexp.exe (exportador de biblioteca de tipos)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Registrando assemblies com o COM](registering-assemblies-with-com.md)
 - [Como inserir bibliotecas de tipo como recursos do Win32 em aplicativos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

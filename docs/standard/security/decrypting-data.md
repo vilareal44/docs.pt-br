@@ -1,22 +1,23 @@
 ---
 title: Descriptografando dados
-ms.date: 03/30/2017
+description: Saiba como descriptografar dados no .NET, usando um algoritmo simétrico ou um algoritmo assimétrico.
+ms.date: 07/16/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- data [.NET Framework], decryption
+- data [.NET], decryption
 - symmetric decryption
 - asymmetric decryption
 - decryption
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
-ms.openlocfilehash: 37194380d9f08d328f836bcb8648772348958768
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 2ba4c3ba43d688aeb66c67ec3f94f4a503d47892
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706234"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556976"
 ---
 # <a name="decrypting-data"></a>Descriptografando dados
 
@@ -24,28 +25,26 @@ A descriptografia é a operação inversa da criptografia. Para criptografia de 
 
 ## <a name="symmetric-decryption"></a>Descriptografia simétrica
 
-A descriptografia de dados criptografados com algoritmos simétricos é semelhante ao processo usado para criptografar dados com algoritmos simétricos. A classe <xref:System.Security.Cryptography.CryptoStream> é usada com classes de criptografia simétrica fornecidas pelo .NET Framework para descriptografar dados lidos de qualquer objeto de fluxo gerenciado.
+A descriptografia de dados criptografados com algoritmos simétricos é semelhante ao processo usado para criptografar dados com algoritmos simétricos. A <xref:System.Security.Cryptography.CryptoStream> classe é usada com classes de criptografia simétrica fornecidas pelo .net para descriptografar dados lidos de qualquer objeto de fluxo gerenciado.
 
-O exemplo a seguir ilustra como criar uma nova instância da classe <xref:System.Security.Cryptography.RijndaelManaged> e usá-la para executar a descriptografia em um objeto <xref:System.Security.Cryptography.CryptoStream>. Este exemplo primeiro cria uma nova instância da classe **RijndaelManaged** . Em seguida, ele cria um objeto **CryptoStream** e o inicializa para o valor de um fluxo gerenciado chamado `myStream`. Em seguida, o método **Createdecryptr** da classe **RijndaelManaged** é passado para a mesma chave e IV que foi usado para criptografia e, em seguida, é passado para o construtor **CryptoStream** . Por fim, a enumeração **CryptoStreamMode. Read** é passada para o construtor **CryptoStream** para especificar o acesso de leitura ao fluxo.
+O exemplo a seguir ilustra como criar uma nova instância da classe de implementação padrão para o <xref:System.Security.Cryptography.Aes> algoritmo. A instância é usada para executar a descriptografia em um <xref:System.Security.Cryptography.CryptoStream> objeto. Este exemplo primeiro cria uma nova instância da classe de implementação **AES** . Em seguida, ele cria um objeto **CryptoStream** e o inicializa para o valor de um fluxo gerenciado chamado `myStream` . Em seguida, o método **Createdecryptr** da classe **AES** é passado para a mesma chave e IV que foi usado para criptografia e, em seguida, é passado para o construtor **CryptoStream** .
 
 ```vb
-Dim rmCrypto As New RijndaelManaged()
-Dim cryptStream As New CryptoStream(myStream, rmCrypto.CreateDecryptor(rmCrypto.Key, rmCrypto.IV), CryptoStreamMode.Read)
+Dim aes As Aes = Aes.Create()
+Dim cryptStream As New CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read)
 ```
 
 ```csharp
-RijndaelManaged rmCrypto = new RijndaelManaged();
-CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateDecryptor(Key, IV), CryptoStreamMode.Read);
+Aes aes = Aes.Create();
+CryptoStream cryptStream = new CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read);
 ```
 
-O exemplo a seguir mostra todo o processo de criação de um fluxo, descriptografia do fluxo, leitura a partir do fluxo e fechamento dos fluxos. É criado um objeto <xref:System.Net.Sockets.TcpListener> que inicializa um fluxo de rede quando uma conexão com o objeto de escuta é feita. O fluxo de rede é então descriptografado usando a classe **CryptoStream** e a classe **RijndaelManaged** . Este exemplo pressupõe que os valores de chave e IV foram transferidos com êxito ou acordado anteriormente. Ele não mostra o código necessário para criptografar e transferir esses valores.
+O exemplo a seguir mostra todo o processo de criação de um fluxo, descriptografia do fluxo, leitura a partir do fluxo e fechamento dos fluxos. Um objeto de fluxo de arquivo é criado e lê um arquivo chamado *TestData.txt*. O fluxo de arquivo é então descriptografado usando a classe **CryptoStream** e a classe **AES** . Este exemplo especifica os valores de chave e IV que são usados no exemplo de criptografia simétrica para [criptografar dados](encrypting-data.md). Ele não mostra o código necessário para criptografar e transferir esses valores.
 
 ```vb
+Imports System
 Imports System.IO
-Imports System.Net
-Imports System.Net.Sockets
 Imports System.Security.Cryptography
-Imports System.Threading
 
 Module Module1
     Sub Main()
@@ -54,33 +53,16 @@ Module Module1
             Dim key As Byte() = {&H1, &H2, &H3, &H4, &H5, &H6, &H7, &H8, &H9, &H10, &H11, &H12, &H13, &H14, &H15, &H16}
             Dim iv As Byte() = {&H1, &H2, &H3, &H4, &H5, &H6, &H7, &H8, &H9, &H10, &H11, &H12, &H13, &H14, &H15, &H16}
         Try
-            'Initialize a TCPListener on port 11000
-            'using the current IP address.
-            Dim tcpListen As New TcpListener(IPAddress.Any, 11000)
+            'Create a file stream.
+            Dim myStream As FileStream = new FileStream("TestData.txt", FileMode.Open)
 
-            'Start the listener.
-            tcpListen.Start()
-
-            'Check for a connection every five seconds.
-            While Not tcpListen.Pending()
-                Console.WriteLine("Still listening. Will try in 5 seconds.")
-
-                Thread.Sleep(5000)
-            End While
-
-            'Accept the client if one is found.
-            Dim tcp As TcpClient = tcpListen.AcceptTcpClient()
-
-            'Create a network stream from the connection.
-            Dim netStream As NetworkStream = tcp.GetStream()
-
-            'Create a new instance of the RijndaelManaged class
+            'Create a new instance of the default Aes implementation class
             'and decrypt the stream.
-            Dim rmCrypto As New RijndaelManaged()
+            Dim aes As Aes = Aes.Create()
 
-            'Create an instance of the CryptoStream class, pass it the NetworkStream, and decrypt
+            'Create an instance of the CryptoStream class, pass it the file stream, and decrypt
             'it with the Rijndael class using the key and IV.
-            Dim cryptStream As New CryptoStream(netStream, rmCrypto.CreateDecryptor(key, iv), CryptoStreamMode.Read)
+            Dim cryptStream As New CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read)
 
             'Read the stream.
             Dim sReader As New StreamReader(cryptStream)
@@ -90,11 +72,11 @@ Module Module1
 
             'Close the streams.
             sReader.Close()
-            netStream.Close()
-            tcp.Close()
+            myStream.Close()
             'Catch any exceptions.
         Catch
-            Console.WriteLine("The Listener Failed.")
+            Console.WriteLine("The decryption Failed.")
+            Throw
         End Try
     End Sub
 End Module
@@ -103,107 +85,91 @@ End Module
 ```csharp
 using System;
 using System.IO;
-using System.Net;
-using System.Net.Sockets;
 using System.Security.Cryptography;
-using System.Threading;
 
 class Class1
 {
-   static void Main(string[] args)
-   {
-      //The key and IV must be the same values that were used
-      //to encrypt the stream.
-      byte[] key = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16};
-      byte[] iv = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16};
-      try
-      {
-         //Initialize a TCPListener on port 11000
-         //using the current IP address.
-         TcpListener tcpListen = new TcpListener(IPAddress.Any, 11000);
+    static void Main(string[] args)
+    {
+        //The key and IV must be the same values that were used
+        //to encrypt the stream.
+        byte[] key = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
+        byte[] iv = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
+        try
+        {
+            //Create a file stream.
+            FileStream myStream = new FileStream("TestData.txt", FileMode.Open);
 
-         //Start the listener.
-         tcpListen.Start();
+            //Create a new instance of the default Aes implementation class
+            Aes aes = Aes.Create();
 
-         //Check for a connection every five seconds.
-         while(!tcpListen.Pending())
-         {
-            Console.WriteLine("Still listening. Will try in 5 seconds.");
-            Thread.Sleep(5000);
-         }
+            //Create a CryptoStream, pass it the file stream, and decrypt
+            //it with the Aes class using the key and IV.
+            CryptoStream cryptStream = new CryptoStream(
+               myStream,
+               aes.CreateDecryptor(key, iv),
+               CryptoStreamMode.Read);
 
-         //Accept the client if one is found.
-         TcpClient tcp = tcpListen.AcceptTcpClient();
+            //Read the stream.
+            StreamReader sReader = new StreamReader(cryptStream);
 
-         //Create a network stream from the connection.
-         NetworkStream netStream = tcp.GetStream();
+            //Display the message.
+            Console.WriteLine("The decrypted original message: {0}", sReader.ReadToEnd());
 
-         //Create a new instance of the RijndaelManaged class
-         // and decrypt the stream.
-         RijndaelManaged rmCrypto = new RijndaelManaged();
-
-         //Create a CryptoStream, pass it the NetworkStream, and decrypt
-         //it with the Rijndael class using the key and IV.
-         CryptoStream cryptStream = new CryptoStream(netStream,
-            rmCrypto.CreateDecryptor(key, iv),
-            CryptoStreamMode.Read);
-
-         //Read the stream.
-         StreamReader sReader = new StreamReader(cryptStream);
-
-         //Display the message.
-         Console.WriteLine("The decrypted original message: {0}", sReader.ReadToEnd());
-
-         //Close the streams.
-         sReader.Close();
-         netStream.Close();
-         tcp.Close();
-      }
-      //Catch any exceptions.
-      catch
-      {
-         Console.WriteLine("The Listener Failed.");
-      }
-   }
+            //Close the streams.
+            sReader.Close();
+            myStream.Close();
+        }
+        //Catch any exceptions.
+        catch
+        {
+            Console.WriteLine("The decryption failed.");
+            throw;
+        }
+    }
 }
 ```
 
-Para que o exemplo anterior funcione, uma conexão criptografada deve ser feita ao ouvinte. A conexão deve usar a mesma chave, o IV e o algoritmo usados no ouvinte. Se essa conexão for estabelecida, a mensagem será descriptografada e exibida para o console.
+O exemplo anterior usa a mesma chave, IV e algoritmo usado no exemplo de criptografia simétrica para [criptografar dados](encrypting-data.md). Ele descriptografa o arquivo de *TestData.txt* que é criado por esse exemplo e exibe o texto original no console.
 
 ## <a name="asymmetric-decryption"></a>Descriptografia assimétrica
 
 Normalmente, uma entidade (parte A) gera uma chave pública e privada e armazena a chave na memória ou em um contêiner de chave de criptografia. Em seguida, a parte a envia a chave pública para outra parte (parte B). Usando a chave pública, a parte B criptografa dados e envia os dados de volta para a parte A. Depois de receber os dados, A parte A descriptografa usando a chave privada que corresponde. A descriptografia será bem-sucedida somente se a parte A usar a chave privada que corresponde à parte da chave pública B usada para criptografar os dados.
 
-Para obter informações sobre como armazenar uma chave assimétrica no contêiner de chave criptográfica segura e como recuperar posteriormente a chave assimétrica, consulte [como armazenar chaves assimétricas em um contêiner de chave](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).
+Para obter informações sobre como armazenar uma chave assimétrica no contêiner de chave criptográfica segura e como recuperar posteriormente a chave assimétrica, consulte [como armazenar chaves assimétricas em um contêiner de chave](how-to-store-asymmetric-keys-in-a-key-container.md).
 
-O exemplo a seguir ilustra a descriptografia de duas matrizes de bytes que representam uma chave simétrica e um IV. Para obter informações sobre como extrair a chave pública assimétrica do objeto <xref:System.Security.Cryptography.RSACryptoServiceProvider> em um formato que você pode enviar facilmente a terceiros, consulte [Criptografando dados](../../../docs/standard/security/encrypting-data.md).
+O exemplo a seguir ilustra a descriptografia de duas matrizes de bytes que representam uma chave simétrica e um IV. Para obter informações sobre como extrair a chave pública assimétrica do <xref:System.Security.Cryptography.RSA> objeto em um formato que você pode enviar facilmente a terceiros, consulte [Criptografando dados](encrypting-data.md).
 
 ```vb
-'Create a new instance of the RSACryptoServiceProvider class.
-Dim rsa As New RSACryptoServiceProvider()
+'Create a new instance of the RSA class.
+Dim rsa As RSA = RSA.Create()
 
 ' Export the public key information and send it to a third party.
 ' Wait for the third party to encrypt some data and send it back.
 
 'Decrypt the symmetric key and IV.
-symmetricKey = rsa.Decrypt(encryptedSymmetricKey, False)
-symmetricIV = rsa.Decrypt(encryptedSymmetricIV, False)
+symmetricKey = rsa.Decrypt(encryptedSymmetricKey, RSAEncryptionPadding.Pkcs1)
+symmetricIV = rsa.Decrypt(encryptedSymmetricIV, RSAEncryptionPadding.Pkcs1)
 ```
 
 ```csharp
-//Create a new instance of the RSACryptoServiceProvider class.
-RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+//Create a new instance of the RSA class.
+RSA rsa = RSA.Create();
 
 // Export the public key information and send it to a third party.
 // Wait for the third party to encrypt some data and send it back.
 
 //Decrypt the symmetric key and IV.
-symmetricKey = rsa.Decrypt(encryptedSymmetricKey, false);
-symmetricIV = rsa.Decrypt(encryptedSymmetricIV , false);
+symmetricKey = rsa.Decrypt(encryptedSymmetricKey, RSAEncryptionPadding.Pkcs1);
+symmetricIV = rsa.Decrypt(encryptedSymmetricIV , RSAEncryptionPadding.Pkcs1);
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Geração de chaves para criptografia e descriptografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
-- [Criptografando dados](../../../docs/standard/security/encrypting-data.md)
-- [Serviços criptográficos](../../../docs/standard/security/cryptographic-services.md)
+- [Gerando chaves para criptografia e descriptografia](generating-keys-for-encryption-and-decryption.md)
+- [Criptografando dados](encrypting-data.md)
+- [Serviços criptográficos](cryptographic-services.md)
+- [Modelo de criptografia](cryptography-model.md)
+- [Criptografia de plataforma cruzada](cross-platform-cryptography.md)
+- [Vulnerabilidades de temporização com descriptografia simétrica no modo CBC usando preenchimento](vulnerabilities-cbc-mode.md)
+- [Proteção de dados do ASP.NET Core](/aspnet/core/security/data-protection/introduction)

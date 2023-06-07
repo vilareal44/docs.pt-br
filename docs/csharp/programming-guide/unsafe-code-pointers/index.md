@@ -1,5 +1,6 @@
 ---
 title: Código e ponteiros não seguros – Guia de Programação em C#
+Description: Saiba mais sobre códigos e ponteiros sem segurança. O C# não dá suporte a ponteiros, mas você pode definir um contexto não seguro no qual os ponteiros podem ser usados com uma palavra-chave ' unsafe '.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - security [C#], type safety
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - C# language, pointers
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
-ms.openlocfilehash: 013af4e55c8fc396bbc92058d7fb454484f3263e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5684a97ed6f7b6632d8fe3d52747d9187c4b8cbc
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711825"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381769"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>Código e ponteiros não seguros (Guia de Programação em C#)
 
@@ -40,9 +41,9 @@ O código não seguro tem as propriedades a seguir:
   
 ## <a name="related-sections"></a>Seções relacionadas
 
-Para obter mais informações, consulte:
+Para obter mais informações, veja:
 
-- [Tipos de Ponteiro](pointer-types.md)
+- [Tipos de ponteiro](pointer-types.md)
 
 - [Buffers de tamanho fixo](fixed-size-buffers.md)
 
@@ -50,7 +51,7 @@ Para obter mais informações, consulte:
 
 Para obter mais informações, confira o tópico [Código não seguro](~/_csharplang/spec/unsafe-code.md) na [especificação da linguagem C#](~/_csharplang/spec/introduction.md).
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
-- [Inseguro](../../language-reference/keywords/unsafe.md)
+- [Guia de programação C#](../index.md)
+- [UNSAFE](../../language-reference/keywords/unsafe.md)

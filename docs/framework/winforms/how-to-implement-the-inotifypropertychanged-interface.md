@@ -1,5 +1,6 @@
 ---
 title: 'Como: implementar a interface INotifyPropertyChanged'
+description: Saiba como implementar a interface INotifyPropertyChanged em objetos comerciais que são usados em Windows Forms Associação de dados.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,23 +8,23 @@ dev_langs:
 helpviewer_keywords:
 - INotifyPropertyChanged interface [Windows Forms], implementing
 ms.assetid: eac428af-b43b-46ac-80d9-1a5f88658725
-ms.openlocfilehash: cfdfb22fd854a8f630243e0f612761c71cb778d8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83d2ef32787d2dbcd877bc77dcede10111098f8a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802031"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619262"
 ---
 # <a name="how-to-implement-the-inotifypropertychanged-interface"></a>Como: implementar a interface INotifyPropertyChanged
-O exemplo de código a seguir demonstra como implementar o <xref:System.ComponentModel.INotifyPropertyChanged> interface. Implemente essa interface em objetos de negócios que são usados na associação de dados de formulários do Windows. Quando implementada, a interface se comunica com um controle associado a alteração de propriedade em um objeto comercial.  
+O exemplo de código a seguir demonstra como implementar a <xref:System.ComponentModel.INotifyPropertyChanged> interface. Implemente essa interface em objetos comerciais que são usados em Windows Forms Associação de dados. Quando implementada, a interface se comunica com um controle associado que a propriedade altera em um objeto comercial.  
   
 ## <a name="example"></a>Exemplo  
  [!code-csharp[System.ComponentModel.IPropertyChangeExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.IPropertyChangeExample/CS/Form1.cs#1)]
  [!code-vb[System.ComponentModel.IPropertyChangeExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.IPropertyChangeExample/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Como: Aplicar o padrão PropertyNameChanged](how-to-apply-the-propertynamechanged-pattern.md)
+- [Como: aplicar o padrão PropertyNameChanged](how-to-apply-the-propertynamechanged-pattern.md)
 - [Associação de dados do Windows Forms](windows-forms-data-binding.md)
-- [Como: Gerar notificações de alteração usando um BindingSource e a Interface INotifyPropertyChanged](./controls/raise-change-notifications--bindingsource.md)
-- [Notificação de alteração na vinculação de dados dos Windows Forms](change-notification-in-windows-forms-data-binding.md)
+- [Como acionar notificações de alteração usando um BindingSource e a interface INotifyPropertyChanged](./controls/raise-change-notifications--bindingsource.md)
+- [Notificação de alteração na associação de dados do Windows Forms](change-notification-in-windows-forms-data-binding.md)

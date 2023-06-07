@@ -4,62 +4,62 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: a40fa9beec1eabeb02c6ccc4e2ab8179aa49288c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fca5fbeffb560f848edda6421301785f02547d2c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585779"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585695"
 ---
 # <a name="transport-quotas"></a>Cotas de transporte
-Cotas de transporte são um mecanismo de política para decidir quando uma conexão está consumindo recursos excessivos. Uma cota é um limite rígido que impede o uso de recursos adicionais depois que o valor da cota é excedido. Cotas de transporte impedir mal-intencionados ou não intencionais ataques de negação de serviço.  
+As cotas de transporte são um mecanismo de política para decidir quando uma conexão está consumindo recursos excessivos. Uma cota é um limite rígido que impede o uso de recursos adicionais depois que o valor da cota é excedido. As cotas de transporte impedem ataques de negação de serviço maliciosos ou não intencionais.  
   
- Transportes do Windows Communication Foundation (WCF) têm valores de cota padrão que se baseiam em uma alocação conservadora de recursos. Esses valores padrão são adequados para cenários de instalação pequenos e ambientes de desenvolvimento. Os administradores de serviço devem examinar as cotas de transporte e ajustar os valores de cota individual se uma instalação está ficando sem recursos ou se as conexões estão sendo limitadas, apesar da disponibilidade de recursos adicionais.  
+ Os transportes do Windows Communication Foundation (WCF) têm valores de cota padrão baseados em uma alocação conservadora de recursos. Esses valores padrão são adequados para ambientes de desenvolvimento e pequenos cenários de instalação. Os administradores de serviço devem revisar as cotas de transporte e ajustar valores de cota individuais se uma instalação estiver ficando sem recursos ou se as conexões estiverem sendo limitadas, apesar da disponibilidade de recursos adicionais.  
   
 ## <a name="types-of-transport-quotas"></a>Tipos de cotas de transporte  
- Transportes WCF têm três tipos de cotas:  
+ Os transportes do WCF têm três tipos de cotas:  
   
-- *Tempos limite* atenuar ataques negação de serviço que dependem de prender os recursos por um longo período de tempo.  
+- Os *tempos limite* atenuam ataques de negação de serviço que dependem da vinculação de recursos por um longo período de tempo.  
   
-- *Limites de alocação de memória* impedir que uma única conexão de esgotamento de memória do sistema e negação de serviço para outras conexões.  
+- *Os limites de alocação de memória* impedem uma única conexão de esgotar a memória do sistema e negar o serviço a outras conexões.  
   
-- *Limites de tamanho da coleção* associado o consumo de recursos que indiretamente alocar memória ou que estão em quantidades limitadas.  
+- *Limites de tamanho de coleção limitam* o consumo de recursos que alocam indiretamente a memória ou estão em um fornecimento limitado.  
   
 ## <a name="transport-quota-descriptions"></a>Descrições de cota de transporte  
- Esta seção descreve as cotas de transporte disponíveis para os transportes WCF padrão: HTTP (S), TCP/IP e pipes nomeados. Transportes personalizados podem expor seus próprios cotas configuráveis que não são incluídas nessa lista. Consulte a documentação para um transporte personalizado saber mais sobre suas cotas.  
+ Esta seção descreve as cotas de transporte disponíveis para os transportes padrão do WCF: HTTP (S), TCP/IP e pipes nomeados. Transportes personalizados podem expor suas próprias cotas configuráveis não incluídas nesta lista. Consulte a documentação de um transporte personalizado para descobrir sobre suas cotas.  
   
- Cada configuração de cota tem um tipo, o valor mínimo e o valor padrão. O valor máximo de uma cota é limitado por seu tipo. Devido a limitações de máquina, ele nem sempre é possível definir uma cota para seu valor máximo.  
+ Cada configuração de cota tem um tipo, valor mínimo e valor padrão. O valor máximo de uma cota é limitado por seu tipo. Devido a limitações do computador, nem sempre é possível definir uma cota para seu valor máximo.  
   
-|Nome|Tipo|Mín.<br /><br /> Valor |Padrão<br /><br /> Valor |Descrição|  
+|Nome|Type|Mín.<br /><br /> valor|Padrão<br /><br /> valor|Descrição|  
 |----------|----------|--------------------|-----------------------|-----------------|  
-|`ChannelInitializationTimeout`|TimeSpan|1 tique|5 s|Tempo máximo de espera para uma conexão enviar o preâmbulo durante a leitura inicial. Esses dados são recebidos antes que a autenticação ocorra. Essa configuração é geralmente muito menor do que o `ReceiveTimeout` valor da cota.|  
-|`CloseTimeout`|TimeSpan|0|1 min|Tempo máximo de espera para uma conexão ser fechado antes que o transporte gere uma exceção.|  
-|`ConnectionBufferSize`|Inteiro|1|8 KB|O tamanho, em bytes, de transmissão e recebimento de buffers de transporte subjacente. Aumentar o tamanho do buffer pode melhorar a taxa de transferência ao enviar mensagens grandes.|  
-|`IdleTimeout`|TimeSpan|0|2 min|Tempo máximo de que uma conexão em pool pode permanecer ocioso antes de serem fechados.<br /><br /> Essa configuração só se aplica a conexões em pool.|  
-|`LeaseTimeout`|TimeSpan|0|5 min|Tempo de vida máximo de uma conexão em pool Active Directory. Depois de decorrido o tempo especificado, a conexão é fechada depois que a solicitação atual é atendida.<br /><br /> Essa configuração só se aplica a conexões em pool.|  
-|`ListenBacklog`|Inteiro|1|10|Número máximo de conexões que o ouvinte pode ter unserviced antes das conexões adicionais ao ponto de extremidade é negado.|  
-|`MaxBufferPoolSize`|Long|0|512 KB|Máximo de memória, em bytes, que o transporte dedica para pool de buffers de mensagens reutilizáveis. Quando o pool não pode fornecer um buffer de mensagem, um novo buffer é alocado para uso temporário.<br /><br /> As instalações que cria várias fábricas de canais ou ouvintes poderá alocar grandes quantidades de memória para pools de buffers. Reduzir o tamanho do buffer pode reduzir consideravelmente o uso de memória nesse cenário.|  
-|`MaxBufferSize`|Inteiro|1|64 KB|Tamanho máximo, em bytes, de um buffer usado para transmissão de dados. Se essa cota de transporte não for definida, ou o transporte não está usando o streaming, então o valor da cota é o mesmo que o menor do `MaxReceivedMessageSize` o valor de cota e <xref:System.Int32.MaxValue>.|  
-|`MaxOutboundConnectionsPerEndpoint`|Inteiro|1|10|Número máximo de conexões de saída que pode ser associado um ponto de extremidade específico.<br /><br /> Essa configuração só se aplica a conexões em pool.|  
-|`MaxOutputDelay`|TimeSpan|0|200 ms|Tempo máximo de espera após uma operação de envio para mensagens adicionais em uma única operação de envio em lote. As mensagens são enviadas anteriormente se encher o buffer de transporte subjacente. Enviar mensagens adicionais não redefine o período de atraso.|  
-|`MaxPendingAccepts`|Inteiro|1|1|Número máximo de aceita para canais que o ouvinte pode ter em espera.<br /><br /> Há um intervalo de tempo entre a concluir a aceitação e um novo accept iniciado. Aumentar esse tamanho da coleção pode impedir que os clientes que se conectam durante esse intervalo seja descartado.|  
-|`MaxPendingConnections`|Inteiro|1|10|Número máximo de conexões que o ouvinte pode ter aguardando para serem aceitas pelo aplicativo. Quando esse valor de cota for excedida, novas conexões de entrada são descartadas em vez de esperar para ser aceito.<br /><br /> Recursos de Conexão, como segurança de mensagem podem fazer com que um cliente abrir mais de uma conexão. Os administradores de serviço devem levar em consideração para essas conexões adicionais ao definir esse valor de cota.|  
-|`MaxReceivedMessageSize`|Long|1|64 KB|Tamanho máximo, em bytes, de uma mensagem recebida, incluindo os cabeçalhos, antes que o transporte gere uma exceção.|  
-|`OpenTimeout`|TimeSpan|0|1 min|Tempo máximo de espera para uma conexão seja estabelecida antes que o transporte gere uma exceção.|  
-|`ReceiveTimeout`|TimeSpan|0|10 min|Tempo máximo de espera para uma operação de leitura seja concluída antes do transporte gere uma exceção.|  
-|`SendTimeout`|Timespan|0|1 min|Tempo máximo de espera para uma operação de gravação seja concluída antes do transporte gere uma exceção.|  
+|`ChannelInitializationTimeout`|TimeSpan|1 tique|5 segundos|Tempo máximo de espera por uma conexão para enviar o preâmbulo durante a leitura inicial. Esses dados são recebidos antes que a autenticação ocorra. Essa configuração geralmente é muito menor do que o `ReceiveTimeout` valor da cota.|  
+|`CloseTimeout`|TimeSpan|0|1 minuto|Tempo máximo de espera para que uma conexão seja fechada antes de o transporte gerar uma exceção.|  
+|`ConnectionBufferSize`|Inteiro|1|8 KB|Tamanho, em bytes, dos buffers de transmissão e recebimento do transporte subjacente. Aumentar o tamanho do buffer pode melhorar a taxa de transferência ao enviar mensagens grandes.|  
+|`IdleTimeout`|TimeSpan|0|2 min|Tempo máximo que uma conexão em pool pode permanecer ociosa antes de ser fechada.<br /><br /> Essa configuração se aplica somente a conexões em pool.|  
+|`LeaseTimeout`|TimeSpan|0|5 min|Tempo de vida máximo de uma conexão ativa em pool. Depois que o tempo especificado decorrer, a conexão será fechada depois que a solicitação atual for atendida.<br /><br /> Essa configuração se aplica somente a conexões em pool.|  
+|`ListenBacklog`|Inteiro|1|10|Número máximo de conexões que o ouvinte pode ter não atendido antes que conexões adicionais para esse ponto de extremidade sejam negadas.|  
+|`MaxBufferPoolSize`|long|0|512 KB|Memória máxima, em bytes, que o transporte deve votar no pool de buffers de mensagens reutilizáveis. Quando o pool não pode fornecer um buffer de mensagens, um novo buffer é alocado para uso temporário.<br /><br /> Instalações que criam várias fábricas de canal ou ouvintes podem alocar grandes quantidades de memória para pools de buffer. Reduzir esse tamanho de buffer pode reduzir muito o uso de memória nesse cenário.|  
+|`MaxBufferSize`|Inteiro|1|64 KB|Tamanho máximo, em bytes, de um buffer usado para transmitir dados. Se essa cota de transporte não estiver definida ou o transporte não estiver usando streaming, o valor da cota será o mesmo que o menor do `MaxReceivedMessageSize` valor da cota e <xref:System.Int32.MaxValue> .|  
+|`MaxOutboundConnectionsPerEndpoint`|Inteiro|1|10|Número máximo de conexões de saída que podem ser associadas a um ponto de extremidade específico.<br /><br /> Essa configuração se aplica somente a conexões em pool.|  
+|`MaxOutputDelay`|TimeSpan|0|200 MS|Tempo máximo de espera após uma operação de envio para enviar mensagens adicionais em lote em uma única operação. As mensagens são enviadas antes se o buffer do transporte subjacente ficar cheio. O envio de mensagens adicionais não redefine o período de atraso.|  
+|`MaxPendingAccepts`|Inteiro|1|1|Número máximo de aceitações para canais que o ouvinte pode ter aguardando.<br /><br /> Há um intervalo de tempo entre a conclusão da aceitação e a inicialização de uma nova aceitação. Aumentar esse tamanho de coleção pode impedir que os clientes que se conectam durante esse intervalo sejam descartados.|  
+|`MaxPendingConnections`|Inteiro|1|10|Número máximo de conexões que o ouvinte pode ter aguardando para ser aceito pelo aplicativo. Quando esse valor de cota é excedido, novas conexões de entrada são removidas em vez de aguardar para serem aceitas.<br /><br /> Recursos de conexão, como segurança de mensagem, podem fazer com que um cliente Abra mais de uma conexão. Os administradores de serviço devem considerar essas conexões adicionais ao definir esse valor de cota.|  
+|`MaxReceivedMessageSize`|long|1|64 KB|O tamanho máximo, em bytes, de uma mensagem recebida, incluindo os cabeçalhos, antes de o transporte gerar uma exceção.|  
+|`OpenTimeout`|TimeSpan|0|1 minuto|Tempo máximo de espera para que uma conexão seja estabelecida antes de o transporte gerar uma exceção.|  
+|`ReceiveTimeout`|TimeSpan|0|10 min|Tempo máximo de espera para a conclusão de uma operação de leitura antes de o transporte gerar uma exceção.|  
+|`SendTimeout`|Timespan|0|1 minuto|Tempo máximo de espera para a conclusão de uma operação de gravação antes de o transporte gerar uma exceção.|  
   
- As cotas de transporte `MaxPendingConnections` e `MaxOutboundConnectionsPerEndpoint` são combinados em uma cota única de transporte chamada `MaxConnections` quando configurada por meio de associação ou a configuração. Apenas o elemento de associação permite definir esses valores de cota individualmente. O `MaxConnections` cota de transporte tem os mesmos valores mínimo e padrão.  
+ As cotas de transporte `MaxPendingConnections` e `MaxOutboundConnectionsPerEndpoint` são combinadas em uma única cota de transporte chamada `MaxConnections` quando definidas por meio da associação ou configuração. Somente o elemento Binding permite definir esses valores de cota individualmente. A `MaxConnections` cota de transporte tem os mesmos valores mínimo e padrão.  
   
-## <a name="setting-transport-quotas"></a>Cotas de transporte de configuração  
- As cotas de transporte são definidas por meio do elemento de associação de transporte, a associação de transporte, configuração de aplicativo ou política de host. Este documento não abrange os transportes de configuração por meio da política de host. Consulte a documentação para o transporte subjacente descobrir as configurações para cotas de política de host. O [Configuring HTTP and HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md) tópico descreve as configurações de cota para o driver HTTP. sys. Pesquise a Base de Conhecimento Microsoft para obter mais informações sobre como configurar limites do Windows em HTTP, TCP/IP e conexões de pipe nomeado.  
+## <a name="setting-transport-quotas"></a>Definindo cotas de transporte  
+ As cotas de transporte são definidas por meio do elemento de associação de transporte, da Associação de transporte, da configuração do aplicativo ou da política de host. Este documento não aborda a definição de transportes por meio da política de host. Consulte a documentação do transporte subjacente para descobrir as configurações para cotas de política de host. O tópico [Configurando http e HTTPS](configuring-http-and-https.md) descreve as configurações de cota para o driver http. sys. Pesquise a base de dados de conhecimento Microsoft para obter mais informações sobre como configurar limites do Windows em conexões HTTP, TCP/IP e pipe nomeado.  
   
- Outros tipos de cotas indiretamente aplicam a todos os transportes. O codificador de mensagem que usa o transporte para transformar uma mensagem em bytes pode ter suas próprias configurações de cota. No entanto, essas cotas são independentes do tipo de transporte que está sendo usado.  
+ Outros tipos de cotas se aplicam indiretamente a transportes. O codificador de mensagem que o transporte usa para transformar uma mensagem em bytes pode ter suas próprias configurações de cota. No entanto, essas cotas são independentes do tipo de transporte que está sendo usado.  
   
-### <a name="controlling-transport-quotas-from-the-binding-element"></a>Controlando as cotas de transporte do elemento de associação  
- Configurando cotas de transporte por meio do elemento de associação oferece mais flexibilidade para controlar o comportamento do transporte. Os tempos limite padrão para fechar, abrir, Receive e enviar operações são executadas da associação, quando um canal é criado.  
+### <a name="controlling-transport-quotas-from-the-binding-element"></a>Controlando cotas de transporte do elemento de associação  
+ A definição de cotas de transporte por meio do elemento de associação oferece a maior flexibilidade no controle do comportamento do transporte. Os tempos limite padrão para operações de fechamento, abertura, recebimento e envio são obtidos da associação quando um canal é compilado.  
   
-|Nome|HTTP|TCP/IP|pipe nomeado|  
+|Nome|HTTP|TCP/IP|Pipe nomeado|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||X|X|  
 |`CloseTimeout`||||  
@@ -78,10 +78,10 @@ Cotas de transporte são um mecanismo de política para decidir quando uma conex
 |`ReceiveTimeout`||||  
 |`SendTimeout`||||  
   
-### <a name="controlling-transport-quotas-from-the-binding"></a>Controlando as cotas de transporte da associação  
- Configurando cotas de transporte por meio da associação oferece um conjunto simplificado de cotas para sua escolha e ainda oferecem acesso aos valores de cota mais comuns.  
+### <a name="controlling-transport-quotas-from-the-binding"></a>Controlando cotas de transporte da Associação  
+ Definir as cotas de transporte por meio da Associação oferece um conjunto simplificado de cotas para escolher enquanto ainda concede acesso aos valores de cota mais comuns.  
   
-|Nome|HTTP|TCP/IP|pipe nomeado|  
+|Nome|HTTP|TCP/IP|Pipe nomeado|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||||  
 |`CloseTimeout`|X|X|X|  
@@ -100,14 +100,14 @@ Cotas de transporte são um mecanismo de política para decidir quando uma conex
 |`ReceiveTimeout`|X|X|X|  
 |`SendTimeout`|X|X|X|  
   
-1. O `MaxBufferSize` cota de transporte só está disponível no `BasicHttp` associação. O `WSHttp` associações são para cenários que não dão suporte a modos de transporte em fluxo.  
+1. A `MaxBufferSize` cota de transporte só está disponível na `BasicHttp` associação. As `WSHttp` associações são para cenários que não dão suporte a modos de transporte transmitidos.  
   
-2. As cotas de transporte `MaxPendingConnections` e `MaxOutboundConnectionsPerEndpoint` são combinados em uma cota única de transporte chamada `MaxConnections`.  
+2. As cotas de transporte `MaxPendingConnections` e `MaxOutboundConnectionsPerEndpoint` são combinadas em uma única cota de transporte chamada `MaxConnections` .  
   
-### <a name="controlling-transport-quotas-from-configuration"></a>Controlando as cotas de transporte da configuração  
- Configuração de aplicativo pode definir as cotas de transporte mesmo como acessar diretamente as propriedades em uma associação. Arquivos de configuração, o nome de uma cota de transporte sempre começa com uma letra minúscula. Por exemplo, o `CloseTimeout` propriedade em uma associação corresponde à `closeTimeout` na configuração e o `MaxConnections` propriedade em uma associação corresponde à `maxConnections` na configuração.  
+### <a name="controlling-transport-quotas-from-configuration"></a>Controlando cotas de transporte da configuração  
+ A configuração do aplicativo pode definir as mesmas cotas de transporte que acessam propriedades diretamente em uma associação. Em arquivos de configuração, o nome de uma cota de transporte sempre começa com uma letra minúscula. Por exemplo, a `CloseTimeout` propriedade em uma associação corresponde à `closeTimeout` configuração na configuração e a `MaxConnections` propriedade em uma associação corresponde à `maxConnections` configuração na configuração.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>

@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
-ms.openlocfilehash: e55e561fa20a3740d352537958681b0a66fc381e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 61c6fe7c33b3292066e653304ded43a863413723
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592039"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397214"
 ---
 # <a name="methods-of-systemnullableof-t-cannot-be-used-as-operands-of-the-addressof-operator"></a>Os métodos de 'System.Nullable(Of T)' não podem ser usados como operandos do operador 'AddressOf'
-Uma instrução usa o `AddressOf` operador com um operando que representa um procedimento do <xref:System.Nullable%601> estrutura.  
+Uma instrução usa o `AddressOf` operador com um operando que representa um procedimento da <xref:System.Nullable%601> estrutura.  
   
  **ID do erro:** BC32126  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Substitua o nome do procedimento na `AddressOf` cláusula com um operando que não é um membro de <xref:System.Nullable%601>.  
+- Substitua o nome do procedimento na `AddressOf` cláusula por um operando que não seja membro de <xref:System.Nullable%601> .  
   
-- Escrever uma classe que encapsula o método de <xref:System.Nullable%601> que você deseja usar. No exemplo a seguir, o `NullableWrapper` classe define um novo método chamado `GetValueOrDefault`. Como esse novo método não é um membro da <xref:System.Nullable%601>, ele pode ser aplicado a `nullInstance`, uma instância de um tipo anulável, para formar um argumento para `AddressOf`.  
+- Escreva uma classe que encapsula o método de <xref:System.Nullable%601> que você deseja usar. No exemplo a seguir, a `NullableWrapper` classe define um novo método chamado `GetValueOrDefault` . Como esse novo método não é um membro de <xref:System.Nullable%601> , ele pode ser aplicado a `nullInstance` uma instância de um tipo anulável para formar um argumento para `AddressOf` .  
   
 ```vb  
 Module Module1  
@@ -61,9 +61,9 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Nullable%601>
-- [Operador AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Tipos de Valor Anulável](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Operador AddressOf](../operators/addressof-operator.md)
+- [Tipos de valor anulável](../../programming-guide/language-features/data-types/nullable-value-types.md)
+- [Tipos genéricos no Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)

@@ -1,17 +1,18 @@
 ---
 title: Coleta de lixo e desempenho
+description: Leia sobre os problemas relacionados à coleta de lixo e ao uso de memória. Aprenda a minimizar o efeito da coleta de lixo em seus aplicativos.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 72cf742aae26f9441229b355dc6e70da7a5fc9cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dee5a4b54806bdadc18d759c5df7016da060fd75
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75900577"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662843"
 ---
 # <a name="garbage-collection-and-performance"></a>Coleta de lixo e desempenho
 
@@ -23,7 +24,7 @@ As seções a seguir descrevem as ferramentas que estão disponíveis para inves
 
 ### <a name="memory-performance-counters"></a>Contadores de Desempenho de Memória
 
-Você pode usar os contadores de desempenho para coletar dados de desempenho. Para obter instruções, consulte [Criação de perfil do runtime](../../../docs/framework/debug-trace-profile/runtime-profiling.md). A categoria de contadores de desempenho de memória CLR do .NET, conforme descrito em [Contadores de desempenho no .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md), fornece informações sobre o coletor de lixo.
+Você pode usar os contadores de desempenho para coletar dados de desempenho. Para obter instruções, consulte [Criação de perfil do runtime](../../framework/debug-trace-profile/runtime-profiling.md). A categoria de contadores de desempenho de memória CLR do .NET, conforme descrito em [Contadores de desempenho no .NET Framework](../../framework/debug-trace-profile/performance-counters.md), fornece informações sobre o coletor de lixo.
 
 ### <a name="debugging-with-sos"></a>Depuração com SOS
 
@@ -33,7 +34,7 @@ Para instalar o WinDbg, instale as Ferramentas de Depuração para Windows da p�
 
 ### <a name="garbage-collection-etw-events"></a>Eventos ETW de coleta de lixo
 
-O ETW (Rastreamento de Eventos para Windows) é um sistema de rastreamento que complementa o suporte à criação de perfil e à depuração fornecido pelo .NET Framework. A partir do .NET Framework 4, os [eventos ETW de coleta de lixo](../../../docs/framework/performance/garbage-collection-etw-events.md) capturam informações úteis para analisar o heap gerenciado do ponto de vista estatístico. Por exemplo, o `GCStart_V1` evento, que é acionado quando uma coleta de lixo está prestes a ocorrer, fornece as seguintes informações:
+O ETW (Rastreamento de Eventos para Windows) é um sistema de rastreamento que complementa o suporte à criação de perfil e à depuração fornecido pelo .NET Framework. A partir do .NET Framework 4, os [eventos ETW de coleta de lixo](../../framework/performance/garbage-collection-etw-events.md) capturam informações úteis para analisar o heap gerenciado do ponto de vista estatístico. Por exemplo, o `GCStart_V1` evento, que é acionado quando uma coleta de lixo está prestes a ocorrer, fornece as seguintes informações:
 
 - Qual geração de objetos está sendo coletada.
 
@@ -45,13 +46,13 @@ O log de eventos ETW é eficiente e não mascarará nenhum problema de desempenh
 
 ### <a name="the-profiling-api"></a>A API de criação de perfil
 
-As interfaces de criação de perfil do CLR (Common Language Runtime) fornecem informações detalhadas sobre os objetos que foram afetados durante a coleta de lixo. Um criador de perfil pode ser notificado sobre quando uma coleta de lixo começa e termina. Ele pode fornecer relatórios sobre os objetos no heap gerenciado, incluindo uma identificação de objetos em cada geração. Para obter mais informações, consulte [Visão geral de ferramentas de criação de perfil](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md).
+As interfaces de criação de perfil do CLR (Common Language Runtime) fornecem informações detalhadas sobre os objetos que foram afetados durante a coleta de lixo. Um criador de perfil pode ser notificado sobre quando uma coleta de lixo começa e termina. Ele pode fornecer relatórios sobre os objetos no heap gerenciado, incluindo uma identificação de objetos em cada geração. Para obter mais informações, consulte [Visão geral de ferramentas de criação de perfil](../../framework/unmanaged-api/profiling/profiling-overview.md).
 
 Criadores de perfil podem fornecer informações abrangentes. No entanto, criadores de perfil complexos têm o potencial de modificar o comportamento de um aplicativo.
 
 ### <a name="application-domain-resource-monitoring"></a>Monitoramento de recursos de domínio de aplicativo
 
-Do .NET Framework 4 em diante, o ARM (monitoramento de recursos de domínio de aplicativo) permite que os hosts monitorem o uso de CPU e memória por domínio de aplicativo. Para obter mais informações, consulte [Monitoramento de recursos de domínio do aplicativo](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).
+Do .NET Framework 4 em diante, o ARM (monitoramento de recursos de domínio de aplicativo) permite que os hosts monitorem o uso de CPU e memória por domínio de aplicativo. Para obter mais informações, consulte [Monitoramento de recursos de domínio do aplicativo](app-domain-resource-monitoring.md).
 
 ## <a name="troubleshooting-performance-issues"></a>Solucionando problemas de desempenho
 
@@ -63,7 +64,7 @@ A primeira etapa é [determinar se o problema é realmente a coleta de lixo](#Is
 
 - [O coletor de lixo não recupera objetos rápido o suficiente](#Issue_NotFastEnough)
 
-- [O monte gerenciado é muito fragmentado](#Issue_Fragmentation)
+- [O heap gerenciado está muito fragmentado](#Issue_Fragmentation)
 
 - [As pausas na coleta de lixo são longas demais](#Issue_LongPauses)
 
@@ -133,7 +134,7 @@ No heap de objetos grandes sempre ocorre fragmentação, porque ele não é comp
 
 A fragmentação pode se tornar um problema na geração 1 e geração 2. Se esses gerações tiverem uma grande quantidade de espaço livre após uma coleta de lixo, o uso de objetos de um aplicativo poderá precisar de modificações e você deverá considerar reavaliar o tempo de vida dos objetos de longo prazo.
 
-O excesso de fixação de objetos pode aumentar a fragmentação. Se a fragmentação é alta, muitos objetos poderiam ter sido fixados.
+O excesso de fixação de objetos pode aumentar a fragmentação. Se a fragmentação for alta, muitos objetos poderão ter sido fixados.
 
 Se a fragmentação da memória virtual estiver impedindo que o coletor de lixo adicione segmentos, as causas poderão ser uma dos seguintes:
 
@@ -143,7 +144,7 @@ Se a fragmentação da memória virtual estiver impedindo que o coletor de lixo 
 
 - Criação de objetos transitórios grandes, que faz com que o heap de objeto grande aloque e libere segmentos de heap frequentemente.
 
-  Ao hospedar o CLR, um aplicativo pode solicitar que o coletor de lixo retenha seus segmentos. Isso reduz a frequência de alocações de segmento. Isso é feito usando o sinalizador STARTUP_HOARD_GC_VM na [Enumeração STARTUP_FLAGS](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).
+  Ao hospedar o CLR, um aplicativo pode solicitar que o coletor de lixo retenha seus segmentos. Isso reduz a frequência de alocações de segmento. Isso é feito usando o sinalizador STARTUP_HOARD_GC_VM na [Enumeração STARTUP_FLAGS](../../framework/unmanaged-api/hosting/startup-flags-enumeration.md).
 
 |Verificações de desempenho|
 |------------------------|
@@ -161,9 +162,9 @@ Na coleta de lixo simultânea, a execução de threads gerenciados é permitida 
 
 Coletas de lixo efêmero (gerações 0 e 1) duram somente alguns milissegundos, então diminuir as pausas geralmente não é viável. No entanto, você pode diminuir as pausas em coletas da geração 2 alterando o padrão de solicitações de alocação por um aplicativo.
 
-Outro método mais preciso é usar [eventos ETW de coleta de lixo](../../../docs/framework/performance/garbage-collection-etw-events.md). Você pode encontrar os intervalos para coletas adicionando as diferenças de carimbo de data/hora a uma sequência de eventos. A sequência de coleta inteira inclui a suspensão do mecanismo de execução, a própria coleta de lixo e a retomada do mecanismo de execução.
+Outro método mais preciso é usar [eventos ETW de coleta de lixo](../../framework/performance/garbage-collection-etw-events.md). Você pode encontrar os intervalos para coletas adicionando as diferenças de carimbo de data/hora a uma sequência de eventos. A sequência de coleta inteira inclui a suspensão do mecanismo de execução, a própria coleta de lixo e a retomada do mecanismo de execução.
 
-Você pode usar [notificações de coleta de lixo](../../../docs/standard/garbage-collection/notifications.md) para determinar se um servidor está prestes a ter uma coleta de geração 2 e se o redirecionamento solicitações para outro servidor pode reduzir os problemas com pausas.
+Você pode usar [notificações de coleta de lixo](notifications.md) para determinar se um servidor está prestes a ter uma coleta de geração 2 e se o redirecionamento solicitações para outro servidor pode reduzir os problemas com pausas.
 
 |Verificações de desempenho|
 |------------------------|
@@ -181,7 +182,7 @@ Você pode usar [notificações de coleta de lixo](../../../docs/standard/garbag
 
 O uso da CPU será alto durante uma coleta de lixo. Se uma quantidade significativa de tempo de processamento é gasto em uma coleta de lixo, isso indica que o número de coletas é frequente demais ou que a coleta é longa demais. Uma maior taxa de alocação de objetos no heap gerenciado faz com que a coleta de lixo ocorra com mais frequência. Diminuir a taxa de alocação reduz a frequência de coletas de lixo.
 
-Você pode monitorar as taxas de alocação usando o contador de desempenho de `Allocated Bytes/second`. Para obter mais informações, consulte [Contadores de desempenho no .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md).
+Você pode monitorar as taxas de alocação usando o contador de desempenho de `Allocated Bytes/second`. Para obter mais informações, consulte [Contadores de desempenho no .NET Framework](../../framework/debug-trace-profile/performance-counters.md).
 
 A duração de uma coleta é essencialmente um fator do número de objetos que sobrevivem após a alocação. O coletor de lixo deve passar por uma grande quantidade de memória se restam muitos objetos a serem coletados. O trabalho para compactar os sobreviventes é demorado. Para determinar quantos objetos foram manipulados durante uma coleta, defina um ponto de interrupção no depurador no final de uma coleta de lixo para uma geração especificada.
 
@@ -271,9 +272,9 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 - Examine os dois contadores de desempenho de memória a seguir:
 
-  - **% Tempo em GC**. Exibe o percentual de tempo decorrido que foi gasto na execução de uma coleta de lixo após o último ciclo de coleta de lixo. Use este contador para determinar se o coletor de lixo está gastando tempo demais para disponibilizar espaço de heap gerenciado. Se o tempo gasto na coleta de lixo for relativamente baixo, isso poderá indicar um problema de recurso fora do heap gerenciado. Esse contador pode não ser preciso quando coleta de lixo simultânea ou em segundo plano está envolvida.
+  - **% De tempo em GC**. Exibe o percentual de tempo decorrido que foi gasto na execução de uma coleta de lixo após o último ciclo de coleta de lixo. Use este contador para determinar se o coletor de lixo está gastando tempo demais para disponibilizar espaço de heap gerenciado. Se o tempo gasto na coleta de lixo for relativamente baixo, isso poderá indicar um problema de recurso fora do heap gerenciado. Esse contador pode não ser preciso quando coleta de lixo simultânea ou em segundo plano está envolvida.
 
-  - **# Total comprometido Bytes**. Exibe a quantidade de memória virtual confirmada atualmente pelo coletor de lixo. Use este contador para determinar se a memória consumida pelo coletor de lixo é uma parte excessiva da memória usada pelo aplicativo.
+  - **N º total de bytes confirmados**. Exibe a quantidade de memória virtual confirmada atualmente pelo coletor de lixo. Use este contador para determinar se a memória consumida pelo coletor de lixo é uma parte excessiva da memória usada pelo aplicativo.
 
   A maioria dos contadores de desempenho de memória é atualizada no final de cada coleta de lixo. Portanto, eles podem não refletir as condições atuais sobre as quais você deseja obter informações.
 
@@ -283,7 +284,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 1. No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando de exceção de impressão (**pe**):
 
-    **!pe**
+    **! PE**
 
     Se a exceção for gerenciada, <xref:System.OutOfMemoryException> será exibido como o tipo de exceção, conforme mostrado no exemplo a seguir.
 
@@ -297,7 +298,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 2. Se a saída não especificar uma exceção, você precisará determinar de qual thread é a exceção de falta de memória. Digite o comando a seguir no depurador para mostrar todos os threads com suas pilhas de chamadas:
 
-    **~\*Kb**
+    **~\*quilobyte**
 
     O thread com a pilha que tem chamadas de exceção é indicado pelo argumento `RaiseTheException`. Esse é o objeto de exceção gerenciada.
 
@@ -423,7 +424,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Se o heap gerenciado é grande, **dumpheap** pode levar algum tempo para concluir.
 
-  Você pode começar a analisar pelas últimas poucas linhas da saída, pois elas listam os objetos que usam mais espaço. Por exemplo: 
+  Você pode começar a analisar pelas últimas poucas linhas da saída, pois elas listam os objetos que usam mais espaço. Por exemplo:
 
   ```console
   2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo
@@ -654,7 +655,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   A segunda coleta de lixo de geração 2 começou durante o terceiro intervalo e terminou no quinto intervalo. Supondo o pior cenário possível, a última coleta de lixo foi para uma coleta de geração 0 que terminou no início do segundo intervalo e a coleta de lixo de geração 2 terminou no final do quinto intervalo. Portanto, o tempo entre o fim da coleta de lixo de geração 0 e o fim da coleta de lixo de geração 2 é de quatro segundos. Já que o contador de `% Time in GC` é 20%, a quantidade máxima de tempo que a coleta de lixo de geração 2 poderia ter levado é (quatro segundos * 20% = 800 ms).
 
-- Como alternativa, você pode determinar a duração de uma coleta de lixo usando [eventos ETW de coleta de lixo](../../../docs/framework/performance/garbage-collection-etw-events.md) e analisando as informações para determinar a duração da coleta de lixo.
+- Como alternativa, você pode determinar a duração de uma coleta de lixo usando [eventos ETW de coleta de lixo](../../framework/performance/garbage-collection-etw-events.md) e analisando as informações para determinar a duração da coleta de lixo.
 
   Por exemplo, os dados a seguir mostram uma sequência de eventos que ocorreram durante uma coleta de lixo não simultânea.
 
@@ -713,7 +714,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 - No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando a seguir para mostrar todos os threads com suas pilhas de chamadas:
 
-  **~\*Kb**
+  **~\*quilobyte**
 
   Esse comando exibe uma saída semelhante à seguinte.
 
@@ -796,4 +797,4 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 ## <a name="see-also"></a>Confira também
 
-- [Coleta de lixo](../../../docs/standard/garbage-collection/index.md)
+- [Coleta de lixo](index.md)

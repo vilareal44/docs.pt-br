@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 519389f2-0217-436c-99d4-93a76ebce5b5
 topic_type:
 - apiref
-ms.openlocfilehash: 1072026f92edbc646653c6dd74ec8e22d5b887e5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 941093b9a0856c2b716ba359c854473f3c9ea26a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105914"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006513"
 ---
 # <a name="stackoverflowinfo-structure"></a>Estrutura StackOverflowInfo
 Armazena o tipo de estouro que ocorreu e informações sobre a exceção que foi lançada devido ao estouro.  
@@ -37,21 +37,21 @@ typedef struct _StackOverflowInfo {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`soType`|Um valor da enumeração [StackOverflowType](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md) que especifica o tipo de estouro.|  
-|`pExceptionInfo`|Um ponteiro para um objeto de `EXCEPTION_POINTERS` do Win32, que contém um registro de exceção com uma descrição independente de computador de uma exceção e um registro de contexto com uma descrição dependente de computador do contexto do processador no momento da exceção.|  
+|`soType`|Um valor da enumeração [StackOverflowType](stackoverflowtype-enumeration.md) que especifica o tipo de estouro.|  
+|`pExceptionInfo`|Um ponteiro para um `EXCEPTION_POINTERS` objeto Win32, que contém um registro de exceção com uma descrição independente de computador de uma exceção e um registro de contexto com uma descrição dependente de computador do contexto do processador no momento da exceção.|  
   
 ## <a name="remarks"></a>Comentários  
- Um objeto `StackOverflowInfo` é passado para o método [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) para eventos de `Event_StackOverflow`.  
+ Um `StackOverflowInfo` objeto é passado para o método [IActionOnCLREvent:: OnEvent](iactiononclrevent-onevent-method.md) para `Event_StackOverflow` eventos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. idl  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Estruturas de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [Estruturas de hospedagem](hosting-structures.md)

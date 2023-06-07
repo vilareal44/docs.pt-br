@@ -1,5 +1,6 @@
 ---
 title: Marshaling padrão para cadeias de caracteres
+description: Examine o comportamento de marshaling padrão para cadeias de caracteres em interfaces, invocação de plataforma, estruturas, & buffers de cadeia de comprimento fixo no .NET.
 ms.date: 03/20/2019
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-ms.openlocfilehash: 49f2d871a42db484e20f0bfc35634a0e8b959c2e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 440a49730f351b820cd68a741e79f94434f585c8
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123546"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904111"
 ---
 # <a name="default-marshaling-for-strings"></a>Marshaling padrão para cadeias de caracteres
 
@@ -232,7 +233,7 @@ Em algumas circunstâncias, um buffer de caracteres de comprimento fixo deve ser
 
 A solução é passar um buffer <xref:System.Text.StringBuilder> como o argumento em vez de um <xref:System.String>. Um `StringBuilder` pode ser desreferenciado e modificado pelo receptor, desde que ele não exceda a capacidade do `StringBuilder`. Ele também pode ser inicializado com um comprimento fixo. Por exemplo, se você inicializar um buffer do `StringBuilder` em uma capacidade de `N`, o marshaler fornecerá um buffer com o tamanho de (`N`+ 1) caracteres. O + 1 leva em conta o fato de que a cadeia de caracteres não gerenciada tem um terminador nulo, ao contrário de `StringBuilder`.
 
-Por exemplo, a função [`GetWindowText`](/windows/desktop/api/winuser/nf-winuser-getwindowtextw) de API do Windows (definida em *WinUser. h*) requer que o chamador passe um buffer de caracteres de comprimento fixo para o qual a função grava o texto da janela. `LpString` aponta para um buffer alocado pelo chamador com o tamanho `nMaxCount`. O chamador deve alocar o buffer e definir o argumento `nMaxCount` com o tamanho do buffer alocado. O exemplo a seguir mostra a declaração de função `GetWindowText`, conforme definida em *winuser.h*.
+Por exemplo, a função de API do Windows [`GetWindowText`](/windows/desktop/api/winuser/nf-winuser-getwindowtextw) (definida em *WinUser. h*) requer que o chamador passe um buffer de caracteres de comprimento fixo para o qual a função grava o texto da janela. `LpString` aponta para um buffer alocado pelo chamador com o tamanho `nMaxCount`. O chamador deve alocar o buffer e definir o argumento `nMaxCount` com o tamanho do buffer alocado. O exemplo a seguir mostra a declaração de função `GetWindowText`, conforme definida em *winuser.h*.
 
 ```cpp
 int GetWindowText(
@@ -285,7 +286,7 @@ Public Class Window
 End Class
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Comportamento de marshaling padrão](default-marshaling-behavior.md)
 - [Realizando marshaling de cadeias de caracteres](marshaling-strings.md)

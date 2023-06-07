@@ -1,13 +1,13 @@
 ---
-title: 'Como: Calcule valores intermediários'
+title: 'Como: calcular valores intermediários'
 ms.date: 07/20/2015
 ms.assetid: 933a97b2-dfe7-4f4d-94ad-e6e20df84abd
-ms.openlocfilehash: 167293a9af94a0991505b6e9edf225e6d3382bee
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bc38d4848a26a24aeb00581079c9dd31abb7ba1e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353359"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375090"
 ---
 # <a name="how-to-calculate-intermediate-values-visual-basic"></a>Como calcular valores intermediários (Visual Basic)
 Este exemplo mostra como calcular valores intermediários que podem ser usados na classificação, filtragem, e em selecionar.  
@@ -15,7 +15,7 @@ Este exemplo mostra como calcular valores intermediários que podem ser usados n
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir utiliza a cláusula de `Let` .  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos (LINQ to XML)](sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("Data.xml")  
@@ -43,7 +43,7 @@ Next
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra a mesma consulta para XML que está em um namespace. Para obter mais informações, consulte [visão geral de namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos em um namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos em um namespace](sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns="http://www.adatum.com">  
@@ -74,6 +74,6 @@ End Module
 435.00  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Consultas básicas (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)

@@ -1,13 +1,14 @@
 ---
 title: Cancelar tarefas assíncronas após um período (C#)
+description: Use o método CancellationTokenSource. CancelAfter em C# para agendar o cancelamento de quaisquer tarefas associadas não concluídas dentro de um período neste exemplo.
 ms.date: 07/20/2015
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-ms.openlocfilehash: 110c4700d0d2afc87f9144bf258cdd4991f107f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f32af1d893c60ac17648f60fa3aa90adaa0383e8
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70204339"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925282"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>Cancelar tarefas assíncronas após um período (C#)
 
@@ -24,13 +25,13 @@ Você pode baixar o projeto completo do WPF (Windows Presentation Foundation) em
 
 1. Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.
 
-2. Na barra de menu, escolha > **Projeto/solução aberta de** > **Project/Solution** **arquivo**.
+2. Na barra de menus, escolha **arquivo**  >  **abrir**  >  **projeto/solução**.
 
 3. Na caixa de diálogo **Abrir Projeto**, abra a pasta em que está o código de exemplo que você descompactou e, em seguida, abra o arquivo de solução (.sln) de AsyncFineTuningCS.
 
 4. No **Gerenciador de Soluções**, abra o menu de atalho do projeto **CancelAfterTime** e, em seguida, escolha **Definir como Projeto de Inicialização**.
 
-5. Pressione a tecla **F5** para executar o projeto. (Ou pressione **Ctrl**+**F5** para executar o projeto sem depura-lo).
+5. Pressione a tecla **F5** para executar o projeto. (Ou pressione **Ctrl** + **F5** para executar o projeto sem depurá-lo).
 
 6. Execute o programa várias vezes para verificar que a saída pode mostrar a saída para todos os sites, nenhum site ou alguns sites.
 
@@ -215,9 +216,9 @@ namespace CancelAfterTime
 }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Programação Assíncrona com assincronia e espera (C#)](./index.md)
+- [Programação assíncrona com Async e Await (C#)](./index.md)
 - [Passo a passo: acessando a Web usando async e await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Cancelar uma tarefa assíncrona ou uma lista de tarefas (C#)](./cancel-an-async-task-or-a-list-of-tasks.md)
 - [Ajuste fino de seu aplicativo assíncrono (C#)](./fine-tuning-your-async-application.md)

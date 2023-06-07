@@ -1,15 +1,16 @@
 ---
-title: Como encontrar elementos em um namespace (XPath-LINQ para XML) (C#)
+title: Como localizar elementos em um namespace (XPath-LINQ to XML) (C#)
+description: Saiba como localizar elementos em um namespace usando uma expressão XPath. Veja um exemplo que lê uma árvore XML contendo dois namespaces.
 ms.date: 07/20/2015
 ms.assetid: cae1c4ac-6cd5-46cf-9b1c-bd85bc9b7ea9
-ms.openlocfilehash: da9d819be5234a2429b6eab276f89bd0d877d4a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3bf15c4183e3ca339fa7090c21baff83526e37d3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141073"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303225"
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a>Como encontrar elementos em um namespace (XPath-LINQ para XML) (C#)
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a>Como localizar elementos em um namespace (XPath-LINQ to XML) (C#)
 
 As expressões XPath pode localizar nós em um namespace específico. Prefixos de namespace do uso de expressões XPath para especificar namespaces. Para analisar uma expressão XPath que contém prefixos de namespace, você deve passar um objeto para os métodos XPath que implementa <xref:System.Xml.IXmlNamespaceResolver>. Este exemplo usa o <xref:System.Xml.XmlNamespaceManager>.
 

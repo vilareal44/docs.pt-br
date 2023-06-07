@@ -1,15 +1,16 @@
 ---
-title: Como validar usando XSD (LINQ para XML) (C#)
+title: Como validar usando XSD (LINQ to XML) (C#)
+description: Saiba como validar uma árvore XML em um arquivo XSD (linguagem de definição de esquema XML). Consulte exemplos de código e exiba recursos adicionais.
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
-ms.openlocfilehash: 29830457b63f36dd401a412364060339344f35cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b4d2137d511efbe20e4d31ad27e4975d5444ec9
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347248"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302627"
 ---
-# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>Como validar usando XSD (LINQ para XML) (C#)
+# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>Como validar usando XSD (LINQ to XML) (C#)
 O namespace <xref:System.Xml.Schema> contém métodos de extensão que facilitam a validação de uma árvore XML em um arquivo XSD. Para obter mais informações, consulte a documentação do método <xref:System.Xml.Schema.Extensions.Validate%2A>.  
   
 ## <a name="example"></a>Exemplo  

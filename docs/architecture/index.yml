@@ -6,12 +6,12 @@ metadata:
   description: Conheça as práticas recomendadas para arquitetar, criar e migrar aplicativos .NET.
   ms.topic: landing-page
   ms.date: 03/19/2020
-  ms.openlocfilehash: ff3b842d33ea3fd5d9cbed5b39b2757933c1a616
-  ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+  ms.openlocfilehash: 0ea87b6e69df9a6edacd916d279a095d984af463
+  ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/19/2020
-  ms.locfileid: "83613636"
+  ms.lasthandoff: 08/17/2020
+  ms.locfileid: "88267913"
 landingContent:
 - title: Desenvolver aplicativos ASP.NET Core
   linkLists:
@@ -19,7 +19,7 @@ landingContent:
     links:
     - text: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure
       url: modern-web-apps-azure/index.md
-    - text: Mais incrivelmente para desenvolvedores de Web Forms ASP.NET (versão prévia)
+    - text: Blazor para desenvolvedores do ASP.NET Web Forms
       url: blazor-for-web-forms-developers/index.md
     - text: ASP.NET Core gRPC para desenvolvedores do WCF
       url: grpc-for-wcf-developers/index.md
@@ -37,6 +37,8 @@ landingContent:
     links:
     - text: Tutorial de microserviço Olá, Mundo
       url: https://dotnet.microsoft.com/learn/aspnet/microservice-tutorial/intro
+    - text: Criar e implantar um microsserviço ASP.NET Core nativo de nuvem
+      url: https://docs.microsoft.com/learn/modules/microservices-aspnet-core
 - title: Migrar aplicativos .NET para o Azure
   linkLists:
   - linkListType: concept

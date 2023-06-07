@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <bypassTrustedAppStrongNames> element
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 ms.openlocfilehash: 96361a6742d1d2f76cb237344189d3277d7c8069
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73739088"
 ---
-# <a name="bypasstrustedappstrongnames-element"></a>\<Elemento bypassTrustedAppStrongNames>
+# <a name="bypasstrustedappstrongnames-element"></a>Elemento \<bypassTrustedAppStrongNames>
 
-Especifica se deve ignorar a validação de nomes fortes em assemblies de confiança total que são carregados em um <xref:System.AppDomain>de confiança total.
+Especifica se deve ignorar a validação de nomes fortes em assemblies de confiança total que são carregados em uma confiança total <xref:System.AppDomain> .
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<bypassTrustedAppStrongNames >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<bypassTrustedAppStrongNames>**
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -43,12 +43,12 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 |Valor|Descrição|
 |-----------|-----------------|
-|`true`|As assinaturas de nome forte em assemblies de confiança total não são validadas quando os assemblies são carregados em um <xref:System.AppDomain>de confiança total. Esse é o padrão.|
-|`false`|As assinaturas de nome forte em assemblies de confiança total são validadas quando os assemblies são carregados em um <xref:System.AppDomain>de confiança total. A assinatura de nome forte é verificada apenas quanto à exatidão da assinatura; Ela não é comparada com outro nome forte para uma correspondência.|
+|`true`|As assinaturas de nome forte em assemblies de confiança total não são validadas quando os assemblies são carregados em uma confiança total <xref:System.AppDomain> . Este é o padrão.|
+|`false`|As assinaturas de nome forte em assemblies de confiança total são validadas quando os assemblies são carregados em uma confiança total <xref:System.AppDomain> . A assinatura de nome forte é verificada apenas quanto à exatidão da assinatura; Ela não é comparada com outro nome forte para uma correspondência.|
 
 ### <a name="child-elements"></a>Elementos filho
 
-nenhuma.
+Nenhum.
 
 ### <a name="parent-elements"></a>Elementos pai
 
@@ -63,7 +63,7 @@ O recurso de bypass de nome forte evita a sobrecarga de verificação de assinat
 
 O recurso de desvio se aplica a qualquer assembly que está assinado com um nome forte e que tem as seguintes características:
 
-- Totalmente confiável sem a evidência de <xref:System.Security.Policy.StrongName> (por exemplo, tem evidências de zona de `MyComputer`).
+- Totalmente confiável sem a <xref:System.Security.Policy.StrongName> evidência (por exemplo, tem `MyComputer` evidências de zona).
 
 - Carregado em um <xref:System.AppDomain> totalmente confiável.
 
@@ -86,7 +86,7 @@ O exemplo a seguir mostra como especificar o comportamento que valida a assinatu
 </configuration>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Esquema de configurações do runtime](index.md)
 - [Esquema de arquivos de configuração](../index.md)

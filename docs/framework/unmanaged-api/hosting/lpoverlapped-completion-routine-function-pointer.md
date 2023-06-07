@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5fb645d9-b818-401c-8c2c-c30d86de58ba
 topic_type:
 - apiref
-ms.openlocfilehash: 103ac75e7c3eaf9739c3a448ff1c052c158621db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c0bdd9e59f5794dbb0d447dc2cc6cb682bfdf09f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090900"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008476"
 ---
 # <a name="lpoverlapped_completion_routine-function-pointer"></a>Ponteiro de função LPOVERLAPPED_COMPLETION_ROUTINE
 Aponta para uma função que notifica o host quando uma e/s sobreposta (ou seja, assíncrona) para um dispositivo for concluída.  
@@ -49,17 +49,17 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
  no Um ponteiro para uma estrutura que contém informações a serem usadas para concluir a solicitação de e/s.  
   
 ## <a name="remarks"></a>Comentários  
- A função à qual os pontos de `LPOVERLAPPED_COMPLETION_ROUTINE` é uma função de retorno de chamada e deve ser implementada pelo gravador do aplicativo de hospedagem. A função de retorno de chamada permite que o host processe a solicitação de e/s concluída.  
+ A função para a qual os `LPOVERLAPPED_COMPLETION_ROUTINE` pontos é uma função de retorno de chamada e deve ser implementada pelo gravador do aplicativo de hospedagem. A função de retorno de chamada permite que o host processe a solicitação de e/s concluída.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** MSCorWks. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funções de hospedagem CLR reprovadas](deprecated-clr-hosting-functions.md)

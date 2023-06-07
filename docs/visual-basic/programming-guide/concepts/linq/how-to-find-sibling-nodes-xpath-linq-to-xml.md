@@ -1,13 +1,13 @@
 ---
-title: 'Como: Nós irmãos de alterações (XPath- LINQ para XML)'
+title: 'Como: localizar nós irmãos (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 73082738-2113-4438-8545-98d5df0927cb
-ms.openlocfilehash: 52151c939bbf67df37a9535b1081ff902d357123
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: add51249dbc7cc4d33c79fcf6f82126f6bdb5612
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344636"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364533"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>Como localizar nós irmãos (XPath-LINQ to XML) (Visual Basic)
 
@@ -21,7 +21,7 @@ A expressão XPath é:
 
 Este exemplo localiza primeiro um elemento de `Book` , e localiza em todos os elementos irmãos nomeados `Book`. A coleção resultante inclui o nó de contexto.
 
-Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: livros (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).
+Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: livros (LINQ to XML)](sample-xml-file-books-linq-to-xml.md).
 
 ```vb
 Dim books As XDocument = XDocument.Load("Books.xml")
@@ -44,7 +44,7 @@ For Each el As XElement In list1
 Next
 ```
 
-Este exemplo gera a seguinte saída:
+Esse exemplo gera a saída a seguir:
 
 ```console
 Results are identical
@@ -69,6 +69,6 @@ Results are identical
 </Book>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [LINQ to XML para usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para usuários do XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

@@ -1,13 +1,14 @@
 ---
 title: Adições ao formato csproj para .NET Core
 description: Saiba mais sobre as diferenças entre arquivos existentes e de csproj do .NET Core
+ms.topic: reference
 ms.date: 04/08/2019
-ms.openlocfilehash: fadc6de43f522129970e48bc72914cf187fe3f82
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 82174b2976abda2337a4a9b5a5a5e1f60a1094fb
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607700"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608333"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adições ao formato csproj para .NET Core
 
@@ -15,7 +16,7 @@ Este documento descreve as alterações adicionadas aos arquivos de projeto como
 
 ## <a name="implicit-package-references"></a>Referências de pacote implícitas
 
-Os metapacotes são referenciados implicitamente de acordo com as estruturas de destino especificadas na propriedade `<TargetFramework>` ou `<TargetFrameworks>` do arquivo de projeto. `<TargetFrameworks>` será ignorado se `<TargetFramework>` for especificado, independente da ordem. Para obter mais informações, consulte [Pacotes, metapacotes e frameworks](../packages.md).
+Os metapacotes são referenciados implicitamente de acordo com as estruturas de destino especificadas na propriedade `<TargetFramework>` ou `<TargetFrameworks>` do arquivo de projeto. `<TargetFrameworks>` será ignorado se `<TargetFramework>` for especificado, independente da ordem.
 
 ```xml
  <PropertyGroup>
@@ -41,7 +42,7 @@ Como os metapacotes `Microsoft.NETCore.App` ou `NETStandard.Library` são refere
 
 ## <a name="implicit-version-for-some-package-references"></a>Versão implícita para algumas referências de pacote
 
-A maioria [`<PackageReference>`](#packagereference) dos usos requerem definir o atributo `Version` para especificar a versão do pacote NuGet a ser usada. Ao usar o .NET Core 2.1 ou 2.2 e referenciar [Microsoft.AspNetCore.App](/aspnet/core/fundamentals/metapackage-app) ou [Microsoft.AspNetCore.All](/aspnet/core/fundamentals/metapackage), no entanto, o atributo é desnecessário. O SDK do .NET Core pode selecionar automaticamente a versão desses pacotes que deve ser usada.
+A maioria dos usos de [`<PackageReference>`](#packagereference) requer a configuração do `Version` atributo para especificar a versão do pacote NuGet a ser usada. Ao usar o .NET Core 2.1 ou 2.2 e referenciar [Microsoft.AspNetCore.App](/aspnet/core/fundamentals/metapackage-app) ou [Microsoft.AspNetCore.All](/aspnet/core/fundamentals/metapackage), no entanto, o atributo é desnecessário. O SDK do .NET Core pode selecionar automaticamente a versão desses pacotes que deve ser usada.
 
 ### <a name="recommendation"></a>Recomendação
 
@@ -55,7 +56,7 @@ Ao fazer referência aos pacotes `Microsoft.AspNetCore.App` ou `Microsoft.AspNet
 
 > Problema conhecido: o SDK do .NET Core 2.1 tem suporte apenas para esta sintaxe, mas o projeto também usa o Microsoft.NET.Sdk.Web. Esse problema foi solucionado no SDK do .NET Core 2.2.
 
-Essas referências aos metapacotes do ASP.NET Core têm um comportamento ligeiramente diferente da maioria dos pacotes normais do NuGet. [Implantações dependentes da estrutura](../deploying/index.md#publish-runtime-dependent) de aplicativos que usam metapacotes aproveitam automaticamente a estrutura compartilhada do ASP.NET Core. Quando você usa os metapacotes, **nenhum** ativo dos pacotes NuGet do ASP.NET Core referenciados é implantado com o aplicativo porque a estrutura compartilhada do ASP.NET Core contém esses ativos. Os ativos na estrutura compartilhada são otimizados para a plataforma de destino para melhorar o tempo de inicialização do aplicativo. Para obter mais informações sobre a estrutura compartilhada, confira [Empacotamento de distribuição do .NET Core](../distribution-packaging.md).
+Essas referências aos metapacotes do ASP.NET Core têm um comportamento ligeiramente diferente da maioria dos pacotes normais do NuGet. [Implantações dependentes da estrutura](../deploying/index.md#publish-framework-dependent) de aplicativos que usam metapacotes aproveitam automaticamente a estrutura compartilhada do ASP.NET Core. Quando você usa os metapacotes, **nenhum** ativo dos pacotes NuGet do ASP.NET Core referenciados é implantado com o aplicativo porque a estrutura compartilhada do ASP.NET Core contém esses ativos. Os ativos na estrutura compartilhada são otimizados para a plataforma de destino para melhorar o tempo de inicialização do aplicativo. Para obter mais informações sobre a estrutura compartilhada, confira [Empacotamento de distribuição do .NET Core](../distribution-packaging.md).
 
 Se uma versão *for* especificada, ela será tratada como a *versão mínima* da estrutura compartilhada do ASP.NET Core para implantações dependentes de estrutura e como uma versão *exata* para implementações autossuficientes. Isso pode ter as seguintes consequências:
 
@@ -125,13 +126,13 @@ Quando o projeto tem várias estruturas de destino, os resultados do comando dev
 
 ### <a name="sdk-attribute"></a>Atributo do SDK
 
-O elemento `<Project>` raiz do arquivo *.csproj* tem um novo atributo chamado `Sdk`. `Sdk` especifica qual SDK será usado pelo projeto. O SDK, como o [documento de camadas](cli-msbuild-architecture.md) descreve, é um conjunto de [tarefas](/visualstudio/msbuild/msbuild-tasks) e [destinos](/visualstudio/msbuild/msbuild-targets) do MSBuild que podem compilar o código do .NET Core. Os seguintes SDKs estão disponíveis para .NET Core:
+O elemento `<Project>` raiz do arquivo *.csproj* tem um novo atributo chamado `Sdk`. `Sdk` especifica qual SDK será usado pelo projeto. O SDK, como o [documento de camadas](cli-msbuild-architecture.md) descreve, é um conjunto de [tarefas](/visualstudio/msbuild/msbuild-tasks) e [destinos](/visualstudio/msbuild/msbuild-targets) do MSBuild que podem compilar o código do .NET Core. Os seguintes SDKs estão disponíveis para o .NET Core:
 
 1. O SDK do .NET Core com a ID `Microsoft.NET.Sdk`
 2. O SDK da Web do .NET Core com a ID `Microsoft.NET.Sdk.Web`
 3. O SDK da Biblioteca de Classes Razor do .NET Core com a ID `Microsoft.NET.Sdk.Razor`
-4. O Serviço de Trabalhadores do `Microsoft.NET.Sdk.Worker` Núcleo .NET com o ID de (desde .NET Core 3.0)
-5. O .NET Core WinForms e o `Microsoft.NET.Sdk.WindowsDesktop` WPF com o ID de (desde .NET Core 3.0)
+4. O serviço de trabalho do .NET Core com a ID `Microsoft.NET.Sdk.Worker` (desde o .net core 3,0)
+5. O .NET Core WinForms e o WPF com a ID `Microsoft.NET.Sdk.WindowsDesktop` (desde o .NET Core 3,0)
 
 É necessário ter o atributo `Sdk` definido com uma dessas IDs no elemento `<Project>` para usar as ferramentas do .NET Core e compilar o código.
 
@@ -145,9 +146,9 @@ Um elemento de item `<PackageReference>` especifica uma [dependência do NuGet n
 
 #### <a name="version"></a>Versão
 
-O atributo `Version` obrigatório especifica a versão do pacote para restauração. O atributo respeita as regras do esquema de [faixa de versão NuGet.](/nuget/concepts/package-versioning#version-ranges) O comportamento padrão é uma versão mínima, inclusive, compatível. Por exemplo, `Version="1.2.3"` especificar é equivalente `[1.2.3, )` à notação NuGet e significa que o pacote resolvido terá a versão 1.2.3 se disponível ou maior de outra forma.
+O atributo `Version` obrigatório especifica a versão do pacote para restauração. O atributo respeita as regras do esquema de [intervalo de versão do NuGet](/nuget/concepts/package-versioning#version-ranges) . O comportamento padrão é uma versão mínima, uma correspondência inclusiva. Por exemplo, especificar `Version="1.2.3"` é equivalente à notação `[1.2.3, )` do NuGet e significa que o pacote resolvido terá a versão 1.2.3, se disponível ou maior caso contrário.
 
-#### <a name="includeassets-excludeassets-and-privateassets"></a>Incluir Ativos, Excluir Ativos e Ativos Privados
+#### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets e PrivateAssets
 
 O atributo `IncludeAssets` especifica quais ativos que pertencem ao pacote especificado pelo `<PackageReference>` devem ser consumidos. Por padrão, todos os ativos de pacote estão incluídos.
 
@@ -156,15 +157,15 @@ O atributo `ExcludeAssets` especifica quais ativos que pertencem ao pacote espec
 O atributo `PrivateAssets` especifica quais ativos que pertencem ao pacote especificado pelo `<PackageReference>` devem ser consumidos, mas não fluir para o próximo projeto. Quando esse atributo não estiver presente, os ativos `Analyzers`, `Build` e `ContentFiles` serão privados por padrão.
 
 > [!NOTE]
-> `PrivateAssets`é equivalente ao elemento *project.json*/*xproj.* `SuppressParent`
+> `PrivateAssets`é equivalente ao *project.jsno* / elemento*xproj* `SuppressParent` .
 
 Esses atributos podem conter um ou mais dos itens a seguir, separados pelo caractere de ponto e vírgula `;` se houver mais de um:
 
-- `Compile`– o conteúdo da pasta *lib* está disponível para compilar contra.
-- `Runtime`– o conteúdo da pasta de *tempo de execução* é distribuído.
+- `Compile` – o conteúdo da pasta *lib* está disponível para a compilação.
+- `Runtime` – o conteúdo da pasta de *tempo de execução* é distribuído.
 - `ContentFiles` – o conteúdo da pasta *contentfiles* é usado.
-- `Build`– os adereços/alvos na pasta *de compilação* são usados.
-- `Native`– os conteúdos dos ativos nativos são copiados para a pasta *de saída* durante o tempo de execução.
+- `Build` – as props/destinos na pasta *Build* são usados.
+- `Native` – o conteúdo de ativos nativos é copiado para a pasta de *saída* para tempo de execução.
 - `Analyzers` – os analisadores são usados.
 
 Como alternativa, o atributo pode conter:
@@ -180,11 +181,11 @@ Um elemento de item `<DotNetCliToolReference>` especifica a ferramenta da CLI qu
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-Observe `DotNetCliToolReference` que agora está [preterido](https://github.com/dotnet/announcements/issues/107) em favor de [.NET Core Local Tools](https://aka.ms/local-tools).
+Observe que `DotNetCliToolReference` [agora é preterido](https://github.com/dotnet/announcements/issues/107) em favor das [ferramentas locais do .NET Core](./global-tools.md#install-a-local-tool).
 
 #### <a name="version"></a>Versão
 
-`Version` especifica a versão do pacote para restauração. O atributo respeita as regras do esquema de [controle de versão do NuGet](/nuget/create-packages/dependency-versions#version-ranges). O comportamento padrão é uma versão mínima, inclusive, compatível. Por exemplo, `Version="1.2.3"` especificar é equivalente `[1.2.3, )` à notação NuGet e significa que o pacote resolvido terá a versão 1.2.3 se disponível ou maior de outra forma.
+`Version` especifica a versão do pacote para restauração. O atributo respeita as regras do esquema de [controle de versão do NuGet](/nuget/create-packages/dependency-versions#version-ranges). O comportamento padrão é uma versão mínima, uma correspondência inclusiva. Por exemplo, especificar `Version="1.2.3"` é equivalente à notação `[1.2.3, )` do NuGet e significa que o pacote resolvido terá a versão 1.2.3, se disponível ou maior caso contrário.
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
 
@@ -227,7 +228,7 @@ O exemplo a seguir especifica os fallbacks apenas para o destino `netcoreapp2.1`
 
 ## <a name="build-events"></a>Eventos de build
 
-A forma como os eventos de pré-compilação e pós-compilação são especificados no arquivo do projeto foi alterada. As propriedades PreBuildEvent e PostBuildEvent não são recomendadas no formato de projeto no estilo SDK, porque macros como $(ProjectDir) não estão resolvidas. Por exemplo, o seguinte código não é mais suportado:
+A maneira como os eventos de pré e pós-compilação são especificados no arquivo de projeto foi alterado. As propriedades PreBuildEvent e PostBuildEvent não são recomendadas no formato de projeto no estilo SDK, pois as macros como $ (ProjectDir) não são resolvidas. Por exemplo, o código a seguir não tem mais suporte:
 
 ```xml
 <PropertyGroup>
@@ -235,7 +236,7 @@ A forma como os eventos de pré-compilação e pós-compilação são especifica
 </PropertyGroup>
 ```
 
-Em projetos no estilo SDK, use `PreBuild` um `PostBuild` destino `BeforeTargets` MSBuild nomeado ou e defina a propriedade para `PreBuild` ou para a `AfterTargets` propriedade para `PostBuild`. Para o exemplo anterior, use o seguinte código:
+Em projetos em estilo SDK, use um destino do MSBuild chamado `PreBuild` ou `PostBuild` e defina a `BeforeTargets` propriedade para `PreBuild` ou a `AfterTargets` propriedade para `PostBuild` . Para o exemplo anterior, use o seguinte código:
 
 ```xml
 <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
@@ -248,11 +249,11 @@ Em projetos no estilo SDK, use `PreBuild` um `PostBuild` destino `BeforeTargets`
 ```
 
 > [!NOTE]
->Você pode usar qualquer nome para os alvos do MSBuild, mas o Visual Studio IDE reconhece `PreBuild` e `PostBuild` visa, por isso recomendamos usar esses nomes para que você possa editar os comandos no Visual Studio IDE.
+>Você pode usar qualquer nome para os destinos do MSBuild, mas o IDE do Visual Studio reconhece `PreBuild` e se `PostBuild` destina, portanto, é recomendável usar esses nomes para que você possa editar os comandos no IDE do Visual Studio.
 
 ## <a name="nuget-metadata-properties"></a>Propriedades de metadados do NuGet
 
-Com a mudança para o MSBuild, mudamos os metadados de entrada que são usados ao embalar um pacote NuGet de arquivos *project.json* para *.csproj.* As entradas são propriedades do MSBuild e, portanto, precisam estar em um grupo `<PropertyGroup>`. A seguir está a lista de propriedades que são usadas `dotnet pack` como entradas para o processo de embalagem ao usar o comando ou o `Pack` destino MSBuild que faz parte do SDK:
+Com a mudança para o MSBuild, movemos os metadados de entrada que são usados ao empacotar um pacote NuGet de *project.jsem* arquivos *. csproj* . As entradas são propriedades do MSBuild e, portanto, precisam estar em um grupo `<PropertyGroup>`. A seguir está a lista de propriedades que são usadas como entradas para o processo de empacotamento ao usar o `dotnet pack` comando ou o `Pack` destino do MSBuild que faz parte do SDK:
 
 ### <a name="ispackable"></a>IsPackable
 
@@ -272,7 +273,7 @@ Um título amigável do pacote, geralmente usado em exibições de interface do 
 
 ### <a name="authors"></a>Autores
 
-Uma lista de autores de pacotes separados em ponto e vírgula, combinando os nomes de perfil no nuget.org. Estes são exibidos na NuGet Gallery em nuget.org e são usados para cruzar pacotes pelos mesmos autores.
+Uma lista separada por ponto-e-vírgula de autores de pacotes, que correspondem aos nomes de perfil em nuget.org. Eles são exibidos na galeria do NuGet em nuget.org e são usados para fazer referência cruzada de pacotes pelos mesmos autores.
 
 ### <a name="packagedescription"></a>PackageDescription
 
@@ -280,7 +281,7 @@ Uma descrição longa do pacote para exibição de interface do usuário.
 
 ### <a name="description"></a>Descrição
 
-Uma descrição longa para o manifesto do assembly. Se `PackageDescription` não for especificado, essa propriedade também será usada como descrição do pacote.
+Uma descrição longa para o manifesto do assembly. Se `PackageDescription` não for especificado, essa propriedade também será usada como a descrição do pacote.
 
 ### <a name="copyright"></a>Direitos autorais
 
@@ -292,7 +293,7 @@ Um valor booliano que especifica se o cliente deve solicitar que o consumidor ac
 
 ### <a name="developmentdependency"></a>DevelopmentDependency
 
-Um valor booleano que especifica se o pacote está marcado como uma dependência somente de desenvolvimento, o que impede que o pacote seja incluído como uma dependência em outros pacotes. Com o PackageReference (NuGet 4.8+), este sinalizador também significa que os ativos de tempo de compilação são excluídos da compilação. Para obter mais informações, confira [Suporte do DevelopmentDependency para PackageReference](https://github.com/NuGet/Home/wiki/DevelopmentDependency-support-for-PackageReference).
+Um valor booliano que especifica se o pacote está marcado como uma dependência somente de desenvolvimento, o que impede que o pacote seja incluído como uma dependência em outros pacotes. Com PackageReference (NuGet 4.8 +), esse sinalizador também significa que os ativos de tempo de compilação são excluídos da compilação. Para obter mais informações, confira [Suporte do DevelopmentDependency para PackageReference](https://github.com/NuGet/Home/wiki/DevelopmentDependency-support-for-PackageReference).
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
@@ -325,7 +326,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 Caminho até um arquivo de licença dentro do pacote, se você estiver usando uma licença que não tenha recebido um identificador SPDX ou for uma licença personalizada (caso contrário, `PackageLicenseExpression` tem preferência)
 
-Substitui `PackageLicenseUrl`, não pode ser `PackageLicenseExpression`combinado com , e requer visual studio versão 15.9.4 e .NET SDK 2.1.502 ou 2.2.101 ou mais recente.
+Substitui `PackageLicenseUrl` , não pode ser combinado com `PackageLicenseExpression` e requer o Visual Studio versão 15.9.4 e o SDK do .NET 2.1.502 ou 2.2.101 ou mais recente.
 
 Você precisará garantir o fornecimento do arquivo de licença adicionando-o explicitamente ao projeto. Exemplo de uso:
 
@@ -342,9 +343,9 @@ Você precisará garantir o fornecimento do arquivo de licença adicionando-o ex
 
 Uma URL para a licença aplicável ao pacote. (_preterida desde o Visual Studio 15.9.4, SDK 2.1.502 e 2.2.101 do .NET_)
 
-### <a name="packageiconurl"></a>PackageIconUrl
+### <a name="packageicon"></a>PackageIcon
 
-Uma URL para uma imagem 64x64 com a tela de fundo transparente a ser usada como o ícone do pacote na exibição de interface do usuário.
+Um caminho para uma imagem no pacote a ser usado como um ícone de pacote. Leia mais sobre [ `icon` metadados](/nuget/reference/nuspec#icon). [PackageIconUrl foi preterido](/nuget/reference/msbuild-targets#packageiconurl) em favor de PackageIcon.
 
 ### <a name="packagereleasenotes"></a>PackageReleaseNotes
 
@@ -370,7 +371,7 @@ Esse valor booliano indica se o processo do pacote deve criar um pacote de orige
 
 ### <a name="istool"></a>IsTool
 
-Especifica se todos os arquivos de saída são copiados para a pasta *tools* em vez da pasta *lib*. Isso é diferente `DotNetCliTool`de a , que `PackageType` é especificado definindo o arquivo *.csproj.*
+Especifica se todos os arquivos de saída são copiados para a pasta *tools* em vez da pasta *lib*. Isso é diferente de a `DotNetCliTool` , que é especificado definindo o `PackageType` no arquivo *. csproj* .
 
 ### <a name="repositoryurl"></a>RepositoryUrl
 
@@ -381,10 +382,10 @@ Especifica a URL para o repositório em que reside o código-fonte do pacote e/o
 Especifica o tipo do repositório. O padrão é “git”.
 
 ### <a name="repositorybranch"></a>RepositoryBranch
-Especifica o nome da filial de origem no repositório. Quando o projeto é embalado em um pacote NuGet, ele é adicionado aos metadados do pacote.
+Especifica o nome da ramificação de origem no repositório. Quando o projeto é empacotado em um pacote NuGet, ele é adicionado aos metadados do pacote.
 
 ### <a name="repositorycommit"></a>RepositoryCommit
-O repositório opcional compromete ou altera o conjunto de alterações para indicar qual fonte o pacote foi construído contra. `RepositoryUrl`também deve ser especificado para que esta propriedade seja incluída. Quando o projeto é embalado em um pacote NuGet, esse conjunto de confirmação ou alteração é adicionado aos metadados do pacote.
+Confirmação opcional do repositório ou conjunto de alterações para indicar de qual fonte o pacote foi criado. `RepositoryUrl` também deve ser especificado para que essa propriedade seja incluída. Quando o projeto é empacotado em um pacote NuGet, esse Commit ou conjunto de alterações é adicionado aos metadados do pacote.
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis
 
@@ -396,7 +397,7 @@ Especifica a versão mínima do cliente NuGet que pode instalar esse pacote, imp
 
 ### <a name="includebuildoutput"></a>IncludeBuildOutput
 
-Este valor booleano especifica se os conjuntos de saída de compilação devem ser embalados no arquivo *.nupkg* ou não.
+Esse valor booliano especifica se os assemblies de saída da compilação devem ser empacotados no arquivo *. nupkg* ou não.
 
 ### <a name="includecontentinpack"></a>IncludeContentInPack
 
@@ -431,7 +432,7 @@ Lista separada por ponto e vírgula de pares chave-valor.
 
 ### <a name="properties-per-attribute"></a>Propriedades por atributo
 
-Como mostrado na tabela a seguir, cada atributo tem uma propriedade que controla seu conteúdo e outra que desativa sua geração:
+Conforme mostrado na tabela a seguir, cada atributo tem uma propriedade que controla seu conteúdo e outro que desabilita sua geração:
 
 | Atributo                                                      | Propriedade               | Propriedade para desabilitar                             |
 |----------------------------------------------------------------|------------------------|-------------------------------------------------|

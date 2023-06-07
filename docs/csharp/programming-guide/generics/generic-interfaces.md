@@ -1,16 +1,17 @@
 ---
 title: Interfaces genéricas – Guia de Programação em C#
+description: Saiba mais sobre como usar interfaces genéricas em C#. Consulte exemplos de código e exiba recursos adicionais disponíveis.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, generic interfaces
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
-ms.openlocfilehash: 4cce23da7579e30ecff80b3afb92a5a58795c1bd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43817a236e95b3ab8fd0ba94da98457eeec2396c
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712202"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301886"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>Interfaces genéricas (Guia de Programação em C#)
 Muitas vezes, é útil definir interfaces para classes de coleção genéricas ou para as classe genéricas que representam itens na coleção. Para classes genéricas, prefere-se usar interfaces genéricas, como <xref:System.IComparable%601> em vez de <xref:System.IComparable>, a fim de evitar operações de conversão boxing e unboxing em tipos de valor. A biblioteca de classes .NET Framework define várias interfaces genéricas para uso com as classes de coleção no namespace <xref:System.Collections.Generic>.  
@@ -43,9 +44,9 @@ Muitas vezes, é útil definir interfaces para classes de coleção genéricas o
   
  As regras que controlam a sobrecarga de método são as mesmas para métodos em classes genéricas, structs genéricos ou interfaces genéricas. Para obter mais informações, consulte [Métodos Genéricos](./generic-methods.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Introdução aos genéricos](./index.md)
-- [Interface](../../language-reference/keywords/interface.md)
+- [interface](../../language-reference/keywords/interface.md)
 - [Genéricos](../../../standard/generics/index.md)

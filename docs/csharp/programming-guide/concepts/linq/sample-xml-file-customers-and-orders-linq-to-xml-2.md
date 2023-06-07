@@ -1,20 +1,21 @@
 ---
-title: 'Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)'
+title: 'Arquivo XML de exemplo: Clientes e ordens (LINQ to XML)'
+description: Esse arquivo XML é usado em vários exemplos na documentação do LINQ to XML. O arquivo contém clientes e pedidos.
 ms.date: 07/20/2015
 ms.assetid: d6d1c9ea-be74-4e6d-bfdd-d4bcc2d301cf
-ms.openlocfilehash: 01c1719bd67bbaf0d46dc6e3c23b5031afd271f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0143fa373ee1ad6acecfe99e1a786d5cc90c2eb2
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346495"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302549"
 ---
-# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)
+# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>Arquivo XML de exemplo: Clientes e ordens (LINQ to XML)
 O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo contém clientes e pedidos.  
   
  O tópico [Arquivo XSD de exemplo: clientes e pedidos](./sample-xsd-file-customers-and-orders1.md) contém um XSD que pode ser usado para validar esse documento. Usa os recursos de XSD `xs:key` e `xs:keyref` para estabelecer que o atributo `CustomerID` do elemento `Customer` é uma chave, e para estabelecer uma relação entre o elemento `CustomerID` em cada elemento `Order`, e o atributo `CustomerID` em cada elemento `Customer`.  
   
- Para um exemplo de escrever consultas LINQ que `Join` se aproveitam dessa relação usando a cláusula, consulte [Como juntar duas coleções (LINQ a XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).  
+ Para obter um exemplo de como escrever consultas LINQ que aproveitam essa relação usando a `Join` cláusula, consulte [como unir duas coleções (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).  
   
 ## <a name="customersordersxml"></a>CustomersOrders.xml  
   

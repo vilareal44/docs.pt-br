@@ -3,18 +3,18 @@ title: <extensions>Section
 ms.date: 03/30/2017
 ms.assetid: 53a59fb6-dede-47ec-9384-b3c2e8f0c1fa
 ms.openlocfilehash: 35621acaf96a80ffa3ffe4a3c6605143c48995a5
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855361"
 ---
-# <a name="extensions-section"></a>\<> seção de extensões
+# <a name="extensions-section"></a>\<extensions>Section
 Esta seção de configuração contém uma coleção de extensões, que permitem ao usuário criar associações definidas pelo usuário, comportamentos e outros aspectos de extensões.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<extensões >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<extensions>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,7 +37,7 @@ Esta seção de configuração contém uma coleção de extensões, que permitem
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
   

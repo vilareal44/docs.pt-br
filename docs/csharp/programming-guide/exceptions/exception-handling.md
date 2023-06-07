@@ -1,16 +1,17 @@
 ---
 title: Manipulação de exceções – Guia de Programação em C#
+description: Saiba mais sobre manipulação de exceção. Veja exemplos de instruções Try-Catch, try-finally e try-catch-finally.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: ee1e5bd15183dad9ffe97824f9b194668e9d3b17
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8e55b44573c40f594e567fc5a4501689e66c7af4
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705295"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302029"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Manipulação de exceções (Guia de Programação em C#)
 Um bloco [try](../../language-reference/keywords/try-catch.md) é usado por programadores de C# para particionar o código que pode ser afetado por uma exceção. Os blocos [catch](../../language-reference/keywords/try-catch.md) associados são usados para tratar qualquer exceção resultante. Um bloco [finally](../../language-reference/keywords/try-finally.md) contém código que será executado independentemente de uma exceção ser ou não ser lançada no bloco `try`, como a liberação de recursos que estão alocados no bloco `try`. Um bloco `try` exige um ou mais blocos `catch` associados ou um bloco `finally` ou ambos.  
@@ -55,12 +56,12 @@ Um bloco [try](../../language-reference/keywords/try-catch.md) é usado por prog
 
 Para obter mais informações, veja [Exceções](~/_csharplang/spec/exceptions.md) e [A declaração try](~/_csharplang/spec/statements.md#the-try-statement) na [Especificação da Linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Referência](../../language-reference/index.md)
-- [C# Guia de Programação](../index.md)
+- [Referência do C#](../../language-reference/index.md)
+- [Guia de programação C#](../index.md)
 - [Exceções e tratamento de exceções](./index.md)
-- [tentar pegar](../../language-reference/keywords/try-catch.md)
+- [try-catch](../../language-reference/keywords/try-catch.md)
 - [try-finally](../../language-reference/keywords/try-finally.md)
 - [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)
-- [usando a Declaração](../../language-reference/keywords/using-statement.md)
+- [Instrução using](../../language-reference/keywords/using-statement.md)

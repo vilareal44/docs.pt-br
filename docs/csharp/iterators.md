@@ -4,12 +4,12 @@ description: Saiba como usar iteradores C# internos e como criar seus próprios 
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: efa755c2243c18fb51b653abccb2bfc702bbc055
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: ee72331cb85ba1a03d48e2f58526ad432c7fe6d4
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507371"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656092"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -24,7 +24,7 @@ Você também criará métodos iteradores que são métodos que produzem um iter
 
 A linguagem C# fornece recursos para esses dois cenários. Este artigo fornece uma visão geral desses recursos.
 
-Este tutorial tem várias etapas. Após cada etapa, você poderá executar o aplicativo e ver o progresso. Você também pode [exibir ou baixar o exemplo concluído](https://github.com/dotnet/samples/blob/master/csharp/iterators) deste tópico. Para obter instruções de download, consulte [Exemplos e tutoriais](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Este tutorial tem várias etapas. Após cada etapa, você poderá executar o aplicativo e ver o progresso. Você também pode [exibir ou baixar o exemplo concluído](https://github.com/dotnet/samples/blob/master/csharp/iterators) deste tópico. Para obter instruções de download, consulte [Exemplos e tutoriais](../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="iterating-with-foreach"></a>iterando com foreach
 
@@ -37,7 +37,7 @@ foreach (var item in collection)
 }
 ```
 
-E isso é tudo. Para iterar em todo o conteúdo de uma coleção, a instrução `foreach` é tudo o que você precisa. No entanto, a instrução `foreach` não é mágica. Ele se baseia em duas interfaces genéricas definidas na biblioteca do .NET Core para gerar o código necessário para iterar uma coleção: `IEnumerable<T>` e `IEnumerator<T>`. Esse mecanismo é explicado mais detalhadamente abaixo.
+Isso é tudo para ela. Para iterar em todo o conteúdo de uma coleção, a instrução `foreach` é tudo o que você precisa. No entanto, a instrução `foreach` não é mágica. Ele se baseia em duas interfaces genéricas definidas na biblioteca do .NET Core para gerar o código necessário para iterar uma coleção: `IEnumerable<T>` e `IEnumerator<T>`. Esse mecanismo é explicado mais detalhadamente abaixo.
 
 Essas duas interfaces também têm contrapartes não genéricas: `IEnumerable` e `IEnumerator`. As versões [genéricas](programming-guide/generics/index.md) são preferenciais para o código moderno.
 
@@ -195,7 +195,7 @@ while (enumerator.MoveNext())
 }
 ```
 
-Isso foi alterado porque o comportamento anterior poderia levar a bugs sutis e difíceis de diagnosticar envolvendo expressões lambda. Para saber mais sobre expressões lambda, confira o artigo sobre [expressões lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md).
+Isso foi alterado porque o comportamento anterior poderia levar a bugs sutis e difíceis de diagnosticar envolvendo expressões lambda. Para saber mais sobre expressões lambda, confira o artigo sobre [expressões lambda](language-reference/operators/lambda-expressions.md).
 
 O código exato gerado pelo compilador é um pouco mais complicada e lida com situações em que o objeto retornado por `GetEnumerator()` implementa a interface `IDisposable`. A expansão completa gera um código mais semelhante a esse:
 

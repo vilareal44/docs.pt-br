@@ -4,12 +4,12 @@ description: Saiba como migrar um aplicativo Windows Presentation Foundation (WP
 author: mjrousos
 ms.date: 09/12/2019
 ms.author: mikerou
-ms.openlocfilehash: ccd2fc5a49d9c2d31c693e48099732614b568c7b
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: fda4f618ddb4a3edbe6f2dd9fba0b10bc618e88d
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507449"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201565"
 ---
 # <a name="migrating-wpf-apps-to-net-core"></a>Migrando aplicativos do WPF para o .NET Core
 
@@ -21,7 +21,7 @@ Para migrar para o .NET Core, você deve primeiro:
 
 01. Entenda e atualize as dependências do NuGet:
 
-    01. Atualize as dependências do NuGet `<PackageReference>` para usar o formato.
+    01. Atualize as dependências do NuGet para usar o `<PackageReference>` formato.
     01. Examine as dependências do NuGet de nível superior para o .NET Core ou a compatibilidade .NET Standard.
     01. Atualize os pacotes NuGet para versões mais recentes.
     01. Use o [.net Portability Analyzer](../../standard/analyzers/portability-analyzer.md) para entender as dependências do .net.
@@ -35,7 +35,7 @@ Para migrar para o .NET Core, você deve primeiro:
 
     01. Adicione uma referência ao pacote [Microsoft. Windows. Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility/) .
     01. Encontre e corrija diferenças no nível da API.
-    01. Remova as seções *app. config* que `appSettings` não `connectionStrings`sejam ou.
+    01. Remova as seções *app. config* que não sejam `appSettings` ou `connectionStrings` .
     01. Gere novamente o código gerado, se necessário.
 
 01. Teste de tempo de execução:
@@ -45,7 +45,7 @@ Para migrar para o .NET Core, você deve primeiro:
 
 ## <a name="about-the-sample"></a>Sobre o exemplo
 
-Este artigo faz referência ao [aplicativo de exemplo do Bean Trader](https://github.com/dotnet/windows-desktop/tree/master/Samples/BeanTrader) porque ele usa uma variedade de dependências semelhantes àquelas que os aplicativos do WPF do mundo real podem ter. O aplicativo não é grande, mas deve ser um Step up de ' Olá, Mundo ' em termos de complexidade. O aplicativo demonstra alguns problemas que os usuários podem encontrar ao portar aplicativos reais. O aplicativo se comunica com um serviço WCF, portanto, para que ele seja executado corretamente, você também precisará executar o projeto BeanTraderServer (disponível no mesmo repositório GitHub) e verificar se a configuração do BeanTraderClient aponta para o ponto de extremidade correto. (Por padrão, o exemplo supõe que o servidor esteja em execução no mesmo computador *http://localhost:8090*em, que será verdadeiro se você iniciar o BeanTraderServer localmente.)
+Este artigo faz referência ao [aplicativo de exemplo do Bean Trader](https://github.com/dotnet/windows-desktop/tree/master/Samples/BeanTrader) porque ele usa uma variedade de dependências semelhantes àquelas que os aplicativos do WPF do mundo real podem ter. O aplicativo não é grande, mas deve ser um Step up de ' Olá, Mundo ' em termos de complexidade. O aplicativo demonstra alguns problemas que os usuários podem encontrar ao portar aplicativos reais. O aplicativo se comunica com um serviço WCF, portanto, para que ele seja executado corretamente, você também precisará executar o projeto BeanTraderServer (disponível no mesmo repositório GitHub) e verificar se a configuração do BeanTraderClient aponta para o ponto de extremidade correto. (Por padrão, o exemplo supõe que o servidor esteja em execução no mesmo computador em `http://localhost:8090` , que será verdadeiro se você iniciar o BeanTraderServer localmente.)
 
 Tenha em mente que este aplicativo de exemplo destina-se a demonstrar os desafios e as soluções de portabilidade do .NET Core. Não se destina a demonstrar as práticas recomendadas do WPF. Na verdade, ele inclui deliberadamente alguns antipadrões para garantir que você se deparasse com pelo menos alguns desafios interessantes ao portar.
 
@@ -55,20 +55,20 @@ O principal desafio de migrar um aplicativo .NET Framework para o .NET Core é q
 
 ### <a name="upgrade-to-packagereference-nuget-references"></a>Atualizar para `<PackageReference>` referências do NuGet
 
-Os projetos .NET Framework mais antigos normalmente listam suas dependências do NuGet em um arquivo *Packages. config* . O novo formato de arquivo de projeto no estilo SDK referencia pacotes [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) NuGet como elementos no próprio arquivo csproj em vez de em um arquivo de configuração separado.
+Os projetos .NET Framework mais antigos normalmente listam suas dependências do NuGet em um arquivo *Packages. config* . O novo formato de arquivo de projeto no estilo SDK referencia pacotes NuGet como [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) elementos no próprio arquivo csproj em vez de em um arquivo de configuração separado.
 
-Ao migrar, há duas vantagens em relação `<PackageReference>`ao uso de referências de estilo:
+Ao migrar, há duas vantagens em relação ao uso `<PackageReference>` de referências de estilo:
 
-- Esse é o estilo da referência do NuGet que é necessário para o novo arquivo de projeto do .NET Core. Se você já estiver usando `<PackageReference>`o, os elementos do arquivo de projeto poderão ser copiados e colados diretamente no novo projeto.
-- Ao contrário de um arquivo Packages `<PackageReference>` . config, os elementos referem-se apenas às dependências de nível superior das quais seu projeto depende diretamente. Todos os outros pacotes NuGet transitivos serão determinados no momento da restauração e registrados no arquivo obj\project.assets.JSON gerado automaticamente. Isso torna muito mais fácil determinar quais dependências seu projeto tem, o que é útil ao determinar se as dependências necessárias funcionarão no .NET Core ou não.
+- Esse é o estilo da referência do NuGet que é necessário para o novo arquivo de projeto do .NET Core. Se você já estiver usando `<PackageReference>` o, os elementos do arquivo de projeto poderão ser copiados e colados diretamente no novo projeto.
+- Ao contrário de um arquivo Packages. config, `<PackageReference>` os elementos referem-se apenas às dependências de nível superior das quais seu projeto depende diretamente. Todos os outros pacotes NuGet transitivos serão determinados no momento da restauração e registrados no arquivo obj\project.assets.JSON gerado automaticamente. Isso torna muito mais fácil determinar quais dependências seu projeto tem, o que é útil ao determinar se as dependências necessárias funcionarão no .NET Core ou não.
 
-A primeira etapa para migrar um aplicativo .NET Framework para o .NET Core é atualizá- `<PackageReference>` lo para usar referências do NuGet. O Visual Studio torna isso simples. Basta clicar com o botão direito do mouse no arquivo *Packages. config* do projeto no **Gerenciador de soluções**do Visual Studio e selecionar **Migrate Packages. config para PackageReference**.
+A primeira etapa para migrar um aplicativo .NET Framework para o .NET Core é atualizá-lo para usar `<PackageReference>` referências do NuGet. O Visual Studio torna isso simples. Basta clicar com o botão direito do mouse no arquivo *Packages. config* do projeto no **Gerenciador de soluções**do Visual Studio e selecionar **Migrate Packages. config para PackageReference**.
 
 ![Atualizando para o PackageReference](./media/convert-project-from-net-framework/package-reference-migration.png)
 
 Uma caixa de diálogo é exibida mostrando dependências do NuGet de nível superior calculadas e perguntando quais outros pacotes NuGet devem ser promovidos para o nível superior. Nenhum desses outros pacotes precisa ser de nível superior para o exemplo do bean de Trader, para que você possa desmarcar todas essas caixas. Em seguida, clique em **OK** e o arquivo *Packages. config* é removido e `<PackageReference>` os elementos são adicionados ao arquivo do projeto.
 
-`<PackageReference>`-as referências de estilo não armazenam pacotes NuGet localmente em uma pasta de pacotes. Em vez disso, eles são armazenados globalmente como uma otimização. Após a conclusão da migração, edite o arquivo csproj e remova `<Analyzer>` todos os elementos referentes aos analisadores que vieram anteriormente do *.. diretório \Packages* Não se preocupe; como você ainda tem as referências do pacote NuGet, os analisadores serão incluídos no projeto. Você só precisa limpar os elementos antigos Packages. config-Style `<Analyzer>` .
+`<PackageReference>`-as referências de estilo não armazenam pacotes NuGet localmente em uma pasta de pacotes. Em vez disso, eles são armazenados globalmente como uma otimização. Após a conclusão da migração, edite o arquivo csproj e remova todos os `<Analyzer>` elementos referentes aos analisadores que vieram anteriormente do *.. diretório \Packages* Não se preocupe; como você ainda tem as referências do pacote NuGet, os analisadores serão incluídos no projeto. Você só precisa limpar os elementos antigos Packages. config-Style `<Analyzer>` .
 
 ### <a name="review-nuget-packages"></a>Examinar pacotes NuGet
 
@@ -111,7 +111,7 @@ Com o exemplo do bean de Trader, todas as atualizações necessárias podem ser 
 
 O ideal é que o aplicativo fosse atualizado para usar a versão mais recente do pacote (já que isso é mais provável de funcionar no .NET Core). No entanto, em alguns casos, isso pode não ser viável. Nesses casos, não atualize o **MahApps. metro** porque as alterações necessárias não são triviais e este tutorial se concentra na migração para o .NET Core 3, não para o **MahApps. metro 2.** Além disso, essa é uma dependência .NET Framework de baixo risco porque o aplicativo do bean de Trader só exercita uma pequena parte do **MahApps. metro**. É claro que você precisará fazer testes para garantir que tudo esteja funcionando quando a migração for concluída. Se esse fosse um cenário do mundo real, seria bom arquivar um problema para acompanhar o trabalho para migrar para o **MahApps. metro** versão 2,0 já que não fazer a migração agora deixa por trás de uma dívida técnica.
 
-Depois que os pacotes NuGet são atualizados para versões recentes, `<PackageReference>` o grupo de itens no arquivo de projeto de exemplo do bean de Trader deve ter esta aparência.
+Depois que os pacotes NuGet são atualizados para versões recentes, o `<PackageReference>` grupo de itens no arquivo de projeto de exemplo do bean de Trader deve ter esta aparência.
 
 ```xml
 <ItemGroup>
@@ -148,33 +148,33 @@ A ferramenta é fornecida como um [plug-in do Visual Studio](https://marketplace
 
 Quando você abrir o relatório HTML, a primeira seção listará todos os binários analisados e qual será a porcentagem das APIs do .NET que eles usam estão disponíveis na plataforma de destino. O percentual não é significativo por si só. O que é mais útil é ver as APIs específicas que estão faltando. Para fazer isso, selecione um nome de assembly ou role para baixo até os relatórios para assemblies individuais.
 
-Concentre-se nos assemblies dos quais você possui o código-fonte. No relatório ApiPort do bean de Trader, por exemplo, há muitos binários listados, mas a maioria deles pertence a pacotes NuGet. `Castle.Windsor`mostra que depende de algumas APIs System. Web que estão ausentes no .NET Core. Isso não é uma preocupação porque você verificou `Castle.Windsor` anteriormente que dá suporte ao .NET Core. É comum que os pacotes NuGet tenham binários diferentes para uso com diferentes plataformas .NET, portanto, se a versão .NET Framework `Castle.Windsor` do usa APIs System. Web ou não é irrelevante, desde que o pacote também tenha como alvo .net Standard ou o .NET Core (o que ele faz).
+Concentre-se nos assemblies dos quais você possui o código-fonte. No relatório ApiPort do bean de Trader, por exemplo, há muitos binários listados, mas a maioria deles pertence a pacotes NuGet. `Castle.Windsor`mostra que depende de algumas APIs System. Web que estão ausentes no .NET Core. Isso não é uma preocupação porque você verificou anteriormente que `Castle.Windsor` dá suporte ao .NET Core. É comum que os pacotes NuGet tenham binários diferentes para uso com diferentes plataformas .NET, portanto, se a versão .NET Framework do `Castle.Windsor` usa APIs System. Web ou não é irrelevante, desde que o pacote também tenha como alvo .net Standard ou o .NET Core (o que ele faz).
 
-Com o exemplo do bean de Trader, o único binário que você precisa considerar é **BeanTraderClient** e o relatório mostra que apenas duas APIs .net estão `System.ServiceModel.ClientBase<T>.Close` ausentes: e `System.ServiceModel.ClientBase<T>.Open`.
+Com o exemplo do bean de Trader, o único binário que você precisa considerar é **BeanTraderClient** e o relatório mostra que apenas duas APIs .net estão ausentes: `System.ServiceModel.ClientBase<T>.Close` e `System.ServiceModel.ClientBase<T>.Open` .
 
 ![Relatório de portabilidade BeanTraderClient](./media/convert-project-from-net-framework/portability-report.png)
 
-É improvável que esses problemas sejam bloqueados porque as APIs de cliente do WCF são (principalmente) com suporte no .NET Core, portanto, deve haver alternativas disponíveis para essas APIs centrais. Na verdade, olhando para `System.ServiceModel`a área de superfície do .NET Core <https://apisof.net>(usando), você vê que há alternativas assíncronas no .NET Core em vez disso.
+É improvável que esses problemas sejam bloqueados porque as APIs de cliente do WCF são (principalmente) com suporte no .NET Core, portanto, deve haver alternativas disponíveis para essas APIs centrais. Na verdade, olhando para a `System.ServiceModel` área de superfície do .NET Core (usando <https://apisof.net> ), você vê que há alternativas assíncronas no .NET Core em vez disso.
 
 Com base nesse relatório e na análise de dependência do NuGet anterior, parece que não deve haver problemas importantes ao migrar o exemplo do bean de Trader para o .NET Core. Você está pronto para a próxima etapa em que, na verdade, iniciará a migração.
 
 ## <a name="migrating-the-project-file"></a>Migrando o arquivo de projeto
 
-Se seu aplicativo não estiver usando o novo [formato de arquivo de projeto no estilo SDK](../../core/tools/csproj.md), você precisará de um novo arquivo de projeto para o .NET Core de destino. Você pode substituir o arquivo csproj existente ou, se preferir manter o projeto existente inalterado em seu estado atual, você pode adicionar um novo arquivo csproj destinado ao .NET Core. Você pode criar versões do aplicativo para o .NET Framework e o .NET Core com um único arquivo de projeto em estilo SDK com [vários](../../standard/library-guidance/cross-platform-targeting.md) destinos (especificando `<TargetFrameworks>` várias metas).
+Se seu aplicativo não estiver usando o novo [formato de arquivo de projeto no estilo SDK](../../core/tools/csproj.md), você precisará de um novo arquivo de projeto para o .NET Core de destino. Você pode substituir o arquivo csproj existente ou, se preferir manter o projeto existente inalterado em seu estado atual, você pode adicionar um novo arquivo csproj destinado ao .NET Core. Você pode criar versões do aplicativo para o .NET Framework e o .NET Core com um único arquivo de projeto em estilo SDK com [vários](../../standard/library-guidance/cross-platform-targeting.md) destinos (especificando várias `<TargetFrameworks>` metas).
 
-Para criar o novo arquivo de projeto, você pode criar um novo projeto do WPF no Visual Studio ou `dotnet new wpf` usar o comando em um diretório temporário para gerar o arquivo de projeto e, em seguida, copiá-lo/renomeá-lo para o local correto. Também há uma ferramenta criada pela Comunidade, [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017), que pode automatizar parte da migração de arquivos do projeto. A ferramenta é útil, mas ainda precisa de um humano para revisar os resultados para garantir que todos os detalhes da migração estejam corretos. Uma área específica que a ferramenta não trata de forma ideal é migrar pacotes NuGet de arquivos *Packages. config* . Se a ferramenta for executada em um arquivo de projeto que ainda usa um arquivo *Packages. config* para referenciar os pacotes do `<PackageReference>` NuGet, ele migrará para `<PackageReference>` os elementos automaticamente, mas adicionará elementos para *todos* os pacotes em vez de apenas os de nível superior. Se você já migrou para`<PackageReference>` elementos com o Visual Studio (como fez neste exemplo), a ferramenta pode ajudar com o restante da conversão. Como Scott Hanselman recomenda em [sua postagem de blog sobre migração de arquivos csproj](https://www.hanselman.com/blog/UpgradingAnExistingNETProjectFilesToTheLeanNewCSPROJFormatFromNETCore.aspx), a portabilidade por mão é educativa e fornecerá melhores resultados se você tiver apenas alguns projetos para portar. Mas se você estiver portando dezenas ou centenas de arquivos de projeto, uma ferramenta como [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) pode ser uma ajuda.
+Para criar o novo arquivo de projeto, você pode criar um novo projeto do WPF no Visual Studio ou usar o `dotnet new wpf` comando em um diretório temporário para gerar o arquivo de projeto e, em seguida, copiá-lo/renomeá-lo para o local correto. Também há uma ferramenta criada pela Comunidade, [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017), que pode automatizar parte da migração de arquivos do projeto. A ferramenta é útil, mas ainda precisa de um humano para revisar os resultados para garantir que todos os detalhes da migração estejam corretos. Uma área específica que a ferramenta não trata de forma ideal é migrar pacotes NuGet de arquivos *Packages. config* . Se a ferramenta for executada em um arquivo de projeto que ainda usa um arquivo *Packages. config* para referenciar os pacotes do NuGet, ele migrará para `<PackageReference>` os elementos automaticamente, mas adicionará `<PackageReference>` elementos para *todos* os pacotes em vez de apenas os de nível superior. Se você já migrou para `<PackageReference>` elementos com o Visual Studio (como fez neste exemplo), a ferramenta pode ajudar com o restante da conversão. Como Scott Hanselman recomenda em [sua postagem de blog sobre migração de arquivos csproj](https://www.hanselman.com/blog/UpgradingAnExistingNETProjectFilesToTheLeanNewCSPROJFormatFromNETCore.aspx), a portabilidade por mão é educativa e fornecerá melhores resultados se você tiver apenas alguns projetos para portar. Mas se você estiver portando dezenas ou centenas de arquivos de projeto, uma ferramenta como [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) pode ser uma ajuda.
 
-Para criar um novo arquivo de projeto para o exemplo do bean de `dotnet new wpf` Trader, execute em um diretório temporário e mova o arquivo *. csproj* gerado para a pasta *BeanTraderClient* e renomeie-o **BeanTraderClient. Core. csproj**.
+Para criar um novo arquivo de projeto para o exemplo do bean de Trader, execute `dotnet new wpf` em um diretório temporário e mova o arquivo *. csproj* gerado para a pasta *BeanTraderClient* e renomeie-o **BeanTraderClient. Core. csproj**.
 
 Como o novo formato de arquivo de projeto inclui automaticamente arquivos C#, arquivos *resx* e arquivos XAML que ele encontra em ou sob seu diretório, o arquivo de projeto já está quase concluído! Para concluir a migração, abra os arquivos de projeto novos e antigos lado a lado e examine o antigo para ver se alguma informação que ele contém precisa ser migrada. No caso de exemplo do bean de Trader, os seguintes itens devem ser copiados para o novo projeto:
 
-- As `<RootNamespace>`propriedades `<AssemblyName>`, e `<ApplicationIcon>` devem ser todas copiadas.
+- As `<RootNamespace>` `<AssemblyName>` Propriedades, e `<ApplicationIcon>` devem ser todas copiadas.
 
-- Você também precisa adicionar uma `<GenerateAssemblyInfo>false</GenerateAssemblyInfo>` Propriedade ao novo arquivo de projeto, já que o exemplo do bean de Trader inclui atributos de `[AssemblyTitle]`nível de assembly (como) em um arquivo AssemblyInfo.cs. Por padrão, os novos projetos no estilo SDK gerarão automaticamente esses atributos com base nas propriedades do arquivo csproj. Como você não quer que isso aconteça nesse caso (os atributos gerados automaticamente entrarão em conflito com aqueles de AssemblyInfo.cs), você desabilita os atributos gerados automaticamente `<GenerateAssemblyInfo>`com.
+- Você também precisa adicionar uma `<GenerateAssemblyInfo>false</GenerateAssemblyInfo>` propriedade ao novo arquivo de projeto, já que o exemplo do bean de Trader inclui atributos de nível de assembly (como `[AssemblyTitle]` ) em um arquivo AssemblyInfo.cs. Por padrão, os novos projetos no estilo SDK gerarão automaticamente esses atributos com base nas propriedades do arquivo csproj. Como você não quer que isso aconteça nesse caso (os atributos gerados automaticamente entrarão em conflito com aqueles de AssemblyInfo.cs), você desabilita os atributos gerados automaticamente com `<GenerateAssemblyInfo>` .
 
-- Embora os arquivos *resx* sejam incluídos automaticamente como recursos incorporados `<Resource>` , outros itens, como imagens, não são. Portanto, copie os `<Resource>` elementos para inserir arquivos de ícone e imagem. Você pode simplificar as referências de png para uma única linha usando o suporte do novo formato de arquivo de projeto para `<Resource Include="**\*.png" />`padrões de mascaramento:.
+- Embora os arquivos *resx* sejam incluídos automaticamente como recursos incorporados, outros `<Resource>` itens, como imagens, não são. Portanto, copie os `<Resource>` elementos para inserir arquivos de ícone e imagem. Você pode simplificar as referências de png para uma única linha usando o suporte do novo formato de arquivo de projeto para padrões de mascaramento: `<Resource Include="**\*.png" />` .
 
-- Da mesma `<None>` forma, os itens são incluídos automaticamente, mas não são copiados para o diretório de saída, por padrão. Como o `<None>` projeto do bean de Trader inclui um item que *é* copiado para o `PreserveNewest` diretório de saída (usando comportamentos), você precisa `<None>` atualizar o item preenchido automaticamente para esse arquivo, desta forma.
+- Da mesma forma, `<None>` os itens são incluídos automaticamente, mas não são copiados para o diretório de saída, por padrão. Como o projeto do bean de Trader inclui um `<None>` item que *é* copiado para o diretório de saída (usando `PreserveNewest` comportamentos), você precisa atualizar o item preenchido automaticamente `<None>` para esse arquivo, desta forma.
 
   ```xml
   <None Update="BeanTrader.pfx">
@@ -182,7 +182,7 @@ Como o novo formato de arquivo de projeto inclui automaticamente arquivos C#, ar
   </None>
   ```
 
-- O exemplo do bean de Trader inclui um arquivo XAML (default. sotaque. `Content` XAML) como (e `Page`não como um) porque os temas e acentos definidos nesse arquivo são carregados a partir do XAML do arquivo em tempo de execução, em vez de serem inseridos no próprio aplicativo. O novo sistema de projeto inclui automaticamente esse arquivo como `<Page>`um, no entanto, uma vez que é um arquivo XAML. Portanto, você precisa remover o arquivo XAML como uma página (`<Page Remove="**\Default.Accent.xaml" />`) e adicioná-lo como conteúdo.
+- O exemplo do bean de Trader inclui um arquivo XAML (default. sotaque. XAML) como `Content` (e não como um `Page` ) porque os temas e acentos definidos nesse arquivo são carregados a partir do XAML do arquivo em tempo de execução, em vez de serem inseridos no próprio aplicativo. O novo sistema de projeto inclui automaticamente esse arquivo como um `<Page>` , no entanto, uma vez que é um arquivo XAML. Portanto, você precisa remover o arquivo XAML como uma página ( `<Page Remove="**\Default.Accent.xaml" />` ) e adicioná-lo como conteúdo.
 
   ```xml
   <Content Include="Resources\Themes\Default.Accent.xaml">
@@ -190,11 +190,11 @@ Como o novo formato de arquivo de projeto inclui automaticamente arquivos C#, ar
   </Content>
   ```
 
-- Por fim, adicione referências do NuGet copiando o `<ItemGroup>` com `<PackageReference>` todos os elementos. Se você não tiver atualizado anteriormente os pacotes do NuGet para versões compatíveis com o .NET Core, poderá fazer isso agora que as referências de pacote estão em um projeto específico do .NET Core.
+- Por fim, adicione referências do NuGet copiando o `<ItemGroup>` com todos os `<PackageReference>` elementos. Se você não tiver atualizado anteriormente os pacotes do NuGet para versões compatíveis com o .NET Core, poderá fazer isso agora que as referências de pacote estão em um projeto específico do .NET Core.
 
 Neste ponto, deve ser possível adicionar o novo projeto à solução BeanTrader e abri-lo no Visual Studio. O projeto deve parecer correto em **Gerenciador de soluções**e `dotnet restore BeanTraderClient.Core.csproj` deve restaurar os pacotes com êxito (com dois avisos esperados relacionados à versão MahApps. metro que você está usando para .NET Framework).
 
-Embora seja possível manter ambos os arquivos de projeto lado a lado (e pode até mesmo ser desejável se você quiser continuar criando o projeto antigo exatamente como era), isso complica o processo de migração (os dois projetos tentarão usar as mesmas pastas bin e obj) e geralmente não é necessário. Se você quiser compilar tanto o .NET Core quanto os destinos do .NET Framework, poderá substituir a `<TargetFramework>netcoreapp3.0</TargetFramework>` Propriedade no novo arquivo de projeto por `<TargetFrameworks>netcoreapp3.0;net472</TargetFrameworks>` em vez disso. Para o exemplo do bean de Trader, exclua o arquivo de projeto antigo (BeanTraderClient. csproj), pois ele não é mais necessário. Se você preferir manter ambos os arquivos de projeto, certifique-se de que eles sejam criados para caminhos de saída intermediário e de saída diferentes.
+Embora seja possível manter ambos os arquivos de projeto lado a lado (e pode até mesmo ser desejável se você quiser continuar criando o projeto antigo exatamente como era), isso complica o processo de migração (os dois projetos tentarão usar as mesmas pastas bin e obj) e geralmente não é necessário. Se você quiser compilar tanto o .NET Core quanto os destinos do .NET Framework, poderá substituir a `<TargetFramework>netcoreapp3.0</TargetFramework>` propriedade no novo arquivo de projeto por `<TargetFrameworks>netcoreapp3.0;net472</TargetFrameworks>` em vez disso. Para o exemplo do bean de Trader, exclua o arquivo de projeto antigo (BeanTraderClient. csproj), pois ele não é mais necessário. Se você preferir manter ambos os arquivos de projeto, certifique-se de que eles sejam criados para caminhos de saída intermediário e de saída diferentes.
 
 ## <a name="fix-build-issues"></a>Corrigir problemas de compilação
 
@@ -202,9 +202,9 @@ A terceira etapa do processo de portabilidade é obter o projeto para compilar. 
 
 ### <a name="systemservicemodel-references-and-microsoftwindowscompatibility"></a>Referências de System. ServiceModel e Microsoft. Windows. Compatibility
 
-Uma fonte comum de erros está faltando referências para APIs que estão disponíveis para o .NET Core, mas não são incluídas automaticamente no metapacote do aplicativo .NET Core. Para resolver isso, você deve fazer referência `Microsoft.Windows.Compatibility` ao pacote. O pacote de compatibilidade inclui um amplo conjunto de APIs que são comuns em aplicativos de área de trabalho do Windows, como WCF Client, serviços de diretório, registro, configuração, APIs de ACLs e muito mais.
+Uma fonte comum de erros está faltando referências para APIs que estão disponíveis para o .NET Core, mas não são incluídas automaticamente no metapacote do aplicativo .NET Core. Para resolver isso, você deve fazer referência ao `Microsoft.Windows.Compatibility` pacote. O pacote de compatibilidade inclui um amplo conjunto de APIs que são comuns em aplicativos de área de trabalho do Windows, como WCF Client, serviços de diretório, registro, configuração, APIs de ACLs e muito mais.
 
-Com o exemplo do bean de Trader, a maioria dos erros de compilação se <xref:System.ServiceModel> deve a tipos ausentes. Eles podem ser resolvidos referenciando os pacotes do WCF NuGet necessários. As APIs de cliente do `Microsoft.Windows.Compatibility` WCF estão entre elas presentes no pacote, mas, portanto, fazer referência ao pacote de compatibilidade é uma solução ainda melhor (já que ela também resolve quaisquer problemas relacionados a APIs, bem como soluções para os problemas do WCF disponibilizados pelo pacote de compatibilidade). O `Microsoft.Windows.Compatibility` pacote ajuda na maioria dos cenários de portabilidade do WPF e WinForms do .net Core 3,0. Depois de adicionar a referência do `Microsoft.Windows.Compatibility`NuGet a, somente um erro de compilação permanece!
+Com o exemplo do bean de Trader, a maioria dos erros de compilação se deve a tipos ausentes <xref:System.ServiceModel> . Eles podem ser resolvidos referenciando os pacotes do WCF NuGet necessários. As APIs de cliente do WCF estão entre elas presentes no `Microsoft.Windows.Compatibility` pacote, mas, portanto, fazer referência ao pacote de compatibilidade é uma solução ainda melhor (já que ela também resolve quaisquer problemas relacionados a APIs, bem como soluções para os problemas do WCF disponibilizados pelo pacote de compatibilidade). O `Microsoft.Windows.Compatibility` pacote ajuda na maioria dos cenários de portabilidade do WPF e WinForms do .NET Core 3,0. Depois de adicionar a referência do NuGet a `Microsoft.Windows.Compatibility` , somente um erro de compilação permanece!
 
 ### <a name="cleaning-up-unused-files"></a>Limpando arquivos não utilizados
 
@@ -212,9 +212,9 @@ Um tipo de problema de migração que surge com freqüência é relacionado aos 
 
 O próximo erro de compilação que você vê no exemplo do bean de Trader se refere a uma implementação de interface inadequada em *OldUnusedViewModel.cs*. O nome do arquivo é uma dica, mas, na inspeção, você descobrirá que esse arquivo de origem está incorreto. Isso não causava problemas anteriormente porque não foi incluído no projeto de .NET Framework original. Os arquivos de origem que estavam presentes no disco, mas não incluídos no *csproj* antigo, são incluídos automaticamente agora.
 
-Para problemas únicos como esse, é fácil comparar com o *csproj* anterior para confirmar que o arquivo não é necessário e, em seguida `<Compile Remove="" />` , ou, se o arquivo de origem não for mais necessário em qualquer lugar, exclua-o. Nesse caso, é seguro excluir apenas *OldUnusedViewModel.cs*.
+Para problemas únicos como esse, é fácil comparar com o *csproj* anterior para confirmar que o arquivo não é necessário e, em seguida, `<Compile Remove="" />` ou, se o arquivo de origem não for mais necessário em qualquer lugar, exclua-o. Nesse caso, é seguro excluir apenas *OldUnusedViewModel.cs*.
 
-Se você tiver muitos arquivos de origem que precisariam ser excluídos dessa forma, você poderá desabilitar a inclusão automática de arquivos C# definindo a `<EnableDefaultCompileItems>` Propriedade como false no arquivo de projeto. Em seguida, você pode `<Compile Include>` copiar itens do arquivo de projeto antigo para o novo a fim de Compilar apenas as fontes que pretende incluir. Da mesma `<EnableDefaultPageItems>` forma, pode ser usado para desativar a inclusão automática de páginas XAML `<EnableDefaultItems>` e pode controlar ambas com uma única propriedade.
+Se você tiver muitos arquivos de origem que precisariam ser excluídos dessa forma, você poderá desabilitar a inclusão automática de arquivos C# definindo a `<EnableDefaultCompileItems>` propriedade como false no arquivo de projeto. Em seguida, você pode copiar `<Compile Include>` itens do arquivo de projeto antigo para o novo a fim de Compilar apenas as fontes que pretende incluir. Da mesma forma, `<EnableDefaultPageItems>` pode ser usado para desativar a inclusão automática de páginas XAML e `<EnableDefaultItems>` pode controlar ambas com uma única propriedade.
 
 ### <a name="a-brief-aside-on-multi-pass-compilers"></a>Um breve lado sobre compiladores com várias passagens
 
@@ -227,33 +227,33 @@ Depois de remover o arquivo transgressor do exemplo do bean de Trader, você pod
 
 Outra classe de problema que surge em alguns cenários de migração são as diferenças de API entre .NET Framework e as versões de dependências do .NET Core. Mesmo que um pacote NuGet tenha como alvo .NET Framework e .NET Standard ou .NET Core, pode haver diferentes bibliotecas para uso com destinos .NET diferentes. Isso permite que os pacotes ofereçam suporte a várias plataformas .NET diferentes, o que pode exigir implementações diferentes. Isso também significa que pode haver pequenas diferenças de API nas bibliotecas ao direcionar diferentes plataformas .NET.
 
-O próximo conjunto de erros que você verá no exemplo do bean de Trader está `Castle.Windsor` relacionado a APIs. O projeto do Bean do .NET Core Traders usa a `Castle.Windsor` mesma versão do que o projeto de .NET Framework direcionado (4.1.1), mas as implementações dessas duas plataformas são um pouco diferentes.
+O próximo conjunto de erros que você verá no exemplo do bean de Trader está relacionado a `Castle.Windsor` APIs. O projeto do Bean do .NET Core Traders usa a mesma versão do `Castle.Windsor` que o projeto de .NET Framework direcionado (4.1.1), mas as implementações dessas duas plataformas são um pouco diferentes.
 
 Nesse caso, você verá os seguintes problemas que precisam ser corrigidos:
 
-1. `Castle.MicroKernel.Registration.Classes.FromThisAssembly`Não está disponível no .NET Core. Há, no entanto, a API `Classes.FromAssemblyContaining` semelhante disponível, portanto, podemos substituir ambos os `Classes.FromThisAssembly()` usos de com `Classes.FromAssemblyContaining(t)`chamadas para `t` , em que é o tipo que faz a chamada.
-1. Da mesma forma *Bootstrapper.cs*, em `Castle.Windsor.Installer.FromAssembly`bootstrapper.cs,. Isso não está disponível no .NET Core. Em vez disso, essa chamada pode ser `FromAssembly.Containing(typeof(Bootstrapper))`substituída por.
+1. `Castle.MicroKernel.Registration.Classes.FromThisAssembly`Não está disponível no .NET Core. Há, no entanto, a API semelhante `Classes.FromAssemblyContaining` disponível, portanto, podemos substituir ambos os usos de `Classes.FromThisAssembly()` com chamadas para `Classes.FromAssemblyContaining(t)` , em que `t` é o tipo que faz a chamada.
+1. Da mesma forma, em *bootstrapper.cs*, `Castle.Windsor.Installer.FromAssembly` . Isso não está disponível no .NET Core. Em vez disso, essa chamada pode ser substituída por `FromAssembly.Containing(typeof(Bootstrapper))` .
 
 ### <a name="updating-wcf-client-usage"></a>Atualizando o uso do cliente WCF
 
-Depois de corrigir `Castle.Windsor` as diferenças, o último erro de compilação restante no projeto do Bean do .NET Core `BeanTraderServiceClient` Traders é que ( `DuplexClientBase`derivado de) não `Open` tem um método. Isso não é surpreendente, pois essa é uma API que foi realçada pelo .NET Portability Analyzer no início deste processo de migração. No `BeanTraderServiceClient` entanto, examinar o desenha nossa atenção para um problema maior. Este cliente WCF foi gerado automaticamente pela ferramenta [svcutil. exe](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) .
+Depois de corrigir as `Castle.Windsor` diferenças, o último erro de compilação restante no projeto do Bean do .NET Core Traders é que `BeanTraderServiceClient` (derivado de `DuplexClientBase` ) não tem um `Open` método. Isso não é surpreendente, pois essa é uma API que foi realçada pelo .NET Portability Analyzer no início deste processo de migração. No `BeanTraderServiceClient` entanto, examinar o desenha nossa atenção para um problema maior. Este cliente WCF foi gerado automaticamente pela ferramenta [svcutil. exe](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) .
 
 **Os clientes WCF gerados por SvcUtil são destinados para uso em .NET Framework.**
 
 As soluções que usam clientes WCF gerados por SvcUtil precisarão regenerar clientes compatíveis com .NET Standard para uso com o .NET Core. Um dos principais motivos pelos quais os clientes antigos não funcionarão é que eles dependem da configuração do aplicativo para definir associações e pontos de extremidade do WCF. Como .NET Standard APIs do WCF podem trabalhar em plataforma cruzada (onde as APIs de sistema. de configuração não estão disponíveis), os clientes WCF para .NET Core e cenários de .NET Standard devem definir associações e pontos de extremidade programaticamente em vez de na configuração.
 
-Na verdade, qualquer uso de cliente WCF que dependa `<system.serviceModel>` da seção app. config (seja criado com SvcUtil ou manualmente) precisará ser alterado para funcionar no .NET Core.
+Na verdade, qualquer uso de cliente WCF que dependa da `<system.serviceModel>` seção app. config (seja criado com SvcUtil ou manualmente) precisará ser alterado para funcionar no .NET Core.
 
 Há duas maneiras de gerar automaticamente clientes WCF compatíveis com .NET Standard:
 
 - A `dotnet-svcutil` ferramenta é uma ferramenta .NET que gera clientes WCF de uma maneira semelhante a como o SvcUtil funcionou anteriormente.
 - O Visual Studio pode gerar clientes WCF usando a opção de [referência de serviço Web do WCF](../../core/additional-tools/wcf-web-service-reference-guide.md) de seu recurso de serviços conectados.
 
-Qualquer uma das abordagens funciona bem. Como alternativa, é claro que você pode escrever o código do cliente WCF por conta própria. Para este exemplo, optei por usar o recurso serviço conectado do Visual Studio. Para fazer isso, clique com o botão direito do mouse no projeto *BeanTraderClient. Core* no Gerenciador de soluções do Visual Studio e selecione **Adicionar** > **serviço conectado**. Em seguida, escolha o provedor de referência do serviço Web WCF. Isso abrirá uma caixa de diálogo onde você pode especificar o endereço do serviço Web do bean de back`localhost:8080` -end (se você estiver executando o servidor localmente) e o namespace que gerou os tipos deve usar (**BeanTrader. Service**, por exemplo).
+Qualquer uma das abordagens funciona bem. Como alternativa, é claro que você pode escrever o código do cliente WCF por conta própria. Para este exemplo, optei por usar o recurso serviço conectado do Visual Studio. Para fazer isso, clique com o botão direito do mouse no projeto *BeanTraderClient. Core* no Gerenciador de soluções do Visual Studio e selecione **Adicionar**  >  **serviço conectado**. Em seguida, escolha o provedor de referência do serviço Web WCF. Isso abrirá uma caixa de diálogo onde você pode especificar o endereço do serviço Web do bean de back-end ( `localhost:8080` se você estiver executando o servidor localmente) e o namespace que gerou os tipos deve usar (**BeanTrader. Service**, por exemplo).
 
 ![Caixa de diálogo serviço conectado de referência do serviço Web WCF](./media/convert-project-from-net-framework/connected-service-dialog.png)
 
-Depois de selecionar o botão **concluir** , um novo nó serviços conectados é adicionado ao projeto e um arquivo Reference.cs é adicionado sob esse nó que contém o novo cliente WCF .net Standard para acessar o serviço do Bean do Trader. Se você examinar os métodos `GetEndpointAddress` ou `GetBindingForEndpoint` nesse arquivo, verá que as associações e os pontos de extremidade agora são gerados programaticamente (em vez de por meio da configuração do aplicativo). O recurso ' Adicionar serviços conectados ' também pode adicionar referências a alguns pacotes System. ServiceModel no arquivo de projeto, o que não é necessário, pois todos os pacotes WCF necessários estão incluídos por meio de Microsoft. Windows. Compatibility. Verifique o csproj para ver se algum item do System. `<PackageReference>` ServiceModel extra foi adicionado e, nesse caso, remova-os.
+Depois de selecionar o botão **concluir** , um novo nó serviços conectados é adicionado ao projeto e um arquivo Reference.cs é adicionado sob esse nó que contém o novo cliente WCF .net Standard para acessar o serviço do Bean do Trader. Se você examinar os `GetEndpointAddress` métodos ou `GetBindingForEndpoint` nesse arquivo, verá que as associações e os pontos de extremidade agora são gerados programaticamente (em vez de por meio da configuração do aplicativo). O recurso ' Adicionar serviços conectados ' também pode adicionar referências a alguns pacotes System. ServiceModel no arquivo de projeto, o que não é necessário, pois todos os pacotes WCF necessários estão incluídos por meio de Microsoft. Windows. Compatibility. Verifique o csproj para ver se algum item do System. ServiceModel extra `<PackageReference>` foi adicionado e, nesse caso, remova-os.
 
 Nosso projeto tem novas classes de cliente WCF agora (em *Reference.cs*), mas ainda tem as antigas (em BeanTrader.cs). Há duas opções neste ponto:
 
@@ -269,7 +269,7 @@ No caso do exemplo do bean de Trader, você pode fazer pequenas alterações no 
 
 01. O novo cliente WCF é semelhante ao antigo, mas vários namespaces no código gerado são diferentes. Por isso, é necessário atualizar o projeto para que os tipos de cliente do WCF sejam usados em BeanTrader. Service (ou em qualquer nome de namespace escolhido) em vez de BeanTrader. Model ou sem um namespace. A criação de *BeanTraderClient. Core. csproj* ajudará a identificar onde essas alterações precisam ser feitas. Correções serão necessárias tanto no C# quanto nos arquivos de origem XAML.
 
-01. Por fim, você descobrirá que há um erro em *BeanTraderServiceClientFactory.cs* porque os construtores disponíveis para o `BeanTraderServiceClient` tipo foram alterados. Costumava ser possível fornecer um `InstanceContext` argumento (que foi criado usando um `CallbackHandler` do contêiner `Castle.Windsor` IOC). Os novos construtores criam novos `CallbackHandler`s. No entanto, há construtores no `BeanTraderServiceClient`tipo base do que correspondem ao que você deseja. Como o código do cliente WCF gerado automaticamente existe em classes parciais, você pode estendê-lo facilmente. Para fazer isso, crie um novo arquivo chamado *BeanTraderServiceClient.cs* e, em seguida, crie uma classe parcial com esse mesmo nome (usando o namespace BeanTrader. Service). Em seguida, adicione um construtor ao tipo parcial, conforme mostrado aqui.
+01. Por fim, você descobrirá que há um erro em *BeanTraderServiceClientFactory.cs* porque os construtores disponíveis para o `BeanTraderServiceClient` tipo foram alterados. Costumava ser possível fornecer um `InstanceContext` argumento (que foi criado usando um `CallbackHandler` do `Castle.Windsor` contêiner IoC). Os novos construtores criam novos `CallbackHandler` s. No entanto, há construtores no `BeanTraderServiceClient` tipo base do que correspondem ao que você deseja. Como o código do cliente WCF gerado automaticamente existe em classes parciais, você pode estendê-lo facilmente. Para fazer isso, crie um novo arquivo chamado *BeanTraderServiceClient.cs* e, em seguida, crie uma classe parcial com esse mesmo nome (usando o namespace BeanTrader. Service). Em seguida, adicione um construtor ao tipo parcial, conforme mostrado aqui.
 
     ```csharp
     public BeanTraderServiceClient(System.ServiceModel.InstanceContext callbackInstance) :
@@ -277,7 +277,7 @@ No caso do exemplo do bean de Trader, você pode fazer pequenas alterações no 
             { }
     ```
 
-Com essas alterações feitas, o exemplo do bean de Trader agora estará usando um novo cliente WCF compatível com .NET Standard e você poderá fazer a correção final de `Open` alterar a chamada em *TradingService.cs* para usar `await OpenAsync` em vez disso.
+Com essas alterações feitas, o exemplo do bean de Trader agora estará usando um novo cliente WCF compatível com .NET Standard e você poderá fazer a correção final de alterar a `Open` chamada em *TradingService.cs* para usar `await OpenAsync` em vez disso.
 
 Com os problemas do WCF abordados, a versão do .NET Core do exemplo do bean de Traders agora é compilada de forma limpa!
 
@@ -302,7 +302,7 @@ Depois de remover a seção System. serviceModel de *app. config*, o aplicativo 
 System.PlatformNotSupportedException: 'Operation is not supported on this platform.'
 ```
 
-A API sem suporte é `Func<T>.BeginInvoke`. Conforme explicado em [dotnet/corefx # 5940](https://github.com/dotnet/corefx/issues/5940), o `BeginInvoke` .NET Core não dá `EndInvoke` suporte aos métodos e em tipos delegados devido a dependências de comunicação remota subjacentes. Esse problema e sua correção são explicados mais detalhadamente na postagem de [chamadas delegate. BeginInvoke para](https://devblogs.microsoft.com/dotnet/migrating-delegate-begininvoke-calls-for-net-core/) o blog do .NET Core, mas o `BeginInvoke` principal `EndInvoke` é que e as chamadas `Task.Run` devem ser substituídas por (ou por alternativas assíncronas, se possível). Aplicando a solução geral aqui, `BeginInvoke` a chamada pode ser substituída `Invoke` por uma chamada `Task.Run`iniciada pelo.
+A API sem suporte é `Func<T>.BeginInvoke` . Conforme explicado em [dotnet/corefx # 5940](https://github.com/dotnet/corefx/issues/5940), o .NET Core não dá suporte aos `BeginInvoke` `EndInvoke` métodos e em tipos delegados devido a dependências de comunicação remota subjacentes. Esse problema e sua correção são explicados mais detalhadamente na postagem de [chamadas delegate. BeginInvoke para](https://devblogs.microsoft.com/dotnet/migrating-delegate-begininvoke-calls-for-net-core/) o blog do .NET Core, mas o principal é que `BeginInvoke` e as `EndInvoke` chamadas devem ser substituídas por `Task.Run` (ou por alternativas assíncronas, se possível). Aplicando a solução geral aqui, a `BeginInvoke` chamada pode ser substituída `Invoke` por uma chamada iniciada pelo `Task.Run` .
 
 ```csharp
 Task.Run(() =>
@@ -316,7 +316,7 @@ Task.Run(() =>
 }, TaskScheduler.Default);
 ```
 
-Depois de remover `BeginInvoke` o uso, o aplicativo do Beans Trader é executado com êxito no .NET Core!
+Depois de remover o `BeginInvoke` uso, o aplicativo do Beans Trader é executado com êxito no .NET Core!
 
 ![Bean de Trader em execução no .NET Core](./media/convert-project-from-net-framework/running-on-core.png)
 

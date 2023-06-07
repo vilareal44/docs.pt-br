@@ -9,18 +9,18 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-ms.openlocfilehash: f3fd0ed0388276f1400bf77d0abfb488634a45a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 00b543dbe96ca99446f6797a13b66ee62c422b93
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74353601"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398273"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Instruções passo a passo: determinando onde My.Application.Log grava informações (Visual Basic)
 
 O objeto `My.Application.Log` pode gravar informações em vários ouvintes de log. Os ouvintes de log são configurados pelo arquivo de configuração do computador e podem ser substituídos pelo arquivo de configuração do aplicativo. Este tópico descreve as configurações padrão e como determinar as configurações para seu aplicativo.
 
-Para obter mais informações sobre os locais de saída padrão, consulte [Trabalhando com logs de aplicativo](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).
+Para obter mais informações sobre os locais de saída padrão, consulte [Trabalhando com logs de aplicativo](working-with-application-logs.md).
 
 ### <a name="to-determine-the-listeners-for-myapplicationlog"></a>Para determinar os ouvintes de My.Application.Log
 
@@ -63,7 +63,7 @@ Para obter mais informações sobre os locais de saída padrão, consulte [Traba
 
     - Para obter informações sobre onde outros tipos de ouvintes de log gravam informações, consulte a documentação daquele tipo.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:System.Diagnostics.DefaultTraceListener>
@@ -72,9 +72,9 @@ Para obter mais informações sobre os locais de saída padrão, consulte [Traba
 - <xref:System.Diagnostics.XmlWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics>
-- [Trabalhar com logs do aplicativo](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Como: registrar exceções em log](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [Como: gravar mensagens de log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Passo a passo: alterar o local no qual My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Trabalhar com logs do aplicativo](working-with-application-logs.md)
+- [Como: registrar exceções em log](how-to-log-exceptions.md)
+- [Como: gravar mensagens de log](how-to-write-log-messages.md)
+- [Passo a passo: alterar o local no qual My.Application.Log grava informações](walkthrough-changing-where-my-application-log-writes-information.md)
 - [Eventos ETW no .NET Framework](../../../../framework/performance/etw-events.md)
-- [Solução de problemas: ouvintes de log](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+- [Solução de problemas: ouvintes de log](troubleshooting-log-listeners.md)

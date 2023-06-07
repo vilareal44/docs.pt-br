@@ -1,5 +1,6 @@
 ---
-title: 'Passo a passo: Criando e usando objetos dinâmicos (C# e Visual Basic)'
+title: 'Passo a passo: criar e usar objetos dinâmicos (C# e Visual Basic)'
+description: Saiba como criar e usar objetos dinâmicos neste passo a passos. Crie um objeto dinâmico personalizado e um projeto que usa uma biblioteca ' IronPython '.
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 3b5a92948a3e692a734f3ddee3c7238d5d27588f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 144651d3b14f6f6093ab07f1df7be10e6d05ae89
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157046"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381249"
 ---
-# <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Passo a passo: Criando e usando objetos dinâmicos (C# e Visual Basic)
+# <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Passo a passo: criar e usar objetos dinâmicos (C# e Visual Basic)
 
 Os objetos dinâmicos expõem membros como propriedades e métodos em tempo de execução, em vez de em tempo de compilação. Isso permite que você crie objetos para trabalhar com estruturas que não correspondem a um formato ou tipo estático. Por exemplo, você pode usar um objeto dinâmico para fazer referência ao DOM (Modelo de Objeto do Documento) HTML, que pode conter qualquer combinação de atributos e elementos de marcação HTML válidos. Como cada documento HTML é único, os membros de um determinado documento HTML são determinados em tempo de execução. Um método comum para fazer referência a um atributo de um elemento HTML é passar o nome do atributo para o método `GetProperty` do elemento. Para fazer referência ao atributo `id` do elemento HTML `<div id="Div1">`, primeiro você obtém uma referência ao elemento `<div>` e, depois, usa `divElement.GetProperty("id")`. Se usar um objeto dinâmico, você poderá fazer referência ao atributo `id` como `divElement.id`.  
   
@@ -46,7 +47,7 @@ O primeiro projeto que você cria neste passo a passo define um objeto dinâmico
   
 1. Inicie o Visual Studio.  
   
-2. No **menu Arquivo,** aponte para **Novo** e clique em **Projeto**.  
+2. No menu **arquivo** , aponte para **novo** e clique em **projeto**.  
   
 3. Na caixa de diálogo **Novo Projeto**, no painel **Tipos de Projetos**, certifique-se de que **Windows** esteja selecionado. Selecione **Aplicativo de Console** no painel **Modelos**. Na caixa **Nome**, digite `DynamicSample` e clique em **OK**. Quando um novo projeto é criado.  
   
@@ -131,11 +132,11 @@ O próximo projeto que você cria neste passo a passo acessa uma biblioteca escr
   
 ### <a name="to-create-a-custom-dynamic-class"></a>Para criar uma classe dinâmica personalizada
   
-1. No Visual Studio, no menu **Arquivo,** aponte para **Novo** e clique em **Projeto**.  
+1. No Visual Studio, no menu **arquivo** , aponte para **novo** e clique em **projeto**.  
   
 2. Na caixa de diálogo **Novo Projeto**, no painel **Tipos de Projetos**, certifique-se de que **Windows** esteja selecionado. Selecione **Aplicativo de Console** no painel **Modelos**. Na caixa **Nome**, digite `DynamicIronPythonSample` e clique em **OK**. Quando um novo projeto é criado.  
   
-3. Se você estiver usando o Visual Basic, clique com o botão direito do mouse no projeto DynamicIronPythonSample e, em seguida, clique em **Propriedades**. Clique na guia **Referências.** Clique no botão **Adicionar.** Se você estiver usando o Visual C#, no **Gerenciador de Soluções**, clique com botão direito do mouse na pasta **Referências** e, em seguida, clique em **Adicionar Referência**.  
+3. Se você estiver usando o Visual Basic, clique com o botão direito do mouse no projeto DynamicIronPythonSample e, em seguida, clique em **Propriedades**. Clique na guia **referências** . Clique no botão **Adicionar** . Se você estiver usando o Visual C#, no **Gerenciador de Soluções**, clique com botão direito do mouse na pasta **Referências** e, em seguida, clique em **Adicionar Referência**.  
   
 4. Na guia **Procurar**, navegue até a pasta em que as bibliotecas do IronPython estão instaladas. Por exemplo, C:\Program Files\IronPython 2.6 for .NET 4.0. Selecione as bibliotecas **IronPython.dll**, **IronPython.Modules.dll**, **Microsoft.Scripting.dll** e **Microsoft.Dynamic.dll**. Clique em **OK**.  
   
@@ -158,11 +159,11 @@ O próximo projeto que você cria neste passo a passo acessa uma biblioteca escr
   
 9. Salve o arquivo e pressione CTRL+F5 para compilar e executar o aplicativo.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Dynamic?displayProperty=nameWithType>
 - <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
-- [Usando o Tipo dynamic](./using-type-dynamic.md)
-- [Associação inicial e tardia](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+- [Usando o tipo dynamic](./using-type-dynamic.md)
+- [Associação antecipada e tardia](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
 - [dinâmico](../../language-reference/builtin-types/reference-types.md)
 - [Implementando interfaces dinâmicas (PDF para download do Microsoft TechNet)](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

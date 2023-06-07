@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbb3caf-20da-4a4b-8983-77376e72b990
 topic_type:
 - apiref
-ms.openlocfilehash: a76a7a2d4ad68e367e38e175377aff40ce399346
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b32e8f0b03ef6d550c384f3d932cc295a7270028
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450199"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007657"
 ---
 # <a name="cormethodimpl-enumeration"></a>Enumeração CorMethodImpl
 Contém valores que descrevem os recursos de implementação do método.  
@@ -54,7 +54,7 @@ typedef enum CorMethodImpl {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`miCodeTypeMask`|Sinalizadores que descrevem o tipo de código.|  
 |`miIL`|Especifica que a implementação do método é MSIL (Microsoft Intermediate Language).|  
@@ -71,15 +71,15 @@ typedef enum CorMethodImpl {
 |`miNoInlining`|Especifica que o método não pode estar em linha.|  
 |`miAggressiveInlining`|Especifica que o método deve ser embutido, se possível.|  
 |`miNoOptimization`|Especifica que o método não deve ser otimizado.|  
-|`miMaxMethodImplVal`|O valor máximo válido para um `CorMethodImpl`.|  
+|`miMaxMethodImplVal`|O valor máximo válido para um `CorMethodImpl` .|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerações de metadados](metadata-enumerations.md)

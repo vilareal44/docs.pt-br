@@ -2,12 +2,12 @@
 title: Lidando com a complexidade de negócios em um microsserviço com padrões DDD e CQRS
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Entenda como lidar com cenários de negócios complexos aplicando padrões DDD e CQRS
 ms.date: 10/08/2018
-ms.openlocfilehash: 88b105b68307c8587f877bb9ddf370e143d8539b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 852073548a66fbe568fc5c2531342db944d5a8b0
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73739834"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144637"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Lidar com a complexidade dos negócios em um microsserviço com padrões DDD e CQRS
 
@@ -15,7 +15,7 @@ ms.locfileid: "73739834"
 
 Esta seção concentra-se em microsserviços mais avançados que você implementa quando precisa lidar com subsistemas complexos ou com microsserviços derivados do conhecimento de especialistas no domínio com mudanças constantes nas regras de negócio. Os padrões de arquitetura usados nesta seção são baseados nas abordagens DDD (design controlado por domínio) e CQRS (Segregação de Responsabilidade de Comando e Consulta), conforme é ilustrado na Figura 7-1.
 
-:::image type="complex" source="./media/index/internal-versus-external-architecture.png" alt-text="Diagrama comparando padrões de arquitetura externas e internas.":::
+:::image type="complex" source="./media/index/internal-versus-external-architecture.png" alt-text="Diagrama comparando padrões de arquitetura externa e interna.":::
 Diferença entre arquitetura externa: padrões de microsserviço, gateways de API, comunicação resilientes, pub/sub etc. e a arquitetura interna: controlado por dados/CRUD, padrões de DDD, injeção de dependência, várias bibliotecas etc.
 :::image-end:::
 
@@ -31,46 +31,46 @@ O DDD é um tópico grande com um conjunto avançado de recursos de aprendizagem
 
 ##### <a name="ddd-domain-driven-design"></a>DDD (design controlado por domínio)
 
-- **Eric Evans. Linguagem de domínio** \
+- **Eric Evans. Idioma do domínio** \
   <https://domainlanguage.com/>
 
-- **Martin Fowler. Design orientado a domínios** \
+- **Martin Fowler. Design controlado por domínio** \
   <https://martinfowler.com/tags/domain%20driven%20design.html>
 
-- **Jimmy Bogard. Fortalecendo seu domínio: uma cartilha** \
+- **Jimmy Bogard. Fortalecendo seu domínio: um primer** \
   <https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/>
 
 ##### <a name="ddd-books"></a>Guias sobre DDD
 
-- **Eric Evans. Design orientado por domínio: enfrentando a complexidade no coração do software** \
+- **Eric Evans. Design controlado por domínio: solução de complexidade no coração do software** \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
-- **Eric Evans. Referência de design orientada a domínio: definições e resumos de padrões** \
+- **Eric Evans. Referência de design controlada por domínio: definições e resumos de padrões** \
   <https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/>
 
-- **Vaughn Vernon. Implementando design orientado a domínios** \
+- **Vaughn Vernon. Implementando o design controlado por domínio** \
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
-- **Vaughn Vernon. Design orientado por domínio destilado** \
+- **Vaughn Vernon. Design controlado por domínio difixado** \
   <https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/>
 
-- **Jimmy Nilsson. Aplicando design e padrões orientados a domínios** \
+- **Jimmy Nilsson. Aplicando padrões e design orientados a domínio** \
   <https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/>
 
-- **Cesar de la Torre. Guia de arquitetura orientada a domínio em camadas com .NET** \
+- **Cesar de la Torre. Guia de arquitetura orientada a domínio N camadas com o .NET** \
   <https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/>
 
-- **Abel Avram e Floyd Marinescu. Design orientado por domínio rapidamente** \
+- **Abel Avram e algoritmo Floyd Marinescu. Design controlado por domínio rapidamente** \
   <https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/>
 
-- **Scott Millett, Nick Tune - Padrões, Princípios e Práticas de Design Orientado por Domínio** \
-  <http://www.wrox.com/WileyCDA/WroxTitle/Patterns-Principles-and-Practices-of-Domain-Driven-Design.productCd-1118714709.html>
+- **Scott Millett, ajuste de Nick-padrões, princípios e práticas de design controlado por domínio** \
+  <https://www.wiley.com/Patterns%2C+Principles%2C+and+Practices+of+Domain+Driven+Design-p-9781118714706>
 
 ##### <a name="ddd-training"></a>Treinamento em DDD
 
-- **Julie Lerman e Steve Smith. Fundamentos de design orientados por domínio** \
+- **Julie Lerman e Steve Smith. Conceitos básicos de design controlado por domínio** \
   <https://bit.ly/PS-DDD>
 
 >[!div class="step-by-step"]
->[Próximo](../multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md)
->[anterior](apply-simplified-microservice-cqrs-ddd-patterns.md)
+>[Anterior](../multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md) 
+> [Avançar](apply-simplified-microservice-cqrs-ddd-patterns.md)

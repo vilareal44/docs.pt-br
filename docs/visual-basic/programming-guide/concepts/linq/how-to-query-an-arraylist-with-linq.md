@@ -1,17 +1,17 @@
 ---
-title: Como consultar um ArrayList com LINQ
+title: 'Como: consultar um ArrayList com LINQ'
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-ms.openlocfilehash: 94a3c6d4c381f41f9ba87bf3af93261712ad1136
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b7b75e017fb314b5e5998b743dbf922f34fd9b7c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347750"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396461"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Como consultar um ArrayList com LINQ (Visual Basic)
 
-Ao usar a LINQ para consultar coleções <xref:System.Collections.IEnumerable> não genéricas como <xref:System.Collections.ArrayList>, você deve declarar explicitamente o tipo da variável de intervalo para refletir o tipo específico dos objetos na coleção. Por exemplo, se você tiver uma <xref:System.Collections.ArrayList> de objetos `Student`, a [cláusula from](../../../../visual-basic/language-reference/queries/from-clause.md) deverá ter esta aparência:
+Ao usar a LINQ para consultar coleções <xref:System.Collections.IEnumerable> não genéricas como <xref:System.Collections.ArrayList>, você deve declarar explicitamente o tipo da variável de intervalo para refletir o tipo específico dos objetos na coleção. Por exemplo, se você tiver um <xref:System.Collections.ArrayList> de `Student` objetos, sua [cláusula from](../../../language-reference/queries/from-clause.md) deverá ter esta aparência:
 
 ```vb
 Dim query = From student As Student In arrList
@@ -20,7 +20,7 @@ Dim query = From student As Student In arrList
 
 Especificando o tipo da variável de intervalo, você está convertendo cada item na <xref:System.Collections.ArrayList> em um `Student`.
 
-O uso de uma variável de intervalo de tipo explícito em uma expressão de consulta é equivalente a chamar o método <xref:System.Linq.Enumerable.Cast%2A>. <xref:System.Linq.Enumerable.Cast%2A> lança uma exceção se a conversão especificada não puder ser realizada. <xref:System.Linq.Enumerable.Cast%2A> e <xref:System.Linq.Enumerable.OfType%2A> são os dois métodos de operador de consulta padrão que operam em tipos <xref:System.Collections.IEnumerable> não genéricos. No Visual Basic, você deve chamar explicitamente o método <xref:System.Linq.Enumerable.Cast%2A> na fonte de dados para garantir um tipo de variável de intervalo específico. Para obter mais informações, consulte [relações de tipo em operações de consulta (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).
+O uso de uma variável de intervalo de tipo explícito em uma expressão de consulta é equivalente a chamar o método <xref:System.Linq.Enumerable.Cast%2A>. <xref:System.Linq.Enumerable.Cast%2A> lança uma exceção se a conversão especificada não puder ser realizada. <xref:System.Linq.Enumerable.Cast%2A> e <xref:System.Linq.Enumerable.OfType%2A> são os dois métodos de operador de consulta padrão que operam em tipos <xref:System.Collections.IEnumerable> não genéricos. Em Visual Basic, você deve chamar explicitamente o <xref:System.Linq.Enumerable.Cast%2A> método na fonte de dados para garantir um tipo de variável de intervalo específico. Para obter mais informações, consulte [relações de tipo em operações de consulta (Visual Basic)](type-relationships-in-query-operations.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -78,6 +78,6 @@ End Module
 '   Garcia: 97
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)

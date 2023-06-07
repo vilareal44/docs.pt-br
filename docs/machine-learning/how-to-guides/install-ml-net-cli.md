@@ -1,33 +1,33 @@
 ---
 title: Como instalar a ferramenta da CLI (Interface de Linha de Comando) do ML.NET
-description: Saiba como instalar, atualizar, fazer downgrade e desinstalar a ferramenta CLI (Command-Line Interface, interface de linha de comando) ML.NET.
-ms.date: 12/18/2019
+description: Saiba como instalar, atualizar, fazer downgrade e desinstalar a ferramenta de interface de linha de comando (CLI) do ML.NET.
+ms.date: 06/08/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 9f678c7117d32bf817139951db7eef2c3d0f5eb2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 13203246411deadf3ab13a5eba0d2c8e6e9027c5
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78848633"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602265"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Como instalar a ferramenta da CLI (Interface de Linha de Comando) do ML.NET
 
-Saiba como instalar o ML.NET CLI (interface de linha de comando) no Windows, Mac ou Linux.
+Saiba como instalar a CLI do ML.NET (interface de linha de comando) no Windows, Mac ou Linux.
 
-O ML.NET CLI gera boa qualidade ML.NET modelos e código-fonte usando aprendizado automático de máquina (AutoML) e um conjunto de dados de treinamento.
+A CLI do ML.NET gera bons modelos de ML.NET de qualidade e código-fonte usando o AutoML (Machine Learning automatizado) e um conjunto de informações de treinamento.
 
 > [!NOTE]
 > Este tópico refere-se à CLI do ML.NET e ao AutoML do ML.NET, que estão atualmente em Versão Prévia. O material pode estar sujeito a alterações.
 
 ## <a name="pre-requisites"></a>Pré-requisitos
 
-- [SDK do .NET Core 2.2](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- [SDK do .NET Core 3,1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-- (Opcional) [Visual Studio 2017 ou 2019](https://visualstudio.microsoft.com/vs/)
+- Adicional [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 
-Você pode executar os projetos de código C# gerados com o Visual Studio pressionando a `F5` tecla ou com `dotnet run` (.NET Core CLI).
+Você pode executar os projetos de código C# gerados com o Visual Studio pressionando a `F5` tecla ou com `dotnet run` (CLI do .NET Core).
 
-Nota: Se depois de instalar [o .NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) o `dotnet tool` comando não estiver funcionando, faça login no Windows e faça login novamente.
+Observação: se depois de instalar SDK do .NET Core o `dotnet tool` comando não estiver funcionando, saia do Windows e entre novamente.
 
 ## <a name="install"></a>Instalar
 
@@ -54,7 +54,7 @@ Você pode confirmar que a instalação foi bem-sucedida digitando o seguinte co
 mlnet
 ```
 
-Você deve ver a ajuda para os comandos disponíveis para a ferramenta mlnet como o comando 'auto-train'.
+Você deve ver a ajuda de comandos disponíveis para a ferramenta mlnet, como o comando ' Classification '.
 
 ## <a name="install-a-specific-release-version"></a>Instalar uma versão de liberação específica
 
@@ -92,7 +92,7 @@ Como a CLI do ML.NET baseia-se em `System.CommandLine`, ela tem suporte interno 
 
 Um exemplo de como o preenchimento automático de guia funciona é mostrado na animação a seguir:
 
-![image](./media/cli-tab-completion.gif)
+![imagem](./media/cli-tab-completion.gif)
 
 O "preenchimento automático baseado em guia" (sugestões de parâmetro) funciona em *Windows PowerShell* e *bash do macOS/Linux*, mas não funciona no *CMD do Windows*.
 
@@ -134,9 +134,9 @@ Observação: as Ferramentas Globais são específicas ao usuário e não globai
 As Ferramentas Globais também podem ser instaladas em um diretório específico. Quando elas forem instaladas em um diretório específico, o usuário precisará garantir que o comando esteja disponível, incluindo o diretório no caminho, chamando o comando com o diretório especificado ou chamando a ferramenta no diretório especificado.
 Nesse caso, a CLI do .NET Core não adiciona esse local automaticamente à variável de ambiente PATH.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [ML.NET visão geral da CLI](../automate-training-with-cli.md)
-- [Tutorial: Analise o sentimento com o ML.NET CLI](../tutorials/sentiment-analysis-cli.md)
+- [Visão geral da CLI do ML.NET](../automate-training-with-cli.md)
+- [Tutorial: analisar o sentimentos com a CLI do ML.NET](../tutorials/sentiment-analysis-cli.md)
 - [Guia de referência de comando auto-train da CLI do ML.NET](../reference/ml-net-cli-reference.md)
 - [Telemetria na CLI do ML.NET](../resources/ml-net-cli-telemetry.md)

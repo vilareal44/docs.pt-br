@@ -1,5 +1,6 @@
 ---
 title: Visão geral do padrão assíncrono baseado em evento
+description: Examine os padrões assíncronos baseados em eventos (EAPs) no .NET, que disponibilizam as vantagens dos aplicativos multissegmentados, mas ocultam algumas complexidades de design.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: cce01a7c87f6f20b5e6c46881b8c863bb5a72a88
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 18fbdb29e5a1fb02601dea00964538144c07122c
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160060"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768853"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Visão geral do padrão assíncrono baseado em evento
 Aplicativos que realizam várias tarefas simultaneamente, mas que ainda permanecem responsivos para interação com o usuário, geralmente exigem um projeto que utilize vários threads. O namespace <xref:System.Threading> oferece todas as ferramentas necessárias para criar aplicativos commulti-thread de alto desempenho. No entanto, usar essas ferramentas de maneira eficaz requer um nível de experiência significativo com engenharia de software com multi-thread. Para aplicativos com multi-thread relativamente simples, o componente <xref:System.ComponentModel.BackgroundWorker> oferece uma solução direta. Para aplicativos assíncronos mais sofisticados, considere implementar uma classe que adere ao Padrão Assíncrono baseado em Evento.  
@@ -34,7 +35,7 @@ Aplicativos que realizam várias tarefas simultaneamente, mas que ainda permanec
   
 - Espere até que recursos sejam disponibilizados sem interromper ("bloquear") seu aplicativo.  
   
-- Comunicar-se com operações assíncronas pendentes usando o modelo familiar de eventos e representantes. Para saber mais sobre como usar manipuladores e representantes de eventos, confira [Eventos](../../../docs/standard/events/index.md).  
+- Comunicar-se com operações assíncronas pendentes usando o modelo familiar de eventos e representantes. Para saber mais sobre como usar manipuladores e representantes de eventos, confira [Eventos](../events/index.md).  
   
  Uma classe compatível com o Padrão Assíncrono baseado em Evento terá um ou mais métodos denominados _MethodName_**Async**. Esses métodos podem espelhar versões síncronas, que realizam a mesma operação no thread atual. A classe também pode ter um evento _MethodName_**Completed** e pode ter um método _MethodName_**AsyncCancel** (ou simplesmente **CancelAsync**).  
   
@@ -45,7 +46,7 @@ Aplicativos que realizam várias tarefas simultaneamente, mas que ainda permanec
  O Padrão Assíncrono baseado em Evento requer que uma operação assíncrona possa ser cancelada, e o controle <xref:System.Windows.Forms.PictureBox> oferece suporte a esse requisito com seu método <xref:System.Windows.Forms.PictureBox.CancelAsync%2A>. Chamar <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> envia uma solicitação para interromper o download pendente e, quando a tarefa é cancelada, o evento <xref:System.Windows.Forms.PictureBox.LoadCompleted> é elevado.  
   
 > [!CAUTION]
-> É possível que o download termine assim que a solicitação <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> seja enviada, por isso, <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> pode não refletir a solicitação de cancelamento. Isso é chamado de *condição de corrida* e é um problema comum na programação com multi-thread. Para saber mais sobre problemas de programação multi-thread, confira [Práticas recomendadas de threading gerenciado](../../../docs/standard/threading/managed-threading-best-practices.md).  
+> É possível que o download termine assim que a solicitação <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> seja enviada, por isso, <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> pode não refletir a solicitação de cancelamento. Isso é chamado de *condição de corrida* e é um problema comum na programação com multi-thread. Para saber mais sobre problemas de programação multi-thread, confira [Práticas recomendadas de threading gerenciado](../threading/managed-threading-best-practices.md).  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>Características do Padrão Assíncrono baseado em Evento  
  O Padrão Assíncrono baseado em Evento pode assumir diversos formatos, dependendo da complexidade das operações compatíveis com uma classe específica. As classes mais simples podem ter um único método _MethodName_**Async** e um evento _MethodName_**Completed** correspondente. Classes mais complexas podem ter vários métodos _MethodName_**Async**, cada um com um evento _MethodName_**Completed** correspondente, bem como versões síncronas desses métodos. As classes podem opcionalmente oferecer suporte a cancelamento, relatórios de progresso e resultados incrementais para cada método assíncrono.  
@@ -131,14 +132,14 @@ public class AsyncExample
   
  Algumas classes podem relatar resultados incrementais conforme as operações assíncronas prosseguem. Esses resultados serão armazenados em uma classe derivada de <xref:System.ComponentModel.ProgressChangedEventArgs> e aparecerão como propriedades na classe derivada. Você pode acessar esses resultados no manipulador de eventos para o evento `ProgressChanged`, assim como acessaria a propriedade <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A>. Se várias operações assíncronas estiverem pendentes, você poderá usar a propriedade <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A> para distinguir qual operação está relatando resultados incrementais.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
-- [Como usar componentes compatíveis com o padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
-- [Como executar uma operação no plano de fundo](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Como implementar um formulário que usa uma operação em segundo plano](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [EAP (Padrão Assíncrono baseado em Evento)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
-- [Práticas recomendadas para a implementação do padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
-- [Decidindo quando implementar o padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
+- [Como usar componentes compatíveis com o padrão assíncrono baseado em evento](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
+- [Como executar uma operação no plano de fundo](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Como implementar um formulário que usa uma operação em segundo plano](../../framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [EAP (Padrão Assíncrono baseado em Evento)](event-based-asynchronous-pattern-eap.md)
+- [Práticas recomendadas para a implementação do padrão assíncrono baseado em evento](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+- [Decidindo quando implementar o padrão assíncrono baseado em evento](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)

@@ -1,13 +1,14 @@
 ---
 title: Visão geral da classe XAttribute (C#)
+description: Os atributos são pares de nome/valor associados a um elemento. XAttribute representa atributos XML. Saiba mais sobre como trabalhar com atributos em LINQ to XML em C#.
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-ms.openlocfilehash: 7a806314664c6319fc45cff0dddedbe38027059d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a19de601041bbb20241c959e909483b97bcf797
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635659"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302224"
 ---
 # <a name="xattribute-class-overview-c"></a>Visão geral da classe XAttribute (C#)
 Os atributos são pares nome/valor que são associados a um elemento. A classe de <xref:System.Xml.Linq.XAttribute> representa atributos XML.  
@@ -79,6 +80,6 @@ Console.WriteLine(c);
   
  Essa distinção importante é primeiro somente para os desenvolvedores que estão escrevendo código que funciona com as árvores XML no nível do nó. Muitos desenvolvedores não serão preocupados com essa distinção.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral da programação LINQ to XML (C#)](./linq-to-xml-overview.md)

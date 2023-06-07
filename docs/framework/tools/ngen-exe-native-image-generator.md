@@ -1,5 +1,6 @@
 ---
 title: Ngen.exe (Gerador de Imagens Nativas)
+description: Examine Ngen.exe, o gerador de imagem nativa. Melhore o desempenho do aplicativo gerenciado criando imagens nativas e instalando no cache de imagem nativa local.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-ms.openlocfilehash: 297bc3f9182e76523eda4d4be3112f4d1d7e3fee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ae86aed773a9a13f102b1ad111cac5a3ee563508
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75741796"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517263"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Gerador de Imagens Nativas)
 
@@ -78,7 +79,7 @@ A tabela a seguir mostra a sintaxe de cada `action`. Para obter descrições das
 |Ação|Descrição|
 |------------|-----------------|
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Gere imagens nativas para um assembly e suas dependências e instale as imagens no cache de imagem nativa.<br /><br /> Se `/queue` for especificado, a ação será enfileirada para o serviço de imagem nativa. A prioridade padrão é 3. Confira a tabela [Níveis de Prioridade](#PriorityTable).|
-|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Exclua as imagens nativas de um assembly e suas dependências do cache de imagem nativa.<br /><br /> Para desinstalar uma única imagem e suas dependências, use os mesmos argumentos de linha de comando que foram usados para instalar a imagem. **Nota:**  Começando com o Quadro .NET `uninstall` 4, a ação * não é mais suportada.|
+|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Exclua as imagens nativas de um assembly e suas dependências do cache de imagem nativa.<br /><br /> Para desinstalar uma única imagem e suas dependências, use os mesmos argumentos de linha de comando que foram usados para instalar a imagem. **Observação:**  A partir do .NET Framework 4, a ação `uninstall` * não é mais suportada.|
 |`update` [`/queue`]|Atualize imagens nativas que se tornaram inválidas.<br /><br /> Se `/queue` for especificado, as atualizações serão enfileiradas para o serviço de imagem nativa. Como as atualizações estão sempre programadas na prioridade 3, elas são executadas quando o computador está ocioso.|
 |`display` [`assemblyName` &#124; `assemblyPath`]|Exiba o estado das imagens nativas para um assembly e suas dependências.<br /><br /> Se nenhum argumento for fornecido, tudo no cache de imagem nativa será exibido.|
 |`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> -ou-<br /><br /> `eqi` [1&#124;2&#124;3]|Execute o trabalho de compilação enfileirado.<br /><br /> Se uma prioridade for especificada, trabalhos de compilação com prioridade maior ou igual serão executados. Se nenhuma prioridade for especificada, todos os trabalhos de compilação enfileirados serão executados.|
@@ -126,7 +127,7 @@ A tabela a seguir mostra a sintaxe de cada `action`. Para obter descrições das
 
 ## <a name="options"></a>Opções
 
-|Opção|Descrição|
+|Opção|DESCRIÇÃO|
 |------------|-----------------|
 |`/nologo`|Suprima a exibição do banner de inicialização da Microsoft.|
 |`/silent`|Suprima a exibição das mensagens de êxito.|
@@ -461,7 +462,7 @@ Para desinstalar uma dependência, use as mesmas opções de linha de comando qu
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
-Para criar uma imagem nativa para um assembly no cache de assembly global, use o nome para exibição do assembly. Por exemplo: 
+Para criar uma imagem nativa para um assembly no cache de assembly global, use o nome para exibição do assembly. Por exemplo:
 
 ```console
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,
@@ -635,9 +636,9 @@ Depois de iniciado pela execução de um comando Ngen.exe que inclui a opção `
 
 No .NET Framework versão 2.0, a única interação com o serviço de imagem nativa ocorre por meio da ferramenta de linha de comando Ngen.exe. Use a ferramenta de linha de comando em scripts de instalação para enfileirar ações para o serviço de imagem nativa e para interagir com o serviço.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Ferramentas](index.md)
 - [Processo de execução gerenciada](../../standard/managed-execution-process.md)
 - [Como o runtime localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
-- [Prompts de Comando](developer-command-prompt-for-vs.md)
+- [Prompts de comando](developer-command-prompt-for-vs.md)

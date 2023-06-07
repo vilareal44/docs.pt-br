@@ -1,5 +1,6 @@
 ---
-title: Como receber notificações de exceções de primeira tentativa
+title: 'Como: Receber notificações de exceção de primeira tentativa'
+description: Obtenha notificações de exceção de primeira chance no .NET por meio do evento FirstChanceException da classe AppDomain, antes que o CLR pesquise manipuladores de exceção.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - first-chance exception notifications
 - exceptions, first chance notifications
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
-ms.openlocfilehash: da60dfca424f7c10e810b5e083ff7fa63a688218
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8b5ae5fb69c7befd329316aee11523f79d73fcd
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119872"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104735"
 ---
-# <a name="how-to-receive-first-chance-exception-notifications"></a>Como receber notificações de exceções de primeira tentativa
+# <a name="how-to-receive-first-chance-exception-notifications"></a>Como: Receber notificações de exceção de primeira tentativa
 O evento <xref:System.AppDomain.FirstChanceException> da classe <xref:System.AppDomain> permite que você receba uma notificação de que uma exceção foi lançada, antes de o Common Language Runtime começar a procurar por manipuladores de exceção.
 
  O evento é gerado no nível de domínio do aplicativo. Um thread de execução pode passar por vários domínios de aplicativo, assim, uma exceção não tratada em um domínio de aplicativo poderia ser tratada em outro domínio de aplicativo. A notificação ocorre em cada domínio de aplicativo que tenha adicionado um manipulador para o evento, até que um domínio de aplicativo lide com a exceção.

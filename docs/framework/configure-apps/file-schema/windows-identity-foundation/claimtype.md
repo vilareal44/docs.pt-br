@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
 ms.openlocfilehash: a46e9129bd27319abb4d7519444568af622170fc
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70252066"
 ---
-# <a name="claimtype"></a>\<> de ClaimType
+# \<claimType>
 Especifica uma única declaração opcional ou necessária para tokens de segurança de entrada.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> identityConfiguration**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> claimTypeRequired**](claimtyperequired.md)\  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de ClaimType**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<claimTypeRequired>**](claimtyperequired.md)\  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<claimType>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,8 +39,8 @@ Especifica uma única declaração opcional ou necessária para tokens de segura
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|tipo|O tipo da declaração. Normalmente um URI. Necessário.|  
-|optional|Um valor booliano que especifica se o tipo de declaração é opcional. Opcional.|  
+|type|O tipo da declaração. Normalmente um URI. Obrigatórios.|  
+|opcional|Um valor booliano que especifica se o tipo de declaração é opcional. Opcional.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  

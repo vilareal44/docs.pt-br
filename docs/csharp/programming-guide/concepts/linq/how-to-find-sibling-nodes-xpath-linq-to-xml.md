@@ -1,15 +1,16 @@
 ---
-title: Como encontrar nós de irmãos (XPath-LINQ para XML) (C#)
+title: Como localizar nós irmãos (XPath-LINQ to XML) (C#)
+description: Este exemplo C# compara XPath com LINQ to XML para saber como localizar todos os irmãos de um nó que têm um nome específico.
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: c201dcea5e6d148ae0998eb27d4e42df5b15309f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2936fc4ad088580a9644f79f1797e679fe877e00
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169201"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105212"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Como encontrar nós de irmãos (XPath-LINQ para XML) (C#)
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Como localizar nós irmãos (XPath-LINQ to XML) (C#)
 Você pode desejar localizar todos os seus irmãos de um nó que têm um nome específico. A coleção resultante pode incluir o nó de contexto se o nó de contexto também tem o nome específico.  
   
  A expressão XPath é:  

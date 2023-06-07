@@ -3,12 +3,12 @@ title: Escrever consultas LINQ em C#
 description: Saiba como escrever consultas LINQ em C#.
 ms.date: 12/01/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-ms.openlocfilehash: ed32543b0422e0664a8577f2c27f7c7c00a719a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bd7da81f2873c6a25570cab32fafecc66fd98be4
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "65632889"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063439"
 ---
 # <a name="write-linq-queries-in-c"></a>Escrever consultas LINQ em C\#
 
@@ -43,7 +43,7 @@ Algumas operações de consulta devem ser expressas como uma chamada de método.
 
 [!code-csharp[csProgGuideLINQ#6](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_2.cs)]
 
-Se o método tiver parâmetros action ou func, estes são fornecidos na forma de uma expressão [lambda,](../programming-guide/statements-expressions-operators/lambda-expressions.md) como mostrado no exemplo a seguir:
+Se o método tiver parâmetros Action ou Func, eles serão fornecidos na forma de uma expressão [lambda](../language-reference/operators/lambda-expressions.md) , conforme mostrado no exemplo a seguir:
 
 [!code-csharp[csProgGuideLINQ#7](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_3.cs)]
 
@@ -79,8 +79,8 @@ Ela pode ser escrita usando a tipagem explícita da seguinte maneira:
 int numCount = numbers.Where(n => n < 3 || n > 7).Count();
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Passo a passo: escrevendo consultas em C#](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
-- [Consulta Integrada ao Idioma (LINQ)](index.md)
-- [onde cláusula](../language-reference/keywords/where-clause.md)
+- [LINQ (Consulta Integrada à Linguagem)](index.md)
+- [cláusula WHERE](../language-reference/keywords/where-clause.md)

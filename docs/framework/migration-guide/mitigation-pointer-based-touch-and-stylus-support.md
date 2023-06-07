@@ -1,5 +1,6 @@
 ---
 title: 'Mitigação: suporte a toque e caneta com base em ponteiro'
+description: Saiba mais sobre os efeitos de habilitar uma pilha opcional do WPF Touch/Stylus para aplicativos do WPF direcionados .NET Framework 4,7.
 ms.date: 04/07/2017
 helpviewer_keywords:
 - retargeting changes
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - WPF retargeting changes
 - WPF pointer-based touch and stylus stack
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
-ms.openlocfilehash: 023c38f66611bd0022699d3f62d90c3923585012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d0c0effeaa727c615dddc3b92cdd34aafde65705
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77094469"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475418"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Mitigação: suporte a toque e caneta com base em ponteiro
 
-Os aplicativos WPF que visam o .NET Framework 4.7 e estão sendo executados `WM_POINTER`no Windows a partir do Windows 10 Creators Update podem habilitar uma pilha de toque/caneta WPF baseada em opcionais.
+Os aplicativos do WPF destinados ao .NET Framework 4,7 e que estão em execução no Windows a partir da atualização do Windows 10 para criadores podem permitir uma `WM_POINTER` pilha de toque/caneta do WPF baseada em opcionais.
 
 ## <a name="impact"></a>Impacto
 
@@ -40,7 +41,7 @@ A seguir estão os problemas conhecidos no momento com a pilha de toque/caneta c
 
 ## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>Optar pelo suporte a toque/caneta com base em WM_POINTER
 
-Os desenvolvedores que desejam habilitar essa pilha podem adicionar o seguinte ao arquivo *app.config* de seu aplicativo.
+Os desenvolvedores que desejam habilitar essa pilha podem adicionar o seguinte ao arquivo de *app.config* do aplicativo.
 
 ```xml
 <configuration>
@@ -52,6 +53,6 @@ Os desenvolvedores que desejam habilitar essa pilha podem adicionar o seguinte a
 
 Remover esta entrada ou definir seu valor como `false` desabilita essa pilha opcional.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Compatibilidade de aplicativos](application-compatibility.md)

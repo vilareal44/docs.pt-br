@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cca0f799-09b8-4689-a33c-6d6537943a9b
 topic_type:
 - apiref
-ms.openlocfilehash: 7fb58c0eb2446253bd658434fc9d68bb857fe0e6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 25a4b101388bfc0151ba7c9c52da6561d48f806b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175116"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503153"
 ---
 # <a name="icorprofilercallbackthreadcreated-method"></a>Método ICorProfilerCallback::ThreadCreated
-Notifica o profiler de que um segmento foi criado.  
+Notifica o criador de perfil de que um thread foi criado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,21 +32,21 @@ HRESULT ThreadCreated(
     [in] ThreadID threadId);
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `threadId`  
- [em] O ID do segmento que foi criado.  
+ no A ID do thread que foi criado.  
   
 ## <a name="remarks"></a>Comentários  
- O `threadId` valor é imediatamente válido.  
+ O `threadId` valor é válido imediatamente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 

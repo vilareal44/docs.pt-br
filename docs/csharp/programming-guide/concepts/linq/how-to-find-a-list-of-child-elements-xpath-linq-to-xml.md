@@ -1,16 +1,17 @@
 ---
-title: Como encontrar uma lista de elementos infantis (XPath-LINQ para XML) (C#)
+title: Como localizar uma lista de elementos filho (XPath-LINQ to XML) (C#)
+description: Saiba como localizar uma lista de elementos filho usando uma expressão XPath. Examine um exemplo de código que localiza todos os elementos filho de um elemento específico.
 ms.date: 07/20/2015
 ms.assetid: 7c589dd8-f680-4cdb-9d6a-78d57e2555e8
-ms.openlocfilehash: 2b6f6031441e7d1bd015e25a8debad7dd7f3b261
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3025aca7fb1055acd55e5ce98914d8359ebe4b7
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141221"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301717"
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a>Como encontrar uma lista de elementos infantis (XPath-LINQ para XML) (C#)
-Este tópico compara o eixo de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> elementos da criança XPath com o eixo.  
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a>Como localizar uma lista de elementos filho (XPath-LINQ to XML) (C#)
+Este tópico compara o eixo dos elementos filho do XPath com o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> eixo.  
   
  A expressão XPath é: `./*`  
   

@@ -1,5 +1,6 @@
 ---
 title: Arquitetura de programação do aplicativo de serviço
+description: Entenda a arquitetura de programação do aplicativo de serviço. Os aplicativos de serviço do Windows são baseados em uma classe que herda de System. ServiceProcess. ServiceBase.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: 1c197b487f1cb7596f507f663fe3f1fb83857cbd
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c59ccc5a8b2f11fda9c4734487092c1aabb74908
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053497"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925573"
 ---
 # <a name="service-application-programming-architecture"></a>Arquitetura de programação do aplicativo de serviço
 Os aplicativos de Serviço Windows baseiam-se em uma classe que é herdada da classe <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. Você substitui os métodos dessa classe e define funcionalidades para eles para determinar o comportamento do seu serviço.  
@@ -49,7 +50,7 @@ Os aplicativos de Serviço Windows baseiam-se em uma classe que é herdada da cl
 > [!NOTE]
 > Esses métodos representam os estados pelos quais o serviço passa em seu tempo de vida. O serviço faz a transição de um estado para o próximo. Por exemplo, você nunca fará com que o serviço responda a um comando <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> antes que <xref:System.ServiceProcess.ServiceBase.OnStart%2A> seja chamado.  
   
- Há várias outras propriedades e métodos interessantes. Eles incluem:  
+ Há várias outras propriedades e métodos interessantes. Elas incluem:  
   
 - O método <xref:System.ServiceProcess.ServiceBase.Run%2A> na classe <xref:System.ServiceProcess.ServiceBase>. Este é o ponto de entrada principal para o serviço. Quando você cria um serviço usando o modelo de Serviço Windows, o código é inserido no método `Main` do aplicativo para executar o serviço. Esse código tem esta aparência:  
   
@@ -66,7 +67,7 @@ Os aplicativos de Serviço Windows baseiam-se em uma classe que é herdada da cl
   
  Você também pode usar um componente chamado <xref:System.ServiceProcess.ServiceController> para comunicar-se com um serviço existente e controlar seu comportamento.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Introdução aos aplicativos de serviço do Windows](introduction-to-windows-service-applications.md)
-- [Como criar Serviços Windows](how-to-create-windows-services.md)
+- [Introdução a aplicativos do Serviço Windows](introduction-to-windows-service-applications.md)
+- [Como: Criar serviços Windows](how-to-create-windows-services.md)

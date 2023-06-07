@@ -3,13 +3,13 @@ title: <Namespace> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 ms.openlocfilehash: 06d88a7b0f95c7c1dbe98818b847c92e08a57a19
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79180961"
 ---
-# <a name="namespace-element-net-native"></a>\<Namespace> Element (.NET Nativo)
+# <a name="namespace-element-net-native"></a>\<Namespace> (.NET Nativo)
 Aplica a política de reflexão de runtime a todos os tipos em um namespace especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -51,7 +51,7 @@ Aplica a política de reflexão de runtime a todos os tipos em um namespace espe
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*namespace_name*|O nome do namespace. Se \<o elemento Namespace> for filho de um [ \< ](library-element-net-native.md) *namespace_name* [ \< ](application-element-net-native.md)elemento>de aplicação, biblioteca>ou [ \<>de montagem,](assembly-element-net-native.md) namespace_name deve ser um nome de namespace totalmente qualificado. Se o elemento \<Namespace> for filho de outro elemento \<Namespace>, o *namespace_name* deverá ser um nome de namespace relacionado.|  
+|*namespace_name*|O nome do namespace. Se o \<Namespace> elemento for um filho de um [\<Application>](application-element-net-native.md) [\<Library>](library-element-net-native.md) elemento, ou [\<Assembly>](assembly-element-net-native.md) , *Namespace_Name* deverá ser um nome de namespace totalmente qualificado. Se o \<Namespace> elemento for filho de outro \<Namespace> elemento, *Namespace_Name* deverá ser um nome de namespace relativo.|  
   
 ## <a name="all-other-attributes"></a>Todos os outros atributos  
   
@@ -64,25 +64,25 @@ Aplica a política de reflexão de runtime a todos os tipos em um namespace espe
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |`<Namespace>`|Aplica a política de reflexão de runtime a todos os tipos em um namespace pai.|  
-|[\<Tipo>](type-element-net-native.md)|Aplica a política de reflexão a um tipo.|  
-|[\<>de Digitação](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído.|  
+|[\<Type>](type-element-net-native.md)|Aplica a política de reflexão a um tipo.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<>de aplicação](application-element-net-native.md)|Serve como um contêiner para os tipos amplos de aplicativos cujos metadados estão disponíveis para reflexão no tempo de execução. O [ \<](application-element-net-native.md) elemento Application>pode ter elementos de [ \<montagem>de](assembly-element-net-native.md) zero, um ou mais.|  
-|[\<>de Montagem](assembly-element-net-native.md)|Aplica a política de reflexão de runtime a todos os tipos em um assembly especificado.|  
-|[\<>da biblioteca](library-element-net-native.md)|Define o assembly que contém tipos e membros de tipo cujos metadados estão disponíveis para reflexão em tempo de execução. O [ \<](library-element-net-native.md) elemento de>biblioteca pode ter zero ou um [ \<](assembly-element-net-native.md) elemento de>de montagem.|  
+|[\<Application>](application-element-net-native.md)|Serve como um contêiner para os tipos amplos de aplicativos cujos metadados estão disponíveis para reflexão no tempo de execução. O [\<Application>](application-element-net-native.md) elemento pode ter zero, um ou mais [\<Assembly>](assembly-element-net-native.md) elementos.|  
+|[\<Assembly>](assembly-element-net-native.md)|Aplica a política de reflexão de runtime a todos os tipos em um assembly especificado.|  
+|[\<Library>](library-element-net-native.md)|Define o assembly que contém tipos e membros de tipo cujos metadados estão disponíveis para reflexão em tempo de execução. O [\<Library>](library-element-net-native.md) elemento pode ter zero ou um [\<Assembly>](assembly-element-net-native.md) elemento.|  
 |`<Namespace>`|Aplica a política de reflexão de tempo de execução a todos os tipos em um namespace pai.|  
   
 ## <a name="remarks"></a>Comentários  
  Os atributos `Activate`, `Browse`, `Dynamic` e `Serialize` são todos opcionais. Se nenhum estiver presente, o elemento `<Namespace>` serve somente como um contêiner para elementos filho. Se eles estiverem presentes, o elemento `<Namespace>` aplica a política de reflexão de runtime a todos os tipos no namespace especificado.  
   
- Quando é filho da [ \<Assembleia>](assembly-element-net-native.md) elemento, o `<Namespace>` elemento substitui a política de reflexão em tempo de execução definida pela [ \<Assembleia>](assembly-element-net-native.md) elemento.  
+ Quando é um filho do [\<Assembly>](assembly-element-net-native.md) elemento, o `<Namespace>` elemento substitui a política de reflexão de tempo de execução definida pelo [\<Assembly>](assembly-element-net-native.md) elemento.  
   
 ## <a name="see-also"></a>Confira também
 
 - [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md)
-- [Referência do arquivo de configuração das diretivas de runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de runtime](runtime-directive-elements.md)

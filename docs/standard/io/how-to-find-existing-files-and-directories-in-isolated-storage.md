@@ -1,5 +1,5 @@
 ---
-title: Como localizar arquivos e diretórios existentes no armazenamento isolado
+title: 'Como: Localizar arquivos e diretórios existentes no armazenamento isolado'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - locating directories in isolated storage file
 - storing data using isolated storage, finding files and directories
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
-ms.openlocfilehash: dfebcc9acf0b699f898c106921d15ce0294bc5d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec1d1fbdefdad3ec0dd2c07fbc1278e4d1d217c6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75707114"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291845"
 ---
-# <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Como localizar arquivos e diretórios existentes no armazenamento isolado
+# <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Como: Localizar arquivos e diretórios existentes no armazenamento isolado
 
 Para procurar um diretório no armazenamento isolado, use o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType>. Esse método usa uma cadeia de caracteres que representa um padrão de pesquisa. Você pode usar o caracteres curinga de caractere único (?) e caracteres múltiplos (\*) no padrão de pesquisa, mas os caracteres curinga deverão aparecer na parte final do nome. Por exemplo, `directory1/*ect*` é uma cadeia de caracteres de pesquisa válida, mas `*ect*/directory2` não é.  
   
@@ -39,7 +39,7 @@ Para procurar um diretório no armazenamento isolado, use o método <xref:System
  [!code-csharp[Conceptual.IsolatedStorage#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source8.cs#9)]
  [!code-vb[Conceptual.IsolatedStorage#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source8.vb#9)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
-- [Armazenamento isolado](../../../docs/standard/io/isolated-storage.md)
+- [Armazenamento isolado](isolated-storage.md)

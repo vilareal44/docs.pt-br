@@ -1,18 +1,19 @@
 ---
-title: 'Arquivo XSD de exemplo: clientes e pedidos'
+title: 'Arquivo de exemplo XSD: Clientes e ordens'
+description: Esse arquivo XSD é usado em vários exemplos na documentação do LINQ to XML. É uma definição de esquema para um arquivo XML de exemplo que contém clientes e pedidos.
 ms.date: 07/20/2015
 ms.assetid: ef9911a3-7ac4-44fd-b36e-a0c0ad0a157d
-ms.openlocfilehash: 2e8fdcd9100ea608828371ff5dce6cf0d040292f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2fd4ce6ebc4c9b5d222ac86fe8dc6746d9126da0
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167940"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302419"
 ---
-# <a name="sample-xsd-file-customers-and-orders"></a>Arquivo XSD de exemplo: clientes e pedidos
+# <a name="sample-xsd-file-customers-and-orders"></a>Arquivo de exemplo XSD: Clientes e ordens
 O arquivo XSD a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo contém uma definição de esquema para o [Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md). O esquema usa os recursos `xs:key` e `xs:keyref` de XSD para estabelecer que o atributo `CustomerID` do elemento `Customer` é uma chave e para estabelecer uma relação entre o elemento `CustomerID` em cada elemento `Order` e o atributo `CustomerID` em cada elemento `Customer`.  
   
- Para um exemplo de escrever consultas LINQ que `Join` se aproveitam dessa relação usando a cláusula, consulte [Como juntar duas coleções (LINQ a XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).  
+ Para obter um exemplo de como escrever consultas LINQ que aproveitam essa relação usando a `Join` cláusula, consulte [como unir duas coleções (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).  
   
 ## <a name="customersordersxsd"></a>CustomersOrders.xsd  
   

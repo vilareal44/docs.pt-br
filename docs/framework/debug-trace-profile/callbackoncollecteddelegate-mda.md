@@ -1,5 +1,6 @@
 ---
 title: MDA callbackOnCollectedDelegate
+description: Examine o MDA (Assistente de depuração gerenciada) do callbackOnCollectedDelegate no .NET, que é invocado se um retorno de chamada ocorrer depois que o delegado for coletado pelo lixo.
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - delegates [.NET Framework], garbage collection
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
-ms.openlocfilehash: d4ca777fa5b41433eec227762fe315f22ab33cf6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32f02a4e65455f11f3bfa9260caae8b4e48f494e
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174219"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416025"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>MDA callbackOnCollectedDelegate
 O MDA (assistente para depuração gerenciada) `callbackOnCollectedDelegate` é ativado se um representante tem o marshaling realizado de um código gerenciado para um código não gerenciado como um ponteiro de função e um retorno de chamada é colocado nesse ponteiro de função depois que o representante foi coletado como lixo.  
@@ -109,7 +110,7 @@ public class Entry
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 18e89f45-e068-426a-be16-9f53a4346860
 topic_type:
 - apiref
-ms.openlocfilehash: a9ab8c81c995bbec41db217c904e03dd70351aee
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 836e4843ead940bc9f76ff6bdd0433e21e400afd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866878"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500631"
 ---
 # <a name="functionleave-function"></a>Função FunctionLeave
 Notifica o criador de perfil de que uma função está prestes a retornar ao chamador.  
   
 > [!NOTE]
-> A função `FunctionLeave` foi preterida no .NET Framework 2,0. Ele continuará funcionando, mas incorrerá em uma penalidade de desempenho. Em vez disso, use a função [FunctionLeave2](functionleave2-function.md) .  
+> A `FunctionLeave` função foi preterida no .NET Framework 2,0. Ele continuará funcionando, mas incorrerá em uma penalidade de desempenho. Em vez disso, use a função [FunctionLeave2](functionleave2-function.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,10 +39,10 @@ void __stdcall FunctionLeave (
 
 - `funcID`
 
-  \[em] o identificador da função que está retornando.
+  \[in] o identificador da função que está retornando.
 
 ## <a name="remarks"></a>Comentários  
- A função `FunctionLeave` é um retorno de chamada; Você deve implementá-lo. A implementação deve usar o atributo de classe de armazenamento `__declspec`(`naked`).  
+ A `FunctionLeave` função é um retorno de chamada; você deve implementá-la. A implementação deve usar o `__declspec` `naked` atributo de classe de armazenamento ().  
   
  O mecanismo de execução não salva nenhum registro antes de chamar essa função.  
   
@@ -50,12 +50,12 @@ void __stdcall FunctionLeave (
   
 - Ao sair, você deve restaurar a pilha removendo todos os parâmetros que foram enviados por Push por seu chamador.  
   
- A implementação de `FunctionLeave` não deve bloquear, pois atrasará a coleta de lixo. A implementação não deve tentar uma coleta de lixo porque a pilha pode não estar em um estado amigável de coleta de lixo. Se uma coleta de lixo for tentada, o tempo de execução será bloqueado até que `FunctionLeave` retorne.  
+ A implementação de `FunctionLeave` não deve bloquear, pois atrasará a coleta de lixo. A implementação não deve tentar uma coleta de lixo porque a pilha pode não estar em um estado amigável de coleta de lixo. Se for feita uma tentativa de coleta de lixo, o tempo de execução será bloqueado até o `FunctionLeave` retorno.  
   
- Além disso, a função `FunctionLeave` não deve chamar um código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
+ Além disso, a `FunctionLeave` função não deve chamar um código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl  
   
@@ -63,7 +63,7 @@ void __stdcall FunctionLeave (
   
  **Versões do .NET Framework:** 1,1, 1,0  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Função FunctionEnter2](functionenter2-function.md)
 - [Função FunctionLeave2](functionleave2-function.md)

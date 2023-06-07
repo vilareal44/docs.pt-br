@@ -1,15 +1,16 @@
 ---
-title: Como classificar elementos em várias teclas (C#)
+title: Como classificar elementos em várias chaves (C#)
+description: Saiba como classificar elementos em várias chaves. Consulte exemplos para classificar elementos que usam documentos XML de exemplo.
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: ddfeab4bf9b67231296ca90df1244a3b8a441440
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 486aac38a27cf064553894a548722a54c58c21b6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347376"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301496"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-c"></a>Como classificar elementos em várias teclas (C#)
+# <a name="how-to-sort-elements-on-multiple-keys-c"></a>Como classificar elementos em várias chaves (C#)
 
 Este tópico mostra como classificar em múltiplas chaves.
 
@@ -36,7 +37,7 @@ foreach (var r in sortedElements)
         r.CustomerID, r.EmployeeID, r.ShipPostalCode, r.OrderDate);
 ```
 
-Esse código gera a seguinte saída:
+Este código produz a seguinte saída:
 
 ```output
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997
@@ -88,7 +89,7 @@ foreach (var r in sortedElements)
         r.CustomerID, r.EmployeeID, r.ShipPostalCode, r.OrderDate);
 ```
 
-Esse código gera a seguinte saída:
+Este código produz a seguinte saída:
 
 ```output
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997

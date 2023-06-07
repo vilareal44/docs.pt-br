@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: 617b940d2cf15779ae3c10e4663b63c9771d44b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e33efac8f65832c87d5c9271eba25c2ca1d1803b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345895"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387589"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Trabalhando com logs de aplicativo no Visual Basic
 
@@ -43,13 +43,13 @@ Um valor típico para `BasePath` é o seguinte.
 
 C:\Documents and Settings\\`username`\Application Data
 
-Os valores de `CompanyName`, `ProductName` e `ProductVersion` vêm das informações do assembly do aplicativo. O formato do nome do arquivo de log é *AssemblyName*.log, em que *AssemblyName* é o nome do arquivo do assembly sem a extensão. Se mais de um arquivo de log for necessário, por exemplo, quando o log original não estiver disponível quando o aplicativo tentar gravar no log, o formulário para o nome do arquivo de log será *AssemblyName*-*Iteration*. `iteration` log, em `Integer`que é um positivo.
+Os valores de `CompanyName`, `ProductName` e `ProductVersion` vêm das informações do assembly do aplicativo. O formato do nome do arquivo de log é *AssemblyName*.log, em que *AssemblyName* é o nome do arquivo do assembly sem a extensão. Se mais de um arquivo de log for necessário, por exemplo, quando o log original não estiver disponível quando o aplicativo tentar gravar no log, o formulário para o nome do arquivo de log será *AssemblyName* - *Iteration*. log, em que `iteration` é um positivo `Integer` .
 
-Você pode substituir o comportamento padrão adicionando ou alterando os arquivos de configuração de aplicativo e do computador. Para obter mais informações, consulte [Instruções passo a passo: Alterando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).
+Você pode substituir o comportamento padrão adicionando ou alterando os arquivos de configuração de aplicativo e do computador. Para obter mais informações, consulte [Instruções passo a passo: Alterando onde My.Application.Log grava informações](walkthrough-changing-where-my-application-log-writes-information.md).
 
 ## <a name="configuring-log-settings"></a>Definindo configurações de log
 
-O `Log` objeto tem uma implementação padrão que funciona sem um arquivo de configuração de aplicativo, app. config. Para alterar os padrões, você deve adicionar um arquivo de configuração com as novas configurações. Para obter mais informações, consulte [Instruções passo a passo: filtrando a saída de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
+O `Log` objeto tem uma implementação padrão que funciona sem um arquivo de configuração de aplicativo, app. config. Para alterar os padrões, você deve adicionar um arquivo de configuração com as novas configurações. Para obter mais informações, consulte [Instruções passo a passo: filtrando a saída de My.Application.Log](walkthrough-filtering-my-application-log-output.md).
 
 As seções de configuração de log ficam localizadas no nó `<system.diagnostics>` no nó `<configuration>` principal do arquivo app.config. As informações de log são definidas em vários nós:
 
@@ -106,7 +106,7 @@ Considere o seguinte ao gravar dados no log:
 
 - **Evite situações de negação de serviço.** Se seu aplicativo gravar muitas informações no log, ele poderá encher o log ou tornar difícil de encontrar informações importantes.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
-- [Registrar informações em log no aplicativo](../../../../visual-basic/developing-apps/programming/log-info/index.md)
+- [Registrando informações em log a partir do aplicativo](index.md)

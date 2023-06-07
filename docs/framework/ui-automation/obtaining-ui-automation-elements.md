@@ -1,100 +1,101 @@
 ---
 title: Obtendo elementos da automação interface do usuário
+description: Revise várias maneiras de obter objetos de interface de automação da interface do usuário (AutomationElement) para elementos da IU.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: eab4e59ee219808a4c0ae9ca5331a14928b66b5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b741dde3b30334ba8fa990d73044da7e3bdd2da
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179993"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168166"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Obtendo elementos da automação interface do usuário
 > [!NOTE]
 > Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32) (API de Automação do Windows: Automação da Interface do Usuário).  
   
- Este tópico descreve as várias formas de obtenção <xref:System.Windows.Automation.AutomationElement> de objetos para [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elementos.  
+ Este tópico descreve as várias maneiras de obter <xref:System.Windows.Automation.AutomationElement> objetos para [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elementos.  
   
 > [!CAUTION]
-> Se o seu aplicativo cliente tentar encontrar elementos em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sua própria interface de usuário, você deve fazer todas as chamadas em um segmento separado. Para obter mais informações, consulte [Problemas de threading de automação de ui](ui-automation-threading-issues.md).  
+> Se seu aplicativo cliente pode tentar localizar elementos em sua própria interface do usuário, você deve fazer todas as [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] chamadas em um thread separado. Para obter mais informações, consulte [problemas de threading de automação da interface do usuário](ui-automation-threading-issues.md).  
   
 <a name="The_Root_Element"></a>
 ## <a name="root-element"></a>Elemento Root  
- Todas as <xref:System.Windows.Automation.AutomationElement> buscas por objetos devem ter um ponto de partida. Isso pode ser qualquer elemento, incluindo a área de trabalho, uma janela de aplicativo ou um controle.  
+ Todas as pesquisas de <xref:System.Windows.Automation.AutomationElement> objetos devem ter um local de início. Pode ser qualquer elemento, incluindo a área de trabalho, uma janela de aplicativo ou um controle.  
   
- O elemento raiz da área de trabalho, do qual todos <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> os elementos são descendentes, é obtido a partir da propriedade estática.  
+ O elemento raiz para a área de trabalho, do qual todos os elementos são descendentes, é obtido da <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> propriedade estática.  
   
 > [!CAUTION]
-> Em geral, você deve tentar obter <xref:System.Windows.Automation.AutomationElement.RootElement%2A>apenas filhos diretos do . Uma busca por descendentes pode iterar através de centenas ou mesmo milhares de elementos, possivelmente resultando em um estouro de pilha. Se você estiver tentando obter um elemento específico em um nível mais baixo, você deve iniciar sua pesquisa a partir da janela de aplicativo ou de um contêiner em um nível mais baixo.  
+> Em geral, você deve tentar obter apenas filhos diretos do <xref:System.Windows.Automation.AutomationElement.RootElement%2A> . Uma pesquisa por descendentes pode iterar por centenas ou até milhares de elementos, possivelmente resultando em um estouro de pilha. Se você estiver tentando obter um elemento específico em um nível inferior, deverá iniciar a pesquisa na janela do aplicativo ou em um contêiner em um nível inferior.  
   
 <a name="Using_Conditions"></a>
 ## <a name="conditions"></a>Condições  
- Para a maioria das [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] técnicas que você <xref:System.Windows.Automation.Condition>pode usar para recuperar elementos, você deve especificar um , que é um conjunto de critérios definindo quais elementos você deseja recuperar.  
+ Para a maioria das técnicas que você pode usar para recuperar [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elementos, você deve especificar um <xref:System.Windows.Automation.Condition> , que é um conjunto de critérios que definem quais elementos você deseja recuperar.  
   
- A condição mais <xref:System.Windows.Automation.Condition.TrueCondition>simples é, um objeto predefinido especificando que todos os elementos dentro do escopo de pesquisa devem ser devolvidos. <xref:System.Windows.Automation.Condition.FalseCondition>, o <xref:System.Windows.Automation.Condition.TrueCondition>inverso de , é menos útil, pois impediria qualquer elemento de ser encontrado.  
+ A condição mais simples é <xref:System.Windows.Automation.Condition.TrueCondition> , um objeto predefinido que especifica que todos os elementos dentro do escopo de pesquisa devem ser retornados. <xref:System.Windows.Automation.Condition.FalseCondition>, o converso de <xref:System.Windows.Automation.Condition.TrueCondition> , é menos útil, pois isso impediria que qualquer elemento fosse encontrado.  
   
- Três outras condições predefinidas podem ser utilizadas <xref:System.Windows.Automation.Automation.ContentViewCondition> <xref:System.Windows.Automation.Automation.ControlViewCondition>sozinhas <xref:System.Windows.Automation.Automation.RawViewCondition>ou em combinação com outras condições: , e . <xref:System.Windows.Automation.Automation.RawViewCondition>, usado por si <xref:System.Windows.Automation.Condition.TrueCondition>só, é equivalente a, porque não filtra elementos por suas <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> propriedades ou <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> propriedades.  
+ Três outras condições predefinidas podem ser usadas sozinhas ou em combinação com outras condições: <xref:System.Windows.Automation.Automation.ContentViewCondition> , <xref:System.Windows.Automation.Automation.ControlViewCondition> e <xref:System.Windows.Automation.Automation.RawViewCondition> . <xref:System.Windows.Automation.Automation.RawViewCondition>, usado por si só, é equivalente a <xref:System.Windows.Automation.Condition.TrueCondition> , porque não filtra elementos por suas <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> Propriedades ou <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> .  
   
- Outras condições são construídas <xref:System.Windows.Automation.PropertyCondition> a partir de um ou mais objetos, cada um dos quais especifica um valor de propriedade. Por exemplo, <xref:System.Windows.Automation.PropertyCondition> um pode especificar que o elemento está ativado ou que suporta um determinado padrão de controle.  
+ Outras condições são criadas a partir de um ou mais <xref:System.Windows.Automation.PropertyCondition> objetos, cada um deles especifica um valor de propriedade. Por exemplo, um <xref:System.Windows.Automation.PropertyCondition> pode especificar que o elemento está habilitado ou que ele dá suporte a um determinado padrão de controle.  
   
- As condições podem ser combinadas usando a <xref:System.Windows.Automation.AndCondition>lógica <xref:System.Windows.Automation.OrCondition>booleana através da construção de objetos de tipos, e <xref:System.Windows.Automation.NotCondition>.  
+ As condições podem ser combinadas usando a lógica booliana construindo objetos de tipos <xref:System.Windows.Automation.AndCondition> , <xref:System.Windows.Automation.OrCondition> e <xref:System.Windows.Automation.NotCondition> .  
   
 <a name="Search_Scope"></a>
 ## <a name="search-scope"></a>Escopo de pesquisa  
- As pesquisas <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> feitas <xref:System.Windows.Automation.AutomationElement.FindAll%2A> usando ou devem ter um escopo, bem como um ponto de partida.  
+ Pesquisas feitas usando <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> ou <xref:System.Windows.Automation.AutomationElement.FindAll%2A> devem ter um escopo, bem como um local de início.  
   
- O escopo define o espaço em torno do local de partida que deve ser pesquisado. Isso pode incluir o elemento em si, seus irmãos, seus pais, seus ancestrais, seus filhos imediatos e seus descendentes.  
+ O escopo define o espaço em volta do local inicial que deve ser pesquisado. Isso pode incluir o próprio elemento, seus irmãos, seu pai, seus ancestrais, seus filhos imediatos e seus descendentes.  
   
- O escopo de uma pesquisa é definido por <xref:System.Windows.Automation.TreeScope> uma combinação de valores da enumeração.  
+ O escopo de uma pesquisa é definido por uma combinação de bits de valores da <xref:System.Windows.Automation.TreeScope> enumeração.  
   
 <a name="Finding_a_Known_Element"></a>
 ## <a name="finding-a-known-element"></a>Encontrando um elemento conhecido  
- Para encontrar um elemento conhecido, identificado por sua <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A>ou alguma outra propriedade <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> ou combinação de propriedades, é mais fácil usar o método. Se o elemento procurado for uma janela de aplicativo, <xref:System.Windows.Automation.AutomationElement.RootElement%2A>o ponto de partida da pesquisa pode ser o .  
+ Para localizar um elemento conhecido, identificado por seu <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> , <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A> ou alguma outra propriedade ou combinação de propriedades, é mais fácil usar o <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> método. Se o elemento procurado for uma janela de aplicativo, o ponto de partida da pesquisa poderá ser o <xref:System.Windows.Automation.AutomationElement.RootElement%2A> .  
   
- Essa forma [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de encontrar elementos é mais útil em cenários de teste automatizados.  
+ Essa forma de localizar [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elementos é mais útil em cenários de teste automatizados.  
   
 <a name="Finding_Elements_in_a_Subtree"></a>
-## <a name="finding-elements-in-a-subtree"></a>Encontrando elementos em uma subárvore  
- Para encontrar todos os elementos que atendem a <xref:System.Windows.Automation.AutomationElement.FindAll%2A>critérios específicos que estão relacionados a um elemento conhecido, você pode usar . Por exemplo, você pode usar este método para recuperar itens de lista ou itens de menu de uma lista ou menu, ou para identificar todos os controles em uma caixa de diálogo.  
+## <a name="finding-elements-in-a-subtree"></a>Localizando elementos em uma subárvore  
+ Para localizar todos os elementos que atendem a critérios específicos relacionados a um elemento conhecido, você pode usar <xref:System.Windows.Automation.AutomationElement.FindAll%2A> . Por exemplo, você pode usar esse método para recuperar itens de lista ou itens de menu de uma lista ou menu, ou para identificar todos os controles em uma caixa de diálogo.  
   
 <a name="Walking_a_Subtree"></a>
-## <a name="walking-a-subtree"></a>Caminhando por uma Subárvore  
- Se você não tiver conhecimento prévio dos aplicativos com os seus clientes, você pode construir <xref:System.Windows.Automation.TreeWalker> uma subárvore de todos os elementos de interesse usando a classe. Seu aplicativo pode fazer isso em resposta a um evento alterado com foco; ou seja, quando um aplicativo ou controle recebe foco de entrada, o cliente de Automação de Interface do Usuário examina crianças e talvez todos os descendentes do elemento focalizado.  
+## <a name="walking-a-subtree"></a>Examinando uma subárvore  
+ Se você não tiver conhecimento prévio dos aplicativos com os quais seu cliente pode ser usado, poderá construir uma subárvore de todos os elementos de interesse usando a <xref:System.Windows.Automation.TreeWalker> classe. Seu aplicativo pode fazer isso em resposta a um evento de alteração de foco; ou seja, quando um aplicativo ou controle recebe o foco de entrada, o cliente de automação da interface do usuário examina os filhos e talvez todos os descendentes do elemento focado.  
   
- Outra maneira <xref:System.Windows.Automation.TreeWalker> de ser usada é identificar os ancestrais de um elemento. Por exemplo, ao subir a árvore você pode identificar a janela pai de um controle.  
+ Outra maneira na qual <xref:System.Windows.Automation.TreeWalker> pode ser usada é identificar os ancestrais de um elemento. Por exemplo, ao percorrer a árvore, você pode identificar a janela pai de um controle.  
   
- Você pode <xref:System.Windows.Automation.TreeWalker> usar, criando um objeto da classe (definindo <xref:System.Windows.Automation.Condition>os elementos de interesse ao passar a), <xref:System.Windows.Automation.TreeWalker>ou usando um dos seguintes objetos predefinidos que são definidos como campos de .  
+ Você pode usar <xref:System.Windows.Automation.TreeWalker> qualquer um deles criando um objeto da classe (definindo os elementos de interesse passando um <xref:System.Windows.Automation.Condition> ) ou usando um dos seguintes objetos predefinidos que são definidos como campos de <xref:System.Windows.Automation.TreeWalker> .  
   
 |||  
 |-|-|  
-|<xref:System.Windows.Automation.TreeWalker.ContentViewWalker>|Encontra apenas <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> elementos `true`cuja propriedade é.|  
-|<xref:System.Windows.Automation.TreeWalker.ControlViewWalker>|Encontra apenas <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> elementos `true`cuja propriedade é.|  
-|<xref:System.Windows.Automation.TreeWalker.RawViewWalker>|Encontra todos os elementos.|  
+|<xref:System.Windows.Automation.TreeWalker.ContentViewWalker>|Localiza apenas os elementos cuja <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> propriedade é `true` .|  
+|<xref:System.Windows.Automation.TreeWalker.ControlViewWalker>|Localiza apenas os elementos cuja <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> propriedade é `true` .|  
+|<xref:System.Windows.Automation.TreeWalker.RawViewWalker>|Localiza todos os elementos.|  
   
- Depois de obter <xref:System.Windows.Automation.TreeWalker>um , usá-lo é simples. Basta chamar `Get` os métodos para navegar entre os elementos da subárvore.  
+ Depois de obter um <xref:System.Windows.Automation.TreeWalker> , usá-lo é simples. Basta chamar os `Get` métodos para navegar entre os elementos da subárvore.  
   
- O <xref:System.Windows.Automation.TreeWalker.Normalize%2A> método pode ser usado para navegar até um elemento na subárvore a partir de outro elemento que não faz parte da visão. Por exemplo, suponha que você tenha criado <xref:System.Windows.Automation.TreeWalker.ContentViewWalker>uma visão de uma subárvore usando . Em seguida, seu aplicativo recebe a notificação de que uma barra de rolagem recebeu o foco de entrada. Como uma barra de rolagem não é um elemento de conteúdo, ela não está presente na sua visão da subárvore. No entanto, <xref:System.Windows.Automation.AutomationElement> você pode passar <xref:System.Windows.Automation.TreeWalker.Normalize%2A> a representação da barra de rolagem para e recuperar o ancestral mais próximo que está na exibição de conteúdo.  
+ O <xref:System.Windows.Automation.TreeWalker.Normalize%2A> método pode ser usado para navegar para um elemento na subárvore de outro elemento que não faz parte da exibição. Por exemplo, suponha que você tenha criado uma exibição de uma subárvore usando <xref:System.Windows.Automation.TreeWalker.ContentViewWalker> . Em seguida, seu aplicativo recebe uma notificação de que uma barra de rolagem recebeu o foco de entrada. Como uma barra de rolagem não é um elemento de conteúdo, ela não está presente na exibição da subárvore. No entanto, você pode passar o <xref:System.Windows.Automation.AutomationElement> que representa a barra de rolagem para <xref:System.Windows.Automation.TreeWalker.Normalize%2A> e recuperar o ancestral mais próximo que está na exibição de conteúdo.  
   
 <a name="Other_Ways_to_Retrieve_an_Element"></a>
 ## <a name="other-ways-to-retrieve-an-element"></a>Outras maneiras de recuperar um elemento  
- Além de pesquisas e navegação, <xref:System.Windows.Automation.AutomationElement> você pode recuperar um nas seguintes maneiras.  
+ Além de pesquisas e navegação, você pode recuperar um <xref:System.Windows.Automation.AutomationElement> das seguintes maneiras.  
   
 ### <a name="from-an-event"></a>De um evento  
- Quando seu aplicativo [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] recebe um evento, o objeto <xref:System.Windows.Automation.AutomationElement>de origem passado para o manipulador de eventos é um . Por exemplo, se você se inscreveu em eventos alterados pelo foco, a fonte passada para o seu <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> é o elemento que recebeu o foco.  
+ Quando seu aplicativo recebe um [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento, o objeto de origem passado para o manipulador de eventos é um <xref:System.Windows.Automation.AutomationElement> . Por exemplo, se você assinou os eventos de foco alterado, a origem passada para seu <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> é o elemento que recebeu o foco.  
   
- Para obter mais informações, consulte [Inscreva-se em Eventos de Automação de UI](subscribe-to-ui-automation-events.md).  
+ Para obter mais informações, consulte [assinar eventos de automação da interface do usuário](subscribe-to-ui-automation-events.md).  
   
 ### <a name="from-a-point"></a>De um ponto  
- Se você tiver coordenadas de tela (por exemplo, <xref:System.Windows.Automation.AutomationElement> uma posição <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> cursor), você pode recuperar uma usando o método estático.  
+ Se você tiver coordenadas de tela (por exemplo, uma posição de cursor), poderá recuperar um <xref:System.Windows.Automation.AutomationElement> usando o <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> método estático.  
   
-### <a name="from-a-window-handle"></a>De uma alça de janela  
- Para recuperar <xref:System.Windows.Automation.AutomationElement> um de um HWND, use o método estático. <xref:System.Windows.Automation.AutomationElement.FromHandle%2A>  
+### <a name="from-a-window-handle"></a>De um identificador de janela  
+ Para recuperar um <xref:System.Windows.Automation.AutomationElement> de um HWND, use o <xref:System.Windows.Automation.AutomationElement.FromHandle%2A> método estático.  
   
-### <a name="from-the-focused-control"></a>Do Controle Focado  
- Você pode <xref:System.Windows.Automation.AutomationElement> recuperar um que representa o <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> controle focalizado da propriedade estática.  
+### <a name="from-the-focused-control"></a>Do controle focado  
+ Você pode recuperar um <xref:System.Windows.Automation.AutomationElement> que representa o controle focalizado da <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> propriedade estática.  
   
 ## <a name="see-also"></a>Confira também
 

@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, partitioners
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
-ms.openlocfilehash: 8caea6d8a97b8c0daf7c59718479ea2e12a52d78
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 50553aab30d5a1bc5880ae0fe39c34508e57d0e5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141560"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276719"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Particionadores personalizados para PLINQ e TPL
 
@@ -23,7 +23,7 @@ Para paralelizar a uma operação em uma fonte de dados, uma das etapas essencia
 
 Há muitas maneiras de particionar uma fonte de dados. Nas abordagens mais eficientes, vários threads cooperam para processar a sequência de origem original, em vez de separar fisicamente a origem em várias subsequências. Para matrizes e outras fontes indexadas como coleções <xref:System.Collections.IList> em que o tamanho é conhecido com antecedência, o *particionamento por intervalos* é o tipo mais simples de particionamento. Cada thread recebe índices exclusivos de abertura e fechamento, para que possa processar seu intervalo da origem sem substituir ou ser substituído por qualquer outro thread. A única sobrecarga envolvida no particionamento por intervalos é o trabalho inicial de criação de intervalos. Nenhuma sincronização adicional é necessária depois disso. Portanto, pode fornecer bom desempenho, desde que a carga de trabalho seja dividida igualmente. Uma desvantagem do particionamento por intervalos é que se um thread termina cedo, não pode ajudar os outros threads a concluírem seu trabalho.
 
-Para listas vinculadas ou outras coleções cujo comprimento não é conhecido, você pode usar o *particionamento por partes*. Na parte de particionamento, cada thread ou tarefa em uma consulta ou um loop paralelo consome alguns elementos de origem em um bloco, processa-os e volta para recuperar elementos adicionais. O particionador garante que todos os elementos sejam distribuídos e que não haja duplicatas. Uma parte pode ser de qualquer tamanho. Por exemplo, o particionador que é demonstrado em [Como implementar partições dinâmicas](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md) cria blocos que contêm apenas um elemento. Como as partes não são muito grandes, esse tipo de particionamento é, inerentemente, um balanceamento de carga, pois a atribuição de elementos a threads não é predeterminada. No entanto, o particionador causa sobrecarga de sincronização sempre que o thread precisa obter outro bloco. A quantidade de sincronização que ocorre nesses casos é inversamente proporcional ao tamanho das partes.
+Para listas vinculadas ou outras coleções cujo comprimento não é conhecido, você pode usar o *particionamento por partes*. Na parte de particionamento, cada thread ou tarefa em uma consulta ou um loop paralelo consome alguns elementos de origem em um bloco, processa-os e volta para recuperar elementos adicionais. O particionador garante que todos os elementos sejam distribuídos e que não haja duplicatas. Uma parte pode ser de qualquer tamanho. Por exemplo, o particionador que é demonstrado em [Como implementar partições dinâmicas](how-to-implement-dynamic-partitions.md) cria blocos que contêm apenas um elemento. Como as partes não são muito grandes, esse tipo de particionamento é, inerentemente, um balanceamento de carga, pois a atribuição de elementos a threads não é predeterminada. No entanto, o particionador causa sobrecarga de sincronização sempre que o thread precisa obter outro bloco. A quantidade de sincronização que ocorre nesses casos é inversamente proporcional ao tamanho das partes.
 
 Em geral, a partição de intervalo só é mais rápida quando o tempo de execução do representante é pequeno a médio e a origem tem um grande número de elementos e o trabalho total de cada partição é aproximadamente equivalente. Portanto, o particionamento de bloco geralmente é mais rápido na maioria dos casos. Em origens com um pequeno número de elementos ou tempos de execução maiores para o representante, o desempenho de bloco e particionamento por intervalos é mais ou menos igual.
 
@@ -47,10 +47,10 @@ A tabela a seguir lista as sobrecargas disponíveis do método <xref:System.Coll
 |<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>|Sempre|
 |<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28%60%600%5B%5D%2CSystem.Boolean%29>|Quando o argumento Boolean é especificado como true|
 |<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IList%7B%60%600%7D%2CSystem.Boolean%29>|Quando o argumento Boolean é especificado como true|
-|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%29>|Never|
-|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%2CSystem.Int32%29>|Never|
-|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int64%2CSystem.Int64%29>|Never|
-|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int64%2CSystem.Int64%2CSystem.Int64%29>|Never|
+|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%29>|Nunca|
+|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%2CSystem.Int32%29>|Nunca|
+|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int64%2CSystem.Int64%29>|Nunca|
+|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int64%2CSystem.Int64%2CSystem.Int64%29>|Nunca|
 
 ### <a name="configuring-static-range-partitioners-for-parallelforeach"></a>Configurando particionadores de intervalo estático para Parallel.ForEach
 
@@ -99,7 +99,7 @@ A tabela a seguir fornece detalhes adicionais sobre como os três tipos de parti
 
 Se desejar que o particionador seja usado em um método <xref:System.Threading.Tasks.Parallel.ForEach%2A>, você deverá ser capaz de retornar um número dinâmico de partições. Isso significa que o particionador pode fornecer um enumerador para uma nova partição sob demanda a qualquer momento durante a execução do loop. Basicamente, sempre que o loop adicionar uma nova tarefa paralela, solicitará uma nova partição para a tarefa. Se for preciso que os dados sejam ordenáveis, derive <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> para que seja atribuído um índice exclusivo a cada item em cada partição.
 
-Para saber mais e obter um exemplo, confira [Como implementar partições dinâmicas](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).
+Para saber mais e obter um exemplo, confira [Como implementar partições dinâmicas](how-to-implement-dynamic-partitions.md).
 
 ### <a name="contract-for-partitioners"></a>Contrato para particionadores
 
@@ -125,8 +125,8 @@ Ao implementar um particionador personalizado, siga estas diretrizes para garant
 
 - Todos os índices devem ser não negativos. Se essa regra não for seguida, PLINQ/TPL poderão gerar exceções.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Programação Paralela](../../../docs/standard/parallel-programming/index.md)
-- [como implementar partições dinâmicas](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)
-- [Como implementar um particionador para particionamento estático](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+- [Programação paralela](index.md)
+- [Como: Implementar partições dinâmicas](how-to-implement-dynamic-partitions.md)
+- [Como: implementar um particionador para particionamento estático](how-to-implement-a-partitioner-for-static-partitioning.md)

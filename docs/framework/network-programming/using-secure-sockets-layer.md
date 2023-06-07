@@ -1,5 +1,6 @@
 ---
 title: Usando o protocolo SSL
+description: Saiba mais sobre como a System.Net e a extensão de classes usam o protocolo SSL para criptografar a conexão para vários protocolos de rede no .NET Framework.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-ms.openlocfilehash: ef2abc7574aea1b4f77ff93545ad84678c66ce48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 67330962382e768849cbf67d5f412ea80f65569d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71046899"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501983"
 ---
 # <a name="using-secure-sockets-layer"></a>Usando o protocolo SSL
 As classes <xref:System.Net> usam o protocolo SSL para criptografar a conexão para vários protocolos de rede.  
@@ -65,5 +66,5 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 ## <a name="see-also"></a>Confira também
 
 - [Segurança na programação de rede](security-in-network-programming.md)
-- [Programação de rede no Framework .NET](index.md)
+- [Programação de rede no .NET Framework](index.md)
 - [Seleção e validação de certificado](certificate-selection-and-validation.md)

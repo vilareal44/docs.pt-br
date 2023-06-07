@@ -2,19 +2,19 @@
 title: Extensibilidade de metadados
 ms.date: 03/30/2017
 ms.assetid: f92fcc76-0806-4c84-9d63-7aae0d3899de
-ms.openlocfilehash: d139e169aa9bd45f5a7ef848acc12aaa35043432
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e8e7f511b38cf3326b9abbca57df769317a26a4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755981"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584617"
 ---
 # <a name="metadata-extensibility"></a>Extensibilidade de metadados
-Esta seção contém exemplos que demonstram os metadados personalizados.  
+Esta seção contém exemplos que demonstram metadados personalizados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Ponto de extremidade de metadados seguros personalizado](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)  
- Demonstra como implementar um serviço com um ponto de extremidade de metadados seguros que usa uma das associações não-metadata exchange e como configurar [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ou clientes para buscar os metadados tal um ponto de extremidade metadados.  
+ [Ponto de extremidade de metadados seguros personalizados](custom-secure-metadata-endpoint.md)  
+ Demonstra como implementar um serviço com um ponto de extremidade de metadados seguro que usa uma das associações de troca que não são de metadados e como configurar a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) ou clientes para buscar os metadados desse ponto de extremidade de metadados.  
   
- [Publicação de WSDL personalizada](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
- Demonstra como implementar uma <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> em um personalizado <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> atributo para exportar as propriedades de atributo como anotações de WSDL, entre outras funcionalidades.
+ [Publicação personalizada de WSDL](custom-wsdl-publication.md)  
+ Demonstra como implementar um <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> em um atributo personalizado <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> para exportar Propriedades de atributo como anotações WSDL, entre outras funcionalidades.

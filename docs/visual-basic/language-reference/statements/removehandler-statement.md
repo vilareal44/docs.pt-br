@@ -9,12 +9,12 @@ helpviewer_keywords:
 - RemoveHandler keyword [Visual Basic]
 - RemoveHandler statement [Visual Basic]
 ms.assetid: 647cd825-e877-4910-b4f1-8d168beebe6a
-ms.openlocfilehash: 177952acf362ccb36a36b5f09b11a1a93dbefa29
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3514a79f2430b148e6a3727b83029b4e207a677b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74333045"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404246"
 ---
 # <a name="removehandler-statement"></a>Instrução RemoveHandler
 Remove a associação entre um evento e um manipulador de eventos.  
@@ -33,17 +33,17 @@ RemoveHandler event, AddressOf eventhandler
 |`eventhandler`|O nome do procedimento que está manipulando o evento no momento.|  
   
 ## <a name="remarks"></a>Comentários  
- As instruções `AddHandler` e `RemoveHandler` permitem iniciar e parar a manipulação de eventos para um evento específico a qualquer momento durante a execução do programa.  
+ As `AddHandler` `RemoveHandler` instruções e permitem que você inicie e interrompa a manipulação de eventos para um evento específico a qualquer momento durante a execução do programa.  
   
 > [!NOTE]
-> Para eventos personalizados, a instrução `RemoveHandler` invoca o acessador de `RemoveHandler` do evento. Para obter mais informações sobre eventos personalizados, consulte [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
+> Para eventos personalizados, a `RemoveHandler` instrução invoca o `RemoveHandler` acessador do evento. Para obter mais informações sobre eventos personalizados, consulte [Event Statement](event-statement.md).  
   
 ## <a name="example"></a>Exemplo  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Instrução AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)
-- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
-- [Instrução Event](../../../visual-basic/language-reference/statements/event-statement.md)
-- [Eventos](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Instrução AddHandler](addhandler-statement.md)
+- [Alças](handles-clause.md)
+- [Instrução Event](event-statement.md)
+- [Eventos](../../programming-guide/language-features/events/index.md)

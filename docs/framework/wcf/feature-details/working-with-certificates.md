@@ -1,5 +1,6 @@
 ---
 title: Trabalhando com certificados
+description: Saiba mais sobre os recursos de certificado digital X. 509 e como usá-los no WCF. Os recursos neste artigo podem explicar ainda mais esses conceitos.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: e38ead0d378092af086218277fd2e85b4a6396c3
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8090e84b33e2a6f442d387c7012e6ccdc2900dd1
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746881"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246396"
 ---
 # <a name="working-with-certificates"></a>Trabalhando com certificados
 
@@ -26,7 +27,7 @@ Os certificados devem ser emitidos por uma autoridade de certificação, que é 
 
 ## <a name="viewing-certificates"></a>Exibindo certificados
 
-Para trabalhar com certificados, geralmente é necessário exibi-los e examinar suas propriedades. Isso é feito facilmente com a ferramenta de snap-in do Console de Gerenciamento Microsoft (MMC). Para obter mais informações, confira [Como exibir certificados com o snap-in do MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
+Para trabalhar com certificados, geralmente é necessário exibi-los e examinar suas propriedades. Isso é feito facilmente com a ferramenta de snap-in do Console de Gerenciamento Microsoft (MMC). Para saber mais, consulte [Como Exibir Certificados com o Snap-in do MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
 
 ## <a name="certificate-stores"></a>Repositórios de certificados
 
@@ -81,17 +82,17 @@ Ao criar um novo serviço, você pode usar um certificado que não seja emitido 
 
 Também é possível definir a propriedade usando configuração. Os seguintes elementos são usados para especificar o modo de validação:
 
-- [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)
+- [\<authentication>](../../configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)
 
-- [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)
+- [\<peerAuthentication>](../../configure-apps/file-schema/wcf/peerauthentication-element.md)
 
-- [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)
+- [\<messageSenderAuthentication>](../../configure-apps/file-schema/wcf/messagesenderauthentication-element.md)
 
 ## <a name="custom-authentication"></a>Autenticação personalizada
 
 A propriedade `CertificateValidationMode` também permite que você personalize como os certificados são autenticados. Por padrão, o nível é definido como `ChainTrust`. Para usar o valor <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>, você também deverá definir o atributo `CustomCertificateValidatorType` para um assembly e um tipo usados para validar o certificado. Para criar um validador personalizado, você deverá herdar da classe abstrata <xref:System.IdentityModel.Selectors.X509CertificateValidator>.
 
-Ao criar um autenticador personalizado, o método mais importante para substituição é o método <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>. Para obter um exemplo de autenticação personalizada, confira a amostra [Validador de certificado X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md). Para obter mais informações, confira [Credencial personalizada e validação de credenciais](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).
+Ao criar um autenticador personalizado, o método mais importante para substituição é o método <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>. Para obter um exemplo de autenticação personalizada, confira a amostra [Validador de certificado X.509](../samples/x-509-certificate-validator.md). Para obter mais informações, confira [Credencial personalizada e validação de credenciais](../extending/custom-credential-and-credential-validation.md).
 
 ## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>Usando o cmdlet New-SelfSignedCertificate do PowerShell para criar uma cadeia de certificados
 
@@ -113,15 +114,15 @@ As perguntas comuns sobre certificados são qual certificado usar e por quê. A 
 
 ### <a name="service-certificates"></a>Certificados de serviço
 
-Os certificados de serviço têm a tarefa principal de autenticar o servidor para clientes. Uma das verificações iniciais feitas quando um cliente autentica um servidor é comparar o valor do campo **Entidade** com o URI (Uniform Resource Identifier) usado para contatar o serviço: o DNS de ambos deve ser correspondente. Por exemplo, se o URI do serviço for `http://www.contoso.com/endpoint/`, o campo **assunto** também deverá conter o valor `www.contoso.com`.
+Os certificados de serviço têm a tarefa principal de autenticar o servidor para clientes. Uma das verificações iniciais feitas quando um cliente autentica um servidor é comparar o valor do campo **Entidade** com o URI (Uniform Resource Identifier) usado para contatar o serviço: o DNS de ambos deve ser correspondente. Por exemplo, se o URI do serviço for `http://www.contoso.com/endpoint/` , o campo **assunto** também deverá conter o valor `www.contoso.com` .
 
-Observe que o campo pode conter vários valores, cada um prefixado com uma inicialização para indicar o valor. Normalmente, a inicialização é "CN" para nome comum, por exemplo, `CN = www.contoso.com`. Também é possível que o campo **Entidade** fique em branco. Nesse caso, o campo **Nome Alternativo da Entidade** pode conter o valor do **Nome DNS**.
+Observe que o campo pode conter vários valores, cada um prefixado com uma inicialização para indicar o valor. Normalmente, a inicialização é "CN" para nome comum, por exemplo, `CN = www.contoso.com` . Também é possível que o campo **Entidade** fique em branco. Nesse caso, o campo **Nome Alternativo da Entidade** pode conter o valor do **Nome DNS**.
 
 Observe também que o valor do campo **Finalidades** do certificado deve incluir um valor apropriado, como "Autenticação do Servidor" ou "Autenticação do Cliente".
 
 ### <a name="client-certificates"></a>Certificados de cliente
 
-Os certificados de cliente não são normalmente emitidos por uma autoridade de certificação de terceiros. Em vez disso, o repositório Pessoal do local atual do usuário geralmente contém os certificados colocados lá por uma autoridade raiz, com uma finalidade de “Autenticação do cliente”. O cliente pode usar um certificado quando a autenticação mútua é necessária.
+Os certificados de cliente não são normalmente emitidos por uma autoridade de certificação de terceiros. Em vez disso, o repositório Pessoal do local atual do usuário geralmente contém os certificados colocados lá por uma autoridade raiz, com uma finalidade de “Autenticação do cliente”. O cliente pode usar esse certificado quando a autenticação mútua é necessária.
 
 ## <a name="online-revocation-and-offline-revocation"></a>Revogação online e revogação offline
 
@@ -135,7 +136,7 @@ A qualquer momento durante o período de validade, a autoridade de certificaçã
 
 Quando isso ocorre, todas as cadeias que descenderem do certificado revogado também tornam-se inválidas e não são confiáveis durante os procedimentos de autenticação. Para descobrir quais certificados são revogados, cada emissor publica uma *CRL* (lista de certificados revogados) com carimbo de data e hora. A lista pode ser marcada usando a revogação online ou offline definindo a propriedade `RevocationMode` ou `DefaultRevocationMode` das seguintes classes para um dos valores de enumeração <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>: as classes <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>, <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>, <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> e <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>. O valor padrão para todas as propriedades é `Online`.
 
-Defina também o modo na configuração usando o atributo `revocationMode` da [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (dos [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)) e da [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (dos [\<endpointBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)).
+Você também pode definir o modo na configuração usando o `revocationMode` atributo de [\<authentication>](../../configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (do [\<serviceBehaviors>](../../configure-apps/file-schema/wcf/servicebehaviors.md) ) e o [\<authentication>](../../configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (do [\<endpointBehaviors>](../../configure-apps/file-schema/wcf/endpointbehaviors.md) ).
 
 ## <a name="the-setcertificate-method"></a>O método SetCertificate
 
@@ -160,7 +161,7 @@ Um repositório pode conter vários certificados com o mesmo nome de assunto. Is
 
 ## <a name="certificates-in-configuration"></a>Certificados na configuração
 
-Você também pode definir certificados usando configuração. Se você estiver criando um serviço, as credenciais, incluindo certificados, serão especificadas nos [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md). Quando você estiver programando um cliente, os certificados serão especificados nos [\<endpointBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md).
+Você também pode definir certificados usando configuração. Se você estiver criando um serviço, as credenciais, incluindo certificados, serão especificadas no [\<serviceBehaviors>](../../configure-apps/file-schema/wcf/servicebehaviors.md) . Quando você está programando um cliente, os certificados são especificados no [\<endpointBehaviors>](../../configure-apps/file-schema/wcf/endpointbehaviors.md) .
 
 ## <a name="mapping-a-certificate-to-a-user-account"></a>Mapeando um certificado para uma conta de usuário
 
@@ -168,7 +169,7 @@ Um recurso do IIS e do Active Directory é a capacidade para mapear um certifica
 
 Para obter mais informações sobre como usar o mapeamento do Active Directory, confira [Mapeando certificados do cliente com o mapeamento do serviço de diretório](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc758484(v=ws.10)).
 
-Com esse recurso ativado, você poderá definir a propriedade <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> da classe <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> como `true`. Na configuração, você pode definir o atributo `mapClientCertificateToWindowsAccount` do elemento [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) como `true`, conforme mostrado no código a seguir.
+Com esse recurso ativado, você poderá definir a propriedade <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> da classe <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> como `true`. Em configuração, você pode definir o `mapClientCertificateToWindowsAccount` atributo do [\<authentication>](../../configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) elemento como `true` , conforme mostrado no código a seguir.
 
 ```xml
 <serviceBehaviors>
@@ -188,10 +189,10 @@ Ao usar o .NET Framework 3,5 ou versões posteriores, o WCF garante que o certif
 
 Na primeira versão do WCF, o mapeamento é feito sem consulta à política de domínio. Portanto, é possível que aplicativos mais antigos que funcionavam ao serem executados na primeira versão falhem se o mapeamento for habilitado e o certificado X.509 não atender a política de domínio.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType>
-- [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Protegendo serviços e clientes](securing-services-and-clients.md)

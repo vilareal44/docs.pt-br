@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30617
 ms.assetid: 5e9de8e5-d26b-4fb2-9e28-814413fe9cef
-ms.openlocfilehash: fc3c102dbfe7c55e66093421bc11379d48ba000d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d01c30571fc34e142300ac8706c56d5e99175fcf
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592091"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397201"
 ---
 # <a name="module-statements-can-occur-only-at-file-or-namespace-level"></a>Instruções 'Module' só podem ocorrer no nível de namespace ou arquivo
-`Module` as instruções devem aparecer na parte superior do seu arquivo de origem imediatamente após `Option` e `Imports` instruções, atributos globais e declarações de namespace, mas antes de todas as outras declarações.  
+`Module`as instruções devem aparecer na parte superior do arquivo de origem imediatamente após `Option` e `Imports` instruções, atributos globais e declarações de namespace, mas antes de todas as outras declarações.  
   
  **ID do erro:** BC30617  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Mover o `Module` instrução na parte superior do seu arquivo de origem ou de declaração de namespace.  
+- Mova a `Module` instrução para a parte superior da sua declaração de namespace ou arquivo de origem.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Instrução Module](../../../visual-basic/language-reference/statements/module-statement.md)
+- [Instrução Module](../statements/module-statement.md)

@@ -3,22 +3,22 @@ title: <issuerMetadata>
 ms.date: 03/30/2017
 ms.assetid: e7eae2c0-cc17-4281-af59-e4eb8d54f92a
 ms.openlocfilehash: a28223127f7987a80bdf12d2dcf42878f717a377
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70397887"
 ---
-# <a name="issuermetadata"></a>\<issuerMetadata>
+# \<issuerMetadata>
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> wsFederationHttpBinding**](wsfederationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de segurança**](security-of-wsfederationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de mensagem**](message-element-of-wsfederationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> issuerMetadata**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<wsFederationHttpBinding>**](wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<message>**](message-element-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<issuerMetadata>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +50,7 @@ ms.locfileid: "70397887"
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|endereço|Atributo `string` obrigatório.<br /><br /> Especifica o endereço do ponto de extremidade. O endereço deve ser um URI absoluto. O valor padrão é uma cadeia de caracteres vazia.|  
+|address|Atributo `string` obrigatório.<br /><br /> Especifica o endereço do ponto de extremidade. O endereço deve ser um URI absoluto. O valor padrão é uma cadeia de caracteres vazia.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -63,13 +63,13 @@ ms.locfileid: "70397887"
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<message>](message-element-of-wsfederationhttpbinding.md)|Define as configurações para a segurança em nível de mensagem para [ \<](wsfederationhttpbinding.md) o elemento de > WSFederationHttpBinding.|  
+|[\<message>](message-element-of-wsfederationhttpbinding.md)|Define as configurações para a segurança em nível de mensagem para o [\<wsFederationHttpBinding>](wsfederationhttpbinding.md) elemento.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.IssuerMetadata%2A>
-- [Autenticação e identidade de serviço](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Identidade e autenticação de serviço](../../../wcf/feature-details/service-identity-and-authentication.md)
 - [Federação e tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)
 - [Recursos de segurança com associações personalizadas](../../../wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [Federação e tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)

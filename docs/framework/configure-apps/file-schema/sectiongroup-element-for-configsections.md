@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <sectionGroup> Element
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
 ms.openlocfilehash: eb221027470fe6e485f8fcc4b939b71e4f219712
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77215258"
 ---
-# <a name="sectiongroup-element-for-configsections"></a>\<elemento > de seção para \<configSections >
+# <a name="sectiongroup-element-for-configsections"></a>Elemento \<sectionGroup> para \<configSections>
 
 Define um namespace para seções de configuração.
 
-[ **\<configuration>** ](configuration-element.md)\
-&nbsp;&nbsp;[ **\<configsections >** ](configsections-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<da seção** >
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<sectionGroup>**
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,25 +32,25 @@ Define um namespace para seções de configuração.
 
 ## <a name="attribute"></a>Atributo
 
-|           | DESCRIÇÃO |
+|           | Descrição |
 | --------- | ----------- |
 | **name**  | Atributo obrigatório.<br><br>Especifica o nome do grupo de seções que você está definindo. |
 
 ## <a name="parent-element"></a>Elemento pai
 
-|     | DESCRIÇÃO |
+|     | Descrição |
 | --- | ----------- |
-| [ **\<configsections >** Elementos](configsections-element-for-configuration.md) | Contém as declarações de namespace e seção de configuração. |
+| [**\<configSections>** Elementos](configsections-element-for-configuration.md) | Contém as declarações de namespace e seção de configuração. |
 
 ## <a name="child-elements"></a>Elementos filho
 
-|     | DESCRIÇÃO |
+|     | Descrição |
 | --- | ----------- |
-| [ **\<seção >** ](section-element.md) | Contém uma declaração de seção de configuração. |
+| [**\<section>**](section-element.md) | Contém uma declaração de seção de configuração. |
 
 ## <a name="remarks"></a>Comentários
 
-Declarar um grupo de seções cria uma marca de contêiner para seções de configuração e garante que não haja conflitos de nomenclatura com seções de configuração definidas por outra pessoa. Você pode aninhar\<elementos do **> de seções** entre si.
+Declarar um grupo de seções cria uma marca de contêiner para seções de configuração e garante que não haja conflitos de nomenclatura com seções de configuração definidas por outra pessoa. Você pode aninhar **\<sectionGroup>** elementos dentro uns dos outros.
 
 ## <a name="example"></a>Exemplo
 

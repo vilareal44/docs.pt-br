@@ -3,12 +3,12 @@ title: Opções de saída na classe de XslCompiledTransform
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-ms.openlocfilehash: 504057bd5e10498d39b2bce908742fc20b112c52
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e9ffdc1377dbf124f042802279e7e7a275222eff
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710499"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288700"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Opções de saída na classe de XslCompiledTransform
 Este tópico discute opções de saída disponíveis XSLT. Você pode especificar opções de saída na folha de estilos, ou o método de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> .  
@@ -43,7 +43,7 @@ Este tópico discute opções de saída disponíveis XSLT. Você pode especifica
 #### <a name="string"></a>String  
  Use esse tipo de saída para especificar a URL do arquivo de saída.  
   
-#### <a name="stream"></a>STREAM  
+#### <a name="stream"></a>Fluxo  
  Um fluxo é uma abstração de uma sequência de bytes, como um arquivo, um dispositivo de arquivos entrada/saída, um pipe de comunicação de inter- processo, ou um soquete TCP/IP. A classe de <xref:System.IO.Stream> e suas classes derivadas fornecem uma visão genérica desses tipos diferentes de entrada e saída, isolando o programador de detalhes específicos do sistema operacional e dispositivos subjacentes.  
   
  Use esse tipo de saída para enviar dados a <xref:System.IO.FileStream>, a <xref:System.IO.MemoryStream>, ou um fluxo de saída (`Response.OutputStream`).  
@@ -57,4 +57,4 @@ Este tópico discute opções de saída disponíveis XSLT. Você pode especifica
   
 ## <a name="see-also"></a>Veja também
 
-- [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [Transformações XSLT](xslt-transformations.md)

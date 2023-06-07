@@ -1,13 +1,14 @@
 ---
 title: Gerenciando permissões com procedimentos armazenados no SQL Server
+description: Saiba como restringir o acesso aos seus dados e objetos de banco de dados implementando o acesso usando procedimentos armazenados ou funções definidas pelo usuário.
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 85383c46dd029db825d24d2f67d2dbda00f3bc95
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 890c1c6dd7003f3abd684d6c827b6a77a3a019c1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452377"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286282"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Gerenciando permissões com procedimentos armazenados no SQL Server
 Um método de criar várias linhas de defesa em torno do banco de dados é implementar todo o acesso a dados usando procedimentos armazenados ou funções definidas pelo usuário. Você revogar ou nega todas as permissões para objetos subjacentes, como tabelas, e concede permissões EXECUTE em procedimentos armazenados. Isso cria efetivamente um perímetro de segurança em torno dos dados e objetos de banco de dados.  
@@ -52,17 +53,17 @@ Um método de criar várias linhas de defesa em torno do banco de dados é imple
 ## <a name="external-resources"></a>Recursos externos  
  Para obter mais informações, consulte os recursos a seguir.  
   
-|Recurso|DESCRIÇÃO|  
+|Recurso|Descrição|  
 |--------------|-----------------|  
 |[Procedimentos armazenados](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) e [injeção de SQL](/sql/relational-databases/security/sql-injection)|Os artigos descrevem como criar procedimentos armazenados e como funciona a injeção de SQL.|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Securing ADO.NET Applications](../securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
+- [Protegendo aplicativos ADO.NET](../securing-ado-net-applications.md)
 - [Visão geral de segurança do SQL Server](overview-of-sql-server-security.md)
 - [Cenários de Segurança de Aplicativo no SQL Server](application-security-scenarios-in-sql-server.md)
 - [Gravação de SQL Dinâmico Seguro no SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
 - [Assinando procedimentos armazenados no SQL Server](signing-stored-procedures-in-sql-server.md)
 - [Personalizando permissões com representação no SQL Server](customizing-permissions-with-impersonation-in-sql-server.md)
 - [Modificando dados com procedimentos armazenados](../modifying-data-with-stored-procedures.md)
-- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)
+- [Visão geral do ADO.NET](../ado-net-overview.md)

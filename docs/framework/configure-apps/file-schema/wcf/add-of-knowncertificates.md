@@ -3,24 +3,24 @@ title: <add> de <knownCertificates>
 ms.date: 03/30/2017
 ms.assetid: 128aaabe-3f1a-4c3b-b59f-898d0f02910f
 ms.openlocfilehash: 29b067e6ec20992084f9ab3bab087222bdd56da2
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400616"
 ---
-# <a name="add-of-knowncertificates"></a>\<Adicionar > de \<knownCertificates >
+# <a name="add-of-knowncertificates"></a>\<add> de \<knownCertificates>
 Adiciona um certificado X. 509 à coleção de certificados conhecidos.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamentos >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de portais**](servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de comportamento**](behavior-of-servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCredentials >** ](servicecredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> issuedTokenAuthentication**](issuedtokenauthentication-of-servicecredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> knownCertificates**](knowncertificates.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Adicionar >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceCredentials>**](servicecredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<issuedTokenAuthentication>**](issuedtokenauthentication-of-servicecredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<knownCertificates>**](knowncertificates.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +40,7 @@ Adiciona um certificado X. 509 à coleção de certificados conhecidos.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|findValue|Cadeia. O valor a ser procurado.|  
+|findValue|Cadeia de caracteres. O valor a ser procurado.|  
 |storeLocation|Enumeração. Um dos dois locais de armazenamento para pesquisar.|  
 |storeName|Enumeração. Uma das lojas de sistema para pesquisa.|  
 |x509FindType|Enumeração. Um dos campos de certificado a serem pesquisados.|  
@@ -49,13 +49,13 @@ Adiciona um certificado X. 509 à coleção de certificados conhecidos.
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Cadeia de Caracteres|O valor depende do campo (especificado pelo atributo X509FindType) que está sendo pesquisado. Por exemplo, se estiver procurando uma impressão digital, o valor deverá ser uma cadeia de caracteres de números hexadecimais.|  
+|String|O valor depende do campo (especificado pelo atributo X509FindType) que está sendo pesquisado. Por exemplo, se estiver procurando uma impressão digital, o valor deverá ser uma cadeia de caracteres de números hexadecimais.|  
   
 ## <a name="x509findtype-attribute"></a>Atributo x509FindType  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Enumeração|Os valores são: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
+|Enumeração|Os valores incluem: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
   
 ## <a name="storelocation-attribute"></a>Atributo storeLocation  
   
@@ -67,10 +67,10 @@ Adiciona um certificado X. 509 à coleção de certificados conhecidos.
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Enumeração|Os valores são: Catálogo, AuthRoot, CertificateAuthority, não permitido, My, root, TrustedPeople e TrustedPublisher.|  
+|Enumeração|Os valores incluem: catálogo, AuthRoot, CertificateAuthority, não permitido, My, root, TrustedPeople e TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -81,7 +81,7 @@ Adiciona um certificado X. 509 à coleção de certificados conhecidos.
 ## <a name="remarks"></a>Comentários  
  O cenário de token emitido tem três estágios. No primeiro estágio, um cliente que tenta acessar um serviço é chamado de um *serviço de token seguro*. O serviço de token seguro autentica o cliente e subsequentemente emite um token do cliente, normalmente um token SAML (Security Assertion Markup Language). O cliente retorna ao serviço com o token. O serviço examina o token de dados que permite que o serviço autentique o token e, portanto, o cliente. Para autenticar o token, o certificado que o serviço de token seguro usa deve ser conhecido pelo serviço.  
   
- O elemento de [ \<> issuedTokenAuthentication](issuedtokenauthentication-of-servicecredentials.md) é o repositório para qualquer certificado de serviço de token seguro. Para adicionar certificados, use o [ \<> knownCertificates](knowncertificates.md). Insira um [ \<elemento adicionar > \<elemento knownCertificates >](add-of-knowncertificates.md) para cada certificado, conforme mostrado no exemplo a seguir.  
+ O [\<issuedTokenAuthentication>](issuedtokenauthentication-of-servicecredentials.md) elemento é o repositório para qualquer certificado de serviço de token seguro. Para adicionar certificados, use o [\<knownCertificates>](knowncertificates.md) . Insira um [ \<add> \<knownCertificates> elemento de elemento](add-of-knowncertificates.md) para cada certificado, conforme mostrado no exemplo a seguir.  
   
 ```xml  
 <issuedTokenAuthentication>
@@ -96,7 +96,7 @@ Adiciona um certificado X. 509 à coleção de certificados conhecidos.
   
  Por padrão, os certificados devem ser obtidos de um serviço de token seguro. Esses certificados "conhecidos" garantem que somente clientes legítimos possam acessar um serviço.  
   
- Para revisar as condições necessárias para um cliente ser autenticado por um serviço federado, bem como mais informações sobre como usar esse elemento de [configuração, consulte Como: Configure as credenciais em um](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)serviço de Federação. Para obter mais informações sobre cenários federados, consulte [Federação e tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md).  
+ Para revisar as condições necessárias para um cliente ser autenticado por um serviço federado, bem como mais informações sobre como usar esse elemento de configuração, consulte [como configurar credenciais em um serviço de Federação](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md). Para obter mais informações sobre cenários federados, consulte [Federação e tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir adiciona o certificado ao repositório para qualquer certificado STS.  
@@ -118,7 +118,7 @@ Adiciona um certificado X. 509 à coleção de certificados conhecidos.
 </serviceBehaviors>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>
@@ -130,5 +130,5 @@ Adiciona um certificado X. 509 à coleção de certificados conhecidos.
 - [\<knownCertificates>](knowncertificates.md)
 - [Trabalhando com certificados](../../../wcf/feature-details/working-with-certificates.md)
 - [Federação e tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)
-- [Como: Configurar credenciais em um Serviço de Federação](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Como configurar credenciais em um serviço de federação](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [Protegendo serviços e clientes](../../../wcf/feature-details/securing-services-and-clients.md)

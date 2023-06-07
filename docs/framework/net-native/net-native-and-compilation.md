@@ -3,10 +3,10 @@ title: Compilação e .NET nativo
 ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 ms.openlocfilehash: cf5c9f05b2f2cb4ca15e4add5b53bc9bdca757a3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128253"
 ---
 # <a name="net-native-and-compilation"></a>Compilação e .NET nativo
@@ -58,9 +58,9 @@ Durante a conversão de um aplicativo de IL para código nativo, a cadeia de fer
 
 O aplicativo resultante que é produzido pela cadeia de ferramentas do .NET Native é gravado em um diretório chamado ilc.out no diretório Debug ou Release do diretório do projeto. Ele consiste dos seguintes arquivos:
 
-- *\<appName>* .exe, um executável de stub que simplesmente transfere o controle para uma exportação de `Main` especial em *\<appName>* .dll.
+- *\<appName>*. exe, um executável de stub que simplesmente transfere o controle para uma `Main` exportação especial no *\<appName>* . dll.
 
-- *\<appName>* .dll, uma biblioteca de vínculo dinâmico do Windows que contém todo o código do aplicativo, bem como código de biblioteca de classes .NET Framework e todas as bibliotecas de terceiros em que você tem uma dependência.  Ele também contém código de suporte, tal como o código necessário para interoperação com o Windows e para serializar objetos em seu aplicativo.
+- *\<appName>*. dll, uma biblioteca de vínculo dinâmico do Windows que contém todo o código do aplicativo, bem como o código da biblioteca de classes de .NET Framework e quaisquer bibliotecas de terceiros nas quais você tem uma dependência.  Ele também contém código de suporte, tal como o código necessário para interoperação com o Windows e para serializar objetos em seu aplicativo.
 
 - mrt100_app.dll, um runtime refatorado que fornece serviços de runtime como coleta de lixo.
 
@@ -80,7 +80,7 @@ Já que a cadeia de ferramentas do .NET Native vinculará o código de implement
 
 - Interoperabilidade COM.
 
-Se o código de implementação ou de metadados necessário está ausente em runtime, o runtime do .NET Native gera uma exceção. Você pode evitar essas exceções e verificar se a cadeia de ferramentas do .NET Native inclui o código de implementação e os metadados necessários, usando um [arquivo de diretivas de tempo de execução](runtime-directives-rd-xml-configuration-file-reference.md), um arquivo XML que designa os elementos do programa cujos metadados ou código de implementação devem estar disponíveis em tempo de execução e atribui uma política de tempo de execução a elas. Este é o arquivo de diretivas de runtime padrão que é adicionado a um projeto da Windows Store que é compilado pela cadeia de ferramentas do .NET Native:
+Se o código de implementação ou de metadados necessário está ausente em runtime, o runtime do .NET Native gera uma exceção. Você pode evitar essas exceções e verificar se a cadeia de ferramentas do .NET Native inclui o código de implementação e os metadados necessários, usando um [arquivo de diretivas de runtime](runtime-directives-rd-xml-configuration-file-reference.md), um arquivo XML que designa os elementos do programa cujos metadados ou código de implementação devem estar disponíveis em runtime e atribui uma política de runtime a elas. Este é o arquivo de diretivas de runtime padrão que é adicionado a um projeto da Windows Store que é compilado pela cadeia de ferramentas do .NET Native:
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -102,9 +102,9 @@ O NGEN [(gerador de imagem nativa)](../tools/ngen-exe-native-image-generator.md)
 
 - As imagens NGEN tendem a ser frágeis. Por exemplo, um patch ou alteração para uma dependência normalmente requer que os assemblies que a usam também tenham imagem gerada novamente por NGEN. Isso é particularmente verdadeiro em assemblies do sistema na biblioteca de classes .NET Framework. Por outro lado, o .NET Native permite que aplicativos sejam atendidos independentemente uns dos outros.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Metadados e componentes autodescritivos](../../standard/metadata-and-self-describing-components.md)
-- [Dentro de .NET Native (vídeo do Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
-- [Reflexão e .NET Native](reflection-and-net-native.md)
-- [Solução de problemas gerais do .NET Native](net-native-general-troubleshooting.md)
+- [Por dentro do .NET Native (vídeo do Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
+- [Reflexão e .NET Nativo](reflection-and-net-native.md)
+- [Solução de problemas gerais do .NET Nativo](net-native-general-troubleshooting.md)

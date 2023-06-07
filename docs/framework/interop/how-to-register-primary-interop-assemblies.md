@@ -1,18 +1,19 @@
 ---
-title: Como registrar assemblies de interoperabilidade primários
+title: 'Como: Registrar assemblies de interoperabilidade primários'
+description: Registre assemblies de interoperabilidade primária usando a ferramenta de registro de assembly (Regasm.exe) e leia sobre outros problemas relacionados a assemblies de interoperabilidade.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - registering primary interop assemblies
 - primary interop assemblies, registering
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
-ms.openlocfilehash: c799e4ead2932f1c376a57488df30390ad48b90f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a15bda7b40f160b31028c62cf7c73bdedd9541fa
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107687"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622738"
 ---
-# <a name="how-to-register-primary-interop-assemblies"></a>Como registrar assemblies de interoperabilidade primários
+# <a name="how-to-register-primary-interop-assemblies"></a>Como: Registrar assemblies de interoperabilidade primários
 
 As classes podem ter o marshaling realizado somente pela interoperabilidade COM e sempre têm o marshaling realizado como interfaces. Em alguns casos, a interface usada para realizar marshaling da classe é conhecida como a interface de classe. Para obter informações sobre como substituir a interface de classe por uma interface de sua preferência, consulte [COM Callable Wrapper](../../standard/native-interop/com-callable-wrapper.md).
 
@@ -47,7 +48,7 @@ Use a [Ferramenta de Registro do Assembly (Regasm.exe)](../tools/regasm-exe-asse
 regasm CompanyA.UtilLib.dll
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Programando com assemblies de interoperabilidade primários](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
 - [Localizando assemblies de interoperabilidade primários](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))

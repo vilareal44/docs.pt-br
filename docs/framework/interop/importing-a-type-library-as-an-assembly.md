@@ -1,5 +1,6 @@
 ---
 title: Importando uma biblioteca de tipos como um assembly
+description: Importar uma biblioteca de tipos, que contém definições de tipo COM, como um assembly. Aprenda maneiras de criar metadados de uma biblioteca de tipos, resultando em um assembly de interoperabilidade.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-ms.openlocfilehash: e1a21175bcabc72b86a328d4f73ecec37140c304
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e5187e3c2ce533f25a38e93bc3715dd3e2e47c11
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107593"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622712"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importando uma biblioteca de tipos como um assembly
 
@@ -70,15 +71,15 @@ Após você localizar a biblioteca de tipos que contém a implementação do seu
 
  Para obter mais informações sobre o processo de importação de interoperabilidade COM, consulte [Resumo da conversão de bibliotecas de tipos em assemblies](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100)).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
-- [Expondo componentes do COM ao .NET Framework](exposing-com-components.md)
+- [Expondo componentes do COM para o .NET Framework](exposing-com-components.md)
 - [Resumo da conversão de bibliotecas de tipos em assemblies](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp. exe (tipo de importador de biblioteca de tipos)](../tools/tlbimp-exe-type-library-importer.md)
+- [Tlbimp.exe (tipo de importador de biblioteca de tipos)](../tools/tlbimp-exe-type-library-importer.md)
 - [Personalizando wrappers padrão](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
 - [Usando tipos COM no código gerenciado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Compilando um projeto de interoperabilidade](compiling-an-interop-project.md)
 - [Implantando um aplicativo de interoperabilidade](deploying-an-interop-application.md)
-- [Como adicionar referências a bibliotecas de tipos](how-to-add-references-to-type-libraries.md)
-- [Como gerar assemblies de interoperabilidade a partir de bibliotecas de tipos](how-to-generate-interop-assemblies-from-type-libraries.md)
+- [Como: Adicionar referências a bibliotecas de tipos](how-to-add-references-to-type-libraries.md)
+- [Como: Gerar assemblies de interoperabilidade com base em bibliotecas de tipos](how-to-generate-interop-assemblies-from-type-libraries.md)

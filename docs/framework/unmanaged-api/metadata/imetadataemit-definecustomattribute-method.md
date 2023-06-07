@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7dd14854-b756-4401-b167-88ca576dc8f0
 topic_type:
 - apiref
-ms.openlocfilehash: 9c4ed282e259aa46fc0cb0175214dc51d3d5fbee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17757df566ba8d141e7adec00dcc1f75959d0e00
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175883"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005618"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>Método IMetaDataEmit::DefineCustomAttribute
-Cria uma definição para um atributo personalizado com a assinatura de metadados especificada, a ser anexada ao objeto especificado e obtém um token para essa definição de atributo personalizado.  
+Cria uma definição para um atributo personalizado com a assinatura de metadados especificada, a ser anexada ao objeto especificado e Obtém um token para essa definição de atributo personalizado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,32 +37,32 @@ HRESULT DefineCustomAttribute (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `tkObj`  
- [em] O token para o item do proprietário.  
+ no O token para o item de proprietário.  
   
  `tkType`  
- [em] O token que identifica o atributo personalizado.  
+ no O token que identifica o atributo personalizado.  
   
  `pCustomAttribute`  
- [em] Um ponteiro para o atributo personalizado.  
+ no Um ponteiro para o atributo personalizado.  
   
  `cbCustomAttribute`  
- [em] A contagem de `pCustomAttribute`bytes em .  
+ no A contagem de bytes em `pCustomAttribute` .  
   
  `pcv`  
- [fora] O `mdCustomAttribute` token atribuído.  
+ fora O `mdCustomAttribute` token atribuído.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interface IMetaDataEmit](imetadataemit-interface.md)
+- [Interface IMetaDataEmit2](imetadataemit2-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ccda329-d752-4d89-abe8-511af3c3f4c9
 topic_type:
 - apiref
-ms.openlocfilehash: d8b8bfd0e70e75c702f32555c10f433a1ff4ae10
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 068014732cee91147edaec29fa0f954a741d8b5c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175415"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491622"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>Método IMetaDataImport::FindMemberRef
-Obtém um ponteiro para o token MemberRef para a <xref:System.Type> referência de membro que está incluído no especificado e que tem o nome especificado e a assinatura de metadados.  
+Obtém um ponteiro para o token de MemberRef para a referência de membro que está entre o especificado <xref:System.Type> e que tem o nome e a assinatura de metadados especificados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,39 +37,39 @@ HRESULT FindMemberRef (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `td`  
- [em] O token TypeRef para a classe ou interface que inclui a referência do membro à pesquisa. Se esse `mdTokenNil`valor for, a pesquisa é feita para uma variável global ou uma referência de função global.  
+ no O token TypeRef para a classe ou interface que inclui a referência de membro a ser pesquisada. Se esse valor for `mdTokenNil` , a pesquisa será feita para uma variável global ou uma referência de função global.  
   
  `szName`  
- [em] O nome da referência do membro para procurar.  
+ no O nome da referência de membro a ser pesquisada.  
   
  `pvSigBlob`  
- [em] Um ponteiro para a assinatura binária de metadados da referência do membro.  
+ no Um ponteiro para a assinatura de metadados binários da referência de membro.  
   
  `cbSigBlob`  
- [em] O tamanho em bytes de `pvSigBlob`.  
+ no O tamanho em bytes de `pvSigBlob` .  
   
  `pmr`  
- [fora] Um ponteiro para o token MemberRef correspondente.  
+ fora Um ponteiro para o token de MemberRef correspondente.  
   
 ## <a name="remarks"></a>Comentários  
- Você especifica o membro usando sua`td`classe ou`szName`interface de fechamento (`pvSigBlob`), seu nome ( ), e opcionalmente sua assinatura ( ).  
+ Você especifica o membro usando sua classe ou interface delimitadora ( `td` ), seu nome ( `szName` ) e, opcionalmente, sua assinatura ( `pvSigBlob` ).  
   
- A assinatura `FindMemberRef` passada deve ter sido gerada no escopo atual, porque as assinaturas estão vinculadas a um escopo específico. Uma assinatura pode incorporar um token que identifica a classe de fechamento ou o tipo de valor. O token é um índice na tabela typeDef local. Não é possível construir uma assinatura de tempo de execução fora `FindMemberRef`do contexto do escopo atual e usar essa assinatura como entrada para .  
+ A assinatura passada para `FindMemberRef` deve ter sido gerada no escopo atual, porque as assinaturas estão associadas a um escopo específico. Uma assinatura pode inserir um token que identifica a classe de circunscrição ou o tipo de valor. O token é um índice na tabela de TypeDef local. Você não pode criar uma assinatura de tempo de execução fora do contexto do escopo atual e usar essa assinatura como entrada para `FindMemberRef` .  
   
- `FindMemberRef`encontra apenas referências de membros que foram definidas diretamente na classe ou interface; não encontra referências de membros herdados.  
+ `FindMemberRef`localiza somente referências de membros que foram definidas diretamente na classe ou na interface; Ele não localiza referências de membros herdadas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

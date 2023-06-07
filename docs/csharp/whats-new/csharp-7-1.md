@@ -2,12 +2,12 @@
 title: Novidades no C# 7.1
 description: Uma visão geral dos novos recursos no C# 7.1.
 ms.date: 04/09/2019
-ms.openlocfilehash: 5d2d6f51b6422f5b4db5c6bd275b5ffce1f695f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fe6e49eb01e24a27bc7970900c05150378ab194a
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399703"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174764"
 ---
 # <a name="whats-new-in-c-71"></a>Novidades no C# 7.1
 
@@ -17,7 +17,7 @@ O C# 7.1 adiciona a [seleção de versão da linguagem](../language-reference/co
 
 Os novos recursos de linguagem nesta versão são:
 
-- [`async``Main` método](#async-main)
+- [`async``Main`método](#async-main)
   - O ponto de entrada para um aplicativo pode ter o modificador `async`.
 - [`default`expressões literais](#default-literal-expressions)
   - Use expressões literais padrão em expressões de valor padrão quando o tipo de destino pode ser inferido.
@@ -106,7 +106,7 @@ string label = "Colors used in the map";
 var pair = (count, label); // element names are "count" and "label"
 ```
 
-Saiba mais sobre esse recurso no artigo [Tuplas](../tuples.md).
+Você pode saber mais sobre esse recurso no artigo [tipos de tupla](../language-reference/builtin-types/value-tuples.md) .
 
 ## <a name="pattern-matching-on-generic-type-parameters"></a>Restrições em parâmetros de tipo genérico
 
@@ -114,5 +114,5 @@ A partir do C# 7.1, a expressão de padrão para o padrão de tipo `is` e `switc
 
 ## <a name="reference-assembly-generation"></a>Geração de assembly de referência
 
-Existem duas novas opções de compiladores que geram *conjuntos somente de referência*: [-refout](../language-reference/compiler-options/refout-compiler-option.md) e [-refonly](../language-reference/compiler-options/refonly-compiler-option.md).
+Há duas novas opções de compilador que geram *assemblies somente de referência*: [-refout](../language-reference/compiler-options/refout-compiler-option.md) e [-refonly](../language-reference/compiler-options/refonly-compiler-option.md).
 Os artigos vinculados explicam essas opções e os assemblies de referência mais detalhadamente.

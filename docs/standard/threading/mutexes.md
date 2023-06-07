@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Mutex class, about Mutex class
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-ms.openlocfilehash: 3f020db49bcdcbf6ce3d573348a93b06e87db199
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: f9267bdd19a14995851f2689651c001815812912
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242719"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291169"
 ---
 # <a name="mutexes"></a>Mutexes
-Você pode usar um objeto <xref:System.Threading.Mutex> para fornecer acesso exclusivo a um recurso. A classe <xref:System.Threading.Mutex> usa mais recursos do sistema do que a classe <xref:System.Threading.Monitor>, mas pode realizar marshaling entre limites de domínio de aplicativo, pode ser usada com vários esperas e pode ser usada para sincronizar threads em processos diferentes. Para obter uma comparação dos mecanismos de sincronização gerenciados, confira [Visão geral dos primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
+Você pode usar um objeto <xref:System.Threading.Mutex> para fornecer acesso exclusivo a um recurso. A classe <xref:System.Threading.Mutex> usa mais recursos do sistema do que a classe <xref:System.Threading.Monitor>, mas pode realizar marshaling entre limites de domínio de aplicativo, pode ser usada com vários esperas e pode ser usada para sincronizar threads em processos diferentes. Para obter uma comparação dos mecanismos de sincronização gerenciados, confira [Visão geral dos primitivos de sincronização](overview-of-synchronization-primitives.md).  
   
  Para obter exemplos de código, consulte a documentação de referência para os construtores <xref:System.Threading.Mutex.%23ctor%2A>.  
   
@@ -47,7 +47,7 @@ Você pode usar um objeto <xref:System.Threading.Mutex> para fornecer acesso exc
   
  Para saber mais sobre segurança de controle de acesso para mutexes, confira as classes <xref:System.Security.AccessControl.MutexSecurity> e <xref:System.Security.AccessControl.MutexAccessRule>, a enumeração <xref:System.Security.AccessControl.MutexRights>, os métodos <xref:System.Threading.Mutex.GetAccessControl%2A>, <xref:System.Threading.Mutex.SetAccessControl%2A> e <xref:System.Threading.Mutex.OpenExisting%2A> da classe <xref:System.Threading.Mutex> e o construtor <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29>.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Threading.Mutex?displayProperty=nameWithType>
 - <xref:System.Threading.Mutex.%23ctor%2A>

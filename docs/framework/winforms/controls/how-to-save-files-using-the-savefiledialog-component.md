@@ -1,5 +1,6 @@
 ---
 title: Como salvar arquivos usando o componente SaveFileDialog
+description: Saiba como usar o componente SaveFileDialog para procurar o sistema de arquivos e selecionar os arquivos a serem salvos.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,34 +12,34 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 32de7f7e38195271e179d4fae3884b7a39f37c45
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: cd773c3d4aa2b907eb09dd87c3fdbe138bf533bb
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868077"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904397"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>Como salvar arquivos usando o componente SaveFileDialog
 
-O componente <xref:System.Windows.Forms.SaveFileDialog> permite que os usuários procurem o sistema de arquivos e selecionem os arquivos a serem salvos. A caixa de diálogo retorna o caminho e o nome do arquivo que o usuário selecionou na caixa de diálogo. No entanto, você deve escrever o código para efetivamente gravar os arquivos no disco.
+O <xref:System.Windows.Forms.SaveFileDialog> componente permite que os usuários procurem o sistema de arquivos e selecionem os arquivos a serem salvos. A caixa de diálogo retorna o caminho e o nome do arquivo que o usuário selecionou na caixa de diálogo. No entanto, você deve escrever o código para efetivamente gravar os arquivos no disco.
 
 ### <a name="to-save-a-file-using-the-savefiledialog-component"></a>Salvar arquivos usando o componente SaveFileDialog
 
 - Exiba a caixa de diálogo **Salvar Arquivo** e chame um método para salvar o arquivo selecionado pelo usuário.
 
-  Use o método <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> do componente de <xref:System.Windows.Forms.SaveFileDialog> para salvar o arquivo. Esse método fornece um <xref:System.IO.Stream> objeto no qual você pode gravar.
+  Use o <xref:System.Windows.Forms.SaveFileDialog> método do componente <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> para salvar o arquivo. Esse método fornece um <xref:System.IO.Stream> objeto no qual você pode gravar.
 
-  O exemplo a seguir usa a propriedade <xref:System.Windows.Forms.DialogResult> para obter o nome do arquivo e o método <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> para salvar o arquivo. O método <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> fornece um fluxo no qual gravar o arquivo.
+  O exemplo a seguir usa a <xref:System.Windows.Forms.DialogResult> propriedade para obter o nome do arquivo e o <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> método para salvar o arquivo. O <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> método fornece um fluxo no qual gravar o arquivo.
 
-  No exemplo a seguir, há um controle de <xref:System.Windows.Forms.Button> com uma imagem atribuída a ele. Quando você clica no botão, um componente <xref:System.Windows.Forms.SaveFileDialog> é instanciado com um filtro que permite arquivos do tipo. gif,. jpeg e. bmp. Se um arquivo desse tipo for selecionado na caixa de diálogo Salvar Arquivo, a imagem do botão será salva.
+  No exemplo a seguir, há um <xref:System.Windows.Forms.Button> controle com uma imagem atribuída a ele. Quando você clica no botão, um <xref:System.Windows.Forms.SaveFileDialog> componente é instanciado com um filtro que permite arquivos do tipo. gif,. jpeg e. bmp. Se um arquivo desse tipo for selecionado na caixa de diálogo Salvar Arquivo, a imagem do botão será salva.
 
   > [!IMPORTANT]
-  > Para obter ou definir a propriedade <xref:System.Windows.Forms.FileDialog.FileName%2A>, seu assembly requer um nível de privilégio concedido pela classe <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>. Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../misc/code-access-security-basics.md).
+  > Para obter ou definir a <xref:System.Windows.Forms.FileDialog.FileName%2A> propriedade, seu assembly requer um nível de privilégio concedido pela <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> classe. Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../misc/code-access-security-basics.md).
 
-  O exemplo supõe que seu formulário tem um controle de <xref:System.Windows.Forms.Button> com sua propriedade <xref:System.Windows.Forms.ButtonBase.Image%2A> definida como um arquivo de Type. gif,. jpeg ou. bmp.
+  O exemplo supõe que seu formulário tenha um <xref:System.Windows.Forms.Button> controle com sua <xref:System.Windows.Forms.ButtonBase.Image%2A> propriedade definida como um arquivo de Type. gif,. jpeg ou. bmp.
 
   > [!NOTE]
-  > A propriedade <xref:System.Windows.Forms.FileDialog.FilterIndex%2A> da classe <xref:System.Windows.Forms.FileDialog> (que, devido à herança, faz parte da classe <xref:System.Windows.Forms.SaveFileDialog>) usa um índice baseado em um. Isso será importante se você estiver escrevendo código para salvar dados em um formato específico (por exemplo, salvar um arquivo como texto sem formatação em vez de formato binário). Essa propriedade é apresentada no exemplo abaixo.
+  > A <xref:System.Windows.Forms.FileDialog> propriedade da classe <xref:System.Windows.Forms.FileDialog.FilterIndex%2A> (que, devido à herança, faz parte da <xref:System.Windows.Forms.SaveFileDialog> classe) usa um índice baseado em um. Isso será importante se você estiver escrevendo código para salvar dados em um formato específico (por exemplo, salvar um arquivo como texto sem formatação em vez de formato binário). Essa propriedade é apresentada no exemplo abaixo.
 
   ```vb
   Private Sub Button2_Click(ByVal sender As System.Object, _
@@ -173,10 +174,10 @@ O componente <xref:System.Windows.Forms.SaveFileDialog> permite que os usuários
       System::EventHandler(this, &Form1::button2_Click);
   ```
 
-  Para obter mais informações sobre como gravar fluxos de arquivos, consulte <xref:System.IO.FileStream.BeginWrite%2A> e <xref:System.IO.FileStream.Write%2A>.
+  Para obter mais informações sobre como gravar fluxos de arquivos, consulte <xref:System.IO.FileStream.BeginWrite%2A> e <xref:System.IO.FileStream.Write%2A> .
 
   > [!NOTE]
-  > Determinados controles, como o controle de <xref:System.Windows.Forms.RichTextBox>, têm a capacidade de salvar arquivos.
+  > Determinados controles, como o <xref:System.Windows.Forms.RichTextBox> controle, têm a capacidade de salvar arquivos.
 
 ## <a name="see-also"></a>Veja também
 

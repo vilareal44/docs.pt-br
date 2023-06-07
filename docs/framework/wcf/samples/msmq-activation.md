@@ -2,16 +2,16 @@
 title: Ativação de MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 805ab78908b4d1146cce94cac5357bafbb35c832
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0dbd24a612d56c0fe88066f625be2a8369b7df5b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744794"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602527"
 ---
 # <a name="msmq-activation"></a>Ativação de MSMQ
 
-Este exemplo demonstra como hospedar aplicativos no WAS (serviço de ativação de processos do Windows) que são lidos de uma fila de mensagens. Este exemplo usa o `netMsmqBinding` e baseia-se no exemplo de [comunicação bidirecional](../../../../docs/framework/wcf/samples/two-way-communication.md) . O serviço, nesse caso, é um aplicativo hospedado na Web e o cliente é hospedado internamente e saídas para o console para observar o status dos pedidos de compra enviados.
+Este exemplo demonstra como hospedar aplicativos no WAS (serviço de ativação de processos do Windows) que são lidos de uma fila de mensagens. Este exemplo usa o `netMsmqBinding` e é baseado no exemplo de [comunicação bidirecional](two-way-communication.md) . O serviço, nesse caso, é um aplicativo hospedado na Web e o cliente é hospedado internamente e saídas para o console para observar o status dos pedidos de compra enviados.
 
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.
@@ -19,11 +19,11 @@ Este exemplo demonstra como hospedar aplicativos no WAS (serviço de ativação 
 > [!NOTE]
 > Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.
 >
-> \<InstallDrive >: \ WF_WCF_Samples
+> \<InstallDrive>: \ WF_WCF_Samples
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os exemplos do WCF e do [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os WCF e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.
 >
-> \<InstallDrive >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
+> \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
 
 O WAS (serviço de ativação de processos do Windows), o novo mecanismo de ativação de processos do Windows Server 2008, fornece recursos semelhantes ao IIS que estavam disponíveis anteriormente apenas para aplicativos baseados em HTTP para aplicativos que usam protocolos não-HTTP. O Windows Communication Foundation (WCF) usa a interface do adaptador do ouvinte para comunicar solicitações de ativação recebidas em protocolos não HTTP com suporte do WCF, como TCP, pipes nomeados e MSMQ. A funcionalidade para receber solicitações em protocolos não HTTP é hospedada por serviços gerenciados do Windows em execução no SMSvcHost. exe.
 
@@ -31,7 +31,7 @@ O serviço de adaptador de escuta net. MSMQ (NetMsmqActivator) ativa os aplicati
 
 O cliente envia pedidos de compra para o serviço de dentro do escopo de uma transação. O serviço recebe os pedidos em uma transação e os processa. Em seguida, o serviço chama o cliente com o status do pedido. Para facilitar a comunicação bidirecional, o cliente e o serviço usam filas para enfileirar ordens de compra e status do pedido.
 
-O `IOrderProcessor` de contrato de serviço define as operações de serviço unidirecionais que funcionam com o enfileiramento. A operação de serviço usa o ponto de extremidade de resposta para enviar status do pedido para o cliente. O endereço do ponto de extremidade de resposta é o URI da fila usada para enviar o status do pedido de volta para o cliente. O aplicativo de processamento de pedidos implementa esse contrato.
+O contrato de serviço `IOrderProcessor` define as operações de serviço unidirecionais que funcionam com o enfileiramento. A operação de serviço usa o ponto de extremidade de resposta para enviar status do pedido para o cliente. O endereço do ponto de extremidade de resposta é o URI da fila usada para enviar o status do pedido de volta para o cliente. O aplicativo de processamento de pedidos implementa esse contrato.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -54,7 +54,7 @@ public interface IOrderStatus
 }
 ```
 
-A operação de serviço processa a ordem de compra enviada. O <xref:System.ServiceModel.OperationBehaviorAttribute> é aplicado à operação de serviço para especificar a inscrição automática na transação que é usada para receber a mensagem da fila e a conclusão automática da transação na conclusão da operação de serviço. A classe `Orders` encapsula a funcionalidade de processamento de pedidos. Nesse caso, ele adiciona a ordem de compra a um dicionário. A transação na qual a operação de serviço inscrito está disponível para as operações na classe `Orders`.
+A operação de serviço processa a ordem de compra enviada. O <xref:System.ServiceModel.OperationBehaviorAttribute> é aplicado à operação de serviço para especificar a inscrição automática na transação que é usada para receber a mensagem da fila e a conclusão automática da transação na conclusão da operação de serviço. A `Orders` classe encapsula a funcionalidade de processamento de pedidos. Nesse caso, ele adiciona a ordem de compra a um dicionário. A transação na qual a operação de serviço inscrito está disponível para as operações na `Orders` classe.
 
 A operação de serviço, além de processar a ordem de compra enviada, responde de volta ao cliente sobre o status do pedido.
 
@@ -90,7 +90,7 @@ O nome da fila MSMQ é especificado em uma seção appSettings do arquivo de con
 
 Um arquivo. svc com o nome da classe é usado para hospedar o código do serviço no WAS.
 
-O próprio arquivo Service. svc contém uma diretiva para criar o `OrderProcessorService`.
+O próprio arquivo Service. svc contém uma diretiva para criar o `OrderProcessorService` .
 
 `<%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>`
 
@@ -98,7 +98,7 @@ O arquivo Service. svc também contém uma diretiva de assembly para garantir qu
 
 `<%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>`
 
-O cliente cria um escopo de transação. A comunicação com o serviço ocorre dentro do escopo da transação, fazendo com que ele seja tratado como uma unidade atômica onde todas as mensagens são bem sucedidas ou falham. A transação é confirmada chamando `Complete` no escopo da transação.
+O cliente cria um escopo de transação. A comunicação com o serviço ocorre dentro do escopo da transação, fazendo com que ele seja tratado como uma unidade atômica onde todas as mensagens são bem sucedidas ou falham. A transação é confirmada chamando `Complete` o escopo da transação.
 
 ```csharp
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
@@ -153,7 +153,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
     }
 ```
 
-O código do cliente implementa o contrato de `IOrderStatus` para receber o status do pedido do serviço. Nesse caso, ele imprime o status do pedido.
+O código do cliente implementa o `IOrderStatus` contrato para receber o status do pedido do serviço. Nesse caso, ele imprime o status do pedido.
 
 ```csharp
 [ServiceBehavior]
@@ -169,7 +169,7 @@ public class OrderStatusService : IOrderStatus
 }
 ```
 
-A fila status do pedido é criada no método `Main`. A configuração do cliente inclui a configuração do serviço de status do pedido para hospedar o serviço de status do pedido, conforme mostrado na seguinte configuração de exemplo.
+A fila status do pedido é criada no `Main` método. A configuração do cliente inclui a configuração do serviço de status do pedido para hospedar o serviço de status do pedido, conforme mostrado na seguinte configuração de exemplo.
 
 ```xml
 <appSettings>
@@ -214,7 +214,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
 1. Verifique se o IIS 7,0 está instalado, pois ele é necessário para a ativação do WAS.
 
-2. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Além disso, você deve instalar os componentes de ativação não HTTP do WCF:
+2. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md). Além disso, você deve instalar os componentes de ativação não HTTP do WCF:
 
     1. No menu **Iniciar**, selecione **Painel de Controle**.
 
@@ -226,7 +226,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
     5. Expanda o nó **Microsoft .NET Framework 3,0** e verifique o Windows Communication Foundation recurso de **ativação não http** .
 
-3. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Para criar a edição C# ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).
 
 4. Execute o cliente executando o Client. exe em uma janela de comando. Isso cria a fila e envia uma mensagem a ela. Deixe o cliente em execução para ver o resultado do serviço que está lendo a mensagem
 
@@ -267,11 +267,11 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         > Esse comando é uma única linha de texto.
 
-        Esse comando permite que o aplicativo/servicemodelsamples seja acessado usando `http://localhost/servicemodelsamples` e `net.msmq://localhost/servicemodelsamples`.
+        Esse comando permite que o aplicativo/servicemodelsamples seja acessado usando `http://localhost/servicemodelsamples` e `net.msmq://localhost/servicemodelsamples` .
 
-7. Se você não tiver feito isso anteriormente, verifique se o serviço de ativação MSMQ está habilitado. No menu **Iniciar** , clique em **executar**e digite `Services.msc`. Pesquise a lista de serviços para o **adaptador de escuta net. MSMQ**. Clique com o botão direito do mouse e selecione **Propriedades**. Defina o **tipo de inicialização** como **automático**, clique em **aplicar** e clique no botão **Iniciar** . Essa etapa deve ser feita apenas uma vez antes do primeiro uso do serviço do adaptador de escuta net. MSMQ.
+7. Se você não tiver feito isso anteriormente, verifique se o serviço de ativação MSMQ está habilitado. No menu **Iniciar** , clique em **executar**e digite `Services.msc` . Pesquise a lista de serviços para o **adaptador de escuta net. MSMQ**. Clique com o botão direito do mouse e selecione **Propriedades**. Defina o **tipo de inicialização** como **automático**, clique em **aplicar** e clique no botão **Iniciar** . Essa etapa deve ser feita apenas uma vez antes do primeiro uso do serviço do adaptador de escuta net. MSMQ.
 
-8. Para executar o exemplo em uma configuração de computador único ou entre computadores, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Além disso, altere o código no cliente que envia a ordem de compra para refletir o nome do computador no URI da fila ao enviar a ordem de compra. Use o código a seguir:
+8. Para executar o exemplo em uma configuração de computador único ou entre computadores, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md). Além disso, altere o código no cliente que envia a ordem de compra para refletir o nome do computador no URI da fila ao enviar a ordem de compra. Use o seguinte código:
 
     ```csharp
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");
@@ -302,7 +302,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     > [!WARNING]
     > A execução do arquivo em lotes redefinirá o DefaultAppPool para ser executado usando .NET Framework versão 2,0.
 
-Por padrão, com o transporte de associação de `netMsmqBinding`, a segurança está habilitada. Duas propriedades, `MsmqAuthenticationMode` e `MsmqProtectionLevel`, em conjunto, determinam o tipo de segurança de transporte. Por padrão, o modo de autenticação é definido como `Windows` e o nível de proteção é definido como `Sign`. Para que o MSMQ forneça o recurso de autenticação e assinatura, ele deve fazer parte de um domínio. Se você executar esse exemplo em um computador que não faz parte de um domínio, o seguinte erro será recebido: "certificado interno do serviço de enfileiramento de mensagens não existe".
+Por padrão, com o `netMsmqBinding` transporte de associação, a segurança é habilitada. Duas propriedades `MsmqAuthenticationMode` e `MsmqProtectionLevel` , juntas, determinam o tipo de segurança de transporte. Por padrão, o modo de autenticação é definido como `Windows` e o nível de proteção é definido como `Sign` . Para que o MSMQ forneça o recurso de autenticação e assinatura, ele deve fazer parte de um domínio. Se você executar esse exemplo em um computador que não faz parte de um domínio, o seguinte erro será recebido: "certificado interno do serviço de enfileiramento de mensagens não existe".
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Para executar o exemplo em um computador ingressado em um grupo de trabalho
 
@@ -321,7 +321,7 @@ Por padrão, com o transporte de associação de `netMsmqBinding`, a segurança 
 2. Altere a configuração no servidor e no cliente antes de executar o exemplo.
 
     > [!NOTE]
-    > Definir `security mode` como `None` é equivalente a definir `MsmqAuthenticationMode`, `MsmqProtectionLevel` e `Message` segurança para `None`.
+    > A configuração `security mode` como `None` é equivalente à `MsmqAuthenticationMode` configuração `MsmqProtectionLevel` e `Message` à segurança para `None` .
 
 3. Para habilitar a ativação em um computador ingressado em um grupo de trabalho, o serviço de ativação e o processo de trabalho devem ser executados com uma conta de usuário específica (deve ser o mesmo para ambos) e a fila deve ter ACLs para a conta de usuário específica.
 
@@ -329,7 +329,7 @@ Por padrão, com o transporte de associação de `netMsmqBinding`, a segurança 
 
     1. Execute inetmgr. exe.
 
-    2. Em **pools de aplicativos**, clique com o botão direito do mouse no **AppPool** (normalmente **DefaultAppPool**) e escolha **definir padrões do pool de aplicativos...** .
+    2. Em **pools de aplicativos**, clique com o botão direito do mouse no **AppPool** (normalmente **DefaultAppPool**) e escolha **definir padrões do pool de aplicativos...**.
 
     3. Altere as propriedades de identidade para usar a conta de usuário específica.
 
@@ -349,4 +349,4 @@ Por padrão, com o transporte de associação de `netMsmqBinding`, a segurança 
 
 ## <a name="see-also"></a>Consulte também
 
-- [Exemplos de persistência e de hospedagem do AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [Hospedagem de AppFabric e persistência Exemplos](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

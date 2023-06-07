@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fd3bb47-58b5-4083-b241-b9719df7a285
 topic_type:
 - apiref
-ms.openlocfilehash: 690abec6104f6eed1ad5a0eae9a6b6bb18d35b0d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 358ca84f32e1b233116605bf5486cc9a01b42e67
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436679"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503491"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>Método IMetaDataImport::GetUserString
 Obtém a cadeia de caracteres literal representada pelo token de metadados especificado.  
@@ -44,21 +44,21 @@ HRESULT GetUserString (
  fora Uma cópia da cadeia de caracteres solicitada.  
   
  `cchString`  
- no O tamanho máximo em caracteres largos do `szString`solicitado.  
+ no O tamanho máximo em caracteres largos do solicitado `szString` .  
   
  `pchString`  
- fora O tamanho em caracteres largos do `szString`retornado.  
+ fora O tamanho em caracteres largos do retornado `szString` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

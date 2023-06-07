@@ -22,66 +22,66 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: b6588335f7634cc87a9fc14cbfc4ba80baad1abb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 686b64977f086c8128e56298a0ed8c5aa0c51efa
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400851"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364026"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Passando argumentos por posição e nome (Visual Basic)
 
-Quando você `Sub` chama `Function` um ou procedimento, você pode passar argumentos *por posição* - na ordem em que eles aparecem na definição do procedimento - ou você pode passá-los *pelo nome*, sem considerar a posição.
+Ao chamar um `Sub` procedimento ou `Function` , você pode passar argumentos *por posição* — na ordem em que eles aparecem na definição do procedimento — ou você pode passá-los *por nome*, sem considerar a posição.
 
-Quando você passa um argumento por nome, você especifica o nome declarado do`:=`argumento seguido por um cólon e um sinal igual ( ), seguido pelo valor do argumento. Você pode fornecer argumentos nomeados em qualquer ordem.
+Quando você passa um argumento por nome, especifica o nome declarado do argumento seguido por dois-pontos e um sinal de igual ( `:=` ), seguido pelo valor do argumento. Você pode fornecer argumentos nomeados em qualquer ordem.
 
-Por exemplo, `Sub` o procedimento a seguir requer três argumentos:
+Por exemplo, o procedimento a seguir `Sub` usa três argumentos:
 
 [!code-vb[SampleProcedure](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#1)]
 
-Quando você chama este procedimento, você pode fornecer os argumentos por posição, por nome ou usando uma mistura de ambos.
+Ao chamar esse procedimento, você pode fornecer os argumentos por posição, por nome ou usando uma combinação de ambos.
 
 ## <a name="passing-arguments-by-position"></a>Passando argumentos por posição
 
-Você pode `Display` chamar o método com seus argumentos passados por posição e delimitados por vírgulas, como mostrado no exemplo a seguir:
+Você pode chamar o `Display` método com seus argumentos passados pela posição e delimitados por vírgulas, conforme mostrado no exemplo a seguir:
 
 [!code-vb[ByPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#2)]
 
-Se você omitir um argumento opcional em uma lista de argumentos posicionais, você deve manter seu lugar com uma vírgula. O exemplo a `Display` seguir `age` chama o método sem o argumento:
+Se você omitir um argumento opcional em uma lista de argumentos posicionais, deverá manter seu lugar com uma vírgula. O exemplo a seguir chama o `Display` método sem o `age` argumento:
 
 [!code-vb[ByPositionWithOptionalArgument](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#3)]
 
 ## <a name="passing-arguments-by-name"></a>Passando argumentos por nome
 
-Alternativamente, você `Display` pode chamar com os argumentos passados pelo nome, também delimitados por vírgulas, como mostrado no exemplo a seguir:
+Como alternativa, você pode chamar `Display` com os argumentos passados pelo nome, também delimitados por vírgulas, conforme mostrado no exemplo a seguir:
 
 [!code-vb[ByName](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#4)]
 
-Passar argumentos por nome dessa forma é especialmente útil quando você chama um procedimento que tem mais de um argumento opcional. Se você fornecer argumentos por nome, você não precisa usar vírgulas consecutivas para denotar argumentos posicionais ausentes. Passar argumentos pelo nome também torna mais fácil acompanhar quais argumentos você está passando e quais você está omitindo.
+Passar argumentos por nome dessa maneira é especialmente útil quando você chama um procedimento que tem mais de um argumento opcional. Se você fornecer argumentos por nome, não precisará usar vírgulas consecutivas para denotar argumentos posicionais ausentes. A passagem de argumentos por nome também facilita o controle de quais argumentos você está passando e quais estão sendo omitidos.
 
-## <a name="mixing-arguments-by-position-and-by-name"></a>Misturando Argumentos por Posição e por Nome
+## <a name="mixing-arguments-by-position-and-by-name"></a>Misturando argumentos por posição e por nome
 
-Você pode fornecer argumentos tanto por posição quanto por nome em uma única chamada de procedimento, como mostrado no exemplo a seguir:
+Você pode fornecer argumentos tanto por posição quanto por nome em uma única chamada de procedimento, conforme mostrado no exemplo a seguir:
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#5)]
 
-No exemplo anterior, nenhuma comma extra é necessária para `age` manter `birth` o lugar do argumento omitido, uma vez que é passado pelo nome.
+No exemplo anterior, nenhuma vírgula extra é necessária para manter o lugar do argumento omitido `age` , já que `birth` é passado pelo nome.
 
-Nas versões do Visual Basic antes de 15.5, quando você fornece argumentos por uma mistura de posição e nome, os argumentos posicionais devem vir primeiro. Uma vez que você forneça um argumento por nome, todos os argumentos restantes devem ser todos passados pelo nome.  Por exemplo, a seguinte `Display` chamada para o método exibe erro do compilador [BC30241: Argumento nomeado esperado](../../../misc/bc30241.md).
+Em versões do Visual Basic antes de 15,5, quando você fornece argumentos por uma mistura de posição e nome, os argumentos posicionais devem ser todos apresentados primeiro. Depois de fornecer um argumento por nome, todos os argumentos restantes devem ser passados pelo nome.  Por exemplo, a chamada a seguir para o `Display` método exibe o erro do compilador [BC30241: argumento nomeado esperado](../../../misc/bc30241.md).
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)]
 
-A partir do Visual Basic 15.5, os argumentos posicionais podem seguir argumentos nomeados se os argumentos posicionais finais estiverem na posição correta. Se compilado em Visual Basic 15.5, `Display` a chamada anterior para o método compila com sucesso e não gera mais erro do compilador [BC30241](../../../misc/bc30241.md).
+A partir do Visual Basic 15,5, argumentos posicionais podem seguir argumentos nomeados se os argumentos posicionais finais estiverem na posição correta. Se for compilado em Visual Basic 15,5, a chamada anterior para o `Display` método será compilada com êxito e não gerará mais o erro [BC30241](../../../misc/bc30241.md)do compilador.
 
-Essa capacidade de misturar e combinar argumentos nomeados e posicionais em qualquer ordem é particularmente útil quando você deseja usar um argumento nomeado para tornar seu código mais legível. Por exemplo, `Person` o construtor de classe a `Person`seguir requer dois `Nothing`argumentos do tipo , ambos podem ser .
+Essa capacidade de misturar e corresponder argumentos nomeados e posicionais em qualquer ordem é particularmente útil quando você deseja usar um argumento nomeado para tornar seu código mais legível. Por exemplo, o construtor de classe a seguir `Person` requer dois argumentos do tipo `Person` , ambos podem ser `Nothing` .
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#7)]
 
-O uso de argumentos mistos e posicionais ajuda a tornar `father` `mother` clara a `Nothing`intenção do código quando o valor dos argumentos e argumentos é:
+Usar argumentos nomeados e posicionais mistos ajuda a tornar a intenção do código claro quando o valor dos `father` `mother` argumentos e é `Nothing` :
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#8)]
 
-Para seguir argumentos posicionais com argumentos nomeados, você deve\*adicionar o seguinte elemento ao seu arquivo Visual Basic (.vbproj):
+Para seguir argumentos posicionais com argumentos nomeados, você deve adicionar o seguinte elemento ao seu arquivo de Visual Basic projeto ( \* . vbproj):
 
 ```xml
 <PropertyGroup>
@@ -89,13 +89,13 @@ Para seguir argumentos posicionais com argumentos nomeados, você deve\*adiciona
 </PropertyGroup>
 ```
 
-Para obter mais informações, [consulte a configuração da versão visual básica](../../../language-reference/configure-language-version.md)do idioma .
+Para obter mais informações, consulte [definindo a versão do idioma do Visual Basic](../../../language-reference/configure-language-version.md).
 
-## <a name="restrictions-on-supplying-arguments-by-name"></a>Restrições ao fornecimento de argumentos por nome
+## <a name="restrictions-on-supplying-arguments-by-name"></a>Restrições de fornecimento de argumentos por nome
 
-Você não pode passar argumentos por nome para evitar inserir argumentos necessários. Você pode omiti-lo apenas os argumentos opcionais.
+Não é possível passar argumentos por nome para evitar a inserção de argumentos necessários. Você pode omitir apenas os argumentos opcionais.
 
-Você não pode passar uma matriz de parâmetros pelo nome. Isso porque quando você chama o procedimento, você fornece um número indefinido de argumentos separados por comma para a matriz de parâmetros, e o compilador não pode associar mais de um argumento com um único nome.
+Não é possível passar uma matriz de parâmetros por nome. Isso ocorre porque, ao chamar o procedimento, você fornece um número indefinido de argumentos separados por vírgulas para a matriz de parâmetros e o compilador não pode associar mais de um argumento a um único nome.
 
 ## <a name="see-also"></a>Confira também
 
@@ -103,7 +103,7 @@ Você não pode passar uma matriz de parâmetros pelo nome. Isso porque quando v
 - [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
 - [Como passar argumentos para um procedimento](./how-to-pass-arguments-to-a-procedure.md)
 - [Passar argumentos por valor e por referência](./passing-arguments-by-value-and-by-reference.md)
-- [Parâmetros opcionais](./optional-parameters.md)
+- [Parâmetros Opcionais](./optional-parameters.md)
 - [Matrizes de parâmetros](./parameter-arrays.md)
-- [Opcional](../../../../visual-basic/language-reference/modifiers/optional.md)
-- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+- [Opcional](../../../language-reference/modifiers/optional.md)
+- [ParamArray](../../../language-reference/modifiers/paramarray.md)

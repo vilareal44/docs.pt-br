@@ -1,13 +1,14 @@
 ---
 title: Amostras de programação de rede
+description: Use esses exemplos de programação de rede baixáveis para .NET Framework System.Net e classes estendidas.
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: 860ee2ee766a4c0c1ea158662f195e6e29628687
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 087b4b85c705ddfcda850422fa6d0392ba0bdc23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180708"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502256"
 ---
 # <a name="network-programming-samples"></a>Amostras de programação de rede
 Esta seção contém descrições e links para amostras de programação de rede que usam classes nos namespaces <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security> e <xref:System.Net.Sockets>, e em outros relacionados.
@@ -25,7 +26,7 @@ Esta seção contém descrições e links para amostras de programação de rede
  [Amostra de tecnologia HttpListener](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/y7cbb2y2(v=vs.85))  
  Mostra como processar solicitações HTTP de dentro de um aplicativo.  
 
- Amostra do [aplicativo do host HttpListener ASPX](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90)) Demonstra como usar os <xref:System.Net.HttpListener?displayProperty=nameWithType> recursos da classe para criar um servidor HTTP que roteia chamadas para um aplicativo de ASP.NET hospedado.
+ [Exemplo de aplicativo de host do HTTPLISTENER aspx](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90)) Demonstra como usar os recursos da <xref:System.Net.HttpListener?displayProperty=nameWithType> classe para criar um servidor http que roteia chamadas para um aplicativo ASP.net hospedado.
   
  [Amostra de tecnologia de mensageiro](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/whw7xbk2(v=vs.85))  
  Mostra como enviar mensagens de email de um aplicativo cliente.  
@@ -58,5 +59,5 @@ Esta seção contém descrições e links para amostras de programação de rede
   
 ## <a name="see-also"></a>Confira também
 
-- [Programação de rede no Framework .NET](index.md)
+- [Programação de rede no .NET Framework](index.md)
 - [Tópicos explicativos de programação de rede](network-programming-how-to-topics.md)

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: c42baa79-f469-4330-95a2-baf7f021c2fc
 topic_type:
 - apiref
-ms.openlocfilehash: e5cbd8c5b1bb048088fe137b1359d0bb9e29af20
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14942680a79c4d1fcc69092a4f752738db1fb0b0
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176117"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008905"
 ---
 # <a name="couninitiee-enumeration"></a>Enumeração COUNINITIEE
-Especifica as constantes usadas pelo [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) ao inicializar o tempo de execução do idioma comum.  
+Especifica constantes usadas por [CoUninitializeEE](../hosting/couninitializeee-function.md) ao inicializar o Common Language Runtime.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,17 +39,17 @@ typedef enum tagCOUNINITEE
 |Membro|Descrição|  
 |------------|-----------------|  
 |`COUNINITEE_DEFAULT`|Indica o modo de não inicialização padrão.|  
-|`COUNINITEE_DLL`|Indica modo de desinicialização para descarregar um conjunto.|  
+|`COUNINITEE_DLL`|Indica o modo de não inicialização para descarregar um assembly.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerações de metadados](metadata-enumerations.md)

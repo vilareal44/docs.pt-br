@@ -1,5 +1,6 @@
 ---
 title: MDA marshalCleanupError
+description: Examine o MDA (Assistente de depuração gerenciada) marshalCleanupError, que é invocado porque ocorreu um erro inesperado ao limpar estruturas temporárias.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - cleanup operations
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - MarshalCleanupError MDA
 - memory, cleanup errors
 ms.assetid: 2f5d9e7c-ae51-4155-a435-54347aa1f091
-ms.openlocfilehash: 1a14c548ce960d53f47934595171189db28edfbb
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 3c7498d6f51484de3a2e84d611a2634f53724ab6
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216148"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051604"
 ---
 # <a name="marshalcleanuperror-mda"></a>MDA marshalCleanupError
 O MDA (assistente de depuração gerenciado) do `marshalCleanupError` é ativado quando o CLR (Common Language Runtime) encontra um erro ao tentar limpar estruturas temporárias e a memória usada para realizar marshaling de tipos de dados entre limites de código gerenciado e nativo.  
@@ -45,8 +45,8 @@ O MDA (assistente de depuração gerenciado) do `marshalCleanupError` é ativado
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling de interoperabilidade](../interop/interop-marshaling.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Realizando marshaling de interoperabilidade](../interop/interop-marshaling.md)

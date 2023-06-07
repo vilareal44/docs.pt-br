@@ -1,5 +1,5 @@
 ---
-title: iCorProfilerCallback9::DynamicMethodDes Method
+title: 'ICorProfilerCallback9: método ynamicMethodUnloaded de:D'
 ms.date: 04/10/2018
 api_name:
 - ICorProfilerCallback9.DynamicMethodUnloaded
@@ -8,17 +8,17 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 0eb38c83e9ab706c96bdef971f0bf17cc096822b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2391ad854b17ec117940a3d3568c40d6cf7f4725
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177027"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498967"
 ---
-# <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>iCorProfilerCallback9::DynamicMethodDes Method
-[Suportado nas versões .NET Framework 4.7.2 e posteriores]  
+# <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>ICorProfilerCallback9: método ynamicMethodUnloaded de:D
+[Com suporte no .NET Framework 4.7.2 e versões posteriores]  
   
-Notifica o profiler sempre que um método dinâmico é coletado e posteriormente descarregado.  
+Notifica o criador de perfil sempre que um método dinâmico é lixo coletado e subsequentemente descarregado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -28,22 +28,22 @@ HRESULT DynamicMethodUnloaded(
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
 [in] `functionId`  
-O identificador da função in-memory que foi coletado e descarregado lixo.
+O identificador da função na memória que foi coletada pelo lixo e descarregada.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [ICorProfilerCallback8.DynamicMethodJITCompilationStarted Method](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
-- [ICorProfilerCallback8.DynamicMethodJITCompilationFinished Method](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
+- [Método ICorProfilerCallback8. DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
+- [Método ICorProfilerCallback8. DynamicMethodJITCompilationFinished](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
 - [Interface ICorProfilerCallback9](icorprofilercallback9-interface.md)
 - [COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS](cor-prf-high-monitor-enumeration.md)

@@ -1,5 +1,6 @@
 ---
 title: Recuperando informações armazenadas em atributos
+description: Aprenda a recuperar informações armazenadas em atributos, como para uma instância de atributo, muitas instâncias para o mesmo escopo, & muitas instâncias para escopos diferentes.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: 4f0f3555ae1ab7e662d5f88ac65739a7c791a964
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cf147a0ae6833039247c4c0878996973cc3db545
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78158071"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84661855"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Recuperando informações armazenadas em atributos
 Recuperar um atributo personalizado é um processo simples. Primeiro, declare uma instância do atributo que você deseja recuperar. Em seguida, use o método <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> para inicializar o novo atributo para o valor do atributo que você deseja recuperar. Após a inicialização do novo atributo, basta usar suas propriedades para obter os valores.  
   
 > [!IMPORTANT]
-> Este tópico descreve como recuperar atributos para o código carregado no contexto da execução. Para recuperar atributos do código carregado no contexto somente reflexão, use a classe <xref:System.Reflection.CustomAttributeData>, conforme mostrado em [Como carregar assemblies no contexto somente reflexão](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+> Este tópico descreve como recuperar atributos para o código carregado no contexto da execução. Para recuperar atributos do código carregado no contexto somente reflexão, use a classe <xref:System.Reflection.CustomAttributeData>, conforme mostrado em [Como carregar assemblies no contexto somente reflexão](../../framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
  Esta seção descreve as seguintes maneiras de recuperar os atributos:  
   
@@ -30,7 +31,7 @@ Recuperar um atributo personalizado é um processo simples. Primeiro, declare um
   
 - [Recuperar várias instâncias de um atributo aplicado ao mesmo escopo](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
   
-- [Recuperando várias instâncias de um atributo aplicado a diferentes escopos](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
+- [Recuperando várias instâncias de um atributo aplicado a escopos diferentes](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
 <a name="cpconretrievingsingleinstanceofattribute"></a>
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>Recuperar uma única instância de um atributo  
@@ -87,4 +88,4 @@ The attribute was not found.
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
-- [Atributos](../../../docs/standard/attributes/index.md)
+- [Atributos](index.md)

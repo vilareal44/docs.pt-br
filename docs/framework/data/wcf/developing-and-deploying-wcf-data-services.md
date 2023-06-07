@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 1dc9f3d261738a6dff0339c094c7aba5e32680ee
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 7519dce8ed17bc623173f30222296ffaa42b4341
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200048"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416064"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Desenvolva e implante WCF Data Services
 
@@ -63,14 +63,14 @@ Ao desenvolver um serviço de dados WCF como um aplicativo ASP.NET ou site ASP.N
 
     - Esse servidor não pode tratar fluxos HTTP em bloco, que são enviados por padrão pelo cliente WCF Data Services ao acessar dados binários grandes do serviço de dados. Para obter mais informações, consulte [streaming Provider](streaming-provider-wcf-data-services.md).
 
-    - Esse servidor tem problemas com o processamento do caractere`.`de ponto () em uma URL, embora esse caractere tenha suporte de WCF Data Services em valores de chave.
+    - Esse servidor tem problemas com o processamento do caractere de ponto ( `.` ) em uma URL, embora esse caractere tenha suporte de WCF Data Services em valores de chave.
 
     > [!TIP]
     > Embora você possa usar o Visual Studio Development Server para testar seus serviços de dados durante o desenvolvimento, você deve testá-los novamente após a implantação em um servidor Web que esteja executando o IIS.
 
 3. **Ambiente de desenvolvimento do Azure**
 
-     As ferramentas do Azure para Visual Studio incluem um conjunto integrado de ferramentas para desenvolver serviços do Azure no Visual Studio. Com essas ferramentas, você pode desenvolver um serviço de dados que pode ser implantado no Azure, e você pode testar o serviço de dados no computador local antes da implantação. Use essas ferramentas ao usar o Visual Studio para desenvolver um serviço de dados executado na plataforma do Azure. Para obter informações sobre como instalar as ferramentas, consulte [Ferramentas do Azure para Visual Studio 2015](../../../azure/sdk/vs2015-install.md). Para obter mais informações sobre como desenvolver um serviço de dados que é executado no Azure, consulte o post [implantando um serviço OData no Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
+     As ferramentas do Azure para Visual Studio incluem um conjunto integrado de ferramentas para desenvolver serviços do Azure no Visual Studio. Com essas ferramentas, você pode desenvolver um serviço de dados que pode ser implantado no Azure, e você pode testar o serviço de dados no computador local antes da implantação. Use essas ferramentas ao usar o Visual Studio para desenvolver um serviço de dados executado na plataforma do Azure. Para obter informações sobre como instalar as ferramentas, consulte [Ferramentas do Azure para Visual Studio 2015](../../../azure/vs2015-install.md). Para obter mais informações sobre como desenvolver um serviço de dados que é executado no Azure, consulte o post [implantando um serviço OData no Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
 ### <a name="development-tips"></a>Dicas de desenvolvimento
 
@@ -115,7 +115,7 @@ O WCF Data Service fornece flexibilidade na escolha do processo que hospeda o se
 
 - **Azure**
 
-     Você pode implantar um serviço de dados no Azure usando as [Ferramentas do Azure para Visual Studio](../../../azure/sdk/vs2015-install.md). Para obter mais informações sobre como implantar um serviço de dados no Azure, consulte [implantando um serviço OData no Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
+     Você pode implantar um serviço de dados no Azure usando as [Ferramentas do Azure para Visual Studio](../../../azure/vs2015-install.md). Para obter mais informações sobre como implantar um serviço de dados no Azure, consulte [implantando um serviço OData no Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
 ### <a name="deployment-considerations"></a>Considerações de implantação
 

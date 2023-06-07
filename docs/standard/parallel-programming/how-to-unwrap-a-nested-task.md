@@ -1,5 +1,5 @@
 ---
-title: Como desencapsular uma tarefa aninhada
+title: 'Como: Desencapsular uma tarefa aninhada'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to unwrap nested tasks
 ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
-ms.openlocfilehash: c72654a2bc21035fe706d76018bb163d8ba01ee8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a69fa42da41ee4a071a6571042fd96fb5a009d2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73106903"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288024"
 ---
-# <a name="how-to-unwrap-a-nested-task"></a>Como desencapsular uma tarefa aninhada
+# <a name="how-to-unwrap-a-nested-task"></a>Como: Desencapsular uma tarefa aninhada
 Você pode retornar uma tarefa de um método e esperar ou continuar a tarefa, conforme é mostrado no exemplo a seguir:  
   
  [!code-csharp[TPL_Unwrap#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#01)]
@@ -41,7 +41,7 @@ Você pode retornar uma tarefa de um método e esperar ou continuar a tarefa, co
  [!code-csharp[TPL_UnWrap#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#04)]
  [!code-vb[TPL_UnWrap#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_unwrap/vb/snippet04.vb#04)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Threading.Tasks.TaskExtensions?displayProperty=nameWithType>
-- [Programação Assíncrona baseada em tarefas](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+- [Programação assíncrona baseada em tarefas](task-based-asynchronous-programming.md)

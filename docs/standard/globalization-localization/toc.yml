@@ -3,6 +3,8 @@
   items:
     - name: Globalização
       href: globalization.md
+    - name: Globalização e ICU
+      href: globalization-icu.md
     - name: Revisão de localização
       href: localizability-review.md
     - name: Localização

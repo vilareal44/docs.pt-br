@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b284b18-0084-4b3a-912a-5ebe9f29c88b
 topic_type:
 - apiref
-ms.openlocfilehash: c88b7a401a19b1bd0e02edab7ef7bbee1372199e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 612463bca18c23fac0b086adde2d208a0fbc5ae5
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432084"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008161"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>Método IMetaDataAssemblyEmit::DefineAssemblyRef
-Cria uma estrutura de `AssemblyRef` que contém metadados para o assembly ao qual este assembly faz referência e retorna o token de metadados associado.  
+Cria uma `AssemblyRef` estrutura que contém metadados para o assembly ao qual este assembly faz referência e retorna o token de metadados associado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,10 +42,10 @@ HRESULT DefineAssemblyRef (
   
 ## <a name="parameters"></a>Parâmetros  
  `pbPublicKeyOrToken`  
- no A chave pública do Publicador do assembly referenciado. A função auxiliar [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) pode ser usada para obter o hash da chave pública a ser passada como esse parâmetro.  
+ no A chave pública do Publicador do assembly referenciado. A função auxiliar [StrongNameTokenFromAssembly](../strong-naming/strongnametokenfromassembly-function.md) pode ser usada para obter o hash da chave pública a ser passada como esse parâmetro.  
   
  `cbPublicKeyOrToken`  
- no O tamanho em bytes de `pbPublicKeyOrToken`.  
+ no O tamanho em bytes de `pbPublicKeyOrToken` .  
   
  `szName`  
  no O nome de texto legível por humanos do assembly. Esse valor não deve exceder 1024 caracteres.  
@@ -57,28 +57,28 @@ HRESULT DefineAssemblyRef (
  no Os dados de hash associados ao assembly referenciado. Opcional.  
   
  `cbHashValue`  
- no O tamanho em bytes de `pbHashValue`.  
+ no O tamanho em bytes de `pbHashValue` .  
   
  `dwAssemblyRefFlags`  
- no Uma combinação bits de valores [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) que influencia o comportamento do mecanismo de execução.  
+ no Uma combinação bits de valores [CorAssemblyFlags](corassemblyflags-enumeration.md) que influencia o comportamento do mecanismo de execução.  
   
  `pmdar`  
- fora Um ponteiro para o token de metadados de `AssemblyRef` retornado.  
+ fora Um ponteiro para o `AssemblyRef` token de metadados retornado.  
   
 ## <a name="remarks"></a>Comentários  
- Uma estrutura de metadados `AssemblyRef` deve ser definida para cada assembly referenciado por esse assembly.  
+ Uma `AssemblyRef` estrutura de metadados deve ser definida para cada assembly referenciado por esse assembly.  
   
  Em tempo de execução, os detalhes de um assembly referenciado são passados para o resolvedor de assembly com uma indicação de que eles representam as informações "como criadas". Em seguida, o resolvedor de assembly aplica a política.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [Interface IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md)

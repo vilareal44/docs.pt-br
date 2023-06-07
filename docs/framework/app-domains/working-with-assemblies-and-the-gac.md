@@ -1,5 +1,6 @@
 ---
 title: Trabalhando com assemblies e o cache de assemblies global
+description: Trabalhe com assemblies e o GAC (cache de assembly global) no .NET. Examine os motivos pelos quais você pode querer instalar um assembly no GAC.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), benefits
 - access control lists [.NET Framework]
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
-ms.openlocfilehash: 7834fbc4d74b44c4bc5204ac451e92cac22e1ef5
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 16cfd9faf02d5b58acad1cc0cf19be61c9814d35
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645414"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105152"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Trabalhando com assemblies e o cache de assemblies global
 
@@ -48,10 +49,10 @@ Há diversas razões para instalar um assembly no cache de assembly global:
 [Como instalar um assembly no cache de assembly global](install-assembly-into-gac.md)  
 Descreve as maneiras de instalar um assembly no cache de assembly global.  
   
-[Como exibir o conteúdo do cache de assembly global](how-to-view-the-contents-of-the-gac.md)  
+[Como: Exibir o conteúdo do cache de assembly global](how-to-view-the-contents-of-the-gac.md)  
 Explica como usar a [Gacutil.exe (Ferramenta de Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md) para exibir o conteúdo do cache de assembly global.  
   
-[Como remover um assembly do cache de assemblies global](how-to-remove-an-assembly-from-the-gac.md)  
+[Como: Remover um assembly do cache de assembly global](how-to-remove-an-assembly-from-the-gac.md)  
 Explica como usar a [Gacutil.exe (Ferramenta de Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md) para remover um assembly do cache de assembly global.  
   
 [Usando componentes atendidos com o cache de assemblies global](use-serviced-components-with-the-gac.md)  
@@ -62,7 +63,7 @@ Explica por que componentes de atendidos (componentes COM+ gerenciados) devem se
 [Criando assemblies](../../standard/assembly/create.md)  
 Apresenta uma visão geral da criação de assemblies.  
   
-[Cache de assembly global](gac.md)  
+[Cache de assemblies global](gac.md)  
 Descreve o cache de assembly global.  
   
 [Como exibir o conteúdo de um assembly](../../standard/assembly/view-contents.md)  

@@ -2,12 +2,12 @@
 title: Iniciar várias tarefas assíncronas e processá-las na conclusão
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: b14171196a95e9a6a12f6b13f6f17d3cfe352bce
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: e227029928676e21d3ed14450140e92b386bf216
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266840"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400791"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Iniciar várias tarefas assíncronas e processá-las na conclusão (Visual Basic)
 Usando <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, você pode iniciar várias tarefas ao mesmo tempo e processá-las individualmente conforme elas foram concluídas, em vez de processá-las na ordem em que foram iniciadas.  
@@ -37,7 +37,7 @@ Usando <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType
  Se não quiser baixar o projeto, você poderá examinar o arquivo MainWindow.xaml.vb no final deste tópico.  
   
 ## <a name="building-the-example"></a>Compilando o Exemplo  
- Este exemplo adiciona ao código que é desenvolvido em [Cancelar tarefas de async restantes após uma ser concluída (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) e usa a mesma uI.  
+ Este exemplo adiciona ao código que é desenvolvido em [Cancelar tarefas assíncronas restantes após uma conclusão (Visual Basic)](cancel-remaining-async-tasks-after-one-is-complete.md) e usa a mesma interface do usuário.  
   
  Para compilar o exemplo por conta própria, passo a passo, siga as instruções na seção "Baixando o exemplo", mas escolha **CancelAfterOneTask** como o **Projeto de Inicialização**. Adicione as alterações neste tópico ao método `AccessTheWebAsync` naquele projeto. As alterações estão marcadas com asteriscos.  
   
@@ -48,7 +48,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
     From url In urlList Select ProcessURLAsync(url, client, ct)  
 ```  
   
- No arquivo MainWindow.xaml.vb do projeto, faça as `AccessTheWebAsync` seguintes alterações no método.  
+ No arquivo MainWindow. XAML. vb do projeto, faça as seguintes alterações no `AccessTheWebAsync` método.  
   
 - Execute a consulta aplicando <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> em vez de <xref:System.Linq.Enumerable.ToArray%2A>.  
   
@@ -80,7 +80,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
  Você deve executar o projeto várias vezes para verificar se os tamanhos baixados não aparecem sempre na mesma ordem.  
   
 > [!CAUTION]
-> Você pode usar `WhenAny` em um loop, conforme descrito no exemplo, para resolver problemas que envolvem um número pequeno de tarefas. No entanto, outras abordagens são mais eficientes se você tiver um número grande de tarefas para processar. Para obter mais informações e exemplos, consulte [Tarefas de processamento à medida que elas forem concluídas](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/).  
+> Você pode usar `WhenAny` em um loop, conforme descrito no exemplo, para resolver problemas que envolvem um número pequeno de tarefas. No entanto, outras abordagens são mais eficientes se você tiver um número grande de tarefas para processar. Para obter mais informações e exemplos, consulte [processando tarefas conforme elas são concluídas](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/).  
   
 ## <a name="complete-example"></a>Exemplo completo  
  O código a seguir é o texto completo do arquivo MainWindow.xaml.vb para o exemplo. Os asteriscos marcam os elementos que foram adicionados para esse exemplo.  
@@ -208,6 +208,6 @@ End Class
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Ajustando seu aplicativo assíncrono (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Ajustando seu aplicativo assíncrono (Visual Basic)](fine-tuning-your-async-application.md)
+- [Programação assíncrona com Async e Await (Visual Basic)](index.md)
 - [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

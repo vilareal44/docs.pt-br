@@ -1,13 +1,14 @@
 ---
 title: Como carregar XML de um arquivo (C#)
+description: Saiba como carregar XML de um URI usando o método XElement. Load em C#. Este exemplo carrega o arquivo XML e imprime a árvore XML no console.
 ms.date: 07/20/2015
 ms.assetid: 3ed38487-8028-4209-9872-c8dce0ed4dfe
-ms.openlocfilehash: 635b338bbaf9c15779bccab4d4c824037858b338
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29de914139d1e9abcda2097addca9219d44d2696
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169046"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104954"
 ---
 # <a name="how-to-load-xml-from-a-file-c"></a>Como carregar XML de um arquivo (C#)
 Este tópico mostra como carregar XML de um URI usando o método <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
@@ -22,7 +23,7 @@ XElement booksFromFile = XElement.Load(@"books.xml");
 Console.WriteLine(booksFromFile);  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```xml  
 <Catalog>  

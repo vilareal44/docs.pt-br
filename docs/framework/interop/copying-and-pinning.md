@@ -1,5 +1,6 @@
 ---
 title: Copiando e fixando
+description: Examine como o Interop marshaler pode copiar ou fixar dados que estão sendo empacotados. Copiar dados coloca uma cópia dos dados de um local da memória em outro local.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pinning, interop marshaling
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-ms.openlocfilehash: f6db7d37293015911c1285d39e19bf7542a7ac59
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b7931813cd5254375eda81515f388c85c78fa284
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123634"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618773"
 ---
 # <a name="copying-and-pinning"></a>Copiando e fixando
 
@@ -78,7 +79,7 @@ Quando um <xref:System.String?displayProperty=nameWithType> é passado por refer
 
 Quando um <xref:System.Text.StringBuilder?displayProperty=nameWithType> é passado por valor, o marshaler passa uma referência ao buffer interno do **StringBuilder** diretamente para o chamador. O chamador e o receptor devem concordar com o tamanho do buffer. O chamador é responsável pela criação de um **StringBuilder** de tamanho adequado. O receptor deve tomar as precauções necessárias para garantir que o buffer não tenha estouro. **StringBuilder** é uma exceção à regra em que os tipos de referência passados por valor são passados como parâmetros de Entrada por padrão. Ele é sempre passado como Entrada/Saída.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Comportamento de marshaling padrão](default-marshaling-behavior.md)
 - [Atributos direcionais](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))

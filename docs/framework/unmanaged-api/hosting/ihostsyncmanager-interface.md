@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2e081a37-6a28-4c93-b7ab-1c96a464637c
 topic_type:
 - apiref
-ms.openlocfilehash: e96492270c403f93687245cee8b680dc16b3c787
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: fd3c941d89fbd93f30fc1af235f6310b23758973
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803120"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501450"
 ---
 # <a name="ihostsyncmanager-interface"></a>Interface IHostSyncManager
 Fornece métodos que permitem que o Common Language Runtime (CLR) crie primitivos de sincronização chamando o host em vez de usar as funções de sincronização do Win32.  
@@ -35,8 +35,8 @@ Fornece métodos que permitem que o Common Language Runtime (CLR) crie primitivo
 |[Método CreateMonitorEvent](ihostsyncmanager-createmonitorevent-method.md)|Cria um objeto de evento monitorado de redefinição automática.|  
 |[Método CreateRWLockReaderEvent](ihostsyncmanager-createrwlockreaderevent-method.md)|Cria um objeto de evento de redefinição manual para a implementação de um bloqueio de leitor.|  
 |[Método CreateRWLockWriterEvent](ihostsyncmanager-createrwlockwriterevent-method.md)|Cria um objeto de evento de redefinição automática para a implementação de um bloqueio de gravador.|  
-|[Método CreateSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createsemaphore-method.md)|Cria um objeto [IHostSemaphore](ihostsemaphore-interface.md) para o CLR usar como um semáforo para eventos de espera.|  
-|[Método SetCLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-setclrsyncmanager-method.md)|Define a instância de [ICLRSyncManager](iclrsyncmanager-interface.md) a ser associada à `IHostSyncManager` instância atual.|  
+|[Método CreateSemaphore](ihostsyncmanager-createsemaphore-method.md)|Cria um objeto [IHostSemaphore](ihostsemaphore-interface.md) para o CLR usar como um semáforo para eventos de espera.|  
+|[Método SetCLRSyncManager](ihostsyncmanager-setclrsyncmanager-method.md)|Define a instância de [ICLRSyncManager](iclrsyncmanager-interface.md) a ser associada à `IHostSyncManager` instância atual.|  
   
 ## <a name="remarks"></a>Comentários  
  O CLR descobre a implementação do host do `IHostSyncManager` chamando o método [IHostControl:: GetHostManager](ihostcontrol-gethostmanager-method.md) com um `IID` de IID_IHostSyncManager.  

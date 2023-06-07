@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f4984a8c-4c0e-4460-9aa1-d022b3621228
 topic_type:
 - apiref
-ms.openlocfilehash: ccff575974093de0bf00b257cba78c509f9cbd92
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d4814e44b1a5311cf6800c804df7a7e11000cbab
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134770"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805143"
 ---
 # <a name="igchostcontrolrequestvirtualmemlimit-method"></a>Método IGCHostControl::RequestVirtualMemLimit
 Solicita que o host altere os limites de memória virtual.  
@@ -42,14 +42,14 @@ HRESULT RequestVirtualMemLimit (
  [entrada, saída] Um ponteiro para o tamanho real da memória alocada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)
+- [Interface IGCHostControl](igchostcontrol-interface.md)

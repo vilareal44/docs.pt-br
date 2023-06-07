@@ -1,5 +1,6 @@
 ---
 title: Como criar um arquivo de documentação XML usando CodeDOM
+description: Neste exemplo detalhado, consulte como gerar código que cria um arquivo de documentação XML usando o Modelo de Objeto do Documento de Código (CodeDOM).
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +10,18 @@ helpviewer_keywords:
 - XML documentation, creating using CodeDOM
 - Code Document Object Model, generating XML documentation
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
-ms.openlocfilehash: a0ccb469a43c3a21a76eaf24fa7ce7b490dd5c4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f905b996910c6cfbc62378cc4cd6bb8c0e0e6fd4
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180518"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865145"
 ---
-# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Como criar um arquivo de documentação XML usando CodeDOM
+# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Como: criar um arquivo de documentação XML usando CodeDOM
+
 O CodeDOM pode ser usado para criar o código que gera a documentação XML. O processo envolve a criação do grafo CodeDOM que contém os comentários de documentação XML, a geração do código e a compilação do código gerado com a opção do compilador que cria a saída de documentação XML.  
   
-### <a name="to-create-a-codedom-graph-that-contains-xml-documentation-comments"></a>Para criar um grafo CodeDOM que contém comentários de documentação XML  
+## <a name="create-a-codedom-graph"></a>Criar um grafo do CodeDOM
   
 1. Crie um <xref:System.CodeDom.CodeCompileUnit> que contém o grafo CodeDOM para o aplicativo de exemplo.  
   
@@ -28,27 +30,28 @@ O CodeDOM pode ser usado para criar o código que gera a documentação XML. O p
      [!code-csharp[CodeDomHelloWorldSample#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#4)]
      [!code-vb[CodeDomHelloWorldSample#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#4)]  
   
-### <a name="to-generate-the-code-from-the-codecompileunit"></a>Para gerar o código do CodeCompileUnit  
+### <a name="generate-the-code-from-the-codecompileunit"></a>Gerar o código a partir do CodeCompileUnit
   
 1. Use o método <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> para gerar o código e criar um arquivo de origem a ser compilado.  
   
      [!code-csharp[CodeDomHelloWorldSample#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#5)]
      [!code-vb[CodeDomHelloWorldSample#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#5)]  
   
-### <a name="to-compile-the-code-and-generate-the-documentation-file"></a>Para compilar o código e gerar o arquivo de documentação  
+### <a name="compile-the-code-and-generate-the-documentation-file"></a>Compilar o código e gerar o arquivo de documentação
   
 1. Adicione a opção do compilador **/doc** à propriedade <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> de um objeto <xref:System.CodeDom.Compiler.CompilerParameters> e passe o objeto para o método <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> para criar o arquivo de documentação XML quando o código é compilado.  
   
      [!code-csharp[CodeDomHelloWorldSample#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#6)]
      [!code-vb[CodeDomHelloWorldSample#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#6)]  
   
-## <a name="example"></a>Exemplo  
- O exemplo de código a seguir cria um grafo CodeDOM com comentários de documentação, gera um arquivo de código do grafo e compila o arquivo e cria um arquivo de documentação XML associado.  
+## <a name="example"></a>Exemplo
+
+O exemplo de código a seguir cria um grafo CodeDOM com comentários de documentação, gera um arquivo de código do grafo e compila o arquivo e cria um arquivo de documentação XML associado.  
   
  [!code-csharp[CodeDomHelloWorldSample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#1)]
  [!code-vb[CodeDomHelloWorldSample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#1)]  
   
- O exemplo de código cria a seguinte documentação XML no arquivo HelloWorldDoc.xml.  
+ O exemplo de código cria a seguinte documentação XML no arquivo de *HelloWorldDoc.xml* .  
   
 ```xml  
 <?xml version="1.0" ?>
@@ -60,8 +63,8 @@ O CodeDOM pode ser usado para criar o código que gera a documentação XML. O p
     <member name="T:Samples.Class1">  
       <summary>  
         Create a Hello World application.
-        <seealso cref="M:Samples.Class1.Main" />
-      </summary>  
+      </summary>
+      <seealso cref="M:Samples.Class1.Main" />
     </member>  
     <member name="M:Samples.Class1.Main">  
       <summary>  
@@ -73,12 +76,12 @@ O CodeDOM pode ser usado para criar o código que gera a documentação XML. O p
 </doc>  
 ```  
   
-## <a name="compiling-the-code"></a>Compilando o código  
+## <a name="compile-permissions"></a>Permissões de compilação
   
-- Este exemplo de código requer a permissão `FullTrust` definida para ser executado com êxito.  
+Este exemplo de código requer a permissão `FullTrust` definida para ser executado com êxito.
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Documentando o código com XML](../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [Comentários de documentação XML](../../csharp/programming-guide/xmldoc/index.md)
-- [Documentação XML](/cpp/ide/xml-documentation-visual-cpp)
+- [Documente seu código com XML (Visual Basic)](../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [Comentários da documentação XML](../../csharp/programming-guide/xmldoc/index.md)
+- [Documentação XML (C++)](/cpp/ide/xml-documentation-visual-cpp)

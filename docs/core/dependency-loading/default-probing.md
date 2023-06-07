@@ -4,12 +4,12 @@ description: Visão geral da lógica de investigação System. Runtime. Loader. 
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 1e347c716c2d739a1bd03be056b57fdbda6c678f
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 13ce4c7de5f6ce1b76b2e61db810c0f19717540f
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859518"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608426"
 ---
 # <a name="default-probing"></a>Investigação padrão
 
@@ -17,7 +17,7 @@ A <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nam
 
 ## <a name="host-configured-probing-properties"></a>Propriedades de investigação configuradas pelo host
 
-Quando o tempo de execução é iniciado, o host de tempo de execução fornece um conjunto de propriedades <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> de investigação nomeadas que configuram caminhos de investigação.
+Quando o tempo de execução é iniciado, o host de tempo de execução fornece um conjunto de propriedades de investigação nomeadas que configuram <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> caminhos de investigação.
 
 Cada propriedade de investigação é opcional. Se houver, cada propriedade será um valor de cadeia de caracteres que contém uma lista delimitada de caminhos absolutos. O delimitador é '; ' no Windows e ': ' em todas as outras plataformas.
 
@@ -31,16 +31,18 @@ Cada propriedade de investigação é opcional. Se houver, cada propriedade ser�
 
 ### <a name="how-are-the-properties-populated"></a>Como as propriedades são populadas?
 
-Há dois cenários principais para popular as propriedades dependendo se o * \<arquivo MyApp>. deps. JSON* existe.
+Há dois cenários principais para popular as propriedades dependendo se o * \<myapp>.deps.jsno* arquivo existe.
 
-- Quando o * \*arquivo. deps. JSON* estiver presente, ele será analisado para preencher as propriedades de investigação.
-- Quando o * \*arquivo. deps. JSON* não está presente, supõe-se que o diretório do aplicativo contenha todas as dependências. O conteúdo do diretório é usado para preencher as propriedades de investigação.
+- Quando o * \*.deps.jsno* arquivo estiver presente, ele será analisado para preencher as propriedades de investigação.
+- Quando o * \*.deps.jsno* arquivo não estiver presente, o diretório do aplicativo será considerado para conter todas as dependências. O conteúdo do diretório é usado para preencher as propriedades de investigação.
 
-Além disso, os * \*arquivos. deps. JSON* para todas as estruturas referenciadas são analisados de forma semelhante.
+Além disso, a * \*.deps.jsem* arquivos para todas as estruturas referenciadas é analisada da mesma forma.
 
-Por fim, a `ADDITIONAL_DEPS` variável de ambiente pode ser usada para adicionar outras dependências.
+Por fim, a variável de ambiente `ADDITIONAL_DEPS` pode ser usada para adicionar outras dependências.  `dotnet.exe` também contém um `--additional-deps` parâmetro opcional para definir esse valor na inicialização do aplicativo.
 
-As `APP_PATHS` propriedades `APP_NI_PATHS` e não são populadas por padrão e são omitidas para a maioria dos aplicativos.
+As `APP_PATHS` `APP_NI_PATHS` Propriedades e não são populadas por padrão e são omitidas para a maioria dos aplicativos.
+
+A lista de todos os * \*.deps.jsem* arquivos usados pelo aplicativo pode ser acessada via `System.AppContext.GetData("APP_CONTEXT_DEPS_FILES")` .
 
 ### <a name="how-do-i-see-the-probing-properties-from-managed-code"></a>Como fazer ver as propriedades de investigação do código gerenciado?
 
@@ -53,7 +55,7 @@ O host de tempo de execução do .NET Core produzirá mensagens de rastreamento 
 |Variável de ambiente        |Descrição  |
 |----------------------------|---------|
 |`COREHOST_TRACE=1`          |Habilita o rastreamento.|
-|`COREHOST_TRACEFILE=<path>` |Rastreia um caminho de arquivo em vez do padrão `stderr`.|
+|`COREHOST_TRACEFILE=<path>` |Rastreia um caminho de arquivo em vez do padrão `stderr` .|
 |`COREHOST_TRACE_VERBOSITY`  |Define o detalhamento de 1 (menor) para 4 (mais alto).|
 
 ## <a name="managed-assembly-default-probing"></a>Investigação padrão do assembly gerenciado
@@ -61,14 +63,14 @@ O host de tempo de execução do .NET Core produzirá mensagens de rastreamento 
 Ao investigar para localizar um assembly gerenciado, o <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> procura na ordem em:
 
 - Arquivos que correspondem <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> ao `TRUSTED_PLATFORM_ASSEMBLIES` (após a remoção de extensões de arquivo).
-- Arquivos de assembly de imagem `APP_NI_PATHS` nativa no com extensões de arquivo comuns.
-- Arquivos de assembly `APP_PATHS` no com extensões de arquivo comuns.
+- Arquivos de assembly de imagem nativa no `APP_NI_PATHS` com extensões de arquivo comuns.
+- Arquivos de assembly no `APP_PATHS` com extensões de arquivo comuns.
 
 ## <a name="satellite-resource-assembly-probing"></a>Investigação de assembly satélite (recurso)
 
 Para localizar um assembly satélite para uma cultura específica, construa um conjunto de caminhos de arquivo.
 
-Para cada caminho no `PLATFORM_RESOURCE_ROOTS` e, `APP_PATHS`em seguida, <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> acrescente a cadeia de caracteres, um <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> separador de diretório, a cadeia de caracteres e a extensão '. dll '.
+Para cada caminho no `PLATFORM_RESOURCE_ROOTS` e, em seguida `APP_PATHS` , acrescente a <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> cadeia de caracteres, um separador de diretório, a <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> cadeia de caracteres e a extensão '. dll '.
 
 Se existir algum arquivo correspondente, tente carregá-lo e retorná-lo.
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a9608861-ae64-4467-8a73-be05ad34beac
 topic_type:
 - apiref
-ms.openlocfilehash: 5ebd1f2780ab25e01bcb384b38220f414d90292e
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: a27e7ca156ca138078215a65486ac4b965c6a93d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868532"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496328"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a>Método ICorProfilerInfo3::GetThreadStaticAddress2
 Obtém o endereço do campo de thread estático especificado que está no escopo do thread e do domínio do aplicativo especificados.  
@@ -53,27 +53,27 @@ HRESULT GetThreadStaticAddress2(
  fora Um ponteiro para o endereço do campo estático que está dentro do thread especificado.  
   
 ## <a name="remarks"></a>Comentários  
- O método `GetThreadStaticAddress2` pode retornar um dos seguintes:  
+ O `GetThreadStaticAddress2` método pode retornar um dos seguintes:  
   
 - Um CORPROF_E_DATAINCOMPLETE HRESULT se o campo estático fornecido não tiver sido atribuído um endereço no contexto especificado.  
   
 - Os endereços de objetos que podem estar no heap de coleta de lixo. Esses endereços podem se tornar inválidos após a coleta de lixo, portanto, após a coleta de lixo, os profileres não devem presumir que eles são válidos.  
   
- Antes de o construtor de classe de uma classe ser concluído, `GetThreadStaticAddress2` retornará CORPROF_E_DATAINCOMPLETE para todos os seus campos estáticos, embora alguns dos campos estáticos possam já estar inicializados e a raiz dos objetos de coleta de lixo.  
+ Antes que o construtor de classe de uma classe seja concluído, o `GetThreadStaticAddress2` retornará CORPROF_E_DATAINCOMPLETE para todos os seus campos estáticos, embora alguns dos campos estáticos já possam ser inicializados e a raiz dos objetos de coleta de lixo.  
   
- O método [ICorProfilerInfo2:: GetThreadStaticAddress](icorprofilerinfo2-getthreadstaticaddress-method.md) é semelhante ao método `GetThreadStaticAddress2`, mas não aceita um argumento de domínio de aplicativo.  
+ O método [ICorProfilerInfo2:: GetThreadStaticAddress](icorprofilerinfo2-getthreadstaticaddress-method.md) é semelhante ao `GetThreadStaticAddress2` método, mas não aceita um argumento de domínio de aplicativo.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerInfo3](icorprofilerinfo3-interface.md)
-- [Interfaces de criação de perfil](profiling-interfaces.md)
+- [Criação de perfil de interfaces](profiling-interfaces.md)
 - [Criação de perfil](index.md)

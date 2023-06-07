@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1e26bff-d3ea-436e-9867-29720df999f4
 topic_type:
 - apiref
-ms.openlocfilehash: 390a29760c0f3680ca082561607ab678e8bd1e8b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1981fdf25440a296801bdbd06c41ebcb4b87e870
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133002"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501378"
 ---
 # <a name="ihosttaskmanagerreverseenterruntime-method"></a>Método IHostTaskManager::ReverseEnterRuntime
 Notifica o host de que uma chamada está sendo feita no Common Language Runtime (CLR) de código não gerenciado.  
@@ -35,7 +35,7 @@ HRESULT ReverseEnterRuntime ();
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`ReverseEnterRuntime` retornado com êxito.|  
+|S_OK|`ReverseEnterRuntime`retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -44,23 +44,23 @@ HRESULT ReverseEnterRuntime ();
 |E_OUTOFMEMORY|Não há memória suficiente disponível para concluir a alocação de recursos solicitada.|  
   
 ## <a name="remarks"></a>Comentários  
- Se a chamada para o CLR for feita de uma sequência originada em código gerenciado, cada chamada para `ReverseEnterRuntime` corresponderá a uma chamada para [ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md).  
+ Se a chamada para o CLR for feita de uma sequência originada em código gerenciado, cada chamada para `ReverseEnterRuntime` corresponderá a uma chamada para [ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md).  
   
 > [!NOTE]
-> As chamadas podem se originar de código não gerenciado sem serem aninhadas. Nesse caso, não há nenhuma chamada para [EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)ou `ReverseLeaveRuntime`, e o número de chamadas para `ReverseEnterRuntime` não é igual ao número de chamadas para `ReverseLeaveRuntime`.  
+> As chamadas podem se originar de código não gerenciado sem serem aninhadas. Nesse caso, não há nenhuma chamada para [EnterRuntime](ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](ihosttaskmanager-leaveruntime-method.md)ou `ReverseLeaveRuntime` , e o número de chamadas para não `ReverseEnterRuntime` é igual ao número de chamadas para `ReverseLeaveRuntime` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [Interface ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [Interface IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [Interface IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [Interface ICLRTask](iclrtask-interface.md)
+- [Interface ICLRTaskManager](iclrtaskmanager-interface.md)
+- [Interface IHostTask](ihosttask-interface.md)
+- [Interface IHostTaskManager](ihosttaskmanager-interface.md)

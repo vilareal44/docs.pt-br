@@ -1,5 +1,6 @@
 ---
 title: Lc.exe (Compilador de Licença)
+description: Use Lc.exe, o compilador de licença. Essa ferramenta lê os arquivos de texto que têm informações de licenciamento e torna um arquivo binário a ser inserido em um executável CLR como um recurso.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Lc.exe
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 464514a241cc35fc821049ba0c29bec108d88253
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 45a80ba7c3e24c0f419758315b2d2daafd3890f4
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180406"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164252"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Compilador de Licença)
 O Compilador de Licença lê arquivos de texto que contêm informações de licenciamento e produz um arquivo binário que pode ser inserido em um executável do Common Language Runtime como um recurso.  
@@ -47,7 +48,7 @@ targetPE /complist:filename [-outdir:path]
 |**/outdir:** *path*|Especifica o diretório no qual o arquivo .licenses de saída deve ser colocado.|  
 |**/target:** *targetPE*|Especifica o executável para o qual o arquivo .licenses está sendo gerado.|  
 |**/v**|Especifica o modo detalhado; exibe informações de andamento da compilação.|  
-|**@***arquivo*|Especifica o arquivo de resposta (.rsp).|  
+|**@** do *arquivo*|Especifica o arquivo de resposta (.rsp).|  
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|  
   
 ## <a name="example"></a>Exemplo  
@@ -95,5 +96,5 @@ lc @response.rsp
 ## <a name="see-also"></a>Confira também
 
 - [Ferramentas](index.md)
-- [Al.exe (Assembly Linker)](al-exe-assembly-linker.md)
-- [Prompts de Comando](developer-command-prompt-for-vs.md)
+- [Al.exe (vinculador de assembly)](al-exe-assembly-linker.md)
+- [Prompts de comando](developer-command-prompt-for-vs.md)

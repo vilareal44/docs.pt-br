@@ -1,5 +1,6 @@
 ---
 title: Elemento <add> para authenticationModules (Configurações de Rede)
+description: O <add> elemento de configurações de rede para ConnectionManagement adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão no .NET Framework.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -10,20 +11,20 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: 4181a045079bdb455a63ebda722dd6b0daf33c4d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1a6d0f79f076a69cec33ac14f0e0f33f7c3c6577
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155109"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504635"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a>\<adicionar> Elemento para autenticaçãoMódulos (Configurações de rede)
+# <a name="add-element-for-authenticationmodules-network-settings"></a>Elemento \<add> para authenticationModules (Configurações de Rede)
 Adiciona um módulo de autenticação ao aplicativo.  
 
-[**\<>de configuração**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<autenticaçãoMódulos>**](authenticationmodules-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<adicionar>**
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<authenticationModules>**](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +41,7 @@ Adiciona um módulo de autenticação ao aplicativo.
   
 |**Atributo**|**Descrição**|  
 |-------------------|---------------------|  
-|`type`|O nome do tipo totalmente <xref:System.Type.FullName%2A> qualificado (indicado pela propriedade) e <xref:System.Reflection.Assembly.FullName%2A> o nome de montagem (indicado pela propriedade), separados por uma comma.|  
+|`type`|O nome do tipo totalmente qualificado (indicado pela <xref:System.Type.FullName%2A> Propriedade) e o nome do assembly (indicado pela <xref:System.Reflection.Assembly.FullName%2A> Propriedade), separados por uma vírgula.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum.  
@@ -49,18 +50,18 @@ Adiciona um módulo de autenticação ao aplicativo.
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[authenticationModules](authenticationmodules-element-network-settings.md)|Especifica módulos usados para autenticar solicitações de rede.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Especifica os módulos usados para autenticar solicitações de rede.|  
   
 ## <a name="remarks"></a>Comentários  
  O `add` elemento adiciona um módulo de autenticação ao final da lista de módulos de autenticação registrados. Os módulos de autenticação são chamados na ordem em que foram adicionados à lista.  
   
- O valor `type` para o atributo deve ser um nome de tipo válido e nome de montagem correspondente, separado por uma comuma.  
+ O valor do `type` atributo deve ser um nome de tipo válido e um nome de assembly correspondente, separados por uma vírgula.  
   
 ## <a name="configuration-files"></a>Arquivos de configuração  
- Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração da máquina (Machine.config).  
+ Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir permite os módulos de autenticação padrão. Você deve substituir os valores de Versão e PublicKeyToken pelos valores corretos para o módulo especificado.  
+ O exemplo a seguir habilita os módulos de autenticação padrão. Você deve substituir os valores de Version e PublicKeyToken pelos valores corretos para o módulo especificado.  
   
 ```xml  
 <configuration>  

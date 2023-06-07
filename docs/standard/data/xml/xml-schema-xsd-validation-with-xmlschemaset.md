@@ -1,5 +1,6 @@
 ---
 title: Validação de XSD (esquema XML) com XmlSchemaSet
+description: Saiba como validar documentos XML em um esquema XSD (linguagem de definição de esquema XML) usando uma classe XmlSchemaSet no .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 359b10eb-ec05-4cc6-ac96-c2b060afc4de
-ms.openlocfilehash: 34215c2b06db08a74b5b9c13589ac84f26a2ef8f
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 995323d1882da13d45cdac516518d5b67845715a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158574"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594498"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>Validação de esquema XML (XSD) com o XmlSchemaSet
 
@@ -42,7 +43,7 @@ Documentos XML podem ser validados em um esquema da linguagem XSD em um <xref:Sy
  [!code-csharp[XmlSchemaSetOverall Example #1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaSetOverall Example/CS/xmlschemasetexample.cs#1)]
  [!code-vb[XmlSchemaSetOverall Example #1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaSetOverall Example/VB/xmlschemasetexample.vb#1)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [XmlSchemaSet para compilação de esquema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Trabalhando com esquemas XML](../../../../docs/standard/data/xml/working-with-xml-schemas.md)
+- [XmlSchemaSet para compilação de esquema](xmlschemaset-for-schema-compilation.md)
+- [Trabalhando com esquemas XML](working-with-xml-schemas.md)

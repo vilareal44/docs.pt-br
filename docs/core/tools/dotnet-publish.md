@@ -2,20 +2,20 @@
 title: Comando dotnet publish
 description: O comando dotnet publish publica um projeto do .NET Core ou uma solução em um diretório.
 ms.date: 02/24/2020
-ms.openlocfilehash: 697746291a8b34a856433049fe7264ad0ea4af7a
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 45bf8504fd882286041794d27ecb56464fc8d13d
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761896"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656659"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 **Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
 
-## <a name="name"></a>Name
+## <a name="name"></a>Nome
 
-`dotnet publish`– Publica o aplicativo e suas dependências em uma pasta para implantação em um sistema de hospedagem.
+`dotnet publish` – Publica o aplicativo e suas dependências em uma pasta para implantação em um sistema de hospedagem.
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -32,13 +32,13 @@ dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet publish -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 `dotnet publish` compila o aplicativo, lê suas dependências especificadas no arquivo de projeto e publica o conjunto de arquivos resultantes em um diretório. A saída inclui os seguintes ativos:
 
 - Código IL (Linguagem Intermediária) em um assembly com uma extensão *dll*.
-- Um arquivo *. deps. JSON* que inclui todas as dependências do projeto.
-- Um arquivo *. runtimeconfig. JSON* que especifica o tempo de execução compartilhado que o aplicativo espera, bem como outras opções de configuração para o tempo de execução (por exemplo, tipo de coleta de lixo).
+- Um *.deps.jsno* arquivo que inclui todas as dependências do projeto.
+- Um *.runtimeconfig.jsno* arquivo que especifica o tempo de execução compartilhado que o aplicativo espera, bem como outras opções de configuração para o tempo de execução (por exemplo, tipo de coleta de lixo).
 - As dependências do aplicativo, que são copiadas do cache NuGet para a pasta de saída.
 
 A saída do comando `dotnet publish` está pronta para implantação em um sistema de hospedagem (por exemplo, um servidor, um computador, um Mac, um laptop) para execução. É a única maneira com suporte oficial de preparar o aplicativo para implantação. Dependendo do tipo de implantação especificado pelo projeto, talvez o sistema de hospedagem não tenha o runtime compartilhado do .NET Core instalado. Para obter mais informações, consulte [publicar aplicativos .NET Core com o CLI do .NET Core](../deploying/deploy-with-cli.md).
@@ -49,13 +49,17 @@ A saída do comando `dotnet publish` está pronta para implantação em um siste
 
 ### <a name="msbuild"></a>MSBuild
 
-O comando `dotnet publish` chama MSBuild, que invoca o destino `Publish`. Quaisquer parâmetros passados para `dotnet publish` são passados para o MSBuild. Os parâmetros `-c` e `-o` mapeiam as propriedades `Configuration` e `OutputPath` do MSBuild, respectivamente.
+O comando `dotnet publish` chama MSBuild, que invoca o destino `Publish`. Quaisquer parâmetros passados para `dotnet publish` são passados para o MSBuild. Os parâmetros `-c` e `-o` mapeiam as propriedades `Configuration` e `PublishDir` do MSBuild, respectivamente.
 
-O `dotnet publish` comando aceita opções do MSBuild, como `-p` para configurar propriedades e `-l` definir um agente de log. Por exemplo, você pode definir uma propriedade do MSBuild usando o formato: `-p:<NAME>=<VALUE>` . Você também pode definir propriedades relacionadas à publicação fazendo referência a um arquivo *. pubxml* , por exemplo:
+O `dotnet publish` comando aceita opções do MSBuild, como `-p` para configurar propriedades e `-l` definir um agente de log. Por exemplo, você pode definir uma propriedade do MSBuild usando o formato: `-p:<NAME>=<VALUE>` .
+
+Você também pode definir propriedades relacionadas à publicação fazendo referência a um arquivo *. pubxml* (disponível desde o SDK do .net Core 3,1). Por exemplo:
 
 ```dotnetcli
-dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
+dotnet publish -p:PublishProfile=FolderProfile
 ```
+
+O exemplo anterior usa o arquivo *FolderProfile. pubxml* que é encontrado na pasta * \<project_folder> /Properties/PublishProfiles* . Se você especificar um caminho e uma extensão de arquivo ao definir a `PublishProfile` propriedade, eles serão ignorados. Por padrão, o MSBuild procura na pasta *Properties/PublishProfiles* e assume a extensão de arquivo *pubxml* . Para especificar o caminho e o nome de arquivo, incluindo a extensão, defina a `PublishProfileFullPath` propriedade em vez da `PublishProfile` propriedade.
 
 Para saber mais, consulte os recursos a seguir:
 
@@ -69,9 +73,9 @@ Para saber mais, consulte os recursos a seguir:
 
   O projeto ou solução a ser publicada.
   
-  * `PROJECT`é o caminho e o nome de arquivo de um Visual Basic de projeto em [c#](csproj.md), f # ou Visual Basic, ou o caminho para um diretório que contém um arquivo de projeto C#, f # ou. Se o diretório não for especificado, o padrão será o diretório atual.
+  * `PROJECT` é o caminho e o nome de arquivo de um Visual Basic de projeto em [c#](csproj.md), f # ou Visual Basic, ou o caminho para um diretório que contém um arquivo de projeto C#, f # ou. Se o diretório não for especificado, o padrão será o diretório atual.
 
-  * `SOLUTION`é o caminho e o nome de arquivo de uma solução (extensão *. sln* ) ou o caminho para um diretório que contém um arquivo de solução. Se o diretório não for especificado, o padrão será o diretório atual. Disponível desde o SDK do .NET Core 3.0.
+  * `SOLUTION` é o caminho e o nome de arquivo de uma solução (extensão *. sln* ) ou o caminho para um diretório que contém um arquivo de solução. Se o diretório não for especificado, o padrão será o diretório atual. Disponível desde o SDK do .NET Core 3.0.
 
 ## <a name="options"></a>Opções
 
@@ -119,7 +123,7 @@ Para saber mais, consulte os recursos a seguir:
 
   Especifica o caminho para o diretório de saída.
   
-  Se não for especificado, o padrão é *[project_file_folder]./bin/[Configuration]/[Framework]/Publish/* para um executável dependente de tempo de execução e binários de plataforma cruzada. O padrão é *[project_file_folder]/bin/[Configuration]/[Framework]/[Runtime]/Publish/* para um executável independente.
+  Se não for especificado, o padrão é *[project_file_folder]./bin/[Configuration]/[Framework]/Publish/* para um executável dependente de estrutura e binários de plataforma cruzada. O padrão é *[project_file_folder]/bin/[Configuration]/[Framework]/[Runtime]/Publish/* para um executável independente.
 
   Em um projeto Web, se a pasta de saída estiver na pasta do projeto, os `dotnet publish` comandos sucessivos resultarão em pastas de saída aninhadas. Por exemplo, se a pasta do projeto *for MyProject*e a pasta de saída de publicação for *MyProject/Publish*e você `dotnet publish` executar duas vezes, a segunda execução colocará arquivos de conteúdo como arquivos *. config* e *. JSON* no *MyProject/publicar/Publish*. Para evitar o aninhamento de pastas de publicação, especifique uma pasta de publicação que não esteja **diretamente** sob a pasta do projeto ou exclua a pasta de publicação do projeto. Para excluir uma pasta de publicação chamada *publishoutput*, adicione o seguinte elemento a um `PropertyGroup` elemento no arquivo *. csproj* :
 
@@ -155,7 +159,7 @@ Para saber mais, consulte os recursos a seguir:
 
 - **`-p:PublishTrimmed=true`**
 
-  Apara as bibliotecas não usadas para reduzir o tamanho da implantação de um aplicativo ao publicar um executável independente. Para obter mais informações, consulte [aparar implantações e executáveis independentes](../deploying/trim-self-contained.md). Disponível desde o SDK do .NET Core 3.0.
+  Apara as bibliotecas não usadas para reduzir o tamanho da implantação de um aplicativo ao publicar um executável independente. Para obter mais informações, consulte [aparar implantações e executáveis independentes](../deploying/trim-self-contained.md). Disponível desde o SDK do .NET Core 3,0 como um recurso de visualização.
 
   Recomendamos que você especifique essa opção em um perfil de publicação em vez de na linha de comando. Para mais informações, consulte [MSBuild](#msbuild).
 
@@ -183,13 +187,13 @@ Para saber mais, consulte os recursos a seguir:
 
 ## <a name="examples"></a>Exemplos
 
-- Crie um [binário de plataforma cruzada dependente de tempo de execução](../deploying/index.md#produce-a-cross-platform-binary) para o projeto no diretório atual:
+- Crie um [binário de plataforma cruzada dependente de estrutura](../deploying/index.md#produce-a-cross-platform-binary) para o projeto no diretório atual:
 
   ```dotnetcli
   dotnet publish
   ```
 
-  A partir do SDK do .NET Core 3,0, este exemplo também cria um [executável dependente de tempo de execução](../deploying/index.md#publish-runtime-dependent) para a plataforma atual.
+  A partir do SDK do .NET Core 3,0, este exemplo também cria um [executável dependente da estrutura](../deploying/index.md#publish-framework-dependent) para a plataforma atual.
 
 - Crie um [executável independente](../deploying/index.md#publish-self-contained) para o projeto no diretório atual, para um tempo de execução específico:
 
@@ -199,7 +203,7 @@ Para saber mais, consulte os recursos a seguir:
 
   O RID deve estar no arquivo de projeto.
 
-- Crie um [executável dependente de tempo de execução](../deploying/index.md#publish-runtime-dependent) para o projeto no diretório atual, para uma plataforma específica:
+- Crie um [executável dependente de estrutura](../deploying/index.md#publish-framework-dependent) para o projeto no diretório atual, para uma plataforma específica:
 
   ```dotnetcli
   dotnet publish --runtime osx.10.11-x64 --self-contained false
@@ -225,12 +229,12 @@ Para saber mais, consulte os recursos a seguir:
   dotnet publish --no-dependencies
   ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral da publicação de aplicativos do .NET Core](../deploying/index.md)
 - [Publicar aplicativos .NET Core com o CLI do .NET Core](../deploying/deploy-with-cli.md)
 - [Estruturas de destino](../../standard/frameworks.md)
-- [Catálogo de RID (identificador de tempo de execução)](../rid-catalog.md)
+- [Catálogo de RID (Identificador de Runtime)](../rid-catalog.md)
 - [Trabalhando com o notarization Catalina do macOS](../install/macos-notarization-issues.md)
 - [Estrutura de diretórios de um aplicativo publicado](/aspnet/core/hosting/directory-structure)
 - [Referência de linha de comando do MSBuild](/visualstudio/msbuild/msbuild-command-line-reference)

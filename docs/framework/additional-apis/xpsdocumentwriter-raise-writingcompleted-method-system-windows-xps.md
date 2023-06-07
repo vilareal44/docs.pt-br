@@ -1,5 +1,6 @@
 ---
-title: XpsDocumentWriter.raise__WritingCompleted Method (System.Windows.Xps)
+title: Método XpsDocumentWriter. raise__WritingCompleted (System. Windows. XPS)
+description: Entenda o Método XpsDocumentWriter. raise__WritingCompleted, que gera o evento WritingCompleted para um documento XPS (XML Paper Specification) no .NET.
 TOCTitle: raise__WritingCompleted Method
 ms.date: 12/12/2007
 api_location:
@@ -10,14 +11,14 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 5d4c11b20624b543ee5c366f5da15afb573fb22d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 287fa2286c7acd5061672453c5be11c3ff34ca80
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155668"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105229"
 ---
-# <a name="xpsdocumentwriterraise__writingcompleted-method"></a>XpsDocumentWriter.raise\_\_WritingCompleted Method
+# <a name="xpsdocumentwriterraise__writingcompleted-method"></a>\_ \_ Método WritingCompleted XpsDocumentWriter. raise
 
 Gera o evento <xref:System.Windows.Xps.XpsDocumentWriter.WritingCompleted>.
 
@@ -28,7 +29,7 @@ public void raise__WritingCompleted (object value0,
   System.Windows.Documents.Serialization.WritingCompletedEventArgs value1);
 ```
 
-## <a name="parameters"></a>parâmetros
+## <a name="parameters"></a>Parâmetros
 
 - `value0` <xref:System.Object>  
   A origem do evento.
@@ -38,8 +39,8 @@ public void raise__WritingCompleted (object value0,
 
 ## <a name="requirements"></a>Requisitos
 
-**Espaço de nome:**<xref:System.Windows.Xps>
+**Namespace:** <xref:System.Windows.Xps>
 
-**Montagem:** System.Printing (em system.printing.dll)
+**Assembly:** System. Printing (em system.printing.dll)
 
-**.NET Framework versões:** 3.0
+**Versões do .NET Framework:** 3,0

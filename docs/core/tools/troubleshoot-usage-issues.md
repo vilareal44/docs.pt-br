@@ -1,22 +1,23 @@
 ---
 title: Solucionar problemas de uso da ferramenta .NET Core
-description: Descubra os problemas comuns ao executar ferramentas do .NET Core e possíveis soluções.
+description: Descubra os problemas comuns ao executar as ferramentas do .NET Core e as possíveis soluções.
 author: kdollard
+ms.topic: troubleshooting
 ms.date: 02/14/2020
-ms.openlocfilehash: ed6243f802c4d3ce56a742916a1a28676e3cd876
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: db88958e1605fef589c5dbcb12065a6318183705
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146444"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608311"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Solucionar problemas de uso da ferramenta .NET Core
 
-Você pode encontrar problemas ao tentar instalar ou executar uma ferramenta .NET Core, que pode ser uma ferramenta global ou uma ferramenta local. Este artigo descreve as causas básicas comuns e algumas soluções possíveis.
+Você pode encontrar problemas ao tentar instalar ou executar uma ferramenta .NET Core, que pode ser uma ferramenta global ou uma ferramenta local. Este artigo descreve as causas raiz comuns e algumas soluções possíveis.
 
-## <a name="installed-net-core-tool-fails-to-run"></a>A ferramenta .NET Core instalada não é executada
+## <a name="installed-net-core-tool-fails-to-run"></a>Falha na execução da ferramenta .NET Core instalada
 
-Quando uma ferramenta .NET Core falha em ser executada, provavelmente você encontrou um dos seguintes problemas:
+Quando uma ferramenta do .NET Core não é executada, é muito provável que você tenha executado um dos seguintes problemas:
 
 * O arquivo executável da ferramenta não foi encontrado.
 * A versão correta do tempo de execução do .NET Core não foi encontrada.
@@ -35,37 +36,37 @@ Possible reasons for this include:
 
 O nome do executável determina como você invoca a ferramenta. A tabela a seguir descreve o formato:
 
-| Formato de nome executável  | Formato de invocação   |
+| Formato do nome do executável  | Formato de invocação   |
 |-------------------------|---------------------|
 | `dotnet-<toolName>.exe` | `dotnet <toolName>` |
 | `<toolName>.exe`        | `<toolName>`        |
 
 * Ferramentas globais
 
-  Ferramentas globais podem ser instaladas no diretório padrão ou em um local específico. Os diretórios padrão são:
+  As ferramentas globais podem ser instaladas no diretório padrão ou em um local específico. Os diretórios padrão são:
 
   | Sistema operacional          | Caminho                          |
   |-------------|-------------------------------|
   | Linux/macOS | `$HOME/.dotnet/tools`         |
   | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-  Se você está tentando executar uma ferramenta `PATH` global, verifique se a variável de ambiente em sua máquina contém o caminho onde você instalou a ferramenta global e se o executável está nesse caminho.
+  Se você estiver tentando executar uma ferramenta global, verifique se a `PATH` variável de ambiente em seu computador contém o caminho em que você instalou a ferramenta global e se o executável está nesse caminho.
 
-  O .NET Core CLI tenta adicionar o local padrão à variável ambiente PATH em seu primeiro uso. No entanto, existem alguns cenários em que o local pode não ser adicionado automaticamente ao PATH:
+  O CLI do .NET Core tenta adicionar o local padrão à variável de ambiente PATH em seu primeiro uso. No entanto, há alguns cenários em que o local pode não ser adicionado automaticamente ao caminho:
 
-  * Se você estiver usando o Linux e tiver instalado o .NET Core SDK usando arquivos *.tar.gz* e não apt-get ou rpm.
-  * Se você estiver usando o macOS 10.15 "Catalina" ou versões posteriores.
-  * Se você estiver usando macOS 10.14 "Mojave" ou versões anteriores, e você instalou o .NET Core SDK usando arquivos *.tar.gz* e não *.pkg*.
-  * Se você instalou o .NET Core 3.0 SDK `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` e definiu `false`a variável de ambiente para .
-  * Se você instalou o .NET Core 2.2 SDK ou versões anteriores, e definiu a `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` variável de ambiente para `true`.
+  * Se você estiver usando o Linux e tiver instalado o SDK do .NET Core usando arquivos *. tar. gz* e não apt-get ou RPM.
+  * Se você estiver usando o macOS 10,15 "Catalina" ou versões posteriores.
+  * Se você estiver usando o macOS 10,14 "Mojave" ou versões anteriores, e tiver instalado o SDK do .NET Core usando arquivos *. tar. gz* e não *. pkg*.
+  * Se você instalou o SDK do .NET Core 3,0 e definiu a `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` variável de ambiente como `false` .
+  * Se você instalou o SDK do .NET Core 2,2 ou versões anteriores, e definiu a `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` variável de ambiente como `true` .
 
-  Nesses cenários ou se `--tool-path` você especificou a opção, a `PATH` variável de ambiente na sua máquina não contém automaticamente o caminho onde você instalou a ferramenta global. Nesse caso, anexar a localização da `$HOME/.dotnet/tools`ferramenta (por exemplo, ) à variável `PATH` ambiente usando qualquer método que seu shell forneça para atualizar variáveis do ambiente. Para obter mais informações, consulte [as ferramentas .NET Core](global-tools.md).
+  Nesses cenários ou se você tiver especificado a `--tool-path` opção, a `PATH` variável de ambiente em seu computador não conterá automaticamente o caminho onde você instalou a ferramenta global. Nesse caso, acrescente o local da ferramenta (por exemplo, `$HOME/.dotnet/tools` ) à `PATH` variável de ambiente usando qualquer método que o seu Shell fornece para atualizar as variáveis de ambiente. Para obter mais informações, consulte [Ferramentas do .NET Core](global-tools.md).
 
 * Ferramentas locais
 
-  Se você está tentando executar uma ferramenta local, verifique se há um arquivo manifesto chamado *dotnet-tools.json* no diretório atual ou em qualquer um de seus diretórios-pai. Este arquivo também pode viver em uma pasta chamada *.config* em qualquer lugar na hierarquia da pasta do projeto, em vez da pasta raiz. Se *o dotnet-tools.json* existir, abra-o e verifique se há a ferramenta que você está tentando executar. Se o arquivo não contiver `"isRoot": true`uma entrada para, então verifique também a hierarquia do arquivo para obter arquivos de manifesto de ferramentas adicionais.
+  Se você estiver tentando executar uma ferramenta local, verifique se há um arquivo de manifesto chamado *dotnet-tools.js* no diretório atual ou em qualquer um de seus diretórios pai. Esse arquivo também pode residir em uma pasta chamada *. config* em qualquer lugar na hierarquia de pastas do projeto, em vez da pasta raiz. Se *dotnet-tools.js* houver, abra-o e verifique a ferramenta que você está tentando executar. Se o arquivo não contiver uma entrada para `"isRoot": true` , verifique também a hierarquia de arquivos para arquivos de manifesto da ferramenta adicional.
 
-  Se você está tentando executar uma ferramenta .NET Core que foi instalada com um caminho especificado, você precisa incluir esse caminho ao usar a ferramenta. Um exemplo de uso de uma ferramenta instalada de caminho de ferramenta é:
+  Se você estiver tentando executar uma ferramenta do .NET Core que foi instalada com um caminho especificado, precisará incluir esse caminho ao usar a ferramenta. Um exemplo de como usar uma ferramenta instalada por caminho de ferramenta é:
 
   ```console
   ..\<toolDirectory>\dotnet-<toolName>
@@ -73,33 +74,33 @@ O nome do executável determina como você invoca a ferramenta. A tabela a segui
 
 ### <a name="runtime-not-found"></a>Tempo de execução não encontrado
 
-As ferramentas .NET Core são [aplicativos dependentes de framework,](../deploying/index.md#publish-runtime-dependent)o que significa que eles dependem de um tempo de execução do .NET Core instalado na máquina. Se o tempo de execução esperado não for encontrado, eles seguirão as regras normais de andamento do .NET Core, como:
+As ferramentas do .NET Core são [aplicativos dependentes da estrutura](../deploying/index.md#publish-framework-dependent), o que significa que eles dependem de um tempo de execução do .NET Core instalado em seu computador. Se o tempo de execução esperado não for encontrado, siga as regras normais de roll-forward do tempo de execução do .NET Core, como:
 
 * Um aplicativo efetua roll forward até a versão de patch mais recente da versão principal e secundária especificadas.
-* Se não houver tempo de execução correspondente com um número de versão maior e menor correspondente, a próxima versão menor superior é usada.
-* O roll forward não ocorre entre versões prévias do runtime ou entre versões prévias e versões de lançamento. Assim, as ferramentas .NET Core criadas usando versões de pré-visualização devem ser reconstruídas e republicadas pelo autor e reinstaladas.
+* Se não houver nenhum tempo de execução correspondente com um número de versão principal e secundária correspondente, a próxima versão secundária mais alta será usada.
+* O roll forward não ocorre entre versões prévias do runtime ou entre versões prévias e versões de lançamento. Portanto, as ferramentas do .NET Core criadas usando versões prévias devem ser recriadas e republicadas pelo autor e reinstaladas.
 
 O roll-forward não ocorrerá por padrão em dois cenários comuns:
 
-* Apenas versões inferiores do tempo de execução estão disponíveis. O roll-forward só seleciona versões posteriores do tempo de execução.
-* Apenas versões principais mais altas do tempo de execução estão disponíveis. Roll-forward não ultrapassa os principais limites da versão.
+* Somente versões inferiores do tempo de execução estão disponíveis. O roll-forward só seleciona versões posteriores do tempo de execução.
+* Somente as versões principais mais altas do tempo de execução estão disponíveis. Roll forward não cruza os limites de versão principais.
 
-Se um aplicativo não consegue encontrar um tempo de execução apropriado, ele falha ao executar e relata um erro.
+Se um aplicativo não conseguir encontrar um tempo de execução apropriado, ele não executará e relatará um erro.
 
-Você pode descobrir quais tempos de execução do .NET Core estão instalados na sua máquina usando um dos seguintes comandos:
+Você pode descobrir quais tempos de execução do .NET Core estão instalados em seu computador usando um dos seguintes comandos:
 
 ```dotnetcli
 dotnet --list-runtimes
 dotnet --info
 ```
 
-Se você acha que a ferramenta deve suportar a versão em tempo de execução que você instalou atualmente, você pode entrar em contato com o autor da ferramenta e ver se eles podem atualizar o número da versão ou o multi-alvo. Uma vez que eles tenham recompilado e republicado seu pacote de ferramentas para NuGet com um número de versão atualizado, você pode atualizar sua cópia. Enquanto isso não acontece, a solução mais rápida para você é instalar uma versão do tempo de execução que funcionaria com a ferramenta que você está tentando executar. Para baixar uma versão específica do .NET Core runtime, visite a [página de download do .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
+Se você considerar que a ferramenta deve dar suporte à versão de tempo de execução instalada atualmente, entre em contato com o autor da ferramenta e veja se eles podem atualizar o número de versão ou vários destinos. Depois de recompilar e republicar seu pacote de ferramentas no NuGet com um número de versão atualizado, você pode atualizar sua cópia. Embora isso não aconteça, a solução mais rápida para você é instalar uma versão do tempo de execução que funcionaria com a ferramenta que você está tentando executar. Para baixar uma versão específica do tempo de execução do .NET Core, visite a [página de download do .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
 
-Se você instalar o .NET Core SDK em um local não `DOTNET_ROOT` padrão, você precisará `dotnet` definir a variável de ambiente para o diretório que contém o executável.
+Se você instalar o SDK do .NET Core em um local não padrão, precisará definir a variável de ambiente `DOTNET_ROOT` para o diretório que contém o `dotnet` executável.
 
 ## <a name="net-core-tool-installation-fails"></a>Falha na instalação da ferramenta .NET Core
 
-Há uma série de razões pelas quais a instalação de uma ferramenta global ou local do .NET Core pode falhar. Quando a instalação da ferramenta falhar, você verá uma mensagem semelhante à seguinte:
+Há vários motivos pelos quais a instalação de uma ferramenta global ou local do .NET Core pode falhar. Quando a instalação da ferramenta falhar, você verá uma mensagem semelhante à seguinte:
 
 ```console
 Tool '{0}' failed to install. This failure may have been caused by:
@@ -112,26 +113,26 @@ Tool '{0}' failed to install. This failure may have been caused by:
 For more reasons, including package naming enforcement, visit https://aka.ms/failure-installing-tool
 ```
 
-Para ajudar a diagnosticar essas falhas, as mensagens NuGet são mostradas diretamente ao usuário, juntamente com a mensagem anterior. A mensagem NuGet pode ajudá-lo a identificar o problema.
+Para ajudar a diagnosticar essas falhas, as mensagens do NuGet são mostradas diretamente para o usuário, juntamente com a mensagem anterior. A mensagem do NuGet pode ajudá-lo a identificar o problema.
 
-### <a name="package-naming-enforcement"></a>Aplicação de nomeação de pacotes
+### <a name="package-naming-enforcement"></a>Imposição de nomenclatura de pacote
 
-A Microsoft mudou sua orientação sobre o ID do pacote para ferramentas, resultando em uma série de ferramentas não encontradas com o nome previsto. A nova orientação é que todas as ferramentas da Microsoft sejam prefixadas com "Microsoft". Este prefixo é reservado e só pode ser usado para pacotes assinados com um certificado autorizado pela Microsoft.
+A Microsoft alterou suas diretrizes sobre a ID do pacote para ferramentas, resultando em várias ferramentas não encontradas com o nome previsto. A nova diretriz é que todas as ferramentas da Microsoft sejam prefixadas com "Microsoft". Esse prefixo é reservado e só pode ser usado para pacotes assinados com um certificado autorizado da Microsoft.
 
-Durante a transição, algumas ferramentas da Microsoft terão a forma antiga do ID do pacote, enquanto outras terão a nova forma:
+Durante a transição, algumas ferramentas da Microsoft terão a forma antiga da ID do pacote, enquanto outras terão o novo formulário:
 
 ```dotnetcli
 dotnet tool install -g Microsoft.<toolName>
 dotnet tool install -g <toolName>
 ```
 
-À medida que os IDs do pacote são atualizados, você precisará mudar para o novo ID do pacote para obter as atualizações mais recentes. Os pacotes com o nome da ferramenta simplificada serão depreciados.
+Como as IDs de pacote são atualizadas, você precisará alterar para a nova ID do pacote para obter as atualizações mais recentes. Os pacotes com o nome da ferramenta simplificada serão preteridos.
 
-### <a name="preview-releases"></a>Versões de pré-visualização
+### <a name="preview-releases"></a>Versões de visualização
 
-* Você está tentando instalar uma versão de pré-visualização e não usou a `--version` opção de especificar a versão.
+* Você está tentando instalar uma versão prévia e não usou a `--version` opção para especificar a versão.
 
-As ferramentas .NET Core que estão em pré-visualização devem ser especificadas com uma parte do nome para indicar que estão em pré-visualização. Você não precisa incluir toda a pré-visualização. Supondo que os números da versão estejam no formato esperado, você pode usar algo como o seguinte exemplo:
+As ferramentas do .NET Core que estão em visualização devem ser especificadas com uma parte do nome para indicar que estão na versão prévia. Você não precisa incluir a visualização inteira. Supondo que os números de versão estejam no formato esperado, você pode usar algo semelhante ao exemplo a seguir:
 
 ```dotnetcli
 dotnet tool install -g --version 1.1.0-pre <toolName>
@@ -141,22 +142,22 @@ dotnet tool install -g --version 1.1.0-pre <toolName>
 
 * Um pacote NuGet com esse nome foi encontrado, mas não era uma ferramenta .NET Core.
 
-Se você tentar instalar um pacote NuGet que seja um pacote NuGet normal e não uma ferramenta .NET Core, você verá um erro semelhante ao seguinte:
+Se você tentar instalar um pacote NuGet que é um pacote NuGet regular e não uma ferramenta .NET Core, verá um erro semelhante ao seguinte:
 
-> NU1212: Combinação inválida de `<ToolName>`pacote de projeto para . O estilo de projeto DotnetToolReference só pode conter referências do tipo DotnetTool.
+> NU1212: combinação de pacote de projeto inválida para `<ToolName>` . O estilo de projeto DotnetToolReference só pode conter referências do tipo DotnetTool.
 
-### <a name="nuget-feed-cant-be-accessed"></a>O feed NuGet não pode ser acessado
+### <a name="nuget-feed-cant-be-accessed"></a>O feed do NuGet não pode ser acessado
 
-* O feed NuGet necessário não pode ser acessado, talvez por causa de um problema de conexão à Internet.
+* O feed NuGet necessário não pode ser acessado, talvez devido a um problema de conexão com a Internet.
 
-A instalação da ferramenta requer acesso ao feed NuGet que contém o pacote da ferramenta. Falha se a ração não estiver disponível. Você pode alterar `nuget.config`feeds com, solicitar um arquivo `nuget.config` específico `--add-source` ou especificar feeds adicionais com o switch. Por padrão, nuGet lança um erro para qualquer feed que não possa se conectar. A `--ignore-failed-sources` bandeira pode pular essas fontes não alcançáveis.
+A instalação da ferramenta requer acesso ao feed do NuGet que contém o pacote de ferramentas. Ele falhará se o feed não estiver disponível. Você pode alterar os feeds com `nuget.config` o, solicitar um `nuget.config` arquivo específico ou especificar Feeds adicionais com a `--add-source` opção. Por padrão, o NuGet gera um erro para qualquer feed que não pode se conectar. O sinalizador `--ignore-failed-sources` pode ignorar essas fontes não acessíveis.
 
-### <a name="package-id-incorrect"></a>ID do pacote incorreto
+### <a name="package-id-incorrect"></a>ID de pacote incorreta
 
-* Você digitou mal o nome da ferramenta.
+* Você digitou indigitadamente o nome da ferramenta.
 
-Uma razão comum para o fracasso é que o nome da ferramenta não está correto. Isso pode acontecer por causa da mistyping, ou porque a ferramenta se moveu ou foi preterida. Para ferramentas no NuGet.org, uma maneira de garantir que você tenha o nome correto é procurar a ferramenta em NuGet.org e copiar o comando de instalação.
+Um motivo comum para a falha é que o nome da ferramenta não está correto. Isso pode ocorrer devido a digitação incorreta ou porque a ferramenta foi movida ou foi preterida. Para ferramentas no NuGet.org, uma maneira de garantir que você tenha o nome correto é Pesquisar a ferramenta em NuGet.org e copiar o comando de instalação.
 
 ## <a name="see-also"></a>Confira também
 
-* [.NET Core ferramentas](global-tools.md)
+* [Ferramentas do .NET Core](global-tools.md)

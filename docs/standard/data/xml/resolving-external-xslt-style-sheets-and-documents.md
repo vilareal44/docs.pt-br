@@ -3,12 +3,12 @@ title: Resolvendo folhas de estilos XSLT e documentos externos
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
-ms.openlocfilehash: 504519532d9a6988209cf04fd6b6196796f929f8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8e7f66d67f2520b47c30307a98ed2f3fb08455df
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710291"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291468"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Resolvendo folhas de estilos XSLT e documentos externos
 Há várias vezes durante uma transformação quando você precise resolver recursos externos.  
@@ -43,15 +43,15 @@ Há várias vezes durante uma transformação quando você precise resolver recu
   
 ## <a name="see-also"></a>Veja também
 
-- [Transformações XSLT com a classe XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
-- [A classe XslTransform implementa do processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
-- [Saída de um XslTransform](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md)
-- [Transformações XSLT sobre diferentes armazena](../../../../docs/standard/data/xml/xslt-transformations-over-different-stores.md)
-- [XsltArgumentList para parâmetros de folha de estilos e objetos de extensão](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)
-- [Script de folha de estilos \<XSLT usando msxsl: script>](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)
-- [Suporte à função msxsl:node-set()](../../../../docs/standard/data/xml/support-for-the-msxsl-node-set-function.md)
-- [XPathNavigator nas transformações](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)
-- [XPathNodeIterator nas transformações](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)
-- [XPathDocument inseriu a XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)
-- [XmlDataDocument inseriu a XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)
-- [XmlDocument inseriu a XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+- [Transformações XSLT com a classe XslTransform](xslt-transformations-with-the-xsltransform-class.md)
+- [A classe XslTransform implementa do processador XSLT](xsltransform-class-implements-the-xslt-processor.md)
+- [Saída de um XslTransform](outputs-from-an-xsltransform.md)
+- [Transformações XSLT sobre diferentes armazena](xslt-transformations-over-different-stores.md)
+- [XsltArgumentList para parâmetros de folha de estilos e objetos de extensão](xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)
+- [Script de folha de estilos XSLT usando\<msxsl:script>](xslt-stylesheet-scripting-using-msxsl-script.md)
+- [Suporte à função msxsl:node-set()](support-for-the-msxsl-node-set-function.md)
+- [XPathNavigator nas transformações](xpathnavigator-in-transformations.md)
+- [XPathNodeIterator nas transformações](xpathnodeiterator-in-transformations.md)
+- [XPathDocument inseriu a XslTransform](xpathdocument-input-to-xsltransform.md)
+- [XmlDataDocument inseriu a XslTransform](xmldatadocument-input-to-xsltransform.md)
+- [XmlDocument inseriu a XslTransform](xmldocument-input-to-xsltransform.md)

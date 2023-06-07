@@ -1,19 +1,20 @@
 ---
 title: Coleções (C#)
+description: Saiba mais sobre coleções em C#, que são usadas para trabalhar com grupos de objetos. As coleções podem aumentar e reduzir dinamicamente conforme as necessidades da alteração do aplicativo.
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: d2996648690fc03b5f1d6a90e0be96155c5a24ed
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 2375980e2915d4daa5a221a94eee2aea41959852
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645477"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924923"
 ---
 # <a name="collections-c"></a>Coleções (C#)
 
 Para muitos aplicativos, você desejará criar e gerenciar grupos de objetos relacionados. Há duas maneiras de agrupar objetos: criando matrizes de objetos e criando coleções de objetos.
 
-As matrizes são mais úteis ao criar e trabalhar com um número fixo de objetos fortemente tipados. Para obter informações sobre matrizes, consulte [Matrizes](../arrays/index.md).
+As matrizes são mais úteis para criar e trabalhar com um número fixo de objetos fortemente tipados. Para obter informações sobre matrizes, consulte [Matrizes](../arrays/index.md).
 
 As coleções fornecem uma maneira mais flexível de trabalhar com grupos de objetos. Ao contrário das matrizes, o grupo de objetos com o qual você trabalha pode crescer e reduzir dinamicamente conforme as necessidades do aplicativo são alteradas. Para algumas coleções, você pode atribuir uma chave para qualquer objeto que coloque na coleção para que você possa recuperar rapidamente o objeto usando a chave.
 
@@ -182,7 +183,7 @@ public class Galaxy
 
 ## <a name="kinds-of-collections"></a>Tipos de coleções
 
-Várias coleções comuns são fornecidas pelo .NET Framework. Cada tipo de coleção é projetado para uma finalidade específica.
+Muitas coleções comuns são fornecidas pelo .NET. Cada tipo de coleção é projetado para uma finalidade específica.
 
 Algumas das classes de coleção comuns são descritas nesta seção:
 
@@ -214,7 +215,7 @@ Para obter informações adicionais, consulte [Tipos de coleção comumente usad
 
 ### <a name="systemcollectionsconcurrent-classes"></a>Classes System.Collections.Concurrent
 
-No .NET Framework 4 ou mais recente, as coleções no namespace <xref:System.Collections.Concurrent> fornecem operações thread-safe eficientes para acessar itens da coleção de vários threads.
+No .NET Framework 4 e versões posteriores, as coleções no <xref:System.Collections.Concurrent> namespace fornecem operações eficientes de thread-safe para acessar itens de coleção de vários threads.
 
 As classes no namespace <xref:System.Collections.Concurrent> deverão ser usadas em vez dos tipos correspondentes nos namespaces <xref:System.Collections.Generic?displayProperty=nameWithType> e <xref:System.Collections?displayProperty=nameWithType> sempre que vários threads estiverem acessando a coleção simultaneamente. Para obter mais informações, veja [Coleções thread-safe](../../../standard/collections/thread-safe/index.md) e <xref:System.Collections.Concurrent>.
 
@@ -351,7 +352,7 @@ private static void FindInDictionary2(string symbol)
 
 ## <a name="using-linq-to-access-a-collection"></a>Usando LINQ para acessar uma coleção
 
-A LINQ (consulta integrada à linguagem) pode ser usada para acessar coleções. As consultas LINQ fornecem recursos de filtragem, classificação e agrupamento. Para obter mais informações, consulte [Getting Started with LINQ in C#](linq/index.md).
+A LINQ (consulta integrada à linguagem) pode ser usada para acessar coleções. As consultas LINQ fornecem recursos de filtragem, classificação e agrupamento. Para obter mais informações, consulte [introdução com LINQ em C#](linq/index.md).
 
 O exemplo a seguir executa uma consulta LINQ em uma `List` genérica. A consulta LINQ retorna uma coleção diferente que contém os resultados.
 
@@ -482,7 +483,7 @@ public class Car : IComparable<Car>
 
 Você pode definir uma coleção implementando a interface <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Collections.IEnumerable>.
 
-Embora seja possível definir uma coleção personalizada, é melhor usar as coleções que estão incluídas no .NET Framework, que estão descritas em [Tipos de coleções](#BKMK_KindsOfCollections) anteriormente neste tópico.
+Embora você possa definir uma coleção personalizada, geralmente é melhor usar as coleções que estão incluídas no .NET, que são descritas em [tipos de coleções](#BKMK_KindsOfCollections) anteriormente neste artigo.
 
 O exemplo a seguir define uma classe de coleção personalizada chamada `AllColors`. Essa classe implementa a interface <xref:System.Collections.IEnumerable>, que requer que o método <xref:System.Collections.IEnumerable.GetEnumerator%2A> seja implementado.
 
@@ -603,7 +604,7 @@ private static IEnumerable<int> EvenSequence(
 - [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [LINQ to Objects (C#)](./linq/linq-to-objects.md)
 - [LINQ paralelo (PLINQ)](../../../standard/parallel-programming/introduction-to-plinq.md)
-- [Coleções e Estruturas de Dados](../../../standard/collections/index.md)
+- [Coleções e estruturas de dados](../../../standard/collections/index.md)
 - [Selecionando uma classe de coleção](../../../standard/collections/selecting-a-collection-class.md)
 - [Comparações e classificações dentro de coleções](../../../standard/collections/comparisons-and-sorts-within-collections.md)
 - [Quando usar coleções genéricas](../../../standard/collections/when-to-use-generic-collections.md)

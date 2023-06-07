@@ -25,7 +25,7 @@
       href: strong-naming/
     - name: WMI e contadores de desempenho
       href: wmi/
-    - name: Funções auxiliares Tlbexp
+    - name: Funções auxiliares do Tlbexp
       href: tlbexp/
     - name: Atributo GUID_ManagedName
       href: guid-managedname-attribute.md

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c268c49e-32b9-4171-b782-dcb7b065fa73
-ms.openlocfilehash: 99b6b3b6959abf4c8adc313364ad641249bd9bc3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d5e7074fc8c68a0a0243ea4ad237e713e0a729b3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710161"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289051"
 ---
 # <a name="select-xml-data-using-xpathnavigator"></a>Selecionar dados XML usando XPathNavigator
 A classe <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métodos usados para selecionar um conjunto de nós em um objeto <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument> usando uma expressão XPath. Depois de selecionado, você pode iterar sobre o conjunto de nós selecionado.  
@@ -65,9 +65,9 @@ while(nodes.MoveNext())
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [Processar dados XML usando o modelo de dados XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Avalia as expressões XPath usando XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)
-- [Nós compatíveis usando XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)
-- [Tipos de nós reconhecidos com consultas XPath](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)
-- [Consultas XPath e namespaces](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
-- [Expressões XPath compilados](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
+- [Processar dados XML usando o modelo de dados XPath](process-xml-data-using-the-xpath-data-model.md)
+- [Avalia as expressões XPath usando XPathNavigator](evaluate-xpath-expressions-using-xpathnavigator.md)
+- [Nós compatíveis usando XPathNavigator](matching-nodes-using-xpathnavigator.md)
+- [Tipos de nós reconhecidos com consultas XPath](node-types-recognized-with-xpath-queries.md)
+- [Consultas XPath e namespaces](xpath-queries-and-namespaces.md)
+- [Expressões XPath compilados](compiled-xpath-expressions.md)

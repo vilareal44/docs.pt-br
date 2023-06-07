@@ -1,13 +1,13 @@
 ---
-title: Como localizar descendentes com um nome de elemento específico
+title: 'Como: localizar descendentes com um nome de elemento específico'
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: 1a8aa07a79d05e62e0d5517c1675bc715e87de42
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 19e0807f3bb7e83061b2076a177107eec126e717
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344397"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405203"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Como localizar descendentes com um nome de elemento específico (Visual Basic)
 Às vezes, você deseja localizar todos os descendentes com um nome específico. Você poderia escrever um código para iterar por todos os descendentes, mas é mais fácil usar o eixo <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
@@ -100,7 +100,7 @@ End Module
 Some text that is broken up into multiple segments.  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
-- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Consultas básicas (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)

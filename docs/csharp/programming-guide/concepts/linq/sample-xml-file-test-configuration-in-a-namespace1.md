@@ -1,15 +1,16 @@
 ---
-title: 'Arquivo XML de Exemplo: Configuração de teste em um namespace'
+title: 'Arquivo XML de exemplo: Configuração de teste em um namespace'
+description: Esse arquivo XML é usado em vários exemplos na documentação do LINQ to XML. O arquivo é um arquivo de configuração de teste. XML é em um namespace.
 ms.date: 07/20/2015
 ms.assetid: e75ad1bc-5636-4623-9a34-a286a8c485d6
-ms.openlocfilehash: ed25a8608977070e0db5f4cdee8a44a3c347cc8e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e08bc476eda39b6e9ff3e2958a49a0d9e5dc303a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167996"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302471"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Arquivo XML de Exemplo: Configuração de teste em um namespace
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Arquivo XML de exemplo: Configuração de teste em um namespace
 O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este é um arquivo de configuração de teste. XML é em um namespace.  
   
 ## <a name="testconfiginnamespacexml"></a>TestConfigInNamespace.xml  

@@ -1,16 +1,16 @@
 ---
-title: 'Como: Localizar os seus irmãos anterior (XPath- LINQ para XML)'
+title: 'Como: localizar irmãos anteriores (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 59055718-d0a7-4db3-8901-18dd33587703
-ms.openlocfilehash: be6c546465f659eb633017e47434c86b9f036bf2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f815aad5709be3624a779fcfb0e0e65e76deb8e1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344685"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400611"
 ---
 # <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a>Como: localizar irmãos precedentes (XPath-LINQ to XML) (Visual Basic)
-Este tópico compara o eixo `preceding-sibling` de XPath ao eixo [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] filho do <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>.  
+Este tópico compara o eixo `preceding-sibling` de XPath ao eixo <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> filho do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
  A expressão XPath é:  
   
@@ -21,7 +21,7 @@ Este tópico compara o eixo `preceding-sibling` de XPath ao eixo [!INCLUDE[sqlte
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir localiza o elemento de `FullAddress` , e então recuperar os elementos anteriores usando o eixo de `preceding-sibling` .  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -45,7 +45,7 @@ For Each el As XElement In list2
 Next  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```console
 Results are identical  
@@ -55,6 +55,6 @@ Results are identical
 <Phone>(503) 555-7555</Phone>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [LINQ to XML para usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para usuários do XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

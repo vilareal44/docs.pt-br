@@ -1,5 +1,6 @@
 ---
 title: MDA reportAvOnComRelease
+description: Examine o MDA (Assistente de depuração gerenciada) reportAvOnComRelease, que pode ser ativado devido a violações de acesso e corrupção de memória no .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), reference counting errors
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - report access violation on Com release
 - reference counting errors
 ms.assetid: a2b86b63-08b2-4943-b344-3c2cf46ccd31
-ms.openlocfilehash: fca6b209e6432678a264f10762adb3871e3596ce
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: f9ba343060cb4d16de5909a5b619353546aca8ca
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803602"
 ---
 # <a name="reportavoncomrelease-mda"></a>MDA reportAvOnComRelease
 O MDA (Assistente para Depuração Gerenciada) do `reportAvOnComRelease` é ativado quando as exceções são lançadas por causa da contagem de erros pela referência do usuário durante a realização da interoperabilidade COM e do uso do método <xref:System.Runtime.InteropServices.Marshal.Release%2A> ou <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> combinado com chamadas COM brutas.  
@@ -46,8 +47,8 @@ O MDA (Assistente para Depuração Gerenciada) do `reportAvOnComRelease` é ativ
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling de interoperabilidade](../interop/interop-marshaling.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Realizando marshaling de interoperabilidade](../interop/interop-marshaling.md)

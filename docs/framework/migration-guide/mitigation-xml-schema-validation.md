@@ -1,16 +1,17 @@
 ---
 title: 'Mitigação: validação de esquema XML'
+description: A validação do esquema XSD detecta uma violação da restrição UNIQUE se uma chave composta é usada e uma chave está vazia no .NET Framework 4,6.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
-ms.openlocfilehash: 99cc1eae08697909d89e5c1e46cd604c7da543bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0672361ca5c0bc7cb6ec166f59278b93555e0947
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457745"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475301"
 ---
 # <a name="mitigation-xml-schema-validation"></a>Mitigação: validação de esquema XML
 No .NET Framework 4.6, a validação de esquema XSD detectará uma violação da restrição exclusiva se uma chave composta for usada e uma chave estiver vazia.  
@@ -35,6 +36,6 @@ No .NET Framework 4.6, a validação de esquema XSD detectará uma violação da
  [!code-csharp[AppCompat.IgnoreEmptyKeySequences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/cs/program.cs#2)]
  [!code-vb[AppCompat.IgnoreEmptyKeySequences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/vb/module1.vb#2)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Compatibilidade de aplicativos](application-compatibility.md)

@@ -1,20 +1,21 @@
 ---
-title: 'Como: excluir linhas do banco de dados'
+title: Como excluir linhas do banco de dados
+description: Saiba como excluir linhas em um banco de dados removendo LINQ to SQL objetos de uma coleção relacionada à tabela. LINQ to SQL traduz as exclusões para comandos SQL DELETE.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 421735567c527ac9a70cc5eefdbd7570599faac7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d08621e834961e1db9312cac36bd2e69133142b5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782008"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286385"
 ---
-# <a name="how-to-delete-rows-from-the-database"></a>Como: excluir linhas do banco de dados
+# <a name="how-to-delete-rows-from-the-database"></a>Como excluir linhas do banco de dados
 
-Você pode excluir linhas em um banco de dados removendo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] os objetos correspondentes de sua coleção relacionada à tabela. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]traduz as alterações nos comandos SQL `DELETE` apropriados.
+Você pode excluir linhas em um banco de dados removendo os [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] objetos correspondentes de sua coleção relacionada à tabela. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]traduz as alterações nos comandos SQL apropriados `DELETE` .
 
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Não dá suporte ou reconhece operações de exclusão em cascata. Se você deseja excluir uma linha em uma tabela com restrições, deverá concluir uma das seguintes tarefas:
 
@@ -29,13 +30,13 @@ Você pode excluir linhas em um banco de dados removendo [!INCLUDE[vbtecdlinq](.
 >
 > Os desenvolvedores que usam o Visual Studio podem usar o Object Relational Designer para desenvolver procedimentos armazenados para a mesma finalidade.
 
-As etapas a seguir presumem que um <xref:System.Data.Linq.DataContext> válido conecta você ao banco de dados Northwind. Para obter mais informações, confira [Como: Conecte-se a](how-to-connect-to-a-database.md)um banco de dados.
+As etapas a seguir presumem que um <xref:System.Data.Linq.DataContext> válido conecta você ao banco de dados Northwind. Para obter mais informações, consulte [como conectar-se a um banco de dados](how-to-connect-to-a-database.md).
 
 ### <a name="to-delete-a-row-in-the-database"></a>Para excluir uma linha no banco de dados
 
 1. Consulte o banco de dados para a linha ser excluída.
 
-2. Chame o método <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>.
+2. Chame o método <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> .
 
 3. Envie a alteração para o banco de dados.
 
@@ -53,8 +54,8 @@ No segundo exemplo, o objetivo é remover uma pedido (#10250). O código primeir
 [!code-csharp[DLinqCascadeWorkaround#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCascadeWorkaround/cs/Program.cs#1)]
 [!code-vb[DLinqCascadeWorkaround#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCascadeWorkaround/vb/Module1.vb#1)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Como: Gerenciar conflitos de alterações](how-to-manage-change-conflicts.md)
-- [Como: Atribuir procedimentos armazenados para executar atualizações, inserções e exclusões (Designer Relacional de Objetos)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
-- [Realizando e enviando alterações de dados](making-and-submitting-data-changes.md)
+- [Como gerenciar conflitos de alteração](how-to-manage-change-conflicts.md)
+- [Como atribuir procedimentos armazenados para executar atualizações, inserções e exclusões (Designer Relacional de Objetos)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
+- [Fazendo e enviando alterações de dados](making-and-submitting-data-changes.md)

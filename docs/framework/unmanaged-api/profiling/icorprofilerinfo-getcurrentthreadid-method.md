@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 39bbdb30-6a7a-4202-8da3-67ae9a0ab3a8
 topic_type:
 - apiref
-ms.openlocfilehash: e70d8ee40e16e37a12f8ed4033d2aa7489f0f25e
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: fa0fe827300a86a906a254292434e2a56ebb4a47
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863940"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498395"
 ---
 # <a name="icorprofilerinfogetcurrentthreadid-method"></a>Método ICorProfilerInfo::GetCurrentThreadID
 Obtém a ID do thread atual, se for um thread gerenciado.  
@@ -37,17 +37,17 @@ HRESULT GetCurrentThreadID(
  fora Um ponteiro para a ID retornada do thread gerenciado.  
   
 ## <a name="remarks"></a>Comentários  
- Se o thread atual for um thread de tempo de execução interno ou outro thread não gerenciado, `GetCurrentThreadID` retornará CORPROF_E_NOT_MANAGED_THREAD como HRESULT, e o valor retornado do parâmetro `pThreadId` será NULL.  
+ Se o thread atual for um thread de tempo de execução interno ou outro thread não gerenciado, `GetCurrentThreadID` o retornará CORPROF_E_NOT_MANAGED_THREAD como HRESULT e o valor retornado do `pThreadId` parâmetro será NULL.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)

@@ -3,24 +3,24 @@ title: <add>do <scopedCertificates> elemento
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
 ms.openlocfilehash: b00a342108beca69a906fbf6212915768e98778f
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70398340"
 ---
-# <a name="add-of-scopedcertificates-element"></a>\<Adicionar > do \<elemento scopedCertificates >
+# <a name="add-of-scopedcertificates-element"></a>\<add>do \<scopedCertificates> elemento
 Adiciona um certificado X. 509 à coleção de certificados com escopo.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamentos >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de comportamento**](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de certificados**](servicecertificate-of-clientcredentials-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> scopedCertificates**](scopedcertificates-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Adicionar >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<clientCredentials>**](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceCertificate>**](servicecertificate-of-clientcredentials-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<scopedCertificates>**](scopedcertificates-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,8 +39,8 @@ Adiciona um certificado X. 509 à coleção de certificados com escopo.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|targetUri|Cadeia. Especifica o URI do serviço associado ao certificado.|  
-|findValue|Cadeia. O valor a ser procurado.|  
+|targetUri|Cadeia de caracteres. Especifica o URI do serviço associado ao certificado.|  
+|findValue|Cadeia de caracteres. O valor a ser procurado.|  
 |x509FindType|Enumeração. Um dos campos de certificado a serem pesquisados.|  
 |storeLocation|Enumeração. Um dos dois locais de armazenamento para pesquisar.|  
 |storeName|Enumeração. Uma das lojas de sistema para pesquisa.|  
@@ -49,13 +49,13 @@ Adiciona um certificado X. 509 à coleção de certificados com escopo.
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Cadeia de Caracteres|O valor depende do campo (especificado pelo atributo X509FindType) que está sendo pesquisado. Por exemplo, se estiver procurando uma impressão digital, o valor deverá ser uma cadeia de caracteres de números hexadecimais.|  
+|String|O valor depende do campo (especificado pelo atributo X509FindType) que está sendo pesquisado. Por exemplo, se estiver procurando uma impressão digital, o valor deverá ser uma cadeia de caracteres de números hexadecimais.|  
   
 ## <a name="x509findtype-attribute"></a>Atributo x509FindType  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Enumeração|Os valores são: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
+|Enumeração|Os valores incluem: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
   
 ## <a name="storelocation-attribute"></a>Atributo storeLocation  
   
@@ -67,10 +67,10 @@ Adiciona um certificado X. 509 à coleção de certificados com escopo.
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Enumeração|Os valores são: Catálogo, AuthRoot, CertificateAuthority, não permitido, My, root, TrustedPeople e TrustedPublisher.|  
+|Enumeração|Os valores incluem: catálogo, AuthRoot, CertificateAuthority, não permitido, My, root, TrustedPeople e TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -83,7 +83,7 @@ Adiciona um certificado X. 509 à coleção de certificados com escopo.
   
  Se uma associação exigir um certificado para o serviço e nenhum certificado específico para a URL do serviço for encontrado no ScopedCertificates, o certificado padrão será usado.  
   
- Para obter mais informações, consulte a seção "certificados com escopo" [de como: Criar um cliente](../../../wcf/feature-details/how-to-create-a-federated-client.md)federado.  
+ Para obter mais informações, consulte a seção "certificados com escopo" de [como: criar um cliente federado](../../../wcf/feature-details/how-to-create-a-federated-client.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir adiciona um certificado X. 509 à coleção.  
@@ -108,14 +108,14 @@ Adiciona um certificado X. 509 à coleção de certificados com escopo.
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
-- [Como: Criar um cliente federado](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [Como criar um cliente federado](../../../wcf/feature-details/how-to-create-a-federated-client.md)
 - [Trabalhando com certificados](../../../wcf/feature-details/working-with-certificates.md)
 - [Protegendo clientes](../../../wcf/securing-clients.md)
 - [Protegendo serviços e clientes](../../../wcf/feature-details/securing-services-and-clients.md)

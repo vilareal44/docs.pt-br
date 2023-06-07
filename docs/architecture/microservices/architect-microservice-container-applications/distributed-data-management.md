@@ -2,12 +2,12 @@
 title: Desafios e soluções do gerenciamento de dados distribuídos
 description: Saiba quais são os desafios e soluções de gerenciamento de dados distribuídos no mundo de microsserviços.
 ms.date: 09/20/2018
-ms.openlocfilehash: c30de24591d5a73fd34087f34a69e9c7ed54cd35
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b91879e879db293ed61bd5f3c49dc391b9d8f5a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "71834454"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144312"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Desafios e soluções do gerenciamento de dados distribuídos
 
@@ -23,7 +23,7 @@ Sua forma de identificar os limites entre vários contextos de aplicativo com um
 
 Um segundo desafio é como implementar consultas que recuperam dados de vários microsserviços, evitando a comunicação intensa dos aplicativos clientes remotos com os microsserviços. Um exemplo pode ser uma única tela de um aplicativo móvel que precisa mostrar microsserviços de informações do usuário que pertencem ao carrinho de compras, de catálogo e de identidade do usuário. Outro exemplo seria um relatório complexo envolvendo diversas tabelas localizadas em vários microsserviços. A solução certa depende da complexidade das consultas. Mas em qualquer caso, será necessária uma maneira de agregar informações se você desejar melhorar a eficiência nas comunicações do sistema. As soluções mais comuns são as seguintes.
 
-**Gateway API.** Para a agregação de dados simples de vários microsserviços que têm bancos de dados diferentes, a abordagem recomendada é um microsserviço de agregação, conhecido como Gateway de API. No entanto, você precisa ter cuidado ao implementar esse padrão, porque ele pode ser um ponto de redução no sistema e pode violar o princípio de autonomia dos microsserviços. Para atenuar essas possibilidades, você pode ter vários Gateways de API refinados, cada um concentrado em uma "fatia" vertical ou em uma área de negócios do sistema. O padrão do Gateway de API será explicado mais detalhadamente na [seção Gateway de API](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md#why-consider-api-gateways-instead-of-direct-client-to-microservice-communication) mais adiante.
+**Gateway de API.** Para a agregação de dados simples de vários microsserviços que têm bancos de dados diferentes, a abordagem recomendada é um microsserviço de agregação, conhecido como Gateway de API. No entanto, você precisa ter cuidado ao implementar esse padrão, porque ele pode ser um ponto de redução no sistema e pode violar o princípio de autonomia dos microsserviços. Para atenuar essas possibilidades, você pode ter vários Gateways de API refinados, cada um concentrado em uma "fatia" vertical ou em uma área de negócios do sistema. O padrão do Gateway de API será explicado mais detalhadamente na [seção Gateway de API](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md#why-consider-api-gateways-instead-of-direct-client-to-microservice-communication) mais adiante.
 
 **CQRS com tabelas de consulta/leituras.** Outra solução para agregar dados de vários microsserviços é o [Padrão de exibição materializada](https://docs.microsoft.com/azure/architecture/patterns/materialized-view). Nessa abordagem, você gera com antecedência (prepara os dados desnormalizados antes que as consultas reais ocorram) uma tabela somente leitura com os dados que pertencem a vários microsserviços. A tabela tem um formato adequado às necessidades do aplicativo cliente.
 
@@ -35,7 +35,7 @@ Além de resolver o problema original (como fazer a consulta e a junção entre 
 
 Tenha em mente que esse banco de dados centralizado deve ser usado somente para consultas e relatórios que não precisam de dados em tempo real. As atualizações e transações originais, ou seja, a fonte confiável, precisam estar nos dados dos microsserviços. A maneira de sincronizar os dados seria usar a comunicação controlada por evento (abordada nas próximas seções) ou usar outras ferramentas de importação/exportação da infraestrutura do banco de dados. Se você usar a comunicação controlada por evento, esse processo de integração será semelhante à maneira de propagar dados já descrita para tabelas de consulta de CQRS.
 
-No entanto, se o design do aplicativo envolver a agregação constante de informações de vários microsserviços para consultas complexas, esse poderá ser um sintoma de design ruim, pois um microsserviço deve estar o mais isolado possível dos outros microsserviços. (Isso exclui relatórios/análises que sempre devem usar bancos de dados a frio.) Ter esse problema muitas vezes pode ser uma razão para mesclar microsserviços. Você precisa equilibrar a autonomia de evolução e a implantação de cada microsserviço com dependências fortes, coesão e agregação de dados.
+No entanto, se o design do aplicativo envolver a agregação constante de informações de vários microsserviços para consultas complexas, esse poderá ser um sintoma de design ruim, pois um microsserviço deve estar o mais isolado possível dos outros microsserviços. (Isso exclui relatórios/análises que sempre devem usar bancos de dados do Cold Data Central.) Ter esse problema muitas vezes pode ser um motivo para mesclar os microserviços. Você precisa equilibrar a autonomia de evolução e a implantação de cada microsserviço com dependências fortes, coesão e agregação de dados.
 
 ## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>Desafio \#3: Como obter consistência entre vários microsserviços
 
@@ -47,7 +47,7 @@ Em uma versão monolítica hipotética deste aplicativo, quando o preço é alte
 
 No entanto, em um aplicativo baseado em microsserviços, as tabelas de Produto e Carrinho de compras pertencem aos seus respectivos microsserviços. Um microsserviço nunca deve incluir tabelas/armazenamento pertencentes a outro microsserviço em suas próprias transações, nem mesmo em consultas diretas, conforme é mostrado na Figura 4-9.
 
-![Diagrama mostrando que os dados do banco de dados de microsserviços não podem ser compartilhados.](./media/distributed-data-management/indepentent-microservice-databases.png)
+![Diagrama mostrando que não é possível compartilhar os dados do banco de dado dos microservices.](./media/distributed-data-management/indepentent-microservice-databases.png)
 
 **Figura 4-9**. Um microsserviço não pode acessar diretamente uma tabela em outro microsserviço
 
@@ -83,7 +83,7 @@ O uso da comunicação assíncrona será explicado em detalhes mais adiante nest
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Teorema do CAP** \
+- **Teorema CAP** \
   <https://en.wikipedia.org/wiki/CAP_theorem>
 
 - **Consistência eventual** \
@@ -92,21 +92,21 @@ O uso da comunicação assíncrona será explicado em detalhes mais adiante nest
 - **Primer de consistência de dados** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Martin Fowler. CQRS (Segregação de Responsabilidade de Comando e Consulta)** \
+- **Martin Fowler. CQRS (Separação das Operações de Comando e de Consulta)** \
   <https://martinfowler.com/bliki/CQRS.html>
 
-- **Visualização materializada** \
+- **Exibição materializada** \
   <https://docs.microsoft.com/azure/architecture/patterns/materialized-view>
 
-- **Charles Row. ACID vs. BASE: O pH de mudança do processamento de transações de banco de dados** \
+- **Carlos linha. ACID versus BASE: a pH de mudança do processamento de transações de banco de dados** \
   <https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/>
 
-- **Transação Compensatória** \
+- **Transação de compensação** \
   <https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction>
 
-- **Udi Dahan. Composição Orientada ao Serviço** \
-  <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
+- **Udi Dahan. Composição orientada por serviço** \
+  <https://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 >[!div class="step-by-step"]
->[Próximo](logical-versus-physical-architecture.md)
->[anterior](identify-microservice-domain-model-boundaries.md)
+>[Anterior](logical-versus-physical-architecture.md) 
+> [Avançar](identify-microservice-domain-model-boundaries.md)

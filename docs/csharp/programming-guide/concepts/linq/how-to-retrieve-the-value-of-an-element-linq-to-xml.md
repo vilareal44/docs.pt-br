@@ -1,26 +1,27 @@
 ---
-title: Como recuperar o valor de um elemento (LINQ para XML) (C#)
+title: Como recuperar o valor de um elemento (LINQ to XML) (C#)
+description: Saiba como obter o valor dos elementos. Veja exemplos usando a conversão de cadeia de caracteres, a conversão de inteiros e a propriedade Value.
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: c4bb78e937fe0de08242923cdd7cd638abf571c7
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: eb750927d74c3068d7ab06caba9835110bd77a09
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805826"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301535"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Como recuperar o valor de um elemento (LINQ para XML) (C#)
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Como recuperar o valor de um elemento (LINQ to XML) (C#)
 
-Este artigo mostra como obter o valor dos elementos. Existem duas maneiras principais de obter o valor:
+Este artigo mostra como obter o valor dos elementos. Há duas maneiras principais de obter o valor:
 
-- Lance <xref:System.Xml.Linq.XElement> um <xref:System.Xml.Linq.XAttribute> ou um para o tipo desejado. O operador de conversão explícita converte o conteúdo do elemento ou do atributo no tipo especificado e o atribui à sua variável.
+- Converta um <xref:System.Xml.Linq.XElement> ou um <xref:System.Xml.Linq.XAttribute> para o tipo desejado. O operador de conversão explícita converte o conteúdo do elemento ou do atributo no tipo especificado e o atribui à sua variável.
 
-- Use <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> as <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> propriedades ou. Você também pode definir o valor usando essas propriedades.
+- Use as <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> Propriedades ou. Você também pode definir o valor usando essas propriedades.
 
-Com C#, o casting é geralmente a melhor abordagem. Se você lançar o elemento ou atributo a um tipo de valor anulado, o código é mais simples de escrever ao recuperar o valor de um elemento (ou atributo) que pode ou não existir. O [último exemplo](#element-might-not-exist-example) deste artigo demonstra que o casting é mais simples no caso em que o elemento pode não existir. No entanto, você não pode definir o conteúdo de um elemento por meio de conversão, como faria usando a propriedade <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>.  
+Com o C#, a conversão é geralmente a melhor abordagem. Se você converter o elemento ou atributo em um tipo de valor anulável, o código será mais simples de escrever ao recuperar o valor de um elemento (ou atributo) que pode ou não existir. O [último exemplo](#element-might-not-exist-example) neste artigo demonstra que a conversão é mais simples no caso em que o elemento pode não existir. No entanto, você não pode definir o conteúdo de um elemento por meio de conversão, como faria usando a propriedade <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>.  
   
-## <a name="string-cast-example"></a>Exemplo de elenco de cordas  
- Para recuperar o valor de <xref:System.Xml.Linq.XElement> um elemento, lance o objeto para o tipo desejado. Você pode lançar um elemento para uma seqüência, da seguinte forma:  
+## <a name="string-cast-example"></a>Exemplo de conversão de cadeia de caracteres  
+ Para recuperar o valor de um elemento, converta o <xref:System.Xml.Linq.XElement> objeto para o tipo desejado. Você pode converter um elemento em uma cadeia de caracteres da seguinte maneira:  
   
 ```csharp  
 XElement e = new XElement("StringElement", "abcde");  
@@ -35,7 +36,7 @@ Console.WriteLine("Value of e:" + (string)e);
 Value of e:abcde  
 ```  
   
-## <a name="integer-cast-example"></a>Exemplo de elenco inteiro  
+## <a name="integer-cast-example"></a>Exemplo de conversão de inteiro  
  Você também pode converter elementos em tipos que não sejam cadeias de caracteres. Por exemplo, se você tiver um elemento que contenha um número inteiro, poderá convertê-lo em `int`, como mostrado no código a seguir:  
   
 ```csharp  
@@ -55,7 +56,7 @@ Value of e:44
   
  O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] fornece os mesmos operadores de conversão para objetos <xref:System.Xml.Linq.XAttribute>.  
   
-## <a name="value-property-example"></a>Exemplo de propriedade de valor  
+## <a name="value-property-example"></a>Exemplo da propriedade Value  
  É possível usar a propriedade <xref:System.Xml.Linq.XElement.Value%2A> para recuperar o conteúdo de um elemento:  
   
 ```csharp  
@@ -71,8 +72,8 @@ Console.WriteLine("Value of e:" + e.Value);
 Value of e:abcde  
 ```  
   
-## <a name="element-might-not-exist-example"></a>Elemento pode não existir exemplo
- Às vezes você tenta recuperar o valor de um elemento, mesmo que você não tenha certeza se ele existe. Neste caso, quando você atribui o elemento lançado a um tipo de referência nulo ou tipo de valor `null`anulado, se o elemento não existir, a variável atribuída será definida como . O código a seguir mostra que quando o elemento pode ou não existir, é mais fácil de usar a conversão do que usar a propriedade <xref:System.Xml.Linq.XElement.Value%2A>.  
+## <a name="element-might-not-exist-example"></a>O elemento pode não existir exemplo
+ Às vezes você tenta recuperar o valor de um elemento, mesmo que não tenha certeza se ele existe. Nesse caso, quando você atribui o elemento convertido a um tipo de referência anulável ou tipo de valor anulável, se o elemento não existir, a variável atribuída será definida como `null` . O código a seguir mostra que quando o elemento pode ou não existir, é mais fácil de usar a conversão do que usar a propriedade <xref:System.Xml.Linq.XElement.Value%2A>.  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -134,7 +135,7 @@ else
 Console.WriteLine("v4:{0}", v4 == null ? "element does not exist" : v4.ToString());  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```output  
 c1:child 1 content  
@@ -150,6 +151,6 @@ v4:element does not exist
   
  Em geral, você pode criar um código mais simples ao usar a conversão para recuperar o conteúdo de elementos e atributos.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Eixos do LINQ to XML (C#)](./linq-to-xml-axes-overview.md)

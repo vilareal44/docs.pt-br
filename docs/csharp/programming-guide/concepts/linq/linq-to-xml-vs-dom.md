@@ -1,15 +1,16 @@
 ---
-title: LINQ para XML vs. DOM (C#)
+title: LINQ to XML vs. DOM (C#)
+description: Saiba mais sobre as principais diferenças entre LINQ to XML e a API de programação XML do W3C Modelo de Objeto do Documento (DOM).
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: 92d0da494829d57517d52fe93a3cbcf1398fdbe4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f5fc3fd7869079d47d7c9031e3668afeed7a117b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168383"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165341"
 ---
-# <a name="linq-to-xml-vs-dom-c"></a>LINQ para XML vs. DOM (C#)
+# <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML vs. DOM (C#)
 Esta seção descreve algumas das principais diferenças entre o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e a atual API de programação de XML predominante, o W3C DOM (Modelo de Objeto do Documento).  
   
 ## <a name="new-ways-to-construct-xml-trees"></a>Novas maneiras de criar árvores XML  
@@ -105,7 +106,7 @@ doc.AppendChild(name);
  Outro problema com os DOM é que ele não permite que você altere o nome de um nó. Em vez disso, você precisa criar um novo nó e copiar todos os nós filhos para ele, perdendo a identidade do nó original. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] evita esse problema permitindo que você defina a propriedade <xref:System.Xml.Linq.XName> em um nó.  
   
 ## <a name="static-method-support-for-loading-xml"></a>Suporte de método estático para carregar XML  
- O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite que você carregue XML usando métodos estáticos em vez de métodos de instância. Isso simplifica o carregamento e a análise. Para obter mais informações, [consulte Como carregar XML de um arquivo (C#)](./how-to-load-xml-from-a-file.md).  
+ O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite que você carregue XML usando métodos estáticos em vez de métodos de instância. Isso simplifica o carregamento e a análise. Para obter mais informações, consulte [como carregar XML de um arquivo (C#)](./how-to-load-xml-from-a-file.md).  
   
 ## <a name="removal-of-support-for-dtd-constructs"></a>Remoção de suporte para construções de DTD  
  O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] simplifica ainda mais a programação de XML removendo o suporte para entidades e referências a entidades. O gerenciamento de entidades é complexo e raramente é usado. Remover o suporte aumenta o desempenho e simplifica a interface de programação. Quando uma árvore [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é populada, todas as entidades de DTD são expandidas.  
@@ -129,8 +130,8 @@ doc.AppendChild(name);
  Elementos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dão suporte a um conjunto extensível de anotações. Isso é útil para acompanhar informações variadas sobre um elemento, como informações de esquema, informações sobre se o elemento está associado a uma interface do usuário ou qualquer outro tipo de informações específicas do aplicativo. Para obter mais informações, consulte [Anotações LINQ to XML (C#)](./linq-to-xml-annotations.md).  
   
 ## <a name="support-for-schema-information"></a>Suporte para informações do esquema  
-O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dá suporte para validação de XSD por meio de métodos de extensão no namespace <xref:System.Xml.Schema?displayProperty=nameWithType>. Você pode validar que uma árvore XML está em conformidade com XSD. Você pode preencher a árvore XML com o PSVI (post-schema-validation infoset). Para obter mais informações, consulte Como <xref:System.Xml.Schema.Extensions> [validar usando XSD](./how-to-validate-using-xsd-linq-to-xml.md) e .
+O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dá suporte para validação de XSD por meio de métodos de extensão no namespace <xref:System.Xml.Schema?displayProperty=nameWithType>. Você pode validar que uma árvore XML está em conformidade com XSD. Você pode preencher a árvore XML com o PSVI (post-schema-validation infoset). Para obter mais informações, consulte [como validar usando xsd](./how-to-validate-using-xsd-linq-to-xml.md) e <xref:System.Xml.Schema.Extensions> .
   
 ## <a name="see-also"></a>Confira também
 
-- [Introdução (LINQ to XML)](./linq-to-xml-overview.md)
+- [Guia de introdução (LINQ to XML)](./linq-to-xml-overview.md)

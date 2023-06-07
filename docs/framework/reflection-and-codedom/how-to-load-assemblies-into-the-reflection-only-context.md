@@ -1,5 +1,6 @@
 ---
-title: Como carregar assemblies no contexto de somente reflexão
+title: 'Como: Carregar assemblies no contexto somente de reflexão'
+description: Exiba um exemplo de como carregar assemblies no contexto somente de reflexão no .NET. Examine os assemblies compilados para outras plataformas ou versões do .NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - assemblies [.NET Framework], reflection-only loader context
 - reflection-only loader context
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
-ms.openlocfilehash: cac6b3b3adf070ad6070e5c5941653f20dedd907
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 92f847f6c61ba39bf8621af6080baccfdabe514a
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130113"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865067"
 ---
-# <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Como carregar assemblies no contexto de somente reflexão
+# <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Como: Carregar assemblies no contexto somente de reflexão
 
 O contexto de carregamento de somente reflexão permite que você examine assemblies compilados para outras plataformas ou para outras versões do .NET Framework. O código carregado neste contexto pode apenas ser examinado, ele não pode ser executado. Isso significa que os objetos não podem ser criados, pois os construtores não podem ser executados. Como o código não pode ser executado, as dependências não são carregadas automaticamente. Se precisar examiná-las, você mesmo deverá carregá-las.
 

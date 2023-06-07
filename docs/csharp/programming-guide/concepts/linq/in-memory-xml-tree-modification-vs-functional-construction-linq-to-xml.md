@@ -1,15 +1,16 @@
 ---
-title: Modificação da árvore XML na memória vs. Construção Funcional (LINQ a XML) (C#)
+title: Modificação da árvore XML na memória versus construção funcional (LINQ to XML) (C#)
+description: Esses exemplos alteram a forma de um documento XML modificando-o no local e usando LINQ to XML construção funcional em C#.
 ms.date: 07/20/2015
 ms.assetid: b5afc31d-a325-4ec6-bf17-0ff90a20ffca
-ms.openlocfilehash: 55eb95585bdd5d2c52175cacae2e6d049bd06f69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7a2e3d2ddcd452cf6a58e9d5cc886f3e8b8dd325
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66484563"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165786"
 ---
-# <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>Modificação da árvore XML na memória vs. Construção Funcional (LINQ a XML) (C#)
+# <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>Modificação da árvore XML na memória versus construção funcional (LINQ to XML) (C#)
 Modificar uma árvore XML no local é uma abordagem tradicional para alterar a forma de um documento XML. Um aplicativo típico carregar um documento em um armazenamento de dados como os DOM ou [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]; usa uma interface de programação para inserir nós, nós, excluir ou modificar o conteúdo dos nós; e então salva XML para um arquivo ou fluxo em uma rede.  
   
  O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite outra abordagem que é útil em muitos cenários: *construção funcional*. Deleites funcionais de compilação que modificam dados como um problema de transformação, em vez de como tratamento detalhada de um armazenamento de dados. Se você pode ter uma representação dos dados e a transformação com eficiência de um formulário para outro, o resultado é o mesmo como se você recebe um armazenamento de dados e o manipulou de alguma maneira para executar outra forma. Uma chave para a abordagem de construção funcional é passar os resultados de consultas para os construtores <xref:System.Xml.Linq.XDocument> e <xref:System.Xml.Linq.XElement>.  
@@ -42,7 +43,7 @@ root.Attributes().Remove();
 Console.WriteLine(root);  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```xml  
 <Root>  

@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - object pool, in .NET Framework
 ms.assetid: 0480e7ff-b6f9-480e-a889-2ed4264d8372
-ms.openlocfilehash: 2c060dc901f8d06a5f9c51db1cd563cb28e4fda3
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 64d91162b27eba80fba63761d0a926e441b63440
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728467"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287855"
 ---
 # <a name="create-an-object-pool-by-using-a-concurrentbag"></a>Criar um pool de objetos usando um ConcurrentBag
 
@@ -22,7 +22,7 @@ Este exemplo mostra como usar um <xref:System.Collections.Concurrent.ConcurrentB
 O <xref:System.Collections.Concurrent.ConcurrentBag%601> é usado para armazenar os objetos porque ele dá suporte à rápida inserção e remoção, especialmente quando o mesmo thread está adicionando e removendo itens. Esse exemplo poderia ser aumentado ainda mais para ser criado em torno de um <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>, que a estrutura de dados do recipiente implementa, como <xref:System.Collections.Concurrent.ConcurrentQueue%601> e <xref:System.Collections.Concurrent.ConcurrentStack%601> fazem.
 
 > [!TIP]
-> Este artigo define como escrever sua própria implementação de um pool de objetos com um tipo simultâneo subjacente para armazenar objetos para reutilização. No entanto <xref:Microsoft.Extensions.ObjectPool.ObjectPool%601?displayProperty=nameWithType> , o tipo já existe <xref:Microsoft.Extensions.ObjectPool?displayProperty=fullName> no namespace. Considere o uso do tipo disponível antes de criar sua própria implementação, que inclui muitos recursos adicionais.
+> Este artigo define como escrever sua própria implementação de um pool de objetos com um tipo simultâneo subjacente para armazenar objetos para reutilização. No entanto, o <xref:Microsoft.Extensions.ObjectPool.ObjectPool%601?displayProperty=nameWithType> tipo já existe no <xref:Microsoft.Extensions.ObjectPool?displayProperty=fullName> namespace. Considere o uso do tipo disponível antes de criar sua própria implementação, que inclui muitos recursos adicionais.
 
 ## <a name="example"></a>Exemplo
 
@@ -31,4 +31,4 @@ O <xref:System.Collections.Concurrent.ConcurrentBag%601> é usado para armazenar
 
 ## <a name="see-also"></a>Confira também
 
-- [Coleções com segurança de thread](../../../../docs/standard/collections/thread-safe/index.md)
+- [Coleções com segurança de thread](index.md)

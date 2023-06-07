@@ -1,13 +1,14 @@
 ---
 title: Configuração automática de endereço IPv6
+description: Saiba como o IPv6 dá suporte ao node Plug and Play, em que um nó ingressa em uma rede IPv6 e está configurado sem intervenção humana.
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-ms.openlocfilehash: 95d9dce36c70b8f6c6b9f963c0842305a111d436
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d65bc453478ac4679556e931b1758c18cfedcf3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047815"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502321"
 ---
 # <a name="ipv6-auto-configuration"></a>Configuração automática de endereço IPv6
 Uma meta importante para IPv6 é dar suporte a Plug and Play de nó. Ou seja, deve ser possível conectar um nó a uma rede IPv6 de modo que ele seja configurado automaticamente sem intervenção humana.  
@@ -26,5 +27,5 @@ Uma meta importante para IPv6 é dar suporte a Plug and Play de nó. Ou seja, de
   
 ## <a name="see-also"></a>Confira também
 
-- [Protocolo da Internet Versão 6](internet-protocol-version-6.md)
+- [Protocolo IP versão 6](internet-protocol-version-6.md)
 - [Soquetes](sockets.md)

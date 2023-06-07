@@ -1,15 +1,16 @@
 ---
-title: Como criar um documento com namespaces (C#) (LINQ para XML)
+title: Como criar um documento com namespaces (C#) (LINQ to XML)
+description: Saiba como criar um documento com um namespace em LINQ to XML em C# usando um objeto XNamespace para combinar o namespace com o nome local.
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: 429b0b0b41f2201b983f931e469b25ff406b91ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6472baefc73285af1c6dca0bfe7d874003940fc4
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141329"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103395"
 ---
-# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Como criar um documento com namespaces (C#) (LINQ para XML)
+# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Como criar um documento com namespaces (C#) (LINQ to XML)
 Este tópico mostra como criar documentos com namespaces.  
   
 ## <a name="example"></a>Exemplo  

@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: 9bf57e0f74a353fb6512a24214e9479c1d813aab
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: aef2471a375469f7cd4dff27084b305ef9394d5e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160203"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291962"
 ---
-# <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Script de folha de estilos XSLT usando \<msxsl:script>
+# <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Script de folha de estilos XSLT usando\<msxsl:script>
 A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usando o elemento `script`.  
   
 > [!NOTE]
-> A classe <xref:System.Xml.Xsl.XslTransform> está obsoleta no .NET Framework 2.0. Você pode executar a linguagem XSL Transformations (XSLT) usando a classe <xref:System.Xml.Xsl.XslCompiledTransform>. Confira [Usar a classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [Migrar da classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) para saber mais.  
+> A classe <xref:System.Xml.Xsl.XslTransform> está obsoleta no .NET Framework 2.0. Você pode executar a linguagem XSL Transformations (XSLT) usando a classe <xref:System.Xml.Xsl.XslCompiledTransform>. Confira [Usar a classe XslCompiledTransform](using-the-xslcompiledtransform-class.md) e [Migrar da classe XslTransform](migrating-from-the-xsltransform-class.md) para saber mais.  
   
  A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usando o elemento `script`. Quando a folha de estilos é carregada, todas as funções definidas são compiladas no Microsoft Intermediate Language (MSIL) sendo empacotadas em uma definição de classe e sem perda de desempenho como resultado.  
   
@@ -29,7 +29,7 @@ A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usand
   
  onde `msxsl` é um prefixo associado ao namespace `urn:schemas-microsoft-com:xslt`.  
   
- O `language` atributo não é obrigatório, mas, se especificado, seu valor deve ser um dos seguintes: `C#`, `VB`, `JScript`, `JavaScript`, `VisualBasic`ou `CSharp`. Se não for especificado, a linguagem padrão é JScript. O `language-name` não diferencia maiúsculas de minúsculas, portanto “JavaScript” e “Javascript” são equivalentes.  
+ O `language` atributo não é obrigatório, mas, se especificado, seu valor deve ser um dos seguintes: `C#` , `VB` , `JScript` , `JavaScript` , `VisualBasic` ou `CSharp` . Se não for especificado, a linguagem padrão é JScript. O `language-name` não diferencia maiúsculas de minúsculas, portanto “JavaScript” e “Javascript” são equivalentes.  
   
  O atributo `implements-prefix` é obrigatório. Esse atributo é usado para declarar um namespace e associá-lo ao bloco de script. O valor desse atributo é o prefixo que representa o namespace. Este namespace pode ser definido em qualquer lugar em uma folha de estilos.  
   
@@ -47,7 +47,7 @@ A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usand
   
  As funções podem ser declaradas no elemento `msxsl:script`. A tabela a seguir mostra os namespaces que têm suporte por padrão. Você pode usar as classes fora dos namespaces listados. No entanto, essas classes devem ser totalmente qualificadas.  
   
-|Namespaces padrão|Descrição|  
+|Namespaces padrão|Description|  
 |------------------------|-----------------|  
 |Sistema|Classe do sistema.|  
 |System.Collection|Classes de coleção.|  
@@ -231,4 +231,4 @@ public class Sample
   
 ## <a name="see-also"></a>Veja também
 
-- [A classe XslTransform implementa do processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [A classe XslTransform implementa do processador XSLT](xsltransform-class-implements-the-xslt-processor.md)

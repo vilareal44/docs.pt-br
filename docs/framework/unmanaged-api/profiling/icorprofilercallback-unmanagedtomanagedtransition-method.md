@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ade2cc01-9b81-4e09-a5f9-b3b9dda27e96
 topic_type:
 - apiref
-ms.openlocfilehash: c381d4a85a1e836f1972060c8182dd698bb27550
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 8734fa9c9418b818cbe14ebe87ce2af6fa59c078
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76870529"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499838"
 ---
 # <a name="icorprofilercallbackunmanagedtomanagedtransition-method"></a>Método ICorProfilerCallback::UnmanagedToManagedTransition
 Notifica o criador de perfil de que uma transição de código não gerenciado para código gerenciado ocorreu.  
@@ -43,20 +43,20 @@ HRESULT UnmanagedToManagedTransition(
 ## <a name="remarks"></a>Comentários  
  Se o valor de `reason` for COR_PRF_TRANSITION_RETURN e `functionId` não for NULL, a ID da função será a da função não gerenciada e nunca terá sido compilada usando o compilador JIT (just-in-time). As funções não gerenciadas têm algumas informações básicas associadas a elas, como um nome e alguns metadados.  
   
- Se o valor de `reason` for COR_PRF_TRANSITION_CALL, talvez seja possível que a função chamada (ou seja, a função gerenciada) ainda não tenha sido compilada por JIT.  
+ Se o valor de `reason` for COR_PRF_TRANSITION_CALL, talvez seja possível que a função chamada (ou seja, a função gerenciada) ainda não tenha sido compilada em JIT.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
 - [Método ManagedToUnmanagedTransition](icorprofilercallback-managedtounmanagedtransition-method.md)
-- [Usando PInvoke explícito no C++ (atributo DllImport)](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)
-- [Usando interop do C++ (PInvoke implícito)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)
+- [Usando o PInvoke explícito em C++ (atributo DllImport)](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)
+- [Usando a interoperabilidade C++ (PInvoke implícito)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)

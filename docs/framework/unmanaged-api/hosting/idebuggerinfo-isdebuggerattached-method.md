@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e21872f-602f-411a-a423-bff5cdf27000
 topic_type:
 - apiref
-ms.openlocfilehash: cbd6fa5f7935a57799d695c3ebb617d856e6dbd9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 95b7a2f6d35104c3353853549dacc783355feb5b
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133172"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805329"
 ---
 # <a name="idebuggerinfoisdebuggerattached-method"></a>Método IDebuggerInfo::IsDebuggerAttached
 Obtém um valor que indica se um depurador gerenciado está anexado a esse processo.  
@@ -35,17 +35,17 @@ HRESULT IsDebuggerAttached (
   
 ## <a name="parameters"></a>Parâmetros  
  `pbAttached`  
- fora Um ponteiro para um valor `true` se um depurador gerenciado estiver anexado ao processo; caso contrário, `false`.  
+ fora Um ponteiro para um valor que `true` se um depurador gerenciado estiver anexado ao processo; caso contrário, `false` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IDebuggerInfo](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)
+- [Interface IDebuggerInfo](idebuggerinfo-interface.md)

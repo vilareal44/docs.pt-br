@@ -10,7 +10,7 @@
           href: pack-uris-in-wpf.md
         - name: Adicionar uma tela inicial a um aplicativo WPF
           href: how-to-add-a-splash-screen-to-a-wpf-application.md
-        - name: Usar um dicionário de recursos de escopo do aplicativo
+        - name: Usar um dicionário de recursos no escopo do aplicativo
           href: how-to-use-an-application-scope-resource-dictionary.md
         - name: Persistir e restaurar propriedades de escopo do aplicativo em sessões de aplicativo
           href: persist-and-restore-application-scope-properties.md
@@ -121,7 +121,7 @@
       items:
         - name: Compilando um aplicativo WPF
           href: building-a-wpf-application-wpf.md
-        - name: Implantando um aplicativo do WPF
+        - name: Implantar um aplicativo WPF
           href: deploying-a-wpf-application-wpf.md
         - name: Tópicos explicativos
           href: build-and-deploy-how-to-topics.md

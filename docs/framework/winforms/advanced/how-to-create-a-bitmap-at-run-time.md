@@ -1,5 +1,6 @@
 ---
-title: 'Como: criar um bitmap em tempo de execução'
+title: Como criar um bitmap em tempo de execução
+description: Saiba como criar um objeto de bitmap e exibi-lo em um controle PictureBox existente do Windows Forms.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +9,15 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], creating
 - bitmaps [Windows Forms], examples [Visual Basic]
 ms.assetid: 737bae30-e599-4e1d-bf30-bab8280b32be
-ms.openlocfilehash: 3027f87cb56d1fca7756e14ae03e04e31804b6a7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e18f58abb93744aeb567ec8dc1a41004565c2bd3
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624217"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174712"
 ---
-# <a name="how-to-create-a-bitmap-at-run-time"></a>Como: criar um bitmap em tempo de execução
-Este exemplo cria e desenha uma <xref:System.Drawing.Bitmap> do objeto e o exibe em um formulários existentes do Windows <xref:System.Windows.Forms.PictureBox> controle.  
+# <a name="how-to-create-a-bitmap-at-run-time"></a>Como criar um bitmap em tempo de execução
+Este exemplo cria e desenha em um <xref:System.Drawing.Bitmap> objeto e o exibe em um controle de Windows Forms existente <xref:System.Windows.Forms.PictureBox> .  
   
 ## <a name="example"></a>Exemplo  
  [!code-csharp[System.Drawing.CreateBitmapAtRuntime#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CreateBitmapAtRuntime/CS/Form1.cs#1)]
@@ -25,9 +26,9 @@ Este exemplo cria e desenha uma <xref:System.Drawing.Bitmap> do objeto e o exibe
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
-- Um formulário do Windows que importa os assemblies System, System. Drawing e System.  
+- Um formulário do Windows que importa os assemblies do sistema, System. Drawing e System. Windows. Forms.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Drawing.Bitmap>
-- [Imagens, bitmaps e metarquivos](images-bitmaps-and-metafiles.md)
+- [Imagens, bitmaps e metaarquivos](images-bitmaps-and-metafiles.md)

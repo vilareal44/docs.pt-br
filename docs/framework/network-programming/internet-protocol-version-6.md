@@ -1,5 +1,6 @@
 ---
 title: Protocolo IP versão 6
+description: Saiba mais sobre o protocolo IPv6 e como ele difere do IPv4. .NET Framework aplicativos dão suporte ao IPv6, mas podem exigir configuração.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - IPv6, improvements
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-ms.openlocfilehash: 367db4fa4e585d6066009dbd1afacb154829319a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd8b0b26e449fba7479d2678aff25ed49e721a90
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047874"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502386"
 ---
 # <a name="internet-protocol-version-6"></a>Protocolo IP versão 6
 O protocolo IP versão 6 (IPv6) é um novo pacote de protocolos padrão para a camada de rede da Internet. O IPv6 foi projetado para resolver muitos dos problemas da versão atual do pacote de protocolos IP (conhecido como IPv4) relacionados ao o esgotamento de endereços, a segurança, a configuração automática, a necessidade de extensibilidade e outros. O IPv6 expande os recursos da Internet para habilitar novos tipos de aplicativos, inclusive aplicativos móveis e de ponto a ponto. Estes são os principais problemas do protocolo IPv4 atual:  

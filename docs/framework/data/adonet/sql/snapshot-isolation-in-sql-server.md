@@ -1,22 +1,23 @@
 ---
 title: Isolamento de instantâneo no SQL Server
+description: Leia uma visão geral de isolamento de instantâneo e controle de versão de linha no SQL Server e saiba como gerenciar a simultaneidade com níveis de isolamento.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 8313ffc8eef70c1e5efc24b09a160edb7cec1595
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7fa769448dd922925a5eccf4c85bd1840155df68
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174258"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286238"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Isolamento de instantâneo no SQL Server
 O isolamento de instantâneo aprimora a simultaneidade para aplicativos OLTP.  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>Entendendo o isolamento de instantâneo e o controle de versão de linha  
- Uma vez ativado o isolamento do instantâneo, as versões de linha atualizadas para cada transação devem ser mantidas.  Antes do SQL Server 2019, essas versões eram armazenadas em **tempdb**. O SQL Server 2019 introduz um novo recurso, O ADR (Accelerated Database Recovery, recuperação acelerada do banco de dados), que requer seu próprio conjunto de versões de linha.  Assim, a partir do SQL Server 2019, se o ADR não estiver habilitado, as versões de linha são mantidas em **temperaturas** como sempre.  Se o ADR estiver ativado, todas as versões de linha, ambas relacionadas ao isolamento de instantâneos e ao ADR, serão mantidas no Persistent Version Store (PVS) do ADR, que está localizado no banco de dados do usuário em um grupo de arquivos que o usuário especifica. Um número de sequência de transação exclusivo identifica cada transação. Esses números exclusivos são registrados para cada versão de linha. A transação funciona com as versões de linha mais recentes que têm um número de sequência anterior ao número de sequência da transação. As versões de linha mais recentes criadas depois que a transação foi iniciada são ignoradas pela transação.  
+ Depois que o isolamento de instantâneo estiver habilitado, as versões de linha atualizadas para cada transação deverão ser mantidas.  Antes do SQL Server 2019, essas versões eram armazenadas em **tempdb**. SQL Server 2019 apresenta um novo recurso, a ADR (recuperação de banco de dados acelerada) que exige seu próprio conjunto de versões de linha.  Portanto, a partir de SQL Server 2019, se ADR não estiver habilitado, as versões de linha serão mantidas em **tempdb** como sempre.  Se ADR estiver habilitado, todas as versões de linha, relacionadas ao isolamento de instantâneo e ADR, serão mantidas no repositório de versão persistente do ADR (PVS), que está localizado no banco de dados do usuário em um grupo de arquivos que o usuário especifica. Um número de sequência de transação exclusivo identifica cada transação. Esses números exclusivos são registrados para cada versão de linha. A transação funciona com as versões de linha mais recentes que têm um número de sequência anterior ao número de sequência da transação. As versões de linha mais recentes criadas depois que a transação foi iniciada são ignoradas pela transação.  
   
  O termo "instantâneo" reflete o fato de que todas as consultas na transação veem a mesma versão (ou instantâneo) do banco de dados, com base no estado do banco de dados no momento em que a transação é iniciada. Nenhum bloqueio é adquirido nas linhas de dados subjacentes ou páginas de dados em uma transação de instantâneo, o que permite que outras transações sejam executadas sem serem bloqueadas por uma transação anterior não concluída. Transações que modificam dados não bloqueiam transações que leem dados e transações que leem dados não bloqueiam transações que gravam dados, como normalmente fariam no nível de isolamento READ COMMITTED padrão no SQL Server. Esse comportamento de não bloqueio também reduz consideravelmente a probabilidade de deadlocks para transações complexas.  
   
@@ -97,7 +98,7 @@ SqlTransaction sqlTran =
   
 - Abre uma segunda conexão e inicia uma segunda transação usando o nível de isolamento SNAPSHOT para ler os dados na tabela **TestSnapshot**. Como o isolamento de instantâneo está habilitado, essa transação pode ler os dados que existiam antes de a sqlTransaction1 ser iniciada.  
   
-- Abre uma terceira conexão e inicia uma transação usando o nível de isolamento READ COMMITTED para tentar ler os dados na tabela. Neste caso, o código não pode ler os dados porque não pode ler além dos bloqueios colocados na tabela na primeira transação e horários fora. O mesmo resultado ocorreria se os níveis de isolamento REPEATABLE READ e SERIALIZABLE fossem usados porque esses níveis de isolamento também não podem ler além dos bloqueios colocados na primeira transação.  
+- Abre uma terceira conexão e inicia uma transação usando o nível de isolamento READ COMMITTED para tentar ler os dados na tabela. Nesse caso, o código não pode ler os dados porque não é possível ler após os bloqueios colocados na tabela na primeira transação e expirar. O mesmo resultado ocorreria se os níveis de isolamento REPETIdos de leitura e SERIALIZÁvel fossem usados porque esses níveis de isolamento também não conseguem ler os bloqueios colocados na primeira transação.  
   
 - Ele abre uma quarta conexão e inicia uma transação usando o nível de isolamento READ UNCOMMITTED, que executa uma leitura suja do valor não confirmado em sqlTransaction1. Esse valor poderá nunca realmente existir no banco de dados se a primeira transação não for confirmada.  
   
@@ -141,7 +142,7 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
  Se o aplicativo tem muitos conflitos, o isolamento de instantâneo pode não ser a melhor opção. As dicas só devem ser usadas quando realmente necessário. Seu aplicativo não deve ser projetado para que ele dependa constantemente de dicas de bloqueio para sua operação.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [SQL Server e ADO.NET](index.md)
 - [Visão geral do ADO.NET](../ado-net-overview.md)

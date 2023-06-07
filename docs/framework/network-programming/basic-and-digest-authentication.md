@@ -1,5 +1,6 @@
 ---
 title: Autenticação Básica e Digest
+description: Aprenda a usar a autenticação básica e resumida, em que um aplicativo fornece um nome de usuário e senha no objeto WebRequest que ele usa para solicitar dados.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - network resources, authentication
 - user authentication, digest
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
-ms.openlocfilehash: 9a1ad701e1e8f4ee9966ebd56922c29e2bae7a03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7772430b508b52a63d716550b69018385418c132
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048910"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502686"
 ---
 # <a name="basic-and-digest-authentication"></a>Autenticação Básica e Digest
 A implementação <xref:System.Net> da autenticação básica e digest está em conformidade com o RFC2617 – Autenticação HTTP: Autenticação Básica e Digest (disponível no site da [World Wide Web Consortium](https://www.w3.org)).  

@@ -1,17 +1,18 @@
 ---
 title: Classes e métodos partial – Guia de Programação em C#
+description: Classes e métodos parciais em C# dividem a definição de uma classe, uma struct, uma interface ou um método em dois ou mais arquivos de origem.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 50b192d5a7416a982f41d0c3ac13e9c1bfe3397c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 792159786131654d6ee0363f7ab7b87ac50d32bb
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399815"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864742"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classes e métodos partial (Guia de Programação em C#)
 
@@ -52,7 +53,7 @@ Elas são equivalentes às seguintes declarações:
 
 Os itens a seguir são mesclados de todas as definições de tipo parcial:
 
-- comentários XML
+- Comentários XML
 
 - interfaces
 
@@ -92,13 +93,13 @@ Há várias regras para seguir quando você está trabalhando com definições d
 
   - [público](../../language-reference/keywords/public.md)
 
-  - [Privada](../../language-reference/keywords/private.md)
+  - [pessoal](../../language-reference/keywords/private.md)
 
-  - [Protegido](../../language-reference/keywords/protected.md)
+  - [protegidos](../../language-reference/keywords/protected.md)
 
-  - [Interno](../../language-reference/keywords/internal.md)
+  - [interno](../../language-reference/keywords/internal.md)
 
-  - [Abstrata](../../language-reference/keywords/abstract.md)
+  - [resume](../../language-reference/keywords/abstract.md)
 
   - [sealed](../../language-reference/keywords/sealed.md)
 
@@ -169,10 +170,10 @@ partial void onNameChanged()
 
 Para obter mais informações, veja [Tipos parciais](~/_csharplang/spec/classes.md#partial-types) na [Especificação da Linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Classes](./classes.md)
 - [Tipos de estrutura](../../language-reference/builtin-types/struct.md)
 - [Interfaces](../interfaces/index.md)
-- [parcial (Tipo)](../../language-reference/keywords/partial-type.md)
+- [partial (tipo)](../../language-reference/keywords/partial-type.md)

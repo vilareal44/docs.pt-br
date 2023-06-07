@@ -2,12 +2,12 @@
 title: Execução adiada e avaliação lenta em LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: 31998eed-b95e-47fb-a865-9de1f337d1fb
-ms.openlocfilehash: 8e94b9133a2d2dd287fba91600c94460a5204b2c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 98a5010de6ea7ef46d845c6a921c54d4e7692370
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346400"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410806"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-visual-basic"></a>Execução retardada e avaliação lenta no LINQ to XML (Visual Basic)
 As operações de consulta e eixo são geralmente implementadas para usar a execução adiada. Este tópico explica os requisitos e as vantagens da execução adiada, além de algumas considerações sobre a implementação.  
@@ -26,13 +26,13 @@ As operações de consulta e eixo são geralmente implementadas para usar a exec
   
  A avaliação lenta normalmente gera um melhor desempenho porque distribui a sobrecarga de processamento uniformemente por toda a avaliação da coleção e minimiza o uso de dados temporários. Naturalmente, para algumas operações, não há nenhuma outra opção que não seja materializar resultados intermediários.  
   
-## <a name="next-steps"></a>{1&gt;Próximas etapas&lt;1}  
+## <a name="next-steps"></a>Próximas etapas  
  O próximo tópico deste tutorial ilustra a execução adiada:  
   
-- [Exemplo de execução adiada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)  
+- [Exemplo de execução adiada (Visual Basic)](deferred-execution-example.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Tutorial: execução adiada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
-- [Conceitos e terminologia (transformação funcional) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
-- [Operações de agregação (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)
+- [Tutorial: execução adiada (Visual Basic)](tutorial-deferred-execution.md)
+- [Conceitos e terminologia (transformação funcional) (Visual Basic)](concepts-and-terminology-functional-transformation.md)
+- [Operações de agregação (Visual Basic)](aggregation-operations.md)

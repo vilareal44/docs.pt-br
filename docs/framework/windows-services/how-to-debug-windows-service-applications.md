@@ -1,5 +1,6 @@
 ---
-title: Como depurar aplicativos de Serviço Windows
+title: 'Como: Depurar aplicativos do serviço Windows'
+description: Entenda como depurar aplicativos de serviço do Windows, que não são tão simples de depurar quanto outros tipos de aplicativos do Visual Studio.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging Windows Service applications
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 860f2ae22eb6510dc1f1a454ae3e51ccb366078b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: fb58f2ff4f480347f0f233ecd9a619cf287cfdfd
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053617"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925755"
 ---
-# <a name="how-to-debug-windows-service-applications"></a>Como depurar aplicativos de Serviço Windows
+# <a name="how-to-debug-windows-service-applications"></a>Como: Depurar aplicativos do serviço Windows
 Um serviço deve ser executado de dentro do contexto do Gerenciador de Controle de Serviços, em vez de dentro do Visual Studio. Por esse motivo, depurar um serviço não é tão simples como depurar outros tipos de aplicativos do Visual Studio. Para depurar um serviço, você deve iniciar o serviço e, em seguida, anexar um depurador ao processo no qual ele está sendo executado. Em seguida, você pode depurar seu aplicativo usando todas as funcionalidades de depuração padrão do Visual Studio.  
   
 > [!CAUTION]
@@ -113,9 +114,9 @@ Um serviço deve ser executado de dentro do contexto do Gerenciador de Controle 
   
  Em alguns casos, como quando você deseja depurar um problema ocorre apenas na inicialização do sistema, é necessário usar o depurador do Windows. [Baixe o Windows Driver Kit (WDK)](/windows-hardware/drivers/download-the-wdk) e consulte [Como depurar serviços Windows](https://support.microsoft.com/kb/824344).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Introdução aos aplicativos de serviço do Windows](introduction-to-windows-service-applications.md)
-- [Como instalar e desinstalar serviços](how-to-install-and-uninstall-services.md)
-- [Como iniciar serviços](how-to-start-services.md)
+- [Introdução a aplicativos do Serviço Windows](introduction-to-windows-service-applications.md)
+- [Como: instalar e desinstalar serviços](how-to-install-and-uninstall-services.md)
+- [Como: Iniciar serviços](how-to-start-services.md)
 - [Depurar um serviço](/windows/desktop/Services/debugging-a-service)

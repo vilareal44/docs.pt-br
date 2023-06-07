@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1b2bbf3f-943e-412e-b66c-e802431b055c
 topic_type:
 - apiref
-ms.openlocfilehash: 21a69d120cc732ca6659f77abc9f8ea0c993271e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 545fe1e1d9e641d2225ad92c11453558dc4b97d1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437791"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491492"
 ---
 # <a name="imetadataimportfindtyperef-method"></a>Método IMetaDataImport::FindTypeRef
-Obtém um ponteiro para o token TypeRef para a referência de <xref:System.Type> que está no escopo especificado e que tem o nome especificado.  
+Obtém um ponteiro para o token TypeRef para a <xref:System.Type> referência que está no escopo especificado e que tem o nome especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,16 +45,16 @@ HRESULT FindTypeRef (
  `ptr`  
  fora Um ponteiro para o token TypeRef correspondente.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

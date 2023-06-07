@@ -3,23 +3,23 @@ title: Elemento <defaultCertificate>
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
 ms.openlocfilehash: cce236bf80fa00f01a3b5f4680d975f83fde0c16
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400423"
 ---
-# <a name="defaultcertificate-element"></a>\<Elemento de > DefaultCertificate
+# <a name="defaultcertificate-element"></a>Elemento \<defaultCertificate>
 Especifica um certificado X. 509 a ser usado quando um serviço ou STS não fornecer um por meio de um protocolo de negociação.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamentos >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de comportamento**](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de certificados**](servicecertificate-of-clientcredentials-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> DefaultCertificate**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<clientCredentials>**](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceCertificate>**](servicecertificate-of-clientcredentials-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<defaultCertificate>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,7 +37,7 @@ Especifica um certificado X. 509 a ser usado quando um serviço ou STS não forn
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|findValue|Cadeia. O valor a ser procurado.|  
+|findValue|Cadeia de caracteres. O valor a ser procurado.|  
 |x509FindType|Enumeração. Um dos campos de certificado a serem pesquisados.|  
 |storeLocation|Enumeração. Um dos dois locais de armazenamento do sistema para pesquisar.|  
 |storeName|Enumeração. Uma das lojas de sistema para pesquisa.|  
@@ -46,13 +46,13 @@ Especifica um certificado X. 509 a ser usado quando um serviço ou STS não forn
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Cadeia de Caracteres|O valor depende do campo (especificado pelo atributo X509FindType) que está sendo pesquisado. Por exemplo, se estiver procurando uma impressão digital, o valor deverá ser uma cadeia de caracteres de números hexadecimais.|  
+|String|O valor depende do campo (especificado pelo atributo X509FindType) que está sendo pesquisado. Por exemplo, se estiver procurando uma impressão digital, o valor deverá ser uma cadeia de caracteres de números hexadecimais.|  
   
 ## <a name="x509findtype-attribute"></a>Atributo x509FindType  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Enumeração|Os valores são: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
+|Enumeração|Os valores incluem: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
   
 ## <a name="storelocation-attribute"></a>Atributo storeLocation  
   
@@ -64,10 +64,10 @@ Especifica um certificado X. 509 a ser usado quando um serviço ou STS não forn
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Enumeração|Os valores são: Catálogo, AuthRoot, CertificateAuthority, não permitido, My, root, TrustedPeople e TrustedPublisher.|  
+|Enumeração|Os valores incluem: catálogo, AuthRoot, CertificateAuthority, não permitido, My, root, TrustedPeople e TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -79,7 +79,7 @@ Especifica um certificado X. 509 a ser usado quando um serviço ou STS não forn
  Para associações que usam segurança de mensagem baseada em certificado, o certificado especificado por esse elemento de configuração é usado para criptografar mensagens para o serviço e deve ser usado pelo serviço para assinar respostas para o cliente. Ele armazena um único certificado a ser usado quando nenhum certificado é especificado por um serviço.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir especifica um certificado a ser usado para pontos de extremidade cujo URI `http://www.contoso.com` começa com e um certificado a ser usado para todos os outros pontos de extremidade que não executam a negociação de certificado.  
+ O exemplo a seguir especifica um certificado a ser usado para pontos de extremidade cujo URI começa com `http://www.contoso.com` e um certificado a ser usado para todos os outros pontos de extremidade que não executam a negociação de certificado.  
   
 ```xml  
 <serviceCertificate>
@@ -99,7 +99,7 @@ Especifica um certificado X. 509 a ser usado quando um serviço ou STS não forn
 </serviceCertificate>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Configuration.X509DefaultServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>

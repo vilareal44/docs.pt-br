@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: 9560faf90d531c32f104dbd053a7c1f5584cfb1b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 31936fb2c8f658203a43702a2b5fa4ee2481beb5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351179"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404596"
 ---
 # <a name="get-statement"></a>Instrução Get
-Declara um procedimento de propriedade `Get` usado para recuperar o valor de uma propriedade.  
+Declara um `Get` procedimento de propriedade usado para recuperar o valor de uma propriedade.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,43 +33,43 @@ End Get
   
 |Termo|Definição|  
 |---|---|  
-|`attributelist`|Opcional. Consulte a [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Opcional em no máximo uma das instruções `Get` e `Set` nesta propriedade. Pode ser um dos seguintes:<br /><br /> -   [protegido](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [amigo](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [privado](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Consulte [níveis de acesso em Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`statements`|Opcional. Uma ou mais instruções que são executadas quando o procedimento de propriedade de `Get` é chamado.|  
-|`End Get`|Necessária. Encerra a definição do procedimento da propriedade `Get`.|  
+|`attributelist`|Opcional. Consulte a [lista de atributos](attribute-list.md).|  
+|`accessmodifier`|Opcional em no máximo uma das `Get` instruções e `Set` nesta propriedade. Pode ser um dos seguintes:<br /><br /> -   [Protected](../modifiers/protected.md)<br />-   [Público](../modifiers/friend.md)<br />-   [Pessoal](../modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Consulte [níveis de acesso em Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).|  
+|`statements`|Opcional. Uma ou mais instruções que são executadas quando o `Get` procedimento de propriedade é chamado.|  
+|`End Get`|Obrigatórios. Encerra a definição do procedimento de `Get` propriedade.|  
   
 ## <a name="remarks"></a>Comentários  
- Cada propriedade deve ter um procedimento de propriedade `Get`, a menos que a propriedade seja marcada `WriteOnly`. O procedimento `Get` é usado para retornar o valor atual da propriedade.  
+ Cada propriedade deve ter um `Get` procedimento de propriedade, a menos que a propriedade esteja marcada `WriteOnly` . O `Get` procedimento é usado para retornar o valor atual da propriedade.  
   
- Visual Basic chama automaticamente o procedimento `Get` de uma propriedade quando uma expressão solicita o valor da propriedade.  
+ Visual Basic chama automaticamente o procedimento de uma propriedade `Get` quando uma expressão solicita o valor da propriedade.  
   
- O corpo da declaração de propriedade pode conter apenas os procedimentos `Get` e `Set` da propriedade entre a [instrução de propriedade](../../../visual-basic/language-reference/statements/property-statement.md) e a instrução `End Property`. Ele não pode armazenar nada além desses procedimentos. Em particular, ele não pode armazenar o valor atual da propriedade. Você deve armazenar esse valor fora da propriedade, porque se armazená-lo dentro de qualquer um dos procedimentos de propriedade, o outro procedimento de propriedade não poderá acessá-lo. A abordagem usual é armazenar o valor em uma variável [privada](../../../visual-basic/language-reference/modifiers/private.md) declarada no mesmo nível da propriedade. Você deve definir um procedimento `Get` dentro da propriedade à qual ele se aplica.  
+ O corpo da declaração de propriedade pode conter somente as propriedades `Get` e os `Set` procedimentos entre a [instrução de propriedade](property-statement.md) e a `End Property` instrução. Ele não pode armazenar nada além desses procedimentos. Em particular, ele não pode armazenar o valor atual da propriedade. Você deve armazenar esse valor fora da propriedade, porque se armazená-lo dentro de qualquer um dos procedimentos de propriedade, o outro procedimento de propriedade não poderá acessá-lo. A abordagem usual é armazenar o valor em uma variável [privada](../modifiers/private.md) declarada no mesmo nível da propriedade. Você deve definir um `Get` procedimento dentro da propriedade à qual ele se aplica.  
   
- O procedimento `Get` assume como padrão o nível de acesso de sua propriedade contendo, a menos que você use `accessmodifier` na instrução `Get`.  
+ O `Get` procedimento assume como padrão o nível de acesso de sua propriedade contendo, a menos que você use `accessmodifier` na `Get` instrução.  
   
 ## <a name="rules"></a>Regras  
   
-- **Níveis de acesso misto.** Se você estiver definindo uma propriedade de leitura/gravação, poderá opcionalmente especificar um nível de acesso diferente para o `Get` ou para o procedimento `Set`, mas não ambos. Se você fizer isso, o nível de acesso do procedimento deverá ser mais restritivo do que o nível de acesso da propriedade. Por exemplo, se a propriedade for declarada `Friend`, você poderá declarar o procedimento `Get` `Private`, mas não `Public`.  
+- **Níveis de acesso misto.** Se você estiver definindo uma propriedade de leitura/gravação, poderá opcionalmente especificar um nível de acesso diferente para o `Get` ou o `Set` procedimento, mas não ambos. Se você fizer isso, o nível de acesso do procedimento deverá ser mais restritivo do que o nível de acesso da propriedade. Por exemplo, se a propriedade for declarada `Friend` , você poderá declarar o `Get` procedimento `Private` , mas não `Public` .  
   
-     Se você estiver definindo uma propriedade `ReadOnly`, o procedimento `Get` representará a propriedade inteira. Você não pode declarar um nível de acesso diferente para `Get`, pois isso definiria dois níveis de acesso para a propriedade.  
+     Se você estiver definindo uma `ReadOnly` propriedade, o `Get` procedimento representará a propriedade inteira. Não é possível declarar um nível de acesso diferente para `Get` , pois isso definiria dois níveis de acesso para a propriedade.  
   
-- **Tipo de retorno.** A [instrução Property](../../../visual-basic/language-reference/statements/property-statement.md) pode declarar o tipo de dados do valor que ele retorna. O procedimento `Get` retorna automaticamente esse tipo de dados. Você pode especificar qualquer tipo de dados ou o nome de uma enumeração, estrutura, classe ou interface.  
+- **Tipo de retorno.** A [instrução Property](property-statement.md) pode declarar o tipo de dados do valor que ele retorna. O `Get` procedimento retorna automaticamente esse tipo de dados. Você pode especificar qualquer tipo de dados ou o nome de uma enumeração, estrutura, classe ou interface.  
   
-     Se a instrução `Property` não especificar `returntype`, o procedimento retornará `Object`.  
+     Se a `Property` instrução não especificar `returntype` , o procedimento retornará `Object` .  
   
 ## <a name="behavior"></a>Comportamento  
   
-- **Retornando de um procedimento.** Quando o procedimento de `Get` retorna ao código de chamada, a execução continua dentro da instrução que solicitou o valor da propriedade.  
+- **Retornando de um procedimento.** Quando o `Get` procedimento retorna ao código de chamada, a execução continua dentro da instrução que solicitou o valor da propriedade.  
   
-     `Get` procedimentos de propriedade podem retornar um valor usando a [instrução return](../../../visual-basic/language-reference/statements/return-statement.md) ou atribuindo o valor de retorno ao nome da propriedade. Para obter mais informações, consulte "valor de retorno" na [instrução function](../../../visual-basic/language-reference/statements/function-statement.md).  
+     `Get`os procedimentos de propriedade podem retornar um valor usando a [instrução return](return-statement.md) ou atribuindo o valor de retorno ao nome da propriedade. Para obter mais informações, consulte "valor de retorno" na [instrução function](function-statement.md).  
   
-     As instruções `Exit Property` e `Return` causam uma saída imediata de um procedimento de propriedade. Qualquer número de instruções `Exit Property` e `Return` pode aparecer em qualquer lugar no procedimento, e você pode misturar `Exit Property` e instruções `Return`.  
+     As `Exit Property` `Return` instruções e causam uma saída imediata de um procedimento de propriedade. Qualquer número de `Exit Property` `Return` instruções and pode aparecer em qualquer lugar no procedimento, e você pode misturar `Exit Property` e `Return` demonstrativos.  
   
-- **Valor de retorno.** Para retornar um valor de um procedimento `Get`, você pode atribuir o valor ao nome da propriedade ou incluí-lo em uma [instrução return](../../../visual-basic/language-reference/statements/return-statement.md). A instrução `Return` atribui simultaneamente o valor de retorno do procedimento `Get` e sai do procedimento.  
+- **Valor de retorno.** Para retornar um valor de um `Get` procedimento, você pode atribuir o valor ao nome da propriedade ou incluí-lo em uma [instrução return](return-statement.md). A `Return` instrução atribui simultaneamente o valor de `Get` retorno do procedimento e sai do procedimento.  
   
-     Se você usar `Exit Property` sem atribuir um valor ao nome da propriedade, o procedimento `Get` retornará o valor padrão para o tipo de dados da propriedade. Para obter mais informações, consulte "valor de retorno" na [instrução function](../../../visual-basic/language-reference/statements/function-statement.md).  
+     Se você usar `Exit Property` sem atribuir um valor ao nome da propriedade, o `Get` procedimento retornará o valor padrão para o tipo de dados da propriedade. Para obter mais informações, consulte "valor de retorno" na [instrução function](function-statement.md).  
   
-     O exemplo a seguir ilustra duas maneiras como a propriedade somente leitura `quoteForTheDay` pode retornar o valor mantido na variável privada `quoteValue`.  
+     O exemplo a seguir ilustra duas maneiras como a propriedade somente leitura `quoteForTheDay` pode retornar o valor mantido na variável privada `quoteValue` .  
   
      [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]  
   
@@ -78,14 +78,14 @@ End Get
      [!code-vb[VbVbalrStatements#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#29)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa a instrução `Get` para retornar o valor de uma propriedade.  
+ O exemplo a seguir usa a `Get` instrução para retornar o valor de uma propriedade.  
   
  [!code-vb[VbVbalrStatements#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#30)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Instrução Set](../../../visual-basic/language-reference/statements/set-statement.md)
-- [Instrução Property](../../../visual-basic/language-reference/statements/property-statement.md)
-- [Instrução Exit](../../../visual-basic/language-reference/statements/exit-statement.md)
-- [Objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Instruções passo a passo: definindo classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)
+- [Instrução SET](set-statement.md)
+- [Instrução Property](property-statement.md)
+- [Instrução Exit](exit-statement.md)
+- [Objetos e classes](../../programming-guide/language-features/objects-and-classes/index.md)
+- [Instruções passo a passo: definindo classes](../../programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)

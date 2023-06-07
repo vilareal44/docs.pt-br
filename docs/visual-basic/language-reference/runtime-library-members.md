@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: a73589c4b0d0faeac321090e6030f1f8392a5342
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f7c7d818e6439f732031e23f297661bb960effb7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349611"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359484"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Membros da Biblioteca de Runtime do Visual Basic
 
-O namespace `Microsoft.VisualBasic` contém as classes, os módulos, as constantes e as enumerações que constituem a biblioteca de tempo de execução Visual Basic. Esses membros da biblioteca fornecem procedimentos, propriedades e valores constantes que você pode usar em seu código. Cada módulo e classe representa uma determinada categoria de funcionalidade.  
+O `Microsoft.VisualBasic` namespace contém as classes, os módulos, as constantes e as enumerações que constituem a biblioteca de tempo de execução Visual Basic. Esses membros da biblioteca fornecem procedimentos, propriedades e valores constantes que você pode usar em seu código. Cada módulo e classe representa uma determinada categoria de funcionalidade.  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Classe Microsoft. VisualBasic. Collection  
   
@@ -98,7 +98,7 @@ O namespace `Microsoft.VisualBasic` contém as classes, os módulos, as constant
 |<xref:Microsoft.VisualBasic.ErrObject.HelpContext%2A>|<xref:Microsoft.VisualBasic.ErrObject.HelpFile%2A>|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|<xref:Microsoft.VisualBasic.ErrObject.Number%2A>|  
 |<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|||  
   
-## <a name="microsoftvisualbasicfilesystem-module"></a>Microsoft.VisualBasic.FileSystem Module  
+## <a name="microsoftvisualbasicfilesystem-module"></a>Módulo Microsoft. VisualBasic. FileSystem  
   
 |||||  
 |---|---|---|---|  
@@ -193,9 +193,9 @@ O namespace `Microsoft.VisualBasic` contém as classes, os módulos, as constant
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Constantes e enumerações do Microsoft. VisualBasic  
 
- O namespace `Microsoft.VisualBasic` fornece constantes e enumerações como parte da biblioteca de tempo de execução Visual Basic. Você pode usar esses valores constantes em seu código. Cada enumeração representa uma determinada categoria de funcionalidade. Para obter mais informações, consulte [constantes e enumerações](../../visual-basic/language-reference/constants-and-enumerations.md).  
+ O `Microsoft.VisualBasic` namespace fornece constantes e enumerações como parte da biblioteca de tempo de execução Visual Basic. Você pode usar esses valores constantes em seu código. Cada enumeração representa uma determinada categoria de funcionalidade. Para obter mais informações, consulte [constantes e enumerações](constants-and-enumerations.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Constantes e Enumerações](../../visual-basic/language-reference/constants-and-enumerations.md)
-- [Palavras-chave](../../visual-basic/language-reference/keywords/index.md)
+- [Constantes e enumerações](constants-and-enumerations.md)
+- [Palavras-chave](keywords/index.md)

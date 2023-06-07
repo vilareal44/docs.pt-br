@@ -1,5 +1,6 @@
 ---
 title: Acessando atributos personalizados
+description: Acesse atributos personalizados no .NET. Depois que os atributos tiverem sido associados aos elementos do programa, você poderá usar a reflexão para consultar sua existência e valores.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - attributes [.NET Framework], accessing
 - reflection, custom attributes
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
-ms.openlocfilehash: a5651e9dc8cf40e737dd523ec5d29e876a9c0765
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1197fc5149e144d293deda1173e82ca2dadeda7d
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130299"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475132"
 ---
 # <a name="accessing-custom-attributes"></a>Acessando atributos personalizados
 Depois que os atributos tiverem sido associados aos elementos do programa, a reflexão poderá ser usada para consultar sua existência e seus valores. No .NET Framework versão 1.0 e 1.1, os atributos personalizados são examinados no contexto de execução. O .NET Framework versão 2.0 fornece um novo contexto de carregamento, o contexto somente para reflexão, que pode ser usado para examinar o código que não pode ser carregado para execução.  
@@ -70,7 +71,7 @@ public class LocalizationExtenderProvider
  [!code-csharp[CustomAttributeData#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source2.cs#2)]
  [!code-vb[CustomAttributeData#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source2.vb#2)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>

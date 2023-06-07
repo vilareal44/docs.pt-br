@@ -3,19 +3,19 @@ title: <udpAnnouncementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 5b3fa9c5-f372-4df9-a9d6-1e426063b721
 ms.openlocfilehash: 8dabf8845126705d082d080b643688ed62883f39
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70854920"
 ---
-# <a name="udpannouncementendpoint"></a>\<udpAnnouncementEndpoint>
+# \<udpAnnouncementEndpoint>
 Este elemento de configuração define um ponto de extremidade padrão que é usado pelos serviços para enviar mensagens de anúncio por uma associação UDP. Ele tem um contrato fixo e dá suporte a duas versões de descoberta. Além disso, ele tem uma associação de UDP fixa e um valor de endereço padrão, conforme as especificações do WS-Discovery (WS-Discovery de abril de 2005 ou WS-Discovery versão 1.1). Você pode especificar o endereço de multicast a ser usado para enviar e receber as mensagens de anúncio.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> standardEndpoints**](standardendpoints.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> udpAnnouncementEndpoint**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<standardEndpoints>**](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<udpAnnouncementEndpoint>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -81,6 +81,6 @@ Este elemento de configuração define um ponto de extremidade padrão que é us
 </standardEndpoints>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>

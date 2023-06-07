@@ -2,22 +2,22 @@
 title: Weakly-typed JSON Serialization Sample
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: bdeaffe31ba9bced28eebcfe294fc9944e5d05d0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a503878f1cbb60090b648da8dfec741edbf02d1b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143584"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602317"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Weakly-typed JSON Serialization Sample
-Ao serializar um tipo definido pelo usuário para um determinado formato de fio ou desserializar um formato de fio de volta para um tipo definido pelo usuário, o determinado tipo definido pelo usuário deve estar disponível tanto no serviço quanto no cliente. Normalmente, para <xref:System.Runtime.Serialization.DataContractAttribute> isso, o atributo é aplicado <xref:System.Runtime.Serialization.DataMemberAttribute> a esses tipos definidos pelo usuário e o atributo é aplicado aos seus membros. Esse mecanismo também se aplica ao trabalhar com objetos JSON (JavaScript Object Notation, notação de objetos javascript), conforme descrito no tópico [Como: Serializar e Desserializar dados JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
+Ao serializar um tipo definido pelo usuário para um determinado formato de conexão ou desserializar um formato de conexão de volta para um tipo definido pelo usuário, o tipo definido pelo usuário fornecido deve estar disponível no serviço e no cliente. Normalmente, para fazer isso, o <xref:System.Runtime.Serialization.DataContractAttribute> atributo é aplicado a esses tipos definidos pelo usuário e o <xref:System.Runtime.Serialization.DataMemberAttribute> atributo é aplicado aos seus membros. Esse mecanismo também se aplica ao trabalhar com objetos JavaScript Object Notation (JSON), conforme descrito no tópico [como serializar e desserializar dados JSON](../feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
- Em alguns cenários, um serviço ou cliente da Windows Communication Foundation (WCF) deve acessar objetos JSON gerados por um serviço ou cliente que esteja fora do controle do desenvolvedor. À medida que mais serviços da Web expõem publicamente as APIs JSON, pode se tornar impraticável para o desenvolvedor wcf construir tipos locais definidos pelo usuário para desserializar objetos JSON arbitrários. Esta amostra fornece um mecanismo que permite que os desenvolvedores do WCF trabalhem com objetos JSON desserializados e arbitrários, sem criar tipos definidos pelo usuário. Isso é conhecido como *serialização fracamente digitada* de objetos JSON, porque o tipo no qual um objeto JSON desserializa não é conhecido no momento da compilação.  
+ Em alguns cenários, um serviço ou cliente do Windows Communication Foundation (WCF) deve acessar objetos JSON gerados por um serviço ou cliente que está fora do controle do desenvolvedor. À medida que mais serviços Web expõem publicamente APIs JSON, pode se tornar impraticável para o desenvolvedor do WCF construir tipos locais definidos pelo usuário para desserializar objetos JSON arbitrários. Este exemplo fornece um mecanismo que permite que os desenvolvedores do WCF trabalhem com objetos JSON desserializados e arbitrários, sem criar tipos definidos pelo usuário. Isso é conhecido como *serialização de tipo fraco* de objetos JSON, pois o tipo no qual um objeto JSON é desserializado não é conhecido no momento da compilação.  
   
 > [!NOTE]
-> O procedimento de configuração e as instruções de construção desta amostra estão localizados no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- Por exemplo, uma API de serviço web público retorna o seguinte objeto JSON, que descreve algumas informações sobre um usuário do serviço.  
+ Por exemplo, uma API de serviço Web pública retorna o seguinte objeto JSON, que descreve algumas informações sobre um usuário do serviço.  
   
 ```json  
 {"personal": {"name": "Paul", "age": 23, "height": 1.7, "isSingle": true, "luckyNumbers": [5,17,21]}, "favoriteBands": ["Band ABC", "Band XYZ"]}  
@@ -58,7 +58,7 @@ Ao serializar um tipo definido pelo usuário para um determinado formato de fio 
   
  Isso pode ser complicado, especialmente se o cliente tiver que lidar com mais de um tipo de objeto JSON.  
   
- O `JsonObject` tipo fornecido por esta amostra introduz uma representação fracamente digitada do objeto JSON desserializado. `JsonObject`depende do mapeamento natural entre objetos JSON e dicionários .NET Framework, e no mapeamento entre matrizes JSON e matrizes .NET Framework. O código a `JsonObject` seguir mostra o tipo.  
+ O `JsonObject` tipo fornecido por este exemplo apresenta uma representação de tipo fraco do objeto JSON desserializado. `JsonObject`o depende do mapeamento natural entre objetos JSON e dicionários de .NET Framework e o mapeamento entre matrizes JSON e matrizes de .NET Framework. O código a seguir mostra o `JsonObject` tipo.  
   
 ```csharp  
 // Instantiation of JsonObject json omitted  
@@ -78,12 +78,12 @@ string[] favoriteBands = {
                                     };  
 ```  
   
- Observe que você pode "navegar" objetos e matrizes JSON sem a necessidade de declarar seu tipo na hora da compilação. Para obter uma explicação sobre a `["root"]` exigência do objeto de nível superior, consulte o tópico [Mapeamento entre JSON e XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
+ Observe que você pode "procurar" objetos JSON e matrizes sem a necessidade de declarar seu tipo no momento da compilação. Para obter uma explicação sobre o requisito para o objeto de nível superior `["root"]` , consulte o tópico [mapeamento entre JSON e XML](../feature-details/mapping-between-json-and-xml.md).  
   
 > [!NOTE]
-> A `JsonObject` classe é fornecida apenas como um exemplo. Não foi minuciosamente testado e não deve ser utilizado em ambientes de produção. Uma implicação óbvia da serialização JSON de tipo fraca é `JsonObject`a falta de segurança do tipo ao trabalhar com .  
+> A `JsonObject` classe é fornecida apenas como exemplo. Ele não foi totalmente testado e não deve ser usado em ambientes de produção. Uma implicação óbvia de serialização JSON de tipo fraco é a falta de segurança de tipos ao trabalhar com o `JsonObject` .  
   
- Para utilizar `JsonObject` o tipo, o <xref:System.ServiceModel.Channels.Message> contrato de operação do cliente deve usar como seu tipo de retorno.  
+ Para usar o `JsonObject` tipo, o contrato de operação do cliente deve usar <xref:System.ServiceModel.Channels.Message> como seu tipo de retorno.  
   
 ```csharp  
 [ServiceContract]  
@@ -98,7 +98,7 @@ string[] favoriteBands = {
     }  
 ```  
   
- O `JsonObject` é então instanciado como mostrado no código a seguir.  
+ O `JsonObject` é então instanciado, conforme mostrado no código a seguir.  
   
 ```csharp  
 // Code to instantiate IClientSideProfileService channel omitted…  
@@ -110,7 +110,7 @@ XmlDictionaryReader reader = channel.GetMemberProfile().GetReaderAtBodyContents(
 JsonObject json = new JsonObject(reader);  
 ```  
   
- O `JsonObject` construtor pega <xref:System.Xml.XmlDictionaryReader>um , que <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> é obtido através do método. O leitor contém uma representação XML da mensagem JSON recebida pelo cliente. Para obter mais informações, consulte o tópico [Mapeamento entre JSON e XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
+ O `JsonObject` construtor usa um <xref:System.Xml.XmlDictionaryReader> , que é obtido por meio do <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> método. O leitor contém uma representação XML da mensagem JSON recebida pelo cliente. Para obter mais informações, consulte o tópico [mapeamento entre JSON e XML](../feature-details/mapping-between-json-and-xml.md).  
   
  O programa produz a seguinte saída:  
   
@@ -125,9 +125,9 @@ My favorite bands are Band ABC and Band XYZ.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Certifique-se de que você tenha realizado o [procedimento de configuração única para as amostras da Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Construa a solução WeaklyTypedJson.sln conforme descrito na [Construção da Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Crie a solução WeaklyTypedJson. sln, conforme descrito em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).  
   
 3. Execute a solução.  
   
@@ -136,6 +136,6 @@ My favorite bands are Band ABC and Band XYZ.
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Se esse diretório não existir, vá para [a Windows Communication Foundation (WCF) e para o Windows Workflow Foundation (WF) Amostras para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Amostras e amostras da [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (Windows Communication Foundation). Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  

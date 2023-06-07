@@ -1,5 +1,6 @@
 ---
 title: Registrando assemblies com o COM
+description: Registre ou cancele o registro de assemblies com com usando a ferramenta de registro de assembly (Regasm.exe), que adiciona informações sobre a classe ao registro do sistema.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM interop, registering assemblies
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-ms.openlocfilehash: 9ff24a5705058d4e303b3b64b454ced8548053a4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1b73a79b8167e7f75b8c68f708179e88c575d66a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73113802"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621893"
 ---
 # <a name="registering-assemblies-with-com"></a>Registrando assemblies com o COM
 Você pode executar uma ferramenta de linha de comando chamada [Ferramenta de registro do Assembly (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) para registrar ou cancelar o registro de um assembly para uso com o COM. Regasm.exe adiciona informações sobre a classe no registro do sistema para que clientes COM possam usar a classe do .NET Framework de forma transparente. A classe <xref:System.Runtime.InteropServices.RegistrationServices> fornece a funcionalidade equivalente.  
@@ -41,9 +42,9 @@ Você pode executar uma ferramenta de linha de comando chamada [Ferramenta de re
   
  Para a subchave `InprocServer32`, uma referência a Mscoree.dll é exibida no lugar de uma biblioteca de tipos COM tradicional para indicar que o Common Language Runtime cria o objeto gerenciado.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Expondo componentes do .NET Framework para COM](exposing-dotnet-components-to-com.md)
-- [Como referenciar tipos do .NET com base no COM](how-to-reference-net-types-from-com.md)
+- [Como: Referenciar tipos .NET por meio do COM](how-to-reference-net-types-from-com.md)
 - [Chamando um objeto .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
 - [Implantando um aplicativo para acesso COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

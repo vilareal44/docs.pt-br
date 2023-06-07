@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-ms.openlocfilehash: b535fdd5027a26cc4dd0eafec9883f0186773dd1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 910c40413075131765a37e00703ac892e3f39641
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175493"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492181"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>Método IMetaDataImport::EnumInterfaceImpls
-Enumera todas as interfaces implementadas `TypeDef`pelo especificado .
+Enumera todas as interfaces implementadas pelo especificado `TypeDef` .
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,43 +37,43 @@ HRESULT EnumInterfaceImpls (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [dentro, fora] Um ponteiro para o enumerador.  
+ [entrada, saída] Um ponteiro para o enumerador.  
   
  `td`  
- [em] O token do TypeDef cujos tokens MethodDef representando implementações de interface devem ser enumerados.  
+ no O token do TypeDef cujos tokens MethodDef que representam implementações de interface devem ser enumerados.  
   
  `rImpls`  
- [fora] A matriz usada para armazenar os tokens MethodDef.  
+ fora A matriz usada para armazenar os tokens MethodDef.  
   
  `cMax`  
- [em] O comprimento máximo `rImpls` da matriz.  
+ no O comprimento máximo da `rImpls` matriz.  
   
  `pcImpls`  
- [fora] O número real de tokens retornou em `rImpls`.  
+ fora O número real de tokens retornados em `rImpls` .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumInterfaceImpls`retornou com sucesso.|  
-|`S_FALSE`|Não há tokens MethodDef para enumerar. Nesse caso, `pcImpls` está definido como zero.|  
+|`S_OK`|`EnumInterfaceImpls`retornado com êxito.|  
+|`S_FALSE`|Não há tokens MethodDef para enumerar. Nesse caso, `pcImpls` é definido como zero.|  
 
 ## <a name="remarks"></a>Comentários
 
-A enumeração retorna `mdInterfaceImpl` uma coleção de tokens para `TypeDef`cada interface implementada pelo especificado . Os tokens de interface são devolvidos na ordem `DefineTypeDef` `SetTypeDefProps`em que as interfaces foram especificadas (através ou ). As propriedades dos `mdInterfaceImpl` tokens retornados podem ser consultadas usando [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).
+A enumeração retorna uma coleção de `mdInterfaceImpl` tokens para cada interface implementada pelo especificado `TypeDef` . Os tokens de interface são retornados na ordem em que as interfaces foram especificadas (por meio `DefineTypeDef` de ou `SetTypeDefProps` ). As propriedades dos `mdInterfaceImpl` tokens retornados podem ser consultadas usando [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

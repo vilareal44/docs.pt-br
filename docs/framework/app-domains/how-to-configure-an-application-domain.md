@@ -1,5 +1,6 @@
 ---
-title: Como configurar um domínio de aplicativo
+title: 'Como: Configurar um domínio do aplicativo'
+description: Configure um domínio de aplicativo no .NET. Você pode fornecer ao CLR informações de configuração para um novo domínio de aplicativo usando a classe AppDomainSetup.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - application domains, configuring
 - ApplicationBase property
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
-ms.openlocfilehash: ca28984fa4a328e33d8d9bf79641cc451160f5ea
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 27afcf161bec74143fafb5dceb20597de73e23d4
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119912"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104862"
 ---
-# <a name="how-to-configure-an-application-domain"></a>Como configurar um domínio de aplicativo
+# <a name="how-to-configure-an-application-domain"></a>Como: Configurar um domínio do aplicativo
 Você pode fornecer o Common Language Runtime com informações de configuração para um novo domínio de aplicativo usando a classe <xref:System.AppDomainSetup>. Ao criar seus próprios domínios de aplicativo, a propriedade mais importante é <xref:System.AppDomainSetup.ApplicationBase%2A>. As outras propriedades **AppDomainSetup** são usadas principalmente por hosts de runtime para configurar um domínio de aplicativo específico.  
   
  A propriedade **ApplicationBase** define o diretório raiz do aplicativo. Quando o runtime precisar atender a uma solicitação de tipo, ele investigará em busca do assembly que contém o tipo no diretório especificado pela propriedade **ApplicationBase**.  
@@ -34,4 +35,4 @@ Você pode fornecer o Common Language Runtime com informações de configuraçã
 ## <a name="see-also"></a>Confira também
 
 - [Programação com domínios do aplicativo](application-domains.md#programming-with-application-domains)
-- [Uso de domínios do aplicativo](use.md)
+- [Usando domínios do aplicativo](use.md)

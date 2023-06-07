@@ -1,14 +1,14 @@
 ---
 title: Modelos personalizados para dotnet new
 description: Saiba mais sobre modelos personalizados para qualquer tipo de projeto ou de arquivos do .NET.
-author: thraka
+author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: 19855c99b240b66dfa819e70d4a1bee5c8ed14ed
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: cabe220917e7ff688a2c2d2df56d9bc7f8afdf56
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761909"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324502"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelos personalizados para dotnet new
 
@@ -36,7 +36,7 @@ dotnet new --list
 O modelo é composto pelas seguintes partes:
 
 - Arquivos e pastas de origem.
-- Um arquivo de configuração (*Template. JSON*).
+- Um arquivo de configuração (*template.jsem*).
 
 ### <a name="source-files-and-folders"></a>Arquivos e pastas de origem
 
@@ -55,7 +55,7 @@ Os arquivos gerados pelo modelo podem ser modificados com base na lógica e nas 
 
 O arquivo *template.json* é colocado em uma pasta *.template.config* no diretório raiz do modelo. O arquivo fornece informações de configuração para o mecanismo de modelo. A configuração mínima requer os membros mostrados na tabela a seguir, suficiente para criar um modelo funcional.
 
-| Membro            | Tipo          | Description |
+| Membro            | Tipo          | Descrição |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | O esquema JSON do arquivo *template.json*. Os editores que dão suporte a esquemas JSON habilitam recursos de edição de JSON quando o esquema é especificado. Por exemplo, o [Visual Studio Code](https://code.visualstudio.com/) requer que esse membro habilite o IntelliSense. Use um valor de `http://json.schemastore.org/template`. |
 | `author`          | string        | O autor do modelo. |
@@ -96,7 +96,7 @@ A pasta *mytemplate* é um pacote de modelo que pode ser instalado. Depois que o
 
 ## <a name="packing-a-template-into-a-nuget-package-nupkg-file"></a>Empacotamento de um modelo em um pacote NuGet (arquivo nupkg)
 
-Um modelo personalizado é fornecido com o comando [dotnet pack](dotnet-pack.md) e um arquivo *csproj*. Como alternativa, [NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference) pode ser usado com o comando [nuget pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) com um arquivo *.nuspec*. No entanto, o NuGet requer o .NET Framework no Windows e o [Mono](https://www.mono-project.com/) no Linux e MacOS.
+Um modelo personalizado é fornecido com o comando [dotnet pack](dotnet-pack.md) e um arquivo *csproj*. Como alternativa, [NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference) pode ser usado com o comando [nuget pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) com um arquivo *.nuspec*. No entanto, o NuGet requer o .NET Framework no Windows e no [mono](https://www.mono-project.com/) no Linux e no MacOS.
 
 O arquivo *.csproj* é ligeiramente diferente de um arquivo *.csproj* de projeto de código tradicional. Observe as seguintes configurações:
 

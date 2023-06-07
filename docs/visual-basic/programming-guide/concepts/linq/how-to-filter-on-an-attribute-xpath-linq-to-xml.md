@@ -1,13 +1,13 @@
 ---
-title: 'Como: Filtrar em um atributo (XPath- LINQ para XML)'
+title: 'Como: filtrar em um atributo (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
-ms.openlocfilehash: f8a804fa7937d8d27b38bba7a294f1c760101de8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5bc0a621f0d3bb8e22701440383cdac54c7be51b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353064"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394499"
 ---
 # <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Como filtrar em um atributo (XPath-LINQ to XML) (Visual Basic)
 Este tópico mostra como obter os elementos descendentes com um nome especificado e, com um atributo com um valor especificado.  
@@ -19,7 +19,7 @@ Este tópico mostra como obter os elementos descendentes com um nome especificad
 ## <a name="example"></a>Exemplo  
  Este exemplo localiza os elementos dos descendentes com o nome de `Address`, e com um atributo de `Type` com um valor de “enviar”.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -45,7 +45,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```console
 Results are identical  
@@ -75,6 +75,6 @@ Results are identical
 </Address>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [LINQ to XML para usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para usuários do XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

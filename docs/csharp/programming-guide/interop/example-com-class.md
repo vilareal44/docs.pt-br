@@ -1,16 +1,17 @@
 ---
 title: Exemplo de classe COM – Guia de Programação em C#
+description: Saiba como expor uma classe como um objeto COM em C#. Este exemplo adiciona código em arquivos. cs a um projeto e define o registro para a propriedade de interoperabilidade COM.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: 6af85d0314a44acbde0996cecbe6dad82cdcc8db
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4ea66ba26595c5bae2e579d1cc85c4b0d58616df
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712072"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303030"
 ---
 # <a name="example-com-class-c-programming-guide"></a>Exemplo de classe COM (Guia de Programação em C#)
 A seguir está um exemplo de uma classe que você poderia expor como um objeto COM. Depois que esse código é colocado em um arquivo .cs e adicionado ao seu projeto, defina a propriedade **Registrar para interoperabilidade COM** como **True**. Para obter mais informações, consulte [Como registrar um componente para interoperabilidade COM](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100)).
@@ -25,7 +26,7 @@ A seguir está um exemplo de uma classe que você poderia expor como um objeto C
   
 - Os eventos devem ser declarados na interface de eventos.  
   
- Os outros membros públicos na classe que não forem declarados nessas interfaces não estarão visíveis para o COM, mas eles estarão visíveis para outros objetos do .NET Framework.  
+ Outros membros públicos na classe que não são declarados nessas interfaces não estarão visíveis para COM, mas eles ficarão visíveis para outros objetos .NET.  
   
  Para expor propriedades e métodos ao COM, você deve declará-los na interface de classe e marcá-los com um atributo `DispId` e implementá-los na classe. A ordem na qual os membros são declarados na interface é a ordem usada para a vtable do COM.  
   
@@ -38,6 +39,6 @@ A seguir está um exemplo de uma classe que você poderia expor como um objeto C
   
 ## <a name="see-also"></a>Confira também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Interoperabilidade](./index.md)
 - [Página de Build, Designer de Projeto (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)

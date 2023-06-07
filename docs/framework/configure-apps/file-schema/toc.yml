@@ -9,10 +9,6 @@
       href: linkedconfiguration-element.md
     - name: Elemento <configSections>
       href: configsections-element-for-configuration.md
-    - name: Elemento <clear> para <configSections>
-      href: clear-element-for-configsections.md
-    - name: Elemento <remove> para <configSections>
-      href: remove-element-for-configsections.md
     - name: Elemento <sectionGroup>
       href: sectiongroup-element-for-configsections.md
     - name: Elemento personalizado para SingleTagSectionHandler

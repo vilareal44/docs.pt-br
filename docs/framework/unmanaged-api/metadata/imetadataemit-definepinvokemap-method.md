@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 03abf921-5154-4070-88fa-10b7092901fb
 topic_type:
 - apiref
-ms.openlocfilehash: e414bc5a7d537e8d153541f05b22dd91578e8739
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 447ec44ed3efc4eec84d1e4acd6f2ec1a730bf74
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177747"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008021"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>Método IMetaDataEmit::DefinePinvokeMap
 Define os recursos da assinatura PInvoke do método referenciado pelo token especificado.  
@@ -36,29 +36,29 @@ HRESULT DefinePinvokeMap (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `tk`  
- [em] O símbolo do método de destino.  
+ no O token para o método de destino.  
   
  `dwMappingFlags`  
- [em] Sinalizadores usados pelo PInvoke para fazer o mapeamento.  
+ no Sinalizadores usados pelo PInvoke para fazer o mapeamento.  
   
  `szImportName`  
- [em] O nome do método de exportação de destino em um DLL não gerenciado.  
+ no O nome do método de exportação de destino em uma DLL não gerenciada.  
   
  `mrImportDLL`  
- [em] O token para o DLL nativo alvo.  
+ no O token para a DLL nativa de destino.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interface IMetaDataEmit](imetadataemit-interface.md)
+- [Interface IMetaDataEmit2](imetadataemit2-interface.md)

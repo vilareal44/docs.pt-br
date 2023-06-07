@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - registry [Visual Basic]
 ms.assetid: 4a0dcce0-c27b-4199-baa8-ee4528da6a56
-ms.openlocfilehash: 841344186b8e56717b81e90397aabc608bdc6dab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 10431b1ad40ed320541a22fb46cc8db6dbb775b0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345495"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360066"
 ---
 # <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>Lendo e gravando no Registro usando o namespace Microsoft.Win32 (Visual Basic)
 
@@ -42,11 +42,11 @@ Embora `My.Computer.Registry` deva suprir suas necessidades básicas ao programa
   
  [!code-vb[VbResourceTasks#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#21)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.SystemException>
 - <xref:System.ApplicationException>
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
-- [Instrução Try...Catch...Finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [Ler e gravar no Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
-- [Segurança e Registro](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)
+- [Instrução Try...Catch...Finally](../../../language-reference/statements/try-catch-finally-statement.md)
+- [Ler e gravar no Registro](reading-from-and-writing-to-the-registry.md)
+- [Segurança e Registro](security-and-the-registry.md)

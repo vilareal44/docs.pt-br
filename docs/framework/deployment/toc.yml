@@ -10,11 +10,11 @@
           href: guide-for-administrators.md
         - name: Reduzindo reinicializações do sistema durante instalações do .NET Framework 4.5
           href: reducing-system-restarts.md
-        - name: Como acompanhar o progresso do Instalador do .NET Framework 4.5
+        - name: 'Como: Acompanhar o progresso do Instalador do .NET Framework 4.5'
           href: how-to-get-progress-from-the-dotnet-installer.md
-        - name: 'Erros de inicialização do .NET Framework: gerenciando a experiência do usuário'
+        - name: 'Erros de inicialização do .NET Framework: gerenciar a experiência do usuário'
           href: initialization-errors-managing-the-user-experience.md
-        - name: Como depurar problemas de ativação do CLR
+        - name: 'Como: depurar problemas de ativação do CLR'
           href: how-to-debug-clr-activation-issues.md
     - name: Implantando aplicativos .NET Framework
       href: net-framework-applications.md

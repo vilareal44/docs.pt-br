@@ -1,16 +1,16 @@
 ---
-title: Como obter a coleção de arquivos em um diretório
+title: 'Como: obter a coleção de arquivos em um diretório'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - folders, working with
 - files [Visual Basic], accessing
 ms.assetid: 6c8ba7e8-dd37-4853-92bf-762b67c98160
-ms.openlocfilehash: bb07ae25b413334f94456b378f0a2339402ac668
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 055151d4b3e3aba6be9b9b03ac9abffc6eb7b734
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74335330"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401609"
 ---
 # <a name="how-to-get-the-collection-of-files-in-a-directory-in-visual-basic"></a>Como obter a coleção de arquivos em um diretório no Visual Basic
 
@@ -48,8 +48,8 @@ As sobrecargas do método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles
   
 - O usuário não possui as permissões necessárias (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A>
-- [Como localizar arquivos com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)
-- [Como localizar subdiretórios com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
+- [Como: localizar arquivos com um padrão específico](how-to-find-files-with-a-specific-pattern.md)
+- [Como: localizar subdiretórios com um padrão específico](how-to-find-subdirectories-with-a-specific-pattern.md)

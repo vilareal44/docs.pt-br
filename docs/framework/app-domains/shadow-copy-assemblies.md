@@ -1,17 +1,18 @@
 ---
 title: Criando cópias de sombra de assemblies
+description: Explore a cópia de sombra de assemblies no .NET, de modo que os que são usados em um domínio de aplicativo possam ser atualizados sem descarregar o domínio do aplicativo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], shadow copying
 - application domains, shadow copying assemblies
 - shadow copying assemblies
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
-ms.openlocfilehash: 9fc8a4aeeeca40f71ed9114a9db40b9a56e5fe6b
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: a7ff72763dd26dbc50cd37e070c2d25ababa00f3
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204568"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104563"
 ---
 # <a name="shadow-copying-assemblies"></a>Criando cópias de sombra de assemblies
 
@@ -74,7 +75,7 @@ Quando um domínio de aplicativo que usa a cópia de sombra for iniciado, haver�
 
 Do .NET Framework 4 em diante, o comportamento de inicialização padrão é comparar diretamente a data e hora do arquivo de cada assembly no diretório de aplicativo com a data e hora do arquivo da cópia no diretório de cópia de sombra. Se o assembly tiver sido atualizado, ele será copiado usando o mesmo procedimento das versões anteriores do .NET Framework; caso contrário, a cópia no diretório de cópia de sombra será carregada.
 
-A melhoria no desempenho resultante é maior para aplicativos nos quais os assemblies não são alterados com frequência, e as alterações normalmente ocorrem em um pequeno subconjunto dos assemblies. Se a maioria dos assemblies em um aplicativo mudar com frequência, o novo comportamento padrão poderá causar uma regressão do desempenho. Você pode restaurar o comportamento de inicialização de versões anteriores do .NET Framework adicionando o [ \<elemento shadowCopyVerifyByTimestamp>](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) ao arquivo de configuração, com `enabled="false"`.
+A melhoria no desempenho resultante é maior para aplicativos nos quais os assemblies não são alterados com frequência, e as alterações normalmente ocorrem em um pequeno subconjunto dos assemblies. Se a maioria dos assemblies em um aplicativo mudar com frequência, o novo comportamento padrão poderá causar uma regressão do desempenho. Você pode restaurar o comportamento de inicialização de versões anteriores do .NET Framework adicionando o [ \<shadowCopyVerifyByTimestamp> elemento](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) ao arquivo de configuração, com `enabled="false"` .
 
 <a name="ObsoleteMethods"></a>
 
@@ -82,10 +83,10 @@ A melhoria no desempenho resultante é maior para aplicativos nos quais os assem
 
 A classe <xref:System.AppDomain> tem vários métodos, como <xref:System.AppDomain.SetShadowCopyFiles%2A> e <xref:System.AppDomain.ClearShadowCopyPath%2A>, que podem ser usados para controlar a cópia de sombra em um domínio do aplicativo, mas eles foram marcados como obsoletos no .NET Framework versão 2.0. A maneira recomendada de configurar um domínio do aplicativo para a cópia de sombra é usar as propriedades da classe <xref:System.AppDomainSetup>.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
-- [\<Elemento de> shadowCopyVerifyByTimestamp](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
+- [\<shadowCopyVerifyByTimestamp>Elementos](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)

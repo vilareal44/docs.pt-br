@@ -1,18 +1,19 @@
 ---
-title: 'Como: criar um serviço Web HTTP WCF básico'
+title: Como criar um serviço Web HTTP WCF básico
+description: Saiba como criar um serviço que expõe um ponto de extremidade da Web no WCF. Os pontos de extremidade da Web enviam dados usando XML ou JSON. Não há envelope SOAP.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-ms.openlocfilehash: e9646235f9423f2a4df9cfe09a5e83a91dcdcace
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 7481367f27d973ba809dff5ca1c4a4f168fbbb98
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895183"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247098"
 ---
-# <a name="how-to-create-a-basic-wcf-web-http-service"></a>Como: criar um serviço Web HTTP WCF básico
+# <a name="how-to-create-a-basic-wcf-web-http-service"></a>Como criar um serviço Web HTTP WCF básico
 
 Windows Communication Foundation (WCF) permite que você crie um serviço que expõe um ponto de extremidade da Web. Os pontos de extremidade Web enviam dados por XML ou JSON; não há envelope SOAP. Este tópico demonstra como expor um ponto de extremidade desse tipo.
 
@@ -77,7 +78,7 @@ Windows Communication Foundation (WCF) permite que você crie um serviço que ex
 
 ## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Para chamar operações de serviço mapeadas para GET no Internet Explorer
 
-1. Abra o Internet Explorer e digite`http://localhost:8000/EchoWithGet?s=Hello, world!`"" e pressione Enter. A URL contém o endereço base do serviço (`http://localhost:8000/`), o endereço relativo do ponto de extremidade (""), a operação de serviço a ser chamada ("EchoWithGet") e um ponto de interrogação seguido por uma lista de parâmetros nomeados separados por um e comercial (&).
+1. Abra o Internet Explorer e digite " `http://localhost:8000/EchoWithGet?s=Hello, world!` " e pressione Enter. A URL contém o endereço base do serviço ( `http://localhost:8000/` ), o endereço relativo do ponto de extremidade (""), a operação de serviço a ser chamada ("EchoWithGet") e um ponto de interrogação seguido por uma lista de parâmetros nomeados separados por um e comercial (&).
 
 ## <a name="to-call-service-operations-in-code"></a>Para chamar operações de serviço no código
 
@@ -112,11 +113,11 @@ A seguir está a listagem completa de códigos deste exemplo.
 
 Ao compilar Service.cs, faça referência à System.ServiceModel.dll e à System.ServiceModel.Web.dll.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>
 - <xref:System.ServiceModel.Web.WebInvokeAttribute>
 - <xref:System.ServiceModel.Web.WebServiceHost>
 - <xref:System.ServiceModel.Description.WebHttpBehavior>
-- [Modelo de programação HTTP Web do WCF](wcf-web-http-programming-model.md)
+- [Modelo de programação WCF Web HTTP](wcf-web-http-programming-model.md)

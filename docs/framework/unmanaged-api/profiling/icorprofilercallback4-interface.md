@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 665f3cfc-cd6f-4880-906c-ea65ad384783
 topic_type:
 - apiref
-ms.openlocfilehash: 1b85c48859ac29738347d112dd0466a76bfdfd2c
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 295d3d440529623f4569fd6c5f4debe7e4558990
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865331"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499435"
 ---
 # <a name="icorprofilercallback4-interface"></a>Interface ICorProfilerCallback4
 Fornece métodos de retorno de chamada que o Common Language Runtime (CLR) usa para comunicar informações ao criador de perfil.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
@@ -37,17 +37,17 @@ Fornece métodos de retorno de chamada que o Common Language Runtime (CLR) usa p
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerCallback2](icorprofilercallback2-interface.md)
-- [Interfaces de criação de perfil](profiling-interfaces.md)
+- [Criação de perfil de interfaces](profiling-interfaces.md)
 - [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)

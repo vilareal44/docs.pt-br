@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
 ms.openlocfilehash: ade55a5b26826633faf2e7ef7598a4071d613bbc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152535"
 ---
-# <a name="sessiontokenrequirement"></a>\<sessãoTokenRequirement>
-Fornece configuração <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> para as classes de classe ou derivadas.  
+# \<sessionTokenRequirement>
+Fornece a configuração para a <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> classe ou classes derivadas.  
   
-[**\<>de configuração**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de configuração de identidade**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de segurançaTokenHandlers**](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<adicionar>**](add.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<sessãoTokenRequisito>**  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<sessionTokenRequirement>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ Fornece configuração <xref:System.IdentityModel.Tokens.SessionSecurityTokenHan
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|lifetime|Especifica a vida útil dos tokens de sessão.|  
+|lifetime|Especifica o tempo de vida dos tokens de sessão.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -51,7 +51,7 @@ Fornece configuração <xref:System.IdentityModel.Tokens.SessionSecurityTokenHan
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<adicionar>](add.md)|Adiciona o manipulador de token de segurança especificado à coleção do manipulador de tokens.|  
+|[\<add>](add.md)|Adiciona o manipulador de token de segurança especificado à coleção de manipulador de token.|  
   
 ## <a name="example"></a>Exemplo  
   

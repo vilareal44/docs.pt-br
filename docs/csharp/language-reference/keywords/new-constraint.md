@@ -31,7 +31,7 @@ Você também pode usar a palavra-chave `new` para [criar uma instância de um t
 
 Para obter mais informações, confira a seção [Restrições de parâmetro de tipo](~/_csharplang/spec/classes.md#type-parameter-constraints) na [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência do C#](../index.md)
 - [Guia de programação C#](../../programming-guide/index.md)

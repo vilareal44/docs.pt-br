@@ -10,16 +10,16 @@ helpviewer_keywords:
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
 ms.openlocfilehash: 40a3c84e1deed4d215383670176623a6a79ac41d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155382"
 ---
-# <a name="systemcodedom-element"></a>\<system.codedom> Element
+# <a name="systemcodedom-element"></a>Elemento \<system.codedom>
 Especifica as definições de configuração do compilador para provedores de linguagem disponíveis.  
   
-[**\<>de configuração**](../configuration-element.md)  
+[**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;**\<system.codedom>**  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,34 +40,34 @@ Especifica as definições de configuração do compilador para provedores de li
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<compiladores>](compilers-element.md)|Recipiente para elementos de configuração do compilador; contém elementos>com [ \<compilador](compiler-element.md) zero ou mais.|  
+|[\<compilers>](compilers-element.md)|Contêiner para elementos de configuração do compilador; contém zero ou mais [\<compiler>](compiler-element.md) elementos.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<>de configuração](../configuration-element.md)|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
+|[\<configuration>](../configuration-element.md)|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="net-framework-version-20"></a>.NET Framework Versão 2.0  
- <xref:Microsoft.CSharp.CSharpCodeProvider> <xref:Microsoft.VisualBasic.VBCodeProvider>O [ \<elemento system.codedom>](system-codedom-element.md) contém configurações de configuração do compilador para provedores de idiomainstalados em um computador, além dos provedores padrão que estão instalados com o .NET Framework, como o e o . Os [ \<compiladores>](compilers-element.md) elemento contém elementos>zero ou mais [ \<compilador.](compiler-element.md) Cada [ \<compilador>](compiler-element.md) elemento especifica os atributos de configuração do compilador para um provedor de idioma específico.  
+## <a name="net-framework-version-20"></a>.NET Framework versão 2,0  
+ O [\<system.codedom>](system-codedom-element.md) elemento contém definições de configuração de compilador para provedores de idiomas instalados em um computador além dos provedores padrão que são instalados com o .NET Framework, como o <xref:Microsoft.CSharp.CSharpCodeProvider> e o <xref:Microsoft.VisualBasic.VBCodeProvider> . O [\<compilers>](compilers-element.md) elemento contém zero ou mais [\<compiler>](compiler-element.md) elementos. Cada [\<compiler>](compiler-element.md) elemento Especifica os atributos de configuração do compilador para um provedor de idioma específico.  
   
- Desenvolvedores e fornecedores de compiladores podem adicionar configurações ao arquivo de <xref:System.CodeDom.Compiler.CodeDomProvider> configuração da máquina (Machine.config) para uma nova implementação. Use <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> o método para enumerar de forma programática tanto os provedores de idiomas padrão quanto os provedores de idiomas identificados pelas configurações de configuração do compilador em um computador.  
+ Os desenvolvedores e fornecedores de compilador podem adicionar definições de configuração ao arquivo de configuração da máquina (Machine. config) para uma nova <xref:System.CodeDom.Compiler.CodeDomProvider> implementação. Use o <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> método para enumerar programaticamente os provedores de idioma padrão e os provedores de idiomas identificados pelas definições de configuração do compilador em um computador.  
   
 > [!NOTE]
-> Nas versões .NET Framework 1.0 e 1.1, os provedores de linguagem padrão fornecidos pelo .NET Framework são identificados no elemento [ \<>compiladores.](compilers-element.md) Na versão 2.0 do .NET Framework, os provedores de linguagem padrão não são identificados <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> nos [ \<compiladores>](compilers-element.md) elemento, mas podem ser enumerados usando o método.  
+> No .NET Framework versões 1,0 e 1,1, os provedores de idioma padrão fornecidos pelo .NET Framework são identificados no [\<compilers>](compilers-element.md) elemento. No .NET Framework versão 2,0, os provedores de idioma padrão não são identificados no [\<compilers>](compilers-element.md) elemento, mas podem ser enumerados usando o <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> método.  
   
-## <a name="net-framework-versions-10-and-11"></a>.NET Framework Versões 1.0 e 1.1  
- O elemento [ \<system.codedom>](system-codedom-element.md) contém as configurações de configuração do compilador para provedores de idiomas em um computador. Os [ \<compiladores>](compilers-element.md) elemento contém elementos>zero ou mais [ \<compilador.](compiler-element.md) Cada [ \<compilador>](compiler-element.md) elemento especifica os atributos de configuração do compilador para um provedor de idioma específico.  
+## <a name="net-framework-versions-10-and-11"></a>.NET Framework versões 1,0 e 1,1  
+ O [\<system.codedom>](system-codedom-element.md) elemento contém os parâmetros de configuração do compilador para provedores de idiomas em um computador. O [\<compilers>](compilers-element.md) elemento contém zero ou mais [\<compiler>](compiler-element.md) elementos. Cada [\<compiler>](compiler-element.md) elemento Especifica os atributos de configuração do compilador para um provedor de idioma específico.  
   
  O .NET Framework define as configurações do compilador iniciais no arquivo de configuração do computador (Machine.config). Os desenvolvedores e fornecedores do compilador podem adicionar parâmetros de configuração em uma nova implementação do <xref:System.CodeDom.Compiler.CodeDomProvider>. Use o método <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> para enumerar programaticamente as definições de configuração do compilador e do provedor de linguagem em um computador.  
   
 ## <a name="configuration-file"></a>Arquivo de configuração  
- Este elemento pode ser usado no arquivo de configuração da máquina e no arquivo de configuração do aplicativo.  
+ Esse elemento pode ser usado no arquivo de configuração da máquina e no arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir ilustra uma configuração típica do compilador.  
+ O exemplo a seguir ilustra uma configuração de compilador típica.  
   
 ```xml  
 <configuration>  
@@ -91,6 +91,6 @@ Especifica as definições de configuração do compilador para provedores de li
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
-- [Esquema de arquivo de configuração](../index.md)
-- [Esquema de configurações do compilador e do provedor de idiomas](index.md)
-- [\<elemento> compilador](compiler-element.md)
+- [Esquema de arquivos de configuração](../index.md)
+- [Esquema de configurações de compilador e de provedor de linguagem](index.md)
+- [\<compiler>Elementos](compiler-element.md)

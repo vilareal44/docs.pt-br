@@ -1,142 +1,126 @@
 ---
-title: Introdução ao C# e ao Visual Studio Code
-description: Saiba como criar e depurar seu primeiro aplicativo .NET Core no C# usando o Visual Studio Code.
-author: kendrahavens
-ms.date: 04/23/2020
-ms.openlocfilehash: 3dd7c4602fbb27e29bad977f8d3df34b6061bc23
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+title: Criar um aplicativo de console do .NET Core usando Visual Studio Code
+description: Saiba como criar um aplicativo de console do .NET Core usando Visual Studio Code e o CLI do .NET Core.
+ms.date: 05/22/2020
+ms.openlocfilehash: 466a1353b574711a73570428569b58eab7ad8135
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506864"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84811694"
 ---
-# <a name="get-started-with-c-and-visual-studio-code"></a>Introdução ao C# e ao Visual Studio Code
+# <a name="tutorial-create-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: criar um aplicativo de console do .NET Core usando Visual Studio Code
 
-O .NET Core oferece uma plataforma modular e rápida para a criação de aplicativos que são executados no Windows, Linux e macOS. Use o Visual Studio Code com a extensão do C# para obter uma excelente experiência de edição com suporte completo para IntelliSense em C# (conclusão de código inteligente) e depuração.
+Este tutorial mostra como criar e executar um aplicativo de console do .NET Core usando Visual Studio Code e o CLI do .NET Core. Tarefas de projeto, como criar, compilar e executar um projeto, são feitas usando o CLI do .NET Core. Você pode seguir este tutorial com um editor de código diferente e executar comandos em um terminal, se preferir.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-1. Instale o [Visual Studio Code](https://code.visualstudio.com/).
-2. Instale o [SDK do .NET Core](https://dotnet.microsoft.com/download).
-3. Instale a [extensão de C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) para o Visual Studio Code. Para saber mais sobre como instalar extensões no Visual Studio Code, confira [Marketplace de extensão de código do VS](https://code.visualstudio.com/docs/editor/extension-gallery).
+1. [Visual Studio Code](https://code.visualstudio.com/) com a [extensão C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) instalada. Para obter informações sobre como instalar extensões em Visual Studio Code, consulte [vs Code Marketplace de extensão](https://code.visualstudio.com/docs/editor/extension-gallery).
+2. O [SDK do .NET Core 3,1 ou posterior](https://dotnet.microsoft.com/download)
 
-## <a name="hello-world"></a>Olá, Mundo
+## <a name="create-the-app"></a>Criar o aplicativo
 
-Comece com um programa simples de "Olá, Mundo" no .NET Core:
+Crie um projeto de aplicativo de console do .NET Core chamado "HelloWorld".
 
-1. Abra um projeto:
+1. Inicie o Visual Studio Code.
 
-    - Abra o Visual Studio Code.
-    - Selecione **arquivo** > **abrir pasta** no menu principal.
-    - Crie uma pasta chamada *HelloWorld*e clique em **Selecionar pasta**. O nome da pasta torna-se o nome do projeto e o nome do namespace por padrão. Você adicionará código posteriormente no tutorial que assume que o namespace do projeto `HelloWorld`é.
+1. Selecione **arquivo**  >  **abrir pasta** (**arquivo**  >  **aberto...** no MacOS) no menu principal.
 
-1. Inicialize um projeto em C#:
+1. Na caixa de diálogo **abrir pasta** , crie uma pasta *HelloWorld* e clique em **Selecionar pasta** (**aberta** no MacOS).
 
-    - Abra o terminal de Visual Studio Code selecionando **Exibir** > **terminal** no menu principal.
-    - Na janela do terminal, digite `dotnet new console`.
+   O nome da pasta torna-se o nome do projeto e o nome do namespace por padrão. Você adicionará código posteriormente no tutorial que assume que o namespace do projeto é `HelloWorld` .
 
-      Este comando cria um arquivo *Program.cs* em sua pasta com um programa simples de "Olá, mundo" já gravado, juntamente com um arquivo de projeto C# chamado *HelloWorld. csproj*.
+1. Abra o **terminal** no Visual Studio Code selecionando **Exibir**  >  **terminal** no menu principal.
 
-      ![O novo comando dotnet](media/with-visual-studio-code/dotnet-new-command.png)
+   O **terminal** é aberto com o prompt de comando na pasta *HelloWorld* .
 
-1. Execute o programa "Olá, Mundo":
+1. No **terminal**, digite o seguinte comando:
 
-    - Na janela do terminal, digite `dotnet run`.
+   ```dotnetcli
+   dotnet new console
+   ```
 
-      ![O comando de execução dotnet](media/with-visual-studio-code/dotnet-run-command.png)
+O modelo cria um simples aplicativo “Olá, Mundo”. Ele chama o <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> método para exibir "Olá, mundo!" na janela do console.
 
-## <a name="debug"></a>Depurar
+O código de modelo define uma classe, `Program` , com um único método, `Main` , que usa uma <xref:System.String> matriz como um argumento:
 
-1. Abra *Program.cs* clicando nele. Na primeira vez que um arquivo do C# é aberto no Visual Studio Code, o [OmniSharp](https://www.omnisharp.net/) é carregado no editor.
+```csharp
+using System;
 
-    ![Abra o arquivo Program.cs](media/with-visual-studio-code/open-program-cs.png)
-
-1. Visual Studio Code solicita que você adicione os ativos ausentes para compilar e depurar seu aplicativo. Selecione **Sim** na barra superior.
-
-    ![Prompt para ativos ausentes](media/with-visual-studio-code/missing-assets.png)
-
-1. Para abrir e exibição Depuração, clique no ícone Depuração no menu do lado esquerdo.
-
-    ![Abrir a guia Depurar no Visual Studio Code](media/with-visual-studio-code/open-debug-tab.png)
-
-1. Localize a seta verde na parte superior do painel. Certifique-se de que a lista suspensa ao lado dele tenha a **inicialização do .NET Core (console)** selecionada.
-
-    ![Selecionando o .NET Core no Visual Studio Code](media/with-visual-studio-code/select-net-core.png)
-
-1. Adicione um ponto de interrupção ao seu projeto. Para isso, clique na **margem do editor** logo à esquerda dos números de linha no editor, próximo à linha 9, ou mova o cursor do texto na linha 9 no editor e pressione <kbd>F9</kbd>.
-
-    ![Definindo um ponto de interrupção](media/with-visual-studio-code/set-breakpoint-vs-code.png)
-
-1. Para iniciar a depuração, pressione <kbd>F5</kbd> ou selecione a seta verde. O depurador interrompe a execução do programa quando ele atinge o ponto de interrupção definido na etapa anterior.
-    - Durante a depuração, você pode exibir suas variáveis locais no painel superior esquerdo ou usar o console de depuração.
-
-1. Selecione a seta azul na parte superior para continuar a depuração ou escolha o quadrado vermelho na parte superior para interromper o processamento.
-
-    ![Execução e depuração no Visual Studio Code](media/with-visual-studio-code/run-debug-vs-code.png)
-
-> [!TIP]
-> Para obter mais informações e dicas sobre solução de problemas de depuração do .NET Core com o OmniSharp no Visual Studio Code, consulte [Instruções para configurar o depurador .NET Core](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
-
-## <a name="add-a-class"></a>Adicionar uma classe
-
-1. Para adicionar uma nova classe, clique com o botão direito do mouse no VSCode Explorer abaixo de *Program.cs* e selecione **novo arquivo**. Isso adiciona um novo arquivo à pasta que você abriu no VSCode.
-1. Nomeie o arquivo *MyClass.cs*. Salve-o com uma extensão `.cs` no final para que ele seja reconhecido como um arquivo csharp.
-1. Adicione o código a seguir para criar sua primeira classe.
-
-    ``` csharp
-    using System;
-
-    namespace HelloWorld
+namespace HelloWorld
+{
+    class Program
     {
-        public class MyClass
+        static void Main(string[] args)
         {
-            public string ReturnMessage()
-            {
-                return "Happy coding!";
-            }
+            Console.WriteLine("Hello World!");
         }
     }
-    ```
+}
+```
 
-1. Chame sua nova classe do seu `Main` método substituindo o código em *Program.cs* pelo seguinte código:
+`Main` é o ponto de entrada do aplicativo, o método que é chamado automaticamente pelo runtime quando ele inicia o aplicativo. Quaisquer argumentos de linha de comando fornecidos quando o aplicativo for iniciado estão disponíveis na matriz *args*.
 
-    ```csharp
-    using System;
+## <a name="run-the-app"></a>Executar o aplicativo
 
-    namespace HelloWorld
-    {
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                var c1 = new MyClass();
-                Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
-            }
-        }
-    }
-    ```
+Execute o seguinte comando no **terminal**:
+
+```dotnetcli
+dotnet run
+```
+
+O programa exibe "Olá, Mundo!" e termina.
+
+![O comando de execução dotnet](media/with-visual-studio-code/dotnet-run-command.png)
+
+## <a name="enhance-the-app"></a>Aprimorar o aplicativo
+
+Aprimore o aplicativo para solicitar ao usuário seu nome e exibi-lo junto com a data e hora.
+
+1. Abra *Program.cs* clicando nele.
+
+   Na primeira vez que um arquivo do C# é aberto no Visual Studio Code, o [OmniSharp](https://www.omnisharp.net/) é carregado no editor.
+
+   ![Abra o arquivo Program.cs](media/with-visual-studio-code/open-program-cs.png)
+
+1. Selecione **Sim** quando Visual Studio Code solicitar que você adicione os ativos ausentes para compilar e depurar seu aplicativo.
+
+   ![Prompt para ativos ausentes](media/with-visual-studio-code/missing-assets.png)
+
+1. Substitua o conteúdo do `Main` método em *Program.cs*, que é a linha que chama `Console.WriteLine` , com o seguinte código:
+
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
+
+   Esse código exibe "Qual é o seu nome?" na janela do console e aguarda até que o usuário insira uma cadeia de caracteres seguida pela tecla <kbd>Enter</kbd> . Ele armazena essa cadeia de caracteres em uma variável chamada `name` . Ele também recupera o valor da propriedade <xref:System.DateTime.Now?displayProperty=nameWithType>, que contém a hora local atual e o atribui a uma variável chamada `date`. Por fim, ele exibe esses valores na janela do console.
+
+   O `\n` representa um caractere de nova linha.
+
+   O cifrão ( `$` ) na frente de uma cadeia de caracteres permite que você coloque expressões como nomes de variáveis entre chaves na cadeia de caracteres. O valor da expressão é inserido na cadeia de caracteres no lugar da expressão. Essa sintaxe é conhecida como [cadeias de caracteres interpoladas](../../csharp/language-reference/tokens/interpolated.md).
 
 1. Salve suas alterações.
 
-1. Execute o programa novamente.
+   > [!IMPORTANT]
+   > No Visual Studio Code, você precisa salvar explicitamente as alterações. Ao contrário do Visual Studio, as alterações de arquivo não são salvas automaticamente quando você compila e executa um aplicativo.
 
-    ```dotnetcli
-    dotnet run
-    ```
+1. Execute o programa novamente:
 
-    A nova mensagem é exibida com a cadeia de caracteres acrescentada.
+   ```dotnetcli
+   dotnet run
+   ```
 
-    ```console
-    Hello World! Happy coding!
-    ```
+1. Responda ao prompt digitando um nome e pressionando a tecla <kbd>Enter</kbd> .
 
-## <a name="faq"></a>Perguntas frequentes
+   :::image type="content" source="media/debugging-with-visual-studio-code/run-modified-program.png" alt-text="Janela do terminal com saída de programa modificada":::
 
-### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Faltam os ativos necessários para compilar e depurar C# no Visual Studio Code. Meu depurador diz: "Nenhuma configuração".
+1. Pressione qualquer tecla para sair do programa.
 
-A extensão C# do Visual Studio Code pode gerar ativos para compilar e depurar para você. O Visual Studio Code solicita que você gere esses ativos ao abrir um projeto C# pela primeira vez. Se você não gerar os ativos em seguida, você ainda poderá executar esse comando abrindo a paleta de comandos (**Exibição > Paleta de comandos**) e digitando">.NET: Generate Assets for Build and Debug". Selecionar isso gera os arquivos de configuração *. vscode*, *Launch. JSON*e *Tasks. JSON* necessários.
-
-## <a name="see-also"></a>Confira também
+## <a name="additional-resources"></a>Recursos adicionais
 
 - [Configurar o Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
-- [Depurar no Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)
+
+## <a name="next-steps"></a>Próximas etapas
+
+Neste tutorial, você criou um aplicativo de console do .NET Core. No próximo tutorial, você depurará o aplicativo.
+
+> [!div class="nextstepaction"]
+> [Depurar um aplicativo de console do .NET Core usando Visual Studio Code](debugging-with-visual-studio-code.md)

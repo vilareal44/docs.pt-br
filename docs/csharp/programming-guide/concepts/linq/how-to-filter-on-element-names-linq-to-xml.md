@@ -1,15 +1,16 @@
 ---
-title: Como filtrar nomes de elementos (LINQ para XML) (C#)
+title: Como filtrar em nomes de elementos (LINQ to XML) (C#)
+description: Saiba como filtrar o nome do elemento ao chamar um método que retorna IEnumerable de XElement.
 ms.date: 07/20/2015
 ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
-ms.openlocfilehash: 74efb19ef5ec77ca29145d27a8e5aa977530b68b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: be660a69b8d860ad907661ce17002379b8842121
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141269"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301743"
 ---
-# <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>Como filtrar nomes de elementos (LINQ para XML) (C#)
+# <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>Como filtrar em nomes de elementos (LINQ to XML) (C#)
 Quando você chamar um dos métodos que <xref:System.Collections.Generic.IEnumerable%601> de retorno de <xref:System.Xml.Linq.XElement>, você pode filtrar no nome do elemento.  
   
 ## <a name="example"></a>Exemplo  
@@ -26,7 +27,7 @@ foreach(XElement prdName in items)
     Console.WriteLine(prdName.Name + ":" + (string) prdName);  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```output  
 ProductName:Lawnmower  
@@ -64,13 +65,13 @@ foreach (XElement prdName in items)
     Console.WriteLine(prdName.Name + ":" + (string)prdName);  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```output  
 {http://www.adventure-works.com}ProductName:Lawnmower  
 {http://www.adventure-works.com}ProductName:Baby Monitor  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Eixos do LINQ to XML (C#)](./linq-to-xml-axes-overview.md)

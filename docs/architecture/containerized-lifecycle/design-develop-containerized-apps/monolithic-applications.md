@@ -1,13 +1,13 @@
 ---
 title: Aplicativos monolíticos
 description: Entenda os principais conceitos da implantação de aplicativos monolíticos em contêineres.
-ms.date: 02/15/2019
-ms.openlocfilehash: 3c186f6a300588816916886927f93e0c06ebd6bc
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 08/06/2020
+ms.openlocfilehash: f188a2ff576436d9378030e0a858ffb8110dad17
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988980"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915439"
 ---
 # <a name="monolithic-applications"></a>Aplicativos monolíticos
 
@@ -17,7 +17,7 @@ Para gerenciar esse modelo, implante um contêiner único para representar o apl
 
 Seguindo o princípio de que um contêiner executa uma ação e faz isso em um processo, o padrão monolítico pode gerar um conflito. É possível incluir vários componentes/bibliotecas ou camadas internas em cada contêiner, conforme ilustrado na Figura 4-1.
 
-![Diagrama mostrando um aplicativo monolítico que se escama pela clonagem do aplicativo.](./media/monolithic-applications/monolithic-application-architecture-example.png)
+![Diagrama mostrando um aplicativo monolítico que se expande clonando o aplicativo.](./media/monolithic-applications/monolithic-application-architecture-example.png)
 
 **Figura 4-1.** Um exemplo de arquitetura de aplicativo monolítico
 
@@ -31,7 +31,7 @@ A abordagem monolítica é comum e muitas organizações estão desenvolvendo co
 
 De uma perspectiva de infraestrutura, cada servidor pode executar vários aplicativos no mesmo host e ter um índice de eficiência razoável de uso de recursos, conforme mostrado na Figura 4-2.
 
-![Um diagrama mostrando um host com vários aplicativos em recipientes separados.](./media/monolithic-applications/host-with-multiple-apps-containers.png)
+![Um diagrama que mostra um host com vários aplicativos em contêineres separados.](./media/monolithic-applications/host-with-multiple-apps-containers.png)
 
 **Figura 4-2.** Um host executando vários aplicativos/contêineres
 
@@ -43,9 +43,9 @@ Também é possível usar os [Serviços de Aplicativos do Azure](https://azure.m
 
 É possível implantar várias VMs como hosts do Docker e executar qualquer quantidade de contêineres por VM. Em seguida, usando o Azure Load Balancer, conforme ilustrado na Figura 4-3, você pode gerenciar o dimensionamento.
 
-![Um diagrama mostrando um aplicativo monolítico dimensionado para diferentes hosts.](./media/monolithic-applications/multiple-hosts-from-single-docker-container.png)
+![Um diagrama que mostra um aplicativo monolítico dimensionado para hosts diferentes.](./media/monolithic-applications/multiple-hosts-from-single-docker-container.png)
 
-**Figura 4-3**. Vários hosts que dimensionam um único aplicativo Docker
+**Figura 4-3**. Vários hosts expandindo um único aplicativo Docker
 
 É possível gerenciar a implantação dos próprios hosts por meio de técnicas de implantação tradicionais.
 
@@ -61,7 +61,7 @@ Como os contêineres são inerentemente imutáveis por design, você nunca preci
 
 Embora aplicativos monolíticos possam se beneficiar do Docker, estamos mencionando apenas as dicas de benefícios. Outros benefícios de gerenciar contêineres são decorrentes da implantação com orquestradores de contêiner, que gerenciam as diversas instâncias e o ciclo de vida de cada instância de contêiner. Dividir o aplicativo monolítico em subsistemas que podem ser dimensionados, desenvolvidos e implantados individualmente é o ponto de entrada no universo dos microsserviços.
 
-Para saber como "levantar e mudar" aplicações monolíticas com contêineres e como você pode modernizar seus aplicativos, você pode ler este guia adicional da Microsoft, modernizar aplicativos <https://aka.ms/LiftAndShiftWithContainersEbook> [.NET existentes com nuvem Azure e Contêineres Windows,](../../modernize-with-azure-containers/index.md)que você também pode baixar como PDF a partir de .
+Para saber mais sobre como "migrar e deslocar" aplicativos monolíticos com contêineres e como você pode modernizar seus aplicativos, leia este guia adicional da Microsoft, [modernizando aplicativos .net existentes com contêineres de nuvem e Windows do Azure](../../modernize-with-azure-containers/index.md), que também pode ser baixado como PDF <https://aka.ms/LiftAndShiftWithContainersEbook> .
 
 ## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>Publicar um aplicativo de contêiner único do Docker no Serviço de Aplicativo do Azure
 
@@ -71,12 +71,12 @@ Usar o Serviço de Aplicativo do Azure é intuitivo e você pode começar a trab
 
 Agora, conforme mostrado na Figura 4-4, ao usar o Visual Studio 2017, o suporte para contêineres no Serviço de Aplicativo do Azure oferece a capacidade de incluir tudo o que você deseja no ambiente do aplicativo. Se você tiver adicionado uma dependência ao aplicativo porque ele está sendo executado em um contêiner, terá a capacidade de incluir essas dependências no Dockerfile ou na imagem do Docker.
 
-![Captura de tela da caixa de diálogo Criar serviço de aplicativo mostrando um Registro de Contêiner.](./media/monolithic-applications/publish-azure-app-service-container.png)
+![Captura de tela da caixa de diálogo Criar serviço de aplicativo mostrando um registro de contêiner.](./media/monolithic-applications/publish-azure-app-service-container.png)
 
 **Figura 4-4**. Publicação de um contêiner no Serviço de Aplicativo do Azure nos aplicativos/contêineres do Visual Studio
 
 A Figura 4-4 também mostra que o fluxo de publicação efetua push de uma imagem por meio de um Contêiner de Registro, que pode ser o Registro de Contêiner do Azure (um registro próximo às implantações no Azure e protegido por grupos e contas do Azure Active Directory) ou outros registros do Docker, como o Docker Hub ou um registro local.
 
 >[!div class="step-by-step"]
->[Próximo](common-container-design-principles.md)
->[anterior](state-and-data-in-docker-applications.md)
+>[Anterior](common-container-design-principles.md) 
+> [Avançar](state-and-data-in-docker-applications.md)

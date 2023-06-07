@@ -2,12 +2,12 @@
 title: A relação entre os recursos de linguagem e os tipos de bibliotecas | Microsoft Docs
 description: Os recursos de linguagem geralmente dependem dos tipos de bibliotecas para implementação. Entenda a relação.
 ms.date: 07/20/2017
-ms.openlocfilehash: dfae7972af0a251a92700d7d33bd6f971eb1870e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: abf15385da3756c35db2df822cc2e11e9edf5758
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "61706020"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174095"
 ---
 # <a name="relationships-between-language-features-and-library-types"></a>Relações entre os recursos de linguagem e os tipos de bibliotecas
 
@@ -21,7 +21,7 @@ Essa dependência da funcionalidade da biblioteca padrão faz parte da linguagem
 
 A primeira versão era simples: o compilador e a biblioteca padrão eram fornecidos juntos e havia somente uma versão de cada um.
 
-As versões posteriores do C# ocasionalmente adicionaram novos tipos ou membros às dependências. Os exemplos incluem: <xref:System.Runtime.CompilerServices.INotifyCompletion>, <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> e <xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>. O C# 7.0 continua isso adicionando uma dependência de <xref:System.ValueTuple> para implementar o recurso de linguagem de [tuplas](../tuples.md).
+As versões posteriores do C# ocasionalmente adicionaram novos tipos ou membros às dependências. Os exemplos incluem: <xref:System.Runtime.CompilerServices.INotifyCompletion>, <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> e <xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>. O C# 7.0 continua isso adicionando uma dependência de <xref:System.ValueTuple> para implementar o recurso de linguagem de [tuplas](../language-reference/builtin-types/value-tuples.md).
 
 A equipe de design de linguagem trabalha para minimizar a área de superfície dos tipos e membros necessários em uma biblioteca padrão em conformidade. Essa meta é equilibrada em relação a um design limpo no qual novos recursos de biblioteca são incorporados diretamente na linguagem. Haverá novos recursos em versões futuras do C# que exigem novos tipos e membros em uma biblioteca padrão. É importante entender como gerenciar essas dependências em seu trabalho.
 

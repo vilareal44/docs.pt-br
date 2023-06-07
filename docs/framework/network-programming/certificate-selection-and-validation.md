@@ -1,13 +1,14 @@
 ---
 title: Seleção e validação de certificado
+description: Saiba mais sobre várias maneiras que as classes System.Net oferecem para selecionar e validar certificados para conexões SSL/TLS.
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: aea47360ab1bb9dad446a5a7b19a91ea688953c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2dc63413f5c3a5fadd0d62ad61f0b887697c6a45
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048742"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502646"
 ---
 # <a name="certificate-selection-and-validation"></a>Seleção e validação de certificado
 As classes <xref:System.Net> dão suporte a várias maneiras de selecionar e validar <xref:System.Security.Cryptography.X509Certificates> para conexões SSL. Um cliente pode selecionar um ou mais certificados para se autenticar em um servidor. Um servidor pode exigir que um certificado do cliente tenha um ou mais atributos específicos para autenticação.  
@@ -40,7 +41,7 @@ As classes <xref:System.Net> dão suporte a várias maneiras de selecionar e val
   
  A ferramenta *Winhttpcertcfg.exe* pode ser usada para configurar certificados do cliente. A ferramenta *Winhttpcertcfg.exe* é fornecida como uma das ferramentas com o Windows Server 2003 Resource Kit. Essa ferramenta também está disponível como um download como parte das Ferramentas do Kit de Recursos do Windows Server 2003 em [www.microsoft.com](https://www.microsoft.com).  
   
-A ferramenta *HttpCfg.exe* pode ser usada para <xref:System.Net.HttpListener> configurar certificados de servidor para a classe. A ferramenta *HttpCfg.exe* é fornecida como uma das ferramentas de suporte do Windows Server 2003 e Windows XP Service Pack 2. *HttpCfg.exe* e as outras ferramentas de suporte não são instaladas por padrão no Windows Server 2003 ou Windows XP. No Windows Server 2003. as ferramentas de suporte são instaladas separadamente nas seguintes pasta e arquivo no CD-ROM do Windows Server 2003:  
+A ferramenta *Httpcfg. exe* pode ser usada para configurar certificados de servidor para a <xref:System.Net.HttpListener> classe. A ferramenta *HttpCfg.exe* é fornecida como uma das ferramentas de suporte do Windows Server 2003 e Windows XP Service Pack 2. *HttpCfg.exe* e as outras ferramentas de suporte não são instaladas por padrão no Windows Server 2003 ou Windows XP. No Windows Server 2003. as ferramentas de suporte são instaladas separadamente nas seguintes pasta e arquivo no CD-ROM do Windows Server 2003:  
   
  \Support\Tools\Suptools.msi  
   
@@ -55,4 +56,4 @@ A ferramenta *HttpCfg.exe* pode ser usada para <xref:System.Net.HttpListener> co
 ## <a name="see-also"></a>Confira também
 
 - [Segurança na programação de rede](security-in-network-programming.md)
-- [Programação de rede no Framework .NET](index.md)
+- [Programação de rede no .NET Framework](index.md)

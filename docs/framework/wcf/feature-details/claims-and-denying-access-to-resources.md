@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], denying access to resources
 ms.assetid: 145ebb41-680e-4256-b14c-1efb4af1e982
-ms.openlocfilehash: 4f48c59090579f4b451f615bb792a4dcb73f6df5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5ecb71b7e0596b1732207b50e1b6087528bba3f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857580"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587034"
 ---
 # <a name="claims-and-denying-access-to-resources"></a>Declarações e acesso negado para recursos
-Windows Communication Foundation (WCF) oferece suporte a um mecanismo de autorização baseada em declarações. Além de permitir o acesso a recursos com base na presença de declarações, sistemas geralmente negar acesso a recursos com base na presença de declarações. Tais sistemas devem examinar o <xref:System.IdentityModel.Policy.AuthorizationContext> para declarações que resultam em acesso negado antes de procurar declarações que resultam em acesso sendo permitido.  
+O Windows Communication Foundation (WCF) dá suporte a um mecanismo de autorização baseado em declarações. Além de permitir o acesso a recursos com base na presença de declarações, os sistemas geralmente negam o acesso a recursos com base na presença de declarações. Esses sistemas devem examinar as <xref:System.IdentityModel.Policy.AuthorizationContext> declarações para que resultam no acesso negado antes de procurar declarações que resultam no acesso permitido.  
   
- Por exemplo, um sistema pode negar o acesso a um recurso para qualquer pessoa que tem uma declaração com um tipo de `Age`, à direita da <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>e um valor de recurso de `Under 21` apenas quando essa identidade também tem uma declaração do tipo `Name`, à direita do <xref:System.IdentityModel.Claims.Rights.Identity%2A>, e um valor de recurso de `Mallory`. Em outras palavras, o sistema nega o acesso a qualquer pessoa que é menos de 21 anos de idade e concede acesso quando o nome é Mallory. Para implementar isso corretamente semântica, é importante procurar o `Age` primeiro de declaração e determinar se a idade é menos de 21 anos de idade. Caso contrário, se Mallory em 21, em seguida, o recurso pode ter acesso somente de acordo com o `Name` de declaração.  
+ Por exemplo, um sistema pode negar acesso a um recurso a qualquer pessoa que tenha uma declaração com um tipo de `Age` , um direito de <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> e um valor de recurso `Under 21` somente quando essa identidade também tiver uma declaração de tipo `Name` , à direita e <xref:System.IdentityModel.Claims.Rights.Identity%2A> um valor de recurso de `Mallory` . Em outras palavras, o sistema nega acesso a qualquer pessoa com menos de 21 anos de idade e concede acesso quando o nome é Mallory. Para implementar corretamente essa semântica, é importante procurar a `Age` declaração primeiro e determinar se a idade está abaixo de 21 anos de idade. Caso contrário, se Mallory for inferior a 21, o recurso poderá receber acesso exclusivamente com base na `Name` declaração.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
-- [Declarações e tokens](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
+- [Gerenciamento de declarações e autorizações com o modelo de identidade](managing-claims-and-authorization-with-the-identity-model.md)
+- [Declarações e tokens](claims-and-tokens.md)

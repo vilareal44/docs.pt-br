@@ -1,5 +1,6 @@
 ---
 title: Como converter uma cadeia de caracteres em um guia de programação de um número C#
+description: Saiba como converter uma cadeia de caracteres em um número em C# chamando os métodos de classe Parse, TryParse ou Convert.
 ms.date: 02/11/2019
 helpviewer_keywords:
 - conversions [C#]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: f1d4a0f36292acafad409bf666f861b7637cd644
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 8c46117579a5b787e5d9f3f317296d33bdd1cce1
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442196"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381964"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Como converter uma cadeia de caracteres em um número (guia de programação C#)
 
@@ -54,8 +55,8 @@ A tabela a seguir lista alguns dos métodos da classe <xref:System.Convert> que 
   
 [!code-csharp[Parsing with Convert methods](~/samples/snippets/csharp/programming-guide/string-to-number/convert/program.cs)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Tipos](./index.md)
+- [Types](./index.md)
 - [Como determinar se uma cadeia de caracteres representa um valor numérico](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
 - [Amostra: Utilitário de Formatação do WinForms do .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)

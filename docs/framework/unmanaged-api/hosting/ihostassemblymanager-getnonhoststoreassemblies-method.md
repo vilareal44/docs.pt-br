@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2250b38-c76a-40ce-80c8-ba45149886e8
 topic_type:
 - apiref
-ms.openlocfilehash: 0dc2f625da7f4e37583f198c8d6dba86f6dcdb10
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 9a1440be7011130b16d7112ae15026eb74856190
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805059"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501581"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>Método IHostAssemblyManager::GetNonHostStoreAssemblies
 Obtém um ponteiro de interface para um [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) que representa a lista de assemblies que o host espera que o Common Language Runtime (CLR) carregue.  
@@ -56,7 +56,7 @@ HRESULT GetNonHostStoreAssemblies (
   
 - Se o assembly aparecer na lista, o CLR será associado a ele normalmente.  
   
-- Se o assembly não aparecer na lista e o host tiver fornecido uma implementação de [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), o CLR chamará [IHostAssemblyStore::P rovideassembly](ihostassemblystore-provideassembly-method.md) para permitir que o host forneça o assembly ao qual associar.  
+- Se o assembly não aparecer na lista e o host tiver fornecido uma implementação de [IHostAssemblyStore](ihostassemblystore-interface.md), o CLR chamará [IHostAssemblyStore::P rovideassembly](ihostassemblystore-provideassembly-method.md) para permitir que o host forneça o assembly ao qual associar.  
   
 - Caso contrário, o CLR não se associará ao assembly.  
   

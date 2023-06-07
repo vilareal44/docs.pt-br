@@ -1,15 +1,16 @@
 ---
-title: Como encontrar um atributo do pai (XPath-LINQ para XML) (C#)
+title: Como encontrar um atributo do pai (XPath-LINQ to XML) (C#)
+description: Saiba como localizar um atributo do elemento pai. Consulte um exemplo de código que usa um documento XML de exemplo.
 ms.date: 07/20/2015
 ms.assetid: dbef9d89-a5c4-431f-80cc-7a2ebf323f86
-ms.openlocfilehash: bfe7554a5c767adde5e7170c8e1ea0537155f6df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 03344bb66f617970d9598c91366eb7d69514397a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141167"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303290"
 ---
-# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-c"></a>Como encontrar um atributo do pai (XPath-LINQ para XML) (C#)
+# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-c"></a>Como encontrar um atributo do pai (XPath-LINQ to XML) (C#)
 
 Este tópico mostra como navegar para o elemento pai e localizar um atributo deles.
 

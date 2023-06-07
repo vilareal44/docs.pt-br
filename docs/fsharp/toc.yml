@@ -1,21 +1,21 @@
-- name: 'Documentação do F#'
+- name: Documentação do F#
   href: index.yml
-- name: 'O que é F#'
+- name: O que é F#
   href: what-is-fsharp.md
 - name: Introdução
   href: get-started/index.md
   items:
-    - name: 'Instalar o F#'
+    - name: Instalar o F#
       href: get-started/install-fsharp.md
-    - name: 'F# no Visual Studio'
+    - name: F# no Visual Studio
       href: get-started/get-started-visual-studio.md
-    - name: 'F# no Visual Studio Code'
+    - name: F# no Visual Studio Code
       href: get-started/get-started-vscode.md
-    - name: 'F# com a CLI do .NET Core'
+    - name: F# com a CLI do .NET Core
       href: get-started/get-started-command-line.md
-    - name: 'F# no Visual Studio para Mac'
+    - name: F# no Visual Studio para Mac
       href: get-started/get-started-with-visual-studio-for-mac.md
-- name: 'Tour do F#'
+- name: Tour do F#
   href: tour.md
 - name: Tutoriais
   items:
@@ -37,17 +37,17 @@
           href: tutorials/type-providers/type-provider-security.md
         - name: Solução de problemas de provedores de tipos
           href: tutorials/type-providers/troubleshooting-type-providers.md
-    - name: 'F# Interativo'
+    - name: F# Interativo
       href: tutorials/fsharp-interactive/index.md
-- name: 'Novidades no F#'
+- name: Novidades no F#
   items:
-    - name: 'F# 4.7'
+    - name: F# 4.7
       href: whats-new/fsharp-47.md
-    - name: 'F# 4.6'
+    - name: F# 4.6
       href: whats-new/fsharp-46.md
-    - name: 'F# 4.5'
+    - name: F# 4.5
       href: whats-new/fsharp-45.md
-- name: 'Referência da linguagem F#'
+- name: Referência da linguagem F#
   href: language-reference/index.md
   items:
     - name: Referência de palavras-chave
@@ -59,7 +59,7 @@
           href: language-reference/symbol-and-operator-reference/arithmetic-operators.md
         - name: Operadores boolianos
           href: language-reference/symbol-and-operator-reference/boolean-operators.md
-        - name: Operadores Bit a Bit
+        - name: Operadores bit a bit
           href: language-reference/symbol-and-operator-reference/bitwise-operators.md
         - name: Operadores anuláveis
           href: language-reference/symbol-and-operator-reference/nullable-operators.md
@@ -74,7 +74,7 @@
           href: language-reference/functions/lambda-expressions-the-fun-keyword.md
         - name: 'Funções recursivas: a palavra-chave rec'
           href: language-reference/functions/recursive-functions-the-rec-keyword.md
-        - name: Ponto de entrada
+        - name: Entry Point
           href: language-reference/functions/entry-point.md
         - name: Funções externas
           href: language-reference/functions/external-functions.md
@@ -87,7 +87,7 @@
           href: language-reference/values/null-values.md
     - name: Literais
       href: language-reference/literals.md
-    - name: 'Tipos F#'
+    - name: Tipos F#
       href: language-reference/fsharp-types.md
     - name: Inferência de tipos
       href: language-reference/type-inference.md
@@ -99,7 +99,7 @@
       href: language-reference/strings.md
     - name: Tuplas
       href: language-reference/tuples.md
-    - name: 'Tipos de coleção de F#'
+    - name: Tipos de coleção de F#
       href: language-reference/fsharp-collection-types.md
     - name: Listas
       href: language-reference/lists.md
@@ -111,7 +111,7 @@
       href: language-reference/slices.md
     - name: Opções
       href: language-reference/options.md
-    - name: Opções de valores
+    - name: Opções de valor
       href: language-reference/value-options.md
     - name: Resultados
       href: language-reference/results.md
@@ -183,7 +183,7 @@
       href: language-reference/access-control.md
     - name: 'Expressões condicionais: if...then...else'
       href: language-reference/conditional-expressions-if-then-else.md
-    - name: Expressões match
+    - name: Expressões de correspondência
       href: language-reference/match-expressions.md
     - name: Correspondência padrão
       href: language-reference/pattern-matching.md
@@ -226,6 +226,8 @@
       href: language-reference/signature-files.md
     - name: Unidades de medida
       href: language-reference/units-of-measure.md
+    - name: Formatação de texto sem formatação
+      href: language-reference/plaintext-formatting.md
     - name: Documentação XML
       href: language-reference/xml-documentation.md
     - name: Expressões lentas
@@ -248,7 +250,7 @@
       href: language-reference/compiler-directives.md
     - name: Opção de compilador
       href: language-reference/compiler-options.md
-    - name: 'Opções do F# Interativo'
+    - name: Opções do F# Interativo
       href: language-reference/fsharp-interactive-options.md
     - name: 'Identificadores de linha, arquivo e caminho de origem'
       href: language-reference/source-line-file-path-identifiers.md
@@ -258,25 +260,25 @@
       href: language-reference/verbose-syntax.md
     - name: Erros e avisos do compilador
       href: language-reference/compiler-messages/index.md
-- name: 'Guia de estilo do F#'
+- name: Guia de estilo do F#
   href: style-guide/index.md
   items:
-    - name: 'Diretrizes de formatação de código do F#'
+    - name: Diretrizes de formatação de código do F#
       href: style-guide/formatting.md
-    - name: 'Convenções de codificação do F#'
+    - name: Convenções de codificação do F#
       href: style-guide/conventions.md
-    - name: 'Diretrizes de design de componente do F#'
+    - name: Diretrizes de design de componente do F#
       href: style-guide/component-design-guidelines.md
-- name: 'Usar F# no Azure'
+- name: Usar F# no Azure
   href: using-fsharp-on-azure/index.md
   items:
-    - name: 'Introdução ao armazenamento de Blobs do Azure usando F#'
+    - name: Introdução ao armazenamento de Blobs do Azure usando F#
       href: using-fsharp-on-azure/blob-storage.md
-    - name: 'Introdução ao armazenamento de Arquivos do Azure usando F#'
+    - name: Introdução ao armazenamento de Arquivos do Azure usando F#
       href: using-fsharp-on-azure/file-storage.md
-    - name: 'Introdução ao armazenamento de Filas do Azure usando F#'
+    - name: Introdução ao armazenamento de Filas do Azure usando F#
       href: using-fsharp-on-azure/queue-storage.md
-    - name: 'Introdução ao armazenamento de Tabelas do Azure usando F#'
+    - name: Introdução ao armazenamento de Tabelas do Azure usando F#
       href: using-fsharp-on-azure/table-storage.md
-    - name: 'Pacote de gerenciamento para Dependências F# do Azure'
+    - name: Pacote de gerenciamento para Dependências F# do Azure
       href: using-fsharp-on-azure/package-management.md

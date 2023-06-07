@@ -1,15 +1,16 @@
 ---
 title: Como depurar problemas de ativação do CLR
+description: Consulte como depurar problemas de ativação de Common Language Runtime (CLR) no .NET. Exiba e depure os logs de ativação do CLR, que podem ser úteis para determinar as causas raiz.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR activation, debugging issues
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
-ms.openlocfilehash: 602ee3c88237a902d48339836fbe25f636ae9705
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5215e82aebf93fa8d6d1937563ab348126a01d97
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716501"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622608"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>Como depurar problemas de ativação do CLR
 
@@ -116,7 +117,7 @@ No exemplo a seguir de um log de ativação, as informações mais úteis são r
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
     ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Implantação](index.md)
-- [Como: Configurar um aplicativo para suportar versões .NET Framework 4 ou posteriores](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Como configurar um aplicativo para dar suporte a .NET Framework 4 ou versões posteriores](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

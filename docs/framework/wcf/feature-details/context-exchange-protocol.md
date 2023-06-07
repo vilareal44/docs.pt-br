@@ -2,44 +2,44 @@
 title: Protocolo de intercâmbio de contexto
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: 00adb68d96f77ce0953811d13b5377ec4ed1e0ea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 86d2a19b086fbd5d6be6f1a084bfd7aaace0e250
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185257"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597430"
 ---
 # <a name="context-exchange-protocol"></a>Protocolo de intercâmbio de contexto
-Esta seção descreve o protocolo de troca de contexto introduzido na versão .NET Framework versão 3.5 da Windows Communication Foundation (Windows Communication Foundation). Este protocolo permite que o canal do cliente aceite um contexto fornecido por um serviço e aplique-o a todas as solicitações subseqüentes a esse serviço enviadas pela mesma instância do canal do cliente. A implementação do protocolo de troca de contexto pode usar um dos dois seguintes mecanismos para propagar o contexto entre o servidor e o cliente: cookies HTTP ou um cabeçalho SOAP.  
+Esta seção descreve o protocolo de troca de contexto apresentado na versão Windows Communication Foundation (WCF) .NET Framework versão 3,5. Esse protocolo permite que o canal do cliente aceite um contexto fornecido por um serviço e aplique-o a todas as solicitações subsequentes para esse serviço enviado pela mesma instância de canal do cliente. A implementação do protocolo de troca de contexto pode usar um dos dois mecanismos a seguir para propagar o contexto entre o servidor e o cliente: cookies HTTP ou um cabeçalho SOAP.  
   
- O protocolo de troca de contexto é implementado em uma camada de canal personalizada. O canal comunica o contexto de e <xref:System.ServiceModel.Channels.ContextMessageProperty> para a camada de aplicativo usando uma propriedade. Para transmissão entre pontos finais, o valor do contexto é serializado como um cabeçalho SOAP na camada do canal ou convertido para ou a partir das propriedades de mensagem que representam uma solicitação e resposta HTTP. Neste último caso, espera-se que uma das camadas de canal subjacente converta as propriedades de solicitação e mensagem de resposta HTTP para e a partir de cookies HTTP, respectivamente. A escolha do mecanismo utilizado para trocar <xref:System.ServiceModel.Channels.ContextExchangeMechanism> o contexto <xref:System.ServiceModel.Channels.ContextBindingElement>é feita utilizando a propriedade no . Os valores válidos são `HttpCookie` ou `SoapHeader`.  
+ O protocolo de troca de contexto é implementado em uma camada de canal personalizada. O canal comunica o contexto de e para a camada de aplicativo usando uma <xref:System.ServiceModel.Channels.ContextMessageProperty> propriedade. Para a transmissão entre os pontos de extremidade, o valor do contexto é serializado como um cabeçalho SOAP na camada de canal, ou convertido de ou para as propriedades de mensagem que representam uma solicitação e resposta HTTP. No último caso, espera-se que uma das camadas de canal subjacentes converta as propriedades da solicitação HTTP e da mensagem de resposta de e para cookies HTTP, respectivamente. A escolha do mecanismo usado para trocar o contexto é feita usando a <xref:System.ServiceModel.Channels.ContextExchangeMechanism> propriedade no <xref:System.ServiceModel.Channels.ContextBindingElement> . Os valores válidos são `HttpCookie` ou `SoapHeader`.  
   
- No cliente, uma instância de um canal pode operar em dois modos <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A>com base nas configurações na propriedade do canal, .  
+ No cliente, uma instância de um canal pode operar em dois modos com base nas configurações na Propriedade do canal, <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> .  
   
-## <a name="mode-1-channel-context-management"></a>Modo 1: Gerenciamento de contexto de canal  
- Este é o <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> modo padrão `true`onde está definido para . Neste modo, o canal de contexto gerencia o contexto e armazena o contexto durante sua vida. O contexto pode ser recuperado do `IContextManager` canal `GetContext` através da propriedade do canal, chamando o método. O canal também pode ser pré-inicializado com contexto `SetContext` específico antes de ser aberto, chamando o método na propriedade do canal. Uma vez que o canal é inicializado com contexto, ele não pode ser reiniciado.  
+## <a name="mode-1-channel-context-management"></a>Modo 1: gerenciamento de contexto do canal  
+ Esse é o modo padrão em que <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> é definido como `true` . Nesse modo, o canal de contexto gerencia o contexto e armazena em cache o contexto durante seu tempo de vida. O contexto pode ser recuperado do canal por meio da propriedade Channel `IContextManager` chamando o `GetContext` método. O canal também pode ser inicializado previamente com contexto específico antes de ser aberto chamando o `SetContext` método na propriedade Channel. Depois que o canal é inicializado com o contexto, ele não pode ser redefinido.  
   
- A seguir está uma lista de invariantes neste modo:  
+ A seguir está uma lista de invariáveis neste modo:  
   
-- Qualquer tentativa de redefinir `SetContext` o contexto usando após <xref:System.InvalidOperationException>a abertura do canal lança um .  
+- Qualquer tentativa de redefinir o contexto usando `SetContext` depois que o canal é aberto gera um <xref:System.InvalidOperationException> .  
   
-- Qualquer tentativa de enviar <xref:System.ServiceModel.Channels.ContextMessageProperty> contexto usando o em <xref:System.InvalidOperationException>uma mensagem de saída lança um .  
+- Qualquer tentativa de enviar o contexto usando o <xref:System.ServiceModel.Channels.ContextMessageProperty> em uma mensagem de saída gera um <xref:System.InvalidOperationException> .  
   
-- Se uma mensagem for recebida do servidor com um contexto específico, quando o canal <xref:System.ServiceModel.ProtocolException>já tiver sido inicializado com um contexto específico, isso resultará em um .  
+- Se uma mensagem for recebida do servidor com um contexto específico, quando o canal já tiver sido inicializado com um contexto específico, isso resultará em um <xref:System.ServiceModel.ProtocolException> .  
   
     > [!NOTE]
     > É apropriado receber um contexto inicial do servidor somente se o canal for aberto sem qualquer contexto definido explicitamente.  
   
-- A <xref:System.ServiceModel.Channels.ContextMessageProperty> mensagem de entrada é sempre nula.  
+- O <xref:System.ServiceModel.Channels.ContextMessageProperty> na mensagem de entrada é sempre nulo.  
   
-## <a name="mode-2-application-context-management"></a>Modo 2: Gerenciamento de contexto de aplicativos  
- Este é o <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> modo `false`quando é definido para . Neste modo, o canal de contexto não gerencia o contexto. É responsabilidade do aplicativo recuperar, gerenciar e aplicar <xref:System.ServiceModel.Channels.ContextMessageProperty>o contexto usando o . Qualquer tentativa `GetContext` de `SetContext` ligar <xref:System.InvalidOperationException>ou resultar em um .  
+## <a name="mode-2-application-context-management"></a>Modo 2: gerenciamento de contexto do aplicativo  
+ Esse é o modo quando <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> é definido como `false` . Nesse modo, o canal de contexto não gerencia o contexto. É responsabilidade do aplicativo recuperar, gerenciar e aplicar o contexto usando o <xref:System.ServiceModel.Channels.ContextMessageProperty> . Qualquer tentativa de chamar `GetContext` ou `SetContext` resultar em um <xref:System.InvalidOperationException> .  
   
- Não importa qual modo seja escolhido, <xref:System.ServiceModel.Channels.IRequestChannel> <xref:System.ServiceModel.Channels.IRequestSessionChannel>a <xref:System.ServiceModel.Channels.IDuplexSessionChannel> fábrica do canal cliente suporta e os padrões de troca de mensagens.  
+ Não importa qual modo é escolhido, a fábrica de canais do cliente dá suporte a <xref:System.ServiceModel.Channels.IRequestChannel> , <xref:System.ServiceModel.Channels.IRequestSessionChannel> e a padrões de troca de <xref:System.ServiceModel.Channels.IDuplexSessionChannel> mensagens.  
   
- No serviço, uma instância do canal é responsável por converter o contexto fornecido <xref:System.ServiceModel.Channels.ContextMessageProperty>pelo cliente em mensagens recebidas para o . A propriedade de mensagem pode então ser acessada pela camada do aplicativo ou outros canais mais adiante na pilha de chamadas. Os canais de serviço também permitem que a camada do aplicativo especifique <xref:System.ServiceModel.Channels.ContextMessageProperty> um novo valor de contexto a ser propagado de volta ao cliente, anexando um à mensagem de resposta. Esta propriedade é convertida para o cabeçalho SOAP ou biscoito HTTP que contém o contexto, que depende da configuração da vinculação. O ouvinte do canal <xref:System.ServiceModel.Channels.IReplyChannel> <xref:System.ServiceModel.Channels.IReplySessionChannel>de <xref:System.ServiceModel.Channels.IReplySessionChannel> serviço suporta padrões de troca de mensagens e de troca de mensagens.  
+ No serviço, uma instância do canal é responsável por converter o contexto fornecido pelo cliente em mensagens de entrada para o <xref:System.ServiceModel.Channels.ContextMessageProperty> . A propriedade Message pode ser acessada pela camada do aplicativo ou outros canais mais adiante na pilha de chamadas. Os canais de serviço também permitem que a camada de aplicativo especifique um novo valor de contexto a ser propagado de volta para o cliente, anexando um <xref:System.ServiceModel.Channels.ContextMessageProperty> à mensagem de resposta. Essa propriedade é convertida no cabeçalho SOAP ou no cookie HTTP que contém o contexto, que depende da configuração da associação. O ouvinte do canal de serviço dá suporte aos <xref:System.ServiceModel.Channels.IReplyChannel> <xref:System.ServiceModel.Channels.IReplySessionChannel> padrões de troca de mensagens, e <xref:System.ServiceModel.Channels.IReplySessionChannel> .  
   
- O protocolo de troca `wsc:Context` de contexto introduz um novo cabeçalho SOAP para representar as informações de contexto quando os cookies HTTP não são usados para propagar o contexto. O esquema de cabeçalho de contexto permite qualquer número de elementos infantis, cada um com uma tecla de seqüência e conteúdo de seqüência. O seguinte é um exemplo de um cabeçalho de contexto.  
+ O protocolo de troca de contexto introduz um novo `wsc:Context` cabeçalho SOAP para representar as informações de contexto quando os cookies http não são usados para propagar o contexto. O esquema de cabeçalho de contexto permite qualquer número de elementos filho, cada um com uma chave de cadeia de caracteres e um conteúdo de cadeia de caracteres. Veja a seguir um exemplo de um cabeçalho de contexto.  
   
  `<Context xmlns="http://schemas.microsoft.com/ws/2006/05/context">`  
   
@@ -47,13 +47,13 @@ Esta seção descreve o protocolo de troca de contexto introduzido na versão .N
   
  `</Context>`  
   
- Quando `HttpCookie` no modo, os `SetCookie` cookies são definidos usando o cabeçalho. O nome `WscContext`do cookie é . O valor do cookie é a codificação `wsc:Context` Base64 do cabeçalho. Este valor é incluído nas cotações.  
+ Quando `HttpCookie` estiver no modo, os cookies são definidos usando o `SetCookie` cabeçalho. O nome do cookie é `WscContext` . O valor do cookie é a codificação base64 do `wsc:Context` cabeçalho. Esse valor é colocado entre aspas.  
   
- O valor do contexto deve ser protegido contra modificações enquanto estiver em trânsito pela mesma razão que os cabeçalhos ws-endereçamento são protegidos – o cabeçalho é usado para determinar para onde despachar a solicitação no serviço. Portanto, `wsc:Context` o cabeçalho é necessário para ser assinado digitalmente ou assinado e criptografado no nível SOAP ou de transporte quando a vinculação oferece capacidade de proteção de mensagens. Quando os cookies HTTP são usados para propagar contexto, eles devem ser protegidos usando a segurança do transporte.  
+ O valor do contexto deve ser protegido contra modificação enquanto estiver em trânsito pelo mesmo motivo pelo qual os cabeçalhos de WS-Addressing são protegidos – o cabeçalho é usado para determinar para onde distribuir a solicitação no serviço. `wsc:Context`Portanto, o cabeçalho deve ser assinado digitalmente ou assinado e criptografado no nível de transporte ou SOAP quando a associação oferece a capacidade de proteção de mensagem. Quando os cookies HTTP são usados para propagar o contexto, eles devem ser protegidos usando a segurança de transporte.  
   
- Os pontos finais de serviço que requerem suporte para o protocolo de troca de contexto podem torná-lo explícito na política publicada. Duas novas afirmações de política foram introduzidas para representar o requisito para que o cliente suporte o protocolo de troca de contexto no nível SOAP ou para habilitar o suporte a cookies HTTP. A geração dessas afirmações na política sobre o serviço <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> é controlada pelo valor da propriedade da seguinte forma:  
+ Os pontos de extremidade de serviço que exigem suporte para o protocolo de troca de contexto podem torná-lo explícito na política publicada. Duas novas declarações de política foram introduzidas para representar o requisito para o cliente dar suporte ao protocolo de troca de contexto no nível SOAP ou para habilitar o suporte a cookie HTTP. A geração dessas asserções na política no serviço é controlada pelo valor da <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> propriedade da seguinte maneira:  
   
-- Para <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>, a seguinte afirmação é gerada:  
+- Para <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader> , a declaração a seguir é gerada:  
   
     ```xml  
     <IncludeContext
@@ -61,12 +61,12 @@ Esta seção descreve o protocolo de troca de contexto introduzido na versão .N
     protectionLevel="Sign" />  
     ```  
   
-- Para <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie>, a seguinte afirmação é gerada:  
+- Para <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie> , a declaração a seguir é gerada:  
   
     ```xml  
     <HttpUseCookie xmlns="http://schemas.xmlsoap.org/soap/http"/>  
     ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Guia de interoperabilidade de protocolos de serviços Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)
+- [Guia de interoperabilidade de protocolos de serviços Web](web-services-protocols-interoperability-guide.md)

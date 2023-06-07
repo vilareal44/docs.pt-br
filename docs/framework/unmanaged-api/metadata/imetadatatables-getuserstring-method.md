@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35b8f0d6-9aba-4714-adb2-62020a38fb7e
 topic_type:
 - apiref
-ms.openlocfilehash: 5936ca837c9ab452e992fcb09aacb476ab37316a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 21ce66722e069573b651ada950b64ef6d97220fb
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431429"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501138"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>Método IMetaDataTables::GetUserString
 
@@ -42,22 +42,22 @@ HRESULT GetUserString (
 no O valor de índice do qual a cadeia de caracteres embutida em código será recuperada.
 
 `pcbData`\
-fora Um ponteiro para o tamanho de `ppData`.
+fora Um ponteiro para o tamanho de `ppData` .
 
 `ppData`\
 fora Um ponteiro para um ponteiro para a cadeia de caracteres retornada.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
 **Cabeçalho:** Cor. h
 
 **Biblioteca:** Usado como um recurso em MsCorEE. dll
 
-**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataTables](imetadatatables-interface.md)
 - [Interface IMetaDataTables2](imetadatatables2-interface.md)

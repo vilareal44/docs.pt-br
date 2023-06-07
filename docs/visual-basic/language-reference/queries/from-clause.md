@@ -10,12 +10,12 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: a63fb41fc2b0ad885acf76ad5d56e446922f5b90
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 33680f49247b3b2a6082b3a6b27ca64f8401e42d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343773"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396175"
 ---
 # <a name="from-clause-visual-basic"></a>Cláusula From (Visual Basic)
 Especifica uma ou mais variáveis de intervalo e uma coleção a ser consultada.  
@@ -31,59 +31,59 @@ From element [ As type ] In collection [ _ ]
   
 |Termo|Definição|  
 |---|---|  
-|`element`|Necessária. Uma *variável de intervalo* usada para iterar pelos elementos da coleção. Uma variável de intervalo é usada para fazer referência a cada membro da `collection` à medida que a consulta é iterada por meio do `collection`. Deve ser um tipo enumerável.|  
-|`type`|Opcional. O tipo de `element`. Se nenhum `type` for especificado, o tipo de `element` será inferido de `collection`.|  
-|`collection`|Necessária. Refere-se à coleção a ser consultada. Deve ser um tipo enumerável.|  
+|`element`|Obrigatórios. Uma *variável de intervalo* usada para iterar pelos elementos da coleção. Uma variável de intervalo é usada para fazer referência a cada membro do `collection` à medida que a consulta é iterada por meio do `collection` . Deve ser um tipo enumerável.|  
+|`type`|Opcional. O tipo de `element`. Se não `type` for especificado, o tipo de `element` será inferido de `collection` .|  
+|`collection`|Obrigatórios. Refere-se à coleção a ser consultada. Deve ser um tipo enumerável.|  
   
 ## <a name="remarks"></a>Comentários  
- A cláusula `From` é usada para identificar os dados de origem de uma consulta e as variáveis que são usadas para fazer referência a um elemento da coleção de origem. Essas variáveis são chamadas de *variáveis de intervalo*. A cláusula `From` é necessária para uma consulta, exceto quando a cláusula `Aggregate` é usada para identificar uma consulta que retorna apenas resultados agregados. Para obter mais informações, consulte [cláusula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ A `From` cláusula é usada para identificar os dados de origem de uma consulta e as variáveis que são usadas para fazer referência a um elemento da coleção de origem. Essas variáveis são chamadas de *variáveis de intervalo*. A `From` cláusula é necessária para uma consulta, exceto quando a `Aggregate` cláusula é usada para identificar uma consulta que retorna apenas resultados agregados. Para obter mais informações, consulte [cláusula Aggregate](aggregate-clause.md).  
   
- Você pode especificar várias cláusulas `From` em uma consulta para identificar várias coleções a serem unidas. Quando várias coleções são especificadas, elas são iteradas de forma independente ou você pode associá-las se estiverem relacionadas. Você pode unir coleções implicitamente usando a cláusula `Select` ou explicitamente usando as cláusulas `Join` ou `Group Join`. Como alternativa, você pode especificar várias variáveis de intervalo e coleções em uma única cláusula de `From`, com cada variável de intervalo relacionada e uma coleção separada das outras por uma vírgula. O exemplo de código a seguir mostra ambas as opções de sintaxe para a cláusula `From`.  
+ Você pode especificar várias `From` cláusulas em uma consulta para identificar várias coleções a serem unidas. Quando várias coleções são especificadas, elas são iteradas de forma independente ou você pode associá-las se estiverem relacionadas. Você pode unir coleções implicitamente usando a `Select` cláusula ou explicitamente usando as `Join` `Group Join` cláusulas ou. Como alternativa, você pode especificar várias variáveis de intervalo e coleções em uma única `From` cláusula, com cada variável de intervalo relacionada e uma coleção separada das outras por uma vírgula. O exemplo de código a seguir mostra ambas as opções de sintaxe para a `From` cláusula.  
   
  [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
- A cláusula `From` define o escopo de uma consulta, que é semelhante ao escopo de um loop de `For`. Portanto, cada variável de intervalo `element` no escopo de uma consulta deve ter um nome exclusivo. Como você pode especificar várias cláusulas `From` para uma consulta, as cláusulas subseqüentes `From` podem se referir a variáveis de intervalo na cláusula `From`, ou podem se referir a variáveis de intervalo em uma cláusula `From` anterior. Por exemplo, o exemplo a seguir mostra uma cláusula aninhada `From` em que a coleção na segunda cláusula é baseada em uma propriedade da variável Range na primeira cláusula.  
+ A `From` cláusula define o escopo de uma consulta, que é semelhante ao escopo de um `For` loop. Portanto, cada `element` variável de intervalo no escopo de uma consulta deve ter um nome exclusivo. Como você pode especificar várias `From` cláusulas para uma consulta, as `From` cláusulas subsequentes podem se referir a variáveis de intervalo na `From` cláusula, ou podem se referir a variáveis de intervalo em uma `From` cláusula anterior. Por exemplo, o exemplo a seguir mostra uma `From` cláusula aninhada onde a coleção na segunda cláusula é baseada em uma propriedade da variável Range na primeira cláusula.  
   
  [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
- Cada cláusula de `From` pode ser seguida por qualquer combinação de cláusulas de consulta adicionais para refinar a consulta. Você pode refinar a consulta das seguintes maneiras:  
+ Cada `From` cláusula pode ser seguida por qualquer combinação de cláusulas de consulta adicionais para refinar a consulta. Você pode refinar a consulta das seguintes maneiras:  
   
-- Combine várias coleções implicitamente usando as cláusulas `From` e `Select` ou explicitamente usando as cláusulas `Join` ou `Group Join`.  
+- Combine várias coleções implicitamente usando as `From` `Select` cláusulas e, ou explicitamente, usando as `Join` `Group Join` cláusulas ou.  
   
-- Use a cláusula `Where` para filtrar o resultado da consulta.  
+- Use a `Where` cláusula para filtrar o resultado da consulta.  
   
-- Classifique o resultado usando a cláusula `Order By`.  
+- Classifique o resultado usando a `Order By` cláusula.  
   
-- Agrupe resultados semelhantes em conjunto usando a cláusula `Group By`.  
+- Agrupe resultados semelhantes em conjunto usando a `Group By` cláusula.  
   
-- Use a cláusula `Aggregate` para identificar as funções de agregação a serem avaliadas para todo o resultado da consulta.  
+- Use a `Aggregate` cláusula para identificar funções de agregação a serem avaliadas para todo o resultado da consulta.  
   
-- Use a cláusula `Let` para introduzir uma variável de iteração cujo valor é determinado por uma expressão em vez de uma coleção.  
+- Use a `Let` cláusula para introduzir uma variável de iteração cujo valor é determinado por uma expressão em vez de uma coleção.  
   
-- Use a cláusula `Distinct` para ignorar os resultados de consulta duplicados.  
+- Use a `Distinct` cláusula para ignorar os resultados de consulta duplicados.  
   
-- Identifique partes do resultado a serem retornadas usando as cláusulas `Skip`, `Take`, `Skip While`e `Take While`.  
+- Identifique partes do resultado a serem retornadas usando as `Skip` `Take` `Skip While` cláusulas,, e `Take While` .  
   
 ## <a name="example"></a>Exemplo  
- A expressão de consulta a seguir usa uma cláusula `From` para declarar uma variável de intervalo `cust` para cada objeto `Customer` na coleção de `customers`. A cláusula `Where` usa a variável Range para restringir a saída aos clientes da região especificada. O loop de `For Each` exibe o nome da empresa para cada cliente no resultado da consulta.  
+ A expressão de consulta a seguir usa uma `From` cláusula para declarar uma variável `cust` de intervalo para cada `Customer` objeto na `customers` coleção. A `Where` cláusula usa a variável Range para restringir a saída aos clientes da região especificada. O `For Each` loop exibe o nome da empresa para cada cliente no resultado da consulta.  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Consultas](../../../visual-basic/language-reference/queries/index.md)
-- [Introdução ao LINQ no Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Instrução For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [Instrução For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [Cláusula Select](../../../visual-basic/language-reference/queries/select-clause.md)
-- [Cláusula Where](../../../visual-basic/language-reference/queries/where-clause.md)
-- [Cláusula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)
-- [Cláusula Distinct](../../../visual-basic/language-reference/queries/distinct-clause.md)
-- [Cláusula Join](../../../visual-basic/language-reference/queries/join-clause.md)
-- [Cláusula Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)
-- [Cláusula Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)
-- [Cláusula Let](../../../visual-basic/language-reference/queries/let-clause.md)
-- [Cláusula Skip](../../../visual-basic/language-reference/queries/skip-clause.md)
-- [Cláusula Take](../../../visual-basic/language-reference/queries/take-clause.md)
-- [Cláusula Skip While](../../../visual-basic/language-reference/queries/skip-while-clause.md)
-- [Cláusula Take While](../../../visual-basic/language-reference/queries/take-while-clause.md)
+- [Consultas](index.md)
+- [Introdução a LINQ no Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [Instrução For Each...Next](../statements/for-each-next-statement.md)
+- [Instrução For...Next](../statements/for-next-statement.md)
+- [Cláusula SELECT](select-clause.md)
+- [Cláusula WHERE](where-clause.md)
+- [Cláusula Aggregate](aggregate-clause.md)
+- [Cláusula Distinct](distinct-clause.md)
+- [Cláusula JOIN](join-clause.md)
+- [Cláusula Group Join](group-join-clause.md)
+- [Cláusula Order By](order-by-clause.md)
+- [Cláusula Let](let-clause.md)
+- [Cláusula Skip](skip-clause.md)
+- [Cláusula Take](take-clause.md)
+- [Cláusula Skip While](skip-while-clause.md)
+- [Cláusula Take While](take-while-clause.md)

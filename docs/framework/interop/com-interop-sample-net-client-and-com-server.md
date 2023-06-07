@@ -1,5 +1,6 @@
 ---
 title: 'Exemplo de interoperabilidade COM: cliente .NET e servidor COM'
+description: Leia um exemplo de código que mostra como um cliente .NET acessa um servidor COM para criar uma instância de coclass COM e chamar membros de classe para executar cálculos de hipoteca.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
-ms.openlocfilehash: d854f474845322ae6df1da5788890a69720a5272
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bc95197813f5e4b0f4c7db6a8f0c24e8b27e4c3e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181496"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620866"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>Exemplo de interoperabilidade COM: cliente .NET e servidor COM
 Esta amostra apresenta como um [cliente .NET](#cpconcominteropsamplenetclientcomserveranchor1), criado para acessar um [servidor COM](#cpconcominteropsamplenetclientcomserveranchor2), cria uma instância de uma coclass COM e chama os membros da classe para executar cálculos de hipoteca.  
@@ -297,6 +298,6 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Expondo componentes do COM ao .NET Framework](exposing-com-components.md)
+- [Expondo componentes do COM para o .NET Framework](exposing-com-components.md)

@@ -2,12 +2,12 @@
 title: Diretrizes de formatação de código do F#
 description: 'Aprenda as diretrizes para formatar o código F #.'
 ms.date: 11/04/2019
-ms.openlocfilehash: dde69c573f1ef58d398ae47676b9403f588680b6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: fe8da6070e1c92bb5205e9cb408b8ac75372b061
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617263"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558303"
 ---
 # <a name="f-code-formatting-guidelines"></a>Diretrizes de formatação de código do F#
 
@@ -100,28 +100,51 @@ let myFun (a: decimal) b c = a + b + c
 let myFunBad (a:decimal)(b)c = a + b + c
 ```
 
-### <a name="place-parameters-on-a-new-line-for-long-member-definitions"></a>Coloque os parâmetros em uma nova linha para definições de membro longo
+### <a name="place-parameters-on-a-new-line-for-long-definitions"></a>Coloque os parâmetros em uma nova linha para definições longas
 
-Se você tiver uma definição de membro muito longa, coloque os parâmetros em novas linhas e recue-os em um escopo.
+Se você tiver uma definição de função muito longa, coloque os parâmetros em novas linhas e recue-os para corresponder ao nível de recuo do parâmetro subsequente.
 
 ```fsharp
-type C() =
-    member _.LongMethodWithLotsOfParameters(
-        aVeryLongType: AVeryLongTypeThatYouNeedToUse
-        aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse
-        aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
+module M =
+    let LongFunctionWithLotsOfParameters(aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                        (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                        (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                        =
         // ... the body of the method follows
 ```
 
-Isso também se aplica a construtores:
+Isso também se aplica a membros, construtores e parâmetros usando tuplas:
 
 ```fsharp
-type C(
-    aVeryLongType: AVeryLongTypeThatYouNeedToUse
-    aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse
-    aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
+type TM() =
+    member _.LongMethodWithLotsOfParameters(aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+                                            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+                                            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse) =
+        // ... the body of the method
+
+type TC(aVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse,
+        aSecondVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse,
+        aThirdVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse) =
     // ... the body of the class follows
 ```
+
+Se os parâmetros forem currified ou houver uma anotação explícita de tipo de retorno, é preferível posicionar o `=` caractere em uma nova linha:
+
+```fsharp
+type C() =
+    member _.LongMethodWithLotsOfParameters(aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+                                            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+                                            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                            : AReturnType =
+        // ... the body of the method
+    member _.LongMethodWithLotsOfCurrifiedParams(aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                                (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                                (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                                =
+        // ... the body of the method
+```
+
+Essa é uma maneira de evitar linhas muito longas (caso o tipo de retorno possa ter um nome longo) e ter menos danos na linha ao adicionar parâmetros.
 
 ### <a name="type-annotations"></a>Anotações de tipo
 

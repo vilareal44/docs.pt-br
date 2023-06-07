@@ -8,12 +8,12 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-ms.openlocfilehash: 3082954ef84560ccb70f7a47cd3532f622829392
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 25dd06905525a96bc1504f033eb4f19af6d454a2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349640"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359626"
 ---
 # <a name="take-clause-visual-basic"></a>Cláusula Take (Visual Basic)
 Retorna um número especificado de elementos contíguos do início de uma coleção.  
@@ -26,28 +26,28 @@ Take count
   
 ## <a name="parts"></a>Partes  
  `count`  
- Necessária. Um valor ou uma expressão que é avaliada como o número de elementos da sequência a ser retornado.  
+ Obrigatórios. Um valor ou uma expressão que é avaliada como o número de elementos da sequência a ser retornado.  
   
 ## <a name="remarks"></a>Comentários  
- A cláusula `Take` faz com que uma consulta inclua um número especificado de elementos contíguos do início de uma lista de resultados. O número de elementos a serem incluídos é especificado pelo parâmetro `count`.  
+ A `Take` cláusula faz com que uma consulta inclua um número especificado de elementos contíguos desde o início de uma lista de resultados. O número de elementos a serem incluídos é especificado pelo `count` parâmetro.  
   
- Você pode usar a cláusula `Take` com a cláusula `Skip` para retornar um intervalo de dados de qualquer segmento de uma consulta. Para fazer isso, passe o índice do primeiro elemento do intervalo para a cláusula `Skip` e o tamanho do intervalo para a cláusula `Take`. Nesse caso, a cláusula `Take` deve ser especificada após a cláusula `Skip`.  
+ Você pode usar a `Take` cláusula com a `Skip` cláusula para retornar um intervalo de dados de qualquer segmento de uma consulta. Para fazer isso, passe o índice do primeiro elemento do intervalo para a `Skip` cláusula e o tamanho do intervalo para a `Take` cláusula. Nesse caso, a `Take` cláusula deve ser especificada após a `Skip` cláusula.  
   
- Quando você usa a cláusula `Take` em uma consulta, também pode ser necessário garantir que os resultados sejam retornados em uma ordem que permitirá que a cláusula `Take` inclua os resultados pretendidos. Para obter mais informações sobre como ordenar os resultados da consulta, consulte [cláusula order by](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ Quando você usa a `Take` cláusula em uma consulta, também pode ser necessário garantir que os resultados sejam retornados em uma ordem que permitirá que a `Take` cláusula inclua os resultados pretendidos. Para obter mais informações sobre como ordenar os resultados da consulta, consulte [cláusula order by](order-by-clause.md).  
   
- Você pode usar a cláusula `TakeWhile` para especificar que apenas determinados elementos sejam retornados, dependendo de uma condição fornecida.  
+ Você pode usar a `TakeWhile` cláusula para especificar que apenas determinados elementos sejam retornados, dependendo de uma condição fornecida.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir usa a cláusula `Take` junto com a cláusula `Skip` para retornar dados de uma consulta em páginas. A função GetCustomers usa a cláusula `Skip` para ignorar os clientes na lista até o valor de índice inicial fornecido e usa a cláusula `Take` para retornar uma página de clientes que começam com esse valor de índice.  
+ O exemplo de código a seguir usa a `Take` cláusula junto com a `Skip` cláusula para retornar dados de uma consulta em páginas. A função GetCustomers usa a `Skip` cláusula para ignorar os clientes na lista até o valor de índice inicial fornecido e usa a `Take` cláusula para retornar uma página de clientes que inicia com esse valor de índice.  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Introdução ao LINQ no Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Consultas](../../../visual-basic/language-reference/queries/index.md)
-- [Cláusula Select](../../../visual-basic/language-reference/queries/select-clause.md)
-- [Cláusula From](../../../visual-basic/language-reference/queries/from-clause.md)
-- [Cláusula Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)
-- [Cláusula Take While](../../../visual-basic/language-reference/queries/take-while-clause.md)
-- [Cláusula Skip](../../../visual-basic/language-reference/queries/skip-clause.md)
+- [Introdução a LINQ no Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [Consultas](index.md)
+- [Cláusula SELECT](select-clause.md)
+- [Cláusula from](from-clause.md)
+- [Cláusula Order By](order-by-clause.md)
+- [Cláusula Take While](take-while-clause.md)
+- [Cláusula Skip](skip-clause.md)

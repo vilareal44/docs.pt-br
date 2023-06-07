@@ -3,19 +3,19 @@ title: <add> de <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
 ms.openlocfilehash: 6197d01665d49a7c97ac9e44251abf15faf80a8f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70850382"
 ---
-# <a name="add-of-protocolmapping"></a>\<Adicionar > de \<protocolMapping >
+# <a name="add-of-protocolmapping"></a>\<add> de \<protocolMapping>
 Representa um mapeamento de protocolo padrão entre um esquema de protocolo de transporte (por exemplo, http, net. TCP, net. pipe, etc.) e uma associação de Windows Communication Foundation (WCF). Ao criar pontos de extremidade padrão em tempo de execução, o WCF examina os mapeamentos configurados e decide qual associação usar para um endereço baseado em particular.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> protocolMapping**](protocolmapping.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Adicionar >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<protocolMapping>**](protocolmapping.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,10 +36,10 @@ Representa um mapeamento de protocolo padrão entre um esquema de protocolo de t
 |-------------|-----------------|  
 |associação|Uma cadeia de caracteres que especifica o tipo de associação a ser usada para um ponto de extremidade durante a criação do ponto de extremidade padrão.|  
 |bindingConfiguration|Uma cadeia de caracteres que especifica o nome da seção de configuração de associação a ser referenciada.|  
-|esquema|O esquema do protocolo de transporte a ser usado para o ponto de extremidade padrão.|  
+|scheme|O esquema do protocolo de transporte a ser usado para o ponto de extremidade padrão.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -63,7 +63,7 @@ Representa um mapeamento de protocolo padrão entre um esquema de protocolo de t
 </protocolMapping>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>

@@ -1,15 +1,16 @@
 ---
-title: Como filtrar um atributo (XPath-LINQ para XML) (C#)
+title: Como filtrar em um atributo (XPath-LINQ to XML) (C#)
+description: Saiba como filtrar elementos descendentes com um nome e valor de atributo especificados para XPath-LINQ to XML.
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-ms.openlocfilehash: ab2cd439f4dd1454de4fa565658ef5dac14b8c22
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 80c43b8485314c6a711b574b5d6c23b56533833d
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141279"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302887"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Como filtrar um atributo (XPath-LINQ para XML) (C#)
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Como filtrar em um atributo (XPath-LINQ to XML) (C#)
 Este tópico mostra como obter os elementos descendentes com um nome especificado e, com um atributo com um valor especificado.  
   
  A expressão XPath é:  

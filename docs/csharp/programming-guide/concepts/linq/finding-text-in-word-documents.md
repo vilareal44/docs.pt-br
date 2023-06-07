@@ -1,13 +1,14 @@
 ---
 title: Localizando texto em documentos do Word (C#)
+description: Saiba como processar um documento do WordprocessingML com LINQ em C#. Este exemplo localiza todas as ocorrências de uma cadeia de caracteres no documento.
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 173472b9dbd669476c3e5529655d111b88b0dba2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1efcbef6185b718287f1222ecc086f4c675f02ab
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70205387"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105398"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Localizando texto em documentos do Word (C#)
 Este tópico estende as consultas anteriores para fazer algo útil: localizar todas as ocorrências de uma cadeia de caracteres no documento.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 735fe9d7-0f7a-4185-ba02-f35e580ec4b8
-ms.openlocfilehash: 8af088ad269cc77bc5c83aedb86bde9af2e37a15
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d99209ed123686355e8d49c82ba23f94084f895
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74334584"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411610"
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>Como ler a partir de arquivos de texto no Visual Basic
 
@@ -60,14 +60,14 @@ Não tome decisões sobre o conteúdo do arquivo com base no nome do arquivo. Po
 
 Verifique todas as entradas antes de usar os dados no seu aplicativo. O conteúdo do arquivo pode não ser esperado, e os métodos para ler o arquivo podem falhar.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>
-- [Ler arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [Como ler a partir de arquivos de texto separados por vírgulas](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
-- [Como ler a partir de arquivos de texto de largura fixa](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
-- [Como ler a partir de arquivos de texto com vários formatos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
-- [Solução de problemas: lendo e gravando em arquivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
-- [Instruções passo a passo: manipulando arquivos e diretórios no Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)
-- [Codificações de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)
+- [Ler arquivos](reading-from-files.md)
+- [Como: ler de arquivos de texto separados por vírgula](how-to-read-from-comma-delimited-text-files.md)
+- [Como: ler de arquivos de texto de largura fixa](how-to-read-from-fixed-width-text-files.md)
+- [Como: ler de arquivos de texto com vários formatos](how-to-read-from-text-files-with-multiple-formats.md)
+- [Solução de problemas: ler e gravar em arquivos de texto](troubleshooting-reading-from-and-writing-to-text-files.md)
+- [Instruções passo a passo: manipulando arquivos e diretórios no Visual Basic](walkthrough-manipulating-files-and-directories.md)
+- [Codificações de arquivo](file-encodings.md)

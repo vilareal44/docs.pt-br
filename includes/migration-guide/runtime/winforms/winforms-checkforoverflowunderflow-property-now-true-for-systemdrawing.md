@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 8b2a01eb6dfdd5bd2bcbef6014d4edeb3ec82ac1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4cd06fd02fadbaa9f74e40f850e688ee883454ed
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "66379617"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619887"
 ---
 ### <a name="winforms-checkforoverflowunderflow-property-is-now-true-for-systemdrawing"></a>A propriedade CheckForOverflowUnderflow do WinForm agora é true para System.Drawing
 
-|   |   |
-|---|---|
-|Detalhes|A propriedade CheckForOverflowUnderflow do o assembly System.Drawing.dll está definida como true.|
-|Sugestão|Anteriormente, quando os estouros ocorriam, o resultado teria sido truncado silenciosamente. Agora, uma exceção <xref:System.OverflowException?displayProperty=name> é gerada.|
-|Escopo|Microsoft Edge|
+#### <a name="details"></a>Detalhes
+
+A propriedade CheckForOverflowUnderflow do o assembly System.Drawing.dll está definida como true.
+
+#### <a name="suggestion"></a>Sugestão
+
+Anteriormente, quando os estouros ocorriam, o resultado teria sido truncado silenciosamente. Agora, uma exceção <xref:System.OverflowException?displayProperty=fullName> é gerada.
+
+| Name    | Valor       |
+|:--------|:------------|
+| Escopo   |Microsoft Edge|
 |Versão|4.5|
-|Tipo|Tempo de execução|
+|Type|Runtime|

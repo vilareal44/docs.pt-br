@@ -1,5 +1,6 @@
 ---
-title: Como preencher um número com zeros à esquerda
+title: 'Como: Preencher um número com zeros à esquerda'
+description: Aprenda a preencher um número com zeros à esquerda. Adicione zeros à esquerda a inteiros ou valores numéricos a um comprimento total específico ou a um número específico de zeros à esquerda.
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - number formatting [.NET Framework]
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-ms.openlocfilehash: bc3c4b75c484274c214141d8fbfcf8ac592b0b99
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6ef0ddb37f1bc73254aa639d7c018ec6a01abd9b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73131984"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447180"
 ---
-# <a name="how-to-pad-a-number-with-leading-zeros"></a>Como preencher um número com zeros à esquerda
+# <a name="how-to-pad-a-number-with-leading-zeros"></a>Como: Preencher um número com zeros à esquerda
 
-É possível adicionar zeros à esquerda de um inteiro usando a [cadeia de caracteres de formato numérico padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md) “D” com um especificador de precisão. Você pode adicionar zeros à esquerda de inteiros e pontos flutuantes usando uma [cadeia de caracteres de formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md). Este artigo mostra como usar os dois métodos para preencher um número com zeros à esquerda.
+É possível adicionar zeros à esquerda de um inteiro usando a [cadeia de caracteres de formato numérico padrão](standard-numeric-format-strings.md) “D” com um especificador de precisão. Você pode adicionar zeros à esquerda de inteiros e pontos flutuantes usando uma [cadeia de caracteres de formato numérico personalizado](custom-numeric-format-strings.md). Este artigo mostra como usar os dois métodos para preencher um número com zeros à esquerda.
 
 ## <a name="to-pad-an-integer-with-leading-zeros-to-a-specific-length"></a>Para acrescentar um número inteiro com zeros à esquerda com um comprimento específico
 
@@ -32,7 +33,7 @@ ms.locfileid: "73131984"
 
     - Para exibir o número inteiro como hexadecimal, chame seu método `ToString(String)` e informe a cadeia de caracteres “X*n*” como valor do parâmetro format, em que *n* representa o comprimento mínimo da cadeia de caracteres.
 
-Você também pode usar a cadeia de caracteres de formato em uma cadeia de caracteres interpolada em [C#](../../csharp/language-reference/tokens/interpolated.md) e em [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) ou você pode chamar um método, como <xref:System.String.Format%2A?displayProperty=nameWithType> ou <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, que usa a [formatação de composição](../../../docs/standard/base-types/composite-formatting.md).
+Você também pode usar a cadeia de caracteres de formato em uma cadeia de caracteres interpolada em [C#](../../csharp/language-reference/tokens/interpolated.md) e em [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) ou você pode chamar um método, como <xref:System.String.Format%2A?displayProperty=nameWithType> ou <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, que usa a [formatação de composição](composite-formatting.md).
 
 O exemplo a seguir formata diversos valores inteiros com zeros à esquerda para que o comprimento total do número formatado tenha pelo menos oito caracteres.
 
@@ -102,6 +103,6 @@ O exemplo a seguir acrescenta dois valores <xref:System.Double> com cinco dígit
 
 ## <a name="see-also"></a>Confira também
 
-- [Strings de formato numérico personalizados](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [Strings de formato numérico padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [Formatação composta](../../../docs/standard/base-types/composite-formatting.md)
+- [Cadeias de caracteres de formato numérico personalizado](custom-numeric-format-strings.md)
+- [Cadeias de caracteres de formato numérico padrão](standard-numeric-format-strings.md)
+- [Formatação composta](composite-formatting.md)

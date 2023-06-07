@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-ms.openlocfilehash: 435d23d4a56d6ea98e3d368f0a5aa37c73e31d96
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 0fa72568df77c4916a3c6676e1dcca7c0c616c4a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616154"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493312"
 ---
 # <a name="etasktype-enumeration"></a>Enumeração ETaskType
-Contém valores que indicam o tipo de tarefa que é representado por uma interface [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) ou [IHostTask](ihosttask-interface.md) .  
+Contém valores que indicam o tipo de tarefa que é representado por uma interface [ICLRTask](iclrtask-interface.md) ou [IHostTask](ihosttask-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -67,6 +67,6 @@ typedef enum ETaskType {
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Hospedando enumerações](hosting-enumerations.md)

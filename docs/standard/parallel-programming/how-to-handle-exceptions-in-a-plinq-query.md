@@ -1,5 +1,5 @@
 ---
-title: Como manipular exceções em uma consulta PLINQ
+title: 'Como: Tratar exceções em uma consulta PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to handle exceptions
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
-ms.openlocfilehash: 5ccddfb01d6b173900dfffc465292c7812626ddc
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 4097d222b5fa51cc638a2d07d3fd2eddf5d9859c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80587983"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278643"
 ---
-# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Como manipular exceções em uma consulta PLINQ
+# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Como: Tratar exceções em uma consulta PLINQ
 
 O primeiro exemplo neste tópico mostra como tratar o <xref:System.AggregateException?displayProperty=nameWithType> que pode ser gerado de uma consulta PLINQ ao ser executado. O segundo exemplo mostra como colocar blocos try-catch em representantes, o mais próximo possível de onde a exceção será gerada. Dessa forma, você pode capturá-los assim que eles ocorrerem e, possivelmente, continuar a execução da consulta. Quando as exceções tiverem permissão de emergirem novamente para o thread de associação, então será possível que uma consulta continue a processar alguns itens após a geração da exceção.
 
@@ -24,7 +24,7 @@ Em alguns casos em que PLINQ volta à execução sequencial e ocorre uma exceç�
 > [!NOTE]
 > Se a opção "Apenas Meu Código" estiver habilitada, o Visual Studio interromperá na linha que gerou a exceção e exibirá a mensagem de erro "exceção não tratada pelo código do usuário". Esse erro é benigno. Você pode pressionar F5 para continuar a partir daí e ver o comportamento de tratamento de exceção, demonstrado nos exemplos a seguir. Para impedir que o Visual Studio seja interrompido no primeiro erro, basta desmarcar a caixa de seleção "Apenas Meu Código" em **Ferramentas, Opções, Depuração, Geral**.
 >
-> Este exemplo tem como objetivo demonstrar o uso e pode não executar tão rápido quanto a consulta LINQ to Objects sequencial equivalente. Para saber mais sobre agilização, confira [Noções básicas sobre agilização no PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).
+> Este exemplo tem como objetivo demonstrar o uso e pode não executar tão rápido quanto a consulta LINQ to Objects sequencial equivalente. Para saber mais sobre agilização, confira [Noções básicas sobre agilização no PLINQ](understanding-speedup-in-plinq.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -50,7 +50,7 @@ O exemplo a seguir mostra como inserir um bloco try-catch em um representante pa
 
 Não captura uma exceção, a menos que você saiba como tratá-la para que o estado do programa não sejam corrompido.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Linq.ParallelEnumerable>
-- [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [LINQ paralelo (PLINQ)](introduction-to-plinq.md)

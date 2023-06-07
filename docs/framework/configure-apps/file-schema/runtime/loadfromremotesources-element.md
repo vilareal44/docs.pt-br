@@ -6,21 +6,21 @@ helpviewer_keywords:
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 ms.openlocfilehash: a0dcffe378cdd09de0fbd8f0a6ef0635c033fd9c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154056"
 ---
-# <a name="loadfromremotesources-element"></a>\<carregarDeelemento>Defontes remotas
-Especifica se os conjuntos carregados de fontes remotas devem ser concedidos total confiança no Quadro .NET 4 e posterior.
+# <a name="loadfromremotesources-element"></a>Elemento \<loadFromRemoteSources>
+Especifica se os assemblies carregados de fontes remotas devem receber confiança total no .NET Framework 4 e posterior.
   
 > [!NOTE]
-> Se você foi direcionado a este artigo por causa de uma mensagem de erro na lista de erros do projeto Visual Studio ou de um erro de compilação, consulte [Como: Usar um conjunto da Web no Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100)).  
+> Se você foi direcionado para este artigo devido a uma mensagem de erro na lista de erros do projeto do Visual Studio ou um erro de compilação, consulte [como: usar um assembly da Web no Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100)).  
   
-[**\<>de configuração**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<>de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<carregamentoDeDeFormaremotas>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<loadFromRemoteSources>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,14 +36,14 @@ Especifica se os conjuntos carregados de fontes remotas devem ser concedidos tot
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`enabled`|Atributo obrigatório.<br /><br /> Especifica se um conjunto carregado de uma fonte remota deve ser concedido total confiança.|  
+|`enabled`|Atributo obrigatório.<br /><br /> Especifica se um assembly que é carregado de uma fonte remota deve receber confiança total.|  
   
-## <a name="enabled-attribute"></a>atributo ativado  
+## <a name="enabled-attribute"></a>atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|Não conceda total confiança a aplicações de fontes remotas. Esse é o padrão.|  
-|`true`|Conceda total confiança a aplicações de fontes remotas.|  
+|`false`|Não conceda confiança total a aplicativos de fontes remotas. Este é o padrão.|  
+|`true`|Conceda confiança total a aplicativos de fontes remotas.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum.  
@@ -57,9 +57,9 @@ Especifica se os conjuntos carregados de fontes remotas devem ser concedidos tot
   
 ## <a name="remarks"></a>Comentários
 
-Nas versões .NET Framework 3.5 e anteriores, se você carregar um conjunto de um local remoto, o código no conjunto será executado em confiança parcial com um conjunto de concessões que depende da região da qual ele é carregado. Por exemplo, se você carregar um conjunto de um site, ele é carregado na região da Internet e concedido o conjunto de permissões da Internet. Em outras palavras, ele é executado em uma caixa de areia da Internet.
+No .NET Framework 3,5 e versões anteriores, se você carregar um assembly de um local remoto, o código no assembly será executado em confiança parcial com um conjunto de concessão que depende da zona da qual ele está carregado. Por exemplo, se você carregar um assembly de um site, ele será carregado na zona da Internet e terá o conjunto de permissões da Internet. Em outras palavras, ele é executado em uma área restrita da Internet.
 
-Começando com o .NET Framework 4, a política CAS (Code Access Security, segurança de acesso ao código) é desativada e as montagens são carregadas em total confiança. Normalmente, isso concederia total confiança às <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> assembléias carregadas com o método que anteriormente havia sido sandboxed. Para evitar isso, a capacidade de executar código em conjuntos carregados de uma fonte remota é desativada por padrão. Por padrão, se você tentar carregar <xref:System.IO.FileLoadException> um conjunto remoto, uma mensagem com exceção como a seguinte será lançada:
+A partir do .NET Framework 4, a política de CAS (segurança de acesso ao código) é desabilitada e os assemblies são carregados em confiança total. Normalmente, isso concederia confiança total a assemblies carregados com o <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> método que anteriormente estava na área restrita. Para evitar isso, a capacidade de executar código em assemblies carregados de uma fonte remota é desabilitada por padrão. Por padrão, se você tentar carregar um assembly remoto, um <xref:System.IO.FileLoadException> com uma mensagem de exceção semelhante à seguinte será lançada:
 
 ```text
 System.IO.FileNotFoundException: Could not load file or assembly 'file:assem.dll' or one of its dependencies. Operation is not supported.
@@ -70,40 +70,40 @@ to be sandboxed in previous versions of the .NET Framework. This release of the 
 so this load may be dangerous. If this load is not intended to sandbox the assembly, please enable the loadFromRemoteSources switch.
 ```
 
-Para carregar o conjunto e executar seu código, você deve:
+Para carregar o assembly e executar seu código, você deve:
 
-- Crie explicitamente uma caixa de areia para o conjunto (veja [Como: Executar código parcialmente confiável em uma caixa de areia](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
+- Crie explicitamente uma área restrita para o assembly (consulte [como: executar código parcialmente confiável em uma área restrita](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
 
-- Execute o código da assembléia em total confiança. Você faz isso configurando o `<loadFromRemoteSources>` elemento. Ele permite especificar que as assembléias que são executadas em confiança parcial em versões anteriores do .NET Framework agora são executadas em total confiança nas versões .NET Framework 4 e posteriores.
+- Execute o código do assembly em confiança total. Você faz isso Configurando o `<loadFromRemoteSources>` elemento. Ele permite que você especifique que os assemblies que são executados em confiança parcial em versões anteriores do .NET Framework agora são executados com confiança total no .NET Framework 4 e versões posteriores.
 
 > [!IMPORTANT]
-> Se o conjunto não for executado em plena confiança, não defina este elemento de configuração. Em vez disso, crie <xref:System.AppDomain> uma caixa de areia na qual para carregar o conjunto.
+> Se o assembly não deve ser executado com confiança total, não defina este elemento de configuração. Em vez disso, crie uma área restrita <xref:System.AppDomain> na qual carregar o assembly.
 
-O `enabled` atributo `<loadFromRemoteSources>` para o elemento só é eficaz quando o CAS (Code Access Security, segurança de acesso ao código) é desativado. Por padrão, a diretiva CAS é desativada nas versões .NET Framework 4 e posteriores. Se você `enabled` `true`definir para , assembléias remotas são concedidas total confiança.
+O `enabled` atributo para o `<loadFromRemoteSources>` elemento é efetivo somente quando a segurança de acesso ao código (CAS) está desabilitada. Por padrão, a política de CAS é desabilitada no .NET Framework 4 e em versões posteriores. Se você definir `enabled` como `true` , os assemblies remotos recebem confiança total.
 
-Se `enabled` não for `true`definido <xref:System.IO.FileLoadException> para, a é jogado qualquer uma das seguintes condições:
+Se `enabled` não estiver definido como `true` , um <xref:System.IO.FileLoadException> será lançado sob uma das seguintes condições:
 
-- O comportamento de sandboxing do domínio atual é diferente de seu comportamento no Quadro .NET 3.5. Isso exige que a política CAS seja desativada e que o domínio atual não seja sandbox.
+- O comportamento de área restrita do domínio atual é diferente do seu comportamento no .NET Framework 3,5. Isso requer que a política de CAS seja desabilitada e o domínio atual não seja colocado em área restrita.
 
-- A montagem que está sendo `MyComputer` carregada não é da zona.
+- O assembly que está sendo carregado não é da `MyComputer` zona.
 
-Definir `<loadFromRemoteSources>` o `true` elemento para evitar que essa exceção seja lançada. Ele permite que você especifique que você não está confiando no tempo de execução do idioma comum para sandbox os conjuntos carregados para segurança, e que eles podem ser autorizados a executar em total confiança.
+Definindo o `<loadFromRemoteSources>` elemento para `true` impedir que essa exceção seja gerada. Ele permite que você especifique que você não depende do Common Language Runtime para colocar os assemblies carregados em área restrita para segurança e que eles podem ter permissão para serem executados em confiança total.
 
 ## <a name="notes"></a>Observações
 
-- Nas versões .NET Framework 4.5 e posteriores, as assembléias sobre ações de rede locais são executadas em total confiança por padrão; você não precisa ativar `<loadFromRemoteSources>` o elemento.
+- No .NET Framework 4,5 e versões posteriores, os assemblies em compartilhamentos de rede local são executados em confiança total por padrão; Você não precisa habilitar o `<loadFromRemoteSources>` elemento.
 
-- Se um aplicativo foi copiado da web, ele é sinalizado pelo Windows como sendo um aplicativo web, mesmo que resida no computador local. Você pode alterar essa designação alterando suas `<loadFromRemoteSources>` propriedades de arquivo, ou você pode usar o elemento para conceder a total confiança da assembléia. Como alternativa, você pode <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> usar o método para carregar um conjunto local que o sistema operacional sinalizou como tendo sido carregado da web.
+- Se um aplicativo tiver sido copiado da Web, ele será sinalizado pelo Windows como sendo um aplicativo Web, mesmo que ele resida no computador local. Você pode alterar essa designação alterando suas propriedades de arquivo ou pode usar o `<loadFromRemoteSources>` elemento para conceder confiança total ao assembly. Como alternativa, você pode usar o <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> método para carregar um assembly local que o sistema operacional tenha sinalizado como tendo sido carregado da Web.
 
-- Você pode <xref:System.IO.FileLoadException> obter um em um aplicativo que está sendo executado em um aplicativo de PC virtual do Windows. Isso pode acontecer quando você tenta carregar um arquivo de pastas vinculadas no computador de hospedagem. Também pode ocorrer quando você tenta carregar um arquivo de uma pasta vinculada sobre [serviços de área de trabalho remota](/windows/win32/termserv/terminal-services-portal) (Serviços de Terminal). Para evitar a `enabled` exceção, definido como `true`.
+- Você pode obter um <xref:System.IO.FileLoadException> em um aplicativo que está sendo executado em um aplicativo do Windows Virtual PC. Isso pode acontecer quando você tenta carregar um arquivo de pastas vinculadas no computador host. Ele também pode ocorrer quando você tenta carregar um arquivo de uma pasta vinculada por [serviços de área de trabalho remota](/windows/win32/termserv/terminal-services-portal) (serviços de terminal). Para evitar a exceção, defina `enabled` como `true` .
 
 ## <a name="configuration-file"></a>Arquivo de configuração
 
-Esse elemento é normalmente usado no arquivo de configuração do aplicativo, mas pode ser usado em outros arquivos de configuração, dependendo do contexto. Para obter mais informações, consulte o artigo [Usos mais implícitos da política CAS: loadFromRemoteSources](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources) no blog .NET Security.  
+Esse elemento é normalmente usado no arquivo de configuração do aplicativo, mas pode ser usado em outros arquivos de configuração, dependendo do contexto. Para obter mais informações, consulte o artigo [usos mais implícitos da política de CAS: loadFromRemoteSources](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources) no blog de segurança do .net.  
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como conceder confiança total a assembléias carregadas de fontes remotas.
+O exemplo a seguir mostra como conceder confiança total a assemblies carregados de fontes remotas.
 
 ```xml
 <configuration>  
@@ -115,8 +115,8 @@ O exemplo a seguir mostra como conceder confiança total a assembléias carregad
 
 ## <a name="see-also"></a>Confira também
 
-- [Usos mais implícitos da política CAS: loadFromRemoteSources](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources)
+- [Mais usos implícitos da política de CAS: loadFromRemoteSources](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources)
 - [Como executar código parcialmente confiável em uma área restrita](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [Esquema de configurações do runtime](index.md)
-- [Esquema de arquivo de configuração](../index.md)
+- [Esquema do arquivo de configuração](../index.md)
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

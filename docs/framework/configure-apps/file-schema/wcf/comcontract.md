@@ -3,19 +3,19 @@ title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
 ms.openlocfilehash: b499294af71ba230dcf985d4af1d013b1ca260cf
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70850033"
 ---
-# <a name="comcontract"></a>\<> de descontrato
+# \<comContract>
 Especifica um contrato de serviço de integração COM+.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de com-contratos**](comcontracts.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de descontrato**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<comContracts>**](comcontracts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<comContract>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +54,7 @@ Especifica um contrato de serviço de integração COM+.
 |contrato|Uma cadeia de caracteres que contém o tipo de contrato.|  
 |name|Uma cadeia de caracteres que contém o nome do contrato.|  
 |namespace|Uma cadeia de caracteres que contém o namespace do contrato.|  
-|requiresSession|Um valor booliano que especifica se o contrato só pode ser usado em associações de sessão. Quando o serviço é inicializado, o Integration Runtime garante que essa configuração seja consistente com o tipo de associação a ser usada. Uma exceção será gerada se uma ou mais das associações para o contrato estiverem em conflito. Se essa propriedade for `false`, e um canal unidirecional estiver em uso e houver quaisquer parâmetros [out], uma exceção também será gerada.|  
+|requiresSession|Um valor booliano que especifica se o contrato só pode ser usado em associações de sessão. Quando o serviço é inicializado, o Integration Runtime garante que essa configuração seja consistente com o tipo de associação a ser usada. Uma exceção será gerada se uma ou mais das associações para o contrato estiverem em conflito. Se essa propriedade for `false` , e um canal unidirecional estiver em uso e houver quaisquer parâmetros [out], uma exceção também será gerada.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -71,7 +71,7 @@ Especifica um contrato de serviço de integração COM+.
 |comContracts|Contém uma coleção de `comContract` elementos.|  
   
 ## <a name="remarks"></a>Comentários  
- Os contratos do serviço de `http://tempuri.org` integração com+ estão atualmente restritos ao namespace e o nome do contrato é derivado da interface com de suporte. No entanto, você pode especificar alternativas usando a `comContracts` seção, bem como o `comContract` elemento no arquivo de configuração. Por exemplo, você pode usar a configuração a seguir para especificar o namespace, o nome do contrato e os tipos definidos pelo usuário a serem incluídos, bem como outras configurações para um contrato de serviço.  
+ Os contratos do serviço de integração COM+ estão atualmente restritos ao `http://tempuri.org` namespace e o nome do contrato é derivado da interface com de suporte. No entanto, você pode especificar alternativas usando a `comContracts` seção, bem como o `comContract` elemento no arquivo de configuração. Por exemplo, você pode usar a configuração a seguir para especificar o namespace, o nome do contrato e os tipos definidos pelo usuário a serem incluídos, bem como outras configurações para um contrato de serviço.  
   
 ```xml  
 <comContracts>
@@ -90,10 +90,10 @@ Especifica um contrato de serviço de integração COM+.
   
  Quando o serviço é inicializado, os namespaces e os nomes de contrato especificados são aplicados às descrições de serviço geradas.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>
 - [\<comContracts>](comcontracts.md)
-- [Integração de aplicativos COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Como: Definir configurações de serviço COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)
+- [Integração com aplicativos COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Como configurar configurações de serviço de COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

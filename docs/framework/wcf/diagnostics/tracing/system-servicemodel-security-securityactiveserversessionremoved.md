@@ -2,21 +2,21 @@
 title: System.ServiceModel.Security.SecurityActiveServerSessionRemoved
 ms.date: 03/30/2017
 ms.assetid: f62789ea-d455-43f5-ab6c-21588184b528
-ms.openlocfilehash: 7c46afca57d703dbfbc7b462ef180ae5a924a284
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e57f435fd12ca13bfdcd930a76db863e2a70903
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926809"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587866"
 ---
 # <a name="systemservicemodelsecuritysecurityactiveserversessionremoved"></a>System.ServiceModel.Security.SecurityActiveServerSessionRemoved
 System.ServiceModel.Security.SecurityActiveServerSessionRemoved  
   
 ## <a name="description"></a>Descrição  
- Uma sessão de segurança do Active Directory foi removida pelo servidor.  
+ Uma sessão de segurança ativa foi removida pelo servidor.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Rastreamento](index.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](using-tracing-to-troubleshoot-your-application.md)
+- [Administração e diagnóstico](../index.md)

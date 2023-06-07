@@ -9,19 +9,19 @@ helpviewer_keywords:
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 ms.openlocfilehash: 5588892ec75a791eda1eb043936c0af95e79354e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153601"
 ---
-# <a name="add-element-for-sharedlisteners"></a>\<adicionar> \<Elemento para> de ouvintes compartilhados
-Adiciona um ouvinte na coleção `sharedListeners`. `sharedListeners`é uma coleção de [ \<](source-element.md) ouvintes que qualquer fonte>ou [ \<traçar>](trace-element.md) pode referenciar.  Por padrão, os `sharedListeners` ouvintes da `Listeners` coleção não são colocados em uma coleção. Eles devem ser adicionados [ \<](source-element.md) pelo nome à fonte>ou [ \<traçar>](trace-element.md). Não é possível obter os `sharedListeners` ouvintes da coleção em código em tempo de execução.  
+# <a name="add-element-for-sharedlisteners"></a>Elemento \<add> para \<sharedListeners>
+Adiciona um ouvinte na coleção `sharedListeners`. `sharedListeners`é uma coleção de ouvintes que qualquer [\<source>](source-element.md) ou [\<trace>](trace-element.md) pode referenciar.  Por padrão, os ouvintes na `sharedListeners` coleção não são colocados em uma `Listeners` coleção. Eles devem ser adicionados pelo nome ao [\<source>](source-element.md) ou ao [\<trace>](trace-element.md) . Não é possível obter os ouvintes na `sharedListeners` coleção no código em tempo de execução.  
 
-[**\<>de configuração**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de ouvintes compartilhados**](sharedlisteners-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<adicionar>**
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<sharedListeners>**](sharedlisteners-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,16 +40,16 @@ Adiciona um ouvinte na coleção `sharedListeners`. `sharedListeners`é uma cole
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`name`|Atributo obrigatório.<br /><br /> Especifica o nome do ouvinte que é usado para adicionar `Listeners` o ouvinte compartilhado a uma coleção.|  
-|`type`|Atributo obrigatório.<br /><br /> Especifica o tipo do ouvinte. Você deve usar uma string que atenda aos requisitos especificados na [Especificação de nomes de tipo totalmente qualificados](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|`initializeData`|Atributo opcional.<br /><br /> A seqüência passou para o construtor para a classe especificada.|  
-|`traceOutputOptions`|Atributo opcional.<br/><br/>A representação de <xref:System.Diagnostics.TraceOptions> seqüência de um ou mais membros de enumeração que indica os dados a serem gravados na saída de rastreamento. Vários itens são separados por commas. O valor padrão é "Nenhum".|
+|`name`|Atributo obrigatório.<br /><br /> Especifica o nome do ouvinte que é usado para adicionar o ouvinte compartilhado a uma `Listeners` coleção.|  
+|`type`|Atributo obrigatório.<br /><br /> Especifica o tipo do ouvinte. Você deve usar uma cadeia de caracteres que atenda aos requisitos especificados na [especificação de nomes de tipo totalmente qualificados](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`initializeData`|Atributo opcional.<br /><br /> A cadeia de caracteres passada para o construtor para a classe especificada.|  
+|`traceOutputOptions`|Atributo opcional.<br/><br/>A representação de cadeia de caracteres de um ou mais <xref:System.Diagnostics.TraceOptions> membros de enumeração que indica os dados a serem gravados na saída do rastreamento. Vários itens são separados por vírgulas. O valor padrão é "None".|
 
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<>de filtro](filter-element-for-add-for-sharedlisteners.md)|Adiciona um filtro a um ouvinte na coleção `sharedListeners`.|  
+|[\<filter>](filter-element-for-add-for-sharedlisteners.md)|Adiciona um filtro a um ouvinte na coleção `sharedListeners`.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -57,30 +57,30 @@ Adiciona um ouvinte na coleção `sharedListeners`. `sharedListeners`é uma cole
 |-------------|-----------------|  
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
 |`system.diagnostics`|Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.|  
-|`sharedListeners`|Uma coleção de ouvintes que qualquer fonte ou elemento de rastreamento pode referenciar.|  
+|`sharedListeners`|Uma coleção de ouvintes que qualquer elemento de origem ou de rastreamento pode referenciar.|  
   
 ## <a name="remarks"></a>Comentários  
- As classes de ouvinte enviadas com o <xref:System.Diagnostics.TraceListener> Quadro .NET derivam da classe. O valor `name` para o atributo é usado para `Listeners` adicionar o ouvinte compartilhado a uma coleção para um traço ou uma fonte de rastreamento. O valor `initializeData` para o atributo depende do tipo de ouvinte que você cria. Nem todos os ouvintes `initializeData`de rastreamento exigem que você especifique .  
+ As classes de ouvinte fornecidas com o .NET Framework derivam da <xref:System.Diagnostics.TraceListener> classe. O valor para o `name` atributo é usado para adicionar o ouvinte compartilhado a uma `Listeners` coleção para um rastreamento ou uma origem de rastreamento. O valor para o `initializeData` atributo depende do tipo de ouvinte que você criar. Nem todos os ouvintes de rastreamento exigem que você especifique `initializeData` .  
   
 > [!NOTE]
-> Quando você `initializeData` usa o atributo, você pode obter o aviso do compilador "O atributo 'initializeData' não é declarado." Esse aviso ocorre porque as configurações são <xref:System.Diagnostics.TraceListener>validadas em `initializeData` relação à classe base abstrata, que não reconhece o atributo. Normalmente, você pode ignorar este aviso para implementações de ouvintes de rastreamento que tenham um construtor que leva um parâmetro.  
+> Ao usar o `initializeData` atributo, você pode obter o aviso do compilador "o atributo ' initializeData ' não está declarado." Esse aviso ocorre porque as definições de configuração são validadas em relação à classe base abstrata <xref:System.Diagnostics.TraceListener> , que não reconhece o `initializeData` atributo. Normalmente, você pode ignorar esse aviso para implementações de ouvinte de rastreamento que têm um construtor que usa um parâmetro.  
   
- A tabela a seguir mostra os ouvintes de rastreamento que estão `initializeData` incluídos no Quadro .NET e descreve o valor de seus atributos.  
+ A tabela a seguir mostra os ouvintes de rastreamento que estão incluídos com o .NET Framework e descreve o valor de seus `initializeData` atributos.  
   
-|Classe de ouvinte de rastreamento|inicializarvalor do atributoData|  
+|Classe de ouvinte de rastreamento|valor do atributo initializeData|  
 |--------------------------|------------------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener>|O `useErrorStream` valor <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> para o construtor.  Defina `initializeData` o`true`atributo como " " para gravar a saída de rastreamento e depuração para o fluxo de erro padrão; configurá-lo`false`para " " para escrever para o fluxo de saída padrão.|  
+|<xref:System.Diagnostics.ConsoleTraceListener>|O `useErrorStream` valor do <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> Construtor.  Defina o `initializeData` atributo como " `true` " para gravar rastreamento e depurar saída para o fluxo de erro padrão; defina-o como " `false` " para gravar no fluxo de saída padrão.|  
 |<xref:System.Diagnostics.DelimitedListTraceListener>|O nome do arquivo no qual o <xref:System.Diagnostics.DelimitedListTraceListener> é gravado.|  
 |<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|O nome da origem de um log de eventos existente.|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|O nome do arquivo <xref:System.Diagnostics.EventSchemaTraceListener> para o que ele escreve.|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|O nome do arquivo <xref:System.Diagnostics.TextWriterTraceListener> para o que ele escreve.|  
-|<xref:System.Diagnostics.XmlWriterTraceListener>|O nome do arquivo <xref:System.Diagnostics.XmlWriterTraceListener> para o que ele escreve.|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|O nome do arquivo no qual as <xref:System.Diagnostics.EventSchemaTraceListener> gravações são gravadas.|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|O nome do arquivo no qual as <xref:System.Diagnostics.TextWriterTraceListener> gravações são gravadas.|  
+|<xref:System.Diagnostics.XmlWriterTraceListener>|O nome do arquivo no qual as <xref:System.Diagnostics.XmlWriterTraceListener> gravações são gravadas.|  
   
 ## <a name="configuration-file"></a>Arquivo de configuração  
- Esse elemento pode ser usado no arquivo de configuração da máquina (Machine.config) e no arquivo de configuração do aplicativo.  
+ Esse elemento pode ser usado no arquivo de configuração da máquina (Machine. config) e no arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir `<add>` mostra como <xref:System.Diagnostics.TextWriterTraceListener> `textListener` usar `sharedListeners` elementos para adicionar à coleção.   `textListener`é adicionado por `Listeners` nome à coleção `TraceSourceApp`para a fonte de rastreamento . O `textListener` ouvinte grava a saída de rastreamento para o arquivo myListener.log.  
+ O exemplo a seguir mostra como usar `<add>` elementos para adicionar o <xref:System.Diagnostics.TextWriterTraceListener> `textListener` à `sharedListeners` coleção.   `textListener`é adicionado pelo nome à `Listeners` coleção para a origem do rastreamento `TraceSourceApp` . O `textListener` ouvinte grava a saída de rastreamento no arquivo myListener. log.  
   
 ```xml  
 <configuration>  

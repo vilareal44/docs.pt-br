@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a3e43ed-3ee3-4395-ab14-f78b903be13e
 topic_type:
 - apiref
-ms.openlocfilehash: 441f7743ba01884592393ce9382348fbecaeaa9d
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b605419a291f7bee76ecad7e07be9a7a989f9fe9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861873"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496003"
 ---
 # <a name="icorprofilerinfo4getobjectsize2-method"></a>Método ICorProfilerInfo4::GetObjectSize2
-Retorna o tamanho de um objeto especificado. Substitui o método [ICorProfilerInfo:: GetObjects](icorprofilerinfo-getobjectsize-method.md) relatando tamanhos de objetos maiores do que o que pode ser expresso em um `ULONG`.  
+Retorna o tamanho de um objeto especificado. Substitui o método [ICorProfilerInfo:: Getobjectize](icorprofilerinfo-getobjectsize-method.md) relatando tamanhos de objetos maiores do que o que pode ser expresso em um `ULONG` .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,15 +43,15 @@ HRESULT GetObjectSize2(
 ## <a name="remarks"></a>Comentários  
  Objetos diferentes dos mesmos tipos geralmente têm o mesmo tamanho. No entanto, alguns tipos, como matrizes ou cadeias de caracteres, podem ter um tamanho diferente para cada objeto.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerInfo4](icorprofilerinfo4-interface.md)

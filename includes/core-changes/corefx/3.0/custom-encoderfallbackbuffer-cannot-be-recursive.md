@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 00c32c10f77995284264e795d386f699082dcb84
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 54ef49755dc0b9d1b821ae7999ab218626d455e1
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721700"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556314"
 ---
 ### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>Instâncias EncoderFallbackBuffer personalizadas não podem retornar recursivamente
 
@@ -16,7 +16,7 @@ Durante uma operação de transcodificação de caractere para byte, o tempo de 
 
 Em seguida, o tempo de execução tenta transcodificar esses caracteres de substituição para a codificação de destino. Se essa operação for realizada com sucesso, o tempo de execução continuará transcodificando de onde parou na cadeia de caracteres de entrada original.
 
-No .NET Core Preview 7 e versões anteriores, implementações personalizadas do <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> podem retornar sequências de caracteres que não são conversíveis para a codificação de destino. Se os caracteres substituídos não puderem ser transcodificados para a codificação de destino, o tempo de execução invocará o <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> método novamente com os caracteres de substituição, esperando que o <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> método retorne uma nova sequência de substituição. Esse processo continua até que o tempo de execução eventualmente Veja uma substituição bem formada, conversível ou até que uma contagem de recursão máxima seja atingida.
+Anteriormente, as implementações personalizadas do <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> podem retornar sequências de caracteres que não são conversíveis para a codificação de destino. Se os caracteres substituídos não puderem ser transcodificados para a codificação de destino, o tempo de execução invocará o <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> método novamente com os caracteres de substituição, esperando que o <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> método retorne uma nova sequência de substituição. Esse processo continua até que o tempo de execução eventualmente Veja uma substituição bem formada, conversível ou até que uma contagem de recursão máxima seja atingida.
 
 A partir do .NET Core 3,0, implementações personalizadas do <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> devem retornar sequências de caracteres que são conversíveis para a codificação de destino. Se os caracteres substituídos não puderem ser transcodificados para a codificação de destino, um <xref:System.ArgumentException> será lançado. O tempo de execução não fará mais chamadas recursivas na <xref:System.Text.EncoderFallbackBuffer> instância.
 

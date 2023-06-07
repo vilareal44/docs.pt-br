@@ -1,13 +1,13 @@
 ---
-title: Clonagem em anexar
+title: Clonagem contra. anexação
 ms.date: 07/20/2015
 ms.assetid: 3c3bd105-c9d3-49bd-875b-27ab4e8bc7a3
-ms.openlocfilehash: 22e86ee78d5c3fa0a7b80ae559c39f424fc9d61a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: aaf3344c0439d96a01006ee000d0a827884a5af9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345684"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410871"
 ---
 # <a name="cloning-vs-attaching-visual-basic"></a>Clonagem x anexação (Visual Basic)
 Ao adicionar <xref:System.Xml.Linq.XNode> (incluindo <xref:System.Xml.Linq.XElement>) ou objetos de <xref:System.Xml.Linq.XAttribute> para uma nova árvore, se o novo conteúdo não tem nenhum pai, os objetos estão conectados somente à árvore XML. Se o novo conteúdo já parented, e é parte de outra árvore XML, o novo conteúdo são clonados. O conteúdo recentemente clonado é anexado a árvore XML.  
@@ -43,13 +43,13 @@ Console.WriteLine("Child2 was {0}", _
     "attached", "cloned"))  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```console  
 Child1 was cloned  
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Criando árvores XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Criando árvores XML (Visual Basic)](creating-xml-trees.md)

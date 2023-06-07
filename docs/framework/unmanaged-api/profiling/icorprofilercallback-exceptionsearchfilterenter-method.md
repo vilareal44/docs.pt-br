@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: acc239ce-3eef-418c-b1df-c5a6dd8e8a4c
 topic_type:
 - apiref
-ms.openlocfilehash: 710dbe70b0a2498a3d521cdc813c4ead7ba6442e
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 304b8da670786851a70e38e6623d44b1bde71a04
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866423"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500228"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a>Método ICorProfilerCallback::ExceptionSearchFilterEnter
 Notifica o criador de perfil de que a fase de pesquisa do tratamento de exceções começou a executar um filtro de exceção definido pelo usuário.  
@@ -36,18 +36,18 @@ HRESULT ExceptionSearchFilterEnter(
 
 - `functionId`
 
-  \[em] a ID da função que contém o filtro.
+  \[in] a ID da função que contém o filtro.
 
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
 - [Método ExceptionSearchFilterLeave](icorprofilercallback-exceptionsearchfilterleave-method.md)

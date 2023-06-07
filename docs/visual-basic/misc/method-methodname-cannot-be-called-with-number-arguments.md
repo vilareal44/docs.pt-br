@@ -1,27 +1,27 @@
 ---
-title: Método '<methodname>' não pode ser chamado com <number> argumentos
+title: O método '<methodname>' não pode ser chamado com argumentos <number>
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNoMethodTakingXArguments2
 ms.assetid: 23260199-b6a4-469f-b75f-4a3d8d25e2cc
-ms.openlocfilehash: e168d59da6c0c293d2429f90b858baf3547c22b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f8dedf6797f16e61eb44875f28f4ed9ea787540
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922311"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402103"
 ---
-# <a name="method-methodname-cannot-be-called-with-number-arguments"></a>Método '\<methodname >' não pode ser chamado com \<número > argumentos
-Uma chamada de método contém um número incorreto de argumentos.  
+# <a name="method-methodname-cannot-be-called-with-number-arguments"></a>O método '\<methodname>' não pode ser chamado com argumentos \<number>
+Uma chamada de método contém o número errado de argumentos.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1. Contagem de argumentos que você forneceu.  
+1. Conte os argumentos que você forneceu.  
   
-2. Corresponde ao número em relação ao número de parâmetros no método que você deseja chamar.  
+2. Corresponda ao número de parâmetros no método que você deseja chamar.  
   
-3. Ajuste o número de argumentos, se não concordar com os dois números.  
+3. Ajuste o número de argumentos se os dois números não concordarem.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Passando Argumentos por Valor e por Referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Passar argumentos por valor e por referência](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

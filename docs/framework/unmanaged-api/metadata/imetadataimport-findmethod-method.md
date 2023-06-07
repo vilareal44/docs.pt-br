@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0f9bde1d-e306-438d-941b-d0925b322304
 topic_type:
 - apiref
-ms.openlocfilehash: 53b3d94e8b1e273fcbc041d25a5bf586a12735c0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c2ec907759a25048444ebcc81bf5bb0fd23ced58
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177260"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503647"
 ---
 # <a name="imetadataimportfindmethod-method"></a>Método IMetaDataImport::FindMethod
-Obtém um ponteiro para o token MethodDef para o <xref:System.Type> método que é incluído pelo especificado e que tem o nome especificado e a assinatura de metadados.  
+Obtém um ponteiro para o token MethodDef do método que está incluído pelo especificado <xref:System.Type> e que tem o nome e a assinatura de metadados especificados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,40 +37,40 @@ HRESULT FindMethod (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `td`  
- [em] O `mdTypeDef` token para o tipo (uma classe ou interface) que inclui o membro para procurar. Se esse `mdTokenNil`valor for, então a pesquisa é feita para uma função global.  
+ no O `mdTypeDef` token do tipo (uma classe ou interface) que inclui o membro a ser pesquisado. Se esse valor for `mdTokenNil` , a pesquisa será feita para uma função global.  
   
  `szName`  
- [em] O nome do método para procurar.  
+ no O nome do método a ser pesquisado.  
   
  `pvSigBlob`  
- [em] Um ponteiro para a assinatura binária de metadados do método.  
+ no Um ponteiro para a assinatura de metadados binários do método.  
   
  `cbSigBlob`  
- [em] O tamanho em bytes de `pvSigBlob`.  
+ no O tamanho em bytes de `pvSigBlob` .  
   
  `pmb`  
- [fora] Um ponteiro para o token MethodDef correspondente.  
+ fora Um ponteiro para o token MethodDef correspondente.  
   
 ## <a name="remarks"></a>Comentários  
- Você especifica o método usando sua`td`classe de`szName`fechamento ou interface (`pvSigBlob`), seu nome ( ), e opcionalmente sua assinatura ( ). Pode haver vários métodos com o mesmo nome em uma classe ou interface. Nesse caso, passe a assinatura do método para encontrar a correspondência única.  
+ Você especifica o método usando sua classe ou interface de delimitadora ( `td` ), seu nome ( `szName` ) e, opcionalmente, sua assinatura ( `pvSigBlob` ). Pode haver vários métodos com o mesmo nome em uma classe ou interface. Nesse caso, passe a assinatura do método para localizar a correspondência exclusiva.  
   
- A assinatura `FindMethod` passada deve ter sido gerada no escopo atual, porque as assinaturas estão vinculadas a um escopo específico. Uma assinatura pode incorporar um token que identifica a classe de fechamento ou o tipo de valor. O token é um índice na tabela typeDef local. Não é possível construir uma assinatura de tempo de execução fora do `FindMethod`contexto do escopo atual e usar essa assinatura como entrada para entrada em .  
+ A assinatura passada para `FindMethod` deve ter sido gerada no escopo atual, porque as assinaturas estão associadas a um escopo específico. Uma assinatura pode inserir um token que identifica a classe de circunscrição ou o tipo de valor. O token é um índice na tabela de TypeDef local. Você não pode criar uma assinatura de tempo de execução fora do contexto do escopo atual e usar essa assinatura como entrada para entrada no `FindMethod` .  
   
- `FindMethod`encontra apenas métodos que foram definidos diretamente na classe ou interface; não encontra métodos herdados.  
+ `FindMethod`localiza somente os métodos que foram definidos diretamente na classe ou interface; Ele não encontra os métodos herdados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Reflection.MethodInfo>
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

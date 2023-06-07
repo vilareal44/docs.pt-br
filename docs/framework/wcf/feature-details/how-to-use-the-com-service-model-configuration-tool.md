@@ -1,17 +1,17 @@
 ---
-title: 'Como: usar a ferramenta de configuração do modelo de serviço COM+'
+title: Como usar a ferramenta de configuração do modelo de serviço COM+
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 67bacade0435f1c63bc79b3282f6bded55b67304
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: f9e761bafd84726b51a2010a932c68c67c37f899
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991581"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595278"
 ---
-# <a name="how-to-use-the-com-service-model-configuration-tool"></a>Como: usar a ferramenta de configuração do modelo de serviço COM+
+# <a name="how-to-use-the-com-service-model-configuration-tool"></a>Como usar a ferramenta de configuração do modelo de serviço COM+
 Depois que você tiver selecionado um modo de hospedagem apropriado, use a ferramenta de linha de comando Configuração de Modelo de Serviço COM+ (ComSvcConfig.exe) para configurar as interfaces de aplicativo que serão expostas como serviços Web.  
   
 > [!NOTE]
@@ -19,7 +19,7 @@ Depois que você tiver selecionado um modo de hospedagem apropriado, use a ferra
   
  Ao usar ComSvcConfig.exe em um computador com Windows 7 para configurar um serviço Web para usar a versão mais recente do modelo de serviço (atualmente v4.5), execute as seguintes etapas:  
   
-1. Defina a chave `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` do registro como um valor DWORD de 0x00000001  
+1. Defina a chave do registro `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` como um valor DWORD de 0x00000001  
   
 2. Executar comsvcconfig.exe  
   
@@ -41,7 +41,7 @@ Depois que você tiver selecionado um modo de hospedagem apropriado, use a ferra
   
      O comando adiciona a interface `IFinances` do componente `ItemOrders.IFinancial` (do aplicativo OnlineStore COM+) ao conjunto de interfaces que serão expostas como serviços Web. O serviço usa o modo de hospedagem COM+ e, portanto, exige a ativação explícita do aplicativo.  
   
-     Embora o caractere curinga asterisco\*() possa ser usado para o componente e a interface, evite usá-lo, pois talvez você queira expor apenas a funcionalidade selecionada como um serviço Web. Se for executado com uma versão futura desse componente, usar o curinga pode sem querer expor interfaces que podem não terem estado presentes quando a sintaxe de configuração foi determinada.  
+     Embora o caractere curinga asterisco ( \* ) possa ser usado para o componente e a interface, evite usá-lo, pois talvez você queira expor apenas a funcionalidade selecionada como um serviço Web. Se for executado com uma versão futura desse componente, usar o curinga pode sem querer expor interfaces que podem não terem estado presentes quando a sintaxe de configuração foi determinada.  
   
      A opção /verbose instrui a ferramenta para exibir avisos além dos erros.  
   
@@ -111,4 +111,4 @@ Depois que você tiver selecionado um modo de hospedagem apropriado, use a ferra
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral da integração de aplicativos COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
+- [Integração com visão geral de aplicativos COM+](integrating-with-com-plus-applications-overview.md)

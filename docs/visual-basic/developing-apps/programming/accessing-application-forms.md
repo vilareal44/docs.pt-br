@@ -1,5 +1,5 @@
 ---
-title: Acessando formulários de aplicativo
+title: Como acessar formulários de aplicativo
 ms.date: 07/20/2015
 helpviewer_keywords:
 - forms [Visual Basic], communicating between
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My.Forms object
 - forms [Visual Basic], accessing all open
 ms.assetid: 9aaf5aaf-2012-4f97-89c7-6e62b9d17863
-ms.openlocfilehash: 332b6a7563160528b6c17210170af0db6e9bc0e7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44f98632fd2fd6c4c087a78b805d5b7da750df87
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74349236"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410199"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>Acessando formulários de aplicativo (Visual Basic)
 
@@ -25,12 +25,12 @@ O objeto `My.Forms` fornece uma maneira fácil de acessar uma instância de cada
   
 |Para|Consulte|  
 |---|---|  
-|Acessar um formulário de outro formulário em um aplicativo.|[Objeto My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
+|Acessar um formulário de outro formulário em um aplicativo.|[Objeto My.Forms](../../language-reference/objects/my-forms-object.md)|  
 |Exibir os títulos de todos os formulários abertos do aplicativo.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
 |Atualizar a tela inicial com informações de status conforme o aplicativo é iniciado.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>
-- [Objeto My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)
+- [Objeto My.Forms](../../language-reference/objects/my-forms-object.md)

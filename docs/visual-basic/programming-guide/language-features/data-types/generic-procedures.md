@@ -12,12 +12,12 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 16a629e07cf711778b3d8d1863958ec7a6300649
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2efc0410b9d4bb663e1ff19d5a5456d7ff2c99bd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350078"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394059"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Procedimentos genéricos no Visual Basic
 Um *procedimento genérico*, também chamado de *método genérico*, é um procedimento definido com pelo menos um parâmetro de tipo. Isso permite que o código de chamada Personalize os tipos de dados para seus requisitos cada vez que chama o procedimento.  
@@ -27,7 +27,7 @@ Um *procedimento genérico*, também chamado de *método genérico*, é um proce
  Um procedimento genérico pode usar seus parâmetros de tipo em sua lista de parâmetros normal, em seu tipo de retorno, se tiver um, e em seu código de procedimento.  
   
 ## <a name="type-inference"></a>Inferência de tipos  
- Você pode chamar um procedimento genérico sem fornecer nenhum argumento de tipo. Se você chamá-lo dessa forma, o compilador tentará determinar os tipos de dados apropriados a serem passados para os argumentos de tipo do procedimento. Isso é chamado de *inferência de tipos*. O código a seguir mostra uma chamada na qual o compilador infere que ele deve passar o tipo `String` para o parâmetro de tipo `t`.  
+ Você pode chamar um procedimento genérico sem fornecer nenhum argumento de tipo. Se você chamá-lo dessa forma, o compilador tentará determinar os tipos de dados apropriados a serem passados para os argumentos de tipo do procedimento. Isso é chamado de *inferência de tipos*. O código a seguir mostra uma chamada na qual o compilador infere que ele deve passar `String` o tipo para o parâmetro de tipo `t` .  
   
  [!code-vb[VbVbalrDataTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#15)]  
   
@@ -50,26 +50,26 @@ End Sub
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Descrição  
- O exemplo a seguir define um procedimento de `Function` genérico para localizar um elemento específico em uma matriz. Ele define um parâmetro de tipo e o usa para construir os dois parâmetros na lista de parâmetros.  
+ O exemplo a seguir define um `Function` procedimento genérico para localizar um elemento específico em uma matriz. Ele define um parâmetro de tipo e o usa para construir os dois parâmetros na lista de parâmetros.  
   
 ### <a name="code"></a>Código  
  [!code-vb[VbVbalrDataTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#14)]  
   
-### <a name="comments"></a>Comments  
- O exemplo anterior requer a capacidade de comparar `searchValue` com cada elemento de `searchArray`. Para garantir essa capacidade, ele restringe o parâmetro de tipo `T` para implementar a interface <xref:System.IComparable%601>. O código usa o método <xref:System.IComparable%601.CompareTo%2A> em vez do operador `=`, porque não há nenhuma garantia de que um argumento de tipo fornecido para `T` dá suporte ao operador `=`.  
+### <a name="comments"></a>Comentários  
+ O exemplo anterior requer a capacidade de comparar `searchValue` com cada elemento de `searchArray` . Para garantir essa capacidade, ele restringe o parâmetro de tipo `T` para implementar a <xref:System.IComparable%601> interface. O código usa o <xref:System.IComparable%601.CompareTo%2A> método em vez do `=` operador, porque não há nenhuma garantia de que um argumento de tipo fornecido para `T` suporte ao `=` operador.  
   
- Você pode testar o procedimento de `findElement` com o código a seguir.  
+ Você pode testar o `findElement` procedimento com o código a seguir.  
   
  [!code-vb[VbVbalrDataTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#13)]  
   
- As chamadas anteriores para `MsgBox` exibem "0", "1" e "-1", respectivamente.  
+ As chamadas anteriores para `MsgBox` Exibir "0", "1" e "-1", respectivamente.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Tipos genéricos no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Como definir uma classe capaz de fornecer uma funcionalidade idêntica em tipos de dados diferentes](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
-- [Como usar uma classe genérica](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [Procedimentos](../../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [Parâmetros e Argumentos de Procedimento](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
-- [Lista de Tipos](../../../../visual-basic/language-reference/statements/type-list.md)
-- [Lista de Parâmetros](../../../../visual-basic/language-reference/statements/parameter-list.md)
+- [Tipos genéricos no Visual Basic](generic-types.md)
+- [Como: Definir uma classe capaz de fornecer uma funcionalidade idêntica em tipos de dados diferentes](how-to-define-a-class-that-can-provide-identical-functionality.md)
+- [Como: Usar uma classe genérica](how-to-use-a-generic-class.md)
+- [Procedimentos](../procedures/index.md)
+- [Parâmetros e Argumentos de Procedimento](../procedures/procedure-parameters-and-arguments.md)
+- [Lista de Tipos](../../../language-reference/statements/type-list.md)
+- [Lista de parâmetros](../../../language-reference/statements/parameter-list.md)

@@ -1,5 +1,5 @@
 ---
-title: Como excluir repositórios no armazenamento isolado
+title: 'Como: Excluir repositórios no armazenamento isolado'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - storing data using isolated storage, deleting stores
 - data storage using isolated storage, deleting stores
 ms.assetid: 3947e333-5af6-4601-b2f1-24d4d6129cf3
-ms.openlocfilehash: 6b1e8e651fd8e18c79dd629c154fb6c4d74243e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 885dc8e3ca0ea99de460cee7dd093b061f916388
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75707821"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291884"
 ---
-# <a name="how-to-delete-stores-in-isolated-storage"></a>Como excluir repositórios no armazenamento isolado
+# <a name="how-to-delete-stores-in-isolated-storage"></a>Como: Excluir repositórios no armazenamento isolado
 A classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fornece dois métodos para excluir arquivos de armazenamento isolado:  
   
 - O método de instância <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> não recebe qualquer argumento e exclui o armazenamento que o chama. Nenhuma permissão é necessária para essa operação. Qualquer código que possa acessar o armazenamento pode excluir qualquer ou todos os dados dentro dele.  
@@ -36,7 +36,7 @@ A classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fornece dois méto
  [!code-csharp[Conceptual.IsolatedStorage#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source3.cs#3)]
  [!code-vb[Conceptual.IsolatedStorage#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source3.vb#3)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
-- [Armazenamento isolado](../../../docs/standard/io/isolated-storage.md)
+- [Armazenamento isolado](isolated-storage.md)

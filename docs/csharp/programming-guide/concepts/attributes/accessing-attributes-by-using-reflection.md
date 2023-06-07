@@ -1,13 +1,14 @@
 ---
 title: Acessando atributos usando reflexão (C#)
+description: Use a reflexão para obter informações definidas com atributos personalizados em C# usando o método GetCustomAttributes.
 ms.date: 07/20/2015
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-ms.openlocfilehash: 990b6487e50bfb2d123c3871e5f85da063711d9e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9425141d64fd061d0c1f628228693cce02f7bfa0
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595494"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925092"
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>Acessando atributos usando reflexão (C#)
 O fato de que você pode definir atributos personalizados e colocá-los em seu código-fonte seria de pouco valor sem alguma maneira de recuperar essas informações e tomar ação sobre elas. Por meio de reflexão, você pode recuperar as informações que foram definidas com atributos personalizados. O método principal é o `GetCustomAttributes`, que retorna uma matriz de objetos que são equivalentes, em tempo de execução, aos atributos do código-fonte. Esse método tem várias versões sobrecarregadas. Para obter mais informações, consulte <xref:System.Attribute>.  
@@ -113,11 +114,11 @@ class TestAuthorAttribute
 */  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [C# Guia de Programação](../../index.md)
+- [Guia de programação C#](../../index.md)
 - [Recuperando informações armazenadas em atributos](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
 - [Reflexão (C#)](../reflection.md)
 - [Atributos (C#)](./index.md)

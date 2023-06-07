@@ -2,20 +2,20 @@
 title: Emitindo traços de código de usuário
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 93da2eb74705a0581923d0317315e628f374be3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8b2031165a83e24ba15a2fcf847a170f47e696a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998097"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589286"
 ---
 # <a name="emitting-user-code-traces"></a>Emitindo traços de código de usuário
 
-Além de habilitar o rastreamento na configuração para coletar dados de instrumentação gerados pelo Windows Communication Foundation (WCF), você também pode emitir rastreamentos programaticamente no código do usuário. Dessa forma, você pode criar proativamente os dados de instrumentação que você pode analisar posteriormente para fins de diagnóstico. Este tópico discute como você pode fazer isso.
+Além de habilitar o rastreamento na configuração para coletar dados de instrumentação gerados pelo Windows Communication Foundation (WCF), você também pode emitir rastreamentos programaticamente no código do usuário. Dessa forma, você pode criar proativamente dados de instrumentação que você pode examinar posteriormente para fins de diagnóstico. Este tópico discute como você pode fazer isso.
 
-Além disso, o [estendendo rastreamento](../../../../../docs/framework/wcf/samples/extending-tracing.md) exemplo inclui todo o código demonstrado nas seções a seguir.
+Além disso, o exemplo de [rastreamento estendido](../../samples/extending-tracing.md) inclui todo o código demonstrado nas seções a seguir.
 
-## <a name="creating-a-trace-source"></a>Criação de uma origem de rastreamento
+## <a name="creating-a-trace-source"></a>Criando uma origem de rastreamento
 
 Você pode usar o código a seguir para criar uma origem de rastreamento de usuário.
 
@@ -23,15 +23,15 @@ Você pode usar o código a seguir para criar uma origem de rastreamento de usu�
 TraceSource ts = new TraceSource("myUserTraceSource");
 ```
 
-## <a name="creating-activities"></a>Criação de atividades
+## <a name="creating-activities"></a>Criando atividades
 
-As atividades são a unidade lógica de processamento. Você pode criar uma atividade para cada unidade de processamento principal no qual você deseja que os rastreamentos a serem agrupados. Por exemplo, você pode criar uma atividade para cada solicitação para o serviço. Para fazer isso, execute as seguintes etapas.
+As atividades são unidade lógica de processamento. Você pode criar uma atividade para cada unidade de processamento principal na qual você deseja que os rastreamentos sejam agrupados juntos. Por exemplo, você pode criar uma atividade para cada solicitação para o serviço. Para fazer isso, execute as etapas a seguir.
 
-1. Salve a ID de atividade no escopo.
+1. Salve a ID da atividade no escopo.
 
-2. Criar uma nova ID de atividade.
+2. Crie uma nova ID de atividade.
 
-3. Transferência da atividade no escopo para a nova, defina a nova atividade no escopo e emitir um rastreamento de início para a atividade.
+3. Transfira da atividade no escopo para a nova, defina a nova atividade no escopo e emita um rastreamento de início para essa atividade.
 
 O código a seguir demonstra como fazer isso.
 
@@ -43,7 +43,7 @@ Trace.CorrelationManager.ActivityId = traceID; // Trace is static
 ts.TraceEvent(TraceEventType.Start, 0, "Add request");
 ```
 
-## <a name="emitting-traces-within-a-user-activity"></a>Emitindo rastreamentos de dentro de uma atividade de usuário
+## <a name="emitting-traces-within-a-user-activity"></a>Emitindo rastreamentos dentro de uma atividade de usuário
 
 O código a seguir emite rastreamentos dentro de uma atividade de usuário.
 
@@ -55,9 +55,9 @@ double result = client.Add(value1, value2);
 ts.TraceInformation("Client receives Add response '" + result + "'");
 ```
 
-## <a name="stopping-the-activities"></a>Interromper as atividades
+## <a name="stopping-the-activities"></a>Interrompendo as atividades
 
-Para interromper as atividades, transfira de volta à atividade antiga, parar a id da atividade atual e redefinir a id de atividade antigo no escopo.
+Para interromper as atividades, transfira de volta para a atividade antiga, interrompa a ID da atividade atual e redefina a ID da atividade antiga no escopo.
 
 O código a seguir demonstra como fazer isso.
 
@@ -67,12 +67,12 @@ ts.TraceEvent(TraceEventType.Stop, 0, "Add request");
 Trace.CorrelationManager.ActivityId = oldID;
 ```
 
-## <a name="propagating-the-activity-id-to-a-service"></a>Propagando a ID de atividade a um serviço
+## <a name="propagating-the-activity-id-to-a-service"></a>Propagando a ID da atividade para um serviço
 
-Se você definir a `propagateActivity` de atributo para `true` para o `System.ServiceModel` arquivos de origem de rastreamento na configuração de serviço e cliente, o serviço de processamento para a solicitação para adicionar ocorre na mesma atividade como aquele definido no cliente. Se o serviço define suas próprias atividades e transferências, os rastreamentos de serviço não aparecem na atividade propagada pelo cliente. Em vez disso, eles aparecem em uma atividade correlacionada por rastreamentos de transferência para a atividade cuja ID é propagada pelo cliente.
+Se você definir o `propagateActivity` atributo como `true` para a `System.ServiceModel` origem do rastreamento nos arquivos de configuração do cliente e do serviço, o processamento do serviço para a solicitação de adição ocorrerá na mesma atividade que a definida no cliente. Se o serviço definir suas próprias atividades e transferências, os rastreamentos de serviço não aparecerão na atividade propagada pelo cliente. Em vez disso, eles aparecem em uma atividade correlacionada pelos rastreamentos de transferência para a atividade cuja ID é propagada pelo cliente.
 
 > [!NOTE]
-> Se o `propagateActivity` atributo é definido como `true` sobre o cliente e o serviço, a atividade de ambiente no escopo de operação do serviço é definida pelo WCF.
+> Se o `propagateActivity` atributo for definido como `true` no cliente e no serviço, a atividade ambiente no escopo da operação do serviço será definida pelo WCF.
 
 Você pode usar o código a seguir para verificar se uma atividade foi definida no escopo pelo WCF.
 
@@ -99,56 +99,56 @@ ts.TraceEvent(TraceEventType.Stop, 0, "Add Activity");
 // return result;
 ```
 
-## <a name="tracing-exceptions-thrown-in-code"></a>Exceções geradas em código de rastreamento
+## <a name="tracing-exceptions-thrown-in-code"></a>Exceções de rastreamento lançadas no código
 
-Ao lançar uma exceção no código, você também pode rastrear a exceção no nível de aviso ou usando o código a seguir.
+Quando você lança uma exceção no código, também pode rastrear a exceção no nível de aviso ou acima usando o código a seguir.
 
 ```csharp
 ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessage");
 ```
 
-## <a name="viewing-user-traces-in-the-service-trace-viewer-tool"></a>Exibindo rastreamentos de usuário na ferramenta de Visualizador de rastreamento de serviço
+## <a name="viewing-user-traces-in-the-service-trace-viewer-tool"></a>Exibindo rastreamentos de usuário na ferramenta do Visualizador de rastreamento de serviço
 
-Esta seção contém as capturas de tela de gerado pela execução de rastreamentos a [estendendo rastreamento](../../../../../docs/framework/wcf/samples/extending-tracing.md) de exemplo, quando exibido usando o [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).
+Esta seção contém capturas de tela de rastreamentos gerados pela execução da amostra de [rastreamento de extensão](../../samples/extending-tracing.md) , quando exibidas usando a ferramenta do Visualizador de [rastreamento de serviço (SvcTraceViewer. exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md).
 
-No diagrama a seguir, a atividade de "Solicitação para adicionar" criada anteriormente está selecionada no painel à esquerda. Ele é listado com três outras matemática operação atividades (dividir, subtrair, multiplicar) que constituem o programa de cliente do aplicativo. O código do usuário definiu uma nova atividade para cada operação isolar possíveis ocorrências do erro em diferentes solicitações.
+No diagrama a seguir, a atividade "Adicionar solicitação" criada anteriormente está selecionada no painel esquerdo. Ela é listada com três outras atividades de operação matemática (dividir, subtrair, multiplicar) que constituem o programa cliente do aplicativo. O código do usuário definiu uma nova atividade para cada operação a fim de isolar possíveis ocorrências de erro em solicitações diferentes.
 
-Para demonstrar o uso de transferências na [estendendo rastreamento](../../../../../docs/framework/wcf/samples/extending-tracing.md) exemplo, uma atividade de calculadora que encapsula as solicitações de quatro operação também é criada. Para cada solicitação, há uma transferência de e para trás da atividade de Calculadora para a atividade de solicitação (o rastreamento é realçado no painel superior direito na figura).
+Para demonstrar o uso de transferências no exemplo de [rastreamento estendido](../../samples/extending-tracing.md) , uma atividade de calculadora que encapsula as quatro solicitações de operação também é criada. Para cada solicitação, há uma transferência para frente e para trás da atividade de calculadora para a atividade de solicitação (o rastreamento é realçado no painel superior direito na figura).
 
-Quando você seleciona uma atividade no painel à esquerda, os rastreamentos incluídos por essa atividade são mostrados no painel à direita superior. Se `propagateActivity` é `true` em cada ponto de extremidade no caminho da solicitação, os rastreamentos na atividade de solicitação são de todos os processos que participam da solicitação. Neste exemplo, você pode ver os rastreamentos do cliente e de serviço na coluna 4º no painel.
+Quando você seleciona uma atividade no painel esquerdo, os rastreamentos incluídos por essa atividade são mostrados no painel superior direito. Se `propagateActivity` estiver `true` em cada ponto de extremidade no caminho da solicitação, os rastreamentos na atividade de solicitação serão de todos os processos que participam da solicitação. Neste exemplo, você pode ver rastreamentos do cliente e do serviço na 4ª coluna do painel.
 
-Essa atividade mostra a ordem de processamento a seguir:
+Essa atividade mostra a seguinte ordem de processamento:
 
-1. Cliente envia a mensagem a ser adicionada.
+1. O cliente envia a mensagem para adicionar.
 
-2. Serviço recebe a mensagem de solicitação de adicionar.
+2. O serviço recebe a mensagem de solicitação de adição.
 
-3. Serviço envia a resposta de adicionar.
+3. O serviço envia adicionar resposta.
 
-4. Cliente recebe a resposta de adicionar.
+4. O cliente recebe adicionar resposta.
 
-Todos esses rastreamentos foram emitidos no nível de informações. Clicar em um rastreamento no painel superior direito mostra os detalhes de que o rastreamento no painel inferior direito.
+Todos esses rastreamentos foram emitidos no nível de informações. Clicar em um rastreamento no painel superior direito mostra os detalhes desse rastreamento no painel inferior direito.
 
-No diagrama a seguir, também vemos os rastreamentos de transferência de e para a atividade de Calculadora, bem como dois pares de iniciar e parar rastreamentos por atividade de solicitação, um para o cliente e outra para o serviço (uma para cada origem de rastreamento).
+No diagrama a seguir, também vemos os rastreamentos de transferência de e para a atividade de calculadora, bem como dois pares de rastreamentos de iniciar e parar por atividade de solicitação, um para o cliente e outro para o serviço (um para cada origem de rastreamento).
 
-![Visualizador de rastreamento: Emissão de usuário&#45;rastreamentos de código](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd") lista de atividades por hora de criação (painel esquerdo) e suas atividades aninhadas (o painel superior direito)
+![Visualizador de rastreamento: emitindo rastreamentos de código de&#45;de usuário](media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd") Lista de atividades por hora de criação (painel esquerdo) e suas atividades aninhadas (painel superior direito)
 
-Se o código de serviço gera uma exceção que faz com que o cliente gere também (por exemplo, quando o cliente não obteve resposta à sua solicitação), o serviço e cliente de aviso ou mensagens de erro ocorrerem na mesma atividade para correlação direta. Na imagem a seguir, o serviço gera uma exceção afirmando que "o serviço se recusará a processar essa solicitação no código do usuário." O cliente também gerará uma exceção informando que "o servidor foi capaz de processar a solicitação devido a um erro interno."
+Se o código do serviço lançar uma exceção que faz com que o cliente seja acionado também (por exemplo, quando o cliente não obteve a resposta à sua solicitação), o serviço e as mensagens de aviso ou de erro do cliente ocorrerão na mesma atividade para correlação direta. Na imagem a seguir, o serviço gera uma exceção que declara "o serviço se recusa a processar essa solicitação no código do usuário". O cliente também gera uma exceção afirmando "o servidor não pôde processar a solicitação devido a um erro interno".
 
-As imagens a seguir mostra erros entre pontos de extremidade para uma determinada solicitação aparecem na mesma atividade se a id de atividade de solicitação foi propagada:
+As imagens a seguir mostram que os erros nos pontos de extremidade de uma determinada solicitação aparecem na mesma atividade se a ID da atividade de solicitação foi propagada:
 
-![Captura de tela que mostra erros entre pontos de extremidade para uma determinada solicitação.](./media/emitting-user-code-traces/trace-viewer-endpoint-errors.gif)
+![Captura de tela que mostra erros nos pontos de extremidade de uma determinada solicitação.](./media/emitting-user-code-traces/trace-viewer-endpoint-errors.gif)
 
-Clicando duas vezes o Multiply atividade no painel à esquerda mostra o gráfico a seguir, com os rastreamentos para o multiplicar a atividade para cada processo envolvido. Podemos ver que um aviso ocorreu pela primeira vez no serviço (exceção lançada), que é seguido por erros e avisos no cliente porque não foi possível processar a solicitação. Portanto, podemos implica o relacionamento causal com erro entre pontos de extremidade e derivar a causa do erro.
+Clicar duas vezes na atividade multiplicar no painel esquerdo mostra o grafo a seguir, com os rastreamentos para a atividade de multiplicação de cada processo envolvido. Podemos ver que um aviso ocorreu primeiro no serviço (exceção gerada), que é seguido por avisos e erros no cliente porque a solicitação não pôde ser processada. Portanto, podemos implicar a relação de erro causal entre os pontos de extremidade e derivar a causa raiz do erro.
 
-A imagem a seguir mostra um modo de exibição de gráfico de correlação de erro:
+A imagem a seguir mostra uma exibição de gráfico de correlação de erros:
 
-![Captura de tela que mostra o modo de exibição de gráfico de correlação de erro.](./media/emitting-user-code-traces/trace-viewer-error-correlation.gif)
+![Captura de tela que mostra a exibição de gráfico da correlação de erros.](./media/emitting-user-code-traces/trace-viewer-error-correlation.gif)
 
-Para obter os rastreamentos anteriores, definimos `ActivityTracing` para as fontes de rastreamento de usuário e `propagateActivity=true` para o `System.ServiceModel` origem de rastreamento. Nós não definimos `ActivityTracing` para o `System.ServiceModel` origem de rastreamento para habilitar o código de usuário para a propagação de atividade de código do usuário. (Quando o rastreamento de atividade de ServiceModel está ativado, a ID da atividade definida no cliente não é propagada para o código de usuário do serviço; No entanto, as transferências, correlacionam as atividades de código do usuário cliente e serviço para as atividades do WCF intermediárias.)
+Para obter os rastreamentos anteriores, definimos `ActivityTracing` para as fontes de rastreamento do usuário e `propagateActivity=true` para a `System.ServiceModel` origem do rastreamento. Não definimos `ActivityTracing` para a `System.ServiceModel` origem de rastreamento para habilitar o código do usuário para a propagação da atividade de código do usuário. (Quando o rastreamento de atividade ServiceModel está ativado, a ID da atividade definida no cliente não é propagada até o código de usuário do serviço; No entanto, as transferências correlacionam as atividades de código do usuário do cliente e do serviço às atividades intermediárias do WCF.)
 
-Definir as atividades e propagação de ID de atividade nos permite executar a correlação de erro direto entre pontos de extremidade. Dessa forma, podemos localizar a causa raiz de um erro mais rapidamente.
+A definição de atividades e a propagação da ID da atividade nos permite executar a correlação de erros diretas entre pontos de extremidade. Dessa forma, podemos localizar a causa raiz de um erro mais rapidamente.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Estendendo o rastreamento](../../../../../docs/framework/wcf/samples/extending-tracing.md)
+- [Estendendo rastreamento](../../samples/extending-tracing.md)

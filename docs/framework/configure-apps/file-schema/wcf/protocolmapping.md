@@ -3,18 +3,18 @@ title: <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
 ms.openlocfilehash: be4224ef1a8b17653df8123aaf89e105a496355a
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400015"
 ---
-# <a name="protocolmapping"></a>\<> protocolMapping
+# \<protocolMapping>
 Representa uma seção de configuração para definir um conjunto de mapeamentos de protocolo padrão entre esquemas de protocolo de transporte (por exemplo, http, net. TCP, net. pipe, etc.) e associações do WCF. Ao criar pontos de extremidade padrão em tempo de execução, Windows Communication Foundation (WCF) examina os mapeamentos configurados e decide qual associação usar para um endereço baseado em particular.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> protocolMapping**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<protocolMapping>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -30,7 +30,7 @@ Representa uma seção de configuração para definir um conjunto de mapeamentos
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -60,7 +60,7 @@ Representa uma seção de configuração para definir um conjunto de mapeamentos
 </protocolMapping>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>

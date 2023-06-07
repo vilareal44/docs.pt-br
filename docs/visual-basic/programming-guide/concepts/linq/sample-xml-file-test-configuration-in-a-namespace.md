@@ -1,13 +1,13 @@
 ---
-title: 'Arquivo XML de exemplo: Configuração de teste em um Namespace3'
+title: 'Arquivo XML de exemplo: configuração de teste em um Namespace3'
 ms.date: 07/20/2015
 ms.assetid: aff02614-30ee-45e1-bc0f-d64b193d20b8
-ms.openlocfilehash: aef70e1ff7a7d61a1730588cc9e2ad26e6b67007
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6727a83e1373cd2d058bce2210993419effb1190
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786939"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360855"
 ---
 # <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Arquivo XML de exemplo: Configuração de teste em um namespace
 O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este é um arquivo de configuração de teste. XML é em um namespace.  
@@ -56,6 +56,6 @@ O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLU
 </Tests>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Documentos XML de exemplo (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [Documentos XML de exemplo (LINQ to XML)](sample-xml-documents-linq-to-xml.md)

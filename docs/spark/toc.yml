@@ -25,6 +25,10 @@
       href: tutorials/ml-sentiment-analysis.md
 - name: Guias de instruções
   items:
+    - name: Guia de difusão
+      href: how-to-guides/broadcast-guide.md
+    - name: Guia de UDF
+      href: how-to-guides/udf-guide.md
     - name: Depurar seu aplicativo
       href: how-to-guides/debug.md
     - name: Enviar trabalhos para o HDInsight

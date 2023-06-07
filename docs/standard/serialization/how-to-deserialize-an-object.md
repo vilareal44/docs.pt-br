@@ -10,10 +10,10 @@ helpviewer_keywords:
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
 ms.openlocfilehash: e08ae0d77539219223650fd3bcbd1bcee4df2739
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "83379110"
 ---
 # <a name="how-to-deserialize-an-object-using-xmlserializer"></a>Como desserializar um objeto usando XmlSerializer

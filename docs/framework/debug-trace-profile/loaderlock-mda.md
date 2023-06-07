@@ -1,5 +1,6 @@
 ---
 title: MDA loaderLock
+description: Examine o MDA (Assistente de depuração gerenciada) do loaderLock no .NET, que detecta tentativas de execução de código gerenciado em um thread que mantém o bloqueio do carregador de sistema operacional do Windows.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deadlocks [.NET Framework]
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - loader locks
 - locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
-ms.openlocfilehash: cd77640a6566f3fd94631dac184ae5bc3ffab5d1
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 055b07a805c5f0b613519d6019950a9b249a4b38
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217347"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051610"
 ---
 # <a name="loaderlock-mda"></a>MDA loaderLock
 O MDA (Assistente de Depuração Gerenciado) de `loaderLock` detecta tentativas de executar código gerenciado em um thread que mantém o bloqueio do carregador do sistema operacional Microsoft Windows.  Qualquer execução desse tipo é inválida porque pode levar a deadlocks e ao uso de DLLs antes de elas terem sido inicializadas pelo carregador do sistema operacional.  
@@ -53,6 +53,6 @@ O MDA (Assistente de Depuração Gerenciado) de `loaderLock` detecta tentativas 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)

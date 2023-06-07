@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30801
 ms.assetid: 67743319-2d1c-496e-bfd9-22b046b43b5a
-ms.openlocfilehash: fa474aaff4b1ceaf9b80be5dbc869276a54a6e65
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: bd3d3ac6c0a56a26b94e8a245253b2450d9c5b71
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700994"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397383"
 ---
 # <a name="labels-that-are-numbers-must-be-followed-by-colons"></a>Rótulos que são números são seguidos de dois pontos
 Os números de linha seguem as mesmas regras que outros tipos de rótulos e devem conter dois-pontos.  
@@ -27,6 +27,6 @@ Os números de linha seguem as mesmas regras que outros tipos de rótulos e deve
     400:    X += 1  
     ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Instrução GoTo](../../../visual-basic/language-reference/statements/goto-statement.md)
+- [Instrução GoTo](../statements/goto-statement.md)

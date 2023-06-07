@@ -2,20 +2,20 @@
 title: Comando dotnet msbuild
 description: O comando dotnet msbuild fornece acesso à linha de comando MSBuild.
 ms.date: 02/14/2020
-ms.openlocfilehash: 88e85868e2d7de564b2e4c90ce6e78bde4cb350e
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 9739fe782e17db3955db087ca1781ad4280cd491
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463622"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803171"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
-**Este artigo se aplica a:** ✔️ .NET Core 2.x SDK e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
 
 ## <a name="name"></a>Nome
 
-`dotnet msbuild` – Compila um projeto e todas as suas dependências.
+`dotnet msbuild` – Compila um projeto e todas as suas dependências. Observação: um arquivo de solução ou de projeto pode precisar ser especificado se houver vários.
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -29,9 +29,9 @@ dotnet msbuild -h
 
 O comando `dotnet msbuild` permite o acesso a um MSBuild totalmente funcional.
 
-O comando tem exatamente os mesmos recursos que o cliente de linha de comando MSBuild existente apenas para projetos no estilo SDK. As opções são todas iguais. Para obter mais informações sobre as opções disponíveis, consulte a [referência de linha de comando MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
+O comando tem exatamente os mesmos recursos que o cliente de linha de comando do MSBuild existente apenas para projetos no estilo SDK. As opções são todas iguais. Para obter mais informações sobre as opções disponíveis, consulte a [referência de linha de comando do MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
 
-O comando [dotnet build](dotnet-build.md) é equivalente ao comando `dotnet msbuild -restore -target:Build`. [a compilação dotnet](dotnet-build.md) é mais comumente usada para projetos de construção, `dotnet msbuild` mas como ela sempre executa o alvo de construção, você pode usar quando não quiser construir o projeto. Por exemplo, se você tiver um alvo específico, você `dotnet msbuild` deseja executar sem construir o projeto, use e especifique o destino.
+O comando [dotnet build](dotnet-build.md) é equivalente ao comando `dotnet msbuild -restore`. Quando você não quiser compilar o projeto e tiver um destino específico que deseja executar, use `dotnet build` ou `dotnet msbuild` e especifique o destino.
 
 ## <a name="examples"></a>Exemplos
 
@@ -57,4 +57,5 @@ O comando [dotnet build](dotnet-build.md) é equivalente ao comando `dotnet msbu
 
   ```dotnetcli
   dotnet msbuild -preprocess
+  dotnet msbuild -preprocess:<fileName>.xml
   ```

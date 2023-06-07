@@ -1,5 +1,6 @@
 ---
 title: Gerando e compilando código-fonte de um gráfico CodeDOM
+description: Gere e compile o código-fonte de um grafo do CodeDOM no .NET. Use um provedor de código do CodeDOM para gerar código-fonte e compilar assemblies.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - compiling source code, multiple languages
 - CodeDOM, graphs
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
-ms.openlocfilehash: a8d3bf7363cb887834a1c251aead05c75e2e3fe8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 85654fe961f01ad7b8fb886d59a3de9ab0efe7aa
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130227"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474040"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>Gerando e compilando código-fonte de um gráfico CodeDOM
 O namespace <xref:System.CodeDom.Compiler> fornece interfaces para geração de código-fonte de grafos de objeto CodeDOM e para o gerenciamento da compilação com compiladores com suporte. Um provedor de código pode produzir código-fonte em uma linguagem de programação específica acordo com um grafo CodeDOM. Uma classe que deriva de <xref:System.CodeDom.Compiler.CodeDomProvider> normalmente pode fornecer métodos para gerar e compilar o código para a linguagem à qual o provedor dá suporte.  
@@ -91,7 +92,7 @@ O namespace <xref:System.CodeDom.Compiler> fornece interfaces para geração de 
 ## <a name="languages-with-initial-support"></a>Linguagens com suporte inicial  
  O .NET Framework fornece compiladores de código e geradores de código para as seguintes linguagens: C#, Visual Basic, C++ e JScript. O suporte do CodeDOM pode ser estendido a outras linguagens implementando geradores de código e compiladores de código específicos da linguagem.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.CodeDom>
 - <xref:System.CodeDom.Compiler>

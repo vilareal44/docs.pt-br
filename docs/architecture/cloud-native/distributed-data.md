@@ -3,12 +3,12 @@ title: Dados distribuídos
 description: Contraste o armazenamento de dados em aplicativos monolíticos e nativos de nuvem.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 2eff37dcc57ae39daac0ba10d10322be5eb4e321
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 28513f8691c06cf58ed14d57bf7830bb35d94852
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614130"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144390"
 ---
 # <a name="distributed-data"></a>Dados distribuídos
 
@@ -120,7 +120,7 @@ A Figura 5-7 mostra uma implementação do padrão CQRS.
 
 **Figura 5-7**. Implementação de CQRS
 
-Na figura anterior, são implementados os modelos de comando e consulta separados. Cada operação de gravação de dados é salva no repositório de gravação e, em seguida, propagada para o repositório de leitura. Preste muita atenção à forma como o processo de propagação de dados opera no princípio de [consistência eventual](http://www.cloudcomputingpatterns.org/eventual_consistency/). O modelo de leitura eventualmente sincroniza com o modelo de gravação, mas pode haver algum atraso no processo. Discutiremos a consistência eventual na próxima seção.
+Na figura anterior, são implementados os modelos de comando e consulta separados. Cada operação de gravação de dados é salva no repositório de gravação e, em seguida, propagada para o repositório de leitura. Preste muita atenção à forma como o processo de propagação de dados opera no princípio de [consistência eventual](https://www.cloudcomputingpatterns.org/eventual_consistency/). O modelo de leitura eventualmente sincroniza com o modelo de gravação, mas pode haver algum atraso no processo. Discutiremos a consistência eventual na próxima seção.
 
 Essa separação permite que leituras e gravações sejam dimensionadas de forma independente. As operações de leitura usam um esquema otimizado para consultas, enquanto as gravações usam um esquema otimizado para atualizações. As consultas de leitura vão contra dados desnormalizados, enquanto a lógica de negócios complexa pode ser aplicada ao modelo de gravação. Além de isso, você pode impor uma segurança mais rígida em operações de gravação do que aquelas que expõem leituras.
 

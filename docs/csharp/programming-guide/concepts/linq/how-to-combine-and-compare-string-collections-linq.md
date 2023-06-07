@@ -1,15 +1,16 @@
 ---
-title: Como combinar e comparar coleções de strings (LINQ) (C#)
+title: Como combinar e comparar coleções de cadeias de caracteres (LINQ) (C#)
+description: Este exemplo mescla os arquivos que contêm linhas de texto. Saiba como fazer uma concatenação simples, uma União e uma interseção sobre os conjuntos de linhas no LINQ em C#.
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: f73a31e109933a4b6dd0078934d89d3bb770de5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bfbdb9a0a3d531b56578b242c91596d9e41b6cd6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169448"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105357"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Como combinar e comparar coleções de strings (LINQ) (C#)
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Como combinar e comparar coleções de cadeias de caracteres (LINQ) (C#)
 Este exemplo mostra como mesclar arquivos que contêm linhas de texto e, em seguida, classificar os resultados. Especificamente, mostra como executar uma concatenação, uma união e uma interseção simples nos dois conjuntos de linhas de texto.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Para configurar o projeto e os arquivos de texto  

@@ -2,12 +2,12 @@
 title: Adicionar elementos, atributos e nós a uma árvore XML
 ms.date: 07/20/2015
 ms.assetid: e243e694-c987-43aa-8b22-1e33dace582c
-ms.openlocfilehash: 8d3d3a27194bb022434f09778dbf3960bd0b9853
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5b80a19c952388c2591536077f382df2f69fe80f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345821"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84383891"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>Adicionando elementos, atributos e nós a uma árvore XML (Visual Basic)
 Você pode adicionar conteúdo (elementos, atributos, comentários, instruções de processamento, texto e CDATA) a uma árvore XML existente.  
@@ -80,6 +80,6 @@ Console.WriteLine(xmlTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Modificando árvores XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [Modificando árvores XML (LINQ to XML) (Visual Basic)](modifying-xml-trees-linq-to-xml.md)

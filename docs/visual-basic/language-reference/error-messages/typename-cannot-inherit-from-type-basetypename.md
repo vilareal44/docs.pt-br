@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
-ms.openlocfilehash: e21eea20d953e64e91522074c25f037451145bf8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa04c558abbcc4259c2821cdcbdc1669b91ffee0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664206"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402766"
 ---
-# <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>'\<typename >' não pode herdar de \<tipo > '\<basetypename >' porque ele expande o acesso da base de \<tipo > fora do assembly
+# <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>'\<typename>' não pode ser herdado de \<type> '\<basetypename>' porque ele expande o acesso do \<type> base fora do assembly
 Uma classe ou interface herda de uma classe base ou interface, mas tem um nível de acesso menos restritivo.  
   
- Por exemplo, uma `Public` interface herda de uma `Friend` interface, ou um `Protected` classe herda de uma `Private` classe. Isso expõe a classe base ou interface para acesso além do nível desejado.  
+ Por exemplo, uma `Public` interface herda de uma `Friend` interface ou uma `Protected` classe herda de uma `Private` classe. Isso expõe a classe base ou a interface para acessar além do nível pretendido.  
   
  **ID do erro:** BC30910  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Altere o nível de acesso da classe derivada ou interface seja pelo menos tão restritivo quanto da classe base ou interface.  
+- Altere o nível de acesso da classe derivada ou da interface para que seja pelo menos tão restritiva quanto a classe base ou interface.  
   
-     - ou -  
+     -ou-  
   
-- Se você exigir o nível de acesso menos restritivo, remova o `Inherits` instrução. Você não pode herdar de uma classe base mais restrito ou interface.  
+- Se você precisar do nível de acesso menos restritivo, remova a `Inherits` instrução. Não é possível herdar de uma classe base ou interface mais restrita.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Instrução Class](../../../visual-basic/language-reference/statements/class-statement.md)
-- [Instrução Interface](../../../visual-basic/language-reference/statements/interface-statement.md)
-- [Instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)
-- [Níveis de acesso no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Instrução Class](../statements/class-statement.md)
+- [Instrução Interface](../statements/interface-statement.md)
+- [Instrução Inherits](../statements/inherits-statement.md)
+- [Níveis de acesso no Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)

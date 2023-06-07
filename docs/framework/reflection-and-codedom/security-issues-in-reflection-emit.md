@@ -1,5 +1,6 @@
 ---
 title: Problemas de segurança na emissão de reflexão
+description: Conheça os problemas de segurança na emissão de reflexo, que é feita por meio de assemblies dinâmicos ou métodos dinâmicos conectados a assemblies existentes ou hospedados anonimamente.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: d1b6994f7ee9efa9f6472deffb2f3d869606e182
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: d0ca26a1d0964c935137b0a30a5d7c78f93c597b
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644194"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865236"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemas de segurança na emissão de reflexão
 O .NET Framework fornece três maneiras de emitir a MSIL (Microsoft Intermediate Language), cada uma com seus próprios problemas de segurança:  
@@ -151,7 +152,7 @@ O .NET Framework fornece três maneiras de emitir a MSIL (Microsoft Intermediate
 ### <a name="obtaining-information-on-types-and-members"></a>Obtendo informações sobre tipos e membros  
  A partir do .NET Framework 2.0, não é necessária nenhuma permissão para obter informações sobre membros e tipos não públicos. A reflexão é usada para obter as informações necessárias para emitir métodos dinâmicos. Por exemplo, os objetos <xref:System.Reflection.MethodInfo> são usados para emitir chamadas de método. As versões anteriores do .NET Framework exigem <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>. Para obter mais informações, consulte [Security Considerations for Reflection](security-considerations-for-reflection.md) (Considerações sobre segurança relacionadas à reflexão).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Considerações sobre segurança relacionadas à reflexão](security-considerations-for-reflection.md)
 - [Emissão de métodos e assemblies dinâmicos](emitting-dynamic-methods-and-assemblies.md)

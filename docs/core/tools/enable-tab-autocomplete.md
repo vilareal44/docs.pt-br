@@ -1,23 +1,24 @@
 ---
 title: Ativar o recurso auto-completar com TAB
 description: Este artigo ensina você a habilitar o preenchimento com TAB na CLI do .NET Core para o PowerShell, o Bash e o zsh.
-author: thraka
+author: adegeo
 ms.author: adegeo
+ms.topic: how-to
 ms.date: 11/03/2019
-ms.openlocfilehash: 31328be14811760bc8d7fb527e0d55abfe6b1493
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd46305b8cd82825671a3a1568e8b93de1bbab26
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156745"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062802"
 ---
 # <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>Como habilitar o preenchimento com TAB na CLI do .NET Core
 
-**Este artigo se aplica a:** ✔️ .NET Core 2.1 SDK e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
 
-Este artigo descreve como configurar o preenchimento com TAB para três shells: PowerShell, Bash e zsh. Para outros shells, consulte sua documentação sobre como configurar a conclusão da guia.
+Este artigo descreve como configurar o preenchimento com TAB para três shells: PowerShell, Bash e zsh. Para outros shells, consulte a documentação sobre como configurar a conclusão da guia.
 
-Uma vez configurado, a conclusão da guia para `dotnet` o .NET Core CLI é acionada digitando um comando no shell e, em seguida, pressionando a tecla TAB. A linha de comando atual é enviada para o comando `dotnet complete`, e os resultados são processados pelo shell. Teste os resultados sem habilitar o preenchimento com TAB enviando algo diretamente para o comando `dotnet complete`. Por exemplo: 
+Uma vez configurado, o preenchimento com Tab para o CLI do .NET Core é disparado digitando um `dotnet` comando no Shell e, em seguida, pressionando a tecla Tab. A linha de comando atual é enviada para o comando `dotnet complete`, e os resultados são processados pelo shell. Teste os resultados sem habilitar o preenchimento com TAB enviando algo diretamente para o comando `dotnet complete`. Por exemplo:
 
 ```console
 > dotnet complete "dotnet a"

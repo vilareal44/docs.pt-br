@@ -1,13 +1,13 @@
 ---
-title: Como localizar um elemento com um atributo específico
+title: 'Como: localizar um elemento com um atributo específico'
 ms.date: 07/20/2015
 ms.assetid: 59fb7c19-d42f-40eb-8cf8-f1d5b9658eb7
-ms.openlocfilehash: c27905f286d6b346e7615baeda15e156afb366f2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ec5d3bf46d517e2cfb27c228674d9b86fefffa14
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352944"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405242"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>Como localizar um elemento com um atributo específico (Visual Basic)
 Este tópico mostra como localizar um elemento que tem um atributo que tem um valor específico.  
@@ -15,7 +15,7 @@ Este tópico mostra como localizar um elemento que tem um atributo que tem um va
 ## <a name="example"></a>Exemplo  
  O exemplo mostra como localizar o elemento `Address` que tem um atributo `Type` com um valor de “faturamento”.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: ordem de compra típica (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: ordem de compra típica (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -41,12 +41,12 @@ Next
 </Address>  
 ```  
   
- Observe que este exemplo usa a [propriedade de eixo filho XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), a [propriedade de eixo de atributo XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)e a [propriedade valor XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ Observe que este exemplo usa a [propriedade de eixo filho XML](../../../language-reference/xml-axis/xml-child-axis-property.md), a [propriedade de eixo de atributo XML](../../../language-reference/xml-axis/xml-attribute-axis-property.md)e a [propriedade valor XML](../../../language-reference/xml-axis/xml-value-property.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra a mesma consulta para XML que está em um namespace. Para obter mais informações, consulte [visão geral de namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: ordem de compra típica em um namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: ordem de compra típica em um namespace](sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -78,10 +78,10 @@ End Module
 </aw:Address>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Operações de projeção (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Consultas básicas (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)
+- [Visão geral de operadores de consulta padrão (Visual Basic)](standard-query-operators-overview.md)
+- [Operações de projeção (Visual Basic)](projection-operations.md)

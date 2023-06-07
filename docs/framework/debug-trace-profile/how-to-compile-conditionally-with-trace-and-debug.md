@@ -1,5 +1,6 @@
 ---
 title: Como compilar condicionalmente com Trace e Debug
+description: Saiba como compilar condicionalmente com os atributos condicionais TRACE e DEBUG ao compilar um aplicativo .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - trace compiler options
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-ms.openlocfilehash: 2c3ec54535319f4c7507563a5976038ca40d20aa
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 8758b793866ec0317f91d636476d33bd001ddd78
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217452"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051214"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Como compilar condicionalmente com Trace e Debug
 Enquanto você estiver depurando um aplicativo durante o desenvolvimento, a saída de rastreamento e de depuração é enviada para a janela de Saída no Visual Studio. No entanto, para incluir recursos de rastreamento em um aplicativo implantado, compile os aplicativos instrumentados com a diretiva do compilador **TRACE** habilitada. Isso permite que o código de rastreamento seja compilado na versão de lançamento do aplicativo. Se você não habilitar a diretiva **TRACE**, todo o código de rastreamento será ignorado durante a compilação e não será incluído no código executável que será implantado.  
@@ -48,9 +48,9 @@ Enquanto você estiver depurando um aplicativo durante o desenvolvimento, a saí
   
      Por exemplo, a seguinte instrução do compilador inserida na linha de comando incluirá o código de rastreamento em um executável compilado:  
   
-     Para Visual Basic: **Vbc-r:System.dll-d:TRACE = True-d:debug = false MyApplication. vb**  
+     Para Visual Basic: **vbc -r:System.dll-d:TRACE = True-d:debug = false MyApplication. vb**  
   
-     Para C#: **CSC-r:System.dll-d:Trace-d:debug = false MyApplication.cs**  
+     Para C#: **csc -r:System.dll-d:Trace-d:debug = FALSE MyApplication.cs**  
   
     > [!TIP]
     > Para compilar mais de um arquivo de aplicativo, deixe um espaço em branco entre os nomes de arquivo, por exemplo, **MyApplication1.vb MyApplication2.vb MyApplication3.vb** ou **MyApplication1.cs MyApplication2.cs MyApplication3.cs**.  
@@ -93,12 +93,12 @@ Comente a diretiva do compilador.
 > [!NOTE]
 > Quando você estiver pronto para compilar, escolha **Compilar** no menu **Compilar** ou use o método de linha de comando, mas sem digitar o **d:** para definir símbolos de compilação condicional.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Rastreando e instrumentando aplicativos](tracing-and-instrumenting-applications.md)
-- [Como criar, inicializar e configurar as opções de rastreamento](how-to-create-initialize-and-configure-trace-switches.md)
+- [Rastreamento e instrumentação de aplicativos](tracing-and-instrumenting-applications.md)
+- [Como criar, inicializar e configurar opções de rastreamento](how-to-create-initialize-and-configure-trace-switches.md)
 - [Opções de rastreamento](trace-switches.md)
 - [Ouvintes de rastreamento](trace-listeners.md)
-- [Como adicionar instruções de rastreamento ao código do aplicativo](how-to-add-trace-statements-to-application-code.md)
-- [Como definir variáveis de ambiente para a linha de comando do Visual Studio](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [Como invocar o compilador de linha de comando](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+- [Como adicionar instruções de rastreamento ao código de um aplicativo](how-to-add-trace-statements-to-application-code.md)
+- [Como configurar variáveis de ambiente para a linha de comando do Visual Studio](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Como: Invocar o compilador de linha de comando](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

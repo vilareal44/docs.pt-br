@@ -1,5 +1,6 @@
 ---
 title: Regsvcs.exe (Ferramenta de Instalação de Serviços .NET)
+description: Use Regsvcs.exe, a ferramenta de instalação de serviços .NET. Carregue e registre um assembly, configure os serviços que você adicionou programaticamente a uma classe e muito mais.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Regsvcs.exe
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - type libraries
 - registering assemblies
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
-ms.openlocfilehash: aecd2f6894558b45898c7f22dd333617d9e2e327
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6d0090eda764113407e35a3bcec139f1c7cfb050
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180357"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517237"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (Ferramenta de Instalação de Serviços .NET)
 A ferramenta Instalação de Serviços .NET realiza as seguintes ações:  
@@ -37,13 +38,13 @@ A ferramenta Instalação de Serviços .NET realiza as seguintes ações:
 [/nologo] [/quiet]assemblyFile.dll
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
   
 |Argumento|Descrição|  
 |--------------|-----------------|  
 |*assemblyFile.dll*|O arquivo do assembly de origem. O assembly deve ser assinado com um nome forte. Para obter mais informações, consulte [Assinando um assembly com um nome forte](../../standard/assembly/sign-strong-name.md).|  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**/appdir:** *path*|Especifica o diretório raiz do aplicativo.|  
 |**/appname:** *applicationName*|Especifica o nome do aplicativo COM+ a ser encontrado ou criado.|  
@@ -51,7 +52,7 @@ A ferramenta Instalação de Serviços .NET realiza as seguintes ações:
 |**/componly**|Configura apenas componentes; ignora métodos e interfaces.|  
 |**/exapp**|Especifica a ferramenta para aguardar um aplicativo existente.|  
 |**/extlb**|Usa uma biblioteca de tipos existente.|  
-|**/fc**|Encontra ou cria o aplicativo de destino.|  
+|**/FC**|Encontra ou cria o aplicativo de destino.|  
 |**/help**|Exibe sintaxe de comando e opções para a ferramenta.|  
 |**/noreconfig**|Não reconfigura um aplicativo de destino existente.|  
 |**/nologo**|Suprime a exibição do banner de inicialização da Microsoft.|  
@@ -84,8 +85,8 @@ regsvcs /appname:myTargetApp myTest.dll
 regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Ferramentas](index.md)
 - [Como assinar um assembly com um nome forte](../../standard/assembly/sign-strong-name.md)
-- [Prompts de Comando](developer-command-prompt-for-vs.md)
+- [Prompts de comando](developer-command-prompt-for-vs.md)

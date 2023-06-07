@@ -1,27 +1,28 @@
 ---
 title: Métodos – Guia de Programação em C#
+description: Um método em C# é um bloco de código que contém uma série de instruções. Um programa executa as instruções chamando o método e especificando argumentos.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 114fa2973c50be9a4199db9729e3cd9ea6122866
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: db35b48d4d7e70a54b38342e79fa2881b3857bd7
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626523"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864144"
 ---
 # <a name="methods-c-programming-guide"></a>Métodos (Guia de Programação em C#)
 
-Um método é um bloco de código que contém uma série de instruções. Um programa faz com que as instruções sejam executadas chamando o método e especificando os argumentos de método necessários. No C#, todas as instruções executadas são realizadas no contexto de um método. O `Main` método é o ponto de entrada para cada aplicação C# e é chamado pelo tempo de execução do idioma comum (CLR) quando o programa é iniciado.
+Um método é um bloco de código que contém uma série de instruções. Um programa faz com que as instruções sejam executadas chamando o método e especificando os argumentos de método necessários. No C#, todas as instruções executadas são realizadas no contexto de um método. O `Main` método é o ponto de entrada para cada aplicativo C# e é chamado pelo Common Language Runtime (CLR) quando o programa é iniciado.
 
 > [!NOTE]
-> Este artigo discute métodos nomeados. Para obter informações sobre funções anônimas, consulte [Funções anônimas](../statements-expressions-operators/anonymous-functions.md).
+> Este artigo discute os métodos nomeados. Para obter informações sobre funções anônimas, consulte [Funções anônimas](../statements-expressions-operators/anonymous-functions.md).
 
 ## <a name="method-signatures"></a>Assinaturas de método
 
-Os métodos são declarados em uma [classe,](../../language-reference/keywords/class.md) [estruturação](../../language-reference/builtin-types/struct.md)ou [interface](../interfaces/index.md) especificando o nível de acesso, `public` como ou, `private`modificadores opcionais, como `abstract` ou , `sealed`o valor de retorno, o nome do método e quaisquer parâmetros do método. Juntas, essas partes são a assinatura do método.
+Os métodos são declarados em uma [classe](../../language-reference/keywords/class.md), [struct](../../language-reference/builtin-types/struct.md)ou [interface](../interfaces/index.md) especificando o nível de acesso, como `public` ou `private` , modificadores opcionais, como `abstract` ou `sealed` , o valor de retorno, o nome do método e qualquer parâmetro de método. Juntas, essas partes são a assinatura do método.
 
 > [!NOTE]
 > Um tipo de retorno de um método não faz parte da assinatura do método para fins de sobrecarga de método. No entanto, ele faz parte da assinatura do método ao determinar a compatibilidade entre um delegado e o método para o qual ele aponta.
@@ -30,29 +31,29 @@ Os parâmetros de método estão entre parênteses e separados por vírgulas. Pa
 
 [!code-csharp[csProgGuideObjects#40](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#40)]
 
-## <a name="method-access"></a>Acesso ao método
+## <a name="method-access"></a>Acesso de método
 
 Chamar um método em um objeto é como acessar um campo. Após o nome do objeto, adicione um ponto final, o nome do método e parênteses. Os argumentos são listados dentro dos parênteses e são separados por vírgulas. Os métodos da classe `Motorcycle` podem, portanto, ser chamados como no exemplo a seguir:
 
 [!code-csharp[csProgGuideObjects#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#41)]
 
-## <a name="method-parameters-vs-arguments"></a>Parâmetros do método versus argumentos
+## <a name="method-parameters-vs-arguments"></a>Parâmetros do método vs. argumentos
 
-A definição do método especifica os nomes e tipos de quaisquer parâmetros obrigatórios. Quando o código de chamada chama o método, ele fornece valores concretos, chamados argumentos, para cada parâmetro. Os argumentos devem ser compatíveis com o tipo de parâmetro, mas o nome do argumento (se houver) usado no código de chamada não precisa ser o mesmo que o parâmetro nomeado definido no método. Por exemplo: 
+A definição do método especifica os nomes e tipos de quaisquer parâmetros obrigatórios. Quando o código de chamada chama o método, ele fornece valores concretos, chamados argumentos, para cada parâmetro. Os argumentos devem ser compatíveis com o tipo de parâmetro, mas o nome do argumento (se houver) usado no código de chamada não precisa ser o mesmo que o parâmetro nomeado definido no método. Por exemplo:
 
 [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]
 
-## <a name="passing-by-reference-vs-passing-by-value"></a>Passando por referência versus passando por valor
+## <a name="passing-by-reference-vs-passing-by-value"></a>Passando por referência vs. passando por valor
 
-Por padrão, quando uma instância de um tipo de [valor](../../language-reference/builtin-types/value-types.md) é passada para um método, sua cópia é passada em vez da própria instância. Portanto, as alterações no argumento não têm efeito sobre a instância original no método de chamada. Para passar uma instância de tipo `ref` de valor por referência, use a palavra-chave. Para obter mais informações, consulte [Passando parâmetros de tipo de valor](./passing-value-type-parameters.md).
+Por padrão, quando uma instância de um [tipo de valor](../../language-reference/builtin-types/value-types.md) é passada para um método, sua cópia é passada em vez da própria instância. Portanto, as alterações no argumento não têm efeito sobre a instância original no método de chamada. Para passar uma instância de tipo de valor por referência, use a `ref` palavra-chave. Para obter mais informações, consulte [Passando parâmetros de tipo de valor](./passing-value-type-parameters.md).
 
 Quando um objeto de tipo de referência é passado para um método, uma referência ao objeto é passada. Ou seja, o método recebe não o objeto em si, mas um argumento que indica o local do objeto. Se você alterar um membro do objeto usando essa referência, a alteração será refletida no argumento no método de chamada, ainda que você passe o objeto por valor.
 
-Você cria um tipo `class` de referência usando a palavra-chave, como mostra o exemplo a seguir:
+Você cria um tipo de referência usando a `class` palavra-chave, como mostra o exemplo a seguir:
 
 [!code-csharp[csProgGuideObjects#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#42)]
 
-Agora, se você passar um objeto com base nesse tipo para um método, uma referência ao objeto será passada. O exemplo a seguir `SampleRefType` passa `ModifyObject`um objeto de tipo para o método:
+Agora, se você passar um objeto com base nesse tipo para um método, uma referência ao objeto será passada. O exemplo a seguir passa um objeto do tipo `SampleRefType` para o método `ModifyObject` :
 
 [!code-csharp[csProgGuideObjects#75](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#75)]
 
@@ -91,7 +92,7 @@ Para usar o valor retornado de um método por referência, você deve declarar u
 ref int distance = plant
 ```
 
-Retornar uma matriz multidimensional de um método, `M`, que modifica o conteúdo da matriz, não é necessário se a função de chamada passou a matriz para `M`.  Você pode retornar a matriz resultante de `M` para um bom estilo ou fluxo funcional de valores, mas isso não é necessário porque o C# passa todos os tipos de referência por valor e o valor de uma referência de matriz é o ponteiro para a matriz. No método, `M`quaisquer alterações no conteúdo da matriz são observáveis por qualquer código que tenha uma referência à matriz, como mostrado no exemplo a seguir:
+Retornar uma matriz multidimensional de um método, `M`, que modifica o conteúdo da matriz, não é necessário se a função de chamada passou a matriz para `M`.  Você pode retornar a matriz resultante de `M` para um bom estilo ou fluxo funcional de valores, mas isso não é necessário porque o C# passa todos os tipos de referência por valor e o valor de uma referência de matriz é o ponteiro para a matriz. No método `M` , qualquer alteração no conteúdo da matriz é observável por qualquer código que tenha uma referência à matriz, conforme mostrado no exemplo a seguir:
 
 ```csharp
 static void Main(string[] args)
@@ -134,7 +135,7 @@ O método `startButton_Click` é um exemplo de método assíncrono que tem um ti
 
 Um método assíncrono não pode declarar nenhum parâmetro [ref](../../language-reference/keywords/ref.md) ou [out](../../language-reference/keywords/out-parameter-modifier.md), mas pode chamar métodos com tais parâmetros.
 
-Para obter mais informações sobre métodos assíncronos, consulte [Programação Assíncrona com assincronização e aguarde](../concepts/async/index.md), [Fluxo de Controle em Programas de Assincronia](../concepts/async/control-flow-in-async-programs.md)e [Tipos de Retorno Assincronico](../concepts/async/async-return-types.md).
+Para obter mais informações sobre métodos assíncronos, consulte [programação assíncrona com Async e Await](../concepts/async/index.md), [fluxo de controle em programas assíncronos](../concepts/async/control-flow-in-async-programs.md)e [tipos de retorno assíncronos](../concepts/async/async-return-types.md).
 
 ## <a name="expression-body-definitions"></a>Definições de corpo de expressão
 
@@ -165,16 +166,16 @@ Para obter mais informações, consulte [Iteradores](../concepts/iterators.md).
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Classes e structs](index.md)
 - [Modificadores de acesso](access-modifiers.md)
 - [Classes static e membros de classes static](static-classes-and-static-class-members.md)
 - [Herança](inheritance.md)
-- [Classes e membros de classes abstratas e lacradas](abstract-and-sealed-classes-and-class-members.md)
-- [Params](../../language-reference/keywords/params.md)
-- [Retorno](../../language-reference/keywords/return.md)
+- [Classes e membros de classes abstract e sealed](abstract-and-sealed-classes-and-class-members.md)
+- [params](../../language-reference/keywords/params.md)
+- [return](../../language-reference/keywords/return.md)
 - [fora](../../language-reference/keywords/out.md)
 - [ref](../../language-reference/keywords/ref.md)
 - [Passando parâmetros](passing-parameters.md)

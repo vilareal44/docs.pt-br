@@ -1,15 +1,16 @@
 ---
 title: Membros aptos para expressão – Guia de Programação em C#
+description: Saiba mais sobre os membros do Expression-apto para. Consulte exemplos de código que usam a definição do corpo da expressão para propriedades, construtores, finalizadores e muito mais.
 ms.date: 02/06/2019
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
-ms.openlocfilehash: f212bb707d3dd2d4a7cc917d335a83cff01ed0cf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e68e96e4aa3ff6a64590459a7197da1833e1a275
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75711981"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381652"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Membros aptos para expressão (Guia de Programação em C#)
 
@@ -28,7 +29,7 @@ O suporte para definições de corpo da expressão foi introduzido para métodos
 |[Método](#methods)  |C# 6 |
 |[Propriedade somente leitura](#read-only-properties)   |C# 6  |
 |[Propriedade](#properties)  |C# 7.0 |
-|[Construtor](#constructors)   |C# 7.0 |
+|[Qu](#constructors)   |C# 7.0 |
 |[Finalizer](#finalizers)     |C# 7.0 |
 |[Indexador](#indexers)       |C# 7.0 |
 
@@ -86,9 +87,9 @@ Para obter mais informações, consulte [Finalizadores (Guia de Programação em
 
 ## <a name="indexers"></a>Indexadores
 
-Como nas propriedades, `get` `set` o indexador e os `get` acessórios consistem em definições de corpo `set` de expressão se o acessório consiste em uma única expressão que retorna um valor ou o acessório executa uma atribuição simples.
+Assim como as propriedades, o indexador `get` e os `set` acessadores consistem em definições de corpo de expressão se o `get` acessador consiste em uma única expressão que retorna um valor ou o `set` acessador executa uma atribuição simples.
 
-O exemplo a seguir define uma classe chamada `Sports` que inclui uma matriz <xref:System.String> interna que contém os nomes de vários esportes. Tanto o `get` indexador quanto `set` os acessórios são implementados como definições de corpo de expressão.
+O exemplo a seguir define uma classe chamada `Sports` que inclui uma matriz <xref:System.String> interna que contém os nomes de vários esportes. O indexador `get` e os `set` acessadores são implementados como definições de corpo da expressão.
 
 [!code-csharp[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)]
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 82e60b3cb5eb777d48219209550367642f78d8c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c260c349f035de67257adbca06fb447ff993329
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711422"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277668"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapes de caracteres em expressões regulares
 A barra invertida (\\) em uma expressão regular indica uma das situações a seguir:  
@@ -35,21 +35,21 @@ A barra invertida (\\) em uma expressão regular indica uma das situações a se
 ## <a name="character-escapes-in-net"></a>Escapes de caracteres em .NET  
  A tabela a seguir lista os escapes de caracteres com suporte das expressões regulares em .NET.  
   
-|Caractere ou sequência|Descrição|  
+|Caractere ou sequência|Description|  
 |---------------------------|-----------------|  
-|Todos os caracteres, exceto pelos seguintes:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |Caracteres diferentes dos listados na coluna **Caractere ou sequência** não têm significado especial em expressões regulares; eles correspondem a si mesmos.<br /><br /> Os caracteres incluídos na coluna **Caractere ou sequência** são elementos especiais na linguagem de expressão regular. Para combiná-los em uma expressão regular, eles devem ser escapados ou incluídos em um [grupo de caracteres positivos](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Por exemplo, a expressão regular `\$\d+` ou `[$]\d+` corresponde a "$1200".|  
+|Todos os caracteres, exceto pelos seguintes:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |Caracteres diferentes dos listados na coluna **Caractere ou sequência** não têm significado especial em expressões regulares; eles correspondem a si mesmos.<br /><br /> Os caracteres incluídos na coluna **Caractere ou sequência** são elementos especiais na linguagem de expressão regular. Para fazer a correspondência com eles em uma expressão regular, eles devem ser ignorados ou incluídos em um [grupo de caracteres positivo](character-classes-in-regular-expressions.md). Por exemplo, a expressão regular `\$\d+` ou `[$]\d+` corresponde a "$1200".|  
 |`\a`|Corresponde a um caractere de sino (alarme), `\u0007`.|  
-|`\b`|Em `[`uma *classe de personagens character_group,* `]` corresponde a um backspace, `\u0008`.  (Veja [Classes de Caracteres](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) Fora de uma `\b` classe de caracteres, é uma âncora que corresponde a um limite de palavras. (Confira [Âncoras](../../../docs/standard/base-types/anchors-in-regular-expressions.md)).|  
+|`\b`|Em uma `[` *character_group* `]` classe de caractere character_group, corresponde a um backspace, `\u0008` .  (Consulte [classes de caractere](character-classes-in-regular-expressions.md).) Fora de uma classe de caractere, `\b` é uma âncora que corresponde a um limite de palavra. (Confira [Âncoras](anchors-in-regular-expressions.md)).|  
 |`\t`|Corresponde a uma tabulação, `\u0009`.|  
 |`\r`|Corresponde a um retorno de carro, `\u000D`. Observe que `\r` não é equivalente ao caractere de nova linha, `\n`.|  
 |`\v`|Corresponde a uma tabulação vertical, `\u000B`.|  
 |`\f`|Corresponde a um avanço de página, `\u000C`.|  
 |`\n`|Corresponde a uma nova linha, `\u000A`.|  
 |`\e`|Corresponde a um escape, `\u001B`.|  
-|`\` *nnn*|Corresponde a um caractere ASCII, onde *nnn* consiste de dois ou três dígitos que representam o código de caractere octal. Por exemplo, `\040` representa um caractere de espaço. Esse constructo é interpretado como referência inversa se tiver apenas um dígito (por exemplo, `\2`) ou se corresponder ao número de um grupo de captura. (Confira [Constructos de referência inversa](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)).|  
-|`\x`*nn*|Corresponde a um caractere ASCII, em que *nn* é um código de caractere hexadecimal com dois dígitos.|  
+|`\` *nnn*|Corresponde a um caractere ASCII, em que *nnn* consiste em dois ou três dígitos que representam o código de caractere octal. Por exemplo, `\040` representa um caractere de espaço. Esse constructo é interpretado como referência inversa se tiver apenas um dígito (por exemplo, `\2`) ou se corresponder ao número de um grupo de captura. (Confira [Constructos de referência inversa](backreference-constructs-in-regular-expressions.md)).|  
+|`\x` *nn*|Corresponde a um caractere ASCII, em que *nn* é um código de caractere hexadecimal com dois dígitos.|  
 |`\c`*X*|Corresponde a um caractere de controle ASCII, em que X é a letra do caractere de controle. Por exemplo, `\cC` é CTRL-C.|  
-|`\u` *nnnn*|Corresponde a uma unidade de código UTF-16 cujo valor é *nnnn* hexadecimal. **Nota:**  A fuga de caracteres Perl 5 que é usada para especificar Unicode não é suportada por .NET. A fuga do personagem Perl 5 tem a forma, `\x{` *####* `…}`onde *####* `…` há uma série de dígitos hexadecimais. Em vez disso, use `\u`*nnnn*.|  
+|`\u` *nnnn*|Corresponde a uma unidade de código UTF-16 cujo valor é *nnnn* hexadecimal. **Observação:**  O caractere de escape do Perl 5 que é usado para especificar o Unicode não tem suporte do .NET. O escape de caractere do Perl 5 tem o formulário `\x{` *####* `…}` , em que *####* `…` é uma série de dígitos hexadecimais. Em vez disso, use `\u`*nnnn*.|  
 |`\`|Quando seguido por um caractere que não é reconhecido como um caractere com escape, corresponde a esse caractere. Por exemplo, `\*` corresponde a um asterisco (*) e é igual a `\x2A`.|  
   
 ## <a name="an-example"></a>Um Exemplo  
@@ -68,6 +68,6 @@ A barra invertida (\\) em uma expressão regular indica uma das situações a se
 |`(.+)`|Corresponde qualquer caractere uma ou mais vezes. Este é o segundo grupo de captura.|  
 |`\r?\n`|Corresponde a zero ou uma ocorrência de um retorno de carro, seguida por uma nova linha.|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Linguagem de Expressão Regular - Referência Rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguagem de expressões regulares – referência rápida](regular-expression-language-quick-reference.md)

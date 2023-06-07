@@ -2,12 +2,12 @@
 title: Associação transacionada do MSMQ
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-ms.openlocfilehash: a3592195f853dd97bf8e4351526bf0fff9ce78fd
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: fa53099caba144f321698f180fe18f7614a1fa64
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715627"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596559"
 ---
 # <a name="transacted-msmq-binding"></a>Associação transacionada do MSMQ
 
@@ -22,7 +22,7 @@ Quando as transações são usadas para enviar e receber mensagens, na verdade, 
 
 Neste exemplo, o cliente envia um lote de mensagens para o serviço de dentro do escopo de uma transação. As mensagens enviadas para a fila são então recebidas pelo serviço dentro do escopo da transação definido pelo serviço.
 
-O contrato de serviço é `IOrderProcessor`, conforme mostrado no código de exemplo a seguir. A interface define um serviço unidirecional que é adequado para uso com filas do.
+O contrato de serviço é `IOrderProcessor` , conforme mostrado no código de exemplo a seguir. A interface define um serviço unidirecional que é adequado para uso com filas do.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -33,7 +33,7 @@ public interface IOrderProcessor
 }
 ```
 
-O comportamento do serviço define um comportamento de operação com `TransactionScopeRequired` definido como `true`. Isso garante que o mesmo escopo de transação usado para recuperar a mensagem da fila seja usado por qualquer Gerenciador de recursos acessado pelo método. Também garante que, se o método lançar uma exceção, a mensagem será retornada para a fila. Sem definir esse comportamento de operação, um canal enfileirado cria uma transação para ler a mensagem da fila e a confirma automaticamente antes da expedição, de modo que, se a operação falhar, a mensagem seja perdida. O cenário mais comum é que as operações de serviço se inscrevam na transação que é usada para ler a mensagem da fila, conforme demonstrado no código a seguir.
+O comportamento do serviço define um comportamento de operação com `TransactionScopeRequired` definido como `true` . Isso garante que o mesmo escopo de transação usado para recuperar a mensagem da fila seja usado por qualquer Gerenciador de recursos acessado pelo método. Também garante que, se o método lançar uma exceção, a mensagem será retornada para a fila. Sem definir esse comportamento de operação, um canal enfileirado cria uma transação para ler a mensagem da fila e a confirma automaticamente antes da expedição, de modo que, se a operação falhar, a mensagem seja perdida. O cenário mais comum é que as operações de serviço se inscrevam na transação que é usada para ler a mensagem da fila, conforme demonstrado no código a seguir.
 
 ```csharp
  // This service class that implements the service contract.
@@ -50,7 +50,7 @@ O comportamento do serviço define um comportamento de operação com `Transacti
 }
 ```
 
-O serviço é hospedado internamente. Ao usar o transporte MSMQ, a fila usada deve ser criada com antecedência. Isso pode ser feito manualmente ou por meio de código. Neste exemplo, o serviço contém o código para verificar a existência da fila e criar a fila, caso ela não exista. O nome da fila é lido no arquivo de configuração. O endereço base é usado pela [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar o proxy para o serviço.
+O serviço é hospedado internamente. Ao usar o transporte MSMQ, a fila usada deve ser criada com antecedência. Isso pode ser feito manualmente ou por meio de código. Neste exemplo, o serviço contém o código para verificar a existência da fila e criar a fila, caso ela não exista. O nome da fila é lido no arquivo de configuração. O endereço base é usado pela [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar o proxy para o serviço.
 
 ```csharp
 // Host the service within this EXE console application.
@@ -90,9 +90,9 @@ O nome da fila MSMQ é especificado em uma seção appSettings do arquivo de con
 ```
 
 > [!NOTE]
-> O nome da fila usa um ponto (.) para o computador local e separadores de barra invertida em seu caminho ao criar a fila usando <xref:System.Messaging>. O ponto de extremidade do Windows Communication Foundation (WCF) usa o endereço de fila com o esquema net. MSMQ, usa "localhost" para denotar o computador local e usa barras invertidas em seu caminho.
+> O nome da fila usa um ponto (.) para o computador local e separadores de barra invertida em seu caminho ao criar a fila usando <xref:System.Messaging> . O ponto de extremidade do Windows Communication Foundation (WCF) usa o endereço de fila com o esquema net. MSMQ, usa "localhost" para denotar o computador local e usa barras invertidas em seu caminho.
 
-O cliente cria um escopo de transação. A comunicação com a fila ocorre dentro do escopo da transação, fazendo com que ela seja tratada como uma unidade atômica, onde todas as mensagens são enviadas para a fila ou nenhuma das mensagens é enviada para a fila. A transação é confirmada chamando <xref:System.Transactions.TransactionScope.Complete%2A> no escopo da transação.
+O cliente cria um escopo de transação. A comunicação com a fila ocorre dentro do escopo da transação, fazendo com que ela seja tratada como uma unidade atômica, onde todas as mensagens são enviadas para a fila ou nenhuma das mensagens é enviada para a fila. A transação é confirmada chamando <xref:System.Transactions.TransactionScope.Complete%2A> o escopo da transação.
 
 ```csharp
 // Create a client.
@@ -159,7 +159,7 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo
 
-1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
 2. Se o serviço for executado primeiro, ele verificará se a fila está presente. Se a fila não estiver presente, o serviço criará uma. Você pode executar o serviço primeiro para criar a fila ou pode criar um por meio do Gerenciador de filas MSMQ. Siga estas etapas para criar uma fila no Windows 2008.
 
@@ -173,15 +173,15 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
 
     5. Insira `ServiceModelSamplesTransacted` como o nome da nova fila.
 
-3. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Para criar a edição C# ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).
 
-4. Para executar o exemplo em uma configuração de computador único ou entre computadores, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Para executar o exemplo em uma configuração de computador único ou entre computadores, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md).
 
-Por padrão, com a <xref:System.ServiceModel.NetMsmqBinding>, a segurança de transporte está habilitada. Há duas propriedades relevantes para a segurança de transporte do MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> e <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>. Por padrão, o modo de autenticação é definido como `Windows` e o nível de proteção é definido como `Sign`. Para que o MSMQ forneça o recurso de autenticação e assinatura, ele deve fazer parte de um domínio e a opção de integração de Active Directory para o MSMQ deve ser instalada. Se você executar esse exemplo em um computador que não atenda a esses critérios, você receberá um erro.
+Por padrão, com a <xref:System.ServiceModel.NetMsmqBinding> segurança de transporte está habilitada. Há duas propriedades relevantes para a segurança de transporte do MSMQ <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> e <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> . Por padrão, o modo de autenticação é definido como `Windows` e o nível de proteção é definido como `Sign` . Para que o MSMQ forneça o recurso de autenticação e assinatura, ele deve fazer parte de um domínio e a opção de integração de Active Directory para o MSMQ deve ser instalada. Se você executar esse exemplo em um computador que não atenda a esses critérios, você receberá um erro.
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Para executar o exemplo em um computador ingressado em um grupo de trabalho ou sem integração de Active Directory
 
-1. Se o computador não fizer parte de um domínio ou não tiver a integração Active Directory instalada, desative a segurança de transporte definindo o modo de autenticação e o nível de proteção como `None`, conforme mostrado no código de configuração de exemplo a seguir.
+1. Se o computador não fizer parte de um domínio ou não tiver a integração de Active Directory instalada, desative a segurança de transporte definindo o modo de autenticação e o nível de proteção como `None` mostrado no código de configuração de exemplo a seguir.
 
     ```xml
     <system.serviceModel>
@@ -228,13 +228,13 @@ Por padrão, com a <xref:System.ServiceModel.NetMsmqBinding>, a segurança de tr
 2. Certifique-se de alterar a configuração no servidor e no cliente antes de executar o exemplo.
 
     > [!NOTE]
-    > Definir `security mode` como `None` é equivalente a definir <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>e segurança de `Message` para `None`.
+    > A configuração `security mode` como `None` é equivalente à configuração <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> , <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> e `Message` à segurança para `None` .
 
 > [!IMPORTANT]
 > Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`

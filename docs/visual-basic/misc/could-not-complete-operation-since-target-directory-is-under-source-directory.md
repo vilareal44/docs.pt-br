@@ -1,24 +1,24 @@
 ---
-title: Não foi possível concluir a operação, pois o diretório de destino está sob o diretório de origem
+title: Não foi possível concluir a operação porque o diretório de destino está sob o diretório de origem
 ms.date: 07/20/2015
 f1_keywords:
 - vbrIO_CyclicOperation
 ms.assetid: 850d3a24-5d51-4ac8-a912-630efcd75278
-ms.openlocfilehash: fca42f91f803a6b12535badcb25cc05cc3d23f6b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 46ec7ae452d4f8259d0f8ca3a896d1b29151ed61
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598478"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84376736"
 ---
-# <a name="could-not-complete-operation-since-target-directory-is-under-source-directory"></a>Não foi possível concluir a operação, pois o diretório de destino está sob o diretório de origem
-Uma operação cíclica falhou. Ciclo de operações cíclicas e, portanto, não pode ser concluída. Por exemplo, o objeto A pode tentar herdar do objeto B, que por sua vez herda de objeto A.  
+# <a name="could-not-complete-operation-since-target-directory-is-under-source-directory"></a>Não foi possível concluir a operação porque o diretório de destino está sob o diretório de origem
+Falha em uma operação cíclica. Ciclo de operações cíclicas e, portanto, não pode ser concluído. Por exemplo, o objeto A pode tentar herdar do objeto B, que por sua vez é herdado do objeto A.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Ao herdar, certifique-se de que não há nenhuma referência cíclica.  
+- Ao herdar, verifique se não há referências cíclicas.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipos de erro](../programming-guide/language-features/error-types.md)
 - [Usar pontos de interrupção no depurador do Visual Studio](/visualstudio/debugger/using-breakpoints)

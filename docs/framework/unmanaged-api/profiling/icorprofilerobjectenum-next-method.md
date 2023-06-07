@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-ms.openlocfilehash: b6e26d1538cab30db66e887aee89b8fbae501bdb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 850f05520e4146b5016bb574f02aa800dfcaaf32
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177001"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494573"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>Método ICorProfilerObjectEnum::Next
-Obtém o número especificado de objetos contíguos de uma coleção seqüencial de objetos, começando pela posição atual do enumerador na seqüência.  
+Obtém o número especificado de objetos contíguos de uma coleção sequencial de objetos, começando na posição atual do enumerador na sequência.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,24 +36,24 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `celt`  
- [em] O número de objetos a serem recuperados.  
+ no O número de objetos a serem recuperados.  
   
  `objects`  
- [fora] Uma matriz `ObjectID` de valores, cada um dos quais representa um objeto recuperado.  
+ fora Uma matriz de `ObjectID` valores, cada um representando um objeto recuperado.  
   
  `pceltFetched`  
- [fora] Um ponteiro para o número de `objects` elementos realmente retornado na matriz.  
+ fora Um ponteiro para o número de elementos realmente retornados na `objects` matriz.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 

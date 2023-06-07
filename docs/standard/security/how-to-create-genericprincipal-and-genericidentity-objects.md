@@ -1,6 +1,6 @@
 ---
-title: Como criar objetos GenericPrincipal e GenericIdentity
-ms.date: 03/30/2017
+title: 'Como: criar objetos GenericPrincipal e GenericIdentity'
+ms.date: 07/15/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -11,20 +11,25 @@ helpviewer_keywords:
 - Creating GenericPrincipal Objects
 - GenericIdentity Objects
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
-ms.openlocfilehash: 546b4d20f7b6b7a8c448f704fefd9a39b3ebd1d7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 903d636938c47850951330d7936d95470441607e
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706143"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557210"
 ---
-# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Como criar objetos GenericPrincipal e GenericIdentity
+# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Como: criar objetos GenericPrincipal e GenericIdentity
 
-Você pode usar a classe <xref:System.Security.Principal.GenericIdentity> em conjunto com a classe <xref:System.Security.Principal.GenericPrincipal> para criar um esquema de autorização que existe independentemente de um domínio do Windows.
+> [!NOTE]
+> Este artigo aplica-se ao Windows.
+>
+> Para obter informações sobre ASP.NET Core, consulte [visão geral da segurança do ASP.NET Core](https://docs.microsoft.com/aspnet/core/security/).
+
+Você pode usar a <xref:System.Security.Principal.GenericIdentity> classe em conjunto com a <xref:System.Security.Principal.GenericPrincipal> classe para criar um esquema de autorização que existe independentemente de um domínio do Windows.
 
 ### <a name="to-create-a-genericprincipal-object"></a>Para criar um objeto GenericPrincipal
 
-1. Crie uma nova instância da classe Identity e inicialize-a com o nome que você deseja que ela mantenha. O código a seguir cria um novo objeto **GenericIdentity** e o inicializa com o nome `MyUser`.
+1. Crie uma nova instância da classe Identity e inicialize-a com o nome que você deseja que ela mantenha. O código a seguir cria um novo objeto **GenericIdentity** e inicializa-o com o nome `MyUser` .
 
     ```vb
     Dim myIdentity As New GenericIdentity("MyUser")
@@ -46,7 +51,7 @@ Você pode usar a classe <xref:System.Security.Principal.GenericIdentity> em con
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. Use o código a seguir para anexar a entidade de segurança ao thread atual. Isso é valioso em situações em que a entidade de segurança deve ser validada várias vezes, deve ser validada por outro código em execução em seu aplicativo ou deve ser validada por um objeto <xref:System.Security.Permissions.PrincipalPermission>. Você ainda pode executar a validação baseada em função no objeto principal sem anexá-lo ao thread. Para obter mais informações, consulte [substituindo um objeto principal](../../../docs/standard/security/replacing-a-principal-object.md).
+3. Use o código a seguir para anexar a entidade de segurança ao thread atual. Isso é valioso em situações em que a entidade de segurança deve ser validada várias vezes, ela deve ser validada por outro código em execução em seu aplicativo ou deve ser validada por um <xref:System.Security.Permissions.PrincipalPermission> objeto. Você ainda pode executar a validação baseada em função no objeto principal sem anexá-lo ao thread. Para obter mais informações, consulte [substituindo um objeto principal](replacing-a-principal-object.md).
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal
@@ -139,10 +144,10 @@ The IsAuthenticated is: True
 Is this a Manager? True
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Security.Principal.GenericIdentity>
 - <xref:System.Security.Principal.GenericPrincipal>
 - <xref:System.Security.Permissions.PrincipalPermission>
-- [Como substituir um objeto Principal](../../../docs/standard/security/replacing-a-principal-object.md)
-- [Objetos Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)
+- [Substituindo um objeto Principal](replacing-a-principal-object.md)
+- [Objetos Principal e Identity](principal-and-identity-objects.md)

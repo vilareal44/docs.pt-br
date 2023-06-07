@@ -1,5 +1,6 @@
 ---
 title: Melhores práticas para exceções – .NET
+description: Conheça as práticas recomendadas para exceções, como usar try/catch/finally, manipular condições comuns sem exceções e usar tipos de exceção .NET predefinidos.
 ms.date: 12/05/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 1de231b01e3fa97e78a87ae6b0595a9b5536374e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 90dda00acd32852b032fc383580c5f34022ec9b4
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160164"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447089"
 ---
 # <a name="best-practices-for-exceptions"></a>Práticas recomendadas para exceções
 
@@ -64,7 +65,7 @@ Exceções asseguram que falhas não passem despercebidas porque o código de ch
 
 ## <a name="use-the-predefined-net-exception-types"></a>Usar os tipos de exceção do .NET predefinidos
 
-Apresente uma nova classe de exceção apenas quando a predefinida não se aplicar. Por exemplo: 
+Apresente uma nova classe de exceção apenas quando a predefinida não se aplicar. Por exemplo:
 
 - Gere uma exceção <xref:System.InvalidOperationException> se uma propriedade de definição ou chamada de método não for adequada para o estado atual do objeto.
 
@@ -72,7 +73,7 @@ Apresente uma nova classe de exceção apenas quando a predefinida não se aplic
 
 ## <a name="end-exception-class-names-with-the-word-exception"></a>Terminar os nomes das classes de exceção com a palavra `Exception`
 
-Quando uma exceção personalizada for necessária, nomeie-a adequadamente e derive-a da classe <xref:System.Exception>. Por exemplo: 
+Quando uma exceção personalizada for necessária, nomeie-a adequadamente e derive-a da classe <xref:System.Exception>. Por exemplo:
 
 [!code-cpp[Conceptual.Exception.Handling#4](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
 [!code-csharp[Conceptual.Exception.Handling#4](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
@@ -110,10 +111,10 @@ Escreva frases claras e inclua pontuação final. Cada sentença na cadeia de ca
 
 A mensagem de erro que o usuário recebe é derivada da propriedade <xref:System.Exception.Message?displayProperty=nameWithType> da exceção que foi gerada, e não do nome da classe de exceção. Normalmente, você atribui um valor à propriedade <xref:System.Exception.Message?displayProperty=nameWithType> passando a cadeia de caracteres de mensagem para o argumento `message` de um [Construtor de exceção](xref:System.Exception.%23ctor%2A).
 
-Para aplicativos localizados, você deverá fornecer uma cadeia de caracteres de mensagem localizada para toda exceção que seu aplicativo puder gerar. Use arquivos de recurso para fornecer mensagens de erro localizadas. Para obter informações sobre a localização de aplicativos e a recuperação de strings localizadas, consulte os seguintes artigos:
+Para aplicativos localizados, você deverá fornecer uma cadeia de caracteres de mensagem localizada para toda exceção que seu aplicativo puder gerar. Use arquivos de recurso para fornecer mensagens de erro localizadas. Para obter informações sobre a localização de aplicativos e a recuperação de cadeias de caracteres localizadas, consulte os seguintes artigos:
 
 - [Como criar exceções definidas pelo usuário com mensagens de exceção localizadas](how-to-create-localized-exception-messages.md)
-- [Recursos em aplicativos de área de trabalho](../../framework/resources/index.md)
+- [Recursos em aplicativos da área de trabalho](../../framework/resources/index.md)
 - <xref:System.Resources.ResourceManager?displayProperty=nameWithType>
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>Em exceções personalizadas, forneça propriedades adicionais conforme necessário
@@ -126,7 +127,7 @@ O rastreamento de pilha começa na instrução na qual a exceção é lançada e
 
 ## <a name="use-exception-builder-methods"></a>Usar métodos de construtor de exceção
 
-É comum uma classe lançar a mesma exceção em locais diferentes em sua implementação. Para evitar excesso de código, use métodos auxiliares que criam a exceção e a retornam. Por exemplo: 
+É comum uma classe lançar a mesma exceção em locais diferentes em sua implementação. Para evitar excesso de código, use métodos auxiliares que criam a exceção e a retornam. Por exemplo:
 
 [!code-cpp[Conceptual.Exception.Handling#6](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
 [!code-csharp[Conceptual.Exception.Handling#6](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]

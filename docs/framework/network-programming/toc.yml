@@ -10,13 +10,13 @@
       items:
         - name: Criando solicitações da Internet
           href: creating-internet-requests.md
-        - name: Como solicitar uma página da Web e recuperar os resultados como um fluxo
+        - name: 'Como: Solicitar uma página da Web e recuperar os resultados como um fluxo'
           href: how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md
-        - name: Como solicitar dados usando a classe WebRequest
+        - name: 'Como: Solicitar dados usando a classe WebRequest'
           href: how-to-request-data-using-the-webrequest-class.md
-        - name: Como enviar dados usando a classe WebRequest
+        - name: 'Como: Enviar dados usando a classe WebRequest'
           href: how-to-send-data-using-the-webrequest-class.md
-        - name: Como recuperar uma WebResponse específica de protocolo que corresponde a uma WebRequest
+        - name: 'Como: Recuperar uma WebResponse específica de protocolo que corresponde a uma WebRequest'
           href: how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md
         - name: Usando fluxos na rede
           href: using-streams-on-the-network.md
@@ -27,9 +27,9 @@
     - name: Programando protocolos conectáveis
       href: programming-pluggable-protocols.md
       items:
-        - name: Como registrar um protocolo personalizado usando WebRequest
+        - name: 'Como: Registrar um protocolo personalizado usando WebRequest'
           href: how-to-register-a-custom-protocol-using-webrequest.md
-        - name: Como fazer a conversão de tipo de uma WebRequest para acessar propriedades específicas de protocolo
+        - name: 'Como: Fazer a conversão de tipo de uma WebRequest para acessar propriedades específicas de protocolo'
           href: how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md
         - name: Derivando de WebRequest
           href: deriving-from-webrequest.md
@@ -40,14 +40,14 @@
       items:
         - name: HTTP
           href: http.md
-        - name: Como acessar propriedades específicas de HTTP
+        - name: 'Como: Acessar propriedades específicas de HTTP'
           href: how-to-access-http-specific-properties.md
         - name: Gerenciando conexões
           href: managing-connections.md
           items:
             - name: Agrupamento de conexão
               href: connection-grouping.md
-            - name: Como atribuir informações de usuário a conexões de grupo
+            - name: 'Como: Atribuir informações de usuário a conexões de grupo'
               href: how-to-assign-user-information-to-group-connections.md
         - name: TCP-UDP
           href: tcp-udp.md
@@ -59,7 +59,7 @@
         - name: Soquetes
           href: sockets.md
           items:
-            - name: Como criar um soquete
+            - name: 'Como: Criar um soquete'
               href: how-to-create-a-socket.md
             - name: Usando soquetes de cliente
               href: using-client-sockets.md
@@ -89,11 +89,11 @@
         - name: FTP
           href: ftp.md
           items:
-            - name: Como baixar arquivos com FTP
+            - name: 'Como: baixar arquivos com FTP'
               href: how-to-download-files-with-ftp.md
-            - name: Como carregar arquivos com FTP
+            - name: 'Como: carregar arquivos com FTP'
               href: how-to-upload-files-with-ftp.md
-            - name: Como listar o conteúdo do diretório com FTP
+            - name: 'Como: Listar o conteúdo do diretório com FTP'
               href: how-to-list-directory-contents-with-ftp.md
         - name: Noções básicas sobre problemas e exceções de WebRequest
           href: understanding-webrequest-problems-and-exceptions.md
@@ -108,7 +108,7 @@
           href: ipv6-auto-configuration.md
         - name: Habilitando e desabilitando o IPv6
           href: enabling-and-disabling-ipv6.md
-        - name: Como modificar o arquivo de configuração do computador para habilitar o suporte a IPv6
+        - name: 'Como: Modificar o arquivo de configuração do computador para habilitar o suporte ao IPv6'
           href: how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md
     - name: Configurando aplicativos da Internet
       href: configuring-internet-applications.md
@@ -119,7 +119,7 @@
           href: interpreting-network-tracing.md
         - name: Habilitando o rastreamento de rede
           href: enabling-network-tracing.md
-        - name: Como configurar o rastreamento de rede
+        - name: 'Como: Configurar o rastreamento de rede'
           href: how-to-configure-network-tracing.md
     - name: Gerenciamento de cache para aplicativos de rede
       href: cache-management-for-network-applications.md
@@ -138,13 +138,13 @@
         - name: Configurando o cache em aplicativos de rede
           href: configuring-caching-in-network-applications.md
           items:
-            - name: Como definir uma política de cache baseada na localização para um aplicativo
+            - name: 'Como: Definir uma política de cache baseada na localização para um aplicativo'
               href: how-to-set-a-location-based-cache-policy-for-an-application.md
-            - name: Como definir uma política de cache baseada em tempo padrão para um aplicativo
+            - name: 'Como: Definir uma política de cache baseada em tempo padrão para um aplicativo'
               href: how-to-set-the-default-time-based-cache-policy-for-an-application.md
             - name: Como personalizar uma política de cache baseada em tempo
               href: how-to-customize-a-time-based-cache-policy.md
-            - name: Como definir uma política de cache para uma solicitação
+            - name: 'Como: Definir uma política de cache para uma solicitação'
               href: how-to-set-cache-policy-for-a-request.md
     - name: Segurança na programação de rede
       href: security-in-network-programming.md
@@ -174,18 +174,18 @@
           href: proxy-configuration.md
         - name: Detecção automática de proxy
           href: automatic-proxy-detection.md
-        - name: Como habilitar uma WebRequest a usar um proxy para se comunicar com a Internet
+        - name: 'Como: Habilitar uma WebRequest a usar um proxy para se comunicar com a Internet'
           href: how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md
-        - name: Como substituir uma seleção de proxy global
+        - name: 'Como: Substituir uma seleção de proxy global'
           href: how-to-override-a-global-proxy-selection.md
     - name: NetworkInformation
       href: networkinformation.md
       items:
-        - name: Como detectar a disponibilidade de rede e alterações de endereço
+        - name: 'Como: Detectar a disponibilidade de rede e alterações de endereço'
           href: how-to-detect-network-availability-and-address-changes.md
-        - name: Como obter informações de interface e de protocolo
+        - name: 'Como: obter informações de interface e de protocolo'
           href: how-to-get-interface-and-protocol-information.md
-        - name: Como executar ping em um host
+        - name: 'Como: executar ping em um host'
           href: how-to-ping-a-host.md
     - name: Alterações no namespace System.Uri na versão 2.0
       href: changes-to-the-system-uri-namespace-in-version-2-0.md

@@ -1,21 +1,22 @@
 ---
 title: Configurando HTTP e HTTPS
+description: Saiba como configurar HTTP/HTTPS para permitir que os serviços e clientes do WCF se comuniquem. Configure um registro de URL e uma exceção de firewall usando Netsh.exe.
 ms.date: 04/08/2019
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: f7fd2bad6ced09b638cc1bb5d539fab1b9ce7d25
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fbff78ff8e2c5c4fa73a56a3fdc15163596aa985
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336694"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245135"
 ---
 # <a name="configuring-http-and-https"></a>Configurando HTTP e HTTPS
 
 Os serviços e os clientes WCF podem se comunicar por HTTP e HTTPS. As configurações de HTTP/HTTPS são definidas usando o IIS (Serviços de Informações da Internet) ou uma ferramenta de linha de comando. Quando um serviço WCF é hospedado no IIS HTTP ou HTTPS, as configurações podem ser definidas no IIS (usando a ferramenta inetmgr.exe). Se um serviço WCF for auto-hospedado, as configurações de HTTP ou HTTPS serão definidas usando uma ferramenta de linha de comando.
 
-No mínimo, você deseja configurar um registro de URL e adicionar uma exceção de firewall para a URL que seu serviço usará. Você pode definir essas configurações com a ferramenta Netsh. exe.
+No mínimo, você deseja configurar um registro de URL e adicionar uma exceção de firewall para a URL que seu serviço usará. Você pode definir essas configurações com a ferramenta Netsh.exe.
 
 ## <a name="configuring-namespace-reservations"></a>Configurando reservas de namespace
 
@@ -23,13 +24,13 @@ A reserva de namespace atribui os direitos para uma parte do namespace da URL HT
 
 Um aplicativo em execução pode criar uma solicitação semelhante para adicionar registros de namespace. Os registros e as reservas competem por partes do namespace. Uma reserva pode ter precedência sobre um registro de acordo com a ordem de resolução fornecida na [ordem de resolução entre as declarações de namespace que envolvem curingas](/windows/desktop/Http/routing-incoming-requests). Nesse caso, a reserva impede que o aplicativo em execução receba pedidos.
 
-O exemplo a seguir usa a ferramenta Netsh. exe:
+O exemplo a seguir usa a ferramenta de Netsh.exe:
 
 ```console
 netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
 ```
 
-Esse comando adiciona uma reserva de URL para o namespace de URL especificado para a conta domínio \ usuário. Para obter mais informações sobre como usar o comando netsh, digite `netsh http add urlacl /?` em um prompt de comando e pressione Enter.
+Esse comando adiciona uma reserva de URL para o namespace de URL especificado para a conta domínio \ usuário. Para obter mais informações sobre como usar o comando netsh, digite `netsh http add urlacl /?` um prompt de comando e pressione Enter.
 
 ## <a name="configuring-a-firewall-exception"></a>Configurando uma exceção de firewall
 
@@ -57,7 +58,7 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 
 Ao usar <xref:System.ServiceModel.WSDualHttpBinding>, a conexão de cliente usa os padrões que são compatíveis com as reservas de namespace e o firewall do Windows. Se você escolher personalizar o endereço base do cliente de uma conexão dupla, também deverá definir essas configurações HTTP no cliente para que correspondam ao novo endereço.
 
-A API do servidor HTTP tem algumas definições de configuração avançadas que não estão disponíveis por meio do HttpCfg. Essas configurações são mantidas no Registro e aplicam-se a todos os aplicativos executados nos sistemas que usam as APIs do servidor HTTP. Para obter informações sobre essas configurações, consulte [configurações do registro http. sys para o IIS](https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows). A maioria dos usuários não precisa alterar essas configurações.
+A API do servidor HTTP tem algumas definições de configuração avançadas que não estão disponíveis por meio do HttpCfg. Essas configurações são mantidas no Registro e aplicam-se a todos os aplicativos executados nos sistemas que usam as APIs do servidor HTTP. Para obter informações sobre essas configurações, consulte [Http.sys configurações do registro para o IIS](https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows). A maioria dos usuários não precisa alterar essas configurações.
 
 ## <a name="see-also"></a>Veja também
 

@@ -4,12 +4,12 @@ description: Aprenda a usar a herança em bibliotecas e aplicativos em C#.
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 78833110db0e4f0382e5c0c6de7c6c8be9a16c8d
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: 70db8716bea84984ad56d79fa9e26aab3a8182fa
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391143"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063504"
 ---
 # <a name="inheritance-in-c-and-net"></a>Herança em C# e .NET
 
@@ -17,7 +17,7 @@ Este tutorial apresenta a herança em C#. Herança é um recurso das linguagens 
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Este tutorial pressupõe que você instalou o .NET Core SDK. Visite a página [.NET Core Downloads](https://dotnet.microsoft.com/download) para baixá-la. Você também precisa de um editor de código. Este tutorial usa o [Visual Studio Code](https://code.visualstudio.com), embora você possa usar qualquer editor de código que quiser.
+Este tutorial pressupõe que você instalou o SDK do .NET Core. Visite a página de [downloads do .NET Core](https://dotnet.microsoft.com/download) para baixá-lo. Você também precisa de um editor de código. Este tutorial usa o [Visual Studio Code](https://code.visualstudio.com), embora você possa usar qualquer editor de código que quiser.
 
 ## <a name="running-the-examples"></a>Como executar os exemplos
 
@@ -58,9 +58,9 @@ Enquanto todos os outros membros de uma classe base são herdados por classes de
 
 - Membros [Públicos](../language-reference/keywords/public.md) são visíveis em classes derivadas e fazem parte da interface pública da classe derivada. Os membros públicos herdados podem ser chamados como se estivessem definidos na classe derivada. No exemplo a seguir, a classe `A` define um método chamado `Method1`, e a classe `B` herda da classe `A`. Depois, o exemplo chama `Method1` como se fosse um método de instância em `B`.
 
-[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
+  [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
-Classes derivadas também podem *substituir* membros herdados fornecendo uma implementação alternativa. Para poder substituir um membro, o membro na classe base deve ser marcado com a palavra-chave [virtual](../language-reference/keywords/virtual.md). Por padrão, os membros da classe base não são marcados como `virtual` e não podem ser substituídos. A tentativa de substituir um membro não virtual, como faz o exemplo a seguir, gera o erro do compilador CS0506: "O \<member> não pode substituir o membro herdado \<member>, pois não está marcado como virtual, abstrato ou de substituição".
+Classes derivadas também podem *substituir* membros herdados fornecendo uma implementação alternativa. Para poder substituir um membro, o membro na classe base deve ser marcado com a palavra-chave [virtual](../language-reference/keywords/virtual.md). Por padrão, os membros da classe base não são marcados como `virtual` e não podem ser substituídos. A tentativa de substituir um membro não virtual, como faz o exemplo a seguir, gera o erro do compilador CS0506: "\<member> não consegue substituir o membro herdado \<member>, pois ele não está marcado como virtual, abstrato ou de substituição.
 
 ```csharp
 public class A
@@ -165,7 +165,7 @@ Um relacionamento é-um(a) baseado na herança é mais bem aplicado a uma classe
 
 ## <a name="designing-the-base-class-and-derived-classes"></a>Criação da classe base e das classes derivadas
 
-Vamos examinar o processo de criação de uma classe base e de suas classes derivadas. Nesta seção, você definirá uma `Publication`classe base, que representa uma publicação de qualquer tipo, como um livro, uma revista, um jornal, um jornal, um artigo, etc. Você também definirá `Book` uma classe `Publication`que deriva de . É possível estender facilmente o exemplo para definir outras classes derivadas, como `Magazine`, `Journal`, `Newspaper` e `Article`.
+Vamos examinar o processo de criação de uma classe base e de suas classes derivadas. Nesta seção, você definirá uma classe base, `Publication` , que representa uma publicação de qualquer tipo, como um livro, uma revista, um jornal, um diário, um artigo, etc. Você também definirá uma `Book` classe derivada de `Publication` . É possível estender facilmente o exemplo para definir outras classes derivadas, como `Magazine`, `Journal`, `Newspaper` e `Article`.
 
 ### <a name="the-base-publication-class"></a>A classe base de Publicação
 
@@ -181,7 +181,7 @@ Em projetar a classe `Publication`, você precisa tomar várias decisões de des
 
 - O quanto devemos ampliar a hierarquia de classe. Você deseja desenvolver uma hierarquia de três ou mais classes, em vez de simplesmente uma classe base e uma ou mais classes derivadas? Por exemplo, `Publication` poderia ser uma classe base de `Periodical`, que por sua vez é uma classe base de `Magazine`, `Journal` e `Newspaper`.
 
-  Para o seu exemplo, você usará a hierarquia pequena de uma classe `Publication` e uma única classe derivada, a `Book`. É possível ampliar o exemplo facilmente para criar várias classes adicionais derivadas de `Publication`, como `Magazine` e `Article`.
+  Para o seu exemplo, você usará a hierarquia pequena de uma classe `Publication` e uma única classe derivada, a `Book`. Você pode estender facilmente o exemplo para criar várias classes adicionais que derivam de `Publication` , como `Magazine` e `Article` .
 
 - Se faz sentido instanciar a classe base. Se não fizer, você deverá aplicar a palavra-chave [abstract](../language-reference/keywords/abstract.md) à classe. Caso contrário, a instância da classe `Publication` poderá ser criada chamando seu construtor de classe. Se for feita uma tentativa de instanciar uma classe marcada com a palavra-chave `abstract` por uma chamada direta para o construtor de classe, o compilador de C# gerará o erro CS0144, "Não é possível criar uma instância da classe abstrata ou interface". Se for feita uma tentativa de instanciar a classe por meio da reflexão, o método de reflexão lançará um <xref:System.MemberAccessException>.
 
@@ -191,9 +191,9 @@ Em projetar a classe `Publication`, você precisa tomar várias decisões de des
 
 - Se as classes derivadas precisam herdar a implementação de membros específicos da classe base, se elas têm a opção de substituir a implementação da classe base ou se precisam fornecer uma implementação. Use a palavra-chave [abstract](../language-reference/keywords/abstract.md) para forçar as classes derivadas a fornecer uma implementação. Use a palavra-chave [virtual](../language-reference/keywords/virtual.md) para permitir que as classes derivadas substituam um método de classe base. Por padrão, os métodos definidos na classe base *não* são substituíveis.
 
- A classe `Publication` não tem nenhum método `abstract`, mas a classe em si é `abstract`.
+  A classe `Publication` não tem nenhum método `abstract`, mas a classe em si é `abstract`.
 
-- Se uma classe derivada representa a classe final na hierarquia de herança e não pode se ser usada como uma classe base para outras classes derivadas. Por padrão, qualquer classe pode servir como classe base. Você pode aplicar a palavra-chave [sealed](../language-reference/keywords/sealed.md) para indicar que uma classe não pode funcionar como uma classe base para quaisquer classes adicionais. A tentativa de derivar de uma classe selada gerou o erro do compilador CS0509, "Não é possível derivar do tipo selado \<typeName>".
+- Se uma classe derivada representa a classe final na hierarquia de herança e não pode se ser usada como uma classe base para outras classes derivadas. Por padrão, qualquer classe pode servir como classe base. Você pode aplicar a palavra-chave [sealed](../language-reference/keywords/sealed.md) para indicar que uma classe não pode funcionar como uma classe base para quaisquer classes adicionais. A tentativa de derivar de uma classe selada gerou o erro do compilador CS0509, "não é possível derivar do tipo sealed \<typeName>".
 
   No seu exemplo, você marcará a classe derivada como `sealed`.
 
@@ -295,7 +295,6 @@ O exemplo a seguir usa objetos derivados de `Shape`. Ele cria uma matriz de obje
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Classes e objetos](../tour-of-csharp/classes-and-objects.md)
 - [Herança (Guia de Programação em C#)](../programming-guide/classes-and-structs/inheritance.md)

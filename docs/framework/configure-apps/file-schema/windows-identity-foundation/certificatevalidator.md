@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: 86161897-c20f-4ad8-9d7f-050c247251bf
 author: BrucePerlerMS
 ms.openlocfilehash: 3f3d79d3567c1714a79423b7767ce3f454b9d52d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152782"
 ---
-# <a name="certificatevalidator"></a>\<> do validador de certificados
-Especifica um tipo personalizado para validação de certificado. Esse tipo só é `certificateValidationMode` usado se o atributo do [ \<elemento validar>certificado](certificatevalidation.md) estiver definido como "Personalizado".  
+# \<certificateValidator>
+Especifica um tipo personalizado para validação de certificado. Esse tipo será usado somente se o `certificateValidationMode` atributo do [\<certificateValidation>](certificatevalidation.md) elemento estiver definido como "personalizado".  
   
-[**\<>de configuração**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de configuração de identidade**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de validação de certificados**](certificatevalidation.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>do validador de certificados**  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<certificateValidation>**](certificatevalidation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<certificateValidator>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ Especifica um tipo personalizado para validação de certificado. Esse tipo só 
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|type|Especifica um tipo personalizado que <xref:System.IdentityModel.Selectors.X509CertificateValidator> deriva da classe. Defina `certificateValidationMode` o atributo do [ \<certificadoValidação>](certificatevalidation.md) elemento como "Personalizado" para usar esse tipo. Para obter mais informações `type` sobre como especificar o atributo, consulte [Referências de tipo personalizadas](../windows-workflow-foundation/index.md). Opcional.|  
+|type|Especifica um tipo personalizado que deriva da <xref:System.IdentityModel.Selectors.X509CertificateValidator> classe. Defina o `certificateValidationMode` atributo do [\<certificateValidation>](certificatevalidation.md) elemento como "Custom" para usar esse tipo. Para obter mais informações sobre como especificar o `type` atributo, consulte [referências de tipo personalizado](../windows-workflow-foundation/index.md). Opcional.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -48,7 +48,7 @@ Especifica um tipo personalizado para validação de certificado. Esse tipo só 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<>de validação de certificados](certificatevalidation.md)|Controla as configurações que os manipuladores de tokens usam para validar certificados.|  
+|[\<certificateValidation>](certificatevalidation.md)|Controla as configurações que os manipuladores de token usam para validar certificados.|  
   
 ## <a name="example"></a>Exemplo  
   

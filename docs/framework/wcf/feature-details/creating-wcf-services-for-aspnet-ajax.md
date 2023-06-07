@@ -2,12 +2,12 @@
 title: Criando serviços do WCF para o AJAX ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
-ms.openlocfilehash: 2ec4d2f1f2fb3a6a184a524ed0134360407b4649
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 8c82d4c61b32572fd1ad7d8f19e939273cc2280b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964061"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599302"
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>Criando serviços do WCF para o AJAX ASP.NET
 
@@ -21,15 +21,15 @@ Se você estiver usando o Visual Studio, poderá usar um modelo predefinido para
 
 Se você não estiver usando os modelos do Visual Studio, há duas maneiras de criar um ponto de extremidade do ASP.NET AJAX:
 
-- Crie o ponto de extremidade usando a ativação dinâmica do host sem usar nenhuma configuração. Essa é a abordagem mais básica se você não estiver familiarizado com o sistema de configuração do WCF. Para obter mais informações, consulte [como: adicionar um ponto de extremidade do ASP.NET AJAX sem usar a configuração](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).
+- Crie o ponto de extremidade usando a ativação dinâmica do host sem usar nenhuma configuração. Essa é a abordagem mais básica se você não estiver familiarizado com o sistema de configuração do WCF. Para obter mais informações, consulte [como: adicionar um ponto de extremidade do ASP.NET AJAX sem usar a configuração](how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).
 
-- Adicione um ponto de extremidade habilitado para AJAX a um serviço WCF usando a configuração. Para obter mais informações, consulte [como: usar a configuração para adicionar um ponto de extremidade do ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).
+- Adicione um ponto de extremidade habilitado para AJAX a um serviço WCF usando a configuração. Para obter mais informações, consulte [como: usar a configuração para adicionar um ponto de extremidade do ASP.NET AJAX](how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).
 
-O modelo de programação da Web descrito na [visão geral do modelo de programação Web http do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md) pode ser usado com serviços AJAX ASP.net. Especificamente:
+O modelo de programação da Web descrito na [visão geral do modelo de programação Web http do WCF](wcf-web-http-programming-model-overview.md) pode ser usado com serviços AJAX ASP.net. Especificamente:
 
-- Você pode usar os atributos <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute> para selecionar entre os verbos HTTP GET e HTTP POST. Se usado corretamente, isso pode melhorar significativamente o desempenho do seu aplicativo. Para obter mais informações, consulte [como: escolher entre solicitações HTTP post e http get para pontos de extremidade do ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md).
+- Você pode usar os <xref:System.ServiceModel.Web.WebGetAttribute> <xref:System.ServiceModel.Web.WebInvokeAttribute> atributos e para selecionar entre os VERBOS http Get e http post. Se usado corretamente, isso pode melhorar significativamente o desempenho do seu aplicativo. Para obter mais informações, consulte [como: escolher entre solicitações HTTP post e http get para pontos de extremidade do ASP.NET AJAX](http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md).
 
-- Você pode usar as propriedades <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> e <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> para fazer com que o serviço retorne dados XML em vez do JavaScript Object Notation padrão (JSON). Fazer isso com a estrutura do ASP.NET AJAX faz com que o cliente JavaScript receba um objeto XML DOM.
+- Você pode usar as <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> Propriedades e para fazer com que o serviço retorne dados XML em vez do JavaScript Object Notation padrão (JSON). Fazer isso com a estrutura do ASP.NET AJAX faz com que o cliente JavaScript receba um objeto XML DOM.
 
   > [!WARNING]
   > Sua operação deve definir o tipo de conteúdo como text/xml para que isso funcione. Caso contrário, o cliente JavaScript receberá uma cadeia de caracteres contendo o XML em vez de um objeto XML DOM.
@@ -48,19 +48,19 @@ O modelo de programação da Web descrito na [visão geral do modelo de programa
   }
   ```
 
-- Nenhuma outra propriedade nos atributos <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute> poderá ser alterada se a compatibilidade com o AJAX ASP.NET for necessária. Outros aspectos do modelo de programação da Web podem ser usados desde que as convenções de chamada do AJAX ASP.NET não sejam violadas.
+- Nenhuma outra propriedade nos <xref:System.ServiceModel.Web.WebGetAttribute> atributos e <xref:System.ServiceModel.Web.WebInvokeAttribute> poderá ser alterada se a compatibilidade com o AJAX ASP.NET for necessária. Outros aspectos do modelo de programação da Web podem ser usados desde que as convenções de chamada do AJAX ASP.NET não sejam violadas.
 
  Cenários mais avançados exigem alguns detalhes adicionais de suporte a AJAX no WCF que serão compreendidos:
 
-- Para entender como os dados são transferidos entre um cliente de página AJAX e um serviço WCF usando JavaScript e para obter detalhes sobre como .NET Framework tipos são mapeados para tipos JavaScript, consulte [suporte para JSON e outros formatos de transferência de dados](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md).
+- Para entender como os dados são transferidos entre um cliente de página AJAX e um serviço WCF usando JavaScript e para obter detalhes sobre como .NET Framework tipos são mapeados para tipos JavaScript, consulte [suporte para JSON e outros formatos de transferência de dados](support-for-json-and-other-data-transfer-formats.md).
 
 - Para aproveitar os recursos do ASP.NET, por exemplo, a autenticação baseada em URL e o acesso às informações de sessão do ASP.NET, talvez você queira habilitar o modo de compatibilidade do ASP.NET por meio da configuração.
 
-Os pontos de extremidade AJAX no WCF podem até mesmo ser consumidos sem a estrutura do ASP.NET AJAX. Isso requer uma compreensão da arquitetura de suporte do suporte AJAX no WCF. Para obter uma discussão sobre essa arquitetura, consulte [modelo de objeto de programação do WCF Web http](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md). Para obter um exemplo de código que demonstra essa abordagem, consulte o [serviço AJAX com JSON e XML](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).
+Os pontos de extremidade AJAX no WCF podem até mesmo ser consumidos sem a estrutura do ASP.NET AJAX. Isso requer uma compreensão da arquitetura de suporte do suporte AJAX no WCF. Para obter uma discussão sobre essa arquitetura, consulte [modelo de objeto de programação do WCF Web http](wcf-web-http-programming-object-model.md). Para obter um exemplo de código que demonstra essa abordagem, consulte o [serviço AJAX com JSON e XML](../samples/ajax-service-with-json-and-xml-sample.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [Como adicionar um ponto de extremidade do ASP.NET AJAX sem utilizar a configuração](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)
-- [Como usar a configuração para adicionar um ponto de extremidade do ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
-- [Como escolher entre solicitações HTTP POST e HTTP GET para pontos de extremidade do ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)
+- [Modelo de programação WCF Web HTTP](wcf-web-http-programming-model.md)
+- [Como adicionar um ponto de extremidade do ASP.NET AJAX sem utilizar a configuração](how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)
+- [Como usar a configuração para adicionar um ponto de extremidade do ASP.NET AJAX](how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [Como escolher entre solicitações HTTP POST e HTTP GET para pontos de extremidade AJAX ASP.NET](http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)

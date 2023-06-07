@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-ms.openlocfilehash: 4312abef83728f432e2f6a492e5acad3450719b1
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 474a920c9cfdfba7a8157320d9c88b8677958425
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592058"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406515"
 ---
-# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>A variável ' \<variablename > ' oculta uma variável em um bloco delimitador
+# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>A variável '\<variablename>' oculta uma variável em bloco delimitador
 Uma variável colocada em um bloco tem o mesmo nome que outra variável local.  
   
  **ID do erro:** BC30616  
@@ -30,11 +30,11 @@ Uma variável colocada em um bloco tem o mesmo nome que outra variável local.
     End If  
     ```  
   
-- Uma causa comum desse erro é o uso de `Catch e As Exception` dentro de um manipulador de eventos. Se esse for o caso, nomeie a variável de bloco `Catch` `ex` em vez de `e`.  
+- Uma causa comum para esse erro é o uso de `Catch e As Exception` dentro de um manipulador de eventos. Se esse for o caso, nomeie a `Catch` variável de bloco `ex` em vez de `e` .  
   
-- Outra fonte comum desse erro é uma tentativa de acessar uma variável local declarada dentro de um bloco `Try` em um bloco separado `Catch`. Para corrigir isso, declare a variável fora da estrutura `Try...Catch...Finally`.  
+- Outra fonte comum desse erro é uma tentativa de acessar uma variável local declarada dentro de um `Try` bloco em um `Catch` bloco separado. Para corrigir isso, declare a variável fora da `Try...Catch...Finally` estrutura.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Instrução Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [Declaração de Variável](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Instrução Try...Catch...Finally](../statements/try-catch-finally-statement.md)
+- [Declaração de Variável](../../programming-guide/language-features/variables/variable-declaration.md)

@@ -1,5 +1,6 @@
 ---
 title: Storeadm.exe (Ferramenta de Armazenamento Isolado)
+description: Leia sobre Storeadm.exe, a ferramenta de armazenamento isolado. Esta ferramenta lista ou remove todos os repositórios existentes para o usuário atual.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Storeadm.exe
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - stores, current user
 - removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
-ms.openlocfilehash: 46e846eaf92835fb2a9130b85ed20749934ca5a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 153fc2b4b5a955fd5ed768d1492f053595363e6e
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715723"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517003"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (Ferramenta de Armazenamento Isolado)
 A ferramenta Armazenamento Isolado lista ou remove todos os repositórios existentes para o usuário atual.  
@@ -33,10 +34,10 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
 |Opção|Descrição|  
 |------------|-----------------|  
 |**/h**[**elp**]|Exibe sintaxe de comando e opções para a ferramenta.|  
-|**/list**|Exibe todos os repositórios existentes para o usuário atual. Isso inclui os repositórios de todos os aplicativos ou assemblies executados por esse usuário.|  
-|**/machine**|Seleciona o repositório do computador. Use essa opção com as opções **/list** ou **/remove** para especificar que a ação deve ser aplicada ao repositório do computador.<br /><br /> Novidades no .NET Framework 2.0|  
+|**/List**|Exibe todos os repositórios existentes para o usuário atual. Isso inclui os repositórios de todos os aplicativos ou assemblies executados por esse usuário.|  
+|**/Machine**|Seleciona o repositório do computador. Use essa opção com as opções **/list** ou **/remove** para especificar que a ação deve ser aplicada ao repositório do computador.<br /><br /> Novidades no .NET Framework 2.0|  
 |**/quiet**|Especifica o modo silencioso; suprime a saída informativa de forma que apenas as mensagens de erro sejam exibidas.|  
-|**/remove**|Remove permanentemente todos os repositórios existentes para o usuário atual.|  
+|**/Remove**|Remove permanentemente todos os repositórios existentes para o usuário atual.|  
 |**/roaming**|Seleciona o repositório móvel. Use essa opção com as opções **/list** ou **/remove** para especificar que a ação deve ser aplicada ao repositório móvel.|  
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|  
   
@@ -58,8 +59,8 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
  Independentemente do roaming estar efetivamente habilitado para o usuário, isso não afeta a administração de Storeadm.exe. A execução da ferramenta sem opções se aplica a todas as ações no repositório local. A execução da ferramenta com a opção **/roaming** se aplica a todas as ações no repositório compatível com roaming. A execução da ferramenta com a opção **/machine** se aplica a todas as ações no repositório do computador.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Ferramentas](index.md)
 - [Armazenamento isolado](../../standard/io/isolated-storage.md)
-- [Prompts de Comando](developer-command-prompt-for-vs.md)
+- [Prompts de comando](developer-command-prompt-for-vs.md)

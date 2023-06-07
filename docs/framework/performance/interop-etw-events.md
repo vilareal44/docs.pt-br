@@ -1,19 +1,20 @@
 ---
 title: Eventos ETW de interoperabilidade
+description: Examine os eventos de Interop ETW (rastreamento de eventos para Windows), que capturam informações sobre geração de stub do Microsoft Intermediate Language (MSIL) & cache no .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interop events [.NET Framework]
 - ETW, interop events (CLR)
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
-ms.openlocfilehash: 80fd1f7487dbe3925b875e728eaeddac86927ad4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9dac9bc70cd070eb3e94969ce47ce24325a6f89d
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716013"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904241"
 ---
 # <a name="interop-etw-events"></a>Eventos ETW de interoperabilidade
-Eventos de interoperabilidade capturam informações sobre geração e cache de stub MSIL (Microsoft Intermediate Language).  
+ Eventos de interoperabilidade capturam informações sobre a geração e o cache de stub da MSIL (Microsoft Intermediate Language).  
 
 ## <a name="ilstubgenerated-event"></a>Evento ILStubGenerated
 
@@ -25,7 +26,7 @@ A tabela a seguir mostra a palavra-chave e o nível. (Para obter mais informaç�
   
  A tabela a seguir mostra as informações do evento.  
   
-|Event|ID do evento|Acionado quando|  
+|Evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`ILStubGenerated`|88|O stub em MSIL foi gerado.|  
   
@@ -55,7 +56,7 @@ A tabela a seguir mostra a palavra-chave e o nível.
   
  A tabela a seguir mostra as informações do evento.  
   
-|Event|ID do evento|Acionado quando|  
+|Evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`ILStubCacheHit`|89|O cache MSIL foi acessado.|  
   
@@ -73,4 +74,4 @@ A tabela a seguir mostra a palavra-chave e o nível.
   
 ## <a name="see-also"></a>Veja também
 
-- [Eventos de CLR ETW](clr-etw-events.md)
+- [Eventos ETW no CLR](clr-etw-events.md)

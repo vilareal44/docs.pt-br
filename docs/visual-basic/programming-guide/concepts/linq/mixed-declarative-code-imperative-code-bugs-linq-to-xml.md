@@ -2,15 +2,15 @@
 title: Bugs misturados de código declarativo/código obrigatório (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: f12b1ab4-bb92-4b92-a648-0525e45b3ce7
-ms.openlocfilehash: 369fae59516df785ac686645d47e74e69a8f1457
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e5526a64805b19ea293d3ef28636738923d03662
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331653"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84361067"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>Código declarativo misto/bugs de código imperativo (LINQ to XML) (Visual Basic)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] contém vários métodos que permitem que você modifique uma árvore XML diretamente. Você pode adicionar elementos, excluir elementos, modifica o conteúdo de um elemento, adiciona atributos, e assim por diante. Essa interface de programação é descrita em [modificando árvores XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Se você estiver iterando com um dos eixos, como <xref:System.Xml.Linq.XContainer.Elements%2A>, e você está alterando a árvore XML como você itera através do eixo, você pode acabar com alguns erros estranhas.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] contém vários métodos que permitem que você modifique uma árvore XML diretamente. Você pode adicionar elementos, excluir elementos, modifica o conteúdo de um elemento, adiciona atributos, e assim por diante. Essa interface de programação é descrita em [modificando árvores XML (LINQ to XML) (Visual Basic)](modifying-xml-trees-linq-to-xml.md). Se você estiver iterando com um dos eixos, como <xref:System.Xml.Linq.XContainer.Elements%2A>, e você está alterando a árvore XML como você itera através do eixo, você pode acabar com alguns erros estranhas.  
   
  Esse problema é às vezes conhecido como “o problema do Dia De Bruxas”.  
   
@@ -118,7 +118,7 @@ Next
 Console.WriteLine(root)  
 ```  
   
- Isso gerencia a saída a seguir:  
+ Isso gera a saída a seguir:  
   
 ```xml  
 <Root />  
@@ -155,7 +155,7 @@ Dim z = _
   
  Você pode para evitar esses problemas.  
   
-## <a name="guidance"></a>{1&gt;Orientação&lt;1}  
+## <a name="guidance"></a>Diretrizes  
  Primeiro, não mistura o código declarativo e obrigatório.  
   
  Mesmo se você souber exatamente a semântica das coleções e semântica dos métodos que modificam a árvore XML, se você escrever qualquer código inteligente que impede essas categorias de problemas, seu código deverá ser mantido no futuro por outros desenvolvedores, e não podem ser como o espaço livre nos problemas. Se você mistura estilos declarativo e obrigatórias de codificação, seu código será mais frágil.  
@@ -176,6 +176,6 @@ Dim newRoot As XElement = New XElement("Root", _
 Console.WriteLine(newRoot)  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Programação de LINQ to XML avançada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Programação de LINQ to XML avançada (Visual Basic)](advanced-linq-to-xml-programming.md)

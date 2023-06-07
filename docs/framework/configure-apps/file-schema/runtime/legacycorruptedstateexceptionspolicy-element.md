@@ -6,18 +6,18 @@ helpviewer_keywords:
 - legacyCorruptedStateExceptionsPolicy element
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 ms.openlocfilehash: d1d29a37999a01f3e370897a1052f4f94435a218
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73116454"
 ---
-# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<elemento de > legacyCorruptedStateExceptionsPolicy
+# <a name="legacycorruptedstateexceptionspolicy-element"></a>Elemento \<legacyCorruptedStateExceptionsPolicy>
 Especifica se o Common Language Runtime permite que o código gerenciado Capture violações de acesso e outras exceções de estado corrompidas.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<legacyCorruptedStateExceptionsPolicy >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<legacyCorruptedStateExceptionsPolicy>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,11 +38,11 @@ Especifica se o Common Language Runtime permite que o código gerenciado Capture
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|O aplicativo não detectará falhas de exceção de estado corrompido, como violações de acesso. Esse é o padrão.|  
+|`false`|O aplicativo não detectará falhas de exceção de estado corrompido, como violações de acesso. Este é o padrão.|  
 |`true`|O aplicativo detectará falhas de exceção de estado corrompido, como violações de acesso.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -54,13 +54,13 @@ Especifica se o Common Language Runtime permite que o código gerenciado Capture
 ## <a name="remarks"></a>Comentários  
  No .NET Framework versão 3,5 e anteriores, o Common Language Runtime permitia código gerenciado para capturar exceções que foram geradas por Estados de processo corrompidos. Uma violação de acesso é um exemplo desse tipo de exceção.  
   
- A partir do .NET Framework 4, o código gerenciado não captura mais esses tipos de exceções em blocos de `catch`. No entanto, você pode substituir essa alteração e manter a manipulação de exceções de estado corrompidas de duas maneiras:  
+ A partir do .NET Framework 4, o código gerenciado não captura mais esses tipos de exceções em `catch` blocos. No entanto, você pode substituir essa alteração e manter a manipulação de exceções de estado corrompidas de duas maneiras:  
   
-- Defina o atributo de `enabled` do elemento de `<legacyCorruptedStateExceptionsPolicy>` como `true`. Essa configuração é aplicada processwide e afeta todos os métodos.  
+- Defina o `<legacyCorruptedStateExceptionsPolicy>` atributo do elemento `enabled` como `true` . Essa configuração é aplicada processwide e afeta todos os métodos.  
   
- \- ou -  
+ -ou-  
   
-- Aplique o atributo <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> ao método que contém as exceções `catch` bloco.  
+- Aplique o <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> atributo ao método que contém o bloco de exceções `catch` .  
   
  Este elemento de configuração está disponível apenas no .NET Framework 4 e posterior.  
   
@@ -75,8 +75,8 @@ Especifica se o Common Language Runtime permite que o código gerenciado Capture
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>
-- [Esquema de configurações do tempo de execução](index.md)
-- [Esquema de arquivos de configuração](../index.md)
+- [Esquema de configurações do runtime](index.md)
+- [Esquema do arquivo de configuração](../index.md)

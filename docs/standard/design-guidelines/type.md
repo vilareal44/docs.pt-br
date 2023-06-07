@@ -8,12 +8,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], type design guidelines
 - types [.NET Framework], design guidelines
 ms.assetid: 6b49314e-8bba-43ea-97ca-4e0255812f95
-ms.openlocfilehash: 2a3cca0139974cbc92ce85a19db73dfb3d13d1a0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 17bd300277a039818a3d563c8f2d5f99eb2fc68d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743572"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289558"
 ---
 # <a name="type-design-guidelines"></a>Diretrizes de Design de tipo
 Da perspectiva do CLR, há apenas duas categorias de tipos — tipos de referência e tipos de valor — mas, para fins de uma discussão sobre design de estrutura, dividimos os tipos em mais grupos lógicos, cada um com suas próprias regras de design específicas.
@@ -33,10 +33,10 @@ Da perspectiva do CLR, há apenas duas categorias de tipos — tipos de referên
  ✔️ garantir que cada tipo seja um conjunto bem definido de membros relacionados, não apenas uma coleção aleatória de funcionalidades não relacionadas.
 
 ## <a name="in-this-section"></a>Nesta seção
- [Escolher entre](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md) classes [abstratas](../../../docs/standard/design-guidelines/abstract-class.md) de classe e struct design da classe [estática](../../../docs/standard/design-guidelines/static-class.md) [design de](../../../docs/standard/design-guidelines/interface.md) design [struct](../../../docs/standard/design-guidelines/struct.md) [design de](../../../docs/standard/design-guidelines/enum.md) design de estrutura [tipos aninhados](../../../docs/standard/design-guidelines/nested-types.md) *partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*
+ [Escolher entre](choosing-between-class-and-struct.md) classes [abstratas](abstract-class.md) de classe e struct design da classe [estática](static-class.md) [design de](interface.md) design [struct](struct.md) [design de](enum.md) design de estrutura [tipos aninhados](nested-types.md) *partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*
 
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
+- [Diretrizes de design de estrutura](index.md)

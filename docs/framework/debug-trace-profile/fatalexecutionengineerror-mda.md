@@ -1,5 +1,6 @@
 ---
 title: MDA fatalExecutionEngineError
+description: Examine o MDA (Assistente de depuração gerenciada) do fatalExecutionEngineError no .NET, que pode ser ativado devido a um encerramento de processo inesperado.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - corrupted CLR
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - FatalExecutionEngineError MDA
 - managed debugging assistants (MDAs), fatal errors
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
-ms.openlocfilehash: e25c9ef6ec43089f1d85479d1afe301232ed1d4f
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 0806d2eaa1752c88bebd03304fbe5c8094416a48
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217497"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415921"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>MDA fatalExecutionEngineError
 O MDA (assistente para depuração gerenciada) `fatalExecutionEngineError` é ativado quando um erro fatal no CLR (Common Language Runtime) é detectado. O processo será terminado.  
@@ -71,8 +72,8 @@ O MDA (assistente para depuração gerenciada) `fatalExecutionEngineError` é at
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution.Cer>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)

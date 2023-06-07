@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
-ms.openlocfilehash: c7e5f797c1d098a3b2d01745b949ed50375ea7e8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e7a9166f1879ed0850ca893bed307a0318298bbb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345568"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401817"
 ---
 # <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Como mostrar portas seriais disponíveis no Visual Basic
 
@@ -36,7 +36,7 @@ Este tópico descreve como usar `My.Computer.Ports` para mostrar as portas seria
   
 - Uma referência de projeto ao System.Windows.Forms.dll.  
   
-- Acesso aos membros do namespace <xref:System.Windows.Forms>. Adicione uma instrução `Imports` se você não está qualificando totalmente os nomes de membros em seu código. Para obter mais informações, consulte [Instrução Imports (tipo e namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Acesso aos membros do namespace <xref:System.Windows.Forms>. Adicione uma instrução `Imports` se você não está qualificando totalmente os nomes de membros em seu código. Para obter mais informações, consulte [Instrução Imports (tipo e namespace .NET)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 - Que seu formulário tenha um controle <xref:System.Windows.Forms.ListBox> chamado `ListBox1`.  
   
@@ -47,9 +47,9 @@ Este tópico descreve como usar `My.Computer.Ports` para mostrar as portas seria
 > [!NOTE]
 > Os nomes das portas retornados por `My.Computer.Ports.SerialPortNames` podem estar incorretos quando executados no Windows 98. Para evitar erros de aplicativo, use o tratamento de exceções, como a instrução `Try...Catch...Finally` ou a instrução `Using`, ao usar os nomes de portas para abrir portas.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
-- [Como: discar modems anexados a portas seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)
-- [Como: enviar cadeias de caracteres para portas seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
-- [Como: receber cadeias de caracteres de portas seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
+- [Como: discar modems anexados a portas seriais](how-to-dial-modems-attached-to-serial-ports.md)
+- [Como: enviar cadeias de caracteres para portas seriais](how-to-send-strings-to-serial-ports.md)
+- [Como: receber cadeias de caracteres de portas seriais](how-to-receive-strings-from-serial-ports.md)

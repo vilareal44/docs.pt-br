@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7263f9a9-4c0b-4d82-a181-288873fb2b18
 topic_type:
 - apiref
-ms.openlocfilehash: 2c6ed14f9238d653b15d26dec9d954c05238817c
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 7d209b7c319baff912b3462f8ed5f3f30f127750
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213446"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501905"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>Método ICorDebugManagedCallback2::ChangeConnection
 Notifica o depurador de que o conjunto de tarefas associado à conexão especificada foi alterado.  
@@ -46,7 +46,7 @@ HRESULT ChangeConnection (
   
 - Quando um depurador é anexado a um processo que contém conexões. Nesse caso, o tempo de execução irá gerar e distribuir um evento [ICorDebugManagedCallback2:: CreateConnection](icordebugmanagedcallback2-createconnection-method.md) e um `ChangeConnection` evento para cada conexão no processo. Um `ChangeConnection` evento é gerado para cada conexão existente, independentemente de o conjunto de tarefas dessa conexão ter sido alterado desde sua criação.  
   
-- Quando um host chama [ICLRDebugManager:: SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) na [API de hospedagem](../hosting/index.md).  
+- Quando um host chama [ICLRDebugManager:: SetConnectionTasks](../hosting/iclrdebugmanager-setconnectiontasks-method.md) na [API de hospedagem](../hosting/index.md).  
   
  O depurador deve verificar todos os threads no processo para selecionar as novas alterações.  
   

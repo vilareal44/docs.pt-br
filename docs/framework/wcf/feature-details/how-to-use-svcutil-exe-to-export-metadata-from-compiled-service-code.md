@@ -1,22 +1,22 @@
 ---
-title: 'Como: usar Svcutil.exe para exportar metadados de código de serviço compilado'
+title: Como utilizar o Svcutil.exe para exportar metadados de código de serviço compilado
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 2d1b70931fe70dfd605e182d4b23a151bc8130a3
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 9acefdec63a6f518ead6cdbcb19ebc8c75609dd6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991174"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595356"
 ---
-# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Como: usar Svcutil.exe para exportar metadados de código de serviço compilado
+# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Como utilizar o Svcutil.exe para exportar metadados de código de serviço compilado
 Svcutil. exe pode exportar metadados para serviços, contratos e tipos de dados em assemblies compilados, da seguinte maneira:  
   
 - Para exportar metadados para todos os contratos de serviço compilados para um conjunto de assemblies usando svcutil. exe, especifique os assemblies como parâmetros de entrada. Esse é o comportamento padrão.  
   
 - Para exportar metadados para um serviço compilado usando svcutil. exe, especifique o assembly de serviço ou assemblies como parâmetros de entrada. Você deve usar a `/serviceName` opção para indicar o nome da configuração do serviço que deseja exportar. Svcutil. exe carrega automaticamente o arquivo de configuração para o assembly executável especificado.  
   
-- Para exportar todos os tipos de contrato de dados dentro de um conjunto de `/dataContractOnly` assemblies, use a opção.  
+- Para exportar todos os tipos de contrato de dados dentro de um conjunto de assemblies, use a `/dataContractOnly` opção.  
   
 > [!NOTE]
 > Use a `/reference` opção para especificar os caminhos de arquivo para quaisquer assemblies dependentes.  
@@ -166,7 +166,7 @@ public class MyService : IPersonFinder
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Exportando e importando metadados](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
+- [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Exportando e importando metadados](exporting-and-importing-metadata.md)

@@ -3,12 +3,12 @@ title: Comparação entre project.json e csproj
 description: Veja um mapeamento entre os elementos project.json e csproj.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: a997b48f645ed58d15610a68aee7c67411f9763f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c8638bc30ba09d8e8d464159aded60dcde4b8dc0
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205830"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87427015"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Um mapeamento entre as propriedades de project.json e csproj
 
@@ -141,7 +141,7 @@ Use a propriedade `TargetFrameworks` para definir a lista de estruturas de desti
 </PropertyGroup>
 ```
 
-## <a name="dependencies"></a>dependências
+## <a name="dependencies"></a>dependencies
 
 > [!IMPORTANT]
 > Se a dependência for um **projeto** e não um pacote, o formato será diferente.
@@ -339,7 +339,7 @@ No MSBuild, todos os projetos são *portáteis* durante o build, mas podem ser p
 
 Para obter mais informações, consulte [SCD (implantações independentes)](../deploying/index.md#publish-self-contained).
 
-## <a name="tools"></a>ferramentas
+## <a name="tools"></a>tools
 
 ```json
 {
@@ -475,7 +475,7 @@ Consulte também [Arquivos](#files).
   <!-- summary is not migrated from project.json, but you can use the <Description> property for that if needed. -->
   <PackageTags>machine learning;framework</PackageTags>
   <PackageReleaseNotes>Version 0.9.12-beta</PackageReleaseNotes>
-  <PackageIconUrl>http://numl.net/images/ico.png</PackageIconUrl>
+  <PackageIcon>ico.png</PackageIcon>
   <PackageProjectUrl>http://numl.net</PackageProjectUrl>
   <PackageLicenseUrl>https://raw.githubusercontent.com/sethjuarez/numl/master/LICENSE.md</PackageLicenseUrl>
   <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -485,7 +485,7 @@ Consulte também [Arquivos](#files).
 </PropertyGroup>
 ```
 
-Não há nenhum equivalente do elemento `owners` no MSBuild. Para `summary` o, você pode usar a `<Description>` Propriedade MSBuild. O valor de `summary` não é migrado automaticamente para essa propriedade, já que essa propriedade é mapeada para o [`description`](#other-common-root-level-options) elemento.
+Não há nenhum equivalente do elemento `owners` no MSBuild. Para `summary` o, você pode usar a `<Description>` Propriedade MSBuild. O valor de `summary` não é migrado automaticamente para essa propriedade, já que essa propriedade é mapeada para o [`description`](#other-common-root-level-options) elemento.  [PackageIconUrl foi preterido](/nuget/reference/msbuild-targets#packageiconurl) em favor de PackageIcon.
 
 ## <a name="scripts"></a>scripts
 
@@ -527,7 +527,7 @@ Seus equivalentes no MSBuild são [destinos](/visualstudio/msbuild/msbuild-targe
 }
 ```
 
-Todas as configurações nesse grupo, exceto para a `System.GC.Server` propriedade, são colocadas em um arquivo chamado *runtimeconfig. Template. JSON* na pasta do projeto, com opções levantadas para o objeto raiz durante o processo de migração:
+Todas as configurações nesse grupo, exceto para a `System.GC.Server` propriedade, são colocadas em um arquivo chamado *runtimeconfig.template.js* na pasta do projeto, com opções levantadas para o objeto raiz durante o processo de migração:
 
 ```json
 {
@@ -671,6 +671,6 @@ Para obter mais informações, consulte [Incluindo conteúdo em um pacote](/nuge
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de alto nível das alterações na CLI](cli-msbuild-architecture.md)

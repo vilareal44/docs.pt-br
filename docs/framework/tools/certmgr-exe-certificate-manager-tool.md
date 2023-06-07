@@ -1,5 +1,6 @@
 ---
 title: Certmgr.exe (ferramenta Gerenciador de Certificados)
+description: Explore Certmgr.exe, a ferramenta Gerenciador de certificados. Essa ferramenta gerencia certificados, listas de certificados confiáveis (CTLs) e listas de certificados revogados (CRLs).
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-ms.openlocfilehash: 06fe3a78d0b19720d4f83111980b88806312205f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43ab281e6ec28ff23ea584b03fd4278c6682e33e
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73129869"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167264"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (ferramenta Gerenciador de Certificados)
 A ferramenta Gerenciador de Certificados (Certmgr.exe) gerencia certificados, CTLs (listas de certificados confiáveis) e CRLs (listas de certificados revogados).  
@@ -49,13 +50,13 @@ A ferramenta Gerenciador de Certificados (Certmgr.exe) gerencia certificados, CT
 |*sourceStorename*|O repositório de certificados que contém os certificados, as CTLs ou as CRLs existentes que serão adicionados, excluídos, salvos ou exibidos. Ele pode ser um arquivo de repositório ou um repositório de sistemas.|  
 |*destinationStorename*|O repositório ou o arquivo de certificados de saída.|  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
-|**/add**|Adiciona certificados, CTLs e CRLs a um repositório de certificados.|  
-|**/all**|Adiciona todas as entradas quando usadas com **/add**. Exclui todas as entradas quando usada com **/del**. Exibe todas as entradas quando usadas sem as opções **/add** **ou /del.** A opção **/all** não pode ser usada com **/put**.|  
-|**/c**|Adiciona certificados quando usados com **/add**. Exclui certificados quando usado com **/del**. Salva certificados quando usado com **/put**. Exibe certificados quando usados sem as opções **/add**, **/del** ou **/put**.|  
-|**/CRL**|Adiciona CRLs quando usadas com **/add**. Exclui CRLs quando usado com **/del**. Salva CRLs quando usado com **/put**. Exibe CRLs quando usadas sem a opção **/add**, **/del** ou **/put**.|  
-|**/CTL**|Adiciona CTLs quando usadas com **/add**. Exclui CTLs quando usado com **/del**. Salva CTLs quando usado com **/put**. Exibe CTLs quando usadas sem as opções **/add**, **/del** ou **/put**.|  
+|**/Add**|Adiciona certificados, CTLs e CRLs a um repositório de certificados.|  
+|**/All**|Adiciona todas as entradas quando usadas com **/add**. Exclui todas as entradas quando usadas com **/del**. Exibe todas as entradas quando usadas sem as opções **/Add** ou **/del** . A opção **/all** não pode ser usada com **/put**.|  
+|**/c**|Adiciona certificados quando usados com **/add**. Exclui certificados quando usados com **/del**. Salva certificados quando usados com **/Put**. Exibe certificados quando usados sem as opções **/add**, **/del** ou **/put**.|  
+|**/CRL**|Adiciona CRLs quando usadas com **/add**. Exclui as CRLs quando usadas com **/del**. Salva as CRLs quando usadas com **/Put**. Exibe CRLs quando usadas sem a opção **/add**, **/del** ou **/put**.|  
+|**/CTL**|Adiciona CTLs quando usadas com **/add**. Exclui as CTLs quando usadas com **/del**. Salva CTLs quando usada com **/Put**. Exibe CTLs quando usadas sem as opções **/add**, **/del** ou **/put**.|  
 |**/del**|Exclui certificados, CTLs e CRLs de um repositório de certificados.|  
 |**/e** *encodingType*|Especifica o tipo de codificação do certificado. O padrão é `X509_ASN_ENCODING`.|  
 |**/f** *dwFlags*|Especifica o sinalizador de repositório aberto. Esse é o parâmetro *dwFlags* passado para **CertOpenStore**. O valor padrão é CERT_SYSTEM_STORE_CURRENT_USER. Essa opção só será ignorada se a opção **/y** for usada.|  
@@ -139,4 +140,4 @@ certmgr /put /c /s my newFile
 
 - [Ferramentas](index.md)
 - [Makecert.exe (Ferramenta de Criação de Certificado)](/windows/desktop/SecCrypto/makecert)
-- [Prompts de Comando](developer-command-prompt-for-vs.md)
+- [Prompts de comando](developer-command-prompt-for-vs.md)

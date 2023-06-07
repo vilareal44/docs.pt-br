@@ -2,22 +2,22 @@
 title: Extensibilidade de transporte
 ms.date: 03/30/2017
 ms.assetid: 3c9108be-f60f-4035-9f57-1da58c325420
-ms.openlocfilehash: 9e7ce17c74abaa70140c4ddf8c7410bde59c9785
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 57868f72658831039e936bd4325836b24531a6dc
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971360"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596520"
 ---
 # <a name="transport-extensibility"></a>Extensibilidade de transporte
-Esta seção contém exemplos que demonstram os transportes personalizados no Windows Communication Foundation (WCF).  
+Esta seção contém exemplos que demonstram Transportes personalizados no Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Ativação de UDP](../../../../docs/framework/wcf/samples/udp-activation.md)  
- Demonstra como estender o [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemplo para dar suporte à ativação de processo usando o serviço de ativação de processos do Windows (WAS).  
+ [Ativação de UDP](udp-activation.md)  
+ Demonstra como estender o exemplo de [transporte: UDP](transport-udp.md) para dar suporte à ativação do processo usando o WAS (serviço de ativação de processos do Windows).  
   
- [Transporte: Transações personalizadas através de UDP](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md)  
- Demonstra como estender o exemplo de transporte UDP para dar suporte a fluxo de transação personalizada e mostra o uso do <xref:System.ServiceModel.Channels.TransactionMessageProperty> propriedade.  
+ [Transporte: transações personalizadas por UDP](transport-custom-transactions-over-udp-sample.md)  
+ Demonstra como estender o exemplo de transporte UDP para dar suporte ao fluxo de transações personalizadas e mostra o uso da <xref:System.ServiceModel.Channels.TransactionMessageProperty> propriedade.  
   
- [Transporte: Interoperabilidade do WSE 3.0 TCP](../../../../docs/framework/wcf/samples/transport-wse-3-0-tcp-interoperability.md)  
- Este exemplo demonstra como implementar uma sessão duplex do TCP como um transporte personalizado do Windows Communication Foundation (WCF).
+ [Transporte: interoperabilidade de TCP de WSE 3.0](transport-wse-3-0-tcp-interoperability.md)  
+ Este exemplo demonstra como implementar uma sessão TCP duplex como um transporte de Windows Communication Foundation (WCF) personalizado.

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 962fc293-8ded-4b3b-90ce-2c21a4f1b244
 topic_type:
 - apiref
-ms.openlocfilehash: 9ecfb551b55551e5f6cc7e7e9ffb55e5a96259ee
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2f83bc5b114b746958f936c311efa823d88441d1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141509"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503879"
 ---
 # <a name="wait_option-enumeration"></a>Enumeração WAIT_OPTION
 Contém valores que indicam a ação que um host deve executar se uma operação solicitada pelos blocos de Common Language Runtime (CLR).  
@@ -38,22 +38,22 @@ typedef enum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`WAIT_ALERTABLE`|Notifica o host de que a tarefa deve ser despertada se o CLR chama o método [IHostTask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) .|  
-|`WAIT_MSGPUMP`|Notifica o host de que ele deve bombear mensagens no thread do sistema operacional atual se o thread for bloqueado. O tempo de execução especifica esse valor somente em um thread de <xref:System.Threading.ApartmentState.STA>.|  
-|`WAIT_NOTINDEADLOCK`|Notifica o host que a solicitação de sincronização especificada não pode ser quebrada por um host. Ou seja, o host não pode retornar `HOST_E_DEADLOCK`.|  
+|`WAIT_ALERTABLE`|Notifica o host de que a tarefa deve ser despertada se o CLR chama o método [IHostTask:: Alert](ihosttask-alert-method.md) .|  
+|`WAIT_MSGPUMP`|Notifica o host de que ele deve bombear mensagens no thread do sistema operacional atual se o thread for bloqueado. O tempo de execução especifica esse valor somente em um <xref:System.Threading.ApartmentState.STA> thread.|  
+|`WAIT_NOTINDEADLOCK`|Notifica o host que a solicitação de sincronização especificada não pode ser quebrada por um host. Ou seja, o host não pode retornar `HOST_E_DEADLOCK` .|  
   
 ## <a name="remarks"></a>Comentários  
- Os métodos [IHostTaskManager:: Sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md) e [IHostTaskManager:: SwitchToTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md) usam um parâmetro desse tipo.  
+ Os métodos [IHostTaskManager:: Sleep](ihosttaskmanager-sleep-method.md) e [IHostTaskManager:: SwitchToTask](ihosttaskmanager-switchtotask-method.md) usam um parâmetro desse tipo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Hospedando enumerações](hosting-enumerations.md)

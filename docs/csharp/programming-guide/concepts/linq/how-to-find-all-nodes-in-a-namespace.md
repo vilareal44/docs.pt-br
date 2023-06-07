@@ -1,15 +1,16 @@
 ---
-title: Como encontrar todos os nós em um namespace (C#)
+title: Como localizar todos os nós em um namespace (C#)
+description: Saiba como filtrar no namespace de cada elemento ou atributo para localizar todos os nós nesse namespace.
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: 408f4207798720428d0dd3821d33fd3edf2f897e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf739480c6b4e2c53d5c430d47ff833e8995f6a4
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141186"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303303"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Como encontrar todos os nós em um namespace (C#)
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Como localizar todos os nós em um namespace (C#)
 Você pode filtrar no namespace de cada elemento ou atributo para localizar todos os nós nesse namespace específico.  
   
 ## <a name="example"></a>Exemplo  
@@ -35,7 +36,7 @@ foreach (XElement el in awElements)
     Console.WriteLine(el.Name.ToString());  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```output  
 Nodes in the http://www.adventure-works.com namespace  
@@ -59,7 +60,7 @@ XElement newTree = new XElement("Root",
 Console.WriteLine(newTree);  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```xml  
 <Root>  

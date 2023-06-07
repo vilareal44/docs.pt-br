@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - In keyword [Visual Basic]
 ms.assetid: 2f003a85-8fb6-4280-822b-6ac12839b915
-ms.openlocfilehash: bf7a21e694b245ea72916e0930f11c332a3c9726
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ad3a1281cfaf366f1f28a847d3c3831ad11b0a20
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353584"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404518"
 ---
 # <a name="in-clause-visual-basic"></a>Cláusula In (Visual Basic)
-Especifica o grupo que a variável de loop deve atravessar em um loop de `For Each` ou especifica a coleção a ser consultada em uma cláusula `From`, `Join`ou `Group Join`.  
+Especifica o grupo que a variável de loop deve atravessar em um `For Each` loop ou especifica a coleção a ser consultada em uma `From` `Join` cláusula, ou `Group Join` .  
   
 ## <a name="remarks"></a>Comentários  
- A palavra-chave `In` pode ser usada nos seguintes contextos:  
+ A `In` palavra-chave pode ser usada nos seguintes contextos:  
   
- [Instrução For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [Instrução For Each...Next](for-each-next-statement.md)  
   
- [Cláusula From](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Cláusula from](../queries/from-clause.md)  
   
- [Cláusula Join](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [Cláusula JOIN](../queries/join-clause.md)  
   
- [Cláusula Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [Cláusula Group Join](../queries/group-join-clause.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
+- [Palavras-chave](../keywords/index.md)

@@ -2,15 +2,15 @@
 title: Compatibilidade da funcionalidade de confiança parcial
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 3e0f1c2f673d4ba603df7da431d10c211cf779ac
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 85e34e365d125fe4f00756549ba5bda4311b78f8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212119"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579157"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilidade da funcionalidade de confiança parcial
-O Windows Communication Foundation (WCF) dá suporte a um subconjunto limitado de funcionalidade durante a execução em um ambiente parcialmente confiável. Os recursos com suporte em confiança parcial são projetados em um conjunto específico de cenários, conforme descrito no tópico [cenários de implantação com suporte](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
+O Windows Communication Foundation (WCF) dá suporte a um subconjunto limitado de funcionalidade durante a execução em um ambiente parcialmente confiável. Os recursos com suporte em confiança parcial são projetados em um conjunto específico de cenários, conforme descrito no tópico [cenários de implantação com suporte](supported-deployment-scenarios.md) .  
   
 ## <a name="minimum-permission-requirements"></a>Requisitos mínimos de permissão  
  O WCF dá suporte a um subconjunto de recursos em aplicativos em execução em qualquer um dos seguintes conjuntos de permissões nomeados padrão:  
@@ -24,31 +24,31 @@ O Windows Communication Foundation (WCF) dá suporte a um subconjunto limitado d
 ## <a name="contracts"></a>Contratos  
  Os contratos estão sujeitos às seguintes restrições ao serem executados sob confiança parcial:  
   
-- A classe de serviço que implementa a interface `[ServiceContract]` deve ser `public` e ter um Construtor `public`. Se ele definir `[OperationContract]` métodos, eles deverão ser `public`. Se, em vez disso, ele implementar uma interface `[ServiceContract]`, essas implementações de método poderão ser explícitas ou `private`, desde que a interface `[ServiceContract]` seja `public`.  
+- A classe de serviço que implementa a `[ServiceContract]` interface deve ser `public` e ter um `public` Construtor. Se ele definir `[OperationContract]` métodos, eles deverão ser `public` . Se, em vez disso, ele implementa uma `[ServiceContract]` interface, essas implementações de método podem ser explícitas ou `private` , desde que a `[ServiceContract]` interface seja `public` .  
   
-- Ao usar o atributo `[ServiceKnownType]`, o método especificado deve ser `public`.  
+- Ao usar o `[ServiceKnownType]` atributo, o método especificado deve ser `public` .  
   
-- `[MessageContract]` classes e seus membros podem ser `public`. Se a classe `[MessageContract]` for definida no assembly do aplicativo, ela poderá ser `internal`da e ter `internal` Membros.  
+- `[MessageContract]`as classes e seus membros podem ser `public` . Se a `[MessageContract]` classe for definida no assembly do aplicativo, ela poderá ser `internal` e ter `internal` Membros.  
   
 ## <a name="system-provided-bindings"></a>Associações fornecidas pelo sistema  
- O <xref:System.ServiceModel.BasicHttpBinding> e <xref:System.ServiceModel.WebHttpBinding> têm suporte total em um ambiente de confiança parcial. O <xref:System.ServiceModel.WSHttpBinding> tem suporte somente para o modo de segurança de transporte.  
+ O <xref:System.ServiceModel.BasicHttpBinding> e o <xref:System.ServiceModel.WebHttpBinding> têm suporte total em um ambiente de confiança parcial. O <xref:System.ServiceModel.WSHttpBinding> tem suporte apenas para o modo de segurança de transporte.  
   
- Associações que usam transportes diferentes de HTTP, como o <xref:System.ServiceModel.NetTcpBinding>, o <xref:System.ServiceModel.NetNamedPipeBinding>ou o <xref:System.ServiceModel.NetMsmqBinding>, não têm suporte quando são executadas em um ambiente de confiança parcial.  
+ Associações que usam transportes que não sejam HTTP, como, <xref:System.ServiceModel.NetTcpBinding> <xref:System.ServiceModel.NetNamedPipeBinding> ou, não têm <xref:System.ServiceModel.NetMsmqBinding> suporte quando são executadas em um ambiente de confiança parcial.  
   
 ## <a name="custom-bindings"></a>Associações personalizadas  
  Associações personalizadas podem ser criadas e usadas em um ambiente de confiança parcial, mas devem seguir as restrições especificadas nesta seção.  
   
 ### <a name="transports"></a>Transportes  
- Os únicos elementos de associação de transporte permitidos são <xref:System.ServiceModel.Channels.HttpTransportBindingElement> e <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>.  
+ Os únicos elementos de associação de transporte permitidos são <xref:System.ServiceModel.Channels.HttpTransportBindingElement> e <xref:System.ServiceModel.Channels.HttpsTransportBindingElement> .  
   
 ### <a name="encoders"></a>Codificadores  
  Os codificadores a seguir são permitidos:  
   
-- O codificador de texto (<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>).  
+- O codificador de texto ( <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> ).  
   
-- O codificador binário (<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>).  
+- O codificador binário ( <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> ).  
   
-- O codificador de mensagem da Web (<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>).  
+- O codificador de mensagem da Web ( <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> ).  
   
  Não há suporte para os codificadores MTOM (mecanismo de otimização de transmissão de mensagens).  
   
@@ -58,60 +58,60 @@ O Windows Communication Foundation (WCF) dá suporte a um subconjunto limitado d
 ### <a name="unsupported-bindings"></a>Associações sem suporte  
  Não há suporte para associações que usam mensagens confiáveis, transações ou segurança no nível de mensagem.  
   
-## <a name="serialization"></a>{1&gt;Serialização&lt;1}  
- O <xref:System.Runtime.Serialization.DataContractSerializer> e o <xref:System.Xml.Serialization.XmlSerializer> têm suporte em um ambiente de confiança parcial. No entanto, o uso do <xref:System.Runtime.Serialization.DataContractSerializer> está sujeito às seguintes condições:  
+## <a name="serialization"></a>Serialização  
+ Tanto o <xref:System.Runtime.Serialization.DataContractSerializer> quanto o <xref:System.Xml.Serialization.XmlSerializer> têm suporte em um ambiente de confiança parcial. No entanto, o uso do <xref:System.Runtime.Serialization.DataContractSerializer> está sujeito às seguintes condições:  
   
-- Todos os tipos de `[DataContract]` serializáveis devem ser `public`.  
+- Todos os `[DataContract]` tipos serializáveis devem ser `public` .  
   
-- Todos os campos de `[DataMember]` serializáveis ou propriedades em um tipo de `[DataContract]` devem ser públicos e de leitura/gravação. Não há suporte para a serialização e desserialização de campos [ReadOnly](https://go.microsoft.com/fwlink/?LinkID=98854) ao executar o WCF em um aplicativo parcialmente confiável.  
+- Todos os `[DataMember]` campos serializáveis ou propriedades em um `[DataContract]` tipo devem ser públicos e de leitura/gravação. Não há suporte para a serialização e desserialização de campos [ReadOnly](https://go.microsoft.com/fwlink/?LinkID=98854) ao executar o WCF em um aplicativo parcialmente confiável.  
   
-- Não há suporte para o modelo de programação `[Serializable]`/ISerializable em um ambiente de confiança parcial.  
+- `[Serializable]`Não há suporte para o modelo de programação/ISerializable em um ambiente de confiança parcial.  
   
 - Tipos conhecidos devem ser especificados no código ou na configuração no nível do computador (Machine. config). Tipos conhecidos não podem ser especificados na configuração em nível de aplicativo por motivos de segurança.  
   
-- Tipos que implementam <xref:System.Runtime.Serialization.IObjectReference> geram uma exceção em um ambiente parcialmente confiável.  
+- Os tipos que implementam <xref:System.Runtime.Serialization.IObjectReference> geram uma exceção em um ambiente parcialmente confiável.  
   
- Consulte a seção serialização em [práticas recomendadas de confiança parcial](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) para obter mais informações sobre segurança ao usar o <xref:System.Runtime.Serialization.DataContractSerializer> com segurança em um aplicativo parcialmente confiável.  
+ Consulte a seção serialização em [práticas recomendadas de confiança parcial](partial-trust-best-practices.md) para obter mais informações sobre segurança ao usar com <xref:System.Runtime.Serialization.DataContractSerializer> segurança em um aplicativo parcialmente confiável.  
   
 ### <a name="collection-types"></a>Tipos de coleção  
- Alguns tipos de coleção implementam tanto <xref:System.Collections.Generic.IEnumerable%601> quanto <xref:System.Collections.IEnumerable>. Os exemplos incluem tipos que implementam <xref:System.Collections.Generic.ICollection%601>. Esses tipos podem implementar uma implementação de `public` de `GetEnumerator()`e uma implementação explícita de `GetEnumerator()`. Nesse caso, <xref:System.Runtime.Serialization.DataContractSerializer> invoca a implementação de `public` de `GetEnumerator()`e não a implementação explícita de `GetEnumerator()`. Se nenhuma das implementações de `GetEnumerator()` for `public` e todas forem implementações explícitas, <xref:System.Runtime.Serialization.DataContractSerializer> invoca `IEnumerable.GetEnumerator()`.  
+ Alguns tipos de coleção implementam <xref:System.Collections.Generic.IEnumerable%601> e <xref:System.Collections.IEnumerable> . Os exemplos incluem tipos que implementam <xref:System.Collections.Generic.ICollection%601> . Esses tipos podem implementar uma `public` implementação de `GetEnumerator()` e uma implementação explícita do `GetEnumerator()` . Nesse caso, <xref:System.Runtime.Serialization.DataContractSerializer> o invoca a `public` implementação de `GetEnumerator()` , e não a implementação explícita de `GetEnumerator()` . Se nenhuma das `GetEnumerator()` implementações for `public` e todas forem implementações explícitas, o <xref:System.Runtime.Serialization.DataContractSerializer> invocará `IEnumerable.GetEnumerator()` .  
   
- Para tipos de coleção quando o WCF está sendo executado em um ambiente de confiança parcial, se nenhuma das implementações de `GetEnumerator()` for `public`ou nenhuma delas for implementações de interface explícitas, uma exceção de segurança será lançada.  
+ Para tipos de coleção quando o WCF está sendo executado em um ambiente de confiança parcial, se nenhuma das `GetEnumerator()` implementações for `public` ou nenhuma delas for implementações de interface explícitas, uma exceção de segurança será lançada.  
   
 ### <a name="netdatacontractserializer"></a>NetDataContractSerializer  
- Muitos .NET Framework tipos de coleção, como <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ArrayList>, <xref:System.Collections.Generic.Dictionary%602> e <xref:System.Collections.Hashtable>, não são suportados pelo <xref:System.Runtime.Serialization.NetDataContractSerializer> em confiança parcial. Esses tipos têm o atributo `[Serializable]` definido e, como mencionado anteriormente na seção de serialização, esse atributo não tem suporte em confiança parcial. O <xref:System.Runtime.Serialization.DataContractSerializer> trata as coleções de uma maneira especial e, portanto, é capaz de contornar essa restrição, mas o <xref:System.Runtime.Serialization.NetDataContractSerializer> não tem esse mecanismo para burlar essa restrição.  
+ Muitos .NET Framework tipos de coleção, <xref:System.Collections.Generic.List%601> como <xref:System.Collections.ArrayList> , <xref:System.Collections.Generic.Dictionary%602> e <xref:System.Collections.Hashtable> não têm suporte pelo <xref:System.Runtime.Serialization.NetDataContractSerializer> em confiança parcial. Esses tipos têm o `[Serializable]` atributo definido e, como mencionado anteriormente na seção de serialização, esse atributo não tem suporte em confiança parcial. O <xref:System.Runtime.Serialization.DataContractSerializer> trata as coleções de uma maneira especial e, portanto, é capaz de contornar essa restrição, mas o <xref:System.Runtime.Serialization.NetDataContractSerializer> não tem esse mecanismo para burlar essa restrição.  
   
- O <xref:System.Runtime.Serialization.NetDataContractSerializer> não dá suporte ao tipo de <xref:System.DateTimeOffset> em confiança parcial.  
+ O <xref:System.DateTimeOffset> tipo não é suportado pelo <xref:System.Runtime.Serialization.NetDataContractSerializer> em confiança parcial.  
   
- Um substituto não pode ser usado com o <xref:System.Runtime.Serialization.NetDataContractSerializer> (usando o mecanismo de <xref:System.Runtime.Serialization.SurrogateSelector>) durante a execução em confiança parcial. Observe que essa restrição se aplica ao uso de um substituto, não à serialização.  
+ Um substituto não pode ser usado com o <xref:System.Runtime.Serialization.NetDataContractSerializer> (usando o <xref:System.Runtime.Serialization.SurrogateSelector> mecanismo) durante a execução em confiança parcial. Observe que essa restrição se aplica ao uso de um substituto, não à serialização.  
   
 ## <a name="enabling-common-behaviors-to-run"></a>Habilitando comportamentos comuns para execução  
- Os comportamentos de serviço ou ponto de extremidade não marcados com o atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) que são adicionados à seção [\<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) de um arquivo de configuração não são executados quando o aplicativo é executado em um ambiente de confiança parcial e nenhuma exceção é lançada quando isso ocorre. Para impor a execução de comportamentos comuns, você deve executar uma das seguintes opções:  
+ Os comportamentos de serviço ou ponto de extremidade não marcados com o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo (APTCA) que são adicionados à [\<commonBehaviors>](../../configure-apps/file-schema/wcf/commonbehaviors.md) seção de um arquivo de configuração não são executados quando o aplicativo é executado em um ambiente de confiança parcial e nenhuma exceção é lançada quando isso ocorre. Para impor a execução de comportamentos comuns, você deve executar uma das seguintes opções:  
   
-- Marque seu comportamento comum com o atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> para que ele possa ser executado quando implantado como um aplicativo de confiança parcial. Observe que uma entrada de registro pode ser definida no computador para impedir a execução de assemblies marcados com APTCA. .  
+- Marque seu comportamento comum com o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo para que ele possa ser executado quando implantado como um aplicativo de confiança parcial. Observe que uma entrada de registro pode ser definida no computador para impedir a execução de assemblies marcados com APTCA. .  
   
-- Certifique-se de que, se o aplicativo for implantado como um aplicativo totalmente confiável, que os usuários não possam modificar as configurações de segurança de acesso ao código para executar o aplicativo em um ambiente de confiança parcial. Se puderem fazer isso, o comportamento não é executado e nenhuma exceção é lançada. Para garantir isso, consulte a opção **LevelFinal** usando [Caspol. exe (ferramenta de política de segurança de acesso do código)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
+- Certifique-se de que, se o aplicativo for implantado como um aplicativo totalmente confiável, que os usuários não possam modificar as configurações de segurança de acesso ao código para executar o aplicativo em um ambiente de confiança parcial. Se puderem fazer isso, o comportamento não é executado e nenhuma exceção é lançada. Para garantir isso, consulte a opção **LevelFinal** usando [Caspol. exe (ferramenta de política de segurança de acesso do código)](../../tools/caspol-exe-code-access-security-policy-tool.md).  
   
- Para obter um exemplo de comportamento comum, consulte [como bloquear pontos de extremidade na empresa](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+ Para obter um exemplo de comportamento comum, consulte [como bloquear pontos de extremidade na empresa](../extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
-## <a name="configuration"></a>Configuração do  
- Com uma exceção, o código parcialmente confiável só pode carregar seções de configuração do WCF no arquivo de `app.config` local. Para carregar as seções de configuração do WCF que referenciam as seções do WCF em Machine. config ou em um arquivo Web. config de raiz requer ConfigurationPermission (Irrestrito). Sem essa permissão, as referências às seções de configuração do WCF (comportamentos, associações) fora do arquivo de configuração local resultam em uma exceção quando a configuração é carregada.  
+## <a name="configuration"></a>Configuração  
+ Com uma exceção, o código parcialmente confiável só pode carregar seções de configuração do WCF no `app.config` arquivo local. Para carregar as seções de configuração do WCF que referenciam as seções do WCF em Machine. config ou em um arquivo Web. config de raiz requer ConfigurationPermission (Irrestrito). Sem essa permissão, as referências às seções de configuração do WCF (comportamentos, associações) fora do arquivo de configuração local resultam em uma exceção quando a configuração é carregada.  
   
  A única exceção é a configuração de tipo conhecido para serialização, conforme descrito na seção serialização deste tópico.  
   
 > [!IMPORTANT]
 > As extensões de configuração só têm suporte quando são executadas em confiança total.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
   
-### <a name="event-logging"></a>Registro de eventos em log  
+### <a name="event-logging"></a>Log de eventos  
  Há suporte para o log de eventos limitado sob confiança parcial. Somente as falhas de ativação de serviço e de rastreamento/log de mensagens são registradas no log de eventos. O número máximo de eventos que podem ser registrados por um processo é 5, para evitar a gravação de mensagens excessivas no log de eventos.  
   
 ### <a name="message-logging"></a>Registro em log de mensagens  
  O log de mensagens não funciona quando o WCF é executado em um ambiente de confiança parcial. Se habilitado sob confiança parcial, ele não falha na ativação do serviço, mas nenhuma mensagem é registrada.  
   
 ### <a name="tracing"></a>Rastreamento  
- A funcionalidade de rastreamento restrito está disponível durante a execução em um ambiente de confiança parcial. No elemento <`listeners`> no arquivo de configuração, os únicos tipos que você pode adicionar são <xref:System.Diagnostics.TextWriterTraceListener> e o novo <xref:System.Diagnostics.EventSchemaTraceListener>. O uso do <xref:System.Diagnostics.XmlWriterTraceListener> padrão pode resultar em logs incompletos ou incorretos.  
+ A funcionalidade de rastreamento restrito está disponível durante a execução em um ambiente de confiança parcial. No elemento <`listeners`> no arquivo de configuração, os únicos tipos que você pode adicionar são <xref:System.Diagnostics.TextWriterTraceListener> e o novo <xref:System.Diagnostics.EventSchemaTraceListener> . O uso do padrão <xref:System.Diagnostics.XmlWriterTraceListener> pode resultar em logs incompletos ou incorretos.  
   
  As origens de rastreamento com suporte são:  
   
@@ -127,9 +127,9 @@ O Windows Communication Foundation (WCF) dá suporte a um subconjunto limitado d
   
 - <xref:System.IO.Log>  
 
-- [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
+- [System. ServiceModel. Internal. TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
   
- Os seguintes membros da enumeração <xref:System.Diagnostics.TraceOptions> não devem ser especificados:  
+ Os seguintes membros da <xref:System.Diagnostics.TraceOptions> enumeração não devem ser especificados:  
   
 - <xref:System.Diagnostics.TraceOptions.Callstack?displayProperty=nameWithType>  
   
@@ -158,13 +158,13 @@ O Windows Communication Foundation (WCF) dá suporte a um subconjunto limitado d
  O uso de recursos do WCF que não têm suporte em um ambiente de confiança parcial pode resultar em exceções em tempo de execução.  
   
 ## <a name="unlisted-features"></a>Recursos não listados  
- A melhor maneira de descobrir que uma informação ou ação está indisponível durante a execução em um ambiente de confiança parcial é tentar acessar o recurso ou executar a ação dentro de um bloco de `try` e, em seguida, `catch` a falha. Para evitar a inundação dos arquivos de rastreamento com erros duplicados, o WCF desabilita o rastreamento do recurso ou da ação após a primeira falha de segurança. Há um rastreamento de exceção para cada acesso de recurso com falha, a primeira vez que uma tentativa é feita para acessar o recurso ou executar a ação.  
+ A melhor maneira de descobrir que uma informação ou ação está indisponível durante a execução em um ambiente de confiança parcial é tentar acessar o recurso ou fazer a ação dentro de um `try` bloco e, em seguida, `catch` a falha. Para evitar a inundação dos arquivos de rastreamento com erros duplicados, o WCF desabilita o rastreamento do recurso ou da ação após a primeira falha de segurança. Há um rastreamento de exceção para cada acesso de recurso com falha, a primeira vez que uma tentativa é feita para acessar o recurso ou executar a ação.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
-- [Cenários de implantação com suporte](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)
-- [Práticas recomendadas de confiança parcial](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+- [Cenários de implantação com suporte](supported-deployment-scenarios.md)
+- [Práticas recomendadas de confiança parcial](partial-trust-best-practices.md)

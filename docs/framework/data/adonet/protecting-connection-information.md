@@ -1,23 +1,24 @@
 ---
 title: Protegendo informações de conexão
+description: Saiba mais sobre vulnerabilidades de segurança em cadeias de conexão, que podem surgir devido à forma como as cadeias de conexão são construídas e persistentes e o tipo de autenticação.
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: 1039d3fd797a16391876b59aa018b30b7f397aeb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e693fd99384a2808a621b358f8e70c6777c3930
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149213"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286644"
 ---
 # <a name="protecting-connection-information"></a>Protegendo informações de conexão
-A proteção do acesso à fonte de dados é essencial para a segurança do aplicativo. Uma cadeia de conexão apresenta uma vulnerabilidade potencial se não estiver protegida. Armazenar as informações de conexão em texto sem formatação ou persistir-la na memória pode comprometer seu sistema inteiro. As seqüências de conexão incorporadas em seu código-fonte podem ser lidas usando o [Ildasm.exe (IL Desassembler)](../../tools/ildasm-exe-il-disassembler.md) para visualizar o Microsoft Intermediate Language (MSIL) em um conjunto compilado.  
+A proteção do acesso à fonte de dados é essencial para a segurança do aplicativo. Uma cadeia de conexão apresenta uma vulnerabilidade potencial se não estiver protegida. Armazenar as informações de conexão em texto sem formatação ou persistir-la na memória pode comprometer seu sistema inteiro. As cadeias de conexão inseridas em seu código-fonte podem ser lidas usando o [ILDASM. exe (desmontador de Il)](../../tools/ildasm-exe-il-disassembler.md) para exibir o MSIL (Microsoft intermediator Language) em um assembly compilado.  
   
  As vulnerabilidades de segurança envolvendo cadeias de conexão podem surgir com base no tipo de autenticação usado, em como as cadeias de conexão são persistidas na memória e no disco e nas técnicas usadas para construí-los em tempo de execução.  
   
 ## <a name="use-windows-authentication"></a>Usar Autenticação do Windows  
- Para ajudar a limitar o acesso a sua fonte de dados, você deverá proteger as informações de conexão como a identificação do usuário, senha e nome da fonte de dados. Para evitar expor as informações do usuário, recomendamos o uso da autenticação do Windows (às vezes referida como *segurança integrada)* sempre que possível. A autenticação do Windows é especificada em uma cadeia de conexão usando as palavras-chave `Integrated Security` ou `Trusted_Connection`, eliminando a necessidade de usar uma identificação de usuário e senha. Ao usar a autenticação do Windows, os usuários são autenticados pelo Windows e o acesso ao servidor e os recursos de banco de dados são determinados concedendo permissões a usuários e grupos do Windows.  
+ Para ajudar a limitar o acesso a sua fonte de dados, você deverá proteger as informações de conexão como a identificação do usuário, senha e nome da fonte de dados. Para evitar a exposição de informações do usuário, é recomendável usar a autenticação do Windows (às vezes conhecida como *segurança integrada*) sempre que possível. A autenticação do Windows é especificada em uma cadeia de conexão usando as palavras-chave `Integrated Security` ou `Trusted_Connection`, eliminando a necessidade de usar uma identificação de usuário e senha. Ao usar a autenticação do Windows, os usuários são autenticados pelo Windows e o acesso ao servidor e os recursos de banco de dados são determinados concedendo permissões a usuários e grupos do Windows.  
   
- Para situações onde não é possível usar a autenticação do Windows, você deverá ter cuidado adicional porque as credenciais do usuário são expostas na cadeia de conexão. Em um aplicativo do ASP.NET, você pode configurar uma conta do Windows como uma identidade fixa que é usada para se conectar a bancos de dados e outros recursos de rede. Você habilita a personificação no elemento de identidade no arquivo **Web.config** e especifica um nome de usuário e senha.  
+ Para situações onde não é possível usar a autenticação do Windows, você deverá ter cuidado adicional porque as credenciais do usuário são expostas na cadeia de conexão. Em um aplicativo do ASP.NET, você pode configurar uma conta do Windows como uma identidade fixa que é usada para se conectar a bancos de dados e outros recursos de rede. Você habilita a representação no elemento Identity no arquivo **Web. config** e especifica um nome de usuário e uma senha.  
   
 ```xml  
 <identity impersonate="true"
@@ -37,11 +38,11 @@ A proteção do acesso à fonte de dados é essencial para a segurança do aplic
  O valor padrão para `Persist Security Info` é falso; nós recomendamos usar esta opção em todas as cadeias de conexão. Configurar `Persist Security Info` como `true` ou `yes` permite informações confidenciais de segurança, incluindo a identificação de usuário e a senha, para serem obtidas de uma conexão depois que ela tiver sido aberta. Quando `Persist Security Info` for definido como `false` ou `no`, as informações de segurança serão descartadas após serem usadas para abrir a conexão, garantindo que uma fonte não confiável não tenha acesso a informações confidenciais de segurança.  
   
 ## <a name="encrypt-configuration-files"></a>Criptografe arquivos de configuração  
- Você também pode armazenar cadeias de conexão em arquivos de configuração, o que elimina a necessidade de inseri-las no código do aplicativo. Os arquivos de configuração são arquivos XML padrão para os quais o .NET Framework definiu um conjunto comum de elementos. As seqüências de conexão em arquivos de configuração são normalmente armazenadas dentro da ** \<conexãoStrings>** elemento no **app.config** para um aplicativo Windows ou o arquivo **web.config** para um aplicativo ASP.NET. Para obter mais informações sobre o básico de armazenar, recuperar e criptografar seqüências de conexões de arquivos de configuração, consulte [Strings de conexão e arquivos de configuração](connection-strings-and-configuration-files.md).  
+ Você também pode armazenar cadeias de conexão em arquivos de configuração, o que elimina a necessidade de inseri-las no código do aplicativo. Os arquivos de configuração são arquivos XML padrão para os quais o .NET Framework definiu um conjunto comum de elementos. As cadeias de conexão em arquivos de configuração normalmente são armazenadas dentro do **\<connectionStrings>** elemento no **app. config** de um aplicativo do Windows ou no arquivo **Web. config** de um aplicativo ASP.net. Para obter mais informações sobre as noções básicas de armazenamento, recuperação e criptografia de cadeias de conexão de arquivos de configuração, consulte [cadeias de conexão e arquivos de configuração](connection-strings-and-configuration-files.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Protegendo aplicativos ADO.NET](securing-ado-net-applications.md)
-- [Criptografando informações de configuração usando configuração protegida](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))
+- [Criptografando informações de configuração usando a configuração protegida](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))
 - [Segurança no .NET](../../../standard/security/index.md)
 - [Visão geral do ADO.NET](ado-net-overview.md)

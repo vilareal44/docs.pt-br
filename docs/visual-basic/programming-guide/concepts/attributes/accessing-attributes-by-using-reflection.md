@@ -2,12 +2,12 @@
 title: Acessando atributos usando reflexão
 ms.date: 07/20/2015
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-ms.openlocfilehash: 94352f07cf1f7e4a35f023503f138596ae5ac227
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c0da5c4ae00eb2bc80b10f63f4bfd39763445e55
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353551"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400752"
 ---
 # <a name="accessing-attributes-by-using-reflection-visual-basic"></a>Acessando atributos usando reflexão (Visual Basic)
 
@@ -101,12 +101,12 @@ Class TestAuthorAttribute
 End Class
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Guia de programação do Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Guia de programação do Visual Basic](../../index.md)
 - [Recuperando informações armazenadas em atributos](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
-- [Reflexão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [Atributos (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [Criando atributos personalizados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [Reflexão (Visual Basic)](../reflection.md)
+- [Atributos (Visual Basic)](../../../language-reference/attributes.md)
+- [Criando atributos personalizados (Visual Basic)](creating-custom-attributes.md)

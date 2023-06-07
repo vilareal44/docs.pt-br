@@ -1,5 +1,6 @@
 ---
 title: Comportamento de marshaling padrão
+description: Aprenda o comportamento de marshaling padrão no .NET. Examine o gerenciamento de memória com o marshaling de interoperabilidade e veja marshaling padrão para classes, delegados e tipos de valor.
 ms.date: 06/26/2018
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: f7df323dacfbee3361fe75d831f1e87df328b194
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 0469874d016725eb6423bb8453e9657b2be923d4
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989214"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618565"
 ---
 # <a name="default-marshaling-behavior"></a>Comportamento de marshaling padrão
 O marshaling de interoperabilidade opera em regras que determinam como os dados associados aos parâmetros de método se comportam, conforme eles passam entre a memória gerenciada e não gerenciada. Essas regras internas controlam atividades de marshaling como transformações de tipo de dados, se um receptor pode alterar os dados passados para ele e retornar essas alterações ao chamador e em quais circunstâncias o marshaler fornece otimizações de desempenho.  
@@ -437,7 +438,7 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Tipos blittable e não blittable](blittable-and-non-blittable-types.md)
 - [Copiando e fixando](copying-and-pinning.md)

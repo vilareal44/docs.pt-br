@@ -3,10 +3,10 @@ title: Solução de problemas gerais do .NET Nativo
 ms.date: 03/30/2017
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
 ms.openlocfilehash: 2bea81e380fed6c456898e9883658ef874c8dd97
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128233"
 ---
 # <a name="net-native-general-troubleshooting"></a>Solução de problemas gerais do .NET Nativo
@@ -29,7 +29,7 @@ Este tópico descreve como solucionar problemas potenciais que você pode encont
 
   **Resolução:** Se o compilador de .NET Native for invocado, você perceberá tempos de compilação mais longos e o Gerenciador de tarefas mostrará vários processos de componentes de .NET Native, como ILC. exe e nutc_driver. exe.
 
-  Depois de criar com êxito seu projeto com .NET Native, você encontrará a saída em obj\\*config*\ *Arch*\\*ProjectName*. ilc\out.  O conteúdo final do pacote nativo pode ser encontrado em bin\\*arch*\\*config*\AppX. O conteúdo do pacote nativo final estará em \bin\\*arch*\\*config*\AppX se você tiver implantado o aplicativo.
+  Depois de criar com êxito seu projeto com .net Native, você encontrará a saída em obj \\ *config* \  *Arch* \\ *ProjectName*. ilc\out.  O conteúdo final do pacote nativo pode ser encontrado em \\ *bin* \\ *config*\AppX. O conteúdo final do pacote nativo estará sob \Bin \\ *Arch* \\ *config*\AppX se você tiver implantado o aplicativo.
 
 - **Problema:** seu aplicativo compilado com o .NET Native está lançando exceções de tempo de execução (normalmente exceções [MissingMetadataException](missingmetadataexception-class-net-native.md) ou [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)) que ele não lançava quando era compilado sem o .NET Native.
 
@@ -41,6 +41,6 @@ Este tópico descreve como solucionar problemas potenciais que você pode encont
 
   Para obter mais informações, consulte [Reflexão e .NET Native](reflection-and-net-native.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Migrando seu aplicativo da Windows Store para .NET Native](migrating-your-windows-store-app-to-net-native.md)
+- [Migrando seu aplicativo da Windows Store para .NET Nativo](migrating-your-windows-store-app-to-net-native.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 3d4315a09869b77b4ae8cbb43646f9a96280b678
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4715a27a94ac86c5e4955c0e8be95c6ee4a28507
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173465"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619696"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Referência de C#)
 
@@ -141,7 +141,7 @@ Uma tarefa pode estar em um estado de falha porque ocorreram várias exceções 
 
 ## <a name="example"></a>Exemplo
 
-No exemplo a seguir, o bloco `try` contém uma chamada para o método `ProcessString` que pode causar uma exceção. A cláusula `catch` contém o manipulador de exceção que apenas exibe uma mensagem na tela. Quando instrução `throw` é chamada de dentro de `MyMethod`, o sistema procura a instrução `catch` e exibe a mensagem `Exception caught`.
+No exemplo a seguir, o bloco `try` contém uma chamada para o método `ProcessString` que pode causar uma exceção. A cláusula `catch` contém o manipulador de exceção que apenas exibe uma mensagem na tela. Quando instrução `throw` é chamada de dentro de `ProcessString`, o sistema procura a instrução `catch` e exibe a mensagem `Exception caught`.
 
 [!code-csharp[csrefKeywordsExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsExceptions/CS/csrefKeywordsExceptions.cs#2)]
 
@@ -177,12 +177,12 @@ Cada uma das três tarefas causa uma exceção. O bloco `catch` itera por meio d
 
 Para obter mais informações, confira a seção [A instrução try](~/_csharplang/spec/statements.md#the-try-statement) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
 - [Instruções try, throw e catch (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
-- [Jogar](throw.md)
-- [try-finally](try-finally.md)
+- [throw](throw.md)
+- [Experimente-finalmente](try-finally.md)
 - [Como gerar exceções explicitamente](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

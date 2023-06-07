@@ -1,5 +1,6 @@
 ---
 title: Argumentos nomeados e opcionais – Guia de Programação em C#
+description: Argumentos nomeados em C# especificam argumentos por nome, não posição. Argumentos opcionais podem ser omitidos.
 ms.date: 07/20/2015
 f1_keywords:
 - namedParameter_CSharpKeyword
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 15b685248730c1f742035612a201d97d180bbc41
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 46b9dc23644e68aea2767f2b990fe7f243a4f357
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399808"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864976"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumentos nomeados e opcionais (Guia de Programação em C#)
 O C# 4 apresenta argumentos nomeados e opcionais. *Argumentos nomeados* permitem especificar um argumento para um parâmetro específico associando o argumento ao nome do parâmetro e não com à posição do parâmetro na lista de parâmetros. *Argumentos opcionais* permitem omitir argumentos para alguns parâmetros. Ambas as técnicas podem ser usadas com os métodos, indexadores, construtores e delegados.  
@@ -50,7 +51,7 @@ O C# 4 apresenta argumentos nomeados e opcionais. *Argumentos nomeados* permitem
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- Os argumentos posicionais que seguem quaisquer argumentos nomeados fora de ordem são inválidos.
+ Argumentos posicionais que seguem os argumentos nomeados fora de ordem são inválidos.
 
  ```csharp
  // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.
@@ -112,7 +113,7 @@ O C# 4 apresenta argumentos nomeados e opcionais. *Argumentos nomeados* permitem
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- Para obter mais informações e exemplos, consulte [Como usar argumentos nomeados e opcionais na programação do Office](./how-to-use-named-and-optional-arguments-in-office-programming.md) e como acessar [objetos de interop do Office usando recursos C#](../interop/how-to-access-office-onterop-objects.md).  
+ Para obter mais informações e exemplos, consulte [como usar argumentos nomeados e opcionais na programação do Office](./how-to-use-named-and-optional-arguments-in-office-programming.md) e [como acessar objetos de interoperabilidade do Office usando recursos do C#](../interop/how-to-access-office-onterop-objects.md).  
   
 ## <a name="overload-resolution"></a>Resolução de sobrecarga  
  O uso de argumentos nomeados e opcionais afeta a resolução de sobrecarga das seguintes maneiras:  
@@ -126,9 +127,9 @@ O C# 4 apresenta argumentos nomeados e opcionais. *Argumentos nomeados* permitem
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Como usar argumentos nomeados e opcionais na programação do Office](./how-to-use-named-and-optional-arguments-in-office-programming.md)
-- [Usando o Tipo dynamic](../types/using-type-dynamic.md)
+- [Usando o tipo dynamic](../types/using-type-dynamic.md)
 - [Usando construtores](./using-constructors.md)
 - [Usando indexadores](../indexers/using-indexers.md)

@@ -1,5 +1,6 @@
 ---
 title: Marshaling de dados com invocação de plataforma
+description: Realize marshaling de dados com a invocação de plataforma no .NET. Veja uma lista de tipos de dados usados em APIs do Windows e funções em estilo C e localize seus equivalentes de tipo gerenciado do .NET.
 ms.date: 03/20/2019
 dev_langs:
 - cpp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
-ms.openlocfilehash: b8c4e9d835db044912d1cbed92a14dd05e7de658
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 27045790780c1eef9537bdf7e52deb579e2b467c
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399934"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904098"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Marshaling de dados com invocação de plataforma
 
@@ -31,7 +32,7 @@ Esta seção fornece amostras que demonstram como criar protótipos de função 
 
 A tabela a seguir lista os tipos de dados usados nas APIs do Windows e nas funções de estilo C. Muitas bibliotecas não gerenciadas contêm funções que passam esses tipos de dados como parâmetros e valores retornados. A terceira coluna lista a classe ou tipo de valor interno correspondente do .NET Framework que você usa em código gerenciado. Em alguns casos, você pode substituir um tipo do mesmo tamanho pelo tipo listado na tabela.
 
-|Tipo não gerenciado nas APIs do Windows|Tipo de linguagem C não gerenciado|Tipo gerenciado|Descrição|
+|Tipo não gerenciado nas APIs do Windows|Tipo de linguagem C não gerenciado|Tipo gerenciado|Description|
 |--------------------------------|-------------------------------|------------------------|-----------------|
 |`VOID`|`void`|<xref:System.Void?displayProperty=nameWithType>|Aplicado a uma função que não retorna um valor.|
 |`HANDLE`|`void *`|<xref:System.IntPtr?displayProperty=nameWithType> ou <xref:System.UIntPtr?displayProperty=nameWithType>|32 bits em Sistemas Operacionais Windows 32 bits, 64 bits em Sistemas Operacionais Windows 64 bits.|

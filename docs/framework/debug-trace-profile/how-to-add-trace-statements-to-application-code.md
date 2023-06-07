@@ -1,5 +1,6 @@
 ---
 title: Como adicionar instruções de rastreamento ao código de um aplicativo
+description: Saiba como adicionar instruções de rastreamento ao código do aplicativo no .NET. Os métodos usados com mais frequência para rastreamento são os métodos para gravar a saída em ouvintes.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-ms.openlocfilehash: 9903a0357d1d8ceade21b590fd54c8cab517f134
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c75a8775649aabe73b02187c4604d2eb3a8435b
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174739"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415882"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Como adicionar instruções de rastreamento ao código de um aplicativo
 Os métodos usados com mais frequência para rastreamento são os métodos para gravar a saída em ouvintes: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert** e **Fail**. Esses métodos podem ser divididos em duas categorias: **Write**, **WriteLine**, and **Fail** emitem a saída incondicionalmente, enquanto **WriteIf**, **WriteLineIf** e **Assert** testam uma condição booliana e gravam ou não com base no valor da condição. **WriteIf** e **WriteLineIf** emitirão a saída se a condição for `true` e **Assert** emitirá a saída se a condição for `false`.  
@@ -82,7 +83,7 @@ Os métodos usados com mais frequência para rastreamento são os métodos para 
     > [!NOTE]
     > Use **Assert** com o rastreamento e a depuração. Este exemplo gera a pilha de chamadas para qualquer ouvinte da coleção **Listeners**. Para obter mais informações, consulte [Declarações em código gerenciado](/visualstudio/debugger/assertions-in-managed-code) e <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>

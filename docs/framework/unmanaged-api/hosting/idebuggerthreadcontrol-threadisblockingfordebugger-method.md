@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4d7cb2d-69da-48b3-879a-1a8a68c9bfa8
 topic_type:
 - apiref
-ms.openlocfilehash: 067d4e844055206543e5c7fb409296b0d0a7a549
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f7cdc3fe9d52db56d0280bc602d3a9f2f54e8246
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134947"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805261"
 ---
 # <a name="idebuggerthreadcontrolthreadisblockingfordebugger-method"></a>Método IDebuggerThreadControl::ThreadIsBlockingForDebugger
 Notifica o host que o thread que está enviando esse retorno de chamada está prestes a ser bloqueado nos serviços de depuração.  
@@ -32,19 +32,19 @@ HRESULT ThreadIsBlockingForDebugger ( );
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O método `ThreadIsBlockingForDebugger` sempre será chamado em um thread de tempo de execução.  
+ O `ThreadIsBlockingForDebugger` método sempre será chamado em um thread de tempo de execução.  
   
- O método `ThreadIsBlockingForDebugger` dá ao host uma oportunidade de executar outra ação enquanto o thread é bloqueado.  
+ O `ThreadIsBlockingForDebugger` método dá ao host uma oportunidade de executar outra ação enquanto o thread é bloqueado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IDebuggerThreadControl](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+- [Interface IDebuggerThreadControl](idebuggerthreadcontrol-interface.md)

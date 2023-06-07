@@ -8,15 +8,15 @@ helpviewer_keywords:
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-ms.openlocfilehash: 6a4f511af72aad916d367153090504e2a8e11cb8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: fd5b8fe10d0dcca5da3a2093f7be37f6d88b382a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741816"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280606"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Abstrações (tipos e interfaces abstratos)
-Uma abstração é um tipo que descreve um contrato, mas não fornece uma implementação completa do contrato. As abstrações geralmente são implementadas como classes ou interfaces abstratas e são fornecidas com um conjunto bem definido de documentação de referência que descreve a semântica necessária dos tipos que implementam o contrato. Algumas das abstrações mais importantes no .NET Framework incluem <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>e <xref:System.Object>.
+Uma abstração é um tipo que descreve um contrato, mas não fornece uma implementação completa do contrato. As abstrações geralmente são implementadas como classes ou interfaces abstratas e são fornecidas com um conjunto bem definido de documentação de referência que descreve a semântica necessária dos tipos que implementam o contrato. Algumas das abstrações mais importantes no .NET Framework incluem <xref:System.IO.Stream> , <xref:System.Collections.Generic.IEnumerable%601> e <xref:System.Object> .
 
  Você pode estender estruturas implementando um tipo concreto que dá suporte ao contrato de uma abstração e usando esse tipo concreto com APIs de estrutura consumindo (operando em) a abstração.
 
@@ -26,7 +26,7 @@ Uma abstração é um tipo que descreve um contrato, mas não fornece uma implem
 
  No entanto, as abstrações fornecem extensibilidade extremamente poderosa que os outros mecanismos de extensibilidade geralmente não podem corresponder. Eles estão no núcleo de muitos padrões arquitetônicos, como plug-ins, inversão de controle (IoC), pipelines e assim por diante. Eles também são extremamente importantes para a capacidade de teste de estruturas. As boas abstrações possibilitam o stub de dependências pesadas para fins de teste de unidade. Em resumo, as abstrações são responsáveis pelas sofisticações buscadas das estruturas orientadas a objeto modernas.
 
- ❌ não fornecem abstrações, a menos que sejam testadas desenvolvendo várias implementações concretas e APIs que consomem as abstrações.
+ ❌Não forneça abstrações a menos que elas sejam testadas desenvolvendo várias implementações concretas e APIs que consomem as abstrações.
 
  ✔️ Escolha cuidadosamente entre uma classe abstrata e uma interface ao projetar uma abstração.
 
@@ -36,7 +36,7 @@ Uma abstração é um tipo que descreve um contrato, mas não fornece uma implem
 
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
-- [Designer voltado para extensibilidade](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+- [Diretrizes de design de estrutura](index.md)
+- [Designer voltado para extensibilidade](designing-for-extensibility.md)

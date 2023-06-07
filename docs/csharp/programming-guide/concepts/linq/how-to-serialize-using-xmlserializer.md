@@ -1,13 +1,14 @@
 ---
 title: Como serializar usando XmlSerializer (C#)
+description: Saiba como serializar objetos usando o XmlSerializer. Veja um exemplo que cria objetos, serializa-os para um fluxo de memória e, em seguida, os desserializa.
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
-ms.openlocfilehash: 0ec19e964471382c6f10f07d6d4bb25f88fd532f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29c8c7170af8a24292892862dc89cfe101d24f15
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347392"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301509"
 ---
 # <a name="how-to-serialize-using-xmlserializer-c"></a>Como serializar usando XmlSerializer (C#)
 Este tópico mostra um exemplo que serialize e desserializa usando <xref:System.Xml.Serialization.XmlSerializer>.  

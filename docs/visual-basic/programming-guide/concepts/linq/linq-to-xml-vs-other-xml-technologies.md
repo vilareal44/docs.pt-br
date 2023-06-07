@@ -2,17 +2,17 @@
 title: LINQ to XML versus outros Technologies2 XML
 ms.date: 07/20/2015
 ms.assetid: 72ce3a82-ffc6-488c-98e7-b9b40f3591ec
-ms.openlocfilehash: 35d2be530c63cdbc09631c5dfc036558bb9851bc
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: ee855c40e61a6b63c2891d8f30072fc8e235fe4b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636609"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84389313"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML e outras tecnologias XML
 Este tópico compara o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] às seguintes tecnologias XML: <xref:System.Xml.XmlReader>, XSLT, MSXML e XmlLite. Estas informações podem ajudá-lo a decidir qual tecnologia usar.  
   
- Para obter uma comparação de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para o Modelo de Objeto do Documento (DOM), consulte [LINQ to XML vs. dom (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md).  
+ Para obter uma comparação de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] com o modelo de objeto do documento (dom), consulte [LINQ to XML vs. DOM (Visual Basic)](linq-to-xml-vs-dom.md).  
   
 ## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML vs. XmlReader  
  A classe <xref:System.Xml.XmlReader> é um analisador rápido, somente encaminhamento e não armazenado em cache.  
@@ -52,6 +52,6 @@ Este tópico compara o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] às
   
  O XmlLite não é integrado à LINQ (consulta integrada à linguagem). Ele não produz os aperfeiçoamentos de produtividade do programador que são a força motivada por trás do LINQ.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Introdução (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+- [Guia de introdução (LINQ to XML)](getting-started-linq-to-xml.md)

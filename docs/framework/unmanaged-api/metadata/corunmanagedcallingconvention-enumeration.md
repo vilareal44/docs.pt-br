@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 83058790-160b-4703-a5eb-74b66acbdfa9
 topic_type:
 - apiref
-ms.openlocfilehash: 58d30e71929d314ee36adb9f83270858ff8a161b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b4c521489f38360d45c2cf8ff3780e057299f0b4
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442442"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008944"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>Enumeração CorUnmanagedCallingConvention
 Especifica as convenções de chamada para código não gerenciado.  
@@ -44,7 +44,7 @@ typedef enum CorUnmanagedCallingConvention {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`IMAGE_CEE_UNMANAGED_CALLCONV_C`|A Convenção de chamada de linguagem C.|  
 |`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|A Convenção de chamada padrão.|  
@@ -58,13 +58,13 @@ typedef enum CorUnmanagedCallingConvention {
 ## <a name="remarks"></a>Comentários  
  O CLR não oferece suporte à Convenção de chamada "rápida" no .NET Framework versão 1,0.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerações de metadados](metadata-enumerations.md)

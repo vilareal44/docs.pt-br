@@ -7,19 +7,19 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
-ms.openlocfilehash: 68c003467d837fe79d5e275968e47fa5dc3490cc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1dbe1a709f7c1b527a1754ab943a0a10ff52c6e8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710720"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289181"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>Dados XML de inserção usando XPathNavigator
 A classe de <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métodos usados para irmão, o filho, e nós de atributo de inserção em um documento XML. Para usar esses métodos, o objeto <xref:System.Xml.XPath.XPathNavigator> deve ser editável, ou seja, sua propriedade <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> deve ser `true`.  
   
  Os objetos <xref:System.Xml.XPath.XPathNavigator> que podem editar um documento XML são criados pelo método <xref:System.Xml.XmlDocument.CreateNavigator%2A> da classe <xref:System.Xml.XmlDocument>. os objetos de<xref:System.Xml.XPath.XPathNavigator> criados pela classe de <xref:System.Xml.XPath.XPathDocument> são somente leitura e qualquer tentativa de usar os métodos de um objeto de <xref:System.Xml.XPath.XPathNavigator> criado por <xref:System.Xml.XPath.XPathDocument> objetos resultados em <xref:System.NotSupportedException>.  
   
- Para saber mais sobre como criar objetos <xref:System.Xml.XPath.XPathNavigator> editáveis, confira [Leitura de dados XML usando XPathDocument e XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md).  
+ Para saber mais sobre como criar objetos <xref:System.Xml.XPath.XPathNavigator> editáveis, confira [Leitura de dados XML usando XPathDocument e XmlDocument](reading-xml-data-using-xpathdocument-and-xmldocument.md).  
   
 ## <a name="inserting-nodes"></a>Inserindo nós  
  A classe de <xref:System.Xml.XPath.XPathNavigator> fornece métodos para irmão, o filho, e nós de atributo de inserção em um documento XML. Esses métodos permitem que você insira nós e atributos em locais diferentes com relação a posição atual de <xref:System.Xml.XPath.XPathNavigator> objeto e são descritas nas seções.  
@@ -218,7 +218,7 @@ navigator.SetTypedValue(DateTime.Now);
   
  A propriedade <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> altera a marcação XML dos nós filho no qual um objeto <xref:System.Xml.XPath.XPathNavigator> está posicionado no momento com o conteúdo analisado da `string` do XML determinada. Da mesma maneira, a propriedade <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> altera a marcação XML dos nós filho no qual um objeto <xref:System.Xml.XPath.XPathNavigator> está posicionado no momento além do próprio nó atual.  
   
- Além dos métodos descritos neste tópico, <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> e as propriedades de <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> podem ser usados para inserir nós e valores em um documento XML. Para saber mais sobre como usar as propriedades <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> e <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> para inserir nós e valores, confira o tópico [Modificar dados XML usando XPathNavigator](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md).  
+ Além dos métodos descritos neste tópico, <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> e as propriedades de <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> podem ser usados para inserir nós e valores em um documento XML. Para saber mais sobre como usar as propriedades <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> e <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> para inserir nós e valores, confira o tópico [Modificar dados XML usando XPathNavigator](modify-xml-data-using-xpathnavigator.md).  
   
 ## <a name="namespace-and-xmllang-conflicts"></a>Namespace e XML: conflitos de idioma  
  Alguns conflitos relacionados ao escopo de namespace e declarações de `xml:lang` podem ocorrer ao inserir dados XML usando <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>, <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>, <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A> e métodos de <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> de <xref:System.Xml.XPath.XPathNavigator> classe que utiliza objetos de <xref:System.Xml.XmlReader> como parâmetros.  
@@ -326,13 +326,13 @@ document.Save("book.xml");
 ```  
   
 ## <a name="saving-an-xml-document"></a>Salvando um documento XML  
- Salvando as alterações feitas a um objeto de <xref:System.Xml.XmlDocument> como resultado dos métodos descritos neste tópico é executado usando os métodos da classe <xref:System.Xml.XmlDocument> . Para saber mais sobre como salvar as alterações feitas em um objeto <xref:System.Xml.XmlDocument>, confira [Salvar e gravar um documento](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  
+ Salvando as alterações feitas a um objeto de <xref:System.Xml.XmlDocument> como resultado dos métodos descritos neste tópico é executado usando os métodos da classe <xref:System.Xml.XmlDocument> . Para saber mais sobre como salvar as alterações feitas em um objeto <xref:System.Xml.XmlDocument>, confira [Salvar e gravar um documento](saving-and-writing-a-document.md).  
   
 ## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [Processar dados XML usando o modelo de dados XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Modificar dados XML usando XPathNavigator](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)
-- [Remova os dados XML usando XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)
+- [Processar dados XML usando o modelo de dados XPath](process-xml-data-using-the-xpath-data-model.md)
+- [Modificar dados XML usando XPathNavigator](modify-xml-data-using-xpathnavigator.md)
+- [Remova os dados XML usando XPathNavigator](remove-xml-data-using-xpathnavigator.md)

@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 891c29b731214fb0028e960256b79cfc267d86b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 5c949b79eefa68ea6f8d4ad27c716c438e24f170
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803123"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619777"
 ---
 ### <a name="deserialization-of-objects-across-appdomains-can-fail"></a>Desserialização de objetos em domínios de aplicativo podem falhar
 
-|   |   |
-|---|---|
-|Detalhes|Em alguns casos, quando um aplicativo usa dois ou mais domínios de aplicativo com bases de aplicativo diferentes, a tentativa de desserializar objetos no contexto da chamada lógica nos domínios de aplicativo aciona uma exceção.|
-|Sugestão|Confira [Mitigação: Desserialização de objetos em domínios do aplicativo](~/docs/framework/migration-guide/mitigation-deserialization-of-objects-across-app-domains.md)|
-|Escopo|Microsoft Edge|
+#### <a name="details"></a>Detalhes
+
+Em alguns casos, quando um aplicativo usa dois ou mais domínios de aplicativo com bases de aplicativo diferentes, a tentativa de desserializar objetos no contexto da chamada lógica nos domínios de aplicativo aciona uma exceção.
+
+#### <a name="suggestion"></a>Sugestão
+
+Consulte [Mitigação: desserialização de objetos em domínios de aplicativos](~/docs/framework/migration-guide/mitigation-deserialization-of-objects-across-app-domains.md).
+
+| Name    | Valor       |
+|:--------|:------------|
+| Escopo   |Microsoft Edge|
 |Versão|4.5.1|
-|Tipo|Tempo de execução|
+|Type|Runtime|

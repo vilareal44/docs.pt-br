@@ -1,15 +1,16 @@
 ---
-title: Como encontrar elementos infantis com base na posição (XPath-LINQ para XML) (C#)
+title: Como localizar elementos filho com base na posição (XPath-LINQ to XML) (C#)
+description: Saiba como localizar elementos filho com base na posição usando uma expressão XPath. Examine um exemplo de código que usa um arquivo XML de exemplo.
 ms.date: 07/20/2015
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
-ms.openlocfilehash: cc0ff5639345d36ebb0423a12b66de8f1a70ade1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2603d3ac94ace645bde1ce85a43a43af7321014e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141126"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301665"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>Como encontrar elementos infantis com base na posição (XPath-LINQ para XML) (C#)
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>Como localizar elementos filho com base na posição (XPath-LINQ to XML) (C#)
 Às vezes você deseja localizar elementos com base em sua posição. Você pode desejar localizar o segundo elemento, ou você talvez queira localizar o terceiro através do quinto elemento.  
   
  A expressão XPath é:  

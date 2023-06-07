@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 37b95cce-9bfb-4ecf-a00b-33dcba782c67
 topic_type:
 - apiref
-ms.openlocfilehash: e07210203d8a8010890eeb511ff1c08821bfc4a7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: fa2b5052a1d569487f0c6c72699ff9ab571beefc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616324"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504388"
 ---
 # <a name="eclrfailure-enumeration"></a>Enumeração EClrFailure
 Descreve o conjunto de falhas para as quais um host pode definir ações de política.  
@@ -51,7 +51,7 @@ typedef enum {
 |`FAIL_CodeContract`|Ocorreu uma falha de contrato de código. Consulte [contratos de código](../../debug-trace-profile/code-contracts.md).|  
   
 ## <a name="remarks"></a>Comentários  
- Consulte o método [ICLRPolicyManager:: SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) para obter uma lista de valores [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) que o host pode usar para especificar as ações de política para condições de falha. Para obter mais informações sobre regiões críticas e não críticas de código, consulte [EClrOperation](eclroperation-enumeration.md).  
+ Consulte o método [ICLRPolicyManager:: SetActionOnFailure](iclrpolicymanager-setactiononfailure-method.md) para obter uma lista de valores [EPolicyAction](epolicyaction-enumeration.md) que o host pode usar para especificar as ações de política para condições de falha. Para obter mais informações sobre regiões críticas e não críticas de código, consulte [EClrOperation](eclroperation-enumeration.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
@@ -62,7 +62,7 @@ typedef enum {
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICLRPolicyManager](iclrpolicymanager-interface.md)
 - [Método SetActionOnFailure](iclrpolicymanager-setactiononfailure-method.md)

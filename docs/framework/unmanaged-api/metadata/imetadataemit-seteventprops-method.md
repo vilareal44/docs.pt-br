@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-ms.openlocfilehash: f664e694303691fb1132150037dcbcdb5549539a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 720133e64c02aa09c9ff7e43a20630b0d55c1acf
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177521"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008749"
 ---
 # <a name="imetadataemitseteventprops-method"></a>Método IMetaDataEmit::SetEventProps
-Define ou atualiza o recurso especificado de um evento definido por uma chamada anterior ao [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
+Define ou atualiza o recurso especificado de um evento definido por uma chamada anterior para [IMetaDataEmit::D efineevent](imetadataemit-defineevent-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,38 +39,38 @@ HRESULT SetEventProps (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ev`  
- [em] O token do evento.  
+ no O token do evento.  
   
  `dwEventFlags`  
- [em] Bandeiras de eventos. Isto é uma `CorEventAttr` pequena máscara de valores.  
+ no Sinalizadores de eventos. Esta é uma bitmask de `CorEventAttr` valores.  
   
  `tkEventType`  
- [em] O símbolo para a aula de eventos. Isso é `mdTypeDef` um `mdTypeRef` ou um símbolo.  
+ no O token para a classe de evento. Este é um `mdTypeDef` `mdTypeRef` token ou.  
   
  `mdAddOn`  
- [em] O método usado para subscrever o evento, ou nulo.  
+ no O método usado para assinar o evento ou nulo.  
   
  `mdRemoveOn`  
- [em] O método usado para cancelar a inscrição do evento, ou nulo.  
+ no O método usado para cancelar a assinatura do evento, ou NULL.  
   
  `mdFire`  
- [em] O método utilizado (por uma classe derivada) para elevar o evento.  
+ no O método usado (por uma classe derivada) para gerar o evento.  
   
  `rmdOtherMethods[]`  
- [em] Uma matriz de tokens para outros métodos associados ao evento. O último elemento da `mdMethodDefNil`matriz deve ser .  
+ no Uma matriz de tokens para outros métodos associados ao evento. O último elemento da matriz deve ser `mdMethodDefNil` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interface IMetaDataEmit](imetadataemit-interface.md)
+- [Interface IMetaDataEmit2](imetadataemit2-interface.md)

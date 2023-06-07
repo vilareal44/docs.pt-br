@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: 48e3a080097aae2e539c238bfe33c3e107f81bf0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: f07397b4c10ffec4902dbde37b622978d00f5b63
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921150"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594979"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Utilizando filas de mensagens mortas para manuseio de transferência de mensagens com falha
 As mensagens em fila podem ser entregues com falha. Essas mensagens com falha são registradas em uma fila de mensagens mortas. A entrega com falha pode ser causada por motivos como falhas de rede, uma fila excluída, uma falha de autenticação completa ou uma falha de entrega no prazo.  
@@ -19,7 +19,7 @@ As mensagens em fila podem ser entregues com falha. Essas mensagens com falha s�
   
  Em geral, os aplicativos gravam a lógica de compensação para ler mensagens dos motivos de falha e de fila de mensagens mortas. A lógica de compensação depende da causa da falha. Por exemplo, no caso de falha de autenticação, você pode corrigir o certificado anexado à mensagem e reenviar a mensagem. Se a entrega falhou porque a cota de fila de destino foi atingida, você pode tentar novamente a entrega na esperança de que o problema de cota foi resolvido.  
   
- A maioria dos sistemas de enfileiramento tem uma fila de mensagens mortas em todo o sistema, em que todas as mensagens com falha desse sistema são armazenadas. O MSMQ (enfileiramento de mensagens) fornece duas filas de mensagens mortas de todo o sistema: uma fila de mensagens mortas em todo o sistema transacional que armazena mensagens que falharam na entrega à fila transacional e uma fila de mensagens mortas em todo o sistema não transacional que armazena mensagens que falharam na entrega para a fila não transacional. Se dois clientes estiverem enviando mensagens para dois serviços diferentes e, portanto, filas diferentes no WCF estiverem compartilhando o mesmo serviço MSMQ a ser enviado, será possível ter uma combinação de mensagens na fila mensagens mortas do sistema. Isso nem sempre é o ideal. Em vários casos (segurança, por exemplo), talvez você não queira que um cliente leia as mensagens de outro cliente de uma fila de mensagens mortas. Uma fila de mensagens mortas compartilhada também exige que os clientes naveguem pela fila para encontrar uma mensagem que eles enviaram, o que pode ser extremamente caro com base no número de mensagens na fila da mensagem de mensagens mortas. Portanto, no WCF`NetMsmqBinding`, o `MsmqIntegrationBinding,` e o MSMQ no Windows Vista fornecem uma fila de mensagens mortas personalizada (às vezes chamada de fila de mensagens mortas específica do aplicativo).  
+ A maioria dos sistemas de enfileiramento tem uma fila de mensagens mortas em todo o sistema, em que todas as mensagens com falha desse sistema são armazenadas. O serviço de enfileiramento de mensagens (MSMQ) fornece duas filas de mensagens mortas de todo o sistema: uma fila de mensagens mortas em todo o sistema transacional, que armazena mensagens que falharam na entrega à fila transacional e uma fila de mensagens mortas em todo o sistema não transacional que armazena as mensagens que falharam na fila de não transacional. Se dois clientes estiverem enviando mensagens para dois serviços diferentes e, portanto, filas diferentes no WCF estiverem compartilhando o mesmo serviço MSMQ a ser enviado, será possível ter uma combinação de mensagens na fila mensagens mortas do sistema. Isso nem sempre é o ideal. Em vários casos (segurança, por exemplo), talvez você não queira que um cliente leia as mensagens de outro cliente de uma fila de mensagens mortas. Uma fila de mensagens mortas compartilhada também exige que os clientes naveguem pela fila para encontrar uma mensagem que eles enviaram, o que pode ser extremamente caro com base no número de mensagens na fila da mensagem de mensagens mortas. Portanto, no WCF `NetMsmqBinding` , `MsmqIntegrationBinding,` e o MSMQ no Windows Vista fornecem uma fila de mensagens mortas personalizada (às vezes chamada de fila de mensagens mortas específica do aplicativo).  
   
  A fila de mensagens mortas personalizada fornece isolamento entre clientes que compartilham o mesmo serviço MSMQ para enviar mensagens.  
   
@@ -41,19 +41,19 @@ As mensagens em fila podem ser entregues com falha. Essas mensagens com falha s�
   
 - Para ler mensagens de uma fila de mensagens mortas não transacional do sistema, o URI deve estar no formato: net. MSMQ://localhost/System $;D eadLetter.  
   
-- Para ler as mensagens de uma fila de mensagens mortas personalizada, o URI deve estar no formato: net. MSMQ://localhost/Private/\<*Custom-DLQ-name*> em que *Custom-DLQ-Name* é o nome da fila de mensagens mortas personalizada.  
+- Para ler mensagens de uma fila de mensagens mortas personalizada, o URI deve estar no formato: net. MSMQ://localhost/Private/, \<*custom-dlq-name*> em que *Custom-DLQ-Name* é o nome da fila de mensagens mortas personalizada.  
   
- Para obter mais informações sobre como endereçar filas, consulte [pontos de extremidade de serviço e endereçamento de fila](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+ Para obter mais informações sobre como endereçar filas, consulte [pontos de extremidade de serviço e endereçamento de fila](service-endpoints-and-queue-addressing.md).  
   
- A pilha do WCF no receptor corresponde aos endereços que o serviço está escutando com o endereço na mensagem. Se os endereços corresponderem, a mensagem será expedida; caso contrário, a mensagem não será despachada. Isso pode causar problemas durante a leitura da fila de mensagens mortas, pois, em geral, elas são endereçadas para o serviço e não para o serviço fila inativo. Portanto, o serviço de leitura da fila de mensagens mortas deve instalar um filtro de endereço `ServiceBehavior` que instrui a pilha a corresponder todas as mensagens na fila independentemente do destinatário. Especificamente, você deve adicionar um `ServiceBehavior` com o parâmetro <xref:System.ServiceModel.AddressFilterMode.Any> ao serviço de leitura de mensagens da fila mensagens mortas.  
+ A pilha do WCF no receptor corresponde aos endereços que o serviço está escutando com o endereço na mensagem. Se os endereços corresponderem, a mensagem será expedida; caso contrário, a mensagem não será despachada. Isso pode causar problemas durante a leitura da fila de mensagens mortas, pois, em geral, elas são endereçadas para o serviço e não para o serviço fila inativo. Portanto, o serviço de leitura da fila de mensagens mortas deve instalar um filtro de endereço `ServiceBehavior` que instrui a pilha a corresponder todas as mensagens na fila independentemente do destinatário. Especificamente, você deve adicionar um `ServiceBehavior` com o <xref:System.ServiceModel.AddressFilterMode.Any> parâmetro ao serviço de leitura de mensagens da fila de mensagem mortas.  
   
 ## <a name="poison-message-handling-from-the-dead-letter-queue"></a>Manipulação de mensagens suspeitas da fila de mensagens mortas  
- A manipulação de mensagens suspeitas está disponível em filas de mensagens mortas, com algumas condições. Como não é possível criar subfilas a partir de filas do sistema, ao ler da fila de mensagens mortas do sistema, o `ReceiveErrorHandling` não pode ser definido como `Move`. Observe que, se você estiver lendo de uma fila de mensagens mortas personalizada, poderá ter subfilas e, portanto, `Move` será uma disposição válida para a mensagem suspeita.  
+ A manipulação de mensagens suspeitas está disponível em filas de mensagens mortas, com algumas condições. Como não é possível criar subfilas de filas do sistema, ao ler da fila de mensagens mortas do sistema, o `ReceiveErrorHandling` não pode ser definido como `Move` . Observe que, se você estiver lendo de uma fila de mensagens mortas personalizada, poderá ter subfilas e, portanto, `Move` será uma disposição válida para a mensagem suspeita.  
   
- Quando `ReceiveErrorHandling` é definido como `Reject`, ao ler da fila de mensagens mortas personalizada, a mensagem suspeita é colocada na fila de mensagens mortas do sistema. Se estiver lendo na fila de mensagens mortas do sistema, a mensagem será descartada (limpa). Uma rejeição de uma fila de mensagens mortas do sistema no MSMQ descarta (limpa) a mensagem.  
+ Quando `ReceiveErrorHandling` é definido como `Reject` , ao ler da fila de mensagens mortas personalizada, a mensagem suspeita é colocada na fila de mensagens mortas do sistema. Se estiver lendo na fila de mensagens mortas do sistema, a mensagem será descartada (limpa). Uma rejeição de uma fila de mensagens mortas do sistema no MSMQ descarta (limpa) a mensagem.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como criar uma fila de mensagem mortas e como usá-la para processar mensagens expiradas. O exemplo se baseia no exemplo em [como trocar mensagens em fila com pontos de extremidade do WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md). O exemplo a seguir mostra como gravar o código do cliente no serviço de processamento de pedidos que usa uma fila de mensagens mortas para cada aplicativo. O exemplo também mostra como processar mensagens da fila de mensagens mortas.  
+ O exemplo a seguir mostra como criar uma fila de mensagem mortas e como usá-la para processar mensagens expiradas. O exemplo se baseia no exemplo em [como trocar mensagens em fila com pontos de extremidade do WCF](how-to-exchange-queued-messages-with-wcf-endpoints.md). O exemplo a seguir mostra como gravar o código do cliente no serviço de processamento de pedidos que usa uma fila de mensagens mortas para cada aplicativo. O exemplo também mostra como processar mensagens da fila de mensagens mortas.  
   
  Veja a seguir o código de um cliente que especifica uma fila de mensagens mortas para cada aplicativo.  
   
@@ -69,8 +69,8 @@ As mensagens em fila podem ser entregues com falha. Essas mensagens com falha s�
   
  Veja a seguir o código para o arquivo de configuração do serviço fila de mensagens mortas.  
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Visão geral de filas](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Como trocar mensagens na fila com pontos de extremidade do WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
-- [Manipulação de mensagens suspeitas](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [Visão geral de filas](queues-overview.md)
+- [Como fazer intercâmbio de mensagens em fila com pontos de extremidade do WCF](how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Manipulação de mensagens suspeitas](poison-message-handling.md)

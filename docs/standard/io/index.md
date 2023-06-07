@@ -1,5 +1,6 @@
 ---
 title: E/S de arquivo e de fluxo – .NET
+description: Aprenda as noções básicas de e/s de arquivo e fluxo, que é a transferência de dados de ou para um meio de armazenamento, no .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-ms.openlocfilehash: 3c69e0fd23b1f8bc11fe908c66ba492f31a53f30
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2761d17846009ba06a2ffb1fc58b430f3ec9a949
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75706589"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662713"
 ---
 # <a name="file-and-stream-io"></a>E/S de arquivo e de fluxo
 
@@ -97,7 +98,7 @@ Confira [Como ler texto de um arquivo](how-to-read-text-from-a-file.md), [Como g
 
 ## <a name="asynchronous-io-operations"></a>Operações de E/S assíncronas
 
-A leitura ou gravação de uma grande quantidade de dados pode consumir muitos recursos. Você deve executar essas tarefas de forma assíncrona se seu aplicativo precisar continuar respondendo ao usuário. Com as operações de E/S síncronas, o thread de interface do usuário é bloqueado até que a operação de uso intensivo seja concluída.  Use operações assíncronas de I/O ao desenvolver aplicativos do Windows 8.x Store para evitar criar a impressão de que seu aplicativo parou de funcionar.
+A leitura ou gravação de uma grande quantidade de dados pode consumir muitos recursos. Você deve executar essas tarefas de forma assíncrona se seu aplicativo precisar continuar respondendo ao usuário. Com as operações de E/S síncronas, o thread de interface do usuário é bloqueado até que a operação de uso intensivo seja concluída.  Use operações de e/s assíncronas ao desenvolver aplicativos da loja do Windows 8. x para evitar a criação da impressão de que seu aplicativo parou de funcionar.
 
 Os membros assíncronas contêm `Async` em seus nomes, como os métodos <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> e <xref:System.IO.Stream.WriteAsync%2A>. Você usa esses métodos com as palavras-chave `async` e `await`.
 
@@ -127,7 +128,7 @@ Confira [How to: Compress and Extract Files](how-to-compress-and-extract-files.m
 
 Um armazenamento isolado é um mecanismo de armazenamento de dados que fornece isolamento e segurança ao definir maneiras padronizadas de associar códigos a dados salvos. O armazenamento fornece um sistema de arquivos virtual que é isolado por usuário, assembly e (opcionalmente) domínio. O armazenamento isolado é particularmente útil quando o aplicativo não tem permissão para acessar arquivos de usuários. Você pode salvar configurações ou arquivos para seu aplicativo de modo que ele seja controlado pela política de segurança do computador.
 
-O armazenamento isolado não está disponível para aplicativos do Windows 8.x Store; em vez disso, use <xref:Windows.Storage?displayProperty=nameWithType> classes de dados de aplicativos no namespace. Para saber mais, veja [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29).
+O armazenamento isolado não está disponível para aplicativos da loja do Windows 8. x; em vez disso, use classes de dados de aplicativo no <xref:Windows.Storage?displayProperty=nameWithType> namespace. Para saber mais, veja [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29).
 
 As classes a seguir são usadas com frequência na implementação do armazenamento isolado:
 
@@ -141,11 +142,11 @@ Confira [Armazenamentos isolado](isolated-storage.md).
 
 ## <a name="io-operations-in-windows-store-apps"></a>Operações de E/S em aplicativos da Windows Store
 
-Os aplicativos .NET para Windows 8.x Store contêm muitos dos tipos para ler e escrever em fluxos; no entanto, este conjunto não inclui todos os tipos de I/O do Framework .NET.
+O .NET para aplicativos da loja do Windows 8. x contém muitos dos tipos de leitura e gravação em fluxos; no entanto, esse conjunto não inclui todos os tipos de e/s de .NET Framework.
 
-Algumas diferenças importantes a serem observadas ao usar operações de I/O em aplicativos do Windows 8.x Store:
+Algumas diferenças importantes a serem observadas ao usar operações de e/s em aplicativos da loja do Windows 8. x:
 
-- Tipos especificamente relacionados a operações <xref:System.IO.FileInfo> <xref:System.IO.Directory> de <xref:System.IO.DirectoryInfo>arquivos, como <xref:System.IO.File>, e , não estão incluídos no .NET para aplicativos Windows 8.x Store. Em vez disso, use os tipos no namespace <xref:Windows.Storage?displayProperty=nameWithType> do Windows Runtime, como <xref:Windows.Storage.StorageFile> e <xref:Windows.Storage.StorageFolder>.
+- Tipos especificamente relacionados a operações de arquivo, como <xref:System.IO.File> , <xref:System.IO.FileInfo> <xref:System.IO.Directory> e <xref:System.IO.DirectoryInfo> , não estão incluídos no .net para aplicativos da loja do Windows 8. x. Em vez disso, use os tipos no namespace <xref:Windows.Storage?displayProperty=nameWithType> do Windows Runtime, como <xref:Windows.Storage.StorageFile> e <xref:Windows.Storage.StorageFolder>.
 
 - O armazenamento isolado não está disponível. Use [dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).
 
@@ -153,31 +154,31 @@ Algumas diferenças importantes a serem observadas ao usar operações de I/O em
 
 - Os tipos de compactação com base em caminhos <xref:System.IO.Compression.ZipFile> e <xref:System.IO.Compression.ZipFileExtensions> não estão disponíveis. Em vez disso, use os tipos no namespace <xref:Windows.Storage.Compression?displayProperty=nameWithType>.
 
-É possível converter entre fluxos do .NET Framework e fluxos do Windows Runtime, se necessário. Para obter mais informações, consulte [Como: Converter entre fluxos framework .NET e fluxos de execução do Windows](how-to-convert-between-dotnet-streams-and-winrt-streams.md) ou <xref:System.IO.WindowsRuntimeStreamExtensions>.
+É possível converter entre fluxos do .NET Framework e fluxos do Windows Runtime, se necessário. Para obter mais informações, consulte [como converter entre fluxos de .NET Framework e fluxos de Windows Runtime](how-to-convert-between-dotnet-streams-and-winrt-streams.md) ou <xref:System.IO.WindowsRuntimeStreamExtensions> .
 
-Para obter mais informações sobre operações de I/O em um aplicativo do Windows 8.x Store, consulte [Quickstart: Leitura e gravação de arquivos](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).
+Para obter mais informações sobre operações de e/s em um aplicativo da loja do Windows 8. x, consulte [início rápido: lendo e gravando arquivos](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).
 
 ## <a name="io-and-security"></a>E/S e segurança
 
 Ao usar as classes no namespace <xref:System.IO?displayProperty=nameWithType>, você deve atender aos requisitos de segurança do sistema operacional, como ACLs (listas de controle de acesso) para controlar o acesso a arquivos e diretórios. Esse é um requisito adicional aos requisitos de <xref:System.Security.Permissions.FileIOPermission>. As ACLs podem ser gerenciadas por meio de programação. Para saber mais, confira [Como adicionar ou remover entradas da lista de controle de acesso](how-to-add-or-remove-access-control-list-entries.md).
 
-As políticas de segurança padrão impedem que aplicativos da Internet ou intranet acessem arquivos no computador do usuário. Consequentemente, não use classes de E/S que exijam um caminho para um arquivo físico ao escrever código que será baixado via Internet ou intranet. Em vez disso, use [armazenamento isolado](isolated-storage.md) para aplicativos tradicionais do .NET Framework ou use dados [de aplicativos](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) para aplicativos windows 8.x Store.
+As políticas de segurança padrão impedem que aplicativos da Internet ou intranet acessem arquivos no computador do usuário. Consequentemente, não use classes de E/S que exijam um caminho para um arquivo físico ao escrever código que será baixado via Internet ou intranet. Em vez disso, use o [armazenamento isolado](isolated-storage.md) para aplicativos .NET Framework tradicionais ou use [dados de aplicativos](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) para aplicativos da loja do Windows 8. x.
 
 Uma verificação de segurança é executada somente quando o fluxo é construído. Consequentemente, não abra um fluxo para depois passá-lo para código ou domínios de aplicativos menos confiáveis.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-- [Tarefas comuns de I/O](common-i-o-tasks.md)\
+- [Tarefas comuns de e/s](common-i-o-tasks.md)\
 Fornece uma lista das tarefas de E/S associadas a arquivos, diretórios e fluxos, além de links para conteúdo e exemplos relevantes para cada tarefa.
 
-- [Arquivo Assíncrono I/O](asynchronous-file-i-o.md)\
+- [E/s de arquivo assíncrono](asynchronous-file-i-o.md)\
 Descreve as vantagens de desempenho e a operação básica da E/S assíncrona.
 
 - [Armazenamento isolado](isolated-storage.md)\
 Descreve um mecanismo de armazenamento isolado que fornece isolamento e segurança ao definir maneiras padronizadas de associar códigos aos dados salvos.
 
-- [Tubos](pipe-operations.md)\
+- [Especificadas](pipe-operations.md)\
 Descreve operações de pipes anônimos e nomeados no .NET Framework.
 
-- [Arquivos mapeados de memória](memory-mapped-files.md)\
+- [Arquivos mapeados para memória](memory-mapped-files.md)\
 Descreve arquivos mapeados na memória, os quais armazenam o conteúdo de arquivos do disco na memória virtual. Você pode usar arquivos mapeados na memória para editar arquivos muito grandes e para criar memória compartilhada para a comunicação entre processos.

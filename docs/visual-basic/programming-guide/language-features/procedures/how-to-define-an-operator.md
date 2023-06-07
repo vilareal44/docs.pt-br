@@ -13,22 +13,22 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: b99af8ff4d5428f1749bfc1a4c51a136f12405ee
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 49b9c8d1a6db56a56b50c16b4a6bb5b928df6c7d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344869"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388031"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Como definir um operador (Visual Basic)
-Se você tiver definido uma classe ou estrutura, poderá definir o comportamento de um operador padrão (como `*`, `<>`ou `And`) quando um ou ambos os operandos forem do tipo de sua classe ou estrutura.  
+Se você tiver definido uma classe ou estrutura, poderá definir o comportamento de um operador padrão (como `*` , `<>` ou `And` ) quando um ou ambos os operandos forem do tipo de sua classe ou estrutura.  
   
- Defina o operador padrão como um procedimento de operador dentro da classe ou estrutura. Todos os procedimentos de operador devem ser `Public` `Shared`.  
+ Defina o operador padrão como um procedimento de operador dentro da classe ou estrutura. Todos os procedimentos de operador devem ser `Public` `Shared` .  
   
  A definição de um operador em uma classe ou estrutura também é chamada de *sobrecarga* do operador.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir define o operador de `+` para uma estrutura chamada `height`. A estrutura usa alturas medidas em pés e polegadas. Uma *polegada* é de 2,54 centímetros e um *pé* é de 12 polegadas. Para garantir valores normalizados (polegadas < 12,0), o construtor executa aritmética de *módulo* 12. O operador `+` usa o construtor para gerar valores normalizados.  
+ O exemplo a seguir define o `+` operador para uma estrutura chamada `height` . A estrutura usa alturas medidas em pés e polegadas. Uma *polegada* é de 2,54 centímetros e um *pé* é de 12 polegadas. Para garantir valores normalizados (polegadas < 12,0), o construtor executa aritmética de *módulo* 12. O `+` operador usa o construtor para gerar valores normalizados.  
   
  [!code-vb[VbVbcnProcedures#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#25)]  
   
@@ -36,13 +36,13 @@ Se você tiver definido uma classe ou estrutura, poderá definir o comportamento
   
  [!code-vb[VbVbcnProcedures#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#26)]  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Procedimentos de Operador](./operator-procedures.md)
+- [Procedimentos do operador](./operator-procedures.md)
 - [Como definir um operador de conversão](./how-to-define-a-conversion-operator.md)
 - [Como chamar um procedimento de operador](./how-to-call-an-operator-procedure.md)
 - [Como usar uma classe que define operadores](./how-to-use-a-class-that-defines-operators.md)
-- [Instrução Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Instrução Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Como declarar uma estrutura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [Operador Mod](../../../../visual-basic/language-reference/operators/mod-operator.md)
+- [Instrução Operator](../../../language-reference/statements/operator-statement.md)
+- [Instrução Structure](../../../language-reference/statements/structure-statement.md)
+- [Como: Declarar uma estrutura](../data-types/how-to-declare-a-structure.md)
+- [Operador Mod](../../../language-reference/operators/mod-operator.md)

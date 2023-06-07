@@ -1,16 +1,17 @@
 ---
 title: Desempenho do .NET Framework
+description: Projete e planeje o desempenho em seus aplicativos .NET. Use as ferramentas fornecidas pela Microsoft para medir o desempenho do aplicativo e fazer melhorias.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-ms.openlocfilehash: 47d85ae63f0594b778523425631ff54f9f3ca32f
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ee8260056bd87dfc66d96e394f9b93bb9427afd8
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504096"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309749"
 ---
 # <a name="net-framework-performance"></a>Desempenho do .NET Framework
 Se você deseja criar aplicativos com ótimo desempenho, projete e planeje o desempenho da mesma forma como projetaria qualquer outro recurso do aplicativo. É possível usar as ferramentas fornecidas pela Microsoft para medir o desempenho do aplicativo e, se necessário, fazer melhorias no uso da memória, na produtividade de código e na capacidade de resposta. Este tópico lista as ferramentas de análise de desempenho que a Microsoft fornece, além de fornecer links a outros tópicos que abordam o desempenho em áreas específicas do desenvolvimento de aplicativo.  
@@ -28,7 +29,7 @@ Se você deseja criar aplicativos com ótimo desempenho, projete e planeje o des
 ### <a name="performance-tools"></a>Ferramentas de desempenho  
  Seguem algumas das ferramentas de desempenho que você pode usar com os aplicativos .NET Framework.  
   
-|Ferramenta|DESCRIÇÃO|  
+|Ferramenta|Descrição|  
 |----------|-----------------|  
 |Análise de desempenho do Visual Studio|Use para analisar o uso de CPU dos aplicativos .NET Framework, que serão implantados em computadores que executam o sistema operacional Windows.<br /><br /> Essa ferramenta está disponível do menu **Depurar** no Visual Studio depois de você abrir um projeto. Para obter mais informações, consulte [Gerenciador de Desempenho](/visualstudio/profiling/performance-explorer). **Observação:** use a Análise de Aplicativo do Windows Phone (veja a próxima linha) ao focar um Windows Phone.|  
 |Análise de Aplicativo do Windows Phone|Use para analisar a CPU e a memória, a taxa de transferência de dados de rede, a capacidade de resposta do aplicativo e o consumo de bateria nos aplicativos do Windows Phone.<br /><br /> Essa ferramenta está disponível do menu **Depurar** para um projeto do Windows Phone no Visual Studio depois de você instalar o [SDK do Windows Phone](https://go.microsoft.com/fwlink/?LinkId=265773). Para obter mais informações, consulte [criação de perfil de aplicativo para Windows Phone 8](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105)).|  
@@ -44,15 +45,15 @@ Se você deseja criar aplicativos com ótimo desempenho, projete e planeje o des
 |Tipo de aplicativo|Consulte|  
 |--------------|---------|  
 |Aplicativos .NET Framework para todas as plataformas|[Coleta de lixo e desempenho](../../standard/garbage-collection/performance.md)<br /><br /> [Dicas de desempenho](performance-tips.md)|  
-|Aplicativos da loja do Windows 8. x C++escritos C#em, e Visual Basic|[Práticas recomendadas de desempenho para Aplicativos da Windows Store usando C++, C# e Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
+|Aplicativos da loja do Windows 8. x escritos em C++, C# e Visual Basic|[Práticas recomendadas de desempenho para aplicativos da Windows Store usando C++, C# e Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
 |Windows Presentation Foundation (WPF)|[Pacote de desempenho WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[Visão geral do desempenho do ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
   
 ## <a name="related-topics"></a>Tópicos Relacionados  
   
-|Title|DESCRIÇÃO|  
+|Título|Descrição|  
 |-----------|-----------------|  
-|[Cache em aplicativos do .NET Framework](caching-in-net-framework-applications.md)|Descreve técnicas para armazenar dados em cache para melhorar o desempenho no aplicativo.|  
+|[Armazenamento em cache em aplicativos do .NET Framework](caching-in-net-framework-applications.md)|Descreve técnicas para armazenar dados em cache para melhorar o desempenho no aplicativo.|  
 |[Inicialização lenta](lazy-initialization.md)|Descreve como inicializar objetos quando necessário para melhorar o desempenho, especialmente na inicialização do aplicativo.|  
 |[Confiabilidade](reliability.md)|Fornece informações sobre evitar exceções assíncronas em um ambiente de servidor.|  
 |[Escrevendo aplicativos .NET Framework grandes e dinâmicos](writing-large-responsive-apps.md)|Fornece dicas de desempenho coletadas para regravar os compiladores C# e Visual Basic em código gerenciado, e inclui vários exemplos reais do compilador C#.|

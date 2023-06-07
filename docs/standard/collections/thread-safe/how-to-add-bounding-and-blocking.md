@@ -5,15 +5,15 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, custom blocking collections
 ms.assetid: 4c2492de-3876-4873-b5a1-000bb404d770
-ms.openlocfilehash: 33c0b5a93a9c63e3e743a04e69bb7353ac69fa8a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 57a01726e897f4ddbf8df5ede53609c198012d80
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711279"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287868"
 ---
 # <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>Como adicionar a funcionalidade de delimitação e bloqueio a uma coleção
-Este exemplo mostra como adicionar a funcionalidade de delimitação e de bloqueio a uma classe de coleção personalizada por meio da implementação da interface <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> na classe e do uso de uma instância da classe como o mecanismo de armazenamento interno para um <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>. Para obter mais informações sobre delimitação e bloqueio, veja [Visão geral de BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  
+Este exemplo mostra como adicionar a funcionalidade de delimitação e de bloqueio a uma classe de coleção personalizada por meio da implementação da interface <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> na classe e do uso de uma instância da classe como o mecanismo de armazenamento interno para um <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>. Para obter mais informações sobre delimitação e bloqueio, veja [Visão geral de BlockingCollection](blockingcollection-overview.md).  
   
 ## <a name="example"></a>Exemplo  
  A classe de coleção personalizada é uma fila de prioridade básica na qual os níveis de prioridade são representados como uma matriz de objetos <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>. Nenhuma solicitação adicional é executada dentro de cada fila.  
@@ -26,6 +26,6 @@ Este exemplo mostra como adicionar a funcionalidade de delimitação e de bloque
   
  Por padrão, o armazenamento para um <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> é <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Coleções Thread-Safe](../../../../docs/standard/collections/thread-safe/index.md)
+- [Coleções com segurança de thread](index.md)

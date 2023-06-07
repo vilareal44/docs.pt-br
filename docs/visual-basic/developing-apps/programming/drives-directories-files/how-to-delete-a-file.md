@@ -1,5 +1,5 @@
 ---
-title: Como excluir um arquivo
+title: 'Como: excluir um arquivo'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Delete method [Visual Basic]
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - files [Visual Basic], manipulating
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
-ms.openlocfilehash: 57182f1a1d92b7fe954fd26b32c5e4b1107823ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c8213786b8073d784f1f3ea51417741d5ad4cba
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348787"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401648"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>Como excluir um arquivo no Visual Basic
 
@@ -60,10 +60,10 @@ O método `DeleteFile` do objeto `My.Computer.FileSystem` permite a exclusão de
   
 - O usuário cancelou a operação e `onUserCancel` está definido como `ThrowException` (<xref:System.OperationCanceledException>).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.UIOption>
 - <xref:Microsoft.VisualBasic.FileIO.RecycleOption>
-- [Como obter a coleção de arquivos em um diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [Como: obter a coleção de arquivos em um diretório](how-to-get-the-collection-of-files-in-a-directory.md)

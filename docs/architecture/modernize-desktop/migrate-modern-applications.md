@@ -2,12 +2,12 @@
 title: Migrando aplicativos de área de trabalho modernos
 description: Tudo o que você precisa saber sobre o processo de migração para aplicativos de área de trabalho modernos.
 ms.date: 05/12/2020
-ms.openlocfilehash: 2108aa0b99cabfbb0f3263f094ba8277f953ed6a
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: a015b266dc5c36fcef38dad04b9f4f048ee5906a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83423295"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446913"
 ---
 # <a name="migrating-modern-desktop-applications"></a>Migrando aplicativos de área de trabalho modernos
 
@@ -102,13 +102,13 @@ Da perspectiva do código, houve muitas tecnologias e estruturas para dar ao des
 
 Os exemplos mais comuns de banco de dados que você pode encontrar ao falar sobre o aplicativo da área de trabalho do Windows são o Microsoft Access e o Microsoft SQL Server. Se você tiver mais de 20 anos de programação de experiência para a área de trabalho, nomes como ODBC, OLEDB, RDO, ADO, ADO.NET, LINQ e Entity Framework parecerão familiares.
 
-### <a name="odbc"></a>ODBCODBC
+### <a name="odbc"></a>ODBC
 
 Você pode continuar a usar o ODBC no .NET Core, uma vez que a Microsoft está fornecendo a `System.Data.Odbc` biblioteca compatível com o .NET Standard 2,0.
 
 ### <a name="ole-db"></a>OLE DB
 
-[OLE DB](https://msdn.microsoft.com/library/ms722784(v=vs.85).aspx)   tem sido uma ótima maneira de acessar várias fontes de dados de maneira uniforme. Mas foi baseado em COM, que é uma tecnologia somente Windows, e como tal não era a melhor opção para uma tecnologia de plataforma cruzada, como o .NET Core. Também não há suporte no SQL Server versões 2014 e posteriores. Por esses motivos, o OLE DB não terá suporte do .NET Core.
+[OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms722784(v=vs.85))   tem sido uma ótima maneira de acessar várias fontes de dados de maneira uniforme. Mas foi baseado em COM, que é uma tecnologia somente Windows, e como tal não era a melhor opção para uma tecnologia de plataforma cruzada, como o .NET Core. Também não há suporte no SQL Server versões 2014 e posteriores. Por esses motivos, o OLE DB não terá suporte do .NET Core.
 
 ### <a name="adonet"></a>ADO.NET
 

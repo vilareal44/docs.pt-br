@@ -1,13 +1,14 @@
 ---
 title: Covariância e contravariância (C#)
+description: Saiba mais sobre covariância e contravariância e como eles afetam a compatibilidade de atribuição. Consulte um exemplo de código que demonstra as diferenças entre eles.
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
-ms.openlocfilehash: 80b4d703bb88d0bf1f7f48236c21b7698017e7f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 65c75029c27b6c9a5ddc96f01622b520e8698f55
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79169864"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105690"
 ---
 # <a name="covariance-and-contravariance-c"></a>Covariância e contravariância (C#)
 No C#, a covariância e a contravariância habilitam a conversão de referência implícita para tipos de matriz, tipos de delegados e argumentos de tipo genérico. A covariância preserva a compatibilidade de atribuição, e a contravariância reverte.  
@@ -68,7 +69,7 @@ static void Test()
 }  
 ```  
   
- No .NET Framework 4 ou mais recente, o C# dá suporte à covariância e á contravariância em interfaces e delegados genéricos e permite a conversão implícita de parâmetros de tipo genérico. Para obter mais informações, consulte [Variação em interfaces genéricas (C#)](./variance-in-generic-interfaces.md) e [Variação em delegados (C#)](./variance-in-delegates.md).  
+ No .NET Framework 4 e versões posteriores, o C# dá suporte à covariância e contravariância em interfaces e delegados genéricos e permite a conversão implícita de parâmetros de tipo genérico. Para obter mais informações, consulte [Variação em interfaces genéricas (C#)](./variance-in-generic-interfaces.md) e [Variação em delegados (C#)](./variance-in-delegates.md).  
   
  O exemplo de código a seguir mostra a conversão de referência implícita para interfaces genéricas.  
   
@@ -81,7 +82,7 @@ IEnumerable<Object> objects = strings;
   
 ## <a name="related-topics"></a>Tópicos Relacionados  
   
-|Title|Descrição|  
+|Título|Descrição|  
 |-----------|-----------------|  
 |[Variância em interfaces genéricas (C#)](./variance-in-generic-interfaces.md)|Discute a covariância e a contravariância em interfaces genéricas e fornece uma lista de interfaces genéricas variáveis no .NET Framework.|  
 |[Criando interfaces genéricas variáveis (C#)](./creating-variant-generic-interfaces.md)|Mostra como criar interfaces variantes personalizadas.|  

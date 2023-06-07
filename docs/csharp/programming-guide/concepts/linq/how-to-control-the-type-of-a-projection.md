@@ -1,15 +1,16 @@
 ---
-title: Como controlar o tipo de projeção (C#)
+title: Como controlar o tipo de uma projeção (C#)
+description: Saiba mais sobre como controlar o tipo de uma projeção em LINQ em C# para criar coleções de tipos diferentes de IEnumerable <T> de XElement.
 ms.date: 07/20/2015
 ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
-ms.openlocfilehash: cb7c272fbe67c0700b5740691befc483993f4e29
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32b019b5e1574e7160b4dce5fb0322caa3c1ca71
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141359"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103338"
 ---
-# <a name="how-to-control-the-type-of-a-projection-c"></a>Como controlar o tipo de projeção (C#)
+# <a name="how-to-control-the-type-of-a-projection-c"></a>Como controlar o tipo de uma projeção (C#)
 A projeção é o processo de receber um dataset, de filtre-o, para alterar sua forma, e mesmo de alterar seu tipo. A maioria das expressões de consulta executam projeções. A maioria das expressões de consulta mostradas nesta seção valor para <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, mas você pode controlar o tipo de projeção para criar coleções de outros tipos. Este tópico mostra como fazer isso.  
   
 ## <a name="example"></a>Exemplo  
@@ -60,7 +61,7 @@ class Program
 }  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```output  
 GREAL:Great Lakes Food Market:Howard Snyder  

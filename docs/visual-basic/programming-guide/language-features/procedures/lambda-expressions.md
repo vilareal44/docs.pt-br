@@ -9,67 +9,67 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: 1827eb5630ed217527de25fc9d9c2bb8994b9aff
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 54a9c0cf275a67c77748c32771c3c5dcbdb916d7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249663"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406697"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Expressões lambda (Visual Basic)
 
-Uma *expressão lambda* é uma função ou subrotina sem um nome que pode ser usado onde um delegado é válido. Expressões Lambda podem ser funções ou subrotinas e podem ser de linha única ou multi-linha. Você pode passar valores do escopo atual para uma expressão lambda.
+Uma *expressão lambda* é uma função ou sub-rotina sem um nome que pode ser usado sempre que um delegado é válido. As expressões lambda podem ser funções ou sub-rotinas e podem ser de linha única ou várias linhas. Você pode passar valores do escopo atual para uma expressão lambda.
 
 > [!NOTE]
-> A `RemoveHandler` declaração é uma exceção. Você não pode passar uma expressão lambda `RemoveHandler`para o parâmetro delegado de .
+> A `RemoveHandler` instrução é uma exceção. Não é possível passar uma expressão lambda no para o parâmetro delegado de `RemoveHandler` .
 
-Você cria expressões lambda `Function` `Sub` usando a palavra-chave, assim como você cria uma função padrão ou subrotina. No entanto, expressões lambda são incluídas em uma declaração.
+Você cria expressões lambda usando a `Function` `Sub` palavra-chave ou, assim como cria uma função ou sub-rotina padrão. No entanto, as expressões lambda são incluídas em uma instrução.
 
-O exemplo a seguir é uma expressão lambda que incrementa seu argumento e retorna o valor. O exemplo mostra a sintaxe de expressão lambda de linha única e multi-linha para uma função.
+O exemplo a seguir é uma expressão lambda que incrementa seu argumento e retorna o valor. O exemplo mostra a sintaxe de expressão lambda de linha única e de várias linhas para uma função.
 
 [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]
 
-O exemplo a seguir é uma expressão lambda que escreve um valor para o console. O exemplo mostra a sintaxe de expressão lambda de linha única e multilinha para uma subrotina.
+O exemplo a seguir é uma expressão lambda que grava um valor no console. O exemplo mostra a sintaxe de expressão lambda de linha única e de várias linhas para uma sub-rotina.
 
 [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]
 
-Observe que nos exemplos anteriores as expressões lambda são atribuídas a um nome variável. Sempre que você se refere à variável, você invoca a expressão lambda. Você também pode declarar e invocar uma expressão lambda ao mesmo tempo, como mostrado no exemplo a seguir.
+Observe que, nos exemplos anteriores, as expressões lambda são atribuídas a um nome de variável. Sempre que você se referir à variável, invocará a expressão lambda. Você também pode declarar e invocar uma expressão lambda ao mesmo tempo, conforme mostrado no exemplo a seguir.
 
 [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]
 
-Uma expressão lambda pode ser devolvida como o valor de uma chamada de função (como é mostrado no exemplo na seção [Contexto](#context) mais tarde neste tópico), ou passada como um argumento para um parâmetro que toma um tipo de delegado, como mostrado no exemplo a seguir.
+Uma expressão lambda pode ser retornada como o valor de uma chamada de função (como é mostrado no exemplo na seção de [contexto](#context) mais adiante neste tópico) ou passada como um argumento para um parâmetro que usa um tipo delegado, como mostrado no exemplo a seguir.
 
 [!code-vb[VbVbalrLambdas#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class2.vb#8)]
 
 ## <a name="lambda-expression-syntax"></a>Sintaxe da expressão lambda
 
-A sintaxe de uma expressão lambda se assemelha à de uma função padrão ou subrotina. As diferenças são:
+A sintaxe de uma expressão lambda é semelhante à de uma função padrão ou sub-rotina. As diferenças são:
 
 - Uma expressão lambda não tem um nome.
 
-- Expressões lambda não podem ter `Overloads` modificadores, tais como ou `Overrides`.
+- Expressões lambda não podem ter modificadores, como `Overloads` ou `Overrides` .
 
-- As funções de lambda de `As` linha única não usam uma cláusula para designar o tipo de retorno. Em vez disso, o tipo é inferido do valor que o corpo da expressão lambda avalia. Por exemplo, se o corpo da `cust.City = "London"`expressão lambda `Boolean`é, seu tipo de retorno é .
+- As funções lambda de linha única não usam uma `As` cláusula para designar o tipo de retorno. Em vez disso, o tipo é inferido do valor que o corpo da expressão lambda avalia. Por exemplo, se o corpo da expressão lambda for `cust.City = "London"` , seu tipo de retorno será `Boolean` .
 
-- Em funções de lambda multi-linha, você pode `As` especificar um tipo `As` de retorno usando uma cláusula ou omitir a cláusula para que o tipo de retorno seja inferido. Quando `As` a cláusula é omitida para uma função lambda multi-linha, o `Return` tipo de retorno é inferido como o tipo dominante de todas as instruções na função lambda multi-linha. O *tipo dominante* é um tipo único que todos os outros tipos podem ampliar. Se este tipo único não puder ser determinado, o tipo dominante é o tipo único que todos os outros tipos na matriz podem se restringir. Se nenhum desses tipos exclusivos puder ser determinado, o tipo dominante será `Object`. Neste caso, `Option Strict` se for `On`definido como , um erro de compilador ocorre.
+- Em funções lambda de várias linhas, você pode especificar um tipo de retorno usando uma `As` cláusula ou omitir a `As` cláusula para que o tipo de retorno seja inferido. Quando a `As` cláusula é omitida para uma função lambda de várias linhas, o tipo de retorno é inferido para ser o tipo dominante de todas as `Return` instruções na função lambda de várias linhas. O *tipo dominante* é um tipo exclusivo para o qual todos os outros tipos podem ampliar. Se esse tipo exclusivo não puder ser determinado, o tipo dominante será o tipo exclusivo que todos os outros tipos na matriz podem restringir. Se nenhum desses tipos exclusivos puder ser determinado, o tipo dominante será `Object`. Nesse caso, se `Option Strict` for definido como `On` , ocorrerá um erro do compilador.
 
-     Por exemplo, se as expressões fornecidas à `Return` declaração contiverem valores de `Integer`tipo `Long`e `Double`, a matriz resultante for do tipo `Double`. Ambos `Integer` `Long` e `Double` ampliam `Double`para e somente . Portanto, `Double` é o tipo dominante. Para obter mais informações, consulte [Ampliando e restringindo conversões](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).
+     Por exemplo, se as expressões fornecidas para a `Return` instrução contiverem valores do tipo `Integer` , `Long` e `Double` , a matriz resultante será do tipo `Double` . `Integer`E `Long` amplie para `Double` e apenas `Double` . Portanto, `Double` é o tipo dominante. Para obter mais informações, consulte [Ampliando e restringindo conversões](../data-types/widening-and-narrowing-conversions.md).
 
-- O corpo de uma função de linha única deve ser uma expressão que retorna um valor, não uma declaração. Não há `Return` declaração para funções de linha única. O valor devolvido pela função de linha única é o valor da expressão no corpo da função.
+- O corpo de uma função de linha única deve ser uma expressão que retorne um valor, não uma instrução. Não há nenhuma `Return` instrução para funções de linha única. O valor retornado pela função de linha única é o valor da expressão no corpo da função.
 
-- O corpo de uma sub-rotina de linha única deve ser uma declaração de linha única.
+- O corpo de uma sub-rotina de linha única deve ser uma instrução de linha única.
 
-- Funções e subrotinas de linha `End Function` única `End Sub` não incluem uma ou declaração.
+- As funções e sub-rotinas de linha única não incluem uma `End Function` `End Sub` instrução ou.
 
-- Você pode especificar o tipo de dados de `As` um parâmetro de expressão lambda usando a palavra-chave, ou o tipo de dados do parâmetro pode ser inferido. Todos os parâmetros devem ter tipos de dados especificados ou todos devem ser inferidos.
+- Você pode especificar o tipo de dados de um parâmetro de expressão lambda usando a `As` palavra-chave ou o tipo de dados do parâmetro pode ser inferido. Todos os parâmetros devem ter tipos de dados especificados ou todos devem ser inferidos.
 
-- `Optional`e `Paramarray` parâmetros não são permitidos.
+- `Optional``Paramarray`parâmetros e não são permitidos.
 
 - Parâmetros genéricos não são permitidos.
 
 ## <a name="async-lambdas"></a>Lambdas assíncronos
 
-Você pode facilmente criar expressões e instruções lambda que incorporam processamento assíncrono usando as palavras-chave [Async](../../../../visual-basic/language-reference/modifiers/async.md) e [Aguardo Operador.](../../../../visual-basic/language-reference/operators/await-operator.md) Por exemplo, o exemplo do Windows Forms a seguir contém um manipulador de eventos que chama e espera um método assíncrono `ExampleMethodAsync`.
+Você pode criar facilmente expressões lambda e instruções que incorporam o processamento assíncrono usando as palavras-chave operador [Async](../../../language-reference/modifiers/async.md) e [Await](../../../language-reference/operators/await-operator.md) . Por exemplo, o exemplo do Windows Forms a seguir contém um manipulador de eventos que chama e espera um método assíncrono `ExampleMethodAsync`.
 
 ```vb
 Public Class Form1
@@ -88,7 +88,7 @@ Public Class Form1
 End Class
 ```
 
-Você pode adicionar o mesmo manipulador de eventos usando uma lambda assíncrona em uma [declaração addhandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md). Para adicionar esse manipulador, adicione um modificador `Async` antes da lista de parâmetros lambda, como mostra o exemplo a seguir.
+Você pode adicionar o mesmo manipulador de eventos usando um lambda assíncrono em uma [instrução AddHandler](../../../language-reference/statements/addhandler-statement.md). Para adicionar esse manipulador, adicione um modificador `Async` antes da lista de parâmetros lambda, como mostra o exemplo a seguir.
 
 ```vb
 Public Class Form1
@@ -110,45 +110,45 @@ Public Class Form1
 End Class
 ```
 
-Para obter mais informações sobre como criar e usar métodos assíncronos, consulte [Programação Assíncrona com Assync e Aguarde](../../../../visual-basic/programming-guide/concepts/async/index.md).
+Para obter mais informações sobre como criar e usar métodos assíncronos, consulte [programação assíncrona com Async e Await](../../concepts/async/index.md).
 
 ## <a name="context"></a>Contexto
 
-Uma expressão lambda compartilha seu contexto com o escopo dentro do qual é definida. Ele tem os mesmos direitos de acesso que qualquer código escrito no escopo de contenção. Isso inclui acesso a variáveis, funções e `Me`subs membros, e parâmetros e variáveis locais no escopo de contenção.
+Uma expressão lambda compartilha seu contexto com o escopo no qual ele é definido. Ele tem os mesmos direitos de acesso que qualquer código escrito no escopo de contenção. Isso inclui acesso a variáveis de membro, funções e sub-rotinas, `Me` e parâmetros e variáveis locais no escopo de contenção.
 
-O acesso a variáveis e parâmetros locais no escopo de contenção pode se estender além da vida útil desse escopo. Enquanto um delegado referente a uma expressão lambda não estiver disponível para coleta de lixo, o acesso às variáveis no ambiente original é mantido. No exemplo a `target` seguir, `makeTheGame`a variável é local para `playTheGame` , o método no qual a expressão lambda é definida. Observe que a expressão lambda retornada, atribuída a `takeAGuess` in `Main` `target`, ainda tem acesso à variável local .
+O acesso a variáveis locais e parâmetros no escopo de contenção pode se estender além do tempo de vida desse escopo. Desde que um delegado que se refira a uma expressão lambda não esteja disponível para a coleta de lixo, o acesso às variáveis no ambiente original é mantido. No exemplo a seguir, a variável `target` é local para `makeTheGame` , o método no qual a expressão lambda `playTheGame` é definida. Observe que a expressão lambda retornada, atribuída a `takeAGuess` no `Main` , ainda tem acesso à variável local `target` .
 
 [!code-vb[VbVbalrLambdas#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class6.vb#12)]
 
-O exemplo a seguir demonstra a ampla gama de direitos de acesso da expressão lambda aninhada. Quando a expressão lambda retornada `Main` `aDel`é executada a partir de como, ele acessa esses elementos:
+O exemplo a seguir demonstra a ampla variedade de direitos de acesso da expressão lambda aninhada. Quando a expressão lambda retornada é executada a partir de `Main` `aDel` , ela acessa esses elementos:
 
-- Um campo da classe em que é definido:`aField`
+- Um campo da classe na qual está definido:`aField`
 
-- Uma propriedade da classe em que é definida:`aProp`
+- Uma propriedade da classe na qual ela está definida:`aProp`
 
-- Um parâmetro de `functionWithNestedLambda`método, no qual é definido:`level1`
+- Um parâmetro do método `functionWithNestedLambda` , no qual ele é definido:`level1`
 
-- Uma variável `functionWithNestedLambda`local de:`localVar`
+- Uma variável local de `functionWithNestedLambda` :`localVar`
 
-- Um parâmetro da expressão lambda em que está aninhado:`level2`
+- Um parâmetro da expressão lambda no qual está aninhado:`level2`
 
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]
 
-## <a name="converting-to-a-delegate-type"></a>Conversão para um tipo de delegado
+## <a name="converting-to-a-delegate-type"></a>Convertendo para um tipo delegado
 
-Uma expressão lambda pode ser implicitamente convertida para um tipo de delegado compatível. Para obter informações sobre os requisitos gerais para compatibilidade, consulte [Conversão de Delegado Relaxado](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md). Por exemplo, o exemplo de código a seguir mostra `Func(Of Integer, Boolean)` uma expressão lambda que implicitamente converte ou uma assinatura de delegado correspondente.
+Uma expressão lambda pode ser convertida implicitamente em um tipo de delegado compatível. Para obter informações sobre os requisitos gerais de compatibilidade, consulte [conversão de delegado reduzida](../delegates/relaxed-delegate-conversion.md). Por exemplo, o exemplo de código a seguir mostra uma expressão lambda que implicitamente converte para `Func(Of Integer, Boolean)` ou uma assinatura delegada correspondente.
 
 [!code-vb[VbVbalrLambdas#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#16)]
 
-O exemplo de código a seguir mostra uma `Sub(Of Double, String, Double)` expressão lambda que implicitamente se converte ou uma assinatura de delegado correspondente.
+O exemplo de código a seguir mostra uma expressão lambda que converte implicitamente em `Sub(Of Double, String, Double)` ou uma assinatura delegada correspondente.
 
 [!code-vb[VbVbalrLambdas#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/class7.vb#23)]
 
-Quando você atribui expressões lambda aos delegados ou passa-as como argumentos para os procedimentos, você pode especificar os nomes dos parâmetros, mas omitir seus tipos de dados, deixando que os tipos sejam retirados do delegado.
+Ao atribuir expressões lambda a delegados ou passá-las como argumentos para procedimentos, você pode especificar os nomes de parâmetro, mas omitir seus tipos de dados, permitindo que os tipos sejam extraídos do delegado.
 
 ## <a name="examples"></a>Exemplos
 
-- O exemplo a seguir define uma `True` expressão lambda que retorna se o `False` argumento do `Nothing`tipo de valor anulado tiver um valor atribuído e se seu valor for .
+- O exemplo a seguir define uma expressão lambda que retorna `True` se o argumento de tipo de valor anulável tiver um valor atribuído e `False` se seu valor for `Nothing` .
 
      [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]
 
@@ -159,11 +159,11 @@ Quando você atribui expressões lambda aos delegados ou passa-as como argumento
 ## <a name="see-also"></a>Confira também
 
 - [Procedimentos](./index.md)
-- [Introdução a LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [Declaração de função](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [Instrução Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Tipos de valor anulados](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [Como passar procedimentos para outro procedimento no Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [Introdução a LINQ no Visual Basic](../linq/introduction-to-linq.md)
+- [Delegados](../delegates/index.md)
+- [Instrução Function](../../../language-reference/statements/function-statement.md)
+- [Instrução Sub](../../../language-reference/statements/sub-statement.md)
+- [Tipos de valor anulável](../data-types/nullable-value-types.md)
+- [Como passar procedimentos para outro procedimento no Visual Basic](../delegates/how-to-pass-procedures-to-another-procedure.md)
 - [Como criar uma expressão lambda](./how-to-create-a-lambda-expression.md)
-- [Conversão de delegado reduzida](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Conversão de delegado reduzida](../delegates/relaxed-delegate-conversion.md)

@@ -2,12 +2,12 @@
 title: 'How to: Replace the WCF URL Reservation with a Restricted Reservation'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: fc50a0e31a0c323b695ada6565743fa19c1d4c2a
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 780a2c7fe240ed624ff106e8157661f8b76b32bd
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212186"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202370"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>How to: Replace the WCF URL Reservation with a Restricted Reservation
 
@@ -15,7 +15,7 @@ Uma reserva de URL permite restringir quem pode receber mensagens de uma URL ou 
   
  Como parte da configuração padrão do sistema operacional, o Windows Communication Foundation (WCF) cria uma reserva globalmente acessível para a porta 80 para permitir que todos os usuários executem aplicativos que usam uma associação HTTP dupla para comunicação duplex. Como a ACL nessa reserva é para todos, os administradores não podem explicitamente permitir ou impedir permissão para escutar em uma URL ou conjunto de URLs. Este tópico explica como excluir essa reserva e como recriar a reserva com uma ACL restrita.  
   
-No Windows Vista ou no Windows Server 2008, você pode exibir todas as reservas de URL HTTP de um prompt de comando elevado digitando `netsh http show urlacl`. O exemplo a seguir mostra o que uma reserva de URL do WCF deve ser semelhante a:
+No Windows Vista ou no Windows Server 2008, você pode exibir todas as reservas de URL HTTP de um prompt de comando elevado digitando `netsh http show urlacl` . O exemplo a seguir mostra o que uma reserva de URL do WCF deve ser semelhante a:
 
 ```
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  
@@ -31,7 +31,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. Clique **em Iniciar**, aponte **para todos os programas**, clique em **acessórios**, clique com o botão direito do mouse em prompt de **comando** e clique em **Executar como administrador** no menu de contexto que aparece. Clique em **continuar** na janela controle de conta de usuário (UAC) que pode pedir permissões para continuar.  
   
-2. Digite **netsh http Delete urlacl URL =http://+:80/Temporary_Listen_Addresses/** na janela do prompt de comando.  
+2. Digite na `netsh http delete urlacl url=http://+:80/Temporary_Listen_Addresses/` janela do prompt de comando.  
   
 3. Se a reserva for excluída com êxito, a seguinte mensagem será exibida. **Reserva de URL excluída com êxito**  
   
@@ -42,7 +42,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. Clique **em Iniciar**, aponte **para todos os programas**, clique em **acessórios**, clique com o botão direito do mouse em prompt de **comando** e clique em **Executar como administrador** no menu de contexto que aparece. Clique em **continuar** na janela controle de conta de usuário (UAC) que pode pedir permissões para continuar.  
   
-2. Digite **net localgroup "\<nome do grupo de segurança >"/comment: "\<descrição do grupo de segurança >"/Add** no prompt de comando. Substituir **\<nome do grupo de segurança >** pelo nome do grupo de segurança que você deseja criar e **\<descrição do grupo de segurança >** com uma descrição adequada para o grupo de segurança.  
+2. Digite no `net localgroup "<security group name>" /comment:"<security group description>" /add` prompt de comando. Substituindo **\<security group name>** pelo nome do grupo de segurança que você deseja criar e **\<security group description>** com uma descrição adequada para o grupo de segurança.  
   
 3. Se o grupo de segurança for criado com êxito, a seguinte mensagem será exibida. **O comando foi concluído com êxito.**  
   
@@ -56,6 +56,6 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. Clique **em Iniciar**, aponte **para todos os programas**, clique em **acessórios**, clique com o botão direito do mouse em prompt de **comando** e clique em **Executar como administrador** no menu de contexto que aparece. Clique em **continuar** na janela controle de conta de usuário (UAC) que pode pedir permissões para continuar.  
   
-2. Digite **netsh http add urlacl URL =http://+:80/Temporary_Listen_Addresses/ User = "\< nome do computador >\\ < nome do grupo de segurança\>** no prompt de comando. Substituir **\<nome do computador >** pelo nome do computador no qual o grupo deve ser criado e **\<nome do grupo de segurança >** com o nome do grupo de segurança que você criou anteriormente.  
+2. Digite no `netsh http add urlacl url=http://+:80/Temporary_Listen_Addresses/ user="<machine name>\<security group name>` prompt de comando. Substituindo **\<machine name>** pelo nome do computador no qual o grupo deve ser criado e **\<security group name>** pelo nome do grupo de segurança que você criou anteriormente.  
   
 3. Se a reserva for criada com êxito, a seguinte mensagem será exibida. **Reserva de URL adicionada com êxito**.

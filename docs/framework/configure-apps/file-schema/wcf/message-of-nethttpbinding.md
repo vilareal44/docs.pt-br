@@ -3,22 +3,22 @@ title: <message> de <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
 ms.openlocfilehash: 62b1793d18ddc8edc1f55b02137c4e0a9f7327d2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73738964"
 ---
-# <a name="message-of-nethttpbinding"></a>\<> de mensagens de \<NetHttpBinding >
-Define as configurações de segurança em nível de mensagem do [\<NetHttpBinding](nethttpbinding.md).  
+# <a name="message-of-nethttpbinding"></a>\<message> de \<netHttpBinding>
+Define as configurações de segurança em nível de mensagem do [\<netHttpBinding>](nethttpbinding.md) .  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<NetHttpBinding**](nethttpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<security >** ](security-of-nethttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**message >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<netHttpBinding>**](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<message>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,15 +34,15 @@ Define as configurações de segurança em nível de mensagem do [\<NetHttpBindi
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|algorithmSuite|Define a criptografia de mensagem e os algoritmos de encapsulamento de chaves. Esse atributo é do tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>, que especifica os algoritmos e os tamanhos de chave. Esses algoritmos são mapeados para aqueles especificados na especificação do WS-SecurityPolicy (Security Policy Language).<br /><br /> O valor padrão é `Basic256`.|  
+|algorithmSuite|Define a criptografia de mensagem e os algoritmos de encapsulamento de chaves. Esse atributo é do tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> , que especifica os algoritmos e os tamanhos de chave. Esses algoritmos são mapeados para aqueles especificados na especificação do WS-SecurityPolicy (Security Policy Language).<br /><br /> O valor padrão é `Basic256`.|  
 |clientCredentialType|Especifica o tipo de credencial a ser usado ao executar a autenticação de cliente usando a segurança baseada em mensagem. O padrão é `UserName`.|  
   
 ## <a name="clientcredentialtype-attribute"></a>Atributo clientCredentialtype  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|UserName|-Requer que o cliente seja autenticado no servidor com uma credencial de nome de usuário. Essa credencial precisa ser especificada usando o elemento <`clientCredentials`>.<br />-O WCF não dá suporte ao envio de um resumo de senha ou à derivação de chaves usando senhas e usando essas chaves para segurança de mensagem. Portanto, o WCF impõe que o transporte seja protegido ao usar credenciais de nome de usuário. Para o `basicHttpBinding`, isso requer a configuração de um canal SSL.|  
-|Certificate|Requer que o cliente seja autenticado no servidor usando um certificado. Nesse caso, a credencial do cliente precisa ser especificada usando <`clientCredentials`> e <`clientCertificate`>. Além disso, ao usar o modo de segurança de mensagem, o cliente precisa ser provisionado com o certificado de serviço. Nesse caso, a credencial de serviço precisa ser especificada usando a classe <xref:System.ServiceModel.Description.ClientCredentials> ou o elemento de comportamento de `ClientCredentials` e especificando o certificado de serviço usando o elemento \<Service-Certificate > de serviceCredentials.|  
+|UserName|-Requer que o cliente seja autenticado no servidor com uma credencial de nome de usuário. Essa credencial precisa ser especificada usando o `clientCredentials` elemento <>.<br />-O WCF não dá suporte ao envio de um resumo de senha ou à derivação de chaves usando senhas e usando essas chaves para segurança de mensagem. Portanto, o WCF impõe que o transporte seja protegido ao usar credenciais de nome de usuário. Para o `basicHttpBinding` , isso requer a configuração de um canal SSL.|  
+|Certificado|Requer que o cliente seja autenticado no servidor usando um certificado. Nesse caso, a credencial do cliente precisa ser especificada usando <`clientCredentials`> e a `clientCertificate`> de <. Além disso, ao usar o modo de segurança de mensagem, o cliente precisa ser provisionado com o certificado de serviço. Nesse caso, a credencial de serviço precisa ser especificada usando o <xref:System.ServiceModel.Description.ClientCredentials> `ClientCredentials` elemento de classe ou comportamento e especificando o certificado de serviço usando o \<serviceCertificate> elemento de ServiceCredentials.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -51,10 +51,10 @@ Define as configurações de segurança em nível de mensagem do [\<NetHttpBindi
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|<`security`> elemento de <`netHttpBinding`>|Define os recursos de segurança para o elemento <`netHttpBinding`>.|  
+|<`security`> elemento de <`netHttpBinding`>|Define os recursos de segurança para o `netHttpBinding` elemento <>.|  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo demonstra como implementar um aplicativo que usa a basicHttpBinding e a segurança da mensagem. No exemplo de configuração a seguir para um serviço, a definição do ponto de extremidade especifica basicHttpBinding e faz referência a uma configuração de associação chamada `Binding1`. O certificado que o serviço usa para se autenticar no cliente é definido na seção `behaviors` do arquivo de configuração no elemento `serviceCredentials`. O modo de validação que se aplica ao certificado que o cliente usa para se autenticar para o serviço também é definido na seção `behaviors` sob o elemento `clientCertificate`.  
+ Este exemplo demonstra como implementar um aplicativo que usa a basicHttpBinding e a segurança da mensagem. No exemplo de configuração a seguir para um serviço, a definição do ponto de extremidade especifica basicHttpBinding e faz referência a uma configuração de associação denominada `Binding1` . O certificado que o serviço usa para se autenticar para o cliente é definido na `behaviors` seção do arquivo de configuração sob o `serviceCredentials` elemento. O modo de validação que se aplica ao certificado que o cliente usa para se autenticar para o serviço também é definido na `behaviors` seção sob o `clientCertificate` elemento.  
   
  Os mesmos detalhes de ligação e segurança são especificados no arquivo de configuração do cliente.  
   
@@ -120,10 +120,10 @@ Define as configurações de segurança em nível de mensagem do [\<NetHttpBindi
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Protegendo serviços e clientes](../../../wcf/feature-details/securing-services-and-clients.md)
 - [Associações](../../../wcf/bindings.md)
 - [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding >](bindings.md)
+- [\<binding>](bindings.md)

@@ -9,10 +9,10 @@ ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
 ms.openlocfilehash: 98ea6f23467b85dc270aa323e72a8a9b0934994a
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "83378423"
 ---
 # <a name="basic-serialization"></a>Serialização básica

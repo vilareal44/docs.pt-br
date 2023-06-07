@@ -1,17 +1,18 @@
 ---
-title: DIRETÓRIOS LINQ e arquivos (C#)
+title: LINQ e diretórios de arquivos (C#)
+description: Esses recursos LINQ do C# para operações do sistema de arquivos não são usados para alterar o conteúdo dos arquivos ou pastas.
 ms.date: 07/20/2015
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
-ms.openlocfilehash: fe503584e7d14e8d1dd281eb644f0723782feb4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac00e29f90ee1c04ab9978b6ada3ae5f28991a1c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714621"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165666"
 ---
-# <a name="linq-and-file-directories-c"></a>DIRETÓRIOS LINQ e arquivos (C#)
+# <a name="linq-and-file-directories-c"></a>LINQ e diretórios de arquivos (C#)
 
-Muitas operações de sistema de arquivos são essencialmente consultas e, portanto, são adequadas para a abordagem LINQ.  
+Muitas operações do sistema de arquivos são basicamente consultas e, portanto, são bem adequadas para a abordagem do LINQ.  
   
  As consultas nesta seção não são destrutivas. Elas não são usadas para alterar o conteúdo dos arquivos ou pastas originais. Isso segue a regra de que consultas não devem causar efeitos colaterais. Em geral, qualquer código (incluindo consultas que executam operadores criar / atualizar / excluir) que modifique dados de origem deve ser mantido separado do código que apenas consulta os dados.  
   
@@ -32,10 +33,10 @@ Muitas operações de sistema de arquivos são essencialmente consultas e, porta
  [Como consultar o maior arquivo ou arquivos em uma árvore de diretório (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)\
  Mostra como retornar o maior ou o menor arquivo ou um número especificado de arquivos, em uma árvore de diretório.  
   
- [Como consultar arquivos duplicados em uma árvore de diretório (LINQ) (C#)](./how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)\
+ [Como consultar arquivos duplicados em uma árvore de diretórios (LINQ) (C#)](./how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)\
  Mostra como agrupar todos os nomes de arquivo que ocorrem em mais de um local em uma árvore de diretórios especificada. Também mostra como realizar comparações mais complexas com base em um comparador personalizado.  
   
- [Como consultar o conteúdo dos arquivos em uma pasta (LINQ) (C#)](./how-to-query-the-contents-of-files-in-a-folder-lin.md)\
+ [Como consultar o conteúdo de arquivos em uma pasta (LINQ) (C#)](./how-to-query-the-contents-of-files-in-a-folder-lin.md)\
  Mostra como iterar pelas pastas em uma árvore, abrir cada arquivo e consultar o conteúdo do arquivo.  
   
 ## <a name="comments"></a>Comentários  

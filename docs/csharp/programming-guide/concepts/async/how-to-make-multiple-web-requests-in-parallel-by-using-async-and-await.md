@@ -1,22 +1,23 @@
 ---
-title: Como fazer várias solicitações web em paralelo usando assincronizar e aguardar (C#)
+title: Como fazer várias solicitações da Web em paralelo usando Async e Await (C#)
+description: Saiba como separar a criação de uma tarefa usando o operador Await em C#, em vez de aplicá-la quando uma tarefa é criada.
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 9f7420113d4af83d7d057b772af307bd8d4bcc00
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 899dfd9165d199a67a5178bb351081ee544b231f
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169943"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925157"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Como fazer várias solicitações web em paralelo usando assincronizar e aguardar (C#)
-Em um método assíncrono, as tarefas são iniciadas quando elas são criadas. O operador [await](../../../language-reference/operators/await.md) é aplicado à tarefa no ponto do método em que o processamento não pode continuar até que a tarefa seja concluída. Geralmente, uma tarefa é aguardada assim que ela é criada, como mostrado no exemplo a seguir.  
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Como fazer várias solicitações da Web em paralelo usando Async e Await (C#)
+Em um método assíncrono, as tarefas são iniciadas quando são criadas. O operador [Await](../../../language-reference/operators/await.md) é aplicado à tarefa no ponto do método em que o processamento não pode continuar até que a tarefa seja concluída. Muitas vezes, uma tarefa é esperada assim que é criada, como mostra o exemplo a seguir.  
   
 ```csharp  
 var result = await someWebAccessMethodAsync(url);  
 ```  
   
- No entanto, você pode separar a criação da tarefa da espera da tarefa se o programa tiver outro trabalho a realizar, que não depende da conclusão da tarefa.  
+ No entanto, você pode separar a criação da tarefa de esperar a tarefa se o programa tiver outro trabalho para realizar que não depende da conclusão da tarefa.  
   
 ```csharp  
 // The following line creates and starts the task.  
@@ -32,12 +33,12 @@ var result = await myTask;
   
  Entre o início de uma tarefa e a espera por ela, você pode iniciar outras tarefas. As tarefas adicionais são executadas implicitamente em paralelo, mas não são criados threads adicionais.  
   
- O programa a seguir inicia três downloads assíncronos na Web e, em seguida, os aguarda na ordem em que foram chamados. Observe ao executar o programa, que as tarefas nem sempre são concluídas na ordem em que foram criadas e aguardadas. Eles começam a ser executadas quando são criadas e uma ou mais tarefas podem terminar antes que o método alcance as expressões await.  
+ O programa a seguir inicia três downloads da Web assíncronos e os aguarda na ordem em que são chamados. Observe que, quando você executa o programa, as tarefas nem sempre são concluídas na ordem em que são criadas e aguardadas. Eles começam a ser executados quando são criados, e uma ou mais tarefas podem ser concluídas antes que o método atinja as expressões Await.  
   
 > [!NOTE]
 > Para concluir esse projeto, você precisa ter o Visual Studio 2012 ou posterior e o .NET Framework 4.5 ou posterior instalados no seu computador.  
   
- Para outro exemplo que inicia várias tarefas ao mesmo tempo, consulte [Como estender o passo a passo assíncrono usando Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
+ Para obter outro exemplo que inicia várias tarefas ao mesmo tempo, consulte [como estender o passo a assíncrona usando Task. WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
   
  Você pode baixar o código deste exemplo de [Exemplos de código para desenvolvedores](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).  
   
@@ -136,7 +137,7 @@ var result = await myTask;
   
 5. Escolha a tecla F5 para executar o programa e, em seguida, o botão **Iniciar**.  
   
-     Execute o programa várias vezes para ver que as três tarefas nem sempre são concluídas na mesma ordem e que a ordem em que elas são concluídas não é, necessariamente, a ordem em que elas foram criadas e aguardadas.  
+     Execute o programa várias vezes para verificar se as três tarefas nem sempre são concluídas na mesma ordem e se a ordem em que elas são concluídas não é necessariamente a ordem na qual elas são criadas e aguardadas.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir contem o exemplo completo.  
@@ -224,8 +225,8 @@ namespace AsyncExample_MultipleTasks
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Passo a passo: acessando a Web usando async e await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Programação Assíncrona com assincronia e espera (C#)](./index.md)
-- [Como estender o passo a passo async usando Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Programação assíncrona com Async e Await (C#)](./index.md)
+- [Como estender a instrução assíncrona usando Task. WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

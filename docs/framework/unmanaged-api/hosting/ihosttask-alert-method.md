@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5245d4b5-b6c3-48df-9cb9-8caf059f43fb
 topic_type:
 - apiref
-ms.openlocfilehash: 7271fe8e28da0bb5fd878aae5d36ab703e64ebf0
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: c95b787101d4d0302ce4d2a5cd3bdc7e11f9cd63
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803014"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501424"
 ---
 # <a name="ihosttaskalert-method"></a>Método IHostTask::Alert
 Solicita que o host ative a tarefa representada pela instância [IHostTask](ihosttask-interface.md) atual, para que a tarefa possa ser anulada.  
@@ -46,7 +46,7 @@ HRESULT Alert ();
  O CLR chama o `Alert` método quando <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> é chamado a partir do código do usuário ou quando o <xref:System.AppDomain> associado ao atual é <xref:System.Threading.Thread> desligado. O host deve retornar imediatamente, pois a chamada é feita de forma assíncrona. Se o host não puder alertar a tarefa imediatamente, ele deverá ser ativado na próxima vez que entrar em um estado no qual possa ser alertado.  
   
 > [!NOTE]
-> `Alert`afeta apenas as tarefas para as quais o tempo de execução passou um valor [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) de WAIT_ALERTABLE para métodos como [Join](ihosttask-join-method.md).  
+> `Alert`afeta apenas as tarefas para as quais o tempo de execução passou um valor [WAIT_OPTION](wait-option-enumeration.md) de WAIT_ALERTABLE para métodos como [Join](ihosttask-join-method.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  

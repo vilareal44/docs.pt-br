@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
 ms.openlocfilehash: 53f3943524c45a43ddb60553b8ff45f19df66b14
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152457"
 ---
-# <a name="wsfederation"></a>\<wsFederation>
-Fornece configuração <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> para o (WSFAM).  
+# \<wsFederation>
+Fornece a configuração para o <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
   
-[**\<>de configuração**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel.services>**](system-identitymodel-services.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<federaçãoconfiguração>**](federationconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>da WSFederation**  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<federationConfiguration>**](federationconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<wsFederation>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,22 +51,22 @@ Fornece configuração <xref:System.IdentityModel.Services.WSFederationAuthentic
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|authenticationType|Um URI que especifica o tipo de autenticação. Define o parâmetro wauth de solicitação de login wuth da WS-Federação. Opcional. O padrão é uma seqüência de string vazia, que especifica que o parâmetro wauth não está incluído na solicitação.|  
-|Frescor|A idade máxima desejada de pedidos de autenticação, em minutos. Define o parâmetro wfresh de solicitação de login ws-Federation. Opcional. O padrão é zero. Opcional. **Aviso:**  Na próxima versão do .NET Framework `freshness` 4.5, `xs:string` o atributo será `null`do tipo e seu valor padrão será .|  
-|homeReal|O reino doméstico do provedor de identidade (IdP) para usar para autenticação. Define o parâmetro ws-federation de solicitação de solicitação whr. Opcional. O padrão é uma seqüência de string vazia, que especifica que o parâmetro whr não está incluído na solicitação.|  
-|emissor|O URI do emissor de token pretendido. Define a URL base das solicitações de login da WS-Federation e solicitações de saída necessárias.|  
-|persistenteCookiesonPassiveRedirects|Especifica se os cookies persistentes são emitidos na autenticação. Opcional. O padrão é "falso", os cookies não são emitidos.|  
-|passivoRedirectEnabled|Especifica se o WSFAM está habilitado a redirecionar automaticamente solicitações não autorizadas para um STS. Opcional. O padrão é "verdadeiro", as solicitações não autorizadas são automaticamente redirecionadas.|  
-|policy|Uma URL que especifica a localização da diretiva relevante para usar nas solicitações de login. O padrão é uma cadeia de caracteres vazia. Define o parâmetro wp de solicitação de login ws-federation. Opcional. O padrão é uma seqüência de string vazia, que especifica que o parâmetro wp não está incluído na solicitação.|  
-|Reino|O URI do reino solicitante. (Um URI que identifica a parte de dependência (RP) para o serviço de token de segurança (STS).) Define o parâmetro de solicitação wtrealm WS-Federation sign-in request-. Obrigatórios.|  
-|Resposta|Uma URL que identifica o endereço no qual o aplicativo de parte de fundo (RP) gostaria de receber respostas do Security Token Service (STS). Define o parâmetro wreply de solicitação de solicitação wreply do WS-Federation. Opcional. O padrão é uma seqüência de string vazia, que especifica que o parâmetro wreply não está incluído na solicitação.|  
-|solicitação|O pedido de emissão de tokens. Define o parâmetro wreq de solicitação wreq de solicitação wreq da WS-Federação. Opcional. O padrão é uma seqüência de string vazia, que especifica que o parâmetro wreq não está incluído na solicitação. Não incluir o wreq ou o parâmetro wreqptr na solicitação implica que o STS sabe que tipo de token emitir.|  
-|solicitarPtr|Uma URL que especifica a localização da solicitação de emissão de tokens. Define o parâmetro de solicitação wreqptr. Opcional. O padrão é uma seqüência de string vazia, que especifica que o parâmetro wreqptr não está incluído na solicitação. Não incluir o wreq ou o parâmetro wreqptr na solicitação implica que o STS sabe que tipo de token emitir.|  
-|requeremHttps|Especifica se a comunicação com o serviço de token de segurança (STS) deve usar o protocolo HTTPS. Opcional. O padrão é "verdadeiro", HTTPS deve ser usado.|  
-|recurso|Um URI que identifica o recurso que está sendo acessado, o rp (relying party) para o serviço de token de segurança (STS). Opcional. Define o parâmetro ws-federation de solicitação wres. Opcional. O padrão é uma seqüência de string vazia, que especifica que o parâmetro wres não está incluído na solicitação. **Nota:** wres é um parâmetro legado. Especifique o atributo `realm` para usar o parâmetro wtrealm em vez disso.|  
-|signInQueryString|Fornece um ponto de extensibilidade para especificar parâmetros de consulta definidos pelo aplicativo na URL de solicitação de login do WS-Federation. Opcional. O padrão é uma seqüência de string vazia, que especifica que nenhum parâmetro adicional deve ser incluído na solicitação. Os parâmetros são especificados como um fragmento `"param1=value1&param2=value2&param3=value3"` de seqüência de consulta usando o seguinte formulário: e assim por diante. **Nota:**  Em um arquivo de configuração, o caractere '&' na seqüência de consultas deve ser especificado usando sua referência de entidade, `&`.|  
-|signOutQueryString|Fornece um ponto de extensibilidade para especificar parâmetros de consulta definidos pelo aplicativo na URL de solicitação de login do WS-Federation. Opcional. O padrão é uma seqüência de string vazia, que especifica que nenhum parâmetro adicional deve ser incluído na solicitação. Os parâmetros são especificados como um fragmento `"param1=value1&param2=value2&param3=value3"` de seqüência de consulta usando o seguinte formulário: e assim por diante. **Nota:**  Em um arquivo de configuração, o caractere '&' na seqüência de consultas deve ser especificado usando sua referência de entidade, `&`.|  
-|signOutReply|Especifica a URL para a qual o cliente deve ser redirecionado pelo serviço de token de segurança (STS) durante a saída passiva através do protocolo WS-Federação. Define o parâmetro wreply em uma solicitação de saída wS-Federação. Opcional. O padrão é uma seqüência de string vazia, que especifica que nenhum parâmetro adicional deve ser incluído na solicitação.|  
+|authenticationType|Um URI que especifica o tipo de autenticação. Define o parâmetro wauth da solicitação de entrada do WS-Federation. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que o parâmetro wauth não está incluído na solicitação.|  
+|atualização|A idade máxima desejada de solicitações de autenticação, em minutos. Define o parâmetro wfresh da solicitação de entrada do WS-Federation. Opcional. O padrão é zero. Opcional. **AVISO:**  Na próxima versão do .NET Framework 4,5, o `freshness` atributo será do tipo `xs:string` e seu valor padrão será `null` .|  
+|homeRealm|O realm inicial do IdP (provedor de identidade) a ser usado para autenticação. Define o parâmetro de solicitação de conexão do WS-Federation com WHr. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que o parâmetro whr não está incluído na solicitação.|  
+|emissor|O URI do emissor do token pretendido. Define a URL base de solicitações de entrada e solicitações de saída do WS-Federation necessárias.|  
+|persistentCookiesOnPassiveRedirects|Especifica se cookies persistentes são emitidos na autenticação. Opcional. O padrão é "false", os cookies não são emitidos.|  
+|passiveRedirectEnabled|Especifica se o WSFAM está habilitado para redirecionar automaticamente solicitações não autorizadas para um STS. Opcional. O padrão é "true", as solicitações não autorizadas são redirecionadas automaticamente.|  
+|policy|Uma URL que especifica o local da política relevante a ser usada nas solicitações de entrada. O padrão é uma cadeia de caracteres vazia. Define o parâmetro WP da solicitação de entrada do WS-Federation. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que o parâmetro WP não está incluído na solicitação.|  
+|territórios|O URI do Realm solicitante. (Um URI que identifica a parte confiável (RP) para o serviço de token de segurança (STS).) Define o parâmetro de solicitação de entrada do WS-Federation wtrealm de solicitação. Obrigatórios.|  
+|resposta|Uma URL que identifica o endereço no qual o aplicativo RP (terceira parte confiável) gostaria de receber respostas do serviço de token de segurança (STS). Define o parâmetro Wreply da solicitação de entrada do WS-Federation. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que o parâmetro Wreply não está incluído na solicitação.|  
+|solicitação|A solicitação de emissão de token. Define o parâmetro wreq da solicitação de entrada do WS-Federation. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que o parâmetro wreq não está incluído na solicitação. Não incluir o parâmetro wreq ou wreqptr na solicitação implica que o STS sabe que tipo de token emitir.|  
+|requestPtr|Uma URL que especifica o local da solicitação de emissão de token. Define o parâmetro wreqptr da solicitação. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que o parâmetro wreqptr não está incluído na solicitação. Não incluir o parâmetro wreq ou wreqptr na solicitação implica que o STS sabe que tipo de token emitir.|  
+|requireHttps|Especifica se a comunicação com o serviço de token de segurança (STS) deve usar o protocolo HTTPS. Opcional. O padrão é "true", o HTTPS deve ser usado.|  
+|recurso|Um URI que identifica o recurso que está sendo acessado, a RP (terceira parte confiável), para o serviço de token de segurança (STS). Opcional. Define o parâmetro wres da solicitação de entrada do WS-Federation. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que o parâmetro wres não está incluído na solicitação. **Observação:** wres é um parâmetro herdado. `realm`Em vez disso, especifique o atributo para usar o parâmetro wtrealm.|  
+|signInQueryString|Fornece um ponto de extensibilidade para especificar parâmetros de consulta definidos pelo aplicativo na URL de solicitação de entrada do WS-Federation. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que nenhum parâmetro adicional deve ser incluído na solicitação. Os parâmetros são especificados como um fragmento de cadeia de caracteres de consulta usando a seguinte forma: `"param1=value1&param2=value2&param3=value3"` e assim por diante. **Observação:**  Em um arquivo de configuração, o caractere "&" na cadeia de caracteres de consulta deve ser especificado usando sua referência de entidade, `&` .|  
+|signOutQueryString|Fornece um ponto de extensibilidade para especificar parâmetros de consulta definidos pelo aplicativo na URL de solicitação de entrada do WS-Federation. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que nenhum parâmetro adicional deve ser incluído na solicitação. Os parâmetros são especificados como um fragmento de cadeia de caracteres de consulta usando a seguinte forma: `"param1=value1&param2=value2&param3=value3"` e assim por diante. **Observação:**  Em um arquivo de configuração, o caractere "&" na cadeia de caracteres de consulta deve ser especificado usando sua referência de entidade, `&` .|  
+|signOutReply|Especifica a URL para a qual o cliente deve ser redirecionado pelo serviço de token de segurança (STS) durante a saída passiva por meio do protocolo WS-Federation. Define o parâmetro Wreply em uma solicitação de saída do WS-Federation. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que nenhum parâmetro adicional deve ser incluído na solicitação.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -75,18 +75,18 @@ Fornece configuração <xref:System.IdentityModel.Services.WSFederationAuthentic
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<federaçãoconfiguração>](federationconfiguration.md)|Contém as configurações que <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> configuram o (WSFAM) e o <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).|  
+|[\<federationConfiguration>](federationconfiguration.md)|Contém as configurações que definem o <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) e o <xref:System.IdentityModel.Services.SessionAuthenticationModule> (Sam).|  
   
 ## <a name="remarks"></a>Comentários  
- Você pode `<wsFederation>` usar o elemento para configurar as configurações padrão do parâmetro WS-Federation e o comportamento padrão do WSFAM. Configurações de parâmetros WS-Federação definidas sob `<wsFederation>` <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> o conjunto de elementos propriedades equivalentes expostas pela classe. Essas propriedades permanecem as mesmas para todas as solicitações emitidas pelo WSFAM. Você pode alterar os parâmetros do WS-Federation dinamicamente durante o processamento de solicitações adicionando manipuladores de eventos para os eventos expostos pelo WSFAM; por exemplo, <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> o evento. Para obter mais informações, <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> consulte a documentação da aula.  
+ Você pode usar o `<wsFederation>` elemento para definir as configurações padrão do parâmetro WS-Federation e o comportamento padrão para o WSFAM. As configurações de parâmetro do WS-Federation definidas no `<wsFederation>` elemento definem as propriedades equivalentes expostas pela <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> classe. Essas propriedades permanecem as mesmas para cada solicitação emitida pelo WSFAM. Você pode alterar os parâmetros do WS-Federation dinamicamente durante o processamento da solicitação adicionando manipuladores de eventos para os eventos expostos por WSFAM; por exemplo, o <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> evento. Para obter mais informações, consulte a documentação da <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> classe.  
   
- O `<wsFederation>` elemento é <xref:System.IdentityModel.Services.Configuration.WSFederationElement> representado pela classe. O objeto de configuração <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> em si é representado pela classe. Uma <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> única instância é <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> definida no objeto <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> que é acessado através da propriedade e fornece configuração para o WSFAM.  
+ O `<wsFederation>` elemento é representado pela <xref:System.IdentityModel.Services.Configuration.WSFederationElement> classe. O próprio objeto de configuração é representado pela <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> classe. Uma única <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> instância é definida no <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> objeto que é acessado por meio da <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> propriedade e fornece a configuração para o WSFAM.  
   
 ## <a name="example"></a>Exemplo  
- O XML a `<wsFederation>` seguir mostra um elemento que especifica as configurações para o WSFAM.  
+ O XML a seguir mostra um `<wsFederation>` elemento que especifica as configurações para o WSFAM.  
   
 > [!WARNING]
-> Neste exemplo, o WSFAM não é obrigado a usar HTTPS. Isso porque `requireHttps` o atributo `<wsFederation>` no `false`elemento está definido . Esta configuração não é recomendada para a maioria dos ambientes de produção, pois pode apresentar um risco de segurança.  
+> Neste exemplo, o WSFAM não é necessário para usar HTTPS. Isso ocorre porque o `requireHttps` atributo no `<wsFederation>` elemento está definido `false` . Essa configuração não é recomendada para a maioria dos ambientes de produção, pois pode representar um risco de segurança.  
   
 ```xml
 <wsFederation passiveRedirectEnabled="true"

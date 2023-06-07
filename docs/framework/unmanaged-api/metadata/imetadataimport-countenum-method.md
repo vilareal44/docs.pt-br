@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1de53ad-9435-4b5f-9df7-07f21210e5b5
 topic_type:
 - apiref
-ms.openlocfilehash: b780ca513d8a0b4f88e66594e86e9ff8290f6523
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4521a3f15ec358a4d786a4533efb6b99d0e1c1cc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177355"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492376"
 ---
 # <a name="imetadataimportcountenum-method"></a>Método IMetaDataImport::CountEnum
 Obtém o número de elementos na enumeração que foi recuperado pelo enumerador especificado.  
@@ -34,26 +34,26 @@ HRESULT CountEnum (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `hEnum`  
- [em] A alça do enumerador.  
+ no O identificador do enumerador.  
   
  `pulCount`  
- [fora] O número de elementos enumerados.  
+ fora O número de elementos enumerados.  
   
 ## <a name="remarks"></a>Comentários  
- O cabo `hEnum` especificado é obtido `Enum`a partir de uma chamada *nome* anterior (por exemplo, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
+ O identificador especificado por `hEnum` é obtido de uma chamada de `Enum` *nome* anterior (por exemplo, [IMetaDataImport:: EnumTypeDefs](imetadataimport-enumtypedefs-method.md)).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

@@ -3,21 +3,21 @@ title: <participants>do WCF
 ms.date: 03/30/2017
 ms.assetid: d99dbddc-0057-4e18-8e42-f91411d39970
 ms.openlocfilehash: 35ed7a49967143838a6f74c51e77c553817bd09a
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855085"
 ---
-# <a name="participants-of-wcf"></a>\<participantes > do WCF
-Configure uma lista de participantes que ouça em registros de rastreamento emissores de tempo de execução diretamente e processá-los de forma que eles são configurados de rastreamento. Isso inclui a escrita em uma saída específica (por exemplo, arquivo, Console, ETW), processamento/agregando os registros ou qualquer outra combinação que pode ser necessária.  
+# <a name="participants-of-wcf"></a>\<participants>do WCF
+Configure uma lista de participantes que ouça em registros de rastreamento emissores de runtime diretamente e processá-los de forma que eles são configurados de rastreamento. Isso inclui a escrita em uma saída específica (por exemplo, arquivo, Console, ETW), processamento/agregando os registros ou qualquer outra combinação que pode ser necessária.  
   
 Para obter mais informações sobre os participantes de rastreamento e rastreamento de fluxo de trabalho, consulte [rastreamento de fluxo de trabalho e rastreamento](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) e [participantes](../../../windows-workflow-foundation/tracking-participants.md)de rastreamento.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<acompanhamento de >** ](tracking-of-wcf.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<participantes >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking-of-wcf.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<participants>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,7 +35,7 @@ Para obter mais informações sobre os participantes de rastreamento e rastreame
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -86,7 +86,7 @@ Para obter mais informações sobre os participantes de rastreamento e rastreame
 </configuration>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>

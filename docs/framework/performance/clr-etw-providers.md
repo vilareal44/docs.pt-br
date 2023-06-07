@@ -1,23 +1,24 @@
 ---
 title: Provedores ETW no CLR
+description: 'Examine os detalhes sobre os dois provedores de ETW (rastreamento de eventos) Common Language Runtime (CLR): o provedor runtimne e o provedor de encerramento.'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ETW, CLR providers
 - CLR ETW providers
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
-ms.openlocfilehash: 33ef7491c2bffeda4ef737ed8f826cdfbfbb119d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f86e8334482880c4f7cb23ec93a3c826c083389
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400074"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309645"
 ---
 # <a name="clr-etw-providers"></a>Provedores ETW no CLR
 O CLR (Common Language Runtime) tem dois provedores: o provedor de tempo de execução e o provedor de encerramento.  
   
  O provedor de runtime aciona eventos, dependendo de quais palavras-chave (categorias de eventos) são habilitadas. Por exemplo, é possível coletar eventos de carregador habilitando a palavra-chave `LoaderKeyword`.  
   
- O rastreamento de eventos para Windows (ETW) é logado em um arquivo que tem uma extensão .etl, que pode ser posteriormente processado em arquivos de valor separado separação de comma (.csv) conforme necessário. Para obter informações sobre como converter o arquivo .etl em um arquivo .csv, consulte [Controlando o log do .NET Framework](controlling-logging.md).  
+ Os eventos do ETW (rastreamento de eventos para Windows) são registrados em um arquivo que tem uma extensão. ETL, que posteriormente pode ser processada novamente em arquivos de valores separados por vírgulas (. csv), conforme necessário. Para obter informações sobre como converter o arquivo .etl em um arquivo .csv, consulte [Controlando o log do .NET Framework](controlling-logging.md).  
   
 ## <a name="the-runtime-provider"></a>O provedor de runtime  
  O provedor de runtime é o principal provedor CLR ETW.  
@@ -35,7 +36,7 @@ O CLR (Common Language Runtime) tem dois provedores: o provedor de tempo de exec
   
  Normalmente, o log ETW é habilitado antes do início de um processo e é desativado depois que o processo é fechado. No entanto, se o log ETW for ativado durante a execução do processo, serão necessárias informações adicionais sobre o processo. Por exemplo, para a resolução de símbolo, você precisa registrar eventos de método para métodos que já foram carregados antes da ativação do log.  
   
- Os eventos `DCStart` e `DCEnd` capturam o estado do processo quando a coleta de dados foi iniciada e interrompida. (Estado refere-se a informações em alto nível, incluindo os métodos que já foram compilados e montagens que foram carregadas.) Esses dois eventos podem fornecer informações sobre o que já aconteceu no processo; por exemplo, quais métodos foram compilados pelo JIT, e assim por diante.  
+ Os eventos `DCStart` e `DCEnd` capturam o estado do processo quando a coleta de dados foi iniciada e interrompida. (State refere-se a informações em um nível alto, incluindo os métodos que já foram compilados JIT (just-in-time) e assemblies que foram carregados.) Esses dois eventos podem fornecer informações sobre o que já aconteceu no processo; por exemplo, quais métodos foram compilados em JIT e assim por diante.  
   
  Somente os eventos com `DC`, `DCStart`, `DCEnd` ou `DCInit` em seus nomes são acionados no provedor de encerramento. Além disso, esses eventos são acionados apenas no provedor de encerramento.  
   

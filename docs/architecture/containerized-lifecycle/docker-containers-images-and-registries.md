@@ -1,13 +1,13 @@
 ---
 title: Registros, imagens e contêineres do Docker
 description: Saiba o importante papel geral desempenhado pelos registros no modo como o Docker implanta aplicativos.
-ms.date: 02/15/2019
-ms.openlocfilehash: bfef21cab7be89abaf33b89366d7cff2115a7cc6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 2ff6cf76b35777546b6e653d477a029296f8e496
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72770926"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915240"
 ---
 # <a name="docker-containers-images-and-registries"></a>Registros, imagens e contêineres do Docker
 
@@ -15,11 +15,11 @@ Ao usar o Docker, você cria um aplicativo ou serviço e empacota a ele e suas d
 
 Para executar o aplicativo ou o serviço, uma instância da imagem do aplicativo é criada para criar um contêiner, que estará em execução no host do Docker. Inicialmente, os contêineres são testados em um ambiente de desenvolvimento ou em um computador.
 
-Você armazena imagens em um registro que funciona como uma biblioteca de imagens. É necessário um registro ao implantar em orquestradores de produção. O Docker mantém um Registro público por meio do [Hub do Docker](https://hub.docker.com/); outros fornecedores fornecem os Registros para diferentes coleções de imagens, incluindo [Registro de Contêiner do Azure](https://azure.microsoft.com/services/container-registry/). Como alternativa, as empresas podem ter um Registro privado local para suas próprias imagens do Docker.
+Você armazena imagens em um registro que atua como uma biblioteca de imagens. É necessário um registro ao implantar em orquestradores de produção. O Docker mantém um Registro público por meio do [Hub do Docker](https://hub.docker.com/); outros fornecedores fornecem os Registros para diferentes coleções de imagens, incluindo [Registro de Contêiner do Azure](https://azure.microsoft.com/services/container-registry/). Como alternativa, as empresas podem ter um Registro privado local para suas próprias imagens do Docker.
 
 A Figura 1-4 mostra como imagens e registros no Docker se relacionam com outros componentes. Ela também mostra as várias ofertas de Registro dos fornecedores.
 
-![Um diagrama mostrando a taxonomia básica em Docker.](./media/docker-containers-images-and-registries/taxonomy-docker-terms-concepts.png)
+![Um diagrama que mostra a taxonomia básica no Docker.](./media/docker-containers-images-and-registries/taxonomy-docker-terms-concepts.png)
 
 **Figura 1-4**. Taxonomia de termos e conceitos do Docker
 
@@ -34,5 +34,5 @@ Registros de imagem privados, hospedados localmente ou na nuvem, são recomendad
 - Você deseja ter latência de rede mínima entre suas imagens e o ambiente de implantação escolhido. Por exemplo, se o ambiente de produção for o Azure, você provavelmente desejará armazenar as imagens no [Registro de Contêiner do Azure](https://azure.microsoft.com/services/container-registry/) para que a latência de rede seja mínima. De maneira semelhante, se seu ambiente de produção for local, tenha um Registro Confiável do Docker local disponível na mesma rede local.
 
 >[!div class="step-by-step"]
->[Próximo](docker-terminology.md)
->[anterior](road-to-modern-applications-based-on-containers.md)
+>[Anterior](docker-terminology.md) 
+> [Avançar](road-to-modern-applications-based-on-containers.md)

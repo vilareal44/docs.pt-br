@@ -2,22 +2,22 @@
 title: Exemplos de extensibilidade de sindicalização
 ms.date: 03/30/2017
 ms.assetid: b2c34ae5-62ed-4c2d-b2fa-2d4d0802099c
-ms.openlocfilehash: 998db813316acc5e26d2313f47dacd79df160534
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3609aa114d0264fcb330c9a6d4ab180e09ca7e1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923039"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575050"
 ---
 # <a name="syndication-extensibility-samples"></a>Exemplos de extensibilidade de sindicalização
-Esta seção contém exemplos que demonstram a agregação personalizada no Windows Communication Foundation (WCF).  
+Esta seção contém exemplos que demonstram a distribuição personalizada no Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Extensões fortemente tipadas](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)  
- Demonstra como implementar um elemento de extensão definido em RFC do Atom Threading extensões propostas.  
+ [Extensões com rigidez de tipos](strongly-typed-extensions-sample.md)  
+ Demonstra como implementar um elemento de extensão definido na RFC de extensões de Threading Atom propostas.  
   
- [Formatador do feed (JSON)](../../../../docs/framework/wcf/samples/feed-formatter-json.md)  
- Demonstra como serializar uma instância de um <xref:System.ServiceModel.Syndication.SyndicationFeed> classe no formato de notação JSON (JavaScript Object) usando uma personalização <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> e o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
+ [Formatador de feed (JSON)](feed-formatter-json.md)  
+ Demonstra como serializar uma instância de uma <xref:System.ServiceModel.Syndication.SyndicationFeed> classe no formato JavaScript Object Notation (JSON) usando um personalizado <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> e o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> .  
   
- [Feeds de Streaming](../../../../docs/framework/wcf/samples/streaming-feeds-sample.md)  
- Demonstra como gerenciar feeds de agregação que contêm um grande número de itens.
+ [Feeds de streaming](streaming-feeds-sample.md)  
+ Demonstra como gerenciar feeds de distribuição que contêm um grande número de itens.

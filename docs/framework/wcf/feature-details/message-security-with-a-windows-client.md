@@ -5,38 +5,38 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: bcfeb5f863b1dd6cf9171a7fc53c8984ea68ecb3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dcb311523c6ec41b62f6e69fe6bc7635b9d49708
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184622"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595226"
 ---
 # <a name="message-security-with-a-windows-client"></a>Segurança de mensagem com um cliente do Windows
-Este cenário mostra um cliente e servidor da Windows Communication Foundation (WCF) protegido pelo modo de segurança de mensagens. O cliente e o serviço são autenticados usando credenciais do Windows.  
+Esse cenário mostra um cliente Windows Communication Foundation (WCF) e um servidor protegido pelo modo de segurança da mensagem. O cliente e o serviço são autenticados usando as credenciais do Windows.  
   
- ![Segurança de mensagens com um cliente Windows](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
+ ![Segurança de mensagem com um cliente Windows](media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
 |Modo de segurança|Mensagem|  
 |Interoperabilidade|Somente WCF|  
-|Autenticação (Servidor)|Autenticação mútua do servidor e do cliente|  
-|Autenticação (Cliente)|Autenticação mútua do servidor e do cliente|  
-|Integridade|Sim, usando o contexto de segurança compartilhada|  
-|Confidencialidade|Sim, usando o contexto de segurança compartilhada|  
-|Transporte|Net. Tcp|  
+|Autenticação (servidor)|Autenticação mútua do servidor e do cliente|  
+|Autenticação (cliente)|Autenticação mútua do servidor e do cliente|  
+|Integridade|Sim, usando o contexto de segurança compartilhado|  
+|Confidencialidade|Sim, usando o contexto de segurança compartilhado|  
+|Transport|Virtual. Protocol|  
 |Associação|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Serviço  
- O seguinte código e configuração devem ser executados independentemente. Realize um dos seguintes procedimentos:  
+ O código e a configuração a seguir devem ser executados de forma independente. Realize um dos seguintes procedimentos:  
   
 - Crie um serviço autônomo usando o código sem configuração.  
   
-- Crie um serviço usando a configuração fornecida, mas não defina nenhum ponto final.  
+- Crie um serviço usando a configuração fornecida, mas não defina nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
- O código a seguir mostra como criar um ponto final de serviço que usa a segurança da mensagem para estabelecer um contexto seguro com uma máquina Windows.  
+ O código a seguir mostra como criar um ponto de extremidade de serviço que usa segurança de mensagem para estabelecer um contexto seguro com um computador Windows.  
   
  [!code-csharp[C_SecurityScenarios#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#11)]
  [!code-vb[C_SecurityScenarios#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#11)]  
@@ -73,17 +73,17 @@ Este cenário mostra um cliente e servidor da Windows Communication Foundation (
 ```  
   
 ## <a name="client"></a>Cliente  
- O seguinte código e configuração devem ser executados independentemente. Realize um dos seguintes procedimentos:  
+ O código e a configuração a seguir devem ser executados de forma independente. Realize um dos seguintes procedimentos:  
   
 - Crie um cliente autônomo usando o código (e o código do cliente).  
   
-- Crie um cliente que não defina nenhum endereço de ponto final. Em vez disso, use o construtor cliente que toma o nome da configuração como argumento. Por exemplo:   
+- Crie um cliente que não defina nenhum endereço de ponto de extremidade. Em vez disso, use o construtor do cliente que usa o nome da configuração como um argumento. Por exemplo:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Código  
- O código a seguir cria um cliente. A vinculação é para a segurança do modo mensagem e o tipo de credencial do cliente está definido como `Windows`.  
+ O código a seguir cria um cliente. A associação é a segurança do modo de mensagem e o tipo de credencial do cliente é definido como `Windows` .  
   
  [!code-csharp[C_SecurityScenarios#18](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#18)]
  [!code-vb[C_SecurityScenarios#18](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#18)]  
@@ -118,5 +118,5 @@ Este cenário mostra um cliente e servidor da Windows Communication Foundation (
   
 ## <a name="see-also"></a>Confira também
 
-- [Visão geral da segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Modelo de segurança para a malha do aplicativo do Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Visão geral de segurança](security-overview.md)
+- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

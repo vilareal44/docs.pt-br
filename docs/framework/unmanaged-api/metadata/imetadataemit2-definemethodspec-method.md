@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3c24e552-fc69-4971-b65a-a3e4b5f7f1e8
 topic_type:
 - apiref
-ms.openlocfilehash: a5d9342b8bfe650106ccf9daf2a91dfbcd575446
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8e067dc4943e6847177c13a683703e3a649a49e4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175532"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503808"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>Método IMetaDataEmit2::DefineMethodSpec
-Cria uma instância genérica de um método e obtém um token para a definição.  
+Cria uma instância genérica de um método e Obtém um token para a definição.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,29 +36,29 @@ HRESULT DefineMethodSpec (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `tkParent`  
- [em] Um token para o método de criar a instância genérica. O token deve `mdMethodDef` ser `mdMemberRef`do tipo ou .  
+ no Um token para o método do qual criar a instância genérica. O token deve ser do tipo `mdMethodDef` ou `mdMemberRef` .  
   
  `pvSigBlob`  
- [em] Um ponteiro para a assinatura binária COM+ do método.  
+ no Um ponteiro para a assinatura COM+ binária do método.  
   
  `cbSibBlob`  
- [em] O tamanho, em bytes, de `pvSigBlob`.  
+ no O tamanho, em bytes, de `pvSigBlob` .  
   
  `pmi`  
- [fora] Um token para a definição de assinatura de metadados do método.  
+ fora Um token para a definição de assinatura de metadados do método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Interface IMetaDataEmit2](imetadataemit2-interface.md)
+- [Interface IMetaDataEmit](imetadataemit-interface.md)

@@ -3,12 +3,12 @@ title: Objetos de extensão XSLT
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
-ms.openlocfilehash: 6ad5b5140239ad7dc0ad72e65d10af744dfbd784
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 03e24153cc11c139fc9d9e692ef93bd82c51ee3d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709706"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282591"
 ---
 # <a name="xslt-extension-objects"></a>Objetos de extensão XSLT
 Os objetos de extensão são usados para estender a funcionalidade de folhas de estilos. Os objetos de extensão são mantidos pela classe de <xref:System.Xml.Xsl.XsltArgumentList> .  
@@ -22,7 +22,7 @@ Os objetos de extensão são usados para estender a funcionalidade de folhas de 
  Os objetos de extensão XSLT são adicionados ao objeto de <xref:System.Xml.Xsl.XsltArgumentList> usando o método <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> . Um nome qualificado e URI de namespace são associados com o objeto de extensão no momento.  
   
 > [!NOTE]
-> O conjunto de permissões FullTrust é necessário chamar o método de <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> . Para saber mais, confira [Segurança de acesso ao código](../../../../docs/framework/misc/code-access-security.md) e [Conjuntos de permissão nomeada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
+> O conjunto de permissões FullTrust é necessário chamar o método de <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> . Para saber mais, confira [Segurança de acesso ao código](../../../framework/misc/code-access-security.md) e [Conjuntos de permissão nomeada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
   
  Os tipos de dados retornados de objetos de extensão é um dos quatro tipos de dados básicos XPath `number`, `string`, `Boolean`, e `node set`.  
   
@@ -38,5 +38,5 @@ Os objetos de extensão são usados para estender a funcionalidade de folhas de 
   
 ## <a name="see-also"></a>Veja também
 
-- [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [Considerações de segurança XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md)
+- [Transformações XSLT](xslt-transformations.md)
+- [Considerações de segurança XSLT](xslt-security-considerations.md)

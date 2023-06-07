@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework 2.0, hosting global static functions
 - hosting global static functions [.NET Framework], version 2.0
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
-ms.openlocfilehash: 8925278bdf4d48efc9e589ffc4e181d904444e6b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 083d0ff285abb4a99ad05c791bc504ff7f282c6a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616418"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504362"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Funções de hospedagem CLR reprovadas
 Esta seção descreve as funções estáticas globais não gerenciadas que as versões anteriores da API de hospedagem usavam.  
@@ -24,7 +24,7 @@ Esta seção descreve as funções estáticas globais não gerenciadas que as ve
  Preterido. Cria uma instância do tipo gerenciado especificado.  
   
  [Função CoInitializeCor](coinitializecor-function.md)  
- Obsoleto. Para inicializar o Common Language Runtime (CLR), use [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) ou [CorBindToCurrentRuntime](corbindtocurrentruntime-function.md).  
+ Obsoleto. Para inicializar o Common Language Runtime (CLR), use [CorBindToRuntimeEx](corbindtoruntimeex-function.md) ou [CorBindToCurrentRuntime](corbindtocurrentruntime-function.md).  
   
  [Função CoInitializeEE](coinitializeee-function.md)  
  Preterido. Garante que o mecanismo de execução do CLR seja carregado em um processo. Em vez disso, use o método [ICLRRuntimeHost:: Start](iclrruntimehost-start-method.md) .  
@@ -156,6 +156,6 @@ Esta seção descreve as funções estáticas globais não gerenciadas que as ve
  [Função _CorValidateImage](corvalidateimage-function.md)  
  Valida as imagens de módulo gerenciado e notifica o carregador do sistema operacional depois que elas tiverem sido carregadas.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [.NET Framework 4 hospedando funções estáticas globais](net-framework-4-hosting-global-static-functions.md)

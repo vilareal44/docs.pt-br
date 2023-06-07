@@ -16,12 +16,12 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-ms.openlocfilehash: 7f897241b121cf1bd52d02ee5f487aeafafc3cb0
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d0b822f725444248d1037c21ffea9afe1cebb7e2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378652"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290013"
 ---
 # <a name="assembly-security-considerations"></a>Considerações sobre a segurança do assembly
 Ao criar um assembly, você pode especificar um conjunto de permissões que o assembly exige para ser executado. Se determinadas permissões são concedidas ou não a um assembly é algo que se baseia na evidência.  
@@ -39,7 +39,7 @@ Ao criar um assembly, você pode especificar um conjunto de permissões que o as
 - Não use uma solicitação de permissão para obter permissões de que seu código possa precisar, mas esteja preparado para identificar exceções de segurança se as permissões não forem concedidas.  
   
   > [!NOTE]
-  > Segurança é uma área complexa, e você tem várias opções para escolher. Para saber mais, confira [Conceitos-chave sobre segurança](../../standard/security/key-security-concepts.md).  
+  > Segurança é uma área complexa, e você tem várias opções para escolher. Para saber mais, confira [Conceitos-chave sobre segurança](../security/key-security-concepts.md).  
   
  No momento do carregamento, a evidência do assembly é usada como entrada para uma política de segurança. A política de segurança é estabelecida pela empresa e pelo administrador do computador, bem como por configurações de política do usuário e determina o conjunto de permissões concedido a todo o código gerenciado quando executado. A política de segurança pode ser estabelecida para o editor do assembly (se ele tiver uma assinatura gerada por uma ferramenta de assinatura), para o site e a zona (em termos do Internet Explorer) de onde o assembly foi baixado, ou para o nome forte do assembly. Por exemplo, um administrador de computador pode estabelecer uma política de segurança que permite que todo código baixado de um site e assinado por uma determinada empresa de software acesse um banco de dados em um computador, mas não dê acesso para gravar no disco do computador.  
   
@@ -61,7 +61,7 @@ Ao criar um assembly, você pode especificar um conjunto de permissões que o as
   
  Como a nomenclatura forte e a assinatura usando o [SignTool.exe (Ferramenta de assinatura)](../../framework/tools/signtool-exe.md) garantem integridade, você pode basear a política de segurança de acesso a códigos nessas duas formas de evidência do assembly. Nomenclatura forte e assinatura usando o [SignTool.exe (Ferramenta de Assinatura)](../../framework/tools/signtool-exe.md) garantem a integridade por meio de certificados e assinaturas digitais. Todas as tecnologias mencionadas — verificação de hash, nomenclatura forte e assinatura usando o [SignTool.exe (Ferramenta de Assinatura)](../../framework/tools/signtool-exe.md) — funcionam juntas para garantir que o assembly não tenha sido alterado de forma alguma.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Assemblies de nome forte](strong-named.md)
 - [Assemblies no .NET](index.md)

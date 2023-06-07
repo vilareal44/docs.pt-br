@@ -1,5 +1,6 @@
 ---
 title: Autenticação da Internet
+description: Saiba mais sobre a variedade de mecanismos de autenticação de cliente que o System.Net classes dá suporte para seus aplicativos no .NET Framework.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [.NET Framework], classes
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 3e0b5cd58270cec758db5d4dad6f3ad48962921a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a1f0829aa0e9e4bcc68168b73443578c3a34310b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047916"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502373"
 ---
 # <a name="internet-authentication"></a>Autenticação da Internet
 As classes <xref:System.Net> dão suporte a uma variedade de mecanismos de autenticação de cliente, incluindo os métodos de autenticação padrão de Internet básico, digest, negotiate, NTLM e a autenticação Kerberos, bem como métodos personalizados criados por você.  
@@ -41,6 +42,6 @@ As classes <xref:System.Net> dão suporte a uma variedade de mecanismos de auten
   
 ## <a name="see-also"></a>Confira também
 
-- [Autenticação Básica e Digesta](basic-and-digest-authentication.md)
+- [Autenticação básica e resumida](basic-and-digest-authentication.md)
 - [Autenticação NTLM e Kerberos](ntlm-and-kerberos-authentication.md)
 - [Segurança na programação de rede](security-in-network-programming.md)

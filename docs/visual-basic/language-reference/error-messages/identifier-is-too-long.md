@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30033
 ms.assetid: 3d07f6d0-9a2f-49ca-94e8-1e354932e855
-ms.openlocfilehash: 91a5cc5c822b837657502aa82d2dd9b48b237b9b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 52d69bc1681c387fc686f2b4b223336286e82259
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662000"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402869"
 ---
 # <a name="identifier-is-too-long"></a>O identificador é muito longo
-O nome ou identificador de cada elemento de programação é limitado a 1023 caracteres. Além disso, um nome totalmente qualificado não pode exceder 1023 caracteres. Isso significa que a cadeia de caracteres de identificador de inteiro (`<namespace>.<...>.<namespace>.<class>.<element>`) não pode ter mais de 1023 caracteres, incluindo o operador de acesso de membro (`.`) caracteres.  
+O nome, ou identificador, de cada elemento de programação é limitado a 1023 caracteres. Além disso, um nome totalmente qualificado não pode exceder 1023 caracteres. Isso significa que toda a cadeia de caracteres do identificador ( `<namespace>.<...>.<namespace>.<class>.<element>` ) não pode ter mais de 1023 caracteres, incluindo os caracteres do operador de acesso para membro ( `.` ).  
   
  **ID do erro:** BC30033  
   
@@ -23,6 +23,6 @@ O nome ou identificador de cada elemento de programação é limitado a 1023 car
   
 - Reduza o comprimento do identificador.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Nomes de Elementos Declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Nomes de elementos declarados](../../programming-guide/language-features/declared-elements/declared-element-names.md)

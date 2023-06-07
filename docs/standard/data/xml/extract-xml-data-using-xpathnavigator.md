@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
-ms.openlocfilehash: 627da3c8c45d007e677c4f92f4d5cd602d34ae84
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e639931204a416c3cde87044730364a4f387799a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710850"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287760"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>Extrair dados XML usando XPathNavigator
 Há várias maneiras diferentes de representar um documento XML no Microsoft .NET Framework. Isso inclui usar um <xref:System.String> ou usar as classes <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument> ou <xref:System.Xml.XPath.XPathDocument>. Para facilitar a movimentação entre essas diferentes representações de um documento XML, a classe <xref:System.Xml.XPath.XPathNavigator> fornece alguns métodos e propriedades para extrair XML como um objeto <xref:System.String>, <xref:System.Xml.XmlReader> ou <xref:System.Xml.XmlWriter>.  
@@ -165,7 +165,7 @@ book.Close();
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [Processar dados XML usando o modelo de dados XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Navegação do nó usando XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)
-- [Navegação do nó de atributo e do namespace usando XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)
-- [Acessando dados fortemente tipados XML usando XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+- [Processar dados XML usando o modelo de dados XPath](process-xml-data-using-the-xpath-data-model.md)
+- [Navegação do nó usando XPathNavigator](node-set-navigation-using-xpathnavigator.md)
+- [Navegação do nó de atributo e do namespace usando XPathNavigator](attribute-and-namespace-node-navigation-using-xpathnavigator.md)
+- [Acessando dados fortemente tipados XML usando XPathNavigator](accessing-strongly-typed-xml-data-using-xpathnavigator.md)

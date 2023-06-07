@@ -9,10 +9,10 @@ helpviewer_keywords:
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
 ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128384"
 ---
 # <a name="compiling-apps-with-net-native"></a>Compilando aplicativos com o .NET Nativo
@@ -40,19 +40,19 @@ Para usuários de seus aplicativos, o .NET Native oferece essas vantagens:
 > [!IMPORTANT]
 > Para a grande maioria dos aplicativos e cenários, o .NET Native oferece tempos de inicialização significativamente mais rápidos e desempenho superior quando comparado a um aplicativo compilado para IL ou a uma imagem NGEN. No entanto, os resultados podem variar. Para garantir que seu aplicativo tenha se beneficiado dos aprimoramentos de desempenho do .NET Native, você deve comparar seu desempenho com o da versão nativa non-.NET do seu aplicativo. Para obter mais informações, consulte [visão geral da sessão de desempenho](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview).
 
-Mas .NET Native envolve mais do que uma compilação para código nativo. Ele transforma a maneira que os aplicativos .NET Framework são criados e executados. Em particular:
+Mas .NET Native envolve mais do que uma compilação para código nativo. Ele transforma a maneira que os aplicativos .NET Framework são criados e executados. Especialmente:
 
 - Durante a pré-compilação, partes necessárias do .NET Framework são vinculadas estaticamente ao seu aplicativo. Isso permite que o aplicativo seja executado com as bibliotecas de aplicativo local do .NET Framework e o compilador realize análises globais para proporcionar vantagens de desempenho. Como resultado, os aplicativos são inicializados consistentemente mais rápido mesmo depois de atualizações do .NET Framework.
 
 - O tempo de execução de .NET Native é otimizado para pré-compilação estática e, na grande maioria dos casos, oferece desempenho superior. Ao mesmo tempo, ele mantém os recursos de reflexão principais que os desenvolvedores acham tão produtivos.
 
-- .NET Native usa o mesmo back-end que C++ o compilador, que é otimizado para cenários de pré-compilação estática.
+- .NET Native usa o mesmo back-end que o compilador C++, que é otimizado para cenários de pré-compilação estática.
 
-.NET Native é capaz de trazer os benefícios de desempenho C++ do para os desenvolvedores de código gerenciado, pois ele usa as mesmas C++ ou ferramentas semelhantes que os bastidores, conforme mostrado nesta tabela.
+.NET Native é capaz de trazer os benefícios de desempenho do C++ para os desenvolvedores de código gerenciado, pois ele usa as mesmas ou ferramentas semelhantes que o C++ nos bastidores, conforme mostrado nesta tabela.
 
 ||.NET Nativo|C++|
 |-|----------------------------------------------------------------|-----------|
-|Libraries|O .NET Framework + Windows Runtime|Win32 + Windows Runtime|
+|Bibliotecas|O .NET Framework + Windows Runtime|Win32 + Windows Runtime|
 |Compilador|Compilador de otimização de UTC|Compilador de otimização de UTC|
 |Implantado|Binários prontos para execução|Binários prontos para execução (ASM)|
 |Runtime|MRT.dll (runtime de CLR mínimo)|CRT.dll (runtime C)|
@@ -67,16 +67,16 @@ Para obter mais informações sobre o desenvolvimento de aplicativos com compila
 
 - [Compilação e .NET Native:](net-native-and-compilation.md) como o .NET Native compila seu projeto para código nativo.
 
-- [Reflexão e .NET Native](reflection-and-net-native.md)
+- [Reflexão e .NET Nativo](reflection-and-net-native.md)
 
   - [APIs que dependem de reflexão](apis-that-rely-on-reflection.md)
 
-  - [Referência da API de reflexão](net-native-reflection-api-reference.md)
+  - [Referência da API de Reflexão](net-native-reflection-api-reference.md)
 
-  - [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+  - [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 
 - [Serialização e metadados](serialization-and-metadata.md)
 
-- [Migrando seu aplicativo da Windows Store para .NET Native](migrating-your-windows-store-app-to-net-native.md)
+- [Migrando seu aplicativo da Windows Store para .NET Nativo](migrating-your-windows-store-app-to-net-native.md)
 
-- [Solução de problemas gerais do .NET Native](net-native-general-troubleshooting.md)
+- [Solução de problemas gerais do .NET Nativo](net-native-general-troubleshooting.md)

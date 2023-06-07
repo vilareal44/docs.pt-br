@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
-ms.openlocfilehash: c921331b00fe137d4ad52d62951e8c161768dfae
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: adc1a10bb9acb14ee88589c13e28c49773e42100
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711136"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291585"
 ---
 # <a name="building-xml-schemas"></a>Compilando esquemas XML
 As classes no namespace <xref:System.Xml.Schema?displayProperty=nameWithType> mapeiam para as estruturas definidas na recomendação do W3C (World Wide Web Consortium) sobre esquemas XML e podem ser usadas para compilar esquemas XML na memória.  
@@ -88,10 +88,10 @@ As classes no namespace <xref:System.Xml.Schema?displayProperty=nameWithType> ma
   
 ## <a name="see-also"></a>Veja também
 
-- [Visão geral do modelo de objeto de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [Lendo e gravando esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Percorrer esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [Esquemas XML de edição](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [Incluindo ou importando um esquema XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
-- [XmlSchemaSet para compilação de esquema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Compilação Infoset de pré esquema](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [Visão geral do modelo de objeto de esquema XML](xml-schema-object-model-overview.md)
+- [Lendo e gravando esquemas XML](reading-and-writing-xml-schemas.md)
+- [Percorrer esquemas XML](traversing-xml-schemas.md)
+- [Esquemas XML de edição](editing-xml-schemas.md)
+- [Incluindo ou importando um esquema XML](including-or-importing-xml-schemas.md)
+- [XmlSchemaSet para compilação de esquema](xmlschemaset-for-schema-compilation.md)
+- [Compilação Infoset de pré esquema](post-schema-compilation-infoset.md)

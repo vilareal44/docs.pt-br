@@ -9,12 +9,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
-ms.openlocfilehash: 6fbb86fc63a26599ae83c81817dbcb9abfb88cc8
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: c7e53816c2f571fe6ff68b517ed827459a0f1562
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76864682"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499084"
 ---
 # <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>Método ICorProfilerCallback7:: ModuleInMemorySymbolsUpdated
 [Com suporte no .NET Framework 4.6.1 e versões posteriores]  
@@ -37,20 +37,20 @@ HRESULT ModuleInMemorySymbolsUpdated(
  Esse retorno de chamada é controlado pela definição do sinalizador de máscara de evento [COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](cor-prf-high-monitor-enumeration.md) ao chamar o método [ICorProfilerCallback5:: SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) .  
   
 > [!NOTE]
-> Esse evento não é gerado atualmente para símbolos criados implicitamente ou modificados por meio de APIs de <xref:System.Reflection.Emit>.  
+> Esse evento não é gerado atualmente para símbolos criados implicitamente ou modificados via <xref:System.Reflection.Emit> APIs.  
   
- Mesmo quando os símbolos são fornecidos antecipadamente em uma chamada para uma das sobrecargas dos métodos <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> gerenciados que incluem um argumento `rawSymbolStore` para especificar os símbolos para o assembly, o tempo de execução pode, na verdade, associar os dados simbólicos ao módulo até que o retorno de chamada [ModuleLoadFinished](icorprofilercallback-moduleloadfinished-method.md) tenha ocorrido. Esse evento fornece uma oportunidade posterior para coletar símbolos para esses módulos.  
+ Mesmo quando os símbolos são fornecidos antecipadamente em uma chamada para uma das sobrecargas dos métodos gerenciados <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> que incluem um `rawSymbolStore` argumento para especificar os símbolos para o assembly, o tempo de execução pode não associar realmente os dados simbólicos ao módulo até que o retorno de chamada [ModuleLoadFinished](icorprofilercallback-moduleloadfinished-method.md) tenha ocorrido. Esse evento fornece uma oportunidade posterior para coletar símbolos para esses módulos.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Método ModuleLoadFinished](icorprofilercallback-moduleloadfinished-method.md)
 - [Método SetEventMask2](icorprofilerinfo5-seteventmask2-method.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Request object
 ms.assetid: 93d5f0e2-6b60-4a2c-8652-d90216f6ad10
-ms.openlocfilehash: 22329bc501c9bb75b1336dd5384ab5b23a98ac21
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 38f510e2a3958761b902f37760069aa8d595ea8e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350687"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372421"
 ---
 # <a name="myrequest-object"></a>Objeto My.Request
 Obtém o objeto <xref:System.Web.HttpRequest> para a página solicitada.  
@@ -23,11 +23,11 @@ Obtém o objeto <xref:System.Web.HttpRequest> para a página solicitada.
  O objeto `My.Request` está disponível somente para aplicativos do ASP.NET.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir obtém a coleção de cabeçalho do objeto `My.Request` e usa o objeto `My.Response` para gravá-lo na página ASP.NET.  
+ O exemplo a seguir obtém a coleção de cabeçalho do `My.Request` objeto e usa o `My.Response` objeto para escrevê-lo na página ASP.net.  
   
  [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Web.HttpRequest>
-- [Objeto My.Response](../../../visual-basic/language-reference/objects/my-response-object.md)
+- [Objeto My.Response](my-response-object.md)

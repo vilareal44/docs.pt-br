@@ -1,20 +1,21 @@
 ---
 title: Eventos ETW de monitoramento de recursos de domínio de aplicativo (ARM)
+description: Leia sobre eventos de ETW (monitoramento de recursos de domínio de aplicativo) no .NET, como ThreadCreated, AppDomainMemAllocated, AppDomainMemSurvived e muito mais.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ETW, application domain monitoring events
 - application domain monitoring events [.NET Framework]
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
-ms.openlocfilehash: 0e453b2bafffd9e07a1bdddd97282c5b97f5483d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d118b3196b019a804df5399464cb86f7492c61b0
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716223"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309775"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Eventos ETW de monitoramento de recursos de domínio de aplicativo (ARM)
 
-Esses eventos fornecem informações de diagnóstico detalhadas sobre o estado de um domínio de aplicativo. Use esses eventos ou o recurso ARM (monitoramento de recursos do domínio do aplicativo) para obter as mesmas informações.
+ Esses eventos fornecem informações de diagnóstico detalhadas sobre o estado de um domínio do aplicativo. Use esses eventos ou o recurso ARM (monitoramento de recursos do domínio do aplicativo) para obter as mesmas informações.
 
 ## <a name="threadcreated-event"></a>Evento ThreadCreated
 
@@ -22,14 +23,14 @@ Esse evento também é acionado no provedor de encerramento como `ThreadDC` (com
 
 A tabela a seguir mostra a palavra-chave e o nível. Para obter mais informações, consulte [palavras-chave e níveis do ETW do CLR](clr-etw-keywords-and-levels.md).
 
-|Palavra-chave para acionar o evento|Nível|
+|Palavra-chave para acionar o evento|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|Informativo(4)|
 |`ThreadingKeyword` (0x10000)|Informativo(4)|
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Acionado quando|
+|Evento|ID do evento|Acionado quando|
 |-----------|--------------|-----------------|
 |`ThreadCreated`|85|Um thread foi criado para o domínio do aplicativo.|
 
@@ -39,7 +40,7 @@ A seguinte tabela mostra os dados do evento:
 |----------------|---------------|-----------------|
 |ThreadID|win:UInt64|ID do thread que foi criado.|
 |AppDomainID|win:UInt64|Identificador do domínio do aplicativo para o qual a atividade do thread está sendo relatada.|
-|Sinalizadores|win:UInt32|Sinalizadores de criação do thread.|
+|Flags|win:UInt32|Sinalizadores de criação do thread.|
 |ManagedThreadIndex|win:UInt32|Índice gerenciado do thread que foi criado.|
 |OSThreadID|win:UInt32|ID do sistema operacional do thread que foi criado.|
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|
@@ -48,13 +49,13 @@ A seguinte tabela mostra os dados do evento:
 
 A seguinte tabela mostra a palavra-chave e o nível:
 
-|Palavra-chave para acionar o evento|Nível|
+|Palavra-chave para acionar o evento|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|Informativo(4)|
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Acionado quando|
+|Evento|ID do evento|Acionado quando|
 |-----------|--------------|-----------------|
 |`AppDomainMemAllocated`|83|Cada 4 MB de memória (aproximadamente) é alocado no domínio do aplicativo.|
 
@@ -70,13 +71,13 @@ A seguinte tabela mostra os dados do evento:
 
 A seguinte tabela mostra a palavra-chave e o nível:
 
-|Palavra-chave para acionar o evento|Nível|
+|Palavra-chave para acionar o evento|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|Informativo(4)|
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Acionado quando|
+|Evento|ID do evento|Acionado quando|
 |-----------|--------------|-----------------|
 |`AppDomainMemSurvived`|84|Cada coleta de lixo é encerrada.|
 
@@ -93,14 +94,14 @@ A seguinte tabela mostra os dados do evento:
 
 A seguinte tabela mostra a palavra-chave e o nível:
 
-|Palavra-chave para acionar o evento|Nível|
+|Palavra-chave para acionar o evento|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|Informativo(4)|
 |`ThreadingKeyword` (0x10000)|Informativo(4)|
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Acionado quando|
+|Evento|ID do evento|Acionado quando|
 |-----------|--------------|-----------------|
 |`ThreadAppDomainEnter`|87|Um thread entra em um domínio do aplicativo.|
 
@@ -116,14 +117,14 @@ A seguinte tabela mostra os dados do evento:
 
 A seguinte tabela mostra a palavra-chave e o nível:
 
-|Palavra-chave para acionar o evento|Nível|
+|Palavra-chave para acionar o evento|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|Informativo(4)|
 |`ThreadingKeyword` (0x10000)|Informativo(4)|
 
 A seguinte tabela mostra as informações do evento:
 
-|Event|ID do evento|Acionado quando|
+|Evento|ID do evento|Acionado quando|
 |-----------|--------------|-----------------|
 |`ThreadTerminated`|86|Um thread termina.|
 
@@ -135,6 +136,6 @@ A seguinte tabela mostra os dados do evento:
 |AppDomainID|win:UInt64|O identificador do domínio do aplicativo.|
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Eventos de CLR ETW](clr-etw-events.md)
+- [Eventos ETW no CLR](clr-etw-events.md)

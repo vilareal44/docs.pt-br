@@ -3,13 +3,13 @@ title: <AttributeImplies> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
 ms.openlocfilehash: 2ab1fdc71bc43f61f69a0d9b7bea7acb35e14ea5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79181058"
 ---
-# <a name="attributeimplies-element-net-native"></a>\<Atributoimplica> Elemento (.NET nativo)
+# <a name="attributeimplies-element-net-native"></a>\<AttributeImplies> (.NET Nativo)
 Define a política para os elementos de código ao qual o atributo recipiente é aplicado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -58,7 +58,7 @@ Define a política para os elementos de código ao qual o atributo recipiente é
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Tipo>](type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
+|[\<Type>](type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
   
 ## <a name="remarks"></a>Comentários  
  O elemento `<AttributeImplies>` é usado se o seu tipo recipiente for um atributo (isto é, uma classe derivada de <xref:System.Attribute?displayProperty=nameWithType>). Se o atributo for aplicado a um elemento de programa específico, a política definida pelo elemento `<AttributeImplies>` aplica-se a esse elemento de programa.  
@@ -67,7 +67,7 @@ Define a política para os elementos de código ao qual o atributo recipiente é
   
 ## <a name="see-also"></a>Confira também
 
-- [\<Tipo elemento>](type-element-net-native.md)
-- [Referência do arquivo de configuração das diretivas de runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [\<Type>Elementos](type-element-net-native.md)
+- [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de runtime](runtime-directive-elements.md)
 - [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-ms.openlocfilehash: 8d1ebdcd0a23dff69a7acca22268c03e30ec06d9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a6ea83fadf18ef3be778e6de31c0eb4e65e74824
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345411"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392864"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Diferenças entre sombreamento e sobreposição (Visual Basic)
 Quando você define uma classe que herda de uma classe base, às vezes você deseja redefinir um ou mais dos elementos da classe base na classe derivada. Sombreamento e substituição estão disponíveis para essa finalidade.  
@@ -22,21 +22,21 @@ Quando você define uma classe que herda de uma classe base, às vezes você des
   
 ||||  
 |---|---|---|  
-|Ponto de comparação|Sombreamento|Substituindo|  
+|Ponto de comparação|Sombreamento|Substituição|  
 |Finalidade|Protege contra uma modificação subsequente de classe base que apresenta um membro que você já definiu em sua classe derivada|Obtém polimorfismo definindo uma implementação diferente de um procedimento ou propriedade com a mesma sequência de chamada<sup>1</sup>|  
-|Elemento redefinido|Qualquer tipo de elemento declarado|Somente um procedimento (`Function`, `Sub`ou `Operator`) ou propriedade|  
+|Elemento redefinido|Qualquer tipo de elemento declarado|Somente um procedimento ( `Function` , `Sub` ou `Operator` ) ou propriedade|  
 |Redefinindo elemento|Qualquer tipo de elemento declarado|Somente um procedimento ou propriedade com a sequência de chamada idêntica<sup>1</sup>|  
 |Nível de acesso do elemento redefinido|Qualquer nível de acesso|Não é possível alterar o nível de acesso do elemento substituído|  
 |Legibilidade e gravação do elemento redefinindo|Qualquer combinação|Não é possível alterar a legibilidade ou gravação da propriedade substituída|  
-|Controle sobre a redefinição|O elemento da classe base não pode impor ou proibir sombreamento|O elemento da classe base pode especificar `MustOverride`, `NotOverridable`ou `Overridable`|  
-|Uso de palavra-chave|`Shadows` recomendado na classe derivada; `Shadows` presumido se nenhum `Shadows` nem `Overrides` especificado<sup>2</sup>|`Overridable` ou `MustOverride` necessário na classe base; `Overrides` necessário na classe derivada|  
+|Controle sobre a redefinição|O elemento da classe base não pode impor ou proibir sombreamento|O elemento da classe base pode especificar `MustOverride` , `NotOverridable` ou`Overridable`|  
+|Uso de palavra-chave|`Shadows`recomendado na classe derivada; `Shadows`presumido se nem `Shadows` nem `Overrides` especificado<sup>2</sup>|`Overridable`ou `MustOverride` obrigatório na classe base; `Overrides` necessário na classe derivada|  
 |Herança da redefinição de elemento por classes derivadas de sua classe derivada|Elemento de sombreamento herdado por mais classes derivadas; elemento sombreado ainda oculto<sup>3</sup>|Elemento de substituição herdado por classes derivadas posteriores; elemento substituído ainda substituído|  
   
- <sup>1</sup> a *sequência de chamada* consiste no tipo de elemento (`Function`, `Sub`, `Operator`ou `Property`), nome, lista de parâmetros e tipo de retorno. Você não pode substituir um procedimento por uma propriedade, ou o contrário. Não é possível substituir um tipo de procedimento (`Function`, `Sub`ou `Operator`) por outro tipo.  
+ <sup>1</sup> a *sequência de chamada* consiste no tipo de elemento ( `Function` ,, `Sub` `Operator` ou `Property` ), nome, lista de parâmetros e tipo de retorno. Você não pode substituir um procedimento por uma propriedade, ou o contrário. Não é possível substituir um tipo de procedimento ( `Function` , `Sub` ou `Operator` ) por outro tipo.  
   
- <sup>2</sup> se você não especificar `Shadows` ou `Overrides`, o compilador emitirá uma mensagem de aviso para ajudá-lo a ter certeza de qual tipo de redefinição você deseja usar. Se você ignorar o aviso, o mecanismo de sombreamento será usado.  
+ <sup>2</sup> se você não especificar `Shadows` ou `Overrides` , o compilador emitirá uma mensagem de aviso para ajudá-lo a ter certeza de qual tipo de redefinição você deseja usar. Se você ignorar o aviso, o mecanismo de sombreamento será usado.  
   
- <sup>3</sup> se o elemento de sombreamento estiver inacessível em uma classe derivada adicional, o sombreamento não será herdado. Por exemplo, se você declarar o elemento de sombreamento como `Private`, uma classe que deriva de sua classe derivada herdará o elemento original em vez do elemento de sombreamento.  
+ <sup>3</sup> se o elemento de sombreamento estiver inacessível em uma classe derivada adicional, o sombreamento não será herdado. Por exemplo, se você declarar o elemento de sombreamento como `Private` , uma classe que deriva de sua classe derivada herdará o elemento original em vez do elemento de sombreamento.  
   
 ## <a name="guidelines"></a>Diretrizes  
  Normalmente, você usa a substituição nos seguintes casos:  
@@ -51,12 +51,12 @@ Quando você define uma classe que herda de uma classe base, às vezes você des
   
 - Você quer a liberdade de alterar o tipo de elemento ou a sequência de chamada.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Referências a Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Sombreamento em Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [Como ocultar uma variável com o mesmo nome que a variável](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
-- [Como ocultar uma variável herdada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
-- [Como acessar uma variável oculta por uma classe derivada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
-- [Sombras](../../../../visual-basic/language-reference/modifiers/shadows.md)
-- [Substituições](../../../../visual-basic/language-reference/modifiers/overrides.md)
+- [Referências a elementos declarados](references-to-declared-elements.md)
+- [Sombreamento no Visual Basic](shadowing.md)
+- [Como ocultar uma variável com o mesmo nome que a variável](how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
+- [Como ocultar uma variável herdada](how-to-hide-an-inherited-variable.md)
+- [Como acessar uma variável oculta por uma classe derivada](how-to-access-a-variable-hidden-by-a-derived-class.md)
+- [Sombras](../../../language-reference/modifiers/shadows.md)
+- [Substituições](../../../language-reference/modifiers/overrides.md)

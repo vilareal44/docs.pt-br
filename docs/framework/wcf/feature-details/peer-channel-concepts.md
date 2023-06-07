@@ -2,25 +2,25 @@
 title: Conceitos de canal par
 ms.date: 03/30/2017
 ms.assetid: 379c2c0b-a44f-4423-9480-4739e7f18614
-ms.openlocfilehash: 8955f6ab18e7fddac2f99b30be38532781c7ae21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9a63784b685ce57a7878934ddd042afd70c32b9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769428"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576337"
 ---
 # <a name="peer-channel-concepts"></a>Conceitos de canal par
-Esta seção explica resumidamente os conceitos que compõem o canal de pares do Windows Communication Foundation (WCF).  
+Esta seção explica brevemente os conceitos que compõem o canal de mesmo nível do Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Emparelhar as malhas](../../../../docs/framework/wcf/feature-details/peer-meshes.md):  Descreve as características de malhas criadas usando o canal par.  
+ [Malhas pares](peer-meshes.md): descreve as características das malhas criadas usando o canal de mesmo nível.  
   
- [Emparelhar nós](../../../../docs/framework/wcf/feature-details/peer-nodes.md):  Descreve nós pares.  
+ [Nós de par](peer-nodes.md): descreve os nós de par.  
   
- [Segurança de canal par](../../../../docs/framework/wcf/feature-details/peer-channel-security.md):  Descreve cenários de segurança e soluções fornecidas pelo canal par.  
+ [Segurança de canal par](peer-channel-security.md): descreve cenários e soluções de segurança fornecidos pelo canal par.  
   
- [Resolvedores de pares](../../../../docs/framework/wcf/feature-details/peer-resolvers.md):  Discute o uso do protocolo de resolução de nome de par (PRNP) e outros resolvedores personalizados.  
+ [Resolvedores de pares](peer-resolvers.md): discute o uso de PRNP (Peer Name Resolution Protocol) e outros resolvedores personalizados.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Compilando um aplicativo de canal par](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+- [Compilando um aplicativo de canal par](building-a-peer-channel-application.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 75711ea534907e5692d97e0ec5f290e03fb75235
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 57a1537e1bde1efcd3586d032efee063561efcca
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69988698"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586488"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integração com visão geral de aplicativos COM+
 O Windows Communication Foundation (WCF) fornece um ambiente avançado para a criação de aplicativos distribuídos. Se você já estiver usando a lógica de aplicativo baseada em componentes hospedada no COM+, poderá usar o WCF para estender sua lógica existente em vez de ter que regravá-la. Um cenário comum é quando você deseja expor a lógica de negócios dos serviços corporativos ou COM+ existentes por meio de serviços Web.  
@@ -40,9 +40,9 @@ O Windows Communication Foundation (WCF) fornece um ambiente avançado para a cr
   
 2. Selecione um modo de hospedagem apropriado.  
   
-3. Use a ferramenta de configuração do modelo de serviço COM+ (ComSvcConfig. exe) para adicionar um serviço Web para a interface. Para obter mais informações sobre como usar o ComSvcConfig. exe, [consulte Como: Use a ferramenta](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)de configuração do modelo de serviço com+.  
+3. Use a ferramenta de configuração do modelo de serviço COM+ (ComSvcConfig. exe) para adicionar um serviço Web para a interface. Para obter mais informações sobre como usar o ComSvcConfig. exe, consulte [como usar a ferramenta de configuração do modelo de serviço com+](how-to-use-the-com-service-model-configuration-tool.md).  
   
-4. Defina as configurações de serviço adicionais no arquivo de configuração do aplicativo. Para obter mais informações sobre como configurar um componente, consulte [como: Defina as configurações](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)do serviço com+.  
+4. Defina as configurações de serviço adicionais no arquivo de configuração do aplicativo. Para obter mais informações sobre como configurar um componente, consulte [How to: configure com+ Service Settings](how-to-configure-com-service-settings.md).  
   
 ## <a name="supported-interfaces"></a>Interfaces com suporte  
  Há algumas restrições sobre o tipo de interfaces que podem ser expostas como um serviço Web. Não há suporte para os seguintes tipos de interfaces:  
@@ -62,11 +62,11 @@ O Windows Communication Foundation (WCF) fornece um ambiente avançado para a cr
 - Interfaces de componentes de serviços corporativos que não foram adicionados ao cache de assembly global.  
   
 ### <a name="limited-object-reference-support"></a>Suporte à referência de objeto limitado  
- Como vários componentes COM+ implantados usam objetos por parâmetros de referência, como retornar um objeto Recordset ADO, a integração COM+ inclui suporte limitado para parâmetros de referência de objeto. O suporte é limitado a objetos que implementam `IPersistStream` a interface com. Isso inclui objetos ADO RecordSet e pode ser implementado para objetos COM específicos do aplicativo.  
+ Como vários componentes COM+ implantados usam objetos por parâmetros de referência, como retornar um objeto Recordset ADO, a integração COM+ inclui suporte limitado para parâmetros de referência de objeto. O suporte é limitado a objetos que implementam a `IPersistStream` interface com. Isso inclui objetos ADO RecordSet e pode ser implementado para objetos COM específicos do aplicativo.  
   
- Para habilitar esse suporte, a ferramenta ComSvcConfig. exe fornece a opção **allowreferences** que desabilita o parâmetro de assinatura do método regular e verifica se a ferramenta é executada para garantir que os parâmetros de referência do objeto não estejam sendo usados. Além disso, os tipos de objeto que você passa como parâmetros devem ser nomeados e identificados dentro`persistableTypes`do elemento de configuração < > que é um filho`comContract`do elemento > <.  
+ Para habilitar esse suporte, a ferramenta ComSvcConfig. exe fornece a opção **allowreferences** que desabilita o parâmetro de assinatura do método regular e verifica se a ferramenta é executada para garantir que os parâmetros de referência do objeto não estejam sendo usados. Além disso, os tipos de objeto que você passa como parâmetros devem ser nomeados e identificados dentro do `persistableTypes` elemento de configuração <> que é um filho do `comContract` elemento> <.  
   
- Quando esse recurso é usado, o serviço de integração com+ usa `IPersistStream` a interface para serializar ou desserializar a instância do objeto. Se a instância do objeto não oferecer `IPersistStream`suporte, uma exceção será lançada.  
+ Quando esse recurso é usado, o serviço de integração COM+ usa a `IPersistStream` interface para serializar ou desserializar a instância do objeto. Se a instância do objeto não oferecer suporte `IPersistStream` , uma exceção será lançada.  
   
  Em um aplicativo cliente, os métodos no <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> objeto podem ser usados para passar um objeto para um serviço e, de modo semelhante, para recuperar um objeto.  
   
@@ -82,18 +82,18 @@ O Windows Communication Foundation (WCF) fornece um ambiente avançado para a cr
   
 - Hospedado na Web  
   
-     O serviço Web é hospedado em um processo de trabalho do servidor Web. Esse modo não exige que o COM+ esteja ativo quando a solicitação inicial é recebida. Se o aplicativo não estiver ativo quando essa solicitação for recebida, ele será ativado automaticamente antes de processar a solicitação. Esse modo também fornece o serviço Web e o acesso DCOM ao aplicativo de servidor, mas causa um salto de processo para solicitações de serviço Web. Isso normalmente requer que o cliente habilite a representação. No WCF, isso pode ser feito com a <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> propriedade <xref:System.ServiceModel.Security.WindowsClientCredential> da classe, que é acessada como uma propriedade da classe <xref:System.ServiceModel.ChannelFactory%601> genérica, bem como o <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> valor de enumeração.  
+     O serviço Web é hospedado em um processo de trabalho do servidor Web. Esse modo não exige que o COM+ esteja ativo quando a solicitação inicial é recebida. Se o aplicativo não estiver ativo quando essa solicitação for recebida, ele será ativado automaticamente antes de processar a solicitação. Esse modo também fornece o serviço Web e o acesso DCOM ao aplicativo de servidor, mas causa um salto de processo para solicitações de serviço Web. Isso normalmente requer que o cliente habilite a representação. No WCF, isso pode ser feito com a <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> propriedade da <xref:System.ServiceModel.Security.WindowsClientCredential> classe, que é acessada como uma propriedade da <xref:System.ServiceModel.ChannelFactory%601> classe genérica, bem como o <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> valor de enumeração.  
   
 - Hospedado na Web em processo  
   
      O serviço Web e a lógica do aplicativo COM+ são hospedados dentro do processo de trabalho do servidor Web. Isso fornece a ativação automática do modo hospedado na Web sem causar um salto de processo para solicitações de serviço Web. A desvantagem é que o aplicativo de servidor não pode ser acessado por meio do DCOM.  
   
-### <a name="security-considerations"></a>Considerações sobre segurança  
+### <a name="security-considerations"></a>Considerações de segurança  
  Assim como outros serviços do WCF, as configurações de segurança para o serviço exposto são administradas por meio de definições de configuração para o canal do WCF. As configurações de segurança DCOM tradicionais, como as configurações de permissões de todo o computador DCOM, não são impostas. Para impor funções de aplicativo COM+, a autorização "verificações de acesso no nível de componente" deve ser habilitada para o componente.  
   
  O uso de uma associação não segura pode deixar a comunicação aberta para violação ou divulgação de informações. Para evitar isso, é recomendável que você use uma associação segura.  
   
- Para os modos hospedados pelo COM+ e hospedado na Web, os aplicativos cliente devem permitir que o processo do servidor represente o usuário cliente. Isso pode ser feito em clientes WCF definindo o nível de representação como <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
+ Para os modos hospedados pelo COM+ e hospedado na Web, os aplicativos cliente devem permitir que o processo do servidor represente o usuário cliente. Isso pode ser feito em clientes WCF definindo o nível de representação como <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> .  
   
  Com o Serviços de Informações da Internet (IIS) ou o WAS (serviço de ativação de processos do Windows) usando o transporte HTTP, a ferramenta Httpcfg. exe pode ser usada para reservar um endereço de ponto de extremidade de transporte. Em outras configurações, é importante proteger contra serviços não autorizados que atuam como o serviço pretendido. Para impedir que um serviço invasor inicie no ponto de extremidade desejado, o serviço legítimo pode ser configurado para ser executado como um serviço NT. Isso permite que o serviço legítimo solicite o endereço do ponto de extremidade antes de qualquer serviço não autorizado.  
   
@@ -103,4 +103,4 @@ O Windows Communication Foundation (WCF) fornece um ambiente avançado para a cr
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral da integração de aplicativos COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+- [Visão geral da integração com aplicativos COM](integrating-with-com-applications-overview.md)

@@ -1,17 +1,17 @@
 ---
-title: A palavra-chave fixed
-description: Saiba como você pode "pin" em um local para a pilha para evitar a coleta com o F# 'fixed' a palavra-chave.
-ms.date: 04/24/2017
-ms.openlocfilehash: 7fdf66560f3e2ab7584b00c7e4584d7f6c161858
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+title: A palavra-chave Fixed
+description: 'Saiba como você pode "fixar" um local na pilha para evitar a coleta com a palavra-chave "fixed" do F #.'
+ms.date: 08/15/2020
+ms.openlocfilehash: 786ffd706c243fc83f8fb3afc2201d2a34536372
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772652"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559174"
 ---
-# <a name="the-fixed-keyword"></a>A palavra-chave fixed
+# <a name="the-fixed-keyword"></a>A palavra-chave Fixed
 
-F#4.1 apresenta o `fixed` palavra-chave, que permite que você "fixar" em um local para a pilha para impedir que ele seja coletado ou movido durante a coleta de lixo.  Ele é usado para cenários de programação de nível baixo.
+A `fixed` palavra-chave permite que você "fixe" um local na pilha para impedir que ele seja coletado ou movido durante a coleta de lixo.  Ele é usado para cenários de programação de baixo nível.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -21,13 +21,13 @@ use ptr = fixed expression
 
 ## <a name="remarks"></a>Comentários
 
-Isso estende a sintaxe de expressões para permitir a extração de um ponteiro e associá-la a um nome que é impedido de ser coletado ou movido durante a coleta de lixo.  
+Isso estende a sintaxe de expressões para permitir a extração de um ponteiro e a vinculação a um nome que é impedido de ser coletado ou movido durante a coleta de lixo.  
 
-Um ponteiro de uma expressão é corrigido por meio de `fixed` palavra-chave está associado a um identificador por meio do `use` palavra-chave.  A semântica isso é semelhante ao gerenciamento de recursos por meio de `use` palavra-chave.  O ponteiro é fixa enquanto ele está no escopo e, depois que ele está fora do escopo, não é fixo.  `fixed` não pode ser usado fora do contexto de um `use` associação.  Você deve associar o ponteiro para um nome com `use`.
+Um ponteiro de uma expressão é corrigido por meio da `fixed` palavra-chave é associado a um identificador por meio da `use` palavra-chave.  A semântica disso é semelhante ao gerenciamento de recursos por meio da `use` palavra-chave.  O ponteiro é fixo enquanto está no escopo e, quando está fora do escopo, ele não é mais fixo.  `fixed` Não pode ser usado fora do contexto de uma `use` associação.  Você deve associar o ponteiro a um nome com `use` .
 
-Uso de `fixed` deve ocorrer dentro de uma expressão em uma função ou um método.  Ele não pode ser usado em um escopo de nível de script ou módulo.
+O uso de `fixed` deve ocorrer dentro de uma expressão em uma função ou um método.  Ele não pode ser usado em um escopo de nível de script ou de módulo.
 
-Como todos os códigos de ponteiro, isso é um recurso que não é seguro e emitirá um aviso quando usado.
+Como todo o código de ponteiro, esse é um recurso não seguro e emitirá um aviso quando usado.
 
 ## <a name="example"></a>Exemplo
 
@@ -61,6 +61,6 @@ let doPointerWork() =
 doPointerWork()
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Módulo NativePtr](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)
+- [Módulo NativePtr](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-nativeinterop-nativeptrmodule.html)

@@ -1,13 +1,14 @@
 ---
 title: Serializando para um XmlReader (invocando XSLT) (C#)
+description: Saiba como usar o createleiar para criar um XmlReader em C#. O módulo que lê esse XmlReader lê os nós da árvore XML e os processa.
 ms.date: 07/20/2015
 ms.assetid: 4cc3ee03-ef4c-429b-a408-fedd10b728cd
-ms.openlocfilehash: b079fe05fa8c230f644e011dcb62ec54f55cae60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa5a232c74c5314cb7f1cf03c2a8875ca1cd04df
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66487184"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302406"
 ---
 # <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a>Serializando para um XmlReader (invocando XSLT) (C#)
 Quando você usa os recursos de interoperabilidade de <xref:System.Xml?displayProperty=nameWithType> de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], você pode usar <xref:System.Xml.Linq.XNode.CreateReader%2A> para criar um <xref:System.Xml.XmlReader>. O módulo que lê deste <xref:System.Xml.XmlReader> lê os nós da árvore XML e processa-os de acordo.  
@@ -59,6 +60,6 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Serializando árvores XML (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

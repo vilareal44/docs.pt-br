@@ -3,21 +3,21 @@ title: <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 96db336c-4f7a-4193-81a5-910b8ffd804f
 ms.openlocfilehash: 90a34a4a52b4c7a2e67d733fecba132818cac4fc
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70399631"
 ---
-# <a name="servicecredentials"></a>\<serviceCredentials>
+# \<serviceCredentials>
 Especifica a credencial a ser usada na autenticação do serviço e nas configurações relacionadas à validação da credencial do cliente.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamentos >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de portais**](servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de comportamento**](behavior-of-servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<serviceCredentials >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceCredentials>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,21 +53,21 @@ Especifica a credencial a ser usada na autenticação do serviço e nas configur
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<clientCertificate>](clientcertificate-of-servicecredentials.md)|Especifica o certificado a ser usado quando o certificado do cliente está disponível fora de banda. Esse elemento também especifica as configurações de validação de certificado do cliente. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>.|  
-|[\<issuedTokenAuthentication>](issuedtokenauthentication-of-servicecredentials.md)|Especifica o token emitido atual para este serviço. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement>.|  
-|[\<peer>](peer-of-servicecredentials.md)|Especifica as credenciais atuais para um nó par. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.PeerCredentialElement>.|  
-|[\<secureConversationAuthentication>](secureconversationauthentication-of-servicecredential.md)|Especifica as credenciais atuais para uma conversa segura. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.SecureConversationServiceElement>.|  
-|[\<serviceCertificate>](servicecertificate-of-servicecredentials.md)|Especifica um certificado usado por um serviço para se identificar. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>.|  
-|[\<userNameAuthentication>](usernameauthentication.md)|Especifica as configurações para validação de senha de nome de usuário. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.UserNameServiceElement>.|  
-|[\<windowsAuthentication>](windowsauthentication-of-servicecredentials.md)|Especifica as configurações para validação de credenciais do Windows. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.WindowsServiceElement>.|  
+|[\<clientCertificate>](clientcertificate-of-servicecredentials.md)|Especifica o certificado a ser usado quando o certificado do cliente está disponível fora de banda. Esse elemento também especifica as configurações de validação de certificado do cliente. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement> .|  
+|[\<issuedTokenAuthentication>](issuedtokenauthentication-of-servicecredentials.md)|Especifica o token emitido atual para este serviço. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement> .|  
+|[\<peer>](peer-of-servicecredentials.md)|Especifica as credenciais atuais para um nó par. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.PeerCredentialElement> .|  
+|[\<secureConversationAuthentication>](secureconversationauthentication-of-servicecredential.md)|Especifica as credenciais atuais para uma conversa segura. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.SecureConversationServiceElement> .|  
+|[\<serviceCertificate>](servicecertificate-of-servicecredentials.md)|Especifica um certificado usado por um serviço para se identificar. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement> .|  
+|[\<userNameAuthentication>](usernameauthentication.md)|Especifica as configurações para validação de senha de nome de usuário. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.UserNameServiceElement> .|  
+|[\<windowsAuthentication>](windowsauthentication-of-servicecredentials.md)|Especifica as configurações para validação de credenciais do Windows. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.WindowsServiceElement> .|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<> de comportamento](behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
 - <xref:System.ServiceModel.Description.ServiceCredentials>

@@ -1,5 +1,6 @@
 ---
 title: Método Exception. PrepForRemoting (sistema)
+description: Examine o método Exception. PrepForRemoting no .NET. O método adiciona o rastreamento de pilha do lado do servidor à mensagem antes que a exceção seja relançada no cliente.
 ms.date: 10/08/2019
 topic_type:
 - apiref
@@ -9,12 +10,12 @@ api_location:
 - mscorlib.dll
 api_type:
 - Assembly
-ms.openlocfilehash: ce1c24578690a1643b7f5af0e44eaae95ed7b0a2
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 9ceb73499ae3bb308975e6db5b961bfe40165ba3
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214893"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105260"
 ---
 # <a name="exceptionprepforremoting-method"></a>Método Exception.PrepForRemoting
 
@@ -32,7 +33,7 @@ Esta instância <xref:System.Exception>.
 ## <a name="remarks"></a>Comentários
 
 > [!WARNING]
-> O método `Exception.PrepForRemoting` é interno e não deve ser usado diretamente no seu código.
+> O `Exception.PrepForRemoting` método é interno e não deve ser usado diretamente no seu código.
 >
 > A Microsoft não oferece suporte ao uso desse método em um aplicativo de produção em qualquer circunstância.
 
@@ -40,6 +41,6 @@ Esta instância <xref:System.Exception>.
 
 **Namespace:** <xref:System>
 
-**Assembly:** mscorlib. dll (em mscorlib. dll)
+**Assembly:** mscorlib.dll (em mscorlib.dll)
 
 **.NET Framework versões:** Disponível desde 1,0.

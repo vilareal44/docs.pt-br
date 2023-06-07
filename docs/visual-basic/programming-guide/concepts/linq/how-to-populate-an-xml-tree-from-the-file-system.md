@@ -1,13 +1,13 @@
 ---
-title: 'Como: Preencher uma árvore XML do sistema de arquivos'
+title: 'Como: popular uma árvore XML do sistema de arquivos'
 ms.date: 07/20/2015
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
-ms.openlocfilehash: 5a4c7eaea91db54afcd91d85745dfec27cbabb8c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a3898b63f24bb87ab5e0de47685c36d61f09250b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344486"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396526"
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Como: popular uma árvore XML do sistema de arquivos (Visual Basic)
 Um aplicativo comum e útil das árvores XML é como um armazenamento de dados hierárquica de nome/valor. Você pode preencher uma árvore XML com dados hierárquicos, e consultar-la em seguida, transformar-la e, se necessário, serializar-la. Neste cenário de uso, muitas de semântica específica XML, como namespaces e comportamento de espaço em branco, não são importantes. Em vez disso, você estiver usando a árvore XML como um pequeno, na memória, base de dados hierárquica de usuário único.  
@@ -114,6 +114,6 @@ End Module
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Técnicas de consulta avançada (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Técnicas de consulta avançada (LINQ to XML) (Visual Basic)](advanced-query-techniques-linq-to-xml.md)

@@ -1,13 +1,13 @@
 ---
 title: Fluxo de trabalho de DevOps de aplicativos do Docker com as ferramentas da Microsoft
 description: Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft, o fluxo de trabalho do DevOps e as ferramentas da Microsoft
-ms.date: 02/15/2019
-ms.openlocfilehash: 6b138301a7e6794ce0a7b15957684b3b73e9f89f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 30c5066fa90d8792d8eef8f760dc63c00ce32130
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70295738"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915208"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Fluxo de trabalho de DevOps de aplicativos do Docker com as ferramentas da Microsoft
 
@@ -23,7 +23,7 @@ A complexidade do desenvolvimento de aplicativos em contêineres aumenta de mane
 
 - Gerenciamento de código-fonte do Azure DevOps Services/Team Foundation Server (baseado no Git ou no Controle de Versão do Team Foundation), planejamento do Agile (com suporte para Agile, Scrum e CMMI), CI, gerenciamento de versão e outras ferramentas para equipes do Agile.
 
-- O Azure DevOps Services e o Team Foundation Server incluem um ecossistema avançado e crescente de extensões internas e de terceiros com as quais você pode facilmente construir um pipeline de CI, build, teste, entrega e gerenciamento de versão para microsserviços.
+- Azure DevOps Services e Team Foundation Server incluem um ecossistema avançado e cada vez maior de extensões de terceiros e de terceiros, com as quais você pode facilmente construir um pipeline de CI, Build, teste, entrega e liberação de gerenciamento para microservices.
 
 - Execute testes automatizados como parte do seu pipeline de build no Azure DevOps Services.
 
@@ -32,5 +32,5 @@ A complexidade do desenvolvimento de aplicativos em contêineres aumenta de mane
 - As organizações podem provisionar com facilidade contêineres do Docker com base em imagens privadas armazenadas no Registro de Contêiner do Azure, juntamente com as dependências de componentes do Azure (Dados, PaaS, etc.) usando modelos do Azure Resource Manager com ferramentas com as quais elas já estão familiarizadas.
 
 >[!div class="step-by-step"]
->[Próximo](../design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md)
->[anterior](docker-application-outer-loop-devops-workflow.md)
+>[Anterior](../design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md) 
+> [Avançar](docker-application-outer-loop-devops-workflow.md)

@@ -3,12 +3,12 @@ title: 'Tutorial: escrever seu primeiro analisador e correção de código'
 description: Este tutorial fornece instruções passo a passo para criar um analisador e correção de código usando o SDK do .NET Compiler (APIs do Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 23ebf4befc75e08592890d85f2dda51251f59cd6
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: e79907f364939462b7d0d5814c4752be23bcfdf3
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396276"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381587"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: escrever seu primeiro analisador e correção de código
 
@@ -17,6 +17,25 @@ O SDK da .NET Compiler Platform fornece as ferramentas necessárias para criar a
 Neste tutorial, você explorará a criação de um **analisador** e uma **correção de código** que o acompanha, usando as APIs do Roslyn. Um analisador é uma maneira de executar a análise de código-fonte e relatar um problema para o usuário. Opcionalmente, um analisador também pode fornecer uma correção de código que representa uma modificação no código-fonte do usuário. Este tutorial cria um analisador que localiza as declarações de variável local que poderiam ser declaradas usando o modificador `const`, mas não o são. A correção de código anexa modifica essas declarações para adicionar o modificador `const`.
 
 ## <a name="prerequisites"></a>Pré-requisitos
+
+> [!NOTE]
+> O modelo atual do **analisador do Visual Studio com o código Fix (.net Standard)** tem um bug conhecido e deve ser corrigido no Visual Studio 2019 versão 16,7. Os projetos no modelo não serão compilados, a menos que sejam feitas as seguintes alterações:
+>
+> 1. Selecione **ferramentas**  >  **Opções**  >  pacote**Gerenciador de pacotes NuGet**  >  **fontes**
+>    - Selecione o botão de adição para adicionar uma nova fonte:
+>    - Defina a **origem** como `https://dotnet.myget.org/F/roslyn-analyzers/api/v3/index.json` e selecione **Atualizar**
+> 1. No **Gerenciador de soluções**, clique com o botão direito do mouse no projeto **MakeConst. vsix** e selecione **Editar arquivo de projeto**
+>    - Atualize o `<AssemblyName>` nó para adicionar o `.Visx` sufixo:
+>      - `<AssemblyName>MakeConst.Vsix</AssemblyName>`
+>    - Atualize o `<ProjectReference>` nó na linha 41 para alterar o `TargetFramework` valor:
+>      - `<ProjectReference Update="@(ProjectReference)" AdditionalProperties="TargetFramework=netstandard2.0" />`
+> 1. Atualize o arquivo *MakeConstUnitTests.cs* , no projeto *MakeConst. Test* :
+>    - Altere a linha 9 para o seguinte, observe a alteração do namespace:
+>      - `using Verify = Microsoft.CodeAnalysis.CSharp.Testing.MSTest.CodeFixVerifier<`
+>    - Altere a linha 24 para o seguinte método:
+>      - `await Verify.VerifyAnalyzerAsync(test);`
+>    - Altere a linha 62 para o seguinte método:
+>      - `await Verify.VerifyCodeFixAsync(test, expected, fixtest);`
 
 - [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
 - [Visual Studio 2019](https://www.visualstudio.com/downloads)
@@ -55,7 +74,7 @@ A análise para determinar se uma variável pode ser tornada constante está env
 - Em **Visual C# > Extensibilidade**, escolha **Analisador com correção de código (.NET Standard)**.
 - Nomeie seu projeto como "**MakeConst**" e clique em OK.
 
-O analisador com modelo de correção de código cria três projetos: um contém o analisador e a correção de código, o segundo é um projeto de teste de unidade e o terceiro é o projeto VSIX. O projeto de inicialização padrão é o projeto VSIX. Pressione **F5** para iniciar o projeto VSIX. Isso inicia uma segunda instância do Visual Studio que tenha carregado o seu novo analisador.
+O analisador com modelo de correção de código cria três projetos: um contém o analisador e a correção de código, o segundo é um projeto de teste de unidade e o terceiro é o projeto VSIX. O projeto de inicialização padrão é o projeto VSIX. Pressione <kbd>F5</kbd> para iniciar o projeto VSIX. Isso inicia uma segunda instância do Visual Studio que tenha carregado o seu novo analisador.
 
 > [!TIP]
 > Quando você executa seu analisador, você pode iniciar uma segunda cópia do Visual Studio. Essa segunda cópia usa um hive do Registro diferente para armazenar configurações. Isso lhe permite diferenciar as configurações visuais em duas cópias do Visual Studio. Você pode escolher um tema diferente para a execução experimental do Visual Studio. Além disso, não use perfil móvel de suas configurações nem faça logon na conta do Visual Studio usando a execução experimental do Visual Studio. Isso mantém as diferenças entre as configurações.
@@ -148,7 +167,7 @@ if (localDeclaration.Modifiers.Any(SyntaxKind.ConstKeyword))
 
 Por fim, você precisa verificar que a variável pode ser `const`. Isso significa assegurar que ela nunca seja atribuída após ser inicializada.
 
-Você executará alguma análise semântica usando o <xref:Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext>. Você usa o argumento `context` para determinar se a declaração de variável local pode ser tornada `const`. Um <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> representa todas as informações semânticas em um único arquivo de origem. Você pode aprender mais no artigo que aborda [modelos semânticos](../work-with-semantics.md). Você usará o <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> para realizar a análise de fluxo de dados na instrução de declaração local. Em seguida, você usa os resultados dessa análise de fluxo de dados para garantir que a variável local não seja escrita com um novo valor em nenhum outro lugar. Chame o método de extensão <xref:Microsoft.CodeAnalysis.ModelExtensions.GetDeclaredSymbol%2A> para recuperar o <xref:Microsoft.CodeAnalysis.ILocalSymbol> para a variável e verifique se ele não está contido na coleção <xref:Microsoft.CodeAnalysis.DataFlowAnalysis.WrittenOutside%2A?displayProperty=nameWithType> da análise de fluxo de dados. Adicione o código a seguir ao final do método `AnalyzeNode`:
+Você executará alguma análise semântica usando o <xref:Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext>. Você usa o argumento `context` para determinar se a declaração de variável local pode ser tornada `const`. Um <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> representa todas as informações semânticas em um único arquivo de origem. Você pode aprender mais no artigo que aborda [modelos semânticos](../work-with-semantics.md). Você usará o <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> para realizar a análise de fluxo de dados na instrução de declaração local. Em seguida, você usa os resultados dessa análise de fluxo de dados para garantir que a variável local não seja escrita com um novo valor em nenhum outro lugar. Chame o método de extensão <xref:Microsoft.CodeAnalysis.ModelExtensions.GetDeclaredSymbol%2A> para recuperar o <xref:Microsoft.CodeAnalysis.ILocalSymbol> para a variável e verifique se ele não está contido na coleção <xref:Microsoft.CodeAnalysis.DataFlowAnalysis.WrittenOutside%2A?displayProperty=nameWithType> da análise de fluxo de dados. Adicione o seguinte código ao final do método `AnalyzeNode`:
 
 ```csharp
 // Perform data flow analysis on the local declaration.
@@ -170,7 +189,7 @@ O código recém-adicionado garante que a variável não seja modificada e pode,
 context.ReportDiagnostic(Diagnostic.Create(Rule, context.Node.GetLocation()));
 ```
 
-Você pode verificar seu andamento pressionando **F5** para executar o analisador. Você pode carregar o aplicativo de console que você criou anteriormente e, em seguida, adicionar o seguinte código de teste:
+Você pode verificar seu andamento pressionando <kbd>F5</kbd> para executar o analisador. Você pode carregar o aplicativo de console que você criou anteriormente e, em seguida, adicionar o seguinte código de teste:
 
 ```csharp
 int x = 0;
@@ -247,11 +266,11 @@ A etapa final é fazer a edição. Há três etapas para esse processo:
 1. Criar um novo documento, substituindo a declaração existente pela nova declaração.
 1. Retornar o novo documento.
 
-Adicione o código a seguir ao final do método `MakeConstAsync`:
+Adicione o seguinte código ao final do método `MakeConstAsync`:
 
 [!code-csharp[replace the declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceDocument  "Generate a new document by replacing the declaration")]
 
-A correção de código está pronta para ser experimentada.  Pressione F5 para executar o projeto do analisador em uma segunda instância do Visual Studio. Na segunda instância do Visual Studio, crie um novo projeto de Aplicativo de Console em C# e adicione algumas declarações de variável local inicializadas com valores constantes para o método Main. Você verá que elas são relatadas como avisos, conforme mostrado a seguir.
+A correção de código está pronta para ser experimentada.  Pressione <kbd>F5</kbd> para executar o projeto do analisador em uma segunda instância do Visual Studio. Na segunda instância do Visual Studio, crie um novo projeto de Aplicativo de Console em C# e adicione algumas declarações de variável local inicializadas com valores constantes para o método Main. Você verá que elas são relatadas como avisos, conforme mostrado a seguir.
 
 ![Pode fazer avisos constantes](media/how-to-write-csharp-analyzer-code-fix/make-const-warning.png)
 
@@ -310,7 +329,7 @@ O código anterior também fez algumas alterações no código que cria o result
 
 [!code-csharp[string constants for fix test](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
 
-Execute esses dois testes para certificar-se de sua aprovação. No Visual Studio, abra o **Gerenciador de Testes** selecionando **Teste** > **Windows** > **Gerenciador de Testes**.  Em seguida, pressione o link **Executar Tudo**.
+Execute esses dois testes para certificar-se de sua aprovação. No Visual Studio, abra o **Gerenciador de Testes** selecionando **Teste** > **Windows** > **Gerenciador de Testes**. Em seguida, selecione o link **executar tudo** .
 
 ## <a name="create-tests-for-valid-declarations"></a>Criar testes para declarações válidas
 
@@ -485,7 +504,7 @@ else if (variableType.IsReferenceType && constantValue.Value != null)
 }
 ```
 
-Você precisa escrever um pouco mais de código no seu provedor de correção de código para substituir a palavra-chave var' com o nome do tipo correto. Retorne ao **CodeFixProvider.cs**. O código que você adicionará realizará as seguintes etapas:
+Você deve escrever um pouco mais de código no provedor de correção de código para substituir a `var` palavra-chave pelo nome de tipo correto. Retorne ao **CodeFixProvider.cs**. O código que você adicionará realizará as seguintes etapas:
 
 - Verifique se a declaração é uma declaração `var` e se afirmativo:
 - Crie um novo tipo para o tipo inferido.
@@ -503,12 +522,12 @@ Você precisará adicionar uma `using` diretiva para usar o <xref:Microsoft.Code
 using Microsoft.CodeAnalysis.Simplification;
 ```
 
-Execute seus testes, que devem todos ser aprovados. Dê parabéns a si mesmo, executando seu analisador concluído. Pressione Ctrl + F5 para executar o projeto do analisador em uma segunda instância do Visual Studio com a extensão de versão prévia do Roslyn carregada.
+Execute seus testes, que devem todos ser aprovados. Dê parabéns a si mesmo, executando seu analisador concluído. Pressione <kbd>Ctrl</kbd> + <kbd>F5</kbd> para executar o projeto do analisador em uma segunda instância do Visual Studio com a extensão de visualização do Roslyn carregada.
 
 - Na segunda instância do Visual Studio, crie um novo projeto de Aplicativo de Console de C# e adicione `int x = "abc";` ao método Main. Graças à primeira correção de bug, nenhum aviso deve ser relatado para esta declaração de variável local (embora haja um erro do compilador, conforme esperado).
 - Em seguida, adicione `object s = "abc";` ao método Main. Devido à segunda correção de bug, nenhum aviso deve ser relatado.
 - Por fim, adicione outra variável local que usa a palavra-chave `var`. Você verá que um aviso é relatado e uma sugestão é exibida abaixo e a esquerda.
-- Mova o cursor do editor sobre o sublinhado ondulado e pressione Ctrl +. para exibir a correção de código sugerida. Ao selecionar a correção de código, observe que a palavra-chave var' agora é manipulada corretamente.
+- Mova o cursor do editor sobre o sublinhado ondulado e pressione <kbd>Ctrl</kbd> + <kbd>.</kbd>. para exibir a correção de código sugerida. Ao selecionar a correção de código, observe que a `var` palavra-chave agora é manipulada corretamente.
 
 Por fim, adicione o seguinte código:
 

@@ -1,5 +1,5 @@
 ---
-title: 'Explicação passo a passo: Usando BatchBlock e BatchedJoinBlock para aumentar a eficiência'
+title: 'Passo a passo: usando BatchBlock e BatchedJoinBlock para melhorar a eficiência'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, improving efficiency
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
-ms.openlocfilehash: 4b2b6a6124bf8cc0fb3b379607135283678e3268
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e572c5a14958ccc069ae7649af8c8ed4eb967dc1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091356"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284579"
 ---
-# <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Explicação passo a passo: Usando BatchBlock e BatchedJoinBlock para aumentar a eficiência
+# <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Passo a passo: usando BatchBlock e BatchedJoinBlock para melhorar a eficiência
 
 A Biblioteca de Fluxo de dados TPL fornece as classes <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> para que você possa receber e armazenar em buffer os dados de uma ou mais fontes e, depois, propagar esses dados armazenados em buffer como uma coleção. Este mecanismo de envio em lote é útil quando você coleta dados de uma ou mais fontes e, em seguida, processa vários elementos de dados como um lote. Por exemplo, considere um aplicativo que usa o fluxo de dados para inserir registros em um banco de dados. Essa operação pode ser mais eficiente se vários itens forem inseridos ao mesmo tempo, em vez de um de cada vez sequencialmente. Este documento descreve como usar a classe <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> para melhorar a eficiência dessas operações de inserção de banco de dados. Também descreve como usar a classe <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> para capturar os resultados e todas as exceções que ocorrem quando o programa lê de um banco de dados.
 
@@ -24,7 +24,7 @@ A Biblioteca de Fluxo de dados TPL fornece as classes <xref:System.Threading.Tas
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-1. Leia a seção Blocos de ingresso no documento [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) antes de começar este passo a passo.
+1. Leia a seção Blocos de ingresso no documento [Fluxo de dados](dataflow-task-parallel-library.md) antes de começar este passo a passo.
 
 2. Certifique-se de que você tenha uma cópia do banco de dados Northwind, Northwind.sdf, disponível em seu computador. Normalmente, esse arquivo está localizado na pasta %Arquivos de Programas%\Microsoft SQL Server Compact Edition\v3.5\Samples\\.
 
@@ -39,7 +39,7 @@ Este passo a passo contém as seguintes seções:
 
 - [Definir as operações de banco de dados do funcionário](#operations)
 
-- [Adicionando dados de funcionários ao banco de dados sem usar buffering](#nonBuffering)
+- [Adicionando dados de funcionários ao banco de dado sem usar o armazenamento em buffer](#nonBuffering)
 
 - [Usar o armazenamento em buffer para adicionar dados de funcionário ao banco de dados](#buffering)
 
@@ -51,7 +51,7 @@ Este passo a passo contém as seguintes seções:
 
 ## <a name="creating-the-console-application"></a>Criando o Aplicativo de Console
 
-1. No Visual Studio, crie um projeto visual C# ou visual basic **console application.** Neste documento, o projeto é chamado `DataflowBatchDatabase`.
+1. No Visual Studio, crie um projeto de aplicativo de **console** do Visual C# ou Visual Basic. Neste documento, o projeto é chamado `DataflowBatchDatabase`.
 
 2. Em seu projeto, adicione uma referência ao System.Data.SqlServerCe.dll e uma referência a System.Threading.Tasks.Dataflow.dll.
 
@@ -129,6 +129,6 @@ O exemplo a seguir mostra todo o código. O método `Main` compara o tempo neces
 [!code-csharp[TPLDataflow_BatchDatabase#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#100)]
 [!code-vb[TPLDataflow_BatchDatabase#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#100)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Fluxo de dados](dataflow-task-parallel-library.md)

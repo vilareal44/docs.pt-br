@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-ms.openlocfilehash: a300c2679ef11a84edb2ab89c8dea96e445c9ee3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a05cbe985c2cfebb67756fdfb54398b36e87f441
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177978"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008502"
 ---
 # <a name="loadstringrcex-function"></a>Função LoadStringRCEx
 Traduz um valor HRESULT para uma mensagem de erro apropriada para a cultura especificada.  
   
- Esta função foi depreciada no Quadro .NET 4.  
+ Essa função foi preterida no .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,47 +39,47 @@ HRESULT LoadStringRCEx (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `lcid`  
- [em] Um identificador de cultura. Passe -1 `lcid` para usar a cultura padrão.  
+ no Um identificador de cultura. Pass-1 para `lcid` para usar a cultura padrão.  
   
  `iResourceID`  
- [em] Um HRESULT.  
+ no Um HRESULT.  
   
  `szBuffer`  
- [fora] Um buffer que contém a mensagem de erro após a conclusão bem sucedida.  
+ fora Um buffer que contém a mensagem de erro após a conclusão bem-sucedida.  
   
  `iMax`  
- [em] O tamanho do buffer de mensagem de erro.  
+ no O tamanho do buffer de mensagens de erro.  
   
  `bQuiet`  
- [em] Ignorado.  
+ no Aceita.  
   
  `pcwchUsed`  
- [fora] Um ponteiro para o comprimento da mensagem de erro.  
+ fora Um ponteiro para o comprimento da mensagem de erro.  
   
-## <a name="return-value"></a>Valor retornado  
- Este método retorna códigos de erro COM padrão, conforme definido em WinError.h, além dos seguintes valores.  
+## <a name="return-value"></a>Valor Retornado  
+ Esse método retorna códigos de erro COM padrão, conforme definido no WinError. h, além dos valores a seguir.  
   
 |Código de retorno|Descrição|  
 |-----------------|-----------------|  
-|S_OK|O método foi concluído com sucesso.|  
-|E_INVALIDARG|`szBuffer`é nulo, ou `iMax` é zero (0).|  
+|S_OK|O método foi concluído com êxito.|  
+|E_INVALIDARG|`szBuffer`é NULL ou `iMax` é zero (0).|  
   
 ## <a name="remarks"></a>Comentários  
- Se o método não `szBuffer` for concluído com sucesso, contém uma seqüência vazia.  
+ Se o método não for concluído com êxito, `szBuffer` conterá uma cadeia de caracteres vazia.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Mscoree.dll  
+ **Biblioteca:** MSCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>
-- [Função LoadStringRC](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)
-- [Funções de hospedagem CLR reprovadas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Função LoadStringRC](loadstringrc-function.md)
+- [Funções de hospedagem CLR reprovadas](deprecated-clr-hosting-functions.md)

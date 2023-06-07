@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9720428-c353-4f07-a7e8-899e106a1b37
 topic_type:
 - apiref
-ms.openlocfilehash: a1cd932051a9ed90a29ff5eeaa818a67104192bb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6f4764f016360a2ec0ab054b7a89ccb3f86aeb43
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175246"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490218"
 ---
 # <a name="imetadatatablesgetnextstring-method"></a>Método IMetaDataTables::GetNextString
-Obtém o índice da próxima string na coluna de tabela atual.  
+Obtém o índice da próxima cadeia de caracteres na coluna da tabela atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,23 +34,23 @@ HRESULT GetNextString (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ixString`  
- [em] O valor do índice de uma coluna de tabela de strings.  
+ no O valor de índice de uma coluna de tabela de cadeia de caracteres.  
   
  `pNext`  
- [fora] Um ponteiro para o índice da próxima string na coluna.  
+ fora Um ponteiro para o índice da próxima cadeia de caracteres na coluna.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [Interface IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [Interface IMetaDataTables](imetadatatables-interface.md)
+- [Interface IMetaDataTables2](imetadatatables2-interface.md)

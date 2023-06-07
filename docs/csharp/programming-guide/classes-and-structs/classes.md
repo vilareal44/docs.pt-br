@@ -83,9 +83,9 @@ A herança é realizada usando uma *derivação*, o que significa que uma classe
 
 Quando uma classe declara uma classe base, ela herda todos os membros da classe base, exceto os construtores. Para obter mais informações, consulte [Herança](inheritance.md).
   
-Ao contrário do C++, uma classe no C# só pode herdar diretamente de uma classe base. No entanto, como uma classe base pode herdar de outra classe, uma classe pode herdar indiretamente várias classes base. Além disso, uma classe pode implementar diretamente mais de uma interface. Para obter mais informações, consulte [Interfaces](../interfaces/index.md).  
+Ao contrário do C++, uma classe no C# só pode herdar diretamente de uma classe base. No entanto, como uma classe base pode herdar de outra classe, uma classe pode herdar indiretamente várias classes base. Além disso, uma classe pode implementar diretamente mais de uma interface. Para obter mais informações, consulte [interfaces](../interfaces/index.md).  
   
-Uma classe pode ser declarada [abstract](../../language-reference/keywords/abstract.md). Uma classe abstrata contém métodos abstratos que têm uma definição de assinatura, mas não têm implementação. As classes abstratas não podem ser instanciadas. Elas só podem ser usadas por meio de classes derivadas que implementam os métodos abstratos. Por outro lado, uma classe [lacrada](../../language-reference/keywords/sealed.md) não permite que outras classes sejam derivadas dela. Para obter mais informações, consulte [Classes Abstratas e Lacradas e Membros de Classe](abstract-and-sealed-classes-and-class-members.md).  
+Uma classe pode ser declarada [abstract](../../language-reference/keywords/abstract.md). Uma classe abstrata contém métodos abstratos que têm uma definição de assinatura, mas não têm implementação. As classes abstratas não podem ser instanciadas. Elas só podem ser usadas por meio de classes derivadas que implementam os métodos abstratos. Por outro lado, uma classe [lacrada](../../language-reference/keywords/sealed.md) não permite que outras classes sejam derivadas dela. Para obter mais informações, consulte [classes abstratas e lacradas e membros de classe](abstract-and-sealed-classes-and-class-members.md).  
   
 As definições de classe podem ser divididas entre arquivos de origem diferentes. Para obter mais informações, consulte [Classes parciais e métodos](partial-classes-and-methods.md).  
   
@@ -99,9 +99,9 @@ No exemplo a seguir, é definida uma classe pública que contém uma [propriedad
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Programação orientada a objeto](../concepts/object-oriented-programming.md)
 - [Polimorfismo](polymorphism.md)
 - [Nomes de identificadores](../inside-a-program/identifier-names.md)

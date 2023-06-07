@@ -1,5 +1,6 @@
 ---
 title: Compilando um projeto de interoperabilidade
+description: Examine como compilar um projeto de interoperabilidade COM, que será compilado como projetos gerenciados se eles fizerem referência a um ou mais assemblies que contêm tipos COM importados.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interoperation with unmanaged code, compiling
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing COM components
 - COM interop, exposing COM components
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
-ms.openlocfilehash: 32102910ae674a97e941e1346a1898585f503527
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a8dfbeb88d0057eb3c9047b4435f021750ed86d2
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123679"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620853"
 ---
 # <a name="compiling-an-interop-project"></a>Compilando um projeto de interoperabilidade
 
@@ -37,9 +38,9 @@ Os projetos de interoperabilidade COM que referenciam um ou mais assemblies que 
 
  Para compilar um aplicativo que inclui um assembly de interoperabilidade primário quando ele é implantado, use a opção do compilador **/reference** e especifique o nome do assembly de interoperabilidade.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Expondo componentes do COM ao .NET Framework](exposing-com-components.md)
+- [Expondo componentes do COM para o .NET Framework](exposing-com-components.md)
 - [Componentes de independência de linguagem e componentes independentes da linguagem](../../standard/language-independence-and-language-independent-components.md)
 - [Usando tipos COM no código gerenciado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Passo a passo: inserindo tipos de assemblies gerenciados no Visual Studio](../../standard/assembly/embed-types-visual-studio.md)

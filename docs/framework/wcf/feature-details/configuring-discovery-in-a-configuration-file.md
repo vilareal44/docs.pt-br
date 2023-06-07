@@ -2,18 +2,18 @@
 title: Configurando a descoberta em um arquivo de configuração
 ms.date: 03/30/2017
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-ms.openlocfilehash: 934b04b51b9954cf943f57f33250951048e5671b
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 59eaecb7e34b9105bc694f444d98c13c036d552f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81464213"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597546"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Configurando a descoberta em um arquivo de configuração
-Existem quatro grandes grupos de configurações usadas na descoberta. Este tópico descreverá brevemente cada um e mostrará exemplos de como configurá-los. Na sequência de cada seção haverá um link para uma documentação mais detalhada sobre cada área.  
+Há quatro grupos principais de definições de configuração usadas na descoberta. Este tópico descreverá brevemente cada um e mostrará exemplos de como configurá-los. Seguir cada seção será um link para uma documentação mais detalhada sobre cada área.  
   
 ## <a name="behavior-configuration"></a>Configuração de comportamento  
- A Discovery usa comportamentos de serviço e comportamentos de ponto final. O <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> comportamento permite a descoberta de todos os pontos finais de um serviço e permite especificar pontos finais de anúncio.  O exemplo a seguir <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> mostra como adicionar e especificar um ponto final de anúncio.  
+ A descoberta usa comportamentos de serviço e comportamentos de ponto de extremidade. O <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> comportamento habilita a descoberta para todos os pontos de extremidade de um serviço e permite que você especifique pontos de extremidade de anúncio.  O exemplo a seguir mostra como adicionar o <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> e especificar um ponto de extremidade do comunicado.  
   
 ```xml  
 <behaviors>  
@@ -29,7 +29,7 @@ Existem quatro grandes grupos de configurações usadas na descoberta. Este tóp
 </behaviors>  
 ```  
   
- Depois de especificar o comportamento, `service` faça referência a um elemento> <, conforme mostrado na amostra a seguir.  
+ Depois de especificar o comportamento, referencie-o de um `service` elemento <>, conforme mostrado no exemplo a seguir.  
   
 ```xml  
 <system.serviceModel>  
@@ -46,9 +46,9 @@ Existem quatro grandes grupos de configurações usadas na descoberta. Este tóp
 </system.serviceModel>  
 ```  
   
- Para que um serviço seja descoberto, você também deve adicionar um ponto <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> final de descoberta, o exemplo acima adiciona um ponto final padrão.  
+ Para que um serviço seja detectável, você também deve adicionar um ponto de extremidade de descoberta, o exemplo acima adiciona um <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ponto de extremidade padrão.  
   
- Ao adicionar pontos finais de anúncio, você também deve `services` adicionar um serviço de ouvinte de anúncio ao elemento> <como mostrado no exemplo a seguir.  
+ Ao adicionar pontos de extremidade de comunicado, você também deve adicionar um serviço de ouvinte de comunicado ao `services` elemento <>, conforme mostrado no exemplo a seguir.  
   
 ```xml  
 <services>  
@@ -67,7 +67,7 @@ Existem quatro grandes grupos de configurações usadas na descoberta. Este tóp
 </services>
 ```  
   
- O <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> comportamento é usado para ativar ou desativar a descoberta de um ponto final específico.  O exemplo a seguir configura um serviço com dois pontos finais de aplicativo, um com a detecção ativada e outro com a detecção desativada. Para cada ponto <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> final é adicionado um comportamento.  
+ O <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> comportamento é usado para habilitar ou desabilitar a descoberta de um ponto de extremidade específico.  O exemplo a seguir configura um serviço com dois pontos de extremidade do aplicativo, um com a descoberta habilitada e outro com a descoberta desabilitada. Para cada ponto de extremidade, um <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> comportamento é adicionado.  
   
 ```xml  
 <system.serviceModel>  
@@ -108,7 +108,7 @@ Existem quatro grandes grupos de configurações usadas na descoberta. Este tóp
 </system.serviceModel>  
 ```  
   
- O <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> comportamento também pode ser usado para adicionar metadados personalizados aos metadados de ponto final retornados pelo serviço. O exemplo a seguir mostra como fazer isso.  
+ O <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> comportamento também pode ser usado para adicionar metadados personalizados aos metadados do ponto de extremidade retornados pelo serviço. O exemplo a seguir mostra como fazer isso.  
   
 ```xml  
 <behavior name="ep4Behavior">  
@@ -141,10 +141,10 @@ Existem quatro grandes grupos de configurações usadas na descoberta. Este tóp
 </behavior>  
 ```  
   
- Para obter <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> mais <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> informações e consulte [o WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).  
+ Para obter mais informações sobre o <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> e <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> consulte [visão geral da descoberta do WCF](wcf-discovery-overview.md).  
   
-## <a name="binding-element-configuration"></a>Configuração do elemento de vinculação  
- A configuração do elemento de ligação é mais interessante no lado do cliente. Você pode usar a configuração para especificar os critérios de encontrar usados para descobrir serviços a partir de um aplicativo cliente WCF.  O exemplo a seguir cria <xref:System.ServiceModel.Discovery.DiscoveryClient> uma vinculação personalizada com o canal e especifica critérios de encontrar que incluam um tipo e escopo. Além disso, especifica valores para as <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> propriedades. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>  
+## <a name="binding-element-configuration"></a>Configuração do elemento de associação  
+ A configuração do elemento de associação é mais interessante no lado do cliente. Você pode usar a configuração para especificar os critérios de localização usados para descobrir serviços de um aplicativo cliente WCF.  O exemplo a seguir cria uma associação personalizada com o <xref:System.ServiceModel.Discovery.DiscoveryClient> canal e especifica os critérios de localização que incluem um tipo e um escopo. Além disso, ele especifica valores para <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> as <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> Propriedades e.  
   
 ```xml  
 <bindings>  
@@ -172,7 +172,7 @@ Existem quatro grandes grupos de configurações usadas na descoberta. Este tóp
 </bindings>  
 ```  
   
- Esta configuração de vinculação personalizada deve ser referenciada por um ponto final do cliente:  
+ Essa configuração de associação personalizada deve ser referenciada por um ponto de extremidade do cliente:  
   
 ```xml  
 <client>  
@@ -183,10 +183,10 @@ Existem quatro grandes grupos de configurações usadas na descoberta. Este tóp
 </client>  
 ```  
   
- Para obter mais informações sobre os critérios de encontrar, consulte [Discovery Find e FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). Para obter mais informações sobre elementos de descoberta e vinculação, consulte o [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ Para obter mais informações sobre critérios de localização [, consulte descoberta e FindCriteria](discovery-find-and-findcriteria.md). Para obter mais informações sobre elementos de associação e descoberta, consulte [visão geral da descoberta do WCF](wcf-discovery-overview.md)  
   
-## <a name="standard-endpoint-configuration"></a>Configuração padrão do ponto final  
- Os pontos finais padrão são pontos finais predefinidos que têm valores padrão para uma ou mais propriedades (endereço, vinculação ou contrato) ou um ou mais valores de propriedade que não podem ser alterar. .NET 4 navios com 3 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>pontos <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>finais <xref:System.ServiceModel.Discovery.DynamicEndpoint>padrão relacionados à descoberta: , e .  O <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> é um ponto final padrão pré-configurado para operações de detecção sobre uma vinculação multicast UDP. O <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> é um ponto final padrão que está pré-configurado para enviar mensagens de anúncio por uma vinculação UDP. O <xref:System.ServiceModel.Discovery.DynamicEndpoint> é um ponto final padrão que usa a descoberta para encontrar o endereço de ponto final de um serviço descoberto dinamicamente em tempo de execução.  As vinculações padrão são `endpoint` especificadas com um elemento> <que contém atributo tipo que especificava o tipo de ponto final padrão a ser adicionado. O exemplo a seguir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> mostra <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>como adicionar a e a .  
+## <a name="standard-endpoint-configuration"></a>Configuração de ponto de extremidade padrão  
+ Os pontos de extremidade padrão são pontos de extremidade predefinidos que têm valores padrão para uma ou mais Propriedades (endereço, associação ou contrato) ou um ou mais valores de propriedade que não podem ser alterados. O .NET 4 é fornecido com 3 pontos de extremidade padrão relacionados à descoberta: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> , <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> e <xref:System.ServiceModel.Discovery.DynamicEndpoint> .  O <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> é um ponto de extremidade padrão pré-configurado para operações de descoberta em uma associação de multicast UDP. O <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> é um ponto de extremidade padrão que é pré-configurado para enviar mensagens de anúncio por uma associação UDP. O <xref:System.ServiceModel.Discovery.DynamicEndpoint> é um ponto de extremidade padrão que usa a descoberta para localizar o endereço do ponto de extremidade de um serviço descoberto dinamicamente em tempo de execução.  As associações padrão são especificadas com um `endpoint` elemento <> que contém o atributo Kind que especificou o tipo de ponto de extremidade padrão a ser adicionado. O exemplo a seguir mostra como adicionar um <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> e um <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> .  
   
 ```xml  
 <services>  
@@ -200,7 +200,7 @@ Existem quatro grandes grupos de configurações usadas na descoberta. Este tóp
 </services>  
 ```  
   
- Os pontos finais padrão são `standardEndpoints` configurados em um elemento> <. O exemplo a seguir mostra <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> como <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>configurar o e o .  
+ Os pontos de extremidade padrão são configurados em um `standardEndpoints` elemento <>. O exemplo a seguir mostra como configurar o <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> e o <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> .  
   
 ```xml  
 <standardEndpoints>  
@@ -233,7 +233,7 @@ Existem quatro grandes grupos de configurações usadas na descoberta. Este tóp
 </standardEndpoints>
 ```  
   
- Depois de adicionar a configuração padrão do ponto `endpoint` final, consulte a configuração no elemento <> para cada ponto final, conforme mostrado na amostra a seguir.  
+ Depois de adicionar a configuração de ponto de extremidade padrão, faça referência à configuração no `endpoint` elemento <> para cada ponto de extremidade, conforme mostrado no exemplo a seguir.  
   
 ```xml  
 <services>  
@@ -247,7 +247,7 @@ Existem quatro grandes grupos de configurações usadas na descoberta. Este tóp
 </services>  
 ```  
   
- Ao contrário dos outros pontos finais padrão usados <xref:System.ServiceModel.Discovery.DynamicEndpoint>na descoberta, você especifica uma vinculação e contrato para . O exemplo a seguir mostra como <xref:System.ServiceModel.Discovery.DynamicEndpoint>adicionar e configurar um .  
+ Ao contrário dos outros pontos de extremidade padrão usados na descoberta, você especifica uma associação e um contrato para o <xref:System.ServiceModel.Discovery.DynamicEndpoint> . O exemplo a seguir mostra como adicionar e configurar um <xref:System.ServiceModel.Discovery.DynamicEndpoint> .  
   
 ```xml  
 <system.serviceModel>  
@@ -276,4 +276,4 @@ Existem quatro grandes grupos de configurações usadas na descoberta. Este tóp
 </system.ServiceModel>  
 ```  
   
- Para obter mais informações sobre pontos finais padrão, consulte [Standard Endpoints](standard-endpoints.md).
+ Para obter mais informações sobre pontos de extremidade padrão, consulte [pontos de extremidade padrão](standard-endpoints.md).

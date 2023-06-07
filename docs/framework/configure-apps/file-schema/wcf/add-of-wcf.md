@@ -3,22 +3,22 @@ title: <add>do WCF
 ms.date: 03/30/2017
 ms.assetid: c196f6d7-77f6-4266-973c-305b2b4dd8a2
 ms.openlocfilehash: 0b21bdabc76ec4853a0f2664cdd3cead149417a1
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70850306"
 ---
-# <a name="add-of-wcf"></a>\<Adicionar > do WCF
-Configure um participante de rastreamento que escuta para registros de rastreamento emissores de tempo de execução diretamente e processá-los de forma que ele foi configurado. Isso inclui a escrita em uma saída específica (por exemplo, arquivo, Console, ETW), processamento/agregando os registros ou qualquer outra combinação que pode ser necessária.  
+# <a name="add-of-wcf"></a>\<add>do WCF
+Configure um participante de rastreamento que escuta para registros de rastreamento emissores de runtime diretamente e processá-los de forma que ele foi configurado. Isso inclui a escrita em uma saída específica (por exemplo, arquivo, Console, ETW), processamento/agregando os registros ou qualquer outra combinação que pode ser necessária.  
   
  Para obter mais informações sobre os participantes de rastreamento e rastreamento de fluxo de trabalho, consulte [rastreamento de fluxo de trabalho e rastreamento](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) e [participantes](../../../windows-workflow-foundation/tracking-participants.md)de rastreamento.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<acompanhamento de >** ](tracking-of-wcf.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<participantes >** ](participants-of-wcf.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Adicionar >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<participants>**](participants-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,10 +41,10 @@ Configure um participante de rastreamento que escuta para registros de rastreame
 |-------------|-----------------|  
 |name|Uma cadeia de caracteres que especifica o nome de um participante de rastreamento.|  
 |profileName|Uma cadeia de caracteres que especifica o nome do perfil de rastreamento que define os registros de rastreamento o participante de rastreamento tiver assinado.|  
-|tipo|Uma cadeia de caracteres que especifica o tipo de um participante de rastreamento.|  
+|type|Uma cadeia de caracteres que especifica o tipo de um participante de rastreamento.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -89,7 +89,7 @@ Configure um participante de rastreamento que escuta para registros de rastreame
 </configuration>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>

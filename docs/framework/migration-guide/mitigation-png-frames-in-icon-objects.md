@@ -1,13 +1,14 @@
 ---
 title: 'Mitigação: quadros PNG em objetos de ícone'
+description: Saiba como configurar o comportamento de quadros PNG em objetos de ícone se o novo comportamento incluído no .NET Framework 4,6 e posterior for indesejável.
 ms.date: 03/30/2017
 ms.assetid: ca87fefb-7144-4b4e-8832-5a939adbb4b2
-ms.openlocfilehash: 713e6a0fa615ac748134fac501e5142a65e434f1
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: b7ba2951a38ee2d1c7a9b1fc45c5a81d24986a85
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248889"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475431"
 ---
 # <a name="mitigation-png-frames-in-icon-objects"></a>Mitigação: quadros PNG em objetos de ícone
 A partir do .NET Framework 4.6, o método <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> converte com êxito ícones com quadros PNG em objetos <xref:System.Drawing.Bitmap>.  
@@ -18,7 +19,7 @@ A partir do .NET Framework 4.6, o método <xref:System.Drawing.Icon.ToBitmap%2A?
  Essa alteração afeta aplicativos que são recompilados para direcionamento ao .NET Framework 4.6 e que implementam tratamento especial para a <xref:System.ArgumentOutOfRangeException> que será gerada se um objeto <xref:System.Drawing.Icon> tiver quadros PNG. Ao executar no .NET Framework 4.6, a conversão é bem-sucedida, uma <xref:System.ArgumentOutOfRangeException> não é mais gerada e, portanto, o manipulador de exceção não é invocado.  
   
 ### <a name="mitigation"></a>Atenuação  
- Se esse comportamento for indesejável, você pode reter o comportamento anterior adicionando o seguinte elemento à seção de>de [ \<tempo de execução](../configure-apps/file-schema/runtime/runtime-element.md) do seu arquivo app.config:  
+ Se esse comportamento for indesejável, você poderá manter o comportamento anterior adicionando o seguinte elemento à [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) seção do seu arquivo de app.config:  
   
 ```xml  
 <AppContextSwitchOverrides
@@ -32,6 +33,6 @@ A partir do .NET Framework 4.6, o método <xref:System.Drawing.Icon.ToBitmap%2A?
       value="Switch.System.Drawing.DontSupportPngFramesInIcons=true;previous key=previous-value" />
 ```
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Compatibilidade de aplicativos](application-compatibility.md)

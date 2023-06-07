@@ -1,5 +1,6 @@
 ---
 title: Winres.exe (Windows Resource Localization Editor)
+description: Use Winres.exe, o editor de localização de recursos do Windows. Essa ferramenta de layout visual ajuda os especialistas de localização a localizar Windows Forms recursos de interface do usuário usados por formulários.
 ms.date: 08/15/2018
 helpviewer_keywords:
 - Winres.exe
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-ms.openlocfilehash: 2cfb2d9874b34eef78fe462e0270fd70307a9f61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8393eb44246ed1bbc0e4e6acc84ad7bd57041ec0
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715704"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87516899"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows Resource Localization Editor)
 
@@ -92,10 +93,10 @@ Você deve usar a versão de Winres.exe liberada com o .NET Framework que você 
 |-------------------|--------------------|----------------|
 |Visual Studio .NET 2002|1.0|1.0|
 |Visual Studio .NET 2003|1,1|1,1|
-|Visual Studio 2005|2,0|2,0|
+|Visual Studio 2005|2.0|2.0|
 |Visual Studio 2008|3.0 e 3.5|3.0 e 3.5|
 |Visual Studio 2010|4,0|4,0|
-|Visual Studio 2017|4.6|4.6|
+|Visual Studio 2017|4,6|4,6|
 
 > [!NOTE]
 > Embora VSFM tenha a vantagem de ser compatível com o Visual Studio, como armazena apenas valores alterados no arquivo de recurso, Winres.exe exige que os pais do arquivo de recurso atual estejam localizados no mesmo diretório. Por exemplo, a edição de `TestApp.de-DE.resources`, um arquivo de recurso em alemão na Alemanha, exige a presença do arquivo de recurso padrão, `TestApp.resx`, e possivelmente do arquivo de recurso de cultura neutra, `TestApp.de.resources`.
@@ -135,7 +136,7 @@ Você deve usar a versão de Winres.exe liberada com o .NET Framework que você 
 
    A ferramenta salva o arquivo usando a convenção de nomenclatura esperada pelo tempo de execução para arquivos de recurso localizados. Por exemplo, se você localizar `TestApp.resources` para o alemão na Alemanha, a ferramenta salvará o arquivo como `TestApp.de-DE.resources`. Se você localizar `TestApp.resx` para o alemão na Alemanha, a ferramenta salvará o arquivo como `TestApp.de-DE.resx`. Para obter mais informações sobre as convenções de nomenclatura de recurso, consulte [Empacotando e implantando recursos](../resources/packaging-and-deploying-resources-in-desktop-apps.md). Para obter uma lista dos nomes de cultura predefinidos usados pelo tempo de execução, consulte a classe <xref:System.Globalization.CultureInfo>.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.ComponentModel.LocalizableAttribute>
 - <xref:System.Globalization.CultureInfo>
@@ -143,5 +144,5 @@ Você deve usar a versão de Winres.exe liberada com o .NET Framework que você 
 - <xref:System.Resources.ResourceReader>
 - <xref:System.Resources.ResourceWriter>
 - [Ferramentas](index.md)
-- [Recursos em aplicativos de área de trabalho](../resources/index.md)
+- [Recursos em aplicativos da área de trabalho](../resources/index.md)
 - [Globalização e localização](../../standard/globalization-localization/index.md)

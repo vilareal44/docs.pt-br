@@ -1,25 +1,25 @@
 ---
-title: O argumento 'Life' não pode ser zero
+title: Argumento 'Life' não pode ser zero
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFinancial_LifeNEZero
 ms.assetid: c402da97-a2b2-4219-a83a-0cebbfdffef2
-ms.openlocfilehash: e1a739d08b89c07c33302eb3bfcdc4b1e8c6e80e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a737afb8901382d75c3858f84be1b2359338b057
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659137"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84368160"
 ---
-# <a name="argument-life-cannot-be-zero"></a>O argumento 'Life' não pode ser zero
-Um argumento para `Life`, que deve ser um `Double` que especifica a duração da vida útil do ativo, não é válido.  
+# <a name="argument-life-cannot-be-zero"></a>Argumento 'Life' não pode ser zero
+Um argumento para `Life` , que deve ser um `Double` que especifica o comprimento da vida útil do ativo, não é válido.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Verifique a ortografia de argumentos na expressão. Um nome de variável incorreta implicitamente pode criar uma variável numérica que é inicializada como zero.  
+- Verifique a ortografia dos argumentos na expressão. Um nome de variável digitado incorretamente pode criar implicitamente uma variável numérica que é inicializada como zero.  
   
-- Verifique as operações anteriores em variáveis na expressão, especialmente aquelas de outros procedimentos passadas para o procedimento como argumentos.  
+- Verifique as operações anteriores em variáveis na expressão, especialmente aquelas passadas para o procedimento como argumentos de outros procedimentos.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Passando Argumentos por Valor e por Referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Passar argumentos por valor e por referência](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

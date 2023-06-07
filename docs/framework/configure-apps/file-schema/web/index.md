@@ -10,10 +10,10 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], Web settings
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
 ms.openlocfilehash: 030841330ff37cddb0c9e3e466a55a4be098e784
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088784"
 ---
 # <a name="web-settings-schema"></a>Esquema de configurações Web
@@ -25,15 +25,15 @@ As configurações da Web estão contidas em arquivos Aspnet.config, que estão 
   
 As configurações da Web não são usadas em nenhum outro arquivo de configuração, como o arquivo machine.config, o Web.config raiz ou os arquivos Web.config do nível do aplicativo.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. web >** ](system-web-element-web-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ApplicationPool >** ](applicationpool-element-web-settings.md)
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.web>**](system-web-element-web-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<applicationPool>**](applicationpool-element-web-settings.md)
 
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<system.web>](system-web-element-web-settings.md)|Contém informações que a camada de hospedagem do ASP.NET usa.|  
 |[\<applicationPool>](applicationpool-element-web-settings.md)|Especifica as configurações de CPU e do ASP.NET em nível de execução que se aplicam ao comportamento de todo o processo gerenciado pela camada de hospedagem do ASP.NET.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Esquema de arquivos de configuração](../index.md)
+- [Esquema do arquivo de configuração](../index.md)

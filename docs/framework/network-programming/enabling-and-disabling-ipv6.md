@@ -1,13 +1,14 @@
 ---
 title: Habilitando e desabilitando o IPv6
+description: Siga estas etapas de configuração para habilitar o uso do protocolo IPv6, incluindo a modificação do arquivo de configuração para o computador ou para o aplicativo.
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-ms.openlocfilehash: 66c802dd5feb865faf7469cb7da04fbffcb4a2d6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7729647b09df20a98d5d639a641cb0a31f557330
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048571"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502607"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>Habilitando e desabilitando o IPv6
 Para usar o protocolo IPv6, verifique se você está executando uma versão do sistema operacional que dá suporte ao IPv6 e se o sistema operacional e as classes de rede estão configuradas corretamente.  
@@ -46,7 +47,7 @@ Para usar o protocolo IPv6, verifique se você está executando uma versão do s
   
 ## <a name="see-also"></a>Confira também
 
-- [Protocolo da Internet Versão 6](internet-protocol-version-6.md)
+- [Protocolo IP versão 6](internet-protocol-version-6.md)
 - [Soquetes](sockets.md)
 - [Esquema de configurações de rede](../configure-apps/file-schema/network/index.md)
-- [\<ipv6 elemento> (configurações de rede)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)
+- [\<ipv6>Elemento (configurações de rede)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)

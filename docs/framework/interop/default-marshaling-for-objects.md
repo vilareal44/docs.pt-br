@@ -1,5 +1,6 @@
 ---
 title: Marshaling padrão para objetos
+description: Entender o marshaling padrão de objetos. Examine as opções de marshaling. Realize marshaling de objetos para interfaces ou variantes, variantes para objetos e variantes de ByRef.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-ms.openlocfilehash: e0de715a3ed33eedf212fc3e0e9930c9cbaa0a38
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7b8f94f4dfd8e8b9e8e04df8de5f8266a8581a92
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618441"
 ---
 # <a name="default-marshaling-for-objects"></a>Marshaling padrão para objetos
 
@@ -116,7 +117,7 @@ struct ObjectHolder {
 
 ## <a name="marshaling-object-to-interface"></a>Realizando marshaling de objeto para interface
 
-Quando um objeto é exposto para o COM como uma interface, essa interface é a interface de classe do tipo gerenciado <xref:System.Object> (a interface **_Object**). Essa interface é digitada como **IDispatch** um IDispatch<xref:System.Runtime.InteropServices.UnmanagedType>() ou um **IUnknown** (**UnmanagedType. IUnknown**) na biblioteca de tipos resultante. Os clientes COM podem invocar dinamicamente os membros da classe gerenciada ou todos os membros implementados por suas classes derivadas por meio da interface **_Object**. O cliente também pode chamar **QueryInterface** para obter qualquer outra interface implementada explicitamente pelo tipo gerenciado.
+Quando um objeto é exposto para o COM como uma interface, essa interface é a interface de classe do tipo gerenciado <xref:System.Object> (a interface **_Object**). Essa interface é digitada como um **IDispatch** ( <xref:System.Runtime.InteropServices.UnmanagedType> ) ou um **IUnknown** (**UnmanagedType. IUnknown**) na biblioteca de tipos resultante. Os clientes COM podem invocar dinamicamente os membros da classe gerenciada ou todos os membros implementados por suas classes derivadas por meio da interface **_Object**. O cliente também pode chamar **QueryInterface** para obter qualquer outra interface implementada explicitamente pelo tipo gerenciado.
 
 ## <a name="marshaling-object-to-variant"></a>Realizando marshaling de objeto para variante
 
@@ -235,12 +236,12 @@ A tabela a seguir mostra os valores possíveis para a enumeração **TypeCode** 
 |**TypeCode.Decimal**|**VT_DECIMAL**|
 |**TypeCode.DateTime**|**VT_DATE**|
 |**TypeCode.String**|**VT_BSTR**|
-|Sem suporte.|**VT_INT**|
-|Sem suporte.|**VT_UINT**|
-|Sem suporte.|**VT_ARRAY**|
-|Sem suporte.|**VT_RECORD**|
-|Sem suporte.|**VT_CY**|
-|Sem suporte.|**VT_VARIANT**|
+|Não há suporte.|**VT_INT**|
+|Não há suporte.|**VT_UINT**|
+|Não há suporte.|**VT_ARRAY**|
+|Não há suporte.|**VT_RECORD**|
+|Não há suporte.|**VT_CY**|
+|Não há suporte.|**VT_VARIANT**|
 
 O valor da variante COM é determinado com uma chamada à interface **IConvertible.To** *Type*, em que **To** *Type* é a rotina de conversão que corresponde ao tipo retornado do **IConvertible.GetTypeCode**. Por exemplo, um objeto que retorna **TypeCode.Double** de **IConvertible.GetTypeCode** tem o marshaling realizado como uma variante COM do tipo **VT_R8**. É possível obter o valor da variante (armazenado no campo **dblVal** da variante COM) com a conversão para a interface **IConvertible** e uma chamada ao método <xref:System.IConvertible.ToDouble%2A>.
 
@@ -274,7 +275,7 @@ Ao realizar marshaling de uma variante para um objeto, o tipo e, às vezes, o va
 |**VT_ARRAY** &#124; **VT_**\*|<xref:System.Array?displayProperty=nameWithType>|
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|
 |**VT_RECORD**|Tipo de valor demarcado correspondente.|
-|**VT_VARIANT**|Sem suporte.|
+|**VT_VARIANT**|Não há suporte.|
 
 Os tipos de variante passados do COM para o código gerenciado e, em seguida, novamente para o COM podem não manter o mesmo tipo de variante durante a chamada. Considere o que acontece quando uma variante do tipo **VT_DISPATCH** é passada do COM para o .NET Framework. Durante o marshaling, a variante é convertida em um <xref:System.Object?displayProperty=nameWithType>. Se o **Object** for então passado novamente para o COM, ele terá o marshaling realizado novamente como uma variante do tipo **VT_UNKNOWN**. Não há nenhuma garantia de que a variante produzida quando um objeto tem o marshaling realizado de um código gerenciado para o COM terá o mesmo tipo de variante usado inicialmente para produzir o objeto.
 
@@ -312,14 +313,14 @@ A tabela a seguir resume as regras de propagação para variantes e objetos.
 
 |De|Para|Alterações propagadas novamente|
 |----------|--------|-----------------------------|
-|**Variante**  *v*|**Objeto**  *o*|Never|
-|**Objeto**  *o*|**Variante**  *v*|Never|
-|**Variante**   ***\****  *PV*|**Objeto de Referência**  *o*|Sempre|
-|**Objeto de referência**  *o*|**Variante**   ***\****  *PV*|Sempre|
-|**Variante**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Objeto**  *o*|Never|
+|**Variante**  *v*|**Objeto**  *o*|Nunca|
+|**Objeto**  *o*|**Variante**  *v*|Nunca|
+|**Variante** ***\**** *VP*     |**Objeto de Referência**  *o*|Sempre|
+|**Objeto de referência**  *o*|**Variante** ***\**** *VP*     |Sempre|
+|**Variante**  *v* **(VT_BYREF** *&#124;* **VT_ \* )**|**Objeto**  *o*|Nunca|
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Objeto de Referência**  *o*|Somente se o tipo não foi alterado.|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Comportamento de marshaling padrão](default-marshaling-behavior.md)
 - [Tipos blittable e não blittable](blittable-and-non-blittable-types.md)

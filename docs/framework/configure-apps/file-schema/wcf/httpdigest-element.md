@@ -3,22 +3,22 @@ title: Elemento <httpDigest>
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
 ms.openlocfilehash: 328411a429cd42927a190c6805a1f5e2b3555ea1
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77448446"
 ---
-# <a name="httpdigest-element"></a>\<elemento de > httpDigest
+# <a name="httpdigest-element"></a>Elemento \<httpDigest>
 Especifica uma credencial de tipo Digest usada ao autenticar o cliente para um serviço.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**comportamentos**](behaviors.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**comportamento**](behavior-of-endpointbehaviors.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientcredentials >** ](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<httpDigest >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<clientCredentials>**](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<httpDigest>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -27,22 +27,22 @@ Especifica uma credencial de tipo Digest usada ao autenticar o cliente para um s
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
+ As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIÇÃO|  
+|Atributo|Descrição|  
 |---------------|-----------------|  
-|`impersonationLevel`|Define a preferência de representação que o cliente se comunica com o servidor. O modo de representação que o cliente seleciona não é imposto no servidor. Os valores válidos incluem os seguintes:<br /><br /> -Identificação: o servidor pode obter a identidade e os privilégios do cliente, mas não pode representar o cliente.<br />-Impersonation: o servidor pode representar o contexto de segurança do cliente no sistema local.<br />-Delegation: o servidor pode representar o contexto de segurança do cliente em sistemas remotos.<br />-Anônimo: o servidor não pode representar ou identificar o cliente.<br />-Nenhum: um nível de representação não é atribuído.<br /><br /> O padrão é identificação. Este atributo é do tipo <xref:System.Security.Principal.TokenImpersonationLevel>.|  
+|`impersonationLevel`|Define a preferência de representação que o cliente se comunica com o servidor. O modo de representação que o cliente seleciona não é imposto no servidor. Os valores válidos incluem os seguintes:<br /><br /> -Identificação: o servidor pode obter a identidade e os privilégios do cliente, mas não pode representar o cliente.<br />-Impersonation: o servidor pode representar o contexto de segurança do cliente no sistema local.<br />-Delegation: o servidor pode representar o contexto de segurança do cliente em sistemas remotos.<br />-Anônimo: o servidor não pode representar ou identificar o cliente.<br />-Nenhum: um nível de representação não é atribuído.<br /><br /> O padrão é identificação. Esse atributo é do tipo <xref:System.Security.Principal.TokenImpersonationLevel> .|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
   
-### <a name="parent-elements"></a>Elementos Pai  
+### <a name="parent-elements"></a>Elementos pai  
   
-|Elemento|DESCRIÇÃO|  
+|Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<clientCredentials >](clientcredentials.md)|Especifica as credenciais usadas para autenticar um cliente para um serviço.|  
+|[\<clientCredentials>](clientcredentials.md)|Especifica as credenciais usadas para autenticar um cliente para um serviço.|  
   
 ## <a name="remarks"></a>Comentários  
  Um resumo é um hash determinado pelo uso de um algoritmo e um conjunto de entradas. O autenticador e o concorda autenticado sobre um algoritmo e trocam os dados usados como entradas. O cliente pode calcular o hash e enviá-lo para o serviço. O serviço também calcula o hash e compara os valores. Uma correspondência valida o cliente.  

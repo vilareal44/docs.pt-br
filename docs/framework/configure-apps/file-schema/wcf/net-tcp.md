@@ -3,18 +3,18 @@ title: <net.tcp>
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
 ms.openlocfilehash: 4a3a17655f5469fe84c0b684ebdac9848bbfba84
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70397690"
 ---
-# <a name="nettcp"></a>\<net.tcp>
+# \<net.tcp>
 Especifica as definições de configuração para a rede. O serviço de compartilhamento de porta TCP, que permite que vários processos compartilhem a mesma porta TCP.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<sistema. serviceModel. Activation >** ](system-servicemodel-activation.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> NET. TCP**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel.activation>**](system-servicemodel-activation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<net.tcp>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ Especifica as definições de configuração para a rede. O serviço de comparti
 </configuration>
 ```  
   
-## <a name="type"></a>Tipo  
+## <a name="type"></a>Type  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -63,7 +63,7 @@ Especifica as definições de configuração para a rede. O serviço de comparti
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<allowAccounts>](allowaccounts.md)|Uma coleção de elementos de configuração que contêm `securityIdentifier` um atributo para especificar contas de usuário para processos que hospedam serviços WCF e recebem acesso de conexão ao serviço de compartilhamento.|  
+|[\<allowAccounts>](allowaccounts.md)|Uma coleção de elementos de configuração que contêm um `securityIdentifier` atributo para especificar contas de usuário para processos que hospedam serviços WCF e recebem acesso de conexão ao serviço de compartilhamento.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -74,8 +74,8 @@ Especifica as definições de configuração para a rede. O serviço de comparti
 ## <a name="remarks"></a>Comentários  
  Para obter mais informações sobre compartilhamento de porta, consulte [net. TCP Port Sharing](../../../wcf/feature-details/net-tcp-port-sharing.md). Para entender como configurar o serviço de compartilhamento de porta, consulte [Configurando o serviço de compartilhamento de porta Net. TCP](../../../wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>
-- [Compartilhamento de porta do NET.TCP](../../../wcf/feature-details/net-tcp-port-sharing.md)
-- [Configurando o serviço de compartilhamento de porta NET.TCP](../../../wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
+- [Compartilhamento de porta Net.TCP](../../../wcf/feature-details/net-tcp-port-sharing.md)
+- [Configurando o serviço de compartilhamento de porta Net.TCP](../../../wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-ms.openlocfilehash: e9bf248da980705f070be878208c55b0cc6dae01
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 08f7cd9dd95a10cad0df6539ba43122495347bae
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589730"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397357"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>As expressões lambda não são válidas na primeira expressão de uma instrução 'Select Case'
-Você não pode usar uma expressão lambda para a expressão de teste em um `Select Case` instrução. As definições de expressão lambda retornam funções e a expressão de teste de um `Select Case` instrução deve ser um tipo de dados elementar.  
+Você não pode usar uma expressão lambda para a expressão de teste em uma `Select Case` instrução. As definições de expressão lambda retornam funções e a expressão de teste de uma `Select Case` instrução deve ser um tipo de dados elementar.  
   
- O código a seguir faz com que esse erro:  
+ O código a seguir causa esse erro:  
   
 ```vb  
 ' Select Case (Function(arg) arg Is Nothing)  
@@ -29,7 +29,7 @@ Você não pode usar uma expressão lambda para a expressão de teste em um `Sel
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Examine seu código para determinar se uma construção condicional diferente, como um `If...Then...Else` instrução, funciona para você.  
+- Examine seu código para determinar se uma construção condicional diferente, como uma `If...Then...Else` instrução, funcionaria para você.  
   
 - Você pode ter pretendido chamar a função, conforme mostrado no código a seguir:  
   
@@ -40,8 +40,8 @@ Select Case ((Function(arg? As Integer) arg Is Nothing)(num))
 End Select  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Expressões Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [Instrução If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [Instrução Select...Case](../../../visual-basic/language-reference/statements/select-case-statement.md)
+- [Expressões lambda](../../programming-guide/language-features/procedures/lambda-expressions.md)
+- [Instrução If...Then...Else](../statements/if-then-else-statement.md)
+- [Instrução Select...Case](../statements/select-case-statement.md)

@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30594
 ms.assetid: 5b9fceb4-ab11-41bb-ad3b-6f1a9da8ae7e
-ms.openlocfilehash: d6067c75835ecd14f1dd796c20ae3f29f456e541
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fc163c1069aa6f41766664e0fa5f5a9c34a1f73d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642950"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409563"
 ---
 # <a name="events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a>Eventos de variáveis WithEvents compartilhadas não podem ser identificados por métodos não compartilhados
-Uma variável declarada com o `Shared` modificador é uma variável compartilhada. Uma variável compartilhada identifica exatamente um local de armazenamento. Uma variável declarada com o `WithEvents` modificador declara que o tipo ao qual pertence a variável manipula o conjunto de eventos que aciona a variável. Quando um valor é atribuído à variável, a propriedade criada pela `WithEvents` declaração desengancha qualquer manipulador de eventos existente e conecta-se o novo manipulador de eventos por meio de `Add` método.  
+Uma variável declarada com o `Shared` modificador é uma variável compartilhada. Uma variável compartilhada identifica exatamente um local de armazenamento. Uma variável declarada com o `WithEvents` modificador afirma que o tipo ao qual a variável pertence trata o conjunto de eventos que a variável gera. Quando um valor é atribuído à variável, a propriedade criada pela `WithEvents` declaração desvincula qualquer manipulador de eventos existente e conecta o novo manipulador de eventos por meio do `Add` método.  
   
  **ID do erro:** BC30594  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Declare o manipulador de eventos `Shared`.  
+- Declare seu manipulador de eventos `Shared` .  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Compartilhado](../../../visual-basic/language-reference/modifiers/shared.md)
-- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
+- [Compartilhado](../modifiers/shared.md)
+- [WithEvents](../modifiers/withevents.md)

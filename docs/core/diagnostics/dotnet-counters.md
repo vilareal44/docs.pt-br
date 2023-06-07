@@ -1,21 +1,21 @@
 ---
-title: contadores dotnet - .NET Core
-description: Saiba como instalar e usar a ferramenta de linha de comando dotnet-counter.
+title: dotnet-contadores-.NET Core
+description: Saiba como instalar e usar a ferramenta de linha de comando dotnet-Counter.
 ms.date: 02/26/2020
-ms.openlocfilehash: dc95297478784ca06fe442a939f8489a40b29da7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a4fd92540dbc16173dfa3a10ff9dfaa1f31f7d0
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147172"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062893"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
-**Este artigo se aplica a:** ✔️ .NET Core 3.0 SDK e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .net Core 3,0 e versões posteriores
 
-## <a name="install-dotnet-counters"></a>Instale contadores de dotnet
+## <a name="install-dotnet-counters"></a>Instalar dotnet-contadores
 
-Para instalar a versão `dotnet-counters` de versão mais recente do [pacote NuGet,](https://www.nuget.org/packages/dotnet-counters)use o comando [dotnet tool install:](../tools/dotnet-tool-install.md)
+Para instalar a versão de lançamento mais recente do `dotnet-counters` [pacote NuGet](https://www.nuget.org/packages/dotnet-counters), use o comando de [instalação da ferramenta dotnet](../tools/dotnet-tool-install.md) :
 
 ```dotnetcli
 dotnet tool install --global dotnet-counters
@@ -29,30 +29,30 @@ dotnet-counters [-h|--help] [--version] <command>
 
 ## <a name="description"></a>Descrição
 
-`dotnet-counters`é uma ferramenta de monitoramento de desempenho para monitoramento de saúde ad-hoc e investigação de desempenho de primeiro nível. Ele pode observar valores de <xref:System.Diagnostics.Tracing.EventCounter> contador de desempenho que são publicados através da API. Por exemplo, você pode monitorar rapidamente coisas como o uso da CPU ou a taxa de exceções que estão sendo `PerfView` lançadas em seu aplicativo .NET Core para ver se há algo suspeito antes de mergulhar em uma investigação de desempenho mais séria usando ou `dotnet-trace`.
+`dotnet-counters`é uma ferramenta de monitoramento de desempenho para monitoramento de integridade ad hoc e investigação de desempenho de primeiro nível. Ele pode observar os valores do contador de desempenho que são publicados por meio da <xref:System.Diagnostics.Tracing.EventCounter> API. Por exemplo, você pode monitorar rapidamente coisas como o uso da CPU ou a taxa de exceções que estão sendo geradas em seu aplicativo .NET Core para ver se há algo suspeito antes de mergulhar em uma investigação de desempenho mais séria usando o `PerfView` ou o `dotnet-trace` .
 
 ## <a name="options"></a>Opções
 
 - **`--version`**
 
-  Exibe a versão do utilitário dotnet-counters.
+  Exibe a versão do utilitário dotnet-Counters.
 
 - **`-h|--help`**
 
-  Mostra ajuda na linha de comando.
+  Mostra a ajuda da linha de comando.
 
 ## <a name="commands"></a>Comandos
 
 | Comando                                             |
-| --------------------------------------------------- |
-| [dotnet-contadores coletar](#dotnet-counters-collect) |
-| [lista dotnet-contadores](#dotnet-counters-list)       |
-| [monitor dotnet-contadores](#dotnet-counters-monitor) |
-| [dotnet-counters ps](#dotnet-counters-ps) |
+|-----------------------------------------------------|
+| [dotnet – coleta de contadores](#dotnet-counters-collect) |
+| [dotnet – lista de contadores](#dotnet-counters-list)       |
+| [dotnet – monitor de contadores](#dotnet-counters-monitor) |
+| [dotnet-contadores PS](#dotnet-counters-ps)           |
 
-## <a name="dotnet-counters-collect"></a>dotnet-contadores coletar
+## <a name="dotnet-counters-collect"></a>dotnet – coleta de contadores
 
-Coletar periodicamente os valores do contador selecionados e exportá-los para um formato de arquivo especificado para pós-processamento.
+Coletar periodicamente os valores de contador selecionados e exportá-los para um formato de arquivo especificado para o pós-processamento.
 
 ### <a name="synopsis"></a>Sinopse
 
@@ -64,19 +64,19 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
 - **`-p|--process-id <PID>`**
 
-  A id do processo a ser monitorada.
+  A ID do processo a ser monitorado.
 
 - **`--refresh-interval <SECONDS>`**
 
-  O número de segundos para atrasar entre a atualização dos contadores exibidos
+  O número de segundos de atraso entre a atualização dos contadores exibidos
 
 - **`counter_list <COUNTERS>`**
 
-  Uma lista de contadores separados no espaço. Os contadores podem `provider_name[:counter_name]`ser especificados . Se `provider_name` o for usado `counter_name`sem uma qualificação, todos os contadores serão mostrados. Para descobrir nomes de provedores e contadores, use o comando [dotnet-counters list.](#dotnet-counters-list)
+  Uma lista de contadores separados por espaços. Os contadores podem ser especificados `provider_name[:counter_name]` . Se o `provider_name` for usado sem uma qualificação `counter_name` , todos os contadores serão mostrados. Para descobrir os nomes de provedor e contador, use o comando [dotnet-Counters List](#dotnet-counters-list) .
 
 - **`--format <csv|json>`**
 
-  TO formato a ser exportado. Atualmente disponível: csv, json.
+  O formato a ser exportado. Atualmente disponível: CSV, JSON.
 
 - **`-o|--output <output>`**
 
@@ -84,7 +84,7 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
 ### <a name="examples"></a>Exemplos
 
-- Coletar todos os contadores em um intervalo de atualização de 3 segundos e gerar um csv como saída:
+- Colete todos os contadores em um intervalo de atualização de 3 segundos e gere um CSV como saída:
 
   ```console
   > dotnet-counters collect --process-id 1902 --refresh-interval 3 --format csv
@@ -93,7 +93,7 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
   Starting a counter session. Press Q to quit.
   ```
 
-## <a name="dotnet-counters-list"></a>lista dotnet-contadores
+## <a name="dotnet-counters-list"></a>dotnet – lista de contadores
 
 Exibe uma lista de nomes e descrições de contadores, agrupados por provedor.
 
@@ -107,21 +107,42 @@ dotnet-counters list [-h|--help]
 
 ```console
 > dotnet-counters list
+Showing well-known counters only. Specific processes may support additional counters.
 
-    Showing well-known counters only. Specific processes may support additional counters.
-    System.Runtime
-        cpu-usage                    Amount of time the process has utilized the CPU (ms)
-        working-set                  Amount of working set used by the process (MB)
-        gc-heap-size                 Total heap size reported by the GC (MB)
-        gen-0-gc-count               Number of Gen 0 GCs / sec
-        gen-1-gc-count               Number of Gen 1 GCs / sec
-        gen-2-gc-count               Number of Gen 2 GCs / sec
-        exception-count              Number of Exceptions / sec
+System.Runtime
+    cpu-usage                                    Amount of time the process has utilized the CPU (ms)
+    working-set                                  Amount of working set used by the process (MB)
+    gc-heap-size                                 Total heap size reported by the GC (MB)
+    gen-0-gc-count                               Number of Gen 0 GCs / min
+    gen-1-gc-count                               Number of Gen 1 GCs / min
+    gen-2-gc-count                               Number of Gen 2 GCs / min
+    time-in-gc                                   % time in GC since the last GC
+    gen-0-size                                   Gen 0 Heap Size
+    gen-1-size                                   Gen 1 Heap Size
+    gen-2-size                                   Gen 2 Heap Size
+    loh-size                                     LOH Heap Size
+    alloc-rate                                   Allocation Rate
+    assembly-count                               Number of Assemblies Loaded
+    exception-count                              Number of Exceptions / sec
+    threadpool-thread-count                      Number of ThreadPool Threads
+    monitor-lock-contention-count                Monitor Lock Contention Count
+    threadpool-queue-length                      ThreadPool Work Items Queue Length
+    threadpool-completed-items-count             ThreadPool Completed Work Items Count
+    active-timer-count                           Active Timers Count
+
+Microsoft.AspNetCore.Hosting
+    requests-per-second                  Request rate
+    total-requests                       Total number of requests
+    current-requests                     Current number of requests
+    failed-requests                      Failed number of requests
 ```
 
-## <a name="dotnet-counters-monitor"></a>monitor dotnet-contadores
+> [!NOTE]
+> Os `Microsoft.AspNetCore.Hosting` contadores são exibidos quando há processos identificados que dão suporte a esses contadores, por exemplo, quando um aplicativo ASP.NET Core está em execução no computador host.
 
-Exibe valores de atualização periódica dos contadores selecionados.
+## <a name="dotnet-counters-monitor"></a>dotnet – monitor de contadores
+
+Exibe a atualização periódica de valores dos contadores selecionados.
 
 ### <a name="synopsis"></a>Sinopse
 
@@ -133,19 +154,19 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
 - **`-p|--process-id <PID>`**
 
-  A id do processo a ser monitorada.
+  A ID do processo a ser monitorado.
 
 - **`--refresh-interval <SECONDS>`**
 
-  O número de segundos para atrasar entre a atualização dos contadores exibidos
+  O número de segundos de atraso entre a atualização dos contadores exibidos
 
 - **`counter_list <COUNTERS>`**
 
-  Uma lista de contadores separados no espaço. Os contadores podem `provider_name[:counter_name]`ser especificados . Se `provider_name` o for usado `counter_name`sem uma qualificação, todos os contadores serão mostrados. Para descobrir nomes de provedores e contadores, use o comando [dotnet-counters list.](#dotnet-counters-list)
+  Uma lista de contadores separados por espaços. Os contadores podem ser especificados `provider_name[:counter_name]` . Se o `provider_name` for usado sem uma qualificação `counter_name` , todos os contadores serão mostrados. Para descobrir os nomes de provedor e contador, use o comando [dotnet-Counters List](#dotnet-counters-list) .
 
 ### <a name="examples"></a>Exemplos
 
-- Monitore todos `System.Runtime` os contadores a partir de um intervalo de atualização de 3 segundos:
+- Monitorar todos os contadores de `System.Runtime` em um intervalo de atualização de 3 segundos:
 
   ```console
   > dotnet-counters monitor --process-id 1902  --refresh-interval 3 System.Runtime
@@ -161,7 +182,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       Number of Exceptions / sec                     4
   ```
 
-- Monitore apenas o uso `System.Runtime`da CPU e o tamanho do heap GC de:
+- Monitorar apenas o uso da CPU e o tamanho do heap do GC de `System.Runtime` :
 
   ```console
   > dotnet-counters monitor --process-id 1902 System.Runtime[cpu-usage,gc-heap-size]
@@ -172,7 +193,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       GC Heap Size (MB)                            811
   ```
 
-- Monitore `EventCounter` os valores a partir de definidos pelo `EventSource`usuário . Para obter mais informações, consulte [Tutorial: Como medir o desempenho para eventos muito frequentes usando EventCounters](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).
+- Monitorar `EventCounter` valores de definidos pelo usuário `EventSource` . Para obter mais informações, consulte [tutorial: medir o desempenho usando o EventCounters no .NET Core](event-counter-perf.md).
 
   ```console
   > dotnet-counters monitor --process-id 1902 Samples-EventCounterDemos-Minimal
@@ -181,9 +202,9 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       request                                      100
   ```
   
-## <a name="dotnet-counters-ps"></a>dotnet-counters ps
+## <a name="dotnet-counters-ps"></a>dotnet-contadores PS
 
-Exibir uma lista de processos dotnet que podem ser monitorados.
+Exibe uma lista de processos dotnet que podem ser monitorados.
 
 ### <a name="synopsis"></a>Sinopse
 

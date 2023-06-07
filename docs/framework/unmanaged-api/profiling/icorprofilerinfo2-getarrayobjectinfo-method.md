@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bda75017-739f-4ce5-9000-f3b526e8473c
 topic_type:
 - apiref
-ms.openlocfilehash: 839cd574e5352b74b47cd6242d5706bc6405d439
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 368b8f270797beb525e0745a29990667913f4071
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76862900"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84497339"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>Método ICorProfilerInfo2::GetArrayObjectInfo
 Obtém informações detalhadas sobre um objeto de matriz.  
@@ -50,21 +50,21 @@ HRESULT GetArrayObjectInfo(
  fora Uma matriz que contém inteiros, cada um representando o limite inferior de uma dimensão da matriz.  
   
  `ppData`  
- fora Um ponteiro para o endereço do buffer bruto para a matriz, que é disposta de acordo com a C++ Convenção.  
+ fora Um ponteiro para o endereço do buffer bruto para a matriz, que é disposta de acordo com a Convenção de C++.  
   
 ## <a name="remarks"></a>Comentários  
  Os `pDimensionSizes` e `pDimensionLowerBounds` são matrizes paralelas, portanto, os elementos localizados no mesmo índice em cada matriz são características da mesma entidade.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)
 - [Interface ICorProfilerInfo2](icorprofilerinfo2-interface.md)

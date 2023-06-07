@@ -1,15 +1,16 @@
 ---
-title: Como usar árvores de expressão para construir consultas dinâmicas (C#)
+title: Como usar árvores de expressão para criar consultas dinâmicas (C#)
+description: Saiba como usar árvores de expressão para criar consultas dinâmicas de LINQ. Essas consultas são úteis quando as especificidades de uma consulta são desconhecidas no momento da compilação.
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 6114ec13dd43a7df146b87dda00fba06d6eb870c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: edcef4068c19ba8e789683cf6ba4d5ef2477e0d8
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635893"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105595"
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Como usar árvores de expressão para construir consultas dinâmicas (C#)
+# <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Como usar árvores de expressão para criar consultas dinâmicas (C#)
 No LINQ, as árvores de expressão são usadas para representar consultas estruturadas que se destinam a fontes de dados que implementam <xref:System.Linq.IQueryable%601>. Por exemplo, o provedor LINQ implementa a interface <xref:System.Linq.IQueryable%601> para consultar repositórios de dados relacionais. O compilador do C# compila as consultas que se destinam a essas fontes de dados, no código que cria uma árvore de expressão em runtime. O provedor de consultas pode percorrer a estrutura de dados da árvore de expressão e convertê-la em uma linguagem de consulta apropriada para a fonte de dados.  
   
  As árvores de expressão também são usadas no LINQ para representar expressões lambda que são atribuídas a variáveis do tipo <xref:System.Linq.Expressions.Expression%601>.  

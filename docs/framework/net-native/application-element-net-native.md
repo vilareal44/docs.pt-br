@@ -3,17 +3,17 @@ title: <Application> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 ms.openlocfilehash: e26826b3d8674b536ab0897182da58bc02cfd00b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128526"
 ---
-# <a name="application-element-net-native"></a>Elemento de > de aplicativo \<(.NET Native)
+# <a name="application-element-net-native"></a>\<Application> (.NET Nativo)
 Serve como um contêiner para tipos em todo o aplicativo e membros de tipo cujos metadados estão disponível para reflexão no runtime e aplica-se à política de reflexão no runtime a todos os elementos de programa em um aplicativo.  
   
  Elemento \<Directives>  
-Elemento \<Application> (rd.xml)  
+\<Application>Elemento (RD. xml)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +52,7 @@ Elemento \<Application> (rd.xml)
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*policy_setting*|A configuração para essa política para ser aplicada aos tipos no aplicativo. Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md).|  
+|*policy_setting*|A configuração para essa política para ser aplicada aos tipos no aplicativo. Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -61,7 +61,7 @@ Elemento \<Application> (rd.xml)
 |[\<Assembly>](assembly-element-net-native.md)|Aplica a política a todos os tipos em um assembly específico.|  
 |[\<Namespace>](namespace-element-net-native.md)|Aplica a política a todos os tipos em um namespace específico.|  
 |[\<Type>](type-element-net-native.md)|Aplica a política a um tipo específico, como uma classe ou estrutura.|  
-|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica a política a um tipo genérico construído. Por exemplo, um elemento [\<TypeInstantiation>](typeinstantiation-element-net-native.md) pode ser usado para definir a política para um tipo `List<String>`.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica a política a um tipo genérico construído. Por exemplo, um [\<TypeInstantiation>](typeinstantiation-element-net-native.md) elemento poderia ser usado para definir a política para um `List<String>` tipo.|  
 |[\<Method>](method-element-net-native.md)|Aplica a política a um método em um tipo específico.|  
 |[\<MethodInstantiation>](methodinstantiation-element-net-native.md)|Aplica a política a um tipo genérico construído.|  
 |[\<Property>](property-element-net-native.md)|Aplica a política a uma propriedade em um tipo específico.|  
@@ -75,17 +75,17 @@ Elemento \<Application> (rd.xml)
 |[\<Directives>](directives-element-net-native.md)|O elemento raiz de um arquivo de diretivas de runtime.|  
   
 ## <a name="remarks"></a>Comentários  
- O elemento [\<Directives>](directives-element-net-native.md) pode conter zero ou um elemento `<Application>`. Vários elementos `<Application>` em um mesmo arquivo de diretivas de reflexão não são suportados.  
+ O [\<Directives>](directives-element-net-native.md) elemento pode conter zero ou um `<Application>` elemento. Vários elementos `<Application>` em um mesmo arquivo de diretivas de reflexão não são suportados.  
   
  O elemento `<Application>` pode ser usado em uma de duas formas:  
   
-- Como um contêiner para definir os elementos do programa cujos metadados são necessários no tempo de execução. Nesse caso, o elemento `<Application>` não precisa ter todos os atributos. No tempo de compilação, as ferramentas do compilador pesquisam todas as bibliotecas, incluindo bibliotecas principais do .NET Framework, buscando elementos do programa identificados por elementos filhos do elemento `<Application>`. Por outro lado, as ferramentas do compilador pesquisam somente a biblioteca designada pelo elemento [\<Library>](library-element-net-native.md) em busca de elementos do programa identificados pelos elementos filhos de [\<Library>](library-element-net-native.md).  
+- Como um contêiner para definir os elementos do programa cujos metadados são necessários no tempo de execução. Nesse caso, o elemento `<Application>` não precisa ter todos os atributos. No tempo de compilação, as ferramentas do compilador pesquisam todas as bibliotecas, incluindo bibliotecas principais do .NET Framework, buscando elementos do programa identificados por elementos filhos do elemento `<Application>`. Por outro lado, as ferramentas de compilador pesquisam apenas a biblioteca designada pelo [\<Library>](library-element-net-native.md) elemento para elementos de programa identificados pelos elementos filho de [\<Library>](library-element-net-native.md) .  
   
-- Como um elemento que define a política de todo o aplicativo para reflexão, serialização e interoperabilidade. Os atributos do elemento `<Application>` definem a política de todo o aplicativo, que pode ser substituída pelos elementos filhos definidos pelo elemento `<Application>` ou [\<Library>](library-element-net-native.md).  
+- Como um elemento que define a política de todo o aplicativo para reflexão, serialização e interoperabilidade. Os atributos do `<Application>` elemento definem a política de todo o aplicativo, que pode ser substituída pelos elementos filho definidos `<Application>` pelo [\<Library>](library-element-net-native.md) elemento ou.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Elemento de > de biblioteca de \<](library-element-net-native.md)
-- [Elemento de > de diretivas de \<](directives-element-net-native.md)
-- [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [\<Library>Elementos](library-element-net-native.md)
+- [\<Directives>Elementos](directives-element-net-native.md)
+- [Elementos da diretiva de runtime](runtime-directive-elements.md)
+- [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

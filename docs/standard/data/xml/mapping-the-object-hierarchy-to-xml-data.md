@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-ms.openlocfilehash: 4ad505749625e22a09406549329179990b81c140
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 8507c4b323f97279c3054b76aaf8d52f14f0d4ad
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794384"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289129"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>Mapeando a hierarquia do objeto para dados XML
 Quando um documento XML está na memória, a representação conceitual é uma árvore. Para programar, você tem uma hierarquia de objeto para acessar os nós da árvore. O exemplo a seguir mostra como o conteúdo XML torna-se nós.  
@@ -30,7 +30,7 @@ Quando um documento XML está na memória, a representação conceitual é uma �
   
  A entrada é representada na memória como a árvore de nó a seguir com a propriedade de tipo de nó atribuída:  
   
- ![árvore do nó de exemplo](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
+ ![árvore do nó de exemplo](media/simple-xml.gif "Simple_XML")  
 Representação da árvore do nó do livro e do título  
   
  O elemento `book` torna-se um objeto **XmlElement**, o elemento a seguir, `title`, também se torna **XmlElement**, enquanto o conteúdo do elemento se torna um objeto **XmlText**. Ao analisar os métodos e as propriedades **XmlElement**, eles são diferentes dos métodos e das propriedades disponíveis em um objeto **XmlText**. Portanto, saber qual tipo de nó a marcação XML se torna é vital, porque o tipo de nó determina as ações que podem ser executadas.  
@@ -187,8 +187,8 @@ public class Sample
 |Entrada|Saída|Teste de tipo de nó|  
 |-----------|------------|--------------------|  
 |\<?xml version="1.0"?>|\<?xml version='1.0'?>|XmlNodeType.XmlDeclaration|  
-|\<!--Este é um documento XML de exemplo -->|\<!--Este é um documento XML de exemplo -->|XmlNodeType.Comment|  
-|\<!DOCTYPE Items [\<!ENTITY number "123">]>|\<!DOCTYPE Items [\<!ENTITY number "123">]|XmlNodeType.DocumentType|  
+|\<!-- This is a sample XML document -->|\<!--This is a sample XML document -->|XmlNodeType.Comment|  
+|\<!DOCTYPE Items [\<!ENTITY number "123">] >|\<!DOCTYPE Items [\<!ENTITY number "123">]|XmlNodeType.DocumentType|  
 |\<Items>|\<Items>|XmlNodeType.Element|  
 |\<Item>|\<Item>|XmlNodeType.Element|  
 |Teste com uma entidade: &number;|Teste com uma entidade: 123|XmlNodeType.Text|  
@@ -200,13 +200,13 @@ public class Sample
 |\</Item>|\</Item>|XmlNodeType.EndElement|  
 |\<Item>|\<Item>|XmlNodeType.Element|  
 |teste com uma seção CDATA|teste com uma seção CDATA|XmlTest.Text|  
-|<![CDATA[\<456>]]\>|<![CDATA[\<456>]]\>|XmlTest.CDATA|  
+|<! [CDATA [ \<456> ]]\>|<! [CDATA [ \<456> ]]\>|XmlTest.CDATA|  
 |def|def|XmlNodeType.Text|  
 |\</Item>|\</Item>|XmlNodeType.EndElement|  
 |\<Item>|\<Item>|XmlNodeType.Element|  
 |Teste com uma entidade de caracteres: &\#65;|Teste com uma entidade de caracteres: A|XmlNodeType.Text|  
 |\</Item>|\</Item>|XmlNodeType.EndElement|  
-|\<!-- Quatorze caracteres nesse elemento. -->|\<--Quatorze caracteres nesse elemento. -->|XmlNodeType.Comment|  
+|\<!-- Fourteen chars in this element.-->|\<--Fourteen chars in this element.-->|XmlNodeType.Comment|  
 |\<Item>|\<Item>|XmlNodeType.Element|  
 |1234567890ABCD|1234567890ABCD|XmlNodeType.Text|  
 |\</Item>|\</Item>|XmlNodeType.EndElement|  
@@ -214,10 +214,10 @@ public class Sample
   
  Você deve saber qual tipo de nó é atribuído, porque o tipo de nó controla quais tipos de ações são válidos e qual tipo de propriedades você pode definir e recuperar.  
   
- A criação do nó para o espaço em branco é controlada quando os dados são carregados no DOM pelo sinalizador **PreserveWhitespace**. Para saber mais, confira [Espaço em branco e tratamento de espaço em branco significativo ao carregar o DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).  
+ A criação do nó para o espaço em branco é controlada quando os dados são carregados no DOM pelo sinalizador **PreserveWhitespace**. Para saber mais, confira [Espaço em branco e tratamento de espaço em branco significativo ao carregar o DOM](white-space-and-significant-white-space-handling-when-loading-the-dom.md).  
   
- Para adicionar novos nós para o DOM, consulte [Inserir nós em um documento XML](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md). Para remover os nós do DOM, consulte [Remover nós, conteúdo e valores de um documento XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md). Para modificar o conteúdo de nós no DOM, consulte [Modificar nós, conteúdo e valores em um documento XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
+ Para adicionar novos nós para o DOM, consulte [Inserir nós em um documento XML](inserting-nodes-into-an-xml-document.md). Para remover os nós do DOM, consulte [Remover nós, conteúdo e valores de um documento XML](removing-nodes-content-and-values-from-an-xml-document.md). Para modificar o conteúdo de nós no DOM, consulte [Modificar nós, conteúdo e valores em um documento XML](modifying-nodes-content-and-values-in-an-xml-document.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

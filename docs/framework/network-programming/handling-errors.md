@@ -1,5 +1,6 @@
 ---
 title: Tratando erros
+description: Saiba mais sobre as exceções específicas da Web e do sistema lançadas por WebRequest e WebResponse. Use a propriedade status para entender e resolver o problema.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: f5be5d8e14d7aa2d98009fc10c9cce314e745ed1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 786b2bd8bc4d1b394bcfe920053b2f4f55d1cdea
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180868"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502568"
 ---
 # <a name="handling-errors"></a>Tratando erros
 

@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 4bae06f7-94d7-4ba8-b250-648b2da78674
 topic_type:
 - apiref
-ms.openlocfilehash: 891cca8ac47a3f8391bd7ab7b27b35d6318bbe0a
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 6a53b9b1b061c2ca07a469abc78c07ed9e710069
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866280"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500085"
 ---
 # <a name="icorprofilercallback-interface"></a>Interface ICorProfilerCallback
 Fornece métodos que são usados pelo Common Language Runtime (CLR) para notificar um criador de perfil de código quando os eventos para os quais o criador de perfil assinou ocorreram.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
@@ -42,8 +42,8 @@ Fornece métodos que são usados pelo Common Language Runtime (CLR) para notific
 |[Método ClassUnloadStarted](icorprofilercallback-classunloadstarted-method.md)|Notifica o criador de perfil de que uma classe está sendo descarregada.|  
 |[Método COMClassicVTableCreated](icorprofilercallback-comclassicvtablecreated-method.md)|Notifica o criador de perfil de que um RCW (Runtime Callable Wrapper) para o IID e a classe especificados foram criados.|  
 |[Método COMClassicVTableDestroyed](icorprofilercallback-comclassicvtabledestroyed-method.md)|Notifica o criador de perfil de que um RCW está sendo destruído.|  
-|[Método ExceptionCatcherEnter](icorprofilercallback-exceptioncatcherenter-method.md)|Notifica o criador de perfil que o controle está sendo passado para o bloco de `catch` apropriado.|  
-|[Método ExceptionCatcherLeave](icorprofilercallback-exceptioncatcherleave-method.md)|Notifica o criador de perfil que o controle está sendo passado do bloco de `catch` apropriado.|  
+|[Método ExceptionCatcherEnter](icorprofilercallback-exceptioncatcherenter-method.md)|Notifica o criador de perfil que o controle está sendo passado para o `catch` bloco apropriado.|  
+|[Método ExceptionCatcherLeave](icorprofilercallback-exceptioncatcherleave-method.md)|Notifica o criador de perfil que o controle está sendo passado para fora do `catch` bloco apropriado.|  
 |[Método ExceptionCLRCatcherExecute](icorprofilercallback-exceptionclrcatcherexecute-method.md)|Obsoleto no .NET Framework versão 2,0.|  
 |[Método ExceptionCLRCatcherFound](icorprofilercallback-exceptionclrcatcherfound-method.md)|Obsoleto no .NET Framework 2,0.|  
 |[Método ExceptionOSHandlerEnter](icorprofilercallback-exceptionoshandlerenter-method.md)|Não implementado. Um criador de perfil que precisa de informações de exceção não gerenciadas deve obter essas informações por meio de outros meios.|  
@@ -54,8 +54,8 @@ Fornece métodos que são usados pelo Common Language Runtime (CLR) para notific
 |[Método ExceptionSearchFunctionEnter](icorprofilercallback-exceptionsearchfunctionenter-method.md)|Notifica o criador de perfil de que a fase de pesquisa do tratamento de exceções inseriu uma função.|  
 |[Método ExceptionSearchFunctionLeave](icorprofilercallback-exceptionsearchfunctionleave-method.md)|Notifica o criador de perfil de que a fase de pesquisa do tratamento de exceções concluiu a pesquisa de uma função.|  
 |[Método ExceptionThrown](icorprofilercallback-exceptionthrown-method.md)|Notifica o criador de perfil de que uma exceção foi lançada.|  
-|[Método ExceptionUnwindFinallyEnter](icorprofilercallback-exceptionunwindfinallyenter-method.md)|Notifica o criador de perfil de que a fase de desenrolamento da manipulação de exceção está inserindo uma cláusula `finally` contida na função especificada.|  
-|[Método ExceptionUnwindFinallyLeave](icorprofilercallback-exceptionunwindfinallyleave-method.md)|Notifica o criador de perfil de que a fase de desenrolamento da manipulação de exceção saiu de uma cláusula de `finally`.|  
+|[Método ExceptionUnwindFinallyEnter](icorprofilercallback-exceptionunwindfinallyenter-method.md)|Notifica o criador de perfil de que a fase de desenrolamento da manipulação de exceção está inserindo uma `finally` cláusula contida na função especificada.|  
+|[Método ExceptionUnwindFinallyLeave](icorprofilercallback-exceptionunwindfinallyleave-method.md)|Notifica o criador de perfil de que a fase de desenrolamento da manipulação de exceção saiu de uma `finally` cláusula.|  
 |[Método ExceptionUnwindFunctionEnter](icorprofilercallback-exceptionunwindfunctionenter-method.md)|Notifica o criador de perfil de que a fase de desenrolar da manipulação de exceções inseriu uma função.|  
 |[Método ExceptionUnwindFunctionLeave](icorprofilercallback-exceptionunwindfunctionleave-method.md)|Notifica o criador de perfil de que a fase de desenrolamento da manipulação de exceções concluiu o desenrolamento de uma função.|  
 |[Método FunctionUnloadStarted](icorprofilercallback-functionunloadstarted-method.md)|Notifica o criador de perfil de que o tempo de execução começou a descarregar uma função.|  
@@ -99,27 +99,27 @@ Fornece métodos que são usados pelo Common Language Runtime (CLR) para notific
 |[Método UnmanagedToManagedTransition](icorprofilercallback-unmanagedtomanagedtransition-method.md)|Notifica o criador de perfil de que uma transição de código não gerenciado para código gerenciado ocorreu.|  
   
 ## <a name="remarks"></a>Comentários  
- O CLR chama um método na interface `ICorProfilerCallback` (ou [ICorProfilerCallback2](icorprofilercallback2-interface.md)) para notificar o criador de perfil quando um evento, ao qual o criador de perfil assinou, ocorre. Essa é a interface de retorno de chamada principal por meio da qual o CLR se comunica com o criador de perfil de código.  
+ O CLR chama um método na `ICorProfilerCallback` interface (ou [ICorProfilerCallback2](icorprofilercallback2-interface.md)) para notificar o criador de perfil quando um evento, ao qual o criador de perfil assinou, ocorre. Essa é a interface de retorno de chamada principal por meio da qual o CLR se comunica com o criador de perfil de código.  
   
- Um criador de perfil de código deve implementar os métodos da interface `ICorProfilerCallback`. Para o .NET Framework versão 2,0 ou posterior, o criador de perfil também deve implementar os métodos de `ICorProfilerCallback2`. Cada implementação de método deve retornar um HRESULT que tenha um valor de S_OK em caso de êxito ou E_FAIL em caso de falha. Atualmente, o CLR ignora o HRESULT que é retornado por cada retorno de chamada, exceto [ICorProfilerCallback:: Objectreferenciations](icorprofilercallback-objectreferences-method.md).  
+ Um criador de perfil de código deve implementar os métodos da `ICorProfilerCallback` interface. Para o .NET Framework versão 2,0 ou posterior, o criador de perfil também deve implementar os `ICorProfilerCallback2` métodos. Cada implementação de método deve retornar um HRESULT que tenha um valor de S_OK em caso de êxito ou E_FAIL em caso de falha. Atualmente, o CLR ignora o HRESULT que é retornado por cada retorno de chamada, exceto [ICorProfilerCallback:: Objectreferenciations](icorprofilercallback-objectreferences-method.md).  
   
- No registro do Microsoft Windows, um criador de perfil de código deve registrar seu objeto de Component Object Model (COM) que implementa as interfaces `ICorProfilerCallback` e `ICorProfilerCallback2`. Um criador de perfil de código assina os eventos para os quais deseja receber notificação chamando [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md). Isso geralmente é feito na implementação do criador de perfil de [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md). Em seguida, o criador de perfil é capaz de receber a notificação do tempo de execução quando um evento está prestes a ocorrer ou ocorreu apenas em um processo de tempo de execução.  
+ No registro do Microsoft Windows, um criador de perfil de código deve registrar seu objeto de Component Object Model (COM) que implementa as `ICorProfilerCallback` `ICorProfilerCallback2` interfaces e. Um criador de perfil de código assina os eventos para os quais deseja receber notificação chamando [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md). Isso geralmente é feito na implementação do criador de perfil de [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md). Em seguida, o criador de perfil é capaz de receber a notificação do tempo de execução quando um evento está prestes a ocorrer ou ocorreu apenas em um processo de tempo de execução.  
   
 > [!NOTE]
-> O criador de perfil registra um único objeto COM. Se o criador de perfil estiver direcionando para o .NET Framework versão 1,0 ou 1,1, esse objeto COM precisará implementar apenas os métodos de `ICorProfilerCallback`. Se ele estiver direcionando .NET Framework versão 2,0 ou posterior, o objeto COM também deverá implementar os métodos de `ICorProfilerCallback2`.  
+> O criador de perfil registra um único objeto COM. Se o criador de perfil estiver direcionando para o .NET Framework versão 1,0 ou 1,1, esse objeto COM precisará implementar apenas os métodos de `ICorProfilerCallback` . Se ele estiver direcionando .NET Framework versão 2,0 ou posterior, o objeto COM também deverá implementar os métodos de `ICorProfilerCallback2` .  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Interfaces de criação de perfil](profiling-interfaces.md)
+- [Criação de perfil de interfaces](profiling-interfaces.md)
 - [Interface ICorProfilerCallback2](icorprofilercallback2-interface.md)
 - [Interface ICorProfilerCallback3](icorprofilercallback3-interface.md)
 - [Interface ICorProfilerCallback4](icorprofilercallback4-interface.md)

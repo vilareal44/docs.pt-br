@@ -3,21 +3,21 @@ title: <serviceDiscovery>
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
 ms.openlocfilehash: 7ac067e84f2a4d2724e3d8f2d0af9b220fd15538
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70399629"
 ---
-# <a name="servicediscovery"></a>\<serviceDiscovery>
+# \<serviceDiscovery>
 Especifica a descoberta de pontos de extremidade de serviço.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamentos >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de portais**](servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de comportamento**](behavior-of-servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de indescoberta**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceDiscovery>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,7 +44,7 @@ Especifica a descoberta de pontos de extremidade de serviço.
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -57,10 +57,10 @@ Especifica a descoberta de pontos de extremidade de serviço.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<> de comportamento](behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
   
 ## <a name="remarks"></a>Comentários  
- Quando adicionado à configuração de comportamento do serviço, esse elemento de configuração torna todos os pontos de extremidade desse serviço detectáveis. Você pode configurar ainda mais os recursos de descoberta desses pontos de extremidade usando os [ \<elementos filho DiscoveryEndpoint >](discoveryendpoint.md) ou [ \<announcementEndpoint >](announcementendpoint.md) . Use a [ \<seção > de announcementEndpoint](announcementendpoint.md) para configurar os anúncios especificando a configuração do ponto de extremidade a ser usada para enviar comunicados de serviço (online/Olá e offline/até). Use a [ \<seção > de DiscoveryEndpoint](discoveryendpoint.md) para especificar manualmente o ponto de extremidade no qual escutar as mensagens de descoberta.  
+ Quando adicionado à configuração de comportamento do serviço, esse elemento de configuração torna todos os pontos de extremidade desse serviço detectáveis. Você pode configurar ainda mais os recursos de descoberta desses pontos de extremidade usando os [\<discoveryEndpoint>](discoveryendpoint.md) [\<announcementEndpoint>](announcementendpoint.md) elementos filho ou. Use a [\<announcementEndpoint>](announcementendpoint.md) seção para configurar os comunicados especificando a configuração do ponto de extremidade a ser usada para enviar comunicados de serviço (online/Olá e offline/adeus). Use a [\<discoveryEndpoint>](discoveryendpoint.md) seção para especificar manualmente o ponto de extremidade no qual escutar as mensagens de descoberta.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de configuração a seguir especifica que o CalculatorService a ser descoberto e, opcionalmente, especifica o ponto de extremidade de anúncio a ser usado.  
@@ -86,6 +86,6 @@ Especifica a descoberta de pontos de extremidade de serviço.
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>

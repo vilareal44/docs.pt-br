@@ -9,32 +9,32 @@ helpviewer_keywords:
 - Unicode keyword [Visual Basic]
 - Unicode, marshaling strings
 ms.assetid: 0021d5ff-3209-444e-8497-420f3e6ee075
-ms.openlocfilehash: c4286ed9e9d5fd768ae29b7050b3d1505ccca9dd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9b1bc40bb52244deefc0486d3a40c4b961ad1ee5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344218"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402675"
 ---
 # <a name="unicode-visual-basic"></a>Unicode (Visual Basic)
 Especifica que Visual Basic deve realizar marshaling de todas as cadeias de caracteres para valores Unicode, independentemente do nome do procedimento externo que está sendo declarado.  
   
- Quando você chama um procedimento definido fora do seu projeto, o compilador Visual Basic não tem acesso às informações que ele deve ter para chamar o procedimento corretamente. Essas informações incluem onde o procedimento está localizado, como ele é identificado, sua sequência de chamada e tipo de retorno e o conjunto de caracteres da cadeia de caracteres que ele usa. A [instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md) cria uma referência a um procedimento externo e fornece essas informações necessárias.  
+ Quando você chama um procedimento definido fora do seu projeto, o compilador Visual Basic não tem acesso às informações que ele deve ter para chamar o procedimento corretamente. Essas informações incluem onde o procedimento está localizado, como ele é identificado, sua sequência de chamada e tipo de retorno e o conjunto de caracteres da cadeia de caracteres que ele usa. A [instrução Declare](../statements/declare-statement.md) cria uma referência a um procedimento externo e fornece essas informações necessárias.  
   
- A parte `charsetmodifier` na instrução `Declare` fornece as informações do conjunto de caracteres para empacotar as cadeias durante uma chamada para o procedimento externo. Ele também afeta como Visual Basic pesquisa o nome do procedimento externo no arquivo externo. O modificador de `Unicode` especifica que Visual Basic deve realizar marshaling de todas as cadeias de caracteres para valores Unicode e deve procurar o procedimento sem modificar seu nome durante a pesquisa.  
+ A `charsetmodifier` parte na `Declare` instrução fornece as informações do conjunto de caracteres para realizar marshaling de cadeias durante uma chamada para o procedimento externo. Ele também afeta como Visual Basic pesquisa o nome do procedimento externo no arquivo externo. O `Unicode` modificador especifica que Visual Basic deve realizar marshaling de todas as cadeias de caracteres para valores Unicode e deve procurar o procedimento sem modificar seu nome durante a pesquisa.  
   
  Se nenhum modificador de conjunto de caracteres for especificado, `Ansi` será o padrão.  
   
 ## <a name="remarks"></a>Comentários  
- O modificador de `Unicode` pode ser usado neste contexto:  
+ O `Unicode` modificador pode ser usado neste contexto:  
   
- [Instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Instrução Declare](../statements/declare-statement.md)  
   
 ## <a name="smart-device-developer-notes"></a>Notas para desenvolvedores de dispositivos inteligentes  
  Não há suporte para essa palavra-chave.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)
-- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
-- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
+- [Ansi](ansi.md)
+- [Automático](auto.md)
+- [Palavras-chave](../keywords/index.md)

@@ -1,5 +1,6 @@
 ---
 title: Como instalar e desinstalar os serviços do Windows
+description: Consulte Como instalar e desinstalar os serviços do Windows. Se você estiver desenvolvendo um serviço do Windows com o .NET, poderá usar o InstallUtil.exe ou o PowerShell.
 ms.date: 02/05/2019
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -12,30 +13,30 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 8937ef8b4007253b06444e59b292395084e4df2f
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 883b587a7ef60bc686d6f453c775f6651f0ccb7f
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607913"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063816"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>Como instalar e desinstalar os serviços do Windows
 
-Se você estiver desenvolvendo um serviço do Windows com o .NET Framework, poderá instalar rapidamente seu aplicativo de serviço usando o utilitário de linha de comando [*InstallUtil. exe*](../tools/installutil-exe-installer-tool.md) ou o [PowerShell](/powershell/scripting/overview). Os desenvolvedores que desejam lançar um serviço Windows que os usuários possam instalar e desinstalar devem usar o InstallShield. Para obter mais informações, consulte [criar um pacote de instalador (Windows Desktop)](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
+Se você estiver desenvolvendo um serviço do Windows com o .NET Framework, poderá instalar rapidamente seu aplicativo de serviço usando o utilitário de linha de comando [*InstallUtil.exe*](../tools/installutil-exe-installer-tool.md) ou o [PowerShell](/powershell/scripting/overview). Os desenvolvedores que desejam lançar um serviço do Windows que os usuários podem instalar e desinstalar podem usar o conjunto de ferramentas do [WiX](https://wixtoolset.org/) , ou os recursos comerciais, como o [Advanced Installer](https://www.advancedinstaller.com/), o [InstallShield](https://www.revenera.com/install/products/installshield.html)ou outros. Para obter mais informações, consulte [criar um pacote de instalador (Windows Desktop)](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
 
 > [!WARNING]
 > Se você deseja desinstalar um serviço do seu computador, não execute as etapas neste artigo. Nesse caso, descubra qual pacote de software ou programa instalou o serviço e, em seguida, escolha **Aplicativos** em Configurações para desinstalar o programa. Observe que muitos serviços são partes integrais do Windows, se você removê-los, poderá causar instabilidade do sistema.
 
-Para seguir as etapas neste artigo, primeiro você precisa adicionar um instalador de serviço no serviço Windows. Para obter mais informações, consulte [Walkthrough: Criando um aplicativo de serviço do Windows](../windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).
+Para seguir as etapas neste artigo, primeiro você precisa adicionar um instalador de serviço no serviço Windows. Para obter mais informações, consulte [Walkthrough: Criando um aplicativo de serviço do Windows](walkthrough-creating-a-windows-service-application-in-the-component-designer.md).
 
 Não é possível executar projetos de serviço Windows diretamente no ambiente de desenvolvimento do Visual Studio pressionando F5. Antes de executar o projeto, você precisa instalar o serviço no projeto.
 
 > [!TIP]
 > Você pode usar o **Gerenciador de Servidores** para verificar se instalou ou desinstalou o serviço. Para obter mais informações, confira [Como usar o Gerenciador de Servidores no Visual Studio](https://support.microsoft.com/help/316649/how-to-use-the-server-explorer-in-visual-studio-net-and-visual-studio).
 
-### <a name="install-your-service-manually-using-installutilexe-utility"></a>Instale o serviço manualmente usando o utilitário InstallUtil. exe
+### <a name="install-your-service-manually-using-installutilexe-utility"></a>Instalar o serviço manualmente usando o utilitário InstallUtil.exe
 
-1. No menu **Iniciar**, selecione o diretório **Visual Studio \<*versão*>** e, em seguida, selecione o **Prompt de Comando do Desenvolvedor para VS \<*versão*>**.
+1. No menu **Iniciar** , selecione o diretório do **Visual \<*version*> Studio** e, em seguida, selecione ** \<*version*> prompt de comando do desenvolvedor para vs **.
 
      O Prompt de Comando do Desenvolvedor para Visual Studio é exibido.
 
@@ -47,15 +48,15 @@ Não é possível executar projetos de serviço Windows diretamente no ambiente 
     installutil <yourproject>.exe
     ```
 
-     Se você estiver usando o Prompt de Comando do Desenvolvedor para Visual Studio, *InstallUtil.exe* deverá estar no caminho do sistema. Caso contrário, você poderá adicioná-lo ao caminho ou usar o caminho totalmente qualificado para invocá-lo. Essa ferramenta é instalada com o .NET Framework no *%windir%\Microsoft.NET\Framework [64]\\<framework_version\>*.
+     Se você estiver usando o Prompt de Comando do Desenvolvedor para Visual Studio, *InstallUtil.exe* deverá estar no caminho do sistema. Caso contrário, você poderá adicioná-lo ao caminho ou usar o caminho totalmente qualificado para invocá-lo. Essa ferramenta é instalada com o .NET Framework no *%windir%\Microsoft.NET\Framework [64] \\<framework_version \> *.
 
      Por exemplo:
      - para a versão de 32 bits do .NET Framework 4 ou 4.5 e posterior, se o diretório de instalação do Windows for *C:\Windows*, o caminho padrão será *C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe*.
      - para a versão de 64 bits do .NET Framework 4 ou 4.5 e posterior, o caminho padrão é *C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
 
-### <a name="uninstall-your-service-manually-using-installutilexe-utility"></a>Desinstalar o serviço manualmente usando o utilitário InstallUtil. exe
+### <a name="uninstall-your-service-manually-using-installutilexe-utility"></a>Desinstalar o serviço manualmente usando o utilitário InstallUtil.exe
 
-1. No menu **Iniciar**, selecione o diretório **Visual Studio \<*versão*>** e, em seguida, selecione o **Prompt de Comando do Desenvolvedor para VS \<*versão*>**.
+1. No menu **Iniciar** , selecione o diretório do **Visual \<*version*> Studio** e, em seguida, selecione ** \<*version*> prompt de comando do desenvolvedor para vs **.
 
      O Prompt de Comando do Desenvolvedor para Visual Studio é exibido.
 
@@ -95,9 +96,9 @@ Não é possível executar projetos de serviço Windows diretamente no ambiente 
     sc.exe delete "YourServiceName"
     ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Introdução aos aplicativos do serviço Windows](../windows-services/introduction-to-windows-service-applications.md)
-- [Como: criar serviços do Windows](../windows-services/how-to-create-windows-services.md)
-- [Como: Adicionar instaladores ao seu aplicativo de serviço](../windows-services/how-to-add-installers-to-your-service-application.md)
+- [Introdução aos aplicativos de serviço do Windows](introduction-to-windows-service-applications.md)
+- [Como: criar serviços do Windows](how-to-create-windows-services.md)
+- [Como: Adicionar instaladores ao seu aplicativo de serviço](how-to-add-installers-to-your-service-application.md)
 - [Installutil.exe (Ferramenta de Instalação)](../tools/installutil-exe-installer-tool.md)

@@ -1,24 +1,24 @@
 ---
-ms.openlocfilehash: cb8c0532bb2bcfbcd619cd382f3d236b431c3480
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: e10b5168d59edd56ff549a3a1e3a09d023fe5e28
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83720989"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556121"
 ---
 ### <a name="donotloadlatestricheditcontrol-compatibility-switch-not-supported"></a>Não há suporte para a opção de compatibilidade DoNotLoadLatestRichEditControl
 
-A `Switch.System.Windows.Forms.UseLegacyImages` opção de compatibilidade, que foi introduzida no .NET Framework 4.7.1, não tem suporte no Windows Forms no .NET Core 3,0.
+A `Switch.System.Windows.Forms.UseLegacyImages` opção de compatibilidade, que foi introduzida no .NET Framework 4.7.1, não tem suporte no Windows Forms no .NET Core ou no .net 5,0 e posterior.
 
 #### <a name="change-description"></a>Descrição da alteração
 
-No .NET Framework 4.6.2 e versões anteriores, o <xref:System.Windows.Forms.RichTextBox> controle criaria uma instância do controle RichEdit do Win32 v 3.0 e, para aplicativos direcionados .NET Framework 4.7.1, o <xref:System.Windows.Forms.RichTextBox> controle criaria uma instância de RichEdit v 4.1 (em *MsftEdit. dll*). A `Switch.System.Windows.Forms.DoNotLoadLatestRichEditControl` opção de compatibilidade foi introduzida para permitir aplicativos direcionados .NET Framework 4.7.1 e versões posteriores para recusar o novo controle RichEdit v 4.1 e usar o antigo controle RichEdit v3.
+No .NET Framework 4.6.2 e versões anteriores, o <xref:System.Windows.Forms.RichTextBox> controle instancia o controle RichEdit do Win32 v 3.0 e, para aplicativos direcionados .NET Framework 4.7.1, o <xref:System.Windows.Forms.RichTextBox> controle instancia o RichEdit v 4.1 (em *msftedit.dll*). A `Switch.System.Windows.Forms.DoNotLoadLatestRichEditControl` opção de compatibilidade foi introduzida para permitir aplicativos direcionados .NET Framework 4.7.1 e versões posteriores para recusar o novo controle RichEdit v 4.1 e usar o antigo controle RichEdit v3.
 
-No .NET Core, `Switch.System.Windows.Forms.DoNotLoadLatestRichEditControl` não há suporte para a opção. Há suporte apenas para novas versões do <xref:System.Windows.Forms.RichTextBox> controle.
+No .NET Core e no .NET 5,0 e versões posteriores, `Switch.System.Windows.Forms.DoNotLoadLatestRichEditControl` não há suporte para a opção. Há suporte apenas para novas versões do <xref:System.Windows.Forms.RichTextBox> controle.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3,0 Preview 9
+3.0
 
 #### <a name="recommended-action"></a>Ação recomendada
 

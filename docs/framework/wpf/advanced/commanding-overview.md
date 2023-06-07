@@ -1,5 +1,6 @@
 ---
 title: Visão geral dos comandos
+description: Saiba mais sobre comandos, um mecanismo de entrada no Windows Presentation Foundation que fornece tratamento de entrada em um nível mais semântico do que a entrada do dispositivo.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 3477e6a9eda40edeadaab9cd6d3de2f016250fc8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f7d12fbf0de9b1546f15061ab7eb1318378bbbb
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186210"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168121"
 ---
 # <a name="commanding-overview"></a>Visão geral dos comandos
 <a name="introduction"></a> Os comandos são um mecanismo de entrada do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] que oferecem manipulação de entrada em um nível mais semântico do que a entrada do dispositivo. Os exemplos de comandos são as operações **Copiar**, **Recortar** e **Colar**, encontradas em muitos aplicativos.  
@@ -173,9 +174,9 @@ ms.locfileid: "79186210"
 ## <a name="command-library"></a>Biblioteca de comandos  
  O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferece um conjunto de comandos predefinidos.  A biblioteca de comandos consiste nas seguintes classes: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Documents.EditingCommands> e o <xref:System.Windows.Input.ComponentCommands>.  Essas classes fornecem comandos como <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.NavigationCommands.BrowseBack%2A> e <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>, <xref:System.Windows.Input.MediaCommands.Play%2A>, <xref:System.Windows.Input.MediaCommands.Stop%2A> e <xref:System.Windows.Input.MediaCommands.Pause%2A>.  
   
- Muitos desses comandos incluem um conjunto de associações de entrada padrão.  Por exemplo, se você especificar que seu aplicativo lida com o comando de cópia, você automaticamente obterá a vinculação do teclado "CTRL+C" Você também obterá vinculações para outros dispositivos de entrada, como gestos de caneta tablet PC e informações de fala.  
+ Muitos desses comandos incluem um conjunto de associações de entrada padrão.  Por exemplo, se você especificar que seu aplicativo manipula o comando de cópia, você obtém automaticamente a ligação de teclado "CTRL + C". você também obtém associações para outros dispositivos de entrada, como gestos de caneta do Tablet PC e informações de fala.  
   
- Quando você faz referência a comandos nas várias bibliotecas de comandos usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], geralmente é possível omitir o nome de classe da classe da biblioteca que expõe a propriedade de comando estático. De modo geral, os nomes dos comandos são cadeias de caracteres não ambíguas; os tipos de propriedade existem para fornecer um agrupamento lógico de comandos, mas não são necessários para eliminar a ambiguidade. Por exemplo, é possível especificar o `Command="Cut"` em vez do `Command="ApplicationCommands.Cut"`, mais detalhado. Este é um mecanismo de conveniência [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que é incorporado ao processador para comandos <xref:System.Windows.Input.ICommand>(mais [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] precisamente, é um comportamento de conversor de tipo de , que o processador faz referência na hora da carga).  
+ Quando você faz referência a comandos nas várias bibliotecas de comandos usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], geralmente é possível omitir o nome de classe da classe da biblioteca que expõe a propriedade de comando estático. De modo geral, os nomes dos comandos são cadeias de caracteres não ambíguas; os tipos de propriedade existem para fornecer um agrupamento lógico de comandos, mas não são necessários para eliminar a ambiguidade. Por exemplo, é possível especificar o `Command="Cut"` em vez do `Command="ApplicationCommands.Cut"`, mais detalhado. Esse é um mecanismo de conveniência interno ao [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processador para comandos (mais precisamente, é um comportamento de conversor de tipo <xref:System.Windows.Input.ICommand> , que o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processador faz referência no tempo de carregamento).  
   
 <a name="creating_commands"></a>
 ## <a name="creating-custom-commands"></a>Criando comandos personalizados  

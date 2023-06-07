@@ -1,17 +1,18 @@
 ---
 title: 'Passo a passo: modelo e consulta de objeto simples (C#)'
+description: Siga este passo a passos para criar uma classe de entidade que modela uma tabela em um banco de dados de exemplo. Em seguida, crie uma consulta simples para listar clientes em um determinado local.
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: a9b3b57e37331cd13f2cd30b8a7663f2fb39d8c1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4637fabecc1726d8fec12857a667073912cfbed5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792137"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286295"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Passo a passo: modelo e consulta de objeto simples (C#)
 
-Este passo a passo fornece um cenário completo fundamental do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] com complexidades mínimas. Você criará uma classe de entidade que modela a tabela Customers no banco de dados de exemplo Northwind. Em seguida, você criará uma consulta simples para listar os clientes que estão localizados em Londres.
+Este passo a passo fornece um cenário completo fundamental do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] com complexidades mínimas. Você criará uma classe de entidade que modela a tabela Customers no banco de dados de exemplo Northwind. Em seguida, criará uma consulta simples para listar os clientes que estão localizados em Londres.
 
 Este passo a passo é orientado a código por design para ajudar a mostrar os conceitos do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Em termos gerais, você usaria o Object Relational Designer para criar seu modelo de objeto.
 
@@ -19,7 +20,7 @@ Este passo a passo é orientado a código por design para ajudar a mostrar os co
 
 Esse passo a passo foi escrito usando as configurações de desenvolvimento do Visual C#.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Este passo a passo usa uma pasta dedicada ("c:\linqtest5") para armazenar arquivos. Crie essa pasta antes de iniciar o passo a passo.
 
@@ -49,7 +50,7 @@ Nesta primeira tarefa, você cria uma solução do Visual Studio que contém as 
 
 1. No menu **arquivo** do Visual Studio, aponte para **novo**e clique em **projeto**.
 
-2. No painel **tipos de projeto** da caixa de diálogo **novo projeto** , clique **em C#Visual** .
+2. No painel **tipos de projeto** da caixa de diálogo **novo projeto** , clique em **Visual C#**.
 
 3. No painel **Modelos**, clique em **Aplicativo de Console**.
 
@@ -131,7 +132,7 @@ Você também gerará uma saída de log para mostrar os comandos SQL gerados pel
 
 Nesta etapa, você realmente executa a consulta. As expressões de consulta que você criou nas etapas anteriores não são avaliadas até que os resultados sejam necessários. Quando você começa a iteração `foreach`, um comando SQL é executado no banco de dados e os objetos são materializados.
 
-### <a name="to-execute-the-query"></a>Para executar a consulta
+### <a name="to-execute-the-query"></a>Para executar a consulta.
 
 1. Digite ou cole o seguinte código ao final do método `Main` (após a descrição de consulta).
 
@@ -160,10 +161,10 @@ Nesta etapa, você realmente executa a consulta. As expressões de consulta que 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-O [passo a passo: A consulta no tópicoC#Relationships](walkthrough-querying-across-relationships-csharp.md) () continua onde este passo a passos termina. A consulta através de instruções de relações [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] demonstra como o pode consultar em tabelas, semelhantes a *junções* em um banco de dados relacional.
+O tópico [passo a passos: consultando entre relações (C#)](walkthrough-querying-across-relationships-csharp.md) continua onde este passo a passos termina. A consulta através de instruções de relações demonstra como o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pode consultar em tabelas, semelhantes a *junções* em um banco de dados relacional.
 
 Se você desejar realizar o passo a passo Consulta entre relações, salve a solução do passo a passo que você acabou de concluir, que é um pré-requisito.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Aprendendo com explicações passo a passo](learning-by-walkthroughs.md)

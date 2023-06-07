@@ -3,16 +3,16 @@ title: Teste de unidade do Visual Basic no .NET Core com dotnet test e NUnit
 description: Aprenda os conceitos de teste de unidade no .NET Core por meio de uma experiência interativa de criação passo a passo de uma solução de exemplo do Visual Basic usando NUnit.
 author: rprouse
 ms.date: 10/04/2018
-ms.openlocfilehash: a33447457344b241b4c2376d777b0deb7f556874
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b807463d29f271d1a707b6254b7b5e66f745319
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240916"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656404"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Teste de unidade de bibliotecas do .NET Core do Visual Basic usando dotnet test e NUnit
 
-Este tutorial apresenta uma experiência interativa de compilação de uma solução de exemplo passo a passo para aprender os conceitos do teste de unidade. Se você preferir acompanhar o tutorial usando uma solução interna, [veja ou baixe o exemplo de código](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-nunit/) antes de começar. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Este tutorial apresenta uma experiência interativa de compilação de uma solução de exemplo passo a passo para aprender os conceitos do teste de unidade. Se você preferir acompanhar o tutorial usando uma solução interna, [veja ou baixe o exemplo de código](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-nunit/) antes de começar. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
@@ -84,7 +84,7 @@ O comando [dotnet new](../tools/dotnet-new.md) cria um projeto de teste que usa 
 
 [!code-xml[Packages](~/samples/snippets/core/testing/unit-testing-vb-nunit/vb/PrimeService.Tests/PrimeService.Tests.vbproj#Packages)]
 
-O projeto de teste requer outros pacotes para criar e executar testes de unidade. O `dotnet new` na etapa anterior adicionou o NUnit e o adaptador de teste do NUnit. Agora, adicione a biblioteca de classes `PrimeService` como outra dependência ao projeto. Use [`dotnet add reference`](../tools/dotnet-add-reference.md) o comando:
+O projeto de teste requer outros pacotes para criar e executar testes de unidade. O `dotnet new` na etapa anterior adicionou o NUnit e o adaptador de teste do NUnit. Agora, adicione a biblioteca de classes `PrimeService` como outra dependência ao projeto. Use o [`dotnet add reference`](../tools/dotnet-add-reference.md) comando:
 
 ```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.vbproj

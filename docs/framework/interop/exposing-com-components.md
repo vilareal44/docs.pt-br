@@ -1,17 +1,18 @@
 ---
 title: Expondo componentes do COM para o .NET Framework
+description: Conheça o processo de exposição de componentes COM ao .NET. Os componentes COM são valiosos em código gerenciado como aplicativos de negócios de camada intermediária ou funcionalidade isolada.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing COM components to .NET Framework
 - interoperation with unmanaged code, exposing COM components
 - COM interop, exposing COM components
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
-ms.openlocfilehash: 914f72b5e4840555541943620ca2df1f629b0604
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 459ba7ffed2e4f6c458f89a63b2baa37180d270d
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123518"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620840"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>Expondo componentes do COM para o .NET Framework
 Esta seção resume o processo necessário para expor um componente COM existente ao código gerenciado. Para obter detalhes sobre como escrever servidores COM que são totalmente integrados ao .NET Framework, consulte [Considerações sobre design para interoperação](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100)).
@@ -36,10 +37,10 @@ Esta seção resume o processo necessário para expor um componente COM existent
   
      Os aplicativos de interoperabilidade são mais bem implantados como assemblies assinados [de nome forte](../../standard/assembly/strong-named.md) no cache de assembly global.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Interoperação com código não gerenciado](index.md)
 - [Considerações sobre design para interoperação](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))
-- [Amostra de interoperabilidade COM: cliente .NET e servidor COM](com-interop-sample-net-client-and-com-server.md)
+- [Exemplo de interoperabilidade COM: cliente .NET e servidor COM](com-interop-sample-net-client-and-com-server.md)
 - [Componentes de independência de linguagem e componentes independentes da linguagem](../../standard/language-independence-and-language-independent-components.md)
-- [Gacutil. exe (Ferramenta de Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md)
+- [Gacutil.exe (Ferramenta de Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md)

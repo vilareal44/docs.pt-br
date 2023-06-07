@@ -5,14 +5,14 @@ helpviewer_keywords:
 - <value> XML tag
 - value XML tag
 ms.assetid: 0b84b02e-9e6d-41b5-a926-0d5dc76dacb5
-ms.openlocfilehash: 240c2131179420834e6dade729ee631c0d7811a4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 24358a1b004f1cefbfeb3fb8451380ed883841df
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352179"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411467"
 ---
-# <a name="value-visual-basic"></a>> de valor de \<(Visual Basic)
+# <a name="value-visual-basic"></a>\<value> (Visual Basic)
 Especifica a descrição de uma propriedade.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -26,15 +26,15 @@ Especifica a descrição de uma propriedade.
  Uma descrição da propriedade.  
   
 ## <a name="remarks"></a>Comentários  
- Use a marca `<value>` para descrever uma propriedade. Observe que quando você adiciona uma propriedade usando o assistente de código no ambiente de desenvolvimento do Visual Studio, ela adicionará uma marca de [> de resumo\<](../../../visual-basic/language-reference/xmldoc/summary.md) para a nova propriedade. Em seguida, você deve adicionar manualmente uma marca de `<value>` para descrever o valor que a propriedade representa.  
+ Use a `<value>` marca para descrever uma propriedade. Observe que quando você adiciona uma propriedade usando o assistente de código no ambiente de desenvolvimento do Visual Studio, ela adicionará uma [\<summary>](summary.md) marca para a nova propriedade. Em seguida, você deve adicionar manualmente uma `<value>` marca para descrever o valor que a propriedade representa.  
   
- Compile com [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
+ Compile com [-Doc](../../reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa a marca `<value>` para descrever o valor que a propriedade `Counter` contém.  
+ Este exemplo usa a `<value>` marca para descrever o valor que a `Counter` Propriedade mantém.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Marcações de Comentário XML](index.md)

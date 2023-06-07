@@ -2,12 +2,12 @@
 title: Aplicabilidade de transformação funcional
 ms.date: 07/20/2015
 ms.assetid: 3b74e134-e19b-44bc-8d06-e26c48305040
-ms.openlocfilehash: 292201f4964142126d428939807cb20f354a7d2f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: db24871e3763c5acc79cf21b4afb90a93ed8bd53
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345764"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84383696"
 ---
 # <a name="applicability-of-functional-transformation-visual-basic"></a>Aplicabilidade da transformação funcional (Visual Basic)
 Transformações e puras são aplicáveis em uma variedade de situações.  
@@ -16,7 +16,7 @@ Transformações e puras são aplicáveis em uma variedade de situações.
   
  Essa abordagem é aplicável a muitos problemas que não podem parecer à primeira vista para ser um candidato. Usado em conjunto ou separadamente com LINQ, a transformação funcional deve ser considerada para as seguintes áreas:  
   
-- Documentos com base em XML. Os dados bem formado do dialeto de XML podem facilmente ser manipulados pela transformação funcional. Para obter mais informações, consulte [transformação funcional do XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md).  
+- Documentos com base em XML. Os dados bem formado do dialeto de XML podem facilmente ser manipulados pela transformação funcional. Para obter mais informações, consulte [transformação funcional do XML (Visual Basic)](functional-transformation-of-xml.md).  
   
 - Outros formatos de arquivo estruturados. De Windows.ini arquivos aos documentos de texto sem formatação, a maioria dos arquivos têm qualquer estrutura que se empresta a análise e a transformação.  
   
@@ -26,14 +26,14 @@ Transformações e puras são aplicáveis em uma variedade de situações.
   
 - Matemático, estatística, e soluções de ciência. Esses campos tendem a manipular grandes conjuntos de dados para ajudar o usuário em visualizar, em estimar, ou realmente em resolver problemas não triviais.  
   
- Conforme descrito em [refatoração em funções puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md), o uso de funções puras é um exemplo de programação funcional. Em adicional a seus benefícios imediatos, usar funções puras fornece a experiência valiosa no pensamento sobre problemas de uma perspectiva funcional de transformação. Essa abordagem pode também ter o impacto principal no design do programa e da classe. Isso é especialmente verdadeiro quando um problema se empresta a uma solução de transformação de dados como descrito acima.  
+ Conforme descrito em [refatoração em funções puras (Visual Basic)](refactoring-into-pure-functions.md), o uso de funções puras é um exemplo de programação funcional. Em adicional a seus benefícios imediatos, usar funções puras fornece a experiência valiosa no pensamento sobre problemas de uma perspectiva funcional de transformação. Essa abordagem pode também ter o impacto principal no design do programa e da classe. Isso é especialmente verdadeiro quando um problema se empresta a uma solução de transformação de dados como descrito acima.  
   
  Embora eles sejam além do escopo deste tutorial, os projetos que são influenciados pela perspectiva funcional de transformação tendem a centralizar sobre processam mais do que em objetos como atores, e a solução resultante tendem a ser implementados como série de transformações em grande escala, em vez de alterações de estado individuais de objeto.  
   
  Novamente, lembre-se de que Visual Basic dá suporte a abordagens imperativas e funcionais, portanto, o melhor design para seu aplicativo pode incorporar elementos de ambos.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Introdução às transformações funcionais puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Transformação funcional de XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)
-- [Refatoração em funções puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Introdução às transformações funcionais puras (Visual Basic)](introduction-to-pure-functional-transformations.md)
+- [Transformação funcional de XML (Visual Basic)](functional-transformation-of-xml.md)
+- [Refatoração em funções puras (Visual Basic)](refactoring-into-pure-functions.md)

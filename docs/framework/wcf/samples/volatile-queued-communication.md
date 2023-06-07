@@ -2,16 +2,16 @@
 title: Comunicação em fila volátil
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-ms.openlocfilehash: 8ed10262d319664d404e6beb630593cb93748a7d
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: a9f7e8a96fd293c7f87cc19846a42a42f28de288
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715276"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602330"
 ---
 # <a name="volatile-queued-communication"></a>Comunicação em fila volátil
 
-Este exemplo demonstra como executar comunicação volátil em fila no transporte do MSMQ (enfileiramento de mensagens). Este exemplo usa <xref:System.ServiceModel.NetMsmqBinding>. O serviço, nesse caso, é um aplicativo de console auto-hospedado para permitir que você observe o serviço que recebe mensagens enfileiradas.
+Este exemplo demonstra como executar comunicação volátil em fila no transporte do MSMQ (enfileiramento de mensagens). Este exemplo usa <xref:System.ServiceModel.NetMsmqBinding> . O serviço, nesse caso, é um aplicativo de console auto-hospedado para permitir que você observe o serviço que recebe mensagens enfileiradas.
 
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.
@@ -49,7 +49,7 @@ public class StockTickerService : IStockTicker
 }
 ```
 
-O serviço é hospedado internamente. Ao usar o transporte MSMQ, a fila usada deve ser criada com antecedência. Isso pode ser feito manualmente ou por meio de código. Neste exemplo, o serviço contém o código para verificar a existência da fila e criá-la, se necessário. O nome da fila é lido no arquivo de configuração. O endereço base é usado pela [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar o proxy para o serviço.
+O serviço é hospedado internamente. Ao usar o transporte MSMQ, a fila usada deve ser criada com antecedência. Isso pode ser feito manualmente ou por meio de código. Neste exemplo, o serviço contém o código para verificar a existência da fila e criá-la, se necessário. O nome da fila é lido no arquivo de configuração. O endereço base é usado pela [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar o proxy para o serviço.
 
 ```csharp
 // Host the service within this EXE console application.
@@ -80,10 +80,10 @@ public static void Main()
 }
 ```
 
-O nome da fila MSMQ é especificado na seção appSettings do arquivo de configuração. O ponto de extremidade para o serviço é definido na seção System. serviceModel do arquivo de configuração e especifica a associação de `netMsmqBinding`.
+O nome da fila MSMQ é especificado na seção appSettings do arquivo de configuração. O ponto de extremidade para o serviço é definido na seção System. serviceModel do arquivo de configuração e especifica a `netMsmqBinding` associação.
 
 > [!NOTE]
-> O nome da fila usa um ponto (.) para o computador local e separadores de barra invertida em seu caminho ao criar uma fila usando <xref:System.Messaging>. O endereço do ponto de extremidade do Windows Communication Foundation (WCF) especifica um net. MSMQ: esquema, usa "localhost" para o computador local e barras invertidas em seu caminho.
+> O nome da fila usa um ponto (.) para o computador local e separadores de barra invertida em seu caminho ao criar uma fila usando <xref:System.Messaging> . O endereço do ponto de extremidade do Windows Communication Foundation (WCF) especifica um net. MSMQ: esquema, usa "localhost" para o computador local e barras invertidas em seu caminho.
 
 As garantias e durabilidade ou volatilidade de mensagens também são especificadas na configuração.
 
@@ -157,17 +157,17 @@ Stock Tick zzz9:43.3
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo
 
-1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Para criar a edição C# ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).
 
-3. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md).
 
-Por padrão, com a <xref:System.ServiceModel.NetMsmqBinding>, a segurança de transporte está habilitada. Há duas propriedades pertinentes para a segurança de transporte do MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> e <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` por padrão, o modo de autenticação é definido como `Windows` e o nível de proteção é definido como `Sign`. Para que o MSMQ forneça o recurso de autenticação e assinatura, ele deve fazer parte de um domínio e a opção de integração do Active Directory para o MSMQ deve ser instalada. Se você executar esse exemplo em um computador que não atenda a esses critérios, receberá um erro.
+Por padrão, com a <xref:System.ServiceModel.NetMsmqBinding> segurança de transporte está habilitada. Há duas propriedades pertinentes para a segurança de transporte do MSMQ <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> e, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` por padrão, o modo de autenticação é definido como `Windows` e o nível de proteção é definido como `Sign` . Para que o MSMQ forneça o recurso de autenticação e assinatura, ele deve fazer parte de um domínio e a opção de integração do Active Directory para o MSMQ deve ser instalada. Se você executar esse exemplo em um computador que não atenda a esses critérios, receberá um erro.
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Para executar o exemplo em um computador ingressado em um grupo de trabalho ou sem integração com o Active Directory
 
-1. Se o seu computador não fizer parte de um domínio ou não tiver a integração do Active Directory instalada, desative a segurança de transporte definindo o modo de autenticação e o nível de proteção como `None`, conforme mostrado no código de configuração de exemplo a seguir:
+1. Se o seu computador não fizer parte de um domínio ou não tiver a integração do Active Directory instalada, desative a segurança de transporte definindo o modo de autenticação e o nível de proteção como `None` mostrado no código de configuração de exemplo a seguir:
 
     ```xml
     <system.serviceModel>
@@ -217,13 +217,13 @@ Por padrão, com a <xref:System.ServiceModel.NetMsmqBinding>, a segurança de tr
 2. Certifique-se de alterar a configuração no servidor e no cliente antes de executar o exemplo.
 
     > [!NOTE]
-    > Definir `security mode` como `None` é equivalente a definir <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>e segurança de `Message` para `None`.
+    > A configuração `security mode` como `None` é equivalente à configuração <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> , <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> e `Message` à segurança para `None` .
 
 > [!IMPORTANT]
 > Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Volatile`

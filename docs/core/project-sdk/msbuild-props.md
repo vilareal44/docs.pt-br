@@ -3,12 +3,12 @@ title: Propriedades do MSBuild para Microsoft. NET. Sdk
 description: Referência para as propriedades e os itens do MSBuild que são compreendidos pelo SDK do .NET Core.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: cda56b3e23592a341d9fe672fc1f1530adcdab49
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 7980369b87d606d3876fe043e929a65da1d0d92b
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206103"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916245"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>Referência do MSBuild para projetos de SDK do .NET Core
 
@@ -25,7 +25,7 @@ Esta página é uma referência para as propriedades e os itens do MSBuild que v
 
 ### <a name="targetframework"></a>TargetFramework
 
-A `TargetFramework` propriedade especifica a versão do Framework de destino para o aplicativo, que referencia implicitamente um [metapacote](../packages.md#metapackages). Para obter uma lista de monikers de estrutura de destino válidos, consulte [estruturas de destino em projetos em estilo SDK](../../standard/frameworks.md#supported-target-framework-versions).
+A `TargetFramework` propriedade especifica a versão do Framework de destino para o aplicativo. Para obter uma lista de monikers de estrutura de destino válidos, consulte [estruturas de destino em projetos em estilo SDK](../../standard/frameworks.md#supported-target-framework-versions).
 
 ```xml
 <PropertyGroup>
@@ -55,7 +55,7 @@ Para obter mais informações, consulte [estruturas de destino em projetos em es
 > [!NOTE]
 > Essa propriedade só se aplica a projetos que usam o `netstandard1.x` . Ele não se aplica a projetos que usam o `netstandard2.x` .
 
-Use a `NetStandardImplicitPackageVersion` propriedade quando desejar especificar uma versão de estrutura inferior à versão do [metapacote](../packages.md#metapackages) . O arquivo de projeto no exemplo a seguir tem `netstandard1.3` como destino, mas usa a versão 1.6.0 do `NETStandard.Library` .
+Use a `NetStandardImplicitPackageVersion` propriedade quando desejar especificar uma versão de estrutura inferior à versão do metapacote. O arquivo de projeto no exemplo a seguir tem `netstandard1.3` como destino, mas usa a versão 1.6.0 do `NETStandard.Library` .
 
 ```xml
 <PropertyGroup>
@@ -182,7 +182,7 @@ Você pode configurar alguns comportamentos de tempo de execução especificando
 
 ### <a name="concurrentgarbagecollection"></a>ConcurrentGarbageCollection
 
-A `ConcurrentGarbageCollection` propriedade define se a [coleta de lixo em segundo plano (simultânea)](../../standard/garbage-collection/background-gc.md) está habilitada. Defina o valor como `false` para desabilitar a coleta de lixo em segundo plano. Para obter mais informações, consulte [System. GC. simultaneamente/COMPlus_gcConcurrent](../run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent).
+A `ConcurrentGarbageCollection` propriedade define se a [coleta de lixo em segundo plano (simultânea)](../../standard/garbage-collection/background-gc.md) está habilitada. Defina o valor como `false` para desabilitar a coleta de lixo em segundo plano. Para obter mais informações, consulte [background GC](../run-time-config/garbage-collector.md#background-gc).
 
 ```xml
 <PropertyGroup>
@@ -202,7 +202,7 @@ A `InvariantGlobalization` propriedade define se o aplicativo é executado no mo
 
 ### <a name="retainvmgarbagecollection"></a>RetainVMGarbageCollection
 
-A `RetainVMGarbageCollection` Propriedade configura o coletor de lixo para colocar os segmentos de memória excluídos em uma lista em espera para uso futuro ou liberá-los. Definir o valor para `true` instruir o coletor de lixo a colocar os segmentos em uma lista de espera. Para obter mais informações, consulte [System. GC. RetainVM/COMPlus_GCRetainVM](../run-time-config/garbage-collector.md#systemgcretainvmcomplus_gcretainvm).
+A `RetainVMGarbageCollection` Propriedade configura o coletor de lixo para colocar os segmentos de memória excluídos em uma lista em espera para uso futuro ou liberá-los. Definir o valor para `true` instruir o coletor de lixo a colocar os segmentos em uma lista de espera. Para obter mais informações, consulte [reter VM](../run-time-config/garbage-collector.md#retain-vm).
 
 ```xml
 <PropertyGroup>
@@ -212,7 +212,7 @@ A `RetainVMGarbageCollection` Propriedade configura o coletor de lixo para coloc
 
 ### <a name="servergarbagecollection"></a>ServerGarbageCollection
 
-A `ServerGarbageCollection` propriedade define se o aplicativo usa a coleta de lixo da [estação de trabalho ou a coleta de lixo do servidor](../../standard/garbage-collection/workstation-server-gc.md). Defina o valor como para `true` usar a coleta de lixo do servidor. Para obter mais informações, consulte [System. GC. Server/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
+A `ServerGarbageCollection` propriedade define se o aplicativo usa a coleta de lixo da [estação de trabalho ou a coleta de lixo do servidor](../../standard/garbage-collection/workstation-server-gc.md). Defina o valor como para `true` usar a coleta de lixo do servidor. Para obter mais informações, consulte [estação de trabalho versus servidor](../run-time-config/garbage-collector.md#workstation-vs-server).
 
 ```xml
 <PropertyGroup>
@@ -292,7 +292,7 @@ Você pode definir a `AssetTargetFallback` propriedade para uma ou mais [versõe
 
 ### <a name="packagereference"></a>PackageReference
 
-O `PackageReference` Item define uma referência a um pacote NuGet. Por exemplo, talvez você queira fazer referência a um único pacote em vez de um [metapacote](../packages.md#metapackages).
+O `PackageReference` Item define uma referência a um pacote NuGet.
 
 O atributo `Include` especifica a ID do pacote. O `Version` atributo especifica a versão ou o intervalo de versão. Para obter informações sobre como especificar uma versão mínima, a versão máxima, o intervalo ou a correspondência exata, consulte [intervalos de versão](/nuget/concepts/package-versioning#version-ranges). Você também pode adicionar os seguintes metadados a uma referência de projeto: `IncludeAssets` , `ExcludeAssets` e `PrivateAssets` .
 
@@ -344,7 +344,7 @@ A restauração de um pacote referenciado instala todas as suas dependências di
 </PropertyGroup>
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de esquema do MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference)
 - [Propriedades comuns do MSBuild](/visualstudio/msbuild/common-msbuild-project-properties)

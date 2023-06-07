@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0eed759f-cce8-405d-88dc-9ee293a38928
 topic_type:
 - apiref
-ms.openlocfilehash: 2b2d619c5940376806e9873a528b4f08886593e9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 18c3b6e840ec1f6cb1481c8d752e6399dcdae077
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863550"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498135"
 ---
 # <a name="icorprofilerinfogetfunctionfromtoken-method"></a>Método ICorProfilerInfo::GetFunctionFromToken
 Obtém a ID de uma função. Esse método é obsoleto no .NET Framework versão 2,0. Em vez disso, use o método [ICorProfilerInfo2:: GetFunctionFromTokenAndTypeArgs](icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) .  
@@ -35,10 +35,10 @@ HRESULT GetFunctionFromToken(
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O método `GetFunctionFromToken` não funcionará para funções genéricas ou funções em tipos genéricos; Agora é obsoleto. Use `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs` para todas as funções.  
+ O `GetFunctionFromToken` método não funcionará para funções genéricas ou funções em tipos genéricos; agora é obsoleto. Use `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs` para todas as funções.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
@@ -46,6 +46,6 @@ HRESULT GetFunctionFromToken(
   
  **Versões do .NET Framework:** 1,1, 1,0  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)

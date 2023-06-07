@@ -25,17 +25,17 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: 4a0cfe176a59b3f90f5850ae8b4e34784c400c6b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c4075c87df8b9daa56ca1d35e0d6661598895fdc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351005"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403363"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Considerações sobre procedimentos de sobrecarga (Visual Basic)
 Ao sobrecarregar um procedimento, você deve usar uma *assinatura* diferente para cada versão sobrecarregada. Isso geralmente significa que cada versão deve especificar uma lista de parâmetros diferente. Para obter mais informações, consulte "assinatura diferente" em [sobrecarga de procedimento](./procedure-overloading.md).  
   
- Você pode sobrecarregar um procedimento de `Function` com um procedimento de `Sub` e vice-versa, desde que eles tenham assinaturas diferentes. Duas sobrecargas não podem diferir apenas se uma tiver um valor de retorno e a outra não.  
+ Você pode sobrecarregar um `Function` procedimento com um `Sub` procedimento e vice-versa, desde que eles tenham assinaturas diferentes. Duas sobrecargas não podem diferir apenas se uma tiver um valor de retorno e a outra não.  
   
  Você pode sobrecarregar uma propriedade da mesma maneira que sobrecarrega um procedimento e com as mesmas restrições. No entanto, você não pode sobrecarregar um procedimento com uma propriedade ou vice-versa.  
   
@@ -57,7 +57,7 @@ Ao sobrecarregar um procedimento, você deve usar uma *assinatura* diferente par
 #### <a name="when-to-use-optional-parameters"></a>Quando usar parâmetros opcionais  
  Você pode preferir um ou mais parâmetros opcionais nos seguintes casos:  
   
-- A única ação necessária quando o código de chamada não fornece um argumento opcional é definir o parâmetro como um valor padrão. Nesse caso, o código do procedimento pode ser menos complicado se você definir uma única versão com um ou mais parâmetros de `Optional`.  
+- A única ação necessária quando o código de chamada não fornece um argumento opcional é definir o parâmetro como um valor padrão. Nesse caso, o código do procedimento pode ser menos complicado se você definir uma única versão com um ou mais `Optional` parâmetros.  
   
  Para obter mais informações, consulte [parâmetros opcionais](./optional-parameters.md).  
   
@@ -74,7 +74,7 @@ Ao sobrecarregar um procedimento, você deve usar uma *assinatura* diferente par
 - O código de chamada pode passar valores de tipos de dados diferentes.  
   
 #### <a name="when-to-use-a-parameter-array"></a>Quando usar uma matriz de parâmetros  
- Você é mais bem atendido por um parâmetro `ParamArray` nos seguintes casos:  
+ Você é mais bem atendido por um `ParamArray` parâmetro nos seguintes casos:  
   
 - Você não pode prever quantos valores o código de chamada pode passar para a matriz de parâmetros e pode ser um grande número.  
   
@@ -83,7 +83,7 @@ Ao sobrecarregar um procedimento, você deve usar uma *assinatura* diferente par
  Para obter mais informações, consulte [matrizes de parâmetros](./parameter-arrays.md).  
   
 ## <a name="implicit-overloads-for-optional-parameters"></a>Sobrecargas implícitas para parâmetros opcionais  
- Um procedimento com um parâmetro [opcional](../../../../visual-basic/language-reference/modifiers/optional.md) é equivalente a dois procedimentos sobrecarregados, um com o parâmetro opcional e outro sem ele. Não é possível sobrecarregar esse procedimento com uma lista de parâmetros correspondente a um desses. As declarações a seguir ilustram isso.  
+ Um procedimento com um parâmetro [opcional](../../../language-reference/modifiers/optional.md) é equivalente a dois procedimentos sobrecarregados, um com o parâmetro opcional e outro sem ele. Não é possível sobrecarregar esse procedimento com uma lista de parâmetros correspondente a um desses. As declarações a seguir ilustram isso.  
   
  [!code-vb[VbVbcnProcedures#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#58)]  
   
@@ -94,13 +94,13 @@ Ao sobrecarregar um procedimento, você deve usar uma *assinatura* diferente par
  Para um procedimento com mais de um parâmetro opcional, há um conjunto de sobrecargas implícitas, recebidos pela lógica semelhante àquela no exemplo anterior.  
   
 ## <a name="implicit-overloads-for-a-paramarray-parameter"></a>Sobrecargas implícitas para um parâmetro ParamArray  
- O compilador considera um procedimento com um parâmetro [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) para ter um número infinito de sobrecargas, diferente do outro no que o código de chamada passa para a matriz de parâmetros, da seguinte maneira:  
+ O compilador considera um procedimento com um parâmetro [ParamArray](../../../language-reference/modifiers/paramarray.md) para ter um número infinito de sobrecargas, diferente do outro no que o código de chamada passa para a matriz de parâmetros, da seguinte maneira:  
   
-- Uma sobrecarga para quando o código de chamada não fornece um argumento para o `ParamArray`  
+- Uma sobrecarga para quando o código de chamada não fornece um argumento para o`ParamArray`  
   
-- Uma sobrecarga para quando o código de chamada fornece uma matriz unidimensional do tipo de elemento `ParamArray`  
+- Uma sobrecarga para quando o código de chamada fornece uma matriz unidimensional do `ParamArray` tipo de elemento  
   
-- Para cada inteiro positivo, uma sobrecarga para quando o código de chamada fornece esse número de argumentos, cada um dos `ParamArray` tipo de elemento  
+- Para cada inteiro positivo, uma sobrecarga para quando o código de chamada fornece esse número de argumentos, cada um dos `ParamArray` tipos de elemento  
   
  As declarações a seguir ilustram essas sobrecargas implícitas.  
   
@@ -113,7 +113,7 @@ Ao sobrecarregar um procedimento, você deve usar uma *assinatura* diferente par
  [!code-vb[VbVbcnProcedures#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#71)]  
   
 ## <a name="typeless-programming-as-an-alternative-to-overloading"></a>Programação não tipada como uma alternativa à sobrecarga  
- Se você quiser permitir que o código de chamada transmita tipos de dados diferentes para um parâmetro, uma abordagem alternativa será a programação sem tipo. Você pode definir a opção de verificação de tipo para `Off` com a [instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) ou a opção [-optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) do compilador. Em seguida, você não precisa declarar o tipo de dados do parâmetro. No entanto, essa abordagem tem as seguintes desvantagens em comparação com a sobrecarga:  
+ Se você quiser permitir que o código de chamada transmita tipos de dados diferentes para um parâmetro, uma abordagem alternativa será a programação sem tipo. Você pode definir a opção de verificação de tipo como `Off` com a [instrução Option Strict](../../../language-reference/statements/option-strict-statement.md) ou a opção de compilador [-optionstrict](../../../reference/command-line-compiler/optionstrict.md) . Em seguida, você não precisa declarar o tipo de dados do parâmetro. No entanto, essa abordagem tem as seguintes desvantagens em comparação com a sobrecarga:  
   
 - A programação sem tipo produz um código de execução menos eficiente.  
   
@@ -121,14 +121,14 @@ Ao sobrecarregar um procedimento, você deve usar uma *assinatura* diferente par
   
 - O compilador não poderá sinalizar um erro se o código de chamada passar um tipo de dados ao qual o procedimento não dá suporte.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Procedimentos](./index.md)
 - [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
-- [Solução de problemas de Procedimentos](./troubleshooting-procedures.md)
+- [Solucionando problemas de procedimentos](./troubleshooting-procedures.md)
 - [Como definir várias versões de um procedimento](./how-to-define-multiple-versions-of-a-procedure.md)
 - [Como chamar um procedimento sobrecarregado](./how-to-call-an-overloaded-procedure.md)
 - [Como sobrecarregar um procedimento que usa parâmetros opcionais](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [Como sobrecarregar um procedimento que usa um número indefinido de parâmetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
-- [Resolução de Sobrecarga](./overload-resolution.md)
-- [Sobrecargas](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Resolução de sobrecarga](./overload-resolution.md)
+- [Sobrecargas](../../../language-reference/modifiers/overloads.md)

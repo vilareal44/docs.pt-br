@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a95a3908-9f87-4084-937e-8e01ef03ad63
 topic_type:
 - apiref
-ms.openlocfilehash: 13220dcfdd260688494d5aebc50f94abf8a82215
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b710f966f519e2702607b7e186fff5986110d391
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177500"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007813"
 ---
 # <a name="imetadataemitsetparamprops-method"></a>Método IMetaDataEmit::SetParamProps
-Define ou altera características de um parâmetro de método definido por uma chamada anterior ao [IMetaDataEmit::DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
+Define ou altera recursos de um parâmetro de método que foi definido por uma chamada anterior para [IMetaDataEmit::D efineparam](imetadataemit-defineparam-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,35 +38,35 @@ HRESULT SetParamProps (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pd`  
- [em] O símbolo do parâmetro alvo.  
+ no O token para o parâmetro de destino.  
   
  `szName`  
- [em] O nome do parâmetro em Unicode.  
+ no O nome do parâmetro em Unicode.  
   
  `dwParamFlags`  
- [em] As bandeiras para o parâmetro.  
+ no Os sinalizadores para o parâmetro.  
   
  `dwCPlusTypeFlag`  
- [em] O ELEMENT_TYPE_* pelo valor constante.  
+ no O ELEMENT_TYPE_ * para o valor constante.  
   
  `pValue`  
- [em] O valor constante para o parâmetro.  
+ no O valor da constante para o parâmetro.  
   
  `cchValue`  
- [em] O tamanho nos caracteres `pValue`(Unicode) de .  
+ no O tamanho em caracteres (Unicode) de `pValue` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interface IMetaDataEmit](imetadataemit-interface.md)
+- [Interface IMetaDataEmit2](imetadataemit2-interface.md)

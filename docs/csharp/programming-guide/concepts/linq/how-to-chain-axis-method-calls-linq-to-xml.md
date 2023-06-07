@@ -1,15 +1,16 @@
 ---
-title: Como acorrentar as chamadas do método do eixo (LINQ para XML) (C#)
+title: Como encadear chamadas de método de eixo (LINQ to XML) (C#)
+description: Esses LINQ to XML exemplos em C# demonstram chamadas para dois eixos para localizar todos os elementos de um nome especificado em uma determinada profundidade na árvore.
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: 56fa5c9e8358883d838b68e99664240aa97f347f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f26efd2ca918fd36916eb4f01462af70066219a0
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169461"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105379"
 ---
-# <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Como acorrentar as chamadas do método do eixo (LINQ para XML) (C#)
+# <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Como encadear chamadas de método de eixo (LINQ to XML) (C#)
 Um padrão comum que você usar em seu código é chamar um método do eixo, então chama um dos eixos do método de extensão.  
   
  Há dois eixos com o nome de `Elements` que retornam uma coleção de elementos: o método de <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> e o método de <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> . Você pode combinar esses dois eixos para localizar todos os elementos de um nome especificado em uma determinada profundidade na árvore.  

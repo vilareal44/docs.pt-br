@@ -1,5 +1,6 @@
 ---
 title: Padrão de design do observador
+description: Saiba mais sobre o padrão de design do observador no .NET. Esse padrão permite que um assinante registre e receba notificações de um provedor.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: 817337cec604a431f9f7d4eacb04378ee0d3c227
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4edcd2645b28095f4bd18f4918b9afa5c893bd39
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73131574"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662726"
 ---
 # <a name="observer-design-pattern"></a>Padrão de design do observador
 
@@ -89,10 +90,10 @@ O exemplo a seguir contém o ponto de entrada do aplicativo que instancia a clas
 [!code-csharp[Conceptual.ObserverDesignPattern#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesignpattern/cs/program.cs#5)]
 [!code-vb[Conceptual.ObserverDesignPattern#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesignpattern/vb/module1.vb#5)]
 
-## <a name="related-topics"></a>Tópicos Relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 |Title|Descrição|
 |-----------|-----------------|
-|[Práticas recomendadas para o padrão de design do observador](../../../docs/standard/events/observer-design-pattern-best-practices.md)|São descritas as práticas recomendadas ao desenvolver aplicativos que implementam o padrão de design do observador.|
-|[Como implementar um provedor](../../../docs/standard/events/how-to-implement-a-provider.md)|É fornecida uma implementação passo a passo de um provedor para uma aplicativo de monitoramento de temperatura.|
-|[Como implementar um observador](../../../docs/standard/events/how-to-implement-an-observer.md)|É fornecida uma implementação passo a passo de um observador para uma aplicativo de monitoramento de temperatura.|
+|[Práticas recomendadas para o padrão de design do observador](observer-design-pattern-best-practices.md)|São descritas as práticas recomendadas ao desenvolver aplicativos que implementam o padrão de design do observador.|
+|[Como implementar um provedor](how-to-implement-a-provider.md)|É fornecida uma implementação passo a passo de um provedor para uma aplicativo de monitoramento de temperatura.|
+|[Como: implementar um observador](how-to-implement-an-observer.md)|É fornecida uma implementação passo a passo de um observador para uma aplicativo de monitoramento de temperatura.|

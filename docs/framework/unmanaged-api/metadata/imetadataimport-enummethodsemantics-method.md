@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e7e3c630-9691-46d6-94df-b5593a7bb08a
 topic_type:
 - apiref
-ms.openlocfilehash: f20652a7f86576e64646a1f63c3e2c48b55cf811
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 213cbd955e3d47a49abde579a54af48641e225ec
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175454"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491908"
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a>Método IMetaDataImport::EnumMethodSemantics
 Enumera as propriedades e os eventos de alteração de propriedade aos quais o método especificado está relacionado.  
@@ -37,42 +37,42 @@ HRESULT EnumMethodSemantics (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [dentro, fora] Um ponteiro para o enumerador. Isto deve ser NULO para a primeira chamada deste método.  
+ [entrada, saída] Um ponteiro para o enumerador. Isso deve ser nulo para a primeira chamada deste método.  
   
  `mb`  
- [em] Um token MethodDef que limita o escopo da enumeração.  
+ no Um token MethodDef que limita o escopo da enumeração.  
   
  `rEventProp`  
- [fora] A matriz usada para armazenar os eventos ou propriedades.  
+ fora A matriz usada para armazenar os eventos ou as propriedades.  
   
  `cMax`  
- [em] O tamanho máximo `rEventProp` da matriz.  
+ no O tamanho máximo da `rEventProp` matriz.  
   
  `pcEventProp`  
- [fora] O número de eventos ou `rEventProp`propriedades retornadas em .  
+ fora O número de eventos ou Propriedades retornados em `rEventProp` .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSemantics`retornou com sucesso.|  
+|`S_OK`|`EnumMethodSemantics`retornado com êxito.|  
 |`S_FALSE`|Não há eventos ou propriedades para enumerar. Nesse caso, `pcEventProp` é zero.|  
   
 ## <a name="remarks"></a>Comentários  
- Muitos tipos de tempo de `On`execução de idiomas comuns definem eventos de *propriedade* `Changed` e métodos de *propriedade* `Changed` relacionados às suas propriedades. Por exemplo, <xref:System.Windows.Forms.Control?displayProperty=nameWithType> o tipo <xref:System.Windows.Forms.Control.Font%2A> define <xref:System.Windows.Forms.Control.FontChanged> uma propriedade, <xref:System.Windows.Forms.Control.OnFontChanged%2A> um evento e um método. O método de <xref:System.Windows.Forms.Control.Font%2A> acessório <xref:System.Windows.Forms.Control.OnFontChanged%2A> definido do método de <xref:System.Windows.Forms.Control.FontChanged> chamadas de propriedade, que por sua vez levanta o evento. Você `EnumMethodSemantics` ligaria usando o <xref:System.Windows.Forms.Control.OnFontChanged%2A> MethodDef para <xref:System.Windows.Forms.Control.Font%2A> obter referências à propriedade e ao <xref:System.Windows.Forms.Control.FontChanged> evento.  
+ Muitos tipos de Common Language Runtime definem eventos de *Propriedade* `Changed` e `On` *Property* `Changed` métodos de propriedade relacionados a suas propriedades. Por exemplo, o <xref:System.Windows.Forms.Control?displayProperty=nameWithType> tipo define uma <xref:System.Windows.Forms.Control.Font%2A> propriedade, um <xref:System.Windows.Forms.Control.FontChanged> evento e um <xref:System.Windows.Forms.Control.OnFontChanged%2A> método. O método do acessador set do <xref:System.Windows.Forms.Control.Font%2A> método de chamadas de propriedade <xref:System.Windows.Forms.Control.OnFontChanged%2A> que, por sua vez, gera o <xref:System.Windows.Forms.Control.FontChanged> evento. Você chamaria `EnumMethodSemantics` usando o MethodDef para <xref:System.Windows.Forms.Control.OnFontChanged%2A> para obter referências à <xref:System.Windows.Forms.Control.Font%2A> propriedade e ao <xref:System.Windows.Forms.Control.FontChanged> evento.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

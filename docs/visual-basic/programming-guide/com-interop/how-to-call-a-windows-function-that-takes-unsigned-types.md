@@ -1,5 +1,5 @@
 ---
-title: Como chamar uma função do Windows que use tipos não assinados
+title: 'Como: Chamar uma função do Windows que use tipos não assinados'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 790c680744e2100a40a7cea8b8cef80c68d586bb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f30b78a2f0c38f233796e18006c889438dce4c58
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348727"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396824"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Como chamar uma função do Windows que use tipos não assinados (Visual Basic)
 
@@ -27,15 +27,15 @@ Se você estiver consumindo uma classe, módulo ou estrutura que tem membros de 
 
 ## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Para chamar uma função do Windows que usa um tipo sem sinal
 
-1. Use uma [instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md) para informar Visual Basic qual biblioteca contém a função, qual nome está nessa biblioteca, qual é a sequência de chamada e como converter cadeias de caracteres ao chamá-la.
+1. Use uma [instrução Declare](../../language-reference/statements/declare-statement.md) para informar Visual Basic qual biblioteca contém a função, qual nome está nessa biblioteca, qual é a sequência de chamada e como converter cadeias de caracteres ao chamá-la.
 
-2. Na instrução `Declare`, use `UInteger`, `ULong`, `UShort`ou `Byte` conforme apropriado para cada parâmetro com um tipo não assinado.
+2. Na `Declare` instrução, use `UInteger` ,, `ULong` `UShort` ou `Byte` conforme apropriado para cada parâmetro com um tipo não assinado.
 
 3. Consulte a documentação da função do Windows que você está chamando para localizar os nomes e valores das constantes que ele usa. Muitos deles são definidos no arquivo WinUser. h.
 
-4. Declare as constantes necessárias no seu código. Muitas constantes do Windows são valores não assinados de 32 bits e você deve declará-las `As UInteger`.
+4. Declare as constantes necessárias no seu código. Muitas constantes do Windows são valores não assinados de 32 bits e você deve declará-los `As UInteger` .
 
-5. Chame a função da maneira normal. O exemplo a seguir chama a função do Windows `MessageBox`, que usa um argumento inteiro sem sinal.
+5. Chame a função da maneira normal. O exemplo a seguir chama a função do Windows `MessageBox` , que usa um argumento inteiro sem sinal.
 
     ```vb
     Public Class windowsMessage
@@ -70,7 +70,7 @@ Se você estiver consumindo uma classe, módulo ou estrutura que tem membros de 
     ```
 
     > [!CAUTION]
-    > Os tipos de dados `UInteger`, `ULong`, `UShort`e `SByte` não fazem parte da [independência de linguagem e dos componentes independentes de linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS), portanto, o código em conformidade com CLS não pode consumir um componente que os utilize.
+    > Os `UInteger` tipos de dados,, e `ULong` não fazem `UShort` `SByte` parte da [independência de linguagem e dos componentes independentes de linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS), portanto, o código em conformidade com CLS não pode consumir um componente que os utilize.
 
     > [!IMPORTANT]
     > Fazer uma chamada para código não gerenciado, como a API (interface de programação de aplicativo) do Windows, expõe seu código a possíveis riscos de segurança.
@@ -78,10 +78,10 @@ Se você estiver consumindo uma classe, módulo ou estrutura que tem membros de 
     > [!IMPORTANT]
     > Chamar a API do Windows requer permissão de código não gerenciado, o que pode afetar sua execução em situações de confiança parcial. Para obter mais informações, consulte <xref:System.Security.Permissions.SecurityPermission> e [permissões de acesso ao código](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)
-- [Tipo de Dados Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)
-- [Tipo de Dados UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)
-- [Instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [Instruções passo a passo: chamando APIs do Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+- [Tipos de dados](../../language-reference/data-types/index.md)
+- [Tipo de Dados Integer](../../language-reference/data-types/integer-data-type.md)
+- [Tipo de Dados UInteger](../../language-reference/data-types/uinteger-data-type.md)
+- [Instrução Declare](../../language-reference/statements/declare-statement.md)
+- [Passo a passo: Fazer chamadas de APIs do Windows](walkthrough-calling-windows-apis.md)

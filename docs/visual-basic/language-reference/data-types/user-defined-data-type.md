@@ -23,16 +23,16 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: 99eeb4b619f6bb23d00f8e449de953d41843f714
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fbd9536a54d7fb471d6cb2e130b14a84e40a4940
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343874"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415486"
 ---
 # <a name="user-defined-data-type"></a>Tipo de dados definido pelo usuário
 
-Contém dados em um formato que você define. A instrução `Structure` define o formato.
+Contém dados em um formato que você define. A `Structure` instrução define o formato.
 
 As versões anteriores do Visual Basic dão suporte ao tipo definido pelo usuário (UDT). A versão atual expande o UDT para uma *estrutura*. Uma estrutura é uma concatenação de um ou mais *Membros* de vários tipos de dados. Visual Basic trata uma estrutura como uma única unidade, embora você também possa acessar seus membros individualmente.
 
@@ -44,25 +44,25 @@ O valor padrão de um tipo de dados de estrutura consiste na combinação dos va
 
 ## <a name="declaration-format"></a>Formato de declaração
 
-Uma declaração de estrutura começa com a [instrução Structure](../../../visual-basic/language-reference/statements/structure-statement.md) e termina com a instrução `End Structure`. A instrução `Structure` fornece o nome da estrutura, que também é o identificador do tipo de dados que a estrutura está definindo. Outras partes do código podem usar esse identificador para declarar variáveis, parâmetros e valores de retorno de função para serem do tipo de dados dessa estrutura.
+Uma declaração de estrutura começa com a [instrução Structure](../statements/structure-statement.md) e termina com a `End Structure` instrução. A `Structure` instrução fornece o nome da estrutura, que também é o identificador do tipo de dados que a estrutura está definindo. Outras partes do código podem usar esse identificador para declarar variáveis, parâmetros e valores de retorno de função para serem do tipo de dados dessa estrutura.
 
-As declarações entre as instruções `Structure` e `End Structure` definem os membros da estrutura.
+As declarações entre as `Structure` `End Structure` instruções e definem os membros da estrutura.
 
 ## <a name="member-access-levels"></a>Níveis de acesso de membro
 
-Você deve declarar todos os membros usando uma [instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md) ou uma instrução que especifique o nível de acesso, como [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md)ou [Private](../../../visual-basic/language-reference/modifiers/private.md). Se você usar uma instrução `Dim`, o nível de acesso padrão será público.
+Você deve declarar todos os membros usando uma [instrução Dim](../statements/dim-statement.md) ou uma instrução que especifique o nível de acesso, como [Public](../modifiers/public.md), [Friend](../modifiers/friend.md)ou [Private](../modifiers/private.md). Se você usar uma `Dim` instrução, o nível de acesso padrão será público.
 
 ## <a name="programming-tips"></a>Dicas de programação
 
-- **Consumo de memória.** Assim como acontece com todos os tipos de dados compostos, você não pode calcular com segurança o consumo total de memória de uma estrutura adicionando as alocações de armazenamento nominal de seus membros. Além disso, você não pode supor com segurança que a ordem de armazenamento na memória é igual à sua ordem de declaração. Se você precisar controlar o layout de armazenamento de uma estrutura, poderá aplicar o atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> à instrução `Structure`.
+- **Consumo de memória.** Assim como acontece com todos os tipos de dados compostos, você não pode calcular com segurança o consumo total de memória de uma estrutura adicionando as alocações de armazenamento nominal de seus membros. Além disso, você não pode supor com segurança que a ordem de armazenamento na memória é igual à sua ordem de declaração. Se você precisar controlar o layout de armazenamento de uma estrutura, poderá aplicar o <xref:System.Runtime.InteropServices.StructLayoutAttribute> atributo à `Structure` instrução.
 
 - **Considerações sobre interoperabilidade.** Se você estiver fazendo a interface com componentes não escritos para o .NET Framework, por exemplo, automação ou objetos COM, tenha em mente que os tipos definidos pelo usuário em outros ambientes não são compatíveis com Visual Basic tipos de estrutura.
 
-- **Ampliação.** Não há conversão automática de ou para nenhum tipo de dados de estrutura. Você pode definir operadores de conversão em sua estrutura usando a [instrução Operator](../../../visual-basic/language-reference/statements/operator-statement.md)e pode declarar cada operador de conversão como `Widening` ou `Narrowing`.
+- **Ampliação.** Não há conversão automática de ou para nenhum tipo de dados de estrutura. Você pode definir operadores de conversão em sua estrutura usando a [instrução Operator](../statements/operator-statement.md)e pode declarar cada operador de conversão como `Widening` ou `Narrowing` .
 
 - **Digite os caracteres.** Os tipos de dados de estrutura não têm nenhum caractere de tipo literal ou caractere de tipo de identificador.
 
-- **Tipo de estrutura.** Não há nenhum tipo correspondente no .NET Framework. Todas as estruturas herdam da classe .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, mas nenhuma estrutura individual corresponde à <xref:System.ValueType?displayProperty=nameWithType>.
+- **Tipo de estrutura.** Não há nenhum tipo correspondente no .NET Framework. Todas as estruturas herdam da classe .NET Framework <xref:System.ValueType?displayProperty=nameWithType> , mas nenhuma estrutura individual corresponde a <xref:System.ValueType?displayProperty=nameWithType> .
 
 ## <a name="example"></a>Exemplo
 
@@ -76,15 +76,15 @@ O paradigma a seguir mostra o contorno da declaração de uma estrutura.
 End Structure
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ValueType>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
-- [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)
-- [Funções de Conversão do Tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Resumo da Conversão](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [Instrução Structure](../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Ampliação](../../../visual-basic/language-reference/modifiers/widening.md)
-- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
-- [Estruturas](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Uso Eficiente de Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Tipos de dados](index.md)
+- [Funções de conversão do tipo](../functions/type-conversion-functions.md)
+- [Resumo da Conversão](../keywords/conversion-summary.md)
+- [Instrução Structure](../statements/structure-statement.md)
+- [Widening](../modifiers/widening.md)
+- [Narrowing](../modifiers/narrowing.md)
+- [Estruturas](../../programming-guide/language-features/data-types/structures.md)
+- [Uso eficiente de tipos de dados](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)

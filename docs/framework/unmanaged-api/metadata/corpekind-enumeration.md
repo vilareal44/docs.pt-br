@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 22dc6dea-b1b9-4982-a730-a022d586b117
 topic_type:
 - apiref
-ms.openlocfilehash: 74670a1477546066145bd4bbf2f123a252e10b55
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8b6eab8156f72847eb6dd3369950f9b46a3fc877
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436477"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007553"
 ---
 # <a name="corpekind-enumeration"></a>Enumeração CorPEKind
-Contém valores que descrevem um arquivo executável portátil (PE), como retornado de uma chamada para [IMetaDataImport2:: GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
+Contém valores que descrevem um arquivo executável portátil (PE), como retornado de uma chamada para [IMetaDataImport2:: GetPEKind](imetadataimport2-getpekind-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,7 +41,7 @@ typedef enum CorPEKind {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`peNot`|Indica que este não é um arquivo PE.|  
 |`peILOnly`|Indica que este arquivo PE contém apenas código gerenciado.|  
@@ -53,13 +53,13 @@ typedef enum CorPEKind {
 ## <a name="remarks"></a>Comentários  
  Esses valores podem ser usados em combinações de bits.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerações de metadados](metadata-enumerations.md)

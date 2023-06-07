@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dd5e9b64-b4a3-4ba6-9be6-ddb540f4ffcf
 topic_type:
 - apiref
-ms.openlocfilehash: 6e6cc44c2f9028c0e26c4f933242cad93e3a98c3
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 12a0792e8fafc73b480de6bacc86f98470dfedf7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866085"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503283"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>Método ICorProfilerCallback::ObjectReferences
 Notifica o criador de perfil sobre objetos na memória que estão sendo referenciados pelo objeto especificado.  
@@ -43,29 +43,29 @@ HRESULT ObjectReferences(
  no A ID da classe da qual o objeto especificado é uma instância do.  
   
  `cObjectRefs`  
- no O número de objetos referenciados pelo objeto especificado (ou seja, o número de elementos na matriz de `objectRefIds`).  
+ no O número de objetos referenciados pelo objeto especificado (ou seja, o número de elementos na `objectRefIds` matriz).  
   
  `objectRefIds`  
- no Uma matriz de IDs de objetos que estão sendo referenciados por `objectId`.  
+ no Uma matriz de IDs de objetos que estão sendo referenciados pelo `objectId` .  
   
 ## <a name="remarks"></a>Comentários  
- O método `ObjectReferences` é chamado para cada objeto restante no heap após a conclusão de uma coleta de lixo. Se o criador de perfil retornar um erro desse retorno de chamada, os serviços de criação de perfil descontinuarão invocando esse retorno de chamada até a próxima coleta de lixo.  
+ O `ObjectReferences` método é chamado para cada objeto restante no heap após a conclusão de uma coleta de lixo. Se o criador de perfil retornar um erro desse retorno de chamada, os serviços de criação de perfil descontinuarão invocando esse retorno de chamada até a próxima coleta de lixo.  
   
- O retorno de chamada `ObjectReferences` pode ser usado em conjunto com o retorno de chamada [ICorProfilerCallback:: RootReferences](icorprofilercallback-rootreferences-method.md) para criar um grafo de referência de objeto completo para o tempo de execução. O Common Language Runtime (CLR) garante que cada referência de objeto seja relatada apenas uma vez pelo método `ObjectReferences`.  
+ O `ObjectReferences` retorno de chamada pode ser usado em conjunto com o retorno de chamada [ICorProfilerCallback:: RootReferences](icorprofilercallback-rootreferences-method.md) para criar um grafo de referência de objeto completo para o tempo de execução. O Common Language Runtime (CLR) garante que cada referência de objeto seja relatada apenas uma vez pelo `ObjectReferences` método.  
   
- As IDs de objeto retornadas por `ObjectReferences` não são válidas durante o próprio retorno de chamada, pois a coleta de lixo pode estar no meio da movimentação de objetos. Portanto, os profileres não devem tentar inspecionar objetos durante uma chamada de `ObjectReferences`. Quando [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md) é chamado, a coleta de lixo é concluída e a inspeção pode ser feita com segurança.  
+ As IDs de objeto retornadas por `ObjectReferences` não são válidas durante o próprio retorno de chamada, pois a coleta de lixo pode estar no meio da movimentação de objetos. Portanto, os profileres não devem tentar inspecionar objetos durante uma `ObjectReferences` chamada. Quando [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md) é chamado, a coleta de lixo é concluída e a inspeção pode ser feita com segurança.  
   
- Um `ClassId` nulo indica que `objectId` tem um tipo que está descarregando.  
+ Um NULL `ClassId` indica que `objectId` tem um tipo que está descarregando.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerCallback](icorprofilercallback-interface.md)

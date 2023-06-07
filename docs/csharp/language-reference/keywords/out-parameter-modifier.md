@@ -4,12 +4,12 @@ ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: 57308992268e1285cfeb82b28e2abf213e7a831b
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 30946c85d2b64ead3f42e03da61108fa5b367779
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805862"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174803"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>Modificador de parâmetro out (Referência de C#)
 
@@ -48,15 +48,15 @@ Não é possível usar as palavras-chave `in`, `ref` e `out` para os seguintes t
   
 - Métodos de iterador, que incluem uma instrução [yield return](./yield.md) ou `yield break`.  
 
-Além disso, [os métodos de extensão](../../programming-guide/classes-and-structs/extension-methods.md) têm as seguintes restrições:
+Além disso, os [métodos de extensão](../../programming-guide/classes-and-structs/extension-methods.md) têm as seguintes restrições:
 
 - A `out` palavra-chave não pode ser usada no primeiro argumento de um método de extensão.
-- A `ref` palavra-chave não pode ser usada no primeiro argumento de um método de extensão quando o argumento não é uma estrutura, ou um tipo genérico não constrangido a ser uma estrutura.
-- A `in` palavra-chave não pode ser usada a menos que o primeiro argumento seja uma estrutura. A `in` palavra-chave não pode ser usada em qualquer tipo genérico, mesmo quando constrangida a ser uma estrutura.
+- A `ref` palavra-chave não pode ser usada no primeiro argumento de um método de extensão quando o argumento não é um struct ou um tipo genérico não restrito a ser um struct.
+- A `in` palavra-chave não pode ser usada, a menos que o primeiro argumento seja um struct. A `in` palavra-chave não pode ser usada em nenhum tipo genérico, mesmo quando restrita a um struct.
 
 ## <a name="declaring-out-parameters"></a>Declarando parâmetros `out`
 
-Declarar um método com argumentos `out` é uma solução clássica para retornar vários valores. Começando com o C# 7.0, considere [tuplas](../../tuples.md) para cenários semelhantes. O exemplo a seguir usa `out` para retornar três variáveis com uma única chamada de método. O terceiro argumento é atribuído a nulo. Isso permite que os métodos retornem valores opcionalmente.  
+Declarar um método com argumentos `out` é uma solução clássica para retornar vários valores. A partir do C# 7,0, considere as [tuplas de valor](../builtin-types/value-tuples.md) para cenários semelhantes. O exemplo a seguir usa `out` para retornar três variáveis com uma única chamada de método. O terceiro argumento é atribuído a NULL. Isso permite que os métodos retornem valores opcionalmente.  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#3)]  
 
@@ -77,9 +77,9 @@ No exemplo anterior, a variável `number` é fortemente tipada como um `int`. Vo
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [C# Referência](../index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
-- [C# Palavras-chave](./index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
+- [Palavras-chave do C#](./index.md)
 - [Parâmetros de método](./method-parameters.md)

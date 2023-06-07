@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
-ms.openlocfilehash: dd3292620cafc4e5d2494b3b5e18e04691910dc4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a77780621032e2ce59b9db04a179c7086588219b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711188"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291637"
 ---
 # <a name="accessing-attributes-in-the-dom"></a>Acessando atributos no DOM
 
@@ -260,4 +260,4 @@ XmlAttribute attr = doc.DocumentElement.Attributes[0];
 
 ## <a name="see-also"></a>Veja também
 
-- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

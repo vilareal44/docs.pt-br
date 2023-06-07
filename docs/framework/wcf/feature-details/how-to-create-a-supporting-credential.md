@@ -2,12 +2,12 @@
 title: Como criar uma credencial de suporte
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 3f33bf5a78c575237ee4bc609a482a81fd30fc53
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: b8e7ddcd6118c77e14e090a0b1fa8d65aeb8e3df
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964552"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597144"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Como criar uma credencial de suporte
 É possível ter um esquema de segurança personalizado que exija mais de uma credencial. Por exemplo, um serviço pode exigir do cliente não apenas um nome de usuário e uma senha, mas também uma credencial que comprova que o cliente está acima da idade de 18. A segunda credencial é uma *credencial de suporte*. Este tópico explica como implementar essas credenciais em um cliente Windows Communication Foundation (WCF).  
@@ -29,13 +29,13 @@ ms.locfileid: "75964552"
   
 |Finalidade|Descrição|  
 |-------------|-----------------|  
-|Assinado|O token de suporte é incluído no cabeçalho de segurança e é assinado pela assinatura da mensagem.|  
+|Com sinal|O token de suporte é incluído no cabeçalho de segurança e é assinado pela assinatura da mensagem.|  
 |Endosso|Um *token de endosso* assina a assinatura da mensagem.|  
-|Assinado e endossador|Assinados, tokens de endosso assinam todo o elemento de `ds:Signature` produzido da assinatura da mensagem e são assinados por essa assinatura de mensagem; ou seja, os dois tokens (o token usado para a assinatura de mensagem e o token de endosso assinado) se assinam uns aos outros.|  
-|Assinado e criptografado|Tokens de suporte criptografados assinados são tokens de suporte assinados que também são criptografados quando aparecem no `wsse:SecurityHeader`.|  
+|Assinado e endossador|Assinados, os tokens de endosso assinam todo o `ds:Signature` elemento produzido da assinatura da mensagem e são assinados por essa assinatura de mensagem; ou seja, ambos os tokens (o token usado para a assinatura de mensagem e o token de endosso assinado) se assinam uns aos outros.|  
+|Assinado e criptografado|Tokens de suporte criptografados assinados são tokens de suporte assinados que também são criptografados quando aparecem no `wsse:SecurityHeader` .|  
   
 ## <a name="programming-supporting-credentials"></a>Programando credenciais de suporte  
- Para criar um serviço que usa tokens de suporte, você deve criar um [\<> CustomBinding](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Para obter mais informações, consulte [como: criar uma associação personalizada usando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
+ Para criar um serviço que usa tokens de suporte, você deve criar um [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md) . (Para obter mais informações, consulte [como: criar uma associação personalizada usando o SecurityBindingElement](how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
   
  A primeira etapa ao criar uma associação personalizada é criar um elemento de associação de segurança, que pode ser um dos três tipos:  
   
@@ -45,7 +45,7 @@ ms.locfileid: "75964552"
   
 - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
- Todas as classes herdam da <xref:System.ServiceModel.Channels.SecurityBindingElement>, que inclui quatro propriedades relevantes:  
+ Todas as classes herdam do <xref:System.ServiceModel.Channels.SecurityBindingElement> , que inclui quatro propriedades relevantes:  
   
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.EndpointSupportingTokenParameters%2A>  
   
@@ -68,18 +68,18 @@ ms.locfileid: "75964552"
   
 #### <a name="to-create-a-custom-binding-that-includes-supporting-credentials"></a>Para criar uma associação personalizada que inclui credenciais de suporte  
   
-1. Crie um elemento de associação de segurança. O exemplo a seguir cria um <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> com o modo de autenticação `UserNameForCertificate`. Use o método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A>.  
+1. Crie um elemento de associação de segurança. O exemplo a seguir cria um <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> com o `UserNameForCertificate` modo de autenticação. Use o método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A>.  
   
-2. Adicione o parâmetro de suporte à coleção de tipos retornada pela propriedade apropriada (`Endorsing`, `Signed`, `SignedEncrypted`ou `SignedEndorsed`). Os tipos no namespace <xref:System.ServiceModel.Security.Tokens> incluem tipos comumente usados, como o <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>.  
+2. Adicione o parâmetro de suporte à coleção de tipos retornada pela propriedade apropriada ( `Endorsing` ,, `Signed` `SignedEncrypted` ou `SignedEndorsed` ). Os tipos no <xref:System.ServiceModel.Security.Tokens> namespace incluem tipos comumente usados, como o <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters> .  
   
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Descrição  
- O exemplo a seguir cria uma instância do <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> e adiciona uma instância da classe <xref:System.ServiceModel.Security.Tokens.KerberosSecurityTokenParameters> à coleção que a propriedade de endosso retornou.  
+ O exemplo a seguir cria uma instância do <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> e adiciona uma instância da <xref:System.ServiceModel.Security.Tokens.KerberosSecurityTokenParameters> classe à coleção que a propriedade de endosso retornou.  
   
 ### <a name="code"></a>Código  
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Como criar uma associação personalizada utilizando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Como criar uma associação personalizada utilizando o SecurityBindingElement](how-to-create-a-custom-binding-using-the-securitybindingelement.md)

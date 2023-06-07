@@ -1,13 +1,14 @@
 ---
 title: Construção funcional (LINQ to XML) (C#)
+description: Saiba como a interface de programação de LINQ to XML permite a construção funcional, a capacidade de criar uma árvore XML em uma única instrução em C#.
 ms.date: 07/20/2015
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
-ms.openlocfilehash: e55b0010a5f75eee8137d1e9bcefc573b5e07e72
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f209a7ef2a4597ec8eeccb3083b77223a27e7a65
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635750"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103777"
 ---
 # <a name="functional-construction-linq-to-xml-c"></a>Construção funcional (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] fornece uma maneira eficiente de criar elementos XML chamada *construção funcional*. Construção funcional é a capacidade de criar uma árvore XML em uma única instrução.  
@@ -20,7 +21,7 @@ ms.locfileid: "75635750"
   
 - Se um objeto implementar <xref:System.Collections.Generic.IEnumerable%601>, a coleção no objeto será enumerada, e todos os itens da coleção serão adicionados. Se a coleção contiver objetos <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XAttribute>, cada item da coleção será adicionado separadamente. Isso é importante porque permite que você passe os resultados de uma consulta LINQ para o construtor.  
   
- Esses recursos permitem escrever código para criar uma árvore XML. A seguir, é mostrado um exemplo:  
+ Esses recursos permitem escrever código para criar uma árvore XML. Veja um exemplo a seguir:  
   
 ```csharp  
 XElement contacts =  
@@ -38,7 +39,7 @@ XElement contacts =
     );  
 ```  
   
- Esses recursos também permitem que você escreva código que usa os resultados das consultas LINQ quando você cria uma árvore XML, da seguinte forma:  
+ Esses recursos também permitem que você escreva código que usa os resultados de consultas LINQ ao criar uma árvore XML, da seguinte maneira:  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  

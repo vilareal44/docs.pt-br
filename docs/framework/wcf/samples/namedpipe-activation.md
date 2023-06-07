@@ -2,16 +2,16 @@
 title: NamedPipe Activation
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: a562ec51d35af08f49e89b652670e9a57b0f00c2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 8d9a10b94c52514db611144352653b911d109056
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837851"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602460"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe Activation
 
-Este exemplo demonstra a hospedagem de um serviço que usa o WAS (serviço de ativação de processos do Windows) para ativar um serviço que se comunica em pipes de nomes. Este exemplo é baseado na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e requer que o Windows Vista seja executado.
+Este exemplo demonstra a hospedagem de um serviço que usa o WAS (serviço de ativação de processos do Windows) para ativar um serviço que se comunica em pipes de nomes. Este exemplo é baseado na [introdução](getting-started-sample.md) e requer que o Windows Vista seja executado.
 
 > [!NOTE]
 > Os procedimentos de instalação e as instruções de compilação para esse exemplo estão localizadas no final deste tópico.
@@ -21,7 +21,7 @@ Este exemplo demonstra a hospedagem de um serviço que usa o WAS (serviço de at
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`
 
@@ -29,7 +29,7 @@ Este exemplo demonstra a hospedagem de um serviço que usa o WAS (serviço de at
 
 O exemplo consiste em um programa de console do cliente (. exe) e uma biblioteca de serviços (. dll) hospedados em um processo de trabalho ativado pelo WAS (serviços de ativação de processos do Windows). A atividade do cliente fica visível na janela do console.
 
-O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido pela interface `ICalculator`, que expõe operações matemáticas (adicionar, subtrair, multiplicar e dividir), conforme mostrado no código de exemplo a seguir.
+O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido pela `ICalculator` interface, que expõe operações matemáticas (adicionar, subtrair, multiplicar e dividir), conforme mostrado no código de exemplo a seguir.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -71,7 +71,7 @@ public class CalculatorService : ICalculator
 }
 ```
 
-O exemplo usa uma associação de `netNamedPipeBinding` modificada sem segurança. A associação é especificada nos arquivos de configuração para o cliente e o serviço. O tipo de associação para o serviço é especificado no atributo `binding` do elemento de ponto de extremidade, conforme mostrado na seguinte configuração de exemplo.
+O exemplo usa uma associação modificada sem `netNamedPipeBinding` segurança. A associação é especificada nos arquivos de configuração para o cliente e o serviço. O tipo de associação para o serviço é especificado no atributo do elemento do ponto de extremidade `binding` , conforme mostrado na seguinte configuração de exemplo.
 
 Se você quiser usar uma associação de pipe nomeado segura, altere o modo de segurança do servidor para a configuração de segurança desejada e execute svcutil. exe novamente no cliente para obter um arquivo de configuração de cliente atualizado.
 
@@ -161,7 +161,7 @@ Press <ENTER> to terminate client.
 
 1. Verifique se o IIS 7,0 está instalado. O IIS 7,0 é necessário para a ativação do WAS.
 
-2. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+2. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
     Além disso, você deve instalar os componentes de ativação não HTTP do WCF:
 
@@ -198,9 +198,9 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         > Esse comando é uma única linha de texto.
 
-        Esse comando permite que o aplicativo/servicemodelsamples seja acessado usando `http://localhost/servicemodelsamples` e `net.tcp://localhost/servicemodelsamples`.
+        Esse comando permite que o aplicativo/servicemodelsamples seja acessado usando o `http://localhost/servicemodelsamples` e o `net.tcp://localhost/servicemodelsamples` .
 
-4. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+4. Para criar a edição C# ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).
 
 5. Remova a associação de site net. pipe que você adicionou para este exemplo.
 
@@ -226,4 +226,4 @@ Press <ENTER> to terminate client.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Exemplos de persistência e de hospedagem do AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [Hospedagem de AppFabric e persistência Exemplos](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

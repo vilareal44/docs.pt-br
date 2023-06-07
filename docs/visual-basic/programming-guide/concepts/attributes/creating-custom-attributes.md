@@ -2,12 +2,12 @@
 title: Criando atributos personalizados
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: 773a3e8e974f37a1554892dd3441c115681c5bae
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 84b400c2fa1b2d4019eec32092f954d680e64978
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350151"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400688"
 ---
 # <a name="creating-custom-attributes-visual-basic"></a>Criando atributos personalizados (Visual Basic)
 
@@ -63,12 +63,12 @@ End Class
 > [!NOTE]
 > Se sua classe de atributos contém uma propriedade, essa propriedade deve ser de leitura/gravação.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Reflection>
-- [Guia de programação do Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Guia de programação do Visual Basic](../../index.md)
 - [Escrevendo atributos personalizados](../../../../standard/attributes/writing-custom-attributes.md)
-- [Reflexão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [Atributos (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [Acessando atributos usando reflexão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-- [AttributeUsage (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+- [Reflexão (Visual Basic)](../reflection.md)
+- [Atributos (Visual Basic)](../../../language-reference/attributes.md)
+- [Acessando atributos usando reflexão (Visual Basic)](accessing-attributes-by-using-reflection.md)
+- [AttributeUsage (Visual Basic)](attributeusage.md)

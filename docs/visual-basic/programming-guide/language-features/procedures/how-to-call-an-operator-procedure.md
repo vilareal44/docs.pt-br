@@ -11,17 +11,17 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: a977b17d4b2c797bbe38d289a57f3d9d31fa64fa
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fa2bc5417b8b917ff48502a5bd0a4daa21fab67e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345960"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388563"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Como chamar um procedimento de operador (Visual Basic)
-Você chama um procedimento de operador usando o símbolo de operador em uma expressão. No caso de um operador de conversão, você chama a [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) para converter um valor de um tipo de dados para outro.  
+Você chama um procedimento de operador usando o símbolo de operador em uma expressão. No caso de um operador de conversão, você chama a [função CType](../../../language-reference/functions/ctype-function.md) para converter um valor de um tipo de dados para outro.  
   
- Você não chama os procedimentos de operador explicitamente. Basta usar o operador ou a função `CType`, em uma instrução de atribuição ou uma expressão, da mesma maneira que você usa um operador normalmente. Visual Basic faz a chamada para o procedimento de operador.  
+ Você não chama os procedimentos de operador explicitamente. Basta usar o operador, ou a `CType` função, em uma instrução de atribuição ou em uma expressão, da mesma maneira que você usa um operador normalmente. Visual Basic faz a chamada para o procedimento de operador.  
   
  A definição de um operador em uma classe ou estrutura também é chamada de *sobrecarga* do operador.  
   
@@ -39,29 +39,29 @@ Você chama um procedimento de operador usando o símbolo de operador em uma exp
   
 2. Verifique se os tipos de dados dos operandos são apropriados para a conversão e na ordem correta.  
   
-3. `CType` chama o procedimento de operador de conversão e retorna o valor convertido.  
+3. `CType`chama o procedimento de operador de conversão e retorna o valor convertido.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir cria duas estruturas <xref:System.TimeSpan>, adiciona-as juntas e armazena o resultado em uma terceira estrutura de <xref:System.TimeSpan>. A estrutura de <xref:System.TimeSpan> define procedimentos de operador para sobrecarregar vários operadores padrão.  
+ O exemplo a seguir cria duas <xref:System.TimeSpan> estruturas, adiciona-as juntas e armazena o resultado em uma terceira <xref:System.TimeSpan> estrutura. A <xref:System.TimeSpan> estrutura define os procedimentos de operador para sobrecarregar vários operadores padrão.  
   
  [!code-vb[VbVbcnProcedures#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#29)]  
   
- Como <xref:System.TimeSpan> sobrecarrega o operador de `+` padrão, o exemplo anterior chama um procedimento de operador quando calcula o valor de `combinedSpan`.  
+ Como o <xref:System.TimeSpan> sobrecarrega o operador padrão `+` , o exemplo anterior chama um procedimento de operador quando calcula o valor de `combinedSpan` .  
   
  Para obter um exemplo de como chamar um procedimento de operador de conversa, consulte [como: usar uma classe que define operadores](./how-to-use-a-class-that-defines-operators.md).  
   
 ## <a name="compile-the-code"></a>Compilar o código  
  Certifique-se de que a classe ou estrutura que você está usando define o operador que você deseja usar.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Procedimentos de Operador](./operator-procedures.md)
+- [Procedimentos do operador](./operator-procedures.md)
 - [Como definir um operador](./how-to-define-an-operator.md)
 - [Como definir um operador de conversão](./how-to-define-a-conversion-operator.md)
-- [Instrução Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Ampliação](../../../../visual-basic/language-reference/modifiers/widening.md)
-- [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
-- [Instrução Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Como declarar uma estrutura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [Conversões Implícitas e Explícitas](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Conversões de Widening e Narrowing](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Instrução Operator](../../../language-reference/statements/operator-statement.md)
+- [Widening](../../../language-reference/modifiers/widening.md)
+- [Narrowing](../../../language-reference/modifiers/narrowing.md)
+- [Instrução Structure](../../../language-reference/statements/structure-statement.md)
+- [Como: Declarar uma estrutura](../data-types/how-to-declare-a-structure.md)
+- [Conversões implícitas e explícitas](../data-types/implicit-and-explicit-conversions.md)
+- [Conversões de Widening e Narrowing](../data-types/widening-and-narrowing-conversions.md)

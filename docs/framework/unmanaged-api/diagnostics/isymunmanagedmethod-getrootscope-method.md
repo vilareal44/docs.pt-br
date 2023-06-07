@@ -36,12 +36,12 @@ HRESULT GetRootScope(
  `pRetVal`  
  fora Um ponteiro que é definido para a interface [ISymUnmanagedScope](isymunmanagedscope-interface.md) retornada.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ISymUnmanagedMethod](isymunmanagedmethod-interface.md)

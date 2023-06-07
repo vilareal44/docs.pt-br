@@ -6,18 +6,18 @@ helpviewer_keywords:
 - appDomainManagerAssembly element
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
 ms.openlocfilehash: 4c4ea35bff17a0e5188f26884e93cf77173a7df8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154415"
 ---
-# <a name="appdomainmanagerassembly-element"></a>\<appDomainManagerO> Elemento
+# <a name="appdomainmanagerassembly-element"></a>Elemento \<appDomainManagerAssembly>
 Especifica o assembly que fornece o gerenciador do domínio do aplicativo para o domínio do aplicativo padrão no processo.  
   
-[**\<>de configuração**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<>de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<appDomainManager>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<appDomainManagerAssembly>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,7 +33,7 @@ Especifica o assembly que fornece o gerenciador do domínio do aplicativo para o
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`value`|Atributo obrigatório. Especifica o nome de exibição do conjunto que fornece o gerenciador de domínio do aplicativo para o domínio de aplicativo padrão no processo.|  
+|`value`|Atributo obrigatório. Especifica o nome de exibição do assembly que fornece o Gerenciador de domínio do aplicativo para o domínio de aplicativo padrão no processo.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum.  
@@ -46,20 +46,20 @@ Especifica o assembly que fornece o gerenciador do domínio do aplicativo para o
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- Para especificar o tipo do gerenciador de domínio do aplicativo, você deve especificar esse elemento e o [ \<elemento>do appDomainManagerType.](appdomainmanagertype-element.md) Se um desses elementos não for especificado, o outro será ignorado.  
+ Para especificar o tipo de Gerenciador de domínio do aplicativo, você deve especificar esse elemento e o [\<appDomainManagerType>](appdomainmanagertype-element.md) elemento. Se um desses elementos não for especificado, o outro será ignorado.  
   
- Quando o domínio de aplicativo <xref:System.TypeLoadException> padrão é carregado, é jogado se o conjunto especificado não existir ou se o conjunto não contiver o tipo especificado pelo [ \<elemento appDomainManagerType>;](appdomainmanagertype-element.md) e o processo não começa. Se o conjunto for encontrado, mas as <xref:System.IO.FileLoadException> informações da versão não coincidirem, um será lançado.  
+ Quando o domínio de aplicativo padrão for carregado, <xref:System.TypeLoadException> será gerado se o assembly especificado não existir ou se o assembly não contiver o tipo especificado pelo [\<appDomainManagerType>](appdomainmanagertype-element.md) elemento; e o processo não for iniciado. Se o assembly for encontrado, mas as informações de versão não corresponderem, um <xref:System.IO.FileLoadException> será lançado.  
   
- Quando você especifica o tipo de gerenciador de domínio de aplicativo para o domínio de aplicativo padrão, outros domínios de aplicativo criados a partir do domínio do aplicativo padrão herdam o tipo de gerenciador de domínio do aplicativo. Use <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> as <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> propriedades e as propriedades para especificar um tipo diferente de gerenciador de domínio de aplicativo para um novo domínio de aplicativo.  
+ Quando você especifica o tipo de Gerenciador de domínio do aplicativo para o domínio de aplicativo padrão, outros domínios de aplicativo criados a partir do domínio de aplicativo padrão herdam o tipo de Gerenciador de domínio do aplicativo. Use as <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> Propriedades e para especificar um tipo de Gerenciador de domínio de aplicativo diferente para um novo domínio de aplicativo.  
   
- Especificar o tipo de gerenciador de domínio do aplicativo requer que o aplicativo tenha total confiança. (Por exemplo, um aplicativo em execução na área de trabalho tem total confiança.) Se o aplicativo não tiver <xref:System.TypeLoadException> total confiança, um é jogado.  
+ A especificação do tipo de Gerenciador de domínio do aplicativo exige que o aplicativo tenha confiança total. (Por exemplo, um aplicativo em execução na área de trabalho tem confiança total.) Se o aplicativo não tiver confiança total, um <xref:System.TypeLoadException> será lançado.  
   
- Para obter o formato do nome <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> de exibição do conjunto, consulte a propriedade.  
+ Para o formato do nome de exibição do assembly, consulte a <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> propriedade.  
   
  Este elemento de configuração está disponível apenas no .NET Framework 4 e posterior.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como especificar que o gerenciador `MyMgr` de domínio `AdMgrExample` do aplicativo para o domínio de aplicativo padrão de um processo é o tipo no conjunto.  
+ O exemplo a seguir mostra como especificar que o Gerenciador de domínio do aplicativo para o domínio de aplicativo padrão de um processo é o `MyMgr` tipo no `AdMgrExample` assembly.  
   
 ```xml  
 <configuration>  
@@ -75,7 +75,7 @@ Especifica o assembly que fornece o gerenciador do domínio do aplicativo para o
 
 - <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
-- [\<aplicativoDomainManagerType> Element](appdomainmanagertype-element.md)
+- [\<appDomainManagerType>Elementos](appdomainmanagertype-element.md)
 - [Esquema de configurações do runtime](index.md)
-- [Esquema de arquivo de configuração](../index.md)
+- [Esquema de arquivos de configuração](../index.md)
 - [Método SetAppDomainManagerType](../../../unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

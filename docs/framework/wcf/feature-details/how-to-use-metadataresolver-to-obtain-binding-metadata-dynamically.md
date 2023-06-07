@@ -1,15 +1,15 @@
 ---
-title: 'Como: usar MetadataResolver para obter metadados de associação dinamicamente'
+title: Como utilizar o MetadataResolver para obter metadados de associação dinamicamente
 ms.date: 03/30/2017
 ms.assetid: 56ffcb99-fff0-4479-aca0-e3909009f605
-ms.openlocfilehash: dfa36c81bbeb70c1dd981ff91b4efb6d7c423a5c
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 98fe4977f270b008c51039af19261ca86b8d6642
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991616"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601121"
 ---
-# <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>Como: usar MetadataResolver para obter metadados de associação dinamicamente
+# <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>Como utilizar o MetadataResolver para obter metadados de associação dinamicamente
 Este tópico mostra como usar a <xref:System.ServiceModel.Description.MetadataResolver> classe para obter metadados de associação dinamicamente.  
   
 ### <a name="to-dynamically-obtain-binding-metadata"></a>Para obter metadados de associação dinamicamente  
@@ -21,7 +21,7 @@ Este tópico mostra como usar a <xref:System.ServiceModel.Description.MetadataRe
       = new EndpointAddress(new Uri("http://localhost:8080/SampleService/mex"));  
     ```  
   
-2. Chamada <xref:System.ServiceModel.Description.MetadataResolver.Resolve%28System.Type%2CSystem.ServiceModel.EndpointAddress%29>, que passa o tipo de serviço e o endereço do ponto de extremidade de metadados. Isso retorna uma coleção de pontos de extremidade que implementam o contrato especificado. Somente informações de associação são importadas dos metadados; as informações de contrato não são importadas. O contrato fornecido é usado em seu lugar.  
+2. Chamada <xref:System.ServiceModel.Description.MetadataResolver.Resolve%28System.Type%2CSystem.ServiceModel.EndpointAddress%29> , que passa o tipo de serviço e o endereço do ponto de extremidade de metadados. Isso retorna uma coleção de pontos de extremidade que implementam o contrato especificado. Somente informações de associação são importadas dos metadados; as informações de contrato não são importadas. O contrato fornecido é usado em seu lugar.  
   
     ```csharp  
     ServiceEndpointCollection endpoints = MetadataResolver.Resolve(typeof(SampleServiceClient),metaAddress);  
@@ -47,4 +47,4 @@ Este tópico mostra como usar a <xref:System.ServiceModel.Description.MetadataRe
   
 ## <a name="see-also"></a>Consulte também
 
-- [Metadados](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [Metadados](metadata.md)

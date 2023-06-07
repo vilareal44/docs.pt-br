@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf7940e9-4558-4319-925c-09f6c98c8fcd
 topic_type:
 - apiref
-ms.openlocfilehash: c5527f3bd0b04857a1ebc520016b81ddbe3c23f8
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a3093f33f2220b22b7b4b373f6d79a341abf8c9c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83208844"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501931"
 ---
 # <a name="icordebugmanagedcallback2destroyconnection-method"></a>Método ICorDebugManagedCallback2::DestroyConnection
 Notifica o depurador de que a conexão especificada foi encerrada.  
@@ -42,7 +42,7 @@ HRESULT DestroyConnection (
  no A ID da conexão que foi destruída.  
   
 ## <a name="remarks"></a>Comentários  
- Um `DestroyConnection` retorno de chamada será acionado quando um host chamar [ICLRDebugManager:: EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md) na [API de hospedagem](../hosting/index.md).  
+ Um `DestroyConnection` retorno de chamada será acionado quando um host chamar [ICLRDebugManager:: EndConnection](../hosting/iclrdebugmanager-endconnection-method.md) na [API de hospedagem](../hosting/index.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  

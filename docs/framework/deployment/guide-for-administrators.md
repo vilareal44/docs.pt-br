@@ -1,25 +1,26 @@
 ---
 title: Guia de implantação do .NET Framework para administradores
+description: Leia o guia de implantação do .NET para administradores. Use essas informações para implantar a versão 4,5 do .NET e suas dependências do sistema em uma rede.
 ms.date: 04/10/2018
 helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-ms.openlocfilehash: be15ce0b0bed37da6fe400e98bfdd118c48f7ba0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d58eac4f21e4f1069ac392aacb4e9818831e914c
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716532"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622647"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guia de implantação do .NET Framework para administradores
 
-Este artigo passo a passo descreve como um administrador de sistema pode implantar o .NET Framework 4.5 e suas dependências de sistema em uma rede usando o Microsoft Endpoint Configuration Manager. Este artigo pressupõe que todos os computadores clientes de destino atendem aos requisitos mínimos do .NET Framework. Para obter uma lista dos requisitos de hardware e software para instalar o .NET Framework 4.5, consulte [Requisitos do sistema](../get-started/system-requirements.md).
+Este artigo passo a passo descreve como um administrador do sistema pode implantar o .NET Framework 4,5 e suas dependências do sistema em uma rede usando o Microsoft Endpoint Configuration Manager. Este artigo pressupõe que todos os computadores clientes de destino atendem aos requisitos mínimos do .NET Framework. Para obter uma lista dos requisitos de hardware e software para instalar o .NET Framework 4.5, consulte [Requisitos do sistema](../get-started/system-requirements.md).
 
 > [!NOTE]
-> O software mencionado neste documento, incluindo, sem limitação, o .NET Framework 4.5, O Gerenciador de Configuração e o Active Directory, estão sujeitos a termos e condições de licença. Essas instruções assumem que esses termos de licença e condições foram examinados e aceitos pelos licenciados apropriados do software. Essas instruções não renunciam nenhum dos termos e condições dos contratos de tal licença.
+> O software referenciado neste documento, incluindo, sem limitação, o .NET Framework 4,5, Configuration Manager e Active Directory, estão sujeitos aos termos e condições da licença. Essas instruções assumem que esses termos de licença e condições foram examinados e aceitos pelos licenciados apropriados do software. Essas instruções não renunciam nenhum dos termos e condições dos contratos de tal licença.
 >
-> Para obter informações sobre o suporte ao .NET Framework, consulte a [política de suporte oficial do .NET Framework](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) no site do Suporte da Microsoft.
+> Para obter informações sobre o suporte para o .NET Framework, consulte [.NET Framework a política de suporte oficial](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) no site do suporte da Microsoft.
 
 Este tópico contém as seguintes seções:
 
@@ -27,7 +28,7 @@ Este tópico contém as seguintes seções:
 - [Implantando o .NET Framework](#deploying_in_a_test_environment)
 - [Criar uma coleção](#creating_a_collection)
 - [Crie um pacote e programa](#creating_a_package)
-- [Selecione um ponto de distribuição](#select_dist_point)
+- [Selecionar um ponto de distribuição](#select_dist_point)
 - [Implantar o pacote](#deploying_package)
 - [Recursos](#resources)
 - [Solução de problemas](#troubleshooting)
@@ -36,11 +37,11 @@ Este tópico contém as seguintes seções:
 
 ## <a name="the-deployment-process"></a>O processo de implantação
 
-Quando você tem a infra-estrutura de suporte em vigor, você usa o Gerenciador de configuração para implantar o pacote redistributable do .NET Framework para computadores na rede. Estabelecer uma infraestrutura envolve criar e definir cinco áreas principais: coleções, um pacote e programa para o software, pontos de distribuição e implantações.
+Quando você tem a infraestrutura de suporte em vigor, usa Configuration Manager para implantar o pacote redistribuível .NET Framework em computadores na rede. Estabelecer uma infraestrutura envolve criar e definir cinco áreas principais: coleções, um pacote e programa para o software, pontos de distribuição e implantações.
 
-- **Coleções** são grupos de recursos do Configuration Manager, como usuários, grupos de usuários ou computadores, nos quais o .NET Framework é implantado. Para obter mais informações, consulte [Introdução às coleções no Gerenciador de Configuração](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections) na biblioteca de documentação do Gerenciador de configuração.
+- **Coleções** são grupos de recursos do Configuration Manager, como usuários, grupos de usuários ou computadores, nos quais o .NET Framework é implantado. Para obter mais informações, consulte [introdução às coleções em Configuration Manager](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections) na biblioteca de documentação do Configuration Manager.
 
-- **Pacotes e programas** geralmente representam aplicativos de software a serem instalados em um computador cliente, mas também podem conter arquivos individuais, atualizações ou até mesmo comandos individuais. Para obter mais informações, consulte [Pacotes e programas no Gerenciador de configuração](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs) na biblioteca de documentação do Gerenciador de configuração.
+- **Pacotes e programas** geralmente representam aplicativos de software a serem instalados em um computador cliente, mas também podem conter arquivos individuais, atualizações ou até mesmo comandos individuais. Para obter mais informações, consulte [pacotes e programas em Configuration Manager](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs) na biblioteca de documentação do Configuration Manager.
 
 - **Pontos de distribuição** são funções do sistema de sites do Configuration Manager que armazenam os arquivos necessários para que o software seja executado em computadores cliente. Quando o cliente do Configuration Manager recebe e processa uma implantação de software, ele contata um ponto de distribuição para baixar o conteúdo associado ao software e iniciar o processo de instalação. Para obter mais informações, veja [Conceitos fundamentais para gerenciamento de conteúdo no Configuration Manager](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management) na biblioteca de documentação do Configuration Manager.
 
@@ -53,7 +54,7 @@ Quando você tem a infra-estrutura de suporte em vigor, você usa o Gerenciador 
 
 ## <a name="deploying-the-net-framework"></a>Implantando o .NET Framework
 
-Você pode usar o Gerenciador de Configuração para implantar uma instalação silenciosa do .NET Framework 4.5, onde os usuários não interagem com o processo de instalação. Siga estas etapas:
+Você pode usar Configuration Manager para implantar uma instalação silenciosa do .NET Framework 4,5, em que os usuários não interagem com o processo de instalação. Siga estas etapas:
 
 1. [Crie uma coleção](#creating_a_collection).
 
@@ -61,13 +62,13 @@ Você pode usar o Gerenciador de Configuração para implantar uma instalação 
 
 3. [Selecione um ponto de distribuição](#select_dist_point).
 
-4. [Implantar o pacote](#deploying_package).
+4. [Implante o pacote](#deploying_package).
 
 <a name="creating_a_collection"></a>
 
 ### <a name="create-a-collection"></a>Criar uma coleção
 
-Nesta etapa, você selecionará os computadores nos quais pacote e o programa serão implantados e os agrupará em uma coleção de dispositivos. Para criar uma coleção no Configuration Manager, você pode usar regras de associação diretas (onde você especifica manualmente os membros da coleção) ou regras de consulta (onde o Configuration Manager determina os membros da coleção com base em critérios especificados). Para obter mais informações sobre regras de associação, incluindo consultas e regras [diretas, consulte Introdução a coleções no Gerenciador de Configuração](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections) na Biblioteca de Documentação do Gerenciador de Configuração.
+Nesta etapa, você selecionará os computadores nos quais pacote e o programa serão implantados e os agrupará em uma coleção de dispositivos. Para criar uma coleção no Configuration Manager, você pode usar regras de associação diretas (onde você especifica manualmente os membros da coleção) ou regras de consulta (onde o Configuration Manager determina os membros da coleção com base em critérios especificados). Para obter mais informações sobre regras de associação, incluindo consultas e regras diretas, consulte [introdução às coleções em Configuration Manager](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections) na biblioteca de documentação do Configuration Manager.
 
 Para criar uma coleção:
 
@@ -81,7 +82,7 @@ Para criar uma coleção:
 
 5. Escolha **Procurar** para especificar uma coleção de restrição.
 
-6. Na página **Regras de Associação**, escolha **Adicionar Regra** e escolha **Regra Direta** para abrir o **Assistente de Criação de Regra de Associação Direta**. Escolha **a seguir**.
+6. Na página **Regras de Associação**, escolha **Adicionar Regra** e escolha **Regra Direta** para abrir o **Assistente de Criação de Regra de Associação Direta**. Escolha **Próxima**.
 
 7. Na página **Pesquisar Recursos**, na lista **Classe de recurso**, escolha **Recurso do Sistema**. Na lista **Nome do atributo**, escolha **Nome**. No campo **Valor**, insira `%` e escolha **Avançar**.
 
@@ -97,7 +98,7 @@ As etapas a seguir criam, manualmente, um pacote para o .NET Framework redistrib
 
 Para criar um pacote:
 
-1. No console Gerenciador de configuração, escolha **Biblioteca de software**.
+1. No console do Configuration Manager, escolha **Biblioteca de Software**.
 
 2. No workspace **Biblioteca de Software**, expanda **Gerenciamento de Aplicativos** e escolha **Pacotes**.
 
@@ -145,7 +146,7 @@ Para distribuir o pacote e o programa para computadores clientes de um servidor,
 
 Use as etapas a seguir para selecionar um ponto de distribuição para o pacote .NET Framework 4.5 criado na seção anterior:
 
-1. No console Gerenciador de configuração, escolha **Biblioteca de software**.
+1. No console do Configuration Manager, escolha **Biblioteca de Software**.
 
 2. No workspace **Biblioteca de Software**, expanda **Gerenciamento de Aplicativos** e escolha **Pacotes**.
 
@@ -161,7 +162,7 @@ Use as etapas a seguir para selecionar um ponto de distribuição para o pacote 
 
 8. Conclua o assistente.
 
-O pacote agora conterá todas as informações que você precisa para implantar silenciosamente o .NET Framework 4.5. Antes de implantar o pacote e o programa, verifique se ele foi instalado no ponto de distribuição; consulte a seção "Monitoramento de status de conteúdo de conteúdo de conteúdo que você distribui com o [Gerenciador de configuração](https://docs.microsoft.com/configmgr/core/servers/deploy/configure/monitor-content-you-have-distributed) na Biblioteca de Documentação do Gerenciador de Configuração.
+O pacote agora conterá todas as informações que você precisa para implantar silenciosamente o .NET Framework 4.5. Antes de implantar o pacote e o programa, verifique se ele foi instalado no ponto de distribuição; consulte a seção "monitoramento de status de conteúdo" do [Monitor de conteúdo que você distribui com o Configuration Manager](https://docs.microsoft.com/configmgr/core/servers/deploy/configure/monitor-content-you-have-distributed) na biblioteca de documentação Configuration Manager.
 
 <a name="deploying_package"></a>
 
@@ -169,7 +170,7 @@ O pacote agora conterá todas as informações que você precisa para implantar 
 
 Para implantar o pacote e o programa .NET Framework 4.5:
 
-1. No console Gerenciador de configuração, escolha **Biblioteca de software**.
+1. No console do Configuration Manager, escolha **Biblioteca de Software**.
 
 2. No workspace **Biblioteca de Software**, expanda **Gerenciamento de Aplicativos** e escolha **Pacotes**.
 
@@ -177,13 +178,13 @@ Para implantar o pacote e o programa .NET Framework 4.5:
 
 4. Na guia **Início**, no grupo **Implantação**, escolha **Implantar**.
 
-5. Na página **Geral** do **Assistente de Implantação de Software**, escolha **Procurar** e selecione a coleção anteriormente criada. Escolha **a seguir**.
+5. Na página **Geral** do **Assistente de Implantação de Software**, escolha **Procurar** e selecione a coleção anteriormente criada. Escolha **Próxima**.
 
 6. Na página **Conteúdo** do assistente, verifique se o ponto do qual você deseja distribuir o software é exibido e escolha **Avançar**.
 
-7. Na página **Configurações de Implantação** do assistente, confirme se a **Ação** está definida como **Instalar** e a **Finalidade** como **Obrigatório**. Isso garantirá que o pacote de software seja uma instalação obrigatória nos computadores de destino. Escolha **a seguir**.
+7. Na página **Configurações de Implantação** do assistente, confirme se a **Ação** está definida como **Instalar** e a **Finalidade** como **Obrigatório**. Isso garantirá que o pacote de software seja uma instalação obrigatória nos computadores de destino. Escolha **Próxima**.
 
-8. Na página **Agendamento** do assistente, especifique quando você deseja que o .NET Framework seja instalado. Você pode escolher **Nova** para atribuir uma hora de instalação ou instruir o software a ser instalado quando o usuário fizer logon, logoff ou assim que possível. Escolha **a seguir**.
+8. Na página **Agendamento** do assistente, especifique quando você deseja que o .NET Framework seja instalado. Você pode escolher **Nova** para atribuir uma hora de instalação ou instruir o software a ser instalado quando o usuário fizer logon, logoff ou assim que possível. Escolha **Próxima**.
 
 9. Na página **Experiência do Usuário** do assistente, use os valores padrão e escolha **Avançar**.
 
@@ -206,7 +207,7 @@ Para obter mais informações sobre a infraestrutura para testar a implantação
 
 - [Active Directory Domain Services](/windows/desktop/ad/active-directory-domain-services)
 
-- [DNS (Sistema de Nomes de Domínio)](/windows-server/networking/dns/dns-top)
+- [Sistema de nome de domínio (DNS)](/windows-server/networking/dns/dns-top)
 
 - [Protocolo DHCP](/windows-server/networking/technologies/dhcp/dhcp-top)
 
@@ -234,8 +235,8 @@ Para obter mais informações sobre a infraestrutura para testar a implantação
 
 Os seguintes arquivos de log são gerados durante a configuração do .NET Framework:
 
-- %temp%\Microsoft .NET Framework *versão*\*.txt
-- %temp%\Microsoft .NET Framework *versão*\*.html
+- %temp%\Microsoft .NET Framework *version* \* . txt
+- %temp%\Microsoft .NET Framework *versão* \* . html
 
 em que *versão* é a versão do .NET Framework que você está instalando, como 4.5 ou 4.7.2.
 
@@ -276,7 +277,7 @@ Outros códigos de erro:
 
 - [Códigos de resultado do Windows Update Agent](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Guia de implantação para desenvolvedores](deployment-guide-for-developers.md)
 - [Requisitos do sistema](../get-started/system-requirements.md)

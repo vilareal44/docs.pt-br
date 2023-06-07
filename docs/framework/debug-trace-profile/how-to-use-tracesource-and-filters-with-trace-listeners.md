@@ -1,5 +1,6 @@
 ---
 title: Como usar TraceSource e filtros com ouvintes de rastreamento
+description: Use a classe de rastreamento e os filtros com ouvintes de rastreamento no .NET. O rastreador substitui os métodos estáticos das classes de rastreamento e depuração mais antigas.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - initializing trace listeners
@@ -14,12 +15,11 @@ helpviewer_keywords:
 - trace listeners, filters
 - trace listeners, initializing
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
-ms.openlocfilehash: 7d2b9da72ae0b2a5c60eb90da0b56b45634e6e05
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.openlocfilehash: 432c866f7c3ca1fd59f8f3d36acd61740b6584c0
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181822"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051253"
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Como usar TraceSource e filtros com ouvintes de rastreamento
 Um dos novos recursos do .NET Framework versão 2.0 é um sistema de rastreamento aprimorado. A premissa básica permanece inalterada: mensagens de rastreamento são enviadas por meio de comutadores para ouvintes, que relatam os dados para um meio de saída associado. Uma diferença principal para a versão 2.0 é que os rastreamentos podem ser iniciados por meio de instâncias da classe <xref:System.Diagnostics.TraceSource>. A <xref:System.Diagnostics.TraceSource> destina-se a funcionar como um sistema de rastreamento aprimorado e pode ser usada no lugar dos métodos estáticos das classes de rastreamento antigas <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug>. As classes <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug> familiares ainda existem, mas a prática recomendada é usar a classe <xref:System.Diagnostics.TraceSource> para o rastreamento.  
@@ -161,7 +161,7 @@ Um dos novos recursos do .NET Framework versão 2.0 é um sistema de rastreament
     }  
     ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>

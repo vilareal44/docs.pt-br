@@ -1,5 +1,6 @@
 ---
 title: Como criar e inicializar ouvintes de rastreamento
+description: Saiba como criar e inicializar ouvintes de rastreamento usando classes como System. Diagnostics. DefaultTraceListener no .NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,18 +12,17 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
-ms.openlocfilehash: ce0df0af32d6798c89c8db6761d18febc1c398bb
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 752306124e41a7fb7458daccc8c2891631eb9616
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217439"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051201"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>Como criar e inicializar ouvintes de rastreamento
 
 As classes <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.Trace?displayProperty=nameWithType> enviam mensagens para objetos chamados ouvintes, que recebem e processam essas mensagens. Um ouvinte desse tipo, o <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, é criado e inicializado automaticamente quando a depuração ou o rastreamento é habilitado. Se você desejar que a saída <xref:System.Diagnostics.Trace> ou <xref:System.Diagnostics.Debug> seja direcionada para outras fontes, crie e inicialize ouvintes de rastreamento adicionais.
 
-Os ouvintes criados devem refletir as necessidades do aplicativo. Por exemplo, se desejar obter um registro de texto de toda a saída de rastreamento, crie um ouvinte <xref:System.Diagnostics.TextWriterTraceListener>, que grava toda a saída para um novo arquivo de texto quando ele é habilitado. Por outro lado, se desejar exibir a saída somente durante a execução do aplicativo, crie um ouvinte <xref:System.Diagnostics.ConsoleTraceListener>, que direciona toda a saída para uma janela do console. O <xref:System.Diagnostics.EventLogTraceListener> pode direcionar a saída de rastreamento para um log de eventos. Para obter mais informações, consulte [Ouvintes de rastreamento](trace-listeners.md).
+Os ouvintes criados devem refletir as necessidades do aplicativo. Por exemplo, se desejar obter um registro de texto de toda a saída de rastreamento, crie um ouvinte <xref:System.Diagnostics.TextWriterTraceListener>, que grava toda a saída para um novo arquivo de texto quando ele é habilitado. Por outro lado, se desejar exibir a saída somente durante a execução do aplicativo, crie um ouvinte <xref:System.Diagnostics.ConsoleTraceListener>, que direciona toda a saída para uma janela do console. O <xref:System.Diagnostics.EventLogTraceListener> pode direcionar a saída de rastreamento para um log de eventos. Para obter mais informações, consulte [ouvintes de rastreamento](trace-listeners.md).
 
 Crie ouvintes de rastreamento em um [arquivo de configuração de aplicativo](../configure-apps/index.md) ou no código. Recomendamos o uso de arquivos de configuração de aplicativo, porque eles permitem adicionar, modificar ou remover ouvintes de rastreamento sem a necessidade de alterar o código.
 
@@ -93,9 +93,9 @@ Crie ouvintes de rastreamento em um [arquivo de configuração de aplicativo](..
     myListener.Flush();
     ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Ouvintes de rastreamento](trace-listeners.md)
 - [Opções de rastreamento](trace-switches.md)
-- [Como adicionar instruções de rastreamento ao código do aplicativo](how-to-add-trace-statements-to-application-code.md)
-- [Rastreando e instrumentando aplicativos](tracing-and-instrumenting-applications.md)
+- [Como adicionar instruções de rastreamento ao código de um aplicativo](how-to-add-trace-statements-to-application-code.md)
+- [Rastreamento e instrumentação de aplicativos](tracing-and-instrumenting-applications.md)

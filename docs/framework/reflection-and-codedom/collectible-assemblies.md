@@ -1,17 +1,17 @@
 ---
 title: Assemblies de coleção para geração de tipos dinâmicos
-description: ''
+description: Introdução aos assemblies de coleção para geração dinâmica de tipos no .NET. Leia sobre as restrições e tempos de vida do assembly de coleção.
 ms.date: 08/29/2017
 helpviewer_keywords:
 - reflection, dynamic assembly
 - assemblies, collectible
 - collectible assemblies, retrieving
-ms.openlocfilehash: 02c7048e0321282463aa3558287d1d13c5e4f8d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4981b93dbd49a6da96740bebed0f2ed7b89036c8
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180541"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475119"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>Assemblies de coleção para geração de tipos dinâmicos
 
@@ -61,7 +61,7 @@ As seguintes restrições se aplicam a assemblies de coleção:
 
 - **Interoperabilidade com** Nenhuma interface COM pode ser definida em um assembly de coleção e nenhuma instância de tipos dentro de um assembly de coleção pode ser convertida em objetos COM. Um tipo em um assembly de coleção não pode servir como um CCW (COM Callable Wrapper) ou RCW (Runtime Callable Wrapper). No entanto, os tipos em assemblies de coleção podem usar objetos que implementam interfaces COM.
 
-- **Invocação de plataforma** Os métodos que têm <xref:System.Runtime.InteropServices.DllImportAttribute> o atributo não serão compilados quando forem declarados em um assembly de coleção. A instrução <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType> não pode ser usada na implementação de um tipo em um assembly de coleção e esses tipos não podem ter marshaling para um código não gerenciado. No entanto, você pode chamar um código nativo por meio de um ponto de entrada declarado em um assembly de não coleção.
+- **Invocação de plataforma** Os métodos que têm o <xref:System.Runtime.InteropServices.DllImportAttribute> atributo não serão compilados quando forem declarados em um assembly de coleção. A instrução <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType> não pode ser usada na implementação de um tipo em um assembly de coleção e esses tipos não podem ter marshaling para um código não gerenciado. No entanto, você pode chamar um código nativo por meio de um ponto de entrada declarado em um assembly de não coleção.
 
 - **Marshaling** Objetos (em particular, delegados) que são definidos em assemblies de coleção não podem ser empacotados. Essa é uma restrição de todos os tipos emitidos transitórios.
 
@@ -71,6 +71,6 @@ As seguintes restrições se aplicam a assemblies de coleção:
 
 - **Dados estáticos de thread** Não há suporte para variáveis de thread estático.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Emissão de métodos e assemblies dinâmicos](emitting-dynamic-methods-and-assemblies.md)

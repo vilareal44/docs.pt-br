@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b500a260-1d57-4953-95e1-c27063f7c8da
 topic_type:
 - apiref
-ms.openlocfilehash: 129750644962cee3206b9e38cbeaa77d38dddd71
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f66d34fcfdd8c61dcc92817ec1a928ac5b603fc
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176104"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008892"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>Método ICeeGen::AddSectionReloc
-Adiciona uma instrução .reloc à base de código.  
+Adiciona uma instrução. realocação à base de código.  
   
- Este método é obsoleto e não deve ser utilizado.  
+ Este método é obsoleto e não deve ser usado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,28 +38,28 @@ HRESULT AddSectionReloc (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `section`  
- [em] A seção de código de memória para adicionar uma instrução .reloc.  
+ no A seção de código na memória à qual adicionar uma instrução. realocação.  
   
  `offset`  
- [em] O deslocamento da seção.  
+ no O deslocamento da seção.  
   
  `relativeTo`  
- [em] A seção `offset` a que se refere.  
+ no A seção à qual `offset` se refere.  
   
  `relocType`  
- [em] Um dos valores [de CeeSectionRelocType,](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) indicando o tipo de instrução .reloc a ser adicionado.  
+ no Um dos valores de [CeeSectionRelocType](ceesectionreloctype-enumeration.md) , indicando o tipo de instrução. realocação a ser adicionado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como recurso em MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [Interface ICeeGen](iceegen-interface.md)

@@ -1,24 +1,24 @@
 ---
-title: Linha <number> não pode ser lido porque excede o tamanho máximo da linha.
+title: A linha <number> não pode ser lida porque excede o tamanho máximo de linha.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MaxLineSizeExceeded
 ms.assetid: c59116d9-9856-47af-b32d-616d8f2d10d3
-ms.openlocfilehash: d716d7dcaaf338489c952615622f70f9d384ccd7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e489a99ec2c049b54f3067c52ad2493e7226d945
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64604146"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402142"
 ---
-# <a name="line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a>Linha \<número > não pode ser lido porque excede o tamanho máximo da linha.
-Não é possível ler a linha porque ela excede o tamanho máximo da linha. Geralmente, isso significa que há uma aspa de abertura no arquivo, mas nenhuma aspa de fechamento.  
+# <a name="line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a>A linha \<number> não pode ser lida porque excede o tamanho máximo de linha.
+A linha não pode ser lida porque excede o tamanho máximo da linha. Normalmente, isso significa que há uma aspa de abertura no arquivo, mas sem aspas de fechamento.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Inserir aspas de fechamento no arquivo.  
+- Insira uma aspa de fechamento no arquivo.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Analisando arquivos de texto com o objeto TextFieldParser](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
-- [Objeto TextFieldParser](../../visual-basic/language-reference/objects/textfieldparser-object.md)
+- [Analisando arquivos de texto com o objeto TextFieldParser](../developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+- [Objeto TextFieldParser](../language-reference/objects/textfieldparser-object.md)

@@ -1,13 +1,14 @@
 ---
 title: 'Mitigação: layout de WPF'
+description: Saiba como atenuar os problemas resultantes de uma alteração no layout de controles do WPF, como o posicionamento de um objeto que se move em um pixel.
 ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
-ms.openlocfilehash: 7a074698fd203d0c5f9b799bfee8a6a9cb40800e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e4e4612f7b39eefbf0e76ac86c8eb644c257ba75
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457787"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475340"
 ---
 # <a name="mitigation-wpf-layout"></a>Mitigação: layout de WPF
 O layout dos controles do WPF pode ser ligeiramente alterado.  
@@ -36,6 +37,6 @@ O layout dos controles do WPF pode ser ligeiramente alterado.
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=true" />  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Compatibilidade de aplicativos](application-compatibility.md)

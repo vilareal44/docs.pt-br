@@ -1,13 +1,14 @@
 ---
 title: Programando com nós (C#)
+description: Saiba mais sobre a programação com nós. Isso permite aos desenvolvedores escrever programas que funcionam em um nível mais preciso de detalhes do que elementos e atributos.
 ms.date: 07/20/2015
 ms.assetid: c38df0f2-c805-431a-93ff-9103a4284c2f
-ms.openlocfilehash: 05c2e95fe97effda7b537a7ac2d8f5780f4e212b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a31d6459ab644a682d480239cabc3d88fd7dc14
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168308"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301678"
 ---
 # <a name="programming-with-nodes-c"></a>Programando com nós (C#)
 desenvolvedores de[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] que precisam geralmente escrever programas como um editor XML, um sistema uma transformação, ou uma necessidade o gravador de relatório escrever programas que funcionam no nível mais fino de granularidade dos elementos e atributos. Freqüentemente necessitam de trabalhar no nível de nó, em nós de manipulação de texto, as instruções de processamento, e os comentários. Este tópico fornece alguns detalhes sobre programação no nível do nó.  

@@ -2,24 +2,24 @@
 title: Considerações sobre desempenho
 ms.date: 03/30/2017
 ms.assetid: 83082d4a-7350-4b04-ab2d-1fa5ffd643f5
-ms.openlocfilehash: 46e5b5c392ff3a0d401bb709b21637b3d2e784ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d95d003ef5062e2d942d6a1d1897c27a08ea2f65
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650499"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600744"
 ---
 # <a name="performance-considerations"></a>Considerações sobre desempenho
-Considerações sobre desempenho sempre é importantes ao criar aplicativos. Esta seção contém as entradas relacionadas a desempenho e segurança.  
+As considerações de desempenho são sempre importantes ao criar aplicativos. Esta seção contém entradas relacionadas ao desempenho e à segurança.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- Descreve o mecanismo mais rápido para localizar as declarações em uma coleção de declarações.  
+ [Gerenciamento de declarações e autorizações com o modelo de identidade](managing-claims-and-authorization-with-the-identity-model.md)  
+ Descreve o mecanismo mais rápido para localizar declarações em uma coleção de declarações.  
   
- [Criptografia de assinaturas digitais](../../../../docs/framework/wcf/feature-details/encryption-of-digital-signatures.md)  
- Descreve como criptografar a assinatura digital pode adicionar uma penalidade de desempenho e como desabilitá-lo.  
+ [Criptografia de assinaturas digitais](encryption-of-digital-signatures.md)  
+ Descreve como a criptografia da assinatura digital pode adicionar uma penalidade de desempenho e como desabilitá-la.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Práticas recomendadas de segurança](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)
-- [Considerações sobre segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Práticas recomendadas de segurança](best-practices-for-security-in-wcf.md)
+- [Considerações sobre segurança](security-considerations-in-wcf.md)

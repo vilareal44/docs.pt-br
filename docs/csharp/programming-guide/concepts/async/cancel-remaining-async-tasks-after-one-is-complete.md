@@ -1,13 +1,14 @@
 ---
 title: Cancelar as demais tarefas assíncronas depois que uma delas estiver concluída (C#)
+description: Use o método Task. WhenAny junto com um CancellationToken em C# para cancelar todas as tarefas restantes quando uma tarefa for concluída neste exemplo.
 ms.date: 07/20/2015
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-ms.openlocfilehash: e829254c1cd47da16b14aa9c2c90312a97b4b581
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6de60c8faa93752961e3703a042885a71972cc4a
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169968"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925274"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>Cancelar as demais tarefas assíncronas depois que uma delas estiver concluída (C#)
 Usando o método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> juntamente com um <xref:System.Threading.CancellationToken>, você pode cancelar todas as tarefas restantes quando uma tarefa é concluída. O método `WhenAny` leva um argumento que é uma coleção de tarefas. O método inicia todas as tarefas e retorna uma única tarefa. A tarefa única será concluída quando qualquer tarefa na coleção for concluída.  
@@ -257,9 +258,9 @@ namespace CancelAfterOneTask
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [Ajuste fino de seu aplicativo assíncrono (C#)](./fine-tuning-your-async-application.md)
-- [Programação Assíncrona com assincronia e espera (C#)](./index.md)
+- [Programação assíncrona com Async e Await (C#)](./index.md)
 - [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

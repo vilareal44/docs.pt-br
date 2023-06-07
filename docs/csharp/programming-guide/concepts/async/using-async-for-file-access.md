@@ -1,13 +1,14 @@
 ---
 title: Usando o Async para acessar arquivos (C#)
+description: Saiba como usar o recurso assíncrono para acessar arquivos em C#. Você pode chamar métodos assíncronos sem usar retornos de chamada ou dividir seu código entre os métodos.
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: 8e0a62c2263ed3fd11eb4accb54978ef439ac010
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: eb67bd408fe37b99e6c5ffdc2550e8f95110d7eb
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396957"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925118"
 ---
 # <a name="using-async-for-file-access-c"></a>Usando o Async para acessar arquivos (C#)
 Você pode usar o recurso async para acessar arquivos. Usando o recurso async, você pode chamar os métodos assíncronos sem usar retornos de chamada ou dividir seu código em vários métodos ou expressões lambda. Para tornar síncrono um código assíncrono, basta chamar um método assíncrono em vez de um método síncrono e adicionar algumas palavras-chave ao código.  

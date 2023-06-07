@@ -2,24 +2,24 @@
 title: Protegendo as mensagens com a segurança de mensagens
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: a6b062d0d6a74ce2a2ff9afa7e8a0a18853dbd22
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 70c645101033c31da01d79f624ab03ce328dd3a6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746440"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589975"
 ---
 # <a name="securing-messages-using-message-security"></a>Protegendo as mensagens com a segurança de mensagens
-Esta seção aborda a segurança de mensagens do WCF ao usar o <xref:System.ServiceModel.NetMsmqBinding>.  
+Esta seção aborda a segurança de mensagens do WCF ao usar o <xref:System.ServiceModel.NetMsmqBinding> .  
   
 > [!NOTE]
-> Antes de ler este tópico, é recomendável que você leia os [conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
+> Antes de ler este tópico, é recomendável que você leia os [conceitos de segurança](security-concepts.md).  
   
  A ilustração a seguir fornece um modelo conceitual de comunicação em fila usando o WCF. Esta ilustração e terminologia são usadas para explicar  
   
  conceitos de segurança de transporte.  
   
- ![Diagrama de aplicativo na fila](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Queue-figura")  
+ ![Diagrama de aplicativos enfileirados](media/distributed-queue-figure.jpg "Distributed-Queue-figura")  
   
  Ao enviar mensagens em fila usando o WCF, a mensagem WCF é anexada como um corpo da mensagem do serviço de enfileiramento de mensagens (MSMQ). Embora a segurança de transporte proteja toda a mensagem do MSMQ, a segurança de mensagem (ou SOAP) só protege o corpo da mensagem MSMQ.  
   
@@ -28,13 +28,13 @@ Esta seção aborda a segurança de mensagens do WCF ao usar o <xref:System.Serv
  A segurança de mensagens do WCF adiciona cabeçalhos de segurança à mensagem do WCF que se integram a infraestruturas de segurança existentes, como um certificado ou o protocolo Kerberos.  
   
 ## <a name="message-credential-type"></a>Tipo de credencial da mensagem  
- Usando a segurança da mensagem, o serviço e o cliente podem apresentar credenciais para autenticar um ao outro. Você pode selecionar segurança de mensagem definindo o modo de <xref:System.ServiceModel.NetMsmqBinding.Security%2A> como `Message` ou `Both` (ou seja, usar segurança de transporte e segurança de mensagem).  
+ Usando a segurança da mensagem, o serviço e o cliente podem apresentar credenciais para autenticar um ao outro. Você pode selecionar segurança de mensagem definindo o <xref:System.ServiceModel.NetMsmqBinding.Security%2A> modo como `Message` ou `Both` (ou seja, usar segurança de transporte e segurança de mensagem).  
   
- O serviço pode usar a propriedade <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> para inspecionar a credencial usada para autenticar o cliente. Isso também pode ser usado para outras verificações de autorização que o serviço opta por implementar.  
+ O serviço pode usar a <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> propriedade para inspecionar a credencial usada para autenticar o cliente. Isso também pode ser usado para outras verificações de autorização que o serviço opta por implementar.  
   
  Esta seção explica os diferentes tipos de credenciais e como usá-los com filas do.  
   
-### <a name="certificate"></a>Certificate  
+### <a name="certificate"></a>Certificado  
  O tipo de credencial do certificado usa um certificado X. 509 para identificar o serviço e o cliente.  
   
  Em um cenário típico, o cliente e o serviço são emitidos um certificado válido por uma autoridade de certificação confiável. Em seguida, a conexão é estabelecida, o cliente autentica a validade do serviço usando o certificado do serviço para decidir se ele pode confiar no serviço. Da mesma forma, o serviço usa o certificado do cliente para validar a relação de confiança do cliente.  
@@ -43,7 +43,7 @@ Esta seção aborda a segurança de mensagens do WCF ao usar o <xref:System.Serv
   
  Em um computador que executa o Windows, os certificados são mantidos em vários tipos de armazenamentos. Para obter mais informações sobre os diferentes repositórios, consulte [repositórios de certificados](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).  
   
-### <a name="windows"></a>Portal  
+### <a name="windows"></a>Windows  
  O tipo de credencial de mensagem do Windows usa o protocolo Kerberos.  
   
  O protocolo Kerberos é um mecanismo de segurança que autentica os usuários em um domínio e permite que os usuários autenticados estabeleçam contextos seguros com outras entidades em um domínio.  
@@ -65,7 +65,7 @@ Esta seção aborda a segurança de mensagens do WCF ao usar o <xref:System.Serv
   
 ## <a name="see-also"></a>Consulte também
 
-- [Protegendo mensagens usando a segurança do transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
-- [Segurança de mensagem através do enfileiramento de mensagem](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
-- [Conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Mensagens de segurança que usam a segurança de transporte](securing-messages-using-transport-security.md)
+- [Segurança de mensagem através do enfileiramento de mensagem](../samples/message-security-over-message-queuing.md)
+- [Conceitos de segurança](security-concepts.md)
+- [Protegendo serviços e clientes](securing-services-and-clients.md)

@@ -1,19 +1,20 @@
 ---
-title: Como se inscrever e cancelar a inscrição de eventos - C# Guia de Programação
+title: Como assinar e cancelar a assinatura de eventos – guia de programação C#
+description: Saiba como assinar e cancelar a assinatura de eventos. Assine eventos usando o IDE do Visual Studio, programaticamente, ou usando um método anônimo.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 0a9e2cc64da56c376445efce32e8da36ba9b6cdc
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 4aecbbd58268e7b50a34f503160edd1eca4fe659
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738230"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063619"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Como se inscrever e cancelar a inscrição de eventos (C# Guia de Programação)
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Como assinar e cancelar a assinatura de eventos (guia de programação C#)
 Você assina um evento publicado por outra classe quando quer escrever um código personalizado que é chamado quando esse evento é gerado. Por exemplo, você pode assinar o evento `click` de um botão para fazer com que seu aplicativo faça algo útil quando o usuário clicar no botão.  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Para assinar eventos usando o IDE do Visual Studio  
@@ -57,7 +58,7 @@ Você assina um evento publicado por outra classe quando quer escrever um códig
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
-     Você também pode usar uma [expressão lambda](../statements-expressions-operators/lambda-expressions.md) para especificar um manipulador de eventos:
+     Você também pode usar uma [expressão lambda](../../language-reference/operators/lambda-expressions.md) para especificar um manipulador de eventos:
   
     ```csharp
     public Form1()  
@@ -97,10 +98,10 @@ Você assina um evento publicado por outra classe quando quer escrever um códig
   
      Quando todos os assinantes tiverem cancelado a assinatura de um evento, a instância do evento na classe do publicador será definida como `null`.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Eventos](./index.md)
 - [event](../../language-reference/keywords/event.md)
-- [Como publicar eventos em conformidade com as diretrizes do .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
-- [- e -= operadores](../../language-reference/operators/subtraction-operator.md)
-- [+ e += operadores](../../language-reference/operators/addition-operator.md)
+- [Como publicar eventos que estão em conformidade com as diretrizes do .NET](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [-e-= operadores](../../language-reference/operators/subtraction-operator.md)
+- [operadores + e + =](../../language-reference/operators/addition-operator.md)

@@ -1,13 +1,14 @@
 ---
 title: Ajuste fino de seu aplicativo assíncrono (C#)
+description: Esses exemplos em C# usam CancellationToken e métodos de tarefa importantes, como Task. WhenAll e Task. WhenAny, para ajustar os aplicativos assíncronos.
 ms.date: 07/20/2015
 ms.assetid: 97696eb9-81fc-4940-9655-84daa8eb4d5c
-ms.openlocfilehash: cff50e62ff62b70e97e7ea6e03714326d774e407
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 46457f889a78932e306d2bd21dca666625d744eb
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73970237"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925313"
 ---
 # <a name="fine-tuning-your-async-application-c"></a>Ajuste fino de seu aplicativo assíncrono (C#)
 É possível adicionar flexibilidade e precisão a seus aplicativos assíncronos usando os métodos e propriedades que o tipo <xref:System.Threading.Tasks.Task> disponibiliza. Os tópicos nesta seção mostram exemplos que usam <xref:System.Threading.CancellationToken> e métodos de `Task` importantes como <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>.  
@@ -20,13 +21,13 @@ ms.locfileid: "73970237"
   
 - `WhenAll` retorna uma tarefa que é concluída quando todas as tarefas em uma coleção forem concluídas.  
   
-     Para obter mais informações `WhenAll`e um exemplo que use, consulte [Como estender o passo a passo async usando Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
+     Para obter mais informações e um exemplo que usa `WhenAll` o, consulte [como estender a instrução assíncrona usando Task. WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
   
  Esta seção inclui os seguintes exemplos.  
   
-- [Cancele uma tarefa de sincronização ou uma lista de tarefas (C#)](./cancel-an-async-task-or-a-list-of-tasks.md).  
+- [Cancelar uma tarefa assíncrona ou uma lista de tarefas (C#)](./cancel-an-async-task-or-a-list-of-tasks.md).  
   
-- [Cancelar tarefas de assync após um período de tempo (C#)](./cancel-async-tasks-after-a-period-of-time.md)  
+- [Cancelar tarefas assíncronas após um período de tempo (C#)](./cancel-async-tasks-after-a-period-of-time.md)  
   
 - [Cancelar as demais tarefas assíncronas depois que uma delas estiver concluída (C#)](./cancel-remaining-async-tasks-after-one-is-complete.md)  
   
@@ -37,10 +38,10 @@ ms.locfileid: "73970237"
   
  Os projetos criam uma interface do usuário que contém um botão que inicia o processo e um botão que o cancela, como mostra a imagem a seguir. Os botões são chamados `startButton` e `cancelButton`.  
   
- ![Janela WPF com botão Cancelar](./media/fine-tuning-your-async-application/cancellation-and-start-button.png "Caixa de diálogo com um botão Iniciar e Parar")  
+ ![Janela do WPF com o botão Cancelar](./media/fine-tuning-your-async-application/cancellation-and-start-button.png "Caixa de diálogo com um botão Iniciar e parar")  
   
  É possível baixar projetos completos do WPF (Windows Presentation Foundation) em [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Programação Assíncrona com assincronia e espera (C#)](./index.md)
+- [Programação assíncrona com Async e Await (C#)](./index.md)

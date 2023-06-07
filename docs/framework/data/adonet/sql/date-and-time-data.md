@@ -1,16 +1,17 @@
 ---
 title: Dados de data e hora
+description: Saiba mais sobre os tipos de dados para manipular informações de data e hora no Provedor de Dados de .NET Framework para SQL Server.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: d7a016b8911cee3091dec24bc26d1f1965f54749
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9345e995dcb1179e7d0a86f62737f9fda5889f42
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148758"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286488"
 ---
 # <a name="date-and-time-data"></a>Dados de data e hora
 O SQL Server 2008 apresenta novos tipos de dados para o tratamento de informações de data e hora. Os novos tipos de dados incluem tipos separados para data e hora e tipos de dados expandidos com maior reconhecimento de intervalo, precisão e fuso horário. A partir do .NET Framework versão 3.5 Service Pack (SP) 1, o Provedor de Dados .NET Framework para SQL Server (<xref:System.Data.SqlClient>) oferece suporte completo para todos os novos recursos do Mecanismo de Banco de Dados do SQL Server 2008. Você deve instalar o .NET Framework 3.5 SP1 (ou posterior) para usar esses novos recursos com o SqlClient.  
@@ -26,7 +27,7 @@ O SQL Server 2008 apresenta novos tipos de dados para o tratamento de informaç�
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>Tipos de dados de data/hora introduzidos no SQL Server 2008  
  A tabela a seguir descreve os novos tipos de dados de data e hora.  
   
-|Tipo de dados do SQL Server|Descrição|  
+|Tipo de dados do SQL Server|Description|  
 |--------------------------|-----------------|  
 |`date`|O tipo de dados `date` tem um intervalo de 1º de janeiro de 01 a 31 de dezembro de 9999 com precisão de um dia. O valor padrão é 1º de janeiro de 1900. O tamanho do armazenamento é 3 bytes.|  
 |`time`|O tipo de dados `time` armazena somente valores temporais, com base em um relógio de 24 horas. O tipo de dados `time` tem um intervalo de 00:00:00.0000000 a 23:59:59,9999999 com precisão de 100 nanossegundos. O valor padrão é 00:00:00.0000000 (meia-noite). O tipo de dados `time` dá suporte à precisão de fração de segundo definida pelo usuário. O tamanho do armazenamento varia de 3 a 6 bytes, com base na precisão especificada.|  
@@ -41,12 +42,12 @@ O SQL Server 2008 apresenta novos tipos de dados para o tratamento de informaç�
   
  A instrução SET LANGUAGE do Transact-SQL define implicitamente o DATEFORMAT que determina a ordem das partes da data. Você pode usar a instrução SET DATEFORMAT do Transact-SQL em uma conexão para eliminar a ambiguidade dos valores de data ordenando as partes da data na ordem MDA, DMA, AMD, ADM, MAD ou DAM.  
   
- Se você não especificar nenhum DATEFORMAT para a conexão, o SQL Server usará o idioma padrão associado à conexão. Por exemplo, uma cadeia de caracteres de data de '01/02/03' seria interpretada como MDA (2 de janeiro de 2003) em um servidor com uma configuração de idioma de inglês dos Estados Unidos e como DMA (1º de fevereiro de 2003) em um servidor com uma configuração de idioma de inglês britânico. O ano é determinado usando a regra de ano limiar do SQL Server, que define a data limiar para atribuir o valor do século. Para obter mais informações, consulte [opção de corte de dois dígitos](/sql/database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option)de ano .  
+ Se você não especificar nenhum DATEFORMAT para a conexão, o SQL Server usará o idioma padrão associado à conexão. Por exemplo, uma cadeia de caracteres de data de '01/02/03' seria interpretada como MDA (2 de janeiro de 2003) em um servidor com uma configuração de idioma de inglês dos Estados Unidos e como DMA (1º de fevereiro de 2003) em um servidor com uma configuração de idioma de inglês britânico. O ano é determinado usando a regra de ano limiar do SQL Server, que define a data limiar para atribuir o valor do século. Para obter mais informações, consulte [opção de corte de ano de dois dígitos](/sql/database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option).  
   
 > [!NOTE]
 > Não há suporte para o formato de data ADM ao converter de um formato de cadeia de caracteres para `date`, `time`, `datetime2` ou `datetimeoffset`.  
   
- Para obter mais informações sobre como o SQL Server interpreta os dados de data e hora, consulte [Usando dados de data e hora](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100)).  
+ Para obter mais informações sobre como SQL Server interpreta dados de data e hora, consulte [usando dados de data e hora](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100)).  
   
 ## <a name="datetime-data-types-and-parameters"></a>Parâmetros e tipos de dados de data/hora  
  As enumerações a seguir foram adicionadas ao <xref:System.Data.SqlDbType> para dar suporte aos novos tipos de dados de data e hora.  
@@ -88,7 +89,7 @@ Você pode especificar o tipo de dados de um <xref:System.Data.SqlClient.SqlPara
   
 |Propriedade|Descrição|  
 |--------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Obtém ou define se um valor é anulável. Quando você envia um valor de parâmetro nulo para o servidor, deve especificar <xref:System.DBNull>, não `null` (`Nothing` no Visual Basic). Para obter mais informações sobre nulos de banco de dados, consulte [Manipulação de Valores Nulos](handling-null-values.md).|  
+|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Obtém ou define se um valor é anulável. Quando você envia um valor de parâmetro nulo para o servidor, deve especificar <xref:System.DBNull>, não `null` (`Nothing` no Visual Basic). Para obter mais informações sobre nulos de banco de dados, consulte [lidando com valores nulos](handling-null-values.md).|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|Obtém ou define o número máximo de dígitos usados para representar o valor. Essa configuração é ignorada para tipos de dados de data e hora.|  
 |<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|Obtém ou define o número de casas decimais para as quais a parte de hora do valor é resolvida para `Time`, `DateTime2` e `DateTimeOffset`. O valor padrão é 0, o que significa que a escala real é inferida do valor e enviada ao servidor.|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|Ignorado para tipos de dados de data e hora.|  
@@ -101,7 +102,7 @@ Você pode especificar o tipo de dados de um <xref:System.Data.SqlClient.SqlPara
 ### <a name="creating-parameters"></a>Criar parâmetros  
  Você pode criar um objeto <xref:System.Data.SqlClient.SqlParameter> usando o construtor ou adicionando-o a uma coleção de <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> chamando o método `Add` do <xref:System.Data.SqlClient.SqlParameterCollection>. O método `Add` usará como entrada argumentos do construtor ou um objeto de parâmetro existente.  
   
- As próximas seções neste tópico fornecem exemplos de como especificar parâmetros de data e hora. Para obter exemplos adicionais de trabalho com parâmetros, consulte [Configuração de parâmetros e parâmetros de dados](../configuring-parameters-and-parameter-data-types.md) de parâmetros e [parâmetros de adaptadores de dados](../dataadapter-parameters.md).  
+ As próximas seções neste tópico fornecem exemplos de como especificar parâmetros de data e hora. Para obter exemplos adicionais de como trabalhar com parâmetros, consulte [configurando parâmetros e tipos de dados de parâmetro](../configuring-parameters-and-parameter-data-types.md) e [parâmetros de DataAdapter](../dataadapter-parameters.md).  
   
 ### <a name="date-example"></a>Exemplo de data  
  O fragmento de código a seguir demonstra como especificar um parâmetro `date`.  
@@ -197,7 +198,7 @@ command.Parameters.AddWithValue( _
 ## <a name="retrieving-date-and-time-data"></a>Recuperando dados de data e hora  
  A tabela a seguir descreve os métodos que são usados para recuperar os valores de data e hora do SQL Server 2008.  
   
-|Método SqlClient|Descrição|  
+|Método SqlClient|Description|  
 |----------------------|-----------------|  
 |<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|Recupera o valor da coluna especificada como uma estrutura <xref:System.DateTime>.|  
 |<xref:System.Data.SqlClient.SqlDataReader.GetDateTimeOffset%2A>|Recupera o valor da coluna especificada como uma estrutura <xref:System.DateTimeOffset>.|  
@@ -231,7 +232,7 @@ command.Parameters.AddWithValue( _
  Valores temporais menores que zero ou maiores ou iguais a 24 horas lançarão um <xref:System.ArgumentException>.  
   
 ## <a name="resources-in-sql-server-books-online"></a>Recursos nos Manuais Online do SQL Server  
- Para obter mais informações sobre como trabalhar com valores de data e hora no SQL Server, consulte os seguintes recursos no SQL Server Books Online.  
+ Para obter mais informações sobre como trabalhar com valores de data e hora no SQL Server, consulte os recursos a seguir em Manuais Online do SQL Server.  
   
 |Tópico|Descrição|  
 |-----------|-----------------|  
@@ -239,9 +240,9 @@ command.Parameters.AddWithValue( _
 |[Usando dados de data e hora](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|Fornece informações sobre as funções e os tipos de dados de data e hora e exemplos de como usá-los.|  
 |[Tipos de dados (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)|Descreve os tipos de dados do sistema no SQL Server.|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Mapeamentos de tipo de dados do SQL Server](../sql-server-data-type-mappings.md)
 - [Configurando parâmetros e tipos de dados de parâmetro](../configuring-parameters-and-parameter-data-types.md)
-- [Tipos e ADO.NET de dados do servidor SQL](sql-server-data-types.md)
+- [Tipos de dados SQL Server e ADO.NET](sql-server-data-types.md)
 - [Visão geral do ADO.NET](../ado-net-overview.md)

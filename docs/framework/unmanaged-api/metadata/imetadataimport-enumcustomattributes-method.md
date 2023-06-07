@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 798513a0-68b1-4d04-bc5b-782a4445ea68
 topic_type:
 - apiref
-ms.openlocfilehash: 61b5678a546bdbadbcc6d8ee86447cb17ce72b99
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b0da8a06259fe99da52497da3011da94289d301
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175519"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492311"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>Método IMetaDataImport::EnumCustomAttributes
-Enumera tokens personalizados de definição de atributos associados ao tipo ou membro especificado.  
+Enumera os tokens de definição de atributo personalizados associados ao tipo ou membro especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,42 +38,42 @@ HRESULT EnumCustomAttributes (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [dentro, fora] Um ponteiro para o enumerador retornado.  
+ [entrada, saída] Um ponteiro para o enumerador retornado.  
   
  `tk`  
- [em] Um token para o escopo da enumeração, ou zero para todos os atributos personalizados.  
+ no Um token para o escopo da enumeração ou zero para todos os atributos personalizados.  
   
  `tkType`  
- [em] Um token para o construtor do tipo de atributos `null` a serem enumerados, ou para todos os tipos.  
+ no Um token para o construtor do tipo dos atributos a serem enumerados ou `null` para todos os tipos.  
   
  `rCustomAttributes`  
- [fora] Uma matriz de tokens de atributo personalizados.  
+ fora Uma matriz de tokens de atributo personalizados.  
   
  `cMax`  
- [em] O tamanho máximo `rCustomAttributes` da matriz.  
+ no O tamanho máximo da `rCustomAttributes` matriz.  
   
  `pcCustomAttributes`  
- [fora, opcional] O número real de valores `rCustomAttributes`de token retornado em .  
+ [saída, opcional] O número real de valores de token retornados em `rCustomAttributes` .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes`retornou com sucesso.|  
+|`S_OK`|`EnumCustomAttributes`retornado com êxito.|  
 |`S_FALSE`|Não há atributos personalizados para enumerar. Nesse caso, `pcCustomAttributes` é zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

@@ -1,5 +1,6 @@
 ---
 title: Ordem de membro de dados
+description: Saiba mais sobre a ordem dos membros de dados no WCF. Os aplicativos podem precisar saber ou alterar a ordem na qual os membros de dados são enviados ou esperados.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,26 +8,26 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: 2a5d7430953bdc31644e92b9207cd2865209cce5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c192d3bda65a7364345df4310dccd96cbe04056
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185192"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247358"
 ---
 # <a name="data-member-order"></a>Ordem de membro de dados
-Em alguns aplicativos, é útil saber a ordem em que os dados dos vários membros de dados são enviados ou são esperados para serem recebidos (como a ordem em que os dados aparecem no XML serializado). Às vezes pode ser necessário mudar essa ordem. Este tópico explica as regras de pedidos.  
+Em alguns aplicativos, é útil saber a ordem na qual os dados dos vários membros de dados são enviados ou devem ser recebidos (como a ordem na qual os dados aparecem no XML serializado). Às vezes, pode ser necessário alterar essa ordem. Este tópico explica as regras de ordenação.  
   
 ## <a name="basic-rules"></a>Regras básicas  
- As regras básicas para o pedido de dados incluem:  
+ As regras básicas para a ordenação de dados incluem:  
   
-- Se um tipo de contrato de dados faz parte de uma hierarquia de herança, os membros de dados de seus tipos de base são sempre os primeiros na ordem.  
+- Se um tipo de contrato de dados for uma parte de uma hierarquia de herança, os membros de dados de seus tipos base serão sempre primeiro na ordem.  
   
-- Em seguida, em ordem estão os membros de <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> dados <xref:System.Runtime.Serialization.DataMemberAttribute> do tipo atual que não têm a propriedade do conjunto de atributos, em ordem alfabética.  
+- A seguir, na ordem, estão os membros de dados do tipo atual que não têm a <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> Propriedade do <xref:System.Runtime.Serialization.DataMemberAttribute> conjunto de atributos, em ordem alfabética.  
   
-- Em seguida estão os <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> membros de <xref:System.Runtime.Serialization.DataMemberAttribute> dados que tenham a propriedade do conjunto de atributos. Estes são ordenados pelo `Order` valor da propriedade primeiro e, em seguida, `Order` alfabeticamente se há mais de um membro de um determinado valor. Os valores da ordem podem ser ignorados.  
+- A seguir estão todos os membros de dados que têm a <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> Propriedade do <xref:System.Runtime.Serialization.DataMemberAttribute> conjunto de atributos. Eles são ordenados primeiro pelo valor da `Order` propriedade e, em seguida, em ordem alfabética, se houver mais de um membro de um determinado `Order` valor. Os valores de ordem podem ser ignorados.  
   
- A ordem alfabética é <xref:System.String.CompareOrdinal%2A> estabelecida chamando o método.  
+ A ordem alfabética é estabelecida chamando o <xref:System.String.CompareOrdinal%2A> método.  
   
 ## <a name="examples"></a>Exemplos  
  Considere o código a seguir.  
@@ -62,8 +63,8 @@ Em alguns aplicativos, é útil saber a ordem em que os dados dos vários membro
 </DerivedType>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
-- [Equivalência de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
-- [Usando contratos de dados](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Equivalência de contrato de dados](data-contract-equivalence.md)
+- [Usando contratos de dados](using-data-contracts.md)

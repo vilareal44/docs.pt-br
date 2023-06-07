@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-ms.openlocfilehash: 994153ba93848ebb120f23bdf6a979462a65142d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 2ff8a8b85c3bfa594bd958a9a3688380885e0426
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159475"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290299"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>Validação de XSD (esquema XML) com XmlSchemaCollection
 Você pode usar o <xref:System.Xml.Schema.XmlSchemaCollection> para validar um documento XML com esquemas XSD. O <xref:System.Xml.Schema.XmlSchemaCollection> melhora o desempenho armazenando esquemas na coleção, de forma que não sejam carregados na memória sempre que ocorra uma validação. Se o esquema existir na coleção de esquema, o atributo `schemaLocation` será usado para pesquisar o esquema na coleção.  
   
 > [!IMPORTANT]
-> A classe <xref:System.Xml.Schema.XmlSchemaCollection> agora está obsoleta e foi substituída pela classe <xref:System.Xml.Schema.XmlSchemaSet>. Para saber mais sobre a classe <xref:System.Xml.Schema.XmlSchemaSet>, veja [XmlSchemaSet para compilação de esquema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+> A classe <xref:System.Xml.Schema.XmlSchemaCollection> agora está obsoleta e foi substituída pela classe <xref:System.Xml.Schema.XmlSchemaSet>. Para saber mais sobre a classe <xref:System.Xml.Schema.XmlSchemaSet>, veja [XmlSchemaSet para compilação de esquema](xmlschemaset-for-schema-compilation.md).  
   
  O exemplo a seguir mostra o elemento raiz de um arquivo de dados.  
   
@@ -211,4 +211,4 @@ while(vr.Read()) {
 - <xref:System.Xml.XmlParserContext>
 - <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>
 - <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType>
-- [Compilação do esquema de XmlSchemaCollection](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)
+- [Compilação do esquema de XmlSchemaCollection](xmlschemacollection-schema-compilation.md)

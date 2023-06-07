@@ -1,4 +1,4 @@
-- name: Repositório de símbolos de diagnóstico
+- name: Armazenamento de símbolo de diagnóstico
   href: index.md
   items:
     - name: Interfaces de armazenamento de símbolo de diagnóstico

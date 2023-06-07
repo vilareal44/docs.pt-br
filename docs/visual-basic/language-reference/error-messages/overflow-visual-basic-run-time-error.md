@@ -4,27 +4,27 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
-ms.openlocfilehash: 63223a815e1c4ff8d4e0afbb6c732fff90aad465
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5606ae8188c12142800adef46819791b732ff73c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946543"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387264"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a>Estouro (erro de tempo de execução do Visual Basic)
-Um estouro durante a tentativa de uma atribuição que excede os limites do destino da atribuição de resultados.  
+Um estouro resulta quando você tenta uma atribuição que excede os limites do destino da atribuição.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1. Certifique-se de que os resultados do tipo de dados, cálculos e atribuições de conversões não são muito grande para ser representado dentro do intervalo de coluna não são permitidos para esse tipo de valor e atribua o valor a uma variável de um tipo que podem conter um intervalo maior de valores , se necessário.  
+1. Verifique se os resultados de atribuições, cálculos e conversões de tipo de dados não são muito grandes para serem representados no intervalo de variáveis permitidas para esse tipo de valor e atribua o valor a uma variável de um tipo que possa conter um intervalo maior de valores, se necessário.  
   
-2. Certifique-se de atribuições às propriedades se encaixam no intervalo da propriedade à qual elas são feitas.  
+2. Certifique-se de que as atribuições às propriedades caibam no intervalo da propriedade na qual elas são feitas.  
   
-3. Certifique-se de que números usados em cálculos que são forçados em inteiros não tem resultados maiores do que os inteiros.  
+3. Verifique se os números usados em cálculos que são conforçados em inteiros não têm resultados maiores do que os inteiros.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Int32.MaxValue?displayProperty=nameWithType>
 - <xref:System.Double.MaxValue?displayProperty=nameWithType>
-- [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)
-- [Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipos de dados](../data-types/index.md)
+- [Tipos de erro](../../programming-guide/language-features/error-types.md)

@@ -1,5 +1,6 @@
 ---
 title: Usando um soquete de servidor assíncrono
+description: Este exemplo mostra um soquete de servidor assíncrono. A classe Socket usa .NET Framework programação assíncrona para processar solicitações de serviço de rede.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 467804e685d800643c421ed1aad040a842b42886
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b85afb3ffdf69973eff37ccbb067b470ed44e3a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180630"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502022"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Usando um soquete de servidor assíncrono
 Os soquetes de servidor assíncrono usam o modelo de programação assíncrono do .NET Framework para processar solicitações de serviço da rede. A classe <xref:System.Net.Sockets.Socket> segue o padrão de nomenclatura assíncrona do .NET Framework; por exemplo, o método <xref:System.Net.Sockets.Socket.Accept%2A> síncrono corresponde aos métodos <xref:System.Net.Sockets.Socket.BeginAccept%2A> e <xref:System.Net.Sockets.Socket.EndAccept%2A> assíncronos.  

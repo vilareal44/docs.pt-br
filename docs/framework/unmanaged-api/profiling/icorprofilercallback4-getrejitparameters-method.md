@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0e9bfe07-9f20-498c-b568-9017c8f6056c
 topic_type:
 - apiref
-ms.openlocfilehash: 858d65783515a89a434cf719ef9d5a999643094c
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 527e48d02d5267d6ae41214686c2e8c997d85dca
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865305"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499539"
 ---
 # <a name="icorprofilercallback4getrejitparameters-method"></a>Método ICorProfilerCallback4::GetReJITParameters
 Permite que o criador de perfil de código defina sinalizadores de geração de código alternativos para um novo corpo de método recompilado.  
@@ -42,18 +42,18 @@ HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef met
  no Um ponteiro para uma interface [ICorProfilerFunctionControl](icorprofilerfunctioncontrol-interface.md) que o criador de perfil pode usar para fornecer informações de recompilação JIT para o método que está sendo recompilado.  
   
 ## <a name="remarks"></a>Comentários  
- O CLR emite um retorno de chamada `GetReJITParameters` para que o criador de perfil possa especificar os parâmetros para a recompilação de um determinado método. O retorno de chamada `GetReJITParameters` é emitido apenas uma vez por função; os parâmetros fornecidos pelo criador de perfil se aplicam a todas as instâncias dessa função.  
+ O CLR emite um `GetReJITParameters` retorno de chamada para que o criador de perfil possa especificar os parâmetros para a recompilação de um determinado método. O `GetReJITParameters` retorno de chamada é emitido apenas uma vez por função; os parâmetros fornecidos pelo criador de perfil se aplicam a todas as instâncias dessa função.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
 - [Interface ICorProfilerCallback4](icorprofilercallback4-interface.md)

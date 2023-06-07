@@ -1,13 +1,14 @@
 ---
 title: Protocolo PNRP
+description: Saiba mais sobre o PNRP (Peer Name Resolution Protocol), um protocolo de registro de nome seguro, escalonável e dinâmico e resolução de nomes.
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: c8b7b2190349323bf212d816a77f5f7810f6ca2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 72eb63c2c90f398c515d77cd2b2d693237e533a5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74428217"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502217"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protocolo PNRP
 Em ambientes de ponto a ponto, pares usam sistemas de resolução de nome específicos para resolver os locais de rede (endereços, protocolos e portas) uns dos outros, com base em nomes ou outros tipos de identificadores. No passado, a resolução de nome de par foi complicada devido à conectividade inerentemente transitória, bem como outras falhas dentro do sistema DNS (Sistema de Nomes de Domínio).  

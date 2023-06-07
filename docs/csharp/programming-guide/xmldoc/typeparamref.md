@@ -1,5 +1,6 @@
 ---
-title: <typeparamref>- Guia de programação C#
+title: <typeparamref>-Guia de programação C#
+description: Saiba mais sobre a <typeparamref> marca XML. Essa marca permite que os consumidores do arquivo de documentação formatem a palavra de alguma forma distinta, por exemplo, em itálico.
 ms.date: 07/20/2015
 f1_keywords:
 - typeparamref
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - typeparamref C# XML tag
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
-ms.openlocfilehash: 266eadad322fd3c4167c7a911cb57ef1e1333012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a39e896f1242452c7bcc94faa1e7ef3086ae2149
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789652"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380716"
 ---
-# <a name="typeparamref-c-programming-guide"></a>\<typeparamref> (guia de programação C#)
+# <a name="typeparamref-c-programming-guide"></a>\<typeparamref>(Guia de programação C#)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,7 +35,7 @@ Para obter mais informações sobre parâmetros de tipo em tipos e métodos gen�
 
 Use essa marca para habilitar os consumidores do arquivo de documentação a formatar a palavra de alguma forma distinta, por exemplo, em itálico.
 
-Compilar com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação para um arquivo.
+Compile com [-Doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.
 
 ## <a name="example"></a>Exemplo
 

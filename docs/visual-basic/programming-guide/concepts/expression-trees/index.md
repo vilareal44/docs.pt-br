@@ -2,17 +2,17 @@
 title: Árvores de expressão
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
-ms.openlocfilehash: b2266cbae0a9a8a07c2a3569efa33d162ffedd1d
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 5d30b2e2e66aa322e6d43b5fbf4a4baf3435b2a6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266411"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410961"
 ---
 # <a name="expression-trees-visual-basic"></a>Árvores de expressão (Visual Basic)
 Árvores de expressão representam código em uma estrutura de dados de árvore, onde cada nó é, por exemplo, uma expressão, uma chamada de método ou uma operação binária como `x < y`.  
   
- Você pode compilar e executar código representado por árvores de expressão. Isso permite a modificação dinâmica de código executável, a execução de consultas LINQ em vários bancos de dados e a criação de consultas dinâmicas. Para obter mais informações sobre árvores de expressão no LINQ, consulte [Como usar árvores de expressão para compilar consultas dinâmicas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md).  
+ Você pode compilar e executar código representado por árvores de expressão. Isso permite a modificação dinâmica de código executável, a execução de consultas LINQ em vários bancos de dados e a criação de consultas dinâmicas. Para obter mais informações sobre árvores de expressão no LINQ, consulte [Como usar árvores de expressão para compilar consultas dinâmicas (Visual Basic)](how-to-use-expression-trees-to-build-dynamic-queries.md).  
   
  Árvores de expressão também são usadas no runtime de linguagem dinâmica (DLR) para fornecer interoperabilidade entre linguagens dinâmicas e o .NET Framework e permitir que gravadores compiladores emitam árvores de expressão em vez de Microsoft intermediate language (MSIL). Para obter mais informações sobre o DLR, consulte [Visão geral do Dynamic Language Runtime](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).  
   
@@ -21,7 +21,7 @@ ms.locfileid: "78266411"
 ## <a name="creating-expression-trees-from-lambda-expressions"></a>Criando árvores de expressão de expressões Lambda  
  Quando uma expressão lambda é atribuída a uma variável do tipo <xref:System.Linq.Expressions.Expression%601>, o compilador emite código para criar uma árvore de expressão que representa a expressão lambda.  
   
- Os compiladores do Visual Basic podem gerar árvores de expressão de expressões lambdas (ou lambdas de linha única). Ele não é possível analisar instruções lambdas (ou lambdas de várias linhas). Para obter mais informações sobre expressões lambda no Visual Basic, consulte [Expressões lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Os compiladores do Visual Basic podem gerar árvores de expressão de expressões lambdas (ou lambdas de linha única). Ele não é possível analisar instruções lambdas (ou lambdas de várias linhas). Para obter mais informações sobre expressões lambda no Visual Basic, consulte [Expressões lambda](../../language-features/procedures/lambda-expressions.md).  
   
  Os exemplos de código a seguir demonstram como fazer os compiladores do Visual Basic criarem uma árvore de expressão que representa a expressão lambda `Function(num) num < 5`.  
   
@@ -111,7 +111,7 @@ Console.WriteLine(String.Format("Decomposed expression: {0} => {1} {2} {3}",
 ```  
   
 ## <a name="immutability-of-expression-trees"></a>Imutabilidade das árvores de expressão  
- Árvores de expressão devem ser imutáveis. Isso significa que se você deseja modificar uma árvore de expressão, deverá criar uma nova árvore de expressão, copiando a existente e substituindo seus nós. Você pode usar um visitantes de árvore expressão para percorrer a árvore de expressão existente. Para obter mais informações, consulte [Como modificar árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md).  
+ Árvores de expressão devem ser imutáveis. Isso significa que se você deseja modificar uma árvore de expressão, deverá criar uma nova árvore de expressão, copiando a existente e substituindo seus nós. Você pode usar um visitantes de árvore expressão para percorrer a árvore de expressão existente. Para obter mais informações, consulte [Como modificar árvores de expressão (Visual Basic)](how-to-modify-expression-trees.md).  
   
 ## <a name="compiling-expression-trees"></a>Compilando árvores de expressão  
  O tipo <xref:System.Linq.Expressions.Expression%601> fornece o método <xref:System.Linq.Expressions.Expression%601.Compile%2A> que compila o código representado por uma árvore de expressão para um delegado executável.  
@@ -139,13 +139,13 @@ Console.WriteLine(expr.Compile()(4))
 ' Also prints True.  
 ```  
   
- Para obter mais informações, consulte [Como executar árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).  
+ Para obter mais informações, consulte [Como executar árvores de expressão (Visual Basic)](how-to-execute-expression-trees.md).  
   
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Linq.Expressions>
-- [Como executar árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [Como modificar árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
-- [Expressões Lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [Visão geral do tempo de execução do idioma dinâmico](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
-- [Conceitos de Programação (Visual Basic)](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Como executar árvores de expressão (Visual Basic)](how-to-execute-expression-trees.md)
+- [Como modificar árvores de expressão (Visual Basic)](how-to-modify-expression-trees.md)
+- [Expressões lambda](../../language-features/procedures/lambda-expressions.md)
+- [Visão geral do tempo de execução de linguagem dinâmica](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
+- [Conceitos de Programação (Visual Basic)](../index.md)

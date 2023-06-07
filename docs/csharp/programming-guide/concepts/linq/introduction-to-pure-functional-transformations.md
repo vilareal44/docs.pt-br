@@ -1,13 +1,14 @@
 ---
 title: Introdução às transformações funcionais puras (C#)
+description: Saiba mais sobre transformações funcionais, incluindo conceitos subjacentes e construções de linguagem em C#. Esses recursos usam a transformação XML para obter exemplos.
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
-ms.openlocfilehash: 34e2fdfae7c0243ca6f59354c453396648c3fa85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17f9dcb072b5f67521f668b1802d12a455f383fa
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69592108"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165678"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>Introdução às transformações funcionais puras (C#)
 Esta seção apresenta transformações funcionais, incluindo os conceitos fundamentais e as compilações de linguagem de suporte. Contrasta as abordagens orientados a objeto e funcionais de transformação para programação, incluindo conselhos sobre como fazer a transição para último. Embora as transformações e podem ser usadas em muitos cenários de programação, a transformação XML é usado aqui como um exemplo concrete.  
@@ -21,7 +22,7 @@ Esta seção apresenta transformações funcionais, incluindo os conceitos funda
 |Tópico|Descrição|  
 |-----------|-----------------|  
 |[Conceitos e terminologia (transformação funcional) (C#)](./concepts-and-terminology-functional-transformation.md)|Apresenta os conceitos e a terminologia de transformações e puras.|  
-|[Programação Funcional vs. Programação Imperativa (C#)](./functional-programming-vs-imperative-programming.md)|Compara e contrasta programação funcional à programação (procedural) imperativa mais tradicional.|  
+|[Programação funcional versus programação imperativa (C#)](./functional-programming-vs-imperative-programming.md)|Compara e contrasta programação funcional à programação (procedural) imperativa mais tradicional.|  
 |[Refatoração em funções puras (C#)](./refactoring-into-pure-functions.md)|Apresenta funções puras, e mostra exemplos de funções e puras e impuros.|  
 |[Aplicabilidade da transformação funcional (C#)](./applicability-of-functional-transformation.md)|Descreve cenários típicos para transformações funcionais.|  
 |[Transformação funcional de XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)|Descreve transformações e no contexto de transformar árvores XML.|  

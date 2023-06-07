@@ -22,12 +22,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming folders
 - I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
-ms.openlocfilehash: 8e0b291c0bb526c21654a1e8c08bd168d95ac53a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12f5e8d29ea92750884e45bf1d9ef05bbfe672b8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348919"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401752"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Criando, excluindo e movendo arquivos e diretórios no Visual Basic
 
@@ -35,46 +35,46 @@ Esta seção lista as tarefas associadas a criar, excluir, mover e renomear arqu
   
 ## <a name="in-this-section"></a>Nesta seção  
 
- [Como copiar arquivos com um padrão específico para um diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
+ [Como: copiar arquivos com um padrão específico para um diretório](how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
  Demonstra como copiar arquivos com um padrão de nome de arquivo específico, como somente arquivos .txt, para um diretório.  
   
- [Como criar uma cópia de um arquivo no mesmo diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
+ [Como: criar uma cópia de um arquivo no mesmo diretório](how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
  Demonstra como criar uma cópia de um arquivo no mesmo diretório.  
   
- [Como criar uma cópia de um arquivo em um diretório diferente](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
+ [Como: criar uma cópia de um arquivo em outro diretório](how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
  Demonstra como copiar um arquivo para outro diretório.  
   
- [Como criar um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
+ [Como: criar um arquivo](how-to-create-a-file.md)  
  Demonstra como criar um arquivo.  
   
- [Como excluir um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
+ [Como: excluir um arquivo](how-to-delete-a-file.md)  
  Demonstra como excluir um arquivo.  
   
- [Como localizar arquivos com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
+ [Como: localizar arquivos com um padrão específico](how-to-find-files-with-a-specific-pattern.md)  
  Demonstra como listar somente os arquivos com um padrão de nome de arquivo específico em um diretório.  
   
- [Como mover um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
+ [Como: mover um arquivo](how-to-move-a-file.md)  
  Demonstra como mover um arquivo para um diretório diferente.  
   
- [Como renomear um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
+ [Como: renomear um arquivo](how-to-rename-a-file.md)  
  Demonstra como renomear um arquivo.  
   
- [Como copiar um diretório para outro diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
+ [Como: copiar um diretório para outro diretório](how-to-copy-a-directory-to-another-directory.md)  
  Demonstra como copiar um diretório para outro local.  
   
- [Coco criar um diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)  
+ [Como: criar um diretório](how-to-create-a-directory.md)  
  Demonstra como criar um diretório.  
   
- [Como localizar subdiretórios com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
+ [Como: localizar subdiretórios com um padrão específico](how-to-find-subdirectories-with-a-specific-pattern.md)  
  Demonstra como listar diretórios com um padrão específico no nome.  
   
- [Como obter a coleção de arquivos em um diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)  
+ [Como: obter a coleção de arquivos em um diretório](how-to-get-the-collection-of-files-in-a-directory.md)  
  Demonstra como listar arquivos em um diretório.  
   
- [Como recuperar o conteúdo do diretório Meus Documentos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
+ [Como: recuperar o conteúdo do diretório Meus Documentos](how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
  Demonstra como ler de diretórios especiais.  
   
- [Como analisar demarcadores de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
+ [Como: analisar caminhos de arquivo](how-to-parse-file-paths.md)  
  Demonstra como usar métodos `My` para combinar caminhos de arquivo.  
   
 ## <a name="reference"></a>Referência  
@@ -120,8 +120,8 @@ Esta seção lista as tarefas associadas a criar, excluir, mover e renomear arqu
   
 ## <a name="related-sections"></a>Seções relacionadas  
 
- [Ler arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [Ler arquivos](reading-from-files.md)  
  Lista as tarefas associadas à leitura de arquivos.  
   
- [Gravando em arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
+ [Gravar em arquivos](writing-to-files.md)  
  Lista as tarefas que envolvem a gravação em arquivos.

@@ -1,23 +1,24 @@
 ---
 title: Eventos ETW de informações de runtime
+description: Consulte eventos de ETW de informações de tempo de execução, que registram o SKU, o número de versão, como o tempo de execução foi ativado (incluindo parâmetros de linha de comando), o GUID e muito mais.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - runtime information events [.NET Framework]
 - ETW, runtime information events
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
-ms.openlocfilehash: 2927ed088ba6c9e46b9676d55d0046575e23cfb1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 385519229bdb76841cdf592d95e96d2288ec5e1a
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715950"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474222"
 ---
 # <a name="runtime-information-etw-events"></a>Eventos ETW de informações de runtime
 Esses eventos ETW registram informações sobre o runtime, incluindo a SKU, o número de versão, a maneira pela qual o runtime foi ativado, os parâmetros de linha de comando com os quais ele foi iniciado, o GUID (se aplicável) e outras informações relevantes. Se vários runtimes estiverem sendo executados dentro de um processo, as informações fornecidas por esses eventos (o ClrInstanceID) ajudarão a desfazer a ambiguidade entre os runtimes.  
   
  A tabela a seguir mostra os dois eventos de informações de runtime. Os eventos podem ser gerados sob qualquer palavra-chave ou máscara. (Para obter mais informações, consulte [Palavras-chaves e níveis CLR ETW](clr-etw-keywords-and-levels.md).)  
   
-|Event|ID do evento|Provider|Descrição|  
+|Evento|ID do evento|Provedor|Descrição|  
 |-----------|--------------|--------------|-----------------|  
 |`RuntimeInformationEvent`|187|CLRRuntime|Gerado quando um runtime é carregado.|  
 |`RuntimeInformationDCStart`|187|CLRRundown|Enumera os runtimes que são carregados.|  
@@ -42,6 +43,6 @@ Esses eventos ETW registram informações sobre o runtime, incluindo a SKU, o n�
 |ComObjectGUID|win:GUID|Não nulo somente se StartupMode=0x08.|  
 |RuntimeDLLPath|win:UnicodeString|Caminho para o arquivo. dll do CLR que foi carregado no processo.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Eventos de CLR ETW](clr-etw-events.md)
+- [Eventos ETW no CLR](clr-etw-events.md)

@@ -6,37 +6,37 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
-ms.openlocfilehash: 16b3afe9540f3e2953311f602408fce5412be2eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed0f018e0151e68afeb9a4747bf8a260faa184b1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000760"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601030"
 ---
 # <a name="security-considerations-in-wcf"></a>Considerações de segurança no WCF
-Os tópicos nesta seção listam vários itens relacionados à segurança a serem considerados ao projetar um aplicativo do Windows Communication Foundation (WCF).  
+Os tópicos nesta seção listam vários itens relacionados à segurança a serem considerados ao criar um aplicativo Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Divulgação de informações](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- Discute as várias maneiras de informações podem ser divulgadas ou atacadas e como mitigar isso.  
+ [Divulgação de informações](information-disclosure.md)  
+ Discute as várias maneiras pelas quais as informações podem ser divulgadas ou atacadas e como mitigar isso.  
   
- [Elevação de privilégio](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- Discute os efeitos de dar permissões de autorização um invasor além daqueles concedidos inicialmente e como mitigar isso.  
+ [Elevação de privilégio](elevation-of-privilege.md)  
+ Discute os efeitos de dar a um invasor permissões de autorização além daquelas inicialmente concedidas e como mitigar isso.  
   
- [Negação de serviço](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- Discute o que acontece quando um sistema é capaz de processar mensagens adequadamente e como resolvê-la.  
+ [Negação de serviço](denial-of-service.md)  
+ Discute o que acontece quando um sistema não consegue processar mensagens adequadamente e como atenuá-la.  
   
- [Violação](../../../../docs/framework/wcf/feature-details/tampering.md)  
- Discute a alteração de mensagens ou a entrega de mensagens e como resolvê-la.  
+ [Adulteração](tampering.md)  
+ Discute a alteração de mensagens ou a entrega de mensagens e como atenuá-la.  
   
- [Ataques de reprodução](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- Discute o que acontece quando um invasor copia um fluxo de mensagens entre dois parceiros e repete o fluxo a um ou mais das partes e como mitigar isso.  
+ [Ataques por repetição](replay-attacks.md)  
+ Discute o que acontece quando um invasor copia um fluxo de mensagens entre duas partes e repete o fluxo para uma ou mais das partes e como mitigar isso.  
   
- [Considerações sobre segurança para sessões seguras](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)  
- Discute os seguintes itens que afetam a segurança ao implementar sessões seguras.  
+ [Considerações de segurança para sessões seguras](security-considerations-for-secure-sessions.md)  
+ Discute os itens a seguir que afetam a segurança ao implementar sessões seguras.  
   
- [Cenários sem suporte](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- Lista os vários cenários que não dão suporte a um determinado aspecto de segurança e devem ser evitados ou considerados.  
+ [Cenários sem suporte](unsupported-scenarios.md)  
+ Lista vários cenários que não dão suporte a um aspecto específico de segurança e que devem ser evitados ou considerados.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.IdentityModel.Tokens>  
@@ -48,8 +48,8 @@ Os tópicos nesta seção listam vários itens relacionados à segurança a sere
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Diretrizes e práticas recomendadas de segurança](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Diretrizes e práticas recomendadas de segurança](security-guidance-and-best-practices.md)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Segurança](../../../../docs/framework/wcf/feature-details/security.md)
+- [Segurança](security.md)

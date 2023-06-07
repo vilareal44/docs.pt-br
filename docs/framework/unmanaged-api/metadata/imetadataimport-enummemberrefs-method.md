@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e97c97a6-6e4f-41f5-9af1-9b3cf3bdbd6b
 topic_type:
 - apiref
-ms.openlocfilehash: b8a65b0748fec0e474d8b3b5dc03473fbd716108
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 68cdefe7ab362b26bbf060fa46766068eb0d7094
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177329"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503751"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>Método IMetaDataImport::EnumMemberRefs
-Enumera os tokens MemberRef representando membros do tipo especificado.  
+Enumera os tokens de MemberRef que representam os membros do tipo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,39 +37,39 @@ HRESULT EnumMemberRefs (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [dentro, fora] Um ponteiro para o enumerador.  
+ [entrada, saída] Um ponteiro para o enumerador.  
   
  `tkParent`  
- [em] Um token TypeDef, TypeRef, MethodDef ou ModuleRef para o tipo cujos membros devem ser enumerados.  
+ no Um token de TypeDef, TypeRef, MethodDef ou ModuleRef para o tipo cujos membros devem ser enumerados.  
   
  `rMemberRefs`  
- [fora] A matriz usada para armazenar tokens MemberRef.  
+ fora A matriz usada para armazenar tokens de MemberRef.  
   
  `cMax`  
- [em] O tamanho máximo `rMemberRefs` da matriz.  
+ no O tamanho máximo da `rMemberRefs` matriz.  
   
  `pcTokens`  
- [fora] O número real de tokens `rMemberRefs`MemberRef retornou em .  
+ fora O número real de tokens de MemberRef retornado em `rMemberRefs` .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs`retornou com sucesso.|  
-|`S_FALSE`|Não há tokens MemberRef para enumerar. Nesse caso, `pcTokens` é zero.|  
+|`S_OK`|`EnumMemberRefs`retornado com êxito.|  
+|`S_FALSE`|Não há tokens de MemberRef para enumerar. Nesse caso, `pcTokens` é zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

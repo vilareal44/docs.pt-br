@@ -2,22 +2,22 @@
 title: Implementando um barramento de eventos com o RabbitMQ para o ambiente de desenvolvimento ou de teste
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Use o RabbitMQ para implementar mensagens de barramento de eventos para eventos de integração para os ambientes de desenvolvimento ou de teste.
 ms.date: 10/02/2018
-ms.openlocfilehash: 12e37fabfe915b4d2089d27f7852528a9a037d3c
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 1af72d18825eb610d6900178205450e2c2e34c25
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988291"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306884"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementando um barramento de eventos com o RabbitMQ para o ambiente de desenvolvimento ou de teste
 
-Devemos começar dizendo que, se você criar seu barramento de eventos personalizado com base no RabbitMQ em execução em um contêiner, como o aplicativo eShopOnContainers faz, ele deverá ser usado apenas para seus ambientes de desenvolvimento e teste. Você não deve usá-lo para o seu ambiente de produção, a menos que o esteja criando como parte de um barramento de serviço pronto para produção. Um barramento de eventos personalizado simples talvez não tenha muitos recursos críticos prontos para produção que um barramento de serviço comercial tem.
+Devemos começar dizendo que, se você criar seu barramento de eventos personalizado com base no RabbitMQ em execução em um contêiner, como o aplicativo eShopOnContainers faz, ele deverá ser usado apenas para seus ambientes de desenvolvimento e teste. Não use-o para seu ambiente de produção, a menos que esteja criando-o como parte de um barramento de serviço pronto para produção. Um barramento de eventos personalizado simples talvez não tenha muitos recursos críticos prontos para produção que um barramento de serviço comercial tem.
 
-Uma das implementações personalizadas de ônibus de eventos no eShopOnContainers é basicamente uma biblioteca usando a API RabbitMQ. (Há outra implementação baseada no Azure Service Bus.)
+Uma das implementações personalizadas do barramento de evento no eShopOnContainers é basicamente uma biblioteca que usa a API RabbitMQ. (Há outra implementação baseada no barramento de serviço do Azure.)
 
 A implementação do barramento de eventos com RabbitMQ permite que os microsserviços assinem, publiquem e recebam eventos, conforme mostrado na Figura 6-21.
 
-![Diagrama mostrando RabbitMQ entre o remetente de mensagens e o receptor de mensagem.](./media/rabbitmq-event-bus-development-test-environment/rabbitmq-implementation.png)
+![Diagrama mostrando RabbitMQ entre remetente de mensagem e receptor de mensagem.](./media/rabbitmq-event-bus-development-test-environment/rabbitmq-implementation.png)
 
 **Figura 6-21.** Implementação de um barramento de eventos do RabbitMQ
 
@@ -108,20 +108,20 @@ Cada tipo de evento tem um canal relacionado para obter eventos do RabbitMQ. Em 
 
 O método Subscribe aceita um objeto IIntegrationEventHandler, que é como um método de retorno de chamada no microsserviço atual, além de seu objeto IntegrationEvent relacionado. O código, então, adiciona o manipulador de eventos à lista de manipuladores de eventos que cada tipo de evento de integração pode ter por microsserviço do cliente. Se o código do cliente ainda não tiver assinado o evento, o código criará um canal para o tipo de evento para que ele possa receber eventos em um estilo de push do RabbitMQ quando esse evento for publicado de qualquer outro serviço.
 
-Como mencionado acima, o ônibus de eventos implementado no eShopOnContainers tem único e objetivo educativo, uma vez que lida apenas com os principais cenários, por isso não está pronto para produção.
+Conforme mencionado acima, o barramento de evento implementado em eShopOnContainers tem apenas e finalidade Education, já que trata apenas dos principais cenários, portanto, ele não está pronto para produção.
 
-Para os cenários de produção, verifique os recursos adicionais abaixo, específicos para RabbitMQ, e a comunicação baseada em eventos de implementação entre a seção [de microsserviços.](./integration-event-based-microservice-communications.md#additional-resources)
+Para cenários de produção, verifique os recursos adicionais abaixo, específicos para RabbitMQ e a seção [implementando a comunicação baseada em evento entre os microserviços](./integration-event-based-microservice-communications.md#additional-resources) .
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
 Uma solução pronta para produção com suporte para RabbitMQ.
 
-- **EasyNetQ** - Cliente de API de código aberto .NET para RabbitMQ \
-  <http://easynetq.com/>
+- **EasyNetQ** -cliente de API .net de código aberto para RabbitMQ \
+  <https://easynetq.com/>
 
-- **Transporte coletivo** \
+- **MassTransit** \
   <https://masstransit-project.com/>
   
 > [!div class="step-by-step"]
-> [Próximo](integration-event-based-microservice-communications.md)
-> [anterior](subscribe-events.md)
+> [Anterior](integration-event-based-microservice-communications.md) 
+>  [Avançar](subscribe-events.md)

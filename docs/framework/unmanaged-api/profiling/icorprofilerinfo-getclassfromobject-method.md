@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b97493fb-713e-49d5-a73e-5688b2ad0700
 topic_type:
 - apiref
-ms.openlocfilehash: a5573765486112a83f5ea7cc9258447692f72166
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 613267549329d2f48dcd18ae341e47538e414ac0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76864044"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498525"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>Método ICorProfilerInfo::GetClassFromObject
-Obtém a `ClassID` de um objeto, dado seu `ObjectID`.  
+Obtém o `ClassID` de um objeto, dado seu `ObjectID` .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,23 +35,23 @@ HRESULT GetClassFromObject(
   
 ## <a name="parameters"></a>Parâmetros  
  `objectId`  
- no A ID do objeto para o qual obter o `ClassID`.  
+ no A ID do objeto para o qual obter o `ClassID` .  
   
  `pClassId`  
- fora Um ponteiro para o `ClassID`retornado.  
+ fora Um ponteiro para o retornado `ClassID` .  
   
 ## <a name="remarks"></a>Comentários  
- Um `pClassId` nulo indica que `objectId` tem um tipo que está descarregando.  
+ Um NULL `pClassId` indica que `objectId` tem um tipo que está descarregando.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)

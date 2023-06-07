@@ -1,13 +1,14 @@
 ---
 title: Desempenho de consultas encadeadas (LINQ to XML) (C#)
+description: Saiba mais sobre o desempenho de consultas encadeadas. Uma consulta encadeada é uma consulta que usa outra consulta como sua fonte.
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-ms.openlocfilehash: 7deff9205e6535877efabd85257baa5b3906f41a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e9173e85845dd085f4d7bf6deec7eb498acd7f3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253118"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302848"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>Desempenho de consultas encadeadas (LINQ to XML) (C#)
 

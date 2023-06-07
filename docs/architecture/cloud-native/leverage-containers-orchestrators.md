@@ -1,13 +1,13 @@
 ---
 title: Como aproveitar contêineres e orquestradores
 description: Aproveitando contêineres do Docker e orquestradores kubernetes no Azure
-ms.date: 05/13/2020
-ms.openlocfilehash: 5d0b7f41caecb3422a4416514de2fdd54e94539a
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.date: 05/31/2020
+ms.openlocfilehash: 25e981e0fb7957e7180be09a19a406eddfe4e51b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613873"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446861"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Como aproveitar contêineres e orquestradores
 
@@ -53,30 +53,11 @@ Os contêineres são definidos por arquivos simples baseados em texto que se tor
 
 Os contêineres são imutáveis. Depois de definir um contêiner, você pode recriá-lo e executá-lo exatamente da mesma maneira. Essa imutabilidade se presta ao design baseado em componentes. Se algumas partes de um aplicativo evoluem de forma diferente do que outras, por que reimplantar todo o aplicativo quando você pode simplesmente implantar as partes que mudam com mais frequência? Diferentes recursos e preocupações abrangentes de um aplicativo podem ser divididos em unidades separadas. A Figura 3-2 mostra como um aplicativo monolítico pode aproveitar os contêineres e os microserviços delegando determinados recursos ou funcionalidades. A funcionalidade restante no aplicativo também foi contida em contêineres.
 
-Os contêineres são imutáveis. Depois de definir um contêiner, você pode recriá-lo e executá-lo exatamente da mesma maneira. Essa imutabilidade se presta ao design baseado em componentes. Se algumas partes de um aplicativo evoluem de forma diferente do que outras, por que reimplantar todo o aplicativo quando você pode simplesmente implantar as partes que mudam com mais frequência? Diferentes recursos e preocupações abrangentes de um aplicativo podem ser divididos em unidades separadas. A Figura 3-2 mostra como um aplicativo monolítico pode aproveitar os contêineres e os microserviços delegando determinados recursos ou funcionalidades. A funcionalidade restante no aplicativo também foi contida em contêineres.
-
 ![Dividir um aplicativo monolítico para usar os microserviços no back-end.](./media/cloud-native-design.png)
 
 **Figura 3-2**. Decompondo um aplicativo monolítico para abraçar os microserviços.
 
 Cada serviço nativo de nuvem é criado e implantado em um contêiner separado. Cada uma pode ser atualizada conforme necessário. Serviços individuais podem ser hospedados em nós com recursos apropriados para cada serviço. O ambiente em que cada serviço é executado é imutável, compartilhado entre ambientes de desenvolvimento, teste e produção e com controle de versão com facilidade. O acoplamento entre diferentes áreas do aplicativo ocorre explicitamente como chamadas ou mensagens entre serviços, não as dependências de tempo de compilação dentro do monolítico. Você também pode escolher a tecnologia que melhor suites um determinado recurso sem a necessidade de alterações no restante do aplicativo.
-
-Os serviços em contêineres exigem gerenciamento automatizado. Não seria possível administrar manualmente um grande conjunto de contêineres implantados de forma independente. Por exemplo, considere as seguintes tarefas:
-
-- Como as instâncias de contêiner serão provisionadas em um cluster de vários computadores?
-- Uma vez implantado, como os contêineres irão descobrir e se comunicar entre si?
-- Como os contêineres podem ser expandidos ou reduzidos sob demanda?
-- Como monitorar a integridade de cada contêiner?
-- Como proteger um contêiner contra falhas de hardware e software?
-- Como atualizar contêineres para um aplicativo em tempo real sem tempo de inatividade?
-
-Os orquestradores de contêiner abordam e automatizam essas e outras preocupações.
-
-No sistema de eco nativo de nuvem, kubernetes tornou-se o orquestrador de contêiner de fato. É uma plataforma de software livre gerenciada pela CNCF (nuvem Native Computing Foundation). O kubernetes automatiza a implantação, o dimensionamento e as preocupações operacionais de cargas de trabalho em contêineres em um cluster de máquina. No entanto, a instalação e o gerenciamento do kubernetes são notoriamente complexos.
-
-Uma abordagem muito melhor é aproveitar o kubernetes como um serviço gerenciado de um fornecedor de nuvem. A nuvem do Azure apresenta uma plataforma kubernetes totalmente gerenciada chamada [AKs (serviço kubernetes do Azure)](https://azure.microsoft.com/services/kubernetes-service/). O AKS abstrai a complexidade e a sobrecarga operacional do gerenciamento de kubernetes. Você consome kubernetes como um serviço de nuvem; A Microsoft assume a responsabilidade por gerenciar e dar suporte a ela. O AKS também se integra perfeitamente com outros serviços do Azure e ferramentas de desenvolvimento.
-
-AKS é uma tecnologia baseada em cluster. Um pool de máquinas virtuais federadas, ou nós, é implantado na nuvem do Azure. Juntos, eles formam um ambiente altamente disponível ou cluster. O cluster aparece como uma entidade simples e direta para seu aplicativo nativo de nuvem. Nos bastidores, o AKS implanta seus serviços em contêineres entre esses nós seguindo uma estratégia predefinida que distribui uniformemente a carga.
 
 Os serviços em contêineres exigem gerenciamento automatizado. Não seria possível administrar manualmente um grande conjunto de contêineres implantados de forma independente. Por exemplo, considere as seguintes tarefas:
 
@@ -175,7 +156,7 @@ O que é o Minikube? O projeto Minikube diz "Minikube implementa um cluster kube
 - DNS
 - NodePorts
 - ConfigMaps e segredos
-- Dashboards
+- Painéis
 - Tempos de execução de contêiner: Docker, RKT, CRI-O e em contêineres
 - Habilitando o CNI (interface de rede de contêiner)
 - Entrada
@@ -240,8 +221,6 @@ Além disso, a qualquer momento você pode adicionar o suporte do Docker a um ap
 ![Adicionar suporte ao Docker ao Visual Studio](./media/visual-studio-add-docker-support.png)
 
 **Figura 3-8**. Adicionando suporte ao Docker ao Visual Studio
-
-Você também pode adicionar suporte à orquestração de contêiner, também mostrada na Figura 3-8. Por padrão, o orquestrador usa kubernetes e Helm. Depois de escolher o orquestrador, um `azds.yaml` arquivo é adicionado à raiz do projeto e uma `charts` pasta é adicionada contendo os gráficos Helm usados para configurar e implantar o aplicativo no kubernetes. A Figura 3-9 mostra os arquivos resultantes em um novo projeto.
 
 Você também pode adicionar suporte à orquestração de contêiner, também mostrada na Figura 3-8. Por padrão, o orquestrador usa kubernetes e Helm. Depois de escolher o orquestrador, um `azds.yaml` arquivo é adicionado à raiz do projeto e uma `charts` pasta é adicionada contendo os gráficos Helm usados para configurar e implantar o aplicativo no kubernetes. A Figura 3-9 mostra os arquivos resultantes em um novo projeto.
 

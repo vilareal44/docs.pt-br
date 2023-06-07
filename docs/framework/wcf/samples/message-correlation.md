@@ -2,22 +2,22 @@
 title: Correlação de mensagem
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 9ded0886920f9f0b3d2f9b441061253b42a1c567
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 84b10b507f9fdaa7c53cf937bb132c8cc0aac33f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76747175"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84591626"
 ---
 # <a name="message-correlation"></a>Correlação de mensagem
 
 Este exemplo demonstra como um aplicativo MSMQ (enfileiramento de mensagens) pode enviar uma mensagem MSMQ para um serviço Windows Communication Foundation (WCF) e como as mensagens podem ser correlacionadas entre os aplicativos do remetente e do destinatário em um cenário de solicitação/resposta. Este exemplo usa a associação msmqIntegrationBinding. O serviço, nesse caso, é um aplicativo de console auto-hospedado para permitir que você observe o serviço que recebe mensagens enfileiradas. k
 
- O serviço processa a mensagem recebida do remetente e envia uma mensagem de resposta de volta para o remetente. O remetente correlaciona a resposta recebida para a solicitação que ele enviou originalmente. As propriedades `MessageID` e `CorrelationID` da mensagem são usadas para correlacionar as mensagens de solicitação e resposta.
+ O serviço processa a mensagem recebida do remetente e envia uma mensagem de resposta de volta para o remetente. O remetente correlaciona a resposta recebida para a solicitação que ele enviou originalmente. As `MessageID` `CorrelationID` Propriedades e da mensagem são usadas para correlacionar as mensagens de solicitação e resposta.
 
- O contrato de serviço `IOrderProcessor` define uma operação de serviço unidirecional que é adequada para uso com o enfileiramento. Uma mensagem MSMQ não tem um cabeçalho Action, portanto, não é possível mapear diferentes mensagens MSMQ para contratos de operação automaticamente. Portanto, pode haver apenas um contrato de operação nesse caso. Se você quiser definir mais contratos de operação no serviço, o aplicativo deverá fornecer informações sobre qual cabeçalho na mensagem MSMQ (por exemplo, o rótulo ou CorrelationId) pode ser usado para decidir qual contrato de operação deve ser despachado.
+ O `IOrderProcessor` contrato de serviço define uma operação de serviço unidirecional que é adequada para uso com o enfileiramento. Uma mensagem MSMQ não tem um cabeçalho Action, portanto, não é possível mapear diferentes mensagens MSMQ para contratos de operação automaticamente. Portanto, pode haver apenas um contrato de operação nesse caso. Se você quiser definir mais contratos de operação no serviço, o aplicativo deverá fornecer informações sobre qual cabeçalho na mensagem MSMQ (por exemplo, o rótulo ou CorrelationId) pode ser usado para decidir qual contrato de operação deve ser despachado.
 
- A mensagem MSMQ também não contém informações sobre quais cabeçalhos são mapeados para os diferentes parâmetros do contrato de operação. Portanto, pode haver apenas um parâmetro no contrato de operação. O parâmetro é do tipo <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, que contém a mensagem do MSMQ subjacente. O tipo "T" na classe `MsmqMessage<T>` representa os dados que são serializados no corpo da mensagem MSMQ. Neste exemplo, o tipo de `PurchaseOrder` é serializado no corpo da mensagem MSMQ.
+ A mensagem MSMQ também não contém informações sobre quais cabeçalhos são mapeados para os diferentes parâmetros do contrato de operação. Portanto, pode haver apenas um parâmetro no contrato de operação. O parâmetro é do tipo <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> , que contém a mensagem subjacente do MSMQ. O tipo "T" na `MsmqMessage<T>` classe representa os dados que são serializados no corpo da mensagem MSMQ. Neste exemplo, o `PurchaseOrder` tipo é serializado no corpo da mensagem do MSMQ.
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -66,9 +66,9 @@ public class OrderProcessorService : IOrderProcessor
 }
 ```
 
- O serviço usa uma `OrderResponseClient` de cliente personalizada para enviar a mensagem MSMQ para a fila. Como o aplicativo que recebe e processa a mensagem é um aplicativo MSMQ e não um aplicativo WCF, não há nenhum contrato de serviço implícito entre os dois aplicativos. Portanto, não podemos criar um proxy usando a ferramenta svcutil. exe neste cenário.
+ O serviço usa um cliente personalizado `OrderResponseClient` para enviar a mensagem MSMQ para a fila. Como o aplicativo que recebe e processa a mensagem é um aplicativo MSMQ e não um aplicativo WCF, não há nenhum contrato de serviço implícito entre os dois aplicativos. Portanto, não podemos criar um proxy usando a ferramenta svcutil. exe neste cenário.
 
- O proxy personalizado é essencialmente o mesmo para todos os aplicativos WCF que usam a associação de `msmqIntegrationBinding` para enviar mensagens. Ao contrário de outros proxies, ele não inclui uma variedade de operações de serviço. É apenas uma operação de envio de mensagem.
+ O proxy personalizado é essencialmente o mesmo para todos os aplicativos WCF que usam a `msmqIntegrationBinding` Associação para enviar mensagens. Ao contrário de outros proxies, ele não inclui uma variedade de operações de serviço. É apenas uma operação de envio de mensagem.
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -100,7 +100,7 @@ public partial class OrderResponseClient : System.ServiceModel.ClientBase<IOrder
 }
 ```
 
- O serviço é hospedado internamente. Ao usar o transporte de integração do MSMQ, a fila usada deve ser criada com antecedência. Isso pode ser feito manualmente ou por meio de código. Neste exemplo, o serviço contém <xref:System.Messaging> código para verificar a existência da fila e criá-la, se necessário. O nome da fila é lido no arquivo de configuração.
+ O serviço é hospedado internamente. Ao usar o transporte de integração do MSMQ, a fila usada deve ser criada com antecedência. Isso pode ser feito manualmente ou por meio de código. Neste exemplo, o serviço contém o <xref:System.Messaging> código para verificar a existência da fila e criá-la, se necessário. O nome da fila é lido no arquivo de configuração.
 
 ```csharp
 public static void Main()
@@ -126,7 +126,7 @@ public static void Main()
 }
 ```
 
- A fila MSMQ para a qual as solicitações de pedido são enviadas é especificada na seção appSettings do arquivo de configuração. Os pontos de extremidade de cliente e de serviço são definidos na seção System. serviceModel do arquivo de configuração. Ambos especificam a associação de `msmqIntegrationbinding`.
+ A fila MSMQ para a qual as solicitações de pedido são enviadas é especificada na seção appSettings do arquivo de configuração. Os pontos de extremidade de cliente e de serviço são definidos na seção System. serviceModel do arquivo de configuração. Especifique a `msmqIntegrationbinding` associação.
 
 ```xml
 <appSettings>
@@ -165,7 +165,7 @@ public static void Main()
 </system.serviceModel>
 ```
 
- O aplicativo cliente usa <xref:System.Messaging> para enviar uma mensagem durável e transacional para a fila. O corpo da mensagem contém a ordem de compra.
+ O aplicativo cliente usa o <xref:System.Messaging> para enviar uma mensagem durável e transacional para a fila. O corpo da mensagem contém a ordem de compra.
 
 ```csharp
 static void PlaceOrder()
@@ -222,7 +222,7 @@ static void PlaceOrder()
 </appSettings>
 ```
 
- O aplicativo cliente salva o `messageID` da mensagem de solicitação de pedido que ele envia para o serviço e aguarda uma resposta do serviço. Quando uma resposta chega na fila, o cliente a correlaciona com a mensagem de pedido enviada usando a propriedade `correlationID` da mensagem, que contém a `messageID` da mensagem de pedido que o cliente enviou para o serviço originalmente.
+ O aplicativo cliente salva a `messageID` mensagem de solicitação de pedido que ele envia para o serviço e aguarda uma resposta do serviço. Quando uma resposta chega na fila, o cliente a correlaciona com a mensagem de pedido enviada usando a `correlationID` propriedade da mensagem, que contém o `messageID` da mensagem de pedido que o cliente enviou para o serviço originalmente.
 
 ```csharp
 static void DisplayOrderStatus()
@@ -272,7 +272,7 @@ static void DisplayOrderStatus()
 
 ## <a name="set-up-build-and-run-the-sample"></a>Configurar, compilar e executar o exemplo
 
-1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
 2. Se o serviço for executado primeiro, ele verificará se a fila está presente. Se a fila não estiver presente, o serviço criará uma. Você pode executar o serviço primeiro para criar a fila ou pode criar um por meio do Gerenciador de filas MSMQ. Siga estas etapas para criar uma fila no Windows 2008.
 
@@ -286,9 +286,9 @@ static void DisplayOrderStatus()
 
     5. Insira `ServiceModelSamplesTransacted` como o nome da nova fila.
 
-3. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Para criar a edição C# ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).
 
-4. Para executar o exemplo em uma configuração de computador único, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Para executar o exemplo em uma configuração de computador único, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md).
 
 ## <a name="run-the-sample-across-computers"></a>Executar o exemplo entre computadores
 
@@ -309,11 +309,11 @@ static void DisplayOrderStatus()
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`
 
 ## <a name="see-also"></a>Consulte também
 
-- [Enfileiramento no WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Enfileiramento de mensagens](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))
+- [Enfileiramento no WCF](../feature-details/queuing-in-wcf.md)
+- [Enfileiramento de Mensagens](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

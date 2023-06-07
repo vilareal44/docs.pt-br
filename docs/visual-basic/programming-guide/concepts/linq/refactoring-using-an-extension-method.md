@@ -2,15 +2,15 @@
 title: Refatoração usando um método de extensão
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-ms.openlocfilehash: c66fb90f9949ee3e47105498b211c857d5d63804
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5bb3ed44c0c3f7616468f820428fe1a384ab6d45
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348014"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413421"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>Refatoração usando um método de extensão (Visual Basic)
-Este exemplo baseia-se no exemplo anterior, [recuperando o texto dos parágrafos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), refatorando a concatenação de cadeias de caracteres usando uma função pura que é implementada como um método de extensão.  
+Este exemplo baseia-se no exemplo anterior, [recuperando o texto dos parágrafos (Visual Basic)](retrieving-the-text-of-the-paragraphs.md), refatorando a concatenação de cadeias de caracteres usando uma função pura que é implementada como um método de extensão.  
   
  O exemplo anterior usa o operador padrão de consulta de <xref:System.Linq.Enumerable.Aggregate%2A> para concatenar várias cadeias de caracteres em uma cadeia de caracteres. No entanto, é mais conveniente escrever um método de extensão para fazer isso, porque a consulta resultante menor e mais simples.  
   
@@ -19,7 +19,7 @@ Este exemplo baseia-se no exemplo anterior, [recuperando o texto dos parágrafos
   
  O exemplo contém várias sobrecargas de método `StringConcatenate` .  
   
- Você pode encontrar instruções para criar o documento de origem para este exemplo na [criação do documento Office Open XML de origem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Você pode encontrar instruções para criar o documento de origem para este exemplo na [criação do documento Office Open XML de origem (Visual Basic)](creating-the-source-office-open-xml-document.md).  
   
  Este exemplo usa classes do assembly WindowsBase. Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -80,7 +80,7 @@ Console.WriteLine("{0}", intNumbers.StringConcatenate(Function(i) i.ToString()))
 Console.WriteLine("{0}", intNumbers.StringConcatenate(Function(i) i.ToString(), ":"))  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```console  
 onetwothree  
@@ -241,9 +241,9 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>Próximas etapas  
  O exemplo a seguir mostra como refatorar esse código em outra maneira, usando funções puras:  
   
-- [Refatoração usando uma função pura (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [Refatoração usando uma função pura (Visual Basic)](refactoring-using-a-pure-function.md)  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Tutorial: manipulando conteúdo em um documento do WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [Refatoração em funções puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Tutorial: manipulando conteúdo em um documento do WordprocessingML (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Refatoração em funções puras (Visual Basic)](refactoring-into-pure-functions.md)

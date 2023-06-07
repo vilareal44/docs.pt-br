@@ -3,21 +3,21 @@ title: <serviceThrottling>
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
 ms.openlocfilehash: ad87a5876381a7224341babdb076c85edcd1dd87
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70399559"
 ---
-# <a name="servicethrottling"></a>\<serviceThrottling>
+# \<serviceThrottling>
 Especifica o mecanismo de limitação de um serviço do Windows Communication Foundation (WCF).  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamentos >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de portais**](servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de comportamento**](behavior-of-servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de perlimitação**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceThrottling>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,13 +39,13 @@ Especifica o mecanismo de limitação de um serviço do Windows Communication Fo
 |maxConcurrentSessions|Um número inteiro positivo que limita o número de sessões que um objeto <xref:System.ServiceModel.ServiceHost> pode aceitar.<br /><br /> O serviço aceitará conexões além do limite, mas somente os canais abaixo do limite estarão ativos (as mensagens são lidas do canal). Definir esse valor como 0 é equivalente a defini-lo como Int32.MaxValue. O padrão é 100 * contagem de processadores.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<> de comportamento](behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
   
 ## <a name="remarks"></a>Comentários  
  Os controles de limitação colocam limites no número de chamadas simultâneas, instâncias ou sessões para evitar a sobrecarga de consumo de recursos.  
@@ -69,8 +69,8 @@ Especifica o mecanismo de limitação de um serviço do Windows Communication Fo
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>
 - <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>
-- [Usando o ServiceThrottlingBehavior para desempenho do serviço WCF de controle](../../../wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)
+- [Utilizando o ServiceThrottlingBehavior para controlar o desempenho de serviço do WCF](../../../wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)

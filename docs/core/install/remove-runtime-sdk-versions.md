@@ -1,16 +1,16 @@
 ---
 title: Remover o SDK e o runtime do .NET Core
 description: Este artigo descreve como determinar quais versões do runtime e do SDK do .NET Core estão instaladas e, em seguida, como removê-las no Windows, Mac e Linux.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 04/28/2020
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: f1482c243ba22fa81c69ede847a0f6b36a9cb83c
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 1e4a846cf5e3d0209f5ade873520ef64abc12e7c
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595779"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324650"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>Como remover o SDK e o Runtime do .NET Core
 
@@ -20,7 +20,7 @@ Ao longo do tempo, ao instalar as versões atualizadas do runtime e do SDK do .N
 
 Os comportamentos de [seleção de versão do .NET Core](../versions/selection.md) e a compatibilidade do runtime do .NET Core com as atualizações permitem a remoção segura de versões anteriores. As atualizações de runtime do .NET core são compatíveis com uma “banda” de versão principal como 1.x e 2.x. Além disso, versões mais recentes do SDK do .NET Core geralmente mantêm a capacidade de compilar aplicativos destinados a versões anteriores do runtime de uma maneira compatível.
 
-Em geral, você precisa apenas do SDK mais recente e da versão de patch mais recente dos runtimes necessários para seu aplicativo. As instâncias em que você talvez queira manter versões mais antigas do SDK ou do Runtime incluem a manutenção de aplicativos baseados em *Project. JSON*. A menos que seu aplicativo tenha motivos específicos para runtimes ou SDKs anteriores, você pode remover com segurança as versões mais antigas.
+Em geral, você precisa apenas do SDK mais recente e da versão de patch mais recente dos runtimes necessários para seu aplicativo. As instâncias em que você talvez queira manter versões mais antigas do SDK ou *do*Runtime incluem manterproject.jsaplicativos baseados em. A menos que seu aplicativo tenha motivos específicos para runtimes ou SDKs anteriores, você pode remover com segurança as versões mais antigas.
 
 ## <a name="determine-what-is-installed"></a>Determinar o que está instalado
 
@@ -66,7 +66,7 @@ As instalações do .NET Core anteriores a 2,0 não desinstalaram o aplicativo h
 apt-get remove dotnet-host
 ```
 
-Observe que não há nenhuma versão anexada `dotnet-host`a.
+Observe que não há nenhuma versão anexada a `dotnet-host` .
 
 Se instalou usando um tarball, você deverá remover o .NET Core usando o método manual.
 
@@ -104,7 +104,7 @@ Os diretórios pais para o SDK e o runtime são listados na saída dos comandos 
 
 ## <a name="net-core-uninstall-tool"></a>Ferramenta de Desinstalação do .NET Core
 
-A [ferramenta de desinstalação do .NET Core](../additional-tools/uninstall-tool.md) (`dotnet-core-uninstall`) permite que você remova os SDKs do .NET Core e os tempos de execução de um sistema. Uma coleção de opções está disponível para especificar quais versões devem ser desinstaladas.
+A [ferramenta de desinstalação do .NET Core](../additional-tools/uninstall-tool.md) ( `dotnet-core-uninstall` ) permite que você remova os SDKs do .NET Core e os tempos de execução de um sistema. Uma coleção de opções está disponível para especificar quais versões devem ser desinstaladas.
 
 ## <a name="visual-studio-dependency-on-net-core-sdk-versions"></a>Dependência do Visual Studio em versões de SDK do .NET Core
 
@@ -122,7 +122,7 @@ A partir do Visual Studio 2019 versão 16,3, o Visual Studio é responsável por
 
 ## <a name="remove-the-nuget-fallback-folder"></a>Remover a pasta de fallback do NuGet
 
-Antes do SDK do .NET Core 3,0, os instaladores de SDK do .NET Core usaram uma pasta chamada *NuGetFallbackFolder* para armazenar um cache de pacotes NuGet. Esse cache foi usado durante operações como `dotnet restore` ou. `dotnet build /t:Restore` O *NuGetFallbackFolder* está localizado em *C:\Program Files\dotnet\sdk* no Windows e em */usr/local/share/dotnet/SDK* no MacOS.
+Antes do SDK do .NET Core 3,0, os instaladores de SDK do .NET Core usaram uma pasta chamada *NuGetFallbackFolder* para armazenar um cache de pacotes NuGet. Esse cache foi usado durante operações como `dotnet restore` ou `dotnet build /t:Restore` . O *NuGetFallbackFolder* está localizado em *C:\Program Files\dotnet\sdk* no Windows e em */usr/local/share/dotnet/SDK* no MacOS.
 
 Talvez você queira remover essa pasta, se:
 

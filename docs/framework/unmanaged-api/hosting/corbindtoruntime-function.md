@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 799740aa-46ec-4532-95da-6444565b4971
 topic_type:
 - apiref
-ms.openlocfilehash: 0bcfe42a70d64c091851a1eec81d03e49dbde52b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 52594c36c54c74941371f9950fbc6fb543b86de0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616653"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493546"
 ---
 # <a name="corbindtoruntime-function"></a>Função CorBindToRuntime
 Permite que hosts não gerenciados carreguem o Common Language Runtime (CLR) em um processo.  
@@ -55,7 +55,7 @@ HRESULT CorBindToRuntime (
  Se `pwszBuildFlavor` é definido como NULL, a compilação da estação de trabalho é carregada. Durante a execução em um computador com um único processador, a compilação da estação de trabalho é sempre carregada, mesmo se `pwszBuildFlavor` estiver definida como `svr` . No entanto, se `pwszBuildFlavor` for definido como `svr` e a coleta de lixo simultânea for especificada (consulte a descrição do `flags` parâmetro), a compilação do servidor será carregada.  
   
  `rclsid`  
- no O `CLSID` da coclass que implementa a interface [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) ou [ICLRRuntimeHost](iclrruntimehost-interface.md) . Os valores com suporte são CLSID_CorRuntimeHost ou CLSID_CLRRuntimeHost.  
+ no O `CLSID` da coclass que implementa a interface [ICorRuntimeHost](icorruntimehost-interface.md) ou [ICLRRuntimeHost](iclrruntimehost-interface.md) . Os valores com suporte são CLSID_CorRuntimeHost ou CLSID_CLRRuntimeHost.  
   
  `riid`  
  no O `IID` da interface solicitada de `rclsid` . Os valores com suporte são IID_ICorRuntimeHost ou IID_ICLRRuntimeHost.  
@@ -75,7 +75,7 @@ HRESULT CorBindToRuntime (
   
 2. Alterando o modo padrão do processo para o modo de compatibilidade da versão 1, em que o <xref:System.Security.Principal.WindowsIdentity> objeto não flui em nenhum ponto assíncrono, independentemente das <xref:System.Threading.ExecutionContext> configurações no thread atual. A maneira como você altera o modo padrão depende se você usa um executável gerenciado ou uma interface de hospedagem não gerenciada para carregar o CLR:  
   
-    1. Para executáveis gerenciados, você deve definir o `enabled` atributo do elemento de [ \<>legacyImpersonationPolicy](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) como `true` .  
+    1. Para executáveis gerenciados, você deve definir o `enabled` atributo do [\<legacyImpersonationPolicy>](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) elemento como `true` .  
   
     2. Para interfaces de hospedagem não gerenciadas, defina o `STARTUP_LEGACY_IMPERSONATION` sinalizador no `flags` parâmetro ao chamar a `CorBindToRuntimeEx` função.  
   
@@ -93,7 +93,7 @@ HRESULT CorBindToRuntime (
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Função CorBindToCurrentRuntime](corbindtocurrentruntime-function.md)
 - [Função CorBindToRuntimeByCfg](corbindtoruntimebycfg-function.md)

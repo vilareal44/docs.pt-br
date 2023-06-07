@@ -2,12 +2,12 @@
 title: Eventos de domínio. design e implementação
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Obtenha uma visão detalhada dos eventos de domínio, um conceito fundamental para estabelecer a comunicação entre agregações.
 ms.date: 10/08/2018
-ms.openlocfilehash: e03abba66945a6434f6a81eaa9f50d53998f346c
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 630bd0a0b060431e565df98faa77f452e2045fa2
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988710"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144299"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de domínio: design e implementação
 
@@ -47,11 +47,11 @@ Assim, a interface do barramento de eventos precisa de alguma infraestrutura que
 
 Se a execução de um comando relacionado a uma instância de agregação exigir regras de domínio adicionais para ser executado em uma ou mais agregações, você deverá projetar e implementar esses efeitos colaterais para que sejam disparados por eventos de domínio. Conforme mostrado na Figura 7-14 e como um dos mais importantes casos de uso, um evento de domínio deve ser usado para propagar alterações de estado entre várias agregações dentro do mesmo modelo de domínio.
 
-![Diagrama mostrando um evento de domínio controlando dados para um agregado comprador.](./media/domain-events-design-implementation/domain-model-ordering-microservice.png)
+![Diagrama mostrando um evento de domínio que controla dados para um comprador agregado.](./media/domain-events-design-implementation/domain-model-ordering-microservice.png)
 
 **Figura 7-14**. Eventos de domínio para impor consistência entre várias agregações dentro do mesmo domínio
 
-A Figura 7-14 mostra como a consistência entre agregados é alcançada por eventos de domínio. Quando o usuário inicia uma ordem, `OrderStarted` o Order Aggregate envia um evento de domínio. O evento de domínio OrderStarted é tratado pelo Agregado comprador para criar um objeto Comprador no microserviço de pedidos, com base nas informações originais do usuário do microserviço de identidade (com informações fornecidas no comando CreateOrder).
+A Figura 7-14 mostra como a consistência entre agregações é obtida por eventos de domínio. Quando o usuário inicia uma ordem, a agregação de ordem envia um `OrderStarted` evento de domínio. O evento de domínio OrderStarted é tratado pelo comprador agregado para criar um objeto de comprador no microserviço de ordenação, com base nas informações do usuário original do microserviço de identidade (com as informações fornecidas no comando CreateOrder).
 
 Como alternativa, você pode fazer com que a raiz da agregação assine eventos acionado pelos membros de suas respectivas agregações (entidades filho). Por exemplo, cada entidade filho OrderItem poderá acionar um evento quando o preço do item for maior que um valor específico, ou quando a quantidade de itens do produto for muito alta. Assim, a raiz de agregação poderá receber esses eventos e executar um cálculo global ou uma agregação.
 
@@ -61,7 +61,7 @@ A manipulação de eventos de domínio é um interesse do aplicativo. A camada d
 
 Os eventos de domínio também podem ser usados para disparar um grande número de ações de aplicativo e, o mais importante, devem estar abertos para aumentar esse número no futuro de maneira separada. Por exemplo, quando o pedido é iniciado, você publica um evento de domínio para propagar essas informações para outras agregações ou, até mesmo, para gerar ações de aplicativo, como notificações.
 
-O ponto-chave é o número indefinido de ações a serem executadas quando ocorre um evento de domínio. As ações e regras do domínio e do aplicativo vão, eventualmente, aumentar. A complexidade ou o número de ações de efeito colateral quando algo acontece crescerá, mas se `new`seu código estivesse associado a "cola" (ou seja, criando objetos específicos com), então toda vez que você precisasse adicionar uma nova ação, você também precisaria mudar o código de trabalho e testado.
+O ponto-chave é o número indefinido de ações a serem executadas quando ocorre um evento de domínio. As ações e regras do domínio e do aplicativo vão, eventualmente, aumentar. A complexidade ou o número de ações de efeito colateral quando algo acontecer aumentará, mas se o seu código estivesse acoplado a "cola" (ou seja, criando objetos específicos com `new` ), sempre que for necessário adicionar uma nova ação, você também precisaria alterar o código de trabalho e testado.
 
 Essa alteração pode resultar em novos bugs e essa abordagem também vai contra o [Princípio Aberto/Fechado](https://en.wikipedia.org/wiki/Open/closed_principle) de [SOLID](https://en.wikipedia.org/wiki/SOLID). E não se trata apenas disso, pois a classe original que estava orquestrando as operações cresceria sem parar, o que vai contra o [SRP (princípio de responsabilidade única)](https://en.wikipedia.org/wiki/Single_responsibility_principle).
 
@@ -69,7 +69,7 @@ Por outro lado, se você usa eventos de domínio, você pode criar uma implement
 
 1. Enviar um comando (por exemplo, CreateOrder).
 2. Receber o comando em um manipulador de comandos.
-   - Execute a transação de um único agregado.
+   - Executar uma única transação de agregação.
    - (Opcional) Acionar eventos de domínio para efeitos colaterais (por exemplo, OrderStartedDomainEvent).
 3. Manipular eventos de domínio (dentro do processo atual) que executarão um número indefinido de efeitos colaterais em várias agregações ou ações de aplicativo. Por exemplo:
    - Verificar ou criar o comprador e a forma de pagamento.
@@ -78,13 +78,13 @@ Por outro lado, se você usa eventos de domínio, você pode criar uma implement
 
 Conforme mostrado na Figura 7-15, começando pelo mesmo evento de domínio, você pode manipular várias ações relacionadas a outras agregações do domínio ou ações de aplicativos adicionais que você precisa realizar entre microsserviços que se conectam com eventos de integração e o barramento de eventos.
 
-![Diagrama mostrando um evento de domínio passando dados para vários manipuladores de eventos.](./media/domain-events-design-implementation/aggregate-domain-event-handlers.png)
+![Diagrama que mostra um evento de domínio passando dados para vários manipuladores de eventos.](./media/domain-events-design-implementation/aggregate-domain-event-handlers.png)
 
 **Figura 7-15**. Manipulando várias ações por domínio
 
-Pode haver vários manipuladores para o mesmo evento de domínio na camada de aplicativo, um manipulador pode resolver a consistência entre agregações e outro manipulador pode publicar um evento de integração, para que outros microsserviços possam fazer algo com ele. Os manipuladores de eventos geralmente estão na camada do aplicativo, porque você usará objetos de infra-estrutura como repositórios ou uma API de aplicativo para o comportamento do microserviço. Nesse sentido, os manipuladores de eventos são semelhantes aos manipuladores de comandos, portanto, ambos fazem parte da camada de aplicativo. A diferença importante é que um comando deve ser processado apenas uma vez. Um evento de domínio pode ser processado zero ou *n* vezes, porque ele pode ser recebido por vários destinatários ou manipuladores de eventos, com uma finalidade diferente para cada manipulador.
+Pode haver vários manipuladores para o mesmo evento de domínio na camada de aplicativo, um manipulador pode resolver a consistência entre agregações e outro manipulador pode publicar um evento de integração, para que outros microsserviços possam fazer algo com ele. Os manipuladores de eventos normalmente estão na camada de aplicativo, pois você usará objetos de infraestrutura como repositórios ou uma API de aplicativo para o comportamento do microserviço. Nesse sentido, os manipuladores de eventos são semelhantes aos manipuladores de comandos, portanto, ambos fazem parte da camada de aplicativo. A diferença importante é que um comando deve ser processado apenas uma vez. Um evento de domínio pode ser processado zero ou *n* vezes, porque ele pode ser recebido por vários destinatários ou manipuladores de eventos, com uma finalidade diferente para cada manipulador.
 
-Ter um número aberto de manipuladores por evento de domínio permite adicionar quantas regras de domínio forem necessárias, sem afetar o código atual. Por exemplo, a implementação da seguinte regra de negócios poderá ser tão fácil quanto adicionar alguns manipuladores de eventos (ou apenas um):
+Ter um número aberto de manipuladores por evento de domínio permite que você adicione quantas regras de domínio forem necessárias, sem afetar o código atual. Por exemplo, a implementação da seguinte regra de negócios poderá ser tão fácil quanto adicionar alguns manipuladores de eventos (ou apenas um):
 
 > Quando o valor total comprado por um cliente na loja, em qualquer número de pedidos, excede US$ 6.000, aplicar 10% de desconto para cada novo pedido e notificar o cliente com um email, informando sobre esse desconto para pedidos futuros.
 
@@ -124,7 +124,7 @@ Nos termos da linguagem ubíqua do domínio, como um evento é algo que ocorreu 
 
 Conforme observado anteriormente, uma característica importante de eventos é que, como um evento é algo que ocorreu no passado, ele não deve ser alterado. Portanto, ele deve ser uma classe imutável. Observe no código anterior que as propriedades são somente leitura. Não é possível atualizar o objeto, você pode definir os valores apenas quando ele é criado.
 
-É importante destacar aqui que se os eventos de domínio fossem tratados de forma assíncrona, usando uma fila que exigia serialização e desserialização dos objetos de evento, as propriedades teriam que ser "conjunto privado" em vez de leitura, para que o desumseriador pudesse atribuir os valores ao desfazer. Isso não é um problema no microsserviço de pedidos, pois o evento de domínio pub/sub é implementado de forma síncrona usando o MediatR.
+É importante destacar aqui que, se os eventos de domínio fossem tratados de forma assíncrona, usando uma fila que exigia a serialização e desserialização dos objetos de evento, as propriedades teriam que ser "conjunto particular" em vez de somente leitura, de modo que o desserializador seria capaz de atribuir os valores na retirada do enfileiramento. Isso não é um problema no microsserviço de pedidos, pois o evento de domínio pub/sub é implementado de forma síncrona usando o MediatR.
 
 ### <a name="raise-domain-events"></a>Acionar eventos de domínio
 
@@ -216,15 +216,15 @@ Executar uma única transação entre agregações em vez de depender de consist
 
 > Não é esperado que toda regra que abrange Agregações esteja atualizada em todos os momentos. Por meio de processamento de eventos, processamento em lote ou de outros mecanismos de atualização, outras dependências podem ser resolvidas dentro de um período específico. (página 128)
 
-Vaughn Vernon diz o seguinte em [Design Agregado Efetivo. Parte II: Fazer os agregados funcionarem juntos](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf):
+Vaughn Vernon diz o seguinte em [design agregado efetivo. Parte II: fazer com que as agregações funcionem juntas](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf):
 
-> Assim, se a execução de um comando em uma instância agregada exige \[que regras comerciais adicionais sejam executadas em um ou mais agregados, use eventual consistência ... \] Há uma maneira prática de suportar uma eventual consistência em um modelo DDD. Um método de agregação publica um evento de domínio que é entregue no momento exato a um ou mais assinantes assíncronos.
+> Portanto, se a execução de um comando em uma instância de agregação exigir que regras de negócios adicionais sejam executadas em uma ou mais agregações, use a consistência eventual \[ ... \] Há uma maneira prática de dar suporte à consistência eventual em um modelo DDD. Um método de agregação publica um evento de domínio que é entregue no momento exato a um ou mais assinantes assíncronos.
 
 Essa lógica é baseada na adoção de transações refinadas em vez de transações que abrangem muitas agregações ou entidades. A ideia é que, no segundo caso, o número de bloqueios de banco de dados será significativo em aplicativos de larga escala com necessidades de alta escalabilidade. Aceitar o fato de que aplicativos altamente escalonáveis não precisam de consistência transacional instantânea entre várias agregações ajuda a aceitar o conceito de consistência eventual. Geralmente, as mudanças atômicas não são necessárias aos negócios e, em todo caso, é da responsabilidade dos especialistas de domínio dizer se operações específicas precisam ou não de transações atômicas. Se uma operação sempre precisar de uma transação atômica entre várias agregações, você poderá questionar se a agregação deveria ser maior ou se não foi corretamente projetada.
 
 No entanto, outros desenvolvedores e arquitetos, como Jimmy Bogard, estão de acordo com a abrangência de uma única transação entre várias agregações, mas somente quando essas agregações adicionais forem relacionadas a efeitos colaterais do mesmo comando original. Por exemplo, em [A better domain events pattern (Um padrão melhor de eventos de domínio)](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/), Bogard diz:
 
-> Normalmente, eu quero que os efeitos colaterais de um evento de domínio ocorram dentro da \[mesma transação lógica, mas não necessariamente no mesmo escopo de levantar o evento de domínio ... \] Pouco antes de cometermos nossa transação, enviamos nossos eventos para seus respectivos manipuladores.
+> Normalmente, quero que os efeitos colaterais de um evento de domínio ocorram dentro da mesma transação lógica, mas não necessariamente no mesmo escopo de gerar o evento de domínio \[ ... \] Logo antes de confirmarmos nossa transação, expedimos nossos eventos para seus respectivos manipuladores.
 
 Se você expedir os eventos de domínio imediatamente *antes* da confirmação da transação original, será porque você deseja que os efeitos colaterais desses eventos sejam incluídos na mesma transação. Por exemplo, se o método SaveChanges do DbContext do EF falhar, a transação reverterá todas as alterações, incluindo o resultado de qualquer operação de efeito colateral implementada pelos manipuladores de eventos de domínio relacionados. Isso ocorre porque o escopo de vida do DbContext é, por padrão, definido como "com escopo". Portanto, o objeto DbContext é compartilhado entre vários objetos de repositório que estão sendo instanciados dentro do mesmo escopo ou objeto graph. Isso coincide com o escopo de HttpRequest ao desenvolver aplicativos da API Web ou do MVC.
 
@@ -244,7 +244,7 @@ Uma abordagem é um sistema de mensagens real ou até mesmo um barramento de eve
 
 Outra maneira de mapear eventos para vários manipuladores de eventos é o uso de registro de tipos em um contêiner de IoC para que você possa inferir dinamicamente o local para expedir os eventos. Em outras palavras, você precisa saber quais manipuladores de eventos precisam obter um evento específico. A figura 7-16 mostra uma abordagem simplificada para esta abordagem.
 
-![Diagrama mostrando um despachante de eventos de domínio enviando eventos para os manipuladores apropriados.](./media/domain-events-design-implementation/domain-event-dispatcher.png)
+![Diagrama que mostra um distribuidor de eventos de domínio enviando eventos para os manipuladores apropriados.](./media/domain-events-design-implementation/domain-event-dispatcher.png)
 
 **Figura 7-16**. Dispatcher de evento de domínio usando IoC
 
@@ -342,43 +342,43 @@ Por fim, é importante mencionar que, às vezes, convém propagar eventos entre 
 
 Conforme mencionado, use eventos de domínio para implementar explicitamente os efeitos colaterais de alterações em seu domínio. Para usar a terminologia DDD, use eventos de domínio para implementar explicitamente efeitos colaterais entre uma ou várias agregações. Além disso e para melhor escalabilidade e menor impacto em bloqueios de banco de dados, use consistência eventual entre agregações dentro do mesmo domínio.
 
-O aplicativo de referência usa [o MediatR](https://github.com/jbogard/MediatR) para propagar eventos de domínio sincronizadamente entre agregados, dentro de uma única transação. No entanto, você também pode usar alguma implementação AMQP como [RabbitMQ](https://www.rabbitmq.com/) ou [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) para propagar eventos de domínio de forma assíncrona, usando uma eventual consistência, mas, como mencionado acima, você tem que considerar a necessidade de ações compensatórias em caso de falhas.
+O aplicativo de referência usa [mediador](https://github.com/jbogard/MediatR) para propagar eventos de domínio de forma síncrona entre agregações em uma única transação. No entanto, você também pode usar alguma implementação de AMQP como [RabbitMQ](https://www.rabbitmq.com/) ou [barramento de serviço do Azure](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) para propagar eventos de domínio de forma assíncrona, usando a consistência eventual, mas, como mencionado acima, você precisa considerar a necessidade de ações de compensação em caso de falhas.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
 - **Greg Young. O que é um evento de domínio?** \
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf#page=25>
 
-- **Jan Stenberg. Eventos de domínio e consistência eventual** \
+- **Stenberg de Jan. Eventos de domínio e consistência eventual** \
   <https://www.infoq.com/news/2015/09/domain-events-consistency>
 
-- **Jimmy Bogard. Um melhor padrão de eventos de domínio** \
+- **Jimmy Bogard. Um padrão de eventos de domínio melhor** \
   <https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/>
 
-- **Vaughn Vernon. Design agregado efetivo Parte II: Fazendo os agregados funcionarem juntos** \
+- **Vaughn Vernon. Design de agregação efetivo parte II: fazer com que as agregações funcionem juntas** \
   [https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
-- **Jimmy Bogard. Fortalecendo seu domínio: Eventos de domínio** \
+- **Jimmy Bogard. Fortalecendo seu domínio: eventos de domínio** \
   <https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>
 
 - **Tony Truong. Exemplo de padrão de eventos de domínio** \
   <https://www.tonytruong.net/domain-events-pattern-example/>
 
 - **Udi Dahan. Como criar modelos de domínio totalmente encapsulados** \
-  <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
+  <https://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 - **Udi Dahan. Eventos de domínio – Take 2** \
-  <http://udidahan.com/2008/08/25/domain-events-take-2/>
+  <https://udidahan.com/2008/08/25/domain-events-take-2/>
 
-- **Udi Dahan. Eventos de Domínio – Salvação** \
-  <http://udidahan.com/2009/06/14/domain-events-salvation/>
+- **Udi Dahan. Eventos de domínio – Salvation** \
+  <https://udidahan.com/2009/06/14/domain-events-salvation/>
 
-- **Jan Kronquist. Não publique Eventos de Domínio, devolva-os!** \
+- **Kronquist de Jan. Não publique eventos de domínio, retorne-os!** \
   <https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/>
 
-- **Cesar de la Torre. Eventos de domínio vs. Eventos de integração em arquiteturas DDD e microserviços** \
+- **Cesar de la Torre. Eventos de domínio vs. eventos de integração em arquiteturas DDD e de microservices** \
   <https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/>
 
 >[!div class="step-by-step"]
->[Próximo](client-side-validation.md)
->[anterior](infrastructure-persistence-layer-design.md)
+>[Anterior](client-side-validation.md) 
+> [Avançar](infrastructure-persistence-layer-design.md)

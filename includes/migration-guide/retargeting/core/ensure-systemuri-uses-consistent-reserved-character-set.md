@@ -1,18 +1,44 @@
 ---
-ms.openlocfilehash: 2ec5224b1ab16c05f6f942f6084f1ab105b71b0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 21921156295d89aad04f3197fef9fa322f3c8c87
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773981"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614274"
 ---
 ### <a name="ensure-systemuri-uses-a-consistent-reserved-character-set"></a>Verifique se o System.URI usa um conjunto consistente de caracteres reservados
 
-|   |   |
-|---|---|
-|Detalhes|No <xref:System.Uri?displayProperty=fullName>, determinados caracteres codificados por porcentagem que, às vezes, eram decodificados agora permanecem codificados de forma consistente. Isso ocorre nas propriedades e nos métodos que acessam os componentes de caminho, consulta, fragmento ou informações do usuário do URI. O comportamento será alterado somente quando os dois itens a seguir forem verdadeiros:<ul><li>O URI contiver a forma codificada de um dos seguintes caracteres reservados: <code>:</code>, <code>'</code>, <code>(</code>, <code>)</code>, <code>!</code> ou <code>*</code>.</li><li>O URI contiver um caractere Unicode ou não reservado codificado. Se ambas as condições acima forem verdadeiras, os caracteres reservados codificados serão deixados codificados. Nas versões anteriores do .NET Framework, eles são decodificados.</li></ul>|
-|Sugestão|Para aplicativos direcionados a versões do .NET Framework começando com a 4.7.2, o novo comportamento de decodificação é habilitado por padrão. Se essa alteração não for desejada, você poderá desabilitá-la adicionando a seguinte opção [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) à seção <code>&lt;runtime&gt;</code> do arquivo de configuração de aplicativo:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>Para aplicativos direcionados a versões anteriores do .NET Framework, mas executados em versões começando com o .NET Framework 4.7.2, o novo comportamento de decodificação é desabilitado por padrão. Você poderá habilitá-la adicionando a seguinte opção [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) à seção <code>&lt;runtime&gt;</code> do arquivo de configuração de aplicativo:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|Escopo|Secundário|
-|Versão|4.7.2|
-|Tipo|Redirecionando|
-|APIs afetadas|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Detalhes
+
+No <xref:System.Uri?displayProperty=fullName>, determinados caracteres codificados por porcentagem que, às vezes, eram decodificados agora permanecem codificados de forma consistente. Isso ocorre nas propriedades e nos métodos que acessam os componentes de caminho, consulta, fragmento ou informações do usuário do URI. O comportamento será alterado somente quando os dois itens a seguir forem verdadeiros:
+
+- O URI contiver a forma codificada de um dos seguintes caracteres reservados: `:`, `'`, `(`, `)`, `!` ou `*`.
+- O URI contiver um caractere Unicode ou não reservado codificado. Se ambas as condições acima forem verdadeiras, os caracteres reservados codificados serão deixados codificados. Nas versões anteriores do .NET Framework, eles são decodificados.
+
+#### <a name="suggestion"></a>Sugestão
+
+Para aplicativos direcionados a versões do .NET Framework começando com a 4.7.2, o novo comportamento de decodificação é habilitado por padrão. Se essa alteração não for desejada, você poderá desabilitá-la adicionando a seguinte opção [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) à seção `<runtime>` do arquivo de configuração de aplicativo:
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets=true" />
+</runtime>
+```
+
+Para aplicativos direcionados a versões anteriores do .NET Framework, mas executados em versões começando com o .NET Framework 4.7.2, o novo comportamento de decodificação é desabilitado por padrão. Você pode habilitá-lo adicionando o seguinte comutador [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) à `<runtime>` seção do arquivo de configuração do aplicativo:
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets=false" />
+</runtime>
+```
+
+| Name    | Valor       |
+|:--------|:------------|
+| Escopo   | Secundária       |
+| Versão | 4.7.2       |
+| Type    | Redirecionando |
+
+#### <a name="affected-apis"></a>APIs afetadas
+
+- <xref:System.Uri?displayProperty=nameWithType>

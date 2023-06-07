@@ -1,15 +1,16 @@
 ---
-title: Como encontrar irmãos anteriores (XPath-LINQ para XML) (C#)
+title: Como localizar irmãos precedentes (XPath-LINQ to XML) (C#)
+description: Este exemplo de C# compara o eixo irmão anterior ao XPath com o eixo de LINQ to XML filho XNode. ElementsBeforeSelf.
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
-ms.openlocfilehash: 08fc2073f76f37bd0381a05a7969d1c7748d6252
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4150c94fe1e30e7a72bb53b4c6c12481ee0bad19
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141050"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103464"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Como encontrar irmãos anteriores (XPath-LINQ para XML) (C#)
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Como localizar irmãos precedentes (XPath-LINQ to XML) (C#)
 Este tópico compara o eixo `preceding-sibling` de XPath ao eixo <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> filho do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
  A expressão XPath é:  

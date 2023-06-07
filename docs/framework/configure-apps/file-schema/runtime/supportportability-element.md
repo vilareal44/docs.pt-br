@@ -6,19 +6,19 @@ helpviewer_keywords:
 - <supportPortability> element
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 ms.openlocfilehash: 63c309a8a93c1d31ed8f73a495cf5154c3590d56
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73115650"
 ---
-# <a name="supportportability-element"></a>\<supportPortability elemento >
+# <a name="supportportability-element"></a>Elemento \<supportPortability>
 Especifica que um aplicativo pode fazer referência ao mesmo assembly em duas implementações diferentes do .NET Framework, desabilitando o comportamento padrão que trata os assemblies como equivalentes para fins de portabilidade do aplicativo.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \<supportPortability **>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<supportPortability>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,18 +35,18 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |PCT|Atributo obrigatório.<br /><br /> Especifica o token de chave pública do assembly afetado, como uma cadeia de caracteres.|  
-|habilitado|Atributo opcional.<br /><br /> Especifica se o suporte para portabilidade entre as implementações do assembly de .NET Framework especificado deve ser habilitado.|  
+|Habilitado|Atributo opcional.<br /><br /> Especifica se o suporte para portabilidade entre as implementações do assembly de .NET Framework especificado deve ser habilitado.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|true|Habilite o suporte para portabilidade entre implementações do assembly de .NET Framework especificado. Esse é o padrão.|  
+|true|Habilite o suporte para portabilidade entre implementações do assembly de .NET Framework especificado. Este é o padrão.|  
 |false|Desabilite o suporte para portabilidade entre implementações do assembly de .NET Framework especificado. Isso permite que o aplicativo tenha referências a várias implementações do assembly especificado.|  
   
 ### <a name="child-elements"></a>Elementos filho  
 
-nenhuma.  
+Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -58,16 +58,16 @@ nenhuma.
   
 ## <a name="remarks"></a>Comentários  
 
-A partir do .NET Framework 4, o suporte é fornecido automaticamente para aplicativos que podem usar uma das duas implementações do .NET Framework, por exemplo, a implementação do .NET Framework ou o .NET Framework para a implementação do Silverlight. As duas implementações de um determinado assembly de .NET Framework são vistas como equivalentes pelo associador de assembly. Em alguns cenários, esse recurso de portabilidade de aplicativo causa problemas. Nesses cenários, o elemento `<supportPortability>` pode ser usado para desabilitar o recurso.  
+A partir do .NET Framework 4, o suporte é fornecido automaticamente para aplicativos que podem usar uma das duas implementações do .NET Framework, por exemplo, a implementação do .NET Framework ou o .NET Framework para a implementação do Silverlight. As duas implementações de um determinado assembly de .NET Framework são vistas como equivalentes pelo associador de assembly. Em alguns cenários, esse recurso de portabilidade de aplicativo causa problemas. Nesses cenários, o `<supportPortability>` elemento pode ser usado para desabilitar o recurso.  
   
 Um cenário desse tipo é um assembly que tem que referenciar a implementação de .NET Framework e o .NET Framework para a implementação do Silverlight de um determinado assembly de referência. Por exemplo, um designer XAML escrito em Windows Presentation Foundation (WPF) pode precisar referenciar a implementação da área de trabalho do WPF, para a interface do usuário do designer e o subconjunto do WPF que está incluído na implementação do Silverlight. Por padrão, as referências separadas causam um erro do compilador, pois a associação de assembly considera os dois assemblies equivalentes. Esse elemento desabilita o comportamento padrão e permite que a compilação tenha sucesso.  
   
 > [!IMPORTANT]
-> Para que o compilador passe as informações para a lógica de associação de assembly do Common Language Runtime, você deve usar a opção de compilador `/appconfig` para especificar o local do arquivo app. config que contém esse elemento.  
+> Para que o compilador passe as informações para a lógica de associação de assembly do Common Language Runtime, você deve usar a `/appconfig` opção do compilador para especificar o local do arquivo app. config que contém esse elemento.  
   
 ## <a name="example"></a>Exemplo  
 
-O exemplo a seguir permite que um aplicativo tenha referências para a implementação de .NET Framework e o .NET Framework para a implementação do Silverlight de qualquer assembly .NET Framework que exista em ambas as implementações. A opção de compilador `/appconfig` deve ser usada para especificar o local deste arquivo app. config.  
+O exemplo a seguir permite que um aplicativo tenha referências para a implementação de .NET Framework e o .NET Framework para a implementação do Silverlight de qualquer assembly .NET Framework que exista em ambas as implementações. A `/appconfig` opção do compilador deve ser usada para especificar o local deste arquivo app. config.  
   
 ```xml  
 <configuration>  
@@ -80,7 +80,7 @@ O exemplo a seguir permite que um aplicativo tenha referências para a implement
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [-appconfig (opções do compilador do C#)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
-- [Visão geral da unificação do assembly .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))
+- [-AppConfig (opções do compilador C#)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
+- [Visão Geral da Unificação de Assemblies no .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

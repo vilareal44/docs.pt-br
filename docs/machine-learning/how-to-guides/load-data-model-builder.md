@@ -1,80 +1,80 @@
 ---
-title: Carregar dados de treinamento para Model Builder
-description: Aprenda a carregar dados de treinamento de um banco de dados do SQL Server ou de um arquivo para uso em um dos cenários do Model Builder para ML.NET.
+title: Carregar dados de treinamento para o construtor de modelos
+description: Saiba como carregar os dados de treinamento de um banco de SQL Server ou de um arquivo para uso em um dos cenários do construtor de modelos para ML.NET.
 ms.date: 10/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, mlnet-tooling
-ms.openlocfilehash: 23de2d06090f4c1eaa2c79178ba4c346698d45e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64e366b3c66427ccd2810324abeb880f6cb9ebc1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78849153"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602200"
 ---
-# <a name="load-training-data-into-model-builder"></a>Carregar dados de treinamento em Model Builder
+# <a name="load-training-data-into-model-builder"></a>Carregar dados de treinamento no construtor de modelos
 
-Aprenda a carregar seus conjuntos de dados de treinamento a partir de um arquivo ou de um banco de dados Do SQL Server para uso em um dos cenários do Model Builder para ML.NET. Os cenários do Model Builder podem usar bancos de dados sql server, arquivos de imagem e formatos de arquivos CSV ou TSV como dados de treinamento.
+Saiba como carregar seus conjuntos de dados de treinamento de um arquivo ou de um SQL Server banco de dados para uso em um dos cenários do construtor de modelos para ML.NET. Os cenários do construtor de modelos podem usar SQL Server bancos de dados, arquivos de imagem e formatos de arquivo CSV ou TSV como dado de treinamento.
 
-## <a name="training-dataset-limitations-in-model-builder"></a>Limitações do conjunto de dados de treinamento no Model Builder
+## <a name="training-dataset-limitations-in-model-builder"></a>Limitações do conjunto de os conjuntos de modelos
 
-O Model Builder limita a quantidade e o tipo de dados que você pode usar para modelos de treinamento:
+O construtor de modelos limita a quantidade e o tipo de dados que você pode usar para modelos de treinamento:
 
-- Dados do SQL Server: 100.000 linhas
-- Arquivos CSV e TSV: Sem limite de tamanho
-- Imagens: SOMENTE PNG e JPG.
+- Dados de SQL Server: 100.000 linhas
+- Arquivos CSV e TSV: sem limite de tamanho
+- Imagens: somente PNG e JPG.
 
-## <a name="model-builder-scenarios"></a>Cenários do Model Builder
+## <a name="model-builder-scenarios"></a>Cenários do construtor de modelos
 
-O Model Builder ajuda você a criar modelos para os seguintes cenários de aprendizado de máquina:
+O construtor de modelos ajuda a criar modelos para os seguintes cenários de aprendizado de máquina:
 
-- Análise de sentimento (classificação binária): Classificar dados texais em duas categorias.
-- Classificação de problemas (classificação multiclasse): Classificar dados texais em 3 ou mais categorias.
-- Previsão de preços (regressão): Prever um valor numérico.
-- Classificação de imagem (deep learning): Categorizar imagens com base em características.
-- Cenário personalizado: Construa cenários personalizados a partir de seus dados usando regressão, classificação e outras tarefas.
+- Análise de sentimentos (classificação binária): classificar dados textuais em duas categorias.
+- Classificação do problema (classificação multiclasse): classificar dados textuais em três ou mais categorias.
+- Previsão de preço (regressão): prever um valor numérico.
+- Classificação de imagem (aprendizado profundo): categorizar imagens com base em características.
+- Cenário personalizado: Crie cenários personalizados de seus dados usando regressão, classificação e outras tarefas.
 
-Este artigo abrange cenários de classificação e regressão com dados textuais ou numéricos e cenários de classificação de imagens.
+Este artigo aborda cenários de classificação e regressão com dados textuais ou numéricos e cenários de classificação de imagem.
 
 ## <a name="load-text-or-numeric-data-from-a-file"></a>Carregar texto ou dados numéricos de um arquivo
 
-Você pode carregar texto ou dados numéricos de um arquivo no Model Builder. Ele aceita formatos de arquivo comma-delimited (CSV) ou tab-delimited (TSV).
+Você pode carregar texto ou dados numéricos de um arquivo no construtor de modelos. Ele aceita formatos de arquivo CSV (delimitados por vírgula) ou TSV (delimitados por tabulação).
 
-1. Na etapa de dados do Model Builder, selecione **Arquivo** a partir da gota de origem de dados.
-2. Selecione o botão ao lado da **Caixa Selecionar uma** caixa de texto de arquivo e use o File Explorer para navegar e selecionar o arquivo de dados.
-3. Escolha uma categoria na **estada Coluna para Prever (Rótulo).**
-4. A partir da parada **Colunas de entrada (Recursos),** confirme se as colunas de dados que deseja incluir são verificadas.
+1. Na etapa dados do construtor de modelos, selecione **arquivo** na lista suspensa fonte de dados.
+2. Selecione o botão ao lado da caixa de texto **selecionar um arquivo** e use o explorador de arquivos para procurar e selecionar o arquivo de dados.
+3. Escolha uma categoria na **coluna para prever (rótulo)** DropDown.
+4. Na lista suspensa **colunas de entrada (recursos)** , confirme se as colunas de dados que você deseja incluir estão marcadas.
 
-Você terminou de configurar seu arquivo de origem de dados para Model Builder. Selecione o link **Trem** para passar para a próxima etapa do Model Builder.
+Você concluiu a configuração do arquivo de fonte de dados para o construtor de modelos. Selecione o link **treinar** para mover para a próxima etapa no construtor de modelos.
 
-## <a name="load-data-from-a-sql-server-database"></a>Carregar dados de um banco de dados do SQL Server
+## <a name="load-data-from-a-sql-server-database"></a>Carregar dados de um banco de SQL Server
 
-O Model Builder suporta o carregamento de dados de bancos de dados SQL Server locais e remotos.
+O construtor de modelos dá suporte ao carregamento de dados de bancos de dado de SQL Server locais e remotos.
 
-Para carregar dados de um banco de dados do SQL Server no Module Builder:
+Para carregar dados de um banco de dado SQL Server no construtor de módulos:
 
-1. Na etapa de dados do Model Builder, selecione **SQL Server** a partir da gota de origem de dados.
-1. Selecione o botão ao lado da caixa de texto **do banco de dados Connect to SQL Server.**
-    1. Na caixa de diálogo **Escolher dados,** selecione **O arquivo de banco de dados do Microsoft SQL Server**.
-    1. Desmarque o Use sempre esta caixa **de seleção** e selecione **Continuar**
-    1. Na caixa de diálogo Propriedades de **conexão,** **selecione Procurar** e selecione o baixado . Arquivo MDF.
+1. Na etapa dados do construtor de modelos, selecione **SQL Server** na lista suspensa fonte de dados.
+1. Selecione o botão ao lado da caixa de texto **conectar ao SQL Server banco de dados** .
+    1. Na caixa de diálogo **escolher dados** , selecione **Microsoft SQL Server arquivo de banco**.
+    1. Desmarque a caixa de seleção **sempre usar esta seleção** e selecione **continuar**
+    1. Na caixa de diálogo **Propriedades da conexão** , selecione **procurar** e selecione o baixado. Arquivo MDF.
     1. Selecione **OK**
-1. Escolha o nome do conjunto de dados na estada **nome da tabela.**
-1. Na **parada Coluna para Prever (Rótulo),** escolha a categoria de dados na qual deseja fazer uma previsão.
-1. A partir da parada **Colunas de entrada (Recursos),** confirme se as colunas desejadas são verificadas.
+1. Escolha o nome do conjunto de campos na lista suspensa **nome da tabela** .
+1. Na lista suspensa **coluna a prever (rótulo)** , escolha a categoria de dados na qual você deseja fazer uma previsão.
+1. Na lista suspensa **colunas de entrada (recursos)** , confirme se as colunas que você deseja incluir estão marcadas.
 
-Você terminou de configurar seu arquivo de origem de dados para Model Builder. Selecione o link **Trem** para passar para a próxima etapa do Model Builder.
+Você concluiu a configuração do arquivo de fonte de dados para o construtor de modelos. Selecione o link **treinar** para mover para a próxima etapa no construtor de modelos.
 
 ## <a name="set-up-image-data-files"></a>Configurar arquivos de dados de imagem
 
-O Model Builder espera que os dados de imagem sejam arquivos JPG ou PNG organizados em pastas que correspondam às categorias da classificação.
+O construtor de modelos espera que os dados de imagem sejam arquivos JPG ou PNG organizados em pastas que correspondam às categorias da classificação.
 
-Para carregar imagens no Model Builder, forneça o caminho para um único diretório de nível superior:
+Para carregar imagens no construtor de modelos, forneça o caminho para um único diretório de nível superior:
 
-- Este diretório de alto nível contém uma subpasta para cada uma das categorias a prever.
+- Esse diretório de nível superior contém uma subpasta para cada uma das categorias a prever.
 - Cada subpasta contém os arquivos de imagem pertencentes à sua categoria.
 
-Na estrutura da pasta ilustrada abaixo, o diretório de alto nível é *flower_photos*. Existem cinco subdiretórios correspondentes às categorias que você deseja prever: margarida, dente-de-leão, rosas, girassóis e tulipas. Cada um desses subdiretórios contém imagens pertencentes à sua respectiva categoria.
+Na estrutura de pastas ilustrada abaixo, o diretório de nível superior é *flower_photos*. Há cinco subdiretórios correspondentes às categorias que você deseja prever: Margarida, dandelion, rosas, flores e tulips. Cada um desses subdiretórios contém imagens que pertencem a sua respectiva categoria.
 
 ```text
 \---flower_photos
@@ -106,9 +106,9 @@ Na estrutura da pasta ilustrada abaixo, o diretório de alto nível é *flower_p
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Siga estes tutoriais para criar aplicativos de aprendizado de máquina com o Model Builder:
+Siga estes tutoriais para criar aplicativos de Machine Learning com o construtor de modelos:
 
 - [Prever os preços usando regressão](../tutorials/predict-prices-with-model-builder.md)
-- [Analisar o sentimento em uma aplicação web usando classificação binária](../tutorials/sentiment-analysis-model-builder.md )
+- [Analisar sentimentos em um aplicativo Web usando a classificação binária](../tutorials/sentiment-analysis-model-builder.md)
 
-Se você está treinando um modelo usando código, [aprenda a carregar dados usando a API ML.NET](load-data-ml-net.md).
+Se você estiver treinando um modelo usando código, [saiba como carregar dados usando a API ml.net](load-data-ml-net.md).

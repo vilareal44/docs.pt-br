@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e525aa16-c923-4b16-833b-36f1f0dd70fc
 topic_type:
 - apiref
-ms.openlocfilehash: d924dbf21a0f0b046c8d8f8f294e91bc5ff6c015
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 1cc05f4c10f4a5b042ff14c05f3c85a7b5935184
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76869405"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84497888"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>Método ICorProfilerInfo::GetTokenAndMetadataFromFunction
 Obtém o token de metadados e uma instância de interface de metadados que podem ser usados em relação ao token para a função especificada.  
@@ -48,15 +48,15 @@ HRESULT GetTokenAndMetaDataFromFunction(
  `pToken`  
  fora Um ponteiro para o token de metadados para a função especificada.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)

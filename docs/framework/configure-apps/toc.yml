@@ -1,12 +1,12 @@
-- name: Configurando aplicativos
+- name: Configuração de aplicativos
   href: index.md
   items:
-    - name: Como localizar assemblies usando DEVPATH
+    - name: 'Como: Localizar assemblies usando DEVPATH'
       href: how-to-locate-assemblies-by-using-devpath.md
     - name: Redirecionando versões de assembly
       href: redirect-assembly-versions.md
       items:
-        - name: Como habilitar e desabilitar o redirecionamento automático de associações
+        - name: 'Como: Habilitar e desabilitar o redirecionamento automático de associação'
           href: how-to-enable-and-disable-automatic-binding-redirection.md
         - name: Permissão de segurança para redirecionamento de associações de assemblies
           href: assembly-binding-redirection-security-permission.md
@@ -19,7 +19,7 @@
           href: map-algorithm-names-to-cryptography-classes.md
         - name: Mapeando identificadores de objeto para algoritmos de criptografia
           href: map-object-identifiers-to-cryptography-algorithms.md
-    - name: Como criar uma política de editor
+    - name: 'Como: Criar uma política de editor'
       href: how-to-create-a-publisher-policy.md
     - name: Esquema do arquivo de configuração
       href: file-schema/index.md

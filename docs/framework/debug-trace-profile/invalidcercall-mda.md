@@ -1,5 +1,6 @@
 ---
 title: MDA invalidCERCall
+description: Examine o MDA (Assistente de depuração gerenciada) invalidCERCall, que será ativado se houver uma chamada inválida dentro do grafo CER (região de execução restrita).
 ms.date: 03/30/2017
 helpviewer_keywords:
 - invalid CER calls
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
-ms.openlocfilehash: f8e467401f7c50898613c7cf6eca68a8a705431a
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: dec32a81929d72274757b75cb03d6615d9fa948b
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217391"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051786"
 ---
 # <a name="invalidcercall-mda"></a>MDA invalidCERCall
 O MDA (Assistente de Depuração Gerenciado) de `invalidCERCall` é ativado quando há uma chamada de dentro do gráfico de CER (região de execução restrita) a um método que não tem nenhum contrato de confiabilidade um tem um contrato excessivamente fraco. Um contrato fraco é um contrato que declara que o pior caso de corrupção de estado tem escopo maior do que a instância passou para a chamada, ou seja, o <xref:System.AppDomain> ou o estado do processo pode se corromper ou o resultado dele não é sempre computável de forma determinística quando chamado dentro de uma CER.  
@@ -52,8 +52,8 @@ O MDA (Assistente de Depuração Gerenciado) de `invalidCERCall` é ativado quan
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)

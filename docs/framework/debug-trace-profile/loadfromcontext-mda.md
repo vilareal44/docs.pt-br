@@ -1,5 +1,6 @@
 ---
 title: MDA loadFromContext
+description: Entenda o MDA (Assistente de depuração gerenciada) do loadFromContext no .NET, que será ativado se um assembly for carregado no contexto LoadFrom.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), LoadFrom context
@@ -7,12 +8,11 @@ helpviewer_keywords:
 - LoadFrom context
 - LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
-ms.openlocfilehash: d0090a0272d1c3b6175b351175689df1e1e4fdbd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.openlocfilehash: 8d55268f2b2106dde4e488a6f0271fd3b17349da
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181803"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051643"
 ---
 # <a name="loadfromcontext-mda"></a>MDA loadFromContext
 O MDA (Assistente de Depuração Gerenciado) de `loadFromContext` é ativado se um assembly é carregado no contexto `LoadFrom`. Essa situação pode ocorrer como resultado da chamar <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> ou outros métodos semelhantes.  
@@ -70,6 +70,6 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)

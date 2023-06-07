@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UploadFile method [Visual Basic]
 - My.Computer.Network.UploadFile method
 ms.assetid: a8b37924-c523-4fd3-b5ca-cb0074df29cd
-ms.openlocfilehash: 52b731606c74ab7ff06a42dfdbe078616ba33d88
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cee6811d6b6d295c28eb683c5d2f7bcbb5fe94ab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345556"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401804"
 ---
 # <a name="how-to-upload-a-file-in-visual-basic"></a>Como carregar um arquivo no Visual Basic
 
@@ -47,9 +47,9 @@ O método <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> pode ser us
   
 - A conexão ultrapassou o tempo limite (<xref:System.TimeoutException>).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>
-- [Como: baixar um arquivo](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)
-- [Como analisar demarcadores de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [Como: baixar um arquivo](how-to-download-a-file.md)
+- [Como: analisar caminhos de arquivo](../drives-directories-files/how-to-parse-file-paths.md)

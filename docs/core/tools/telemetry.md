@@ -3,12 +3,12 @@ title: Telemetria do SDK do .NET Core
 description: Descubra os recursos de telemetria do SDK do .NET Core que coletam informações de uso para análise, quais dados são coletados e como desabilitá-los.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: a79b791abc99331ff39f5e281ee0fdc62b258989
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 0917dae23588ccd1809252aaf484c397e84561c7
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507276"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226563"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria do SDK do .NET Core
 
@@ -46,25 +46,25 @@ The .NET Core tools collect usage data in order to help us improve your experien
 Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
 
-Para desativar esta mensagem e a mensagem `DOTNET_NOLOGO` de `true`boas-vindas do .NET Core, defina a variável de ambiente para . Observe que esta variável não tem efeito sobre a telemetria optar por sair.
+Para desabilitar essa mensagem e a mensagem de boas-vindas do .NET Core, defina a `DOTNET_NOLOGO` variável de ambiente como `true` . Observe que essa variável não tem nenhum efeito na recusa de telemetria.
 
 ## <a name="data-points"></a>Pontos de dados
 
 O recurso de telemetria não coleta dados pessoais, como nomes de usuário ou endereços de email. Ele não examina o código nem extrai dados no nível de projeto, como nome, repositório ou autor. Os dados são enviados com segurança para os servidores Microsoft usando a tecnologia [Azure Monitor](https://azure.microsoft.com/services/monitor/), mantidos em acesso restrito e publicados sob controles de segurança rigorosos por meio dos sistemas seguros do [Armazenamento do Azure](https://azure.microsoft.com/services/storage/).
 
-A proteção de sua privacidade é importante para nós. Se você suspeita que a telemetria está coletando dados confidenciais ou que os dados estão sendo manipulados de modo inseguro ou inadequado, registre um problema no repositório [dotnet/cli](https://github.com/dotnet/cli/issues) ou envie um email para [dotnet@microsoft.com](mailto:dotnet@microsoft.com) para investigação.
+A proteção de sua privacidade é importante para nós. Se você suspeitar que a telemetria está coletando dados confidenciais ou que os dados estão sendo inseguros ou indevidamente manipulados, execute um problema no repositório [dotnet/SDK](https://github.com/dotnet/sdk/issues) ou envie um email para [dotnet@microsoft.com](mailto:dotnet@microsoft.com) para investigação.
 
 O recurso de telemetria coleta os seguintes dados:
 
 | Versões do SDK | Dados |
 |--------------|------|
-| Todos          | Carimbo de data/hora da invocação. |
-| Todos          | Comando invocado (por exemplo, "build"), com hash no 2.1 em diante. |
-| Todos          | Três endereços IP de octeto usados para determinar a localização geográfica. |
-| Todos          | Sistema operacional e versão. |
-| Todos          | RID (ID de runtime) em que o SDK está em execução. |
-| Todos          | Versão do SDK do .NET Core. |
-| Todos          | Perfil de telemetria: um valor opcional usado somente com o consentimento explícito do usuário e usado internamente na Microsoft. |
+| Tudo          | Carimbo de data/hora da invocação. |
+| Tudo          | Comando invocado (por exemplo, "build"), com hash no 2.1 em diante. |
+| Tudo          | Três endereços IP de octeto usados para determinar a localização geográfica. |
+| Tudo          | Sistema operacional e versão. |
+| Tudo          | RID (ID de runtime) em que o SDK está em execução. |
+| Tudo          | Versão do SDK do .NET Core. |
+| Tudo          | Perfil de telemetria: um valor opcional usado somente com o consentimento explícito do usuário e usado internamente na Microsoft. |
 | >=2.0        | Opções e argumentos de comando: várias opções e vários argumentos são coletados (não cadeias de caracteres arbitrárias). Confira [Opções coletadas](#collected-options). Com hash após 2.1.300. |
 | >=2.0         | Se o SDK está em execução em um contêiner. |
 | >=2.0         | Estruturas de destino (do evento `TargetFramework`), com hash começando em 2.1. |
@@ -139,4 +139,4 @@ Por isso, os builds personalizados do SDK do .NET Core não devem estar localiza
 ## <a name="see-also"></a>Confira também
 
 - [Telemetria da CLI do .NET Core – dados do T2 de 2019](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2)
-- [Fonte de referência de telemetria (repositório dotnet/cli)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)
+- [Fonte de referência de telemetria (repositório dotnet/SDK)](https://github.com/dotnet/sdk/tree/master/src/Cli/dotnet/Telemetry)

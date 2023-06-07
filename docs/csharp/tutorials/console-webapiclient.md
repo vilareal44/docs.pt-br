@@ -3,12 +3,12 @@ title: Cria um cliente REST usando .NET Core
 description: Este tutorial ensina vários recursos no .NET Core e da linguagem C#.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 4a3a76d1ec9893c2c3e0353e305a19e59c586fe5
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 8db87440bb6e0995b1cc2c97b0d28995170ada8c
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420377"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656938"
 ---
 # <a name="rest-client"></a>Cliente REST
 
@@ -25,7 +25,7 @@ Você compilará um aplicativo que emite solicitações HTTP para um serviço RE
 
 Há muitos recursos neste tutorial. Vamos compilá-los individualmente.
 
-Se preferir acompanhar com o [exemplo final](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) para esse tópico, você poderá baixá-lo. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Se preferir acompanhar com o [exemplo final](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) para esse tópico, você poderá baixá-lo. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -37,10 +37,10 @@ Será necessário instalar o editor de código de sua preferência. As descriç�
 A primeira etapa é criar um novo aplicativo. Abra um prompt de comando e crie um novo diretório para seu aplicativo. Torne ele o diretório atual. Digite o seguinte comando em uma janela de console:
 
 ```dotnetcli
-dotnet new console --name WebApiClient
+dotnet new console --name WebAPIClient
 ```
 
-Isso cria os arquivos iniciais de um aplicativo "Olá, Mundo" básico. O nome do projeto é "WebApiClient". Como esse é um novo projeto, nenhuma das dependências está em vigor. A primeira execução baixará o .NET Core Framework, instalará um certificado de desenvolvimento e executará o Gerenciador de pacotes NuGet para restaurar as dependências ausentes.
+Isso cria os arquivos iniciais de um aplicativo "Olá, Mundo" básico. O nome do projeto é "WebAPIClient". Como esse é um novo projeto, nenhuma das dependências está em vigor. A primeira execução baixará o .NET Core Framework, instalará um certificado de desenvolvimento e executará o Gerenciador de pacotes NuGet para restaurar as dependências ausentes.
 
 Antes de começar a fazer modificações, digite `dotnet run` ([veja a observação](#dotnet-restore-note)) no prompt de comando para executar seu aplicativo. `dotnet run` executará automaticamente `dotnet restore` se estiverem faltando dependências em seu ambiente. Ele também executará `dotnet build` se seu aplicativo precisar ser reconstruído.
 Após sua configuração inicial, você só precisará executar `dotnet restore` ou `dotnet build` quando fizer sentido para seu projeto.

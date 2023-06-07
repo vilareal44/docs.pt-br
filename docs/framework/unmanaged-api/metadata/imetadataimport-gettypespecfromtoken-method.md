@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee518bda-3296-482e-a7b7-e9d51dd1a181
 topic_type:
 - apiref
-ms.openlocfilehash: 34b7cebfa063a3ad077b74a753fd37ba67ff53a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43e9671afa92d36966e51bbdc630db4a9d9083b7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175311"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503492"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>Método IMetaDataImport::GetTypeSpecFromToken
-Obtém a assinatura binária de metadados da especificação do tipo representada pelo token especificado.  
+Obtém a assinatura de metadados binários da especificação de tipo representada pelo token especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,29 +35,29 @@ HRESULT GetTypeSpecFromToken (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `typespec`  
- [em] O token TypeSpec associado à assinatura de metadados solicitada.  
+ no O token TypeSpec associado à assinatura de metadados solicitada.  
   
  `ppvSig`  
- [fora] Um ponteiro para a assinatura binária de metadados.  
+ fora Um ponteiro para a assinatura de metadados binários.  
   
  `pcbSig`  
- [fora] O tamanho, em bytes, da assinatura de metadados.  
+ fora O tamanho, em bytes, da assinatura de metadados.  
   
-## <a name="return-value"></a>Valor retornado  
- Um HRESULT que indica sucesso ou fracasso. As falhas podem ser testadas com a macro FAILED.  
+## <a name="return-value"></a>Valor Retornado  
+ Um HRESULT que indica êxito ou falha. As falhas podem ser testadas com a macro com falha.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

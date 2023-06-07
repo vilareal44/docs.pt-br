@@ -1,16 +1,17 @@
 ---
 title: Delegados genéricos – Guia de Programação em C#
+description: Saiba mais sobre como usar delegados genéricos em C#. Consulte exemplos de código e exiba recursos adicionais disponíveis.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-ms.openlocfilehash: 4e57256328fc81a485670b47fcf8fd1c38e26fac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d99271ca9f12e95743d633caac16aaa4151e9c41
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712215"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301899"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>Delegados genéricos (Guia de Programação em C#)
 Um [delegado](../../language-reference/builtin-types/reference-types.md) pode definir seus próprios parâmetros de tipo. O código que referencia o delegado genérico pode especificar o argumento de tipo para criar um tipo construído fechado, assim como quando uma classe genérica é instanciada ou quando um método genérico é chamado, conforme mostrado no exemplo a seguir:  
@@ -36,10 +37,10 @@ Um [delegado](../../language-reference/builtin-types/reference-types.md) pode de
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.Generic>
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Introdução aos genéricos](./index.md)
-- [Métodos Genéricos](./generic-methods.md)
-- [Classes Genéricas](./generic-classes.md)
+- [Métodos genéricos](./generic-methods.md)
+- [Classes genéricas](./generic-classes.md)
 - [Interfaces genéricas](./generic-interfaces.md)
-- [Delega](../delegates/index.md)
+- [Representantes](../delegates/index.md)
 - [Genéricos](../../../standard/generics/index.md)

@@ -1,5 +1,6 @@
 ---
 title: Criação de perfil do runtime
+description: Explore a criação de perfil de tempo de execução no .NET, que é um método de coleta de dados de desempenho em qualquer cenário de desenvolvimento ou implantação.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - profiling applications
 - Performance Console
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
-ms.openlocfilehash: daa2ae4fbbed78bda4648b4b3077fa7d96a9b3f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fc88cc5c7c7655cf03573bae3935498a05496cc2
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121558"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803580"
 ---
 # <a name="runtime-profiling"></a>Criação de perfil do runtime
 Criação de perfil é um método de coleta de dados de desempenho em qualquer cenário de desenvolvimento ou de implantação. Esta seção é para desenvolvedores e administradores de sistema que desejam coletar informações sobre o desempenho do aplicativo.  
@@ -32,15 +33,15 @@ Criação de perfil é um método de coleta de dados de desempenho em qualquer c
   
 3. Na barra de ferramentas do Monitor de Desempenho, clique no ícone **Adicionar** (sinal de adição) se ele estiver presente. Se não estiver presente, clique com o botão direito do mouse na janela do monitor e selecione a opção **Adicionar Contadores**.  
   
-     Isso abre a caixa de diálogo **Adicionar Contadores**. A caixa de listagem **Contadores disponíveis** exibe os objetos de desempenho disponíveis. Há um número de objetos predefinidos para aplicativos do .NET Framework, incluindo aqueles para gerenciamento de memória (**Memória do .NET CLR**), interoperabilidade (**Interoperabilidade do .NET CLR**), tratamento de exceção (**Exceções do .NET CLR**) e multithreading ( **.NET CLR LocksAndThreads**). Cada objeto de desempenho inclui uma série de contadores de desempenho individuais. Para obter uma lista de contadores de desempenho disponíveis no Monitor de Desempenho, consulte [Contadores de desempenho](performance-counters.md).  
+     Isso abre a caixa de diálogo **Adicionar Contadores**. A caixa de listagem **Contadores disponíveis** exibe os objetos de desempenho disponíveis. Há um número de objetos predefinidos para aplicativos do .NET Framework, incluindo aqueles para gerenciamento de memória (**Memória do .NET CLR**), interoperabilidade (**Interoperabilidade do .NET CLR**), tratamento de exceção (**Exceções do .NET CLR**) e multithreading (**.NET CLR LocksAndThreads**). Cada objeto de desempenho inclui uma série de contadores de desempenho individuais. Para obter uma lista de contadores de desempenho disponíveis no Monitor de Desempenho, consulte [Contadores de desempenho](performance-counters.md).  
   
 4. Selecione a caixa de seleção ao lado do nome de um objeto de desempenho para exibir a lista de contadores de desempenho individuais aos quais ele dá suporte.  
   
 5. Clique no contador de desempenho que você deseja exibir.  
   
-6. Na caixa de listagem **Instâncias do objeto selecionado**, clique em **\<Todas as instâncias>** para especificar que você deseja monitorar o contador de desempenho para o Common Language Runtime globalmente (ou seja, em todo o sistema).  
+6. Na caixa **de listagem instâncias do objeto selecionado** , clique **\<All instances>** para especificar que você deseja monitorar o contador de desempenho para o Common Language Runtime globalmente (ou seja, em todo o sistema).  
   
-     \- ou -  
+     -ou-  
   
      Na caixa de listagem **Instâncias do objeto selecionado**, clique em um nome do aplicativo para monitorar o contador de desempenho para esse aplicativo.  
   
@@ -52,12 +53,12 @@ Criação de perfil é um método de coleta de dados de desempenho em qualquer c
  Se você deseja criar o perfil de um assembly que existe em uma zona ou em um compartilhamento remoto, verifique se o assembly remoto tem confiança total no computador que executa os contadores de desempenho. Se o assembly não tiverem confiança suficiente, os contadores de desempenho não funcionarão. Para obter informações sobre como conceder confiança em zonas diferentes, consulte [Caspol.exe (ferramenta de política de segurança de acesso do código)](../tools/caspol-exe-code-access-security-policy-tool.md).  
   
 > [!NOTE]
-> Em sistemas nos quais o .NET Framework 4 está instalado, o monitor de desempenho pode não exibir dados para contadores de desempenho em algumas categorias, como **.NET CLR data** e **.NET CLR Networking**, para aplicativos que foram desenvolvidos usando o .net Estrutura 1,1. Se esse for o caso, você pode configurar o Monitor de Desempenho para exibir esses dados, adicionando o elemento [\<forcePerformanceCounterUniqueSharedMemoryReads>](../configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) ao arquivo de configuração do aplicativo.  
+> Em sistemas nos quais o .NET Framework 4 está instalado, o monitor de desempenho pode não exibir dados para contadores de desempenho em algumas categorias, como **dados .NET CLR** e **rede .NET CLR**, para aplicativos que foram desenvolvidos usando o .NET Framework 1,1. Se esse for o caso, você poderá configurar o monitor de desempenho para exibir esses dados adicionando o [\<forcePerformanceCounterUniqueSharedMemoryReads>](../configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) elemento ao arquivo de configuração do aplicativo.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Ler e criar contadores de desempenho de forma programática  
  O .NET Framework fornece classes que você pode usar para acessar programaticamente as mesmas informações de desempenho disponíveis no console de desempenho. Você também pode usar essas classes para criar contadores de desempenho personalizados. A tabela a seguir descreve algumas das classes de monitoramento de desempenho que são fornecidas no .NET Framework.  
   
-|Class|Descrição|  
+|Classe|Descrição|  
 |-----------|-----------------|  
 |<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|Representa um componente do contador de desempenho do Windows NT. Use essa classe para ler contadores existentes predefinidos ou personalizados e publicar dados de desempenho (gravação) em contadores personalizados.|  
 |<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|Fornece vários métodos para interagir com os contadores e categorias de contadores no computador.|  

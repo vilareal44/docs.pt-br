@@ -1,5 +1,6 @@
 ---
-title: <example> - Guia de programação C#
+title: <example> -Guia de programação C#
+description: Saiba mais sobre o XML <example> Tags. Essa marca permite que você especifique um exemplo de como usar um método ou outro membro da biblioteca.
 ms.date: 07/20/2015
 f1_keywords:
 - <example>
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - <example> C# XML tag
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
-ms.openlocfilehash: 615eccbc427b6a5bbbed061acd0c8b0b9be7f46c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd529e8f2a54cf9086d0d8c555dd1adb70b99126
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789809"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381522"
 ---
-# <a name="example-c-programming-guide"></a>\<exemplo> (guia de programação C#)
+# <a name="example-c-programming-guide"></a>\<example>(Guia de programação C#)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,9 +32,9 @@ ms.locfileid: "76789809"
 
 ## <a name="remarks"></a>Comentários
 
-A marca \<example> permite especificar um exemplo de como usar um método ou outro membro da biblioteca. Isso geralmente envolve [ \<](./code.md) o uso do código>tag.
+A `<example>` marca permite especificar um exemplo de como usar um método ou outro membro da biblioteca. Isso geralmente envolve o uso da [\<code>](./code.md) marca.
 
-Compilar com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação para um arquivo.
+Compile com [-Doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.
 
 ## <a name="example"></a>Exemplo
 
@@ -41,5 +42,5 @@ Compilar com [-doc](../../language-reference/compiler-options/doc-compiler-optio
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

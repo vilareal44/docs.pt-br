@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 958970d6-f6a2-4b84-b32a-f555cbaf8f61
 topic_type:
 - apiref
-ms.openlocfilehash: 7198698edce48546c4f9a82ace18d5a6e71891ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e43eb7ebfc367e7d4a7a209a5037fcc4566cd7ec
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176247"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83803933"
 ---
 # <a name="ihostsecuritymanagergetsecuritycontext-method"></a>Método IHostSecurityManager::GetSecurityContext
-Obtém o [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) solicitado do host.  
+Obtém o [IHostSecurityContext](ihostsecuritycontext-interface.md) solicitado do host.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,38 +34,38 @@ HRESULT GetSecurityContext (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `eContextType`  
- [em] Um dos valores do [EContextType,](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md) indicando que tipo de contexto de segurança deve retornar.  
+ no Um dos valores de [EContextType](econtexttype-enumeration.md) , que indica o tipo de contexto de segurança a ser retornado.  
   
  `ppSecurityContext`  
- [fora] O endereço de um `IHostSecurityContext` ponteiro `eContextType`de interface para o de .  
+ fora O endereço de um ponteiro de interface para o `IHostSecurityContext` de `eContextType` .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`GetSecurityContext`retornou com sucesso.|  
-|Host_e_clrnotavailable|O tempo de execução do idioma comum (CLR) não foi carregado em um processo, ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com sucesso.|  
-|HOST_E_TIMEOUT|A chamada acabou.|  
-|HOST_E_NOT_OWNER|O interlocutor não é dono da fechadura.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um fio ou fibra bloqueado estava esperando por ele.|  
-|E_FAIL|Uma falha catastrófica desconhecida ocorreu. Quando um método retorna E_FAIL, a CLR não é mais utilizável dentro do processo. Chamadas subseqüentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`GetSecurityContext`retornado com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
+|HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- Um host pode controlar todo o acesso de código aos tokens de thread tanto pelo CLR quanto pelo código do usuário. Ele também pode garantir que informações completas do contexto de segurança são passadas através de operações assíncronas ou pontos de código com acesso restrito ao código. `IHostSecurityContext`encapsula essas informações de contexto de segurança, o que é opaco para a CLR. O CLR captura essas informações e as move através do despacho de itens do ponto do trabalhador do pool de thread, execução do finalizador e construção de módulos e classes.  
+ Um host pode controlar todo o acesso ao código para tokens de thread tanto pelo CLR quanto pelo código do usuário. Ele também pode garantir que as informações completas do contexto de segurança sejam passadas entre operações assíncronas ou pontos de código com acesso restrito ao código. `IHostSecurityContext`encapsula essas informações de contexto de segurança, que são opacas para o CLR. O CLR captura essas informações e as move entre a expedição do item de trabalho do pool de threads, a execução do finalizador e a construção de módulo e classe.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Enumeração EContextType](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md)
-- [Interface IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
-- [Interface IHostSecurityManager](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
+- [Enumeração EContextType](econtexttype-enumeration.md)
+- [Interface IHostSecurityContext](ihostsecuritycontext-interface.md)
+- [Interface IHostSecurityManager](ihostsecuritymanager-interface.md)

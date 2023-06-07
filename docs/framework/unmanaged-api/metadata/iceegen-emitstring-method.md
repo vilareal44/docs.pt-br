@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad2710a7-edb8-4493-8619-3fce235e3334
 topic_type:
 - apiref
-ms.openlocfilehash: 8433ff6e0ec550d6b0558bfb9c7698c49e98278c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e7c58e6cdbe0d3c8513721a40eaa3fdfcec6ce2e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436390"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008853"
 ---
 # <a name="iceegenemitstring-method"></a>Método ICeeGen::EmitString
 Emite a cadeia de caracteres especificada na base de código.  
@@ -43,15 +43,15 @@ HRESULT EmitString (
  `RVA`  
  fora O endereço virtual relativo da cadeia de caracteres emitida.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [Interface ICeeGen](iceegen-interface.md)

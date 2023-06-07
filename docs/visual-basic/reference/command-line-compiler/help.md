@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-ms.openlocfilehash: 6013b92206e00a77a8ca30d38846c87372c3873e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b30a5a9d73dd84231f30f20549f5c0ae813742ab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344276"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408628"
 ---
 # <a name="-help---visual-basic"></a>/help, /? (Visual Basic)
 Exibe as opções do compilador.  
@@ -25,7 +25,7 @@ Exibe as opções do compilador.
 -help  
 ```
 
-ou o  
+ou  
 
 ```console
 -?  
@@ -35,7 +35,7 @@ ou o
  Se você incluir essa opção em uma compilação, nenhum arquivo de saída será criado e nenhuma compilação ocorrerá.  
   
 > [!NOTE]
-> A `-help` opção não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando.  
+> A `-help` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ela está disponível somente durante a compilação na linha de comando.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir exibe a ajuda da linha de comando.  
@@ -44,7 +44,7 @@ ou o
 vbc -help  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Compilador de linha de comando do Visual Basic](index.md)
+- [Linhas de Comando de Compilação de Exemplo](sample-compilation-command-lines.md)

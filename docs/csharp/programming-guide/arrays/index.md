@@ -1,20 +1,21 @@
 ---
 title: Matrizes – Guia de Programação em C#
+description: Armazene várias variáveis do mesmo tipo em uma estrutura de dados de matriz em C#. Declare uma matriz especificando um tipo ou especifique um objeto para armazenar qualquer tipo.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: bbabc84c144e5b3415c19f346b890782e251662c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e302ff2e4c2488c4899c4eb99a666d2d322119ce
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715050"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474729"
 ---
 # <a name="arrays-c-programming-guide"></a>Matrizes (Guia de Programação em C#)
 
-Você pode armazenar diversas variáveis do mesmo tipo em uma estrutura de dados de matriz. Você pode declarar uma matriz especificando o tipo de seus elementos. Se você quiser que a matriz armazene `object` elementos de qualquer tipo, você pode especificar como seu tipo. No sistema de tipos unificado do C#, todos os tipos, predefinidos e definidos pelo usuário, tipos de referência e tipos de valor, herdam direta ou indiretamente de <xref:System.Object>.
+Você pode armazenar diversas variáveis do mesmo tipo em uma estrutura de dados de matriz. Você pode declarar uma matriz especificando o tipo de seus elementos. Se você quiser que a matriz armazene elementos de qualquer tipo, você pode especificar `object` como seu tipo. No sistema de tipos unificado do C#, todos os tipos, predefinidos e definidos pelo usuário, tipos de referência e tipos de valor, herdam direta ou indiretamente de <xref:System.Object>.
 
 ```csharp
 type[] arrayName;
@@ -40,15 +41,15 @@ Uma matriz tem as seguintes propriedades:
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-- [Matrizes como objetos](arrays-as-objects.md)
-- [Usando foreach com Arrays](using-foreach-with-arrays.md)
+- [Matrizes como Objetos](arrays-as-objects.md)
+- [Usar foreach com matrizes](using-foreach-with-arrays.md)
 - [Passar matrizes como argumentos](passing-arrays-as-arguments.md)
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Coleções](../concepts/collections.md)

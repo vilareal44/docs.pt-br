@@ -1,13 +1,13 @@
 ---
-title: 'Como: Crie a hierarquia usando o agrupamento'
+title: 'Como: criar uma hierarquia usando o agrupamento'
 ms.date: 07/20/2015
 ms.assetid: 4eb3ca6b-1aed-43de-b8b9-41c769c993f8
-ms.openlocfilehash: 3fea3e008e0bb18ae92f8883d08be4f27929b9fd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 551a1b8909eb36fea17c93563895296f65794cac
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74341591"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414576"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>Como: criar hierarquia usando o agrupamento (Visual Basic)
 Este exemplo mostra como agrupar dados, e gerencia em XML baseado em agrupamento.  
@@ -15,7 +15,7 @@ Este exemplo mostra como agrupar dados, e gerencia em XML baseado em agrupamento
 ## <a name="example"></a>Exemplo  
  Este exemplo primeiro agrupa dados por uma categoria, então gerencia um novo arquivo XML na hierarquia XML reflete o agrupamento.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos (LINQ to XML)](sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim doc As XElement = XElement.Load("Data.xml")  
@@ -40,7 +40,7 @@ Dim newData As XElement = _
 Console.WriteLine(newData)  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <Root>  
@@ -79,6 +79,6 @@ Console.WriteLine(newData)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Técnicas de consulta avançada (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Técnicas de consulta avançada (LINQ to XML) (Visual Basic)](advanced-query-techniques-linq-to-xml.md)

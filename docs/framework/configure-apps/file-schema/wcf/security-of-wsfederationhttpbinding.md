@@ -3,21 +3,21 @@ title: <security> de <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
 ms.openlocfilehash: ea029444cee331a235c7a2fc140b4321d7530063
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73736320"
 ---
-# <a name="security-of-wsfederationhttpbinding"></a>\<> de segurança do \<wsFederationHttpBinding >
-Define as configurações de segurança do [\<WSFederationHttpBinding](wsfederationhttpbinding.md).  
+# <a name="security-of-wsfederationhttpbinding"></a>\<security> de \<wsFederationHttpBinding>
+Define as configurações de segurança do [\<wsFederationHttpBinding>](wsfederationhttpbinding.md) .  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsFederationHttpBinding >** ](wsfederationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**security >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<wsFederationHttpBinding>**](wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -86,9 +86,9 @@ Define as configurações de segurança do [\<WSFederationHttpBinding](wsfederat
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|Modo|Opcional. Especifica o tipo de segurança que é aplicado. O valor padrão é `Message`. Este atributo é do tipo <xref:System.ServiceModel.WSFederationHttpSecurityMode>.|  
+|Mode|Opcional. Especifica o tipo de segurança que é aplicado. O valor padrão é `Message`. Esse atributo é do tipo <xref:System.ServiceModel.WSFederationHttpSecurityMode> .|  
   
-## <a name="mode-attribute"></a>Atributo de modo  
+## <a name="mode-attribute"></a>Atributo Mode  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -100,15 +100,15 @@ Define as configurações de segurança do [\<WSFederationHttpBinding](wsfederat
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<message >](message-element-of-wsfederationhttpbinding.md)|Define as configurações para a segurança em nível de mensagem. Este elemento é do tipo <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.|  
+|[\<message>](message-element-of-wsfederationhttpbinding.md)|Define as configurações para a segurança em nível de mensagem. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement> .|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<binding >](bindings.md)|Define todos os recursos de associação do [\<wsDualHttpBinding >](wsdualhttpbinding.md).|  
+|[\<binding>](bindings.md)|Define todos os recursos de associação do [\<wsDualHttpBinding>](wsdualhttpbinding.md) .|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.WSFederationHttpSecurity>
 - <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>
@@ -120,4 +120,4 @@ Define as configurações de segurança do [\<WSFederationHttpBinding](wsfederat
 - [Associações](../../../wcf/bindings.md)
 - [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding >](bindings.md)
+- [\<binding>](bindings.md)

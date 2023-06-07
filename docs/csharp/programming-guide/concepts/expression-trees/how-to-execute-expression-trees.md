@@ -1,13 +1,14 @@
 ---
 title: Como executar árvores de expressão (C#)
+description: Saiba como executar uma árvore de expressão para retornar um valor ou executar uma ação como chamar um método.
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: e7d408ea154572dc8b45d2e67bca3f05837868d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e306da545ba6c6275f36b8f6dd4e98bb91ed54e
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73969892"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105612"
 ---
 # <a name="how-to-execute-expression-trees-c"></a>Como executar árvores de expressão (C#)
 Este tópico mostra como executar uma árvore de expressão. Executar uma árvore de expressão pode retornar um valor ou apenas realizar uma ação, como chamar um método.  

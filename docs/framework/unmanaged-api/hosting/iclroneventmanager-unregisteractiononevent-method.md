@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c02ec37-cdf0-46b2-890e-235092741236
 topic_type:
 - apiref
-ms.openlocfilehash: 8a9fdcd650e18bb91e2a4e30e5a22fb2a991d25c
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: a3018d8477d5abd7d03ad8675503624d2e44e8f4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703486"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504128"
 ---
 # <a name="iclroneventmanagerunregisteractiononevent-method"></a>Método ICLROnEventManager::UnregisterActionOnEvent
 Cancela o registro de um ponteiro de retorno de chamada registrado anteriormente para o evento especificado.  
@@ -39,9 +39,9 @@ HRESULT UnregisterActionOnEvent (
  no Um dos valores de [EClrEvent](eclrevent-enumeration.md) , indicando o evento para o qual cancelar o registro do ponteiro de retorno de chamada descrito por `pAction` .  
   
  `pAction`  
- no Um ponteiro para um objeto [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) que foi passado como um parâmetro para o método [RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) .  
+ no Um ponteiro para um objeto [IActionOnCLREvent](iactiononclrevent-interface.md) que foi passado como um parâmetro para o método [RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - NetFx40_PInvokeStackResilience element
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 ms.openlocfilehash: 86f50aafe0b21d5080288e09ac7118ca1e4c939a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73116155"
 ---
-# <a name="netfx40_pinvokestackresilience-element"></a>\<elemento de > NetFx40_PInvokeStackResilience
+# <a name="netfx40_pinvokestackresilience-element"></a>Elemento \<NetFx40_PInvokeStackResilience>
 
 Especifica se o runtime corrige automaticamente declarações de invocação de plataforma incorretas em runtime, às custas de transições mais lentas entre o código gerenciado e não gerenciado.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<NetFx40_PInvokeStackResilience >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<NetFx40_PInvokeStackResilience>**  
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,12 +40,12 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 |Valor|Descrição|
 |-----------|-----------------|
-|`0`|O tempo de execução usa a arquitetura de marshaling de interoperabilidade mais rápida introduzida no .NET Framework 4, que não detecta e corrige declarações de invocação de plataforma incorretas. Esse é o padrão.|
+|`0`|O tempo de execução usa a arquitetura de marshaling de interoperabilidade mais rápida introduzida no .NET Framework 4, que não detecta e corrige declarações de invocação de plataforma incorretas. Este é o padrão.|
 |`1`|O tempo de execução usa transições mais lentas que detectam e corrigem declarações de invocação de plataforma incorretas.|
 
 ### <a name="child-elements"></a>Elementos filho
 
-nenhuma.
+Nenhum.
 
 ### <a name="parent-elements"></a>Elementos pai
 
@@ -62,9 +62,9 @@ A partir do .NET Framework 4, uma arquitetura de marshaling de interoperabilidad
 
 Para facilitar a detecção de declarações incorretas durante o desenvolvimento, a experiência de depuração do Visual Studio foi aprimorada. O MDA (Assistente de depuração gerenciada) [pInvokeStackImbalance](../../../debug-trace-profile/pinvokestackimbalance-mda.md) notifica sobre declarações de invocação de plataforma incorretas quando seu aplicativo está em execução com o depurador anexado.
 
-Para abordar cenários em que seu aplicativo usa componentes que você não pode recompilar e que têm declarações de invocação de plataforma incorretas, você pode usar o elemento `NetFx40_PInvokeStackResilience`. Adicionar esse elemento ao arquivo de configuração do aplicativo com `enabled="1"` opta em um modo de compatibilidade com o comportamento de versões anteriores do .NET Framework, com o custo de transições mais lentas. Os assemblies que foram compilados em relação às versões anteriores do .NET Framework são automaticamente optados por esse modo de compatibilidade e não precisam desse elemento.
+Para abordar cenários em que seu aplicativo usa componentes que você não pode recompilar e que têm declarações de invocação de plataforma incorretas, você pode usar o `NetFx40_PInvokeStackResilience` elemento. Adicionar esse elemento ao arquivo de configuração do aplicativo com `enabled="1"` optas por um modo de compatibilidade com o comportamento de versões anteriores do .NET Framework, às custas de transições mais lentas. Os assemblies que foram compilados em relação às versões anteriores do .NET Framework são automaticamente optados por esse modo de compatibilidade e não precisam desse elemento.
 
-## <a name="configuration-file"></a>Arquivo de Configuração
+## <a name="configuration-file"></a>Arquivo de configuração
 
 Esse elemento só pode ser usado no arquivo de configuração do aplicativo.
 
@@ -80,8 +80,8 @@ O exemplo a seguir mostra como aceitar maior resiliência contra declarações d
 </configuration>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de configurações do runtime](index.md)
 - [Esquema de arquivos de configuração](../index.md)
 - [pInvokeStackImbalance](../../../debug-trace-profile/pinvokestackimbalance-mda.md)

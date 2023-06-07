@@ -1,16 +1,17 @@
 ---
 title: Refatoração usando uma função pura (C#)
+description: Saiba como refatorar o código usando uma função pura. Consulte exemplos de código e exiba recursos adicionais disponíveis.
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: f264a0028ed265a5a4fbe1dc32f430c648724c20
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3f0084d9de27f3f215cc3ba527ada93f7a3d61a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253087"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300105"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refatoração usando uma função pura (C#)
-O exemplo a seguir refatora o exemplo anterior, [Refatoração usando um método de extensão (C#)](./refactoring-using-an-extension-method.md), para usar uma função pura. Neste exemplo, o código para localizar o texto de um parágrafo é movido para o método estático puro `ParagraphText`.  
+O exemplo a seguir refacto o exemplo anterior, [Refatorando usando um método de extensão (C#)](./refactoring-using-an-extension-method.md), para usar uma função pura. Neste exemplo, o código para localizar o texto de um parágrafo é movido para o método estático puro `ParagraphText` .  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo processa um documento de WordprocessingML, recuperando os nós de parágrafo de um documento de WordprocessingML. Também identifica o estilo de cada parágrafo. Este exemplo cria nos exemplos anteriores neste tutorial. O código refactored é chamado nos comentários no código a seguir.  
@@ -179,7 +180,7 @@ StyleName:Code >Hello World<
   
 - [Projetando XML em uma forma diferente (C#)](./projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
 - [Refatoração usando um método de extensão (C#)](./refactoring-using-an-extension-method.md)

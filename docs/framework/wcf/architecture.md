@@ -1,17 +1,18 @@
 ---
 title: Arquitetura do Windows Communication Foundation
+description: Saiba mais sobre as principais camadas da arquitetura de Windows Communication Foundation, incluindo contratos, tempo de execução de serviço, mensagens e ativação & hospedagem.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], architecture
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: f34a05a436dd021f0d1fcc05f3a12a058123acdc
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: a07d5c4be2e36b8123e39a0a04d841797e34212b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320828"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245564"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Arquitetura do Windows Communication Foundation
 O gráfico a seguir ilustra as principais camadas da arquitetura do Windows Communication Foundation (WCF).  
@@ -20,7 +21,7 @@ O gráfico a seguir ilustra as principais camadas da arquitetura do Windows Comm
  ![A arquitetura do WCF](./media/wcf-architecture.gif "WCF_Architecture")  
   
 ### <a name="contracts-and-descriptions"></a>Contratos e descrições  
- Os contratos definem vários aspectos do sistema de mensagens. O contrato de dados descreve todos os parâmetros que compõem cada mensagem que um serviço pode criar ou consumir. Os parâmetros de mensagem são definidos por documentos XSD, permitindo que qualquer sistema que entenda o XML processe os documentos. O contrato de mensagem define partes de mensagem específicas usando protocolos SOAP e permite um controle mais refinado sobre partes da mensagem, quando a interoperabilidade exige tal precisão. O contrato de serviço especifica as assinaturas de método real do serviço e é distribuído como uma interface em uma das linguagens de programação com suporte, como Visual Basic ou C#Visual.  
+ Os contratos definem vários aspectos do sistema de mensagens. O contrato de dados descreve todos os parâmetros que compõem cada mensagem que um serviço pode criar ou consumir. Os parâmetros de mensagem são definidos por documentos XSD, permitindo que qualquer sistema que entenda o XML processe os documentos. O contrato de mensagem define partes de mensagem específicas usando protocolos SOAP e permite um controle mais refinado sobre partes da mensagem, quando a interoperabilidade exige tal precisão. O contrato de serviço especifica as assinaturas de método real do serviço e é distribuído como uma interface em uma das linguagens de programação com suporte, como Visual Basic ou Visual C#.  
   
  Políticas e associações determinam as condições necessárias para se comunicar com um serviço.  Por exemplo, a associação deve (no mínimo) especificar o transporte usado (por exemplo, HTTP ou TCP) e uma codificação. As políticas incluem requisitos de segurança e outras condições que devem ser atendidas para se comunicar com um serviço.  
   
@@ -45,7 +46,7 @@ O gráfico a seguir ilustra as principais camadas da arquitetura do Windows Comm
   
  Os serviços também podem ser *hospedados*ou executados em um executável gerenciado por um agente externo, como o WAS (serviço de ativação do Windows ou IIS). O WAS permite que aplicativos WCF sejam ativados automaticamente quando implantados em um computador que executa o WAS. Os serviços também podem ser executados manualmente como executáveis (arquivos. exe). Um serviço também pode ser executado automaticamente como um serviço do Windows. Os componentes COM+ também podem ser hospedados como serviços WCF.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [O que é o Windows Communication Foundation](whats-wcf.md)
 - [Conceitos fundamentais do Windows Communication Foundation](fundamental-concepts.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Evitar que uma tarefa filho se anexe ao seu pai'
+title: 'Como: evitar que uma tarefa filha se anexe ao pai dela'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - tasks, preventing attachments
 ms.assetid: c0fb85d4-9e80-4905-9f65-29acc54201c4
-ms.openlocfilehash: 265b6d06f17a1dfbee3f009feff1ee1645e62a46
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5ff181344e6437179fa77f11872ae9a47745be93
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139257"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288154"
 ---
-# <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>Como: Evitar que uma tarefa filho se anexe ao seu pai
+# <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>Como: evitar que uma tarefa filha se anexe ao pai dela
 Este documento demonstra como evitar que uma tarefa filho se anexe à tarefa principal. Impedir que uma tarefa filho seja anexada à tarefa pai é útil quando você chama um componente que é gravado por um terceiro e que também usa tarefas. Por exemplo, um componente de terceiros que usa a opção <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> para criar um objeto <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601> pode causar problemas em seu código se ele for de longa duração ou lançar uma exceção não controlada.  
   
 ## <a name="example"></a>Exemplo  
@@ -26,6 +26,6 @@ Este documento demonstra como evitar que uma tarefa filho se anexe à tarefa pri
   
  Como a tarefa pai não termina até que todas as tarefas filho sejam concluídas, uma tarefa filho de longa duração pode fazer com que o aplicativo geral tenha um baixo desempenho. Neste exemplo, quando o aplicativo usa as opções padrão para criar a tarefa pai, a tarefa filho deve terminar antes da conclusão da tarefa pai. Quando o aplicativo usa a opção <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>, a tarefa filho não está anexada à tarefa pai. Portanto, o aplicativo pode executar trabalhos adicionais após a conclusão da tarefa pai e antes de aguardar a conclusão da tarefa filho.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Programação Assíncrona baseada em tarefas](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+- [Programação assíncrona baseada em tarefas](task-based-asynchronous-programming.md)

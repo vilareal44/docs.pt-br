@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e3c6643b-6fc7-4a99-959d-4b7b4e63fdee
 topic_type:
 - apiref
-ms.openlocfilehash: abc6cca185b318be016f92ac8c97d21f7af5940a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8f4e1cd7586df7d8e2a577d26f06eaed6b2c8bb7
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136772"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804611"
 ---
 # <a name="ihostmalloc-interface"></a>Interface IHostMalloc
 Fornece métodos que permitem que o Common Language Runtime (CLR) solicite alocações refinadas do heap por meio do host.  
@@ -28,23 +28,23 @@ Fornece métodos que permitem que o Common Language Runtime (CLR) solicite aloca
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Alloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md)|Solicita que o host aloque a quantidade solicitada de memória do heap.|  
-|[Método DebugAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-debugalloc-method.md)|Solicita que o host aloque a quantidade solicitada de memória do heap e rastreie também onde a memória foi alocada.|  
-|[Método Free](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-free-method.md)|Libera a memória que foi alocada usando o método `Alloc`.|  
+|[Método Alloc](ihostmalloc-alloc-method.md)|Solicita que o host aloque a quantidade solicitada de memória do heap.|  
+|[Método DebugAlloc](ihostmalloc-debugalloc-method.md)|Solicita que o host aloque a quantidade solicitada de memória do heap e rastreie também onde a memória foi alocada.|  
+|[Método Free](ihostmalloc-free-method.md)|Libera a memória que foi alocada usando o `Alloc` método.|  
   
 ## <a name="remarks"></a>Comentários  
- O CLR Obtém um ponteiro de interface para uma instância de `IHostMalloc` chamando o método [IHostMemoryManager:: CreateMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) .  
+ O CLR Obtém um ponteiro de interface para uma `IHostMalloc` instância chamando o método [IHostMemoryManager:: CreateMAlloc](ihostmemorymanager-createmalloc-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
-- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interface IHostMemoryManager](ihostmemorymanager-interface.md)
+- [Interfaces de hospedagem](hosting-interfaces.md)

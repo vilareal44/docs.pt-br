@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-ms.openlocfilehash: 03dc98c45a894304a67765c3e49cd19bbb089c8c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d1307603ebc06b4eb4c3786f1cd2fb432c0cf636
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74335428"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360456"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
 Suprime a exibição da faixa de direitos autorais e as mensagens informativas durante a compilação.  
@@ -24,10 +24,10 @@ Suprime a exibição da faixa de direitos autorais e as mensagens informativas d
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Se você especificar `-nologo`, o compilador não exibirá uma faixa de direitos autorais. Por padrão, `-nologo` não está em vigor.  
+ Se você especificar `-nologo` , o compilador não exibirá uma faixa de direitos autorais. Por padrão, `-nologo` não está em vigor.  
   
 > [!NOTE]
-> A `-nologo` opção não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando.  
+> A `-nologo` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ela está disponível somente durante a compilação na linha de comando.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir compila `T2.vb` e não exibe uma faixa de direitos autorais.  
@@ -36,7 +36,7 @@ Suprime a exibição da faixa de direitos autorais e as mensagens informativas d
 vbc -nologo t2.vb  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Compilador de linha de comando do Visual Basic](index.md)
+- [Linhas de Comando de Compilação de Exemplo](sample-compilation-command-lines.md)

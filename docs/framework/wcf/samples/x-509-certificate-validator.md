@@ -2,12 +2,12 @@
 title: Validador de certificado X.509
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: ba73381bb6211dcbd1ddad1457f9ae8611008d43
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 32d99b93ef014967aa04bc70f73fbd2ebcfe2c60
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141206"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594823"
 ---
 # <a name="x509-certificate-validator"></a>Validador de certificado X.509
 
@@ -23,7 +23,7 @@ Em resumo, este exemplo demonstra como:
 
 - O servidor é autenticado usando o certificado X. 509 do servidor.
 
-O serviço expõe um único ponto de extremidade para se comunicar com o serviço, definido usando o arquivo de configuração app. config. O ponto de extremidade consiste em um endereço, uma associação e um contrato. A associação é configurada com `wsHttpBinding` um padrão que usa `WSSecurity` o e a autenticação de certificado do cliente. O comportamento do serviço especifica o modo personalizado para validar certificados X. 509 do cliente junto com o tipo da classe do validador. O comportamento também especifica o certificado do servidor usando o elemento userCertificate. O certificado do servidor deve conter o mesmo valor para o `SubjectName` como `findValue` no [ \<>de certificados ](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
+O serviço expõe um único ponto de extremidade para se comunicar com o serviço, definido usando o arquivo de configuração app. config. O ponto de extremidade consiste em um endereço, uma associação e um contrato. A associação é configurada com um padrão `wsHttpBinding` que usa o `WSSecurity` e a autenticação de certificado do cliente. O comportamento do serviço especifica o modo personalizado para validar certificados X. 509 do cliente junto com o tipo da classe do validador. O comportamento também especifica o certificado do servidor usando o elemento userCertificate. O certificado do servidor deve conter o mesmo valor para o as `SubjectName` `findValue` no [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) .
 
 ```xml
   <system.serviceModel>
@@ -95,7 +95,7 @@ O serviço expõe um único ponto de extremidade para se comunicar com o serviç
       </system.serviceModel>
 ```
 
-A configuração de ponto de extremidade do cliente consiste em um nome de configuração, um endereço absoluto para o ponto de extremidade de serviço, a associação e o contrato. A associação de cliente é configurada com o modo `clientCredentialType`e a mensagem apropriados.
+A configuração de ponto de extremidade do cliente consiste em um nome de configuração, um endereço absoluto para o ponto de extremidade de serviço, a associação e o contrato. A associação de cliente é configurada com o modo e a mensagem apropriados `clientCredentialType` .
 
 ```xml
 <system.serviceModel>
@@ -199,7 +199,7 @@ catch (Exception e)
 }
 ```
 
-Este exemplo usa um X509CertificateValidator personalizado para validar certificados. O exemplo implementa CustomX509CertificateValidator, derivado de <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Consulte a documentação <xref:System.IdentityModel.Selectors.X509CertificateValidator> sobre para obter mais informações. Este exemplo de validador personalizado específico implementa o método Validate para aceitar qualquer certificado X. 509 que seja emitido por conta própria, conforme mostrado no código a seguir.
+Este exemplo usa um X509CertificateValidator personalizado para validar certificados. O exemplo implementa CustomX509CertificateValidator, derivado de <xref:System.IdentityModel.Selectors.X509CertificateValidator> . Consulte a documentação sobre <xref:System.IdentityModel.Selectors.X509CertificateValidator> para obter mais informações. Este exemplo de validador personalizado específico implementa o método Validate para aceitar qualquer certificado X. 509 que seja emitido por conta própria, conforme mostrado no código a seguir.
 
 ```csharp
 public class CustomX509CertificateValidator : X509CertificateValidator
@@ -305,7 +305,7 @@ Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lot
 
 #### <a name="to-set-up-and-build-the-sample"></a>Para configurar e compilar o exemplo
 
-1. Para compilar a solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+1. Para compilar a solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).
 
 2. Para executar o exemplo em uma configuração de computador único ou entre computadores, use as instruções a seguir.
 
@@ -332,13 +332,13 @@ Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lot
 
 4. Copie os arquivos de programa do cliente para o diretório cliente no computador cliente. Copie também os arquivos Setup. bat, Cleanup. bat e ImportServiceCert. bat para o cliente.
 
-5. No servidor, execute `setup.bat service` em um prompt de comando do desenvolvedor para Visual Studio aberto com privilégios de administrador. A `setup.bat` execução com `service` o argumento cria um certificado de serviço com o nome de domínio totalmente qualificado do computador e exporta o certificado de serviço para um arquivo chamado Service. cer.
+5. No servidor, execute `setup.bat service` em um prompt de comando do desenvolvedor para Visual Studio aberto com privilégios de administrador. `setup.bat`A execução com o `service` argumento cria um certificado de serviço com o nome de domínio totalmente qualificado do computador e exporta o certificado de serviço para um arquivo chamado Service. cer.
 
-6. Edite Service. exe. config para refletir o novo nome do certificado ( `findValue` no atributo no [ \<>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)do Service-Certificate), que é o mesmo que o nome de domínio totalmente qualificado do computador. Também altere o nome do computador no \<elemento Service>\</baseaddresss> do localhost para o nome totalmente qualificado do seu computador de serviço.
+6. Edite Service. exe. config para refletir o novo nome de certificado (no `findValue` atributo em [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ), que é o mesmo que o nome de domínio totalmente qualificado do computador. Além disso, altere o nome do computador no \<service> / \<baseAddresses> elemento do localhost para o nome totalmente qualificado do seu computador de serviço.
 
 7. Copie o arquivo Service. cer do diretório de serviço para o diretório cliente no computador cliente.
 
-8. No cliente, execute `setup.bat client` em um prompt de comando do desenvolvedor para Visual Studio aberto com privilégios de administrador. A `setup.bat` execução com `client` o argumento cria um certificado de cliente chamado Client.com e exporta o certificado do cliente para um arquivo chamado Client. cer.
+8. No cliente, execute `setup.bat client` em um prompt de comando do desenvolvedor para Visual Studio aberto com privilégios de administrador. `setup.bat`A execução com o `client` argumento cria um certificado de cliente chamado Client.com e exporta o certificado do cliente para um arquivo chamado Client. cer.
 
 9. No arquivo client. exe. config no computador cliente, altere o valor de endereço do ponto de extremidade para corresponder ao novo endereço do serviço. Faça isso substituindo localhost pelo nome de domínio totalmente qualificado do servidor.
 
@@ -357,4 +357,4 @@ Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lot
 1. Execute o Cleanup. bat na pasta Samples depois de concluir a execução do exemplo. Isso remove os certificados de cliente e servidor do repositório de certificados.
 
 > [!NOTE]
-> Esse script não remove certificados de serviço em um cliente ao executar esse exemplo em computadores. Se você tiver executado Windows Communication Foundation (WCF) exemplos que usam certificados entre computadores, certifique-se de limpar os certificados de serviço que foram instalados no repositório CurrentUser-TrustedPeople. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+> Esse script não remove certificados de serviço em um cliente ao executar esse exemplo em computadores. Se você tiver executado Windows Communication Foundation (WCF) exemplos que usam certificados entre computadores, certifique-se de limpar os certificados de serviço que foram instalados no repositório CurrentUser-TrustedPeople. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` .

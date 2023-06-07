@@ -10,15 +10,16 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: afd9e688bd716375bafb370fad4af082a9498411
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb679fbffaf742739275c171ef6d88511b2a2a77
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399850"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240753"
 ---
-# <a name="classes-and-structs-c-programming-guide"></a>Classes e structs (Guia de Programação em C#)
-Classes e structs são duas das construções básicas do Common Type System no .NET Framework. Cada um é, essencialmente, uma estrutura de dados que encapsula um conjunto de dados e os comportamentos que são uma unidade lógica. Os dados e os comportamentos são os *membros* da classe ou struct, e eles incluem seus métodos, propriedades e eventos, e etc., conforme listado neste tópico.  
+# <a name="classes-and-structs-c-programming-guide"></a>Classes e estruturas (guia de programação C#)
+
+Classes e structs são duas das construções básicas do Common Type System no .NET. Cada um é, essencialmente, uma estrutura de dados que encapsula um conjunto de dados e os comportamentos que são uma unidade lógica. Os dados e os comportamentos são os *membros* da classe ou struct, e eles incluem seus métodos, propriedades e eventos, e etc., conforme listado neste tópico.  
   
  Uma declaração de classe ou struct é como um plano que é usado para criar instâncias ou objetos em tempo de execução. Se você definir uma classe ou struct chamado `Person`, `Person` será o nome do tipo. Se você declarar e inicializar um `p` variável do tipo `Person`, `p` será considerado um objeto ou uma instância de `Person`. Várias instâncias do mesmo tipo `Person` podem ser criadas, e cada instância pode ter valores diferentes em suas propriedades e campos.  
   
@@ -28,10 +29,10 @@ Classes e structs são duas das construções básicas do Common Type System no 
   
  Em geral, as classes são usadas para modelar o comportamento mais complexo ou dados que serão modificados depois que um objeto de classe for criado. Os structs são mais adequados para estruturas de dados pequenas que contêm principalmente dados que não serão modificados depois que o struct for criado.  
   
- Para obter mais informações, consulte [Classes,](./classes.md) [Objetos](./objects.md)e [Tipos de Estrutura](../../language-reference/builtin-types/struct.md).  
+ Para obter mais informações, consulte [classes](./classes.md), [objetos](./objects.md)e [tipos de estrutura](../../language-reference/builtin-types/struct.md).  
   
 ## <a name="example"></a>Exemplo  
- No exemplo a seguir, `CustomClass` no namespace `ProgrammingGuide` tem três membros: um construtor de instância, uma propriedade chamada `Number` e um método chamado `Multiply`. O método `Main` na classe `Program` cria uma instância (objeto) de `CustomClass`, e o método e a propriedade do objeto são acessados usando a notação de ponto.
+ No exemplo a seguir, `CustomClass` no namespace `ProgrammingGuide` tem três membros: um construtor de instância, uma propriedade chamada `Number` e um método chamado `Multiply`. O `Main` método na `Program` classe cria uma instância (objeto) de `CustomClass` , e o método e a propriedade do objeto são acessados usando a notação de ponto.
   
  [!code-csharp[csProgGuideObjects#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/class1.cs#1)]  
   
@@ -43,7 +44,7 @@ Classes e structs são duas das construções básicas do Common Type System no 
 ### <a name="members"></a>Membros  
  Todos os métodos, campos, constantes, propriedades e eventos devem ser declarados em um tipo. Eles são chamados de *membros* do tipo. No C#, não existem variáveis globais ou métodos como em algumas das outras linguagens. Até mesmo um ponto de entrada de um programa, o método `Main`, deve ser declarado em uma classe ou struct. A lista a seguir inclui todos os vários tipos de membros que podem ser declarados em uma classe ou struct.  
   
-- [Campos](./fields.md)  
+- [Fields](./fields.md)  
   
 - [Constantes](./constants.md)  
   
@@ -69,16 +70,16 @@ Classes e structs são duas das construções básicas do Common Type System no 
 ### <a name="inheritance"></a>Herança  
  Classes (mas não structs) dão suporte ao conceito de herança. Uma classe que deriva de outra classe (a *classe base*) contém automaticamente todos os membros públicos, protegidos e internos da classe base, exceto seus construtores e finalizadores. Para obter mais informações, consulte [Herança](./inheritance.md) e [Polimorfismo](./polymorphism.md).  
   
- As classes podem ser declaradas como [abstratas](../../language-reference/keywords/abstract.md), o que significa que um ou mais dos seus métodos não têm nenhuma implementação. Embora as classes abstratas não possam ser instanciadas diretamente, elas servem como classes base para outras classes que fornecem a implementação ausente. As classes também podem ser declaradas como [lacradas](../../language-reference/keywords/sealed.md) para impedir que outras classes herdem delas. Para obter mais informações, consulte [Classes Abstratas e Lacradas e Membros de Classe](./abstract-and-sealed-classes-and-class-members.md).  
+ As classes podem ser declaradas como [abstratas](../../language-reference/keywords/abstract.md), o que significa que um ou mais dos seus métodos não têm nenhuma implementação. Embora as classes abstratas não possam ser instanciadas diretamente, elas servem como classes base para outras classes que fornecem a implementação ausente. As classes também podem ser declaradas como [lacradas](../../language-reference/keywords/sealed.md) para impedir que outras classes herdem delas. Para obter mais informações, consulte [classes abstratas e lacradas e membros de classe](./abstract-and-sealed-classes-and-class-members.md).  
   
 ### <a name="interfaces"></a>Interfaces  
- Classes e estruturas podem herdar várias interfaces. Herdar de uma interface significa que o tipo implementa todos os métodos definidos na interface. Para obter mais informações, consulte [Interfaces](../interfaces/index.md).  
+ Classes e estruturas podem herdar várias interfaces. Herdar de uma interface significa que o tipo implementa todos os métodos definidos na interface. Para obter mais informações, consulte [interfaces](../interfaces/index.md).  
   
 ### <a name="generic-types"></a>Tipos genéricos  
  Classes e estruturas podem ser definidas com um ou mais parâmetros de tipo. O código do cliente fornece o tipo quando ele cria uma instância do tipo. Por exemplo a classe <xref:System.Collections.Generic.List%601> no namespace <xref:System.Collections.Generic> é definida com um parâmetro de tipo. O código do cliente cria uma instância de um `List<string>` ou `List<int>` para especificar o tipo que a lista conterá. Para obter mais informações, consulte [Genéricos](../generics/index.md).  
   
 ### <a name="static-types"></a>Tipos estáticos  
- As classes (mas não structs) podem ser declaradas como [estáticas](../../language-reference/keywords/static.md). Uma classe estática pode conter apenas membros estáticos e não pode ser instanciada com a palavra-chave *new*. Uma cópia da classe é carregada na memória quando o programa é carregado e seus membros são acessados pelo nome da classe. Classes e structs podem conter membros estáticos. Para obter mais informações, consulte [Classes Estáticas e Membros de Classe Estática](./static-classes-and-static-class-members.md).  
+ As classes (mas não structs) podem ser declaradas como [estáticas](../../language-reference/keywords/static.md). Uma classe estática pode conter apenas membros estáticos e não pode ser instanciada com a palavra-chave *new*. Uma cópia da classe é carregada na memória quando o programa é carregado e seus membros são acessados pelo nome da classe. Classes e structs podem conter membros estáticos. Para obter mais informações, consulte [classes estáticas e membros de classe estática](./static-classes-and-static-class-members.md).  
   
 ### <a name="nested-types"></a>Tipos aninhados  
  Uma classe ou struct pode ser aninhado em outra classe ou struct. Para obter mais informações, consulte [Tipos aninhados](./nested-types.md).  
@@ -92,7 +93,7 @@ Classes e structs são duas das construções básicas do Common Type System no 
 ### <a name="anonymous-types"></a>Tipos anônimos  
  Em situações nas quais não é conveniente ou necessário criar uma classe nomeada, por exemplo, quando você estiver preenchendo uma lista com estruturas de dados que você não precisa manter ou passar para outro método, use tipos anônimos. Para obter mais informações, consulte [Tipos Anônimos](./anonymous-types.md).  
   
-### <a name="extension-methods"></a>Métodos de extensão  
+### <a name="extension-methods"></a>Métodos de Extensão  
  Você pode "estender" uma classe sem criar uma classe derivada criando um tipo separado cujos métodos podem ser chamados como se pertencessem ao tipo original. Para obter mais informações, consulte [Métodos de extensão](./extension-methods.md).  
   
 ### <a name="implicitly-typed-local-variables"></a>Variáveis Locais Tipadas Implicitamente  
@@ -101,6 +102,6 @@ Classes e structs são duas das construções básicas do Common Type System no 
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)

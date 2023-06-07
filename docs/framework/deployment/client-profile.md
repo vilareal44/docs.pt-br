@@ -1,5 +1,6 @@
 ---
 title: .NET Framework Client Profile
+description: Leia sobre o perfil do cliente .NET, que era um subconjunto do .NET fornecido na versão 4 e nas edições anteriores do .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF [.NET Framework Client Profile]
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - profile [.NET Framework Client Profile]
 - .NET Framework Client Profile
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
-ms.openlocfilehash: 32fc29500a8a2e95b52ba16847020cdb390caceb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9678e49cd5f3c37f59c1e5a0eda668e5602fbcb5
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716566"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621737"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 O .NET Client Profile é um subconjunto do .NET Framework que era fornecido com o .NET Framework 4 e versões anteriores e era otimizado para aplicativos clientes. O .NET Framework é uma plataforma de desenvolvimento para Windows, Windows Phone e Microsoft Azure e fornece um ambiente gerenciado de execução de aplicativos e a biblioteca de classes do .NET Framework. O .NET Framework 4 e as versões anteriores forneciam duas opções de implantação: o .NET Framework completo e o Client Profile. O Client Profile permitia uma implantação mais rápida e pacotes de instalação de aplicativos menores que os do .NET Framework completo.  
@@ -25,9 +26,9 @@ O .NET Client Profile é um subconjunto do .NET Framework que era fornecido com 
   
  Quando você instala o .NET Framework 4.5, o .NET Framework 4 Client Profile é atualizado para a versão completa do .NET Framework. Para obter mais informações sobre como instalar o .NET Framework 4.5, veja [Instalar o .NET Framework para desenvolvedores](../install/guide-for-developers.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [.NET Framework Client Profile (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
 - [Visão geral do Visual Studio Multi-Targeting](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [Solução de problemas com erros de direcionamento do .NET Framework](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)
-- [Como: Direcionar uma versão do Framework .NET](/visualstudio/ide/visual-studio-multi-targeting-overview)
+- [Como: direcionar uma versão do .NET Framework](/visualstudio/ide/visual-studio-multi-targeting-overview)

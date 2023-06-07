@@ -1,5 +1,6 @@
 ---
 title: Criar uma caixa de texto de senha com controle TextBox
+description: Saiba como criar um texto de Windows Forms que exibe caracteres de espaço reservado enquanto um usuário digita uma cadeia de caracteres.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-ms.openlocfilehash: ff4706a736d15f14cf437c808219e9088773dc6d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6d7e61eefa44ce3152aa77e3922bde471a4aeaf3
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76731285"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904306"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Como criar uma caixa de texto de senha com o controle TextBox dos Windows Forms
 
@@ -25,16 +26,16 @@ Uma caixa de senha é uma caixa de texto do Windows Forms que exibe caracteres d
 
 ### <a name="to-create-a-password-text-box"></a>Criar uma caixa de texto de senha
 
-1. Defina a propriedade <xref:System.Windows.Forms.TextBox.PasswordChar%2A> do controle de <xref:System.Windows.Forms.TextBox> como um caractere específico.
+1. Defina a <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Propriedade do <xref:System.Windows.Forms.TextBox> controle como um caractere específico.
 
-    A propriedade <xref:System.Windows.Forms.TextBox.PasswordChar%2A> especifica o caractere exibido na caixa de texto. Por exemplo, se você quiser que os asteriscos sejam exibidos na caixa senha, especifique * para a propriedade <xref:System.Windows.Forms.TextBox.PasswordChar%2A> na janela Propriedades. Em seguida, independentemente de qual caractere de um usuário digita na caixa de texto, será exibido um asterisco.
+    A <xref:System.Windows.Forms.TextBox.PasswordChar%2A> propriedade especifica o caractere exibido na caixa de texto. Por exemplo, se você quiser que os asteriscos sejam exibidos na caixa senha, especifique * para a <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Propriedade na janela Propriedades. Em seguida, independentemente de qual caractere de um usuário digita na caixa de texto, será exibido um asterisco.
 
-2. Adicional Defina a propriedade <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A>. A propriedade determina quantos caracteres podem ser digitado na caixa de texto. Se o tamanho máximo for excedido, o sistema emitirá um aviso sonoro e a caixa de texto não aceitará mais caracteres. Observe que isso pode não ser recomendável, visto que o tamanho máximo de uma senha pode ser útil para os hackers que estão tentando adivinhá-la.
+2. Adicional Defina a <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> propriedade. A propriedade determina quantos caracteres podem ser digitado na caixa de texto. Se o tamanho máximo for excedido, o sistema emitirá um aviso sonoro e a caixa de texto não aceitará mais caracteres. Observe que isso pode não ser recomendável, visto que o tamanho máximo de uma senha pode ser útil para os hackers que estão tentando adivinhá-la.
 
-    O exemplo de código a seguir mostra como inicializar uma caixa de texto que aceita uma cadeia de até 14 caracteres e exibir os asteriscos no lugar da cadeia de caracteres. O procedimento de `InitializeMyControl` não será executado automaticamente; Ele deve ser chamado.
+    O exemplo de código a seguir mostra como inicializar uma caixa de texto que aceita uma cadeia de até 14 caracteres e exibir os asteriscos no lugar da cadeia de caracteres. O `InitializeMyControl` procedimento não será executado automaticamente; ele deve ser chamado.
 
     > [!IMPORTANT]
-    > Usar a propriedade <xref:System.Windows.Forms.TextBox.PasswordChar%2A> em uma caixa de texto pode ajudar a garantir que outras pessoas não poderão determinar a senha de um usuário se observarem o usuário inserindo-a. Essa medida de segurança não abrange nenhum tipo de armazenamento e transmissão de senha que pode ocorrer devido a lógica do aplicativo. Como o texto inserido não é criptografado de nenhuma forma, você deve tratá-lo como qualquer outro dado confidencial. Mesmo que ela não apareça como tal, a senha é ainda está sendo tratada como uma cadeia de caracteres de texto sem formatação (a menos que você implemente alguma outra medida de segurança adicional).
+    > O uso da <xref:System.Windows.Forms.TextBox.PasswordChar%2A> propriedade em uma caixa de texto pode ajudar a garantir que outras pessoas não poderão determinar a senha de um usuário se observarem o usuário inserindo-a. Essa medida de segurança não abrange nenhum tipo de armazenamento e transmissão de senha que pode ocorrer devido a lógica do aplicativo. Como o texto inserido não é criptografado de nenhuma forma, você deve tratá-lo como qualquer outro dado confidencial. Mesmo que ela não apareça como tal, a senha é ainda está sendo tratada como uma cadeia de caracteres de texto sem formatação (a menos que você implemente alguma outra medida de segurança adicional).
 
     ```vb
     Private Sub InitializeMyControl()
@@ -72,7 +73,7 @@ Uma caixa de senha é uma caixa de texto do Windows Forms que exibe caracteres d
        }
     ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.TextBox>
 - [Visão geral do controle TextBox](textbox-control-overview-windows-forms.md)

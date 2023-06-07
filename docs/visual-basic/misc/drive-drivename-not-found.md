@@ -1,29 +1,29 @@
 ---
-title: Unidade '<drivename>' não encontrado
+title: Unidade '<drivename>' não encontrada
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_DriveNotFound1
 ms.assetid: 0250e9f2-3470-4fe4-8fda-be4fbf2e2a30
-ms.openlocfilehash: 9084e885ba98211623781b036e9f7407a44368ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a426130b284a7c09004933bca264e4d52be1df3c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970138"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394590"
 ---
-# <a name="drive-drivename-not-found"></a>Unidade '\<drivename >' não encontrado
-A unidade não pode ser encontrada. Sua conexão de rede foi perdida ou a unidade que você está tentando acessar está offline ou não existe.  
+# <a name="drive-drivename-not-found"></a>Unidade '\<drivename>' não encontrada
+Não é possível encontrar a unidade. Sua conexão de rede foi perdida ou a unidade que você está tentando acessar está offline ou não existe.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1. Verifique a alimentação para a unidade.  
+1. Verifique a energia na unidade.  
   
-2. Certifique-se de que os cabos que conectam o computador à rede estão conectados corretamente.  
+2. Verifique se todos os cabos que conectam o computador à rede estão conectados corretamente.  
   
-3. Para acessar uma unidade em uma rede, certifique-se de que uma conexão lógica existe entre o computador e a unidade.  
+3. Para acessar uma unidade em uma rede, verifique se existe uma conexão lógica entre o computador e a unidade.  
   
-4. Reconectar-se à rede e tente novamente.  
+4. Reconecte-se à rede e tente novamente.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipos de erro](../programming-guide/language-features/error-types.md)

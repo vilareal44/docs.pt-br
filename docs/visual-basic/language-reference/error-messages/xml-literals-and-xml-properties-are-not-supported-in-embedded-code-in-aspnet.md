@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC31200
 ms.assetid: 053e8cba-8584-45cc-9fa0-43d122779772
-ms.openlocfilehash: edd8032e693c233a51248daa6ffdfc830b0648a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bda92b4244631f66142499a94be562854b35437e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662597"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406463"
 ---
 # <a name="xml-literals-and-xml-properties-are-not-supported-in-embedded-code-within-aspnet"></a>Literais e propriedades de XML não são suportados em código inserido dentro do ASP.NET
-Não há suporte para literais XML e propriedades XML no código inserido dentro do ASP.NET. Para usar recursos XML, mova o código para code-behind.  
+Não há suporte para literais XML e propriedades XML no código inserido dentro de ASP.NET. Para usar recursos XML, mova o código para code-behind.  
   
- Um literal XML ou uma propriedade de eixo XML é definida no código inserido (`<%= =>`) em um arquivo do ASP.NET.  
+ Uma propriedade XML literal ou XML Axis é definida no código inserido ( `<%= =>` ) em um arquivo ASP.net.  
   
  **ID do erro:** BC31200  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Mova o código que inclui a literal XML ou uma propriedade de eixo XML para um arquivo de code-behind do ASP.NET.  
+- Mova o código que inclui o literal XML ou a propriedade de eixo XML para um arquivo code-behind ASP.NET.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Literais XML](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Propriedades do Eixo XML](../../../visual-basic/language-reference/xml-axis/index.md)
-- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [Literais XML](../xml-literals/index.md)
+- [Propriedades do eixo XML](../xml-axis/index.md)
+- [XML](../../programming-guide/language-features/xml/index.md)

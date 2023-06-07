@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8d4ff73e-739b-40f6-9349-359fbc99c2f9
 topic_type:
 - apiref
-ms.openlocfilehash: 8446960d0746a864c44febbbe4a4d0313d6dcd4d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7a6553de31d4f9627809af7691218c39dc734c6f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616704"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501658"
 ---
 # <a name="cor_gc_stats-structure"></a>Estrutura COR_GC_STATS
 Fornece estatísticas sobre o mecanismo de coleta de lixo do Common Language Runtime (CLR).  
@@ -59,7 +59,7 @@ typedef struct _COR_GC_STATS {
 |`KBytesPromotedFromGen1`|O tamanho, em quilobytes, dos objetos promovidos da geração um para a geração dois.|  
   
 ## <a name="remarks"></a>Comentários  
- O método [ICLRGCManager:: GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) exige que o `Flags` campo da `COR_GC_STATS` estrutura seja definido como um ou mais valores da enumeração [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) para especificar quais estatísticas devem ser definidas.  
+ O método [ICLRGCManager:: GetStats](iclrgcmanager-getstats-method.md) exige que o `Flags` campo da `COR_GC_STATS` estrutura seja definido como um ou mais valores da enumeração [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) para especificar quais estatísticas devem ser definidas.  
   
  A tabela a seguir mapeia as estatísticas fornecidas por essa estrutura para os dois [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) valores de enumeração `COR_GC_COUNTS` e `COR_GC_MEMORYUSAGE` .  
   
@@ -84,7 +84,7 @@ pCLRGCManager->GetStats(&GCStats);
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Estruturas de hospedagem](hosting-structures.md)
 - [Gerenciamento automático de memória](../../../standard/automatic-memory-management.md)

@@ -1,13 +1,13 @@
 ---
-title: 'Como: Localizar uma união de dois caminhos de local (XPath- LINQ para XML)'
+title: 'Como: localizar uma união de dois caminhos de localização (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: c82c09b4-cb0a-47ec-8cc3-a124144c2788
-ms.openlocfilehash: db9ba3f66bfa8643738203ec05a106bab4193fda
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 36528d1748d5675231f14de92dcd78734a696711
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352981"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406866"
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>Como localizar uma União de dois caminhos de local (XPath-LINQ to XML) (Visual Basic)
 O XPath permite que você localize a união de resultados de dois caminhos de local XPath.  
@@ -21,7 +21,7 @@ O XPath permite que você localize a união de resultados de dois caminhos de lo
 ## <a name="example"></a>Exemplo  
  Este exemplo localiza os elementos de `Category` e todos os elementos de `Price` , e os concatena em uma única coleção. Observe que a consulta de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] chama <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> para ordenar os resultados. Os resultados da avaliação de expressão XPath são também em ordem do documento.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos (LINQ to XML)](sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim data As XDocument = XDocument.Load("Data.xml")  
@@ -45,7 +45,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```console
 Results are identical  
@@ -65,6 +65,6 @@ Results are identical
 <Price>6.99</Price>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [LINQ to XML para usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para usuários do XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

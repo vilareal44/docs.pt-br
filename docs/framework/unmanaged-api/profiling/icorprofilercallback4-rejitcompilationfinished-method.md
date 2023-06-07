@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b5cff02-2005-44eb-a2bc-50214c4b0e1d
 topic_type:
 - apiref
-ms.openlocfilehash: e010a49dabd3b44602136e70b4c5524a68bdd9e2
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: ff06c285bf5306977b520ed9ff845e70fb25989a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865201"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499370"
 ---
 # <a name="icorprofilercallback4rejitcompilationfinished-method"></a>Método ICorProfilerCallback4::ReJITCompilationFinished
 Notifica o criador de perfil de que o compilador JIT (just-in-time) concluiu a recompilação de uma função.  
@@ -45,20 +45,20 @@ HRESULT ReJITCompilationFinished(
  no Um valor que indica se a recompilação JIT foi bem-sucedida.  
   
  `fIsSafeToBlock`  
- [in] `true` para indicar que o bloqueio pode fazer com que o tempo de execução aguarde até que o thread de chamada retorne deste retorno de chamada; `false` para indicar que o bloqueio não afetará a operação do tempo de execução.  
+ [in] `true` para indicar que o bloqueio pode fazer com que o tempo de execução aguarde o thread de chamada retornar desse retorno de chamada; `false`para indicar que o bloqueio não afetará a operação do tempo de execução.  
   
- Um valor de `true` não danifica o tempo de execução, mas pode afetar os resultados da criação de perfil.  
+ Um valor de não `true` danifica o tempo de execução, mas pode afetar os resultados da criação de perfil.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
 - [Interface ICorProfilerCallback4](icorprofilercallback4-interface.md)

@@ -1,17 +1,18 @@
 ### YamlMime:Landing
 title: Documentação do Visual Basic
-summary: A Visual Basic é projetada para ajudá-lo a criar aplicativos de tipo seguro e orientado a objetos de forma produtiva. Visual Basic é uma maneira rápida e fácil de criar aplicativos .NET.
+summary: Visual Basic é uma linguagem de programação orientada a objeto desenvolvida pela Microsoft. O uso de Visual Basic torna rápido e fácil a criação de aplicativos .NET de tipo seguro.
 metadata:
   title: Visual Basic docs-introdução, tutoriais, referência.
   description: Aprenda Visual Basic programação no .NET – para desenvolvedores iniciantes, novos desenvolvedores para Visual Basic e experientes desenvolvedores de Visual Basic
   ms.topic: landing-page
-  ms.date: 04/22/2020
-  ms.openlocfilehash: 0dba96b4d42085680a8e0aa25456ec756e8c9b42
-  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+  ms.date: 08/13/2020
+  ms.custom: contperfq1
+  ms.openlocfilehash: dff262ba8646427baa0021dbe4b3f859d22459cd
+  ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 04/24/2020
-  ms.locfileid: "82135783"
+  ms.lasthandoff: 08/18/2020
+  ms.locfileid: "88559200"
 landingContent:
 - title: Introdução
   linkLists:
@@ -21,53 +22,47 @@ landingContent:
       url: https://dotnet.microsoft.com/download
   - linkListType: get-started
     links:
-    - text: Criar um aplicativo "Olá, Mundo" com o .NET Core
-      url: ../core/tutorials/vb-with-visual-studio.md
-    - text: Criar uma biblioteca de classes com .NET Standard
-      url: ../core/tutorials/vb-library-with-visual-studio.md
-    - text: Recursos adicionais
-      url: getting-started/additional-resources.md
+    - text: Criar um aplicativo de console do .NET Core usando o Visual Studio
+      url: ../core/tutorials/with-visual-studio.md
+    - text: Criar uma biblioteca de .NET Standard usando o Visual Studio
+      url: ../core/tutorials/library-with-visual-studio.md
     - text: Passo a passo
       url: walkthroughs.md
-- title: Conceitos básicos de Visual Basic
+    - text: Recursos adicionais
+      url: getting-started/additional-resources.md
+- title: Conceitos básicos
   linkLists:
   - linkListType: overview
     links:
     - text: Conceitos de programação
       url: programming-guide/concepts/index.md
+  - linkListType: whats-new
+    links:
+    - text: Novidades no Visual Basic
+      url: getting-started/whats-new.md
   - linkListType: concept
     links:
-    - text: Estrutura do programa e convenções de código
-      url: programming-guide/program-structure/program-structure-and-code-conventions.md
-    - text: Desenvolva aplicativos com Visual Basic
-      url: developing-apps/index.md
-    - text: Estrutura do programa e convenções de código
-      url: programming-guide/program-structure/program-structure-and-code-conventions.md
+    - text: Estrutura de um aplicativo Visual Basic
+      url: programming-guide/program-structure/structure-of-a-visual-basic-program.md
     - text: Funcionalidades da linguagem
       url: programming-guide/language-features/index.md
-    - text: interoperabilidade COM
-      url: programming-guide/com-interop/index.md
-- title: Cenários populares
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Windows Forms delegados e eventos personalizados
-      url: https://social.technet.microsoft.com/wiki/contents/articles/53470.vb-net-windows-forms-custom-delegates-and-events.aspx
-    - text: Editar valores de tabela de banco de dados via WPF DataGrid
-      url: https://social.msdn.microsoft.com/Forums/vstudio/10a3dd61-7dcc-48f3-a6e0-f7386d06f9f1/edit-database-table-values-via-wpf-datagrid-visual-basic?forum=wpf
-    - text: 'ListView Windows Forms: examinando o modo de exibição de detalhes com SQL Server'
-      url: https://social.technet.microsoft.com/wiki/contents/articles/53356.windows-forms-listview-examining-detail-view-with-sql-server.aspx
-    - text: Como abrir a pasta de trabalho do Excel 2016 por meio de OleDbConnection
-      url: https://social.msdn.microsoft.com/Forums/vstudio/70a45808-9aaf-4320-a5fc-04cbbabf6e4d/how-to-open-excel-2016-workbook-through-oledbconnection?forum=vbgeneral
-- title: Referência da linguagem Visual Basic
+    - text: Desenvolva aplicativos com Visual Basic
+      url: developing-apps/index.md
+    - text: Aplicativos do Windows Forms
+      url: developing-apps/windows-forms/index.md
+- title: Referência da linguagem
   linkLists:
   - linkListType: reference
     links:
-    - text: Referência de linguagem
+    - text: Índice
       url: language-reference/index.md
     - text: Palavras-chave
       url: language-reference/keywords/index.md
     - text: Operadores
       url: language-reference/operators/index.md
+    - text: Tipos de dados
+      url: language-reference/keywords/data-types-summary.md
+    - text: Funções de cadeia de caracteres
+      url: language-reference/functions/string-functions.md
     - text: Especificação da linguagem
       url: reference/language-specification/index.md

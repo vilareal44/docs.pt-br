@@ -3,12 +3,12 @@ title: Integração XML com dados relacionais e o ADO.NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-ms.openlocfilehash: 30b788c77a2352d0d02ee772ab3f428381facd9f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: f54c7a890ada01f2cffdd54c024cfbc98777200d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78155614"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289012"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>Integração XML com dados relacionais e o ADO.NET
 A classe **XmlDataDocument** é uma classe derivada de **XmlDocument**, e contém dados XML. A vantagem de **XmlDataDocument** é que fornece uma ponte entre dados relacionais e hierárquicos. É um **XmlDocument** que pode ser associado a **Conjunto de Dados** e ambas as classes podem sincronizar as alterações feitas aos dados contidos nas duas classes. Um **XmlDocument** que é associado a um **Conjunto de Dados** permite ao XML integrar-se a dados relacionais, e você não precisa representar seus dados como XML ou em um formato relacional. Você pode fazer ambos e não ser restrito a uma única representação dos dados.  
@@ -41,10 +41,10 @@ A classe **XmlDataDocument** é uma classe derivada de **XmlDocument**, e conté
 |Preservação do elemento de ordenação em XML de origem não é essencial.|Preservação do elemento de ordenação no XML fonte é essencial.|  
 |Espaço em branco entre elementos e formatação não precisa ser mantido no XML fonte.|Preservação de espaço em branco e de formatação no XML fonte é essencial.|  
   
- Se carregar e escrever XML diretamente no **Conjunto de Dados** atender às suas necessidades, consulte [Carregar um Conjunto de Dados a partir de XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) e [Escrever um Conjunto de Dados como dados de XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).  
+ Se carregar e escrever XML diretamente no **Conjunto de Dados** atender às suas necessidades, consulte [Carregar um Conjunto de Dados a partir de XML](../../../framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) e [Escrever um Conjunto de Dados como dados de XML](../../../framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).  
   
- Se carregar o **Conjunto de Dados** de um **XmlDataDocument** atender às suas necessidades, consulte [Sincronizar um Conjunto de Dados com um documento XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
+ Se carregar o **Conjunto de Dados** de um **XmlDataDocument** atender às suas necessidades, consulte [Sincronizar um Conjunto de Dados com um documento XML](../../../framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
   
 ## <a name="see-also"></a>Veja também
 
-- [Using XML in a DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md) (Usando XML em um DataSet)
+- [Using XML in a DataSet](../../../framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md) (Usando XML em um DataSet)

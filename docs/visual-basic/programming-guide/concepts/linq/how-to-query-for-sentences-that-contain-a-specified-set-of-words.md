@@ -1,13 +1,13 @@
 ---
-title: Como consultar sentenças que contenham um conjunto especificado de palavras (LINQ)
+title: 'Como: consultar sentenças que contêm um conjunto específico de palavras (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: a5ae8ced-61fe-4c10-bb8a-95630e50f603
-ms.openlocfilehash: 6595932fae9737a0ac482c952b29bfde429de76f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ce88bf001346f90eb9b08ca1ff14afc7dcb04fa0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344158"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397954"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a>Como consultar frases que contêm um conjunto especificado de palavras (LINQ) (Visual Basic)
 
@@ -65,8 +65,8 @@ Na chamada para <xref:System.String.Split%2A>, as marcas de pontuação são usa
 
 ## <a name="compile-the-code"></a>Compilar o código
 
-Crie um projeto de aplicativo de console Visual Basic, com uma instrução `Imports` para o namespace System. Linq.
+Crie um projeto de aplicativo de console Visual Basic, com uma `Imports` instrução para o namespace System. Linq.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ e cadeias de caracteres (Visual Basic)](linq-and-strings.md)

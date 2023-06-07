@@ -1,15 +1,15 @@
 ---
-title: Estruturas de destino em projetos no estilo SDK - .NET
+title: Estruturas de destino em projetos em estilo SDK-.NET
 description: Saiba mais sobre estruturas de destino para aplicativos e bibliotecas do .NET Core.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 33beb5606cbf857cc41b739f256482b0298f1fb1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c1fd3a6fe07526d9f6828851c591ed0155c79a19
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400550"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164303"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>Estruturas de destino em projetos no estilo SDK
 
@@ -27,11 +27,11 @@ Para estruturas de destino com base em pacote (por exemplo, .NET Standard e .NET
 
 A tabela a seguir define as estruturas de destino mais comuns, como elas são referenciadas e qual versão do [.NET Standard](net-standard.md) elas implementam. Estas versões de estrutura de destino são as versões estáveis mais recentes. As versões de pré-lançamento não são mostradas. Um TFM (Moniker da Estrutura de Destino) é um formato de token padronizado para especificar a estrutura de destino de um aplicativo ou uma biblioteca do .NET.
 
-| Estrutura de Destino      | Última <br/> Versão estável | TFM (Moniker de Estrutura de Destino) | Implementado <br/> Versão do .NET Standard |
+| Estrutura de Destino      | Mais Recente <br/> Versão estável | TFM (Moniker de Estrutura de Destino) | Implementado <br/> Versão do .NET Standard |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
-| .NET Standard         | 2.1                         | netstandard2.1                 | N/D                                     |
-| .NET Core             | 3.1                         | netcoreapp3.1                  | 2.1                                     |
-| .NET Framework        | 4.8                         | net48                          | 2,0                                     |
+| .NET Standard         | 2.1                         | netstandard 2.1                 | N/D                                     |
+| .NET Core             | 3.1                         | netcoreapp 3.1                  | 2.1                                     |
+| .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Versões de estrutura de destino com suporte
 
@@ -39,8 +39,8 @@ Normalmente, uma estrutura de destino é referenciada por um TFM. A tabela a seg
 
 | Estrutura de Destino           | TFM |
 | -------------------------- | --- |
-| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0<br>netstandard2.1 |
-| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp3.0<br>netcoreapp3.1 |
+| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0<br>netstandard 2.1 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp 3.0<br>netcoreapp 3.1 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Windows Store              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
@@ -50,7 +50,7 @@ Normalmente, uma estrutura de destino é referenciada por um TFM. A tabela a seg
 
 ## <a name="how-to-specify-target-frameworks"></a>Como especificar estruturas de destino
 
-As estruturas de destino são especificadas no arquivo de projeto. Quando uma única estrutura de destino é especificada, use o elemento **TargetFramework**. O arquivo de projeto do aplicativo de console a seguir demonstra como segmentar o .NET Core 3.0:
+As estruturas de destino são especificadas no arquivo de projeto. Quando uma única estrutura de destino é especificada, use o elemento **TargetFramework**. O arquivo de projeto de aplicativo de console a seguir demonstra como direcionar o .NET Core 3,0:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -106,7 +106,7 @@ public class MyClass
 }
 ```
 
-O sistema de compilação está ciente dos símbolos de pré-processador que representam as estruturas de destino mostradas na tabela [de versões de quadro de destino suportada](#supported-target-framework-versions) quando você estiver usando projetos no estilo SDK. Ao usar um símbolo que representa um TFM do .NET Standard ou .NET Core, substitua o ponto por um sublinhado e altere as letras minúsculas por maiúsculas (por exemplo, o símbolo de `netstandard1.4` é `NETSTANDARD1_4`).
+O sistema de compilação reconhece os símbolos de pré-processador que representam as estruturas de destino mostradas na tabela de [versões do Framework de destino com suporte](#supported-target-framework-versions) quando você está usando projetos em estilo SDK. Ao usar um símbolo que representa um TFM do .NET Standard ou .NET Core, substitua o ponto por um sublinhado e altere as letras minúsculas por maiúsculas (por exemplo, o símbolo de `netstandard1.4` é `NETSTANDARD1_4`).
 
 A lista completa de símbolos de pré-processador para estruturas de destino do .NET Core é:
 
@@ -129,7 +129,6 @@ As seguintes estruturas de destino estão preteridas. Os pacotes direcionados a 
 
 ## <a name="see-also"></a>Confira também
 
-- [Pacotes, metapacotes e estruturas](../core/packages.md)
 - [Desenvolver bibliotecas com as ferramentas de plataforma cruzada](../core/tutorials/libraries.md)
 - [.NET Standard](net-standard.md)
 - [Controle de versão do .NET Core](../core/versions/index.md)

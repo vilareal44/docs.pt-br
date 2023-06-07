@@ -1,5 +1,5 @@
 ---
-title: elemento <clear> para NameValueSectionHandler e DictionarySectionHandler
+title: <clear>elemento para NameValueSectionHandler e DictionarySectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/clear
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
 ms.openlocfilehash: f6d860f35d22002030ffa3d09dd0d8a96116bf5e
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77214751"
 ---
-# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<limpar > elemento para NameValueSectionHandler e DictionarySectionHandler
+# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<clear>elemento para NameValueSectionHandler e DictionarySectionHandler
 
 Limpa todas as configurações definidas anteriormente em uma seção.
 
-[ **\<configuration>** ](configuration-element.md)\
-&nbsp;&nbsp;[ **\<sectionname >** ](custom-element-2.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<desmarque >**
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<sectionName>**](custom-element-2.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,9 +34,9 @@ Nenhum
 
 ## <a name="parent-element"></a>Elemento pai
 
-|     | DESCRIÇÃO |
+|     | Descrição |
 | --- | ------------|
-| [ **\<sectionname >** Elementos](custom-element-2.md) | Define as configurações para seções de configuração personalizadas que usam as classes <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler>. |
+| [**\<sectionName>** Elementos](custom-element-2.md) | Define as configurações para seções de configuração personalizadas que usam as <xref:System.Configuration.NameValueSectionHandler> <xref:System.Configuration.DictionarySectionHandler> classes e. |
 
 ## <a name="child-elements"></a>Elementos filho
 
@@ -44,13 +44,13 @@ Nenhum
 
 ## <a name="remarks"></a>Comentários
 
-Você pode usar o elemento **\<clear >** para remover todas as configurações do seu aplicativo que foram definidas em um nível mais alto na hierarquia do arquivo de configuração.
+Você pode usar o **\<clear>** elemento para remover todas as configurações do aplicativo que foram definidas em um nível mais alto na hierarquia do arquivo de configuração.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo define um arquivo de configuração de computador e um arquivo de configuração de aplicativo e mostra como usar o **\<apagar >** elemento em um arquivo de configuração de aplicativo para limpar as seções definidas anteriormente no arquivo de configuração de computador.
+Este exemplo define um arquivo de configuração de computador e um arquivo de configuração de aplicativo e mostra como usar o **\<clear>** elemento em um arquivo de configuração de aplicativo para limpar as seções definidas anteriormente no arquivo de configuração de computador.
 
-O código do arquivo de configuração do computador a seguir declara a seção **\<myseção >** :
+O código do arquivo de configuração do computador a seguir declara a seção **\<mySection>** :
 
 ```xml
 <!-- Machine.config file -->
@@ -65,7 +65,7 @@ O código do arquivo de configuração do computador a seguir declara a seção 
 </configuration>
 ```
 
-O código do arquivo de configuração de aplicativo a seguir remove todas as configurações de **\<myseção >** . O aplicativo não pode recuperar nenhuma das configurações que foram declaradas no na seção **\<myseção >** do arquivo de configuração do computador.
+O código do arquivo de configuração de aplicativo a seguir remove todas as configurações de **\<mySection>** . O aplicativo não pode recuperar nenhuma das configurações que foram declaradas no na **\<mySection>** seção do arquivo de configuração do computador.
 
 ```xml
 <!-- Application configuration file -->

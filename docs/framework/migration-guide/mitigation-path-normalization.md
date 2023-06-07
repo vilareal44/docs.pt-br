@@ -1,16 +1,17 @@
 ---
 title: 'Mitigação: normalização do caminho'
+description: Saiba como a normalização de caminho no .NET Framework foi alterada começando com aplicativos direcionados .NET Framework 4.6.2.
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-ms.openlocfilehash: 61c8eec2043aa2fb9309ee6052e27fc2c91c6c6a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89dcc46d9f266ffd3635dc0cc02b634720356eda
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181232"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475210"
 ---
 # <a name="mitigation-path-normalization"></a>Mitigação: normalização do caminho
-Começando com os aplicativos direcionados ao .NET Framework 4.6.2, a normalização do caminho no .NET Framework foi alterada.  
+A partir de aplicativos direcionados .NET Framework 4.6.2, a normalização de caminho no .NET Framework foi alterada.  
   
 ## <a name="what-is-path-normalization"></a>O que é normalização do caminho?  
  Normalizar um caminho envolve modificar a cadeia de caracteres que identifica um caminho ou arquivo para que ele esteja em conformidade com um caminho válido no sistema operacional de destino. Normalmente, a normalização envolve:  
@@ -43,7 +44,7 @@ Para os aplicativos direcionados ao .NET Framework 4.6.2 ou posterior, essas alt
 Os aplicativos direcionados ao .NET Framework 4.6.1 e versões anteriores, mas que são executados no .NET Framework 4.6.2 ou posteriores, não são afetados por essa alteração.  
   
 ## <a name="mitigation"></a>Atenuação  
- Os aplicativos que têm como alvo o .NET Framework 4.6.2 ou posterior escoam para desativar essa alteração e usar a normalização legado adicionando o [ \<](../configure-apps/file-schema/runtime/runtime-element.md) seguinte à seção de>em tempo de execução do arquivo de configuração do aplicativo:  
+ Os aplicativos que visam o .NET Framework 4.6.2 ou posterior podem recusar essa alteração e usar a normalização herdada adicionando o seguinte à [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) seção do arquivo de configuração do aplicativo:  
   
 ```xml  
 <runtime>  
@@ -51,7 +52,7 @@ Os aplicativos direcionados ao .NET Framework 4.6.1 e versões anteriores, mas q
 </runtime>  
 ```  
   
-Os aplicativos que têm como alvo o .NET Framework 4.6.1 ou anterior, mas estão sendo executados no .NET Framework 4.6.2 ou posterior, podem habilitar as alterações na normalização do caminho adicionando a seguinte linha à seção [ \<de>de tempo de execução](../configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração do aplicativo:  
+Aplicativos direcionados para o .NET Framework 4.6.1 ou anterior, mas que estão em execução no .NET Framework 4.6.2 ou posterior podem habilitar as alterações na normalização de caminho adicionando a seguinte linha à [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) seção do arquivo Application. Configuration:  
   
 ```xml  
 <runtime>  
@@ -59,6 +60,6 @@ Os aplicativos que têm como alvo o .NET Framework 4.6.1 ou anterior, mas estão
 </runtime>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Compatibilidade de aplicativos](application-compatibility.md)

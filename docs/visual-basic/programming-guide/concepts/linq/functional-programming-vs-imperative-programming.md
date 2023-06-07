@@ -1,18 +1,18 @@
 ---
-title: Programação funcional contra a programação imperativa
+title: Programação com funcional. Programação imperativa
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-ms.openlocfilehash: 704beadc29af0de606b8f246360dc6fffca8cfcc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0090761dc07218673e1e0299951530d5a4763ffe
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353436"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364793"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Programação funcional versus programação imperativa (Visual Basic)
 Este tópico compara e contrasta programação funcional com programação (procedural) imperativa mais tradicional.  
   
-## <a name="functional-programming-vs-imperative-programming"></a>Programação funcional contra a programação imperativa  
+## <a name="functional-programming-vs-imperative-programming"></a>Programação com funcional. Programação imperativa  
  O paradigma de *programação funcional* foi criado explicitamente para dar suporte a uma abordagem funcional pura para a solução de problemas. Programação funcional é uma forma de *programação declarativa*. Por outro lado, a maioria das linguagens mais conhecidas, incluindo linguagens OOP (programação orientada a objeto), como C#, Visual Basic, C++ e Java, foram criadas para dar suporte principalmente à programação *imperativa* (de procedimento).  
   
  Com uma abordagem imperativa, um desenvolvedor escreve o código que descreve detalhadamente exigente as etapas que o computador deve executar para fazer o objetivo. Isso é às vezes chamado de programação *algorítmica*. Por outro lado, uma abordagem funcional envolve compõem o problema como um conjunto de funções a ser executadas. Você define cuidadosamente entrada a cada função, e o que cada função retorna. A tabela a seguir descreve algumas das diferenças gerais entre essas duas abordagens.  
@@ -50,8 +50,8 @@ Este tópico compara e contrasta programação funcional com programação (proc
   
  Felizmente, o Visual Basic não exige o salto completo para a programação funcional, pois dá suporte a abordagens de programação imperativas e funcionais. Um desenvolvedor pode escolher qual abordagem é a mais adequado para um cenário específico. De fato, os programas combinam geralmente as duas abordagens.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Introdução às transformações funcionais puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Introdução às transformações funcionais puras (Visual Basic)](introduction-to-pure-functional-transformations.md)
 - [Transformações XSLT](../../../../standard/data/xml/xslt-transformations.md)
-- [Refatoração em funções puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Refatoração em funções puras (Visual Basic)](refactoring-into-pure-functions.md)

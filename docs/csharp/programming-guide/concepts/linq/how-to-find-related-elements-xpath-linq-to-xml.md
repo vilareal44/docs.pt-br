@@ -1,15 +1,16 @@
 ---
-title: Como encontrar elementos relacionados (XPath-LINQ para XML) (C#)
+title: Como localizar elementos relacionados (XPath-LINQ to XML) (C#)
+description: Este exemplo de C# compara XPath com LINQ to XML para saber como obter um elemento selecionando em um atributo que é referenciado pelo valor de outro elemento.
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: f74c338019c0451ab5e3ac0d8da10392ae5601ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4423e7d719d39e71bcbcc9e88d052c6aff4ffb05
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169227"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105248"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Como encontrar elementos relacionados (XPath-LINQ para XML) (C#)
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Como localizar elementos relacionados (XPath-LINQ to XML) (C#)
 Este tópico mostra como obter um elemento que seleciona em um atributo que é chamada pelo valor de outro elemento.  
   
  A expressão XPath é:  

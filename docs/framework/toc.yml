@@ -464,16 +464,22 @@
       href: additional-apis/index.md
     - name: Microsoft.SqlServer.Server
       items:
-        - name: SmiOrderProperty.Item
-          href: additional-apis/microsoft.sqlserver.server.smiorderproperty.item.md
+        - name: Classe SmiOrderProperty
+          items:
+            - name: Propriedade Item
+              href: additional-apis/microsoft.sqlserver.server.smiorderproperty.item.md
     - name: Sistema
       items:
-        - name: Método Exception.PrepForRemoting
-          href: additional-apis/system.exception.prepforremoting.md
+        - name: Classe de exceção
+          items:
+            - name: Método PrepForRemoting
+              href: additional-apis/system.exception.prepforremoting.md
     - name: System.Data.SqlTypes
       items:
-        - name: Propriedade SqlChars.Stream
-          href: additional-apis/system.data.sqltypes.sqlchars.stream.md
+        - name: Classe SqlChars
+          items:
+            - name: Propriedade Stream
+              href: additional-apis/system.data.sqltypes.sqlchars.stream.md
         - name: Classe SqlStreamChars
           items:
             - name: Construtor SqlStreamChars
@@ -500,10 +506,14 @@
               href: additional-apis/system.data.sqltypes.sqlstreamchars.write.md
     - name: System.IO
       items:
-        - name: Método MemoryStream.InternalGetOriginAndLength
-          href: additional-apis/system.io.memorystream.internalgetoriginandlength.md
+        - name: Classe MemoryStream
+          items:
+            - name: Método InternalGetOriginAndLength
+              href: additional-apis/system.io.memorystream.internalgetoriginandlength.md
     - name: System.Net
       items:
+        - name: Classe ComNetOS
+          href: additional-apis/system.net.comnetos.md
         - name: Classe Connection
           href: additional-apis/connection.md
           items:
@@ -514,8 +524,10 @@
           items:
             - name: Campo m_ConnectionList
               href: additional-apis/m_connectionlist.md
-        - name: Propriedade ConnectStream.Connection
-          href: additional-apis/system.net.connectstream.connection.md
+        - name: Classe ConnectStream
+          items:
+            - name: Propriedade Connection
+              href: additional-apis/system.net.connectstream.connection.md
         - name: Classe CoreResponseData
           href: additional-apis/coreresponsedata.md
           items:
@@ -523,6 +535,10 @@
               href: additional-apis/coreresponsedata_m_responseheaders.md
             - name: Campo m_StatusCode
               href: additional-apis/coreresponsedata_m_statuscode.md
+        - name: Classe ExceptionHelper
+          href: additional-apis/system.net.exceptionhelper.md
+        - name: Classe HttpStatusDescription
+          href: additional-apis/system.net.httpstatusdescription.md
         - name: Classe HttpWebRequest
           items:
             - name: Campo _AutoRedirects
@@ -531,22 +547,46 @@
               href: additional-apis/httpwebrequest__coreresponse.md
             - name: Campo _HttpResponse
               href: additional-apis/_httpresponse.md
-        - name: Propriedade PooledStream.NetworkStream
-          href: additional-apis/system.net.pooledstream.networkstream.md
+        - name: Classe Logging
+          href: additional-apis/system.net.logging.md
+        - name: Classe MailAddressParser
+          href: additional-apis/system.net.mail.mailaddressparser.md
+        - name: Classe MailBnfHelper
+          href: additional-apis/system.net.mime.mailbnfhelper.md
+        - name: Classe PooledStream
+          items:
+            - name: Propriedade NetworkStream
+              href: additional-apis/system.net.pooledstream.networkstream.md
+        - name: Classe QuotedPairReader
+          href: additional-apis/system.net.mail.quotedpairreader.md
         - name: Classe RtcState
           href: additional-apis/system.net.rtcstate.md
         - name: Classe ServicePoint
           items:
             - name: Campo m_ConnectionGroupList
               href: additional-apis/m_connectiongrouplist.md
+        - name: Classe ServicePointManager
+          items:
+            - name: Método CloseConnectionGroups
+              href: additional-apis/system.net.servicepointmanager.closeconnectiongroups.md
             - name: Campo s_ServicePointTable
               href: additional-apis/s_servicepointtable.md
-        - name: Campo TlsStream.m_Worker
-          href: additional-apis/system.net.tlsstream.m_worker.md
+        - name: Classe TlsStream
+          items:
+            - name: Campo m_Worker
+              href: additional-apis/system.net.tlsstream.m_worker.md
+        - name: Classe UnsafeNclNativeMethods
+          href: additional-apis/system.net.unsafenclnativemethods.md
+        - name: Classe WebHeaderCollection
+          items:
+            - name: Método Addinternal
+              href: additional-apis/system.net.webheadercollection.addinternal.md
     - name: System.Net.Security
       items:
-        - name: Propriedade SslState.SslProtocol
-          href: additional-apis/system.net.security.sslstate.sslprotocol.md
+        - name: Classe SslState
+          items:
+            - name: Propriedade SslProtocol
+              href: additional-apis/system.net.security.sslstate.sslprotocol.md
     - name: System.ServiceModel.Channels
       items:
         - name: Classe de mensagens
@@ -555,10 +595,16 @@
               href: additional-apis/system.servicemodel.channels.message.bodytostring.md
             - name: Método WriteStartHeaders
               href: additional-apis/system.servicemodel.channels.message.writestartheaders.md
+    - name: System.Web.Compilation
+      items:
+        - name: Classe ControlBuilderInterceptor
+          href: additional-apis/controlbuilderinterceptor-class.md
     - name: System.Windows.Diagnostics
       items:
-        - name: VisualDiagnostics.s_isDebuggerCheckDisabledForTestPurposes
-          href: additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md
+        - name: Classe VisualDiagnostics
+          items:
+            - name: Campo s_isDebuggerCheckDisabledForTestPurposes
+              href: additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md
     - name: System.Windows.Forms.Design
       items:
         - name: Classe DataMemberFieldEditor
@@ -567,7 +613,7 @@
           href: additional-apis/datamemberlisteditor-class.md
     - name: System.Windows.Xps
       items:
-        - name: XpsDocumentWriter
+        - name: Classe XpsDocumentWriter
           items:
             - name: Método raise__WritingCancelled
               href: additional-apis/xpsdocumentwriter-raise-writingcancelled-method-system-windows-xps.md
@@ -585,8 +631,10 @@
               href: additional-apis/xpsdocumentwriter-writingprogresschanged-event-system-windows-xps.md
     - name: System.Xml
       items:
-        - name: Método XmlReader.CreateSqlReader
-          href: additional-apis/system.xml.xmlreader.createsqlreader.md
+        - name: Classe XmlReader
+          items:
+            - name: Método CreateSqlReader
+              href: additional-apis/system.xml.xmlreader.createsqlreader.md
     - name: namespace adodb
       items:
         - name: Interface de Conexão
@@ -601,16 +649,22 @@
           href: additional-apis/stdole.dispparams.md
         - name: Estrutura EXCEPINFO
           href: additional-apis/stdole.excepinfo.md
-        - name: Propriedade IFont.Name
-          href: additional-apis/stdole.ifont.name.md
+        - name: Classe IFont
+          items:
+            - name: Propriedade Name
+              href: additional-apis/stdole.ifont.name.md
         - name: Interface IFontDisp
           href: additional-apis/stdole.ifontdisp.md
-        - name: Propriedade IPicture.Handle
-          href: additional-apis/stdole.ipicture.handle.md
+        - name: Classe IPicture
+          items:
+            - name: Propriedade Handle
+              href: additional-apis/stdole.ipicture.handle.md
         - name: Interface IPictureDisp
           href: additional-apis/stdole.ipicturedisp.md
-        - name: Propriedade IPictureDisp.Handle
-          href: additional-apis/stdole.ipicturedisp.handle.md
+        - name: Classe IPictureDisp
+          items:
+            - name: Propriedade Handle
+              href: additional-apis/stdole.ipicturedisp.handle.md
         - name: Interface StdFont
           href: additional-apis/stdole.stdfont.md
         - name: Interface StdPicture
@@ -628,3 +682,39 @@
           href: whats-new/obsolete-types.md
         - name: Membros obsoletos
           href: whats-new/obsolete-members.md
+- name: Segurança de acesso do código
+  items:
+    - name: Visão geral
+      href: misc/code-access-security.md
+    - name: Noções básicas da segurança de acesso do código
+      href: misc/code-access-security-basics.md
+    - name: Compatibilidade de políticas de segurança de acesso de código e migração
+      href: misc/code-access-security-policy-compatibility-and-migration.md
+    - name: Permissões perigosas e administração de políticas
+      href: misc/dangerous-permissions-and-policy-administration.md
+    - name: Como executar código parcialmente confiável em uma área restrita
+      href: misc/how-to-run-partially-trusted-code-in-a-sandbox.md
+    - name: Demandas de link
+      href: misc/link-demands.md
+    - name: Protegendo a manipulação de exceções
+      href: misc/securing-exception-handling.md
+    - name: Protegendo o acesso dos métodos
+      href: misc/securing-method-access.md
+    - name: Protegendo código de wrapper
+      href: misc/securing-wrapper-code.md
+    - name: Segurança e campos de matriz públicos somente leitura
+      href: misc/security-and-public-read-only-array-fields.md
+    - name: Considerações sobre segurança e comunicação remota
+      href: misc/security-and-remoting-considerations.md
+    - name: Segurança e serialização
+      href: misc/security-and-serialization.md
+    - name: 'Código transparente de segurança, nível 1'
+      href: misc/security-transparent-code-level-1.md
+    - name: 'Código transparente de segurança, nível 2'
+      href: misc/security-transparent-code-level-2.md
+    - name: Código transparente de segurança
+      href: misc/security-transparent-code.md
+    - name: Usando bibliotecas de código parcialmente confiável
+      href: misc/using-libraries-from-partially-trusted-code.md
+    - name: Usando o método Assert
+      href: misc/using-the-assert-method.md

@@ -1,6 +1,6 @@
 ---
 title: 'Exemplo de expressão regular: Alterando formatos de data'
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -13,16 +13,18 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
-ms.openlocfilehash: 358e26957747073fec9dfe9eb0d404cb438afaf9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b657ac6c88a1ee846f7f1d2156a18fd34621808
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73084190"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803944"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>Exemplo de expressão regular: Alterando formatos de data
-O exemplo de <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> código a seguir usa o método para substituir datas que possuem o formulário *mm*/*dd*/*yy* por datas que tenham o formulário *dd*-*mm*-*yy*.  
-  
+O exemplo de código a seguir usa o <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> método para substituir datas que têm a forma *mm* / *DD* / *AA* com datas que têm a forma *DD* - *mm* - *AA*.  
+
+[!INCLUDE [regex](../../../includes/regex.md)]
+
 ## <a name="example"></a>Exemplo  
  [!code-csharp[RegularExpressions.Examples.ChangeDateFormats#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/cs/Example_ChangeDateFormats1.cs#1)]
  [!code-vb[RegularExpressions.Examples.ChangeDateFormats#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/vb/Example_ChangeDateFormats1.vb#1)]  
@@ -55,6 +57,6 @@ O exemplo de <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProper
 |`-`|Adicionar um hífen.|  
 |`$(year)`|Adicionar a cadeia de caracteres capturada pelo grupo de captura `year`.|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)
+- [Expressões regulares do .NET](regular-expressions.md)

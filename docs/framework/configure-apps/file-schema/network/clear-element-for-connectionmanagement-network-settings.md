@@ -11,19 +11,19 @@ helpviewer_keywords:
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
 ms.openlocfilehash: a76df48a9de084e1121a5e96b22edf7aa3acba23
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088479"
 ---
-# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<limpar > elemento para connectionManagement (configurações de rede)
+# <a name="clear-element-for-connectionmanagement-network-settings"></a>Elemento \<clear> para connectionManagement (Configurações de Rede)
 Limpa a lista de gerenciamento de conexão.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**desmarque >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<connectionManagement>**](connectionmanagement-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,10 +35,10 @@ Limpa a lista de gerenciamento de conexão.
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -47,9 +47,9 @@ Limpa a lista de gerenciamento de conexão.
 |[connectionManagement](connectionmanagement-element-network-settings.md)|Especifica o número máximo de conexões com um host de rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O elemento `clear` limpa todas as entradas da lista de gerenciamento de conexão.  
+ O `clear` elemento limpa todas as entradas da lista de gerenciamento de conexão.  
   
-## <a name="configuration-files"></a>Arquivos de Configuração  
+## <a name="configuration-files"></a>Arquivos de configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
@@ -67,7 +67,7 @@ Limpa a lista de gerenciamento de conexão.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>

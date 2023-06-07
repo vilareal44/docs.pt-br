@@ -1,25 +1,25 @@
 ---
-title: Argumento '<argumentname>' deve estar no intervalo de -32768 a 65535
+title: O argumento '<argumentname>' deve estar no intervalo de -32768 a 65535
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_RangeTwoBytes1
 ms.assetid: d1ab6767-8334-4d7c-bb99-c837a793ed69
-ms.openlocfilehash: 894c5b059db2be5322de837983d73e321af79c8d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09963df9bfe7137c7a0f026eedc58a0ebb548d72
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024528"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84412800"
 ---
-# <a name="argument-argumentname-must-be-in-the-range-of--32768-to-65535"></a>Argumento '\<argumentname >' deve estar no intervalo de -32768 a 65535
-Um valor de argumento está fora do intervalo permitido de -32.768 a 65.535.  
+# <a name="argument-argumentname-must-be-in-the-range-of--32768-to-65535"></a>O argumento '\<argumentname>' deve estar no intervalo de -32768 a 65535
+O valor de um argumento fica fora do intervalo permitido de-32.768 a 65.535.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1. Certifique-se de que o valor do argumento está dentro do intervalo válido.  
+1. Verifique se o valor do argumento cai dentro do intervalo válido.  
   
-2. Se o argumento é fornecido por um cálculo, verifique os valores dos processos de cálculo.  
+2. Se o argumento for fornecido por um cálculo, verifique os valores que os processos de cálculo.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Passando Argumentos por Valor e por Referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Passar argumentos por valor e por referência](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

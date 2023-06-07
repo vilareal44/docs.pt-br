@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d94e041-d340-4ddf-9a2c-d7319e3f4f86
-ms.openlocfilehash: 63278f1aa1fe47377d2dae322a9d12338bbe45dd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0dd68e8c9beadf26f858a4a5100e2824bbbd4a19
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710525"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292027"
 ---
 # <a name="object-comparison-using-xmlnametable"></a>Comparação de objeto usando XmlNameTable
 **XmlDocuments**, quando criado, possui uma tabela de nome especificamente projetada para esse documento. Quando XML é carregado no documento, ou novos elementos ou atributos são criados, os nomes de atributo e de elemento são colocados em **XmlNameTable**. Você também pode criar **XmlDocument** usando **NameTable** existente de outro documento. Quando **XmlDocuments** é criado com o constructo que aceita um parâmetro **XmlNameTable**, o documento tem acesso aos nomes de nó, namespaces e prefixos já armazenados em **XmlNameTable**. Independentemente de como a tabela de nome é carregada com nomes, uma vez que os nomes são armazenados na tabela, os nomes podem ser comparados rapidamente usando a comparação de objeto em vez de comparação de cadeia de caracteres. As cadeias de caracteres também podem ser adicionadas à tabela de nome usando o <xref:System.Xml.NameTable.Add%2A>. O exemplo de código a seguir mostra uma tabela de nome que está sendo criada e a cadeia de caracteres **MyString** sendo adicionada à tabela. Em seguida, um **XmlDocument** é criado usando a tabela e os nomes de elementos e atributos de **Myfile.xml** serão adicionados à tabela de nome existente.  
@@ -53,4 +53,4 @@ if (((object)node1.Name) == ((object)node2.Name))
   
 ## <a name="see-also"></a>Veja também
 
-- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

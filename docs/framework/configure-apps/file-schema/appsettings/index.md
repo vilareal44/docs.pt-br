@@ -8,32 +8,32 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 ms.openlocfilehash: 0a3363b35a6fc8bd27753eb034f8a1e95feb5292
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77215424"
 ---
 # <a name="app-settings-schema"></a>Esquema de configurações do aplicativo
 
 Contém configurações de aplicativo personalizadas, como caminhos de arquivo, URLs de serviço da Web em XML ou qualquer outra informação de configuração personalizada para um aplicativo.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add>** ](add-element-for-appsettings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](clear-element-for-appsettings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<remove>** ](remove-element-for-appsettings.md)
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add-element-for-appsettings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<clear>**](clear-element-for-appsettings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<remove>**](remove-element-for-appsettings.md)
 
-| Elemento | DESCRIÇÃO |
+| Elemento | Descrição |
 | ------- | ----------- |
-| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Contém as marcas **\<add>** , **\<clear>** e **\<remove>** para controlar as configurações de aplicativo. Tem um atributo **file** opcional. |
-| [ **\<add>** ](add-element-for-appsettings.md) | Define uma configuração. Filho de **\<appSettings>** . Requer os atributos **key** e **value**. |
-| [ **\<clear>** ](clear-element-for-appsettings.md) | Limpa todas as configurações. Filho de **\<appSettings>** . Não tem atributos. |
-| [ **\<remove>** ](remove-element-for-appsettings.md) | Remove uma configuração. Filho de **\<appSettings>** . Requer um atributo **key**. |
+| [**\<appSettings>**](appsettings-element-for-configuration.md) | Contém **\<add>** **\<clear>** marcas, e **\<remove>** para controlar as configurações do aplicativo. Tem um atributo **file** opcional. |
+| [**\<add>**](add-element-for-appsettings.md) | Define uma configuração. Filho de **\<appSettings>** . Requer os atributos **key** e **value**. |
+| [**\<clear>**](clear-element-for-appsettings.md) | Limpa todas as configurações. Filho de **\<appSettings>** . Não tem atributos. |
+| [**\<remove>**](remove-element-for-appsettings.md) | Remove uma configuração. Filho de **\<appSettings>** . Requer um atributo **key**. |
 
 ## <a name="appsettings-element"></a>Elemento \<appSettings>
 
-Esse elemento contém as marcas **\<add>** , **\<clear>** e **\<remove>** para controlar as configurações de aplicativo. Define um atributo opcional para **file**.
+Este elemento contém **\<add>** **\<clear>** marcas, e **\<remove>** para controlar as configurações do aplicativo. Define um atributo opcional para **file**.
 
 ## <a name="add-element"></a>Elemento \<add>
 
@@ -41,7 +41,7 @@ Adiciona uma configuração de aplicativo personalizada como um par nome/valor p
 
 ## <a name="clear-element"></a>Elemento \<clear>
 
-Remove todas as referências a configurações de aplicativo personalizadas herdadas e permite somente as referências que são adicionadas por elementos **\<add>** após o elemento **\<clear>** . Não define nenhum atributo.
+Remove todas as referências a configurações de aplicativo personalizadas herdadas e permite apenas as referências que são adicionadas por **\<add>** elementos que seguem o **\<clear>** elemento. Não define nenhum atributo.
 
 ## <a name="remove-element"></a>Elemento \<remove>
 
@@ -70,5 +70,5 @@ O exemplo a seguir mostra um arquivo de configuração de aplicativo que consome
 
 ## <a name="see-also"></a>Confira também
 
-- [Visão Geral das Configurações do Aplicativo](../../../winforms/advanced/application-settings-overview.md)
-- [Arquitetura das configurações de aplicativo](../../../winforms/advanced/application-settings-architecture.md)
+- [Visão geral das configurações do aplicativo](../../../winforms/advanced/application-settings-overview.md)
+- [Arquitetura das configurações do aplicativo](../../../winforms/advanced/application-settings-architecture.md)

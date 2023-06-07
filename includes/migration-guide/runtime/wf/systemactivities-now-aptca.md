@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 6cc1c65a95238e758f99090794f5e50b830d9667
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: beaac7b14535335a665add4fa056a60793879753
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "66379564"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619872"
 ---
 ### <a name="systemactivities-is-now-aptca"></a>System.Activities agora é APTCA
 
-|   |   |
-|---|---|
-|Detalhes|O assembly é marcado com o atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute?displayProperty=name>.|
-|Sugestão|Classes derivadas não podem ser marcadas com <xref:System.Security.SecurityCriticalAttribute?displayProperty=name>. Anteriormente, os tipos derivados precisavam ser marcados com o <xref:System.Security.SecurityCriticalAttribute?displayProperty=name>. No entanto, essa mudança não deve ter um impacto real.|
-|Escopo|Microsoft Edge|
+#### <a name="details"></a>Detalhes
+
+O assembly é marcado com o atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute?displayProperty=fullName>.
+
+#### <a name="suggestion"></a>Sugestão
+
+Classes derivadas não podem ser marcadas com <xref:System.Security.SecurityCriticalAttribute?displayProperty=fullName>. Anteriormente, os tipos derivados precisavam ser marcados com o <xref:System.Security.SecurityCriticalAttribute?displayProperty=fullName>. No entanto, essa mudança não deve ter um impacto real.
+
+| Name    | Valor       |
+|:--------|:------------|
+| Escopo   |Microsoft Edge|
 |Versão|4.5|
-|Tipo|Tempo de execução|
+|Type|Runtime|

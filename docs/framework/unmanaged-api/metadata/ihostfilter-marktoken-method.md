@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7061343-d0a3-4fd5-b312-61974f98bd62
 topic_type:
 - apiref
-ms.openlocfilehash: 6f8df824ed36b7793d5f07e5b5cf51f65f9c8e24
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 11529ce896f265f2b200fa6e511d4b913e9147c8
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432234"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008216"
 ---
 # <a name="ihostfiltermarktoken-method"></a>Método IHostFilter::MarkToken
 Indica que o token de metadados especificado será processado.  
@@ -38,18 +38,18 @@ HRESULT MarkToken (
  no O token de metadados a ser processado.  
   
 ## <a name="remarks"></a>Comentários  
- Normalmente, você deseja que um token seja processado se ele estiver no escopo de metadados. O método `MarkToken` é passado para o mecanismo de metadados por meio do método [IMetaDataEmit:: sethandlers](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) .  
+ Normalmente, você deseja que um token seja processado se ele estiver no escopo de metadados. O `MarkToken` método é passado para o mecanismo de metadados por meio do método [IMetaDataEmit:: sethandlers](imetadataemit-sethandler-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
-- [Interface IHostFilter](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-interface.md)
+- [Interfaces de metadados](metadata-interfaces.md)
+- [Interface IHostFilter](ihostfilter-interface.md)

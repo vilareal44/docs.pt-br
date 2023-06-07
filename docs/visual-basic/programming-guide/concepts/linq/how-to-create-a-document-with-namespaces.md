@@ -2,12 +2,12 @@
 title: 'Como: criar um documento com namespaces (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
-ms.openlocfilehash: bbd23840b0356cf14d2c7d6cb71591fe6461a8bd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a440c9d810798eb5ebd025a336cbb17fface23b4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332580"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414628"
 ---
 # <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Como: Crie um documento com namespaces (LINQ to XML) (Visual Basic)
 Este tópico mostra como criar um documento com namespaces no Visual Basic.  
@@ -18,7 +18,7 @@ Este tópico mostra como criar um documento com namespaces no Visual Basic.
   
  Você define dois namespaces padrão e namespaces com um prefixo usando a palavra-chave `Imports` .  
   
- Para obter mais informações, consulte [introdução aos literais XML no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).  
+ Para obter mais informações, consulte [introdução aos literais XML no Visual Basic](introduction-to-xml-literals.md).  
   
  Observe que o namespace XML padrão se aplica somente aos elementos e não a atributos. Atributos são sempre por padrão em qualquer namespace. No entanto, você pode usar um prefixo de namespace para colocar um atributo em um namespace.  
   
@@ -38,7 +38,7 @@ Module Module1
 End Module  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com">  
@@ -67,7 +67,7 @@ Module Module1
 End Module  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <Root xmlns:fc="www.fourthcoffee.com" xmlns="http://www.adventure-works.com">  
@@ -102,7 +102,7 @@ Module Module1
 End Module  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <aw:Root xmlns:fc="www.fourthcoffee.com" xmlns:aw="http://www.adventure-works.com">  
@@ -114,6 +114,6 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral de namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

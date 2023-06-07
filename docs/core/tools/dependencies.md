@@ -1,23 +1,24 @@
 ---
-title: ''
-description: ''
+title: Gerenciar dependências no .NET Core
+description: Explica como gerenciar dependências de projeto para um aplicativo .NET Core.
 no-loc:
 - dotnet add package
 - dotnet remove package
 - dotnet list package
-ms.date: ''
-ms.openlocfilehash: 667b2d4d68edd82a4d18c370e45ea18f4d4b379a
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.topic: how-to
+ms.date: 02/25/2020
+ms.openlocfilehash: 2aeedb56f774b51076764c2772eb02b2fa095d92
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702844"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062854"
 ---
 # <a name="manage-dependencies-in-net-core-applications"></a>Gerenciar dependências em aplicativos .NET Core
 
 Este artigo explica como adicionar e remover dependências editando o arquivo de projeto ou usando a CLI.
 
-## <a name="the-packagereference-element"></a>O \< elemento> PackageReference
+## <a name="the-packagereference-element"></a>O \<PackageReference> elemento
 
 O `<PackageReference>` elemento de arquivo de projeto tem a seguinte estrutura:
 
@@ -76,7 +77,7 @@ Para remover uma dependência, execute o [dotnet remove package](dotnet-remove-p
 dotnet remove package Microsoft.EntityFrameworkCore
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 * [Referências de pacotes em arquivos de projeto](../project-sdk/msbuild-props.md#reference-properties-and-items)
 * [dotnet list packagelinha](dotnet-list-package.md)

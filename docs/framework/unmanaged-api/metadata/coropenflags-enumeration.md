@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e27a83b5-2698-4996-9032-1e0fed8b91ca
 topic_type:
 - apiref
-ms.openlocfilehash: ad582fc2fd1bd1d2fc9d5a0d483fdb3a51309a10
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7318a7ea3eb1ddb047a799e58ebdfd9ce6cd76d1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436496"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007579"
 ---
 # <a name="coropenflags-enumeration"></a>Enumeração CorOpenFlags
 Contém valores de sinalizadores que controlam o comportamento dos metadados ao abrir arquivos de manifesto.  
@@ -48,7 +48,7 @@ typedef enum CorOpenFlags
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`ofRead`|Indica se o arquivo deve ser aberto como somente leitura.|  
 |`ofWrite`|Indica se o arquivo deve ser aberto para gravação.<br /><br /> Se você estiver usando o sinalizador `ofWrite` ao abrir um arquivo .winmd, deverá passar também o sinalizador `ofNoTransform`.|  
@@ -56,7 +56,7 @@ typedef enum CorOpenFlags
 |`ofCopyMemory`|Indica se o arquivo deve ser lido na memória. Os metadados devem manter sua própria cópia.|  
 |`ofCacheImage`|Obsoleto. Este sinalizador é ignorado.|  
 |`ofManifestMetadata`|Obsoleto. Este sinalizador é ignorado.|  
-|`ofReadOnly`|Indica que o arquivo deve ser aberto para leitura e que uma chamada para `QueryInterface` para um [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) não pode ser feita.|  
+|`ofReadOnly`|Indica que o arquivo deve ser aberto para leitura e que uma chamada para `QueryInterface` para um [IMetaDataEmit](imetadataemit-interface.md) não pode ser feita.|  
 |`ofTakeOwnership`|Indica que a memória foi alocada usando uma chamada para [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) e será liberada pelos metadados.|  
 |`ofNoTypeLib`|Obsoleto. Este sinalizador é ignorado.|  
 |`ofNoTransform`|Indica se as transformações automáticas de arquivos .winmd devem ser desabilitadas. Em outras palavras, a projeção de um tipo de Windows Runtime para um tipo de .NET Framework deve ser desabilitada. Para obter mais informações, consulte [Windows Runtime e o CLR-embaixo dos bastidores com o .net e o Windows Runtime](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime).|  
@@ -64,13 +64,13 @@ typedef enum CorOpenFlags
 |`ofReserved2`|Reservado para uso interno.|  
 |`ofReserved`|Reservado para uso interno.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerações de metadados](metadata-enumerations.md)

@@ -1,5 +1,6 @@
 ---
 title: Carregando e usando tipos dinamicamente
+description: Carregar e usar dinamicamente os tipos no .NET. Use a reflexão, que fornece a infraestrutura usada pelos compiladores de linguagem para implementar a ligação tardia implícita.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-ms.openlocfilehash: 940f334ec6a42c4d8da461d634051ff979b8f98d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 39a4a9a2ff77cb900db7f39a55dc17a5b8c62cf3
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130260"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475080"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Carregando e usando tipos dinamicamente
 A reflexão fornece a infraestrutura usada pelos compiladores de linguagem para implementar a associação tardia implícita. Associação é o processo de localizar a declaração (ou seja, a implementação) que corresponde a um tipo especificado exclusivamente. Quando esse processo ocorre no tempo de execução em vez do tempo de compilação, ele é chamado de associação tardia. O Visual Basic permite que você use associação tardia implícita em seu código. O compilador do Visual Basic chama um método auxiliar que usa a reflexão para obter o tipo de objeto. Os argumentos passados para o método auxiliar fazem com que o método apropriado seja invocado no tempo de execução. Esses argumentos são a instância (um objeto) na qual o método será invocado, o nome do método invocado (uma cadeia de caracteres) e os argumentos passados para o método invocado (uma matriz de objetos).  
@@ -92,11 +93,11 @@ End Module
 |UInt64|Single, Double|  
 |Int64|Single, Double|  
 |Single|Double|  
-|Tipo Nonreference|Tipo Reference|  
+|Tipo Nonreference|Tipo de referência|  
   
  A classe <xref:System.Type> tem métodos **Get** que usam parâmetros do tipo **Binder** para resolver referências a um determinado membro. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType> e <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> pesquisam um determinado membro do tipo atual, fornecendo informações de assinatura para esse membro. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> e <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> são chamados de volta para selecionar as informações de determinada assinatura dos métodos apropriados.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>

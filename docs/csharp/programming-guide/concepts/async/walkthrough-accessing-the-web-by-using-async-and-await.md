@@ -1,13 +1,14 @@
 ---
 title: 'Passo a passo: acessando a Web usando async e await (C#)'
+description: Este tutorial converte um aplicativo síncrono em uma solução assíncrona em C# que usa os recursos Async e Await.
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 42b09dab26fd514e184163eaf41aff117d3a463f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d643793bfcdeaaeff56dd252c510d197a45442f9
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74281793"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925105"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Passo a passo: acessando a Web usando async e await (C#)
 
@@ -26,7 +27,7 @@ Se não quiser compilar os aplicativos, você poderá baixar o [Exemplo de assin
 
 1. Inicie o Visual Studio.
 
-2. Na barra de menu, escolha **Arquivo** > **Novo** > **Projeto**.
+2. Na barra de menus, escolha **arquivo**  >  **novo**  >  **projeto**.
 
      A caixa de diálogo **Novo Projeto** será aberta.
 
@@ -40,7 +41,7 @@ Se não quiser compilar os aplicativos, você poderá baixar o [Exemplo de assin
 
 1. No Editor do Visual Studio Code, escolha a guia **MainWindow.xaml**.
 
-2. Se a janela **Caixa de Ferramentas** não estiver visível, abra o menu **Exibir** e, em seguida, escolha **Caixa de Ferramentas**.
+2. Se a janela **caixa de ferramentas** não estiver visível, abra o menu **Exibir** e escolha caixa de **ferramentas**.
 
 3. Adicione um controle **Botão** e um controle **Caixa de Texto** à janela **MainWindow**.
 
@@ -68,13 +69,13 @@ Se não quiser compilar os aplicativos, você poderá baixar o [Exemplo de assin
 
 1. No **Gerenciador de Soluções**, realce o nome do projeto.
 
-2. Na barra de menu, escolha **Projeto** > **Adicionar referência**.
+2. Na barra de menus, escolha **projeto**  >  **Adicionar referência**.
 
      A caixa de diálogo **Gerenciador de Referências** é exibida.
 
 3. Na parte superior da caixa de diálogo, verifique se seu projeto é voltado para o .NET Framework 4.5 ou posterior.
 
-4. Na categoria **Assemblies**, escolha **Framework** se ele ainda não tiver sido escolhido.
+4. Na categoria **assemblies** , escolha **estrutura** se ela ainda não estiver escolhida.
 
 5. Na lista de nomes, marque a caixa de seleção **System.Net.Http**.
 
@@ -84,7 +85,7 @@ Se não quiser compilar os aplicativos, você poderá baixar o [Exemplo de assin
 
 1. No **Gerenciador de Soluções**, abra o menu de atalho de MainWindow.xaml.cs e, em seguida, escolha **Exibir Código**.
 
-2. Adicione as seguintes diretivas `using` na parte superior do arquivo de código, se elas ainda não estiverem presentes.
+2. Adicione as seguintes `using` diretivas na parte superior do arquivo de código se elas ainda não estiverem presentes.
 
     ```csharp
     using System.Net.Http;
@@ -222,7 +223,7 @@ Observe que são necessários alguns segundos para exibir as contagens. Durante 
 
 ## <a name="convert-geturlcontents-to-an-asynchronous-method"></a>Converter GetURLContents em um método assíncrono
 
-1. Para converter a solução síncrona em uma solução assíncrona, o melhor lugar para começar é em `GetURLContents`, porque é pelas chamadas para o método <xref:System.Net.HttpWebRequest.GetResponse%2A> de <xref:System.Net.HttpWebRequest> e para o método <xref:System.IO.Stream.CopyTo%2A> de <xref:System.IO.Stream> que o aplicativo acessa a Web. O .NET Framework facilita a conversão fornecendo versões assíncronas dos dois métodos.
+1. Para converter a solução síncrona em uma solução assíncrona, o melhor lugar para começar é em `GetURLContents`, porque é pelas chamadas para o método <xref:System.Net.HttpWebRequest.GetResponse%2A> de <xref:System.Net.HttpWebRequest> e para o método <xref:System.IO.Stream.CopyTo%2A> de <xref:System.IO.Stream> que o aplicativo acessa a Web. .NET Framework facilita a conversão fornecendo versões assíncronas de ambos os métodos.
 
      Para obter mais informações sobre os métodos usados em `GetURLContents`, consulte <xref:System.Net.WebRequest>.
 
@@ -235,7 +236,7 @@ Observe que são necessários alguns segundos para exibir as contagens. Durante 
     using (WebResponse response = webReq.GetResponseAsync())
     ```
 
-2. `GetResponseAsync` retorna um <xref:System.Threading.Tasks.Task%601>. Neste caso, a variável `TResult`de retorno <xref:System.Net.WebResponse> *de tarefas*, tem tipo . A tarefa é uma promessa de produzir um objeto `WebResponse` verdadeiro após os dados solicitados terem sido baixados e a tarefa ter sido executada até a conclusão.
+2. `GetResponseAsync` retorna um <xref:System.Threading.Tasks.Task%601>. Nesse caso, a *variável de retorno da tarefa*, `TResult` , tem o tipo <xref:System.Net.WebResponse> . A tarefa é uma promessa de produzir um objeto `WebResponse` verdadeiro após os dados solicitados terem sido baixados e a tarefa ter sido executada até a conclusão.
 
      Para recuperar o valor `WebResponse` da tarefa, aplique um operador [await](../../../language-reference/operators/await.md) à chamada para `GetResponseAsync`, como mostra o código a seguir.
 
@@ -254,13 +255,13 @@ Observe que são necessários alguns segundos para exibir as contagens. Durante 
 
      A chamada para `webReq.GetResponseAsync` retorna um `Task(Of WebResponse)` ou `Task<WebResponse>`. Em seguida, um operador await é aplicado à tarefa para recuperar o valor `WebResponse`.
 
-     Se seu método assíncrono tiver trabalho a fazer que não depende da conclusão da tarefa, o método poderá continuar com esse trabalho entre essas duas instruções, após a chamada para o método assíncrono e antes do operador `await` ser aplicado. Por exemplo, veja [Como fazer várias solicitações na Web em paralelo usando assincronizar e aguardar (C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) e [como estender o passo a passo async usando Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
+     Se o método Async tiver trabalho para fazer isso não depende da conclusão da tarefa, o método poderá continuar com esse trabalho entre essas duas instruções, após a chamada para o método Async e antes da aplicação do `await` operador. Para obter exemplos, consulte [como fazer várias solicitações da Web em paralelo usando Async e Await (c#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) e [como estender a explicação em modo assíncrono usando Task. WhenAll (c#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
 
 3. Como você adicionou o operador `await` na etapa anterior, um erro do compilador ocorre. O operador pode ser usado apenas em métodos que são marcados com o modificador [async](../../../language-reference/keywords/async.md). Ignore o erro enquanto você repetir as etapas de conversão para substituir a chamada para `CopyTo` por uma chamada para `CopyToAsync`.
 
-    - Altere o nome do método que é chamado para <xref:System.IO.Stream.CopyToAsync%2A>.
+    - Altere o nome do método chamado para <xref:System.IO.Stream.CopyToAsync%2A> .
 
-    - O método `CopyTo` ou `CopyToAsync` copia bytes para seu argumento, `content` e não retorna um valor significativo. Na versão síncrona, a chamada para `CopyTo` é uma instrução simples que não retorna um valor. A versão assíncrona, `CopyToAsync`, retorna um <xref:System.Threading.Tasks.Task>. A tarefa funciona como "Task(void)" e permite que o método seja aguardado. Aplique `Await` ou `await` à chamada para `CopyToAsync`, como mostra o código a seguir.
+    - O `CopyTo` `CopyToAsync` método ou copia bytes para seu argumento, `content` e não retorna um valor significativo. Na versão síncrona, a chamada para `CopyTo` é uma instrução simples que não retorna um valor. A versão assíncrona, `CopyToAsync`, retorna um <xref:System.Threading.Tasks.Task>. A tarefa funciona como "Task(void)" e permite que o método seja aguardado. Aplique `Await` ou `await` à chamada para `CopyToAsync`, como mostra o código a seguir.
 
         ```csharp
         await responseStream.CopyToAsync(content);
@@ -283,7 +284,7 @@ Observe que são necessários alguns segundos para exibir as contagens. Durante 
     private async byte[] GetURLContents(string url)
     ```
 
-5. O tipo de retorno de um método assíncrono só pode ser <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> ou `void` em C#. Normalmente, um tipo de retorno de `void` é usado somente em um manipulador de eventos assíncrono, em que `void` é necessário. Em outros casos, você usa `Task(T)` se o método concluído tiver uma instrução [return](../../../language-reference/keywords/return.md) que retorna um valor do tipo T e usa `Task` se o método concluído não retornar um valor significativo. Você pode considerar que o tipo de retorno `Task` significa "Task(void)".
+5. O tipo de retorno de um método assíncrono só pode ser <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> ou `void` em C#. Normalmente, um tipo de retorno de `void` é usado somente em um manipulador de eventos assíncrono, em que `void` é necessário. Em outros casos, você usará `Task(T)` se o método Completed tiver uma instrução [Return](../../../language-reference/keywords/return.md) que retorna um valor do tipo T, e você usará `Task` se o método Completed não retornar um valor significativo. Você pode considerar que o tipo de retorno `Task` significa "Task(void)".
 
      Para obter mais informações, consulte [Tipos de retorno assíncronos (C#)](./async-return-types.md).
 
@@ -305,7 +306,7 @@ Observe que são necessários alguns segundos para exibir as contagens. Durante 
 
 1. Repita as etapas do procedimento anterior para `SumPageSizes`. Primeiro, altere a chamada para `GetURLContents` para uma chamada assíncrona.
 
-    - Altere o nome do método que é chamado de `GetURLContents` para `GetURLContentsAsync`, se ainda não tiver feito isso.
+    - Altere o nome do método que é chamado de `GetURLContents` para `GetURLContentsAsync` , se você ainda não tiver feito isso.
 
     - Aplique `await` à tarefa que `GetURLContentsAsync` retorna para obter o valor da matriz de bytes.
 
@@ -330,7 +331,7 @@ Observe que são necessários alguns segundos para exibir as contagens. Durante 
 
     - Acrescente "Async" ao nome do método.
 
-    - Não há variável de retorno de `SumPageSizesAsync` tarefa, T, desta vez porque não `return` retorna um valor para T. (O método não tem declaração.) No entanto, o `Task` método deve retornar a ser aguardado. Portanto, altere o tipo de retorno do método de `void` para `Task`.
+    - Não há nenhuma variável de retorno de tarefa, T, desta vez porque `SumPageSizesAsync` o não retorna um valor para T. (o método não tem `return` instrução.) No entanto, o método deve retornar um `Task` para ser awaitable. Portanto, altere o tipo de retorno do método de `void` para `Task`.
 
     O código a seguir mostra essas alterações.
 
@@ -342,7 +343,7 @@ Observe que são necessários alguns segundos para exibir as contagens. Durante 
 
 ## <a name="convert-startbutton_click-to-an-asynchronous-method"></a>Converter startButton_Click em um método assíncrono
 
-1. No manipulador de eventos, altere o nome do método chamado de `SumPageSizes` para `SumPageSizesAsync`, se ainda não tiver feito isso.
+1. No manipulador de eventos, altere o nome do método chamado de `SumPageSizes` para `SumPageSizesAsync` , se você ainda não tiver feito isso.
 
 2. Como `SumPageSizesAsync` é um método assíncrono, altere o código no manipulador de eventos para aguardar o resultado.
 
@@ -381,7 +382,7 @@ Observe que são necessários alguns segundos para exibir as contagens. Durante 
     private async void startButton_Click(object sender, RoutedEventArgs e)
     ```
 
-     Normalmente, os nomes dos manipuladores de eventos não são alterados. O tipo de retorno não é alterado para `Task` porque os manipuladores de eventos devem retornar `void`.
+     Normalmente, os nomes dos manipuladores de eventos não são alterados. O tipo de retorno não é alterado para `Task` porque os manipuladores de eventos devem retornar `void` .
 
      A conversão do projeto de um processamento síncrono em um assíncrono está concluída.
 
@@ -391,13 +392,13 @@ Observe que são necessários alguns segundos para exibir as contagens. Durante 
 
 2. Uma saída semelhante à saída da solução síncrona deve aparecer. No entanto, observe as diferenças a seguir.
 
-    - Os resultados não ocorrem todos ao mesmo tempo, após a conclusão do processamento. Por exemplo, os dois programas contêm uma linha em `startButton_Click` que desmarca a caixa de texto. A intenção é desmarcar a caixa de texto entre as execuções se você escolher o botão **Iniciar** pela segunda vez, após um conjunto de resultados ter aparecido. Na versão síncrona, a caixa de texto é desmarcada logo antes das contagens aparecerem pela segunda vez, quando os downloads são concluídos e o thread da interface do usuário fica livre para executar outras tarefas. Na versão assíncrona, a caixa de texto é limpa imediatamente após você escolher o botão **Iniciar**.
+    - Os resultados não ocorrem ao mesmo tempo, após a conclusão do processamento. Por exemplo, os dois programas contêm uma linha em `startButton_Click` que desmarca a caixa de texto. A intenção é desmarcar a caixa de texto entre as execuções se você escolher o botão **Iniciar** pela segunda vez, após um conjunto de resultados ter aparecido. Na versão síncrona, a caixa de texto é desmarcada logo antes das contagens aparecerem pela segunda vez, quando os downloads são concluídos e o thread da interface do usuário fica livre para executar outras tarefas. Na versão assíncrona, a caixa de texto é limpa imediatamente após você escolher o botão **Iniciar**.
 
-    - Mais importante, o thread da interface do usuário não é bloqueado durante os downloads. Você pode mover ou redimensionar a janela enquanto os recursos da Web estão sendo baixados, contados e exibido. Se um dos sites estiver lento ou não estiver respondendo, você poderá cancelar a operação escolhendo o botão **Fechar** (o x no campo vermelho no canto superior direito).
+    - O mais importante é que o thread da interface do usuário não é bloqueado durante os downloads. Você pode mover ou redimensionar a janela enquanto os recursos da Web estão sendo baixados, contados e exibido. Se um dos sites estiver lento ou não estiver respondendo, você poderá cancelar a operação escolhendo o botão **Fechar** (o x no campo vermelho no canto superior direito).
 
-## <a name="replace-method-geturlcontentsasync-with-a-net-framework-method"></a>Substituir o método GetURLContentsAsync por um método .NET Framework
+## <a name="replace-method-geturlcontentsasync-with-a-net-method"></a>Substituir o método GetURLContentsAsync por um método .NET
 
-1. O .NET Framework 4.5 fornece vários métodos assíncronos que você pode usar. Um deles, o método <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29> de <xref:System.Net.Http.HttpClient>, faz exatamente o que é necessário para este passo a passo. Você pode usá-lo em vez do método `GetURLContentsAsync` que criou em um procedimento anterior.
+1. .NET Framework 4,5 e versões posteriores fornecem muitos métodos assíncronos que você pode usar. Um deles, o método <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29> de <xref:System.Net.Http.HttpClient>, faz exatamente o que é necessário para este passo a passo. Você pode usá-lo em vez do método `GetURLContentsAsync` que criou em um procedimento anterior.
 
      A primeira etapa é criar um objeto `HttpClient` no método `SumPageSizesAsync`. Adicione a declaração a seguir ao início do método.
 
@@ -688,13 +689,13 @@ namespace AsyncExampleWPF
 }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Exemplo de assincronia: acessando o passo a passo da Web (C# e Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hh300224(v=vs.110))
-- [Async](../../../language-reference/keywords/async.md)
-- [Aguardam](../../../language-reference/operators/await.md)
-- [Programação Assíncrona com assincronia e espera (C#)](./index.md)
+- [async](../../../language-reference/keywords/async.md)
+- [await](../../../language-reference/operators/await.md)
+- [Programação assíncrona com Async e Await (C#)](./index.md)
 - [Tipos de retorno assíncronos (C#)](./async-return-types.md)
 - [TAP (programação assíncrona baseada em tarefas)](https://www.microsoft.com/download/details.aspx?id=19957)
-- [Como estender o passo a passo async usando Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [Como fazer várias solicitações web em paralelo usando assincronizar e aguardar (C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [Como estender a instrução assíncrona usando Task. WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Como fazer várias solicitações da Web em paralelo usando Async e Await (C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

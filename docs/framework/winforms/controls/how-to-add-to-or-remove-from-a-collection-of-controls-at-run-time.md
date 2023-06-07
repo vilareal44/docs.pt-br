@@ -1,5 +1,6 @@
 ---
 title: Como adicionar a ou remover de uma coleção de controles em tempo de execução
+description: Saiba como adicionar controles e remover controles de qualquer controle de contêiner em seus formulários, como o controle de painel ou GroupBox, ou até mesmo o próprio formulário.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,15 +13,15 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 369946581847b4bdcf8bc658aeb94b14c529061c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6c3f2d1f42b130de4d808871265b50510cfb8f47
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182284"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325858"
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Como adicionar a ou remover de uma coleção de controles em tempo de execução
-Tarefas comuns no desenvolvimento de aplicativos são adicionar controles e remover controles <xref:System.Windows.Forms.Panel> de <xref:System.Windows.Forms.GroupBox> qualquer controle de contêiner em seus formulários (como o controle ou o mesmo o formulário em si). Em tempo de design, controles podem ser arrastados diretamente para um painel ou caixa de grupo. Em tempo de execução, esses controles mantêm uma coleção `Controls`, que mantém o controle de quais controles são colocados neles.  
+Tarefas comuns no desenvolvimento de aplicativos são adicionar controles e remover controles de qualquer controle de contêiner em seus formulários (como o <xref:System.Windows.Forms.Panel> <xref:System.Windows.Forms.GroupBox> controle ou, ou até mesmo o próprio formulário). Em tempo de design, controles podem ser arrastados diretamente para um painel ou caixa de grupo. Em tempo de execução, esses controles mantêm uma coleção `Controls`, que mantém o controle de quais controles são colocados neles.  
   
 > [!NOTE]
 > O exemplo de código a seguir aplica-se a qualquer controle que mantém uma coleção de controles dentro dele.  
@@ -33,7 +34,7 @@ Tarefas comuns no desenvolvimento de aplicativos são adicionar controles e remo
   
 3. Adicione o controle à coleção `Controls` do controle pai.  
   
-     O exemplo de código a seguir <xref:System.Windows.Forms.Button> mostra como criar uma instância do controle. Requer um formulário <xref:System.Windows.Forms.Panel> com um controle e que o método de `NewPanelButton_Click`manipulação de eventos para o botão que está sendo criado, , já existe.  
+     O exemplo de código a seguir mostra como criar uma instância do <xref:System.Windows.Forms.Button> controle. Ele requer um formulário com um <xref:System.Windows.Forms.Panel> controle e que o método de manipulação de eventos para o botão que está sendo criado, `NewPanelButton_Click` já exista.  
   
     ```vb  
     Public NewPanelButton As New Button()  
@@ -66,11 +67,11 @@ Tarefas comuns no desenvolvimento de aplicativos são adicionar controles e remo
   
 ### <a name="to-remove-controls-from-a-collection-programmatically"></a>Para remover os controles de uma coleção de forma programática  
   
-1. Remova o manipulador de eventos do evento. No Visual Basic, use a palavra-chave [RemoveHandler Statement;](../../../visual-basic/language-reference/statements/removehandler-statement.md) em C#, use o [operador -=](../../../csharp/language-reference/operators/subtraction-operator.md).  
+1. Remova o manipulador de eventos do evento. Em Visual Basic, use a palavra-chave [RemoveHandler Statement](../../../visual-basic/language-reference/statements/removehandler-statement.md) ; em C#, use o [operador-=](../../../csharp/language-reference/operators/subtraction-operator.md).  
   
 2. Use o método `Remove` para excluir o controle desejado da coleção `Controls` do painel.  
   
-3. Chame <xref:System.Windows.Forms.Control.Dispose%2A> o método para liberar todos os recursos utilizados pelo controle.  
+3. Chame o <xref:System.Windows.Forms.Control.Dispose%2A> método para liberar todos os recursos usados pelo controle.  
   
     ```vb  
     Public Sub RemoveControl()  
@@ -100,7 +101,7 @@ Tarefas comuns no desenvolvimento de aplicativos são adicionar controles e remo
     }  
     ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.Panel>
 - [Controle de painel](panel-control-windows-forms.md)

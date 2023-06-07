@@ -1,18 +1,18 @@
 ---
-title: Disco não está pronto
+title: O disco não está pronto
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID71
 ms.assetid: 5e2528f5-81b3-4e5e-a294-a43cc738a42e
-ms.openlocfilehash: 3e981a55158ae77ed8a2b5f3d33c02aea175abdc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 28cdb5d9a4a08111150770fbac1f367b271a0798
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970359"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394772"
 ---
-# <a name="disk-not-ready"></a>Disco não está pronto
-Para a unidade especificada, há um disco ou a porta está aberta.  
+# <a name="disk-not-ready"></a>O disco não está pronto
+Para a unidade especificada, não há um disco ou a porta da unidade está aberta.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
@@ -20,6 +20,6 @@ Para a unidade especificada, há um disco ou a porta está aberta.
   
 2. Feche a porta da unidade.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipos de erro](../programming-guide/language-features/error-types.md)

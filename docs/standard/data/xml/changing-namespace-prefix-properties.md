@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
-ms.openlocfilehash: b1df520d00d3a98b2e518092d4eff51b5d0b7741
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: b817a68ff9789be414118ff4c1a3d88ca3ea9f01
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78158019"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290909"
 ---
 # <a name="changing-namespace-prefix-properties"></a>Alterando propriedades de prefixo de namespace
 A classe **XmlNode** permite que você modifique o prefixo de namespace associado a um nó específico. Por exemplo, o código a seguir mostra o prefixo de um elemento que está sendo alterado.  
@@ -66,4 +66,4 @@ Console.WriteLine(doc.InnerXml);
   
 ## <a name="see-also"></a>Veja também
 
-- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

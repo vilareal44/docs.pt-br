@@ -1,20 +1,18 @@
-- name: O que há de novo
-  href: index.yml
-  expanded: true
-  items:
-    - name: 2020
-      items:
-        - name: Abril
-          href: dotnet-2020-04.md
-        - name: Março
-          href: dotnet-2020-03.md
-        - name: Fevereiro
-          href: dotnet-2020-02.md
-        - name: Janeiro
-          href: dotnet-2020-01.md
-    - name: 2019
-      items:
-        - name: Dezembro
-          href: 2019-12.md
-        - name: Novembro
-          href: 2019-11.md
+name: O que há de novo
+href: index.yml
+expanded: true
+items:
+  - name: 2020
+    items:
+      - name: Julho
+        href: 2020-07.md
+      - name: Junho
+        href: 2020-06.md
+      - name: Mai
+        href: dotnet-2020-05.md
+      - name: Abril
+        href: dotnet-2020-04.md
+      - name: Março
+        href: dotnet-2020-03.md
+      - name: Fevereiro
+        href: dotnet-2020-02.md

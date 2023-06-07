@@ -1,16 +1,17 @@
 ---
-title: '{1&gt;{2&gt;Windows Communication Foundation&lt;2}&lt;1}'
+title: Windows Communication Foundation
+description: Saiba como o WCF, um modelo de programação para aplicativos orientados a serviços, permite que você crie soluções seguras, confiáveis e transacionadas.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation [WCF]
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
-ms.openlocfilehash: 836913dd35d127d181c753341a7c39c453242a8f
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: dc4218e830c34e44536bbb816af9c1b35b4b5b07
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552683"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244290"
 ---
 # <a name="develop-service-oriented-applications-with-wcf"></a>Desenvolver aplicativos orientados a serviços com o WCF
 
@@ -24,16 +25,16 @@ Esta seção da documentação fornece informações sobre o Windows Communicati
  [Recursos de simplificação do WCF](wcf-simplification-features.md)\
  Discute os novos recursos que facilitam escrever aplicativos WCF.
 
- [Guia para a documentação](guide-to-the-documentation.md)\
+ [Guia da documentação](guide-to-the-documentation.md)\
  Uma descrição da documentação do WCF
 
  [Visão geral conceitual](conceptual-overview.md)\
  Resume informações sobre o sistema de mensagens do Windows Communication Foundation (WCF) e classes que oferecem suporte ao seu uso.
 
- [Introdução Tutorial](getting-started-tutorial.md)\
+ [Tutorial de Introdução](getting-started-tutorial.md)\
  Um tutorial passo a passo para criar um serviço e um cliente do WCF
 
- [Programação de WCF básica](basic-wcf-programming.md)\
+ [Programação básica do WCF](basic-wcf-programming.md)\
  Descreve os princípios básicos para criar aplicativos do Windows Communication Foundation.
 
  [Detalhes do recurso WCF](./feature-details/index.md)\
@@ -45,7 +46,7 @@ Esta seção da documentação fornece informações sobre o Windows Communicati
  [Diretrizes e práticas recomendadas](guidelines-and-best-practices.md)\
  Fornece diretrizes para criar aplicativos do Windows Communication Foundation (WCF).
 
- \ [de administração e diagnóstico](./diagnostics/index.md)
+ [Administração e diagnóstico](./diagnostics/index.md)\
  Descreve os recursos de diagnóstico do WCF
 
  [Recursos do sistema operacional exigidos pelo WCF](operating-system-resources-required-by-wcf.md)\
@@ -66,11 +67,11 @@ Esta seção da documentação fornece informações sobre o Windows Communicati
  [Exemplos de Windows Communication Foundation](./samples/index.md)\
  Exemplos que fornecem instruções sobre vários aspectos do Windows Communication Foundation
 
- [Windows Communication Foundation glossário](glossary.md)\
+ [Glossário de Windows Communication Foundation](glossary.md)\
  Mostra uma lista de termos específicos para o WCF
 
  [Referência geral](general-reference.md)\
  A seção descreve os elementos que são usados para configurar clientes e serviços do Windows Communication Foundation.
 
- \ de [informações de privacidade](privacy-information.md)
+ [Informações de privacidade](privacy-information.md)\
  Informações relativas ao WCF e privacidade

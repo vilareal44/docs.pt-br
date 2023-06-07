@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5fee4a0-b132-4e5e-8730-e586ce314b9a
 topic_type:
 - apiref
-ms.openlocfilehash: 6d7884e896d6a0463639e7ef08b47dced10a27f4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8a1cdff313dae73e3f5e8918ff2ef395c80b115d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431379"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490621"
 ---
 # <a name="imetadataimport2getgenericparamconstraintprops-method"></a>Método IMetaDataImport2::GetGenericParamConstraintProps
 Obtém os metadados associados à restrição de parâmetro genérico representada pelo token de restrição especificado.  
@@ -43,18 +43,18 @@ HRESULT GetGenericParamConstraintProps (
  fora Um ponteiro para o token que representa o parâmetro genérico que é restrito.  
   
  `ptkConstraintType`  
- fora Um ponteiro para um token de TypeDef, TypeRef ou TypeSpec que representa uma restrição em `ptGenericParam`.  
+ fora Um ponteiro para um token de TypeDef, TypeRef ou TypeSpec que representa uma restrição em `ptGenericParam` .  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)

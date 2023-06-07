@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
-ms.openlocfilehash: 447cf18c7a9d24addf9d0a4ad523f46a45a5d27a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 623f997d1c11bc643ea4605614cac147b6069be5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78155969"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287721"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Como: Executar uma transformação XSLT usando um assembly
 O compilador XSLT (xsltc.exe) compila folhas de estilos XSLT e gera um assembly. O assembly pode ser passado diretamente no método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.  
@@ -177,11 +177,11 @@ por
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  
 ```
   
-no exemplo anterior. Para obter mais informações sobre o método assembly. Load, <xref:System.Reflection.Assembly.Load%2A>consulte.  
+no exemplo anterior. Para obter mais informações sobre o método assembly. Load, consulte <xref:System.Reflection.Assembly.Load%2A> .  
   
 ## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [Compilador de XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
-- [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [Compilador de XSLT (xsltc.exe)](xslt-compiler-xsltc-exe.md)
+- [Transformações XSLT](xslt-transformations.md)
 - [Compilando pela linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

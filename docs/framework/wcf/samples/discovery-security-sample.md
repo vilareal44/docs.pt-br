@@ -2,12 +2,12 @@
 title: Exemplo de segurança de descoberta
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 44022ee756f189347aaec606427ecb3c4c5ffa95
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: c6ec9b7e13234b7dae03541eb09ccba98f4cc93a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728413"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144897"
 ---
 # <a name="discovery-security-sample"></a>Exemplo de segurança de descoberta
 
@@ -38,7 +38,7 @@ A especificação de descoberta não exige que os pontos de extremidade que part
 > [!NOTE]
 > O `PrefixList` foi adicionado no protocolo de versão de descoberta 2008.  
   
- Para calcular a assinatura, o exemplo determina os itens de assinatura expandidos. Uma assinatura XML (`SignedInfo`) é criada, usando o `ds` prefixo de namespace, conforme exigido pela especificação WS-Discovery. O corpo e todos os cabeçalhos nos namespaces de descoberta e endereçamento são referenciados na assinatura, para que eles não possam ser adulterados. Cada elemento referenciado é transformado usando a canonicalização exclusiva (http://www.w3.org/2001/10/xml-exc-c14n# ) e, em seguida, um valor de Resumo dehttp://www.w3.org/2000/09/xmldsig#sha1 SHA-1 é computado (). Com base em todos os elementos referenciados e seus valores de resumo, o valor da assinatura é calculado usandohttp://www.w3.org/2000/09/xmldsig#rsa-sha1 o algoritmo RSA ().  
+ Para calcular a assinatura, o exemplo determina os itens de assinatura expandidos. Uma assinatura XML ( `SignedInfo` ) é criada, usando o `ds` prefixo de namespace, conforme exigido pela especificação WS-Discovery. O corpo e todos os cabeçalhos nos namespaces de descoberta e endereçamento são referenciados na assinatura, para que eles não possam ser adulterados. Cada elemento referenciado é transformado usando a canonicalização exclusiva ( <http://www.w3.org/2001/10/xml-exc-c14n#> ) e, em seguida, um valor de Resumo de SHA-1 é computado ( <http://www.w3.org/2000/09/xmldsig#sha1> ). Com base em todos os elementos referenciados e seus valores de resumo, o valor da assinatura é calculado usando o algoritmo RSA ( <http://www.w3.org/2000/09/xmldsig#rsa-sha1> ).  
   
  As mensagens são assinadas com um certificado especificado pelo cliente. O local do repositório, o nome e o nome da entidade do certificado devem ser especificados quando o elemento de associação é criado. O `KeyId` na assinatura compacta representa o identificador de chave do token de assinatura e é o identificador de chave da entidade (esqui) do token de assinatura ou (se a esqui não existir) um hash SHA-1 da chave pública do token de assinatura.  
   
@@ -72,6 +72,6 @@ A especificação de descoberta não exige que os pontos de extremidade que part
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  

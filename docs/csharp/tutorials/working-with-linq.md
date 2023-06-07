@@ -4,34 +4,34 @@ description: Este tutorial ensina a gerar sequências com LINQ, escrever método
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: ece001e82c0aa44a91999bea78d2fd695ff9362b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9bc17700e22ea29b1861945a220e397a90b9a7c1
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240009"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656990"
 ---
-# <a name="work-with-language-integrated-query-linq"></a>Trabalhe com consulta integrada ao idioma (LINQ)
+# <a name="work-with-language-integrated-query-linq"></a>Trabalhar com consulta integrada à linguagem (LINQ)
 
 ## <a name="introduction"></a>Introdução
 
 Este tutorial ensina os recursos no .NET Core e da linguagem C#. Você aprenderá a:
 
 - Gerar sequências com LINQ.
-- Escrever métodos que podem ser facilmente usados em consultas LINQ.
-- Distinguir entre avaliação ansiosa e preguiçosa.
+- Métodos de gravação que podem ser facilmente usados em consultas LINQ.
+- Distinguir entre a avaliação rápida e lenta.
 
 Você aprenderá essas técnicas ao compilar um aplicativo que demonstra uma das habilidades básicas de qualquer mágico: o [embaralhamento faro](https://en.wikipedia.org/wiki/Faro_shuffle). Em resumo, um embaralhamento faro é uma técnica em que você divide um baralho de cartas exatamente na metade, então as cartas de cada metade são colocadas em ordem aleatória até recriar o conjunto original.
 
 Os mágicos usam essa técnica porque cada carta é fica em um local conhecido após o embaralhamento e a ordem é um padrão de repetição.
 
-Para os seus propósitos, vamos examinar rapidamente as sequências de manipulação de dados. O aplicativo que você construirá constrói um baralho de cartas e, em seguida, executa uma seqüência de embaralhados, escrevendo a seqüência cada vez. Você também comparará a ordem atualizada com a ordem original.
+Para os seus propósitos, vamos examinar rapidamente as sequências de manipulação de dados. O aplicativo que você criar construirá um baralho e, em seguida, executará uma sequência de embaralhamentos, gravando a sequência a cada vez. Você também comparará a ordem atualizada com a ordem original.
 
-Este tutorial tem várias etapas. Após cada etapa, você poderá executar o aplicativo e ver o progresso. Você também poderá ver o [exemplo concluído](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) no repositório dotnet/samples do GitHub. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Este tutorial tem várias etapas. Após cada etapa, você poderá executar o aplicativo e ver o progresso. Você também poderá ver o [exemplo concluído](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) no repositório dotnet/samples do GitHub. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você precisará configurar seu computador para executar o .NET Core. Você pode encontrar as instruções de instalação na página [.NET Core Download.](https://dotnet.microsoft.com/download) Você pode executar este aplicativo no Windows, Ubuntu Linux ou OS X, ou em um contêiner Docker. Será necessário instalar o editor de código de sua preferência. As descrições abaixo usam [Visual Studio Code,](https://code.visualstudio.com/) que é um editor multiplataforma de código aberto. No entanto, você pode usar quaisquer ferramentas que esteja familiarizado.
+Você precisará configurar seu computador para executar o .NET Core. Você pode encontrar as instruções de instalação na página de [download do .NET Core](https://dotnet.microsoft.com/download) . Você pode executar esse aplicativo no Windows, Ubuntu Linux ou OS X ou em um contêiner do Docker. Será necessário instalar o editor de código de sua preferência. As descrições abaixo usam [Visual Studio Code](https://code.visualstudio.com/) que é um editor de plataforma cruzada de software livre. No entanto, você pode usar quaisquer ferramentas que esteja familiarizado.
 
 ## <a name="create-the-application"></a>Criar o aplicativo
 
@@ -118,7 +118,7 @@ Vá em frente e execute o exemplo que você criou neste momento. Ele exibirá to
 
 ![Uma janela de console mostrando o aplicativo gravando 52 cartas.](./media/working-with-linq/console-52-card-application.png)
 
-## <a name="manipulate-the-order"></a>Manipular a Ordem
+## <a name="manipulate-the-order"></a>Manipular o pedido
 
 Em seguida, concentre-se em como você vai embaralhar as cartas no baralho. A primeira etapa de qualquer embaralhada é dividir o baralho em dois. Os métodos <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> que fazem parte das APIs do LINQ fornecem esse recurso para você. Coloque-os sob o loop `foreach`:
 
@@ -173,7 +173,7 @@ public static IEnumerable<T> InterleaveSequenceWith<T> (this IEnumerable<T> firs
 
 Você pode ver a adição do modificador `this` no primeiro argumento para o método. Isso significa que você chama o método como se fosse um método de membro do tipo do primeiro argumento. Esta declaração de método também segue um idioma padrão no qual os tipos de entrada e saídas são `IEnumerable<T>`. Essa prática permite que os métodos LINQ sejam encadeados para executar consultas mais complexas.
 
-Naturalmente, como você dividiu o baralho em metades, precisará unir essas metades. Em código, isso significa que você estará enumerando ambas <xref:System.Linq.Enumerable.Take%2A> as <xref:System.Linq.Enumerable.Skip%2A> seqüências que adquiriu através e ao mesmo tempo, *`interleaving`* os elementos, e criando uma seqüência: seu baralho de cartas agora embaralhado. Escrever um método LINQ que funciona com duas sequências exige que você compreenda como <xref:System.Collections.Generic.IEnumerable%601> funciona.
+Naturalmente, como você dividiu o baralho em metades, precisará unir essas metades. No código, isso significa que você estará enumerando as duas sequências adquiridas por meio de <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> ao mesmo tempo, *`interleaving`* os elementos e a criação de uma sequência: seu baralho de cartas agora em ordem aleatória. Escrever um método LINQ que funciona com duas sequências exige que você compreenda como <xref:System.Collections.Generic.IEnumerable%601> funciona.
 
 A interface <xref:System.Collections.Generic.IEnumerable%601> tem um método: <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A>. O objeto retornado por <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> tem um método para mover para o próximo elemento e uma propriedade que recupera o elemento atual na sequência. Você usará esses dois membros para enumerar a coleção e retornar os elementos. Esse método de Intercalação será um método iterador, portanto, em vez de criar uma coleção e retornar a coleção, você usará a sintaxe `yield return` mostrada acima.
 
@@ -350,7 +350,7 @@ Além do LINQ, você aprendeu um pouco sobre uma técnica usada por mágicos par
 
 Para saber mais sobre o LINQ, consulte:
 
-- [Consulta Integrada ao Idioma (LINQ)](../programming-guide/concepts/linq/index.md)
+- [LINQ (Consulta Integrada à Linguagem)](../programming-guide/concepts/linq/index.md)
 - [Introdução ao LINQ](../programming-guide/concepts/linq/index.md)
 - [Operações de consulta LINQ básica (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
 - [Transformações de dados com LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)

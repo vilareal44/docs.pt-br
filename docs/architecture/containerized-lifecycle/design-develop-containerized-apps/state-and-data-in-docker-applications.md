@@ -1,13 +1,13 @@
 ---
 title: Estado e dados em aplicativos do Docker
 description: Saiba qual é a opção disponível para salvar o estado nos aplicativos em contêineres.
-ms.date: 02/15/2019
-ms.openlocfilehash: b2368efb0eff2bdce48b77b2addcc4de89822c74
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: dc9a1a3eccb77e9fd67e69fd3295f3db1edf5e66
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72394632"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915305"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Estado e dados em aplicativos do Docker
 
@@ -43,11 +43,11 @@ Volumes podem ser nomeados ou anônimos (o padrão). Volumes nomeados são a evo
 
 As **montagens de associação** estão disponíveis há muito tempo e permitem o mapeamento de qualquer pasta para um ponto de montagem em um contêiner. Montagens de associação têm mais limitações que os volumes e alguns problemas de segurança importantes, por isso os volumes são a opção recomendada.
 
-os suportes são pastas virtuais que vivem apenas na memória do host e nunca são escritas no sistema de arquivos. ** `tmpfs` ** Elas são rápidas e seguras, mas usam a memória e destinam-se somente a dados não persistentes.
+as ** `tmpfs` montagens** são pastas virtuais que residem apenas na memória do host e nunca são gravadas no sistema de arquivos. Elas são rápidas e seguras, mas usam a memória e destinam-se somente a dados não persistentes.
 
 Conforme mostrado na Figura 4-5, os volumes Docker regulares podem ser armazenados fora dos contêineres de si, mas dentro dos limites físicos do servidor host ou VM. No entanto, contêineres do Docker não podem acessar um volume de um servidor host ou VM para outro. Em outras palavras, com esses volumes, não é possível gerenciar os dados compartilhados entre contêineres executados em hosts diferentes do Docker, embora esses dados possam ser obtidos com um driver de volume que dá suporte a hosts remotos.
 
-![Diagrama mostrando os volumes docker armazenados fora dos recipientes.](./media/state-and-data-in-docker-applications/container-based-application-external-data-sources.png)
+![Diagrama mostrando os volumes do Docker armazenados fora dos contêineres.](./media/state-and-data-in-docker-applications/container-based-application-external-data-sources.png)
 
 **Figura 4-5**. Volumes e fontes de dados externas para aplicativos baseados em contêiner
 
@@ -55,7 +55,7 @@ Além disso, quando gerenciados por um orquestrador, contêineres do Docker pode
 
 **Fontes de dados remotas e ferramentas de cache** como o Banco de Dados SQL do Azure, o Azure Cosmos DB ou um cache remoto como o Redis podem ser usados em aplicativos em contêineres da mesma forma que são usados durante o desenvolvimento sem contêineres. Essa é uma forma comprovada de armazenar dados de aplicativo de negócios.
 
-**Armazenamento do Microsoft Azure.** Os dados de negócios geralmente precisam ser colocados em recursos ou bancos de dados externos, como o Armazenamento do Azure. O Armazenamento do Azure fornece os seguintes serviços na nuvem:
+**Armazenamento do Azure.** Os dados de negócios geralmente precisam ser colocados em recursos ou bancos de dados externos, como o Armazenamento do Azure. O Armazenamento do Azure fornece os seguintes serviços na nuvem:
 
 - O Armazenamento de Blobs armazena dados de objeto não estruturados. Um blob pode ser qualquer tipo de texto ou dados binários, como documentos ou arquivos de mídia (imagens, áudio e vídeo). O Armazenamento de Blobs também é chamado de armazenamento de Objeto.
 
@@ -63,8 +63,8 @@ Além disso, quando gerenciados por um orquestrador, contêineres do Docker pode
 
 - O Armazenamento de Tabela armazena conjuntos de dados estruturados. O Armazenamento de Tabelas é um armazenamento de dados do atributo-chave NoSQL, que permite o rápido desenvolvimento e acesso a grandes quantidades de dados.
 
-**Bancos de dados relacionais e bancos de dados NoSQL.** Existem muitas opções para bancos de dados externos, desde bancos de dados relacionais como SQL Server, PostgreSQL, Oracle ou NoSQL bancos de dados como Azure Cosmos DB, MongoDB, etc. Essas bases de dados não serão explicadas como parte deste guia, uma vez que são um tema completamente diferente.
+**Bancos de dados relacionais e bancos de dados NoSQL.** Há muitas opções para bancos de dados externos, de bancos de dados relacionais como bancos de dados SQL Server, PostgreSQL, Oracle ou NoSQL, como Azure Cosmos DB, MongoDB, etc. Esses bancos de dados não serão explicados como parte deste guia, pois eles são um tópico diferente.
 
 >[!div class="step-by-step"]
->[Próximo](monolithic-applications.md)
->[anterior](soa-applications.md)
+>[Anterior](monolithic-applications.md) 
+> [Avançar](soa-applications.md)

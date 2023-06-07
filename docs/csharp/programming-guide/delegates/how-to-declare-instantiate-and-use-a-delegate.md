@@ -1,17 +1,18 @@
 ---
-title: Como declarar, instanciar e usar um delegado - Guia de Programação C#
+title: Como declarar, instanciar e usar um guia de programação do delegado C#
+description: Saiba como declarar, criar uma instância e usar um delegado. Veja exemplos que abordam o C# 1,0, 2,0 e 3,0 e posterior.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 7ac1d736e19c4dcf1c8408db944505c399762778
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b741b3bc9c03faaa5fa2c01bd8f70d4be9b099c2
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712358"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063660"
 ---
-# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Como declarar, instanciar e usar um Delegate (Guia de Programação C#)
+# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Como declarar, instanciar e usar um delegado (guia de programação C#)
 No C# 1.0 e versões posteriores, é possível declarar delegados conforme mostrado no exemplo a seguir.  
   
  [!code-csharp[csProgGuideDelegates#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#13)]  
@@ -30,7 +31,7 @@ No C# 1.0 e versões posteriores, é possível declarar delegados conforme mostr
   
  [!code-csharp[csProgGuideDelegates#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#31)]  
   
- Para obter mais informações, consulte [Expressões Lambda](../statements-expressions-operators/lambda-expressions.md).  
+ Para obter mais informações, consulte [Expressões Lambda](../../language-reference/operators/lambda-expressions.md).  
   
  O exemplo a seguir ilustra a declaração, instanciação e o uso de um delegado. A classe `BookDB` encapsula um banco de dados de uma livraria que mantém um banco de dados de livros. Ela expõe um método, `ProcessPaperbackBooks`, que localiza todos os livros de bolso no banco de dados e chama um delegado para cada um. O tipo `delegate` usado tem o nome `ProcessBookDelegate`. A classe `Test` usa essa classe para imprimir os títulos e o preço médio dos livros de bolso.  
   
@@ -71,8 +72,8 @@ No C# 1.0 e versões posteriores, é possível declarar delegados conforme mostr
   
      Um delegado pode ser chamado de forma síncrona, como neste exemplo ou de forma assíncrona, usando os métodos `BeginInvoke` e `EndInvoke`.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)
 - [Eventos](../events/index.md)
-- [Delega](./index.md)
+- [Representantes](./index.md)

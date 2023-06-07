@@ -1,16 +1,16 @@
 ---
-title: Como analisar demarcadores de arquivo
+title: 'Como: analisar caminhos de arquivo'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file names [Visual Basic], parsing [Visual Basic]
 - parsing, file paths [Visual Basic]
 ms.assetid: c1bd99c9-8160-456a-b5ab-60a49139b923
-ms.openlocfilehash: 6a959994be3a57795dc9f7e3447fa54bf075d3ec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb7714a8594c0bce344eb2e48ebc5053dc3bfbb4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74335343"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359936"
 ---
 # <a name="how-to-parse-file-paths-in-visual-basic"></a>Como analisar demarcadores de arquivo no Visual Basic
 
@@ -36,10 +36,10 @@ O objeto <xref:Microsoft.VisualBasic.FileIO.FileSystem> oferece uma série de m�
   
      [!code-vb[VbVbcnMyFileSystem#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#55)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A>
 - <xref:System.IO.FileInfo>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A>
-- [Como obter a coleção de arquivos em um diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [Como: obter a coleção de arquivos em um diretório](how-to-get-the-collection-of-files-in-a-directory.md)

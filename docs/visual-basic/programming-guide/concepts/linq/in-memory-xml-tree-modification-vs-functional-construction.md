@@ -1,18 +1,18 @@
 ---
-title: Alteração de memória de árvore XML na compilação funcional (LINQ to XML)
+title: Modificação de árvore XML na memória versus Construção funcional (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: d91c4ebf-6549-43cc-9961-26d4a82f722b
-ms.openlocfilehash: 15c38cdf7ce860b34d8d3e9d59b8f06d80f6edd8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: efdbf51efa0f502ac9991d520defe45bb95678b7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344446"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397603"
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-visual-basic"></a>Modificação da árvore XML na memória versus construção funcional (LINQ to XML) (Visual Basic)
 Modificar uma árvore XML no local é uma abordagem tradicional para alterar a forma de um documento XML. Um aplicativo típico carregar um documento em um armazenamento de dados como os DOM ou [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]; usa uma interface de programação para inserir nós, nós, excluir ou modificar o conteúdo dos nós; e então salva XML para um arquivo ou fluxo em uma rede.  
   
- O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite outra abordagem que é útil em muitos cenários *: construção funcional*. Deleites funcionais de compilação que modificam dados como um problema de transformação, em vez de como tratamento detalhada de um armazenamento de dados. Se você pode ter uma representação dos dados e a transformação com eficiência de um formulário para outro, o resultado é o mesmo como se você recebe um armazenamento de dados e o manipulou de alguma maneira para executar outra forma. Uma chave para a abordagem de construção funcional é passar os resultados de consultas para os construtores <xref:System.Xml.Linq.XDocument> e <xref:System.Xml.Linq.XElement>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]habilita outra abordagem útil em muitos cenários *: construção funcional*. Deleites funcionais de compilação que modificam dados como um problema de transformação, em vez de como tratamento detalhada de um armazenamento de dados. Se você pode ter uma representação dos dados e a transformação com eficiência de um formulário para outro, o resultado é o mesmo como se você recebe um armazenamento de dados e o manipulou de alguma maneira para executar outra forma. Uma chave para a abordagem de construção funcional é passar os resultados de consultas para os construtores <xref:System.Xml.Linq.XDocument> e <xref:System.Xml.Linq.XElement>.  
   
  Em muitos casos você pode escrever código transformacional em uma fração de tempo que iria para manipular o armazenamento de dados, e que o código é mais fácil e mais robusto manter. Nesses casos, mesmo que a abordagem transformacional pode levar mais avançados de processamento, é mais eficiente para modificar dados. Se um desenvolvedor estiver familiarizado com a abordagem funcional, o código resultante é em muitos casos mais fácil de entender. É mais fácil de localizar o código que altera cada parte da árvore.  
   
@@ -74,6 +74,6 @@ Console.WriteLine(newTree)
   
  Este é um exemplo muito simples, mas serve para mostrar a diferença na filosofia entre as duas abordagens. A abordagem mais funcional fornece ganhos de produtividade para transformar documentos XML maiores.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Modificando árvores XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [Modificando árvores XML (LINQ to XML) (Visual Basic)](modifying-xml-trees-linq-to-xml.md)

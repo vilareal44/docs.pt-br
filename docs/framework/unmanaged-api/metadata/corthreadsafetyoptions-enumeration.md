@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dae07d9b-df51-488c-b17e-52d6e48217bd
 topic_type:
 - apiref
-ms.openlocfilehash: 93dd8c56176890d04d792f3c336492e4f232825b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8c0527a7bc3cde7344bf809dc8e6f5a3fac04852
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442474"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007501"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>Enumeração CorThreadSafetyOptions
 
@@ -37,20 +37,20 @@ typedef enum CorThreadSafetyOptions {
 
 ## <a name="members"></a>Membros
 
-|{1&gt;Membro&lt;1}|Descrição|
+|Membro|Descrição|
 |------------|-----------------|
-|`MDThreadSafetyDefault`|Valor padrão. Mesmo que `MDThreadSafetyOff`.|
+|`MDThreadSafetyDefault`|Valor padrão. Igual a `MDThreadSafetyOff`.|
 |`MDThreadSafetyOff`|Indica que um bloqueio de leitor/gravador não pode ser definido.|
 |`MDThreadSafetyOn`|Indica que um bloqueio de leitor/gravador pode ser definido.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
 **Cabeçalho:** CorHdr. h
 
-**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerações de metadados](metadata-enumerations.md)

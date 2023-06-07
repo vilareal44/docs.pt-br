@@ -10,13 +10,13 @@ metadata:
   ms.collection: collection
   author: BillWagner
   ms.author: wiwagn
-  ms.date: 04/21/2020
-  ms.openlocfilehash: e1f4da6baefc39281a6dd4a5558d9f961a8f98a5
-  ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+  ms.date: 07/10/2020
+  ms.openlocfilehash: aa4090f5de075015aae7fdbd85905ec5ace2e757
+  ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82624924"
+  ms.lasthandoff: 07/13/2020
+  ms.locfileid: "86281648"
 highlightedContent:
   items:
   - title: Baixar o .NET
@@ -34,6 +34,9 @@ highlightedContent:
   - title: Novidades nos documentos do .NET
     itemType: whats-new
     url: whats-new/index.yml
+  - title: Azure para desenvolvedores .NET
+    itemType: overview
+    url: azure/index.yml
 conceptualContent:
   title: '.NET: Livre. Plataforma cruzada. Software livre.'
   summary: 'Uma plataforma de desenvolvedor para criar todos os seus aplicativos: da Web, da área de trabalho, móveis, jogos, IoT e muito mais. Compatível com o Windows, o Linux e o macOS.'
@@ -183,6 +186,8 @@ additionalContent:
         text: Xamarin.Android
       - url: /xamarin/xamarin-forms
         text: Xamarin.Forms
+      - url: /azure/developer/mobile-apps
+        text: Desenvolver aplicativos Xamarin com o Azure
     - title: Desktop
       links:
       - url: /uwp

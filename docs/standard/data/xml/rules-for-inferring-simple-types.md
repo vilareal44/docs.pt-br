@@ -3,12 +3,12 @@ title: Regras para inferir tipos simples
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: 17429e77f7764873e607a8feaa62da1cc6e014a4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 571019d13433312a5d31f581c3527aae901bbba7
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710226"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289064"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regras para inferir tipos simples
 Descreve como a classe de <xref:System.Xml.Schema.XmlSchemaInference> infere o tipo de dados para atributos e elementos.  
@@ -42,7 +42,7 @@ Descreve como a classe de <xref:System.Xml.Schema.XmlSchemaInference> infere o t
 |time|O formato de hora W3C.|  
 |date|Os valores do ano são impedidos de 0001 a 9999.|  
 |gYearMonth|O formato gregoriano mês e ano de W3C.|  
-|cadeia de caracteres|Um ou mais caracteres Unicode.|  
+|string|Um ou mais caracteres Unicode.|  
   
 ## <a name="type-promotion"></a>Promoção de tipos  
  A classe de <xref:System.Xml.Schema.XmlSchemaInference> examina valores de atributo e de um elemento de cada vez. Como valores são encontrados, o tipo mais restritivo, o mais sem sinal é inferido. Se um tipo é inferido de um atributo ou um elemento, e um novo valor está localizado que não corresponde ao tipo atualmente inferido, o tipo é inferido alto para um novo tipo que se aplica a ambos tipo atualmente inferido e o novo valor. A classe de <xref:System.Xml.Schema.XmlSchemaInference> considera valores anteriores para elevar o tipo inferido.  
@@ -76,6 +76,6 @@ Os seguintes esquema- está definindo os atributos que são ignorados durante a 
   
 ## <a name="see-also"></a>Veja também
 
-- [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
-- [Inferindo esquemas de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
-- [Regras para inferir tipos de nó e estrutura de esquema](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+- [SOM (Schema Object Model) XML](xml-schema-object-model-som.md)
+- [Inferindo esquemas de documentos XML](inferring-schemas-from-xml-documents.md)
+- [Regras para inferir tipos de nó e estrutura de esquema](rules-for-inferring-schema-node-types-and-structure.md)

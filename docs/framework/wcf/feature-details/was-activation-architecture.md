@@ -2,45 +2,45 @@
 title: Arquitetura de ativação do WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 67ddcd97ac75ddeb0765c38bb9ce7b5e8f039272
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cfbfd91f9e7bc2e1b4f8485d5ae22c1fb2b5228b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184249"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600666"
 ---
 # <a name="was-activation-architecture"></a>Arquitetura de ativação do WAS
-Este tópico itemeiza e discute os componentes do Serviço de Ativação de Processos do Windows (também conhecido como WAS).  
+Este tópico relaciona e discute os componentes do serviço de ativação de processos do Windows (também conhecido como WAS).  
   
 ## <a name="activation-components"></a>Componentes de ativação  
- Was consiste em vários componentes arquitetônicos:  
+ O foi composto por vários componentes de arquitetura:  
   
-- Adaptadores de ouvintes. Os serviços do Windows que recebem mensagens em protocolos específicos de rede e se comunicam com o WAS para encaminhar mensagens recebidas para o processo correto do trabalhador.  
+- Adaptadores de escuta. Os serviços do Windows que recebem mensagens em protocolos de rede específicos e se comunicam com o WAS para rotear mensagens de entrada para o processo de trabalho correto.  
   
-- Foi. O serviço Windows que gerencia a criação e a vida útil dos processos dos trabalhadores.  
+- Deveria. O serviço do Windows que gerencia a criação e o tempo de vida de processos de trabalho.  
   
-- O processo de trabalhador genérico executável (w3wp.exe).  
+- O processo de trabalho genérico executável (w3wp. exe).  
   
-- Gerente de aplicativos. Gerencia a criação e a vida útil dos domínios de aplicativos que hospedam aplicativos dentro do processo do trabalhador.  
+- Gerenciador de aplicativos. Gerencia a criação e o tempo de vida de domínios de aplicativo que hospedam aplicativos dentro do processo de trabalho.  
   
-- Manipuladores de protocolo. Componentes específicos do protocolo que executam no processo do trabalhador e gerenciam a comunicação entre o processo do trabalhador e os adaptadores individuais do ouvinte. Existem dois tipos de manipuladores de protocolo: manipuladores de protocolo de processo e manipuladores de protocolo AppDomain.  
+- Manipuladores de protocolo. Componentes específicos de protocolo que são executados no processo de trabalho e gerenciam a comunicação entre o processo de trabalho e os adaptadores de ouvinte individuais. Existem dois tipos de manipuladores de protocolo: manipuladores de protocolo de processo e manipuladores de protocolo AppDomain.  
   
- Quando o WAS ativa uma instância de processo do trabalhador, ele carrega os manipuladores de protocolo de processo necessários no processo do trabalhador e usa o gerenciador de aplicativos para criar um domínio de aplicativo para hospedar o aplicativo. O domínio do aplicativo carrega o código do aplicativo, bem como os manipuladores de protocolo AppDomain que os protocolos de rede usados pelo aplicativo exigem.  
+ Quando o WAS ativa uma instância de processo de trabalho, ele carrega os manipuladores de protocolo de processo necessários para o processo de trabalho e usa o Gerenciador de aplicativos para criar um domínio de aplicativo para hospedar o aplicativo. O domínio do aplicativo carrega o código do aplicativo, bem como os manipuladores de protocolo AppDomain que os protocolos de rede usados pelo aplicativo exigem.  
   
- ![Captura de tela que mostra a arquitetura WAS.](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
+ ![Captura de tela que mostra a arquitetura do WAS.](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
-### <a name="listener-adapters"></a>Adaptadores de Ouvintes  
- Os adaptadores de ouvinte são serviços individuais do Windows que implementam a lógica de comunicação de rede usada para receber mensagens usando o protocolo de rede no qual eles ouvem. A tabela a seguir lista os adaptadores de ouvinte para protocolos Da Windows Communication Foundation (WCF).  
+### <a name="listener-adapters"></a>Adaptadores de escuta  
+ Os adaptadores de escuta são serviços individuais do Windows que implementam a lógica de comunicação de rede usada para receber mensagens usando o protocolo de rede no qual elas escutam. A tabela a seguir lista os adaptadores de ouvinte para protocolos Windows Communication Foundation (WCF).  
   
-|Nome do serviço do adaptador do ouvinte|Protocolo|Observações|  
+|Nome do serviço do adaptador de ouvinte|Protocolo|Observações|  
 |-----------------------------------|--------------|-----------|  
-|W3SVC|http|Componente comum que fornece ativação HTTP para IIS 7.0 e WCF.|  
+|W3SVC|http|Componente comum que fornece ativação HTTP para o IIS 7,0 e o WCF.|  
 |NetTcpActivator|net.tcp|Depende do serviço NetTcpPortSharing.|  
 |NetPipeActivator|net.pipe||  
-|NetMsmqActivator|net.msmq|Para uso com aplicativos de fila de mensagens baseados em WCF.|  
-|NetMsmqActivator|msmq.formatname|Fornece retrocompatibilidade com aplicativos de fila de mensagens existentes.|  
+|NetMsmqActivator|net.msmq|Para uso com aplicativos baseados no serviço de enfileiramento de mensagens do WCF.|  
+|NetMsmqActivator|msmq.formatname|Fornece compatibilidade com versões anteriores com aplicativos de enfileiramento de mensagens existentes.|  
   
- Os adaptadores de ouvinte para protocolos específicos são registrados durante a instalação no arquivo applicationHost.config, como mostrado no exemplo XML a seguir.  
+ Os adaptadores de escuta para protocolos específicos são registrados durante a instalação no arquivo applicationHost. config, conforme mostrado no exemplo de XML a seguir.  
   
 ```xml  
 <system.applicationHost>  
@@ -59,7 +59,7 @@ Este tópico itemeiza e discute os componentes do Serviço de Ativação de Proc
 ```  
   
 ### <a name="protocol-handlers"></a>Manipuladores de protocolo  
- Os manipuladores de protocolos Process e AppDomain para protocolos específicos estão registrados no arquivo Web.config no nível da máquina.  
+ Manipuladores de protocolo de processo e AppDomain para protocolos específicos são registrados no arquivo Web. config no nível da máquina.  
   
 ```xml  
 <system.web>  
@@ -85,7 +85,7 @@ Este tópico itemeiza e discute os componentes do Serviço de Ativação de Proc
 </system.web>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Configurar o WAS para uso com o WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
+- [Configurar o WAS para uso com o WCF](configuring-the-wpa--service-for-use-with-wcf.md)
 - [Recursos de hospedagem do Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

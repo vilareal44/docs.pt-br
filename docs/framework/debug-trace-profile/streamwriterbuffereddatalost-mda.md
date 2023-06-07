@@ -1,5 +1,6 @@
 ---
 title: MDA streamWriterBufferedDataLost
+description: Examine o MDA (Assistente de depuração gerenciada) streamWriterBufferedDataLost, que pode ser ativado se um StreamWriter não gravar os últimos 1 a 4 KB de dados em um arquivo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - StreamWriter class, data buffering problems
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - data buffering problems
 - streamWriterBufferedDataLost MDA
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
-ms.openlocfilehash: 18b2a5a95756ed125d26b2846c0b1ddc320463ea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c10ea6bb9dc0aaafa2ac1798696579af7592895
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803476"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>MDA streamWriterBufferedDataLost
 O MDA (assistente para depuração gerenciada) de `streamWriterBufferedDataLost` é ativado quando um <xref:System.IO.StreamWriter> é gravado, mas o método <xref:System.IO.StreamWriter.Flush%2A> ou <xref:System.IO.StreamWriter.Close%2A> não é chamado posteriormente antes da destruição da instância do <xref:System.IO.StreamWriter>. Quando esse MDA está habilitado, o runtime determina se todos os dados armazenados em buffer ainda existem no <xref:System.IO.StreamWriter>. Se os dados armazenados em buffer existirem, o MDA será ativado. A chamada aos métodos <xref:System.GC.Collect%2A> e <xref:System.GC.WaitForPendingFinalizers%2A> pode forçar os finalizadores a serem executados. Caso contrário, os finalizadores serão executados em horários aparentemente arbitrários e, possivelmente, não na saída do processo. A execução explícita dos finalizadores com esse MDA habilitado ajudará a reproduzir esse tipo de problema de maneira mais confiável.  
@@ -102,7 +103,7 @@ static WriteToFile()
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.IO.StreamWriter>
 - [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)

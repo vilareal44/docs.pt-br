@@ -26,7 +26,7 @@
               href: painting-with-images-drawings-and-visuals.md
             - name: Visão geral de TileBrush
               href: tilebrush-overview.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: brushes-how-to-topics.md
               items:
                 - name: Animar a cor ou a opacidade de um SolidColorBrush
@@ -70,7 +70,7 @@
           items:
             - name: Visão geral dos objetos de desenho
               href: drawing-objects-overview.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: drawings-how-to-topics.md
               items:
                 - name: Aplicar um GuidelineSet a um desenho
@@ -92,7 +92,7 @@
               href: path-markup-syntax.md
             - name: Visão geral da geometria
               href: geometry-overview.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: geometries-how-to-topics.md
               items:
                 - name: Animar um EllipseGeometry
@@ -130,7 +130,7 @@
           items:
             - name: Visão geral da geração de imagens
               href: imaging-overview.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: imaging-how-to-topics.md
               items:
                 - name: Usar um BitmapImage em XAML
@@ -172,7 +172,7 @@
           items:
             - name: Visão geral de formas e desenho básico no WPF
               href: shapes-and-basic-drawing-in-wpf-overview.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: shapes-how-to-topics.md
               items:
                 - name: Desenhar uma forma fechada usando o elemento Polygon
@@ -192,7 +192,7 @@
           items:
             - name: Visão geral de transformações
               href: transforms-overview.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: transformations-how-to-topics.md
               items:
                 - name: Aplicar uma transformação a um elemento quando ocorre um evento
@@ -215,7 +215,7 @@
                   href: how-to-use-a-matrixtransform-to-create-custom-transforms.md
         - name: Configurações do Registro de renderização dos elementos gráficos
           href: graphics-rendering-registry-settings.md
-        - name: 'Tópicos explicativos '
+        - name: Tópicos explicativos
           href: graphics-how-to-topics.md
           items:
             - name: Animar um retângulo
@@ -237,7 +237,7 @@
           href: 3-d-transformations-overview.md
         - name: Maximizar desempenho 3D do WPF
           href: maximize-wpf-3d-performance.md
-        - name: 'Tópicos explicativos '
+        - name: Tópicos explicativos
           href: 3-d-graphics-how-to-topics.md
           items:
             - name: Criar uma cena 3D
@@ -299,7 +299,7 @@
           href: timing-behaviors-overview.md
         - name: Visão geral dos eventos de tempo
           href: timing-events-overview.md
-        - name: 'Tópicos explicativos '
+        - name: Tópicos explicativos
           href: animation-and-timing-how-to-topics.md
           items:
             - name: Acelerar ou desacelerar uma animação
@@ -402,7 +402,7 @@
     - name: Visão geral de multimídia
       href: multimedia-overview.md
       items:
-        - name: 'Tópicos explicativos '
+        - name: Tópicos explicativos
           href: audio-and-video-how-to-topics.md
           items:
             - name: 'Controlar um MediaElement (reproduzir, pausar, parar, volume e velocidade)'
@@ -426,7 +426,7 @@
           href: using-drawingvisual-objects.md
         - name: 'Tutorial: Hospedar objetos visuais em um aplicativo Win32'
           href: tutorial-hosting-visual-objects-in-a-win32-application.md
-        - name: 'Tópicos explicativos '
+        - name: Tópicos explicativos
           href: visual-layer-programming-how-to-topics.md
           items:
             - name: Obter o deslocamento de um visual

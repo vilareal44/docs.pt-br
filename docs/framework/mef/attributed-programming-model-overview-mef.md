@@ -1,5 +1,6 @@
 ---
 title: Visão geral do modelo de programação atribuído (MEF)
+description: Introdução ao modelo de programação atribuído, que é o modelo de programação padrão para o Managed Extensibility Framework (MEF) no .NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-ms.openlocfilehash: c6b1093d2e821a55cc5513b077a270748a780b71
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: aea3a19ffe6f177901e5c0839b618bb36f573beb
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347622"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281362"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Visão geral do modelo de programação atribuído (MEF)
 
@@ -341,7 +342,7 @@ Quando um valor importado é solicitado pelo construtor de uma parte, esse objet
 
 O atributo `Import` especifica um requisito para a parte funcionar. Se uma importação não puder ser atendida, a composição dessa parte falhará e a parte não estará disponível.
 
-Você pode especificar que uma importação é *optional* usando a propriedade `AllowDefault`. Nesse caso, a composição terá sucesso mesmo se a importação não corresponder a nenhuma exportação disponível, e a propriedade de importação será definida como o padrão para seu tipo de propriedade (`null` para propriedades de objeto `false` , para boolianos ou zero para propriedades numéricas). A classe a seguir usa uma importação opcional.
+Você pode especificar que uma importação é *optional* usando a propriedade `AllowDefault`. Nesse caso, a composição terá sucesso mesmo se a importação não corresponder a nenhuma exportação disponível, e a propriedade de importação será definida como o padrão para seu tipo de propriedade ( `null` para propriedades de objeto, `false` para boolianos ou zero para propriedades numéricas). A classe a seguir usa uma importação opcional.
 
 ```vb
 Public Class MyClass1

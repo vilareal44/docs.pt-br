@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f86ff37-2dab-4e64-819a-76b3bfe828ff
 topic_type:
 - apiref
-ms.openlocfilehash: 0b613ebacdff82a29fdbc3f4caa0f2b8bb5d3f6a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29f2401e2e3faccae05ca5249fcd7d9e89aacb46
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176156"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007605"
 ---
 # <a name="cornativelinktype-enumeration"></a>Enumeração CorNativeLinkType
 Fornece valores que indicam o tipo vinculado em código nativo.  
@@ -43,21 +43,21 @@ typedef enum
 |Membro|Descrição|  
 |------------|-----------------|  
 |`nltNone`|Indica que nenhuma das palavras-chave está especificada.|  
-|`nltAnsi`|Indica que uma palavra-chave ANSI é especificada.|  
-|`nltUnicode`|Indica que uma palavra-chave Unicode é especificada|  
-|`nltAuto`|Indica que uma palavra-chave automática é especificada.|  
-|`nltOle`|Indica que uma palavra-chave OLE é especificada.|  
+|`nltAnsi`|Indica que uma palavra-chave ANSI está especificada.|  
+|`nltUnicode`|Indica que uma palavra-chave Unicode está especificada|  
+|`nltAuto`|Indica que uma palavra-chave auto está especificada.|  
+|`nltOle`|Indica que uma palavra-chave OLE está especificada.|  
 |`nltMaxValue`|Não usado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerações de metadados](metadata-enumerations.md)

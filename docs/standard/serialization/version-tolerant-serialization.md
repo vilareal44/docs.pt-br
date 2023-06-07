@@ -15,10 +15,10 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
 ms.openlocfilehash: afc822e1f8873bac069f6634fdf1d4665d392e69
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "83762585"
 ---
 # <a name="version-tolerant-serialization"></a>Serialização tolerante a versão
@@ -281,7 +281,7 @@ Para definir que um tipo seja compatível com mecanismos de serialização futur
 - Sempre defina a propriedade **VersionAdded** no atributo **OptionalFieldAttribute** corretamente.
 - Evite controle de versão ramificado.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.SerializableAttribute>
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>

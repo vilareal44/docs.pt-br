@@ -5,12 +5,12 @@ author: FIVIL
 ms.author: tagoo
 ms.date: 04/28/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 27263931ff0338e194c8fd3d9ec5ba59bfafd9fe
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 5c1ad01ea15a9c4352cf7f87e5fba3bf74b4679c
+ms.sourcegitcommit: 2987e241e2f76c9248d2146bf2761a33e2c7a882
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507778"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88228731"
 ---
 # <a name="use-simd-accelerated-numeric-types"></a>Usar tipos numéricos acelerados por SIMD
 
@@ -22,13 +22,13 @@ Os tipos acelerados do .NET SIMD incluem os seguintes tipos:
 
 - Os tipos <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3> e <xref:System.Numerics.Vector4>, que representam vetores com 2, 3 e 4 valores de <xref:System.Single>.
 
-- Dois tipos de matriz <xref:System.Numerics.Matrix3x2>,, que representam uma matriz 3x2 e <xref:System.Numerics.Matrix4x4>, que representa uma matriz 4x4 de <xref:System.Single> valores.
+- Dois tipos de matriz, <xref:System.Numerics.Matrix3x2> , que representam uma matriz 3x2 e <xref:System.Numerics.Matrix4x4> , que representa uma matriz 4x4 de <xref:System.Single> valores.
 
 - O <xref:System.Numerics.Plane> tipo, que representa um plano em espaço tridimensional usando <xref:System.Single> valores.
 
 - O <xref:System.Numerics.Quaternion> tipo, que representa um vetor que é usado para codificar rotações físicas tridimensionais usando <xref:System.Single> valores.
 
-- O tipo <xref:System.Numerics.Vector%601>, que representa um vetor de um tipo numérico especificado e fornece um amplo conjunto de operadores que se beneficiam de suporte a SIMD. A contagem de uma <xref:System.Numerics.Vector%601> instância é fixa durante o tempo de vida de um aplicativo, mas <xref:System.Numerics.Vector%601.Count%2A?displayProperty=nameWithType> seu valor depende da CPU da máquina que executa o código.
+- O tipo <xref:System.Numerics.Vector%601>, que representa um vetor de um tipo numérico especificado e fornece um amplo conjunto de operadores que se beneficiam de suporte a SIMD. A contagem de uma <xref:System.Numerics.Vector%601> instância é fixa durante o tempo de vida de um aplicativo, mas seu valor <xref:System.Numerics.Vector%601.Count%2A?displayProperty=nameWithType> depende da CPU da máquina que executa o código.
 
   > [!NOTE]
   > O <xref:System.Numerics.Vector%601> tipo não está incluído na .NET Framework. Você deve instalar o pacote [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors) do NuGet para obter acesso a esse tipo.
@@ -37,31 +37,31 @@ Os tipos com aceleração SIMD são implementados de forma que possam ser usados
 
 ## <a name="how-to-use-simd"></a>Como usar o SIMD?
 
-Antes de executar algoritmos de SIMD personalizados, é possível verificar se o computador host dá suporte a <xref:System.Numerics.Vector.IsHardwareAccelerated?displayProperty=nameWithType>SIMD usando o, <xref:System.Boolean>que retorna um. Isso não garante que a aceleração SIMD esteja habilitada para um tipo específico, mas é um indicador de que há suporte para alguns tipos.
+Antes de executar algoritmos de SIMD personalizados, é possível verificar se o computador host dá suporte a SIMD usando <xref:System.Numerics.Vector.IsHardwareAccelerated?displayProperty=nameWithType> o, que retorna um <xref:System.Boolean> . Isso não garante que a aceleração SIMD esteja habilitada para um tipo específico, mas é um indicador de que há suporte para alguns tipos.
 
 ## <a name="simple-vectors"></a>Vetores simples
 
-Os tipos mais primitivos de SIMD mais rápidos no .NET <xref:System.Numerics.Vector2>são <xref:System.Numerics.Vector3>, e <xref:System.Numerics.Vector4> tipos, que representam vetores com 2, 3 e 4 <xref:System.Single> valores. O exemplo a seguir <xref:System.Numerics.Vector2> usa para adicionar dois vetores.
+Os tipos mais primitivos de SIMD mais rápidos no .NET são <xref:System.Numerics.Vector2> , <xref:System.Numerics.Vector3> e <xref:System.Numerics.Vector4> tipos, que representam vetores com 2, 3 e 4 <xref:System.Single> valores. O exemplo a seguir usa <xref:System.Numerics.Vector2> para adicionar dois vetores.
 
 ```csharp
 var v1 = new Vector2(0.1f, 0.2f);
 var v2 = new Vector2(1.1f, 2.2f);
-var vResutl = v1 + v2;
+var vResult = v1 + v2;
 ```
 
-Também é possível usar vetores do .net para calcular outras propriedades matemáticas de vetores, como `Dot product`, `Transform` `Clamp` e assim por diante.
+Também é possível usar vetores do .net para calcular outras propriedades matemáticas de vetores, como `Dot product` , `Transform` `Clamp` e assim por diante.
 
 ```csharp
 var v1 = new Vector2(0.1f, 0.2f);
 var v2 = new Vector2(1.1f, 2.2f);
-var vResutl1 = Vector2.Dot(v1, v2);
-var vResutl2 = Vector2.Distance(v1, v2);
-var vResutl3 = Vector2.Clamp(v1, Vector2.Zero, Vector2.One);
+var vResult1 = Vector2.Dot(v1, v2);
+var vResult2 = Vector2.Distance(v1, v2);
+var vResult3 = Vector2.Clamp(v1, Vector2.Zero, Vector2.One);
 ```
 
 ## <a name="matrix"></a>Matriz
 
-<xref:System.Numerics.Matrix3x2>, que representa uma matriz 3x2 e <xref:System.Numerics.Matrix4x4>, que representa uma matriz 4x4. Pode ser usado para cálculos relacionados à matriz. O exemplo a seguir demonstra a multiplicação de uma matriz em sua matriz de Transpose de correspondente usando o SIMD.
+<xref:System.Numerics.Matrix3x2>, que representa uma matriz 3x2 e <xref:System.Numerics.Matrix4x4> , que representa uma matriz 4x4. Pode ser usado para cálculos relacionados à matriz. O exemplo a seguir demonstra a multiplicação de uma matriz em sua matriz de Transpose de correspondente usando o SIMD.
 
 ```csharp
 var m1 = new Matrix4x4(
@@ -74,11 +74,11 @@ var m2 = Matrix4x4.Transpose(m1);
 var mResult = Matrix4x4.Multiply(m1, m2);
 ```
 
-## <a name="vectort"></a>>\<de vetor T
+## <a name="vectort"></a>Vetor\<T>
 
 O <xref:System.Numerics.Vector%601> oferece a capacidade de usar vetores mais longos. A contagem de uma <xref:System.Numerics.Vector%601> instância é fixa, mas seu valor <xref:System.Numerics.Vector%601.Count%2A?displayProperty=nameWithType> depende da CPU da máquina que executa o código.
 
-O exemplo a seguir demonstra como adicionar elementos de <xref:System.Numerics.Vector%601>matrizes longos usando.
+O exemplo a seguir demonstra como adicionar elementos de matrizes longos usando <xref:System.Numerics.Vector%601> .
 
 ```csharp
 double[] SimdVectorProd(double[] left, double[] right)

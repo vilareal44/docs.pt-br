@@ -6,17 +6,17 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: 6751513b72f732bd7392de11a203467a9ead1bce
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a07d7c6da71f4195cb1641ae8ac7585b4158ed63
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743350"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600965"
 ---
 # <a name="wcf-security-terminology"></a>Terminologia de segurança do WCF
 Parte da terminologia usada para discutir a segurança pode não ser familiar. Este tópico fornece breves explicações de alguns termos de segurança, mas não pretende fornecer uma documentação abrangente para cada item.  
   
- Para obter mais informações sobre os termos usados na documentação do Windows Communication Foundation (WCF), consulte [conceitos fundamentais de Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Para obter mais informações sobre os termos usados na documentação do Windows Communication Foundation (WCF), consulte [conceitos fundamentais de Windows Communication Foundation](../fundamental-concepts.md).  
   
  lista de controle de acesso (ACL)  
  Uma lista de proteções de segurança que se aplica a um objeto. (Um objeto pode ser um arquivo, processo, evento ou qualquer outra coisa que tenha um descritor de segurança.) Uma entrada em uma ACL é uma ACE (entrada de controle de acesso). Há dois tipos de ACLs: discricionárias e de sistema.  
@@ -56,7 +56,7 @@ Parte da terminologia usada para discutir a segurança pode não ser familiar. E
  assinatura digital  
  Dados que associam a identidade de um remetente às informações que estão sendo enviadas. Uma assinatura digital pode ser agrupada com qualquer mensagem, arquivo ou outra informação codificada digitalmente ou transmitida separadamente. As assinaturas digitais são usadas em ambientes de chave pública e fornecem serviços de autenticação e integridade.  
   
- {1&gt;encoding&lt;1}  
+ codificando  
  O processo de transformar dados em um fluxo de bits. A codificação faz parte do processo de serialização que converte dados em um fluxo de uns e zeros.  
   
  par de chaves do Exchange  
@@ -74,8 +74,8 @@ Parte da terminologia usada para discutir a segurança pode não ser familiar. E
  autoridade de segurança local (LSA)  
  Um subsistema protegido que autentica e faz logon de usuários no sistema local. O LSA também mantém informações sobre todos os aspectos da segurança local em um sistema, coletivamente conhecido como a diretiva de segurança local do sistema.  
   
- Negociar  
- Um SSP (provedor de suporte de segurança) que atua como uma camada de aplicativo entre a interface do provedor de suporte de segurança (SSPI) e os outros SSPs. Quando um aplicativo chama o SSPI para fazer logon em uma rede, ele pode especificar um SSP para processar a solicitação. Se o aplicativo especificar `Negotiate`, `Negotiate` analisará a solicitação e escolherá o melhor SSP para lidar com a solicitação com base na política de segurança configurada pelo cliente.  
+ Negotiate  
+ Um SSP (provedor de suporte de segurança) que atua como uma camada de aplicativo entre a interface do provedor de suporte de segurança (SSPI) e os outros SSPs. Quando um aplicativo chama o SSPI para fazer logon em uma rede, ele pode especificar um SSP para processar a solicitação. Se o aplicativo especificar `Negotiate` , o `Negotiate` analisará a solicitação e escolherá o melhor SSP para lidar com a solicitação com base na política de segurança configurada pelo cliente.  
   
  nonce  
  Um valor gerado aleatoriamente usado para anular ataques de "reprodução".  
@@ -98,7 +98,7 @@ Parte da terminologia usada para discutir a segurança pode não ser familiar. E
  chave privada  
  A metade secreta de um par de chaves usado em um algoritmo de chave pública. As chaves privadas normalmente são usadas para criptografar uma chave de sessão simétrica, assinar digitalmente uma mensagem ou descriptografar uma mensagem que foi criptografada com a chave pública correspondente. Consulte também "chave pública".  
   
- processo  
+ process  
  O contexto de segurança no qual um aplicativo é executado. Normalmente, o contexto de segurança é associado a um usuário, de modo que todos os aplicativos em execução em um determinado processo assumem as permissões e os privilégios do usuário proprietário.  
   
  par de chaves pública/privada  
@@ -137,13 +137,13 @@ Parte da terminologia usada para discutir a segurança pode não ser familiar. E
  SSPI (interface do provedor de suporte de segurança)  
  Uma interface comum entre aplicativos de nível de transporte, como a RPC (chamada de procedimento remoto) da Microsoft e provedores de segurança, como a segurança distribuída do Windows. O SSPI permite que um aplicativo de transporte chame um de vários provedores de segurança para obter uma conexão autenticada. Essas chamadas não exigem conhecimento extensivo dos detalhes do protocolo de segurança.  
   
- Serviço de token de segurança  
+ serviço de token de segurança  
  Serviços projetados para emitir e gerenciar tokens de segurança personalizados (tokens emitidos) em um cenário de multiatendimento. Os tokens personalizados geralmente são tokens SAML (Security Asserties Markup Language) que incluem uma credencial personalizada.  
   
  certificado do servidor  
  Refere-se a um certificado usado para autenticação de servidor, como autenticar um servidor Web em um navegador da Web. Quando um cliente de navegador da Web tenta acessar um servidor Web seguro, o servidor envia seu certificado ao navegador para permitir que ele verifique a identidade do servidor.  
   
- privado  
+ sessão  
  Uma troca de mensagens sob a proteção de uma única peça do material de chaveamento. Por exemplo, as sessões SSL usam uma única chave para enviar várias mensagens por essa chave.  
   
  chave de sessão  
@@ -183,6 +183,6 @@ Parte da terminologia usada para discutir a segurança pode não ser familiar. E
   
 ## <a name="see-also"></a>Consulte também
 
-- [Conceitos fundamentais do Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md)
-- [Conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Conceitos fundamentais do Windows Communication Foundation](../fundamental-concepts.md)
+- [Conceitos de segurança](security-concepts.md)
 - [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

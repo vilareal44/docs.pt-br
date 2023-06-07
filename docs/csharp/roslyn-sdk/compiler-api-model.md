@@ -1,14 +1,14 @@
 ---
 title: Conceitos e modelo de objeto do SDK do .NET Compiler Platform
 description: Esta visão geral fornece o contexto necessário para trabalhar efetivamente com o SDK do .NET Compiler. Você aprenderá sobre as camadas de API, os principais tipos envolvidos e o modelo de objeto geral.
-ms.date: 10/10/2017
+ms.date: 07/13/2020
 ms.custom: mvc
-ms.openlocfilehash: 529ce6fbdef22964251c8b22abbd5d8aadab633d
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: a65d282dd3c58279bbfd635c0386d50ce3f30055
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975934"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374462"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Entender o modelo do SDK do .NET Compiler Platform
 
@@ -24,27 +24,25 @@ Cada fase desse pipeline é um componente separado. Primeiro, a fase de análise
 
 ![API do pipeline do compilador fornece acesso a cada etapa que faz parte do pipeline do compilador](media/compiler-api-model/compiler-pipeline-api.png)
 
-Correspondente a cada uma dessas fases, o SDK do .NET Compiler Platform expõe um modelo de objeto que permite o acesso às informações da fase. A fase de análise expõe uma árvore de sintaxe, a fase de declaração expõe uma tabela de símbolos hierárquica, a fase de associação expõe o resultado da análise semântica do compilador e a fase de emissão é uma API que gera códigos de bytes de IL.
+Correspondente a cada uma dessas fases, o SDK do .NET Compiler Platform expõe um modelo de objeto que permite o acesso às informações da fase. A fase de análise expõe uma árvore de sintaxe, a fase de declaração expõe uma tabela de símbolos hierárquica, a fase de ligação expõe o resultado da análise semântica do compilador e a fase de emissão é uma API que produz códigos de bytes de IL.
 
 ![os serviço de linguagem disponíveis na API do compilador em cada etapa do pipeline do compilador](media/compiler-api-model/compiler-pipeline-lang-svc.png)
 
 Cada compilador combina esses componentes como um único inteiro de ponta a ponta.
 
-Essas APIs são as mesmas usadas pelo Visual Studio. Por exemplo, os recursos de formatação e estrutura de tópicos do código usam as árvores de sintaxe, o Pesquisador de Objetos e os recursos de navegação usam a tabela de símbolos, as refatorações e o recurso Ir para Definição usam o modelo semântico e o recurso Editar e Continuar usa todos eles, incluindo a API de Emissão.
+Essas APIs são as mesmas usadas pelo Visual Studio. Por exemplo, os recursos de estrutura de tópicos e formatação do código usam as árvores de sintaxe, o **pesquisador de objetos**e os recursos de navegação usam a tabela de símbolos, refatoração e **ir para definição** usam o modelo semântico, e **Editar e continuar** usa todos eles, incluindo a API de emissão.
 
 ## <a name="api-layers"></a>Camadas de API
 
-O SDK do .NET Compiler consiste em duas camadas principais de APIs: APIs do compilador e APIs dos workspaces.
-
-![as camadas de API representadas pelas APIs do pipeline do compilador](media/compiler-api-model/api-layers.png)
+O SDK do compilador .NET consiste em várias camadas de APIs: APIs de compilador, APIs de diagnóstico, APIs de script e APIs de espaços de trabalho.
 
 ### <a name="compiler-apis"></a>APIs do compilador
 
-A camada do compilador contém os modelos de objeto que correspondem às informações expostas em cada fase do pipeline do compilador, tanto sintáticas quanto semânticas. A camada do compilador também contém um instantâneo imutável de uma única invocação de um compilador, incluindo referências de assembly, opções do compilador e arquivos de código-fonte. Há duas APIs distintas que representam a linguagem C# e a linguagem Visual Basic. Essas duas APIs são semelhantes na forma, mas adaptadas para alta fidelidade a cada linguagem individual. Essa camada não tem dependências em componentes do Visual Studio.
+A camada do compilador contém os modelos de objeto que correspondem às informações expostas em cada fase do pipeline do compilador, tanto sintáticas quanto semânticas. A camada do compilador também contém um instantâneo imutável de uma única invocação de um compilador, incluindo referências de assembly, opções do compilador e arquivos de código-fonte. Há duas APIs distintas que representam a linguagem C# e a linguagem Visual Basic. As duas APIs são semelhantes em forma, mas adaptadas para alta fidelidade a cada idioma individual. Essa camada não tem dependências em componentes do Visual Studio.
 
 ### <a name="diagnostic-apis"></a>APIs de diagnóstico
 
-Como parte de sua análise, o compilador pode produzir um conjunto de diagnósticos que abrangem tudo, desde a sintaxe, semântica e erros de atribuição definitiva a vários diagnósticos de avisos e informativos. A camada de API do Compilador expõe o diagnóstico por meio de uma API extensível que permite que os analisadores definidos pelo usuário sejam conectados ao processo de compilação. Ela possibilita que o diagnóstico definido pelo usuário, como aqueles gerados por ferramentas como o StyleCop ou FxCop, seja produzido junto com o diagnóstico definido pelo compilador. A produção de diagnóstico dessa maneira tem o benefício da integração natural a ferramentas como o MSBuild e Visual Studio, que dependem do diagnóstico para experiências como interrupção de um build com base na política, exibição de rabiscos em tempo real no editor e sugestão de correções de código.
+Como parte de sua análise, o compilador pode produzir um conjunto de diagnósticos que abrangem tudo, desde a sintaxe, semântica e erros de atribuição definitiva a vários diagnósticos de avisos e informativos. A camada de API do Compilador expõe o diagnóstico por meio de uma API extensível que permite que os analisadores definidos pelo usuário sejam conectados ao processo de compilação. Ela possibilita que o diagnóstico definido pelo usuário, como aqueles gerados por ferramentas como o StyleCop ou FxCop, seja produzido junto com o diagnóstico definido pelo compilador. A produção de diagnóstico dessa maneira tem o benefício de integrar naturalmente com ferramentas como o MSBuild e o Visual Studio, que dependem de diagnósticos para experiências como interromper uma compilação com base na política e mostrar rabiscos ao vivo no editor e sugerir correções de código.
 
 ### <a name="scripting-apis"></a>APIs de script
 

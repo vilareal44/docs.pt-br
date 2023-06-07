@@ -6,12 +6,12 @@ helpviewer_keywords:
 - events [Visual Basic], custom
 - custom events [Visual Basic]
 ms.assetid: 998b6a90-67c5-4d2c-8b11-366d3e355505
-ms.openlocfilehash: 8d73d9c4590afb33e7176f647069cafcb3a9d7d8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a9f9529d468a036d81c4e436429cbdb3207efd6e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345141"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405151"
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>Como declarar eventos personalizados para evitar bloqueio (Visual Basic)
 Há várias circunstâncias em que é importante que um manipulador de eventos não bloqueie os manipuladores de eventos subsequentes. Eventos personalizados permitem que o evento chame seus manipuladores de eventos de forma assíncrona.  
@@ -21,15 +21,15 @@ Há várias circunstâncias em que é importante que um manipulador de eventos n
  Em vez de usar a implementação padrão de eventos que Visual Basic fornece, você pode usar um evento personalizado para executar os manipuladores de eventos de forma assíncrona.  
   
 ## <a name="example"></a>Exemplo  
- Neste exemplo, o acessador `AddHandler` adiciona o delegado para cada manipulador do evento `Click` a um <xref:System.Collections.ArrayList> armazenado no campo `EventHandlerList`.  
+ Neste exemplo, o `AddHandler` acessador adiciona o delegado para cada manipulador do `Click` evento a um <xref:System.Collections.ArrayList> armazenado no `EventHandlerList` campo.  
   
- Quando o código gera o evento `Click`, o acessador `RaiseEvent` invoca todos os delegados do manipulador de eventos de forma assíncrona usando o método <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A>. Esse método invoca cada manipulador em um thread de trabalho e retorna imediatamente, portanto, os manipuladores não podem bloquear um ao outro.  
+ Quando o código gera o `Click` evento, o `RaiseEvent` acessador invoca todos os delegados do manipulador de eventos de forma assíncrona usando o <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A> método. Esse método invoca cada manipulador em um thread de trabalho e retorna imediatamente, portanto, os manipuladores não podem bloquear um ao outro.  
   
  [!code-vb[VbVbalrEvents#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#27)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.ArrayList>
 - <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A>
-- [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md)
-- [Como declarar eventos personalizados para conservar memória](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [Eventos](index.md)
+- [Como declarar eventos personalizados para conservar memória](how-to-declare-custom-events-to-conserve-memory.md)

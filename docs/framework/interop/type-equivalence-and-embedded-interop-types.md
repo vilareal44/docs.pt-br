@@ -1,5 +1,6 @@
 ---
 title: Equivalência de tipo e tipos de interoperabilidade inseridos
+description: Entenda a equivalência de tipo entre os tipos .NET e os membros com um assembly gerenciado e os tipos COM que são inseridos nesse assembly. Para o .NET 4 e superior.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - type equivalence
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - primary interop assemblies,not necessary in CLR version 4
 - NoPIA
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
-ms.openlocfilehash: ee9d2d94d62f262ef61edc66ce915e1227532d67
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2d572133c42f01af7d50f6f771588f5173853f9a
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126402"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282002"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Equivalência de tipo e tipos de interoperabilidade inseridos
 

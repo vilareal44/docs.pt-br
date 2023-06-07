@@ -1,5 +1,6 @@
 ---
-title: <value> - Guia de programação C#
+title: <value> -Guia de programação C#
+description: Saiba mais sobre o XML <value> Tags. Essa marca permite descrever o valor que uma propriedade representa.
 ms.date: 07/20/2015
 f1_keywords:
 - <value>
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - <value> C# XML tag
 - value C# XML tag
 ms.assetid: 08dbadaf-9ab6-43d9-9493-98e43bed199a
-ms.openlocfilehash: 120805346672738e614743ab8c98388b8dbac0f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d8294b477d7067653c71d1ec2047a85a0bfe6d02
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793345"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380768"
 ---
-# <a name="value-c-programming-guide"></a>\<valor> (guia de programação C#)
+# <a name="value-c-programming-guide"></a>\<value>(Guia de programação C#)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,9 +31,9 @@ ms.locfileid: "76793345"
 
 ## <a name="remarks"></a>Comentários
 
-A marca \<value> permite descrever o valor que uma propriedade representa. Observe que quando você adicionar uma propriedade via assistente de código no [ \<](./summary.md) ambiente de desenvolvimento do Visual Studio .NET, ele adicionará um resumo>tag para a nova propriedade. Então, você deve adicionar manualmente uma marca \<value> para descrever o valor que a propriedade representa.
+A `<value>` marca permite descrever o valor que uma propriedade representa. Quando você adiciona uma propriedade por meio do assistente de código no ambiente de desenvolvimento .NET do Visual Studio, ela adiciona uma [\<summary>](./summary.md) marca para a nova propriedade. Em seguida, você deve adicionar manualmente uma `<value>` marca para descrever o valor que a propriedade representa.
 
-Compilar com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação para um arquivo.
+Compile com [-Doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.
 
 ## <a name="example"></a>Exemplo
 

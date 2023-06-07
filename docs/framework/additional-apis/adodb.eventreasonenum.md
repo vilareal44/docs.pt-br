@@ -1,5 +1,6 @@
 ---
 title: Enumeração EventReason (adodb)
+description: Obtenha informações sobre a enumeração EventReason no .NET. Essa enumeração está no namespace ADODB e no assembly ADODB (na biblioteca adodb.dll).
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,12 +10,12 @@ api_location:
 - adodb.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 0d02fb683335cf0db7d73d9d3ea545e65ca384a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbb616625777e0193af4da10770502da904f401a
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675462"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989891"
 ---
 # <a name="eventreason-enumeration"></a>Enumeração EventReason
 
@@ -25,7 +26,7 @@ public enum EventReasonEnum
 
 ## <a name="members"></a>Membros
 
-| Nome do membro  | Descrição  |
+| Nome do membro  | Description  |
 |---|---|
 |adRsnAddNew  |   |
 |adRsnDelete  |   |
@@ -46,4 +47,4 @@ public enum EventReasonEnum
 
 **Namespace:** `adodb`
 
-**Assembly:** adodb (em ADODB.)
+**Assembly:** ADODB (no adodb.dll)

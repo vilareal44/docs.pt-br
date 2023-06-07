@@ -1,5 +1,6 @@
 ---
-title: Como registrar informações em log sobre serviços
+title: 'Como: Registrar em log informações sobre serviços'
+description: Saiba como registrar em log informações sobre serviços. Defina a propriedade AutoLog se desejar que o projeto de serviço do Windows interaja com o log de eventos do aplicativo.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: 3c974d5a98f8056e45899b109878e5a28ab2938e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6ebce5464dc25ba4101b3898ee791714f8efc5d6
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053616"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925742"
 ---
-# <a name="how-to-log-information-about-services"></a>Como registrar informações em log sobre serviços
+# <a name="how-to-log-information-about-services"></a>Como: Registrar em log informações sobre serviços
 Por padrão, todos os projetos de Serviço Windows têm a capacidade de interagir com o log de eventos do aplicativo e gravar informações e exceções. A propriedade <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> é usada para indicar se você deseja essa funcionalidade em seu aplicativo. Por padrão, o registro em log é habilitado para qualquer serviço criado com o modelo de projeto de Serviço Windows. Você pode usar uma forma estática da classe <xref:System.Diagnostics.EventLog> para gravar informações de serviço em um log sem precisar criar uma instância de um componente <xref:System.Diagnostics.EventLog> nem registrar uma fonte manualmente.  
   
  O instalador do serviço registra automaticamente cada serviço no projeto como uma fonte de eventos válida no log do aplicativo no computador no qual o serviço está instalado, quando o registro em log está habilitado. O serviço registra informações sempre que é iniciado, interrompido, colocado em pausa, retomado, instalado ou desinstalado. Ele também registra as falhas que ocorrem. Você não precisa escrever nenhum código para gravar entradas no log ao usar o comportamento padrão. O serviço faz isso automaticamente.  
@@ -69,6 +70,6 @@ Por padrão, todos os projetos de Serviço Windows têm a capacidade de interagi
     [!code-csharp[VbRadconService#15](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#15)]
     [!code-vb[VbRadconService#15](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#15)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Introdução aos aplicativos de serviço do Windows](introduction-to-windows-service-applications.md)
+- [Introdução a aplicativos do Serviço Windows](introduction-to-windows-service-applications.md)

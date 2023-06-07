@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50e04026-4d4a-47d9-96c1-f4677d6d938b
 topic_type:
 - apiref
-ms.openlocfilehash: 06ff6a1885a5e9bb819c2897aaf85e5c2b9b1147
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 44439eda62f85c32893b73f17bd057195cf6b2e1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437246"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503543"
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a>Método IMetaDataImport::GetNativeCallConvFromSig
 Obtém a Convenção de chamada nativa para o método representado pelo ponteiro de assinatura especificado.  
@@ -40,22 +40,22 @@ HRESULT GetNativeCallConvFromSig (
  no Um ponteiro para a assinatura de metadados do método para o qual retornar a Convenção de chamada.  
   
  `cbSig`  
- no O tamanho em bytes de `pvSig`.  
+ no O tamanho em bytes de `pvSig` .  
   
  `pCallConv`  
  fora Um ponteiro para a Convenção de chamada nativa.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
  **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.CallingConvention>
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

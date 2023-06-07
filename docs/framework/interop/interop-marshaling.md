@@ -1,17 +1,18 @@
 ---
 title: Realizando marshaling de interoperabilidade
+description: Introdução ao marshaling de interoperabilidade, que governa o modo como os dados são passados em argumentos de método e valores de retorno entre memória gerenciada e não gerenciada durante chamadas.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marshaling, COM interop
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-ms.openlocfilehash: 70514811a9d236dc485f64fc34297cdb057a1512
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ca733d59abc4ca3d9d470b054ee9e34b5084ae38
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124281"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618968"
 ---
 # <a name="interop-marshaling"></a>Realizando marshaling de interoperabilidade
 
@@ -122,8 +123,8 @@ Algumas chamadas não gerenciadas podem ser canalizadas por SOAP, assim como as 
 |[Comportamento de marshaling padrão](default-marshaling-behavior.md)|Descreve as regras que o serviço de marshaling de interoperabilidade usa para realizar marshaling de dados.|
 |[Marshaling de dados com invocação de plataforma](marshaling-data-with-platform-invoke.md)|Descreve como declarar parâmetros de método e passar argumentos para funções exportadas por bibliotecas não gerenciadas.|
 |[Realizando marshaling em dados com interoperabilidade COM](marshaling-data-with-com-interop.md)|Descreve como personalizar os wrappers COM para alterar o comportamento de marshaling.|
-|[Como: migrar código gerenciador do DCOM para o WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Descreve como migrar do DCOM para o WCF.|
-|[Como mapear HRESULTs e exceções](how-to-map-hresults-and-exceptions.md)|Descreve como mapear exceções personalizadas para HRESULTs e fornece o mapeamento completo de cada HRESULT para a respectiva classe de exceção comparável no .NET Framework.|
+|[Como: Migrar código DCOM gerenciado para o WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Descreve como migrar do DCOM para o WCF.|
+|[Como: Mapear HRESULTs e exceções](how-to-map-hresults-and-exceptions.md)|Descreve como mapear exceções personalizadas para HRESULTs e fornece o mapeamento completo de cada HRESULT para a respectiva classe de exceção comparável no .NET Framework.|
 |[Interoperação usando tipos genéricos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|Descreve quais ações têm suporte ao usar tipos genéricos para interoperabilidade COM.|
 |[Interoperação com código não gerenciado](index.md)|Descreve os serviços de interoperabilidade fornecidos pelo Common Language Runtime.|
 |[Interoperabilidade COM avançada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Fornece links para obter mais informações sobre como incorporar componentes COM no aplicativo do .NET Framework.|

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c33f0f7-75b2-4c19-b2c7-c94b54997576
 topic_type:
 - apiref
-ms.openlocfilehash: bebc0cf6ac7912ea3a6641e0c729b759e865dac3
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: a6b24fd59a183a4a59b117663772417d55cc67db
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76864655"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503128"
 ---
 # <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a>Método ICorProfilerFunctionControl::SetILFunctionBody
 Substitui o corpo CIL (Common Intermediate Language) do método.  
@@ -40,7 +40,7 @@ HRESULT SetILFunctionBody(
  `pbNewILMethodHeader`  
  [in] Um ponteiro para o novo cabeçalho CIL.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor Retornado  
  Esse método retorna os HRESULTs específicos a seguir.  
   
 |HRESULT|Descrição|  
@@ -48,17 +48,17 @@ HRESULT SetILFunctionBody(
 |S_OK|A substituição foi bem-sucedida.|  
   
 ## <a name="remarks"></a>Comentários  
- Ao contrário do método [ICorProfilerInfo:: SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) , o método `SetILFunctionBody` gerencia a memória necessária para o novo corpo cil. Isso significa que o corpo de CIL fornecido pelo criador de perfil não precisa ser alocado usando a interface [IMethodMalloc](imethodmalloc-interface.md) ou alocado em um intervalo específico. Ele pode ser alocado em qualquer heap. O criador de perfil pode liberar a memória usada para o corpo de CIL depois que `SetILFunctionBody` retorna.  
+ Ao contrário do método [ICorProfilerInfo:: SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) , o `SetILFunctionBody` método gerencia a memória necessária para o novo corpo cil. Isso significa que o corpo de CIL fornecido pelo criador de perfil não precisa ser alocado usando a interface [IMethodMalloc](imethodmalloc-interface.md) ou alocado em um intervalo específico. Ele pode ser alocado em qualquer heap. O criador de perfil pode liberar a memória usada para o corpo de CIL após o `SetILFunctionBody` retorno.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerFunctionControl](icorprofilerfunctioncontrol-interface.md)

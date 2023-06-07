@@ -1,6 +1,6 @@
 ---
 title: Expondo componentes do .NET Core ao COM
-description: Este tutorial mostra como expor uma classe ao COM a partir do .NET Core. Você gera um servidor COM e um manifesto de servidor lado a lado para com.
+description: Este tutorial mostra como expor uma classe para COM do .NET Core. Você gera um servidor COM e um manifesto de servidor lado a lado para COM sem registro.
 ms.date: 07/12/2019
 helpviewer_keywords:
 - exposing .NET Core components to COM
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 17d85b9e9734fae0bb69f94da8c08669216ab0ae
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 346776ebae3a6077fd39f26d5bd19d599d163db2
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242862"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608337"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Expondo componentes do .NET Core ao COM
 
@@ -26,7 +26,7 @@ No .NET Core, o processo de expor seus objetos .NET ao COM foi significativament
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Instale [o .NET Core 3.0 SDK](https://dotnet.microsoft.com/download) ou uma versão mais recente.
+- Instale o [SDK do .NET Core 3,0](https://dotnet.microsoft.com/download) ou uma versão mais recente.
 
 ## <a name="create-the-library"></a>Criar a biblioteca
 
@@ -91,8 +91,8 @@ Há um [exemplo de servidor COM](https://github.com/dotnet/samples/tree/master/c
 
 ## <a name="additional-notes"></a>Observações adicionais
 
-Ao contrário do .NET Framework, não há suporte no .NET Core para gerar um TLB (Biblioteca de Tipos) COM com base em um assembly .NET Core. A orientação é escrever manualmente um arquivo IDL ou um cabeçalho C/C++ para as declarações nativas das interfaces COM.
+Ao contrário do .NET Framework, não há suporte no .NET Core para gerar um TLB (Biblioteca de Tipos) COM com base em um assembly .NET Core. A orientação é gravar manualmente um arquivo IDL ou um cabeçalho C/C++ para as declarações nativas das interfaces COM.
 
-[As implantações independentes](../deploying/index.md#publish-self-contained) de componentes COM não são suportadas. Apenas [implantações dependentes de tempo](../deploying/index.md#publish-runtime-dependent) de execução de componentes COM são suportadas.
+Não há suporte para [implantações independentes](../deploying/index.md#publish-self-contained) de componentes com. Somente as [implantações dependentes da estrutura](../deploying/index.md#publish-framework-dependent) de componentes com têm suporte.
 
-Além disso, carregar o .NET Framework e o .NET Core no mesmo processo tem limitações diagnósticas. A principal limitação é a depuração de componentes gerenciados, pois não é possível depurar tanto o .NET Framework quanto o .NET Core ao mesmo tempo. Além disso, as duas instâncias de tempo de execução não compartilham assembléias gerenciadas. Isso significa que não é possível compartilhar tipos reais .NET nos dois tempos de execução e, em vez disso, todas as interações devem ser restritas aos contratos de interface COM expostos.
+Além disso, o carregamento de .NET Framework e do .NET Core no mesmo processo tem limitações de diagnóstico. A principal limitação é a depuração de componentes gerenciados, pois não é possível depurar .NET Framework e o .NET Core ao mesmo tempo. Além disso, as duas instâncias de tempo de execução não compartilham assemblies gerenciados. Isso significa que não é possível compartilhar os tipos reais do .NET entre os dois tempos de execução e, em vez disso, todas as interações devem ser restritas aos contratos de interface COM expostos.

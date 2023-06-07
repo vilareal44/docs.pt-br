@@ -1,5 +1,6 @@
 ---
 title: Marshaling padrão para matrizes
+description: Entender o marshaling padrão para matrizes. Examine matrizes gerenciadas, matrizes não gerenciadas, passando parâmetros de matriz para código .NET e passando matrizes para COM.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-ms.openlocfilehash: f0094ac572834b2cf0d74fb53c94877da55669e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eafed0e0a0150923aae0fa68a1b96e6d9d66b07a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181456"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622556"
 ---
 # <a name="default-marshaling-for-arrays"></a>Marshaling padrão para matrizes
 Em um aplicativo que consiste inteiramente em um código gerenciado, o Common Language Runtime passa tipos de matriz como parâmetros de Entrada/Saída. Por outro lado, o marshaler de interoperabilidade passa uma matriz como parâmetros de Entrada, por padrão.  
@@ -29,7 +30,7 @@ Em um aplicativo que consiste inteiramente em um código gerenciado, o Common La
   
  Como mostra a tabela a seguir, qualquer instância de uma matriz gerenciada deve ser de um tipo de elemento, classificação e limite inferior específicos.  
   
-|Tipo de matriz gerenciada|Tipo de elemento|Rank|Limite inferior|Notação de assinatura|  
+|Tipo de matriz gerenciada|Tipo de elemento|Classificação|Limite inferior|Notação de assinatura|  
 |------------------------|------------------|----------|-----------------|------------------------|  
 |**ELEMENT_TYPE_ARRAY**|Especificado pelo tipo.|Especificado pela classificação.|Opcionalmente, especificado pelos limites.|*tipo* **[** *n*,*m* **]**|  
 |**ELEMENT_TYPE_CLASS**|Unknown (desconhecido)|Unknown (desconhecido)|Unknown (desconhecido)|**System.Array**|  
@@ -43,8 +44,8 @@ Em um aplicativo que consiste inteiramente em um código gerenciado, o Common La
   
 |Tipo não gerenciado|Tipo importado|  
 |--------------------|-------------------|  
-|**SafeArray (** *tipo* **)**|**ELEMENT_TYPE_SZARRAY** **\<** *convertidotype***>**<br /><br /> Classificação = 1, limite inferior = 0. O tamanho é conhecido apenas se é fornecido na assinatura gerenciada. Matrizes seguras que não têm a classificação = 1 ou o limite inferior = 0 não podem ter o marshaling realizado como **SZARRAY**.|  
-|*Tipo*  **[]**|**ELEMENT_TYPE_SZARRAY** **\<** *convertidotype***>**<br /><br /> Classificação = 1, limite inferior = 0. O tamanho é conhecido apenas se é fornecido na assinatura gerenciada.|  
+|**SafeArray (** *tipo* **)**|**ELEMENT_TYPE_SZARRAY****\<** *ConvertedType* **>**<br /><br /> Classificação = 1, limite inferior = 0. O tamanho é conhecido apenas se é fornecido na assinatura gerenciada. Matrizes seguras que não têm a classificação = 1 ou o limite inferior = 0 não podem ter o marshaling realizado como **SZARRAY**.|  
+|*Tipo*  **[]**|**ELEMENT_TYPE_SZARRAY****\<** *ConvertedType* **>**<br /><br /> Classificação = 1, limite inferior = 0. O tamanho é conhecido apenas se é fornecido na assinatura gerenciada.|  
   
 ### <a name="safe-arrays"></a>Matrizes seguras  
  Quando uma matriz segura é importada de uma biblioteca de tipos para um assembly .NET, a matriz é convertida em uma matriz unidimensional de um tipo conhecido (como **int**). As mesmas regras de conversão de tipo que se aplicam a parâmetros também se aplicam a elementos de matriz. Por exemplo, uma matriz segura de tipos **BSTR** torna-se uma matriz gerenciada de cadeias de caracteres e uma matriz segura de variantes torna-se uma matriz gerenciada de objetos. O tipo de elemento **SAFEARRAY** é capturado na biblioteca de tipos e salvo no valor **SAFEARRAY** da enumeração <xref:System.Runtime.InteropServices.UnmanagedType>.  
@@ -182,8 +183,8 @@ void New3(ref String ar);
   
 |Tipo de matriz gerenciada|Exportado como|  
 |------------------------|-----------------|  
-|**ELEMENT_TYPE_SZARRAY** **\<** *Tipo* de ELEMENT_TYPE_SZARRAY**>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> O tipo é fornecido na assinatura. A classificação é sempre 1 e o limite inferior é sempre 0. O tamanho é sempre conhecido em tempo de execução.|  
-|**ELEMENT_TYPE_ARRAY** **\<** **\<** *classificar* *type* **>** **>** tipo [**\<** *limites* ] **>**|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> O tipo, a classificação e os limites são fornecidos na assinatura. O tamanho é sempre conhecido em tempo de execução.|  
+|**ELEMENT_TYPE_SZARRAY****\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> O tipo é fornecido na assinatura. A classificação é sempre 1 e o limite inferior é sempre 0. O tamanho é sempre conhecido em tempo de execução.|  
+|**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>**[**\<** *bounds* **>**]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> O tipo, a classificação e os limites são fornecidos na assinatura. O tamanho é sempre conhecido em tempo de execução.|  
 |**ELEMENT_TYPE_CLASS****\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> O tipo, a classificação, os limites e o tamanho são sempre conhecidos em tempo de execução.|  
   
  Há uma limitação na Automação OLE relativa a matrizes de estruturas que contêm LPSTR ou LPWSTR.  Portanto, os campos **String** precisam ter o marshaling realizado como **UnmanagedType.BSTR**. Caso contrário, será gerada uma exceção.  
@@ -309,7 +310,7 @@ Sub [New](ar()()() As Long)
 void New(long [][][] ar );  
 ```  
   
-### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
+### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS\<System.Array>  
  Quando um método que contém um parâmetro <xref:System.Array?displayProperty=nameWithType> é exportado de um assembly .NET para uma biblioteca de tipos, o parâmetro da matriz é convertido em uma interface **_Array**. O conteúdo da matriz gerenciada é acessível somente por meio dos métodos e das propriedades da interface **_Array**. **System.Array** também pode ter o marshaling realizado como uma **SAFEARRAY** usando o atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Ao ter o marshaling realizado como uma matriz segura, os elementos da matriz têm o marshaling realizado como variantes. Por exemplo:  
   
 #### <a name="managed-signature"></a>Assinatura gerenciada  
@@ -358,7 +359,7 @@ public struct MyStruct {
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Comportamento de marshaling padrão](default-marshaling-behavior.md)
 - [Tipos blittable e não blittable](blittable-and-non-blittable-types.md)

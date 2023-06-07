@@ -1,5 +1,6 @@
 ---
 title: Cert2spc.exe (Ferramenta de Teste de Certificado do Fornecedor do Software)
+description: Use Cert2spc.exe, a ferramenta de teste de certificado do fornecedor de software. Essa ferramenta cria um certificado do fornecedor de software (SPC) de um ou mais certificados X. 509.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SPC
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Cert2spc.exe
 - certificates, Software Publisher's Certificate
 ms.assetid: be434d7d-9c0d-46e7-8392-58a9b542d11d
-ms.openlocfilehash: 809b7d0383f172a5fbcb2ac4ac3ffb96ff0b8e20
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2eb6339aa6f5d23a5b87986410cbeaac2dac2bec
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73129882"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167318"
 ---
 # <a name="cert2spcexe-software-publisher-certificate-test-tool"></a>Cert2spc.exe (Ferramenta de Teste de Certificado do Fornecedor do Software)
 A ferramenta Teste de Certificado do Editor de Software cria um SPC (Software Publisher's Certificate) com base em um ou vários certificados X.509. Cert2spc.exe é apenas para fins de teste. É possível obter um SPC válido de uma Autoridade de Certificação como, por exemplo, Verisign ou Thawte. Para obter mais informações sobre a criação de certificados X.509, consulte [Makecert.exe (Ferramenta de Criação de Certificado)](/windows/desktop/SecCrypto/makecert).  
@@ -57,4 +58,4 @@ cert2spc oneCertificate.cer twoCertificate.cer mySPCFile.spc
 
 - [Ferramentas](index.md)
 - [Makecert.exe (Ferramenta de Criação de Certificado)](/windows/desktop/SecCrypto/makecert)
-- [Prompts de Comando](developer-command-prompt-for-vs.md)
+- [Prompts de comando](developer-command-prompt-for-vs.md)

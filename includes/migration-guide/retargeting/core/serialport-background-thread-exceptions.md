@@ -1,18 +1,41 @@
 ---
-ms.openlocfilehash: 81b104d8e5a9ccc8e790c3b16e4837cfa0c0def5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e66a5c2a33a4ab5cf35013c1843936ffd01f90a2
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67858998"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614288"
 ---
 ### <a name="serialport-background-thread-exceptions"></a>Exceções de thread de tela de fundo de SerialPort
 
-|   |   |
-|---|---|
-|Detalhes|Threads em segundo plano criados com fluxos <xref:System.IO.Ports.SerialPort> não terminam o processo quando são geradas exceções do sistema operacional. <br/>Em aplicativos direcionados ao .NET Framework 4.7 e a versões anteriores, um processo é terminado quando uma exceção do sistema operacional é gerada em um thread em segundo plano criado com um fluxo <xref:System.IO.Ports.SerialPort>. <br/>Nos aplicativos direcionados ao .NET Framework 4.7.1 e a versões anteriores, os threads em segundo plano esperam pelos eventos do SO relacionados à porta serial ativa e podem falhar em alguns casos, como uma remoção repentina da porta serial.|
-|Sugestão|Para aplicativos destinados ao .NET Framework 4.7.1, será possível recusar a manipulação de exceções se ela não for desejável adicionando o seguinte à seção <code>&lt;runtime&gt;</code> do arquivo <code>app.config</code>:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.Ports.DoNotCatchSerialStreamThreadExceptions=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>Para aplicativos destinados a versões anteriores do .NET Framework mas executados no .NET Framework 4.7.1 ou posterior, é possível aceitar a manipulação de exceções adicionando o seguinte à seção <code>&lt;runtime&gt;</code> do arquivo <code>app.config</code>:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.Ports.DoNotCatchSerialStreamThreadExceptions=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|Escopo|Secundária|
-|Versão|4.7.1|
-|Type|Redirecionando|
-|APIs afetadas|<ul><li><xref:System.IO.Ports.SerialPort?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Detalhes
+
+Threads em segundo plano criados com fluxos <xref:System.IO.Ports.SerialPort> não terminam o processo quando são geradas exceções do sistema operacional. <br/>Em aplicativos direcionados ao .NET Framework 4.7 e a versões anteriores, um processo é terminado quando uma exceção do sistema operacional é gerada em um thread em segundo plano criado com um fluxo <xref:System.IO.Ports.SerialPort>. <br/>Nos aplicativos direcionados ao .NET Framework 4.7.1 e a versões anteriores, os threads em segundo plano esperam pelos eventos do SO relacionados à porta serial ativa e podem falhar em alguns casos, como uma remoção repentina da porta serial.
+
+#### <a name="suggestion"></a>Sugestão
+
+Para aplicativos destinados ao .NET Framework 4.7.1, será possível recusar a manipulação de exceções se ela não for desejável adicionando o seguinte à seção `<runtime>` do arquivo `app.config`:
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.IO.Ports.DoNotCatchSerialStreamThreadExceptions=true" />
+</runtime>
+```
+
+Para aplicativos destinados a versões anteriores do .NET Framework mas executados no .NET Framework 4.7.1 ou posterior, é possível aceitar a manipulação de exceções adicionando o seguinte à seção `<runtime>` do arquivo `app.config`:
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.IO.Ports.DoNotCatchSerialStreamThreadExceptions=false" />
+</runtime>
+```
+
+| Name    | Valor       |
+|:--------|:------------|
+| Escopo   | Secundária       |
+| Versão | 4.7.1       |
+| Type    | Redirecionando |
+
+#### <a name="affected-apis"></a>APIs afetadas
+
+- <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>

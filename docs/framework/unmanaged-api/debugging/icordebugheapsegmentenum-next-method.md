@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51625fd0-7399-49c7-b22b-5dfb05451fe6
 topic_type:
 - apiref
-ms.openlocfilehash: c9999961ec20a31cf82d5ad60104bcdd04c340d1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3d4e44eefaf99a40b9c4f1c45e7dd81192f8b607
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210170"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904267"
 ---
 # <a name="icordebugheapsegmentenumnext-method"></a>Método ICorDebugHeapSegmentEnum::Next
-Obtém o número especificado de instâncias de [COR_HEAPOBJECT](cor-heapobject-structure.md) que contêm informações sobre regiões de memória do heap gerenciado.  
+Obtém o número especificado de instâncias de [COR_SEGMENT](cor-segment-structure.md) que contêm informações sobre regiões de memória do heap gerenciado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,10 +39,10 @@ HRESULT Next(
  no O número de segmentos a serem recuperados.  
   
  segmentos  
- fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto [COR_HEAPOBJECT](cor-heapobject-structure.md) que fornece informações sobre uma região de memória no heap gerenciado.  
+ fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto [COR_SEGMENT](cor-segment-structure.md) que fornece informações sobre uma região de memória no heap gerenciado.  
   
  pceltFetched  
- fora Um ponteiro para o número de objetos [COR_HEAPOBJECT](cor-heapobject-structure.md) realmente retornados em `segments` . Esse valor pode ser `null` se `celt` for 1.  
+ fora Um ponteiro para o número de objetos [COR_SEGMENT](cor-segment-structure.md) realmente retornados em `segments` . Esse valor pode ser `null` se `celt` for 1.  
   
 ## <a name="remarks"></a>Comentários  
   
@@ -55,7 +55,7 @@ HRESULT Next(
   
  **.NET Framework versões:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Interface ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md)
 - [Depurando interfaces](debugging-interfaces.md)

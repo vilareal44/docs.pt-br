@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b558e766-4c11-4628-ae47-b4e0a1800168
 topic_type:
 - apiref
-ms.openlocfilehash: f46033b9e643ef6b4a0063c4995b8c024b8c1f7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1784c9f3085ce188f9e540887dd02064f8448f3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175350"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503569"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>Método IMetaDataImport::GetModuleRefProps
 Obtém o nome do módulo referenciado pelo token de metadados especificado.  
@@ -36,29 +36,29 @@ HRESULT GetModuleRefProps (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `mur`  
- [em] O token de metadados ModuleRef que faz referência ao módulo para obter informações de metadados.  
+ no O token de metadados ModuleRef que faz referência ao módulo para obter informações de metadados.  
   
  `szName`  
- [fora] Um buffer para segurar o nome do módulo.  
+ fora Um buffer para armazenar o nome do módulo.  
   
  `cchName`  
- [em] O tamanho solicitado `szName` de em caracteres largos.  
+ no O tamanho solicitado de `szName` em caracteres largos.  
   
  `pchName`  
- [fora] O tamanho devolvido `szName` de em caracteres largos.  
+ fora O tamanho retornado de `szName` em caracteres largos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

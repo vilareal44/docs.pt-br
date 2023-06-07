@@ -1,5 +1,5 @@
 ---
-title: 'Como: Usar JoinBlock para ler dados de várias fontes'
+title: 'Como: usar JoinBlock para ler dados de várias fontes'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - TPL dataflow library, joining blocks in
 - dataflow blocks, joining in TPL
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
-ms.openlocfilehash: 66fd7ed7a98b8be8f88f65ecb52710a1e40af778
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd2f5c65f45d83ef23643dcc747a748bb8ba89d9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139745"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290818"
 ---
-# <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Como: Usar JoinBlock para ler dados de várias fontes
+# <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Como: usar JoinBlock para ler dados de várias fontes
 Este documento explica como usar a classe <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> para executar uma operação quando os dados estão disponíveis em várias fontes. Ele também demonstra como usar o modo não greedy para habilitar vários blocos de junção para compartilhar uma fonte de dados com mais eficiência.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -33,6 +33,6 @@ Este documento explica como usar a classe <xref:System.Threading.Tasks.Dataflow.
 ## <a name="robust-programming"></a>Programação robusta  
  O uso de junções não greedy também pode ajudar a evitar deadlocks em seu aplicativo. Em um aplicativo de software, o *deadlock* ocorre quando cada um dos dois ou mais processos mantiver um recurso e mutuamente aguardar até que outro processo libere algum outro recurso. Considere um aplicativo que define dois objetos <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>. Os dois objetos leem dados de dois blocos de origem compartilhados. No modo greedy, se um bloco de junção ler da primeira fonte e o segundo bloco de junção ler da segunda fonte, o aplicativo poderá causar o deadlock já que ambos os blocos de junção mutuamente aguardam que o outro libere seus recursos. No modo não greedy, cada bloco de junção lê de suas fontes somente quando todos os dados estão disponíveis e, portanto, o risco de deadlock é eliminado.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Fluxo de dados](dataflow-task-parallel-library.md)

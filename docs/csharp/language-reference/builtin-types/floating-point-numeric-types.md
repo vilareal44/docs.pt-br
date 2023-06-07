@@ -1,6 +1,6 @@
 ---
 title: Tipos numéricos de ponto flutuante – Referência de C#
-description: 'Conheça os tipos de ponto flutuante C# embutidos: flutuar, dobrar e decimal'
+description: 'Saiba mais sobre os tipos de ponto flutuante C# internos: float, Double e decimal'
 ms.date: 02/10/2020
 f1_keywords:
 - float
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: a277215d438b5f6b0bbbef72e5e0121b6ce41990
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: a1142d1aa04003ae1942902672cfc7a05edc99c0
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121477"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662661"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipos numéricos de ponto flutuante (Referência de C#)
 
-Os *tipos numéricos de ponto flutuante* representam números reais. Todos os tipos numéricos de ponto flutuante são tipos de [valor](value-types.md). Eles também são [tipos simples](value-types.md#built-in-value-types) e podem ser inicializados com [literais](#real-literals). Todos os tipos numéricos de ponto flutuante suportam [operadores aritméticos,](../operators/arithmetic-operators.md) [de comparação](../operators/comparison-operators.md)e [de igualdade.](../operators/equality-operators.md)
+Os *tipos numéricos de ponto flutuante* representam números reais. Todos os tipos numéricos de ponto flutuante são [tipos de valor](value-types.md). Eles também são [tipos simples](value-types.md#built-in-value-types) e podem ser inicializados com [literais](#real-literals). Todos os tipos numéricos de ponto flutuante dão suporte a operadores [aritméticos](../operators/arithmetic-operators.md), de [comparação](../operators/comparison-operators.md)e de [igualdade](../operators/equality-operators.md) .
 
 ## <a name="characteristics-of-the-floating-point-types"></a>Características dos tipos de ponto flutuante
 
@@ -50,14 +50,14 @@ O valor padrão de cada tipo de ponto flutuante é zero, `0`. Cada um dos tipos 
 
 Como o tipo `decimal` tem mais precisão e um intervalo menor que `float` e `double`, ele é apropriado para cálculos financeiros e monetários.
 
-Você pode misturar tipos `float` `double` [integrais](integral-numeric-types.md) e os tipos em uma expressão. Neste caso, os tipos integrais são implicitamente convertidos em um `float` dos tipos de ponto `double`flutuante e, se necessário, o tipo é implicitamente convertido para . A expressão é avaliada como segue:
+Você pode misturar tipos [integrais](integral-numeric-types.md) e `float` os `double` tipos e em uma expressão. Nesse caso, os tipos integrais são implicitamente convertidos em um dos tipos de ponto flutuante e, se necessário, o `float` tipo é convertido implicitamente em `double` . A expressão é avaliada como segue:
 
-- Se houver `double` tipo na expressão, a `double`expressão avalia [`bool`](bool.md) , ou em comparações relacionais e de igualdade.
-- Se não `double` houver nenhum tipo na expressão, `float`a `bool` expressão avalia , ou em comparações relacionais e de igualdade.
+- Se houver `double` tipo na expressão, a expressão será avaliada como `double` , ou em comparações [`bool`](bool.md) relacionais e de igualdade.
+- Se não houver nenhum `double` tipo na expressão, a expressão será avaliada como `float` , ou em comparações `bool` relacionais e de igualdade.
 
-Você também pode misturar `decimal` tipos integrais e o tipo em uma expressão. Neste caso, os tipos integrais são `decimal` implicitamente convertidos `decimal`ao `bool` tipo e a expressão avalia , ou para em comparações relacionais e de igualdade.
+Você também pode misturar tipos integrais e o `decimal` tipo em uma expressão. Nesse caso, os tipos integrais são convertidos implicitamente no `decimal` tipo e a expressão é avaliada como `decimal` , ou em comparações `bool` relacionais e de igualdade.
 
-Você não `decimal` pode misturar `float` `double` o tipo com os tipos e em uma expressão. Neste caso, se você quiser realizar operações de aritmética, comparação ou igualdade, você deve converter `decimal` explicitamente os operands de ou para o tipo, como o exemplo a seguir mostra:
+Você não pode misturar o `decimal` tipo com `float` os `double` tipos e em uma expressão. Nesse caso, se você quiser executar operações aritméticas, de comparação ou de igualdade, deverá converter explicitamente os operandos de ou para o `decimal` tipo, como mostra o exemplo a seguir:
 
 ```csharp-interactive
 double a = 1.0;
@@ -70,11 +70,11 @@ Console.WriteLine((decimal)a + b);
 
 ## <a name="real-literals"></a>Literais reais
 
-O tipo de literal real é determinado pelo seu sufixo da seguinte forma:
+O tipo de um literal real é determinado pelo seu sufixo da seguinte maneira:
 
-- O literal sem sufixo ou com o `d` ou `D` sufixo é do tipo`double`
-- O literal `f` com `F` o ou sufixo é do tipo`float`
-- O literal `m` com `M` o ou sufixo é do tipo`decimal`
+- O literal sem sufixo ou com o `d` `D` sufixo or é do tipo`double`
+- O literal com o `f` `F` sufixo or é do tipo`float`
+- O literal com o `m` `M` sufixo or é do tipo`decimal`
 
 O código a seguir demonstra um exemplo de cada um:
 
@@ -90,13 +90,13 @@ decimal myMoney = 3_000.5m;
 myMoney = 400.75M;
 ```
 
-O exemplo anterior também `_` mostra o uso de como *separador de dígitos,* que é suportado a partir de C# 7.0. Você pode usar o separador de dígitos com todos os tipos de literais numéricos.
+O exemplo anterior também mostra o uso de `_` como um *separador de dígito*, que tem suporte a partir do C# 7,0. Você pode usar o separador de dígitos com todos os tipos de literais numéricos.
 
-Você também pode usar a notação científica, ou seja, especificar uma parte expoente de um literal real, como o exemplo a seguir mostra:
+Você também pode usar a notação científica, ou seja, especificar uma parte exponencial de um literal real, como mostra o exemplo a seguir:
 
 ```csharp-interactive
 double d = 0.42e2;
-Console.WriteLine(d);  // output 42;
+Console.WriteLine(d);  // output 42
 
 float f = 134.45E-2f;
 Console.WriteLine(f);  // output: 1.3445
@@ -107,19 +107,19 @@ Console.WriteLine(m);  // output: 1500000
 
 ## <a name="conversions"></a>Conversões
 
-Há apenas uma conversão implícita entre os tipos `float` numéricos de ponto flutuante: de . `double` No entanto, você pode converter qualquer tipo de ponto flutuante para qualquer outro tipo de ponto flutuante com o [gesso explícito](../operators/type-testing-and-cast.md#cast-expression). Para obter mais informações, consulte [conversões numéricas incorporadas](numeric-conversions.md).
+Há apenas uma conversão implícita entre os tipos numéricos de ponto flutuante: de `float` para `double` . No entanto, você pode converter qualquer tipo de ponto flutuante para qualquer outro tipo de ponto flutuante com a [conversão explícita](../operators/type-testing-and-cast.md#cast-expression). Para obter mais informações, consulte [conversões numéricas internas](numeric-conversions.md).
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter mais informações, confira as seguintes seções da [especificação da linguagem C#](~/_csharplang/spec/introduction.md):
 
-- [Tipos de pontos flutuantes](~/_csharplang/spec/types.md#floating-point-types)
+- [Tipos de ponto flutuante](~/_csharplang/spec/types.md#floating-point-types)
 - [O tipo decimal](~/_csharplang/spec/types.md#the-decimal-type)
 - [Literais reais](~/_csharplang/spec/lexical-structure.md#real-literals)
 
 ## <a name="see-also"></a>Confira também
 
-- [Referência do C#](../index.md)
+- [Referência de C#](../index.md)
 - [Tipos de valor](value-types.md)
 - [Tipos integrais](integral-numeric-types.md)
 - [Cadeias de caracteres de formato numérico padrão](../../../standard/base-types/standard-numeric-format-strings.md)

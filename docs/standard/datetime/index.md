@@ -9,12 +9,12 @@ helpviewer_keywords:
 - times [.NET Framework], time zones
 - time [.NET Framework], time zones
 ms.assetid: 295c16e0-641b-4771-94b3-39c1ffa98c13
-ms.openlocfilehash: d46b3cdbddeb1b4e28b7108e7925bd3f086498d0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 86602cd6e662b1b1057832247babc558ef67b79f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122297"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276927"
 ---
 # <a name="dates-times-and-time-zones"></a>Datas, horas e fusos horários
 
@@ -22,7 +22,7 @@ Além da estrutura <xref:System.DateTime> básica, o .NET fornece as seguintes c
 
 * <xref:System.TimeZone>
 
-  Use esta classe para trabalhar com o fuso horário local do sistema e a zona UTC (Tempo Universal Coordenado). A funcionalidade da classe <xref:System.TimeZone> é amplamente substituída pela classe <xref:System.TimeZoneInfo>.
+  Use esta classe para trabalhar com o fuso horário local do sistema e a zona UTC (Tempo Universal Coordenado). A funcionalidade da <xref:System.TimeZone> classe é amplamente substituída pela <xref:System.TimeZoneInfo> classe.
 
 * <xref:System.TimeZoneInfo>
 
@@ -36,41 +36,41 @@ Esta seção da documentação fornece as informações de que você precisa par
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Visão geral sobre fuso horário](../../../docs/standard/datetime/time-zone-overview.md) Discute a terminologia, os conceitos e os problemas envolvidos na criação de aplicativos com reconhecimento de fuso horário.
+[Visão geral sobre fuso horário](time-zone-overview.md) Aborda a terminologia, os conceitos e as questões envolvidas na criação de aplicativos com reconhecimento de fuso horário.
 
-[Escolhendo entre DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md) Discute quando usar os tipos <xref:System.DateTime>, <xref:System.DateTimeOffset> e <xref:System.TimeZoneInfo> ao trabalhar com os dados de data e hora.
+[Escolhendo entre DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo](choosing-between-datetime.md) Discute quando usar os <xref:System.DateTime> <xref:System.DateTimeOffset> tipos, e <xref:System.TimeZoneInfo> ao trabalhar com dados de data e hora.
 
-[Encontrando os fusos horários definidos em um sistema local](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md) Descreve como enumerar os fusos horários encontrados em um sistema local.
+[Encontrando os fusos horários definidos em um sistema local](finding-the-time-zones-on-local-system.md) Descreve como enumerar os fusos horários encontrados em um sistema local.
 
-[Como enumerar os fusos horários presentes em um computador](../../../docs/standard/datetime/enumerate-time-zones.md) Fornece exemplos que enumeram os fusos horários definidos no Registro de um computador e que permitem que os usuários selecionem um fuso horário predefinido em uma lista.
+[Como enumerar os fusos horários presentes em um computador](enumerate-time-zones.md) Fornece exemplos que enumeram os fusos horários definidos no Registro de um computador e que permitem que os usuários selecionem um fuso horário predefinido em uma lista.
 
-[Como acessar os objetos de fuso horário UTC e local predefinidos](../../../docs/standard/datetime/access-utc-and-local.md) Descreve como acessar o Tempo Universal Coordenado e o fuso horário local.
+[Como acessar os objetos de fuso horário UTC e local predefinidos](access-utc-and-local.md) Descreve como acessar o Tempo Universal Coordenado e o fuso horário local.
 
-[Como criar uma instância de um objeto TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md) Descreve como criar uma instância de um objeto <xref:System.TimeZoneInfo> do Registro do sistema local.
+[Como criar uma instância de um objeto TimeZoneInfo](instantiate-time-zone-info.md) Descreve como criar uma instância de um objeto <xref:System.TimeZoneInfo> do Registro do sistema local.
 
-[Criando uma instância de um objeto DateTimeOffset](../../../docs/standard/datetime/instantiating-a-datetimeoffset-object.md) Discute as maneiras de criar uma instância de um objeto <xref:System.DateTimeOffset> e maneiras de converter um valor <xref:System.DateTime> em um valor <xref:System.DateTimeOffset>.
+[Criando uma instância de um objeto DateTimeOffset](instantiating-a-datetimeoffset-object.md) Discute as maneiras de criar uma instância de um objeto <xref:System.DateTimeOffset> e maneiras de converter um valor <xref:System.DateTime> em um valor <xref:System.DateTimeOffset>.
 
-[Como criar fusos horários sem regras de ajuste](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) Descreve como criar um fuso horário personalizado sem suporte para transição de/para o horário de verão.
+[Como criar fusos horários sem regras de ajuste](create-time-zones-without-adjustment-rules.md) Descreve como criar um fuso horário personalizado sem suporte para transição de/para o horário de verão.
 
-[Como criar fusos horários com regras de ajuste](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md) Descreve como criar um fuso horário personalizado com suporte a uma ou mais transições de/para o horário de verão.
+[Como criar fusos horários com regras de ajuste](create-time-zones-with-adjustment-rules.md) Descreve como criar um fuso horário personalizado com suporte a uma ou mais transições de/para o horário de verão.
 
-[Salvando e restaurando fusos horários](../../../docs/standard/datetime/saving-and-restoring-time-zones.md) Descreve o suporte de <xref:System.TimeZoneInfo> para serialização e desserialização dos dados de fuso horário e ilustra alguns dos cenários nos quais esses recursos podem ser usados.
+[Salvando e restaurando fusos horários](saving-and-restoring-time-zones.md) Descreve o suporte de <xref:System.TimeZoneInfo> para serialização e desserialização dos dados de fuso horário e ilustra alguns dos cenários nos quais esses recursos podem ser usados.
 
-[Como salvar fusos horários em um recurso inserido](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) Descreve como criar um fuso horário personalizado e salvar suas informações em um arquivo de recurso.
+[Como salvar fusos horários em um recurso inserido](save-time-zones-to-an-embedded-resource.md) Descreve como criar um fuso horário personalizado e salvar suas informações em um arquivo de recurso.
 
-[Como restaurar fusos horários de um recurso inserido](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) Descreve como criar instâncias de fusos horários personalizados que foram salvos em um arquivo de recurso inserido.
+[Como restaurar fusos horários de um recurso inserido](restore-time-zones-from-an-embedded-resource.md) Descreve como criar instâncias de fusos horários personalizados que foram salvos em um arquivo de recurso inserido.
 
-[Executando operações aritméticas com datas e horas](../../../docs/standard/datetime/performing-arithmetic-operations.md) Discute os problemas envolvidos ao adicionar, subtrair e comparar valores <xref:System.DateTime> e <xref:System.DateTimeOffset>.
+[Executando operações aritméticas com datas e horas](performing-arithmetic-operations.md) Discute os problemas envolvidos ao adicionar, subtrair e comparar valores <xref:System.DateTime> e <xref:System.DateTimeOffset>.
 
-[Como usar fusos horários em aritmética de data e hora](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md) Descreve como realizar uma aritmética de data e hora que reflita as regras de ajuste de um fuso horário.
+[Como usar fusos horários em aritmética de data e hora](use-time-zones-in-arithmetic.md) Descreve como realizar uma aritmética de data e hora que reflita as regras de ajuste de um fuso horário.
 
-[Convertendo entre DateTime e DateTimeOffset](../../../docs/standard/datetime/converting-between-datetime-and-offset.md) Descreve como converter entre valores <xref:System.DateTime> e <xref:System.DateTimeOffset>.
+[Convertendo entre DateTime e DateTimeOffset](converting-between-datetime-and-offset.md) Descreve como converter entre valores <xref:System.DateTime> e <xref:System.DateTimeOffset>.
 
-[Convertendo horários entre fusos horários](../../../docs/standard/datetime/converting-between-time-zones.md) Descreve como converter horários de um fuso horário para outro.
+[Convertendo horários entre fusos horários](converting-between-time-zones.md) Descreve como converter horários de um fuso horário para outro.
 
-[Como resolver horários ambíguos](../../../docs/standard/datetime/resolve-ambiguous-times.md) Descreve como resolver um horário ambíguo, mapeando-o para o horário padrão do fuso horário.
+[Como resolver horários ambíguos](resolve-ambiguous-times.md) Descreve como resolver um horário ambíguo, mapeando-o para o horário padrão do fuso horário.
 
-[Como permitir que os usuários resolvam horários ambíguos](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md) Descreve como permitir que um usuário determine o mapeamento entre um horário local ambíguo e o Tempo Universal Coordenado.
+[Como permitir que os usuários resolvam horários ambíguos](let-users-resolve-ambiguous-times.md) Descreve como permitir que um usuário determine o mapeamento entre uma hora local ambígua e o Tempo Universal Coordenado.
 
 ## <a name="reference"></a>Referência
 

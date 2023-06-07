@@ -1,13 +1,14 @@
 ---
 title: Operações de geração (C#)
+description: Geração cria uma nova sequência de valores. Saiba mais sobre os métodos do operador de consulta padrão no LINQ em C# que executam a geração.
 ms.date: 07/20/2015
 ms.assetid: 1c421b3a-5954-448c-bcac-a27798d1858f
-ms.openlocfilehash: 9fe04c34752825d45ca5bcf33051a24b72243b51
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 90b7913d60ced82c854f514d3644425f6ddd2571
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69594241"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103636"
 ---
 # <a name="generation-operations-c"></a>Operações de geração (C#)
 Geração refere-se à criação de uma nova sequência de valores.  

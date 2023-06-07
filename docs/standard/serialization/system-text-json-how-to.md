@@ -1,17 +1,21 @@
 ---
-title: ''
+title: Como serializar e desserializar JSON usando C#-.NET
 description: Este artigo mostra como usar o System.Text.Json namespace para serializar e desserializar do JSON no .net. Ele inclui o código de exemplo.
-ms.date: ''
+ms.date: 05/13/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-helpviewer_keywords: []
-ms.openlocfilehash: f1a5da448b08f9b4f1cf3fa6cba67fb376b00a6f
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+helpviewer_keywords:
+- JSON serialization
+- serializing objects
+- serialization
+- objects, serializing
+ms.openlocfilehash: 7ad2721f12c5d14b61b35ecf7696ff0d6a6f27da
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702234"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289506"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Como serializar e desserializar (empacotar e desempacotar) JSON no .NET
 
@@ -380,46 +384,10 @@ Para excluir todas as propriedades de valor nulo, defina a <xref:System.Text.Jso
 Aqui está um objeto de exemplo para serializar e a saída JSON:
 
 |Propriedade |Valor  |
-|---
-Título: Descrição: ' Este artigo mostra como usar o System.Text.Json namespace para serializar e desserializar de JSON no .net. Ele inclui o código de exemplo. '
-MS. Date: no-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-Título: Descrição: ' Este artigo mostra como usar o System.Text.Json namespace para serializar e desserializar de JSON no .net. Ele inclui o código de exemplo. '
-MS. Date: no-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|---Título: Descrição: ' Este artigo mostra como usar o System.Text.Json namespace para serializar e desserializar de JSON no .net. Ele inclui o código de exemplo. '
-MS. Date: no-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-Título: Descrição: ' Este artigo mostra como usar o System.Text.Json namespace para serializar e desserializar de JSON no .net. Ele inclui o código de exemplo. '
-MS. Date: no-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------| | Data | 8/1/2019 12:00:00 AM-07:00 | | TemperatureCelsius | 25 | | Resumo | NULL |
+|---------|---------|
+| Data    | 8/1/2019 12:00:00 AM-07:00|
+| TemperatureCelsius| 25 |
+| Resumo| nulo|
 
 ```json
 {
@@ -672,65 +640,13 @@ Se você desserializar o JSON mostrado no tipo mostrado, as `DatesAvailable` Pro
 Quando você desserializar o JSON mostrado anteriormente neste tipo de exemplo, os dados extras se tornarão pares de chave-valor da `ExtensionData` Propriedade:
 
 |Propriedade |Valor  |Observações  |
-|---
-Título: Descrição: ' Este artigo mostra como usar o System.Text.Json namespace para serializar e desserializar de JSON no .net. Ele inclui o código de exemplo. '
-MS. Date: no-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-Título: Descrição: ' Este artigo mostra como usar o System.Text.Json namespace para serializar e desserializar de JSON no .net. Ele inclui o código de exemplo. '
-MS. Date: no-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|---Título: Descrição: ' Este artigo mostra como usar o System.Text.Json namespace para serializar e desserializar de JSON no .net. Ele inclui o código de exemplo. '
-MS. Date: no-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-Título: Descrição: ' Este artigo mostra como usar o System.Text.Json namespace para serializar e desserializar de JSON no .net. Ele inclui o código de exemplo. '
-MS. Date: no-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|---Título: Descrição: ' Este artigo mostra como usar o System.Text.Json namespace para serializar e desserializar de JSON no .net. Ele inclui o código de exemplo. '
-MS. Date: no-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-Título: Descrição: ' Este artigo mostra como usar o System.Text.Json namespace para serializar e desserializar de JSON no .net. Ele inclui o código de exemplo. '
-MS. Date: no-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------| | Data | 8/1/2019 12:00:00 AM-07:00 | | | TemperatureCelsius | 0 | Incompatibilidade de maiúsculas e minúsculas ( `temperatureCelsius` no JSON), portanto, a propriedade não está definida. | | Resumo | Quente | | | ExtensionData | temperatureCelsius: 25 | Como o caso não correspondeu, essa propriedade JSON é um extra e se torna um par chave-valor no dicionário. | || DatesAvailable:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 | A propriedade extra do JSON torna-se um par chave-valor, com uma matriz como o objeto de valor. | | | SummaryWords:<br>Estática<br>Vento<br>Humid | A propriedade extra do JSON torna-se um par chave-valor, com uma matriz como o objeto de valor. |
+|---------|---------|---------|
+| Data    | 8/1/2019 12:00:00 AM-07:00||
+| TemperatureCelsius| 0 | Incompatibilidade de maiúsculas e minúsculas ( `temperatureCelsius` no JSON), portanto, a propriedade não está definida. |
+| Resumo | Dinâmica ||
+| ExtensionData | temperatureCelsius: 25 |Como o caso não corresponde, essa propriedade JSON é um extra e se torna um par chave-valor no dicionário.|
+|| DatesAvailable:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |A propriedade extra do JSON torna-se um par chave-valor, com uma matriz como o objeto de valor.|
+| |SummaryWords:<br>Estática<br>Vento<br>Humid |A propriedade extra do JSON torna-se um par chave-valor, com uma matriz como o objeto de valor.|
 
 Quando o objeto de destino é serializado, os pares de valor de chave de dados de extensão se tornam propriedades JSON, assim como no JSON de entrada:
 

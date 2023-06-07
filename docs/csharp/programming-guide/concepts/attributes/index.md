@@ -1,12 +1,13 @@
 ---
 title: Atributos (C#)
+description: Saiba como usar atributos para associar metadados ou informações declarativas com código em C#. Um atributo pode ser consultado em tempo de execução usando reflexão.
 ms.date: 04/26/2018
-ms.openlocfilehash: 0379bb76cf18ff836bd14aafb9cb97c30aee8ec7
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 5c57838b649531d8e8fe89919771adf8830e7f54
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645481"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924979"
 ---
 # <a name="attributes-c"></a>Atributos (C#)
 
@@ -41,7 +42,7 @@ Alguns atributos podem ser especificados mais de uma vez para uma determinada en
 [!code-csharp[Using the conditional attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
 
 > [!NOTE]
-> Por convenção, todos os nomes de atributo terminam com a palavra "Atributo" para distingui-los de outros itens nas bibliotecas do .NET. No entanto, você não precisa especificar o sufixo de atributo ao usar atributos no código. Por exemplo, `[DllImport]` é equivalente a `[DllImportAttribute]`, mas `DllImportAttribute` é o nome real do atributo na Biblioteca de Classes .NET Framework.
+> Por convenção, todos os nomes de atributo terminam com a palavra "Atributo" para distingui-los de outros itens nas bibliotecas do .NET. No entanto, você não precisa especificar o sufixo de atributo ao usar atributos no código. Por exemplo, `[DllImport]` é equivalente a `[DllImportAttribute]` , mas `DllImportAttribute` é o nome real do atributo na biblioteca de classes do .net.
 
 ### <a name="attribute-parameters"></a>Parâmetros de atributo
 
@@ -119,13 +120,13 @@ Para obter mais informações, consulte:
 
 - [Criando atributos personalizados (C#)](creating-custom-attributes.md)  
 - [Acessando atributos usando reflexão (C#)](accessing-attributes-by-using-reflection.md)  
-- [Como criar uma união C/C++ usando atributos (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [Como criar uma União C/C++ usando atributos (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [Atributos comuns (C#)](../../../language-reference/attributes/global.md)  
 - [Informações do chamador (C#)](../../../language-reference/attributes/caller-information.md)  
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Guia de Programação](../../index.md)
+- [Guia de programação C#](../../index.md)
 - [Reflexão (C#)](../reflection.md)
 - [Atributos](../../../../standard/attributes/index.md)
 - [Usando atributos em C #](../../../tutorials/attributes.md)

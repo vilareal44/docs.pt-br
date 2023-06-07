@@ -2,12 +2,12 @@
 title: Projetar XML em uma forma diferente
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-ms.openlocfilehash: 400ceafe8ca219efbbb921d573126e0ca80bbb5e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1424b88b478896854b0f094ca4ec8eba82b816b4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344492"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396357"
 ---
 # <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Projetando XML em uma forma diferente (Visual Basic)
 Este tópico mostra um exemplo de projetar XML que está em uma forma diferente do XML fonte.  
@@ -17,7 +17,7 @@ Este tópico mostra um exemplo de projetar XML que está em uma forma diferente 
 ## <a name="example"></a>Exemplo  
  Este exemplo processa um documento de WordprocessingML, recuperando os nós de parágrafo de um documento de WordprocessingML. Também identifica o estilo e o texto de cada parágrafo. Finalmente, o exemplo em XML com uma forma diferente. Este exemplo cria nos exemplos anteriores neste tutorial. A nova declaração que faz a projeção é chamada nos comentários no código a seguir.  
   
- Para obter instruções sobre como criar o documento de origem para este exemplo, consulte [criando o documento Office Open XML de origem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Para obter instruções sobre como criar o documento de origem para este exemplo, consulte [criando o documento Office Open XML de origem (Visual Basic)](creating-the-source-office-open-xml-document.md).  
   
  Este exemplo usa classes do assembly WindowsBase. Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -160,7 +160,7 @@ Module Module1
 End Module  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <Root>  
@@ -230,8 +230,8 @@ End Module
 ## <a name="next-steps"></a>Próximas etapas  
  No exemplo a seguir, você consultará para localizar todo o texto em um documento do Word:  
   
-- [Localizando texto em documentos do Word (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Localizando texto em documentos do Word (Visual Basic)](finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Tutorial: manipulando conteúdo em um documento do WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: manipulando conteúdo em um documento do WordprocessingML (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: db268876-6178-4a81-aca3-318ee7f96001
 topic_type:
 - apiref
-ms.openlocfilehash: e53265556de026e84af7ca345a5f82be3c5ff812
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: efbfa310c90f48c99219cb185f090a1b854949a2
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122050"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842277"
 ---
 # <a name="ihostthreadpoolmanagergetmaxthreads-method"></a>Método IHostThreadPoolManager::GetMaxThreads
 Obtém o número máximo de threads que o host mantém simultaneamente no pool de threads.  
@@ -37,36 +37,36 @@ HRESULT GetMaxThreads (
  `pdwMaxWorkerThreads`  
  fora Um ponteiro para o número máximo de threads que o host mantém no pool de threads.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`GetMaxThreads` retornado com êxito.|  
+|S_OK|`GetMaxThreads`retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR (não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
 |HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
-|E_NOTIMPL|O host não fornece uma implementação de `GetMaxThreads`.|  
+|E_NOTIMPL|O host não fornece uma implementação de `GetMaxThreads` .|  
   
 ## <a name="remarks"></a>Comentários  
- O CLR chama `GetMaxThreads` para determinar o número total de threads no pool de threads. O método [GetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md) Obtém o número de threads que não estão processando itens de trabalho no momento. Todas as solicitações acima do valor retornado do parâmetro `pdwMaxWorkerThreads` permanecem enfileiradas até que os threads se tornem disponíveis.  
+ O CLR chama `GetMaxThreads` para determinar o número total de threads no pool de threads. O método [GetAvailableThreads](ihostthreadpoolmanager-getavailablethreads-method.md) Obtém o número de threads que não estão processando itens de trabalho no momento. Todas as solicitações acima do valor retornado do `pdwMaxWorkerThreads` parâmetro permanecem enfileiradas até que os threads se tornem disponíveis.  
   
- Se o host não fornecer uma implementação de `GetMaxThreads`, ele deverá retornar um valor HRESULT de E_NOTIMPL.  
+ Se o host não fornecer uma implementação de `GetMaxThreads` , ele deverá retornar um valor HRESULT de E_NOTIMPL.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
  **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Threading.ThreadPool.GetMaxThreads%2A>
 - <xref:System.Threading.ThreadPool>
-- [Método GetMinThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getminthreads-method.md)
-- [Método SetMaxThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setmaxthreads-method.md)
-- [Interface IHostThreadPoolManager](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+- [Método GetMinThreads](ihostthreadpoolmanager-getminthreads-method.md)
+- [Método SetMaxThreads](ihostthreadpoolmanager-setmaxthreads-method.md)
+- [Interface IHostThreadPoolManager](ihostthreadpoolmanager-interface.md)

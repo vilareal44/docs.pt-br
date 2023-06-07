@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 32114ecf-8916-4ab2-a201-179c017344f1
 topic_type:
 - apiref
-ms.openlocfilehash: 6ed30f07fcec9c730e1514350c594399f0aa16e5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6d62739148280c7333cf7cdb6002b59a145496e3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437267"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503556"
 ---
 # <a name="imetadataimportgetnamefromtoken-method"></a>Método IMetaDataImport::GetNameFromToken
 Obtém o nome UTF-8 do objeto referenciado pelo token de metadados especificado. Esse método é obsoleto.  
@@ -44,8 +44,8 @@ HRESULT GetNameFromToken (
 ## <a name="remarks"></a>Comentários  
  `GetNameFromToken` é obsoleto. Como alternativa, chame um método para obter as propriedades do tipo específico de token necessário, como `GetFieldProps` para um campo ou `GetMethodProps` para um método.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
@@ -53,7 +53,7 @@ HRESULT GetNameFromToken (
   
  **Versões do .NET Framework:** 1,0  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](imetadataimport-interface.md)
+- [Interface IMetaDataImport2](imetadataimport2-interface.md)

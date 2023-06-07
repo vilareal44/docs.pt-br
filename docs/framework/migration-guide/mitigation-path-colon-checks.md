@@ -1,13 +1,14 @@
 ---
 title: 'Mitigação: verificações de dois-pontos no caminho'
+description: Saiba mais sobre as alterações feitas no .NET Framework 4.6.2 para dar suporte a verificações da sintaxe do separador de unidade apropriada (os dois-pontos).
 ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
-ms.openlocfilehash: c6e1106b6f5d8457417992941b9f28712d484442
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f32ee54f88bc4747fd0d8065b0dce06b151d1d9a
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181239"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475444"
 ---
 # <a name="mitigation-path-colon-checks"></a>Mitigação: verificações de dois-pontos no caminho
 Começando com os aplicativos direcionados ao .NET Framework 4.6.2, várias alterações foram feitas para dar suporte aos caminhos anteriormente sem suporte (em termos de comprimento e formato). Em particular, as verificações da sintaxe adequada do separador de unidade (os dois-pontos) foram corrigidas.  
@@ -30,6 +31,6 @@ Começando com os aplicativos direcionados ao .NET Framework 4.6.2, várias alte
     </runtime>  
     ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Compatibilidade de aplicativos](application-compatibility.md)

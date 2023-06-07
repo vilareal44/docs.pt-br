@@ -2,18 +2,18 @@
 title: Coleções
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 232b9ec7b5975092e73daf0a7384fa816f55f72f
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: f264a0f9ee15707daf4bece5651b9f5f07ebbc39
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646338"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400649"
 ---
 # <a name="collections-visual-basic"></a>Coleções (Visual Basic)
 
 Para muitos aplicativos, você desejará criar e gerenciar grupos de objetos relacionados. Há duas maneiras de agrupar objetos: criando matrizes de objetos e criando coleções de objetos.
 
-As matrizes são mais úteis ao criar e trabalhar com um número fixo de objetos fortemente tipados. Para obter informações sobre matrizes, consulte [Matrizes](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+As matrizes são mais úteis para criar e trabalhar com um número fixo de objetos fortemente tipados. Para obter informações sobre matrizes, consulte [Matrizes](../language-features/arrays/index.md).
 
 As coleções fornecem uma maneira mais flexível de trabalhar com grupos de objetos. Ao contrário das matrizes, o grupo de objetos com o qual você trabalha pode crescer e reduzir dinamicamente conforme as necessidades do aplicativo são alteradas. Para algumas coleções, você pode atribuir uma chave para qualquer objeto que coloque na coleção para que você possa recuperar rapidamente o objeto usando a chave.
 
@@ -22,7 +22,7 @@ Uma coleção é uma classe, portanto você deve declarar uma instância da clas
 Se a coleção contiver elementos de apenas um tipo de dados, você poderá usar uma das classes no namespace <xref:System.Collections.Generic?displayProperty=nameWithType>. Uma coleção genérica impõe segurança de tipos para que nenhum outro tipo de dados possa ser adicionado a ela. Ao recuperar um elemento de uma coleção genérica, você não precisa determinar seu tipo de dados ou convertê-lo.
 
 > [!NOTE]
-> Para os exemplos neste tópico, inclua `System.Collections.Generic` [demonstrações de importações](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para os espaços de nome e `System.Linq` de nome.
+> Para os exemplos neste tópico, inclua as instruções [Imports](../../language-reference/statements/imports-statement-net-namespace-and-type.md) para os `System.Collections.Generic` `System.Linq` namespaces e.
 
 <a name="BKMK_SimpleCollection"></a>
 
@@ -30,7 +30,7 @@ Se a coleção contiver elementos de apenas um tipo de dados, você poderá usar
 
 Os exemplos nesta seção usam a classe genérica <xref:System.Collections.Generic.List%601>, que habilita você a trabalhar com uma lista de objetos fortemente tipados.
 
-O exemplo a seguir cria uma lista de strings e, em seguida, itera através das strings usando um [Para Cada... Próxima](../../../visual-basic/language-reference/statements/for-each-next-statement.md) declaração.
+O exemplo a seguir cria uma lista de cadeias de caracteres e, em seguida, itera através das cadeias de caracteres usando um [para cada... Próxima](../../language-reference/statements/for-each-next-statement.md) instrução.
 
 ```vb
 ' Create a list of strings.
@@ -47,7 +47,7 @@ Next
 'Output: chinook coho pink sockeye
 ```
 
-Se o conteúdo de uma coleção for conhecido com antecedência, você poderá usar um *inicializador de coleção* para inicializar a coleção. Para obter mais informações, consulte [Inicializadores de coleção](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).
+Se o conteúdo de uma coleção for conhecido com antecedência, você poderá usar um *inicializador de coleção* para inicializar a coleção. Para obter mais informações, consulte [Inicializadores de coleção](../language-features/collection-initializers/index.md).
 
 O exemplo a seguir é igual ao exemplo anterior, exceto que um inicializador de coleção é usado para adicionar elementos à coleção.
 
@@ -63,7 +63,7 @@ Next
 'Output: chinook coho pink sockeye
 ```
 
-Você pode usar um [Para... Próxima](../../../visual-basic/language-reference/statements/for-next-statement.md) declaração `For Each` em vez de uma declaração para iterar através de uma coleção. Você realiza isso acessando os elementos da coleção pela posição do índice. O índice dos elementos começa em 0 e termina na contagem de elementos, menos de 1.
+Você pode usar um [para... Próxima](../../language-reference/statements/for-next-statement.md) instrução em vez de uma `For Each` instrução para iterar por meio de uma coleção. Você realiza isso acessando os elementos da coleção pela posição do índice. O índice dos elementos começa em 0 e termina na contagem de elementos, menos de 1.
 
 O exemplo a seguir itera nos elementos de uma coleção usando `For…Next` em vez de `For Each`.
 
@@ -95,7 +95,7 @@ Next
 'Output: chinook pink sockeye
 ```
 
-O exemplo a seguir remove elementos de uma lista genérica. Em vez `For Each` de uma declaração, um [Por... A próxima](../../../visual-basic/language-reference/statements/for-next-statement.md) declaração que itera em ordem decrescente é usada. Isso é feito porque o método <xref:System.Collections.Generic.List%601.RemoveAt%2A> faz com que os elementos após um elemento removido tenham um valor de índice menor.
+O exemplo a seguir remove elementos de uma lista genérica. Em vez de uma `For Each` instrução, um [para... A próxima](../../language-reference/statements/for-next-statement.md) instrução que itera em ordem decrescente é usada. Isso é feito porque o método <xref:System.Collections.Generic.List%601.RemoveAt%2A> faz com que os elementos após um elemento removido tenham um valor de índice menor.
 
 ```vb
 Dim numbers As New List(Of Integer) From
@@ -163,7 +163,7 @@ Algumas das classes de coleção comuns são descritas nesta seção:
 
 - Classes <xref:System.Collections>
 
-- Classe `Collection` Visual Basic
+- `Collection`Classe Visual Basic
 
 <a name="BKMK_Generic"></a>
 
@@ -214,15 +214,15 @@ O namespace <xref:System.Collections.Specialized> fornece classes de coleções 
 
 <a name="BKMK_VisualBasic"></a>
 
-### <a name="visual-basic-collection-class"></a>Classe de Coleção Básica Visual
+### <a name="visual-basic-collection-class"></a>Visual Basic classe de coleção
 
-Você pode usar <xref:Microsoft.VisualBasic.Collection> a classe Visual Basic para acessar um item `String` de coleção usando um índice numérico ou uma chave. Você pode adicionar itens a um objeto de coleta com ou sem especificar uma chave. Se você adicionar um item sem uma chave, você deve usar seu índice numérico para acessá-lo.
+Você pode usar a <xref:Microsoft.VisualBasic.Collection> classe Visual Basic para acessar um item de coleção usando um índice numérico ou uma `String` chave. Você pode adicionar itens a um objeto de coleção com ou sem especificar uma chave. Se você adicionar um item sem uma chave, deverá usar seu índice numérico para acessá-lo.
 
-A classe `Collection` Visual Basic armazena `Object`todos os seus elementos como tipo, para que você possa adicionar um item de qualquer tipo de dados. Não há proteção contra a adição de tipos de dados inadequados.
+A `Collection` classe Visual Basic armazena todos os seus elementos como tipo `Object` , de modo que você pode adicionar um item de qualquer tipo de dados. Não há nenhuma proteção contra tipos de dados inadequados sendo adicionados.
 
-Quando você usa `Collection` a classe Visual Basic, o primeiro item de uma coleção tem um índice de 1. Isso difere das classes de coleta .NET Framework, para as quais o índice inicial é 0.
+Quando você usa a `Collection` classe Visual Basic, o primeiro item em uma coleção tem um índice de 1. Isso difere das classes de coleção .NET Framework, para as quais o índice inicial é 0.
 
-Sempre que possível, você deve usar <xref:System.Collections.Generic?displayProperty=nameWithType> as coleções <xref:System.Collections.Concurrent> genéricas no namespace ou no namespace em vez da classe Visual Basic. `Collection`
+Sempre que possível, você deve usar as coleções genéricas no <xref:System.Collections.Generic?displayProperty=nameWithType> namespace ou no <xref:System.Collections.Concurrent> namespace em vez da `Collection` classe Visual Basic.
 
 Para obter mais informações, consulte <xref:Microsoft.VisualBasic.Collection>.
 
@@ -296,7 +296,7 @@ Private Function BuildDictionary2() As Dictionary(Of String, Element)
 End Function
 ```
 
-O exemplo a seguir usa o método <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> e a propriedade <xref:System.Collections.Generic.Dictionary%602.Item%2A> de `Dictionary` para localizar rapidamente um item por chave. A `Item` propriedade permite que você acesse `elements` um item do acervo usando o `elements(symbol)` código no Visual Basic.
+O exemplo a seguir usa o método <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> e a propriedade <xref:System.Collections.Generic.Dictionary%602.Item%2A> de `Dictionary` para localizar rapidamente um item por chave. A `Item` propriedade permite que você acesse um item na `elements` coleção usando o `elements(symbol)` código em Visual Basic.
 
 ```vb
 Private Sub FindInDictionary(ByVal symbol As String)
@@ -330,7 +330,7 @@ End Sub
 
 ## <a name="using-linq-to-access-a-collection"></a>Usando LINQ para acessar uma coleção
 
-A LINQ (consulta integrada à linguagem) pode ser usada para acessar coleções. As consultas LINQ fornecem recursos de filtragem, classificação e agrupamento. Para obter mais informações, consulte [Getting Started com LINQ no Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).
+A LINQ (consulta integrada à linguagem) pode ser usada para acessar coleções. As consultas LINQ fornecem recursos de filtragem, classificação e agrupamento. Para obter mais informações, consulte [introdução com LINQ no Visual Basic](linq/getting-started-with-linq.md).
 
 O exemplo a seguir executa uma consulta LINQ em uma `List` genérica. A consulta LINQ retorna uma coleção diferente que contém os resultados.
 
@@ -458,7 +458,7 @@ End Class
 
 ## <a name="defining-a-custom-collection"></a>Definindo uma coleção personalizada
 
-Você pode definir uma coleção implementando a interface <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Collections.IEnumerable>. Para obter informações adicionais, consulte [Enumerando uma coleção](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100)).
+Você pode definir uma coleção implementando a interface <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Collections.IEnumerable>. Para obter informações adicionais, consulte [enumerando uma coleção](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100)).
 
 Embora seja possível definir uma coleção personalizada, é melhor usar as coleções que estão incluídas no .NET Framework, que estão descritas em [Tipos de coleções](#kinds-of-collections) anteriormente neste tópico.
 
@@ -538,13 +538,13 @@ End Class
 
 ## <a name="iterators"></a>Iterators
 
-Um *iterador* é usado para realizar uma iteração personalizada em uma coleção. Um iterador pode ser um método ou um acessador `get`. Um iterizador usa uma declaração [de Rendimento](../../../visual-basic/language-reference/statements/yield-statement.md) para devolver cada elemento da coleção um de cada vez.
+Um *iterador* é usado para realizar uma iteração personalizada em uma coleção. Um iterador pode ser um método ou um acessador `get`. Um iterador usa uma instrução [yield](../../language-reference/statements/yield-statement.md) para retornar cada elemento da coleção um de cada vez.
 
-Você chama um tempor ternausando um [Para Cada... Próxima](../../../visual-basic/language-reference/statements/for-each-next-statement.md) declaração. Cada iteração do loop `For Each` chama o iterador. Quando uma instrução `Yield` é alcançada no iterador, uma expressão é retornada e o local atual no código é retido. A execução será reiniciada desse local na próxima vez que o iterador for chamado.
+Você chama um iterador usando um [para cada... Próxima](../../language-reference/statements/for-each-next-statement.md) instrução. Cada iteração do loop `For Each` chama o iterador. Quando uma instrução `Yield` é alcançada no iterador, uma expressão é retornada e o local atual no código é retido. A execução será reiniciada desse local na próxima vez que o iterador for chamado.
 
-Para obter mais informações, consulte [Aterators (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md).
+Para obter mais informações, consulte [iteradores (Visual Basic)](iterators.md).
 
-O exemplo a seguir usa um método iterador. O método de vida `Yield` tem uma declaração que está dentro de [um... Próxima](../../../visual-basic/language-reference/statements/for-next-statement.md) volta. No método `ListEvenNumbers`, cada iteração do corpo da instrução `For Each` cria uma chamada ao método iterador, que avança para a próxima instrução `Yield`.
+O exemplo a seguir usa um método iterador. O método Iterator tem uma `Yield` instrução que está dentro de um [para... Próximo](../../language-reference/statements/for-next-statement.md) loop. No método `ListEvenNumbers`, cada iteração do corpo da instrução `For Each` cria uma chamada ao método iterador, que avança para a próxima instrução `Yield`.
 
 ```vb
 Public Sub ListEvenNumbers()
@@ -570,12 +570,12 @@ End Function
 
 ## <a name="see-also"></a>Confira também
 
-- [Iniciadores de Coleção](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
-- [Conceitos de Programação (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
-- [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [Inicializadores de coleção](../language-features/collection-initializers/index.md)
+- [Conceitos de Programação (Visual Basic)](index.md)
+- [Instrução Option Strict](../../language-reference/statements/option-strict-statement.md)
+- [LINQ to Objects (Visual Basic)](linq/linq-to-objects.md)
 - [LINQ paralelo (PLINQ)](../../../standard/parallel-programming/introduction-to-plinq.md)
-- [Coleções e Estruturas de Dados](../../../standard/collections/index.md)
+- [Coleções e estruturas de dados](../../../standard/collections/index.md)
 - [Selecionando uma classe de coleção](../../../standard/collections/selecting-a-collection-class.md)
 - [Comparações e classificações dentro de coleções](../../../standard/collections/comparisons-and-sorts-within-collections.md)
 - [Quando usar coleções genéricas](../../../standard/collections/when-to-use-generic-collections.md)

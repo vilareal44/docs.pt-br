@@ -15,12 +15,12 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-ms.openlocfilehash: a4f4c0e1af379d31c5b478472780d5c7de813bf6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5327bd70b05bac8970fa9802fb15e94ba5f686c8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121942"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290052"
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadados e componentes autodescritivos
 
@@ -64,11 +64,11 @@ Os metadados são a chave para um modelo de programação mais simples e elimina
 
 - Atributos.
 
-  O .NET Framework permite declarar tipos específicos de metadados, chamados atributos, no seu arquivo compilado. Os atributos podem ser encontrados em todo o .NET Framework e são usados para controlar mais detalhadamente como o seu programa se comporta no tempo de execução. Além disso, você pode emitir seus próprios metadados personalizados em arquivos do .NET Framework por meio de atributos definidos pelo usuário. Para obter mais informações, consulte [Atributos](../../docs/standard/attributes/index.md).
+  O .NET Framework permite declarar tipos específicos de metadados, chamados atributos, no seu arquivo compilado. Os atributos podem ser encontrados em todo o .NET Framework e são usados para controlar mais detalhadamente como o seu programa se comporta no tempo de execução. Além disso, você pode emitir seus próprios metadados personalizados em arquivos do .NET Framework por meio de atributos definidos pelo usuário. Para obter mais informações, consulte [Atributos](attributes/index.md).
 
 ## <a name="metadata-and-the-pe-file-structure"></a>Metadados e a estrutura de arquivos PE
 
-Os metadados são armazenados em uma seção de um arquivo PE (Portable Executable) do .NET Framework, e o MSIL (Microsoft Intermediate Language) é armazenado em outra seção do arquivo PE. A parte de metadados do arquivo contém uma série de estruturas de tabela e de dados do heap. A parte MSIL contém tokens MSIL e de metadados que referenciam a parte de metadados do arquivo PE. Você pode encontrar tokens de metadados ao usar ferramentas como o [MSIL Disassembler (Ildasm.exe)](../../docs/framework/tools/ildasm-exe-il-disassembler.md) para exibir o MSIL de seu código, por exemplo.
+Os metadados são armazenados em uma seção de um arquivo PE (Portable Executable) do .NET Framework, e o MSIL (Microsoft Intermediate Language) é armazenado em outra seção do arquivo PE. A parte de metadados do arquivo contém uma série de estruturas de tabela e de dados do heap. A parte MSIL contém tokens MSIL e de metadados que referenciam a parte de metadados do arquivo PE. Você pode encontrar tokens de metadados ao usar ferramentas como o [MSIL Disassembler (Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md) para exibir o MSIL de seu código, por exemplo.
 
 ### <a name="metadata-tables-and-heaps"></a>Tabelas e heaps de metadados
 
@@ -134,7 +134,7 @@ public class MyApp
 
 Quando o código é executado, o runtime carrega o módulo na memória e consulta os metadados dessa classe. Quando carregado, o runtime executa uma análise abrangente do fluxo MSIL (Microsoft Intermediate Language) do método para convertê-lo em instruções de máquina rápidas nativas. O runtime usa um compilador JIT (just-in-time) para converter as instruções MSIL em código de máquina nativo, um método por vez, conforme necessário.
 
-O exemplo a seguir mostra parte do MSIL produzido a partir da função `Main` do código anterior. Você pode exibir o MSIL e os metadados de qualquer aplicativo .NET Framework usando o [MSIL Disassembler (Ildasm.exe)](../../docs/framework/tools/ildasm-exe-il-disassembler.md).
+O exemplo a seguir mostra parte do MSIL produzido a partir da função `Main` do código anterior. Você pode exibir o MSIL e os metadados de qualquer aplicativo .NET Framework usando o [MSIL Disassembler (Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md).
 
 ```console
 .entrypoint
@@ -159,9 +159,9 @@ A tabela a seguir mostra parte da tabela **MethodDef** referenciada pelo token d
 
 |Linha|RVA (endereço virtual relativo)|ImplFlags|Flags|Nome<br /><br /> (Aponta para o heap da cadeia de caracteres.)|Assinatura (Aponta para o heap de blob.)|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
-|1|0x00002050|IL<br /><br /> Gerenciada|Público<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (construtor)||
-|2|0x00002058|IL<br /><br /> Gerenciada|Público<br /><br /> Estático<br /><br /> ReuseSlot|Principal|String|
-|3|0x0000208c|IL<br /><br /> Gerenciada|Público<br /><br /> Estático<br /><br /> ReuseSlot|Adicionar|int, int, int|
+|1|0x00002050|IL<br /><br /> Gerenciados|Público<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (construtor)||
+|2|0x00002058|IL<br /><br /> Gerenciados|Público<br /><br /> Estático<br /><br /> ReuseSlot|Principal|String|
+|3|0x0000208c|IL<br /><br /> Gerenciados|Público<br /><br /> Estático<br /><br /> ReuseSlot|Adicionar|int, int, int|
 
 Cada coluna da tabela contém informações importantes sobre seu código. A coluna **RVA** permite que o runtime calcule o endereço de memória inicial do MSIL que define esse método. As colunas **ImplFlags** e **Flags** contêm bitmasks que descrevem o método (por exemplo, se o método é público ou particular). A coluna **Nome** indexa o nome do método com base no heap da cadeia de caracteres. A coluna **Assinatura** indexa a definição da assinatura do método no heap de blob.
 
@@ -169,8 +169,8 @@ O runtime calcula o endereço de deslocamento desejado com base na coluna **RVA*
 
 Usando metadados, o ambiente de runtime tem acesso a todas as informações necessárias para carregar seu código e processá-lo em instruções de máquina nativas. Dessa maneira, os metadados permitem arquivos autodescritivos e, com o CTS, a herança entre linguagens.
 
-## <a name="related-topics"></a>Tópicos Relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 |Title|Descrição|
 |-----------|-----------------|
-|[Atributos](../../docs/standard/attributes/index.md)|Descreve como aplicar atributos, escrever atributos personalizados e recuperar informações armazenadas em atributos.|
+|[Atributos](attributes/index.md)|Descreve como aplicar atributos, escrever atributos personalizados e recuperar informações armazenadas em atributos.|

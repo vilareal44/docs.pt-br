@@ -1,5 +1,6 @@
 ---
-title: 'Passo a passo: Criar uma interface no estilo do Explorer com os controles ListView e TreeView usando o Designer'
+title: 'Instruções passo a passo: criando uma interface no estilo do Explorer com os controles ListView e TreeView usando o designer'
+description: Saiba como criar uma interface de estilo do Explorer com os controles ListView e TreeView do Windows Forms usando o designer.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,30 +14,30 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: d80f8e3bc729689b274af520bc37fda8417b0407
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 44d4db1ef3da85dbf411498f486882b86a05c140
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69658579"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174621"
 ---
-# <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Passo a passo: Criar uma interface no estilo do Explorer com os controles ListView e TreeView usando o Designer
+# <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Instruções passo a passo: criando uma interface no estilo do Explorer com os controles ListView e TreeView usando o designer
 
-Um dos benefícios do Visual Studio é a capacidade de criar aplicativos dos Windows Forms com aparência profissional em pouco tempo. Um cenário comum é a criação de uma interface do usuário com <xref:System.Windows.Forms.ListView> controles <xref:System.Windows.Forms.TreeView> e que se assemelham ao recurso do Windows Explorer de sistemas operacionais Windows. O Windows Explorer exibe uma estrutura hierárquica de arquivos e pastas no computador do usuário.
+Um dos benefícios do Visual Studio é a capacidade de criar aplicativos dos Windows Forms com aparência profissional em pouco tempo. Um cenário comum é a criação de uma interface do usuário com <xref:System.Windows.Forms.ListView> <xref:System.Windows.Forms.TreeView> controles e que se assemelham ao recurso do Windows Explorer de sistemas operacionais Windows. O Windows Explorer exibe uma estrutura hierárquica de arquivos e pastas no computador do usuário.
 
 ### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>Para criar o formulário contendo controles ListView e TreeView
 
-1. No menu **Arquivo**, aponte para **Novo** e clique em **Projeto**.
+1. No menu **Arquivo** , aponte para **Novo**e clique em **Projeto**.
 
-2. Na caixa de diálogo **Novo Projeto**, faça o seguinte:
+2. Na caixa de diálogo **Novo Projeto** , faça o seguinte:
 
-    1. Em categorias, escolha **Visual Basic** ou **Visual C#** .
+    1. Em categorias, escolha **Visual Basic** ou **Visual C#**.
 
     2. Na lista de modelos, escolha **Aplicativo dos Windows Forms**.
 
 3. Clique em **OK**. Um novo projeto dos Windows Forms é criado.
 
-4. Adicione um <xref:System.Windows.Forms.SplitContainer> controle ao formulário e defina sua <xref:System.Windows.Forms.SplitContainer.Dock%2A> Propriedade como <xref:System.Windows.Forms.DockStyle.Fill>.
+4. Adicione um <xref:System.Windows.Forms.SplitContainer> controle ao formulário e defina sua <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriedade como <xref:System.Windows.Forms.DockStyle.Fill> .
 
 5. Adicione um <xref:System.Windows.Forms.ImageList> nome `imageList1` ao formulário e use o janela Propriedades para adicionar duas imagens: uma imagem de pasta e uma imagem de documento, nessa ordem.
 
@@ -52,11 +53,11 @@ Um dos benefícios do Visual Studio é a capacidade de criar aplicativos dos Win
 
     2. Defina a propriedade <xref:System.Windows.Forms.ListView.View%2A> como <xref:System.Windows.Forms.View.Details>.
 
-    3. Abra o editor de coleção ColumnHeader clicando nas reticências (![o botão de reticências (...) na janela Propriedades do Visual Studio](./media/visual-studio-ellipsis-button.png).) na <xref:System.Windows.Forms.ListView.Columns%2A> propriedade **.** Adicione três colunas e defina sua <xref:System.Windows.Forms.ColumnHeader.Text%2A> Propriedade como `Name`, `Type`e `Last Modified`, respectivamente. Clique em **OK** para fechar a caixa de diálogo.
+    3. Abra o editor de coleção ColumnHeader clicando nas reticências ( ![ o botão de reticências (...) na janela Propriedades do Visual Studio. ](./media/visual-studio-ellipsis-button.png) ) na <xref:System.Windows.Forms.ListView.Columns%2A> propriedade **.** Adicione três colunas e defina sua <xref:System.Windows.Forms.ColumnHeader.Text%2A> propriedade como `Name` , `Type` e `Last Modified` , respectivamente. Clique em **OK** para fechar a caixa de diálogo.
 
     4. Defina a propriedade <xref:System.Windows.Forms.ListView.SmallImageList%2A> como `imageList1.`
 
-8. Implemente o código para popular <xref:System.Windows.Forms.TreeView> o com nós e subnós. Adicione este código à classe `Form1`.
+8. Implemente o código para popular o <xref:System.Windows.Forms.TreeView> com nós e subnós. Adicione este código à classe `Form1`.
 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#1)]
@@ -66,17 +67,17 @@ Um dos benefícios do Visual Studio é a capacidade de criar aplicativos dos Win
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#4)]
 
-10. Chame o método de configuração da etapa anterior no construtor do formulário ou <xref:System.Windows.Forms.Form.Load> no método de manipulação de eventos. Adicione este código ao construtor de formulário.
+10. Chame o método de configuração da etapa anterior no construtor do formulário ou no <xref:System.Windows.Forms.Form.Load> método de manipulação de eventos. Adicione este código ao construtor de formulário.
 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#2)]
 
-11. Manipule o <xref:System.Windows.Forms.TreeView.NodeMouseClick> evento para `treeview1`e implemente o código para preencher `listview1` com o **conteúdo de um** nó quando um nó é clicado. Adicione este código à classe `Form1`.
+11. Manipule o <xref:System.Windows.Forms.TreeView.NodeMouseClick> evento para `treeview1` **,** e implemente o código para preencher `listview1` com o conteúdo de um nó quando um nó é clicado. Adicione este código à classe `Form1`.
 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#3)]
 
-     Se você estiver usando C#o, verifique se você tem <xref:System.Windows.Forms.TreeView.NodeMouseClick> o evento associado ao seu método de manipulação de eventos. Adicione este código ao construtor de formulário.
+     Se você estiver usando C#, verifique se você tem o <xref:System.Windows.Forms.TreeView.NodeMouseClick> evento associado ao seu método de manipulação de eventos. Adicione este código ao construtor de formulário.
 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#5)]
 
@@ -94,17 +95,17 @@ Agora, é possível testar o formulário para garantir que ele se comporta da fo
 
 Esse aplicativo fornece um exemplo de uma maneira que você pode usar <xref:System.Windows.Forms.TreeView> e <xref:System.Windows.Forms.ListView> controlar juntos. Para obter mais informações sobre esses controles, consulte os seguintes tópicos:
 
-- [Como: Adicionar informações personalizadas a um controle TreeView ou ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Como adicionar informações personalizadas a um controle TreeView ou ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
 
-- [Como: Adicionar recursos de pesquisa a um controle ListView](how-to-add-search-capabilities-to-a-listview-control.md)
+- [Como Adicionar Recursos de Pesquisa a um Controle ListView](how-to-add-search-capabilities-to-a-listview-control.md)
 
-- [Como: Anexar um menu de atalho a um nó TreeView](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)
+- [Como anexar um menu ShortCut a um nó TreeView](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.TreeView>
 - [Controle ListView](listview-control-windows-forms.md)
-- [Como: Adicionar e remover nós com o Windows Forms controle TreeView](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [Como: Adicionar e remover itens com o controle Windows Forms ListView](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Como: Adicionar colunas ao controle ListView Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Como adicionar e remover nós com o controle TreeView dos Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [Como Adicionar e Remover Itens com o Controle ListView dos Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Como adicionar colunas ao controle ListView dos Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)

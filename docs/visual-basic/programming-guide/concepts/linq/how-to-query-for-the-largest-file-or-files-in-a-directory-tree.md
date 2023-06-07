@@ -1,15 +1,15 @@
 ---
-title: Como consultar o maior arquivo ou os arquivos em uma árvore de diretório (LINQ)
+title: 'Como: consultar o maior arquivo ou arquivos em uma árvore de diretório (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-ms.openlocfilehash: 723a42e79f1def171a08b28986049ffa04945fc4
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 107f3457fe7361fab16c2c8ce837c90484fc7633
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266983"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397941"
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Como: Consulta para o maior arquivo ou arquivos em uma árvore de diretório (LINQ) (Visual Basic)
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Como consultar o maior arquivo ou arquivos em uma árvore de diretório (LINQ) (Visual Basic)
 Este exemplo mostra cinco consultas relacionadas ao tamanho do arquivo em bytes:  
   
 - Como recuperar o tamanho em bytes do maior arquivo.  
@@ -118,9 +118,9 @@ End Module
  A consulta chama um método separado para obter o tamanho do arquivo em bytes para consumir a exceção possível que ocorrerá caso um arquivo tenha sido excluído em outro thread no período desde que o objeto <xref:System.IO.FileInfo> foi criado na chamada para `GetFiles`. Embora o objeto <xref:System.IO.FileInfo> já tenha sido criado, a exceção poderá ocorrer porque um objeto <xref:System.IO.FileInfo> tentará atualizar sua propriedade <xref:System.IO.FileInfo.Length%2A> usando o tamanho mais atual em bytes na primeira vez que a propriedade foi acessada. Ao colocar essa operação em um bloco try-catch fora da consulta, nós seguimos a regra de evitar operações em consultas que podem causar efeitos colaterais. Em geral, deve-se ter muito cuidado ao consumir exceções para garantir que um aplicativo não seja deixado em um estado desconhecido.  
   
 ## <a name="compile-the-code"></a>Compilar o código  
-Crie um projeto de aplicativo `Imports` de console Visual Basic, com uma declaração para o namespace System.Linq.
+Crie um projeto de aplicativo de console Visual Basic, com uma `Imports` instrução para o namespace System. Linq.
   
 ## <a name="see-also"></a>Confira também
 
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)
+- [LINQ e diretórios de arquivos (Visual Basic)](linq-and-file-directories.md)

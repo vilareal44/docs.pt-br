@@ -1,5 +1,6 @@
 ---
 title: Programação de WCF básica
+description: Consulte estes artigos para desenvolver Windows Communication Foundation aplicativos, desde o ciclo de vida da programação básica até a solução de problemas.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - basic programming [WCF]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: eff565fa18e3360170584395adcf2a3e7029ac07
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 6f4de39494902dcffcb25f75a6ff9f57b28547ff
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960927"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245512"
 ---
 # <a name="basic-wcf-programming"></a>Programação básica do WCF
 
@@ -21,10 +22,10 @@ Esta seção apresenta os conceitos básicos para a criação de aplicativos Win
 
 ## <a name="in-this-section"></a>Nesta seção
 
- \ de [ciclo de vida de programação básica](basic-programming-lifecycle.md)
+ [Ciclo de vida da programação básica](basic-programming-lifecycle.md)\
  Descreve o ciclo de vida de criação, criação e implantação de aplicativos cliente e serviço WCF.
 
- [Serviços de design e implantação](designing-and-implementing-services.md)\
+ [Projetando e implementando serviços](designing-and-implementing-services.md)\
  Descreve como criar e implementar um contrato de serviço, escolher um padrão de troca de mensagem, especificar um contrato de falha e outros aspectos básicos de serviços.
 
  [Configurando serviços](configuring-services.md)\
@@ -33,13 +34,13 @@ Esta seção apresenta os conceitos básicos para a criação de aplicativos Win
  [Serviços de hospedagem](hosting-services.md)\
  Descreve os conceitos básicos de serviços de hospedagem em um aplicativo.
 
- [Compilando clientes](building-clients.md)\
+ [Criando clientes](building-clients.md)\
  Descreve como obter metadados de serviços, convertê-los em código de cliente WCF, lidar com problemas de segurança e criar, configurar e hospedar um cliente WCF.
 
  [Introdução à extensibilidade](introduction-to-extensibility.md)\
  Descreve como estender o WCF para criar soluções personalizadas.
 
- [Início rápido de solução de problemas do WCF](wcf-troubleshooting-quickstart.md)\
+ [Início rápido da solução de problemas do WCF](wcf-troubleshooting-quickstart.md)\
  Descreve alguns dos problemas mais comuns que ocorrem, o que você pode fazer para resolvê-los e onde localizar mais informações sobre o problema.
 
  [WCF e ASP.NET Web API](wcf-and-aspnet-web-api.md)\
@@ -57,7 +58,7 @@ Esta seção apresenta os conceitos básicos para a criação de aplicativos Win
 - [Tutorial de Introdução](getting-started-tutorial.md)
 - [Diretrizes e práticas recomendadas](guidelines-and-best-practices.md)
 - [Ferramentas do Windows Communication Foundation](tools.md)
-- [Exemplos de Windows Communication Foundation (WCF)](./samples/index.md)
+- [Exemplos do WCF (Windows Communication Foundation)](./samples/index.md)
 - [Introdução](./samples/getting-started-sample.md)
 - [Hospedagem do IIS utilizando código embutido](./samples/iis-hosting-using-inline-code.md)
-- [Auto-hospedagem](./samples/self-host.md)
+- [Self-Host](./samples/self-host.md)

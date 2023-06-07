@@ -1,19 +1,19 @@
 ---
-title: Funções de cadeia de caracteres
+title: Funções de Cadeia de Caracteres
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 2608159e28ee63a0fdb10c82054fd65efe79ac62
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 778e57eadd75baf1aabd100f9d8d41a490f79a04
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349975"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406282"
 ---
 # <a name="string-functions-visual-basic"></a>Funções da cadeia de caracteres (Visual Basic)
 
-A tabela a seguir lista as funções que Visual Basic fornece na classe <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> para pesquisar e manipular cadeias de caracteres. Eles podem ser considerados como Visual Basic funções intrínsecas; ou seja, você não precisa chamá-los como membros explícitos de uma classe, como mostram os exemplos. Métodos adicionais e, em alguns casos, métodos complementares, estão disponíveis na classe <xref:System.String?displayProperty=nameWithType>.
+A tabela a seguir lista as funções que Visual Basic fornece na <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> classe para pesquisar e manipular cadeias de caracteres. Eles podem ser considerados como Visual Basic funções intrínsecas; ou seja, você não precisa chamá-los como membros explícitos de uma classe, como mostram os exemplos. Métodos adicionais e, em alguns casos, métodos complementares, estão disponíveis na <xref:System.String?displayProperty=nameWithType> classe.
 
 |Método de .NET Framework|Descrição|
 |---------------------------|-----------------|
@@ -47,49 +47,49 @@ A tabela a seguir lista as funções que Visual Basic fornece na classe <xref:Mi
 |<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Retorna uma cadeia de caracteres que contém uma cópia de uma cadeia de caracteres especificada sem espaços à esquerda ou à direita.|
 |<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Retorna uma cadeia de caracteres ou um caractere que contém a cadeia de caracteres especificada, convertida em maiúsculas.|
 
-Você pode usar a instrução [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) para definir se as cadeias de caracteres são comparadas usando uma ordem de classificação de texto que não diferencia maiúsculas de minúsculas determinada pela localidade do seu sistema (`Text`) ou pelas representações binárias internas dos caracteres (`Binary`). O método de comparação de texto padrão é `Binary`.
+Você pode usar a instrução [Option Compare](../statements/option-compare-statement.md) para definir se as cadeias de caracteres são comparadas usando uma ordem de classificação de texto que não diferencia maiúsculas de minúsculas determinada pela localidade do seu sistema ( `Text` ) ou pelas representações binárias internas dos caracteres ( `Binary` ). O método de comparação de texto padrão é `Binary`.
 
 ## <a name="example-ucase"></a>Exemplo: UCase
 
-Este exemplo usa a função `UCase` para retornar uma versão em maiúsculas de uma cadeia de caracteres.
+Este exemplo usa a função `UCase` para retornar uma versão de uma cadeia de caracteres em letras minúsculas.
 [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]
 
 ## <a name="example-ltrim"></a>Exemplo: LTrim
 
-Este exemplo usa a função `LTrim` para retirar espaços à esquerda e a função `RTrim` para retirar espaços à direita de uma variável de cadeia de caracteres. Ele usa a função `Trim` para retirar os dois tipos de espaços.
+Este exemplo usa a função `LTrim` para retirar espaços à esquerda e a função `RTrim` para retirar espaços à direita de um variável de cadeia de caracteres. Usa a função de `Trim` para retirar ambos os tipos de espaços.
 
 [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]
 
 ## <a name="example-mid"></a>Exemplo: mid
 
-Este exemplo usa a função `Mid` para retornar um número especificado de caracteres de uma cadeia de caractere.
+Este exemplo usa a `Mid` função para retornar um número especificado de caracteres a partir de uma String.
 
 [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]
 
 ## <a name="example-len"></a>Exemplo: Len
 
-Este exemplo usa `Len` para retornar o número de caracteres em uma cadeia.
+Este exemplo usa `Len` para retornar o número especificado de caracteres em uma cadeia de caracteres.
 
 [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]
 
 ## <a name="example-instr"></a>Exemplo: InStr
 
-Este exemplo usa a função `InStr` para retornar a posição da primeira ocorrência de uma cadeia de caracteres dentro de outra.
+Este exemplo usa a função `InStr` para retornar a posição da primeira ocorrência de uma cadeia de caracteres dentro da outra.
 
 [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]
 
 ## <a name="example-format"></a>Exemplo: formato
 
-Este exemplo mostra vários usos da função `Format` para formatar valores usando formatos de `String` e formatos definidos pelo usuário. Para o separador de data (`/`), separador de tempo (`:`) e os indicadores AM/PM (`t` e `tt`), a saída formatada real exibida pelo seu sistema depende das configurações de localidade que o código está usando. Quando os horários e as datas são exibidos no ambiente de desenvolvimento, o formato de hora abreviada e o formato de data abreviada da localidade de código são usados.
+Este exemplo mostra vários usos da função `Format` para formatar valores usando os formatos `String` e os formatos definidos pelo usuário. Para o separador de data (`/`), separador de hora (`:`) e indicadores AM/PM (`t` e `tt`), a saída formatada real exibida pelo seu sistema depende das configurações de localidade que o código está usando. Quando horas e datas são exibidas no ambiente de desenvolvimento, o formato abreviado de tempo e o formato abreviado de data do local do código são usados.
 
 > [!NOTE]
 > Para localidades que usam um relógio de 24 horas, os indicadores AM/PM (`t` e `tt`) não exibem nada.
 
 [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
-- [Membros da Biblioteca de Runtime do Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
-- [Resumo de Manipulação da Cadeia de Caracteres](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+- [Palavras-chave](../keywords/index.md)
+- [Membros da Biblioteca de Runtime do Visual Basic](../runtime-library-members.md)
+- [Resumo de Manipulação da Cadeia de Caracteres](../keywords/string-manipulation-summary.md)
 - [Métodos de classe System. String](xref:System.String#methods)

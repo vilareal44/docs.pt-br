@@ -1,29 +1,31 @@
 ---
-title: Envie um trabalho .NET para Apache Spark para o Azure HDInsight
-description: Saiba como enviar um trabalho .NET para Apache Spark para o Azure HDInsight usando spark-submit e Apache Livy.
-ms.date: 11/19/2019
+title: Enviar um trabalho .NET para Apache Spark para o Azure HDInsight
+description: Saiba como enviar um trabalho .NET para Apache Spark para o Azure HDInsight usando Spark-Submit e Apache Livy.
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 83359f7f613b500a4ce121ce1612cda0ad1191ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 50611b1f62934a446e5b80a8c53698efe23cd1fc
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185794"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617685"
 ---
-# <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a>Envie um trabalho .NET para Apache Spark para o Azure HDInsight
+# <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a>Enviar um trabalho .NET para Apache Spark para o Azure HDInsight
 
-Existem duas maneiras de implantar seu trabalho .NET para Apache Spark no HDInsight: `spark-submit` e Apache Livy.
+Há duas maneiras de implantar seu .NET para Apache Spark trabalho para o HDInsight: `spark-submit` e o Apache Livy.
 
-## <a name="deploy-using-spark-submit"></a>Implantar usando o envio de faíscas
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
+
+## <a name="deploy-using-spark-submit"></a>Implantar usando Spark-Submit
 
 Você pode usar o comando [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) para enviar trabalhos do .NET para Apache Spark para o Azure HDInsight.
 
-1. Navegue até o cluster HDInsight Spark no portal Azure e selecione **o login SSH + Cluster**.
+1. Navegue até o cluster HDInsight Spark no portal do Azure e, em seguida, selecione **SSH + logon do cluster**.
 
-2. Copie as informações de login ssh e cole o login em um terminal. Faça login no cluster usando a senha definida durante a criação do cluster. Você deve ver mensagens de boas-vindas ao Ubuntu e ao Spark.
+2. Copie as informações de logon SSH e cole o logon em um terminal. Entre no cluster usando a senha que você definiu durante a criação do cluster. Você deve ver as mensagens com boas-vindas ao Ubuntu e ao Spark.
 
-3. Use o comando **spark-submit** para executar seu aplicativo no cluster HDInsight. Lembre-se de substituir **mycontainer** e **mystorageaccount** no script de exemplo com os nomes reais de sua conta de contêiner e armazenamento blob. Além disso, certifique-se de substituir com `microsoft-spark-2.3.x-0.6.0.jar` o arquivo de jarro apropriado que você está usando para implantação. `2.3.x`representa a versão do Apache `0.6.0` Spark, e representa a versão do [.NET para trabalhador Apache Spark](https://github.com/dotnet/spark/releases).
+3. Use o comando **Spark-Submit** para executar seu aplicativo em seu cluster HDInsight. Lembre-se de substituir **MyContainer** e **mystorageaccount** no script de exemplo pelos nomes reais do contêiner de BLOB e da conta de armazenamento. Além disso, certifique-se de substituir `microsoft-spark-2.3.x-0.6.0.jar` pelo arquivo JAR apropriado que você está usando para a implantação. `2.3.x`representa a versão do Apache Spark e `0.6.0` representa a versão do [.net para o trabalho do Apache Spark](https://github.com/dotnet/spark/releases).
 
    ```bash
    $SPARK_HOME/bin/spark-submit \
@@ -33,7 +35,7 @@ Você pode usar o comando [spark-submit](https://spark.apache.org/docs/latest/su
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
 
-## <a name="deploy-using-apache-livy"></a>Implantar usando Apache Livy
+## <a name="deploy-using-apache-livy"></a>Implantar usando o Apache Livy
 
 Você pode usar o [Apache Livy](https://livy.incubator.apache.org/), a API REST do Apache Spark, para enviar trabalhos do .NET para Apache Spark a um cluster do Azure HDInsight Spark. Para obter mais informações, consulte [Trabalhos remotos com o Apache Livy](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-livy-rest-interface).
 
@@ -58,4 +60,4 @@ EOF
 
 * [Introdução ao .NET para Apache Spark](../tutorials/get-started.md)
 * [Implantar um aplicativo .NET para Apache Spark no Azure HDInsight](../tutorials/hdinsight-deployment.md)
-* [Documentação HDInsight](https://docs.microsoft.com/azure/hdinsight/)
+* [Documentação do HDInsight](https://docs.microsoft.com/azure/hdinsight/)

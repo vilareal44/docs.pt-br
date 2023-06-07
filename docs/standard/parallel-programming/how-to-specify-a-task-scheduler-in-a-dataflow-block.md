@@ -1,5 +1,5 @@
 ---
-title: 'Como: Especificar um agendador de tarefas em um bloco de fluxo de dados'
+title: 'Como: especificar um agendador de tarefas em um bloco de fluxo de dados'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-ms.openlocfilehash: 2abac1ccf45fc9c9c28e27c132e72fe483a24d75
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76c9e75f787c28657af143b46bb22d08039e2dc4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73122229"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288128"
 ---
-# <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Como: Especificar um agendador de tarefas em um bloco de fluxo de dados
+# <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Como: especificar um agendador de tarefas em um bloco de fluxo de dados
 Este documento demonstra como associar um agendador de tarefas específico quando você usa o fluxo de dados em seu aplicativo. O exemplo usa a classe <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> em um aplicativo Windows Forms para mostrar quando as tarefas do leitor estão ativas e quando uma tarefa de gravador está ativa. Ele também usa o método <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> para permitir que um bloco de fluxo de dados seja executado no thread da interface do usuário.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -79,6 +79,6 @@ Este documento demonstra como associar um agendador de tarefas específico quand
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#100)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Fluxo de dados](dataflow-task-parallel-library.md)

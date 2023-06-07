@@ -1,13 +1,14 @@
 ---
 title: Operações de Igualdade (C#)
+description: Saiba mais sobre os operadores de igualdade no LINQ em C#, em que duas seqüências cujos elementos são iguais e que têm o mesmo número de elementos são iguais.
 ms.date: 07/20/2015
 ms.assetid: 9d9a5bf2-f211-4865-bd19-c59ffa004615
-ms.openlocfilehash: 306129c1fe0c3f0003f8be579d987edcaeb63709
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 605b161250ce63746ca1b1ff350dc2ebf1736e21
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141499"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105438"
 ---
 # <a name="equality-operations-c"></a>Operações de Igualdade (C#)
 Duas sequências cujos elementos correspondentes são iguais e que têm o mesmo número de elementos são consideradas iguais.  

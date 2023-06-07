@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f728de8-45c2-45a5-ac4a-45660bd36ecf
 topic_type:
 - apiref
-ms.openlocfilehash: 5b465216da39e8cf207f0614519720453c384ae9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 9a9fdc80c8f63dd5b004953266a5d7399655bc71
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866579"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500358"
 ---
 # <a name="icorprofilercallbackclassloadstarted-method"></a>Método ICorProfilerCallback::ClassLoadStarted
 Notifica o criador de perfil de que uma classe está sendo carregada.  
@@ -36,20 +36,20 @@ HRESULT ClassLoadStarted(
 
 - `classId`
 
-  \[em] identifica a classe que está sendo carregada.
+  \[in] identifica a classe que está sendo carregada.
 
 ## <a name="remarks"></a>Comentários  
  O valor de `classId` não é válido para uma solicitação de informações até que o método [ICorProfilerCallback:: ClassLoadFinished](icorprofilercallback-classloadfinished-method.md) seja chamado.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerCallback](icorprofilercallback-interface.md)

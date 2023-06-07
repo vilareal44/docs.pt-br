@@ -1,13 +1,14 @@
 ---
 title: Como transformar a forma de uma árvore XML (C#)
+description: Saiba como transformar a forma de uma árvore XML. A forma de uma árvore XML refere-se a seus nomes de elementos e atributos e suas características de hierarquia.
 ms.date: 07/20/2015
 ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
-ms.openlocfilehash: 91f91ed6fea5371fae2ce67a413f4825f37af6c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4fa3cc18f235d061ae1778c177c4ac9b626f4b71
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347299"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302640"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>Como transformar a forma de uma árvore XML (C#)
 A *forma* de um documento XML refere-se aos seus nomes de elemento, nomes de atributo e às características de sua hierarquia.  
@@ -49,7 +50,7 @@ XElement newCustOrd =
 Console.WriteLine(newCustOrd);  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```xml  
 <Root>  
@@ -123,7 +124,7 @@ static void Main(string[] args)
 }  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```xml  
 <PO>  

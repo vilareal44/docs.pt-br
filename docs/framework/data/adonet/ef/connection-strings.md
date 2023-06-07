@@ -1,13 +1,14 @@
 ---
 title: Cadeias de conexão no Entity Framework ADO.NET
+description: Saiba mais sobre cadeias de conexão no Entity Framework, que contêm informações para se conectar ao provedor de dados ADO.NET e sobre arquivos de mapeamento e modelo.
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 392e51022dc0f98b9fad656b9f950cd25588f31a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2ae25f5881c033a84d65f5b0b4ed14b4866dbcb3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040339"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286864"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>Cadeias de conexão no Entity Framework ADO.NET
 
@@ -25,11 +26,11 @@ Para saber mais sobre a sintaxe geral das cadeias de conexão, consulte [sintaxe
 
 A tabela a seguir lista os nomes válidos para valores de palavra-chave na propriedade <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>.
 
-|Palavra-chave|Descrição|
+|Palavra-chave|Description|
 |-------------|-----------------|
 |`Provider`|Necessária quando a palavra-chave `Name` não é especificada. O nome do provedor, que é usado para recuperar o objeto <xref:System.Data.Common.DbProviderFactory> do provedor subjacente. Esse valor é constante.<br /><br /> Quando a palavra-chave `Name` não é incluída em uma cadeia de conexão de entidade, um valor não vazio para a palavra-chave `Provider` é necessário. Essa palavra-chave é mutuamente excludente com a palavra-chave `Name`.|
-|`Provider Connection String`|Opcional. Especifica a cadeia de conexão específica ao provedor que é passada para a fonte de dados subjacente. Essa cadeia de conexão contém pares válidos de palavra-chave/valor para o provedor de dados. Uma palavra-chave `Provider Connection String` inválida produzirá um erro em tempo de execução ao ser avaliada pela fonte de dados.<br /><br /> Essa palavra-chave é mutuamente excludente com a palavra-chave `Name`.<br /><br /> Certifique-se de escapar o valor de acordo com a sintaxe geral das [cadeias de conexão ADO.net](../connection-strings.md). Considere, por exemplo, a seguinte cadeia de conexão: `Server=serverName; User ID = userID`. Ele deve ser ignorado porque contém um ponto e vírgula. Como não contém aspas duplas, elas podem ser usadas para escapar:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|
-|`Metadata`|Necessária quando a palavra-chave `Name` não é especificada. Uma lista de diretórios, arquivos e locais de recursos delimitados por pipe na qual procurar informações de metadados e mapeamento. A seguir está um exemplo:<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Os espaços em branco em cada lado do separador de pipe são ignorados.<br /><br /> Essa palavra-chave é mutuamente excludente com a palavra-chave `Name`.|
+|`Provider Connection String`|Opcional. Especifica a cadeia de conexão específica ao provedor que é passada para a fonte de dados subjacente. Essa cadeia de conexão contém pares válidos de palavra-chave/valor para o provedor de dados. Uma palavra-chave `Provider Connection String` inválida produzirá um erro em tempo de execução ao ser avaliada pela fonte de dados.<br /><br /> Essa palavra-chave é mutuamente excludente com a palavra-chave `Name`.<br /><br /> Certifique-se de escapar o valor de acordo com a sintaxe geral das [cadeias de conexão ADO.net](../connection-strings.md). Considere, por exemplo, a seguinte cadeia de conexão: `Server=serverName; User ID = userID` . Ele deve ser ignorado porque contém um ponto e vírgula. Como não contém aspas duplas, elas podem ser usadas para escapar:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|
+|`Metadata`|Necessária quando a palavra-chave `Name` não é especificada. Uma lista de diretórios, arquivos e locais de recursos delimitados por pipe na qual procurar informações de metadados e mapeamento. A seguir, é mostrado um exemplo:<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Os espaços em branco em cada lado do separador de pipe são ignorados.<br /><br /> Essa palavra-chave é mutuamente excludente com a palavra-chave `Name`.|
 |`Name`|O aplicativo pode, opcionalmente, especificar o nome da conexão em um arquivo de configuração do aplicativo que forneça os valores de cadeia de conexão de palavra-chave-valor necessários. Nesse caso, não é possível fornecê-los diretamente na cadeia de conexão. A palavra-chave `Name` não é permitida em um arquivo de configuração.<br /><br /> Quando a palavra-chave `Name` não é incluída na cadeia de conexão, um valor não vazio para a palavra-chave Provider é necessário.<br /><br /> Essa palavra-chave é mutuamente excludente com todos as outras palavras-chave de cadeia de conexão.|
 
 Veja a seguir um exemplo de uma cadeia de conexão para o [modelo de vendas AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) armazenado no arquivo de configuração do aplicativo:
@@ -44,9 +45,9 @@ Os recursos inseridos são especificados como a seguir:
 
 As seguintes opções estão disponíveis para definir o local de um recurso inserido:
 
-|Opção|Descrição|
+|Opção|Description|
 |-|-|
-|`assemblyFullName`|O nome completo de um assembly com o recurso inserido. O nome inclui o nome simples, o nome da versão, a cultura com suporte e a chave pública, como a seguir:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Os recursos podem ser inseridos em qualquer assembly que seja acessível pelo aplicativo.<br /><br /> Se você especificar um curinga (\*) para `assemblyFullName`, o tempo de execução do Entity Framework procurará recursos nos seguintes locais, nesta ordem:<br /><br /> 1. o assembly de chamada.<br />2. os assemblies referenciados.<br />3. os assemblies no diretório bin de um aplicativo.<br /><br /> Se os arquivos não estiverem em um desses locais, será gerada uma exceção. **Observação:**  Quando você usa curinga (*), o Entity Framework precisa examinar todos os assemblies em busca de recursos com o nome correto. Para melhorar o desempenho, especifique o nome do assembly, em vez do curinga.|
+|`assemblyFullName`|O nome completo de um assembly com o recurso inserido. O nome inclui o nome simples, o nome da versão, a cultura com suporte e a chave pública, como a seguir:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Os recursos podem ser inseridos em qualquer assembly que seja acessível pelo aplicativo.<br /><br /> Se você especificar um curinga ( \* ) para `assemblyFullName` , o tempo de execução de Entity Framework procurará recursos nos seguintes locais, nesta ordem:<br /><br /> 1. o assembly de chamada.<br />2. os assemblies referenciados.<br />3. os assemblies no diretório bin de um aplicativo.<br /><br /> Se os arquivos não estiverem em um desses locais, será gerada uma exceção. **Observação:**  Quando você usa curinga (*), o Entity Framework precisa examinar todos os assemblies em busca de recursos com o nome correto. Para melhorar o desempenho, especifique o nome do assembly, em vez do curinga.|
 |`resourceName`|O nome do recurso incluído, como AdventureWorksModel. CSDL. Os serviços de metadados só procuram arquivos ou recursos com uma das seguintes extensões: .csdl, .ssdl ou .msl. Se a palavra-chave `resourceName` não for especificada, todos os recursos de metadados serão carregados. Os recursos devem ter nomes exclusivos em um assembly. Se vários arquivos com o mesmo nome forem definidos em diferentes diretórios no assembly, a palavra-chave `resourceName` deverá incluir a estrutura de pastas antes do nome do recurso, por exemplo, FolderName.FileName.csdl.<br /><br /> `resourceName` não é necessária quando você especifica um curinga (*) para `assemblyFullName`.|
 
 > [!NOTE]
@@ -78,7 +79,7 @@ O exemplo a seguir carrega todos os recursos inseridos com as extensões .csdl, 
 Metadata=res://AdventureWorks, 1.0.0.0, neutral, a14f3033def15840/
 ```
 
-O exemplo a seguir carrega todos os recursos no caminho de arquivo relativo, além de "datadir\metadata\\" do local do assembly carregado.
+O exemplo a seguir carrega todos os recursos no caminho de arquivo relativo mais "datadir\metadata \\ " do local do assembly carregado.
 
 ```csharp
 Metadata=datadir\metadata\
@@ -90,26 +91,26 @@ O exemplo a seguir carrega todos os recursos no caminho de arquivo relativo do l
 Metadata=.\
 ```
 
-## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>Suporte para a &#124;cadeia de caracteres&#124; de substituição DataDirectory e o operador raiz do aplicativo Web (~)
+## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>Suporte para a cadeia de caracteres de substituição do &#124;DataDirectory&#124; e o operador raiz do aplicativo Web (~)
 
-`DataDirectory` e o operador ~ são usados na <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> como parte das palavras-chave `Metadata` e `Provider Connection String`. <xref:System.Data.EntityClient.EntityConnection> encaminha `DataDirectory` e o operador ~ para <xref:System.Data.Metadata.Edm.MetadataWorkspace> e para o provedor de armazenamento, respectivamente.
+`DataDirectory`e o operador ~ é usado no <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> como parte das `Metadata` `Provider Connection String` palavras-chave e. <xref:System.Data.EntityClient.EntityConnection> encaminha `DataDirectory` e o operador ~ para <xref:System.Data.Metadata.Edm.MetadataWorkspace> e para o provedor de armazenamento, respectivamente.
 
 |Termo|Descrição|
 |----------|-----------------|
-|`&#124;DataDirectory&#124;`|Resolve como um caminho relativo a arquivos de mapeamento e metadados. Este é o valor que é definido por meio do método `AppDomain.SetData("DataDirectory", objValue)`. A cadeia de caracteres de substituição de `DataDirectory` deve estar entre os caracteres de pipe e não pode haver nenhum espaço em branco entre seu nome e os caracteres de pipe. O nome `DataDirectory` não diferencia maiúsculas de minúsculas.<br /><br /> Se um diretório físico chamado "datadirectory" tiver que ser passado como um membro da lista de caminhos de metadados, adicione espaço em branco a um ou ambos os lados do nome. Por exemplo: `Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`. Um aplicativo ASP.NET resolve &#124;o DataDirectory&#124; para a pasta "\<> raiz do aplicativo"/App_Data ".|
+|`&#124;DataDirectory&#124;`|Resolve como um caminho relativo a arquivos de mapeamento e metadados. Este é o valor que é definido por meio do método `AppDomain.SetData("DataDirectory", objValue)`. A `DataDirectory` cadeia de caracteres de substituição deve estar entre os caracteres de pipe e não pode haver nenhum espaço em branco entre seu nome e os caracteres de pipe. O nome `DataDirectory` não diferencia maiúsculas de minúsculas.<br /><br /> Se um diretório físico chamado "datadirectory" tiver que ser passado como um membro da lista de caminhos de metadados, adicione espaço em branco a um ou ambos os lados do nome. Por exemplo: `Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`. Um aplicativo ASP.NET resolve &#124;&#124; de DataDirectory para a pasta " \<application root> /App_Data".|
 |~|Resolve como a raiz do aplicativo Web. O caractere ~ em uma posição à esquerda é sempre interpretado como o operador raiz do aplicativo Web (~), embora possa representar um subdiretório local válido. Para fazer referência a um subdiretório local, o usuário deve passar `./~` explicitamente.|
 
 `DataDirectory` e o operador ~ devem ser especificados somente no início de um caminho; eles não são resolvidos em nenhuma outra posição. O Entity Framework tentará resolver `~/data`, mas tratará `/data/~` como um caminho físico.
 
 Um caminho que começa com `DataDirectory` ou com o operador ~ não pode ser resolvido como um caminho físico fora da ramificação de `DataDirectory` e do operador ~. Por exemplo, os seguintes caminhos serão resolvidos: `~`, `~/data`, `~/bin/Model/SqlServer`. Os seguintes caminhos não serão resolvidos: `~/..`, `~/../other`.
 
-`DataDirectory` e o operador ~ podem ser estendidos para incluir subdiretórios, da seguinte maneira: `|DataDirectory|\Model`, `~/bin/Model`
+`DataDirectory`e o operador ~ pode ser estendido para incluir subdiretórios, da seguinte `|DataDirectory|\Model` maneira:`~/bin/Model`
 
 A resolução da cadeia de caracteres de substituição `DataDirectory` e do operador ~ é não recursiva. Por exemplo, quando `DataDirectory` incluir o caractere `~`, será gerada uma exceção. Isso evita uma recursão infinita.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Trabalhando com Provedores de Dados](working-with-data-providers.md)
-- [Considerações de implantação](deployment-considerations.md)
+- [Considerações sobre implantação](deployment-considerations.md)
 - [Gerenciando conexões e transações](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
-- [Cadeia de Conexão](../connection-strings.md)
+- [Cadeias de conexão](../connection-strings.md)

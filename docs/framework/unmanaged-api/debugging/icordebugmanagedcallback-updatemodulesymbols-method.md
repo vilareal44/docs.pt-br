@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0863f644-58e8-45a0-b0c3-a28e99b20938
 topic_type:
 - apiref
-ms.openlocfilehash: 9ee6f43c94b8ff2e765d2a0dde0697c4c895a94f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c0381cf924e44e581c8b275c9750cacba045cf1b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212367"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501775"
 ---
 # <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a>Método ICorDebugManagedCallback::UpdateModuleSymbols
 Notifica o depurador de que os símbolos de um módulo Common Language Runtime foram alterados.  
@@ -46,7 +46,7 @@ HRESULT UpdateModuleSymbols (
  no Um ponteiro para um objeto COM `IStream` do Win32 que contém os símbolos modificados.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método fornece uma oportunidade de atualizar a exibição do depurador dos símbolos de um módulo chamando [ISymUnmanagedReader:: UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) ou [ISymUnmanagedReader:: ReplaceSymbolStore](../diagnostics/isymunmanagedreader-replacesymbolstore-method.md).  
+ Esse método fornece uma oportunidade de atualizar a exibição do depurador dos símbolos de um módulo chamando [ISymUnmanagedReader:: UpdateSymbolStore](../diagnostics/isymunmanagedreader-updatesymbolstore-method.md) ou [ISymUnmanagedReader:: ReplaceSymbolStore](../diagnostics/isymunmanagedreader-replacesymbolstore-method.md).  
   
  Esse retorno de chamada pode ocorrer várias vezes para o mesmo módulo.  
   

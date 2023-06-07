@@ -1,15 +1,16 @@
 ---
-title: Como trabalhar com dicionários usando LINQ para XML (C#)
+title: Como trabalhar com dicionários usando LINQ to XML (C#)
+description: Saiba como trabalhar com dicionários usando LINQ to XML. Veja exemplos convertendo dicionários em XML e XML de volta para outras estruturas de dados.
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
-ms.openlocfilehash: 1a98293f208e80e969362fca27014ecd2e5c4183
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdba7a2b3dfc16fab1e239ac804c317dfefb7d9e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347220"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302614"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>Como trabalhar com dicionários usando LINQ para XML (C#)
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>Como trabalhar com dicionários usando LINQ to XML (C#)
 É conveniente converter variedades de estruturas de dados para XML, e XML de volta para outras estruturas de dados. Este tópico mostra uma implementação específica dessa abordagem geral convertendo <xref:System.Collections.Generic.Dictionary%602> a XML e verso.  
   
 ## <a name="example"></a>Exemplo  
@@ -28,7 +29,7 @@ XElement root = new XElement("Root",
 Console.WriteLine(root);  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```xml  
 <Root>  
@@ -57,7 +58,7 @@ foreach (string str in dict.Keys)
     Console.WriteLine("{0}:{1}", str, dict[str]);  
 ```  
   
- Esse código gera a seguinte saída:  
+ Este código produz a seguinte saída:  
   
 ```output  
 Child1:Value1  

@@ -1,5 +1,6 @@
 ---
 title: Identificando funções em DLLs
+description: Identifique as funções nas DLLs. A identidade de uma função de DLL consiste em um nome de função ou ordinal, e o nome do arquivo DLL no qual a implementação pode ser encontrada.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - platform invoke, identifying functions
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - identifying DLL functions
 - DLL functions
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
-ms.openlocfilehash: 1a94bb2020b07ba8405d901f46ec4a0687e79700
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 054d1351a9ee6adab17117c9f423aa26d0d9ed59
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121971"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622725"
 ---
 # <a name="identifying-functions-in-dlls"></a>Identificando funções em DLLs
 A identidade de uma função de DLL consiste dos seguintes elementos:  
@@ -43,7 +44,7 @@ A identidade de uma função de DLL consiste dos seguintes elementos:
   
  Para obter a documentação completa sobre a API do Windows, confira o SDK da Plataforma. Para obter exemplos que demonstram como construir declarações baseadas no .NET a serem usadas com a invocação de plataforma, consulte [Realizando marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Consumindo funções de DLL não gerenciadas](consuming-unmanaged-dll-functions.md)
 - [Especificando um ponto de entrada](specifying-an-entry-point.md)

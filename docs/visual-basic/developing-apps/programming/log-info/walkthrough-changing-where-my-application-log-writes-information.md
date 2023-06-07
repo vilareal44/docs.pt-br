@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: bdee0a91360580b156c1734ef4c82139b18ce2b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f9e45cdf4507840f62e32678f4c0a7be2c0be054
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74336729"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398286"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Instruções passo a passo: alterando onde My.Application.Log grava informações (Visual Basic)
 
@@ -18,9 +18,9 @@ ms.locfileid: "74336729"
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-O objeto `Log` pode gravar informações em vários ouvintes de log. Você precisa determinar a configuração atual dos ouvintes de log antes de alterar as configurações. Para obter mais informações, consulte [Instruções passo a passo: Determinando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).
+O objeto `Log` pode gravar informações em vários ouvintes de log. Você precisa determinar a configuração atual dos ouvintes de log antes de alterar as configurações. Para obter mais informações, consulte [Instruções passo a passo: Determinando onde My.Application.Log grava informações](walkthrough-determining-where-my-application-log-writes-information.md).
 
-Talvez você queira examinar [Como gravar informações de evento em um arquivo de texto](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md) ou [Como gravar em um log de eventos do aplicativo](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md).
+Talvez você queira examinar [Como gravar informações de evento em um arquivo de texto](how-to-write-event-information-to-a-text-file.md) ou [Como gravar em um log de eventos do aplicativo](how-to-write-to-an-application-event-log.md).
 
 ### <a name="to-add-listeners"></a>Para adicionar ouvintes
 
@@ -173,7 +173,7 @@ Talvez você queira examinar [Como gravar informações de evento em um arquivo 
 
 1. Para garantir que o tipo correto seja usado para seu ouvinte de log, certifique-se de usar o nome de tipo totalmente qualificado e o nome do assembly de nome forte. A sintaxe de um tipo de nome forte é a seguinte:
 
-     \<*nome do tipo*>, \<*nome do assembly*>, \<*número de versão*>, \<*cultura*>, \<*nome forte*>
+     \<*type name*>, \<*assembly name*>, \<*version number*>, \<*culture*>, \<*strong name*>
 
 2. Este exemplo de código mostra como determinar o nome do tipo do nome forte para um tipo totalmente qualificado —"System.Diagnostics.FileLogTraceListener" nesse caso.
 
@@ -183,11 +183,11 @@ Talvez você queira examinar [Como gravar informações de evento em um arquivo 
 
      `Microsoft.VisualBasic.Logging.FileLogTraceListener, Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>
 - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>
-- [Como: gravar informações de evento em um arquivo de texto](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)
-- [Como: gravar em um Log de Eventos do Aplicativo](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
+- [Como: gravar informações de evento em um arquivo de texto](how-to-write-event-information-to-a-text-file.md)
+- [Como: gravar em um Log de Eventos do Aplicativo](how-to-write-to-an-application-event-log.md)

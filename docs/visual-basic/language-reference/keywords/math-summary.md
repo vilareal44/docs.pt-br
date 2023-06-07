@@ -7,17 +7,17 @@ helpviewer_keywords:
 - math functions, Visual Basic
 - math functions
 ms.assetid: 6abf2dd7-92d2-488a-8e2b-819be9b30c3f
-ms.openlocfilehash: 21c6d35b4e6aa17bb29be1c1e4b5e88a5fb389d8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ef0e014745ec99afbce16824e65587276bc145e4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348500"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373441"
 ---
 # <a name="math-summary-visual-basic"></a>Resumo de matemática (Visual Basic)
 As palavras-chave do idioma Visual Basic e os membros da biblioteca de tempo de execução são organizados por finalidade e uso.  
   
-|Action|Elemento Language|  
+|Ação|Elemento de linguagem|  
 |------------|----------------------|  
 |Derive funções trigonométricas.|<xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A>|  
 |Cálculos gerais.|<xref:System.Math.Exp%2A>, <xref:System.Math.Log%2A>, <xref:System.Math.Sqrt%2A>|  
@@ -26,8 +26,8 @@ As palavras-chave do idioma Visual Basic e os membros da biblioteca de tempo de 
 |Obter o sinal de uma expressão.|<xref:System.Math.Sign%2A>|  
 |Executar conversões numéricas.|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Funções Matemáticas Derivadas](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
-- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
-- [Membros da Biblioteca de Runtime do Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+- [Funções Matemáticas Derivadas](derived-math-functions.md)
+- [Palavras-chave](index.md)
+- [Membros da Biblioteca de Runtime do Visual Basic](../runtime-library-members.md)

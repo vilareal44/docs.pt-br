@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
-ms.openlocfilehash: 36452cc6ff03042939cd4066aef76129b5bb8f0a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fd2e425f2dd3f4127cd777d4a1f7ab9809de9d45
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74329555"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409615"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>Erro no carregamento da DLL (Visual Basic)
-Uma DLL (biblioteca de vínculo dinâmico) é uma biblioteca especificada na cláusula `Lib` de uma instrução `Declare`. Possíveis causas desse erro incluem:  
+Uma DLL (biblioteca de vínculo dinâmico) é uma biblioteca especificada na `Lib` cláusula de uma `Declare` instrução. Possíveis causas desse erro incluem:  
   
 - O arquivo não é executável de DLL.  
   
@@ -22,7 +22,7 @@ Uma DLL (biblioteca de vínculo dinâmico) é uma biblioteca especificada na cl�
   
 - A DLL ou a DLL referenciada não está em um diretório especificado no caminho.  
   
-## <a name="to-correct-this-error"></a>Para corrigir esse erro  
+## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
 - Se o arquivo for um arquivo de texto de origem e, portanto, não executável de DLL, ele deverá ser compilado e vinculado a um formulário executável DLL.  
   
@@ -32,6 +32,6 @@ Uma DLL (biblioteca de vínculo dinâmico) é uma biblioteca especificada na cl�
   
 - Se a dll ou a DLL referenciada não estiver em um diretório especificado pelo caminho, mova a DLL para um diretório referenciado.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Instrução Declare](../statements/declare-statement.md)

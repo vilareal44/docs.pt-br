@@ -3,21 +3,21 @@ title: <security> de <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
 ms.openlocfilehash: b66b5228cab9dbc35502a13a2d0fe56ce4c6a18d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73738586"
 ---
-# <a name="security-of-wshttpbinding"></a>\<> de segurança do \<wsHttpBinding >
-Representa os recursos de segurança do [\<wsHttpBinding >](wshttpbinding.md).  
+# <a name="security-of-wshttpbinding"></a>\<security> de \<wsHttpBinding>
+Representa os recursos de segurança do [\<wsHttpBinding>](wshttpbinding.md) .  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsHttpBinding >** ](wshttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**security >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<wsHttpBinding>**](wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,14 +43,14 @@ Representa os recursos de segurança do [\<wsHttpBinding >](wshttpbinding.md).
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|modo|Adicional. Especifica o tipo de segurança que é aplicado. O padrão é `Message`.<br />-Este atributo é do tipo <xref:System.ServiceModel.SecurityMode>.|  
+|mode|Adicional. Especifica o tipo de segurança que é aplicado. O padrão é `Message`.<br />-Este atributo é do tipo <xref:System.ServiceModel.SecurityMode> .|  
   
-## <a name="mode-attribute"></a>Atributo de modo  
+## <a name="mode-attribute"></a>Atributo Mode  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |Nenhum|A segurança é desabilitada.|  
-|Porta|A proteção é fornecida usando HTTPS. O serviço precisa ser configurado com certificados SSL. A mensagem é totalmente protegida usando HTTPS e é autenticada pelo cliente usando o certificado SSL do serviço. A autenticação do cliente é controlada por meio do atributo `ClientCredentials`. do [> de transporte\<](transport-of-wshttpbinding.md).|  
+|Transport|A proteção é fornecida usando HTTPS. O serviço precisa ser configurado com certificados SSL. A mensagem é totalmente protegida usando HTTPS e é autenticada pelo cliente usando o certificado SSL do serviço. A autenticação do cliente é controlada por meio do `ClientCredentials` atributo. do [\<transport>](transport-of-wshttpbinding.md) .|  
 |Mensagem|A segurança é fornecida usando a segurança de mensagem SOAP. Por padrão, o corpo SOAP é criptografado e assinado. Esse modo oferece uma variedade de recursos, como se as credenciais de serviço estão disponíveis no cliente fora da banda, o pacote de algoritmos a ser usado e qual nível de proteção aplicar ao corpo da mensagem por meio da propriedade Security. Message. A autenticação do cliente é executada uma vez por sessão e os resultados da autenticação são armazenados em cache durante a sessão.|  
 |TransportWithMessageCredential|Nesse modo, o HTTPS fornece integridade, confidencialidade e autenticação de servidor, e a segurança de mensagem SOAP fornece autenticação de cliente. Por padrão, a autenticação do cliente é executada uma vez por sessão e os resultados da autenticação são armazenados em cache durante a sessão.|  
   
@@ -58,8 +58,8 @@ Representa os recursos de segurança do [\<wsHttpBinding >](wshttpbinding.md).
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[> de transporte de \<](transport-of-wshttpbinding.md)|Define as configurações de segurança de transporte. Esse elemento corresponde ao tipo de <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>.|  
-|[\<message >](message-of-wshttpbinding.md)|Define as configurações de segurança para a mensagem. Esse elemento corresponde ao tipo de <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement>.|  
+|[\<transport>](transport-of-wshttpbinding.md)|Define as configurações de segurança de transporte. Este elemento corresponde ao <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> tipo.|  
+|[\<message>](message-of-wshttpbinding.md)|Define as configurações de segurança para a mensagem. Este elemento corresponde ao <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement> tipo.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -70,7 +70,7 @@ Representa os recursos de segurança do [\<wsHttpBinding >](wshttpbinding.md).
 ## <a name="remarks"></a>Comentários  
  A classe WSHttpBinding foi projetada para interoperação com serviços que implementam especificações WS-*. A segurança de transporte para essa associação é protocolo SSL (SSL) sobre HTTP ou HTTPS.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.WSHttpSecurity>
 - <xref:System.ServiceModel.WSHttpBinding.Security%2A>
@@ -80,4 +80,4 @@ Representa os recursos de segurança do [\<wsHttpBinding >](wshttpbinding.md).
 - [Associações](../../../wcf/bindings.md)
 - [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding >](bindings.md)
+- [\<binding>](bindings.md)

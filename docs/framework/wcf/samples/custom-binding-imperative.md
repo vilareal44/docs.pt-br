@@ -2,20 +2,20 @@
 title: Associação personalizada obrigatória
 ms.date: 03/30/2017
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
-ms.openlocfilehash: 90126720beea2cf9742724b24f5889dd6d554200
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f7ba5c21b35d556be2c8d0817c37d98ad7d7dfcb
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79145313"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594732"
 ---
 # <a name="custom-binding-imperative"></a>Associação personalizada obrigatória
-A amostra demonstra como escrever código imperativo para definir e usar vinculações personalizadas sem usar um arquivo de configuração ou um cliente gerado pela Windows Communication Foundation (WCF). Esta amostra combina os recursos fornecidos pelo transporte HTTP e o canal de sessão confiável para criar uma vinculação confiável baseada em HTTP. Esta amostra é baseada no [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora.  
+O exemplo demonstra como escrever código imperativo para definir e usar associações personalizadas sem usar um arquivo de configuração ou um cliente do Windows Communication Foundation (WCF) gerado. Este exemplo combina os recursos fornecidos pelo transporte HTTP e o canal de sessão confiável para criar uma associação baseada em HTTP confiável. Este exemplo é baseado no [introdução](getting-started-sample.md) que implementa um serviço de calculadora.  
   
 > [!NOTE]
-> O procedimento de configuração e as instruções de construção desta amostra estão localizados no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- Tanto no cliente quanto no serviço, é criada uma vinculação personalizada que contém dois elementos de vinculação (Sessão Confiável e HTTP):  
+ No cliente e no serviço, é criada uma associação personalizada que contém dois elementos de ligação (sessão confiável e HTTP):  
 
 ```csharp
 ReliableSessionBindingElement reliableSession = new ReliableSessionBindingElement();  
@@ -28,13 +28,13 @@ httpTransport.HostNameComparisonMode = HostNameComparisonMode.StrongWildcard;
 CustomBinding binding = new CustomBinding(reliableSession, httpTransport);  
 ```
   
- No serviço, a vinculação é usada adicionando um ponto final ao ServiceHost:  
+ No serviço, a associação é usada adicionando um ponto de extremidade ao ServiceHost:  
 
 ```csharp
 serviceHost.AddServiceEndpoint(typeof(ICalculator), binding, "");  
 ```
 
- No cliente, a vinculação <xref:System.ServiceModel.ChannelFactory> é usada por a para criar um canal para o serviço:  
+ No cliente, a associação é usada por um <xref:System.ServiceModel.ChannelFactory> para criar um canal para o serviço:  
 
 ```csharp
 EndpointAddress address = new EndpointAddress("http://localhost:8000/servicemodelsamples/service");  
@@ -42,7 +42,7 @@ ChannelFactory<ICalculator> channelFactory = new ChannelFactory<ICalculator>(bin
 ICalculator channel = channelFactory.CreateChannel();  
 ```
 
- Este canal é então usado para interagir com o serviço:  
+ Esse canal é usado para interagir com o serviço:  
 
 ```csharp
 // Call the Add service operation.  
@@ -52,7 +52,7 @@ double result = channel.Add(value1, value2);
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
 ```
 
- Quando você executa a amostra, as solicitações e respostas da operação são exibidas na janela do console cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ```console  
 Add(100,15.99) = 115.99  
@@ -65,21 +65,21 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Certifique-se de ter realizado o [procedimento de configuração única para as amostras da Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Certifique-se de ter executado o [procedimento de configuração única para os exemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para construir a edição C# ou Visual Basic .NET da solução, siga as instruções em [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para criar a edição C# ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).  
   
-3. Para executar a amostra em uma configuração de máquina única ou cruzada, siga as instruções em [Executar as amostras da Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md).  
   
 > [!IMPORTANT]
 > Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Se esse diretório não existir, vá para [a Windows Communication Foundation (WCF) e para o Windows Workflow Foundation (WF) Amostras para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Amostras e amostras da [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (Windows Communication Foundation). Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Custom\Imperative`  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Amostras de vinculação personalizadas](custom-binding.md)
+- [Exemplos de associação personalizada](custom-binding.md)
